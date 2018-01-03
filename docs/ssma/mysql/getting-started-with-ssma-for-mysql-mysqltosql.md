@@ -1,7 +1,7 @@
 ---
 title: "Introducción a SSMA para MySQL (MySQLToSQL) | Documentos de Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ea110b9e1b4708dfbd37965d3c7f0de48f1b9f2b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 961ab39ffc76be1ce2bd7dd36234163d3c8229bf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Introducción a SSMA para MySQL (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) para MySQL le permite convertir esquemas de base de datos de MySQL a esquemas de SQL Server o base de datos de SQL Azure, cargar los esquemas resultantes en SQL Server o base de datos de SQL Azure y migrar datos de MySQL a SQL Server o base de datos de SQL Azure rápidamente.  
@@ -117,7 +117,7 @@ La siguiente tabla muestra los menús SSMA.
   
 |||  
 |-|-|  
-|**Menú**|**Description**|  
+|**Menú**|**Descripción**|  
 |**Archivo**|Contiene comandos para trabajar con proyectos, conectar con MySQL y conectarse a SQL Server o base de datos de SQL Azure.|  
 |**Editar**|Contiene comandos para buscar y trabajar con texto en las páginas de detalles. Para abrir **administrar marcadores** cuadro de diálogo, en el menú Edición, haga clic en Administrar marcadores. En el cuadro de diálogo verá una lista de los marcadores existentes. Puede usar los botones en el lado derecho del cuadro de diálogo para administrar los marcadores.|  
 |**Ver**|Contiene el **sincronizar metadatos exploradores** comando. Sincroniza los objetos entre el Explorador de metadatos de MySQL y SQL Server o el Explorador de metadatos de base de datos de SQL Azure. También contiene comandos para mostrar y ocultar el **salida** y **lista de errores** paneles y una opción **diseños** para administrar con los diseños.|  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a3d5291538d2f37b037888935be7f93bec8a7865
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8100e678d336075ca42a898fa98c03cec5d8f6a9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-to-sql-bit"></a>C a SQL: bits
 El identificador para el tipo de datos de bit C de ODBC es:  
@@ -36,8 +36,8 @@ El identificador para el tipo de datos de bit C de ODBC es:
   
 |Identificador de tipo SQL|Prueba|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR<br /><br /> SQL_WCHAR SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Ninguno|n/d|  
-|SQL_NUMERIC SQL_DECIMAL DE ODBC<br /><br /> SQL_TINYINT SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT<br /><br /> SQL_REAL SQL_FLOAT<br /><br /> SQL_DOUBLE|Ninguno|n/d|  
-|SQL_BIT|Ninguno|n/d|  
+|SQL_CHAR SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR<br /><br /> SQL_WCHAR SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|None|n/d|  
+|SQL_NUMERIC SQL_DECIMAL DE ODBC<br /><br /> SQL_TINYINT SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT<br /><br /> SQL_REAL SQL_FLOAT<br /><br /> SQL_DOUBLE|None|n/d|  
+|SQL_BIT|None|n/d|  
   
  El controlador omite el valor de longitud/indicador al convertir datos desde el tipo de datos de bit C y se da por supuesto que el tamaño del búfer de datos es el tamaño del tipo de datos de bit C. El valor de longitud/indicador se pasa en el *StrLen_or_Ind* argumento en **SQLPutData** y en el búfer especificado con el *StrLen_or_IndPtr* argumento en **SQLBindParameter**. El búfer de datos se especifica con el *DataPtr* argumento en **SQLPutData** y *ParameterValuePtr* argumento en **SQLBindParameter**.

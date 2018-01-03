@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e4db2f357942eb7bab34a17e8f9c03e442731055
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6c9e38f4287a8832d8e794940093ce696ac0eaf7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>Los cursores desplazables y aislamiento de transacción
 En la tabla siguiente se enumera los factores que rigen la visibilidad de los cambios.  
@@ -46,17 +46,17 @@ En la tabla siguiente se enumera los factores que rigen la visibilidad de los ca
 |Cursor type\action|En sí mismo|El propietario<br /><br /> Transacciones de|Otro<br /><br /> Transacciones de<br /><br /> (RU[a])|Otro<br /><br /> Transacciones de<br /><br /> (RC[a])|Otro<br /><br /> Transacciones de<br /><br /> (RR[a])|Otro<br /><br /> Transacciones de<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |Estático|||||||  
-|Insert|Quizá [b]|No|No|No|No|No|  
-|Update|Quizá [b]|No|No|No|No|No|  
-|DELETE|Quizá [b]|No|No|No|No|No|  
+|Insert|Quizá [b]|no|no|no|no|no|  
+|Update|Quizá [b]|no|no|no|no|no|  
+|DELETE|Quizá [b]|no|no|no|no|no|  
 |Dirigido por conjuntos de claves|||||||  
-|Insert|Quizá [b]|No|No|No|No|No|  
-|Update|Sí|Sí|Sí|Sí|No|No|  
-|DELETE|Quizá [b]|Sí|Sí|Sí|No|No|  
+|Insert|Quizá [b]|no|no|no|no|no|  
+|Update|Sí|Sí|Sí|Sí|no|no|  
+|DELETE|Quizá [b]|Sí|Sí|Sí|no|no|  
 |Dinámica|||||||  
-|Insert|Sí|Sí|Sí|Sí|Sí|No|  
-|Update|Sí|Sí|Sí|Sí|No|No|  
-|DELETE|Sí|Sí|Sí|Sí|No|No|  
+|Insert|Sí|Sí|Sí|Sí|Sí|no|  
+|Update|Sí|Sí|Sí|Sí|no|no|  
+|DELETE|Sí|Sí|Sí|Sí|no|no|  
   
  [a] las letras entre paréntesis indican el nivel de aislamiento de la transacción que contiene el cursor; el nivel de aislamiento de la otra transacción (en el que se realizó el cambio) es irrelevante.  
   

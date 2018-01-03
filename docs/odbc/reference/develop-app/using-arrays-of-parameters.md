@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c7cfa7bcaf6c193a7abde71020d563a095ace3f3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: da3d5662b8eb85f994142aea0e4dff237fd9852b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-arrays-of-parameters"></a>Utilizar matrices de parámetros
 Usar matrices de parámetros, la aplicación llama **SQLSetStmtAttr** con una *atributo* argumento de SQL_ATTR_PARAMSET_SIZE para especificar el número de conjuntos de parámetros. Llama **SQLSetStmtAttr** con una *atributo* argumento de SQL_ATTR_PARAMS_PROCESSED_PTR para especificar la dirección de una variable en el que el controlador puede devolver el número de conjuntos de parámetros procesados, establece el error incluida. Llama **SQLSetStmtAttr** con una *atributo* argumento de SQL_ATTR_PARAM_STATUS_PTR para que apunte a una matriz en la que se va a devolver información de estado para cada fila de valores de parámetro. El controlador almacena estas direcciones en la estructura que se mantiene para la instrucción.  

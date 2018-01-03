@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 30b073e6bca1fee5b98ed835bcc72f127c9ad40c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f879d11b4c9f393accaaf96beda6a159aec2363f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="considering-database-features-to-use"></a>Teniendo en cuenta las características de base de datos que se utilizan
 Después de que se conoce el nivel básico de interoperabilidad, deben tener en cuenta las características de base de datos usadas por la aplicación. Por ejemplo, ¿qué instrucciones SQL ejecutará la aplicación? ¿La aplicación usará los cursores desplazables? ¿Transacciones? ¿Procedimientos? ¿Datos de tipo Long? Para una idea de qué características podría no admitir todos los DBMS, consulte el [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), y [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) ydescripcionesdefunción[ Apéndice C: gramática SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Las características requeridas por una aplicación podrían eliminar algunos de los DBMS en la lista de DBMS de destino. También podría mostrar que la aplicación puede fácilmente tener como destino muchos DBMS.  

@@ -3,10 +3,10 @@ title: "Copias de seguridad y restauración"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
 caps.latest.revision: "50"
-ms.openlocfilehash: 646db87f946475ebdf427b3f4ef3ec00da0dc5f1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 06863b600ed62d795db82aa5aa3ae5c88578833a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="backup-and-restore"></a>Copias de seguridad y restauración
 Describe cómo los datos de copia de seguridad y restauración funciona para almacenamiento de datos paralelos de SQL Server (PDW). Operaciones de copia de seguridad y restauración se utilizan para la recuperación ante desastres. También se pueden utilizar copia de seguridad y restauración para copiar una base de datos de un dispositivo a otro dispositivo.  
@@ -129,7 +129,7 @@ Por ejemplo, cuando se restaura una base de datos de 60 GB desde un dispositivo 
   
 Después de la redistribución cada nodo de proceso contiene menos datos reales y más espacio libre que cada nodo de ejecución en el dispositivo de origen más pequeño. Utilice el espacio adicional para agregar más datos a la base de datos. Si el tamaño de la base de datos restaurada es superior al necesario, puede usar [ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md) para reducir los tamaños de archivo de base de datos.  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Copia de seguridad y la tarea de restauración|Description|  
 |---------------------------|---------------|  

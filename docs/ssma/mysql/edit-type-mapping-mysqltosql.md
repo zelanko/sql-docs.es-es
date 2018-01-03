@@ -1,7 +1,7 @@
 ---
 title: "Editar la asignación de tipo (MySQLToSQL) | Documentos de Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 744612abf33414538b74824b56b280ba635bed6c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8db4278a82968a5bd147f5fcb984af3fa104022e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>Editar la asignación de tipo (MySQLToSQL)
 El **Editar asignación de tipo** cuadro de diálogo permite especificar cómo se asignan los tipos entre los objetos de base de datos de origen y de destino.  
@@ -37,7 +37,7 @@ Puede tener acceso a este cuadro de diálogo en varios lugares:
   
 -   Asignaciones de tipo específico de la tabla invalidación base de datos y las asignaciones de tipos de proyecto. Las asignaciones específicas de la base de datos invalidan las asignaciones de project.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
   
 ##### <a name="source-type"></a>Tipo de origen  
 Seleccione el tipo de datos de origen se asignan a un tipo de datos de SQL Server.  
@@ -47,7 +47,7 @@ Si el tipo de datos es de longitud variable, los siguientes campos aparecerán e
 ##### <a name="from"></a>De  
 Especifique la longitud mínima de esta asignación. Por ejemplo, para la **nchar** tipo de datos, puede especificar 10 para especificar que esta asignación es para un intervalo que comience en **nchar(10).**  
   
-##### <a name="to"></a>Para  
+##### <a name="to"></a>A  
 Especifique la longitud máxima de esta asignación. Por ejemplo, para la **nchar** tipo de datos, puede escribir 20 para especificar que esta asignación es para un intervalo finaliza **nchar (20).**  
   
 ##### <a name="target-type"></a>Tipo de destino  

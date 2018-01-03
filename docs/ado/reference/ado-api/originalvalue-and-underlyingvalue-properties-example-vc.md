@@ -3,7 +3,7 @@ title: Ejemplo de propiedades de UnderlyingValue (VC ++) y OriginalValue | Docum
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bc78a70ee7c3d6443126a190ce9bd80fe03105e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a391163a03eb0ad14c2fd01d5f9555fed7ce7098
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>Ejemplo OriginalValue y UnderlyingValue propiedades (VC ++)
 Este ejemplo se muestra la [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) y [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) propiedades al mostrar un mensaje si los datos subyacentes de un registro han cambiado durante una [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) actualización por lotes.  

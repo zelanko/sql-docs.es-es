@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: d5a621f6bcd1605b7f48ada14607b3e55ef6d6de
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: ffc0ea6cae32b5801b069748b2c124ef1bd87343
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configuración de clúster de disco compartido de Red Hat Enterprise Linux para SQL Server
 
@@ -43,7 +43,7 @@ Para usar una cadena de conexión que apunta a un nombre de servidor de cadena y
 
 En las siguientes secciones abordan los pasos necesarios para configurar una solución de clúster de conmutación por error. 
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Para completar el siguiente escenario de extremo a extremo debe tener dos máquinas para implementar el clúster de dos nodos y otro servidor para configurar el servidor NFS. Pasos siguientes describen cómo se configurarán estos servidores.
 
@@ -134,13 +134,13 @@ En el servidor NFS realice lo siguiente:
 1. Habilitar e iniciar`rpcbind`
 
    ```bash
-   sudo systemctl enable rpcbind && systemctl start rpcbind
+   sudo systemctl enable rpcbind && sudo systemctl start rpcbind
    ```
 
 1. Habilitar e iniciar`nfs-server`
  
    ```bash
-   systemctl enable nfs-server && systemctl start nfs-server
+   sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
 1.  Editar `/etc/exports` para exportar el directorio que desea compartir. Necesitará 1 línea para cada recurso compartido que desee. Por ejemplo: 

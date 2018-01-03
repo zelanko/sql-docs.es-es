@@ -3,10 +3,10 @@ title: Realizar un seguimiento de las alertas de dispositivo (Analytics Platform
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 631345d9-4967-461a-8922-e5f8fd33f48f
 caps.latest.revision: "14"
-ms.openlocfilehash: a3ceaf032eed1af4ac6caeb6deb317a6eb54cc8d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a780aa34667280d9e079dad4f44954ba919275d5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="track-appliance-alerts"></a>Realizar un seguimiento de las alertas de dispositivo
 Este tema explica cómo usar la consola de administración y las vistas del sistema para realizar un seguimiento de las alertas en un dispositivo PDW de SQL Server.  

@@ -2,9 +2,11 @@
 title: Rendimiento de los servicios de R - resultados y los recursos | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/09/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 0b490c8f0d3795dae52fc575c1e231d39ff6e874
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0ee44976c109818292f7fa1587d6828e9f209fc1
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Rendimiento de los servicios de R: resultados y recursos
 
@@ -95,7 +97,7 @@ Esta sección se comparan antes y después de resultados para cada una de las pr
 
 La primera prueba compara el uso de compresión y una tabla de columna para reducir el tamaño de los datos.
 
-| Nombre de la tabla            | Filas     | Reservado   | Datos       | index_size | No utilizado  | % Saving (reserved) |
+| Nombre de la tabla            | Filas     | Reservado   | data       | index_size | No utilizado  | % Saving (reserved) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10 000 000 | 2 978 816 KB | 2 972 160 KB | 6128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10 000 000 | 625 784 KB  | 623 744 KB  | 1352 KB    | 688 KB  | 79 %                 |
@@ -288,7 +290,7 @@ Los paquetes RevoScaleR y de MicrosoftML se usaron para entrenar un modelo de pr
 
 - Tablas en memoria
 - Soft-NUMA
-- Regulador de recursos
+- regulador de recursos
 
 Para evaluar el efecto de NUMA de software en la ejecución del script de R, el equipo de ciencia de datos probado la solución en una máquina virtual con 20 núcleos físicos. En estos núcleos físicos, cuatro nodos NUMA de software se crearon automáticamente, tal que cada nodo contiene cinco núcleos.
 

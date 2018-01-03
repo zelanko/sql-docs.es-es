@@ -1,7 +1,7 @@
 ---
 title: Actualizar desde la base de datos (DB2ToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8fa3c91de2468da1ba9a7d67f597a2eae716632c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c62364a5dae70a00624cceddc87e9673466212fa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="refresh-from-database-db2tosql"></a>Actualizar desde la base de datos (DB2ToSQL)
 El **actualizar desde la base de datos** cuadro de diálogo permite seleccionar los objetos que desea actualizar desde la base de datos DB2. Filas en el cuadro de diálogo están codificadas mediante colores en función del estado de los metadatos:  
@@ -41,7 +41,7 @@ Puede especificar la configuración de actualización de objeto predeterminado e
   
 Para tener acceso a la **actualizar desde la base de datos** cuadro de diálogo, haga un objeto en el Explorador de metadatos de DB2 y haga clic en **actualizar desde la base de datos**.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Contraer (-)**  
 Contraer todos los grupos de objetos para ocultar objetos individuales.  
   

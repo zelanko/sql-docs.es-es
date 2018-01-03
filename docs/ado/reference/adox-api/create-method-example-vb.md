@@ -3,7 +3,7 @@ title: "Crear el ejemplo del método (VB) | Documentos de Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c74713ec876df04d7f36a0bf27a8ea6f7545bfef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4ae8db820ccc8de57968b118a3dcf3435b7d924e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-method-example-vb"></a>Crear el ejemplo del método (VB)
 El código siguiente muestra cómo crear una nueva base de datos de Microsoft Jet con el [Create](../../../ado/reference/adox-api/create-method-adox.md) método.  

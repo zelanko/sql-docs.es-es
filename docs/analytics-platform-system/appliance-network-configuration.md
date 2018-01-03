@@ -3,10 +3,10 @@ title: "Configuración de red del dispositivo (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e2b9abe-963d-479b-a4a7-1739fcb3e249
 caps.latest.revision: "27"
-ms.openlocfilehash: e24ed8e992591d08628ffeb14c30a47d7fa5b54a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 34f322e9bd1d500b3755262332ab5724de5aa301
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appliance-network-configuration"></a>Configuración de red del dispositivo
 El dispositivo PDW de SQL Server está creado y configurado con un conjunto de corrección de direcciones IP a lo largo de todos los servidores y dispositivos aplicables de fábrica del IHV. Con la entrega del dispositivo, la dirección de IP externas (Ethernet) debe configurarse para que coincida con los requisitos de centro de datos del cliente específico.  

@@ -2,9 +2,11 @@
 title: "Generar un procedimiento almacenado de R para el código de R con el paquete sqlrutils | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 805d533d140512754ecd6393654c67fa70f93340
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 05cd57e3d4e4b266eb3570da253e9417646d91f4
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package"></a>Generar un procedimiento almacenado de R para el código de R con el paquete sqlrutils
 El paquete **sqlrutils** proporciona un mecanismo para que los usuarios de R inserten sus scripts de R en un procedimiento almacenado de T-SQL, registren dicho procedimiento almacenado en una base de datos y lo ejecuten desde un entorno de desarrollo de R. 

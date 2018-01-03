@@ -1,7 +1,7 @@
 ---
 title: Seleccionar y configurar afectados objetos (OracleToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 54b2b1e67a0d7049b14c5f4bdd85c28d427810ca
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1a4fe479f53c914b4417cd0069335fa8bb0da027
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Seleccionar y configurar afectados objetos (OracleToSQL)
 En esta página puede seleccionar tablas y claves externas, cambios en el que se deben comparar SSMA comprueba los resultados de ejecución para los objetos que haya elegido en el paso anterior. Además, puede personalizar los parámetros de comprobación.  
@@ -34,7 +34,7 @@ En el árbol de objetos de Oracle situado en el lado izquierdo de la ventana, co
   
 Si no se puede comprobar el evaluador de SSMA cualquiera de estos objetos, verá el vínculo con la etiqueta **algunos objetos seleccionados contienen errores** bajo el árbol de objetos. Haga clic en este vínculo para ver los motivos por qué no se pueden comparar estos objetos y anule la selección de objetos incorrectos.  
   
-## <a name="table"></a>Tabla  
+## <a name="table"></a>Table  
 La pestaña de la tabla contiene la vista de cuadrícula de la tabla seleccionada. La cuadrícula contiene la siguiente información acerca de la tabla seleccionada:  
   
 -   Nombre de la columna  
@@ -47,7 +47,7 @@ La pestaña de la tabla contiene la vista de cuadrícula de la tabla seleccionad
   
 -   Regla  
   
--   Predeterminado  
+-   Valor predeterminado  
   
 -   Identidad  
   

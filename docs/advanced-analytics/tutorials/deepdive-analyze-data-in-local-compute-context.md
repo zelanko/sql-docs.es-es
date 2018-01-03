@@ -1,32 +1,37 @@
 ---
-title: Analizar los datos de contexto de proceso Local | Documentos de Microsoft
-ms.custom: 
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+title: "Analizar los datos de contexto de proceso local (SQL y R profundización) | Documentos de Microsoft"
+ms.date: 12/18/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 787bb526-4a13-40fa-9343-75d3bf5ba6a2
 caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d8e6516b7d203180d5c2a605db1099b1dcbae708
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: e65a4ad3018cfec6b60dae605945a8641b568c5d
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="analyze-data-in-local-compute-context-data-science-deep-dive"></a>Analizar los datos de contexto de proceso Local (datos ciencia profundización)
+# <a name="analyze-data-in-local-compute-context-sql-and-r-deep-dive"></a>Analizar los datos de contexto de proceso local (SQL y R profundización)
 
-Aunque puede ser más rápido ejecutar código R complejo utilizando el contexto de servidor, a veces es simplemente más cómodo obtener los datos fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y analizar en la estación de trabajo privada.
+Este artículo forma parte del tutorial exhaustiva de ciencia de datos, acerca de cómo usar [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-En esta sección aprenderá a volver a un contexto de proceso local y a mover datos entre contextos para optimizar el rendimiento.
+En esta sección, aprenderá a cambiar a un contexto de proceso local y mover datos entre los contextos para optimizar el rendimiento.
+
+Aunque i puede ser más rápido ejecutar código R complejo utilizando el contexto de servidor, a veces resulta más cómodo obtener los datos fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y analizarlos en una estación de trabajo local.
 
 ## <a name="create-a-local-summary"></a>Crear un resumen local
 
@@ -36,7 +41,7 @@ En esta sección aprenderá a volver a un contexto de proceso local y a mover da
     rxSetComputeContext ("local")
     ```
   
-2. Al extraer datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a menudo puede conseguir un mejor rendimiento si aumenta el número de filas que se extraen para cada lectura.  Para ello, aumente el valor del parámetro *rowsPerRead* en el origen de datos.
+2. Al extraer datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a menudo puede conseguir un mejor rendimiento si aumenta el número de filas que se extraen para cada lectura.  Para ello, aumente el valor del parámetro *rowsPerRead* en el origen de datos. Antes, el valor de *rowsPerRead* estaba establecido en 5000.
   
     ```R
     sqlServerDS1 <- RxSqlServerData(
@@ -45,24 +50,19 @@ En esta sección aprenderá a volver a un contexto de proceso local y a mover da
        colInfo = ccColInfo,
        rowsPerRead = 10000)
     ```
-  
-    Antes, el valor de *rowsPerRead* estaba establecido en 5000.
-  
-3. Ahora, llame a **rxSummary** en el nuevo origen de datos.
+
+3. Llame a **rxSummary** en el nuevo origen de datos.
   
     ```R
     rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlServerDS1)
     ```
   
-    Los resultados reales deben ser el mismo que al ejecutar rxSummary en el contexto de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] equipo.  En cambio, la operación puede ser más rápida o más lenta. Depende en gran medida de la conexión a la base de datos, ya que los datos se transfieren al equipo local para el análisis.
+    Los resultados actuales deben ser los mismos que cuando ejecuta **rxSummary** en el contexto del equipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  En cambio, la operación puede ser más rápida o más lenta. Depende en gran medida de la conexión a la base de datos, ya que los datos se transfieren al equipo local para el análisis.
 
-
-## <a name="next--step"></a>Paso siguiente
+## <a name="next-step"></a>Paso siguiente
 
 [Mover datos entre SQL Server y el archivo xdf.](../../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
 
 ## <a name="previous-step"></a>Paso anterior
 
-[Realizar análisis de fragmentación con rxDataStep](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)
-
-
+[Realizar análisis de fragmentación mediante rxDataStep](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)

@@ -1,7 +1,7 @@
 ---
 title: Trabajar con los archivos de comandos de consola de ejemplo (DB2ToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 13046bbc813a7c508593fc54903850ec8cbb09af
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 18787dab013e29427743b0712a9d56b28fbddd3e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>Trabajar con los archivos de comandos de consola de ejemplo (DB2ToSQL)
 Algunos de los archivos de ejemplo se han proporcionado junto con el producto para la referencia de usuario y el uso. Esta sección describe la forma de personalizar fácilmente estos scripts para ajustarse a las necesidades del usuario final.  
@@ -62,7 +62,7 @@ Se han proporcionado los archivos de comandos de consola de ejemplo siguientes q
   
     Para obtener más información sobre la generación de informes, consulte [generar informes &#40; DB2ToSQL &#41;](../../ssma/db2/generating-reports-db2tosql.md).  
   
-    **Comentarios:**  
+    **Notas:**  
   
     Asegúrese de que el argumento de línea de comandos del archivo de valor de la variable se pasa a la aplicación de consola y VariableValueFileSample.xml se actualiza con el usuario especificado valores.  
   

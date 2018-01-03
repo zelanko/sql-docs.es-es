@@ -1,7 +1,7 @@
 ---
 title: Buscar el Asistente de bases de datos (seleccionados archivos) (AccessToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 98f799138330399da6b4f96bbf10574b3878763d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 84759a9bee3439f0a561176a6d8583149770f02d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Buscar el Asistente de bases de datos (seleccionados archivos) (AccessToSQL)
 La página Seleccionar archivos del Asistente para buscar las bases de datos incluyen los archivos que se encontraron durante la búsqueda. Para seleccionar un archivo que desea agregar a SSMA, seleccione la fila que contiene el nombre de archivo. Una vez haya terminado, haga clic en **siguiente** para ver la página de selección comprobar.  
@@ -34,7 +34,7 @@ Para abrir la red de análisis para que el Asistente de archivos, en la **archiv
   
 Para seleccionar un archivo que desea agregar a SSMA, active la casilla situada junto al nombre de archivo. Una vez haya terminado, haga clic en **siguiente** para ver la página de finalización.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Seleccionar todo**  
 Seleccione esta casilla de verificación para seleccionar todas las bases de datos en la lista.  
   

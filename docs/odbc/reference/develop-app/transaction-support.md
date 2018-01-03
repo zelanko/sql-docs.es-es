@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ac759747a088f98f1426afedf8623169d91b113f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4964565ce7de30b30fa3dc4c7705c5656ebcb88b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transaction-support"></a>Compatibilidad con transacciones
 El grado de compatibilidad con transacciones es definido por el controlador. ODBC está diseñado para que se implementen en una base de datos de usuario único o de escritorio que no tiene necesidad de administrar varias actualizaciones para sus datos. Además, algunas bases de datos que admiten transacciones realizar solamente para las instrucciones de lenguaje de manipulación de datos (DML) de SQL; hay restricciones o semántica de transacción especiales con respecto al uso del lenguaje de definición de datos (DDL) cuando una transacción está activa. Es decir, puede haber compatibilidad con transacciones actualizaciones simultáneas de varias tablas, pero no para cambiar el número y la definición de tablas durante una transacción.  

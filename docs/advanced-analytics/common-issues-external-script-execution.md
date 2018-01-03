@@ -2,10 +2,10 @@
 title: "Problemas comunes con la ejecución de scripts externos en SQL Server | Documentos de Microsoft"
 ms.custom: SQL2016_New_Updated
 ms.date: 10/11/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e1dfc244fbe77d7938853cf6c1109e190c464436
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4f515ba26c4eeae70eaf9244c0eaedaa954954b4
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Problemas comunes con la ejecución de scripts externos en SQL Server
 
@@ -191,9 +191,9 @@ Si ha instalado y, a continuación, habilita el aprendizaje automático, pero es
 
 4. Reiniciar el servicio normalmente corrige el problema para que puedan ejecutarse los scripts de aprendizaje de máquina. Si el reinicio no soluciona el problema, tenga en cuenta la ruta de acceso y los argumentos en la **ruta de acceso binaria** propiedad y haga lo siguiente:
 
-    a. Revise el archivo .config del iniciador y asegúrese de que el directorio de trabajo es válido.
+    A. Revise el archivo .config del iniciador y asegúrese de que el directorio de trabajo es válido.
 
-    b. Asegúrese de que el grupo de Windows que se usa por Launchpad puede conectarse a la instancia de SQL Server, como se describe en el [sección anterior](#bkmk_LaunchpadTS).
+    B. Asegúrese de que el grupo de Windows que se usa por Launchpad puede conectarse a la instancia de SQL Server, como se describe en el [sección anterior](#bkmk_LaunchpadTS).
 
     c. Si cambia cualquiera de las propiedades del servicio, reinicie el servicio Launchpad.
 

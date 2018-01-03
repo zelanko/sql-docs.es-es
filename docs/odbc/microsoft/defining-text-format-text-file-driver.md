@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 224a4c7f7c2540d78c69dc7c1ed61267db564261
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 77ccccd8ea0a26c48f5d817ea5b9c0163d8a3cb6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="defining-text-format-text-file-driver"></a>Definir el formato de texto (controlador de archivo de texto)
 Cuando se utiliza el controlador de texto, puede usar el **Definir formato de texto** cuadro de diálogo para definir el formato de columnas en un archivo seleccionado. Este cuadro de diálogo permite especificar el esquema para cada tabla de datos. Esta información se escribe en un archivo Schema.ini en el directorio de origen de datos. Se crea un archivo Schema.ini independiente para cada directorio de origen de datos de texto.  
@@ -49,4 +49,4 @@ Cuando se utiliza el controlador de texto, puede usar el **Definir formato de te
 |**Quitar**|Elimina la columna seleccionada.|  
 |**Filas para explorar**|El número de filas que el programa de instalación o el controlador explorarán cuando se establezcan las columnas y los tipos de datos de columna basados en datos existentes.<br /><br /> Puede escribir un número entre 1 y 32767 para el número de filas que se va a buscar. El valor predeterminado es 25 if el formato del elemento seleccionado en el **tablas** lista no se ha definido anteriormente en este cuadro de diálogo. (Un número que está fuera del límite devolverá un error.)|  
 |**Tablas**|Contiene una lista de todos los archivos en el directorio seleccionado en el **el programa de instalación de texto** cuadro de diálogo que coinciden con la lista de las extensiones especificadas.<br /><br /> Cuando \<predeterminado > está seleccionada, y uno de los siguientes es true, los valores de los atributos de tabla en la **tablas** grupo se escriben en Schema.ini (no hay otras entradas de Schema.ini modificadas):<br /><br /> -No hay ningún Schema.ini en el directorio especificado.<br />-El archivo Schema.ini existe, pero no hay ninguna sección de Schema.ini para uno de los archivos de texto (con la extensión especificada) en el directorio.<br />-La sección de un archivo de texto existe en Schema.ini, pero el cuerpo está vacío.<br /><br /> Cuando \<predeterminado > está seleccionada, el **columnas** grupo está deshabilitado.|  
-|**Ancho**|El ancho de la columna se puede cambiar para columnas CHAR o LONGCHAR. El ancho predeterminado es 1 si el formato del elemento seleccionado en el **tablas** lista no se ha definido anteriormente en este cuadro de diálogo.<br /><br /> Para otros tipos de datos, el ancho del control está deshabilitado y se muestra ningún valor.|
+|**Width**|El ancho de la columna se puede cambiar para columnas CHAR o LONGCHAR. El ancho predeterminado es 1 si el formato del elemento seleccionado en el **tablas** lista no se ha definido anteriormente en este cuadro de diálogo.<br /><br /> Para otros tipos de datos, el ancho del control está deshabilitado y se muestra ningún valor.|

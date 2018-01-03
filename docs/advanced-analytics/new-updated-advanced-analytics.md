@@ -7,23 +7,24 @@ author: MightyPen
 manager: jhubbard
 editor: 
 ms.service: 
-ms.component: advanced-analytics
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.reviewer: 
 ms.suite: sql
-ms.topic: updart-autogen
-ms.technology: database-engine
+ms.technology: r-services
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
+ms.topic: article
 ms.date: 12/02/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
 ms.author: genemi
-ms.workload: advanced-analytics
-ms.openlocfilehash: 840e34eee090d9fba2ec25e10375a8b0c375fea4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.workload: 
+ms.openlocfilehash: c73c6295f7b6e2a23c947ab65160032ce83264e1
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="new-and-recently-updated-advanced-analytics-for-sql-server"></a>Nuevos y actualizados recientemente: análisis avanzados para SQL Server
 
@@ -37,7 +38,7 @@ Se informa de las actualizaciones recientes del siguiente intervalo de fechas y 
 
 
 
-- *Intervalo de fechas de las actualizaciones:* &nbsp; **2017-09-28** &nbsp; - a - &nbsp; **2017-12-02**
+- *Intervalo de fechas de las actualizaciones:* &nbsp; **28-09-2017** &nbsp; a &nbsp; **02-12-2017**
 - *Área de asunto:* &nbsp; **Advanced Analytics para SQL Server**.
 
 <!-- Repo = 'MicrosoftDocs/sql-docs'.   Branch = 'live'. -->
@@ -745,7 +746,7 @@ El ejemplo siguiente muestra los argumentos necesarios para realizar un silencio
 
 ### <a name="14-nbsp-step-3-explore-and-visualize-the-datatutorialssqldev-py3-explore-and-visualize-the-datamd"></a>14. &nbsp;[Paso 3: explorar y visualizar los datos](tutorials/sqldev-py3-explore-and-visualize-the-data.md)
 
-*Actualizado: 2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([anterior](#TitleNum_13))
+*Actualización: 30-11-2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([anterior](#TitleNum_13))
 
 <!-- Source markdown line 66.  ms.author= "jeannt".  -->
 
@@ -795,26 +796,26 @@ En esta sección se enumeran artículos muy similares a los artículos actualiza
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Áreas temáticas con artículos nuevos o actualizados recientemente
 
-- [Nuevos y actualizados (3 + 14): **Advanced Analytics para SQL** documentos](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nuevos + Actualizados (3+14): documentos de **Análisis avanzado para SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
 - [Nuevos + Actualizados (1+0): documentos de **Analysis Services para SQL**](../analysis-services/new-updated-analysis-services.md)
-- [Nuevos y actualizados (87 + 0): **Analytics Platform System para SQL** documentos](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Nuevos y actualizados (4 de 5 +): **conectar con SQL Server** documentos](../connect/new-updated-connect.md)
-- [Nuevos y actualizados (0 + 1): **motor de base de datos de SQL** documentos](../database-engine/new-updated-database-engine.md)
-- [Nuevos y actualizados (2 + 2): **Integration Services para SQL** documentos](../integration-services/new-updated-integration-services.md)
-- [Nuevos y actualizados (10 + 9): **Linux para SQL** documentos](../linux/new-updated-linux.md)
-- [Nuevos y actualizados (2 + 4): **bases de datos relacionales de SQL** documentos](../relational-databases/new-updated-relational-databases.md)
-- [Nuevos y actualizados (4 + 2): **Reporting Services para SQL** documentos](../reporting-services/new-updated-reporting-services.md)
-- [Nuevos y actualizados (0 + 1): **ejemplos para SQL** documentos](../sample/new-updated-sample.md)
-- [Nuevos y actualizados (21 + 0): **Studio de operaciones SQL** documentos](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Nuevos y actualizados (5 + 1): **Microsoft SQL Server** documentos](../sql-server/new-updated-sql-server.md)
+- [Nuevos + Actualizados (87+0): documentos de **Analytics Platform System para SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Nuevos + Actualizados (5+4): documentos de **Conexión a SQL**](../connect/new-updated-connect.md)
+- [Nuevos + Actualizados (0+1): documentos de **Motor de base de datos de SQL**](../database-engine/new-updated-database-engine.md)
+- [Nuevos + Actualizados (2+2): documentos de **Integration Services para SQL**](../integration-services/new-updated-integration-services.md)
+- [Nuevos + Actualizados (10+9): documentos de **Linux para SQL**](../linux/new-updated-linux.md)
+- [Nuevos + Actualizados (2+4): documentos de **Bases de datos relacionales para SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Nuevos + Actualizados (4+2): documentos de **Reporting Services para SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Nuevos + Actualizados (0+1): documentos de **Ejemplos para SQL**](../sample/new-updated-sample.md)
+- [Nuevos + Actualizados (21+0): documentos de **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Nuevos + Actualizados (5+1): documentos de **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
 - [Nuevos + Actualizados (0+1): documentos de **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Nuevos y actualizados (1 + 0): **SQL Server Migration Assistant (SSMA)** documentos](../ssma/new-updated-ssma.md)
+- [Nuevos + Actualizados (1+0): documentos de **SQL Server Migration Assistant (SSMA)**](../ssma/new-updated-ssma.md)
 - [Nuevos + Actualizados (0+1): documentos de **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Nuevos y actualizados (0 + 2): **Transact-SQL** documentos](../t-sql/new-updated-t-sql.md)
+- [Nuevos + Actualizados (0+2): documentos de **Transact-SQL**](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Áreas temáticas sin artículos nuevos ni actualizados recientemente
 
-- [Nuevos y actualizados (0 + 0): **datos migración Ayudante (DMA) para SQL** documentos](../dma/new-updated-dma.md)
+- [Nuevos + Actualizados (0+0): documentos de **Data Migration Assistant (DMA) para SQL**](../dma/new-updated-dma.md)
 - [Nuevos + Actualizados (0+0): documentos de **Objetos de datos ActiveX (ADO) para SQL**](../ado/new-updated-ado.md)
 - [Nuevos + Actualizados (0+0): documentos de **Data Quality Services para SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Nuevos + Actualizados (0+0): documentos de **Extensiones de minería de datos (DMX) para SQL**](../dmx/new-updated-dmx.md)

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f926f312b1696b3fcc3433e6234dc0f44005b7cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1992b3fc6d6013859c1bdd46d119f633db46acfc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scrollable-cursors"></a>Cursores desplazables
 En las aplicaciones modernas basado en pantalla, el usuario se desplaza hacia atrás y hacia delante a través de los datos. Para estas aplicaciones, volver a una fila recopilada previamente es un problema. Una posibilidad es cerrar y volver a abrir el cursor y, a continuación, capturar las filas hasta que el cursor alcanza la fila necesaria. Otra posibilidad consiste en leer el conjunto de resultados, almacenarla en la caché local e implementar el desplazamiento en la aplicación. Ambas posibilidades también solo funcionan con conjuntos de resultados pequeños, y la posibilidad de este última es difícil de implementar. Una solución mejor es usar un *un cursor desplazable,* que puede avanzar y retroceder en el conjunto de resultados.  

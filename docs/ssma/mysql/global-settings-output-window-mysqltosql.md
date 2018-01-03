@@ -1,7 +1,7 @@
 ---
 title: "Configuración global (ventana de salida) (MySQLToSQL) | Documentos de Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ce40c47ae11bd7abcdf636e97fb817603e46953
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 72544e31e9b1681f7da2dbda7fef6d959297f168
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-output-window-mysqltosql"></a>Configuración global (ventana de salida) (MySQLToSQL)
 Use la **configuración Global** cuadro de diálogo para especificar la configuración de SSMA.  
   
 Para acceder a la configuración de la ventana de salida, en la **herramientas** menú, seleccione **configuración Global**, haga clic en **GUI** en la parte inferior del panel izquierdo y, a continuación, seleccione **resultados (ventana)**.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Mostrar el panel de lista de errores**  
 Seleccione **True** si desea SSMA para mostrar el panel de la lista de errores cuando hay mensajes.  
   

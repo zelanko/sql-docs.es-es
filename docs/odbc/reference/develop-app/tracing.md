@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 808eab22673e0ca69671a8209b48bd283a2cb476
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 780cbed9bb417c32b6a7ed33f68e4671c612ca6e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tracing"></a>Seguimiento
 El Administrador de controladores ODBC tiene una utilidad de seguimiento que permite a la secuencia de llamadas a funciones realizadas por una aplicación ODBC se registran y transcripción en un archivo de registro. El seguimiento se realiza mediante una DLL de seguimiento que captura llamadas realizadas entre la aplicación y el Administrador de controladores y entre el Administrador de controladores y el controlador. Este método de creación de trazas sustituye el seguimiento realizado por la API ODBC 2*.x* Administrador de controladores y el seguimiento se realizan en ODBC 2*.x* por ODBC Spy.  

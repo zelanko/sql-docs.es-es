@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2a191cb539aec61150f30d8c083dfba7dd2d2069
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2dabd364fb0a7415a4cf05035d06f5a1dd5838e5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Apéndice B: tablas de transición de estado de ODBC
 Las tablas de este apéndice muestran cómo hacen que las transiciones del entorno, conexión, instrucción y Estados de descriptor funciones ODBC. Normalmente, el estado del entorno, conexión, instrucción o descriptor dicta cuando puede llamar a funciones que usan el tipo de identificador (entorno, conexión, instrucción o descriptor) correspondiente. Los Estados de entorno, conexión, instrucción y descriptor se superponen aproximadamente tal como se muestra en la siguiente ilustración. Por ejemplo, la superposición de conexión exacta Estados C5 y C6 y Estados de instrucción que s1 a través de S12 es, depende del origen de datos, ya que las transacciones empiezan en momentos diferentes en distintos orígenes de datos, y depende del estado de descriptor D1i (implícitamente asignado descriptor) en el estado de la instrucción que está asociado el descriptor, mientras que el estado D1e (asignado explícitamente descriptor) es independiente del estado de cualquier instrucción. Para obtener una descripción de cada estado, vea [transiciones de entorno](../../../odbc/reference/appendixes/environment-transitions.md), [conexión transiciones](../../../odbc/reference/appendixes/connection-transitions.md), [transiciones de instrucción](../../../odbc/reference/appendixes/statement-transitions.md), y [Descriptor transiciones ](../../../odbc/reference/appendixes/descriptor-transitions.md), más adelante en este apéndice.  

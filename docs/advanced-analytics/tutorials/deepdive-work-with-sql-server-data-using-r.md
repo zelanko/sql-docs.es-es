@@ -1,30 +1,35 @@
 ---
-title: Trabajar con datos de SQL Server con R | Documentos de Microsoft
-ms.custom: SQL2016_New_Updated
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+title: "Trabajar con datos de SQL Server con R (SQL y R profundización) | Documentos de Microsoft"
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 0a3d7ba0-4113-4cde-9645-debba45cae8f
 caps.latest.revision: "20"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 2e8e8d4d802e2a940127fff8f6ecd0f831e6711a
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 55eae1d572b8416cafc3774229ddaad91314a61e
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="work-with-sql-server-data-using-r"></a>Trabajar con datos de SQL Server con R
+# <a name="work-with-sql-server-data-using-r-sql-and-r-deep-dive"></a>Trabajar con datos de SQL Server con R (SQL y R profundización)
 
-En esta lección, configurará el entorno, agregará los datos que necesita para entrenar los modelos y ejecutará algunos resúmenes rápidos de los datos. Como parte del proceso, llevará a cabo estas tareas:
+Este artículo forma parte del tutorial exhaustiva de ciencia de datos, acerca de cómo usar [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+
+En esta lección, configurar el entorno y agregar los datos que necesita para entrenar los modelos y ejecutar algunos rápidos resúmenes de los datos. Como parte del proceso, debe completar estas tareas:
   
 - Crear una base de datos para almacenar los datos destinados a entrenar y puntuar dos modelos de R.
   
@@ -38,16 +43,16 @@ En esta lección, configurará el entorno, agregará los datos que necesita para
   
 - Crear un contexto de proceso para habilitar la ejecución remota de código R.
   
-- Aprender a habilitar el seguimiento en el contexto de proceso remoto.
+- (Opcional) Habilitar el seguimiento en el contexto de proceso remoto.
   
 ## <a name="create-the-database-and-user"></a>Crear la base de datos y el usuario
 
-Para este tutorial, creará una base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]y agregará un inicio de sesión de SQL con permisos para escribir y leer datos, así como para ejecutar scripts de R.
+Para este tutorial, creará una nueva base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]y agregar un inicio de sesión SQL con permisos para escribir y leer datos y para ejecutar scripts de R.
 
 > [!NOTE]
-> Si solo está leyendo datos, la cuenta que ejecuta los scripts de R requiere solo permisos SELECT (**db_datareader** rol) en la base de datos especificada. Pero en este tutorial necesitará privilegios de administrador DDL para preparar la base de datos y crear tablas para guardar los resultados de puntuación.
+> Si solo está leyendo datos, la cuenta que ejecuta los scripts de R requiere permisos SELECT (**db_datareader** rol) en la base de datos especificada. Sin embargo, en este tutorial, debe tener privilegios de administrador DDL que se va a preparar la base de datos como crear tablas para guardar los resultados de puntuación.
 > 
-> Además, si no es el propietario de la base de datos, necesitará el permiso EXECUTE ANY EXTERNAL SCRIPT, para poder ejecutar scripts de R.
+> Además, si no es el propietario de la base de datos, necesita el permiso EXECUTE ANY EXTERNAL SCRIPT, para ejecutar scripts de R.
 
 1. En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], seleccione la instancia donde está habilitado [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] , haga clic con el botón derecho en **Bases de datos**y seleccione **Nueva base de datos**.
   
@@ -100,23 +105,23 @@ En esta sección se enumeran algunos problemas comunes que podrían surgir duran
   
     Si no quiere instalar herramientas adicionales de administración de bases de datos, puede crear una conexión de prueba a la instancia de SQL Server mediante el [Administrador de orígenes de datos ODBC](https://msdn.microsoft.com/library/ms714024.aspx) en el Panel de control. Si la base de datos está configurada correctamente y escribe el nombre de usuario y la contraseña correctos, verá la base de datos que acaba de crear y podrá seleccionarla como la base de datos predeterminada.
   
-    Si no se puede conectar a la base de datos, compruebe que las conexiones remotas están habilitadas para el servidor y que se ha habilitado el protocolo Canalizaciones con nombre. En [este artículo](http://social.technet.microsoft.com/wiki/contents/articles/2102.how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)encontrará más sugerencias para solucionar problemas.
+    Si no se puede conectar a la base de datos, compruebe que las conexiones remotas están habilitadas para el servidor y que se ha habilitado el protocolo Canalizaciones con nombre. Se proporcionan varias sugerencias de solución de problemas adicionales en este artículo: [solucionar problemas de conexión para el motor de base de datos de SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
   
 - **¿Por qué el nombre de la tabla tiene como prefijo "datareader"?**
   
-    Cuando se especifica el esquema predeterminado para este usuario como **db_datareader**, todas las tablas y los objetos que este usuario cree tendrán como prefijo este *esquema*. Un esquema es como una carpeta que puede agregar a una base de datos para organizar objetos. El esquema también define los privilegios de un usuario en la base de datos.
+    Cuando se especifica el esquema predeterminado para este usuario como **db_datareader**, todas las tablas y otros objetos nuevos creados por este usuario tienen el prefijo con el *esquema* nombre. Un esquema es como una carpeta que puede agregar a una base de datos para organizar objetos. El esquema también define los privilegios de un usuario en la base de datos.
   
-    Cuando el esquema se asocia con un nombre de usuario determinado, el usuario es el propietario del esquema. Cuando crea un objeto, siempre lo crea en su propio esquema, a menos que solicite específicamente que se cree en otro esquema.
+    Si el esquema se asocia con un nombre de usuario en particular, el usuario es el _propietario del esquema_. Cuando crea un objeto, siempre lo crea en su propio esquema, a menos que solicite específicamente que se cree en otro esquema.
   
-    Por ejemplo, si crea una tabla denominada *TestData* y el esquema predeterminado es **db_datareader**, la tabla se creará con el nombre *<nombre_de_base_de_datos>.db_datareader.TestData*.
+    Por ejemplo, si crea una tabla con el nombre `*`TestData`, and your default schema is **db\_datareader**, the table is created with the name `.db_datareader < database_name >. TestData'.
   
     Por esta razón, una base de datos puede contener varias tablas con el mismo nombre, siempre y cuando las tablas pertenezcan a esquemas diferentes.
    
-    Si busca una tabla y no especifica un esquema, el servidor de bases de datos buscará un esquema de su propiedad. Por lo tanto, no hace falta que especifique el nombre de esquema al tener acceso a tablas en un esquema asociado a su inicio de sesión.
+    Si está buscando una tabla y no especifica un esquema, el servidor de base de datos busca un esquema perteneciente al usuario. Por lo tanto, no hace falta que especifique el nombre de esquema al tener acceso a tablas en un esquema asociado a su inicio de sesión.
   
 - **No tengo privilegios DDL. ¿Puedo ejecutar el tutorial igualmente?**
   
-    Sí, pero debe pedirle a alguien que cargue previamente los datos en las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y omitir las secciones en las que se crean tablas. Por lo general, las funciones que requieren privilegios DDL están indicadas en el tutorial.
+    Sí, pero debe pedirle a alguien que cargue previamente los datos en las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y omitir las secciones en las que se crean tablas. Las funciones que requieren privilegios DDL se indican en el tutorial siempre que sea posible.
 
     Además, pida al administrador que le conceda el permiso EXECUTE ANY EXTERNAL SCRIPT. Es necesario para la ejecución de script de R, si es remoto o mediante `sp_execute_external_script`.
 

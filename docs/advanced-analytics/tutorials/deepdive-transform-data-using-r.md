@@ -1,28 +1,33 @@
 ---
-title: Transformar datos mediante R | Documentos de Microsoft
-ms.custom: SQL2016_New_Updated
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+title: "Transformar datos con R (SQL y R profundización) | Documentos de Microsoft"
+ms.date: 12/24/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 0327e788-94cc-4a47-933b-7c5c027b9208
 caps.latest.revision: "19"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ebc10cd4169f48956ab6b9a770b46c1c11cad6f3
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: b55b2a0ae152cc0fb00d21a7c1221bc3dcdcbcc7
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="transform-data-using-r"></a>Transformar datos mediante R
+# <a name="transform-data-using-r-sql-and-r-deep-dive"></a>Transformar datos con R (SQL y R profundización)
+
+Este artículo forma parte del tutorial exhaustiva de ciencia de datos, acerca de cómo usar [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
 El paquete **RevoScaleR** proporciona varias funciones para transformar los datos en distintas fases del análisis:
 
@@ -32,32 +37,32 @@ El paquete **RevoScaleR** proporciona varias funciones para transformar los dato
 
 - Aunque no son específicas para el movimiento de datos, las funciones **rxSummary**, **rxCube**, **rxLinMod**y **rxLogit** admiten transformaciones de datos.
 
-En esta sección, aprenderá a usar estas funciones. Comencemos con rxDataStep.
+En esta sección, aprenderá a usar estas funciones. Comenzaremos con [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep).
 
-## <a name="use-rxdatastep-to-transform-variables"></a>Usar rxDataStep para transformar variables
+## <a name="use-rxdatastep-to-transform-variables"></a>Utilizar rxDataStep para transformar las variables
 
-La función rxDataStep procesa un fragmento de datos al mismo tiempo, leer desde un origen de datos y escribir en otro. Puede especificar las columnas que se van a transformar, las transformaciones que se van a cargar, etc.
+La función **rxDataStep** procesa un fragmento de datos cada vez. Para ello, lo lee en un origen de datos y lo escribe en otro. Puede especificar las columnas que se van a transformar, las transformaciones que se van a cargar, etc.
 
-Para que este ejemplo sea interesante, usará una función de otro paquete de R para transformar los datos.  El paquete **boot** es uno de los paquetes "recomendados", lo que significa que **boot** se incluye con todas las distribuciones de R, pero no se carga automáticamente en el inicio. Por lo tanto, el paquete ya debe de estar disponible en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ha usado con [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
+Para hacer interesante en este ejemplo, vamos a usar una función de otro paquete de R para transformar los datos.  El paquete **boot** es uno de los paquetes "recomendados", lo que significa que **boot** se incluye con todas las distribuciones de R, pero no se carga automáticamente en el inicio. Por lo tanto, el paquete ya debe de estar disponible en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ha usado con [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
 
-Desde el paquete **boot** , usará la función `inv.logit`que calcula el inverso de una función logit. Es decir, la función `inv.logit` convierte una función logit a una probabilidad en la escala [0,1].
+Desde el **arranque** del paquete, utilice la función `inv.logit`, que calcula el inverso de un logit. Es decir, la función `inv.logit` convierte una función logit a una probabilidad en la escala [0,1].
 
 > [!TIP] 
 > Otra manera de obtener predicciones de esta escala sería establecer la *tipo* parámetro **respuesta** en la llamada original a rxPredict.
 
-1. Empiece creando un origen de datos para almacenar los datos destinados a la tabla *ccScoreOutput*.
+1. Empiece por crear un origen de datos para almacenar los datos destinados a la tabla, `ccScoreOutput`.
   
     ```R
     sqlOutScoreDS <- RxSqlServerData( table =  "ccScoreOutput",  connectionString = sqlConnString, rowsPerRead = sqlRowsPerRead )
     ```
   
-2. Agregue otro origen de datos para almacenar los datos para la tabla ccScoreOutput2.
+2. Agregar otro origen de datos para almacenar los datos de la tabla `ccScoreOutput2`.
   
     ```R
     sqlOutScoreDS2 <- RxSqlServerData( table =  "ccScoreOutput2",  connectionString = sqlConnString, rowsPerRead = sqlRowsPerRead )
     ```
   
-    En la tabla nueva, obtendrá todas las variables de la tabla *ccScoreOutput* anterior, además de la variable recién creada.
+    En la nueva tabla, almacenar todas las variables de la anterior `ccScoreOutput` tabla, así como la variable creada recientemente.
   
 3. Establezca el contexto de proceso en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
@@ -65,13 +70,13 @@ Desde el paquete **boot** , usará la función `inv.logit`que calcula el inverso
     rxSetComputeContext(sqlCompute)
     ```
   
-4. Use la función rxSqlServerTableExists para comprobar si la tabla de salida *ccScoreOutput2* ya existe; y si es así, utilice la función rxSqlServerDropTable para eliminar la tabla.
+4. Use la función **rxSqlServerTableExists** para comprobar si la tabla de salida `ccScoreOutput2` ya existe; y si es así, use la función **rxSqlServerDropTable** para eliminar la tabla.
   
     ```R
     if (rxSqlServerTableExists("ccScoreOutput2"))     rxSqlServerDropTable("ccScoreOutput2")
     ```
   
-5. Llame a la función rxDataStep y especificar las transformaciones deseadas en una lista.
+5. Llame a la función **rxDataStep** y especifique las transformaciones deseadas en una lista.
   
     ```R
     rxDataStep(inData = sqlOutScoreDS,
@@ -81,9 +86,9 @@ Desde el paquete **boot** , usará la función `inv.logit`que calcula el inverso
         overwrite = TRUE)
     ```
 
-    Al definir las transformaciones que se aplican a cada columna, también puede especificar los paquetes de R adicionales que se necesitan para realizar las transformaciones.  Para obtener más información sobre los tipos de transformaciones que puede realizar, consulte  [Transformar y crear un subconjunto de datos](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-data-transform).
+    Al definir las transformaciones que se aplican a cada columna, también puede especificar los paquetes de R adicionales que se necesitan para realizar las transformaciones.  Para obtener más información acerca de los tipos de transformaciones que puede realizar, vea [cómo transformar y el subconjunto de los datos con RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-transform).
   
-6. Llame a rxGetVarInfo para ver un resumen de las variables en el nuevo conjunto de datos.
+6. Llame a **rxGetVarInfo** para ver un resumen de las variables del nuevo conjunto de datos.
   
     ```R
     rxGetVarInfo(sqlOutScoreDS2)
@@ -111,7 +116,7 @@ Desde el paquete **boot** , usará la función `inv.logit`que calcula el inverso
 
 Las puntuaciones originales de la función logit se conservan, pero se ha agregado una nueva columna, *ccFraudProb*, en la que las puntuaciones de la función logit se representan como valores comprendidos entre 0 y 1.
 
-Observe que las variables de factor se han escrito en la tabla *ccScoreOutput2* como datos de caracteres.  Para usarlos como factores en análisis posteriores, use el parámetro *colInfo* para especificar los niveles.
+Tenga en cuenta que las variables de factor se han escrito en la tabla `ccScoreOutput2` como datos de caracteres. Para usarlos como factores en análisis posteriores, use el parámetro *colInfo* para especificar los niveles.
 
 ## <a name="next-step"></a>Paso siguiente
 
@@ -119,4 +124,4 @@ Observe que las variables de factor se han escrito en la tabla *ccScoreOutput2* 
 
 ## <a name="previous-step"></a>Paso anterior
 
-[Crear y ejecutar Scripts de R](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
+[Crear y ejecutar scripts de R](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)

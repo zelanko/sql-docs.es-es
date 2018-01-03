@@ -3,10 +3,10 @@ title: Desinstalar actualizaciones de Microsoft (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,18 +16,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: df61570a-210d-4154-822f-98acd721f075
 caps.latest.revision: "19"
-ms.openlocfilehash: c801918cbac5d0762384a0cd3adcca9ddf8f346a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 52bd212a753f4bb69c79d8b8e274664d2100cbee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uninstall-microsoft-updates"></a>Desinstalar actualizaciones de Microsoft
 En este tema se describe cómo desinstalar una actualización de Microsoft instalada previamente en el dispositivo de sistema de la plataforma de análisis.  
   
 ## <a name="before-you-begin"></a>Antes de comenzar  
   
-### <a name="prerequisites"></a>Requisitos previos  
+### <a name="prerequisites"></a>Prerequisites  
 Para llevar a cabo estos pasos, necesitará:  
   
 -   Un inicio de sesión de sistema de la plataforma de análisis con permisos para tener acceso a la consola de administración para supervisar el dispositivo.  

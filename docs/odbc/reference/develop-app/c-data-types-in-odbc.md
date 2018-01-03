@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b042185cb49c00e61d090934a9c8ed8d2258059f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 713b9448ecb70b57f0aace7f05aa9b977511323b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-data-types-in-odbc"></a>Tipos de datos C en ODBC
 ODBC define los tipos de datos de C que usan variables de aplicación y sus identificadores de tipo correspondiente. Se utilizan por los búferes que están enlazados a columnas del conjunto de resultados y parámetros de la instrucción. Por ejemplo, supongamos que desea que una aplicación recuperar datos de una columna de conjunto de resultados en formato de caracteres. Declara una variable con el SQLCHAR * tipo de datos y enlaza esta variable a la columna del conjunto de resultados con un identificador de tipo de SQL_C_CHAR. Para obtener una lista completa de tipos de datos de C y los identificadores de tipo, consulte [tipos de datos de apéndice D:](../../../odbc/reference/appendixes/appendix-d-data-types.md).  

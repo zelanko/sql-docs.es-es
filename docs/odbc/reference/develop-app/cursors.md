@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 79f78fed6b8b3c2624e9c9fc7617df3dde797bda
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fc2d15d949561f28cf7b9fa653ebf34c602c29bb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cursors"></a>Cursores
 Una aplicación captura los datos con un *cursor*. Un cursor es diferente de un conjunto de resultados: un conjunto de resultados es el conjunto de filas que coincide con los criterios de búsqueda determinada, mientras que un cursor es el software que devuelve las filas a la aplicación. El nombre *cursor,* tal como se aplica a las bases de datos, probablemente se ha originado el cursor parpadeante en un equipo de terminal. Igual que ese cursor indica la posición actual en la pantalla y donde las palabras con tipo aparecerá siguientes, un cursor en un conjunto de resultados indica la posición actual en el conjunto de resultados y qué filas se devolverán a continuación.  

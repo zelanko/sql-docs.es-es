@@ -1,39 +1,43 @@
 ---
-title: Puntuar nuevos datos | Documentos de Microsoft
+title: "Puntuar nuevos datos (SQL y R profundización) | Documentos de Microsoft"
 ms.custom: 
-ms.date: 05/18/2016
-ms.prod: sql-non-specified
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 87056467-f67f-4d72-a83c-ac052736d85d
 caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 83beab637e3740dc41706c34ccfacffe985f2957
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 54cc4dd297357407592c953b54e04d0ae024f7aa
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="score-new-data"></a>Puntuación de nuevos datos
+# <a name="score-new-data-sql-and-r-deep-dive"></a>Puntuar nuevos datos (SQL y R profundización)
 
-Ahora que tiene un modelo que puede usar para las predicciones, introducirá datos de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para generar algunas predicciones.
+Este artículo forma parte del tutorial exhaustiva de ciencia de datos, acerca de cómo usar [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-Usará el modelo de regresión logística, *logitObj*, para crear puntuaciones para otro conjunto de datos que usa las mismas variables independientes como entradas.
+En este paso, se utiliza el modelo de regresión logística que creó anteriormente, para crear puntuaciones para otro conjunto de datos que usa las mismas variables independientes como entradas.
 
 > [!NOTE]
-> Se necesitan privilegios de administrador de DDL para algunos de estos pasos.
+> Se necesitan privilegios de administrador DDL para algunos de estos pasos.
 
 ## <a name="generate-and-save-scores"></a>Generar y guardar las puntuaciones
   
-1. Actualice el origen de datos que ha configurado anteriormente, *sqlScoreDS*, para agregar la información de columna requerida.
+1. Actualizar el origen de datos que configuró anteriormente, `sqlScoreDS`, para agregar la información de columna necesaria.
   
     ```R
     sqlScoreDS <- RxSqlServerData(
@@ -43,14 +47,14 @@ Usará el modelo de regresión logística, *logitObj*, para crear puntuaciones p
         rowsPerRead = sqlRowsPerRead)
     ```
   
-2. Para asegurarse de no perder los resultados, creará un nuevo objeto de origen de datos y lo usará para rellenar una nueva tabla en la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+2. Para asegurarse de que no perderá los resultados, cree un nuevo objeto de origen de datos. A continuación, utilice el nuevo objeto de origen de datos para rellenar una tabla nueva en la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos.
   
     ```R
     sqlServerOutDS <- RxSqlServerData(table = "ccScoreOutput",
         connectionString = sqlConnString,
         rowsPerRead = sqlRowsPerRead )
     ```
-     En este punto, la tabla no se ha creado. Esta instrucción solo define un contenedor para los datos.
+    En este punto, la tabla no se ha creado. Esta instrucción solo define un contenedor para los datos.
      
 3. Compruebe el contexto del proceso actual y establezca el contexto de proceso en el servidor si es necesario.
   
@@ -66,10 +70,11 @@ Usará el modelo de regresión logística, *logitObj*, para crear puntuaciones p
     if (rxSqlServerTableExists("ccScoreOutput"))     rxSqlServerDropTable("ccScoreOutput")
     ```
   
-    -  La función rxSqlServerTableExists consulta el controlador ODBC y devuelve TRUE si la tabla existe, FALSE en caso contrario.
-    -  La función de rxSqlServerDropTable de función ejecuta el archivo DDL y devuelve TRUE si se quita la tabla correctamente, FALSE en caso contrario.
+    -  La función **rxSqlServerTableExists** consulta el controlador ODBC y devuelve TRUE si la tabla existe o FALSE en caso contrario.
+    -  La función **rxSqlServerDropTable** ejecuta el DDL y devuelve TRUE si la tabla está correctamente quita, FALSE en caso contrario.
+    - Referencia para las dos funciones se pueden encontrar aquí: [rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable)
   
-5. Ahora ya está listo para usar la función **rxPredict** para crear las puntuaciones y guardarlas en la nueva tabla definida en el origen de datos *sqlScoreDS*.
+5. Ahora está listo para usar el [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) función para crear las puntuaciones y guardarlas en la nueva tabla definida en el origen de datos `sqlScoreDS`.
   
     ```R
     rxPredict(modelObject = logitObj,
@@ -81,17 +86,17 @@ Usará el modelo de regresión logística, *logitObj*, para crear puntuaciones p
         overwrite = TRUE)
     ```
   
-    La función rxPredict es otra función que se puede ejecutar en contextos de proceso remoto. Puede usar la función rxPredict crear puntuaciones a partir de modelos creados con rxLinMod, rxLogit o rxGlm.
+    La función **rxPredict** es otra función que admite la ejecución en contextos de cálculo remotos. Puede usar la función **rxPredict** para crear puntuaciones de modelos que se han creado mediante [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod), [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)o [rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm).
   
     - El parámetro *writeModelVars* está establecido en **TRUE** aquí. Esto significa que las variables que se han usado para la estimación se incluirán en la nueva tabla.
   
-    - El parámetro *predVarNames* especifica la variable en la que se almacenarán los resultados. Aquí está pasando una nueva variable, *ccFraudLogitScore*.
+    - El parámetro *predVarNames* especifica la variable en la que se almacenarán los resultados. Aquí está pasando una nueva variable, `ccFraudLogitScore`.
   
-    - El *tipo* parámetro para rxPredict define cómo desea que las predicciones que se calcula. Especifique la palabra clave **response** para generar puntuaciones según la escala de la variable de respuesta, o use la palabra clave **link** para generar puntuaciones según la función de vínculo subyacente, en cuyo caso las predicciones estarán en una escala logística.
+    - El parámetro *type* para **rxPredict** define cómo quiere que se calculen las predicciones. Especifica la palabra clave **respuesta** para generar puntuaciones de acuerdo con la escala de la variable de respuesta. O bien, use la palabra clave **vínculo** para generar puntuaciones basadas en la función de enlace subyacente, en cuyo caso se crean predicciones utilizando una escala logística.
 
 6. Después de un tiempo, puede actualizar la lista de tablas en Management Studio para ver la nueva tabla y sus datos.
 
-7. Para agregar variables adicionales para las predicciones de salida, puede usar el argumento *extraVarsToWrite* .  Por ejemplo, en el siguiente código, se agrega la variable *custID* de la tabla de datos de puntuación a la tabla de salida de predicciones.
+7. Para agregar variables adicionales para las predicciones de salida, use el argumento *extraVarsToWrite*.  Por ejemplo, en el código siguiente, la variable `custID` se agregan desde la tabla de datos de puntuación en la tabla de salida de las predicciones.
   
     ```R
     rxPredict(modelObject = logitObj,
@@ -104,11 +109,11 @@ Usará el modelo de regresión logística, *logitObj*, para crear puntuaciones p
             overwrite = TRUE)
     ```
 
-## <a name="display-scores-in-a-histogram"></a>Mostrar puntuaciones en un histograma
+## <a name="display-scores-in-a-histogram"></a>Puntuaciones de presentación en un histograma
 
-Una vez creada la nueva tabla, se calcula y muestra un histograma de las 10 000 puntuaciones de predicción. El cálculo será más rápido si se especifican los valores superior e inferior, de modo que los obtenga de la base de datos y los agregue a los datos de trabajo.
+Una vez creada la nueva tabla, puede calcular y mostrar un histograma de los 10.000 puntuaciones de predicción. Cálculo es más rápido si especifica los valores altos y bajos, por lo que obtenerlos de la base de datos y agregarlas a los datos de trabajo.
 
-1. Cree un nuevo origen de datos, *sqlMinMax*, que consulte la base de datos para obtener los valores altos y bajos.
+1. Crear un nuevo origen de datos, `sqlMinMax`, que consulta la base de datos para obtener los valores altos y bajos.
   
     ```R
     sqlMinMax <- RxSqlServerData(
@@ -117,9 +122,9 @@ Una vez creada la nueva tabla, se calcula y muestra un histograma de las 10 000 
         connectionString = sqlConnString)
     ```
 
-     De este ejemplo, puede ver lo fácil que es usar objetos de origen de datos de RxSqlServerData para definir conjuntos de datos arbitrarios en función de las consultas SQL, funciones o procedimientos almacenados y, a continuación, utilizarlas en el código de R. La variable no almacena los valores reales, solo la definición de origen de datos; la consulta se ejecuta para generar los valores solo cuando se usa en una función como rxImport.
+     Con este ejemplo puede ver lo fácil que es usar los objetos de origen de datos **RxSqlServerData** para definir conjuntos de datos arbitrarios basados en procedimientos almacenados, funciones o consultas de SQL y, después, usarlos en su código de R. La variable no almacena los valores actuales, solo la definición de origen de datos; la consulta se ejecuta para generar los valores solo cuando la usa en una función como **rxImport**.
       
-2. Llame a la función rxImport para colocar los valores en una trama de datos que se pueden compartir entre los contextos de proceso.
+2. Llame a la [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) función para colocar los valores en una trama de datos que se pueden compartir entre los contextos de proceso.
   
     ```R
     minMaxVals <- rxImport(sqlMinMax)
@@ -132,7 +137,7 @@ Una vez creada la nueva tabla, se calcula y muestra un histograma de las 10 000 
      
      *[1] -23.970256   9.786345*
   
-3. Ahora que están disponibles los valores máximos y mínimo, utilice los valores para crear el origen de datos de puntuación.
+3. Ahora que están disponibles los valores máximos y mínimo, utilice los valores para crear otro origen de datos de las puntuaciones generadas.
   
     ```R
     sqlOutScoreDS <- RxSqlServerData(sqlQuery = "SELECT ccFraudLogitScore FROM ccScoreOutput",
@@ -143,7 +148,7 @@ Una vez creada la nueva tabla, se calcula y muestra un histograma de las 10 000 
                         high = ceiling(minMaxVals[2]) ) ) )
     ```
 
-4. Por último, use el objeto de origen de datos de puntuación para obtener los datos de puntuación, y calcular y mostrar un histograma. Agregue el código para establecer el contexto de cálculo si es necesario.
+4. Utilice el objeto de origen de datos `sqlOutScoreDS` para obtener las puntuaciones y calcular y mostrar un histograma. Agregue el código para establecer el contexto de cálculo si es necesario.
   
     ```R
     # rxSetComputeContext(sqlCompute)

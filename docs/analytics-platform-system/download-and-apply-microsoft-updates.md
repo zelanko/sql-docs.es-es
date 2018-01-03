@@ -3,10 +3,10 @@ title: Descargue y aplique las actualizaciones de Microsoft (Analytics Platform 
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,23 +16,23 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4f69df44-8549-4a8a-b10c-f91908594856
 caps.latest.revision: "51"
-ms.openlocfilehash: 806b7fd790244963d878038a3c3c291c387ebb1e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7c91a5ed97d5aedfa456fd63e16c0178c5241706
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="download-and-apply-microsoft-updates"></a>Descargue y aplique las actualizaciones de Microsoft
 Este tema describe cómo descargar actualizaciones desde el catálogo de Microsoft Update para Windows Server Update Services (WSUS) y esas actualizaciones se aplican a los servidores de dispositivo de sistema de la plataforma de análisis. Microsoft Update instalará todas las actualizaciones aplicables para Windows y SQL Server. WSUS está instalado en la máquina virtual VMM del dispositivo.  
   
-## <a name="TOP"></a>Antes de comenzar  
+## <a name="TOP"></a>Antes de empezar  
   
 > [!WARNING]  
 > No intente aplicar actualizaciones si su aplicación o cualquier componente de dispositivo está desconectado o está en un error sobre el estado. En ese caso, póngase en contacto con soporte técnico para obtener ayuda.  
 >   
 > No se aplican Microsoft Updates mientras el dispositivo está en uso. Aplicar actualizaciones para hacer que los nodos de dispositivo que se va a reiniciar. Las actualizaciones se deben aplicar durante una ventana de mantenimiento cuando el dispositivo no esté en uso.  
   
-### <a name="prerequisites"></a>Requisitos previos  
+### <a name="prerequisites"></a>Prerequisites  
 Antes de realizar estos pasos, debe:  
   
 -   Configurar WSUS en el dispositivo siguiendo las instrucciones de [configurar Windows Server Update Services &#40; WSUS &#41; &#40; Sistema de la plataforma de análisis &#41; ](configure-windows-server-update-services-wsus.md).  

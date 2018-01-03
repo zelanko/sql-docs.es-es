@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9a6655bde245348b3b70c3d29631be1b9caa60b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 87347932efb54c93c2439170ebf350e4fe411564
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transfer-octet-length"></a>Longitud de bytes de transferencia
 La longitud de bytes de transferencia de una columna es el número máximo de bytes que se devuelven a la aplicación cuando se transfieren datos a su tipo de datos C predeterminado. Para datos de caracteres, la longitud de bytes de transferencia no incluye espacio para el carácter de terminación null. La longitud de octeto de transferencia de una columna puede ser diferente del número de bytes necesarios para almacenar los datos en el origen de datos.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 73bf988f0ab1b181a75c7569c8b279b36a9b76d8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 735e28da49e0c8a9dc3a12d9a29d107209ec99dd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-collate-command"></a>Comando COLLATE Set.
 Especifica una secuencia de intercalación para los campos de carácter en posteriores indización y operaciones de ordenación.  
@@ -38,7 +38,7 @@ SET COLLATE TO cSequenceName
  *cSequenceName*  
  Especifica una secuencia de intercalación. Las opciones de secuencia de intercalación disponibles se describen en la tabla siguiente.  
   
-|Opciones|Lenguaje|  
+|.|Idioma|  
 |-------------|--------------|  
 |HOLANDÉS|Neerlandés|  
 |GENERAL|Inglés, francés, alemán, español moderno, portugués y otros idiomas de Europa occidental|  

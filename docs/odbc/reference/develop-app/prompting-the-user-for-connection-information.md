@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dc8ca40adb6a70b56d9b91842fa1fd560fc50f8a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f72a196447399b6df74de8d46fa1eee572910fac
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Preguntar al usuario información de conexión
 Si la aplicación utiliza **SQLConnect** y debe pedir al usuario ninguna información de conexión, como un nombre de usuario y una contraseña, debe hacerlo propio. Mientras que esto permite que la aplicación controlar su "apariencia y funcionamiento", se puede forzar a la aplicación para que contenga código específico del controlador. Esto se produce cuando la aplicación debe solicitar al usuario información de conexión específicos del controlador. Esto presenta una situación posible para las aplicaciones genéricas, que están diseñados para trabajar con todos los controladores, incluidos los controladores que no existen cuando se escribe la aplicación.  

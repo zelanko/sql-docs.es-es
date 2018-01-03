@@ -3,10 +3,10 @@ title: "Importar el módulo de administración de SCOM para PDW (Analytics Platf
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,16 +16,16 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fa735041-8e58-4886-ae3b-36f3c6298b12
 caps.latest.revision: "6"
-ms.openlocfilehash: 2766219fc98a1a3f0174b2c33846fcedb0b74022
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 179395b7befdf934fcc44532944f4b535b9d3c5a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="import-the-scom-management-pack-for-pdw"></a>Importar el módulo de administración de SCOM para PDW
 Siga estos pasos para importar los módulos de administración de System Center Operations Manager (SCOM) para SQL Server PDW. Los módulos de administración necesarias para supervisar SQL Server PDW de SCOM.  
   
-## <a name="BeforeBegin"></a>Antes de comenzar  
+## <a name="BeforeBegin"></a>Antes de empezar  
 **Requisitos previos**  
   
 System Center Operations Manager 2007 R2 debe estar instalado y ejecutándose.  

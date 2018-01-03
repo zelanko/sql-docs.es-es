@@ -1,7 +1,7 @@
 ---
 title: Establecer las opciones de proyecto (OracleToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -18,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 6d54418b8a89a50773ffe3c98bb3c03a5ae955cd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0022ce5df4791ba3084507810d3490db2c7ae4dd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-project-options-oracletosql"></a>Establecer las opciones del proyecto (OracleToSQL)
 Para cada proyecto SSMA puede establecer opciones de nivel de proyecto. Estas opciones especifican la conversión de objetos, la carga del objeto, la configuración de migración de datos y la interfaz de usuario. Antes de convertir objetos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o migrar datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], compruebe que las opciones de configuración son adecuadas para el proyecto.  
@@ -44,7 +44,7 @@ SSMA tiene cinco conjuntos de configuración del proyecto:
   
 También tiene cuatro modos para configurar estas opciones:  
   
--   Predeterminado  
+-   Valor predeterminado  
   
 -   Optimistic  
   
@@ -97,7 +97,7 @@ También puede personalizar la configuración del proyecto actual. Esta configur
   
 3.  Haga clic en **Aceptar** para guardar la configuración.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Next Steps  
 El siguiente paso de la migración depende de las necesidades del proyecto:  
   
 -   Para personalizar la asignación de tipos de datos de origen y de destino, vea [asignación Oracle y tipos de datos de SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md).  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 638cd5288073fa374f81a73273ed999a4697c8b2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3ca9ad7c2c1f085cf3a74ab8b824ef7c4d6df2e6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mixed-cursors"></a>Cursores mixtos
 Un cursor mixto es una combinación de un cursor controlado por conjunto de claves y un cursor dinámico. Se utiliza cuando el conjunto de resultados es demasiado grande para guardar razonablemente claves para el conjunto de resultados completo. Cursores mixtos se implementan mediante la creación de un conjunto de claves que es menor que el conjunto de resultados completo pero mayor que el conjunto de filas.  

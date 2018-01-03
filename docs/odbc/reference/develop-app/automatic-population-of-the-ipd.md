@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4a878a9ff6c0d1a00f5e551b1810ab3d6f20d44a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: be483c04101007383a4672701ac2cdfefbade862
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automatic-population-of-the-ipd"></a>Rellenado automático de la IPD
 Algunos controladores son capaces de establecer los campos de la IPD después de que se ha preparado una consulta parametrizada. Los campos del descriptor se rellenan automáticamente con la información sobre el parámetro, incluidos el tipo de datos, precisión, escala y otras características. Esto es equivalente a admitir **SQLDescribeParam**. Esta información puede ser especialmente útil para una aplicación cuando no tiene ninguna otra manera de detectar, por ejemplo, cuando se realiza una consulta ad hoc con parámetros que la aplicación no conozca.  

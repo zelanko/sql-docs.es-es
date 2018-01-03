@@ -1,7 +1,7 @@
 ---
 title: "Asignación de DB2 y tipos de datos SQL Server (DB2ToSQL) | Documentos de Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ce0e2311d040705713b51bf007b9334bccaa69ff
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 88d98ac264e853a2bc94be002c2c2e4eeadee9ff
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Asignación de DB2 y tipos de datos SQL Server (DB2ToSQL)
 Los tipos de base de datos de DB2 difieren entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos base de datos. Al convertir objetos de base de datos de DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos, debe especificar cómo se asignan los tipos de datos de DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Puede aceptar las asignaciones de tipos de datos de forma predeterminada, o puede personalizar las asignaciones como se muestra en las secciones siguientes.  
@@ -94,7 +94,7 @@ El siguiente procedimiento muestra cómo asignar tipos de datos en el proyecto, 
   
         No se puede quitar asignaciones heredadas. Sin embargo, asignaciones heredadas son reemplazadas por las asignaciones personalizadas en un objeto específico o una categoría de objeto.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Next Steps  
 El paso siguiente del proceso de migración consiste en [evaluación informe &#40; DB2ToSQL &#41;](../../ssma/db2/assessment-report-db2tosql.md) o [convertir esquemas de DB2 &#40; DB2ToSQL &#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md). Si crea un informe de evaluación, los objetos de DB2 se convierten automáticamente durante la evaluación.  
   
 ## <a name="see-also"></a>Vea también  

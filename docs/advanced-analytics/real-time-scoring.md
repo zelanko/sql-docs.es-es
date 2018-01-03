@@ -2,10 +2,10 @@
 title: "En tiempo real de puntuación | Documentos de Microsoft"
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 214fd0c3fad495db4642650de867c8d3a9c3b741
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9136aee11d5104fd0723521a3466361f06ce26d6
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="realtime-scoring"></a>En tiempo real de puntuación
 
@@ -62,7 +62,7 @@ En SQL Server, debe habilitar la característica de puntuación de antemano de e
 
 Para obtener información sobre en tiempo real de puntuación en un entorno distribuido que se basa en Microsoft R Server, consulte el [publishService](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice) función disponible en la [mrsDeploy paquete](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package), que es compatible con publicación de modelos en tiempo real un servicio web que se ejecuta en el servidor de R de puntuación como una nueva.
 
-### <a name="restrictions"></a>Restricciones
+### <a name="restrictions"></a>Restrictions
 
 + Debe entrenar el modelo de antemano con uno de los admitidos **rx** algoritmos. Para obtener más información, consulte [admite algoritmos](#bkmk_rt_supported_algos). En tiempo real con la puntuación `sp_rxPredict` admite algoritmos de RevoScaleR y MicrosoftML.
 

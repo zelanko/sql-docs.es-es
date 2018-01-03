@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f807bd12056f3c6a8e7a38efee56f0a6b6727066
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3946b81210ce439579464fa7e10e8fad63bfd225
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="like-predicate-escape-character"></a>COMO carácter de Escape de predicado
 En un **como** predicado, el signo de porcentaje (%) de coincidencias con cero o más de un carácter y el carácter de subrayado (_) coincide con cualquier carácter. Para hacer coincidir un signo de porcentaje real o carácter de subrayado en un **como** predicado, un carácter de escape debe aparecer antes del signo de porcentaje o un carácter de subrayado. La secuencia de escape que define la **como** carácter de escape de predicado es:  

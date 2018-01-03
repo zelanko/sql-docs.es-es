@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bce96e014e56a783f4f367120f1ba6f911d91ed5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9aab042c14953c170d86dda5fcd3432a471a12b6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-function-summary"></a>Resumen de funciones ODBC
 En la tabla siguiente se enumera las funciones ODBC, agrupadas por tipo de tarea e incluye la designación de conformidad y una breve descripción de la finalidad de cada función. Para obtener más información acerca de las designaciones de conformidad, vea [ODBC y la CLI estándar](../../../odbc/reference/odbc-and-the-standard-cli.md). Para obtener más información sobre la sintaxis y semántica para cada función, consulte [referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md).  

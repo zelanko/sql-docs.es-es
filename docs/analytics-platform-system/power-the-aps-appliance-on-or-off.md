@@ -3,10 +3,10 @@ title: "Alimentación del dispositivo de APS o desactivar (Analytics Platform Sy
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2258f8e3-e7a1-4455-8a5e-10d4d15775d6
 caps.latest.revision: "45"
-ms.openlocfilehash: 3264c3f97f765e9a62a38987638bdf2a8b13e82b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5e96898197098556d256c46b517ea42650c4c3ac
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="power-the-aps-appliance-on-or-off"></a>Encender el dispositivo de APS o apagar
 En este tema se describe cómo encender o apagar el Systemappliance de plataforma de análisis que se ejecuta el almacenamiento de datos paralelos y, opcionalmente, ejecuta una región de HDInsight. Utilice este tema cuando se mueve un dispositivo de sistema de la plataforma de análisis, o a la potencia en un dispositivo después de un error de alimentación grave.  
@@ -33,7 +33,7 @@ Conexiones a los nodos de SQL Server PDW pueden realizarse con las direcciones I
   
 ## <a name="PowerOff"></a>Apagar el dispositivo  
   
-### <a name="before-you-begin"></a>Antes de empezar  
+### <a name="before-you-begin"></a>Antes de comenzar  
 Antes de apagar el dispositivo, debe finalizar todas las actividades en el dispositivo. Para finalizar todas las actividades:  
   
 -   Use la **sesiones** página de la consola de administración para identificar los usuarios actuales. Póngase en contacto con ellos y pídale que cierre la sesión.  

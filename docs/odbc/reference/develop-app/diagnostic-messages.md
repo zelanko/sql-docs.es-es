@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5a242628af9898a3a437ec11000de626135e9d79
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35cf3118e503193200dec0e5e07714aa4e2a54ba
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="diagnostic-messages"></a>Mensajes de diagnóstico
 Se devuelve un mensaje de diagnóstico con cada SQLSTATE. A menudo se devuelve el mismo valor de SQLSTATE con un número de mensajes diferentes. Por ejemplo, se devuelve SQLSTATE 42000 (sintaxis o infracción de acceso) para la mayoría de los errores de sintaxis SQL. Sin embargo, los errores de sintaxis es probable que se puede describir con un mensaje diferente.  

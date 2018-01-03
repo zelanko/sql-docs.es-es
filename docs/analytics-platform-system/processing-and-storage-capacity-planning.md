@@ -3,10 +3,10 @@ title: "Capacidad de procesamiento y el almacenamiento de la plataforma de anál
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 2c32fec4-e97c-4797-b7f8-7c8d4301b7b6
 caps.latest.revision: "7"
-ms.openlocfilehash: 5eeb12d1ca257b0caa1566027811d08a4c0bc38d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9d7f933c45f05d7d4226a2f64fd41eff8d1c914a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="analytics-platform-system-processing-and-storage-capacity"></a>Capacidad de procesamiento y almacenamiento del sistema de la plataforma de análisis
 Los requisitos empresariales determinan el número de unidades de escala de datos y el tamaño de los discos de nodo de proceso que necesite en su dispositivo Analytics Platform System (APS). Utilice estos cálculos de procesamiento y almacenamiento para guiar la capacidad de compra y decisiones de planeación.  

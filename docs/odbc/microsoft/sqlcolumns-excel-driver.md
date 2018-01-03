@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,17 +20,17 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: aa5d70ca9e14515259ae705972c3f491784700e3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3ad9750d0d618afb82fefbdada35c04cd05273b9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcolumns-excel-driver"></a>SQLColumns (controlador de Excel)
 > [!NOTE]  
 >  En este tema se proporciona información específica del controlador de Excel. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
-|Columna|Comentarios|  
+|columna|Comentarios|  
 |------------|--------------|  
 |TABLE_QUALIFIER|Se devuelve la ruta de acceso a un directorio.|  
 |TABLE_OWNER|Se devuelve NULL en esta columna porque no se admite el nombre del propietario.|  

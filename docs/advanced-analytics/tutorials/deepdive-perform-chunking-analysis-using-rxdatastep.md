@@ -1,39 +1,45 @@
 ---
-title: "Realizar análisis de fragmentación mediante rxDataStep | Documentos de Microsoft"
+title: "Realizar análisis fragmentación mediante rxDataStep (SQL y R profundización) | Documentos de Microsoft"
 ms.custom: 
-ms.date: 05/03/2017
-ms.prod: sql-non-specified
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 4290ee5f-be90-446a-91e8-3095d694bd82
 caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 245bf9cf48b833a87b96666f1c050ca8fc1b4dbc
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7e47db93c014f2512f40afc88d9e9fb0f2031976
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="perform-chunking-analysis-using-rxdatastep"></a>Realizar análisis de fragmentación mediante rxDataStep
+# <a name="perform-chunking-analysis-using-rxdatastep-sql-and-r-deep-dive"></a>Realizar análisis fragmentación mediante rxDataStep (SQL y R profundización)
 
-La función **rxDataStep** puede usarse para procesar datos en fragmentos en lugar de requerir que el conjunto de datos completo se cargue en memoria y se procese de una vez, como en R tradicional. Funciona de manera que lee los datos en fragmentos y usa funciones de R para procesar cada fragmento de datos a su vez y, después, escribe los resultados de resumen de cada fragmento en un origen de datos común de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+Este artículo forma parte del tutorial exhaustiva de ciencia de datos, acerca de cómo usar [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-En esta lección, podrá practicar esta técnica mediante el uso de la `table` función de R, para calcular una tabla de contingencia.
+En esta lección, utilizará la **rxDataStep** función para procesar los datos en fragmentos, en lugar de requerir que todo el conjunto de datos se cargan en la memoria y procesar al mismo tiempo, como en tradicional R. El **rxDataStep** funciones lee los datos en fragmentos, se aplica a las funciones de R para cada fragmento de datos a su vez y, a continuación, guarda los resultados de resumen para cada fragmento en común [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origen de datos. Cuando se han leído todos los datos, se combinan los resultados.
 
 > [!TIP]
-> Este ejemplo está pensado únicamente con fines informativos. Si necesita pasar conjuntos de datos del mundo real, se recomienda que realice la **rxCrossTabs** o **rxCube** las funciones de **RevoScaleR**, que se optimizan para este tipo de operación.
+> En esta lección, calcular una tabla de contingencia utilizando el `table` función en R. Este ejemplo está pensado únicamente con fines informativos. 
+> 
+> Si necesita pasar conjuntos de datos del mundo real, se recomienda que realice la **rxCrossTabs** o **rxCube** las funciones de **RevoScaleR**, que se optimizan para este tipo de operación.
 
-## <a name="partition-data-by-values"></a>Datos de partición por valores
+## <a name="partition-data-by-values"></a>Datos de la partición por valores
 
-1. En primer lugar, cree una función de R personalizada que llama el *tabla* funcionen en cada fragmento de datos y asígnele el nombre `ProcessChunk`.
+1. Crear una función de R personalizada que llama la R `table` funcionen en cada fragmento de datos y el nombre de la nueva función `ProcessChunk`.
   
     ```R
     ProcessChunk <- function( dataList) {
@@ -58,24 +64,20 @@ En esta lección, podrá practicar esta técnica mediante el uso de la `table` f
     rxSetComputeContext( sqlCompute )
     ```
   
-3. Definirá un origen de datos de SQL Server para almacenar los datos que está procesando. Comience por asignar una consulta de SQL a una variable.
+3. Definir un origen de datos de SQL Server para almacenar los datos que está procesando. Comience por asignar una consulta de SQL a una variable. A continuación, usar esa variable en el *sqlQuery* argumento de un nuevo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origen de datos.
+  
   
     ```R
     dayQuery <-  "SELECT DayOfWeek FROM AirDemoSmallTest"
-    ```
-
-4. Conecte esa variable al argumento *sqlQuery* de un nuevo origen de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
-  
-    ```R
     inDataSource <- RxSqlServerData(sqlQuery = dayQuery,
         connectionString = sqlConnString,
         rowsPerRead = 50000,
         colInfo = list(DayOfWeek = list(type = "factor",
             levels = as.character(1:7))))
     ```
-     Si ha ejecutado *rxGetVarInfo* en este origen de datos, habrá visto que contiene solo la columna única: *Var 1: DayOfWeek, Tipo: factor, no hay niveles de factor disponibles*
+4. Si lo desea, puede ejecutar **rxGetVarInfo** en este origen de datos. En este punto, contiene una sola columna: *Var 1: DayOfWeek, escriba: no factor, ningún nivel de factor disponibles*
      
-5. Antes de aplicar esta variable de factor en los datos de origen, cree una tabla independiente para contener los resultados intermedios. De nuevo, se simplemente utiliza la función RxSqlServerData para definir los datos y eliminar las tablas existentes del mismo nombre.
+5. Antes de aplicar esta variable de factor en los datos de origen, cree una tabla independiente para contener los resultados intermedios. Una vez más, simplemente utilizar la función RxSqlServerData para definir los datos, makign seguro que desea eliminar las tablas existentes del mismo nombre.
   
     ```R
     iroDataSource = RxSqlServerData(table = "iroResults",   connectionString = sqlConnString)
@@ -83,13 +85,13 @@ En esta lección, podrá practicar esta técnica mediante el uso de la `table` f
     if (rxSqlServerTableExists(table = "iroResults",  connectionString = sqlConnString))  { rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString) }
     ```
   
-7.  Ahora podrá llamar a la función personalizada `ProcessChunk` para transformar los datos tal y como se leen, utilizando como el *transformFunc* argumento pasado a la función rxDataStep.
+7.  Llame a la función personalizada `ProcessChunk` para transformar los datos tal y como se leen, utilizando como el *transformFunc* argumento pasado a la **rxDataStep** (función).
   
     ```R
     rxDataStep( inData = inDataSource, outFile = iroDataSource, transformFunc = ProcessChunk, overwrite = TRUE)
     ```
   
-8.  Para ver los resultados intermedios de `ProcessChunk`, asignar los resultados de rxImport a una variable y, a continuación, los resultados en la consola.
+8.  Para ver los resultados intermedios de `ProcessChunk`, asigne los resultados de **rxImport** a una variable y, a continuación, los resultados en la consola.
   
     ```R
     iroResults <- rxImport(iroDataSource)
@@ -115,18 +117,16 @@ En esta lección, podrá practicar esta técnica mediante el uso de la `table` f
 ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---
 97975 | 77725 | 78875 | 81304 | 82987 | 86159 | 94975 
 
-10. Para quitar la tabla de resultados intermedios, realizar otra llamada a rxSqlServerDropTable.
+10. Para quitar la tabla de resultados intermedios, realizar una llamada a **rxSqlServerDropTable**.
   
     ```R
-    rxSqlServerDropTable( table = "iroResults",     connectionString = sqlConnString)
+    rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString)
     ```
 
 ## <a name="next-step"></a>Paso siguiente
 
-[Analizar los datos de contexto de proceso Local;](../../advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context.md)
+[Analizar datos en el contexto del proceso local](../../advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context.md)
 
 ## <a name="previous-step"></a>Paso anterior
 
-[Crear nueva tabla de SQL Server mediante rxDataStep](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
-
-
+[Crear una nueva tabla de SQL Server mediante rxDataStep](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)

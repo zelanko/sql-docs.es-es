@@ -3,10 +3,10 @@ title: "Cargas de monitor para el almacén de datos en paralelo"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: c0c55c16-00bc-4676-8970-a8e10b3e9408
 caps.latest.revision: "6"
-ms.openlocfilehash: a172b35934f35054bbe528894b04d0d69a814910
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 988c34b248b0058941f53575a79e4f3b6acb4de0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="monitor-loads"></a>El Monitor de carga
 Puede supervisar active y reciente [dwloader](dwloader.md) carga mediante la consola de administración de Analytics Platform System (APS) o el almacenamiento de datos paralelo (PDW) [vistas del sistema](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 
@@ -31,7 +31,7 @@ Puede supervisar active y reciente [dwloader](dwloader.md) carga mediante la con
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
 Independientemente del método utilizado para supervisar una carga, el inicio de sesión debe tener permiso para tener acceso a los orígenes de datos subyacentes. 
 
 <!-- MISSING LINKS

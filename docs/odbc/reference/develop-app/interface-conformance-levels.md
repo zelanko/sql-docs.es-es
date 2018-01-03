@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d2af6dc705ad13c12a28203f6dd114afa10f3a31
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0abde908ca3205cc10a35c310b508c5142fcb82c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interface-conformance-levels"></a>Niveles de compatibilidad de interfaz
 El propósito de la redistribución es informar a la aplicación qué características están disponibles a él desde el controlador. Un esquema de redistribución basado en funciones no lo suficientemente lograr este objetivo. En ODBC 3. *x*, los controladores se clasifican en función de las características que poseen. Compatibilidad con la característica puede incluir compatibilidad con la función; También puede incluir la compatibilidad con un campo descriptor, un atributo de instrucción, un valor de "Y" para un tipo de información devolviendo por **SQLGetInfo**, y así sucesivamente.  

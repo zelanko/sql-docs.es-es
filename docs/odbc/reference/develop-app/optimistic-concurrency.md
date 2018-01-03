@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 422f16155f79b61a7cc46516d8a4e7deb2fe19f9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ff92590df7cbc65f3fb349327827c652fe1dd567
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optimistic-concurrency"></a>Simultaneidad optimista
 *Simultaneidad optimista* deriva su nombre de la suposición optimista que no se suele producir colisiones entre transacciones; una colisión han producido durante la otra transacción actualiza o elimina una fila de datos entre el momento en se leyó por la transacción actual y la hora se actualiza o elimina. Es lo contrario de *simultaneidad pesimista,* o bloqueo, en que el programador de aplicaciones cree que tales conflictos son comunes.  

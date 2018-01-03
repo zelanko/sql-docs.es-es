@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6449bd52ad17c63d50f9747d775e7f1fd8ca5efd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8fb1b9b7aec3b0456dc65dd1294403d2b934a4a3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="jet-40-uses-sql-92-reserved-words-list-when-extendedansisqlset"></a>Lista de palabras reservadas de Jet 4.0 utiliza SQL-92 cuando ExtendedAnsiSQL_Set
 Cuando se activa la marca ExtendedAnsiSQL, Jet 4.0 usa la lista de palabras reservadas de SQL-92. La palabra que va a usar un SQL-92 reservada que un nombre de objeto sin comillas, se producirá un error de sintaxis. Cuando la marca ExtendedAnsiSQL está desactivada, las palabras reservadas nuevas se pueden utilizar como nombres de objeto como antes.

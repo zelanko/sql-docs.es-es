@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5ca3aa931dc19199913a5f1499c87e89348fa7b7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4142d2806cb71f8cb188f1ab155213493d4dc975
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>Cuadro de diálogo de configuración de Visual FoxPro ODBC
 El **programa de instalación de Visual FoxPro ODBC** cuadro de diálogo le permite agregar o cambiar un origen de datos de Visual FoxPro.  
@@ -36,7 +36,7 @@ El **programa de instalación de Visual FoxPro ODBC** cuadro de diálogo le perm
  **Nombre del origen de datos**  
  Escriba el nombre que desea usar para el origen de datos.  
   
- **Description**  
+ **Descripción**  
  Escriba una descripción para el origen de datos.  
   
  **Tipo de base de datos**  

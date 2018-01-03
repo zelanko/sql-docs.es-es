@@ -1,7 +1,7 @@
 ---
 title: "Configuración (migración) (AccessToSQL) del proyecto | Documentos de Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a7fcf9092c57fd07601171003381812de2ed6b12
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d3ffb7f8fe3a50fc940bb3030fd2bed518006b01
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-migration-accesstosql"></a>Configuración del proyecto (migración) (AccessToSQL)
 La configuración del proyecto de migración le permite configurar la forma en que se migren los datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure.  
@@ -38,7 +38,7 @@ El panel de migración está disponible en la **configuración del proyecto** y 
   
 -   Use la **configuración de proyecto predeterminada** cuadro de diálogo para establecer las opciones de configuración para todos los proyectos. Para acceder a la configuración de la migración, en el **herramientas** menú, seleccione **la configuración predeterminada del proyecto**, seleccione el tipo de proyecto en **versión de destino de migración** cuadro combinado de los cuales desea acceder a la configuración, haga clic en **General** en la parte inferior del panel izquierdo y, a continuación, haga clic en **migración**.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Restricciones CHECK**  
 Especifica si SSMA debe comprobar restricciones cuando agrega datos a tablas.  
   

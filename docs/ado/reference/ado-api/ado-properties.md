@@ -3,7 +3,7 @@ title: Propiedades de ADO | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 92fd58042fec8d001f539074db2d76d2d8243f6b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f77f31c7dcb3a52e25b359d146669284d43b1dce
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-properties"></a>Propiedades de ADO
 |||  
@@ -53,12 +53,12 @@ ms.lasthandoff: 11/17/2017
 |[Origen de datos](../../../ado/reference/ado-api/datasource-property-ado.md)|Indica un objeto que contiene datos que se va a representar como un **Recordset** objeto.|  
 |[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)|Indica la base de datos predeterminada para un **conexión** objeto.|  
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|Indica la capacidad de datos de un **campo** objeto.|  
-|[Descripción](../../../ado/reference/ado-api/description-property.md)|Describe una **Error** objeto.|  
+|[Description](../../../ado/reference/ado-api/description-property.md)|Describe una **Error** objeto.|  
 |[Dialecto](../../../ado/reference/ado-api/dialect-property.md)|Indica la sintaxis y reglas generales que utilizará el proveedor para analizar el **CommandText** o **CommandStream** propiedades.|  
 |[Dirección](../../../ado/reference/ado-api/direction-property.md)|Indica si la **parámetro** representa un parámetro de entrada, un parámetro de salida o ambos, o si el parámetro es el valor devuelto de un procedimiento almacenado.|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|Indica el estado de edición del registro actual.|  
 |[SOBRECARGAS ELÉCTRICAS](../../../ado/reference/ado-api/eos-property.md)|Indica si la actual posición está al final de la secuencia.|  
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|Indica un filtro para los datos en un **conjunto de registros**.|  
+|[Filtro](../../../ado/reference/ado-api/filter-property.md)|Indica un filtro para los datos en un **conjunto de registros**.|  
 |[HelpContext y HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|Indica el archivo de ayuda y el tema asociados con un **Error** objeto.<br /><br /> **HelpContextID** devuelve un identificador de contexto, como un **largo** valor para un tema en un archivo de ayuda.<br /><br /> **HelpFile** devuelve un **cadena** valor que se evalúa como una ruta de acceso resuelta totalmente de un archivo de ayuda.|  
 |[Index](../../../ado/reference/ado-api/index-property.md)|Indica el nombre del índice actualmente en vigor para un **Recordset** objeto.|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|Indica el nivel de aislamiento para una **conexión** objeto.|  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
 |[Tipo](../../../ado/reference/ado-api/type-property-ado.md)|Indica el tipo de datos o tipo operativo de un **parámetro**, **campo**, o **propiedad** objeto.|  
 |[Type (secuencia ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)|Indica el tipo de datos que se encuentran en la **flujo** (binario o texto).|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|Indica el valor actual de la base de datos para un **campo** objeto.|  
-|[Valor](../../../ado/reference/ado-api/value-property-ado.md)|Indica el valor asignado a un **campo**, **parámetro**, o **propiedad** objeto.|  
+|[Value](../../../ado/reference/ado-api/value-property-ado.md)|Indica el valor asignado a un **campo**, **parámetro**, o **propiedad** objeto.|  
 |[Versión](../../../ado/reference/ado-api/version-property-ado.md)|Indica el número de versión de ADO.|  
   
 ## <a name="see-also"></a>Vea también  

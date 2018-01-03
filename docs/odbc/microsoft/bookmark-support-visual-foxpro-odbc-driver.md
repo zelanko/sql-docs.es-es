@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a804befe83d20585359e8780144dfbcb807052d0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3591e0eecb8c97412f0fbc01c1b93a850f205299
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bookmark-support-visual-foxpro-odbc-driver"></a>Compatibilidad con marcadores (controlador ODBC de Visual FoxPro)
 El controlador ODBC de Visual FoxPro admite marcadores simples. Cuando se llama a [SQLGetInfo](../../odbc/microsoft/sqlgetinfo-visual-foxpro-odbc-driver.md) con el SQL_BOOKMARK_PERSISTENCE *tipo de información*, el valor devuelto es SQL_BP_SCROLL.  

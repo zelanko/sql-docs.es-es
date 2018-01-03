@@ -1,7 +1,7 @@
 ---
 title: "Configuración (GUI) (OracleToSQL) del proyecto | Documentos de Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: ba214028361300a0599289cfc565a7138a2b2926
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2f97219f1039eb027646119c223cfbc09e81c2f8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-gui-oracletosql"></a>Configuración del proyecto (GUI) (OracleToSQL)
 La configuración del proyecto de interfaz gráfica de usuario le permite configurar la aparecen de los datos en el **datos** ficha y si se debe mostrar el informe de evaluación después de la conversión o no.  
@@ -32,7 +32,7 @@ El panel de la interfaz gráfica de usuario está disponible en la **configuraci
   
 -   Use la **configuración de proyecto predeterminada** cuadro de diálogo para establecer opciones de interfaz de usuario para todos los proyectos. Para acceder a la configuración de la interfaz gráfica de usuario, en la **herramientas** menú, seleccione **la configuración predeterminada del proyecto**, seleccione el tipo de proyecto de migración para el que se requiere para puede ver o cambiar de configuración **versión de destino de migración** de lista desplegable y, a continuación, haga clic en **GUI** en la parte inferior del panel izquierdo.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Número máximo de filas de origen**  
 Configura el número de filas de datos que se muestran en la **datos** pestaña de la tabla de origen seleccionado.  
   

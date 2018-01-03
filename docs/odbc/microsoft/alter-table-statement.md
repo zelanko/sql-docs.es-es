@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 97d15f6e7acd6594684a699e61d9861849bbd0ca
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 55cbbebec6937e409597879eaa3446f5ab02abce
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alter-table-statement"></a>Instrucción ALTER TABLE
 Cuando se usa el Microsoft Access, dBASE o Paradoxdriver, se admite la instrucción ALTER TABLE con add y drop cláusulas de definición de restricción de tabla. (Las instrucciones ALTER TABLE no se admiten para los controladores de Microsoft Excel o texto).  

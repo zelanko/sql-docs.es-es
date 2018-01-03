@@ -1,7 +1,7 @@
 ---
 title: "Configuración (GUI) (MySQLToSQL) del proyecto | Documentos de Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dff457f225799ce121729d7247e7927eef882d61
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3631366693d295e11b740a5ae1a27850d07cc365
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-gui--mysqltosql"></a>Configuración del proyecto (GUI) (MySQLToSQL)
 La configuración del proyecto de interfaz gráfica de usuario le permite configurar la aparecen de los datos en el **datos** ficha y si desea incluir datos de informes con informes de evaluación.  
@@ -35,7 +35,7 @@ El panel de la interfaz gráfica de usuario está disponible en la **configuraci
   
 -   Use la **configuración de proyecto predeterminada** cuadro de diálogo para establecer opciones de interfaz de usuario para todos los proyectos. Para acceder a la configuración de la interfaz gráfica de usuario, en la **herramientas** menú, seleccione **la configuración predeterminada del proyecto**y, a continuación, haga clic en **GUI** en la parte inferior del panel izquierdo.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Número máximo de filas de origen**  
 Configura el número de filas de datos que se muestran en la **datos** pestaña de la tabla de origen seleccionado.  
   

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d3f3edee7f90920ad1d3ff68ccf3057a248b3b6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bb1d1c07f1453886fd91159eabad97dc90b9b191
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Convertir datos de C a tipos de datos SQL
 Cuando una aplicación llama **SQLExecute** o **SQLExecDirect**, el controlador JDBC recupera los datos para los parámetros enlazados con **SQLBindParameter** desde ubicaciones de almacenamiento en la aplicación. Cuando una aplicación llama **SQLSetPos**, el controlador recupera los datos de una actualización o agregar operación de columnas enlazadas con **SQLBindCol**. Para los parámetros de datos en ejecución, la aplicación envía los datos del parámetro con **SQLPutData**. Si es necesario, el controlador convierte los datos del tipo de datos especificado por la *ValueType* argumento en **SQLBindParameter** al tipo de datos especificado por el *ParameterType*argumento en **SQLBindParameter**y, a continuación, envía los datos al origen de datos.  

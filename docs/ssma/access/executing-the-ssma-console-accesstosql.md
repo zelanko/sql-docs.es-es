@@ -1,7 +1,7 @@
 ---
 title: Ejecutar la consola SSMA (AccessToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3d749a876fb128f55e653eca6fe8dda613a09dfa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 29f9c2bbce707aa08ce5cff918965e65f66d8370
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Ejecutar la consola SSMA (AccessToSQL)
 Microsoft le ofrece un potente conjunto de comandos del archivo de secuencia de comandos y opciones de línea de comandos para ejecutar y controlar las actividades SSMA. Las secciones posteriores detallan los mismos.  
@@ -167,7 +167,7 @@ acceso de carga-bases de datos: usados para cargar archivos de base de datos de 
 ```xml  
 <load-access-database  database-file="<Access-database>"/>  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <load-access-database>  
@@ -201,7 +201,7 @@ Requiere uno o varios nodos de la metabase como parámetro de línea de comandos
   
   metabase="<source/target>"/>  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <force-load>  
@@ -314,7 +314,7 @@ informe de evaluación generar
   
 />  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <generate-assessment-report  
@@ -386,7 +386,7 @@ convertir esquema
   
 />  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <convert-schema  
@@ -446,7 +446,7 @@ migrar datos
   
 </migrate-data>  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <migrate-data  
@@ -476,7 +476,7 @@ Vincular tablas: este comando vincula la tabla de origen (Access) a la tabla de 
   
 </link-tables>  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <link-tables>  
@@ -502,7 +502,7 @@ tablas desvincular: este comando desvincula la tabla de origen (acceso) de la ta
   
 </unlink-tables>  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <unlink-tables>  
@@ -581,7 +581,7 @@ destino sincronizar
   
 />  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <synchronize-target  
@@ -590,7 +590,7 @@ o bien
   
   object-type="category"/>  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <synchronize-target>  
@@ -646,7 +646,7 @@ Requiere uno o varios nodos de la metabase como parámetro de línea de comandos
   
 />  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <refresh-from-database  
@@ -655,7 +655,7 @@ o bien
   
   object-type="category"/>  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <refresh-from-database>  
@@ -705,7 +705,7 @@ Requiere uno o varios nodos de la metabase como parámetro de línea de comandos
   
 />  
 ```  
-o bien  
+o Administrador de configuración de  
   
 ```xml  
 <save-as-script  

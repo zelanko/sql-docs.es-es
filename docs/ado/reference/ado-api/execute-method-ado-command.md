@@ -3,7 +3,7 @@ title: "Método Execute (Command ADO) | Documentos de Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d8a16c395a01e20765dd1aaa569889b4b041cb9c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aa39093a0efe75959bfa0e6805ea90b65c6d39a9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execute-method-ado-command"></a>Método Execute (Command ADO)
 Ejecuta la consulta, la instrucción SQL o el procedimiento almacenado especificado en el [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) o [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) propiedad de la [objeto de comando](../../../ado/reference/ado-api/command-object-ado.md).  

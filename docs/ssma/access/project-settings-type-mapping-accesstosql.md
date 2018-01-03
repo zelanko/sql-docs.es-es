@@ -1,7 +1,7 @@
 ---
 title: "(Asignación de tipos) de la configuración del proyecto (AccessToSQL) | Documentos de Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -27,11 +27,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1d82b431499de3986f0358074ad96e4acc69fb41
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 81c2512eacc634de526ecffb0d56d86dbcecca87
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>(Asignación de tipos) de la configuración del proyecto (AccessToSQL)
 La configuración del proyecto de asignación de tipo permite definir asignaciones de tipos de valor predeterminado para el proyecto SSMA. También puede especificar asignaciones de tipos para objetos individuales de la base de datos. Para obtener más información, consulte [tipos de datos de destino y origen de asignación](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9).  
@@ -42,7 +42,7 @@ Asignación de tipos está disponible en la **configuración del proyecto** y **
   
 -   Use la **configuración de proyecto predeterminada** cuadro de diálogo para establecer las opciones de configuración para todos los proyectos. Para acceder a la configuración de la asignación de tipo, en la **herramientas** menú, seleccione **la configuración predeterminada del proyecto**, seleccione el tipo de proyecto de migración para el que se requiere para ver / cambiar de configuración **versión de destino de migración** de lista desplegable y, a continuación, haga clic en **asignación de tipos de** en el panel izquierdo.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Tipo de origen**  
 El tipo de datos de acceso para asignar.  
   
@@ -65,7 +65,7 @@ En la tabla siguiente muestra las asignaciones predeterminadas entre tipos de da
 |**Long**|**int**|  
 |**LONGBINARY**|**varbinary(max)**|  
 |**Memorando**|**nvarchar(max)**|  
-|**memorando** : para Access 97|**varchar(max)**|  
+|**memorando** : para Access 97|**ntext**|  
 |**único**|**real**|  
 |**text[\*.. \*]**|**nvarchar [\*]**|  
 |**text[\*.. \*]** : para Access 97|**varchar [\*]**|  

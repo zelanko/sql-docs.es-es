@@ -1,7 +1,7 @@
 ---
 title: Conectarse a SQL Server (AccessToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -32,11 +32,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bd14f32d796098393d7869f717f45f424504f7d9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f7f2c52a7af7fc3f9a35585678b222d6a29e5787
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Conectarse a SQL Server (AccessToSQL)
 Para migrar bases de datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], debe conectarse a la instancia de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Cuando se conecta, SSMA obtiene metadatos acerca de las bases de datos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y muestra los metadatos de la base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Explorador de metadatos. SSMA almacena información acerca de qué instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que están conectados a, pero no almacena las contraseñas.  
@@ -129,7 +129,7 @@ La conexión a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] permane
   
 El procedimiento para volver a conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] es el mismo que el procedimiento para establecer una conexión.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Next Steps  
 Si desea personalizar la asignación entre las bases de datos de origen y de destino, vea [bases de datos de destino y origen de asignación](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4) en caso contrario, es el siguiente paso convertir objetos de base de datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] utilizando la sintaxis [convertir objetos de base de datos](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
 ## <a name="see-also"></a>Vea también  

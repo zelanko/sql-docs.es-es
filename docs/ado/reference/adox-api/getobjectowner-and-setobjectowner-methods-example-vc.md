@@ -3,7 +3,7 @@ title: "Ejemplo GetObjectOwner y SetObjectOwner métodos (VC ++) | Documentos de
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5e93304242647ab822b6db303bdf401ddaa31a2f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 619b464b152b05d1091e7c6d1d90903d2b15a14c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>Ejemplo GetObjectOwner y SetObjectOwner métodos (VC ++)
 Este ejemplo se muestra la [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) y [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) métodos. Este código supone la existencia del grupo Contabilidad (vea el [grupos y usuarios anexar, ejemplo de los métodos ChangePassword (VC ++)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) para ver cómo se agrega este grupo al sistema). El propietario de la tabla de categorías se establece en administración de cuentas.  

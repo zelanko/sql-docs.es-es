@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ec3f9821b729c593fac8cb280f8596eaf0dbed1d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 151963c23abce0f737671dd73dec1d971998228e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-an-interoperable-application"></a>Escribir una aplicación Interoperable
 Cada vez que una aplicación usa el mismo código con más de un controlador, que el código debe ser interoperable entre los controladores. En la mayoría de los casos, esto es una tarea sencilla. Por ejemplo, el código para capturar las filas con un cursor de sólo avance es el mismo para todos los controladores. En algunos casos, esto puede ser más difícil. Por ejemplo, el código para crear identificadores para su uso en instrucciones SQL debe tener en cuenta el caso del identificador, comillas y las convenciones de nomenclatura de tres partes, dos partes y una parte.  

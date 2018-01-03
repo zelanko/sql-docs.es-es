@@ -1,7 +1,7 @@
 ---
 title: Administrar copias de seguridad (OracleToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: fd9985b00f45933194fe60d805cd2b2f5181ddbb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: eba65be518ebd986c6f074a1702ca72945d2fff6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managing-backups-oracletosql"></a>Administrar copias de seguridad (OracleToSQL)
 Administración de copia de seguridad de Oracle permite copias de seguridad y restauración de datos de la tabla antes o después de ejecutar una prueba. También puede administrar el contenido de copia de seguridad con el cuadro de diálogo Administrar contenido de copia de seguridad.  
   
 ## <a name="oracle-backup-management"></a>Administración de copia de seguridad de Oracle  
   
-### <a name="backup"></a>Backup  
+### <a name="backup"></a>Copia de seguridad  
 Para abrir el cuadro de diálogo copia de seguridad, en el punto de menú herramienta de comprobación a la administración de copia de seguridad de Oracle, a continuación, haga clic en copia de seguridad... En el cuadro de diálogo copia de seguridad se encuentra en el árbol de metadatos de Oracle mostrar todas las tablas del esquema de Oracle cargado. Seleccione una o más tablas para realizar una copia de seguridad.  
   
 Los siguientes botones están disponibles en el cuadro de diálogo:  
@@ -42,7 +42,7 @@ Los siguientes botones están disponibles en el cuadro de diálogo:
   
 -   Haga clic en el **cancelar** botón para cerrar el cuadro de diálogo.  
   
-### <a name="restore"></a>Restore  
+### <a name="restore"></a>Restaurar  
 Para abrir el cuadro de diálogo de restauración, en el menú de la herramienta de comprobación, seleccione Administración de copia de seguridad de Oracle, a continuación, haga clic en restaurar... Allí encontrará un árbol que contiene las tablas disponibles en la copia de seguridad. Seleccione una o más tablas para restaurar sus datos.  
   
 Los siguientes botones están disponibles en el cuadro de diálogo:  
@@ -67,7 +67,7 @@ Los siguientes botones están disponibles en el cuadro de diálogo:
 ## <a name="sql-server-backup-management"></a>Administración de copia de seguridad de SQL Server  
 Administración de copia de seguridad de SQL Server le permite copias de seguridad y restauración de datos de la tabla antes o después de ejecutar una prueba. También puede administrar el contenido de copia de seguridad con el cuadro de diálogo Administrar contenido de copia de seguridad.  
   
-### <a name="backup"></a>Backup  
+### <a name="backup"></a>Copia de seguridad  
 Para abrir el cuadro de diálogo copia de seguridad, en el punto de menú de evaluador para administración de copia de seguridad de SQL Server, a continuación, haga clic en copia de seguridad... En el cuadro de diálogo copia de seguridad se encuentra en el árbol de metadatos de SQL Server muestra todas las tablas de las bases de datos de SQL Server carga. Seleccione una o más tablas para realizar una copia de seguridad.  
   
 Los siguientes botones están disponibles en el cuadro de diálogo:  
@@ -78,7 +78,7 @@ Los siguientes botones están disponibles en el cuadro de diálogo:
   
 -   Haga clic en el **cancelar** botón para cerrar el cuadro de diálogo.  
   
-### <a name="restore"></a>Restore  
+### <a name="restore"></a>Restaurar  
 Para abrir el cuadro de diálogo de restauración, en el menú de evaluador seleccione Administración de copia de seguridad de SQL Server, haga clic en restauración... Allí encontrará un árbol que contiene las tablas disponibles en la copia de seguridad. Seleccione uno o más tabla para restaurar sus datos.  
   
 Los siguientes botones están disponibles en el cuadro de diálogo:  

@@ -3,7 +3,7 @@ title: "PrimaryKey y un ejemplo de propiedades únicas (VB) | Documentos de Micr
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c7a8be23faf9284ee4e2bccce79f4015f8f99973
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 68a658cf4af993859fe9d614717fed309e8e7b60
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey y un ejemplo de propiedades únicas (VB)
 Este ejemplo se muestra la [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) y [Unique](../../../ado/reference/adox-api/unique-property-adox.md) propiedades de un [índice](../../../ado/reference/adox-api/index-object-adox.md). El código crea una nueva tabla con dos columnas. El **PrimaryKey** y **Unique** propiedades se utilizan para establecer una columna como la clave principal para el que no se permiten valores duplicados.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cfdd5c33557087a49535d32e8de36460b9adc3c0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e6e53544ca828709027393f246ea0f39e7f31a55
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="date-arithmetic"></a>Aritmética de fecha
 El controlador admite sumar y restar un entero comprendido entre una columna de fecha, hora o marca de tiempo. Para una columna de fecha, el entero que especifica el número de días que desea sumar o restar. Para una columna de hora o marca de tiempo, el entero que especifica el número de segundos que desee agregar o restar.

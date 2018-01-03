@@ -1,7 +1,7 @@
 ---
 title: ROUND (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
-ms.date: 03/13/2017
+ms.date: 12/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e9cb05c7f0b00f93f2602e114de2b502b8be0213
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9dbfe719e4216e778a28f1a9afb8a1995c09acb1
+ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,15 +40,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
   
 ROUND ( numeric_expression , length [ ,function ] )  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-ROUND (numeric_expression , length )  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -143,22 +136,6 @@ GO
 150.00  
   
 (1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="d-using-round-and-estimates"></a>D. Usar ROUND y valores estimados  
- En el ejemplo siguiente se muestran dos expresiones que demuestran que cuando se usa la función `ROUND`, el último dígito siempre es un valor estimado.  
-  
-```  
-SELECT ROUND(123.994999, 3), ROUND(123.995444, 3);  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-
- ```
---------  ---------
-123.995000    123.995444
 ```
   
 ## <a name="see-also"></a>Vea también  
@@ -166,7 +143,4 @@ SELECT ROUND(123.994999, 3), ROUND(123.995444, 3);
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Expresiones &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [FLOOR &#40; Transact-SQL &#41;](../../t-sql/functions/floor-transact-sql.md)   
- [Funciones matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
-  
-  
-
+ [Funciones matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)

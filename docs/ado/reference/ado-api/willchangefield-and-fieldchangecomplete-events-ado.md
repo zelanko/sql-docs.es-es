@@ -3,7 +3,7 @@ title: Eventos WillChangeField y FieldChangeComplete (ADO) | Documentos de Micro
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d532aa3857e2a61bb5ec23fa9258f6d7aa1186f2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4c30a41b18016515f97ba044eb0d36724a59a351
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>Eventos WillChangeField y FieldChangeComplete (ADO)
 El **WillChangeField** evento se le llama antes de que una operación pendiente cambie el valor de uno o varios [campo](../../../ado/reference/ado-api/field-object.md) objetos en el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). El **FieldChangeComplete** eventos se llama después del valor de uno o varios **campo** objetos ha cambiado.  
@@ -47,7 +47,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  *cFields*  
  A **largo** que indica el número de **campo** objetos de *campos*.  
   
- *Campos*  
+ *Fields*  
  Para **WillChangeField**, *campos* parámetro es una matriz de **variantes** que contiene **campo** objetos con los valores originales. Para **FieldChangeComplete**, *campos* parámetro es una matriz de **variantes** que contiene **campo** objetos con los valores cambiados .  
   
  *pError*  

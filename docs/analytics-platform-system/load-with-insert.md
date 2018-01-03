@@ -3,10 +3,10 @@ title: Carga los datos con INSERT
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 6e951b0e-e95b-4fd1-b5f3-c65607aee0d8
 caps.latest.revision: "21"
-ms.openlocfilehash: 059dc1e8601fb02aac9a91631a161bae1e995389
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 625b6938ebbb2d0b753cb1a35f5c1df7372c6cca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="load-data-with-insert"></a>Carga los datos con INSERT
 
@@ -129,8 +129,8 @@ La siguiente tabla definen los formatos aceptados y las reglas para insertar val
   
 |Tipo de literal|Formato|Reglas de conversión|  
 |------------|------|----------------|
-|Literal de cadena de **entero** formato|'nnnnnnnnnnnnnn'<br /><br />Ejemplo: '321312313123'| Ninguno |  
-|Literal de tipo entero|nnnnnnnnnnnnnn<br /><br />Ejemplo: 321312313123| Ninguno|  
+|Literal de cadena de **entero** formato|'nnnnnnnnnnnnnn'<br /><br />Ejemplo: '321312313123'| None |  
+|Literal de tipo entero|nnnnnnnnnnnnnn<br /><br />Ejemplo: 321312313123| None|  
 |Literal decimal|nnnnnn.nnnnn<br /><br />Ejemplo: 123344.34455|Se truncan los valores a la derecha del separador decimal.|  
   
 ### <a name="money-and-smallmoney-data-types"></a>tipos de datos Money y smallmoney  
@@ -153,10 +153,10 @@ La siguiente tabla definen los formatos aceptados y las reglas para insertar val
   
 |Tipo de literal|Formato|Reglas de conversión|  
 |----------------|----------|--------------------|  
-|Literal de cadena|Formato: 'cadena de caracteres'<br /><br />Ejemplo: 'abc'| Ninguno|  
-|Literal de cadena Unicode|Formato: Cadena N'character'<br /><br />Ejemplo: Abc '|  Ninguno |  
-|Literal de tipo entero|Formato: nnnnnnnnnnn<br /><br />Ejemplo: 321312313123| Ninguno |  
-|Literal decimal|Formato: nnnnnn.nnnnnnn<br /><br />Ejemplo: 12344.34455| Ninguno |  
+|Literal de cadena|Formato: 'cadena de caracteres'<br /><br />Ejemplo: 'abc'| None|  
+|Literal de cadena Unicode|Formato: Cadena N'character'<br /><br />Ejemplo: Abc '|  None |  
+|Literal de tipo entero|Formato: nnnnnnnnnnn<br /><br />Ejemplo: 321312313123| None |  
+|Literal decimal|Formato: nnnnnn.nnnnnnn<br /><br />Ejemplo: 12344.34455| None |  
 |Money literal|Formato: $nnnnnn.nnnnn<br /><br />Ejemplo: $123456.99|No se inserta el símbolo de moneda con el valor. Para insertar el símbolo de moneda, inserte el valor como un literal de cadena. Esto coincidirá con el formato de la **dwloader** herramienta, que debe tratar cada literal como un literal de cadena.<br /><br />No se permiten comas.<br /><br />Si el número de dígitos después del punto decimal superior a 2, el valor se redondea al valor más cercano. Por ejemplo, se inserta el valor 123.946789 como 123.95.<br /><br />Se permite solo el estilo predeterminado de 0 (sin comas y 2 dígitos después del separador decimal) cuando se usa la función CONVERT para insertar literales de dinero.|  
 
   

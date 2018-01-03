@@ -3,7 +3,7 @@ title: Ejemplo de propiedad IndexNulls (VC ++) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6da5a87dc80fb32da7994031c1698861fcd4875a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c293b880fc581357613ebb91e941c916ac401b5c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="indexnulls-property-example-vc"></a>Ejemplo de propiedad IndexNulls (VC ++)
 Este ejemplo se muestra la [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) propiedad de un [índice](../../../ado/reference/adox-api/index-object-adox.md). El código crea un nuevo índice y establece el valor de **IndexNulls** tomando como base proporcionados por el usuario. A continuación, la **índice** se anexa a la **empleados** [tabla](../../../ado/reference/adox-api/table-object-adox.md) en el *Northwind* [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md). El nuevo **índice** se aplica a un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) tomando como base la **empleados** tabla y el **Recordset** se abre. Se agrega un nuevo registro a la **empleados** tabla, con un **Null** valor en el campo indizado. Si se muestra este nuevo registro depende del valor de la **IndexNulls** propiedad.  

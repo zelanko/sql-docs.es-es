@@ -25,11 +25,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0399e0ef7587a7a7cb8a7ef32419518f1b95d53e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 040c326ca5e4f38a1a6c32ce3ae5fe7ba6ddddea
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>Sys.dm_geo_replication_link_status (base de datos de SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,8 +48,8 @@ ms.lasthandoff: 11/17/2017
 |rol|**tinyint**|Rol de replicación geográfica, uno de:<br /><br /> 0 = primary. El database_id hace referencia a la base de datos principal de la asociación de replicación geográfica.<br /><br /> 1 = la base de datos secundaria.  El database_id hace referencia a la base de datos principal de la asociación de replicación geográfica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|El tipo secundario, uno de:<br /><br /> 0 no = directo se permiten las conexiones a la base de datos secundaria y la base de datos no está disponible para acceso de lectura.<br /><br /> 2 = all se permiten las conexiones a la base de datos en la replicación secundaria; ication para acceso de solo lectura.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> Todos|  
-|last_commit|**datetimeoffset**|La hora de la última transacción confirmada en la base de datos. Si se recuperan en la base de datos secundaria cuando el grupo principal del vínculo de replicación está inactivo, indica hasta qué punto la base de datos secundaria ha detectado el.|
+|secondary_allow_connections_desc|**nvarchar(256)**|no<br /><br /> All|  
+|last_commit|**datetimeoffset**|La hora de la última transacción confirmada en la base de datos. Si se recuperan en la base de datos principal, indica la última hora de confirmación en la base de datos principal. Si se recuperan en la base de datos secundaria, indica la última hora de confirmación en la base de datos secundaria. Si se recuperan en la base de datos secundaria cuando el grupo principal del vínculo de replicación está inactivo, indica hasta qué punto la base de datos secundaria ha detectado el.|
   
 > [!NOTE]  
 >  Si se termina la relación de replicación mediante la eliminación de la base de datos secundaria (sección 4.2), la fila para esa base de datos en el **sys.dm_geo_replication_link_status** desaparece de la vista.  

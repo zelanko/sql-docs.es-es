@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cec632458d406fa0dedeea10a1285b1b521cb197
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 70351e468a6038a26b7b647d6bc7c64d3263f3d6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calling-sqlsetpos"></a>Llamar a SQLSetPos
 En ODBC 2. *x*, el puntero a la matriz de estado de fila se encontraba argumento pasado a **SQLExtendedFetch**. La matriz de Estados de fila se actualizó más adelante mediante una llamada a **SQLSetPos**. Algunos controladores se basaban en el hecho de que esta matriz no cambia entre **SQLExtendedFetch** y **SQLSetPos**. En ODBC 3. *x*, el puntero a la matriz de estado es un campo de descriptor y, por tanto, la aplicación puede cambiar fácilmente para que apunte a una matriz distinta. Esto puede ser un problema cuando una aplicación ODBC 3. *x* aplicación está trabajando con una API ODBC 2. *x* controlador pero está llamando a **SQLSetStmtAttr** para establecer el puntero de estado de la matriz y llama a **SQLFetchScroll** para capturar los datos. El Administrador de controladores se asigna como una secuencia de llamadas a **SQLExtendedFetch**. En el código siguiente, producirá un error haría normalmente cuando el Administrador de controladores se asigna el segundo **SQLSetStmtAttr** llamar cuando se trabaja con una API ODBC 2*.x* controlador:  

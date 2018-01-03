@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f6a35983cf6977a13718ddce273854740790dfe8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f67569c9da0abde3953bed15ab1a5c149f791703
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sorting-limitations"></a>Limitaciones de ordenación
 La longitud máxima de un criterio de ordenación en una cláusula GROUP BY, la cláusula ORDER BY, la instrucción SELECT DISTINCT o la combinación externa es 255 bytes; la longitud máxima de todas las claves de ordenación en una fila de ordenación es 65.500 bytes.

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7fa45570f0f5bda2190f7b3193f404ffccd3d621
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ceb263eb42a4ef58c38f18eba98736a4c9de89e2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="buffers"></a>Búferes
 Un búfer es cualquier parte de la memoria de la aplicación usa para pasar datos entre la aplicación y el controlador. Por ejemplo, búferes de la aplicación pueden estar asociados, o *enlazado y* columnas con el conjunto de resultados **SQLBindCol**. Tal y como se recupera cada fila, los datos se devuelven para cada columna en estos búferes. *Búferes de entrada* se utilizan para pasar datos de la aplicación para el controlador; *búferes de salida* se utilizan para devolver datos desde el controlador a la aplicación.  

@@ -3,7 +3,7 @@ title: Ejecutar casos de prueba (SybaseToSQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 686e7701014a85e141fed9d4f9bbcecdb029f015
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0b78d26a492a73964c39b15c678103537cd9abe1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="running-test-cases-sybasetosql"></a>Ejecutar casos de prueba (SybaseToSQL)
 Cuando el evaluador de SSMA se ejecuta un caso de prueba, ejecuta los objetos seleccionados para las pruebas y crea un informe sobre los resultados de la comprobación. Si los resultados son idénticos en ambas plataformas, la prueba fue correcta. La correspondencia de objetos entre Sybase y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] se determina según la configuración de la asignación de esquema para el proyecto SSMA actual.  
@@ -43,7 +43,7 @@ Una vez finalizada la prueba, se crea el informe de casos de prueba. Haga clic e
   
 ## <a name="test-case-execution-steps"></a>Pasos de ejecución de caso de prueba  
   
-### <a name="prerequisites"></a>Requisitos previos  
+### <a name="prerequisites"></a>Prerequisites  
 Evaluador de SSMA comprueba si se cumplen todos los requisitos previos para la ejecución de pruebas antes del inicio de la prueba. Si no se cumplen determinadas condiciones, aparece un mensaje de error.  
   
 ### <a name="initialization"></a>Inicialización  
@@ -56,8 +56,8 @@ Los siguientes objetos se crean en Sybase en la base de datos SSMATESTER2005db o
 |Nombre|Tipo|Description|  
 |--------|--------|---------------|  
 |USER_TABLE$ Trg|Desencadenador|Auditoría de los cambios en la tabla comprobado el desencadenador.|  
-|USER_TABLE$ Aud|Tabla|Tabla donde se guardan las filas se eliminan y se sobrescriben.|  
-|USER_TABLE$ AudID|Tabla|Tabla donde se guardan las filas nuevas y modificadas.|  
+|USER_TABLE$ Aud|Table|Tabla donde se guardan las filas se eliminan y se sobrescriben.|  
+|USER_TABLE$ AudID|Table|Tabla donde se guardan las filas nuevas y modificadas.|  
 |USER_TABLE|Ver|Representación simplificada de las modificaciones de tablas.|  
 |USER_TABLE$ nueva|Ver|Representación simplificada de filas insertadas y sobrescribir.|  
 |USER_TABLE$ new_id|Ver|Identificación de filas insertadas y los cambios.|  

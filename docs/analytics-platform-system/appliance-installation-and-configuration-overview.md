@@ -3,10 +3,10 @@ title: "Instalación de dispositivo y la información general de configuración 
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 10934f62-4acf-4ca5-b550-f426ba81fe11
 caps.latest.revision: "23"
-ms.openlocfilehash: 34d66302d0ed114c32e0c6294dfe7789e32a9253
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 719447d2f6d9376ec9db35f35c7f38b50ef460fa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appliance-installation-and-configuration-overview"></a>Introducción a la configuración e instalación de dispositivo
 Le guía a los administradores del equipo PDW de SQL Server a través de los pasos iniciales para configurar y empezar a usar el nuevo dispositivo PDW de SQL Server.  
@@ -43,7 +43,7 @@ Si el IHV no está realizando la instalación de hardware, siga estos pasos para
   
 |||  
 |-|-|  
-|**Tarea**|**Description**|  
+|**Tarea**|**Descripción**|  
 |Confirmar la documentación|Confirme que ha recibido todos los documentos necesarios e información de su proveedor de hardware independientes (IHV). Vea [información para obtener de su IHV &#40; Sistema de la plataforma de análisis &#41; ](information-to-obtain-from-your-ihv.md).|  
 |Instale el hardware|Compruebe el centro de datos puede dar cabida a la aplicación. Mover los componentes del dispositivo al centro de datos. Los conmutadores de red, PDU, rack y cableado. Consulte [la instalación de Hardware &#40; Sistema de la plataforma de análisis &#41; ](hardware-installation.md).|  
   
@@ -51,14 +51,14 @@ Si el IHV no está realizando la instalación de hardware, siga estos pasos para
   
 |||  
 |-|-|  
-|**Tarea**|**Description**|  
+|**Tarea**|**Descripción**|  
 |Encienda el dispositivo|Potencia en cada nodo del componente de dispositivo en el orden requerido, esperando según sea necesario para confirmar que no se encuentran errores.|  
   
 ## <a name="ConfigureAppliance"></a>3. Configurar el dispositivo  
   
 |||  
 |-|-|  
-|**Tarea**|**Description**|  
+|**Tarea**|**Descripción**|  
 |||  
 |Configurar el dispositivo mediante el uso de SQL Server PDW**Configuration Manager**|Utilice el Administrador de configuración para establecer las contraseñas de dispositivo, zonas horarias, configuración de red y del firewall, certificados de seguridad y rendimiento y otras opciones en el dispositivo. Consulte [la configuración del equipo &#40; Sistema de la plataforma de análisis &#41; ](appliance-configuration.md).|  
   
@@ -69,7 +69,7 @@ Si el IHV no está realizando la instalación de hardware, siga estos pasos para
   
 |||  
 |-|-|  
-|**Tarea**|**Description**|  
+|**Tarea**|**Descripción**|  
 |Aplicar las actualizaciones de SQL Server PDW|(Opcional) Debe aplicar una o varias actualizaciones de PDW de SQL Server para actualizar el software de PDW de SQL Server a la versión más reciente. Vea [aplicar las revisiones del sistema de plataforma de análisis &#40; Sistema de la plataforma de análisis &#41; ](apply-analytics-platform-system-hotfixes.md).|  
 |Configurar Windows Server Update Services|Configurar el dispositivo para recibir actualizaciones de Windows Server Update Services para admitir el software. Vea [descargar y aplicar las actualizaciones de Microsoft &#40; Sistema de la plataforma de análisis &#41; ](download-and-apply-microsoft-updates.md).|  
   
@@ -78,7 +78,7 @@ Después de haber completado todos los pasos anteriores, el dispositivo está li
   
 |||  
 |-|-|  
-|**Tarea**|**Description**|  
+|**Tarea**|**Descripción**|  
 |Instalar a controladores de PDW de SQL Server y configurar la conectividad|Configurar los equipos locales para conectarse a SQL Server PDW mediante el uso de SQL Server Data Tools, sqlcmd, software de inteligencia de negocio u otras herramientas. <!-- MISSING LINKS See [Client Tools (SQL Server PDW)](assetId:///721851d5-e521-4d5b-ba6d-8e2e9d3c7808).-->|  
 |Crear roles de servidor e inicios de sesión y asignar permisos|Planear y crear roles de servidor e inicios de sesión que permitirán a los usuarios iniciar sesión en SQL Server PDW con los permisos adecuados. <!-- MISSING LINKS See [PDW Permissions &#40;SQL Server PDW&#41;](../sqlpdw/pdw-permissions-sql-server-pdw.md).-->|  
 |Configurar la puerta de enlace de administración de datos de Azure|La puerta de enlace permite a los usuarios de Azure tener acceso a datos APS locales mediante la exposición de datos APS como proteger las fuentes de OData. La puerta de enlace ya está instalado en el nodo de Control. Solicitar a Microsoft para obtener ayuda con la configuración.|  

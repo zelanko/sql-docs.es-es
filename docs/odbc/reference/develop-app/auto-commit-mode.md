@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0e2127d5b33c5ea4bf2a0c96c5e020322aec39db
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b2a9fd1565d0980e5af77d3cded499ce1f0091e5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="auto-commit-mode"></a>Modo de confirmación automática
 *En el modo de confirmación automática,* cada operación de base de datos es una transacción que se confirma cuando se realiza. Este modo es adecuado para muchas transacciones reales que se componen de una sola instrucción SQL. No es necesario delimitar o especificar la realización de estas transacciones. En las bases de datos sin compatibilidad con transacciones, modo de confirmación automática es el único modo compatible. En esas bases de datos, las instrucciones se confirman cuando se ejecutan y no hay ninguna manera de revertirlas; por lo tanto, están siempre en modo de confirmación automática.  

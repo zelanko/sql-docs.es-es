@@ -1,7 +1,7 @@
 ---
 title: Buscar el Asistente de bases de datos (seleccionados ubicaciones) (AccessToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -21,18 +21,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5ccb64e44a02b83559ce3528290b06f401d1c402
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 069e14ae3babfb3961042edaf0d99e24367df85d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Buscar el Asistente de bases de datos (seleccionados ubicaciones) (AccessToSQL)
 En la página Seleccionar ubicaciones del Asistente para buscar las bases de datos, escriba los parámetros búsqueda para buscar las bases de datos de Access.  
   
 Para abrir el Asistente para buscar las bases de datos, en la **archivo** menú, haga clic en **buscar bases de datos**. Para obtener más información sobre cómo usar este cuadro de diálogo, vea [agregar y quitar archivos de base de datos de Access](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Examinar**  
 Haga clic para examinar el equipo o la red. Seleccione la carpeta o ubicación para buscar y, a continuación, haga clic en **Aceptar**. Haga clic en **agregar** para agregar esta ubicación a la lista.  
   

@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 41ae9665de08068d1bfa3ed919bbf43f55151a7c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b1fa8f540e8f16d901eb41138bc7ee153339cb5a
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (base de datos SQL de Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 |avg_cpu_percent|**decimal (5,2)**|Uso de proceso promedio como porcentaje del límite del nivel de servicio.|  
 |avg_data_io_percent|**decimal (5,2)**|Promedio de datos de utilización de E/S en porcentaje del límite del nivel de servicio.|  
 |avg_log_write_percent|**decimal (5,2)**|Uso de recursos de escritura promedio como porcentaje del límite del nivel de servicio.|  
-|avg_memory_percent|**decimal (5,2)**|Uso de memoria promedio como porcentaje del límite del nivel de servicio.<br /><br /> Esto incluye la memoria utilizada para el almacenamiento de objetos de OLTP en memoria.|  
+|avg_memory_usage_percent|**decimal (5,2)**|Uso de memoria promedio como porcentaje del límite del nivel de servicio.<br /><br /> Esto incluye la memoria utilizada para el almacenamiento de objetos de OLTP en memoria.|  
 |xtp_storage_percent|**decimal (5,2)**|Uso de almacenamiento para OLTP en memoria como un porcentaje del límite del nivel de servicio (al final del intervalo de informes). Esto incluye la memoria utilizada para el almacenamiento de los siguientes objetos de OLTP en memoria: tablas optimizadas en memoria, índices y las variables de tabla. También incluye la memoria utilizada para procesar las operaciones de ALTER TABLE.<br /><br /> Devuelve 0 si no se utiliza OLTP en memoria en la base de datos.|  
 |max_worker_percent|**decimal (5,2)**|Máximos simultáneos trabajadores (solicitudes) como un porcentaje del límite de nivel de servicio de la base de datos.|  
 |max_session_percent|**decimal (5,2)**|Número máximo de sesiones simultáneo en porcentaje del límite de nivel de servicio de la base de datos.|  

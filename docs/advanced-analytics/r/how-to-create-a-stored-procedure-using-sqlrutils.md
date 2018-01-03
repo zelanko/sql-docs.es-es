@@ -2,9 +2,11 @@
 title: "Cómo crear un procedimiento almacenado mediante sqlrutils | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd86e9655770c55f99514cd5a0a9b9910d5f78e1
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 475665c87f672868eaa6efeb2b5b6e927ed945af
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Crear un procedimiento almacenado mediante sqlrutils
 
@@ -39,7 +41,7 @@ Entre los parámetros de entrada puede haber como mucho una trama de datos.
 
 Los objetos de dentro de la trama de datos, así como todos los demás parámetros de entrada de la función, deben ser de los siguientes tipos de datos de R:
 - POSIXct
-- numeric
+- NUMERIC
 - character
 - integer
 - lógicos
@@ -87,7 +89,7 @@ Al realizar llamadas cada función, se crea un objeto de R que más adelante se 
 
 Cuando todos los parámetros de entrada y salidos están listos, realizar una llamada a la `StoredProcedure` constructor.
 
-**Uso**
+**Usage**
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3941b8cdc2a53cb0f9fe3ad2b94f2ef972ad3775
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ccd4cdd57771d32a6a09bf1c1030ba173ee18486
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="behavioral-changes"></a>Cambios de comportamiento
 Cambios de comportamiento son esos cambios para que la *sintaxis* de la interfaz sigue siendo el mismo, pero la *semántica* han cambiado. Para que estos cambios, la funcionalidad que se usa en ODBC 2. *x* se comporta de forma diferente a la misma funcionalidad en ODBC 3. *x*.  

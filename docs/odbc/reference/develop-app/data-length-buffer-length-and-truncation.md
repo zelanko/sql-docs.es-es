@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 978418b3341bf82e0d7560052e68fecbbeb3c59b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d175970f31ac75e3d94fe23bfc89304ac316e3ab
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>Longitud de los datos, la longitud de búfer y truncamiento
 El *longitud de datos* es la longitud de bytes de los datos tal y como se almacenaría en búfer de datos de la aplicación, no cuando se almacenan en el origen de datos. Esta distinción es importante porque los datos se almacenan a menudo en los diferentes tipos en el búfer de datos que en el origen de datos. Por lo que para los datos que se envían al origen de datos, esto es la longitud de bytes de los datos antes de la conversión al tipo del origen de datos. Para los datos que se va a recuperar del origen de datos, esto es la longitud de bytes de los datos después de la conversión al tipo de búfer de datos y antes de que se realiza cualquier truncamiento.  

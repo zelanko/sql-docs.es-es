@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0565ddfffb5b74344aaa41a1d0dfd243c590850
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 98754c574acd8dea29184fafa70e1df702925a2a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-type-identifiers"></a>Identificadores de tipo SQL
 Cada origen de datos define sus propios tipos de datos SQL. ODBC define los identificadores de tipo y describe las características generales de los tipos de datos SQL que se podrían asignar a cada identificador de tipo. Es específica del controlador cómo cada tipo de datos en el origen de datos subyacente se asigna a un identificador de tipo SQL de ODBC.  

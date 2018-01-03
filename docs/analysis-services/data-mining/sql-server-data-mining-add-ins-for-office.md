@@ -1,7 +1,7 @@
 ---
 title: "Complementos de minería de datos para Office de datos de SQL Server | Documentos de Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/18/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -19,14 +19,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: be2255a512f04cd23b8f9d6717d6ec63ab2b2f16
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 420437152716f78a03c78e3d9a67216029751f5e
+ms.sourcegitcommit: f2fde1c324466530f92006561a9a29decb711e1b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Complementos de minería de datos de SQL Server para Office
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Complementos minería de datos para Office es un sencillo conjunto de herramientas para análisis predictivos que permiten utilizar datos en Excel para generar modelos analíticos para la predicción, recomendación o exploración.  
+
+  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Complementos de minería de datos para Office es un conjunto ligero de herramientas para análisis predictivos que permite utilizar datos de Excel para generar modelos analíticos para la predicción, recomendación o exploración.  
+  
+> [!IMPORTANT]
+> El complemento de minería de datos con datos de Office no se admite en Office 2016 o posterior.
   
  Los asistentes y las herramientas de administración de datos de los complementos proporcionan instrucciones paso a paso para estas tareas comunes de minería de datos:  
   

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7db96c719d22b3f6dd47a02eac2ef7724c0b6040
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0b71b742ff9c0833bd36deb256dda5169f2a51c7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schemaini-file-text-file-driver"></a>Archivo Schema.ini (controlador de archivo de texto)
 Cuando se utiliza el controlador de texto, el formato del archivo de texto se determina mediante un archivo de información de esquema. El archivo de información de esquema es siempre denominado Schema.ini y se mantiene siempre en el mismo directorio que el origen de datos de texto. El archivo de información de esquema proporciona el IISAM con información sobre el formato general del archivo, el nombre de columna y la información de tipo de datos y varias otras características de datos. Un archivo Schema.ini siempre es necesario para tener acceso a datos de longitud fija. Debe utilizar un archivo Schema.ini cuando la tabla de texto contiene la fecha y hora, moneda, o datos Decimal o siempre que desee más control sobre el tratamiento de los datos de la tabla.  
@@ -106,7 +106,7 @@ n=ColumnNametype [#]
 |---------------|-----------------|  
 |*ColumnName*|El nombre de la columna de texto. Si el nombre de columna contiene espacios en blanco incrustados, debe encerrarlo entre comillas dobles.|  
 |*Tipo*|Tipos de datos son los siguientes:<br /><br /> **Tipos de datos de Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Moneda<br /><br /> Único<br /><br /> Doble<br /><br /> DateTime<br /><br /> Texto<br /><br /> Memorándum<br /><br /> **Tipos de datos ODBC** Char (igual que el texto)<br /><br /> Float (igual que Double)<br /><br /> Integer (igual que Short)<br /><br /> LongChar (igual que Memo)<br /><br /> Fecha *formato de fecha*|  
-|**Ancho**|El valor de cadena literal `Width`. Indica que el número siguiente designa el ancho de la columna (opcional para archivos delimitados por el carácter; necesario para los archivos de longitud fija).|  
+|**Width**|El valor de cadena literal `Width`. Indica que el número siguiente designa el ancho de la columna (opcional para archivos delimitados por el carácter; necesario para los archivos de longitud fija).|  
 |*#*|El valor entero que indica el ancho de la columna (obligatorio si **ancho** se especifica).|  
   
 ## <a name="selecting-a-character-set"></a>Al seleccionar un juego de caracteres  

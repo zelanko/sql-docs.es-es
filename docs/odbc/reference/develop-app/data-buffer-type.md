@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 73acfc1747cdda9d3082eaed420e56943f698fea
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6b37e2294a22eadffad1302452d74b72a94891f5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-buffer-type"></a>Tipo de búfer de datos
 El tipo de datos C de un búfer especificado por la aplicación. Con una variable simple, esto se produce cuando la aplicación asigna la variable. Con genéricos de memoria, es decir, memoria indicada por un puntero de tipo void, esto se produce cuando la aplicación convierte la memoria a un tipo determinado. El controlador detecta este tipo de dos maneras:  

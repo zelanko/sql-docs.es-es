@@ -3,10 +3,10 @@ title: Crear la base de datos de almacenamiento provisional para almacenamiento 
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 6d0b2726-4772-4858-b700-885cc12219b2
 caps.latest.revision: "20"
-ms.openlocfilehash: f88e2c45aaed8b6f2b3bfb6fe610a0f228c4449e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 073dbb385d34d67b9274ac46828df5887abfe5a4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="staging-database"></a>Base de datos de almacenamiento provisional 
 Almacenamiento de datos paralelos (PDW) de SQL Server utiliza una base de datos de almacenamiento provisional para almacenar datos temporalmente durante el proceso de carga. De forma predeterminada, SQL Server PDW utiliza la base de datos de destino como la base de datos de almacenamiento provisional que puede provocar la fragmentación de las tablas. Para reducir la fragmentación de las tablas, puede crear una base de datos de almacenamiento provisional definido por el usuario. O bien, cuando la reversión de un error de carga no es un problema, puede usar el modo de carga de fastappend para mejorar el rendimiento mediante la omisión de la tabla temporal y cargando directamente en la tabla de destino.  

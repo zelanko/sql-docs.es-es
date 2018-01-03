@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0d78c97adc2ee17c4da6d3f1224313360a798e3b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4bb349dd9bc791659dc518aa66cbc40e958dbe66
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-long-data"></a>Obtener datos de tipo Long
 Definen DBMS *datos long* como cualquier carácter o datos binarios a través de un determinado tamaño, por ejemplo, 255 caracteres. Estos datos pueden ser lo suficientemente pequeños como para almacenarse en un único búfer, como una descripción de la parte de varios miles de caracteres. Sin embargo, puede ser demasiado largo para almacenar en memoria, como documentos de texto largos o mapas de bits. Dado que estos datos no se puede almacenar en un único búfer, se recuperan desde el controlador en partes con **SQLGetData** después de que se hayan extraído los demás datos de la fila.  

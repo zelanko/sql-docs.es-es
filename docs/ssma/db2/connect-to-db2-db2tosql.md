@@ -1,7 +1,7 @@
 ---
 title: "Conéctese a DB2 (DB2ToSQL) | Documentos de Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 92b8b90baea054039b22fb6db6c4761e85fa7aee
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e08da1c1922fce1154ec4ca16cd99a757ff973bd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-db2-db2tosql"></a>Conéctese a DB2 (DB2ToSQL)
 Use la **conectar a DB2** cuadro de diálogo para conectarse a la base de datos de DB2 que se va a migrar.  
   
 Para tener acceso a este cuadro de diálogo, en la **archivo** menú, seleccione **conectar a DB2**. Si se ha conectado anteriormente, el comando es **volver a conectar a DB2**.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Proveedor**  
 Seleccione el proveedor de acceso de datos para la conexión a la base de datos DB2. Proveedores disponibles son los proveedores de cliente DB2 y el proveedor OLE DB. El valor predeterminado es el proveedor de cliente de DB2.  
   
@@ -65,7 +65,7 @@ Escriba al SID de la base de datos. El SID es un identificador que distingue la 
   
 Se trata de una opción de modo estándar.  
   
-**Nombre de usuario.**  
+**User name**  
 Escriba el nombre de usuario que va a usar para conectarse a la base de datos de DB2 SSMA.  
   
 **Contraseña**  

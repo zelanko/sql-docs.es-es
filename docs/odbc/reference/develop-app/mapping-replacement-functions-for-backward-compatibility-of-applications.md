@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4fc2b4027039cf110caaf96bc2a197e2b10f1f62
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c93ea22e03f401580a968dacb1ca15910c7eb44b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Asignación de funciones de reemplazo para mantener la compatibilidad de aplicaciones
 Una aplicación ODBC 3*.x* aplicación funcione a través de ODBC 3*.x* el Administrador de controladores funcionará con una API ODBC 2. *x* controlador siempre y cuando no se utilizan características nuevas. Ambos duplican la funcionalidad y cambios de comportamiento, sin embargo, ser afectan al modo en que ODBC 3. *x* aplicación funciona en una API ODBC 2. *x* controlador. Cuando se trabaja con una API ODBC 2. *x* controlador, el Administrador de controladores asigna el siguiente ODBC 3. *x* funciones, que se reemplazaron uno o más ODBC 2. *x* funciones, en la correspondiente API ODBC 2. *x* funciones.  

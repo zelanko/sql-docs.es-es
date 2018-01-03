@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3ab63b576841aef6dec553ecc0c07ccec010319
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 508b89f5ff60b5cf64a03d167bf1ad4476edb734
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgettypeinfo-function"></a>Función SQLGetTypeInfo
 **Conformidad**  
@@ -113,7 +113,7 @@ SQLRETURN SQLGetTypeInfo(
 > [!NOTE]  
 >  **SQLGetTypeInfo** no puede devolver todos los tipos de datos. Por ejemplo, un controlador no podría devolver tipos de datos definidos por el usuario. Las aplicaciones pueden usar cualquier tipo de datos válido, independientemente de si se devuelve de forma **SQLGetTypeInfo**. Los tipos de datos devueltos por **SQLGetTypeInfo** son las que admite el origen de datos. Están diseñados para su uso en las instrucciones de lenguaje de definición de datos (DDL). Controladores pueden devolver datos de conjunto de resultados con tipos de datos distintos de los tipos devueltos por **SQLGetTypeInfo**. Al crear el conjunto de resultados de una función de catálogo, el controlador podría utilizar un tipo de datos que no es compatible con el origen de datos.  
   
-|Nombre de columna|Columna<br /><br /> number|Tipo de datos|Comentarios|  
+|Nombre de columna|columna<br /><br /> number|Tipo de datos|Comentarios|  
 |-----------------|-----------------------|---------------|--------------|  
 |TYPE_NAME (ODBC 2.0)|1|Varchar no NULL|Nombre de tipo de datos depende del origen de datos; Por ejemplo, "CHAR()", "VARCHAR()", "MONEY", "LONG VARBINARY" o "CHAR () para datos de bits". Las aplicaciones deben usar este nombre en **CREATE TABLE** y **ALTER TABLE** instrucciones.|  
 |DATA_TYPE (ODBC 2.0)|2|Smallint no NULL|Tipo de datos SQL. Puede tratarse de un tipo de datos SQL de ODBC o un tipo de datos SQL específico del controlador. Para los tipos de datos datetime o intervalo, esta columna devuelve el tipo de datos conciso (por ejemplo, SQL_TYPE_TIME o SQL_INTERVAL_YEAR_TO_MONTH). Para obtener una lista de tipos de datos de ODBC SQL válidos, consulte [tipos de datos SQL](../../../odbc/reference/appendixes/sql-data-types.md) en tipos de datos de apéndice D:. Para obtener información acerca de los tipos de datos SQL específico del controlador, consulte la documentación del controlador.|  

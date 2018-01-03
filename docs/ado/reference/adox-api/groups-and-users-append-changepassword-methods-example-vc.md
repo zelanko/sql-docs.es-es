@@ -3,7 +3,7 @@ title: "Usuarios y grupos de anexar, ejemplo de los métodos ChangePassword (VC 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4e84de9ee1ad01e7097532fab23b22f6ca8fa25a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6018d4e9d5f82501832275fd00b931e55c024d24
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vc"></a>Usuarios y grupos de anexar, ejemplo de los métodos ChangePassword (VC ++)
 Este ejemplo se muestra la [anexado](../../../ado/reference/adox-api/append-method-adox-groups.md) método de [grupos](../../../ado/reference/adox-api/groups-collection-adox.md), así como el [anexado](../../../ado/reference/adox-api/append-method-adox-users.md) método de [usuarios](../../../ado/reference/adox-api/users-collection-adox.md) agregando un nuevo [Grupo](../../../ado/reference/adox-api/group-object-adox.md) y una nueva [usuario](../../../ado/reference/adox-api/user-object-adox.md) en el sistema. El nuevo **grupo** se anexa a la **grupos** colección del nuevo **usuario**. Por lo tanto, la nueva **usuario** se agrega a la **grupo**. Además, el [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) método se utiliza para especificar el **usuario** contraseña.  

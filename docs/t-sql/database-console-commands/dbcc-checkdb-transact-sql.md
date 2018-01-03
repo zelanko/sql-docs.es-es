@@ -1,7 +1,7 @@
 ---
 title: DBCC CHECKDB (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
-ms.date: 09/21/2016
+ms.date: 12/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -40,11 +40,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 67d2d6b3b6ad42e444f8f7f2908f2327c4844933
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c4a5ab88b068d32e9a40f4556564018a5f806608
+ms.sourcegitcommit: 27f1143cf9b52dd27acf81234a516c32a239a320
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -132,10 +132,7 @@ DBCC CHECKDB
 >  Para reparar errores, se recomienda restaurar a partir de una copia de seguridad. Las operaciones de reparación no tienen en cuenta ninguna de las restricciones que puede haber en las tablas o entre ellas. Si la tabla especificada está implicada en una o más restricciones, se recomienda ejecutar DBCC CHECKCONSTRAINTS tras una operación de reparación. Si debe utilizar REPAIR, ejecute DBCC CHECKDB sin una opción de reparación para localizar el nivel de reparación que se va a utilizar. Si utiliza el nivel REPAIR_ALLOW_DATA_LOSS, se recomienda realizar una copia de seguridad de la base de datos antes de ejecutar DBCC CHECKDB con esta opción.    
     
  ALL_ERRORMSGS  
- Muestra todos los errores notificados por objeto. De forma predeterminada, se muestran todos los mensajes de error. Especificar u omitir esta opción no tiene ningún efecto. Mensajes de error se ordenan por identificador de objeto, excepto para los mensajes generados desde [base de datos tempdb](../../relational-databases/databases/tempdb-database.md).  
-    
-> [!NOTE] 
-> En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], el número máximo de mensajes de error devueltos es 1000. Cuando se especifica ALL_ERRORMSGS, le recomendamos que ejecute el comando DBCC mediante el uso de la [utilidad sqlcmd](../../tools/sqlcmd-utility.md) o mediante la programación de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo del agente para ejecutar el comando y dirigir la salida a un archivo. Cualquiera de estos métodos garantizará que el comando se ejecute una vez e informará de todos los mensajes de error.    
+ Muestra todos los errores notificados por objeto. De forma predeterminada, se muestran todos los mensajes de error. Especificar u omitir esta opción no tiene ningún efecto. Mensajes de error se ordenan por identificador de objeto, excepto para los mensajes generados desde [base de datos tempdb](../../relational-databases/databases/tempdb-database.md).     
 
  EXTENDED_LOGICAL_CHECKS  
  Si el nivel de compatibilidad es 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) o superior, realiza comprobaciones de coherencia lógica en una vista indizada, en índices XML y en índices espaciales, en caso de que los haya.  

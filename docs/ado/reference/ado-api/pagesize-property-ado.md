@@ -3,7 +3,7 @@ title: Propiedad PageSize (ADO) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9c0417012a1c68d0a3e3951a11f3a9ec84d8e89e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f1a538e98500a0fb162ab9720ff5f9c2ad933e2a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pagesize-property-ado"></a>Propiedad PageSize (ADO)
 Indica cuántos registros constituyen una página en el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  

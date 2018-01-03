@@ -3,10 +3,10 @@ title: Adquirir y configurar un servidor de carga (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: a434b174-a818-4f73-b218-264619bab664
 caps.latest.revision: "19"
-ms.openlocfilehash: 05747889f905e1f827a87cc0ad53ace62a911922
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d4a91dc3216945b3f473e1b5b131333ad8d210d3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="acquire-and-configure-a-loading-server"></a>Adquirir y configurar un servidor de carga
 En este tema se describe cómo adquirir y configurar un servidor de carga como un sistema de Windows no sea de dispositivo para el envío de cargas de datos al almacenamiento de datos paralelo de SQL Server (PDW).  

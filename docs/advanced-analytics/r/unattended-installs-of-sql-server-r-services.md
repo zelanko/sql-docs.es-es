@@ -2,11 +2,11 @@
 title: "Instalación desatendida de servicios de aprendizaje de máquina | Documentos de Microsoft"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: c58bbb4a7277b37c9ef479b79ba4809a02218908
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fdd28279b99f0dd39a0b971412d1252feb978413
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="unattended-installation-of-machine-learning-services-in-database"></a>Instalación desatendida de servicios de aprendizaje de máquina (In-Database)
 
@@ -34,7 +34,7 @@ Instalación desatendida, se entiende que no utilice las características intera
 
 **Se aplica a: servicios de aprendizaje automático de 2017 SQL Server (en bases de datos), SQL Server 2016 R Services**
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 + Debe instalar el motor de base de datos en cada instancia donde va a usar aprendizaje automático.
 

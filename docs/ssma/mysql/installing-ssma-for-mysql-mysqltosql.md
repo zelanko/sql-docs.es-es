@@ -1,7 +1,7 @@
 ---
 title: "Instalación de SSMA para MySQL (MySqlToSql) | Documentos de Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2bbfc5f19ca051eacaaa32e55717c469eee88a4a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b8984aaeb9240c8c3b309925e151e79688bc7be3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>Instalación de SSMA para MySQL (MySqlToSql)
 SQL Server Migration Assistant (SSMA) para MySQL consta de una aplicación de cliente que usa para realizar una migración desde MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. También contiene un módulo de extensión que admite la migración de datos y el uso de funciones de sistema de MySQL en las bases de datos migrados.  
@@ -39,7 +39,7 @@ Si desea actualizar a una versión posterior de SSMA para MySQL, debe desinstala
   
 |||  
 |-|-|  
-|**Tema**|**Description**|  
+|**Tema**|**Descripción**|  
 |[Instalación de SSMA para cliente de MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)|Proporciona información sobre e instrucciones para instalar al cliente SSMA.|  
 |[Instalación de componentes SSMA en SQL Server (MySQL a SQL)](http://msdn.microsoft.com/en-us/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|Proporciona información sobre e instrucciones para instalar el módulo de extensión en las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |[Eliminación de SSMA para componentes de MySQL &#40; MySQLToSql &#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|Proporciona instrucciones para desinstalar el programa cliente.|  

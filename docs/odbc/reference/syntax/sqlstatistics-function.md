@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f0e4b82221c78572d24c28717edb0f3209f29ea6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c1e66748edcc81f87c261d6958a766f5b651c31a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlstatistics-function"></a>Función SQLStatistics
 **Conformidad**  
@@ -82,7 +82,7 @@ SQLRETURN SQLStatistics(
  *Único*  
  [Entrada] Tipo de índice: SQL_INDEX_UNIQUE o SQL_INDEX_ALL.  
   
- *Reservado*  
+ *Reserved*  
  [Entrada] Indica la importancia de las columnas de CARDINALIDAD y las páginas del conjunto de resultados. Las opciones siguientes afectan a la devolución de las columnas de la CARDINALIDAD y páginas únicamente; incluso si no se devuelven la CARDINALIDAD y las páginas, se devuelve información de índice.  
   
  SQL_ENSURE solicita que el controlador incondicionalmente recuperar las estadísticas. (Los controladores que solo cumplen el estándar Open Group y no admiten extensiones de ODBC no será capaces de admitir SQL_ENSURE.)  

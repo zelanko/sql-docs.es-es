@@ -1,7 +1,7 @@
 ---
 title: Establecer las opciones de proyecto (DB2ToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 33144db25f6e444759cd8dc615106b062d9bc5f9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a2ffdaea48e85e53a6ba170ab34251a1d26e193f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-project-options-db2tosql"></a>Establecer las opciones del proyecto (DB2ToSQL)
 Para cada proyecto SSMA puede establecer opciones de nivel de proyecto. Estas opciones especifican la conversión de objetos, la carga del objeto, la configuración de migración de datos y la interfaz de usuario. Antes de convertir objetos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o migrar datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], compruebe que las opciones de configuración son adecuadas para el proyecto.  
@@ -46,7 +46,7 @@ SSMA tiene cinco conjuntos de configuración del proyecto:
   
 También tiene cuatro modos para configurar estas opciones:  
   
--   Predeterminado  
+-   Valor predeterminado  
   
 -   Optimistic  
   
@@ -99,7 +99,7 @@ También puede personalizar la configuración del proyecto actual. Esta configur
   
 3.  Haga clic en **Aceptar** para guardar la configuración.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Next Steps  
 El siguiente paso de la migración depende de las necesidades del proyecto:  
   
 -   Para personalizar la asignación de tipos de datos de origen y de destino, vea [DB2 de asignación y tipos de datos de SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md).  

@@ -2,11 +2,11 @@
 title: "Configuración las opciones avanzadas para servicios de aprendizaje de máquina | Documentos de Microsoft"
 ms.custom: SQL2016_New_Updated
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 369c630e249d7775e67508fc9b00e94447182012
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 24f2082572cdb314257826570471548f87b1b60e
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="advanced-configuration-options-for-machine-learning-services"></a>Opciones de configuración avanzada de servicios de aprendizaje de máquina
 
@@ -97,7 +97,7 @@ Para realizar cambios en este archivo, debe ser administrador en el equipo que e
 
 La tabla siguiente muestra la configuración avanzada de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], con los valores permitidos. 
 
-|**Nombre de opción**|**Tipo**|**Description**|
+|**Nombre de opción**|**Tipo**|**Descripción**|
 |----|----|----|
 |TRABAJO\_LIMPIEZA\_ON\_SALIR|Integer |Se trata únicamente una opción interna: no cambie este valor. </br></br>Especifica si se debe limpiar la carpeta de trabajo temporal creada para cada sesión externo en tiempo de ejecución una vez completada la sesión. Esta opción resulta útil para la depuración. </br></br>Los valores admitidos son **0** (deshabilitado) o **1** (habilitado). </br></br>El valor predeterminado es 1, los archivos de registro de significado se eliminan al salir.|
 |SEGUIMIENTO\_NIVEL|Integer |Configura el nivel de detalle del seguimiento de MSSQLLAUNCHPAD para fines de depuración. Esto afecta a los archivos de seguimiento en la ruta de acceso especificada por la opción LOG_DIRECTORY. </br></br>Los valores admitidos son: **1** (Error), **2** (rendimiento), **3** (advertencia), **4** (información). </br></br>El valor predeterminado es 1, lo que significa que solo advertencias de salida.|

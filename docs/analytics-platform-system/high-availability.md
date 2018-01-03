@@ -3,10 +3,10 @@ title: "Alta disponibilidad de sistema de la plataforma de análisis"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 5ab245e9-0316-4d25-a626-4745ce856925
 caps.latest.revision: "9"
-ms.openlocfilehash: 78b55161af9bfe8da16d7276bddc4e2f2cff9ee5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 11733b45ba25f625ea2d3d601939973e9137b15d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="analytics-platform-system-high-availability"></a>Alta disponibilidad de sistema de la plataforma de análisis
 Describe cómo Analytics Platform System (APS) se ha diseñado para lograr alta disponibilidad.  
@@ -27,12 +27,12 @@ Describe cómo Analytics Platform System (APS) se ha diseñado para lograr alta 
 ## <a name="high-availability-architecture"></a>Arquitectura de alta disponibilidad  
 ![La arquitectura del dispositivo](media/appliance-architecture.png "la arquitectura del dispositivo")  
   
-## <a name="network"></a>Red  
+## <a name="network"></a>red  
 Disponibilidad de la red, el dispositivo de APS tiene dos redes InfiniBand. Si una de las redes InfiniBand deja de funcionar, el otro se sigue estando disponible. Además, Active Directory ha replicado los controladores de dominio para resolver las solicitudes entrantes a la red InfiniBand correcta.  
   
 Para obtener más información, consulte [adaptadores de red InfiniBand configurar](configure-infiniband-network-adapters.md).  
   
-## <a name="storage"></a>Almacenamiento  
+## <a name="storage"></a>Storage  
 Para conservar los datos seguros, APS utiliza RAID 1 para mantener dos copias de todos los datos de usuario de creación de reflejo. Cuando se produce un error en un disco, el sistema de hardware vuelve a generar los datos en un disco de repuesto y establece una alerta que hay un error de disco.  
   
 Para mantener los datos disponibles en línea, APS usa espacios de almacenamiento de Windows y volúmenes compartidos de clúster para administrar los discos de datos de usuario en el almacenamiento de conexión directa. Hay un grupo de almacenamiento por unidad de escala de datos que se organizan en volúmenes compartidos de clúster que están disponibles para los hosts de nodo de proceso a través de puntos de montaje.  

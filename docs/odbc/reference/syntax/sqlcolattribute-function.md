@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fead7415e3cb4a951a5ab2ba90b4969682905a0a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7470412149bf336be8d07495eab4aa9bdf449a86
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcolattribute-function"></a>Función SQLColAttribute
 **Conformidad**  
@@ -131,7 +131,7 @@ SQLRETURN SQLColAttribute (
   
  Un ODBC 3. *x* controlador debe devolver un valor para cada uno de los campos de descriptor. Si un campo de descriptor no se aplica a un controlador u origen de datos y, a menos que se indique lo contrario, el controlador devuelve 0 en \* *StringLengthPtr* o una cadena vacía en **CharacterAttributePtr*.  
   
-## <a name="backward-compatibility"></a>Compatibilidad con versiones anteriores  
+## <a name="backward-compatibility"></a>Backward Compatibility  
  ODBC 3. *x* función **SQLColAttribute** reemplaza el 2 de ODBC en desuso. *x* función **SQLColAttributes**. Al asignar **SQLColAttributes** a **SQLColAttribute** (cuando una API ODBC 2. *x* aplicación está trabajando con una aplicación ODBC 3. *x* controlador), o asignación **SQLColAttribute** a **SQLColAttributes** (cuando una aplicación ODBC 3. *x* aplicación está trabajando con una API ODBC 2. *x* controlador), el Administrador de controladores o pasa el valor de *FieldIdentifier* a través de, lo asigna a un nuevo valor o devuelve un error, como se indica a continuación:  
   
 > [!NOTE]  

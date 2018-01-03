@@ -3,10 +3,10 @@ title: "Copia de seguridad y carga de información general de hardware para APS 
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 3a2ae046-f8d8-4a5c-b3c1-6ecee005df6c
 caps.latest.revision: "9"
-ms.openlocfilehash: 0bdf529aacf1644f55cd44da3d0a7590e509a323
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 91348b3cb936556cbfe4b2c515c6d32e38913618
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="backup-and-loading-hardware-overview"></a>Copia de seguridad y cargar la información general de hardware
 Para implementar los datos de end-to-end con almacenamiento de datos paralelos de SQL Server (PDW) de la solución en Analytics Platform System (APS) de almacenamiento, debe crear un plan de copia de seguridad del almacenamiento de datos y cargar los datos. Utilice esta guía para adquirir y configurar servidores de copia de seguridad y cargar que satisfacen sus requisitos empresariales.  

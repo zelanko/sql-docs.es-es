@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f58efc6ca7f6587ce7d7070bc02ad935efe06bff
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fecf227f991a3c9c6edfb1ce29f5b3b781898e45
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-concise-functions"></a>Uso de funciones concisas
 Algunas funciones ODBC obtienen acceso implícito a descriptores. Escritores de aplicaciones pueden resultar más conveniente que llamar a **SQLSetDescField** o **SQLGetDescField**. Estas funciones se denominan *concisa* funciones ya que realizan una serie de funciones, incluidas establecer u obtener los campos de descriptor. Algunas funciones concisas permiten a una aplicación establecer o recuperar varios campos de descriptor relacionados en una única llamada de función.  

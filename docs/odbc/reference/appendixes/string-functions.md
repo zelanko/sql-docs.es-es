@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0bbc611df9bcddaf0930a864ca2541f003a6ddb4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 049e1acec8ad27e9fd65d838c17f48c78519ad46
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-functions"></a>Funciones de cadena
 En la tabla siguiente se enumera las funciones de manipulación de cadena. Una aplicación puede determinar qué funciones de cadena son compatibles con un controlador mediante una llamada a **SQLGetInfo** con una *tipo de información* de SQL_STRING_FUNCTIONS.  

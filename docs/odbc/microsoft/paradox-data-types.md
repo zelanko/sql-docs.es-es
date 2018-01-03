@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e63f642f7a1921f9d65cd6f8fe665b9e83c9404c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 40266f580e162ed021c069c1b583748906b3b336
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="paradox-data-types"></a>Tipos de datos de Paradox
 El controlador ODBC Paradox asigna tipos de datos de Paradox a tipos de datos SQL de ODBC. En la tabla siguiente se enumera todos los tipos de datos de Paradox y muestra que se asignan a los tipos de datos de ODBC SQL.  

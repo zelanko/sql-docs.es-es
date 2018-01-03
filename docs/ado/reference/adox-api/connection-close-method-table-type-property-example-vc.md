@@ -3,7 +3,7 @@ title: "Conexión Close (método), ejemplo de la propiedad de tipo de tabla (VC 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 22ca4649d8cab1b34bdfdcf064091c8faea9033a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e7d5552d124ce60ee9849aa1e22e2c1f0b0f29c9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Método de cierre de conexión, ejemplo de la propiedad de tipo de tabla (VC ++)
 Establecer el [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) propiedad **nada** debe "cerrar" el catálogo. Colecciones asociadas estará vacías. Los objetos que se crearon a partir de objetos de esquema en el catálogo se quedarán huérfanos. Las propiedades en los objetos que se han almacenado en caché estarán disponibles, pero se producirá un error al intentar leer las propiedades que requieren una llamada al proveedor.  

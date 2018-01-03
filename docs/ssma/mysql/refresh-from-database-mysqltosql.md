@@ -1,7 +1,7 @@
 ---
 title: Actualizar desde la base de datos (MySQLToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a59f32e2917048f385b130a5a19d44d8a5df429
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 18656f8929e52d23e10ccc5fafe8139544bf44a5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="refresh-from-database-mysqltosql"></a>Actualizar desde la base de datos (MySQLToSQL)
 El **actualizar desde la base de datos** cuadro de diálogo permite seleccionar los objetos que desea actualizar desde la base de datos de MySQL. Filas en el cuadro de diálogo están codificadas mediante colores en función del estado de los metadatos:  
@@ -41,7 +41,7 @@ Puede especificar la configuración de actualización de objeto predeterminado e
   
 Para tener acceso a la **actualizar desde la base de datos** cuadro de diálogo, haga un objeto en el Explorador de metadatos de MySQL y haga clic en **actualizar desde la base de datos**.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
   
 |||  
 |-|-|  

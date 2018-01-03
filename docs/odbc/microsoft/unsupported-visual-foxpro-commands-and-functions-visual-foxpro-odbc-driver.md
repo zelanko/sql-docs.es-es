@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: df2f3bfdb37ab506de3fe99d8c7d1e5e9764ef43
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 85d11ebb5fd4245a7c6b5cf7c277e45d8df90011
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>No compatible de Visual FoxPro comandos y funciones (controlador ODBC de Visual FoxPro)
 En la tabla siguiente se enumera los comandos de FoxPro y funciones que no son compatibles con el controlador ODBC de Visual FoxPro pero son compatibles con Microsoft® Visual FoxPro.  
@@ -40,7 +40,7 @@ En la tabla siguiente se enumera los comandos de FoxPro y funciones que no son c
 |-|-|-|  
 |#... DEFINEN #UNDEF|#IF... #ENDIF directiva de preprocesador|#IFDEF &#124; #IFNDEF|  
 |#INCLUDE preprocesador (directiva)|:: Operador de resolución de ámbito|! Comando (vea Ejecutar &#124;! Comando)|  
-|? &#124; ?? Command|??? Command|\ &#124; \\\ Comando|  
+|? &#124; ?? Comando|??? Comando|\ &#124; \\\ Comando|  
 |@ ... CUADRO comando|@ ... Comando de clase|@ ... Borrar, comando|  
 |@ ... Editar - Editar comando cuadros|@ ... RELLENAR, comando|@ ... GET|  
 |@ ... Comando de menú|@ ... Símbolo|@ ... EJEMPLO de comando|  
@@ -228,7 +228,7 @@ En la tabla siguiente se enumera los comandos de FoxPro y funciones que no son c
 |-|-|-|  
 |Salga de comando|||  
   
-## <a name="r"></a>L  
+## <a name="r"></a>R  
   
 ||||  
 |-|-|-|  
@@ -242,7 +242,7 @@ En la tabla siguiente se enumera los comandos de FoxPro y funciones que no son c
 |Cambiar el nombre de comando de conexión|Cambiar el nombre de comando de tabla|RESTAURAR a partir de comando|  
 |Comando de informe|REQUERY () (función)|RESTAURAR la ventana de comando|  
 |RESTAURAR comandos de MACROS|RESTAURAR comandos de pantalla|Función RGBSCHEME)|  
-|Comando RESUME|RGB (función))|¡EJECUTAR &#124;! Command|  
+|Comando RESUME|RGB (función))|¡EJECUTAR &#124;! Comando|  
 |Comando RMDIR|Función de fila)||  
 |Comando RUNSCRIPT|Función RDLEVEL)||  
   

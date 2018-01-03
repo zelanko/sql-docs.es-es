@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 54f9d438571b1535d16f5fc3b333e9a9cede42eb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9ea6f6c65e1250a999d019e7cf8b81510b227831
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="character-data-and-c-strings"></a>Datos de caracteres y cadenas de c.
 Parámetros de entrada que hacen referencia a datos de caracteres de longitud variable (como nombres de columna, los parámetros dinámicos y los valores de atributo de cadena) tienen un parámetro de longitud asociada. Si la aplicación termina cadenas con el carácter null, tal y como es habitual en C, proporciona como argumento a la longitud en bytes de la cadena (sin incluir el terminador null) o SQL_NTS (String Null-Terminated). Un argumento de longitud no negativo especifica la longitud real de la cadena asociada. El argumento de longitud puede ser 0 para especificar una cadena de longitud cero, que es distinta de un valor NULL. El valor negativo SQL_NTS indica al controlador para determinar la longitud de la cadena, localizando el carácter de terminación null.  

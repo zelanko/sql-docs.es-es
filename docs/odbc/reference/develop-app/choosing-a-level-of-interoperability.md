@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ccd1a80447055eb8624c6cfd6df56a21b709aa3b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2ea72f7e7a9ebbbb8d621b953f74a12d568d053e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choosing-a-level-of-interoperability"></a>Elección de un nivel de interoperabilidad
 Suponiendo que la aplicación va a utilizar ODBC, el siguiente paso es determinar qué nivel de interoperabilidad es necesario. El nivel básico de interoperabilidad normalmente es una función del tipo de aplicación: aplicaciones personalizadas no suelen ser interoperables, las aplicaciones verticales suelen ser interoperables entre un número limitado de DBMS y aplicaciones genéricas tienden a ser interoperable entre todos los DBMS.  

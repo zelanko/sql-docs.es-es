@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2cb4ddb3b51763772b00b7d17691e60109d1d6aa
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 749492ebd893234dea574c0fd87e20b45ddd8628
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-database-access-architectures"></a>Arquitecturas de acceso de base de datos estándar
 Para buscar en los componentes de acceso de la base de datos se describe en la sección anterior, pero resulta que dos de ellos: interfaces de programación y los datos de secuencia protocolos: son buenos candidatos para la estandarización. Los otros dos componentes: IPC mecanismo y protocolos de red, no solo residen en un nivel demasiado bajo, pero son ambos dependen en gran medida de la red y el sistema operativo. Hay también un tercer enfoque, las puertas de enlace, que proporciona posibilidades de normalización.  

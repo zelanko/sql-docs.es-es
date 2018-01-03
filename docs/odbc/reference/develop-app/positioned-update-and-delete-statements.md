@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a35d57aaa00f7f2406b779f987c4dd07e694f737
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0c39c0081ee0cd671ee31bd7e11c02a72adc7558
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="positioned-update-and-delete-statements"></a>Actualización posicionada y las instrucciones Delete
 Las aplicaciones pueden actualizar o eliminar la fila actual de un conjunto de resultados con una actualización por posición o la instrucción delete. Coloca update y delete instrucciones son compatibles con algunos orígenes de datos, pero no todas ellas. Para determinar si un origen de datos admite coloca instrucciones update y delete, llama a una aplicación **SQLGetInfo** con el SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ ATTRIBUTES1 o SQL_STATIC_CURSOR_ATTRIBUTES1 *tipo de información* (según el tipo del cursor). Tenga en cuenta que la biblioteca de cursores ODBC simula coloca instrucciones update y delete.  

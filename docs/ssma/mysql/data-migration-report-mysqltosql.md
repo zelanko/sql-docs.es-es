@@ -1,7 +1,7 @@
 ---
 title: "Informe de migración de datos (MySQLToSQL) | Documentos de Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,16 +20,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 90f8bc1e1985e48f07603bebab9431c0c7c1e05b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0fe8dfc94eb8db5da55a150c122616f6f7cc2d19
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-migration-report--mysqltosql"></a>Informe de migración de datos (MySQLToSQL)
 El **informe de migración de datos** aparece el cuadro de diálogo después de migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Estado**  
 Muestra el estado de la migración de datos desde el origen de la base de datos de destino.  
   

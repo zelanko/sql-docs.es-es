@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 17d7cfdacb91ff3963a1bf77343c171e8f9d3fec
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 676ab0116fa14af4d2f29c2620a4f6e15f17cdc0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>Utilizando SQLConfigDatasource con el controlador ODBC para Oracle
 > [!IMPORTANT]  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/20/2017
 |RDOSupport|2|""|0 o 1|Permite RDO llamar a procedimientos de Oracle.|  
 |Comentarios|2|0|0 o 1|Incluir comentarios en funciones de catálogo.|  
 |RowLimit|4|""|0 a 99|Número máximo de filas devueltas por una instrucción SELECT. Una cadena de longitud cero indica que no se aplica ningún límite.|  
-|Server|128|""|A/N|Nombre de servidor de Oracle.|  
+|Servidor|128|""|A/N|Nombre de servidor de Oracle.|  
 |SynonymColumns|2|1|0 o 1|Incluir SYNONYMs en SQLColumns.|  
 |SystemTable|2|""|0 o 1|Si es 0, no se mostrarán las tablas del sistema. Si es 1, se mostrará en las tablas del sistema.|  
 |TranslationDLL|33|""|A/N|Nombre de archivo .dll de traducción.|  

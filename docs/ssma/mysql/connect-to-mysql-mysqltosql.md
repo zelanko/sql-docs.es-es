@@ -1,7 +1,7 @@
 ---
 title: Conectarse a MySQL (MySQLToSQL) | Documentos de Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e7e56b60fb754c34dafda5c08953bf50d01f478f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 068fe6585eac87830511515a95373a938cbcdca2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>Conectarse a MySQL (MySQLToSQL)
 Use la **conectar con MySQL** cuadro de diálogo para conectarse a la base de datos de MySQL que se va a migrar.  
   
 Para tener acceso a este cuadro de diálogo, en la **archivo** menú, seleccione **conectar con MySQL**. Si se ha conectado anteriormente, el comando es **volver a conectar con MySQL**.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Proveedor**  
   
 Proveedor de MySQL disponible es controlador de MySQL ODBC 5.1 (de confianza).  
@@ -48,7 +48,7 @@ Escriba el nombre del servidor MySQL. Se trata de una opción de modo estándar.
   
 Escriba el puerto del servidor. El puerto de servidor predeterminado es 3306. Se trata de una opción de modo estándar.  
   
-**Nombre de usuario.**  
+**User name**  
   
 Escriba el nombre de usuario que va a usar para conectarse a la base de datos de MySQL SSMA.  
   

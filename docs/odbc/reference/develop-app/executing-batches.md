@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ca3a769ca983cae0cb7a2bc629c366b184b067e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 620965b524b6d76d1f1d0a3d7adaf84c05c4540c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-batches"></a>Ejecución de lotes
 Antes de que una aplicación ejecuta un lote de instrucciones, debe comprobar primero si son compatibles. Para ello, la aplicación llama **SQLGetInfo** con las opciones de SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS y SQL_PARAM_ARRAY_SELECTS. La primera opción devuelve si generación de recuento de filas y el resultado de conjunto: generar instrucciones son compatibles con lotes explícitos y procedimientos, mientras las dos últimas opciones devuelven información acerca de la disponibilidad de recuentos de filas y el resultado se establece en parámetros ejecución.  

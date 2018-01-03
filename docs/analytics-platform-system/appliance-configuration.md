@@ -3,10 +3,10 @@ title: "Configuración del equipo (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 064e7485-7026-4acf-8084-f5d30757d177
 caps.latest.revision: "43"
-ms.openlocfilehash: ebb797e3fdb24bad79857f83c163dbf92a439883
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 05670f1727691b1abc0fd98dd5970c7697725b8e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appliance-configuration"></a>Configuración de dispositivo
 Proporciona listas de comprobación para las tareas necesarias para configurar el sistema de la plataforma de análisis para su propio entorno. Estas tareas de configuración son necesarias para poder usar el dispositivo.  
@@ -28,9 +28,9 @@ Proporciona listas de comprobación para las tareas necesarias para configurar e
 > [!WARNING]  
 > Usar Analytics Platform System**Configuration Manager** es la mejor manera y la única manera, para realizar las tareas disponibles en la herramienta admite.  
   
-## <a name="BeforeTasks"></a>Antes de comenzar  
+## <a name="BeforeTasks"></a>Antes de empezar  
   
-### <a name="prerequisites"></a>Requisitos previos  
+### <a name="prerequisites"></a>Prerequisites  
   
 1.  El dispositivo debe estar instalado en el centro de datos y con Bing Maps en.  
   

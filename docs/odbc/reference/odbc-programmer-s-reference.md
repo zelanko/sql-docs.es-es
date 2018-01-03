@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3fc868b66f6322d9769176671c8df2913d58150e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b934652505039a021d2b08c0fa5314614ce9c609
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-programmer39s-reference"></a>Programador de ODBC &#39; s referencia
 El *referencia del programador de ODBC* contiene las siguientes secciones.  
@@ -59,7 +59,7 @@ El *referencia del programador de ODBC* contiene las siguientes secciones.
 |*argumento*|Las palabras en cursiva indican argumentos mediante programación, información que el usuario o la aplicación debe proporcionar o énfasis de word.|  
 |**SQLEndTran**|Tipos en negrita indican que sintaxis debe escribirse exactamente como se muestra, incluidos los nombres de función.|  
 |&#124;|Una barra vertical separa dos opciones mutuamente excluyentes en una línea de sintaxis.|  
-|...|Los puntos suspensivos indican que los argumentos se pueden repetir varias veces.|  
+|…|Los puntos suspensivos indican que los argumentos se pueden repetir varias veces.|  
 |. . .|Una columna de tres puntos que indica que la continuación de líneas de código anteriores.|  
   
 ## <a name="about-the-code-examples"></a>Acerca de los ejemplos de código  

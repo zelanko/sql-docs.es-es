@@ -2,9 +2,11 @@
 title: "Instalación desatendida de servicios de aprendizaje de máquina de Python (In-Database) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 07/31/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: r-services
+ms.component: python
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 77d9a8fcaca2aa8161d6763cda74239754da41d5
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: a159a3198037e21664bb9b07647a01b1d5317d22
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>Instalación desatendida de servicios de aprendizaje de máquina de Python (In-Database)
 
@@ -27,7 +29,7 @@ En este tema se describe cómo utilizar los argumentos de línea de comandos en 
 > [!NOTE]
 > No olvide incluir los argumentos de línea de comandos para los contratos de licencia, uno para Python y otro para SQL Server.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Antes de comenzar el proceso de instalación, tenga en cuenta estos requisitos:
 

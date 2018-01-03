@@ -3,7 +3,7 @@ title: onError (evento, RDS) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 21711f6915fab9edb053010467917cc7b240517e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d6bc8efc6bec5e55ca1f6b9d606542ebd1fe9775
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="onerror-event-rds"></a>onError (evento, RDS)
 El **onError** eventos se llama cada vez que se produce un error durante una operación.  
@@ -42,7 +42,7 @@ onError SCode, Description, Source, CancelDisplay
  *SCode*  
  Un entero que indica el código de estado del error.  
   
- *Descripción*  
+ *Description*  
  A **cadena** que indica una descripción del error.  
   
  *Source*  

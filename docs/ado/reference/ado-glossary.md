@@ -8,7 +8,7 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords: ADO, glossary
@@ -17,11 +17,11 @@ caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.openlocfilehash: dd35c15674cff4dc01edddd18f8416d86280d38d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: be9365b3a26b2b8b1db2f4a705a5df1c7b547c54
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-glossary"></a>Glosario de ADO
 En este tema define los términos relacionados con ADO.  
@@ -253,7 +253,7 @@ En este tema define los términos relacionados con ADO.
  Proxy  
  Un objeto específico de la interfaz que proporciona la serialización de parámetros y la comunicación requerida para que un cliente llamar a un objeto de aplicación que se ejecuta en un entorno de ejecución diferente, como en un subproceso diferente o en otro proceso. El proxy se encuentra en el cliente y se comunica con un código auxiliar correspondiente que se encuentra en el objeto de aplicación que se está llamando. Vea también código auxiliar.  
   
-## <a name="r"></a>L  
+## <a name="r"></a>R  
  dirección URL relativa  
  Dirección URL parcialmente cualificada que especifica un recurso en Internet o en una intranet cuya ubicación es relativa a un punto de partida especificado por una dirección URL absoluta o el objeto de conexión ADO equivalente. De hecho, la constituyen de direcciones URL concatenado de absolutas y relativa una dirección URL completa. Vea también URL y URL absoluta.  
   
@@ -292,7 +292,7 @@ En este tema define los términos relacionados con ADO.
  Una operación iniciada por el código que se completa antes de que puede comenzar la siguiente operación. Vea también la operación asincrónica.  
   
 ## <a name="t-z"></a>T-Z  
- Árbol  
+ trEE  
  Una estructura que representa una relación jerárquica entre elementos (nodos). Hay un nodo en el nivel superior de un árbol (la raíz). Debajo de la raíz, puede haber varios elementos secundarios. Cada elemento secundario a su vez puede ser el elemento primario de otros elementos secundarios, bifurcando así la estructura como un árbol. Una carpeta que contiene documentos y otras carpetas es un ejemplo típico de una estructura de árbol. Vea también jerarquía, nodo, raíz, secundario y primario.  
   
  Servidor Web  

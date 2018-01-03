@@ -1,7 +1,7 @@
 ---
 title: "Configuración (sincronización) (MySQLToSQL) del proyecto | Documentos de Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8ff2ac36451187b0d74087043142969cde9560ee
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cc7bd0c7dce1c8ad2b70cdaa6b66ed7872c5062d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>Configuración del proyecto (la sincronización) (MySQLToSQL)
 La sincronización **configuración del proyecto** le permiten configurar cómo se sincronizan los objetos de base de datos de MySQL con objetos de base de datos de SQL Server.  
@@ -37,7 +37,7 @@ Puede tener acceso a dos páginas diferentes de sincronización que contengan lo
   
 -   Para especificar la configuración para el proyecto actual, en la **herramientas** menú, haga clic en **configuración del proyecto**y, a continuación, haga clic en **sincronización** en la parte inferior del panel izquierdo.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
   
 ##### <a name="misc"></a>Varios  
   

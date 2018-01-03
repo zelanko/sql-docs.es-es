@@ -1,37 +1,42 @@
 ---
-title: Crear y ejecutar Scripts de R | Documentos de Microsoft
-ms.custom: SQL2016_New_Updated
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+title: "Crear y ejecutar scripts de R (SQL y R profundización) | Documentos de Microsoft"
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 51e8e66f-a0a5-4e96-aa71-f5c870e6d0d4
 caps.latest.revision: "18"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d5afb4be84373a1002d7a141fdc743a3a91d1ac8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 3f26a5850ffe3245029486a2be4406790e36b6ab
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="create-and-run-r-scripts"></a>Crear y ejecutar Scripts de R
+# <a name="create-and-run-r-scripts-sql-and-r-deep-dive"></a>Crear y ejecutar scripts de R (SQL y R profundización)
 
-Ahora que ha configurado los orígenes de datos y ha establecido uno o varios contextos de cálculo, está listo para ejecutar scripts de R de alta potencia mediante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  En esta lección, va a usar el contexto de cálculo del servidor para realizar algunas tareas de aprendizaje automático comunes:
+Este artículo forma parte del tutorial exhaustiva de ciencia de datos, acerca de cómo usar [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+
+Ahora que ha configurado los orígenes de datos y ha establecido uno o varios contextos de cálculo, está listo para ejecutar scripts de R de alta potencia mediante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  En esta lección, se utiliza el contexto de proceso de servidor para realizar algunas tareas de aprendizaje de automático comunes:
 
 - Visualizar datos y generar estadísticas de resumen
 - Crear un modelo de regresión lineal
 - Crear un modelo de regresión logística
 - Puntuar nuevos datos y crear un histograma de las puntuaciones
 
-## <a name="change-compute-context-to-the-server"></a>Cambiar el contexto de cálculo al servidor
+## <a name="change-compute-context-to-the-server"></a>Cambio de contexto en el servidor de proceso
 
 Antes de ejecutar cualquier código R, debe especificar el contexto de cálculo *actual* o *activo* .
 
@@ -41,7 +46,7 @@ Antes de ejecutar cualquier código R, debe especificar el contexto de cálculo 
     rxSetComputeContext(sqlCompute)
     ```
   
-    Cuando ejecute esta instrucción, todos los cálculos posteriores se llevarán a cabo en el equipo con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificado en el parámetro *sqlCompute* .
+    En cuanto se ejecuta esta instrucción, todos los cálculos posteriores tienen lugar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] equipo especificado en el *sqlCompute* parámetro.
   
 2. Si decide que prefiere ejecutar el código R en su estación de trabajo, puede cambiar el contexto de cálculo al equipo local mediante la palabra clave  **local** .
   
@@ -53,22 +58,22 @@ Antes de ejecutar cualquier código R, debe especificar el contexto de cálculo 
   
 3. Después de especificar un contexto de cálculo, permanece activo hasta que lo cambie. Pero todos los scripts de R que *no* se puedan ejecutar en un contexto de servidor remoto se ejecutarán localmente.
 
-## <a name="compute-summary-statistics"></a>Calcular las estadísticas de resumen
+## <a name="compute-some-summary-statistics"></a>Proceso de algunas estadísticas de resumen
 
-Para ver cómo funciona el contexto de cálculo, pruebe a generar algunas estadísticas de resumen mediante el origen de datos *sqlFraudDS* .  Recuerde que el objeto de origen de datos solo define los datos que usará; no cambia el contexto de cálculo.
+Para ver cómo funciona el contexto de proceso, intente generar algunas estadísticas de resumen utilizando el `sqlFraudDS` origen de datos.  Recuerde que el objeto de origen de datos solo define los datos que se utilice; no cambia el contexto de proceso.
 
-+ Para realizar el resumen de manera local, use **rxSetComputeContext** y especifique la palabra clave "local".
++ Para realizar el resumen de forma local, utilice **rxSetComputeContext** y especifique la _local_ palabra clave.
 + Para crear los mismos cálculos en el equipo de SQL Server, cambie al contexto de cálculo de SQL que ha definido anteriormente.
 
-1. Llame a la función **rxSummary** y pase los argumentos necesarios, como la fórmula y el origen de datos, y asigne los resultados a la variable *sumOut*.
+1. Llame a la [rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) función y pasar los argumentos necesarios, por ejemplo, la fórmula y el origen de datos y asigne los resultados a la variable `sumOut`.
   
     ```R
-    sumOut \<- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
+    sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    El lenguaje R proporciona numerosas funciones de resumen pero rxSummary admite la ejecución en varios contextos de proceso remoto, incluidos los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  Para obtener más información sobre funciones similares, consulte [Resúmenes de datos](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-data-summaries) en [Funciones RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler/scaler).
+    El lenguaje R proporciona muchas funciones de resumen, pero **rxSummary** admite la ejecución en varios contextos de proceso remoto, incluidos los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener información acerca de funciones similares, vea [resúmenes de los datos con RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
   
-2. Cuando se haya realizado el procesamiento, puede imprimir el contenido de la variable *sumOut* en la consola.
+2. Cuando se realiza el procesamiento, puede imprimir el contenido de la `sumOut` variable en la consola.
   
     ```R
     sumOut
@@ -76,7 +81,6 @@ Para ver cómo funciona el contexto de cálculo, pruebe a generar algunas estad�
   
     > [!NOTE]
     > No intente imprimir los resultados antes de que se devuelvan desde el equipo con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o es posible que se produzca un error.
-
 
 **Resultado**
 
@@ -112,11 +116,11 @@ Para ver cómo funciona el contexto de cálculo, pruebe a generar algunas estad�
 
   *Female 3846*
 
-## <a name="add-maximum-and-minimum-values"></a>Agregar valores máximos y mínimos
+## <a name="add-maximum-and-minimum-values"></a>Agregar los valores máximos y mínimos
 
-Según las estadísticas de resumen calculadas, ha descubierto información útil sobre los datos que quiere incluir en el origen de datos para su uso en cálculos adicionales. Por ejemplo, los valores mínimo y máximos se pueden utilizar para calcular los histogramas, por lo que decide agregar los valores máximo y mínimo para el origen de datos de RxSqlServerData.
+Según las estadísticas de resumen calculadas, ha descubierto información útil sobre los datos que quiere incluir en el origen de datos para su uso en cálculos adicionales. Por ejemplo, los valores mínimo y máximos se pueden utilizar para calcular los histogramas. Por este motivo, vamos a agregar los valores máximo y mínimo para el **RxSqlServerData** origen de datos.
 
-Afortunadamente [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] incluye funciones optimizadas que pueden convertir de forma muy eficaz datos enteros en datos factoriales de categorías.
+Afortunadamente [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] incluye funciones optimizadas que pueden convertir eficazmente los datos enteros a los datos de categorías factor.
 
 1. Empiece por configurar algunas variables temporales.
   
@@ -125,9 +129,9 @@ Afortunadamente [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.m
     var <- sumDF$Name
     ```
   
-2. Use la variable *ccColInfo* que ha creado anteriormente para definir las columnas del origen de datos.
+2. Use la variable `ccColInfo` que creó anteriormente para definir las columnas del origen de datos.
   
-    También agregaremos nuevas columnas calculadas (*numTrans*, *numIntlTrans*y *creditLine*) a la colección de columnas.
+    También, agregar algunas de las columnas calculan nuevas (`numTrans`, `numIntlTrans`, y `creditLine`) a la colección de columnas.
   
     ```R 
     ccColInfo <- list(
@@ -149,22 +153,23 @@ Afortunadamente [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.m
             )
     ```
   
-3. Después de actualizar la colección de columnas, puede aplicar la siguiente instrucción para crear una versión actualizada del origen de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que definió anteriormente.
+3. Necesidad de actualizar la colección de columnas, se aplica la siguiente instrucción para crear una versión actualizada de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origen de datos que definió anteriormente.
   
     ```R
-    sqlFraudDS \<- RxSqlServerData(
+    sqlFraudDS <- RxSqlServerData(
         connectionString = sqlConnString,
         table = sqlFraudTable,
         colInfo = ccColInfo,
         rowsPerRead = sqlRowsPerRead)
     ```
   
-    El origen de datos *sqlFraudDS* ahora incluye las nuevas columnas que ha agregado en *ccColInfo*.
+    El `sqlFraudDS` origen de datos ahora incluye las nuevas columnas que se agregan mediante `ccColInfo`.
   
-  Estas modificaciones solo afectan al objeto de origen de datos en R; no se ha escrito ningún dato en la tabla de la base de datos. En cambio, puede usar los datos que se han capturado en la variable *sumOut* para crear visualizaciones y resúmenes. En el siguiente paso, aprenderá cómo hacerlo mientras cambia los contextos de cálculo.
+
+En este momento, las modificaciones afectan únicamente al objeto de origen de datos en R; No hay nuevos datos se ha escrito aún en la tabla de base de datos. Sin embargo, puede usar los datos capturados en el `sumOut` variable para crear visualizaciones y resúmenes. En el paso siguiente aprenderá a hacerlo al cambio de contextos de proceso.
 
 > [!TIP]
-> Si olvida qué contexto de proceso que está usando, ejecute `rxGetComputeContext()`.  Un valor devuelto de `RxLocalSeq Compute Context` indica que se están ejecutando en el contexto de proceso local.
+> Si olvida qué contexto de proceso que está usando, ejecute `rxGetComputeContext()`.  Un valor devuelto de "Contexto de cálculo de RxLocalSeq" indica que está ejecutando en el contexto de proceso local.
 
 ## <a name="next-step"></a>Paso siguiente
 
@@ -172,5 +177,4 @@ Afortunadamente [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.m
 
 ## <a name="previous-step"></a>Paso anterior
 
-[Definir y utilizar los contextos de proceso](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)
-
+[Definir y usar contextos de cálculo](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)

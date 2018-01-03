@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b5ebc2779d005a31f9b93a1cf6ca8fb6e35b346
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d63ef11103b88f70233f269914c54425402b1def
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-data-types"></a>Tipos de datos SQL
 Cada DBMS define sus propios tipos SQL. Cada controlador ODBC expone solo esos tipos de datos SQL que define el DBMS asociado. Obtener información acerca de cómo se asigna un controlador de DBMS SQL tipos a los identificadores de tipo SQL definidas por ODBC y cómo asigna un controlador de tipos de DBMS SQL a sus propios identificadores de tipo específicos del controlador SQL se devuelve a través de una llamada a **SQLGetTypeInfo**. Un controlador también devuelve los tipos de datos SQL para describir los tipos de datos de columnas y parámetros a través de llamadas a **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, y **SQLSpecialColumns**.  
@@ -52,7 +52,7 @@ Cada DBMS define sus propios tipos SQL. Cada controlador ODBC expone solo esos t
 |SQL_NUMERIC|NUMÉRICO (*p*,*s*)|Firmado, valor numérico exacto con una precisión *p* y escala *s* (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
 |SQL_SMALLINT|SMALLINT|Valor numérico exacto con precisión 5 y escala 0 (firmado: -32.768 < =  *n*  < = 32.767, sin signo: 0 < =  *n*  < = 65.535) [3].|  
 _INTEGER|INTEGER|Valor numérico exacto con precisión 10 y escala 0 (firmado: – 2 [31] < =  *n*  < = 2 [31] – 1, sin signo: 0 < =  *n*  < = 2 [32] – 1) [3].|  
-|SQL_REAL|REAL|Valor con signo, aproximado, numeric con una precisión binaria de 24 (cero o valor absoluto 10 [– 38] para 10[38]).|  
+|SQL_REAL|real|Valor con signo, aproximado, numeric con una precisión binaria de 24 (cero o valor absoluto 10 [– 38] para 10[38]).|  
 |SQL_FLOAT|FLOAT (*p*)|Valor con signo, aproximado, numeric con una precisión binaria de al menos *p*. (La precisión máxima es definido por el controlador). [5]|  
 |SQL_DOUBLE|DOUBLE PRECISION|Valor con signo, aproximado, numeric con una precisión binaria de 53 (cero o valor absoluto entre 10 [–308] y 10[308]).|  
 |SQL_BIT|BIT|Datos binarios de bit único. [8]|  

@@ -3,7 +3,7 @@ title: "CreateObject (método) (RDS) | Documentos de Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 587ea0590dbf2a6bed3f8733c2a1c1f4a90adb58
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ba9c2d9ee2c2cf0a646155e5d184640d1aa0283b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="createobject-method-rds"></a>CreateObject (método) (RDS)
 Crea al proxy para el objeto de comercial de destino y devuelve un puntero a ella. El proxy empaqueta y ordena datos para el código auxiliar de servidor para las comunicaciones con el objeto de negocios enviar solicitudes y datos a través de Internet. Para los objetos de componente en proceso, se utiliza ningún proxy, se proporciona solo un puntero al objeto.  
@@ -42,7 +42,7 @@ Crea al proxy para el objeto de comercial de destino y devuelve un puntero a ell
 |En curso|Objeto de conjunto = DataSpace.CreateObject ("ProgId", "")|  
   
 ## <a name="parameters"></a>Parámetros  
- *Object*  
+ *Objeto*  
  Una variable de objeto que se evalúa como un objeto que es el tipo especificado en *ProgID*.  
   
  *Espacio de datos*  

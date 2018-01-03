@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26e758e6f4884309a17d5abfaa82b64d767d4df5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3dacb8a0f83084d61c7ca55c5ae093bb57876b82
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**destination_owner**||Nombre del propietario del objeto de destino.|  
 |**filter**||Nuevo procedimiento almacenado para filtrar la tabla (filtrado horizontal). El valor predeterminado es NULL. No se puede cambiar para las publicaciones de replicación punto a punto.|  
 |**fire_triggers_on_snapshot**|**true**|Los desencadenadores de usuario replicados se ejecutan cuando se aplica la instantánea inicial.<br /><br /> Nota: para los desencadenadores se repliquen, el valor de máscara de bits de *schema_option* debe incluir el valor **0 x 100**.|  
-||**false**|Los desencadenadores de usuario replicados no se ejecutan cuando se aplica la instantánea inicial.|  
+||**False**|Los desencadenadores de usuario replicados no se ejecutan cuando se aplica la instantánea inicial.|  
 |**identity_range**||Controla el tamaño de los intervalos de identidad asignados en el suscriptor. No se admite para la replicación punto a punto.|  
 |**ins_cmd**||Instrucción INSERT que se ejecuta; de lo contrario, se crea a partir del registro.|  
 |**pre_creation_cmd**||Comando de creación previa que puede quitar, eliminar o truncar la tabla de destino antes de que se aplique la sincronización.|  
@@ -139,7 +139,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**sync_object**||Nombre de la tabla o vista utilizada para generar un archivo de salida de sincronización. El valor predeterminado es NULL. No es compatible con publicadores de Oracle.|  
 |**espacio de tablas**||Identifica el espacio de tablas utilizado por la tabla de registro de un artículo publicado desde una base de datos Oracle. Para más información, vea [Manage Oracle Databases](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md) (Administrar bases de datos de Oracle).|  
 |**umbral**||Valor de porcentaje que controla cuándo el Agente de distribución asigna un nuevo intervalo de identidad. No se admite para la replicación punto a punto.|  
-|**tipo**||No es compatible con publicadores de Oracle.|  
+|**Tipo**||No es compatible con publicadores de Oracle.|  
 ||**logbased**|Artículo basado en registro.|  
 ||**logbased manualboth**|Artículo basado en registro con filtro manual y vista manual. Esta opción requiere que el *sync_object* y *filtro* también se puede establecer propiedades. No es compatible con publicadores de Oracle.|  
 ||**logbased manualfilter**|Artículo basado en registro con filtro manual. Esta opción requiere que el *sync_object* y *filtro* también se puede establecer propiedades. No es compatible con publicadores de Oracle.|  
@@ -218,7 +218,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  Dentro de una publicación existente, puede usar **sp_changearticle** para cambiar un artículo sin tener que quitar y volver a crear la publicación completa.  
   
 > [!NOTE]  
->  Al cambiar el valor de *schema_option*, el sistema no realiza una actualización bit a bit. Esto significa que al establecer *schema_option* con **sp_changearticle**existente puede desactivarse configuración de bits. Para conservar la configuración existente, debe llevar a cabo [& (AND bit a bit)](../../t-sql/language-elements/bitwise-and-transact-sql.md) entre el valor que se está estableciendo y el valor actual de *schema_option*, que se puede determinar mediante la ejecución de [sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md).  
+>  Al cambiar el valor de *schema_option*, el sistema no realiza una actualización bit a bit. Esto significa que al establecer *schema_option* con **sp_changearticle**existente puede desactivarse configuración de bits. Para conservar la configuración existente, debe llevar a cabo [| (OR bit a bit) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) entre el valor que se está estableciendo y el valor actual de *schema_option*, que se puede determinar mediante la ejecución de [sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md).  
   
 ## <a name="valid-schema-options"></a>Opciones de esquema válidas  
  En la tabla siguiente se describe los valores permitidos de *schema_option* basado en el tipo de replicación (se muestra en la parte superior) y el tipo de artículo (que se muestra la primera columna).  

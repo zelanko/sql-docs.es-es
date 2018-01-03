@@ -1,7 +1,7 @@
 ---
 title: "Configuración global (Editor) (DB2ToSQL) | Documentos de Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3685bd1a9445d4864ed0b71dbe964d865ec065e3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f48947b33bfdcea0e0cedfbaaa793649462c3bca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-editor-db2tosql"></a>Configuración global (Editor) (DB2ToSQL)
 Utilice la página del Editor de la **configuración Global** cuadro de diálogo para especificar la configuración de ventanas del editor de código.  
   
 Para acceder a la configuración del editor, en la **herramientas** menú, seleccione **configuración Global**, haga clic en **GUI** en la parte inferior del panel izquierdo y, a continuación, seleccione **Editor**.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Mostrar números de línea**  
 Para mostrar números de línea en las ventanas del editor de código, seleccione **True**.  
   

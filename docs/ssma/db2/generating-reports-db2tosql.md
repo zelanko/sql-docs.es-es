@@ -1,7 +1,7 @@
 ---
 title: "Generación de informes (DB2ToSQL) | Documentos de Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1cd4e49126faf6816575c21f1b87c312c6d7a48
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 77bca9dfb3bb5ff1f2d12fc112ae39a4dda4ed15
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generating-reports-db2tosql"></a>Generación de informes (DB2ToSQL)
 Se generan los informes de ciertas actividades que se realizan mediante comandos en la consola SSMA al nivel de árbol de objetos.  

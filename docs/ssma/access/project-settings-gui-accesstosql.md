@@ -1,7 +1,7 @@
 ---
 title: "Configuración (GUI) (AccessToSQL) del proyecto | Documentos de Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5a14554ff988ab2daa6aa54c3a7e50a2e4d7cfb7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: eb8a538b22a1623b2b54bec8cf339ba8be365fc0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-gui-accesstosql"></a>Configuración del proyecto (GUI) (AccessToSQL)
 La configuración del proyecto de interfaz gráfica de usuario le permite configurar la aparecen de los datos en el **datos** ficha y si desea incluir datos de informes con informes de evaluación.  
@@ -35,7 +35,7 @@ El panel de la interfaz gráfica de usuario está disponible en la **configuraci
   
 -   Use la **configuración de proyecto predeterminada** cuadro de diálogo para establecer opciones de interfaz de usuario para todos los proyectos. Para acceder a la configuración de la interfaz gráfica de usuario, en la **herramientas** menú, seleccione **la configuración predeterminada del proyecto**y, a continuación, haga clic en **GUI** en la parte inferior del panel izquierdo.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Número máximo de filas de origen**  
 Configura el número de filas de datos que se muestran en la **datos** pestaña de la tabla de origen seleccionado.  
   

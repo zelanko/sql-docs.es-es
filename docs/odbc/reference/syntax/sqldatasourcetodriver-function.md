@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0594551a7bc82eb96208ecb5d8840db0477c4f3a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4d09d649bc53a08ff7389413882bb338d9713ffc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldatasourcetodriver-function"></a>SQLDataSourceToDriver (función)
 **SQLDataSourceToDriver** supportstranslations para los controladores ODBC. No se llama a esta función mediante aplicaciones habilitadas para ODBC; las aplicaciones solicitan traducción a través de **SQLSetConnectAttr**. El controlador asociado a la *IdentificadorConexión* especificado en **SQLSetConnectAttr** llama a la DLL especificada para llevar a cabo las traducciones de todos los datos fluyen desde el origen de datos para el controlador. Un archivo DLL de traducción predeterminado puede especificarse en el archivo de inicialización de ODBC.  

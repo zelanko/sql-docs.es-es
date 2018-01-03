@@ -3,10 +3,10 @@ title: Configurar adaptadores de red InfiniBand Analytics Platform System (APS)
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
 caps.latest.revision: "15"
-ms.openlocfilehash: 007e595f52ab891438c862afa6d94d68644b091f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 052dfcb32de7fb84acc0ce97c55775944a1d0dc1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configurar adaptadores de red InfiniBand para Analytics Platform System
 Describe cómo configurar los adaptadores de red InfiniBand en un servidor no sea de dispositivo cliente para conectarse al nodo de Control en almacenamiento de datos paralelos de SQL Server (PDW). Siga estas instrucciones para la conectividad básica y para lograr alta disponibilidad, para que los procesos de carga, la copia de seguridad y otros se conectarán automáticamente a la red InfiniBand active.  
@@ -51,14 +51,14 @@ Por ejemplo, si el nombre de la región PDW es MyPDW y el nombre del dispositivo
   
 -   `dwloader –S MYPDW-SQLCTL01`  
   
-## <a name="BeforeBegin"></a>Antes de comenzar  
+## <a name="BeforeBegin"></a>Antes de empezar  
   
 ### <a name="requirements"></a>Requisitos  
 Necesita una cuenta de dominio de aplicación de puntos de acceso para iniciar sesión en el nodo AD01. Por ejemplo, F12345 * \Administrator.  
   
 Necesita una cuenta de Windows en el servidor de cliente que tiene permiso para configurar los adaptadores de red.  
   
-### <a name="prerequisites"></a>Requisitos previos  
+### <a name="prerequisites"></a>Prerequisites  
 Estas instrucciones se supone el servidor de cliente ya está en rack y conectado a la red InfiniBand de dispositivo. Para la instalación en rack y cableado de instrucciones, consulte [adquirir y configurar un servidor de carga](acquire-and-configure-loading-server.md).  
   
 ### <a name="general-remarks"></a>Notas generales  

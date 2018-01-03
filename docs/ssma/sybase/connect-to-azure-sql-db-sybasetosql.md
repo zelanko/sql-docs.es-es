@@ -3,7 +3,7 @@ title: Conectarse a la base de datos de SQL Azure (SybaseToSQL) | Documentos de 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d63fac7037bfe3f3646d9fa1c36200aa682b2fe3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1267aecb68c344b6de0fad2c7c129a0b6ab2205c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>Conectarse a la base de datos de SQL Azure (SybaseToSQL)
 Use el cuadro de diálogo de la base de datos de SQL Azure para conectarse a la base de datos de la base de datos de SQL Azure que se va a migrar.  
   
 Para tener acceso a este cuadro de diálogo, en la **archivo** menú, seleccione **conectar con base de datos de SQL Azure**. Si se ha conectado anteriormente, el comando es **conectarse de nuevo a la base de datos de SQL Azure.**  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
 **Nombre de servidor**  
   
 Seleccione o escriba el nombre del servidor para conectarse a la base de datos de SQL Azure.  
@@ -43,7 +43,7 @@ Seleccione, escriba o **examinar** el nombre de la base de datos.
 > [!IMPORTANT]  
 > SSMA para Sybase no admite conexiones a la base de datos maestra en la base de datos de SQL Azure.  
   
-**Nombre de usuario.**  
+**User name**  
   
 Escriba el nombre de usuario que va a usar para conectarse a la base de datos de la base de datos de SQL Azure SSMA  
   

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1eb6158d8d70aae635b00bcd78d844f4d1443b75
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1fac9b3c3000809797c63981133234d7b2d7b4ee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlprocedurecolumns-access-driver"></a>SQLProcedureColumns (controlador de Access)
 > [!NOTE]  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/20/2017
   
  Los desarrolladores de aplicaciones deben buscar las columnas definidas por el controlador empezando por el final del conjunto de resultados y continuando hacia atrás.  
   
-|Columna|Comentarios|  
+|columna|Comentarios|  
 |------------|--------------|  
 |COLUMN_TYPE|SQL_PARAM_INPUT o SQL_RESULT_COL|  
 |ORDINAL|Se trata de una columna específica del controlador que se devuelve al final del conjunto de resultados. El tipo SQL de la columna es un entero.|

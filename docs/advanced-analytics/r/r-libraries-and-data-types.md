@@ -2,9 +2,11 @@
 title: Trabajar con tipos de datos de R| Microsoft Docs
 ms.custom: SQL2016_New_Updated
 ms.date: 01/31/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 09ff5069864db36036685c751759cadcf66d6a02
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: e72c4a984359230ace9f800e8ac4efbfcfe5f2a1
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="r-libraries-and-r-data-types"></a>Bibliotecas de R y tipos de datos de R
 
@@ -57,7 +59,7 @@ En la tabla siguiente se muestran los cambios que se producen en los tipos de da
 |**bigint**|`numeric`|**float**||
 |**binary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|Solo se permite como parámetro de entrada y salida.|
 |**bit**|`logical`|**bit**||
-|**char(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**||
+|**char(n)**<br /><br /> n <= 8000|`character`|**ntext**||
 |**datetime**|`POSIXct`|**datetime**|Se representa como GMT.|
 |**date**|`POSIXct`|**datetime**|Se representa como GMT.|
 |**decimal(p,s)**|`numeric`|**float**||
@@ -70,10 +72,10 @@ En la tabla siguiente se muestran los cambios que se producen en los tipos de da
 |**smallint**|`integer`|**int**||
 |**smallmoney**|`numeric`|**float**||
 |**tinyint**|`integer`|**int**||
-|**uniqueidentifier**|`character`|**varchar(max)**||
+|**uniqueidentifier**|`character`|**ntext**||
 |**varbinary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|Solo se permite como parámetro de entrada y salida.|
 |**varbinary(max)**|`raw`|**varbinary(max)**|Solo se permite como parámetro de entrada y salida.|
-|**varchar(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**||
+|**varchar(n)**<br /><br /> n <= 8000|`character`|**ntext**||
 
 
 ## <a name="data-types-not-supported-by-r"></a>Tipos de datos no compatibles con R

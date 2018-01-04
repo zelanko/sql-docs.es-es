@@ -3,9 +3,9 @@ title: "Información del depurador de Transact-SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 82eb9526073e35e05f39be67b6a3f4bcd6569612
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a029341c3f01b4831856a3e3fdd704620fa0d93e
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL Debugger - Information (Depurador de Transact-SQL: Información)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Siempre que el depurador pare temporalmente la ejecución de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, puede usar las distintas ventanas del depurador para ver el estado de la ejecución actual.  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/17/2017
   
  En el modo de depuración, las pestañas **Resultados** y **Mensajes** continúan estando activas en el Editor de consultas. La pestaña **Resultados** continúa mostrando los conjuntos de resultados de las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se ejecutan durante una sesión de depuración. La pestaña **Mensajes** continúa mostrando los mensajes del sistema, como *xx* filas afectadas y el resultado de las instrucciones PRINT y RAISERROR.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Ventana de locales](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
  [Ventana de inspección](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
  [Cuadro de diálogo Inspección rápida](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   

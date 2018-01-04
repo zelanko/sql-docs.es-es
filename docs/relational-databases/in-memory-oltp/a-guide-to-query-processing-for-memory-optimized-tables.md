@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ebca47eee84b4e48edc5164fa6a66670a84e3fee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e9f4dcd81deb9f16e21cd1b63df80cebb25a53ca
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guía del procesamiento de consultas para tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  Consideramos dos tablas, Customer y Order. El siguiente script de [!INCLUDE[tsql](../../includes/tsql-md.md)] contiene las definiciones de estas dos tablas y los índices asociados, en su formato basado en disco (tradicional):  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY,  
   ContactName nvarchar (30) NOT NULL   
@@ -72,7 +72,7 @@ GO
   
  Considere la siguiente consulta, que combina las tablas Customer y Order y devuelve el identificador del pedido y la información del cliente asociada:  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -91,7 +91,7 @@ Plan de consulta para una combinación de tablas basadas en disco.
   
  Considere una ligera variación en esta consulta, que devuelve todas las filas de la tabla Order, no solo OrderID:  
   
-```tsql  
+```sql  
 SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -144,7 +144,7 @@ Canalización de procesamiento de consultas para acceso de Transact-SQL interpre
   
  El siguiente script de [!INCLUDE[tsql](../../includes/tsql-md.md)] contiene las versiones optimizadas para memoria de las tablas Order y Customer, con índices hash:  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY NONCLUSTERED,  
   ContactName nvarchar (30) NOT NULL   
@@ -161,7 +161,7 @@ GO
   
  Considere la misma consulta ejecutada en tablas optimizadas para memoria:  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -180,10 +180,10 @@ Plan de consulta para una combinación de tablas optimizadas para memoria.
   
 -   Este plan contiene una **Hash Match** en lugar de una **Merge Join**. Los índices en las tablas Order y Customer son índices hash y, por tanto, no se ordenan. Una **Merge Join** requeriría operadores de ordenación que reducirían el rendimiento.  
   
-## <a name="natively-compiled-stored-procedures"></a>Procedimientos almacenados compilados de forma nativa  
+## <a name="natively-compiled-stored-procedures"></a>procedimientos almacenados compilados de forma nativa  
  Los procedimientos almacenados compilados de forma nativa son procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)] compilados con código máquina, en lugar de interpretados por el motor de ejecución de consultas. El siguiente script crea un procedimiento almacenado compilado de forma nativa que ejecuta la consulta de ejemplo (de la sección Consulta de ejemplo).  
   
-```tsql  
+```sql  
 CREATE PROCEDURE usp_SampleJoin  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
@@ -249,7 +249,7 @@ Ejecución de los procedimientos almacenados compilados de forma nativa.
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>Recuperar un plan de ejecución de consultas para los procedimientos almacenados compilados de forma nativa  
  El plan de ejecución de consulta para un procedimiento almacenado compilado de forma nativa se puede recuperar con un **Plan de ejecución estimado** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]o con la opción SHOWPLAN_XML en [!INCLUDE[tsql](../../includes/tsql-md.md)]. Por ejemplo:  
   
-```tsql  
+```sql  
 SET SHOWPLAN_XML ON  
 GO  
 EXEC dbo.usp_myproc  
@@ -268,11 +268,11 @@ GO
 |SELECT|`SELECT OrderID FROM dbo.[Order]`||  
 |INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`||  
 |UPDATE|`UPDATE dbo.Customer SET ContactName='ghi' WHERE CustomerID='abc'`||  
-|DELETE|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
+|Delete|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
 |Compute Scalar|`SELECT OrderID+1 FROM dbo.[Order]`|Este operador se usa tanto para las funciones intrínsecas como para las conversiones de tipos. No todas las funciones y conversiones de tipos se admiten en los procedimientos almacenados compilados de forma nativa.|  
 |Combinación de bucles anidados|`SELECT o.OrderID, c.CustomerID FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|Nested Loops es el único operador de combinación admitido en los procedimientos almacenados compilados de forma nativa. Todos los planes que contienen combinaciones utilizarán el operador Nested Loops, incluso si el plan para la misma consulta ejecutada como [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado contiene una combinación de mezcla o hash.|  
-|Ordenar|`SELECT ContactName FROM dbo.Customer ORDER BY ContactName`||  
-|Superior|`SELECT TOP 10 ContactName FROM dbo.Customer`||  
+|Sort|`SELECT ContactName FROM dbo.Customer ORDER BY ContactName`||  
+|TOP|`SELECT TOP 10 ContactName FROM dbo.Customer`||  
 |Top-sort|`SELECT TOP 10 ContactName FROM dbo.Customer  ORDER BY ContactName`|La expresión **TOP** (número de filas que se van a devolver) no puede superar 8000 filas. Si hay también en la consulta operadores de combinación y agregación, habrá menos filas. Las combinaciones y agregaciones suelen reducir el número de filas que se van a ordenar, en comparación con el recuento de filas de las tablas base.|  
 |Stream Aggregate|`SELECT count(CustomerID) FROM dbo.Customer`|Observe que el operador Hash Match no se admite para la agregación. Por consiguiente, toda la agregación en los procedimientos almacenados compilados de forma nativa utiliza el operador Stream Aggregate, incluso si el plan para la misma consulta en [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado utiliza el operador Hash Match.|  
   
@@ -307,7 +307,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
 -   El examen de índice completo en IX_CustomerID se ha reemplazado por index seek. Esto provocó el examen de 5 filas en lugar de las 830 necesarias para el examen de índice completo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Tablas con optimización para memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

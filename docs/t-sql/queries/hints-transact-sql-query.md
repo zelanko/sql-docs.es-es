@@ -60,11 +60,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 88d4de294e7fa31b7334b9b03cc127d479d6628a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c678854df4be6f4d228ad3c02edd8ee29bc9d0e8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="hints-transact-sql---query"></a>Sugerencias (Transact-SQL) - consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -291,7 +291,7 @@ ms.lasthandoff: 11/17/2017
  USE PLAN N**'***xml_plan***'**  
  Obliga al optimizador de consultas a usar un plan de consulta existente para una consulta que se especifica por **'***xml_plan***'**. USE PLAN no puede especificarse con las instrucciones INSERT, UPDATE, MERGE ni DELETE.  
   
-Sugerencia de tabla **(***exposed_object_name* [ **,** \<sugerenciatabla > [[**,** ]...  *n*  ]] **)** Aplica la sugerencia de tabla especificada a la tabla o vista que corresponde a *exposed_object_name*. Se recomienda usar una sugerencia de tabla como una sugerencia de consulta únicamente en el contexto de un [Guía de plan](../../relational-databases/performance/plan-guides.md).  
+Sugerencia de tabla **(***exposed_object_name* [ **,** \<sugerenciatabla > [ [**,** ]...  *n*  ] ] **)** Aplica la sugerencia de tabla especificada a la tabla o vista que corresponde a *exposed_object_name*. Se recomienda usar una sugerencia de tabla como una sugerencia de consulta únicamente en el contexto de un [Guía de plan](../../relational-databases/performance/plan-guides.md).  
   
  *exposed_object_name* puede ser una de las siguientes referencias:  
   
@@ -363,7 +363,7 @@ GO
 ### <a name="c-using-maxrecursion"></a>C. Usar MAXRECURSION  
  MAXRECURSION se puede utilizar para impedir que una expresión de tabla común recursiva con formato incorrecto entre en un bucle infinito. Intencionadamente en el ejemplo siguiente se crea un bucle infinito y usa la sugerencia MAXRECURSION para limitar el número de niveles de recursividad a dos. En el ejemplo se usa la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```tsql  
+```sql  
 --Creates an infinite loop  
 WITH cte (CustomerID, PersonID, StoreID) AS  
 (  

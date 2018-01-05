@@ -52,11 +52,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e61305f37dd20279f328dfe57e3de0c22c9b01f2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ad0dd6ed4d8006a596ac05c35730a8132368d5df
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -512,7 +512,7 @@ Especifica que debe crear un índice en la tabla. Puede tratarse de un índice a
   
  Si se especifica para almacenar toda la tabla en formato de columnas con un índice de almacén de columnas agrupado. Esto siempre incluye todas las columnas de la tabla. Los datos no está ordenados en orden alfabético o numérico, ya que las filas se organizan obtener beneficios de compresión de almacén de columnas.  
   
- ÍNDICE *index_name* almacén de columnas [NONCLUSTERED] (*column_name* [ ,...*n* ] )  
+ ÍNDICE *index_name* almacén de columnas [NONCLUSTERED] (*column_name* [,... *n* ] )  
    
   
 **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -716,7 +716,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  *Filter*  
  Es una expresión lógica que devuelve TRUE o FALSE. Los tipos de datos de alias no pueden formar parte de la expresión.  
   
- *columna*  
+ *column*  
  Es una columna o lista de columnas, entre paréntesis, que se utiliza en las restricciones de tabla para indicar las columnas que se están utilizando en la definición de la restricción.  
   
  [ **ASC** | DESC]  
@@ -763,7 +763,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  DATA_COMPRESSION  
  Especifica la opción de compresión de datos para la tabla, el número de partición o el intervalo de particiones especificados. Las opciones son las siguientes:  
   
- NONE  
+ Ninguno  
  No se comprimen la tabla ni las particiones especificadas.  
   
  ROW  
@@ -1083,7 +1083,7 @@ Para la solución de problemas de tempdb, vea [solución de problemas de suficie
 
 - Sesión A crea una tabla temporal global ##test en testdb1 de base de datos de SQL Azure y agrega 1 fila
 
-```tsql
+```sql
 CREATE TABLE ##test ( a int, b int);
 INSERT INTO ##test values (1,1);
 
@@ -1101,7 +1101,7 @@ SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504
 ```
 - Sesión B se conecta a la base de datos de SQL Azure testdb1 y puede tener acceso a la tabla ##test creados por la sesión A
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 1,1
@@ -1109,7 +1109,7 @@ SELECT * FROM ##test
 
 - Sesión C se conecta a otra base de datos testdb2 de base de datos de SQL Azure y desea obtener acceso a ##test creado en testdb1. Esta instrucción select falla debido a que el ámbito de la base de datos de las tablas temporales globales 
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 Msg 208, Level 16, State 0, Line 1
@@ -1118,7 +1118,7 @@ Invalid object name '##test'
 
 - Objeto de sistema de direccionamiento en tempdb de la base de datos de SQL Azure de testdb1 de base de datos de usuario actual
 
-```tsql
+```sql
 SELECT * FROM tempdb.sys.objects
 SELECT * FROM tempdb.sys.columns
 SELECT * FROM tempdb.sys.database_files
@@ -1127,7 +1127,7 @@ SELECT * FROM tempdb.sys.database_files
 
 
 ## <a name="partitioned-tables"></a>Tablas con particiones  
- Antes de crear una tabla con particiones mediante CREATE TABLE, debe crear una función de partición para especificar cómo se van a crear las particiones en la tabla. Se crea una función de partición mediante [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md). A continuación, debe crear un esquema de partición para especificar los grupos de archivos que van a contener las particiones indicadas mediante la función de partición. Se crea un esquema de partición mediante [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). La colocación de restricciones PRIMARY KEY o UNIQUE para separar grupos de archivos no se puede especificar para las tablas con particiones. Para obtener más información, consulte [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Antes de crear una tabla con particiones mediante CREATE TABLE, debe crear una función de partición para especificar cómo se van a crear las particiones en la tabla. Se crea una función de partición mediante [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md). A continuación, debe crear un esquema de partición para especificar los grupos de archivos que van a contener las particiones indicadas mediante la función de partición. Se crea un esquema de partición mediante [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). La colocación de restricciones PRIMARY KEY o UNIQUE para separar grupos de archivos no se puede especificar para las tablas con particiones. Para obtener más información, vea [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
 ## <a name="primary-key-constraints"></a>Restricciones PRIMARY KEY  
   

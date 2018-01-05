@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5cd1687ea44749eea8a777d80026d375fbd841a2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 233a613024b4e216501ea7baaaf9a363325e5998
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,10 +79,10 @@ CHANGETABLE (
  *column_name*  
  Especifica el nombre de la columna o columnas de clave principal. Se pueden especificar varios nombres de columna y en cualquier orden.  
   
- *Valor*  
+ *Value*  
  Es el valor de la clave principal. Si hay varias columnas de clave principales, deben especificarse los valores en el mismo orden que las columnas aparecen en la *column_name* lista.  
   
- [COMO] *aliasTabla* [ (*column_alias* [ ,...*n* ] ) ]  
+ [COMO] *aliasTabla* [(*column_alias* [,...*n* ] ) ]  
  Proporciona los nombres de los resultados devueltos por CHANGETABLE.  
   
  *aliasTabla*  
@@ -158,7 +158,7 @@ CHANGETABLE (
 ### <a name="a-returning-rows-for-an-initial-synchronization-of-data"></a>A. Devolver las filas de una sincronización inicial de los datos  
  El ejemplo siguiente obtiene los datos para una sincronización inicial de los datos de la tabla. La consulta devuelve todos los datos de fila y sus versiones asociadas. A continuación, pueden insertarse o agregarse estos datos al sistema que contendrá los datos sincronizados.  
   
-```tsql  
+```sql  
 -- Get all current rows with associated version  
 SELECT e.[Emp ID], e.SSN, e.FirstName, e.LastName,  
     c.SYS_CHANGE_VERSION, c.SYS_CHANGE_CONTEXT  
@@ -170,7 +170,7 @@ CROSS APPLY CHANGETABLE
 ### <a name="b-listing-all-changes-that-were-made-since-a-specific-version"></a>B. Enumerar todos los cambios realizados desde una versión concreta  
  El siguiente ejemplo enumera todos los cambios realizados en una tabla desde una versión concreta (`@last_sync_version)`. [Emp ID] y SSN son las columnas de una clave principal compuesta.  
   
-```tsql  
+```sql  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
 SELECT [Emp ID], SSN,  
@@ -182,7 +182,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS C;
 ### <a name="c-obtaining-all-changed-data-for-a-synchronization"></a>C. Obtener todos los datos cambiados para una sincronización  
  El siguiente ejemplo muestra cómo se pueden obtener todos los datos que han cambiado. Esta consulta une la información del seguimiento de cambios con la tabla de usuario para devolver la información de tabla de usuario. Una `LEFT OUTER JOIN` se usa para devolver una fila para las filas eliminadas.  
   
-```tsql  
+```sql  
 -- Get all changes (inserts, updates, deletes)  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
@@ -197,7 +197,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS c
 ### <a name="d-detecting-conflicts-by-using-changetableversion"></a>D. Detectar conflictos mediante CHANGETABLE (VERSION...)  
  El siguiente ejemplo actualiza una fila solo si la fila no ha cambiado desde la última sincronización. El número de versión de la fila concreta se obtiene mediante `CHANGETABLE`. Si se ha actualizado la fila, no se realizan los cambios y la consulta devuelve información sobre el último cambio de la fila.  
   
-```tsql  
+```sql  
 -- @last_sync_version must be set to a valid value  
 UPDATE  
     SalesLT.Product  

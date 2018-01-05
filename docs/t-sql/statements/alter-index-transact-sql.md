@@ -51,11 +51,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 48926573b515a1f40fa0db983d846b4e801abfd4
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 24c7f8121439958cd9d0d4f17254b0520cbaa857
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -307,7 +307,8 @@ Para los índices de almacén de columnas de [!INCLUDE[ssNoVersion](../../includ
 -   Grupos de filas en el que el 10% o más de las filas se han eliminado lógicamente, SQL Server intentará combinar este grupo de filas con uno o varios grupos de filas.    Por ejemplo, 1 del grupo de filas se comprimió con 500.000 filas y 21 de grupo de filas se comprimió con el máximo de 1.048.576 filas.  21 de grupo de filas tiene 60% de las filas eliminadas que deja 409,830 filas. SQL Server, se favorece combinar estos dos grupos de filas para comprimir un nuevo grupo de filas que tiene 909,830 filas.  
   
 REORGANIZAR CON (COMPRESS_ALL_ROW_GROUPS = {ON | **OFF** })  
- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2016) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)], el COMPRESS_ALL_ROW_GROUPS proporciona una manera de obligar a los grupos de filas delta abierto o cerrado en el almacén de columnas. Con esta opción, no es necesario volver a generar el índice de almacén de columnas para vaciar los grupos de filas delta.  Esto, combinado con lo otro remove y mezcla desfragmentación características hace que ya no es necesario volver a generar el índice en la mayoría de los casos.    
+ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)], el COMPRESS_ALL_ROW_GROUPS proporciona una manera de obligar a los grupos de filas delta abierto o cerrado en el almacén de columnas. Con esta opción, no es necesario volver a generar el índice de almacén de columnas para vaciar los grupos de filas delta.  Esto, combinado con lo otro remove y mezcla desfragmentación características hace que ya no es necesario volver a generar el índice en la mayoría de los casos.    
+
 -   ON obliga a todos los grupos de filas en el almacén de columnas, independientemente del tamaño y el estado (cerrados o abiertos).  
   
 -   DESACTIVAR obliga a todos los grupos de filas CLOSED en el almacén de columnas.  
@@ -393,17 +394,11 @@ Valor de FILLFACTOR = *fillfactor*
  Si no se admiten las estadísticas por partición, la opción se omite y se genera una advertencia. Las estadísticas incrementales no se admiten para los siguientes tipos de estadísticas:  
   
 -   Estadísticas creadas con índices que no están alineados por partición con la tabla base.  
-  
 -   Estadísticas creadas sobre bases de datos secundarias legibles AlwaysOn.  
-  
 -   Estadísticas creadas sobre bases de datos de solo lectura.  
-  
 -   Estadísticas creadas sobre índices filtrados.  
-  
 -   Estadísticas creadas sobre vistas.  
-  
 -   Estadísticas creadas sobre tablas internas.  
-  
 -   Estadísticas creadas con índices espaciales o índices XML.  
  
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -414,7 +409,7 @@ Valor de FILLFACTOR = *fillfactor*
  Para un índice XML o un índice espacial, solo se admite ONLINE = OFF y, si ONLINE se establece en ON, se produce un error.  
   
 > [!NOTE]
->  Las operaciones de índices en línea no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de características que son compatibles con las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [ediciones y características admitidas en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Las operaciones de índices en línea no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de características que son compatibles con las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [ediciones y características admitidas en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) y [ediciones y características admitidas en SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
  ON  
  Los bloqueos de tabla de larga duración no se mantienen durante la operación de indización. Durante la fase principal de la operación de índice, solo se mantiene un bloqueo preventivo en la tabla de origen. De esta forma, las consultas o actualizaciones realizadas en la tabla y los índices subyacentes pueden continuar. Al principio de la operación, se mantiene un bloqueo compartido (S) sobre el objeto de origen durante un breve período. Al final de la operación, durante un breve período, se adquiere un bloqueo S sobre el origen si se está creando un índice no clúster; o se adquiere un bloqueo SCH-M (modificación del esquema) cuando se crea o se quita un índice clúster en línea o cuando se regenera un índice clúster o no clúster. ONLINE no se puede establecer en ON cuando se crea un índice en una tabla temporal local.  

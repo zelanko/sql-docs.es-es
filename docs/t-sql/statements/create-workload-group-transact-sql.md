@@ -1,7 +1,7 @@
 ---
 title: Crear grupo de cargas de trabajo (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
-ms.date: 03/16/2016
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dbe9d11d3b018df43eed813f8f987695f41ae189
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3554f6c282ba3ef551fd8592ede4c97f6d29b358
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 CREATE WORKLOAD GROUP group_name  
 [ WITH  
     ( [ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  
@@ -65,13 +64,11 @@ CREATE WORKLOAD GROUP group_name
  Especifica la importancia relativa de una solicitud en el grupo de cargas de trabajo. La importancia puede ser una de las siguientes, siendo MEDIUM el valor predeterminado:  
   
 -   LOW  
-  
--   MEDIUM  
-  
+-   MEDIUM (predeterminado)    
 -   HIGH  
   
 > [!NOTE]  
->  Internamente, cada valor de IMPORTANCE se almacena como un número que se usa para los cálculos.  
+> Internamente, cada valor de IMPORTANCE se almacena como un número que se usa para los cálculos.  
   
  IMPORTANCE es local para el grupo de recursos de servidor; los grupos de cargas de trabajo de importancia distinta dentro del mismo grupo de recursos de servidor se influyen entre sí, pero no influyen en los grupos de cargas de trabajo de otro grupo de recursos de servidor.  
   
@@ -79,7 +76,7 @@ CREATE WORKLOAD GROUP group_name
  Especifica la cantidad máxima de memoria que una única solicitud puede tomar del grupo. Este porcentaje es relativo al tamaño del grupo de recursos de servidor especificado por MAX_MEMORY_PERCENT.  
   
 > [!NOTE]  
->  La cantidad especificada se refiere únicamente a la memoria concedida para la ejecución de la consulta.  
+> La cantidad especificada se refiere únicamente a la memoria concedida para la ejecución de la consulta.  
   
  *valor* debe ser 0 o un entero positivo. El intervalo permitido para *valor* está comprendido entre 0 y 100. El valor predeterminado de *valor* es 25.  
   
@@ -102,7 +99,10 @@ CREATE WORKLOAD GROUP group_name
  Especifica la cantidad máxima de tiempo de CPU, en segundos, que puede usar una solicitud. *valor* debe ser 0 o un entero positivo. El valor predeterminado de *valor* es 0, lo que significa ilimitado.  
   
 > [!NOTE]  
->  El regulador de recursos no impedirá que una solicitud continúe si se supera el tiempo máximo. Sin embargo, se generará un evento. Para obtener más información, consulte [CPU umbral de esta clase de eventos](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).  
+> De forma predeterminada, el regulador de recursos no impedirá una solicitud continuar si se supera el tiempo máximo. Sin embargo, se generará un evento. Para obtener más información, consulte [CPU umbral de esta clase de eventos](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).  
+
+> [!IMPORTANT]
+> A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 y el uso de [2422 marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), el regulador de recursos se anulará una solicitud cuando se supera el tiempo máximo. 
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*valor*  
  Especifica el tiempo máximo, en segundos, que una consulta puede esperar a que una concesión de memoria (memoria de búfer de trabajo) esté disponible.  

@@ -41,11 +41,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e570da6faf04bb8aef58829911cdf19e7f5951c9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 76b25e852e94ff6a511d8b18adb31f9da883a7fe
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -366,9 +366,9 @@ RETURNS return_data_type
 > [!NOTE]  
 >  Esta opción no está disponible en las bases de datos independientes.  
   
- *\<*table_type_definition *>*  ({ \<definición_de_columna > \<column_constraint > | \<definición_de_columna_calculada >}    [ \<table_constraint> ] [ ,... *n*  ]) Define el tipo de datos de la tabla para una [!INCLUDE[tsql](../../includes/tsql-md.md)] función. La declaración de tabla incluye definiciones de columna y restricciones de columna o de tabla. La tabla se coloca siempre en el grupo de archivos principal.  
+ *\<*table_type_definition *>*  ({ \<definición_de_columna > \<column_constraint > | \<definición_de_columna_calculada >}    [ \<table_constraint >] [,... *n*  ]) Define el tipo de datos de la tabla para una [!INCLUDE[tsql](../../includes/tsql-md.md)] función. La declaración de tabla incluye definiciones de columna y restricciones de columna o de tabla. La tabla se coloca siempre en el grupo de archivos principal.  
   
- \<definición_de_tipo_de_tabla_clr > ({ *column_name**data_type* } [ ,... *n*  ]) **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([vista previa en algunas regiones](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+ \<definición_de_tipo_de_tabla_clr > ({ *column_name**data_type* } [,... *n*  ]) **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([vista previa en algunas regiones](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)). |  
   
  Define los tipos de datos de tabla para una función CLR. La declaración de tabla solamente incluye nombres de columna y tipos de datos. La tabla se coloca siempre en el grupo de archivos principal.  
   
@@ -538,7 +538,7 @@ RETURNS return_data_type
   
  Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para hacer referencia al método correcto cuando está sobrecargado en una clase, el método indicado en \<method_specifier > debe tener las siguientes características: 
   
--   Recibir el mismo número de parámetros que se especifica en [ ,...*n* ].  
+-   Recibir el mismo número de parámetros que se especifica en [,...*n* ].  
   
 -   Recibir todos los parámetros por valor y no por referencia.  
   
@@ -668,7 +668,7 @@ RETURNS return_data_type
   
  Esta es la llamada a la función. Observe que el valor de `DATEFIRST` es `1`.  
   
-```tsql
+```sql
 CREATE FUNCTION dbo.ISOweek (@DATE datetime)  
 RETURNS int  
 WITH EXECUTE AS CALLER  
@@ -703,7 +703,7 @@ ISO Week
 ### <a name="b-creating-an-inline-table-valued-function"></a>B. Crear una función alineada con valores de tabla  
  El ejemplo siguiente devuelve una función insertada con valores de tabla en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Devuelve tres columnas `ProductID`, `Name` y la suma de los totales del año hasta la fecha por tienda como `YTD Total` para cada producto vendido en el almacén.  
   
-```tsql  
+```sql  
 CREATE FUNCTION Sales.ufn_SalesByStore (@storeid int)  
 RETURNS TABLE  
 AS  
@@ -722,14 +722,14 @@ GO
 
  Para invocar la función, ejecute esta consulta.    
 
-```tsql  
+```sql  
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
 ### <a name="c-creating-a-multi-statement-table-valued-function"></a>C. Crear una función con valores de tabla de múltiples instrucciones  
  En el ejemplo siguiente se crea la función con valores de tabla `fn_FindReports(InEmpID)` en la base de datos AdventureWorks2012. Cuando se suministra un identificador de empleado válido, la función devuelve una tabla de todos los empleados que están bajo las órdenes de ese empleado tanto directa como indirectamente. La función utiliza la expresión de tabla común (CTE) recursiva para producir la lista jerárquica de empleados. Para obtener más información sobre las CTE recursivas, vea [con common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.ufn_FindReports (@InEmpID INTEGER)  
 RETURNS @retFindReports TABLE   
 (  
@@ -779,7 +779,7 @@ GO
   
 **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql  
+```sql  
 DECLARE @SamplesPath nvarchar(1024);  
 -- You may have to modify the value of this variable if you have  
 -- installed the sample in a location other than the default location.  
@@ -803,7 +803,7 @@ GO
   
 ### <a name="e-displaying-the-definition-of-includetsqlincludestsql-mdmd-user-defined-functions"></a>E. Mostrar la definición de [!INCLUDE[tsql](../../includes/tsql-md.md)] funciones definidas por el usuario  
   
-```tsql  
+```sql  
 SELECT definition, type   
 FROM sys.sql_modules AS m  
 JOIN sys.objects AS o ON m.object_id = o.object_id   

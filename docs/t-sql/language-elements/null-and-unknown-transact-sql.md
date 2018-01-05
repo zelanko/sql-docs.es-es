@@ -18,11 +18,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d0523877d572bd644fa772713f3c7edb82d645f2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6a581045af3d5ed73e9cf9736c60588d87733369
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="null-and-unknown-transact-sql"></a>NULL y UNKNOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -39,23 +39,23 @@ ms.lasthandoff: 11/17/2017
   
 -   Valores NULL no se puede usar como la información necesaria para distinguir una fila en una tabla de otra fila de una tabla, como las claves principales, o para obtener información que se usa para distribuir filas, como las claves de distribución.  
   
- Cuando hay valores NULL en los datos, los operadores lógicos y de comparación pueden devolver un tercer resultado UNKNOWN (desconocido) en lugar de simplemente TRUE (verdadero) o FALSE (falso). Esta necesidad de una lógica de tres valores es el origen de muchos errores de la aplicación. En estas tablas se destaca el efecto de escribir comparaciones con NULL.  
+ Cuando hay valores NULL en los datos, los operadores lógicos y de comparación pueden devolver un tercer resultado UNKNOWN (desconocido) en lugar de simplemente TRUE (verdadero) o FALSE (falso). Esta necesidad de una lógica de tres valores es el origen de muchos errores de la aplicación. Operadores lógicos en una expresión booleana que incluye la cantidad de imprevistos devolverá a desconocido a menos que el resultado del operador no depende de la expresión desconocida. Estas tablas proporcionan ejemplos de este comportamiento.  
   
- La siguiente tabla muestra los resultados de aplicar un operador AND a dos operandos booleanos donde uno de los operandos devuelve NULL.  
+ La siguiente tabla muestra los resultados de aplicar un operador AND a dos expresiones booleanas en una expresión devuelve UNKNOWN.  
   
-|Operando 1|Operando de 2|Resultado|  
+|Expresión 1|Expresión 2|Resultado|  
 |---------------|---------------|------------|  
-|TRUE|NULL|FALSE|  
-|NULL|NULL|FALSE|  
-|FALSE|NULL|FALSE|  
+|TRUE|UNKNOWN|UNKNOWN|  
+|UNKNOWN|UNKNOWN|UNKNOWN|  
+|FALSE|UNKNOWN|FALSE|  
   
- La siguiente tabla muestra los resultados de aplicar un operador OR a dos operandos booleanos donde uno de los operandos devuelve NULL.  
+ La siguiente tabla muestra los resultados de aplicar un operador OR a dos expresiones booleanas en una expresión devuelve UNKNOWN.  
   
-|Operando 1|Operando de 2|Resultado|  
+|Expresión 1|Expresión 2|Resultado|  
 |---------------|---------------|------------|  
-|TRUE|NULL|TRUE|  
-|NULL|NULL|UNKNOWN|  
-|FALSE|NULL|UNKNOWN|  
+|TRUE|UNKNOWN|TRUE|  
+|UNKNOWN|UNKNOWN|UNKNOWN|  
+|FALSE|UNKNOWN|UNKNOWN|  
   
 ## <a name="see-also"></a>Vea también  
  [Y &#40; Transact-SQL &#41;](../../t-sql/language-elements/and-transact-sql.md)   

@@ -3,23 +3,23 @@ title: "Cargador de la línea de comandos para el almacenamiento de datos parale
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
-description: "** dwloader ** es una herramienta de línea de comandos de almacenamiento de datos paralelo (PDW) que carga filas de la tabla de forma masiva en una tabla existente."
+description: "**dwloader** es una herramienta de línea de comandos de almacenamiento de datos paralelo (PDW) que carga filas de la tabla de forma masiva en una tabla existente."
 ms.date: 11/04/2016
 ms.topic: article
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
 caps.latest.revision: "90"
-ms.openlocfilehash: 0335005e2e0590efe28a0cbf7dff6aaacfea331f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dwloader-command-line-loader"></a>Cargador de la línea de comandos de dwloader
 **dwloader** es una herramienta de línea de comandos de almacenamiento de datos paralelo (PDW) que carga filas de la tabla de forma masiva en una tabla existente. Cuando se cargan filas, puede agregar todas las filas al final de la tabla (*modo append* o *fastappend modo*), anexar filas nuevas y actualizar filas existentes (*upsert modo*), o todos los elimine existente filas antes de la carga y, a continuación, insertar todas las filas en una tabla vacía (*recargar modo*).  
@@ -402,7 +402,7 @@ El cargador inserta filas al final de las filas existentes en la tabla de destin
 fastappend  
 El cargador inserta filas directamente, sin usar una tabla temporal, al final de las filas existentes en la tabla de destino. fastappend requiere la transacción múltiple (– m) opción. No se puede especificar una base de datos de almacenamiento provisional al usar fastappend. No hay ninguna reversión con fastappend, lo que significa que la recuperación a partir de una carga anulada o con error deberá controlarse mediante su propio proceso de carga.  
   
-Upsert **-K***merge_column* [ ,...*n* ]    
+Upsert **-K***merge_column* [,...*n* ]  
 El cargador usa la instrucción Merge de SQL Server para actualizar filas existentes e insertar nuevas filas.  
   
 La opción -K especifica la columna o columnas que se basa la combinación. Estas columnas forman una clave de combinación, que debe representar una única fila. Si la clave de combinación existe en la tabla de destino, se actualiza la fila. Si no existe la clave de combinación en la tabla de destino, se anexa la fila.  
@@ -556,13 +556,13 @@ El modo append carga datos en dos fases. La primera fase carga los datos del arc
 |Tipo de tabla|Varias transacciones<br />Modo (-m)|Tabla está vacía|Simultaneidad compatibles|Registro|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |Montón|Sí|Sí|Sí|mínimo|  
-|Montón|Sí|No|Sí|mínimo|  
-|Montón|No|Sí|No|mínimo|  
-|Montón|No|No|No|mínimo|  
-|CL|Sí|Sí|No|mínimo|  
-|CL|Sí|No|Sí|Completo|  
-|CL|No|Sí|No|mínimo|  
-|CL|No|No|Sí|Completo|  
+|Montón|Sí|no|Sí|mínimo|  
+|Montón|no|Sí|no|mínimo|  
+|Montón|no|no|no|mínimo|  
+|CL|Sí|Sí|no|mínimo|  
+|CL|Sí|no|Sí|Completo|  
+|CL|no|Sí|no|mínimo|  
+|CL|no|no|Sí|Completo|  
   
 Se muestra en la tabla anterior **dwloader** utilizando el modo de anexar cargar en un montón o una tabla de índice agrupado (CI), con o sin la marca múltiples transaccional y cargar en una tabla vacía o una tabla no vacía. Comportamiento de cada combinación de este tipo de carga de registro y el bloqueo se muestra en la tabla. Por ejemplo, cargar fase (2) con el modo append en un índice clúster sin modo multi-transaccional y en vacío tabla tendrá PDW cree un bloqueo exclusivo en la tabla y el registro es mínimo. Esto significa que un cliente no pueda cargar (2) fase y consultas simultáneamente en una tabla vacía. Sin embargo, cuando se carga con la misma configuración en una tabla no está vacía, PDW no emitirá un bloqueo exclusivo en la tabla y la simultaneidad es posible. Por desgracia, se produce un registro completo, ralentizan el proceso.  
   

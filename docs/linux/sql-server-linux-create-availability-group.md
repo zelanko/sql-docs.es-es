@@ -14,17 +14,19 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 6ad13c3432daee4fd38b6d46704adc0c00913f7a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5b01fd8add48b2529c9d4150f153d6aea0b5f6c
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Crear y configurar un grupo de disponibilidad para SQL Server en Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Este tutorial explica cómo crear y configurar un grupo de disponibilidad (AG) para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] en Linux. A diferencia de [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] y versiones anteriores en Windows, puede habilitar grupos de disponibilidad con o sin crear primero el clúster marcapasos subyacente. Integración con el clúster, si es necesario, no se realiza hasta más adelante.
+
+El tutorial incluye las siguientes tareas:
  
 > [!div class="checklist"]
 > * Habilite los grupos de disponibilidad.
@@ -593,11 +595,9 @@ El recurso de AG que se crea es un tipo especial de recurso denominado un clon. 
     sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> --master meta notify=true
     ```
 
->[NOTA] En RHEL 7.4, puede producirse una advertencia con el uso de--master. Para evitar esto, utilice la sintaxis siguiente:
-    ```bash
-    sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true
-    ```
-
+    >[!NOTE]
+    >En RHEL 7.4, puede producirse una advertencia con el uso de--master. Para evitar esto, utilice`sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
+   
     **SUSE Linux Enterprise Server (SLES)**
     
     ```bash
@@ -618,7 +618,7 @@ El recurso de AG que se crea es un tipo especial de recurso denominado un clon. 
     commit
     ```
     
-    where *NameForAGResource* is the unique name given to this cluster resource for the AG, and *AGName* is the name of the AG that was created.
+    donde *NameForAGResource* es el nombre único asignado a este recurso de clúster para el AG, y *AGName* es el nombre de disponibilidad que se creó.
  
 2.  Crear el recurso de dirección IP para el AG que se asociará con la funcionalidad de agente de escucha.
 
@@ -647,8 +647,7 @@ El recurso de AG que se crea es un tipo especial de recurso denominado un clon. 
     ```bash
     sudo pcs constraint colocation add <NameForIPResource> <NameForAGResource>-master INFINITY with-rsc-role=Master
     ```
-   
-    
+
     **SLES GRANDE**
     
     ```bash
@@ -690,5 +689,5 @@ En este tutorial, aprendió a crear y configurar un grupo de disponibilidad para
 De muchas tareas de administración de AG, incluidas las actualizaciones y conmuta por error, vea:
 
 > [!div class="nextstepaction"]
-> [Funcionar el grupo de disponibilidad de alta disponibilidad para SQL Server en Linux](sql-server-linux-availability-group-failover-ha.md).
+> [Funcionar el grupo de disponibilidad de alta disponibilidad para SQL Server en Linux](sql-server-linux-availability-group-failover-ha.md)
 

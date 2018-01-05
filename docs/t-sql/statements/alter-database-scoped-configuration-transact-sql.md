@@ -1,7 +1,7 @@
 ---
 title: "Modificar configuración de ámbito de base de datos (Transact-SQL) | Documentos de Microsoft"
 ms.custom: 
-ms.date: 07/27/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -28,20 +28,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2867f3aff5b8d6d7256d2a9a4ecbe7dcfdccb88c
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: cc17063b8f74e296562a460677121c5ef1c85016
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>Modificar configuración de ámbito de base de datos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Esta instrucción permite varios valores de configuración de base de datos en el **base de datos individual** nivel. Esta instrucción está disponible tanto en [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] y en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Los valores son:  
+  Esta instrucción permite varios valores de configuración de base de datos en el **base de datos individual** nivel. Esta instrucción está disponible en [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] y en a partir de SQL Server [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Los valores son:  
   
 - Borrar la caché de procedimientos.  
   
-- Definir el parámetro MAXDOP en un valor arbitrario (1, 2, ...) para la base de datos principal en función del valor que funciona mejor para una base de datos determinada y definir un valor distinto (por ejemplo, 0) para todas las bases de datos secundarias que se usan (por ejemplo, para informar las consultas).  
+- Establece el parámetro MAXDOP en un valor arbitrario (1, 2,...) para la base de datos principal en función de lo que adapte mejor a esa base de datos determinada y defina un valor diferente (por ejemplo, 0) para todas las base de datos secundaria utiliza (por ejemplo consultas de notificación).  
   
 - Definir el modelo de estimación de la cardinalidad del optimizador de consultas independiente de la base de datos en el nivel de compatibilidad.  
   
@@ -50,8 +50,10 @@ ms.lasthandoff: 01/02/2018
 - Habilitar o deshabilitar las revisiones de optimización de consulta en el nivel de base de datos.
 
 - Habilitar o deshabilitar la memoria caché de identidad en el nivel de base de datos.
+
+- Habilitar o deshabilitar un código auxiliar del plan compilado que se almacenará en memoria caché cuando se compila un lote por primera vez. 
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![icono de vínculo](../../database-engine/configure-windows/media/topic-link.gif "icono de vínculo") [convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -71,6 +73,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}    
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
+    | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
 }  
 ```  
   
@@ -85,7 +88,7 @@ MAXDOP  **=**  {\<valor > | PRINCIPAL}
   
 Especifica el valor predeterminado MAXDOP configuración que debe utilizarse para las instrucciones. 0 es el valor predeterminado y se indica que se utilizará en su lugar la configuración del servidor. Reemplaza a la MAXDOP en el ámbito de la base de datos (a menos que se establece en 0) la **grado máximo de paralelismo** establece en el nivel de servidor mediante sp_configure. Sugerencias de consulta aún pueden reemplazar a la base de datos con ámbito de MAXDOP con el fin de optimizar las consultas específicas que requieran configuración diferente. Todas estas configuraciones están limitadas por el MAXDOP establecidos para el grupo de cargas de trabajo.   
 
-Puede utilizar la opción Grado máximo de paralelismo para limitar el número de procesadores que debe utilizarse en la ejecución de planes en paralelo. SQL Server considera los planes de ejecución en paralelo para las consultas, las operaciones DDL (lenguaje) de definición de datos de índice, inserción en paralelo, de columnas, collectiion stats paralelo y el rellenado de cursor estático y controlado por la alteración en línea.
+Puede utilizar la opción Grado máximo de paralelismo para limitar el número de procesadores que debe utilizarse en la ejecución de planes en paralelo. SQL Server considera los planes de ejecución en paralelo para las consultas, las operaciones DDL (lenguaje) de definición de datos de índice, inserción en paralelo, columna, la recopilación de estadísticas paralelo y el rellenado de cursor estático y controlado por la alteración en línea.
  
 Para establecer esta opción en el nivel de instancia, consulte [configurar la max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). 
 
@@ -116,7 +119,7 @@ Habilita o deshabilita [examen de parámetros](../../relational-databases/query-
   
 PRIMARY  
   
-Este valor solo es válido en los elementos secundarios mientras la base de datos en el servidor principal y especifica que el valor de esta configuración en todas las secundarias será el valor establecido para el servidor principal. Si la configuración en el servidor principal para el uso de [examen de parámetros](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) cambios, el valor en los servidores secundarios cambiará en consecuencia, sin necesidad de establecer los servidores secundarios valor explícitamente. Se trata de la configuración predeterminada para los servidores secundarios.  
+Este valor solo es válido en los elementos secundarios mientras la base de datos en el servidor principal y especifica que el valor de esta configuración en todas las secundarias será el valor establecido para el servidor principal. Si la configuración en el servidor principal para el uso de [examen de parámetros](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) cambios, el valor en los servidores secundarios cambiará en consecuencia sin necesidad de establecer los servidores secundarios valor explícitamente. Se trata de la configuración predeterminada para los servidores secundarios.  
   
 QUERY_OPTIMIZER_HOTFIXES  **=**  {ON | **OFF** | PRINCIPAL}  
 
@@ -127,7 +130,7 @@ Habilita o deshabilita las revisiones de optimización de consulta, independient
   
 PRIMARY  
   
-Este valor solo es válido en los elementos secundarios mientras la base de datos en el servidor principal y especifica que el valor de esta configuración en todas las secundarias será el valor establecido para el servidor principal. Si va a cambiar la configuración de los cambios principales, el valor en los servidores secundarios en consecuencia sin necesidad de establecer los servidores secundarios valor explícitamente. Se trata de la configuración predeterminada para los servidores secundarios.  
+Este valor solo es válido en los elementos secundarios mientras la base de datos en el servidor principal y especifica que el valor de esta configuración en todos los elementos secundarios es el valor establecido para el servidor principal. Si cambia la configuración para que los cambios principales, el valor en los servidores secundarios en consecuencia sin necesidad de establecer los servidores secundarios valor explícitamente. Se trata de la configuración predeterminada para los servidores secundarios.  
   
 DESACTIVE PROCEDURE_CACHE  
 
@@ -142,16 +145,22 @@ Habilita o deshabilita la memoria caché de identidad en el nivel de base de dat
 > [!NOTE] 
 > Esta opción solo puede establecerse para la réplica principal. Para obtener más información, consulte [las columnas de identidad](create-table-transact-sql-identity-property.md).  
 
+OPTIMIZE_FOR_AD_HOC_WORKLOADS  **=**  {ON | **OFF** }  
+
+**Se aplica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+
+Habilita o deshabilita un código auxiliar del plan compilado que se almacenará en memoria caché cuando se compila un lote por primera vez. El valor predeterminado es OFF. Una vez que la configuración de ámbito de la base de datos que optimize_for_ad_hoc_workloads está habilitada para una base de datos, un código auxiliar de plan compilado se almacenará en memoria caché cuando un lote se compila por primera vez. Códigos auxiliares de plan tienen una superficie de memoria menor en comparación con el tamaño del plan compilado completo.  Si un lote se compila o se ejecuta de nuevo, el código auxiliar del plan compilado se quitan y se reemplazan con un plan compilado completo.
+
 ##  <a name="Permissions"></a> Permissions  
  Requiere modificar cualquier configuración de ámbito de base de datos   
 en la base de datos. Este permiso se puede conceder a un usuario con permiso CONTROL en una base de datos.  
   
 ## <a name="general-remarks"></a>Notas generales  
- Aunque puede configurar bases de datos secundarias para tener valores de configuración de ámbito diferente desde su servidor principal, todas las bases de datos secundarias usará la misma configuración. No se puede configurar diferentes valores de los elementos secundarios individuales.  
+ Aunque puede configurar bases de datos secundarias para tener valores de configuración de ámbito diferente desde su servidor principal, todas las bases de datos secundarias utilizan la misma configuración. No se puede configurar diferentes valores de los elementos secundarios individuales.  
   
- Al ejecutar esta instrucción, se borrará la caché de procedimientos en la base de datos actual, lo que significa que todas las consultas tendrá que volver a compilar.  
+ Al ejecutar esta instrucción, borra la caché de procedimientos en la base de datos actual, lo que significa que todas las consultas tienen que volver a compilar.  
   
- Para las consultas de nombre de parte 3, la configuración de la conexión de base de datos actual para la consulta se puede respetar, distinto de módulos SQL (por ejemplo, procedimientos, funciones y desencadenadores) que se compilan en el contexto de base de datos actual y, por tanto, usará las opciones de la base de datos en las que residen.  
+ Para las consultas de nombre de parte 3, la configuración de la conexión de base de datos actual para la consulta se cumplirá distinto para los módulos SQL (por ejemplo, procedimientos, funciones y desencadenadores) que se compilan en el contexto de base de datos actual y, por tanto, utiliza las opciones de la base de datos en las que residen.  
   
  El evento ALTER_DATABASE_SCOPED_CONFIGURATION se agrega como un evento DDL que puede usarse para activar un desencadenador DDL. Se trata de un elemento secundario del grupo de desencadenador ALTER_DATABASE_EVENTS.  
   
@@ -162,7 +171,7 @@ en la base de datos. Este permiso se puede conceder a un usuario con permiso CON
   
 -   Sugerencia de consulta invalida sp_configure y la base de datos con ámbito de configuración. Si el grupo de recursos MAXDOP se establece para el grupo de cargas de trabajo:  
   
-    -   Si la sugerencia de consulta se establece en 0 se reemplaza por el regulador de recursos establecer.  
+    -   Si la sugerencia de consulta se establece en 0, se reemplaza por el regulador de recursos establecer.  
   
     -   Si la sugerencia de consulta no es 0, está limitada por el regulador de recursos establecer.  
   
@@ -172,15 +181,15 @@ en la base de datos. Este permiso se puede conceder a un usuario con permiso CON
   
 **QUERY_OPTIMIZER_HOTFIXES**  
   
- Cuando se utiliza la sugerencia QUERYTRACEON para habilitar el optimizador de consultas heredado o las revisiones del optimizador de consultas, sería una condición OR entre la sugerencia de consulta y la configuración de base de datos con ámbito de configuración, lo que significa que si está habilitada, se aplicarán las opciones.  
+ Cuando se utiliza la sugerencia QUERYTRACEON para habilitar el optimizador de consultas heredado o las revisiones del optimizador de consultas, sería una condición OR entre la sugerencia de consulta y la configuración de base de datos con ámbito de configuración, lo que significa que si está habilitada, las opciones se aplican.  
   
 **GeoDR**  
   
- Legibles bases de datos secundarias, por ejemplo, grupos de disponibilidad AlwaysOn y GeoReplication, utilizan el valor secundario comprobando el estado de la base de datos. Aunque se no vuelve a compilar en la conmutación por error y técnicamente el nuevo elemento principal tiene consultas que utilizan la configuración de secundaria, la idea es que la configuración entre principal y secundaria solo varían cuando la carga de trabajo es diferente y, por tanto, las consultas en caché con la configuración óptima, mientras que las nuevas consultas seleccionará la nueva configuración que es adecuada para ellos.  
+ Legibles bases de datos secundarias, por ejemplo, grupos de disponibilidad AlwaysOn y GeoReplication, utilizan el valor secundario comprobando el estado de la base de datos. Aunque recompile no se produce en la conmutación por error y técnicamente el nuevo elemento principal tiene consultas que utilizan la configuración de secundaria, la idea es que la configuración entre principal y secundaria variar solo cuando la carga de trabajo es diferente y, por tanto, las consultas en caché con la configuración óptima, mientras que las nuevas consultas elegir la nueva configuración que es adecuada para ellos.  
   
 **DacFx**  
   
- Puesto que ALTER DATABASE SCOPED CONFIGURATION es una nueva característica de base de datos de SQL Azure y SQL Server 2016 que afecta al esquema de base de datos, las exportaciones del esquema (con o sin datos) no podrá importarse a una versión anterior de SQL Server, por ejemplo, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o < C2 > [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] . Por ejemplo, una exportación a un [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) o un [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) desde una [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] base de datos que usa esta nueva característica no podrá importarse a un servidor de nivel inferior.  
+ Puesto que ALTER DATABASE SCOPED CONFIGURATION es una nueva característica de base de datos de SQL Azure y SQL Server que empiezan por SQL Server 2016 que afecta el esquema de base de datos, las exportaciones del esquema (con o sin datos) no son pueda importarse a una versión anterior de SQL Server Por ejemplo, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. Por ejemplo, una exportación a un [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) o un [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) desde una [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] base de datos que usa esta nueva característica no podrá importarse a un servidor de nivel inferior.  
   
 ## <a name="metadata"></a>Metadatos  
 
@@ -241,8 +250,7 @@ Este ejemplo establece PARAMETER_SNIFFING en OFF para una base de datos principa
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=OFF ;  
 ```  
   
-Este ejemplo establece PARAMETER_SNIFFING para la base de datos secundaria como está en la base de datos principal   
-en un escenario de replicación geográfica.  
+Este ejemplo establece PARAMETER_SNIFFING para la base de datos secundaria como está en la base de datos principal en un escenario de replicación geográfica.  
   
 ```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY ;  
@@ -250,8 +258,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY
   
 ### <a name="e-set-queryoptimizerhotfixes"></a>E. Establecer QUERY_OPTIMIZER_HOTFIXES  
 
-Establece QUERY_OPTIMIZER_HOTFIXES en ON para una base de datos principal   
-en un escenario de replicación geográfica.  
+Establece QUERY_OPTIMIZER_HOTFIXES en ON para una base de datos principal en un escenario de replicación geográfica.  
 
 ```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;  
@@ -275,6 +282,16 @@ Este ejemplo deshabilita la caché de identidad.
 ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ; 
 ```
 
+### <a name="h-set-optimizeforadhocworkloads"></a>H. Establecer OPTIMIZE_FOR_AD_HOC_WORKLOADS
+
+**Se aplica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+
+Este ejemplo habilita un código auxiliar del plan compilado que se almacenará en memoria caché cuando se compila un lote por primera vez.
+
+```sql 
+ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
+```
+
 ## <a name="additional-resources"></a>Recursos adicionales
 
 ### <a name="maxdop-resources"></a>Recursos MAXDOP 
@@ -290,13 +307,12 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * ["Tomarse un parámetro"](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)
 
 ### <a name="queryoptimizerhotfixes-resources"></a>Recursos QUERY_OPTIMIZER_HOTFIXES    
-* [Marcas de seguimiento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
+* [Marcas de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 * [SQL Server modelo optimizador de consultas revisión seguimiento marca 4199 mantenimiento](https://support.microsoft.com/en-us/kb/974006)
 
 ## <a name="more-information"></a>Más información  
- [Sys.database_scoped_configurations &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
- [sys.configurations&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
- [Vistas de catálogo de archivos y bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [Opciones de configuración de servidor &#40; SQL Server &#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
-  
-  
+ [Sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
+ [Sys.Configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+ [Vistas de catálogo de archivos y bases de datos](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+ [Opciones de configuración de servidor](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
+ 

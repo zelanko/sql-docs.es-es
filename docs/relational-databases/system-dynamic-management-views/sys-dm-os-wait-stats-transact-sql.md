@@ -1,7 +1,7 @@
 ---
 title: Sys.dm_os_wait_stats (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
-ms.date: 09/18/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 98e5e604c815b099d7e66d9fd3720d50d8422a9e
-ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
+ms.openlocfilehash: 1e6b1129e76717981e08ff35a97abf516c134ac3
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -169,7 +169,8 @@ Este comando restablece todos los contadores en 0.
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **Se aplica a**: desde [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |COUNTRECOVERYMGR |TBD <br /> **Se aplica a**: desde [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |CREATE_DATINISERVICE |TBD <br /> **Se aplica a**: desde [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|CXPACKET |Se produce con planes de consulta paralelos al sincronizar el iterador de intercambios del procesador de consultas y cuando generar y consumir filas. Si la espera es excesiva y no se puede reducir ajustando la consulta (por ejemplo, agregando índices), considere la posibilidad de ajustar el umbral de costo para paralelismo o de reducir el grado de paralelismo.| 
+|CXCONSUMER |Tiene lugar con planes de consulta paralelos cuando un subproceso consumidor espera un subproceso productor enviar filas. Esto es una parte normal de ejecución en paralelo. <br /> **Se aplica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 y[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET |Se produce con planes de consulta paralelos al sincronizar el iterador de intercambios del procesador de consultas y cuando generar y consumir filas. Si la espera es excesiva y no se puede reducir ajustando la consulta (por ejemplo, agregando índices), considere la posibilidad de ajustar el umbral de costo para paralelismo o de reducir el grado de paralelismo.<br /> **Nota:** en [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 y [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET solo hace referencia que se va a sincronizar el iterador de intercambios del procesador de consultas, así como generar filas para los subprocesos de consumidor. Subprocesos de consumidor se realiza un seguimiento por separado en el tipo de espera CXCONSUMER.| 
 |CXROWSET_SYNC |Tiene lugar durante un examen de intervalo en paralelo.| 
 |DAC_INIT |Tiene lugar mientras se inicializa la conexión de administrador dedicada.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |TBD <br /> **Se aplica a**: desde [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

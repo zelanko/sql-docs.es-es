@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
-ms.openlocfilehash: 439f906eaec98fe6b67c15842441f598ee6d8da5
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: e0a7c5078526b46a8cfa518eeb1d0b5708343115
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Funcionar el clúster de disco compartido de Red Hat Enterprise Linux para SQL Server
 
@@ -184,7 +184,7 @@ Ver los registros de recursos de agente en`/var/log/cluster/corosync.log`
     sudo pcs    cluster node add <nodeName3> 
     ```
 
-    Los anuncios de ejemplo siguiente, un nodo denominado **vm3** al clúster.
+    En el ejemplo siguiente se agrega un nodo denominado **vm3** al clúster.
 
     ```bash
     sudo pcs    cluster auth  

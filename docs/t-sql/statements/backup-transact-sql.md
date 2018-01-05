@@ -51,11 +51,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ef97afb50c2a8d4dcf18ea342b8ac98dc6014863
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1b3cdba9ffe5b8020a0e3d7c64c766cc54d89c71
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ BACKUP LOG { database_name | @database_name_var }
  {  
    { logical_device_name | @logical_device_name_var }   
  | { DISK | TAPE | URL} =   
-     { 'physical_device_name' | @physical_device_name_var }  
+     { 'physical_device_name' | @physical_device_name_var | NUL }  
  }   
   
 <MIRROR TO clause>::=  
@@ -196,7 +196,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  Es el nombre lógico de un grupo de archivos o una variable cuyo valor equivale al nombre lógico de un grupo de archivos que se va a incluir en la copia de seguridad. En el modelo de recuperación simple, se permite la copia de seguridad de un grupo de archivos solo si se trata de un grupo de archivos de solo lectura.  
   
 > [!NOTE]  
->  Considere la posibilidad de utilizar copias de seguridad de archivos cuando el tamaño y los requisitos de rendimiento de la base de datos no permitan realizar una copia de seguridad completa de la base de datos.  
+>  Considere la posibilidad de utilizar copias de seguridad de archivos cuando el tamaño y los requisitos de rendimiento de la base de datos no permitan realizar una copia de seguridad completa de la base de datos. El dispositivo NUL puede utilizarse para probar el rendimiento de las copias de seguridad, pero no debe usarse en entornos de producción.
   
  *n*  
  Es un marcador de posición que indica que se pueden especificar varios archivos y grupos de archivos en una lista separada por comas. El número es ilimitado. 
@@ -227,8 +227,11 @@ PARA \<dispositivodecopiadeseguridad > [ **,**...  *n*  ] Indica que el conjunto
  { *logical_device_name* | **@***logical_device_name_var* }  
  Es el nombre lógico del dispositivo de copia de seguridad en que se hace la copia de seguridad de la base de datos. El nombre lógico debe seguir las reglas definidas para los identificadores. Si se proporciona como una variable (@*logical_device_name_var*), el nombre del dispositivo de copia de seguridad se pueden especificar como una constante de cadena (@*logical_device_name_var*  **=**  nombre de dispositivo lógico de copia de seguridad) o como una variable de cualquier tipo de datos de cadena de caracteres excepto para la **ntext** o **texto** tipos de datos.  
   
- {DISCO | CINTA | Dirección URL}  **=**  { **'***physical_device_name***'**  |   **@**  *physical_device_name_var* }  
- Especifica un archivo de disco o un dispositivo de cinta, o un servicio de almacenamiento Blob de Windows Azure. El formato de dirección URL se usa para crear copias de seguridad para el servicio de almacenamiento de Windows Azure. Para obtener más información y ejemplos, vea [SQL Server Backup and Restore con el servicio de almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Para obtener un tutorial, vea [Tutorial: SQL Server Backup and Restore a Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
+ {DISCO | CINTA | Dirección URL}  **=**  { **'***physical_device_name***'**  |   **@**  *physical_device_name_var* | NUL}  
+ Especifica un archivo de disco o un dispositivo de cinta, o un servicio de almacenamiento Blob de Windows Azure. El formato de dirección URL se usa para crear copias de seguridad para el servicio de almacenamiento de Windows Azure. Para obtener más información y ejemplos, vea [SQL Server Backup and Restore con el servicio de almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Para obtener un tutorial, vea [Tutorial: SQL Server Backup and Restore a Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
+
+[!NOTE] 
+ El dispositivo de disco NUL descartará toda la información que se le envíen y solo debe usarse para realizar pruebas. Esto no es para su uso en producción.
   
 > [!IMPORTANT]  
 >  Con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 hasta [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], solo una copia de seguridad en un único dispositivo cuando copias de seguridad en dirección URL. Para varios dispositivos de copia de seguridad cuando copias de seguridad en dirección URL, debe utilizar [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y deben utilizar tokens de firma de acceso compartido (SAS). Para obtener ejemplos de creación de una firma de acceso compartido, consulte [copias de seguridad de SQL Server a URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) y [simplificar la creación de credenciales de SQL con tokens de firma de acceso compartido (SAS) en el almacenamiento de Azure con Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
@@ -236,6 +239,8 @@ PARA \<dispositivodecopiadeseguridad > [ **,**...  *n*  ] Indica que el conjunto
 **Dirección URL que se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  No es necesario que exista un dispositivo de disco antes de que se especifique en una instrucción BACKUP. Si el dispositivo físico existe y no se especifica la opción INIT en la instrucción BACKUP, la copia de seguridad se anexa al dispositivo.  
+ 
+ El dispositivo NUL descartará todas las entradas que se envíen a este archivo, sin embargo, la copia de seguridad todavía marcará todas las páginas como copia de seguridad.
   
  Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   

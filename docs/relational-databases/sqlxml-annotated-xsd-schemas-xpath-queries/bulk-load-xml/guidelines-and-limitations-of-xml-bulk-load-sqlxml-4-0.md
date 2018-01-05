@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9b6abe63c911f92c661cb7ab4c56b3a2bb61fa14
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 453ce7fe955af4ffe25d13b1ab1abfef0f48cf59
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Instrucciones y limitaciones de la carga masiva XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Cuando se utiliza la carga masiva XML, debe estar familiarizado con las siguientes directrices y limitaciones:  
@@ -171,7 +171,7 @@ ms.lasthandoff: 11/17/2017
   
 -   SchemaGen solamente proporciona funcionalidad básica para generar el esquema relacional de XSD anotado. El usuario debe modificar las tablas generadas manualmente si es preciso.  
   
--   En los casos más de una relación entre tablas, SchemaGen intenta crear una relación única que incluye todas las claves implicadas entre las dos tablas. Esta limitación podría dar lugar a un error [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+-   Donde existe más de una relación entre tablas, SchemaGen intenta crear una relación única que incluye todas las claves implicadas entre las dos tablas. Esta limitación podría dar lugar a un error [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 -   Al realizar cargas masivas de datos XML en una base de datos, debe haber al menos un atributo o elemento secundario en el esquema de asignación que esté asignado a una columna de base de datos.  
   

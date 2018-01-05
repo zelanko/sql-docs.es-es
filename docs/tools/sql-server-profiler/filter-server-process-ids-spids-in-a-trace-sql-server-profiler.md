@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 747817e69c175e90f119906f8263920bc1851c2e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b113e50edcd72ff72717cae44166817478c959b9
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="filter-server-process-ids-spids-in-a-trace-sql-server-profiler"></a>Filtrar los Id. de proceso de servidor (SPID) en un seguimiento (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Este tema describe cómo filtrar identificadores de proceso de servidor (SPID) en un seguimiento mediante [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -34,18 +34,18 @@ ms.lasthandoff: 12/21/2017
   
 1.  En el menú **Archivo** , haga clic en **Nuevo seguimiento**y, a continuación, conéctese a una instancia de SQL Server.  
   
-     Aparecerá el cuadro de diálogo **Propiedades de seguimiento**.  
+     Aparecerá el cuadro de diálogo **Propiedades de seguimiento** .  
   
     > [!NOTE]  
-    >  Si se selecciona **Iniciar el seguimiento inmediatamente tras realizar la conexión**, el cuadro de diálogo **Propiedades de seguimiento**no aparecerá y, en su lugar, se iniciará el seguimiento. Para desactivar esta configuración, en el menú **Herramientas**, haga clic en **Opciones**y desactive la casilla **Iniciar el seguimiento inmediatamente tras realizar la conexión** .  
+    >  Si **iniciar la traza inmediatamente tras realizar la conexión** está activada, el **propiedades de seguimiento** no aparecerá el cuadro de diálogo y en su lugar, se iniciará el seguimiento. Para desactivar esta configuración, en la **herramientas** menú, haga clic en **opciones**y desactive el **iniciar la traza inmediatamente tras realizar la conexión** casilla de verificación.  
   
 2.  En el cuadro **Nombre de seguimiento** , escriba un nombre para el seguimiento.  
   
-3.  En el cuadro **Use the template**(Usar la plantilla), seleccione una plantilla de seguimiento.  
+3.  En el **usar la plantilla** , seleccione una plantilla de seguimiento.  
   
 4.  Opcionalmente, especifique una tabla o un archivo de destino donde guardar los resultados del seguimiento.  
   
-5.  En el menú **Selección de eventos**, haga clic en el encabezado de la columna **SPID**para mostrar el cuadro de diálogo **Editar filtro** . También puede hacer clic con el botón derecho en el encabezado de la columna y seleccionar **Editar filtro de columna**. Si no aparece la columna **SPID** , active la casilla **Mostrar todas las columnas** .  
+5.  En el **selección de eventos** , haga clic en el **SPID** encabezado de columna para iniciar la **Editar filtro** cuadro de diálogo. También puede hacer clic con el botón derecho en el encabezado de la columna y seleccionar **Editar filtro de columna**. Si no aparece la columna **SPID** , active la casilla **Mostrar todas las columnas** .  
   
 6.  En el cuadro de diálogo **Editar filtro** , expanda el operador de comparación adecuado y especifique un SPID como valor para la comparación.  
   

@@ -33,14 +33,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9e14fa00535414673f5526c6aedb3ec349235a29
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3a4ce958ed481b33f4785af2f0d7b32fb5baf519
+ms.sourcegitcommit: 9b8c7883a6c5ba38b6393a9e05367fd66355d9a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Reduce el tamaño de los archivos de datos y de registro de la base de datos especificada.
   
@@ -65,14 +65,14 @@ DBCC SHRINKDATABASE
  Es el porcentaje de espacio disponible que se desea dejar en el archivo de la base de datos después de reducir la base de datos.  
   
  NOTRUNCATE  
- Compacta los datos de archivos de datos moviendo páginas asignadas del final de un archivo a páginas no asignadas del principio del archivo. *porcentaje de destino* es opcional.  
+ Compacta los datos de archivos de datos moviendo páginas asignadas del final de un archivo a páginas no asignadas del principio del archivo. *porcentaje de destino* es opcional. Esta opción no es compatible con almacenamiento de datos de SQL Azure. 
   
  El espacio disponible del final del archivo no se devuelve al sistema operativo y el tamaño físico del archivo no cambia. Por tanto, si se especifica NOTRUNCATE, parecerá que la base de datos no se reduce.  
   
  NOTRUNCATE solo es aplicable a archivos de datos. No afecta al archivo de registro.  
   
  TRUNCATEONLY  
- Devuelve al sistema operativo todo el espacio disponible del final del archivo, pero no realiza ningún movimiento de página dentro del archivo. El archivo de datos solo se reduce hasta el último tamaño asignado. *porcentaje de destino* se omite si se especifica con TRUNCATEONLY.  
+ Devuelve al sistema operativo todo el espacio disponible del final del archivo, pero no realiza ningún movimiento de página dentro del archivo. El archivo de datos solo se reduce hasta el último tamaño asignado. *porcentaje de destino* se omite si se especifica con TRUNCATEONLY. Esta opción no es compatible con almacenamiento de datos de SQL Azure.
   
  TRUNCATEONLY afecta al archivo de registro. Para truncar solo el archivo de datos, use DBCC SHRINKFILE.  
   
@@ -108,6 +108,9 @@ Ejecutar DBCC SHRINKDATABASE sin especificar la opción NOTRUNCATE o la opción 
 La base de datos que se comprime no tiene que estar en modo de usuario único; otros usuarios pueden estar trabajando en la base de datos cuando ésta se está reduciendo. Esto incluye las bases de datos del sistema.
   
 No se puede reducir una base de datos mientras se está realizando una copia de seguridad de la misma. Asimismo, no se puede realizar una copia de seguridad de una base de datos mientras se está realizando una operación de reducción de ésta.
+
+>[!NOTE]
+> Actualmente, el almacenamiento de datos de SQL Azure no admite DBCC SHRINKDATABASE con TDE habilitado.
   
 ## <a name="how-dbcc-shrinkdatabase-works"></a>Cómo funciona DBCC SHRINKDATABASE  
 DBCC SHRINKDATABASE reduce los archivos de datos de uno en uno, pero reduce los archivos de registro como si todos estuvieran en una agrupación de registros contiguos.  Los archivos se reducen siempre desde el final.

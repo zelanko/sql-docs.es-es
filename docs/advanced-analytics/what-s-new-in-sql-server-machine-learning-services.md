@@ -1,26 +1,26 @@
 ---
 title: "¿Qué &#39; s nuevo en servicios de aprendizaje de máquina | Documentos de Microsoft"
-ms.date: 11/16/2017
+ms.date: 01/08/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6aff043a-8b37-4f3f-9827-10a671e1ad1c
 caps.latest.revision: "36"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 694ec29101c2558cf77b01b56bfbfc14c7da48dd
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: abbc7043f4eefe2c6f33a3f9fbc61fe0a97ceff9
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>Novedades en servicios de aprendizaje de máquina en SQL Server
 
@@ -34,9 +34,11 @@ En SQL Server 2017, aprendizaje automático integrado de base de datos pasó a s
 
 Servidor de aprendizaje de máquina en SQL Server proporciona compatibilidad completa para crear e implementar soluciones de aprendizaje de máquina en R o Python. Estos son los aspectos destacados de esta versión:
 
-### <a name="whats-new-in-cumulative-update-1-for-sql-server-2017"></a>Novedades de la actualización acumulativa 1 para SQL Server 2017
+### <a name="whats-new-in-cumulative-update-3-for-sql-server-2017"></a>Novedades de la actualización acumulativa 3 para SQL Server 2017
 
-Ahora puede actualizar los componentes de Python y R al servidor de aprendizaje de máquina 9.2.1.24. Esta versión presenta muchas mejoras a **revoscalepy** y **RevoScaleR**, incluidas las mejoras de rendimiento.
+Esta versión contiene actualizaciones de componentes de Python y R. 
+
++ Se agregó compatibilidad para la serialización de modelo de Python en revoscalepy, mediante la función rx_serialize_model
 
 ### <a name="in-database-python-integration"></a>Integración de Python en bases de datos
 

@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 47ad74a70236b156db230ed229d2022cd6e057b0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f87ea88579145b0220be7a047d230d2f3d8d9a1e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-structure-columns"></a>Columnas de la estructura de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Definir las columnas en una estructura de minería de datos al crear la estructura de minería de datos, elegir las columnas de datos externos y, a continuación, especificando la forma de los datos que se usará para el modelado. Por tanto, las columnas de la estructura de minería de datos son más que copias de los datos de un origen de datos: definen cómo se van a usar los datos del origen en el modelo de minería de datos. Puede asignar propiedades que determinen cómo se discretizan los datos, las propiedades que describen cómo se distribuyen los valores de datos  
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/08/2017
 |Describe los tipos de contenido que están disponibles para cada tipo de datos contenido en una columna de estructura de minería de datos. Los tipos de contenido dependen del tipo de datos. El tipo de contenido se asigna en el modelo y determina cómo usa el modelo los datos de la columna.|[Tipos de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-types-data-mining.md)|  
 |Presenta el concepto de tablas anidadas y explica el modo en que las tablas anidadas se pueden agregar al origen de datos como columnas de la estructura de minería de datos.|[Columnas clasificadas &#40;minería de datos&#41;](../../analysis-services/data-mining/classified-columns-data-mining.md)|  
 |Enumera y explica las propiedades de distribución que puede establecer en una columna de estructura de minería de datos para especificar la distribución esperada de valores de la columna.|[Distribuciones de columnas &#40;minería de datos&#41;](../../analysis-services/data-mining/column-distributions-data-mining.md)|  
-|Explica el concepto de *discretización*y describe métodos que proporciona Analysis Services para discretizar datos numéricos continuos.|[Métodos de discretización &#40;minería de datos&#41;](../../analysis-services/data-mining/discretization-methods-data-mining.md)|  
+|Explica el concepto de *discretización* y describe métodos que proporciona Analysis Services para discretizar datos numéricos continuos.|[Métodos de discretización &#40;minería de datos&#41;](../../analysis-services/data-mining/discretization-methods-data-mining.md)|  
 |Describe las marcas de modelado que se pueden establecer en una columna de la estructura de minería de datos.|[Marcas de modelado &#40;Minería de datos&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)|  
 |Describe las columnas clasificadas, que son un tipo especial de columna que puede utilizar para relacionar una columna de la estructura de minería de datos con otra.|[Columnas clasificadas &#40;minería de datos&#41;](../../analysis-services/data-mining/classified-columns-data-mining.md)|  
 |Aprenda a agregar y modificar columnas de la estructura de minería de datos.|[Tareas y procedimientos de las estructuras de minería de datos](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)|  

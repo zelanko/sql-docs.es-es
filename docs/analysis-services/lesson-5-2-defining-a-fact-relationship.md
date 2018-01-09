@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0223be3eb321aee4ecae975fe77a776082ed495f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cc3614124b6e47f4da3526351927218dba8b03ba
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>Lección 5-2: definir una relación de hechos
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]A veces, los usuarios desean poder dimensionar las medidas según los elementos de datos que se encuentran en la tabla de hechos, o consultar la tabla de hechos para determinada información relacionada adicional, como números de factura o relacionados con hechos de venta específicos de números de pedido de compra. Cuando se define una dimensión basada en un elemento de tabla de hechos de este tipo, la dimensión se conoce como *dimensión de hechos*. Las dimensiones de hechos también se denominan dimensiones degeneradas. Las dimensiones de hechos son útiles para agrupar filas de tablas de hechos relacionadas, como todas las filas que están relacionadas con un número de factura determinado. Aunque esta información puede colocarse en una tabla de dimensiones independiente de la base de datos relacional, crear una tabla de dimensiones independiente para la información no supone ninguna ventaja, ya que la tabla de dimensiones crecerá al mismo ritmo que la tabla de hechos, y simplemente crearía datos duplicados y una complejidad innecesaria.  

@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d938cefe6996b28e13dc13e5562acfc42ee82e5a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6694a4e59637f96240afd1f2b04575ede20c2dfe
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Elegir y asignar datos de entrada para una consulta de predicción
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Crear predicciones a partir de un modelo de minería de datos, generalmente se realiza esto proporcionando datos nuevos en el modelo. (La excepción son los modelos de serie temporal, que pueden realizar predicciones basadas únicamente en datos históricos). Para proporcionar nuevos datos al modelo, debe asegurarse de que los datos están disponibles como parte de una vista del origen de datos. Si conoce de antemano los datos que va a usar para la predicción, puede incluirlos en la vista del origen de datos usada para crear el modelo. De lo contrario, es posible que tenga que crear una nueva vista del origen de datos. Para más información, vea [Vistas del origen de datos en modelos multidimensionales](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  

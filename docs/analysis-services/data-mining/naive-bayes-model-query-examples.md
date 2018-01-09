@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5efdf95cb4a87acd7c2b1e626dd20d3105aa1f6b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1fa67a1dce190a145588f90b740213f6400612dd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="naive-bayes-model-query-examples"></a>Ejemplos de consultas del modelo Bayes naive
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cuando se crea una consulta en un modelo de minería de datos, puede crear cualquier una consulta de contenido, que proporciona detalles sobre los patrones detectados durante el análisis, o puede crear una consulta de predicción, que utiliza los patrones en el modelo para realizar predicciones para los nuevos datos. También puede recuperar los metadatos sobre el modelo utilizando una consulta del conjunto de filas de esquema de minería de datos. En esta sección se explica cómo crear estas consultas para los modelos que se basan en el algoritmo Bayes naive de Microsoft.  
@@ -99,9 +97,9 @@ WHERE NODE_TYPE = 26
 |TM_NaiveBayes|Bike Buyer|Missing|0|0|1|  
 |TM_NaiveBayes|Bike Buyer|0|8869|0.507263784|4|  
 |TM_NaiveBayes|Bike Buyer|1|8615|0.492736216|4|  
-|TM_NaiveBayes|Gender|Missing|0|0|1|  
-|TM_NaiveBayes|Gender|F|8656|0.495081217|4|  
-|TM_NaiveBayes|Gender|M|8828|0.504918783|4|  
+|TM_NaiveBayes|Sexo|Missing|0|0|1|  
+|TM_NaiveBayes|Sexo|F|8656|0.495081217|4|  
+|TM_NaiveBayes|Sexo|M|8828|0.504918783|4|  
   
  Por ejemplo, estos resultados le indican el número de casos de entrenamiento para cada valor discreto (VALUETYPE = 4), junto con la probabilidad calculada, ajustados para los valores que faltan (VALUETYPE = 1).  
   

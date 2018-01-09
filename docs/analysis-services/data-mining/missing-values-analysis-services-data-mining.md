@@ -5,12 +5,10 @@ ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9fd36d5de83b72fcc62945de61aa5f7b2d0cb3e2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 78f57e86acdbcf9292e462854c97ebf4c91f79b1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Valores ausentes (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Control de *valores que faltan* correctamente constituye una parte importante del modelado eficiente. En esta sección se explica qué son los valores ausentes, y se describen las características proporcionadas en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para trabajar con valores ausentes al generar estructuras y modelos de minería de datos.  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/08/2017
   
  Por ejemplo, la tabla siguiente muestra la distribución de valores para el nodo (Todos) del modelo de árbol de decisión creado para el tutorial de Bike Buyer. En el ejemplo, la columna [Bike Buyer] es el atributo de predicción, donde 1 indica "Sí" y 0 indica "No".  
   
-|Value|Casos|  
+|Valor|Casos|  
 |-----------|-----------|  
 |0|9296|  
 |1|9098|  
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="adjusting-probability-for-missing-states"></a>Ajustar la probabilidad para los estados ausentes  
  Además de contar los valores, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] calcula la probabilidad de cualquier valor en el conjunto de datos. Esto también se aplica al valor **Missing** . Por ejemplo, la tabla siguiente muestra las probabilidades para los casos del ejemplo anterior:  
   
-|Value|Casos|Probabilidad|  
+|Valor|Casos|Probabilidad|  
 |-----------|-----------|-----------------|  
 |0|9296|50,55 %|  
 |1|9098|49,42 %|  
@@ -111,7 +109,7 @@ El algoritmo de árboles de decisión proporciona un ajuste adicional que ayuda 
   
  El efecto neto de este ajuste es mantener la estabilidad del árbol.  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  En los siguientes temas se proporciona más información acerca de cómo administrar los valores ausentes.  
   
 |Tareas|Vínculos|  

@@ -5,12 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: content queries [DMX]
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c2f5e3fd04ae0552ef9e8c7cae54e98bc7e46981
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fa60ad8ee91839e04c424c5fe2d23723e495bbd4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>Crear una consulta de minería de datos utilizando XMLA
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Puede crear una variedad de consultas en objetos de minería de datos mediante AMO, DMX o XML/a.  
@@ -51,9 +49,9 @@ ms.lasthandoff: 12/08/2017
   
      En el panel **Resultados** se devuelve una lista de conjuntos de filas de esquema que contiene los nombres de los conjuntos de filas de esquema y las columnas de conjunto de filas para todos los conjuntos de filas disponibles en la instancia actual.  
   
-2.  En el **consulta** panel, coloque el cursor después  **\<lista de restricciones >** y presione ENTRAR para agregar una nueva línea.  
+2.  En el **consulta** panel, coloque el cursor después ** \<lista de restricciones >** y presione ENTRAR para agregar una nueva línea.  
   
-3.  Coloque el cursor en la línea en blanco y escriba  **\<NombreDeEsquema > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
+3.  Coloque el cursor en la línea en blanco y escriba ** \<NombreDeEsquema > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
   
      La sección completa para las restricciones debería aparecer de la forma siguiente:  
   

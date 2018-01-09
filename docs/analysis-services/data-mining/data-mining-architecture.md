@@ -5,12 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: be637286bda9a3d2a6f39115357603bf03eec81c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a26a81ee0d0d2ca6bf64c2aca0d1b5f752b5f52c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-architecture"></a>Arquitectura de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Esta sección describe la arquitectura de soluciones de minería de datos que se hospedan en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. En los temas de esta sección se describe la arquitectura lógica y física de una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que admita la minería de datos, y también proporcionan información acerca de los clientes, los proveedores y los protocolos que se pueden utilizar para comunicarse con los servidores de minería de datos y trabajar con objetos de minería de datos tanto local como remotamente.  

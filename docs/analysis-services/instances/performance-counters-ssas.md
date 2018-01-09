@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0046d4b982d57491553353c88d309b309964e142
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: edaf6abe5becb215a58f8ae229562c774d1f0fd1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="performance-counters-ssas"></a>Contadores de rendimiento (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Mediante el Monitor de rendimiento, puede supervisar el rendimiento de una instancia de Microsoft SQL Server Analysis Services (SSAS) mediante el uso de contadores de rendimiento.  
@@ -109,7 +106,7 @@ ms.lasthandoff: 12/08/2017
 |Filas/s|Número de filas procesadas durante una consulta de predicción de minería de datos.|  
 |Consultas/s|Número de consultas de minería de datos procesadas.|  
 |Total de consultas|Total de consultas de minería de datos recibidas por el servidor.|  
-|Filas de totales|Total de filas devueltas por consultas de minería de datos.|  
+|Total de filas|Total de filas devueltas por consultas de minería de datos.|  
 |Total de predicciones|Total de consultas de predicciones de minería de datos recibidas por el servidor.|  
   
 ###  <a name="bkmk_Locks"></a> Bloqueos  

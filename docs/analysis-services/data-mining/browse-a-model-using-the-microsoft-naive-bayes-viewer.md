@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -31,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0a36102a6075f3382fa8e285b5e753765ab09d63
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 77b9857488d3574338f7eaee0815082ea3ac690c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Examinar un modelo usando el visor Bayes naive de Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visor Bayes Naive en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] muestra los modelos de minería de datos que se generan con el [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Bayes Naive. El algoritmo Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo de clasificación que se adapta muy bien a las tareas de modelado de predicción. Para obtener más información acerca de este algoritmo, vea [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md).  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/08/2017
  Como uno de los principales propósitos de un modelo Bayes naive es ofrecer una manera rápida de explorar los datos de un conjunto de datos, el Visor Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] proporciona varios métodos para mostrar la interacción entre los atributos de predicción y los atributos de entrada.  
   
 > [!NOTE]  
->  Si desea ver información detallada acerca de las ecuaciones que se usan en el modelo y los patrones detectados, puede cambiar al Visor de árbol de contenido genérico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para más información, vea [Examinar un modelo usando el Visor de árbol de contenido genérico de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) o [Visor de árbol de contenido genérico de Microsoft &#40;Minería de datos&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).  
+>  Si desea ver información detallada acerca de las ecuaciones que se usan en el modelo y los patrones detectados, puede cambiar al Visor de árbol de contenido genérico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener más información, vea [Examinar un modelo usando el Visor de árbol de contenido genérico de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) o [Visor de árbol de contenido genérico de Microsoft &#40;Minería de datos&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).  
   
 ##  <a name="BKMK_ViewerTabs"></a> Fichas del visor  
  Cuando se explora un modelo de minería de datos en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], el modelo aparece en la pestaña **Visor de modelos de minería de datos** del visor del diseñador de minería de datos apropiado para el modelo. El Visor Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] dispone de las siguientes pestañas para explorar datos:  
@@ -86,7 +84,7 @@ ms.lasthandoff: 12/08/2017
  Muestra otros atributos del conjunto de datos que contienen un estado que favorece claramente un estado del atributo de predicción.  
   
  **Valores**  
- Muestra el valor del atributo en la columna **Atributo** .  
+ Muestra el valor del atributo en la columna **Atributo**.  
   
  **Favorece \<valor 1 >**  
  Muestra una barra coloreada que indica la intensidad con la que el valor de atributo favorece el valor de atributo predecible mostrado en **Valor 1**.  

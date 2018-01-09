@@ -1,34 +1,39 @@
 ---
 title: "Habilitar o deshabilitar la administración de paquetes de R para SQL Server | Documentos de Microsoft"
 ms.custom: 
-ms.date: 10/05/2017
+ms.date: 01/04/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6e384893-04da-43f9-b100-bfe99888f085
 caps.latest.revision: "7"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 59ab247ebdb53dbd530b3becf6e90ef45bc3a503
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 3c3dab54416d680e0d021a2edf9fbe33d5a0d81f
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="enable-or-disable-r-package-management-for-sql-server"></a>Habilitar o deshabilitar la administración de paquetes de R para SQL Server
 
-En este artículo se describe el proceso de habilitar o deshabilitar la nueva característica de administración de paquetes en SQL Server 2017. Esta característica permite al administrador de base de datos controlar la instalación del paquete en la instancia. La característica se basa en los nuevos roles de base de datos para conceder a los usuarios la capacidad para instalar los paquetes de R necesitan o compartir paquetes con otros usuarios.
+Este artículo describe una nueva característica de administración de paquetes de SQL Server de 2017, diseñado para permitir que el Administrador de base de datos controlar la instalación del paquete en la instancia mediante T-SQL, en lugar de R.
 
-De forma predeterminada, está deshabilitada la característica de administración de paquetes externos para SQL Server, incluso si se instalaron características de aprendizaje de la máquina.
+Más arde que el frature de administración de paquetes está habilitada, también puede usar comandos de R para instalar paquetes en un frm de base de datos un cliente remoto.
 
-Para [habilitar](#bkmk_enable) esta característica es un proceso de dos pasos y requiere cierta ayuda de un administrador de base de datos:
+> [!NOTE]
+> De forma predeterminada, está deshabilitada la característica de administración de paquetes externos para SQL Server, incluso si se instalaron características de aprendizaje de la máquina. 
+
+## <a name="enable-package-management"></a>Habilitar la administración de paquetes
+
+Para [habilitar](#bkmk_enable) esta característica es un proceso de dos pasos, que requieren un administrador de base de datos:
 
 1.  Habilitar la administración de paquetes en la instancia de SQL Server (una vez por instancia de SQL Server)
 
@@ -42,27 +47,29 @@ Para [deshabilitar](#bkmk_disable) la característica de administración de paqu
 
 ## <a name="bkmk_enable"></a>Habilitar la administración de paquetes
 
-Para habilitar o deshabilitar la administración del paquete requiere que la utilidad de línea de comandos **RegisterRExt.exe**, que se incluye con la **RevoScaleR** paquete.
+Para habilitar o deshabilitar la administración de paquetes, use la utilidad de línea de comandos **RegisterRExt.exe**, que se incluye con la **RevoScaleR** paquete.
 
 1. Abra un símbolo del sistema con privilegios elevados y vaya a la carpeta que contiene la utilidad, RegisterRExt.exe. La ubicación predeterminada es `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`.
 
-2. Ejecute el siguiente comando, proporcionar argumentos adecuado para su entorno:
+2. Ejecute el siguiente comando, que proporciona los argumentos apropiados para su entorno:
 
     `RegisterRExt.exe /installpkgmgmt [/instance:name] [/user:username] [/password:*|password]`
 
     Este comando crea objetos de nivel de instancia en el equipo de SQL Server que son necesarios para la administración de paquetes. También se reinicia el Launchpad de la instancia.
 
-    Si no especifica una instancia, se utiliza la instancia predeterminada.
+    Si no especifica una instancia, se utiliza la instancia predeterminada. Si no especifica un usuario, se utiliza el contexto de seguridad actual. Por ejemplo, el siguiente comando habilita la administración de paquetes en la instancia en la ruta de acceso de RegisterRExt.exe, utilizando las credenciales del usuario que abrió el símbolo del sistema:
 
-    Si no especifica un usuario, se utiliza el contexto de seguridad actual.
+    `REgisterRExt.exe /installpkgmgmt`
 
-2.  Para agregar administración de paquetes en el nivel de base de datos, ejecute el siguiente comando desde un símbolo del sistema con privilegios elevados:
+2.  Para agregar administración de paquetes a una base de datos, ejecute el comando siguiente desde un símbolo del sistema con privilegios elevados:
 
     `RegisterRExt.exe /installpkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]`
    
     Este comando crea algunos artefactos de base de datos, incluidos los siguientes roles de base de datos que se usan para controlar los permisos de usuario: `rpkgs-users`, `rpkgs-private`, y `rpkgs-shared`.
 
-    Si no especifica un usuario, se utiliza el contexto de seguridad actual.
+    Por ejemplo, el siguiente comando habilita la administración de paquetes en la base de datos en la instancia donde se ejecuta RegisterRExt. Si no especifica un usuario, se utiliza el contexto de seguridad actual. 
+
+    `RegisterRExt.exe /installpkgmgmt /database:TestDB`
 
 3. Repita el comando para cada base de datos donde deben instalarse los paquetes.
 
@@ -83,21 +90,23 @@ Para habilitar o deshabilitar la administración del paquete requiere que la uti
         ON o.schema_id = s.schema_id;
     ```
 
-4.  Después de que se ha habilitado la característica, cualquier usuario con los permisos adecuados puede utilizar el [crear biblioteca externa](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) instrucción T-SQL para agregar paquetes. Para obtener un ejemplo de cómo funciona esto, consulte [instalar paquetes adicionales en SQL Server](install-additional-r-packages-on-sql-server.md).
+4.  Después de que se ha habilitado la característica, puede conectarse al servidor e instalar o sincronizar los paquetes de forma remota, mediante comandos de R. Para obtener un ejemplo de cómo funciona esto, consulte [instalar paquetes adicionales en SQL Server](install-additional-r-packages-on-sql-server.md).
 
 ## <a name="bkmk_disable"></a>Deshabilitar la administración de paquetes
 
-1.  Desde un símbolo del sistema con privilegios elevados, ejecute el siguiente comando para deshabilitar la administración de paquetes en el nivel de base de datos:
+1.  Desde un símbolo del sistema con privilegios elevados, vuelva a ejecutar la utilidad RegisterRExt y deshabilitar la administración de paquetes en el nivel de base de datos:
 
     `RegisterRExt.exe /uninstallpkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]`
 
-    Ejecute este comando una vez para cada base de datos donde se utiliza la administración de paquetes. Este comando quitará los objetos de base de datos relacionados con administración de paquetes de la base de datos especificada. También se quitarán todos los paquetes que se instalaron desde la ubicación de sistema de archivos protegidos en el equipo de SQL Server.
+    Este comando quita los objetos de base de datos relacionados con administración de paquetes de la base de datos especificada. También se quitan todos los paquetes que se instalaron desde la ubicación de sistema de archivos protegidos en el equipo de SQL Server.
 
-2.  (Opcional) Después de que se han borrado todas las bases de datos de paquetes mediante el paso anterior, ejecute el siguiente comando desde un símbolo del sistema con privilegios elevados:
+2. Ejecute este comando una vez para cada base de datos donde se utiliza la administración de paquetes. 
+
+3.  (Opcional) Después de que se han borrado todas las bases de datos de paquetes mediante el paso anterior, ejecute el siguiente comando desde un símbolo del sistema con privilegios elevados:
 
     `RegisterRExt.exe /uninstallpkgmgmt [/instance:name] [/user:username] [/password:*|password]`
 
-    Este comando quita la característica de administración de paquetes de la instancia.
+    Este comando quita la característica de administración de paquetes de la instancia. Tendrá que reiniciar manualmente el servicio Launchpad una vez más para ver los cambios.
 
 ## <a name="see-also"></a>Vea también
 

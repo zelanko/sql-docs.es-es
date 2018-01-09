@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6bdd35da02c1679607ce89002a6a2c3edc569c0c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cec454c2fe5dc832879a8a320b3e921c4f71ceb2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-instance-management"></a>Administración de una instancia de Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una instancia de Analysis Services es una copia de la **msmdsrv.exe** archivo ejecutable que se ejecuta como un servicio de sistema operativo. Cada instancia es totalmente independiente de otras instancias en el mismo servidor y tiene su propia configuración, permisos, puertos, cuentas de inicio, almacenamiento de archivos, y propiedades del modo de servidor.  

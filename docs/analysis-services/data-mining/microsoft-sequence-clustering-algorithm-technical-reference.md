@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 993c4005015b18b1ee6f6106e13fae8429ddcaec
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e0a53d359debe447cc4e1cc94197516c75f53f8d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Referencia técnica del algoritmo de clústeres de secuencia de Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El algoritmo de clústeres de secuencia de Microsoft es un algoritmo híbrido que usa el análisis de cadenas de Markov para identificar secuencias ordenadas y combina los resultados de este análisis con técnicas para generar clústeres basados en las secuencias y otros atributos de agrupación en clústeres en el modelo. En este tema se describe la implementación del algoritmo y cómo personalizarlo, y se detallan los requisitos especiales para los modelos de agrupación en clústeres de secuencia.  
@@ -137,7 +135,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción  
  El algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se enumeran en la tabla siguiente. Para obtener más información sobre lo que significan los tipos de contenido cuando se usan en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Columna|Tipos de contenido|  
+|columna|Tipos de contenido|  
 |------------|-------------------|  
 |Atributo de entrada|Continuous, Cyclical, Discrete, Discretized, Key, Key Sequence, Table y Ordered|  
 |Atributo de predicción|Continuous, Cyclical, Discrete, Discretized, Table y Ordered|  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f22fa80ab461872b097ecd62eb54de1a22416c3c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d05ca23a224bd7c702bd54ef4355c568cf593327
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="database-dimension-properties"></a>Propiedades de la dimensión de base de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], las características de una dimensión se definen mediante los metadatos de la dimensión, basándose en los valores de varias propiedades de dimensión y en los atributos o jerarquías que están incluidas en la dimensión. En la siguiente tabla se describen las propiedades de dimensión de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/08/2017
 |**Intercalación**|Determina la intercalación utilizada por la dimensión.|  
 |**CurrentStorageMode**|Contiene el modo de almacenamiento actual de la dimensión.|  
 |**DependsOnDimension**|Contiene el Id. de otra dimensión de la que depende la dimensión, si la hubiera.|  
-|**Description**|Contiene la descripción de la dimensión.|  
+|**Descripción**|Contiene la descripción de la dimensión.|  
 |**ErrorConfiguration**|Configuración de control de errores configurable para controlar las claves duplicadas, las claves no conocidas, los límites de error, las acciones tras la detección de errores, el archivo de registro de errores y el control de claves NULL.|  
 |**ID**|Contiene el identificador (Id.) único de la dimensión.|  
 |**Lenguaje**|Especifica el idioma predeterminado de la dimensión.|  

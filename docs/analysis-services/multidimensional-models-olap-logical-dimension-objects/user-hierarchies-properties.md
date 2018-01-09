@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8193e756aeb2b7e0bc307b9012d522d288ac926e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 156d25ca9a17f2c79de133a32a74c8765b77a77d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="user-hierarchies---properties"></a>Jerarquías de usuario - propiedades
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]En la tabla siguiente se describe las propiedades de una jerarquía definida por el usuario.  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/08/2017
 |AllowDuplicateNames|Determina si se permiten nombres duplicados en la jerarquía. Los valores son True y False. Valor predeterminado es True.|  
 |Description|Contiene la descripción de la jerarquía.|  
 |DisplayFolder|Especifica la carpeta en la que se muestra la jerarquía a los usuarios.|  
-|ID|Contiene el identificador único de la jerarquía.|  
+|Id.|Contiene el identificador único de la jerarquía.|  
 |MemberNamesUnique|Determina si los nombres de miembro de la jerarquía deben ser únicos. Los valores son True y False. El valor predeterminado es False.|  
 |Nombre|Contiene el nombre de la jerarquía.|  
   

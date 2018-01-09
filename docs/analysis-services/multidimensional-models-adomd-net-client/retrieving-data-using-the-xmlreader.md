@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dbcce4f4a75d2aa8aefedfff4c3b8b8de81d1fe6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 70b268a896a7acbbf515ac49a722eccb17afdfd8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>Recuperar datos mediante XmlReader
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El **XmlReader** de la clase, parte de la **System.Xml** es similar al espacio de nombres para la biblioteca de clases de Microsoft .NET Framework, el <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> clase en que la **XmlReader**clase también proporciona un rápido, acceso a datos sin almacenamiento en caché y solo avance. Si no es necesario para obtener una vista en memoria y analítica de los datos mediante la <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> objeto, el **XmlReader** objeto es perfecto para recuperar datos XML, especialmente para grandes cantidades de datos. Dado que **XmlReader** vierte los datos, **XmlReader** no tiene que recuperar y almacenar en caché todos los datos antes de exponerlos al llamador, como sería el caso cuando un <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> objeto se usa para convertir el Respuesta de XML for Analysis en una representación del modelo de objetos analítico.  

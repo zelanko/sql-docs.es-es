@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,11 +30,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffca0c4aa4879d5732831113308c26a9032a7dff
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 187eea9af56b4da074f374923c29d7ebcea0aca2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Referencia técnica del algoritmo de clústeres de Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Esta sección explica la implementación de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de clústeres, incluidos los parámetros que puede usar para controlar el comportamiento de los modelos de clústeres. Además, incluye instrucciones sobre cómo mejorar el rendimiento durante la creación y el procesamiento de modelos de agrupación en clústeres.  
@@ -102,7 +100,7 @@ ms.lasthandoff: 12/08/2017
  CLUSTERING_METHOD  
  Especifica el método de agrupación en clústeres que va a usar el algoritmo. Los métodos de agrupación en clústeres disponibles son:  
   
-|ID|Método|  
+|Id.|Método|  
 |--------|------------|  
 |1|EM escalable|  
 |2|EM no escalable|  
@@ -178,7 +176,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción  
  El algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se enumeran en la tabla siguiente. Para más información sobre el significado de los tipos de contenido usados en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Columna|Tipos de contenido|  
+|columna|Tipos de contenido|  
 |------------|-------------------|  
 |Atributo de entrada|Continuous, Cyclical, Discrete, Discretized, Key, Table, Ordered|  
 |Atributo de predicción|Continuous, Cyclical, Discrete, Discretized, Table, Ordered|  

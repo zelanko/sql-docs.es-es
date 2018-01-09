@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9a4da22a2e86eee606ce756df5791908153e9d78
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d202c423a513949b425ac016ebfbcdbe6fe4b321
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-12-analyze-in-excel"></a>Lección 12: Analizar en Excel
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -33,7 +33,7 @@ Para completar esta lección, debe tener instalado Excel en el mismo equipo que 
   
 Tiempo estimado para completar esta lección: **20 minutos**  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
 Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 11: crear Roles](../analysis-services/lesson-11-create-roles.md).  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>Examinar utilizando las perspectivas Predeterminada y Venta por Internet  
@@ -78,7 +78,7 @@ Los roles son una parte integral de cualquier modelo tabular. Sin al menos un ro
       
 3.  Cierre Excel sin guardar el libro.  
   
-## <a name="whats-next"></a>¿Qué debe hacer a continuación?
+## <a name="whats-next"></a>¿Qué sigue?
 Vaya a la siguiente lección: [lección 13: implementar](../analysis-services/lesson-13-deploy.md).
 
   

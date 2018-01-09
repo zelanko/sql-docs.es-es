@@ -5,12 +5,10 @@ ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d1a90c07acc1ac35f50f4ad1923980f0f65b57d5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8c1eef41d84a8bdbd758c02f4830467b14cd9ebb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>Tareas y procedimientos de los modelos de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Use la **modelos de minería de datos** pestaña del Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para administrar y procesar los modelos de minería de datos en una estructura de minería de datos.  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [Ver o cambiar marcas de modelado &#40;minería de datos&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
   
--   [Especificar una columna para utilizar como regresor en un modelo](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)  
+-   [Especificar una columna para usar como regresor en un modelo](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)  
   
 -   [Cambiar las propiedades de un modelo de minería de datos](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)  
   

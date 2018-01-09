@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2d7211e221f95a4217924bfe29aa56306aebdfcb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e463f148b07d8fbe7061dca0eed66bba1b0fee94
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-3-mark-as-date-table"></a>Lección 3: Marcar como tabla de fechas
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -37,7 +37,7 @@ Antes de que se marque la tabla de fechas y la columna de fecha, que necesitamos
   
 Tiempo estimado para completar esta lección: **3 minutos**  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
 Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 2: agregar datos](../analysis-services/lesson-2-add-data.md). 
 
 ### <a name="to-rename-the-fulldatealternatekey-column"></a>Para cambiar el nombre de la columna FullDateAlternateKey
@@ -58,6 +58,6 @@ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe
     ![como-tabular-lesson3-date-table](../analysis-services/media/as-tabular-lesson3-date-table.png)
   
 
-## <a name="whats-next"></a>¿Qué debe hacer a continuación?
+## <a name="whats-next"></a>¿Qué sigue?
 Vaya a la siguiente lección: [lección 4: crear relaciones](../analysis-services/lesson-4-create-relationships.md).
   

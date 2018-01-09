@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 69cc17afa5a35844a76f838993630cecf49b0bed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 24a56699bbdb79f811ce0282aee0f1d93a5d43f0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Supervisar una instancia de Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Puede supervisar el rendimiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o el Monitor de rendimiento, una aplicación que se denomina a veces **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite crear y administrar seguimientos y analizar y reproducir resultados de seguimiento. El Monitor de rendimiento notifica el estado del producto tal como se indiza a través de ciertos contadores, que se analizan en la siguiente sección.  

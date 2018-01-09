@@ -5,13 +5,10 @@ ms.date: 06/15/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: d9825f298a0c881a0a8809205bcb46538f081519
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 876c15beb1fc62e805a4c86718da0590c19244bd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Comparar soluciones tabulares y multidimensionales
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services proporciona varios enfoques para crear un modelo semántico de business intelligence: Tabular, Multidimensional y Power Pivot para SharePoint.
@@ -60,33 +57,33 @@ ms.lasthandoff: 12/08/2017
 |||| 
 |-|-|-|
 ||Multidimensional|Tabular|
-|Acciones|Sí|No|
-|Agregaciones|Sí|No|
-|Columna calculada|No|Sí|  
+|Acciones|Sí|no|
+|Agregaciones|Sí|no|
+|Columna calculada|no|Sí|  
 |Medidas calculadas|Sí|Sí| 
-|Tablas calculadas|No|Sí<sup>1</sup>|  
-|Ensamblados personalizados|Sí|No|
-|Resúmenes personalizados|Sí|No| 
-|Miembro predeterminado|Sí|No|  
+|Tablas calculadas|no|Sí<sup>1</sup>|  
+|Ensamblados personalizados|Sí|no|
+|Resúmenes personalizados|Sí|no| 
+|Miembro predeterminado|Sí|no|  
 |Carpetas para mostrar|Sí|Sí<sup>1</sup>|  
 |Distinct Count|Sí|Sí (mediante DAX)|
 |Obtención de detalles|Sí|Sí (depende de la aplicación cliente)|
 |Jerarquías|Sí|Sí|
 |KPI|Sí|Sí| 
 |Objetos vinculados|Sí|Sí (tablas vinculadas)|
-|Expresiones de M|No|Sí<sup>1</sup>|
+|Expresiones de M|no|Sí<sup>1</sup>|
 |Relaciones varios a varios|Sí|No (pero no hay [bidireccional filtros cruzados](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) en niveles de compatibilidad 1200 y versiones posteriores)| 
-|Conjuntos con nombre|Sí|No| 
+|Conjuntos con nombre|Sí|no| 
 |Jerarquías desiguales|Sí|Sí<sup>1</sup>|  
 |Jerarquías de elementos primarios y secundarios|Sí|Sí (mediante DAX)|
 |Particiones|Sí|Sí| 
-|Perspectivas|Sí|Sí|
+|perspectivas|Sí|Sí|
 |Seguridad de filas|Sí|Sí| 
 |Seguridad de nivel de objeto|Sí|Sí<sup>1</sup>|
 |Medidas de suma parcial|Sí|Sí| 
 |Translations|[Sí](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Sí| 
 |Jerarquías definidas por el usuario|Sí|Sí|
-|Reescritura|Sí|No| 
+|Reescritura|Sí|no| 
   
  <sup>1</sup> vea [Compatibility Level for Tabular los modelos de Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) para obtener información sobre las diferencias funcionales entre los niveles de compatibilidad.  
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 03ae0a4bfe3c764cc0d541f99714be872029e867
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e89ab9340c73e1ae09ec66cb360e23cbe28cd9b3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-7-defining-key-performance-indicators-kpis"></a>Lección 7: definir indicadores clave de rendimiento (KPI)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]En esta lección, aprenderá a definir indicadores clave de rendimiento (KPI) en su [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proyecto. Los KPI proporcionan un marco para definir cálculos del servidor que midan su negocio y estandarizar la forma en que aparezca la información resultante. Los KPI pueden aparecer en informes, portales y paneles, mediante las API de acceso a datos, y mediante herramientas de [!INCLUDE[msCoName](../includes/msconame-md.md)] y herramientas de terceros. Los KPI son contenedores de metadatos alrededor de medidas normales y otras expresiones de Expresiones multidimensionales (MDX). Para obtener más información, consulte [Indicadores clave de rendimiento &#40;KPI&#41; en modelos multidimensionales](../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md).  

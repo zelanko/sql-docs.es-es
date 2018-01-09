@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 56027a8e-1949-4349-b616-68c8b1d2963c
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2e52176bc32adbaee46a22d3c4df6a331cf7c39b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5043f2f3966182853decdde119a6914f59e1c12d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="get-powerpivotsystemserviceinstance-cmdlet"></a>Cmdlet Get-PowerPivotSystemServiceInstance
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Devuelve una o más instancias de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] servicio de sistema que se ejecuta en servidores de aplicaciones de la granja de servidores.  
@@ -62,7 +62,7 @@ Get-PowerPivotSystemServiceInstance [-Identity <PowerPivotMidTierServiceInstance
 |||  
 |-|-|  
 |Entradas|Ninguno.|  
-|Salidas|Ninguno.|  
+|Resultados|Ninguno.|  
   
 ## <a name="example-1"></a>Ejemplo 1  
   

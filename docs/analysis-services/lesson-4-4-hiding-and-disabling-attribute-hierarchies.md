@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b1ae1a57e05d8953c4bd5f93b9e247419ee986c0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: acdeb1132fab9ecd8ea141362a2d1a961ba7192a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-4-4---hiding-and-disabling-attribute-hierarchies"></a>Lección 4-4-ocultar y deshabilitar jerarquías de atributo
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]De forma predeterminada, se crea una jerarquía de atributo para todos los atributos de una dimensión y cada jerarquía está disponible para los datos de hechos de dimensionamiento. Esta jerarquía consta de un nivel "Todos" y un nivel de detalle que contiene todos los miembros de la jerarquía. Como ha aprendido, puede organizar los atributos en jerarquías definidas por el usuario para proporcionar rutas de navegación en un cubo. En determinadas circunstancias, le interesará deshabilitar u ocultar algunos atributos y sus jerarquías. Por ejemplo, determinados atributos, como los números de seguridad social o números de identificación nacional, sueldos, las fechas de nacimiento e información sobre el inicio de sesión, no son atributos que los usuarios vayan a utilizar para dimensionar la información del cubo. En lugar de ello, generalmente esta información solo se visualiza como detalles de un miembro de atributo en concreto. Puede ocultar estas jerarquías de atributo, dejando los atributos visibles solo como propiedades de miembro de un atributo específico. También puede hacer que los miembros de otros atributos, como los nombres de cliente o los códigos postales, solo estén visibles cuando se visualizan a través de una jerarquía de usuario en lugar de visualizarse de forma independiente a través de una jerarquía de atributo. Un motivo para hacerlo puede ser el número total de miembros distintos de la jerarquía de atributo. Por último, para mejorar el rendimiento del procesamiento, debe deshabilitar las jerarquías de atributos que los usuarios no utilizarán para examinar.  

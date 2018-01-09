@@ -7,7 +7,7 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 132db249-b9f1-48f5-a63e-c9806cacc4af
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 88d8e1c0948a51ab8ed6aaeb5a74e771bba95032
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: dc8dfabd3c88bb93012a8d4cd10aaf35573c2782
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-r-code-profiling-functions"></a>Uso de funciones de generación de perfiles de código de R
 Además de usar herramientas y recursos de SQL Server para supervisar la ejecución de scripts de R, puede usar herramientas de rendimiento de otros paquetes de R para obtener más información sobre las llamadas de función interna. En este tema se ofrece una lista de algunos recursos básicos para comenzar. Para obtener orientación experta, se recomienda el capítulo sobre [rendimiento](http://adv-r.had.co.nz/Performance.html) del libro ""Advanced R"", de Hadley Wickham.

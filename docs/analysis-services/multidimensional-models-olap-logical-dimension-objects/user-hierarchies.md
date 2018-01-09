@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -35,11 +33,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71c8f644f19236e9507b37ebdd75f1bcde7299eb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 01f5e5b5a73a8888d24d3ee46127c67327ec75da
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="user-hierarchies"></a>Jerarquías de usuario
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Las jerarquías definidas por el usuario son jerarquías definidas por el usuario de atributos que se usan en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para organizar los miembros de una dimensión en las estructuras jerárquicas y proporcionar rutas de navegación de un cubo. Por ejemplo, en la tabla siguiente se define una tabla de dimensiones para una dimensión de tiempo. La tabla de dimensiones admite tres atributos denominados Year, Quarter y Month.  

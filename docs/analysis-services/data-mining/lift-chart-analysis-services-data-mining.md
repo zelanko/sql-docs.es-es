@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 79178d1319e296d1dead562440d57c25d379dbd4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5effa132a9ccb440ccf3b8a7c004e6692a4aef57
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Gráfico de mejora respecto al modelo predictivo (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A *gráfico de elevación* gráficamente representa la mejora que proporciona un modelo de minería de datos cuando se comparan con una estimación aleatoria, y mide el cambio en términos de un *elevación* puntuación. Si compara las puntuaciones de mejora de los distintos modelos, puede determinar qué modelo es mejor. También puede determinar el punto en el que las predicciones del modelo pasan a ser menos útiles. Por ejemplo, revisando el gráfico de elevación, podría observar que es probable que una campaña de promoción solo sea eficaz para un 30 % de los clientes y usar esa cifra para limitar el ámbito de la campaña.  

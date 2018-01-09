@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Language Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9b93309e6efc49d675a1e9ec326255c18f1ce872
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a2dd0264d572e190278d5cad42e4874554312f72
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="language-element-assl"></a>Elemento Language (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contiene el identificador de idioma del elemento primario.  
@@ -45,25 +43,25 @@ ms.lasthandoff: 12/08/2017
 </Cube>  
 ```  
   
-## <a name="element-characteristics"></a>Características de los elementos  
+## <a name="element-characteristics"></a>Características del elemento  
   
-|Característica|Descripción|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|Integer|  
-|Valor predeterminado|Ninguno|  
+|Valor predeterminado|None|  
 |Cardinalidad|Vea la siguiente tabla.|  
   
 |Antecesor o elemento primario|Cardinalidad|  
 |------------------------|-----------------|  
 |[Traducción](../../../analysis-services/scripting/objects/translation-element-assl.md)|1-1: Elemento necesario que se produce una vez y solo una vez.|  
-|Todos los demás|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
+|Todos las demás|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Cubo](../../../analysis-services/scripting/objects/cube-element-assl.md), [base de datos](../../../analysis-services/scripting/objects/database-element-assl.md), [dimensión](../../../analysis-services/scripting/objects/dimension-element-assl.md), [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md), [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md), [traducción](../../../analysis-services/scripting/objects/translation-element-assl.md)|  
-|Elementos secundarios|Ninguno|  
+|Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Comentarios  
  El **lenguaje** elemento contiene el identificador de idioma predeterminado que se utiliza por el elemento primario o el identificador de idioma específico para una **traducción** elemento. El idioma se debería definir utilizando los códigos del identificador de configuración regional (LCID). Por ejemplo, LCID 1033 se utiliza para indicar el idioma inglés (EE.UU.).  

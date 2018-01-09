@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b8d8d731552fe099d161d6b87bca87ceecd709a9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f17e0880839470e128266ae62993bceeb4457c3e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Cambiar las propiedades de una vista del origen de datos (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Después de definir una vista del origen de datos mediante el Asistente para la vista del origen de datos y agregar tablas, vistas, cálculos con nombre y ver consultas con nombre para el origen de datos, puede que desee cambiar las propiedades relacionadas con:  
@@ -72,7 +69,7 @@ ms.lasthandoff: 12/08/2017
 |FriendlyName|Especifica un nombre para la tabla o vista que es significativo para los usuarios o tiene relación con el asunto. De manera predeterminada, la propiedad **FriendlyName** de una tabla o vista es igual que la propiedad **Name** de la misma. La propiedad **FriendlyName** es utilizada por los objetos de minería de datos y OLAP al definir nombres de objeto basados en tablas o vistas. Esta propiedad se puede editar.|  
 |Nombre|Especifica el nombre de la tabla o vista subyacente, o el nombre de la consulta con nombre. La propiedad **Name** es utilizada por los objetos de minería de datos y OLAP al definir nombres de objeto basados en consultas con nombre. Esta propiedad solo se puede editar para las consultas con nombre.|  
 |QueryDefinition|Especifica la definición de la consulta con nombre. Esta propiedad solo se puede aplicar a las consultas con nombre y no se puede editar directamente. Para editar esta propiedad, se edita la propia consulta con nombre.|  
-|Esquema|Especifica el esquema de la base de datos aplicable a la tabla, vista o consulta con nombre. Esta propiedad no se puede editar.|  
+|esquema|Especifica el esquema de la base de datos aplicable a la tabla, vista o consulta con nombre. Esta propiedad no se puede editar.|  
 |TableType|Especifica el tipo de tabla de la tabla, vista o consulta con nombre. Esta propiedad no se puede editar.|  
   
 ## <a name="viewing-or-changing-datacolumn-properties"></a>Ver o cambiar las propiedades DataColumn  

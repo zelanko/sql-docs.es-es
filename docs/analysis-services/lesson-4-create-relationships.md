@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 53cfcc73f8bca771607425ac69eff021b8e6a00c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 318b583cc92dcd70c75f0eb04be262a82ecf7d1d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-4-create-relationships"></a>Lección 4: Crear relaciones
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +31,7 @@ En esta lección se comprobará las relaciones que se crearon automáticamente c
   
 Tiempo estimado para completar esta lección: **10 minutos**  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
 Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 3: marcar como tabla de fechas](../analysis-services/lesson-3-mark-as-date-table.md). 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>Examinar las relaciones existentes y agregar nuevas relaciones  
@@ -56,7 +56,7 @@ Cuando importa datos utilizando el Asistente para importación de tablas, tenemo
   
 3.  Usar el Diseñador de modelos en la vista de diagrama o el cuadro de diálogo Administrar relaciones, para comprobar que se crearon las siguientes relaciones cuando se importó cada una de las tablas de la base de datos AdventureWorksDW:  
   
-    |Activo|Tabla|Tabla de búsqueda relacionada|  
+    |Activo|Table|Tabla de búsqueda relacionada|  
     |----------|---------|------------------------|  
     |Sí|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
     |Sí|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
@@ -98,7 +98,7 @@ En algunos casos, tal vez necesite crear relaciones adicionales entre las tablas
     
      ![como-tabular-lesson4-newinactive](../analysis-services/media/as-tabular-lesson4-newinactive.png)
   
-## <a name="whats-next"></a>¿Qué debe hacer a continuación?
+## <a name="whats-next"></a>¿Qué sigue?
 Vaya a la siguiente lección: [lección 5: crear columnas calculadas](../analysis-services/lesson-5-create-calculated-columns.md).
   
   

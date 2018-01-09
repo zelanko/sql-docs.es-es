@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 683198616cb883944a20de70e3531d9fa48fee62
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b66f1bb71a185be8663e1fab732a208a0ca99d87
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>Referencia de las opciones de configuración (Power Pivot para SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tema proporciona documentación de referencia para los valores de configuración usados por [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aplicaciones de servicio en una granja de servidores de SharePoint. Si está utilizando un script de PowerShell para configurar un servidor, o si desea buscar información de un valor concreto, la información de este tema proporciona descripciones detalladas.  
@@ -50,7 +47,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="LoadingData"></a> Tiempo de espera de carga de datos  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . En función de cómo y cuándo se tuviera acceso a los datos en último lugar, estos se cargarán bien de una biblioteca de contenido o bien de una memoria caché de archivos local. Los datos se cargan en la memoria cada vez que se recibe una solicitud de procesamiento o consulta. Para lograr la máxima disponibilidad global del servidor, puede establecer un valor de tiempo de espera que indique al servidor que detenga una solicitud de datos de carga si no se puede completar dentro del tiempo asignado.  
   
-|Nombre|Valor de DB-Library|Valores válidos|Description|  
+|Nombre|Valor predeterminado|Valores válidos|Description|  
 |----------|-------------|------------------|-----------------|  
 |Tiempo de espera de carga de datos|1800 (en segundos)|1 a 3600|Especifica la cantidad de tiempo que una aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] esperará una respuesta de una instancia de servidor de Analysis Services concreta.<br /><br /> De forma predeterminada, la aplicación de servicio esperará 30 minutos a una carga de datos de la instancia de servicio del motor a la que reenvió una solicitud concreta.<br /><br /> Si el origen de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no se puede cargar dentro de este período de tiempo, el subproceso se detendrá y se iniciará uno nuevo.|  
   
@@ -65,7 +62,7 @@ ms.lasthandoff: 12/08/2017
   
  Cada tipo de grupo de conexiones tiene límites superiores que puede establecer para asegurarse de que el uso de memoria del sistema es el más conveniente para la administración de las conexiones.  
   
-|Nombre|Valor de DB-Library|Valores válidos|Description|  
+|Nombre|Valor predeterminado|Valores válidos|Description|  
 |----------|-------------|------------------|-----------------|  
 |Tiempo de espera de grupo de conexiones|1800 (en segundos)|1 a 3600.|Este valor se aplica a los grupos de conexiones de datos.<br /><br /> Especifica cuánto tiempo puede permanecer inactiva una conexión en un grupo de conexiones antes de quitarse.<br /><br /> De forma predeterminada, la aplicación de servicio quitará una conexión si está inactiva durante más de cinco minutos.|  
 |Tamaño máximo de grupo de conexiones de usuario|1000|-1, 0, o de 1 a 10000.<br /><br /> -1 especifica un número ilimitado de conexiones inactivas.<br /><br /> 0 significa que no se mantiene ninguna conexión inactiva. Las conexiones nuevas a un origen de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se deben crear cada vez.|Este valor se aplica al número de conexiones inactivas en todos los conjuntos de conexiones de datos creados para una instancia de la aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] concreta.<br /><br /> Se crean grupos de conexiones individuales para combinaciones únicas de un usuario de SharePoint, datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e instancia de servicio. Si tiene muchos usuarios que tienen acceso a orígenes de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] diversos, el rendimiento del servidor podría beneficiarse de un aumento del tamaño del grupo de conexiones.<br /><br /> Si hay más de 100 conexiones inactivas a una instancia de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , las conexiones que han pasado a estar inactivas recientemente se desconectan en lugar de devolverse al grupo.|  
@@ -74,14 +71,14 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="AllocationScheme"></a> Equilibrio de carga  
  Una de las funciones que el servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] realiza es determinar dónde se cargarán los datos de Analysis Services entre las instancias de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] disponibles. El valor **AllocationMethod** especifica los criterios con los que se selecciona una instancia de servicio.  
   
-|Nombre|Valor de DB-Library|Valores válidos|Description|  
+|Nombre|Valor predeterminado|Valores válidos|Description|  
 |----------|-------------|------------------|-----------------|  
 |Método de asignación|RoundRobin|Round Robin<br /><br /> Basado en estado|Esquema para asignar las solicitudes de carga entre dos o más instancias de servidor de Analysis Services.<br /><br /> De forma predeterminada, el servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] alternará las solicitudes basadas en el estado del servidor. Si se basa en el estado, las solicitudes se asignan al servidor que tiene el mayor número de recursos del sistema disponibles en función de la memoria disponible y la utilización de la CPU.<br /><br /> La operación por turnos rota las solicitudes entre los servidores disponibles en orden secuencial, independientemente del estado actual de la carga o del servidor.|  
   
 ##  <a name="DataRefresh"></a> Actualización de datos  
  Especifique el intervalo de horas que define un día laboral normal o típico en una organización. Esta configuración determina cuándo se produce el procesamiento de datos después del horario comercial en las operaciones de actualización de datos. El procesamiento después del horario comercial puede comenzar a la hora en que finaliza la jornada laboral. El procesamiento después del horario comercial es una opción de programación para los propietarios de documentos que quieren actualizar un origen de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] con datos de transacciones que se generaron durante los horarios laborales normales.  
   
-|Nombre|Valor de DB-Library|Valores válidos|Description|  
+|Nombre|Valor predeterminado|Valores válidos|Description|  
 |----------|-------------|------------------|-----------------|  
 |Hora de inicio|04:00 a. m.|1 a 12 horas, donde el valor es un entero válido dentro de ese intervalo.<br /><br /> El tipo es Time.|Establece el límite inferior de un intervalo del horario laboral.|  
 |Hora de finalización|08:00 p. m.|1 a 12 horas, donde el valor es un entero válido dentro de ese intervalo.<br /><br /> El tipo es Time.|Establece el límite superior de un intervalo del horario laboral.|  
@@ -92,7 +89,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="UsageData"></a> Recopilación de datos de uso  
  Los informes de uso que aparecen en el Panel de administración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pueden proporcionar información importante sobre cómo se usan los libros habilitados para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Los siguientes valores de configuración controlan los aspectos de la recopilación de datos de uso para los eventos de servidor de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que se presentan después en los informes de actividad o de uso.  
   
-|Nombre|Valor de DB-Library|Valores válidos|Description|  
+|Nombre|Valor predeterminado|Valores válidos|Description|  
 |----------|-------------|------------------|-----------------|  
 |Intervalo de informes de consulta|300 (en segundos)|1 a n segundos, donde n es un número entero válido.|Para asegurarse de que la recopilación de datos de uso no consume un exceso de la capacidad de transferencia de datos de la granja, se recopilan estadísticas de consulta en cada conexión y se notifican como un único evento. El intervalo de informes de consulta determina con qué frecuencia se notifica un evento. De forma predeterminada, las estadísticas de consulta se notifican cada cinco minutos.<br /><br /> Dado que las conexiones se cierran de inmediato en cuanto se envía una solicitud, el sistema genera un número muy grande de conexiones para incluso un único usuario que tenga acceso a un único origen de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Por esta razón, se crean grupos de conexiones para cada combinación de usuario y origen de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , de modo que una vez creada una conexión, el mismo usuario pueda volver a usarla para los mismos datos. Periódicamente, en los intervalos especificados a través de esta opción de configuración, la aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] notifica los datos de uso de cada conexión del grupo de conexiones.<br /><br /> Al aumentar el valor de tiempo de notificación, se registrarán menos eventos. Sin embargo, si se establece en un valor demasiado alto, se arriesga a perder los datos de los eventos si el servidor se reinicia o se cierra una conexión.<br /><br /> Al bajar el valor, se registrarán más eventos con una mayor frecuencia, lo que supone agregar más datos de uso relacionados con [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]al sistema de recopilación de datos de la base de datos de uso de SharePoint.<br /><br /> Generalmente, no cambie esta opción de configuración a menos que esté intentando resolver un problema concreto (por ejemplo, si la base de datos de uso está creciendo demasiado rápidamente como resultado de los datos de uso de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ).|  
 |Historial de datos de uso|365 (en días)|0, ó 1 a n días, donde n es un número entero válido.<br /><br /> 0 significa que el historial siempre se retiene y no se elimina nunca.|De forma predeterminada, los datos de uso se mantienen durante un año en la base de datos de aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Los registros anteriores a un año se quitan de la base de datos.<br /><br /> Diariamente se comprueba si los datos históricos han expirado, cuando se ejecuta el trabajo de procesamiento de datos de uso de Microsoft SharePoint Foundation. El trabajo de temporizador leerá este valor y desencadenará un comando de eliminación de datos para el historial expirado en la base de datos de aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  

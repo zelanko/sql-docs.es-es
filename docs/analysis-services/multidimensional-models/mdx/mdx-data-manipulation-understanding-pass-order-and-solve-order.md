@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9c3b028eb658f2f75d6e70ec9057f3f156ca5f05
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e081b07e8512e49d2fb09a8b119373f53fa4075a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>Manipulación de datos MDX - descripción paso ordenar y el orden de resolución
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Un cubo se calcula como resultado de un script MDX, puede ir a través de varias fases de computación según el uso de varias características relacionadas con el cálculo. Cada una de estas fases se denomina paso de cálculo.  
@@ -127,7 +124,7 @@ FROM [Adventure Works]
 ||Internet Sales Amount|Costo total del producto por Internet|Margen de beneficio|  
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60 %|  
-|**CY 2008**|$9,770,899.74|$5,721,205.24|41.45 %|  
+|**CY 2008**|$9,770,899.74|$5,721,205.24|41.45 %|  
   
  La diferencia de los conjuntos de resultados entre la primera y la segunda consulta radica en la distinta colocación del miembro calculado. En la primera consulta, el miembro calculado se encuentra en el eje ROWS, mientras que en la segunda consulta se encuentra en el eje COLUMNS. Esta distinta colocación adquiere importancia en la siguiente consulta, en la que se combinan dos miembros calculados en una única consulta MDX.  
   
@@ -172,7 +169,7 @@ FROM [Adventure Works]
 ((9,770,899.74 - 9,791,060.30) - (5,721,205.24 - 5,718,327.17)) / (9,770,899.74 - 9,791,060.30) = 1.14275744   
 ```  
   
- o bien  
+ o Administrador de configuración de  
   
 ```  
 (23,038.63) / (20,160.56) = 114.28%  

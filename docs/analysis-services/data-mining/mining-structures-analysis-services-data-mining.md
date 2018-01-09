@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1c228c4db6aff3eca771e3c4e5aacbbfc3e2aa2d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6b7467be225e2468be21603f3e40de04050dc6b4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Estructuras de minería de datos (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La estructura de minería de datos define los datos desde el que se generan los modelos de minería de datos: especifica la vista del origen de datos, el número y tipo de columnas, y establece una partición opcional en aprendizaje y prueba. Una misma estructura de minería de datos puede admitir varios modelos de minería de datos que comparten el mismo dominio. En el diagrama siguiente, se muestra la relación de la estructura de minería de datos con el origen de datos y con los modelos de minería de datos que la componen.  
@@ -103,7 +101,7 @@ ms.lasthandoff: 12/08/2017
   
  También puede descartar la memoria caché después del procesamiento, si esta es muy grande o desea quitar los datos detallados. Si no desea almacenar los datos en la memoria caché, puede cambiar la propiedad **CacheMode** de la estructura de minería de datos a **ClearAfterProcessing**. Esto destruirá la caché una vez procesados los modelos. Al establecer la propiedad **CacheMode** en **ClearAfterProcessing** , se deshabilita la obtención de detalles del modelo de minería de datos.  
   
- Sin embargo, una vez destruida la memoria caché, no podrá agregar nuevos modelos a la estructura de minería de datos. Si agrega un nuevo modelo de minería de datos a la estructura, o cambia las propiedades de los modelos existentes, primero deberá volver a procesar la estructura de minería de datos. Para obtener más información, vea [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
+ Sin embargo, una vez destruida la memoria caché, no podrá agregar nuevos modelos a la estructura de minería de datos. Si agrega un nuevo modelo de minería de datos a la estructura, o cambia las propiedades de los modelos existentes, primero deberá volver a procesar la estructura de minería de datos. Para más información, vea [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
 ### <a name="viewing-mining-structures"></a>Ver estructuras de minería de datos  
  No se pueden usar los visores para examinar los datos de una estructura de minería de datos. Sin embargo, en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], es posible utilizar la pestaña **Estructura de minería de datos** del Diseñador de minería de datos para ver las columnas de estructura y sus definiciones. Para más información, consulte [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md).  
@@ -117,7 +115,7 @@ ms.lasthandoff: 12/08/2017
   
  Para obtener más información sobre la arquitectura de los modelos de minería de datos, vea [Modelos de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md).  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Use los vínculos proporcionados a continuación para obtener más información sobre cómo definir, administrar y usar las estructuras de minería de datos.  
   
 |Tareas|Vínculos|  
@@ -126,7 +124,7 @@ ms.lasthandoff: 12/08/2017
 |Trabajar con estructuras de minería de datos basadas en cubos OLAP|[Crear una estructura de minería de datos OLAP](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)|  
 |Trabajar con las columnas de una estructura de minería de datos|[Agregar columnas a una estructura de minería de datos](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)<br /><br /> [Quitar columnas de una estructura de minería de datos](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)|  
 |Cambiar o consultar las propiedades y los datos de la estructura de minería de datos|[Cambiar las propiedades de una estructura de minería de datos](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
-|Trabajar con los orígenes de datos subyacentes y actualizar los datos de origen|[Modifique la vista del origen de datos utilizada para una estructura de minería de datos](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [Procesar una estructura de minería de datos](../../analysis-services/data-mining/process-a-mining-structure.md)|  
+|Trabajar con los orígenes de datos subyacentes y actualizar los datos de origen|[Editar la vista del origen de datos usada para una estructura de minería de datos](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [Procesar una estructura de minería de datos](../../analysis-services/data-mining/process-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Objetos de base de datos &#40;Analysis Services - Datos multidimensionales&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   

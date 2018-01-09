@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 605c4ae52c6e6f51ff03eb5ff161603b9fb082e9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1d080c99d9d3fc1a1fcdfb8e6a4e183850462f94
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-8-defining-actions"></a>Lección 8: definir acciones
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]En esta lección, aprenderá a definir acciones en su [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proyecto. Una acción es solo una instrucción de Expresiones multidimensionales (MDX) que se almacena en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y que se puede incorporar en las aplicaciones cliente e iniciarse por el usuario.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/08/2017
 |||  
 |-|-|  
 |CommandLine|Ejecuta un comando en el símbolo del sistema.|  
-|Conjunto de datos|Devuelve un conjunto de datos a una aplicación cliente.|  
+|Dataset|Devuelve un conjunto de datos a una aplicación cliente.|  
 |Obtención de detalles|Devuelve una instrucción de obtención de detalles como una expresión, que el cliente ejecuta para devolver un conjunto de filas.|  
 |Html|Ejecuta un script HTML en un explorador de Internet.|  
 |Propietario|Ejecuta una operación con una interfaz que no aparece en esta tabla.|  

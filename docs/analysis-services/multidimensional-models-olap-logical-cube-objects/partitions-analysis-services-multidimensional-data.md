@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -33,11 +31,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: dab66f2e60e602f163f3c0986719655b6f89f3a5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1a44581e828d92756c46b897d9e7c9be69144c5b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>Particiones (Analysis Services - Datos multidimensionales)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una partición es un contenedor para una parte de los datos del grupo de medida. Las particiones no se ven de las consultas MDX; todas las consultas reflejan el contenido completo del grupo de medidas, sin tener en cuenta cuántas particiones se definen para el grupo de medidas. Los enlaces de consultas de la partición, y la expresión de segmentación, definen el contenido de los datos de una partición.  

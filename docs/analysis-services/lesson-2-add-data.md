@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ba9e57562a9f647ef6909411795312ef2895c9d4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 05a93e001f4b5deb7be0aa3367ad74278e90d70a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-2-add-data"></a>Lección 2: Agregar datos
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -33,7 +33,7 @@ Con el Asistente para importación de tabla, puede importar datos desde una vari
   
 Tiempo estimado para completar esta lección: **20 minutos**  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
 Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas de esta lección, debe haber completado la lección anterior: [Lección 1: Crear un nuevo proyecto de modelo tabular](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="create-a-connection"></a>Crear una conexión  
@@ -93,7 +93,7 @@ La tabla DimCustomer que va a importar desde la base de datos de ejemplo contien
     
     **DimDate**
     
-      |Columna|  
+      |columna|  
       |--------|  
       |**DateKey**|  
       |**SpanishDayNameOfWeek**|  
@@ -103,7 +103,7 @@ La tabla DimCustomer que va a importar desde la base de datos de ejemplo contien
   
     **DimGeography**
   
-      |Columna|  
+      |columna|  
       |-------------|  
       |**SpanishCountryRegionName**|  
       |**FrenchCountryRegionName**|  
@@ -111,7 +111,7 @@ La tabla DimCustomer que va a importar desde la base de datos de ejemplo contien
   
     **DimProduct**
   
-      |Columna|  
+      |columna|  
       |-----------|  
       |**SpanishProductName**|  
       |**FrenchProductName**|  
@@ -126,21 +126,21 @@ La tabla DimCustomer que va a importar desde la base de datos de ejemplo contien
   
     **DimProductCategory**
   
-      |Columna|  
+      |columna|  
       |--------------------|  
       |**SpanishProductCategoryName**|  
       |**FrenchProductCategoryName**|  
   
     **DimProductSubcategory**
   
-      |Columna|  
+      |columna|  
       |-----------------------|  
       |**SpanishProductSubcategoryName**|  
       |**FrenchProductSubcategoryName**|  
   
     **FactInternetSales**
   
-      |Columna|  
+      |columna|  
       |------------------|  
       |**OrderDateKey**|  
       |**DueDateKey**|  
@@ -171,7 +171,7 @@ Es importante que guarde frecuentemente el proyecto de modelos.
   
 -   Click **Archivo** > **Guardar todo**.  
   
-## <a name="whats-next"></a>¿Qué debe hacer a continuación?
+## <a name="whats-next"></a>¿Qué sigue?
 Vaya a la siguiente lección: [lección 3: marcar como tabla de fechas](../analysis-services/lesson-3-mark-as-date-table.md).
 
   

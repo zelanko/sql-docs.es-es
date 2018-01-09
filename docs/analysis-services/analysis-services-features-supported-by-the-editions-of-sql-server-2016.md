@@ -5,13 +5,10 @@ ms.date: 06/29/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f09d7be1-bd63-43f8-b91c-bf19166b4457
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e6b67ada589c925b8737ed13ba6c07f93a75f12c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0b69db6baee27296bf9544801b627c884d68795b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-features-supported-by-the-editions-of-sql-server-2016"></a>Características de Analysis Services compatibles con las ediciones de SQL Server 2016
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
@@ -47,8 +44,8 @@ Este tema proporciona detalles de las características admitidas por las diversa
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Jerarquías|Sí|Sí|||||Sí|  
 |KPI|Sí|Sí|||||Sí|  
-|Perspectivas|Sí||||||Sí|  
-|Traducciones|Sí|Sí|||||Sí|  
+|perspectivas|Sí||||||Sí|  
+|Translations|Sí|Sí|||||Sí|  
 |Cálculos de DAX, consultas de DAX, consultas MDX|Sí|Sí|||||Sí|  
 |Seguridad de nivel de fila|Sí|Sí|||||Sí|  
 |Varias particiones|Sí||||||Sí|  
@@ -62,7 +59,7 @@ Este tema proporciona detalles de las características admitidas por las diversa
 |Medidas de suma parcial|Sí|No <sup>1</sup>|||||Sí|  
 |Jerarquías|Sí|Sí|||||Sí|  
 |KPI|Sí|Sí|||||Sí|  
-|Perspectivas|Sí||||||Sí|  
+|perspectivas|Sí||||||Sí|  
 |Acciones|Sí|Sí|||||Sí|  
 |Inteligencia de cuentas|Sí|Sí|||||Sí|  
 |Inteligencia de tiempo|Sí|Sí|||||Sí|  
@@ -74,7 +71,7 @@ Este tema proporciona detalles de las características admitidas por las diversa
 |Tipos de jerarquías avanzadas (jerarquías primarios-secundarios y jerarquías desiguales)|Sí|Sí|||||Sí|  
 |Dimensiones avanzadas (dimensiones de referencia, dimensiones de varios a varios)|Sí|Sí|||||Sí|  
 |Medidas y dimensiones vinculadas|Sí|Sí  <sup>2</sup> |||||Sí|  
-|Traducciones|Sí|Sí|||||Sí|  
+|Translations|Sí|Sí|||||Sí|  
 |Agregaciones|Sí|Sí|||||Sí|  
 |Varias particiones|Sí|Sí, hasta 3|||||Sí|  
 |Almacenamiento en caché automático|Sí||||||Sí|  

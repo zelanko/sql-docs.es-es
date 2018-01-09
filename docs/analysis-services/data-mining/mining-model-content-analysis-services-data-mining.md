@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 03698274a1d63fb34e814074a17da063442aebab
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1974e13ae601e899960f39917a9afd5349d38d53
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Contenido del modelo de minería de datos (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Después de diseñar y procesar un modelo de minería de datos utilizando los datos de la estructura de minería de datos subyacente, el modelo de minería de datos está completado y contiene *contenido del modelo de minería de datos*. Puede utilizar este contenido para realizar predicciones o analizar los datos.  
@@ -85,7 +83,7 @@ ms.lasthandoff: 12/08/2017
 |NODE_TYPE ID|Etiqueta de nodo|Contenido de nodo|  
 |-------------------|----------------|-------------------|  
 |1|Modelo|Los metadatos y el nodo de contenido raíz. Se aplica a todos los tipos de modelos.|  
-|2|Árbol|Nodo raíz de un árbol de clasificación. Se aplica a los modelos del árbol de decisión.|  
+|2|trEE|Nodo raíz de un árbol de clasificación. Se aplica a los modelos del árbol de decisión.|  
 |3|Interior|Nodo de división interior en un árbol. Se aplica a los modelos del árbol de decisión.|  
 |4|Distribución|Nodo terminal de un árbol. Se aplica a los modelos del árbol de decisión.|  
 |5|Clúster|Clúster detectado por el algoritmo. Se aplica a los modelos de agrupación en clústeres y a los modelos de clústeres de secuencia.|  
@@ -226,7 +224,7 @@ ms.lasthandoff: 12/08/2017
 |3|Continuous|Indica que el valor del atributo es un valor numérico continuo y, por consiguiente, puede ser representado por una media, junto con la varianza y la desviación estándar.|  
 |4|Discrete|Indica un valor, numérico o de texto, que se trata como discreto.<br /><br /> **Nota** Los valores discretos también pueden ser ausentes; sin embargo, se tratan de forma diferente al realizar cálculos. Para obtener información, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).|  
 |5|Discretized|Indica que el atributo contiene valores numéricos que se han convertido en datos discretos. El valor será una cadena con formato que describe los depósitos de discretización.|  
-|6|Existing|Indica que el atributo tiene valores numéricos continuos y que los valores se han proporcionado en los datos, frente a los valores que están ausentes o se han deducido.|  
+|6|Existente|Indica que el atributo tiene valores numéricos continuos y que los valores se han proporcionado en los datos, frente a los valores que están ausentes o se han deducido.|  
 |7|Coeficiente|Indica un valor numérico que representa un coeficiente.<br /><br /> Un coeficiente es un valor que se aplica al calcular el valor de la variable dependiente. Por ejemplo, si un modelo crea una fórmula de regresión que predice los ingresos según la edad, el coeficiente se utiliza en la fórmula que relaciona la edad con los ingresos.|  
 |8|Ganancia de puntuación|Indica un valor numérico que representa la ganancia de puntuación para un atributo.|  
 |9|Estadísticas|Indica un valor numérico que representa una estadística para un regresor.|  
@@ -237,7 +235,7 @@ ms.lasthandoff: 12/08/2017
 |14|Orden de media móvil|Representa el número de medias móviles en una serie.<br /><br /> Se aplica a los modelos de serie temporal que utilizan el algoritmo ARIMA.|  
 |15|Orden de diferencia|Indica que el valor muestra cuántas veces se diferencia la serie.<br /><br /> Se aplica a los modelos de serie temporal que utilizan el algoritmo ARIMA.|  
 |16|Boolean|Representa un tipo booleano.|  
-|17|Otro|Representa un valor personalizado definido por el algoritmo.|  
+|17|Otros|Representa un valor personalizado definido por el algoritmo.|  
 |18|Cadena representada|Representa un valor personalizado que el algoritmo representa como una cadena. El modelo de objetos no aplicó ningún formato.|  
   
  Los tipos de valores se derivan de la enumeración ADMOMD.NET. Para obtener más información, vea <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>.  
@@ -258,7 +256,7 @@ ms.lasthandoff: 12/08/2017
   
  Por ejemplo, si la población de todos los clientes en un árbol de decisión está dividida por igual por el género (y no falta ningún valor), la probabilidad de los nodos secundarios debería ser 5. Sin embargo, suponga que cada uno de los nodos correspondientes al género se divide por igual en los niveles de ingresos: Altos, Medios y Bajos. En este caso, la puntuación MARGINAL_PROBABILITY de cada nodo secundario siempre debería ser 0,33, pero el valor NODE_PROBABILTY será el producto de todas las probabilidades que conducen a ese nodo y, por tanto, siempre será menor que el valor de MARGINAL_PROBABILITY.  
   
-|Nivel de nodo/atributo y valor|La probabilidad marginal|La probabilidad de nodo|  
+|Nivel de nodo/atributo y valor|Probabilidad marginal|La probabilidad de nodo|  
 |----------------------------------------|--------------------------|----------------------|  
 |Raíz del modelo<br /><br /> Todos los clientes de destino|1|1|  
 |Los clientes de destino divididos por género|.5|.5|  

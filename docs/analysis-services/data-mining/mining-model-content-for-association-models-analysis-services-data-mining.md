@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0da3079620f64d2c2b1def8225f359b6cb0d4454
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fbe96dfa6e17bda952dc2858c274df6dee231f02
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de asociación (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tema describe el contenido del modelo de minería de datos que es específico de los modelos que utilizan la [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de reglas de asociación. Para obtener una explicación de terminología general y de estadística relacionada con el contenido del modelo de minería de datos válida para todos los tipos de modelo, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -71,7 +69,7 @@ ms.lasthandoff: 12/08/2017
 |Identificador del tipo de nodo|Tipo|  
 |------------------|----------|  
 |1 (Modelo)|Raíz o nodo primario.|  
-|7 (Conjunto de elementos)|Conjunto de elementos o colección de pares de atributo-valor. Ejemplos:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> o bien<br /><br /> `Gender = Male`.|  
+|7 (Conjunto de elementos)|Conjunto de elementos o colección de pares de atributo-valor. Ejemplos:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> o Administrador de configuración de<br /><br /> `Gender = Male`.|  
 |8 (Regla)|Regla que define cómo se relacionan entre sí los elementos.<br /><br /> Ejemplo:<br /><br /> `Product 1 = Existing, Product 2 = Existing -> Product 3 = Existing`.|  
   
  NODE_CAPTION  

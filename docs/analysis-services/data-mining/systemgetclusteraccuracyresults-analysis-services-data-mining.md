@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6ad7e0e0cbb1cf265a9944b81989b59b110602e9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 47272107eea7905a1e0414f42ff450e7a1ebbdb9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="systemgetclusteraccuracyresults-analysis-services---data-mining"></a>SystemGetClusterAccuracyResults (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Devuelve las métricas de precisión de validación cruzada para una estructura de minería de datos y modelos de agrupación en clústeres relacionados.  
@@ -75,7 +75,7 @@ SystemGetClusterAccuracyResults(
  *lista de pruebas*  
  Cadena que especifica las opciones de prueba. Este parámetro se reserva para uso futuro.  
   
- (Opcional)  
+ (opcional)  
   
 ## <a name="return-type"></a>Tipo devuelto  
  Tabla que contiene puntuaciones para cada partición individual y agregados para todos los modelos.  
@@ -91,7 +91,7 @@ SystemGetClusterAccuracyResults(
 |PartitionCases|Entero que indica el número de casos que se han probado.|  
 |Prueba|Tipo de prueba que se realizó.|  
 |Measure|Nombre de la medida que devuelve la prueba. Las medidas para cada modelo dependen del tipo de modelo, y el tipo del valor de predicción.<br /><br /> Para obtener una lista de las medidas que se devuelven para cada tipo de predicción, vea [Medidas en el informe de validación cruzada](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).<br /><br /> Para obtener una definición de cada medida, vea [Validación cruzada &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).|  
-|Value|Puntuación de probabilidad que indica la probabilidad del caso de clúster.|  
+|Valor|Puntuación de probabilidad que indica la probabilidad del caso de clúster.|  
   
 ## <a name="remarks"></a>Comentarios  
  En la tabla siguiente se proporcionan ejemplos de los valores que puede utilizar para especificar los datos de la estructura de minería de datos que se usan para la validación cruzada. Si desea utilizar casos de prueba para la validación cruzada, la estructura de minería de datos ya debe contener un conjunto de datos de prueba. Para obtener información sobre cómo definir un conjunto de datos de prueba al crear una estructura de minería de datos, vea [Conjuntos de datos de entrenamiento y de prueba](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
@@ -121,7 +121,7 @@ CALL SystemGetClusterAccuracyResults (
   
  Resultados del ejemplo:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Prueba|Measure|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Prueba|Medida|Valor|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |Clúster 1|||0|5545|Agrupación en clústeres|Probabilidad de casos|0.796514342249313|  
 |Clúster 2|||0|5545|Agrupación en clústeres|Probabilidad de casos|0.732122471228572|  

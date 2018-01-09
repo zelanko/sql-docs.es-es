@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 10c3749dafe92066faed35c4af06444e2fcd55ff
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3fa9fd8e7b7c4722e9acf41f0f7229ee0a1f3ef7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connection-string-properties-analysis-services"></a>Propiedades de cadena de conexión (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tema documentan las propiedades de cadena de conexión puede establecer en una de las herramientas de diseñador o de administración o vea en las cadenas de conexión generadas por las aplicaciones de cliente que se conectan a y consultar los datos de Analysis Services. Por tanto, solo se tratan un subconjunto de las propiedades disponibles. La lista completa incluye numerosas propiedades de servidor y base de datos, lo que permite personalizar una conexión para una aplicación específica, independientemente de cómo esté configurada la instancia o la base de datos en el servidor.  
@@ -74,7 +71,7 @@ ms.lasthandoff: 12/08/2017
 |**EffectiveUserName**|Se emplea cuando se debe suplantar una identidad de usuario final en el servidor. Especifique la cuenta en el formato dominio\usuario. Para usar esta propiedad, el autor de la llamada debe tener permisos administrativos en Analysis Services. Para obtener más información acerca de esta propiedad en un libro de Excel desde SharePoint, vea [Usar EffectiveUserName de Analysis Services en SharePoint Server 2013](http://go.microsoft.com/fwlink/?LinkId=311905). Para obtener una ilustración de cómo se usa esta propiedad con Reporting Services, vea [Usar EffectiveUserName para suplantar en SSAS](http://go.microsoft.com/fwlink/?LinkId=301385).<br /><br /> **EffectiveUserName** se usa en [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para la instalación de SharePoint con el fin de capturar información de uso. La identidad del usuario se proporciona al servidor para poder grabar en los archivos de registro los eventos o los errores que incluyen la identidad del usuario. En el caso de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], no se emplea con fines de autorización.|  
 |**Encrypt Password**|Especifica si se va a usar una contraseña local para cifrar cubos locales. Los valores válidos son True o False. El valor predeterminado es False.|  
 |**Encryption Password**|Contraseña que se usa para descifrar un cubo local cifrado. El valor predeterminado es una contraseña vacía. El usuario debe establecer explícitamente este valor.|  
-|**Impersonation Level**|Indica el nivel de suplantación que se permite usar al servidor al suplantar al cliente. Los valores válidos incluyen:<br /><br /> -   Anonymous. El cliente es anónimo para el servidor. El proceso de servidor no puede obtener información sobre el cliente y no se puede suplantar al cliente.<br />-   Identify. El proceso de servidor puede obtener la identidad del cliente. El servidor puede suplantar la identidad del cliente con fines de autorización, pero no puede obtener acceso a los objetos del sistema como el cliente.<br />-   Impersonate. Es el valor predeterminado. La identidad del cliente se puede suplantar, pero solo cuando se establece la conexión, no en cada llamada.<br />-   Delegate. El proceso de servidor puede suplantar el contexto de seguridad del cliente mientras actúa en nombre de este. El proceso de servidor también puede realizar llamadas salientes a otros servidores mientras actúa en nombre del cliente.|  
+|**Impersonation Level**|Indica el nivel de suplantación que se permite usar al servidor al suplantar al cliente. Los valores válidos incluyen:<br /><br /> -   Anonymous. El cliente es anónimo para el servidor. El proceso de servidor no puede obtener información sobre el cliente y no se puede suplantar al cliente.<br />-   Identify. El proceso de servidor puede obtener la identidad del cliente. El servidor puede suplantar la identidad del cliente con fines de autorización, pero no puede obtener acceso a los objetos del sistema como el cliente.<br />-   Impersonate. Este es el valor predeterminado. La identidad del cliente se puede suplantar, pero solo cuando se establece la conexión, no en cada llamada.<br />-   Delegate. El proceso de servidor puede suplantar el contexto de seguridad del cliente mientras actúa en nombre de este. El proceso de servidor también puede realizar llamadas salientes a otros servidores mientras actúa en nombre del cliente.|  
 |**Seguridad integrada**|La identidad de Windows del autor de la llamada se usa para conectarse a Analysis Services. Los valores válidos son en blanco, SSPI y BASIC.<br /><br /> **Integrated Security**=**SSPI** es el valor predeterminado para las conexiones TCP, que permiten una autenticación NTLM, Kerberos o anónima. El valor predeterminado es dejarla en blanco para las conexiones HTTP.<br /><br /> Cuando se usa **SSPI**, **ProtectionLevel** debe establecerse en uno de los valores siguientes: **Connect**, **PktIntegrity**, **PktPrivacy**.|  
 |**Persist Encrypted**|Establezca esta propiedad cuando la aplicación cliente necesite que el objeto de origen de datos conserve información confidencial de autenticación, como una contraseña, en formato cifrado. De forma predeterminada, la información de autenticación no se guarda.|  
 |**Persist Security Info**|Los valores válidos son True y False. Cuando se establece en True, se puede obtener de la conexión la información de seguridad, como la identidad del usuario o la contraseña especificada anteriormente en la cadena de conexión, una vez realizada la conexión. El valor predeterminado es False.|  

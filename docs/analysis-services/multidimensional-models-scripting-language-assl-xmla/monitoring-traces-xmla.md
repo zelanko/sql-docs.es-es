@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f913d7d7cd223d017f617430e4beae1a6c1b8c95
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3ae92fd24e3e9d5abbf3084472eac09a0e2d59fb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="monitoring-traces-xmla"></a>Supervisar los seguimientos (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Puede usar el [suscribir](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md) comando XML for Analysis (XMLA) para supervisar un seguimiento existente definido en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El **suscribir** comando devuelve los resultados de un seguimiento como un conjunto de filas.  
@@ -42,14 +40,14 @@ ms.lasthandoff: 12/08/2017
   
  El conjunto de filas contiene las columnas que se muestran en la tabla siguiente.  
   
-|Columna|Data type|Description|  
+|columna|Data type|Description|  
 |------------|---------------|-----------------|  
 |EventClass|Integer|Clase del evento que recibe el seguimiento.|  
 |EventSubclass|Entero largo|Subclase del evento que recibe el seguimiento.|  
-|CurrentTime|Fecha y hora|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|StartTime|Fecha y hora|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|EndTime|Fecha y hora|Hora a la que finalizó el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".<br /><br /> Esta columna no se rellena para las clases de eventos que describen el inicio de un proceso o acción.|  
-|Duración|Entero largo|Tiempo total transcurrido (en milisegundos) para el evento.|  
+|CurrentTime|DATETIME|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
+|StartTime|DATETIME|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
+|EndTime|DATETIME|Hora a la que finalizó el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".<br /><br /> Esta columna no se rellena para las clases de eventos que describen el inicio de un proceso o acción.|  
+|Duration|Entero largo|Tiempo total transcurrido (en milisegundos) para el evento.|  
 |CPUTime|Entero largo|Tiempo de procesador transcurrido (en milisegundos) para el evento.|  
 |JobID|Entero largo|Identificador de trabajo para el proceso.|  
 |SessionID|String|Identificador de la sesión para la que se produjo el evento.|  
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 |NestLevel|Integer|Nivel de la transacción para la que se produjo el evento.|  
 |NumSegments|Entero largo|Número de segmentos de datos afectados por el comando para el que se produjo el evento o a los que éste tuvo acceso.|  
 |Severity|Integer|Nivel de gravedad de una excepción del evento La columna puede contener uno de los siguientes valores:<br /><br /> <br /><br /> 0: correcto<br /><br /> <br /><br /> 1: información<br /><br /> <br /><br /> 2: advertencia<br /><br /> <br /><br /> 3: error|  
-|Success|Boolean|Indica si un comando se ha ejecutado correctamente o no.|  
+|Correcto|Boolean|Indica si un comando se ha ejecutado correctamente o no.|  
 |Error|Entero largo|Número de error del evento, si procede.|  
 |ConnectionID|String|Identificador de la conexión para la que se produjo el evento.|  
 |DatabaseName|String|Nombre de la base de datos para la que se produjo el evento.|  

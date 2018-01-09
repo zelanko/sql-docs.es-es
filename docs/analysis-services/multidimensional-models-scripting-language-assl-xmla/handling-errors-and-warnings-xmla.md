@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -30,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 04170950534e6cb0020edb371ea265478fe73b97
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 510e6bbbc7155c60241b9aee4ed8b33f130652ed
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Controlar errores y advertencias (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Control de errores es necesario cuando un documento de XML for Analysis (XMLA) [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) o [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) llamada al método no se ejecuta, se ejecuta correctamente, pero genera errores o advertencias, o se ejecuta correctamente pero devuelve resultados que contienen errores.  
@@ -61,9 +59,9 @@ ms.lasthandoff: 12/08/2017
   
 |Nombre de columna|Tipo|Description|Permitida NULL<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
-|**ErrorCode**|**UnsignedInt**|Código de retorno que indica la ejecución correcta o el error del método. El valor hexadecimal debe convertirse en un **UnsignedInt** valor.|No|  
+|**ErrorCode**|**UnsignedInt**|Código de retorno que indica la ejecución correcta o el error del método. El valor hexadecimal debe convertirse en un **UnsignedInt** valor.|no|  
 |**WarningCode**|**UnsignedInt**|Código de retorno que indica una condición de advertencia. El valor hexadecimal debe convertirse en un **UnsignedInt** valor.|Sí|  
-|**Description**|**String**|Texto y descripción del error o la advertencia devueltos por el componente que generó el error.|Sí|  
+|**Descripción**|**String**|Texto y descripción del error o la advertencia devueltos por el componente que generó el error.|Sí|  
 |**Source**|**String**|Nombre del componente que generó el error o la advertencia.|Sí|  
 |**HelpFile**|**String**|Ruta de acceso o dirección URL del tema o el archivo de Ayuda que describe el error o la advertencia.|Sí|  
   

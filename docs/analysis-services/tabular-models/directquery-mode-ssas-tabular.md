@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.bidtoolset.realtime.f1
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 74dc0a734b573c94a4ec32ac9d36b57338be4eae
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e1eae96e5152fa9d16dd20cf1333c03bf2160db4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="directquery-mode"></a>Modo DirectQuery
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Este tema se describe *directquerymode* para los modelos tabulares de Analysis Services en los niveles de compatibilidad 1200 y versiones posteriores. El modo DirectQuery se puede activar para modelos que diseñe en SSDT, o bien para modelos tabulares que ya se hayan implementado, puede cambiar al modo DirectQuery en SSMS. Antes de elegir el modo DirectQuery, es importante comprender las ventajas y las limitaciones.
@@ -66,9 +66,9 @@ Los modelos tabulares DirectQuery en el nivel de compatibilidad 1200 y versiones
 Origen de datos   |Versiones  |Proveedores
 ---------|---------|---------
 Microsoft SQL Server    |  2008 y versiones posteriores      |       Proveedor OLE DB para SQL Server, Proveedor OLE DB de SQL Server Native Client, Proveedor de datos .NET Framework para el cliente SQL  
-Base de datos SQL de Microsoft Azure    |   Todos      |  Proveedor OLE DB para SQL Server, Proveedor OLE DB de SQL Server Native Client, Proveedor de datos .NET Framework para el cliente SQL            
-Almacenamiento de datos de Microsoft Azure SQL     |   Todos     |  Proveedor de datos de .NET Framework para SQL Client       
-Microsoft SQL Analytics Platform System (APS)     |   Todos      |  Proveedor OLE DB para SQL Server, Proveedor OLE DB de SQL Server Native Client, Proveedor de datos .NET Framework para el cliente SQL       
+Base de datos SQL de Microsoft Azure    |   All      |  Proveedor OLE DB para SQL Server, Proveedor OLE DB de SQL Server Native Client, Proveedor de datos .NET Framework para el cliente SQL            
+Almacenamiento de datos de Microsoft Azure SQL     |   All     |  Proveedor de datos de .NET Framework para SQL Client       
+Microsoft SQL Analytics Platform System (APS)     |   All      |  Proveedor OLE DB para SQL Server, Proveedor OLE DB de SQL Server Native Client, Proveedor de datos .NET Framework para el cliente SQL       
 Bases de datos relacionales de Oracle     |  Oracle 9i y versiones posteriores       |  Proveedor OLE DB de Oracle       
 Bases de datos relacionales de Teradata    |  Teradata V2R6 y versiones posteriores     | Proveedor de datos .NET para Teradata        
 

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9b46a11c3edc4ca3e9c735d324f961165bd022cd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3e09cceda5b62fe4112fe15a7a69b520134a733b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de árboles de decisión (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tema describe el contenido del modelo de minería de datos que es específico de los modelos que utilizan la [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de árboles de decisión. Para obtener una explicación general sobre el contenido del modelo de minería de datos para todos los tipos de modelo, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md). Es importante recordar que el algoritmo de árboles de decisión de Microsoft es un algoritmo híbrido que puede crear modelos con funciones muy diferentes: un árbol de decisión puede representar asociaciones, reglas o incluso una regresión lineal. La estructura del árbol es básicamente la misma, pero la forma en la que se interpretará la información dependerá del propósito para el que creó el modelo.  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]elige automáticamente un método de creación de depósitos de los atributos continuos. Sin embargo, puede controlar los valores de forma continuos de las entradas se discretizan estableciendo el tipo de contenido de la columna de estructura de minería de datos para **Discretized** y, a continuación, establecer el <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> o <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> propiedad.  
   
- [Superior](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ##  <a name="bkmk_ModelContent"></a> Contenido del modelo para un modelo de árboles de decisión  
  En esta sección solo se proporcionan detalles y ejemplos de las columnas del contenido del modelo de minería de datos que tienen una relevancia especial para los modelos de árboles de decisión. Para obtener información sobre las columnas de uso general en el conjunto de filas de esquema y para obtener una explicación de la terminología del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -174,7 +172,7 @@ ms.lasthandoff: 12/08/2017
   
  Para obtener ejemplos de cómo recuperar estas estadísticas, vea [Ejemplos de consultas de modelos de árboles de decisión](../../analysis-services/data-mining/decision-trees-model-query-examples.md).  
   
- [Superior](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ## <a name="example-of-decision-tree-structure"></a>Ejemplo de estructura de árbol de decisión  
  Para entender el funcionamiento de un árbol de decisión, considere un ejemplo, como el escenario del comprador de bicicletas de AdventureWorks. Suponiendo que el atributo de predicción lo constituyen las compras de los clientes, el algoritmo de árboles de decisión intenta encontrar una columna de datos, entre todas las entradas proporcionadas, que detecte de forma eficaz qué clientes es probable que adquieran una bicicleta y qué clientes es probable que no lo hagan. Por ejemplo, el modelo podría descubrir que la edad es el mejor indicador de los hábitos de compra. En concreto, que es muy probable que los clientes con más de 30 años compren una bicicleta, y que es improbable que el resto de los clientes lo hagan. En este escenario, el modelo crea una *división* en el atributo Age. Eso significa que el árbol se divide en dos bifurcaciones, una que contiene los clientes con más de 30 años, y otra con los clientes que tienen menos de 30 años. Las nuevas bifurcaciones se representan en la estructura del modelo como dos nuevos árboles interiores (NODE_TYPE = 3).  
@@ -196,7 +194,7 @@ ms.lasthandoff: 12/08/2017
   
  Si el atributo de predicción es un número continuo, el algoritmo intenta crear una fórmula de regresión que modele la relación entre dicho atributo y las entradas.  
   
- [Superior](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ###  <a name="NodeCaption"></a> Título y descripción del nodo  
  En un modelo de árboles de decisión, el título y la descripción del nodo contienen información similar. Sin embargo, la descripción del nodo es más completa y contiene más información a medida que nos acercamos a los nodos hoja. Tanto el título como la descripción del nodo son cadenas traducidas.  
@@ -216,7 +214,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] es compatible con la versión 2.0 del estándar PMML, con extensiones para admitir el uso de la tabla anidada. Si los datos contienen tablas anidadas y genera una versión PMML del modelo, todos los elementos del modelo que incluyen los predicados se marcan como una extensión.  
   
- [Superior](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ###  <a name="bkmk_NodeDist_Discrete"></a> Distribución de nodos para los atributos discretos  
  En un modelo de árboles de decisión, la tabla NODE_DISTRIBUTION contiene estadísticas útiles. Sin embargo, el tipo de estadísticas depende de si el árbol predice un atributo discreto o un atributo continuo. En esta sección se describe el significado de las estadísticas de distribución de nodos para los atributos discretos.  
@@ -284,7 +282,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Si crea un modelo de árboles de decisión que tenga atributos de predicción continuos y discretos, verá puntuaciones completamente diferentes en los nodos (Todos) que representan cada tipo de árbol. Cada modelo se debería considerar de forma individual, ya que los métodos usados para puntuar la regresión son completamente diferentes de los usados para puntuar la clasificación. Los valores de puntuación de nodo no se pueden comparar.  
   
- [Superior](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ##  <a name="bkmk_RegressionNodes"></a> Nodos de regresión dentro de un modelo de árboles de decisión  
  Si un modelo de árboles de decisión contiene un atributo de predicción con datos numéricos continuos, el algoritmo de árboles de decisión de Microsoft busca áreas en los datos donde la relación entre el estado predicho y las variables de entrada sea lineal. Si el algoritmo es capaz de encontrar una relación lineal, crea un árbol especial (NODE_TYPE = 25) que representa una regresión lineal. Estos nodos de árbol de regresión son más complejos que los nodos que representan valores discretos.  

@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d8ce27412abf931efcc0b18de246b921afc2e4fe
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4f00b10d96682d72fde39277ceeeabb866d460e5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de agrupación en clústeres (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tema describe el contenido del modelo de minería de datos que es específico de los modelos que utilizan el algoritmo Microsoft Clustering. Para obtener una explicación general sobre el contenido del modelo de minería de datos para todos los tipos de modelo, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -45,13 +43,13 @@ ms.lasthandoff: 12/08/2017
   
  El nodo primario contiene estadísticas útiles que describen la distribución real de todos los casos de entrenamiento. Estas estadísticas se encuentran en la columna de la tabla anidada NODE_DISTRIBUTION. Por ejemplo, en la tabla siguiente se muestran varias filas de la tabla NODE_DISTRIBUTION que describen la distribución de los datos demográficos de los clientes para el modelo de agrupación en clústeres, `TM_Clustering`, que se crea en [Tutorial básico de minería de datos](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c):  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Support|PROBABILITY|VARIANCE|VALUE_TYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Support|PROBABILITY|varianza|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
 |Age|Missing|0|0|0|1 (ausente)|  
 |Age|44.9016152716593|12939|1|125.663453102554|3 (continuo)|  
-|Gender|Missing|0|0|0|1 (ausente)|  
-|Gender|F|6350|0.490764355823479|0|4 (Discreto)|  
-|Gender|M|6589|0.509235644176521|0|4 (Discreto)|  
+|Sexo|Missing|0|0|0|1 (ausente)|  
+|Sexo|F|6350|0.490764355823479|0|4 (Discreto)|  
+|Sexo|M|6589|0.509235644176521|0|4 (Discreto)|  
   
  En estos resultados se puede observar que se utilizaron 12.939 casos para generar el modelo, que la proporción entre hombres y mujeres fue de 50-50, aproximadamente, y que la edad media fue de 44 años. Las estadísticas descriptivas varían dependiendo de si el atributo sobre el que se está informando es un tipo de datos numérico continuo, como la edad, o un tipo de valor discreto, como el género. Las medidas estadísticas *media* y *varianza* se calculan para los tipos de datos continuos, mientras que la *probabilidad* y el *soporte* se calculan para los tipos de datos discretos.  
   
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="model-content-for-a-clustering-model"></a>Contenido del modelo para un modelo de agrupación en clústeres  
  Esta sección solo proporciona detalles y ejemplos para las columnas del contenido del modelo de minería de datos que son relevantes para los modelos de agrupación en clústeres.  
   
- Para obtener información sobre las columnas de uso general en el conjunto de filas de esquema, como MODEL_CATALOG y MODEL_NAME, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+ Para obtener información sobre las columnas de uso general en el conjunto de filas de esquema, como MODEL_CATALOG y MODEL_NAME, vea [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Nombre de la base de datos en la que se almacena el modelo.  

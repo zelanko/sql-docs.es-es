@@ -5,12 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fcc42dbd4d53a3d5a967933bebf22b1f73ac91e2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5490990412aa4883d575a1fc65fee7e29db06dde
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-logistic-regression-models"></a>Contenido del modelo de minería de datos para los modelos de regresión logística
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tema describe el contenido del modelo de minería de datos que es específico de los modelos que utilizan el algoritmo de regresión logística de Microsoft. Para obtener una explicación de cómo interpretar las estadísticas y la estructura compartidas por todos los tipos de modelos, así como las definiciones generales de los términos relacionados con el contenido del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="model-content-for-a-logistic-regression-model"></a>Contenido del modelo de minería de datos para un modelo de regresión logística  
  En esta sección solo se proporcionan detalles y ejemplos de las columnas del contenido del modelo de minería de datos que tienen una relevancia especial para la regresión logística. El contenido del modelo es casi idéntico al de un modelo de red neuronal, pero las descripciones que se aplican a los modelos de red neuronal se pueden repetir en esta tabla por comodidad.  
   
- Para más información sobre las columnas de uso general en el conjunto de filas de esquema, como MODEL_CATALOG y MODEL_NAME (que no se describen aquí), o para obtener una explicación de la terminología del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+ Para obtener información sobre las columnas de uso general en el conjunto de filas de esquema, como MODEL_CATALOG y MODEL_NAME (que no se describen aquí), o para obtener una explicación de la terminología del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Nombre de la base de datos en la que se almacena el modelo.  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 |Estadísticas marginales|En blanco|  
 |Nivel de entrada|En blanco|  
 |Nodo de entrada|Nombre del atributo de entrada|  
-|nivel oculto|En blanco|  
+|Nivel oculto|En blanco|  
 |Nivel de salida|En blanco|  
 |Nodo de salida|Nombre del atributo de salida|  
   
@@ -103,7 +101,7 @@ ms.lasthandoff: 12/08/2017
 |Estadísticas marginales|Siempre es 0.|  
 |Nivel de entrada|Indica el número de pares de valores y atributos de entrada que usó el modelo.|  
 |Nodo de entrada|Siempre es 0.|  
-|Nivel oculto|En un modelo de regresión logística, siempre es 0.|  
+|nivel oculto|En un modelo de regresión logística, siempre es 0.|  
 |Nivel de salida|Indica el número de valores de salida.|  
 |Nodo de salida|Siempre es 0.|  
   
@@ -121,7 +119,7 @@ ms.lasthandoff: 12/08/2017
 |Estadísticas marginales|En blanco|  
 |Nivel de entrada|En blanco|  
 |Nodo de entrada|Nombre del atributo de entrada|  
-|nivel oculto|En blanco|  
+|Nivel oculto|En blanco|  
 |Nivel de salida|En blanco|  
 |Nodo de salida|Si el atributo de salida es continuo, contiene su nombre.<br /><br /> Si el atributo de salida es discreto o discretizado, contiene el nombre del atributo y el valor.|  
   
@@ -134,7 +132,7 @@ ms.lasthandoff: 12/08/2017
 |Estadísticas marginales|En blanco|  
 |Nivel de entrada|En blanco|  
 |Nodo de entrada|Fragmento XML que contiene la misma información que la columna NODE_DESCRIPTION.|  
-|Nivel oculto|En blanco|  
+|nivel oculto|En blanco|  
 |Nivel de salida|En blanco|  
 |Nodo de salida|Fragmento XML que contiene la misma información que la columna NODE_DESCRIPTION.|  
   

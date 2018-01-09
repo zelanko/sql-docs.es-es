@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 88e8d798f3e3a37fafab3f06ca6354310508e2b5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fcc84bc6effb3e4a831ce58b81fcbe9e7eda3437
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-properties"></a>Propiedades del modelo de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Los modelos de minería de datos tienen los siguientes tipos de propiedades:  
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/08/2017
 |--------------|-----------------|  
 |**Algoritmo**|Establece el tipo de algoritmo para el modelo de minería de datos.|  
 |**AlgorithmParameters**|Establece los valores de los parámetros de algoritmo disponibles para cada tipo de algoritmo.|  
-|**Filtro**|Establece un filtro que se aplica a los datos que se utilizan para el aprendizaje y prueba del modelo de minería de datos. La definición del filtro está almacenada con el modelo y se utiliza opcionalmente al crear consultas de predicción o al probar la exactitud del modelo.<br /><br /> El filtro de modelos no es opcional en el aprendizaje del modelo.|  
+|**Filter**|Establece un filtro que se aplica a los datos que se utilizan para el aprendizaje y prueba del modelo de minería de datos. La definición del filtro está almacenada con el modelo y se utiliza opcionalmente al crear consultas de predicción o al probar la exactitud del modelo.<br /><br /> El filtro de modelos no es opcional en el aprendizaje del modelo.|  
 |**Nombre**|Establece el nombre del modelo de minería de datos.|  
 |**AllowDrillThrough**|Especifica si se habilita la obtención de detalles en el modelo de minería de datos.|  
   
@@ -60,11 +58,11 @@ ms.lasthandoff: 12/08/2017
   
 |Propiedad|Description|  
 |--------------|-----------------|  
-|**Description**|Describe el propósito de la columna de minería.|  
+|**Descripción**|Describe el propósito de la columna de minería.|  
 |**Nombre**|Establece el nombre de la columna del modelo de minería de datos. Puede escribir un nuevo nombre que sirva de alias para la columna del modelo de minería de datos.|  
 |**ModelingFlags**|Configura las marcas específicas de algoritmo de la columna.|  
 |**SourceColumnID**|Indica el nombre de la columna de estructura de minería de datos en la que se basa la columna de modelo.<br /><br /> Esta propiedad es de solo lectura.|  
-|**Uso**|Establece la forma en que el modelo de minería de datos va a utilizar la columna.|  
+|**Usage**|Establece la forma en que el modelo de minería de datos va a utilizar la columna.|  
   
 ## <a name="see-also"></a>Vea también  
  [Columnas del modelo de minería de datos](../../analysis-services/data-mining/mining-model-columns.md)   

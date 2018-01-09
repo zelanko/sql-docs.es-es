@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0006e143-d3ba-4d10-a415-e42c45e2bb0a
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae2cafe597e5540a58cc89e28cee87516942d021
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6de32b7f057093f31143ad56e71c492be325cf4d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Configurar Analysis Services y Delegación limitada de Kerberos (KCD)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Restringida la delegación Kerberos (KCD) es un protocolo de autenticación que se puede configurar con la autenticación de Windows para delegar las credenciales de cliente de servicio a servicio en todo el entorno. KCD requiere una infraestructura adicional, por ejemplo, un controlador de dominio y una configuración adicional del entorno. KCD es un requisito en algunos escenarios que implican datos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] y [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] con SharePoint 2016. En SharePoint 2016, Excel Services se ha trasladado de la granja de SharePoint a un nuevo servidor independiente, **Office Online Server**. Puesto que Office Online Server es independiente, se hace más necesaria una forma de delegar las credenciales de cliente en los escenarios típicos de dos saltos.  

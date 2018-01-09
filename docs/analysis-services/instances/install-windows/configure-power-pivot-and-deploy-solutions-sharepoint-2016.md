@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 18a48995-639f-4782-8b17-6caa5769bb5f
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6675b8338a54dca9dac4b842ec2d0f563058e1b8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cfa636d3fcf08410ecaf2062aa7cd68d1e4aeaec
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>Configuración de Power Pivot e implementación de soluciones (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Estos temas se explica la implementación y configuración de mejoras de nivel intermedio para la [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] características de [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] incluidos [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] galería, programar la actualización de datos, panel de administración y proveedores de datos. Ejecute la herramienta **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2016** para hacer lo siguiente:  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 69507d44a55e1879d31e97f75a9f755078c5f36a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fe5945d4d6dce5b6afff025289793127cb8c9988
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lección 4-1: uso de una versión modificada del proyecto Tutorial de Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]El resto de las lecciones de este tutorial se basa en una versión mejorada de la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proyecto Tutorial que completó en las tres primeras lecciones. Se han agregado tablas y cálculos con nombre adicionales a la vista del origen de datos **Adventure Works DW 2012** , se han agregado más dimensiones al proyecto y estas nuevas dimensiones se han agregado al cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Además, se ha agregado un segundo grupo de medidas, que contiene medidas de una segunda tabla de hechos. Este proyecto mejorado le permitirá continuar aprendiendo a agregar funciones adicionales a la aplicación de Business Intelligence sin necesidad de tener que repetir las técnicas ya aprendidas.  
@@ -49,7 +49,7 @@ Para poder continuar con el tutorial, debe descargar, extraer, cargar y procesar
   
 1.  En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Archivo** , haga clic en **Cerrar solución** para cerrar los archivos que no vaya a usar.  
   
-2.  En el menú **Archivo** , seleccione **Abrir**y haga clic en **Proyecto o solución**.  
+2.  En el menú **Archivo**, seleccione **Abrir** y haga clic en **Proyecto o solución**.  
   
 3.  Vaya a la ubicación donde extrajo los archivos del proyecto de tutorial.  
   
@@ -68,7 +68,7 @@ Observe que, con diez tablas en la vista del origen de datos, el diagrama <All T
 #### <a name="internet-sales-diagram"></a>Diagrama Internet Sales  
 El diagrama **Internet Sales** contiene las tablas que están relacionadas con la venta directa de productos de [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] a los clientes a través de Internet. Las tablas del diagrama son las cuatro tablas de dimensiones y la tabla de hechos que agregó a la vista del origen de datos **Adventure Works DW 2012** en la Lección 1. Estas tablas son las siguientes:  
   
--   **Geografía**  
+-   **Geography**  
   
 -   **Customer**  
   

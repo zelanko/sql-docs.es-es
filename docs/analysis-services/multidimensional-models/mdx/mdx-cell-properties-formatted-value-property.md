@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 23c043a3c35dd63927596c5bba0d9b8cf8d76bf4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0e69f9e798dd5922bae7c677fc599c8f82293ee1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-cell-properties---formattedvalue-property"></a>Propiedades de celda MDX - FORMATTED_VALUE, propiedad
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]La propiedad FORMATTED_VALUE se basa en las interacciones de las propiedades VALUE, FORMAT_STRING y LANGUAGE de la celda. En este tema se explica cómo interactúan estas propiedades para generar la propiedad FORMATTED_VALUE.  
@@ -87,14 +84,14 @@ ms.lasthandoff: 12/08/2017
   
 |Miembro|FORMATTED_VALUE|Explicación|  
 |------------|----------------------|-----------------|  
-|A|$5,040.00|FORMAT_STRING se establece en `Currency` y LANGUAGE es `1033`al heredar el valor de la configuración regional del sistema.|  
+|Un|$5,040.00|FORMAT_STRING se establece en `Currency` y LANGUAGE es `1033`al heredar el valor de la configuración regional del sistema.|  
 |B|€5.040,00|FORMAT_STRING se establece en `Currency` (al heredar de A) y LANGUAGE se establece explícitamente en `1034` (España); por tanto, se usa el signo de euro, además de un separador decimal y un separador de miles diferentes.|  
 |C|$5.040,00|FORMAT_STRING se establece en `$#,##0.00` e invalida a Currency (heredado de A) y LANGUAGE se establece explícitamente en `1034` (España). Dado que la propiedad FORMAT_STRING establece de forma explícita el símbolo de moneda en $, FORMATTED_VALUE se presenta con el signo $. Sin embargo, dado que `.` (punto) y `,` (coma) son respectivamente los marcadores de posición del separador decimal y el separador de miles, la especificación del lenguaje tiene efecto a la hora de generar una salida adaptada para el separador decimal y el separador de miles.|  
 |D|5.04E+03|FORMAT_STRING se establece en `Scientific` y LANGUAGE en `1033`, al heredar el valor de la configuración regional del sistema; por tanto, `.` (punto) será el separador decimal.|  
 |E|5,04E+03|FORMAT_STRING se establece en `Scientific` y LANGUAGE se establece explícitamente en `1034,` , por tanto, `,` (coma) será el separador decimal.|  
-|F|50,40 %|FORMAT_STRING se establece en `Percent` y LANGUAGE en `1033`, al heredar el valor de la configuración regional del sistema; por tanto, `.` (punto) será el separador decimal.<br /><br /> Observe que VALUE se ha modificado de 5040 a 0.5040|  
+|F|50,40 %|FORMAT_STRING se establece en `Percent` y LANGUAGE en `1033`, al heredar el valor de la configuración regional del sistema; por tanto, `.` (punto) será el separador decimal.<br /><br /> Observe que VALUE se ha modificado de 5040 a 0.5040|  
 |G|50,40 %|FORMAT_STRING se establece en `Percent`, al heredar de F, y LANGUAGE se establece explícitamente en `1034` ; por tanto, `,` (coma) será el separador decimal.<br /><br /> Observe que VALUE se ha heredado del valor F.|  
-|H|No|FORMAT_STRING se establece en `YES/NO`, VALUE se establece en 0 y LANGUAGE se establece explícitamente en `1034`; como no hay diferencia entre el inglés NO y el español NO, el usuario no puede apreciar ninguna diferencia en FORMATTED_VALUE.|  
+|H|no|FORMAT_STRING se establece en `YES/NO`, VALUE se establece en 0 y LANGUAGE se establece explícitamente en `1034`; como no hay diferencia entre el inglés NO y el español NO, el usuario no puede apreciar ninguna diferencia en FORMATTED_VALUE.|  
 |I|SI|FORMAT_STRING se establece en `YES/NO`, VALUE se establece en 59 y LANGUAGE se establece explícitamente en `1034`; tal y como se definió para el formato YES/NO, cualquier valor que no sea cero (0) es YES y, dado que el idioma está establecido en español, FORMATTED_VALUE es SI.|  
 |J|Desactivado|FORMAT_STRING se establece en `ON/OFF`, VALUE se establece en 0 y LANGUAGE se establece explícitamente en `1034`; tal y como se definió para el formato ON/OFF, cualquier valor igual a cero (0) es OFF y, dado que el idioma se estableció en español, FORMATTED_VALUE es Desactivado.|  
 |K|Activado|FORMAT_STRING se establece en `ON/OFF`, VALUE se establece en -312 y LANGUAGE se establece explícitamente en `1034`; tal y como se definió en el formato de ON/OFF, cualquier valor distinto de (0) es ON, y dado que el idioma está establecido en español, el valor de FORMATTED_VALUE es Activado.|  
@@ -137,7 +134,7 @@ ms.lasthandoff: 12/08/2017
   
 |Miembro|FORMATTED_VALUE|Explicación|  
 |------------|----------------------|-----------------|  
-|A|3/12/1959 6:30:00 AM|FORMAT_STRING se establece implícitamente en `General Date` a través de la expresión CDate() y LANGUAGE es `1033` (inglés), al heredar el valor de la configuración regional del sistema.|  
+|Un|3/12/1959 6:30:00 AM|FORMAT_STRING se establece implícitamente en `General Date` a través de la expresión CDate() y LANGUAGE es `1033` (inglés), al heredar el valor de la configuración regional del sistema.|  
 |B|Thursday, March 12, 1959|FORMAT_STRING se establece explícitamente en `Long Date` y LANGUAGE es `1033` (inglés) al heredar el valor de la configuración regional del sistema.|  
 |C|12/03/1959 6:30:00|FORMAT_STRING se establece explícitamente en `General Date` y LANGUAGE en `1034` (español).<br /><br /> Observe que el mes y el día cambian de lugar con respecto al estilo de formato de EE.UU.|  
 |D|jueves, 12 de marzo de 1959|FORMAT_STRING se establece explícitamente en `Long Date` y LANGUAGE en `1034` (español).<br /><br /> Observe que el mes y el día de la semana se expresan alfabéticamente en español.|  

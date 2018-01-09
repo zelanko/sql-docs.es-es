@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 90ec951bb5666f28167e0ce704e63ba3bb0972d4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 05f62f6beb2e248fc2e0c3ae405f8893c33c10e9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="understanding-the-database-schemas"></a>Descripción de esquemas de base de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El Asistente para generar esquemas genera un esquema relacional sin normalizar para la base de datos del área de asunto en función de las dimensiones y grupos de medida en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El asistente genera una tabla relacional por dimensión para almacenar los datos de dimensión que se denomina tabla de dimensión y una tabla relacional por grupo de medida para almacenar los datos de hechos que se denomina tabla de hechos. Al generar las tablas relacionales, el asistente omite las dimensiones vinculadas, los grupos de medida vinculados y las dimensiones de tiempo de servidor.  
@@ -66,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Se producirá un error si se especifica más de un atributo clave en la dimensión en la que se basa la tabla de dimensión.  
   
- Traducciones  
+ Translations  
  El asistente genera una tabla independiente para contener los valores traducidos de los atributos que requieran una columna de traducción. El asistente también crea una columna independiente para cada idioma necesario.  
   
 ## <a name="fact-tables"></a>Tablas de hechos  
@@ -87,7 +84,7 @@ ms.lasthandoff: 12/08/2017
   
  Si decide reforzar la integridad referencial, se generan restricciones de integridad referencial entre las tablas de dimensión y las tablas de hechos en los casos necesarios.  
   
- Traducciones  
+ Translations  
  El asistente genera una tabla independiente para contener los valores traducidos de las propiedades en el grupo de medida que requieran una columna de traducción. El asistente también crea una columna independiente para cada idioma necesario.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Conversión de tipo de datos y longitudes predeterminadas  

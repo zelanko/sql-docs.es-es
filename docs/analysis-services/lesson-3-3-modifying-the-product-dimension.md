@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a6ff0c5e509a40c84850e281d2ab9f41246c4880
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4352e05555c713c5b979e4ac8e3fc279d6099fe1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-3-3---modifying-the-product-dimension"></a>Lección 3: 3: modificar la dimensión Product
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]En las tareas de este tema, se utiliza un cálculo con nombre para proporcionar nombres más descriptivos para las líneas de producto, definir una jerarquía en la dimensión Product y especificar el nombre del miembro (All) para la jerarquía. También agrupará los atributos en carpetas para mostrar.  
@@ -165,7 +165,7 @@ Si los datos subyacentes lo permiten, debería definir relaciones de atributo en
   
 2.  En el diagrama, haga clic con el botón derecho en el atributo **Model Name** y haga clic en **Nueva relación de atributo**.  
   
-3.  En el cuadro de diálogo **Crear relación de atributo** , el **Atributo de origen** es **Model Name**. Establezca el **Atributo relacionado** en **Product Line**.  
+3.  En el cuadro de diálogo **Crear relación de atributo**, el **Atributo de origen** es **Model Name**. Establezca el **Atributo relacionado** en **Product Line**.  
   
     En la lista **Tipo de relación** , deje establecido el tipo de relación en **Flexible** , ya que las relaciones entre los miembros pueden cambiar con el tiempo. Por ejemplo, un modelo de producto podría moverse a otra línea de producto.  
   

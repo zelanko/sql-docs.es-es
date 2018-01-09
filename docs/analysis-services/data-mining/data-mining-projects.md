@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ba4efe6772c6fcc668d6ce808a6c928a3af63101
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 115db2e7cc02805cd41e79363d8ff0a83d1c719e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-projects"></a>Proyectos de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un proyecto de minería de datos forma parte de un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solución. Durante el proceso de diseño, los objetos que crea en este proyecto están disponibles para probarlos y consultarlos como parte de una base de datos del área de trabajo. Cuando desee que los usuarios puedan consultar o examinar los objetos del proyecto, debe implementarlo en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecute en modo multidimensional.  
@@ -162,7 +160,7 @@ ms.lasthandoff: 12/08/2017
   
  Según sus necesidades, puede combinar varios modelos en un solo proyecto o crear proyectos distintos para cada tipo de tarea analítica o modelo.  
   
- Una vez creada una estructura y un modelo, *procese* cada modelo ejecutando los datos de la vista del origen de datos a través del algoritmo, lo que genera un modelo matemático de los datos. Este proceso también se conoce como *entrenar el modelo*. Para obtener más información, vea [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
+ Una vez creada una estructura y un modelo, *procese* cada modelo ejecutando los datos de la vista del origen de datos a través del algoritmo, lo que genera un modelo matemático de los datos. Este proceso también se conoce como *entrenar el modelo*. Para más información, vea [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
  Una vez procesado el modelo, a continuación puede explorar visualmente el modelo de minería de datos y crear las consultas de predicción con él. Si los datos del proceso de entrenamiento se almacenan en la memoria caché, puede utilizar las consultas de *obtención de detalles* para devolver información detallada sobre los casos que se usan en el modelo.  
   
@@ -210,7 +208,7 @@ ms.lasthandoff: 12/08/2017
  También puede llevar a cabo estas tareas mediante el Lenguaje de scripting de Analysis Services (ASSL) o bien usando Objetos de administración de análisis (AMO). Para obtener más información, vea [Desarrollar con XMLA en Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md).  
   
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  En los temas siguientes se describe el uso del Asistente para minería de datos para crear un proyecto de minería de datos y sus objetos asociados.  
   
 |Tareas|Temas|  

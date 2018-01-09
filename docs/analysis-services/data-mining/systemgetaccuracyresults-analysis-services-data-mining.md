@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 183fbed8a59f4f6288b321b47d30895e4a7c7394
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1f6cc8a8bc3e35f6072e5998faed8fb9d51b768f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Devuelve las métricas de precisión de validación cruzada para una estructura de minería de datos y todos los modelos relacionados, excluidos los modelos de clústeres.  
@@ -72,12 +72,12 @@ SystemGetAccuracyResults(<mining structure>,
   
  Para obtener una lista completa de los posibles valores, vea la sección Comentarios de este tema.  
   
- (Requerido)  
+ (Obligatorio)  
   
  *atributo de destino*  
  Cadena que contiene el nombre de un objeto de predicción. Un objeto de predicción puede ser una columna, una columna de tabla anidada o una columna de clave de tabla anidada de un modelo de minería de datos.  
   
- (Requerido)  
+ (Obligatorio)  
   
  *estado de destino*  
  Cadena que contiene un valor específico que va a predecirse.  
@@ -88,19 +88,19 @@ SystemGetAccuracyResults(<mining structure>,
   
  El valor predeterminado es **null**.  
   
- (Opcional)  
+ (opcional)  
   
  *umbral de destino*  
  Número comprendido entre 0,0 y 1 que especifica la probabilidad mínima en la que el valor de predicción se considera correcto.  
   
  El valor predeterminado es **null**, que significa que todas las predicciones se consideran correctas.  
   
- (Opcional)  
+ (opcional)  
   
  *lista de pruebas*  
  Cadena que especifica las opciones de prueba. Este parámetro se reserva para uso futuro.  
   
- (Opcional)  
+ (opcional)  
   
 ## <a name="return-type"></a>Tipo devuelto  
  El conjunto de filas que se devuelve incluye puntuaciones para cada partición y agregados para todos los modelos.  
@@ -116,7 +116,7 @@ SystemGetAccuracyResults(<mining structure>,
 |PartitionCases|Un entero que indica el número de filas del conjunto de casos, tomando como base la  *\<conjunto de datos >* parámetro.|  
 |Prueba|Tipo de prueba que se realizó.|  
 |Measure|Nombre de la medida que devuelve la prueba. Las medidas para cada modelo dependen del tipo de modelo, y el tipo del valor de predicción.<br /><br /> Para obtener una lista de las medidas que se devuelven para cada tipo de predicción, vea [Medidas en el informe de validación cruzada](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).<br /><br /> Para obtener una definición de cada medida, vea [Validación cruzada &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).|  
-|Value|Valor de la medida especificada.|  
+|Valor|Valor de la medida especificada.|  
   
 ## <a name="remarks"></a>Comentarios  
  En la tabla siguiente se proporcionan ejemplos de los valores que puede utilizar para especificar los datos de la estructura de minería de datos que se usan para la validación cruzada. Si desea utilizar casos de prueba para la validación cruzada, la estructura de minería de datos ya debe contener un conjunto de datos de prueba. Para obtener información sobre cómo definir un conjunto de datos de prueba al crear una estructura de minería de datos, vea [Conjuntos de datos de entrenamiento y de prueba](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
@@ -151,7 +151,7 @@ CALL SystemGetAccuracyResults (
   
  Resultados del ejemplo:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Prueba|Measure|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Prueba|Medida|Valor|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |v Target Mail DT|Bike Buyer|1|0|1638|Clasificación|Verdadero positivo|605|  
 |v Target Mail DT|Bike Buyer|1|0|1638|Clasificación|Falso positivo|177|  

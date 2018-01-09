@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c9f593c830dbdffe9b09b6f5e44d0957a7bb1d4e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3d71a404f2b91606ec12ac08689a2c8ebefea85f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-3-4---modifying-the-date-dimension"></a>Lección 3-4-modificar la dimensión Date
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]En las tareas de este tema, creará una jerarquía definida por el usuario y cambiar los nombres de miembro que se muestran para los atributos de fecha, mes, trimestre y semestre del calendario. También definirá claves compuestas para los atributos, controlará el criterio de ordenación de los miembros de dimensión y definirá las relaciones de atributo.  
@@ -111,7 +111,7 @@ Si los datos subyacentes lo permiten, debería definir relaciones de atributo en
   
 3.  En el cuadro de diálogo **Crear relación de atributo** , el **Atributo de origen** es **English Month Name**. Establezca el **Atributo relacionado** en **Calendar Quarter**.  
   
-4.  En la lista **Tipo de relación** , establezca el tipo de relación en **Rígida**.  
+4.  En la lista **Tipo de relación**, establezca el tipo de relación en **Rígida**.  
   
     El tipo de relación es **Rígida** porque las relaciones entre los miembros no cambiarán con el tiempo.  
   
@@ -215,7 +215,7 @@ La propiedad **KeyColumns** contiene la columna o columnas que representan la cl
   
 2.  En la ventana **Propiedades** , haga clic en el campo **KeyColumns** y, después, haga clic en el botón Examinar (**...**).  
   
-3.  En el cuadro de diálogo **Columnas de clave** , en la lista **Columnas disponibles** , seleccione la columna **CalendarYear**y, después, haga clic en el botón **>** .  
+3.  En el cuadro de diálogo **Columnas de clave**, en la lista **Columnas disponibles**, seleccione la columna **CalendarYear** y, después, haga clic en el botón **>**.  
   
     Las columnas **CalendarQuarter** y **CalendarYear** se muestran ahora en la lista **Columnas de clave** .  
   

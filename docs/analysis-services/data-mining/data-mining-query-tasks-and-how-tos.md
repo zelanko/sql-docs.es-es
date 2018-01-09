@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: mining models [Analysis Services], how-to topics
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f2be13f6662ad2ed4d3cdae60eb1cc7ac458f62a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 599ad86e236619b5bfa3798a94e3cc0044746db3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>Tareas y procedimientos de Consulta de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La capacidad de crear consultas es esencial hacer uso de los modelos de minería de datos. En esta sección se proporcionan enlaces a ejemplos de cómo crear consultas sobre un modelo de minería de datos usando las herramientas proporcionadas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Si necesita más información sobre qué es una consulta de minería de datos o los tipos diferentes de consultas que puede crear, vea [Consultas de minería de datos](../../analysis-services/data-mining/data-mining-queries.md).  
@@ -40,7 +38,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [Ver y guardar los resultados de una consulta de predicción](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)  
   
--   [Modificar manualmente una consulta de predicción](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)  
+-   [Editar manualmente una consulta de predicción](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)  
   
 -   [Aplicar funciones de predicción a un modelo](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)  
   
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/08/2017
  [Crear una consulta de contenido en un modelo de minería de datos](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
  Describe cómo crear consultas que devuelven información detallada que se almacena en el modelo de minería de datos usando los conjuntos de filas del esquema de minería de datos.  
   
- [Crear una consulta de minería de datos utilizando XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)  
+ [Crear una consulta de minería de datos mediante XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)  
  Describe cómo crear una consulta en el contenido del modelo de minería de datos usando las plantillas XMLA incluidas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Vea también  

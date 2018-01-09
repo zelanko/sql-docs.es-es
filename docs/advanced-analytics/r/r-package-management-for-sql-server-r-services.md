@@ -1,13 +1,13 @@
 ---
 title: "Administración de paquetes de R para SQL Server | Documentos de Microsoft"
 ms.custom: 
-ms.date: 10/09/2017
+ms.date: 01/04/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: R
@@ -15,98 +15,140 @@ ms.assetid: 98c14b05-750e-44f9-8531-1298bf51e8d2
 caps.latest.revision: "7"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 2b421ea34185f483bac0b9f3bd2527d68428bf50
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 576178e53a28f877ac91d99f14ce9ba6a44e506d
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="r-package-management-for-sql-server"></a>Administración de paquetes de R para SQL Server
 
-Este artículo describen características para la administración de paquetes de R en SQL Server 2017 y SQL Server 2016.
+Este artículo describen características para la administración de paquetes de R en SQL Server 2017 y en SQL Server 2016.
 
-+ Cambios en los métodos de instalación de paquete de R entre 2016 y de 2017
-+ Métodos recomendados para administrar paquetes de R
-+ Nuevos roles de base de datos de administración de paquetes en SQL Server 2017
-+ Nueva instrucción de T-SQL para administración de paquetes en SQL Server 2017
++ Métodos recomendados para administrar paquetes de R (y paquetes Python)
++ Cambios en la administración de paquetes entre SQL Server 2016 y de 2017
 
 **Se aplica a:** servicios de aprendizaje de automático de SQL Server 2016 R Services, SQL Server de 2017
 
-## <a name="differences-in-package-management-between-sql-server-2016-and-sql-server-2017"></a>Diferencias en la administración de paquetes entre SQL Server 2016 y SQL Server 2017
+## <a name="recommended-methods-for-package-management"></a>Métodos recomendados para la administración de paquetes
 
-En **SQL Server 2017**, puede habilitar la administración de paquetes en el nivel de instancia y administrar permisos de usuario para agregar o usar paquetes en el nivel de base de datos.
+En SQL Server 2016 y 2017 de SQL Server, un administrador del equipo puede instalar paquetes para cada instancia donde se ha habilitado el aprendizaje automático. 
 
-Esto requiere que el Administrador de base de datos habilite la característica de administración de paquetes mediante la ejecución de un script que crea los objetos de base de datos necesarios. Para obtener más información, consulte [cómo habilitar la administración de paquetes de R](r-package-how-to-enable-or-disable.md).
+Los paquetes se instalan en el sistema de archivos mediante las bibliotecas de instancia y no puede compartirse en todas las instancias. Actualmente, esta es el método recomendado para SQL Server 2016 y 2017 de SQL Server.
 
-En **SQL Server 2016**, un administrador debe instalar paquetes de R en la biblioteca de R asociada a la instancia. Todos los usuarios ejecutar código R en la instancia Utilice estos paquetes. Código de R que se ejecuta en SQL server no puede utilizar paquetes instalados en bibliotecas de usuario. Sin embargo, el administrador puede conceder individuales a los usuarios la capacidad para ejecutar scripts de R en una base de datos.
++ [Instalar paquetes de R adicionales en SQL Server](install-additional-r-packages-on-sql-server.md)
++ [Determinación de los paquetes instalados en SQL Server](determine-which-packages-are-installed-on-sql-server.md)
 
-**Resumen de las diferencias y ventajas**
+Además, si tiene **dbo** pertenencia a una función en una instancia de SQL Server donde se ha habilitado el aprendizaje automático, puede instalar paquetes de R desde un cliente remoto, mediante el uso de nuevas funciones de RevoScaleR.
 
-+ Si está utilizando servicios de aprendizaje de máquina en SQL Server 2017, puede administrar e instalar paquetes de R mediante el método tradicional, basándose en las herramientas de R, o mediante el uso de las instrucciones de T-SQL y nuevos roles de base de datos.
++ [Nuevas funciones de R para la instalación del paquete](#bkmk_remoteInstall)
 
-+ Se recomienda que el último método, porque proporciona un control más minucioso de los administradores, junto con más libertad para los usuarios. Por ejemplo, los usuarios pueden instalar sus propios paquetes, ya sea mediante un procedimiento almacenado o a través de código de R y los paquetes de recurso compartido con otras personas. 
+### <a name="installation-on-servers-with-no-internet-access"></a>Instalación en servidores sin acceso a Internet
 
-    Dado que los paquetes se pueden alcanzar a una base de datos y cada usuario obtenga un espacio aislado de paquete aislado, es más fácil instalar diferentes versiones del mismo paquete de R. También es posible puede copiar o mover los usuarios y sus paquetes entre las bases de datos. 
+Para que sea más fácil de determinar las versiones necesarias de paquete de R y proporcionar todas las dependencias del paquete, puede usar [miniCRAN](https://mran.microsoft.com/package/miniCRAN). Este paquete de R toma una lista de los paquetes de destino y crea un repositorio local que contiene los paquetes de destino junto con todas sus dependencias, en formato comprimido. A continuación, puede copie en el servidor sin conexión, o compartir el repositorio entre varias instancias.
 
-+ Uso de la característica de administración de paquetes en SQL Server hace que las operaciones de copia de seguridad y restauración mucho más fácil. Cuando se migra la base de datos de trabajo a un nuevo servidor, puede usar la función de sincronización de paquete para leer una lista de todos los paquetes e instalarlos en una base de datos en el nuevo servidor.
+Para obtener más información, consulte [crear un repositorio de paquete local mediante miniCRAN](create-a-local-package-repository-using-minicran.md).
 
-+ Le resultará más cómodo instalar paquetes de R como administrador en el equipo, mediante las herramientas tradicionales de R, si es la única persona que utiliza el servidor para trabajos de aprendizaje de máquina.
+### <a name="python-packages"></a>Paquetes de Python
 
-+ Si usas SQL Server 2016 R Services, debe seguir instalar paquetes de R usados por la instancia con herramientas de R > Asegúrese de usar la biblioteca de R asociada a la instancia.
+Instalación de nuevos paquetes de Python sigue las mismas directrices: 
 
-En las secciones siguientes proporcionan más detalles sobre cómo la administración de paquetes realiza utilizando estas dos opciones.
++ Revisar los paquetes de Python de antemano para determinar la compatibilidad con la versión actual de Python
++ Evaluar la adecuación de paquete de Python para un entorno de SQL Server protegido
++ Utilice las herramientas Python para instalar paquetes como un administrador
++ Instalar los paquetes que se deben ejecutar en el contexto de SQL Server sólo en la biblioteca de la instancia. 
++ Si utiliza varios entornos para pruebas, producción, etc., asegúrese de que está instalada la misma versión del paquete de Python en la biblioteca de la instancia.
 
-## <a name="r-package-management-using-t-sql"></a>Administración de paquetes de R mediante T-SQL
+Para obtener pasos de instalación, consulte [instalar nuevos paquetes de Python en SQL Server](../python/install-additional-python-packages-on-sql-server.md)
 
-SQL Server 2017 incluye nuevas instrucciones de T-SQL que ofrecen lo DBA más control sobre los paquetes de R en el nivel de base de datos. Al mismo tiempo, el DBA puede permitir que los usuarios la capacidad para instalar los paquetes que necesitan y compartan con otras personas.
+## <a name="features-for-package-management-in-sql-server-2016-and-sql-server-2017"></a>Características de administración de paquetes en SQL Server 2016 y SQL Server 2017
 
-Si necesita compartir paquetes con otros usuarios, o si necesitan varias personas ejecutar trabajos de aprendizaje de máquina en el servidor, se recomienda habilitar la administración de paquetes, asignar a usuarios a roles de base de datos y cargar los paquetes para que los usuarios puedan compartirlos.
+SQL Server 2017 agrega algunas características nuevas para admitir la administración sea más fácil de paquetes de R (y Python) por los administradores de base de datos. Estas características nuevas incluyen:
+
++ La capacidad para instalar o administrar las bibliotecas de paquete mediante T-SQL
++ Administración de permisos de usuario en el nivel de base de datos a través de roles de base de datos. 
+
+En versiones futuras, estas características se espera que proporcione el método principal para la administración de paquetes por los administradores de base de datos y facilitar a los científicos de datos instalar las bibliotecas que necesitan.
+
+En aproximadamente al mismo tiempo, Microsoft R Server y servidor de aprendizaje de máquina agregan nuevas funciones de R para que resulten más fáciles de instalar y compartir los paquetes en un contexto de proceso de SQL Server. Estas funciones funcionan independientemente de las características de SQL Server en función de T-SQL y están diseñadas para ejecutarse desde un cliente remoto de R.
+
+Esta sección proporciona información general de estas características.
+
+### <a name="bkmk_remoteInstall"></a>Nuevas funciones de RevoScaleR para la instalación del paquete 
+
+Los usuarios con una versión reciente de R Server o servidor de aprendizaje de máquina también pueden usar nuevas funciones en [ **RevoScaleR** ](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) para instalar paquetes en una instancia especificada como el contexto de proceso de SQL Server.
+
++ Los científicos de datos pueden instalar paquetes de R necesarios en SQL Server sin necesidad de acceso directo en el equipo de SQL Server. Sin embargo, el usuario debe ser miembro del propietario de base de datos (**dbo**) rol.
+
++ El usuario puede compartir paquetes con otros usuarios, mediante la instalación de paquetes con ámbito compartido. Otros usuarios autorizados de la misma base de datos de SQL Server pueden tener acceso al paquete.
+
++ Los usuarios pueden instalar paquetes privados que no son visibles para otros usuarios, crear un espacio aislado privado paquetes de R.
+
++ Sincronización de paquetes permite fácilmente copias de seguridad y restauración de paquetes
+
+#### <a name="package-installation-functions"></a>Funciones de instalación de paquete
+
+Se proporcionan las siguientes funciones de administración de paquetes en RevoScaleR, para la instalación y eliminación de paquetes en un contexto de proceso especificado:
+
+-   [rxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages): buscar información acerca de los paquetes instalados en el contexto de proceso especificado.
+
+-   [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages): instalar paquetes en un contexto de proceso, ya sea desde un repositorio especificado o leyendo guardados localmente zip paquetes.
+
+-   [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages): quitar los paquetes instalados en un contexto de proceso.
+
+-   [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage): obtener la ruta de acceso para uno o varios paquetes en el contexto de proceso especificado.
+
+-   [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages): copia de una biblioteca de paquetes entre el sistema de archivos y bases de datos en los contextos de proceso especificado.
+
+-   [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths): obtener la ruta de acceso de búsqueda para los árboles de biblioteca para los paquetes mientras se ejecuta dentro de SQL Server.
+
+Para usar estas funciones, conéctese a una instancia de SQL Server que tiene los permisos necesarios, con un contexto de proceso de SQL Server. 
+
+> [!IMPORTANT]
+> Las credenciales que use en la conexión de determinan si se puede completar la operación en el servidor.
+
+Estas funciones de instalación de paquete comprobación las dependencias y asegúrese de que se pueden instalar todos los paquetes relacionados con SQL Server, igual que la instalación del paquete de R en el contexto de proceso local. La función que desinstala los paquetes también calcula las dependencias y se asegura de que se quiten los paquetes que otros paquetes de SQL Server ya no usan, con el objetivo de liberar recursos.
+
+Estas nuevas funciones se incluyen en la versión de RevoScaleR que se instala en SQL Server 2017. También puede obtener estas funciones [actualizar la instancia de SQL Server](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md) para utilizar una versión reciente de [Microsoft R Server o servidor de aprendizaje de máquina](https://docs.microsoft.com/machine-learning-server/rebranding-microsoft-r-server). Requiere la versión 9.0.1 o una versión posterior.
+
+#### <a name="package-synchronization-functions"></a>Funciones de sincronización de paquete
+
+Sincronización de paquetes es una característica nueva para los paquetes de R solo. El motor de base de datos realiza un seguimiento de los paquetes que usan un propietario específico y un grupo y pueden escribir estos paquetes en el sistema de archivos si es necesario. Normalmente se usaría sincronización de paquetes en estos escenarios:
+
++ Desea mover los paquetes de R entre instancias de SQL Server.
++ Debe volver a instalar los paquetes para un usuario específico o grupo después de restaura una base de datos.
+
+Para obtener más información acerca de cómo habilitar y usar esta característica, consulte [sincronización de paquetes de R para SQL Server](package-install-uninstall-and-sync.md).
+
+### <a name="package-management-using-t-sql"></a>Administración de paquetes mediante T-SQL
+
+SQL Server 2017 agrega las nuevas instrucciones T-SQL para proporcionar a lo DBA más control sobre los paquetes de R en el nivel de base de datos. El DBA no debería tener que aprender a usar R o herramientas de Python, pero en su lugar, debe ser capaz de ofrecer a los usuarios de R o Python la capacidad para instalar los paquetes que necesitan y compartan con otras personas.
+
+Esta característica está diseñada para facilitar la colaboración y la versión de la administración en entornos multiusuario: por ejemplo:
+
++ Desea compartir los paquetes que han desarrollado con otras personas de su equipo.
++ Los analistas varios están trabajando en la misma base de datos y necesitan usar diferentes versiones del mismo paquete.
++ Desea mover los paquetes y sus permisos a la vez que se mueve una base de datos o al realizar la copia de seguridad y las operaciones de restauración.
 
 Administración de paquetes en SQL Server 2017 se basa en estos nuevos objetos de base de datos y características:
 
-+ Nuevos roles de base de datos, para la administración de uso y acceso al paquete
-+ Ámbito de paquete para paquetes privados e independientes compartido
-+ Declaración de crear una biblioteca externa, de carga nuevas bibliotecas de código en el servidor
-+ Contexto de proceso de nuevas funciones de RevoScaleR para admitir la instalación de paquetes en un servidor SQL Server R
-+ Sincronización de paquetes, para garantizar una copia de seguridad y restauración de paquetes
++ [Nuevos roles de base de datos](#bkmk_roles), para la administración de acceso del paquete y usar
++ [CREAR una biblioteca externa](#bkmk_createExternalLibrary) instrucción para cargar bibliotecas de paquete en el servidor
 
-### <a name="database-roles-for-package-management"></a>Roles de base de datos para la administración de paquetes
+El uso de estas características requiere cierta preparación adicional en el nivel de base de datos y la instancia: 
 
-El Administrador de base de datos debe crear los roles utilizados para la administración de paquetes mediante la ejecución de una secuencia de comandos como se describe aquí: [habilitar o deshabilitar la administración de paquetes](r-package-how-to-enable-or-disable.md).
++  El Administrador de base de datos debe habilitar explícitamente la característica de administración de paquetes mediante la ejecución de un script que crea los objetos de base de datos necesarios. Para obtener más información, consulte [cómo habilitar la administración de paquetes de R](r-package-how-to-enable-or-disable.md).
 
-Después de ejecutar este script, debería ver los nuevos roles de base de datos siguientes:
++ Los usuarios deben asignarse a los roles, en un nivel de cada base de datos. Estas funciones dan a los usuarios la capacidad para instalar paquetes compartidos o privados.
 
-+ `rpkgs-users`: Los miembros de este rol pueden utilizar cualquier paquete compartido que fue instalado por otro `rpkgs-shared` miembro del rol.
++ Bibliotecas de paquete se pueden instalar con la nueva instrucción de T-SQL, crear una biblioteca externa. Sin embargo, todas las dependencias de paquete deben preparadas de antemano y se instala como parte de un solo archivo comprimido.
 
-+ `rpkgs-private`: Los miembros de este rol tienen acceso a los paquetes compartidos, con los mismos permisos que los miembros de los `rpkgs-users` rol. Miembros de este rol también pueden instalar, quitar y usar paquetes de forma privada con ámbito.
+> [!NOTE]
+> Aunque las características descritas aquí son totalmente funcionales en este momento, las versiones futuras contienen mejoras adicionales para que sea más fácil para preparar las bibliotecas de paquete y para administrar las dependencias. Si está familiarizado con la instalación del paquete de R, se recomienda que intenta utilizar las herramientas de R por ahora.
 
-+ `rpkgs-shared`: Los miembros de este rol tienen los mismos permisos que los miembros de los `rpkgs-private` rol. Además, los miembros de este rol pueden instalar o quitar paquetes compartidos.
-
-+ `db_owner`: Los miembros de este rol tienen los mismos permisos que los miembros de los `rpkgs-shared` rol. Además, los miembros de este rol pueden **conceder** otros usuarios la posibilidad de instalar o quitar ambos compartida y paquetes privados.
-
-El DBA agrega los usuarios a los roles en una base de cada base de datos, para controlar la capacidad del usuario para instalar paquetes.
-
-### <a name="package-scope"></a>Ámbito del paquete
-
-Las nuevas características de administración del paquete distinguen paquetes según si son privados, o puede ser compartidos por varios usuarios.
-
-+ **Ámbito compartido**
-
-    *Ámbito compartido* significa que los usuarios que le ha concedido permiso a la función de ámbito compartido (`rpkgs-shared`) pueden instalar y desinstalar paquetes a una base de datos especificada. Un paquete que se instala en una biblioteca de ámbito compartido lo pueden usar otros usuarios de la base de datos en SQL Server, siempre y cuando estos usuarios tengan permiso para usar paquetes de R instalados.
-
-+ **Ámbito privado**
-
-    *Ámbito privado* significa que los usuarios que se han proporcionado con pertenencia en el rol de ámbito privado (`rpkgs-private`) puede instalar o desinstalar paquetes en una ubicación de biblioteca privada definida por el usuario. Por lo tanto, los paquetes instalados en el ámbito privado solo los puede usar el usuario que los instaló. Dicho de otra manera, un usuario de SQL Server no puede usar los paquetes privados que instaló otro usuario.
-
-Estos modelos de ámbito *compartido* y *privado* se pueden combinar para desarrollar sistemas seguros personalizados para implementar y administrar paquetes en SQL Server.
-
-Por ejemplo, con el ámbito compartido, el jefe o el administrador de un grupo de científicos de datos podría recibir permiso para instalar paquetes, que luego podrían usar el resto de los usuarios o de los científicos de datos en la misma instancia de SQL Server.
-
-En otro escenario se podría necesitar más aislamiento entre los usuarios o se tendrían que usar diferentes versiones de paquetes. En ese caso, el ámbito privado se puede usar para asignar permisos a los científicos de datos, que se encargarían de instalar y usar únicamente los paquetes que necesitan. Dado que los paquetes se instalan para cada usuario, los paquetes que instale un usuario no afectarán al trabajo del resto de los usuarios que usan la misma base de datos de SQL Server.
-
-### <a name="create-external-library"></a>CREAR BIBLIOTECA EXTERNA
+#### <a name="bkmk_createExternalLibrary"></a>CREAR BIBLIOTECA EXTERNA 
 
 El [crear biblioteca externa](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) es una nueva instrucción de T-SQL introducida en SQL Server 2017 para ayudar al administrador de base de datos trabajar con paquetes sin necesidad de herramientas de usuario R. 
 
@@ -133,68 +175,26 @@ Después de que se ha cargado la biblioteca externa en el servidor, debe instala
 
 + Conectarse a SQL Server desde un cliente remoto de R y ejecute [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) en el contexto de proceso de SQL Server. De nuevo, debe tener permisos para instalar paquetes en ámbito privado o compartido para hacerlo.
 
-Para ver ejemplos de instalación mediante R y T-SQL, consulte [instalar paquetes adicionales en SQL Server](install-additional-r-packages-on-sql-server.md).
+Para asegurarse de que se proporcionan todas las dependencias de paquete, se recomienda usar [miniCRAN](create-a-local-package-repository-using-minicran.md) para crear un repositorio local. A continuación, puede usar ese archivo comprimido para instalar el paquete de destino y sus dependencias.
 
-### <a name="new-r-functions-for-package-installation"></a>Nuevas funciones de R para la instalación del paquete
+#### <a name="bkmk_roles"></a>Roles de base de datos de administración de paquetes 
 
-Después de que se han habilitado los roles de base de datos de administración de paquetes, los usuarios también pueden usar nuevas funciones en [ **RevoScaleR** ](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) para instalar paquetes en la instancia especificada como el contexto de proceso de SQL Server.
+Los nuevos roles proporcionados en SQL Server para la administración de paquetes no se incluyen de forma predeterminada, incluso en casos donde se ha instalado y habilitado aprendizaje automático. Debe agregar los roles mediante la ejecución de una secuencia de comandos como se describe aquí: [habilitar o deshabilitar la administración de paquetes](r-package-how-to-enable-or-disable.md).
 
-+ Los científicos de datos pueden instalar paquetes de R necesarios en SQL Server sin necesidad de acceso directo en el equipo de SQL Server.
+Después de ejecutar este script, debería ver los nuevos roles de base de datos siguientes:
 
-+ Un usuario puede instalar un paquete y compartir con otros usuarios, al instalar el paquete con ámbito compartido. A continuación, otros usuarios autorizados de la misma base de datos de SQL Server pueden tener acceso al paquete.
++ `rpkgs-users`: Los miembros de este rol pueden utilizar cualquier paquete compartido que fue instalado por otro `rpkgs-shared` miembro del rol.
 
-+ Los usuarios pueden instalar paquetes privados que no son visibles para otros usuarios, crear un espacio aislado privado paquetes de R.
++ `rpkgs-private`: Los miembros de este rol tienen acceso a los paquetes compartidos, con los mismos permisos que los miembros de los `rpkgs-users` rol. Miembros de este rol también pueden instalar, quitar y usar paquetes de forma privada con ámbito.
 
-Se proporcionan las siguientes funciones de administración de paquetes en RevoScaleR, para la instalación y eliminación de paquetes en un contexto de proceso especificado:
++ `rpkgs-shared`: Los miembros de este rol tienen los mismos permisos que los miembros de los `rpkgs-private` rol. Además, los miembros de este rol pueden instalar o quitar paquetes compartidos.
 
--   [rxInstalledPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstalledpackages): buscar información acerca de los paquetes instalados en el contexto de proceso especificado.
++ `db_owner`: Los miembros de este rol tienen los mismos permisos que los miembros de los `rpkgs-shared` rol. Además, los miembros de este rol pueden **conceder** otros usuarios la posibilidad de instalar o quitar ambos compartida y paquetes privados.
 
--   [rxInstallPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstallpackages): instalar paquetes en un contexto de proceso, ya sea desde un repositorio especificado o leyendo guardados localmente zip paquetes.
+El DBA puede agregar usuarios a funciones en una base de cada base de datos.
 
--   [rxRemovePackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxremovepackages): quitar los paquetes instalados en un contexto de proceso.
 
--   [rxFindPackage](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxfindpackage): obtener la ruta de acceso para uno o varios paquetes en el contexto de proceso especificado.
-
--   [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages): copia de una biblioteca de paquetes entre el sistema de archivos y bases de datos en los contextos de proceso especificado.
-
--   [rxSqlLibPaths](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqllibpaths): obtener la ruta de acceso de búsqueda para los árboles de biblioteca para los paquetes mientras se ejecuta dentro de SQL Server.
-
-Para usar estas funciones, conéctese a una instancia de SQL Server que tiene los permisos necesarios, con un contexto de proceso de SQL Server. Cuando se conecta, las credenciales de determinan si se puede completar la operación en el servidor.
-
-Las funciones de instalación de paquetes comprueban si hay dependencias y se aseguran de que se puedan instalar todos los paquetes relacionados en SQL Server, como la instalación de paquetes de R en el contexto de proceso local. La función que desinstala los paquetes también calcula las dependencias y se asegura de que se quiten los paquetes que otros paquetes de SQL Server ya no usan, con el objetivo de liberar recursos.
-
-> [!NOTE]
-> 
-> Estas nuevas funciones se incluyen de forma predeterminada en SQL Server 2017. Puede actualizar su versión de RevoScaleR para obtener estas funciones mediante la actualización de la instancia para que utilice una versión posterior de Microsoft R Server, como Microsoft R Server 9.0.1.
-> 
-> Para obtener más información, consulte [utilizando SqlBindR.exe al actualizador de](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
-
-### <a name="synchronization-of-r-package-libraries"></a>Sincronización de las bibliotecas de paquete de R
-
-La versión 2.0 de CTP de SQL Server 2017 (y la versión de abril de 2017 de Microsoft R Server) incluye nuevas funciones de R para *sincronizar paquetes*.
-
-Sincronización de paquete significa que el motor de base de datos realiza un seguimiento de los paquetes que usan un propietario específico y un grupo y pueden escribir estos paquetes en el sistema de archivos si es necesario. Puede utilizar la sincronización de paquete en estos escenarios:
-
-+ Desea mover los paquetes de R entre instancias de SQL Server.
-+ Debe volver a instalar los paquetes para un usuario específico o grupo después de restaura una base de datos.
-
-Para obtener más información acerca de cómo habilitar y usar esta característica, consulte [sincronización de paquetes de R para SQL Server](package-install-uninstall-and-sync.md).
-
-## <a name="r-package-management-using-traditional-r-tools"></a>Administración de paquetes de R mediante herramientas tradicionales de R
-
-El método tradicional de la administración de paquetes de R en una instancia es instalar y enumerar paquetes mediante comandos y herramientas de R. 
-
-+ Esta opción puede ser la única opción si está utilizando una versión preliminar de SQL Server 2016.  
-+ Esta opción también puede ser conveniente si es el único usuario de paquetes de R y tiene acceso administrativo al servidor.
-+ Para facilitar la administración de las versiones de paquetes de R, puede usar [miniCRAN](create-a-local-package-repository-using-minicran.md) para crear un repositorio local y compartirlo entre las instancias.
-
-Para obtener más información, vea estos artículos:
-
-+ [Instalar paquetes de R adicionales en SQL Server](install-additional-r-packages-on-sql-server.md)
-+ [Determinación de los paquetes instalados en SQL Server](determine-which-packages-are-installed-on-sql-server.md)
-
-Para SQL Server 2017, recomendamos que utilice crear biblioteca externa y los roles de base de datos proporciona para administrar usuarios y sus paquetes de R.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Cómo habilitar o deshabilitar la administración de paquetes de R](../r/r-package-how-to-enable-or-disable.md)
+[Administración de paquetes para el aprendizaje automático de SQL Server](r-package-management-for-sql-server-r-services.md)

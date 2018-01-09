@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b267fa74daf5c8ea83501eb3daadd5b84dc9cb7f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8a5fbba7e01d56f77d376f41ac259744b1a4344d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Algoritmo de regresión logística de Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Regresión logística es una técnica estadística conocida que se usa para modelar los resultados binarios.  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="viewing-a-logistic-regression-model"></a>Ver un modelo de regresión logística  
  Para explorar el modelo, puede usar el Visor de redes neuronales de Microsoft o el Visor de árbol de contenido genérico de Microsoft.  
   
- Cuando se ve el modelo con el Visor de redes neuronales de Microsoft, Analysis Services muestra los factores que contribuyen a un resultado determinado, clasificados por su importancia. Puede elegir un atributo y los valores que desea comparar. Para obtener más información, vea [Examinar un modelo usando el Visor de redes neuronales de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md).  
+ Cuando se ve el modelo con el Visor de redes neuronales de Microsoft, Analysis Services muestra los factores que contribuyen a un resultado determinado, clasificados por su importancia. Puede elegir un atributo y los valores que desea comparar. Para más información, vea [Examinar un modelo usando el Visor de redes neuronales de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
  Si desea obtener más información, puede examinar los detalles del modelo con el Visor de árbol de contenido genérico de Microsoft. El contenido de un modelo de regresión logística incluye un nodo marginal que muestra todas las entradas usadas para el modelo y las subredes de los atributos de predicción. Para obtener más información, vea [Contenido del modelo de minería de datos para los modelos de regresión logística &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
   
@@ -84,7 +82,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Admite el uso de modelos de minería de datos OLAP.  
   
--   No admite el uso del Lenguaje de marcado de modelos de predicción (PMML) para crear modelos de minería de datos.  
+-   No se admite el uso del Lenguaje de marcado de modelos de predicción (PMML) para crear modelos de minería de datos.  
   
 ## <a name="see-also"></a>Vea también  
  [Contenido del modelo de minería de datos para los modelos de regresión logística &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   

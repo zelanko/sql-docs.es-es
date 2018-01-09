@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: PERIODSTODATE
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 82a0a00807338927a20a11beff3c0514e1a989e8
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b24e57d8f682e21a6d561a4e3a426da85f5ceb17
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="periodstodate-mdx"></a>PeriodsToDate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
  *Expresión_miembro*  
  Expresión MDX válida que devuelve un miembro.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Dentro del ámbito del nivel especificado, el **PeriodsToDate** función devuelve el conjunto de periodos del mismo nivel que el miembro especificado, empezando por el primer período y finalizando en un miembro especificado.  
   
 -   Si se especifica un nivel, se deduce el miembro actual de la jerarquía *jerarquía*. **CurrentMember**, donde *jerarquía*es la jerarquía del nivel especificado.  
@@ -95,7 +95,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [TopCount &#40; MDX &#41;](../mdx/topcount-mdx.md)   
  [Referencia de funciones MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   

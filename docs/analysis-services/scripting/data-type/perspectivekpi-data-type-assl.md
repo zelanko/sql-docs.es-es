@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: PerspectiveKpi Data Type
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1ddf660518a2976b5255e8355621b3c89f324817
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cb52f4a963d39db3b3b4ac93f00f61615e5235d0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="perspectivekpi-data-type-assl"></a>Tipo de datos PerspectiveKpi (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define un tipo de datos primitivo que representa información sobre un indicador clave de rendimiento (KPI) en un [perspectiva](../../../analysis-services/scripting/objects/perspective-element-assl.md) elemento.  
@@ -46,16 +44,16 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>Características del tipo de datos  
   
-|Característica|Descripción|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Tipos de datos base|Ninguno|  
-|Tipos de datos derivados|Ninguno|  
+|Tipos de datos básicos|None|  
+|Tipos de datos derivados|None|  
   
 ## <a name="data-type-relationships"></a>Relaciones entre tipos de datos  
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elementos primarios|Ninguno|  
+|Elementos primarios|None|  
 |Elementos secundarios|[Anotaciones](../../../analysis-services/scripting/collections/annotations-element-assl.md), [KpiID](../../../analysis-services/scripting/properties/kpiid-element-assl.md)|  
 |Elementos derivados|[KPI](../../../analysis-services/scripting/objects/kpi-element-assl.md) ([KPI](../../../analysis-services/scripting/collections/kpis-element-assl.md) colección de [perspectiva](../../../analysis-services/scripting/objects/perspective-element-assl.md))|  
   

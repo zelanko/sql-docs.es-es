@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 01c75144c964c80a224401cd7b5f81939f2714e9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4b2c46d037112cb79502e8d0ce56a5c9c319ec09
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>Atributos CSDLBI para el diseño de informes
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]En esta sección se describe los atributos de las extensiones de CSDL para la creación de modelos tabulares que afectan a [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] diseño de consultas.  
@@ -32,10 +30,10 @@ ms.lasthandoff: 12/08/2017
 ## <a name="model-attributes"></a>Model Attributes  
  Estos atributos se definen en un subelemento de un elemento [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx) de CSDL.  
   
-|Nombre del atributo|Tipo de datos|Descripción|  
+|Nombre del atributo|Tipo de datos|Description|  
 |--------------------|---------------|-----------------|  
 |Culture|Texto|Indica la referencia cultural usada para los formatos de moneda. Si se omite, se usa EN-US.|  
-|IsRightToLeft|Booleano|Indica si los valores de los campos de texto se deben leer derecha a izquierda de forma predeterminada.|  
+|IsRightToLeft|Boolean|Indica si los valores de los campos de texto se deben leer derecha a izquierda de forma predeterminada.|  
   
 ## <a name="entity-attributes"></a>Atributos de la entidad  
  Estos atributos se definen en un subelemento de un elemento EntitySet o EntityType de CSDL.  

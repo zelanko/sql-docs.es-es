@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 512e5321c0be221e06988dfc1991409a044166bb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 82cafa346d2347afa9022a61d9ffce018d9d0dd8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="partitions---write-enabled-partitions"></a>Particiones: particiones habilitadas para escritura
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Los datos de un cubo son normalmente de solo lectura. Con todo, en ciertos casos, puede interesarle habilitar una partición para escritura. Las particiones habilitadas para escritura se usan para que los usuarios corporativos puedan explorar escenarios si cambian los valores de las celdas y analizan los efectos de los cambios en los datos del cubo. Si habilita una partición para escritura, las aplicaciones cliente podrán registrar los cambios en los datos de la partición. Estos cambios, conocidos como datos de reescritura, se almacenan en una tabla independiente y no sobrescriben los datos existentes en un grupo de medida. Sin embargo, se incorporan a los resultados de la consulta como si formasen parte de los datos del cubo.  
@@ -62,7 +60,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="security"></a>Seguridad  
  Los usuarios corporativos solo podrán registrar los cambios en la tabla de reescritura de un cubo si pertenecen a un rol que tiene permiso de lectura y escritura para las celdas del cubo. En cada rol, puede controlar las celdas del cubo que pueden o no actualizarse. Para obtener más información, vea [conceder cubo o modelo permisos &#40; Analysis Services &#41; ](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Dimensiones habilitadas para escritura](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)   
  [Las agregaciones y diseños de agregaciones](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   

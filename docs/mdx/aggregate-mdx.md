@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: AGGREGATE
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 6e0905531658202c86ef5deac9e20d4db36fd9d6
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9ae3eb300df4b0dccd02e6e3ec7034feaa8913e7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,14 +45,14 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
  *Numeric_expression*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si se especifica un conjunto de tuplas vacías o un conjunto vacío, esta función devuelve un valor vacío.  
   
  La tabla siguiente describe cómo el **agregado** función se comporta con distintas funciones de agregación.  
   
 |Operador de agregación|Resultado|  
 |--------------------------|------------|  
-|Sum|Devuelve la suma de valores del conjunto.|  
+|SUM|Devuelve la suma de valores del conjunto.|  
 |Count|Devuelve el recuento de valores del conjunto.|  
 |Max|Devuelve el valor máximo del conjunto.|  
 |Min|Devuelve el valor mínimo del conjunto.|  
@@ -132,7 +132,7 @@ WHERE ([Geography].[State-Province].x,
     [Measures].[Declining Reseller Sales])  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [PeriodsToDate &#40; MDX &#41;](../mdx/periodstodate-mdx.md)   
  [Elementos secundarios &#40; MDX &#41;](../mdx/children-mdx.md)   
  [Hierarchize &#40; MDX &#41;](../mdx/hierarchize-mdx.md)   

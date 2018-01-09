@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8d32038273e727db3b47125b26ad8293ce088672
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2e94847ca10923bba05e228f36a25e5caa8c2027
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -177,7 +177,7 @@ CLAVE ASIMÉTRICA *asym_key_name*
   
  Especifica el nombre de una clave asimétrica a la que asociar este inicio de sesión. Esta clave debe existir en la base de datos maestra.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  En las contraseñas se distingue entre mayúsculas y minúsculas.  
   
  La aplicación previa del algoritmo hash a las contraseñas solo se admite en la creación de inicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -196,6 +196,8 @@ CLAVE ASIMÉTRICA *asym_key_name*
  Para obtener un script para transferir inicios de sesión, vea [Cómo transferir los inicios de sesión y las contraseñas entre instancias de SQL Server 2005 y SQL Server 2008](http://support.microsoft.com/kb/918992).  
   
  Al crear un inicio de sesión automáticamente se habilita el nuevo inicio de sesión y se concede al mismo el permiso de **CONNECT SQL** de nivel servidor.  
+ 
+ El servidor [modo de autenticación](../../relational-databases/security/choose-an-authentication-mode.md) debe coincidir con el tipo de inicio de sesión para permitir el acceso.
   
  Para más información acerca de cómo diseñar un sistema de permisos, consulte [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
@@ -212,7 +214,7 @@ CLAVE ASIMÉTRICA *asym_key_name*
   
  Para obtener más información acerca de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] inicios de sesión, vea [administrar bases de datos e inicios de sesión en Windows Azure SQL Database](http://msdn.microsoft.com/library/ee336235.aspx).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requiere **ALTER ANY LOGIN** permiso en el servidor o la pertenencia a la **securityadmin** rol fijo de servidor.  
   
  En [!INCLUDE[ssSDS](../../includes/sssds-md.md)], solo pueden crear nuevos inicios de sesión el inicio de sesión principal de nivel servidor (creado por el proceso de aprovisionamiento) o los miembros del rol de base de datos de `loginmanager` en la base de datos maestra.  
@@ -335,7 +337,7 @@ CREATE LOGIN [Contoso\Mary] FROM WINDOWS;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Introducción a los permisos de los motores de bases de datos](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Directiva de contraseñas](../../relational-databases/security/password-policy.md)   

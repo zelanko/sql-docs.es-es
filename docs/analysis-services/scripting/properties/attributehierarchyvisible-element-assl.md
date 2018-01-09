@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: AttributeHierarchyVisible Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bc859f442bbda973bbc215c68c5e2da7b6fbd49f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4a2f17b1949df1acc232ae4103700a6b393cbebd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attributehierarchyvisible-element-assl"></a>Elemento AttributeHierarchyVisible (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Determina si la jerarquía de atributo es visible para las aplicaciones cliente.  
@@ -45,20 +43,20 @@ ms.lasthandoff: 12/08/2017
 </DimensionAttribute>  
 ```  
   
-## <a name="element-characteristics"></a>Características de los elementos  
+## <a name="element-characteristics"></a>Características del elemento  
   
-|Característica|Descripción|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|Booleano|  
+|Tipo y longitud de los datos|Boolean|  
 |Valor predeterminado|**True**|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elemento primario|[CubeAttribute](../../../analysis-services/scripting/data-type/cubeattribute-data-type-assl.md), [DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md), [PerspectiveAttribute](../../../analysis-services/scripting/data-type/perspectiveattribute-data-type-assl.md)|  
-|Elementos secundarios|Ninguno|  
+|Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Comentarios  
  El elemento **AttributeHierarchyVisible** determina si la jerarquía de atributos asociada al atributo está visible para las aplicaciones cliente. Aunque este elemento esté establecido en **False**, se puede usar la jerarquía de atributos para crear jerarquías de atributos definidas por el usuario y se puede hacer referencia a ella en instrucciones MDX (Expresiones multidimensionales).  

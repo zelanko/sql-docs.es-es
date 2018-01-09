@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: EventColumn Data Type
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e84b0f43490e5154ccfcebf6c42c3222dfe84551
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cb58ea2676265b5dcd5b67819b70020c365ec7ed
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="eventcolumn-data-type-assl"></a>Tipo de datos EventColumn (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define un tipo de datos primitivo que representa una columna de información que va a capturar para un [eventos](../../../analysis-services/scripting/objects/event-element-assl.md) elemento como parte de un [seguimiento](../../../analysis-services/scripting/objects/trace-element-assl.md) elemento.  
@@ -45,16 +43,16 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>Características del tipo de datos  
   
-|Característica|Descripción|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Tipos de datos base|Ninguno|  
-|Tipos de datos derivados|Ninguno|  
+|Tipos de datos básicos|None|  
+|Tipos de datos derivados|None|  
   
 ## <a name="data-type-relationships"></a>Relaciones entre tipos de datos  
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elementos primarios|Ninguno|  
+|Elementos primarios|None|  
 |Elementos secundarios|[ColumnID](../../../analysis-services/scripting/properties/columnid-element-eventcolumn-assl.md)|  
 |Elementos derivados|[Columna](../../../analysis-services/scripting/objects/column-element-assl.md) ([columnas](../../../analysis-services/scripting/collections/columns-element-assl.md) colección de [seguimiento](../../../analysis-services/scripting/objects/trace-element-assl.md))|  
   

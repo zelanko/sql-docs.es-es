@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7b2cfe66cc530881a848d7f3d8850c62c0af1486
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5a7e94aeb9f547220a3b3bc836e59ef81ce3bfe9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Alta disponibilidad y recuperación ante desastres en Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Planes de disponibilidad y recuperación ante desastres para [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dependen principalmente del diseño de la granja de servidores de SharePoint, el tiempo de inactividad aceptable para los diferentes componentes y las herramientas y prácticas recomendadas que implementan para la disponibilidad de SharePoint. En este tema se resumen las tecnologías y se incluyen diagramas de topología de ejemplo que hay que tener en cuenta al planear la disponibilidad y la recuperación ante desastres para una implementación de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
@@ -50,7 +47,7 @@ ms.lasthandoff: 12/08/2017
   
  ![disponibilidad de PowerPivot en 2013](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2013.png "disponibilidad de powerpivot en 2013")  
   
--   **(1)** Los servidores front-end web. Use el complemento [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 para instalar los proveedores de datos en cada servidor. Para obtener más información, vea [Instalar o desinstalar el complemento Power Pivot para SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+-   **(1)** Los servidores front-end web. Use el complemento [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 para instalar los proveedores de datos en cada servidor. Para obtener más información, vea [Instalar o desinstalar el complemento PowerPivot para SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 -   **(2)** El servicio compartido [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se ejecuta **en cada** servidor de aplicaciones y permite que la aplicación de servicio se ejecute en **varios servidores de aplicaciones**. Por tanto, si un único servidor de aplicaciones se queda sin conexión, la aplicación [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] sigue estando disponible.  
   

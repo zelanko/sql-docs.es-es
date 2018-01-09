@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: StructureColumn
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: bec1bd29c696b64b1b8bbbe2c31da593d1f1c098
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 24b7869462815e6d636572a093a332ecce6dc02c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +47,7 @@ StructureColumn('structure column name')
   
  Si es una tabla anidada, la función devuelve un valor de tabla. El valor de tabla devuelto se puede utilizar en la cláusula FROM de una instrucción sub-SELECT.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta función es polimórfica y se puede utilizar en cualquier parte de una instrucción que permita expresiones, por ejemplo en una lista de expresiones SELECT, una expresión de condición WHERE y una expresión ORDER BY.  
   
  El nombre de la columna en la estructura de minería de datos es un valor de cadena y por lo tanto, deben incluirse entre comillas simples: por ejemplo, `StructureColumn('` **columna 1**`')`. Si hay varias columnas que tienen el mismo nombre, el nombre se resuelve en el contexto de la instrucción SELECT contenedora.  
@@ -148,7 +146,7 @@ FROM MyModel.CASES
 WHERE EXISTS (SELECT * FROM Products WHERE StructureColumn('Quantity')>1)  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Extensiones de minería de datos &#40; DMX &#41; Referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funciones &#40; DMX &#41;](../dmx/functions-dmx.md)   
  [Funciones de predicción generales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  

@@ -5,12 +5,10 @@ ms.date: 06/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: 
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d86f5ce95ce359f5955e974f7f57012721c3dcb5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 73424406508608226cbf30fa0271aa747dbf9101
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="object-level-security"></a>Seguridad de nivel de objeto
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Seguridad del modelo de datos se inicia con la implementación de forma eficaz [roles](../../analysis-services/tabular-models/roles-ssas-tabular.md) y filtros de nivel de fila para definir permisos de usuario en objetos de modelo de datos y los datos. A partir de los modelos tabulares 1400, también puede definir la seguridad de nivel de objeto, que incluye seguridad de nivel de tabla y la seguridad de nivel de columna en la [objeto Roles](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md).
@@ -80,7 +78,7 @@ En este ejemplo, la propiedad metadataPermission de la clase columnPermissions p
   }
 ```
 
-## <a name="restrictions"></a>Restricciones
+## <a name="restrictions"></a>Restrictions
 
 *  No se puede establecer la seguridad de nivel de tabla para un modelo Si interrumpe la ejecución de una cadena de relación. Se genera un error en tiempo de diseño.
  Por ejemplo, si hay relaciones entre las tablas A y B y B y C, no puede proteger la tabla B. Si la tabla B está protegida, una consulta en la tabla A no puede tránsito las relaciones entre la tabla A y B y B y C. En este caso, se podría configurar una relación diferente entre las tablas A y B.

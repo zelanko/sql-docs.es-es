@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.sqlserverstudio.datasourceproperties.f1
@@ -22,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 654337a578f1852e2e2fcdb452d62bfbe46747f9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6b9db08a099e78744f89e184882d21c3d066e6c0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-data-source-properties-ssas-multidimensional"></a>Establecer propiedades de origen de datos (SSAS multidimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], un objeto de origen de datos especifica una conexión a un almacén de datos externo o la base de datos relacional que proporciona datos a un modelo multidimensional. Las propiedades del origen de datos determinan la cadena de conexión, un intervalo de tiempo de espera, el número máximo de conexiones y el nivel de aislamiento de transacciones.  
@@ -55,7 +52,7 @@ ms.lasthandoff: 12/08/2017
 |**Número máximo de conexiones**|Especifica el número máximo de conexiones permitidas por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para conectarse al origen de datos. Si varias conexiones son necesarias, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esperará hasta que una conexión esté disponible. El valor predeterminado es 10. Al restringir el número de conexiones, se garantiza que el origen de datos externo no está sobrecargado con las solicitudes de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |**Aislamiento**|Especifica el bloqueo y el comportamiento de las versiones de filas de los comandos SQL emitidos por una conexión a una base de datos relacional. Los valores válidos son ReadCommitted o Snapshot. El valor predeterminado es ReadCommitted, que especifica que los datos deben confirmarse antes de que se lean, lo que evita la lectura de datos no actualizados. La instantánea especifica que las lecturas son de una instantánea de datos no confirmados. Para más información sobre el nivel de aislamiento en SQL Server, vea [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).|  
 |**Proveedor administrado**|Si el origen de datos utiliza un proveedor administrado, muestra el nombre del proveedor administrado, como System.Data.SqlClient o System.Data.OracleClient.<br /><br /> Si el origen de datos no utiliza un proveedor administrado, la propiedad muestra una cadena vacía.<br /><br /> Esta propiedad es de solo lectura en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para cambiar el proveedor utilizado en la conexión, modifique la cadena de conexión.|  
-|**Información de suplantación**|Especifica la identidad de Windows con la que se ejecuta [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] al conectarse a un origen de datos que usa la autenticación de Windows. Las opciones incluyen el uso de un conjunto predefinido de credenciales de Windows, la cuenta de servicio, la identidad del usuario actual o una opción heredada que puede ser útil si el modelo contiene objetos de origen de datos. Para más información, vea [Establezca las opciones de suplantación &#40;SSAS - multidimensional&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md).<br /><br /> En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], la lista de valores válidos incluyen los siguientes:<br /><br /> **ImpersonateAccount** (usar un nombre de usuario y una contraseña de Windows específicos para conectarse con el origen de datos).<br /><br /> **ImpersonateServiceAccount** (usar la identidad de seguridad de la cuenta de servicio para conectarse con el origen de datos). Es el valor predeterminado.<br /><br /> **ImpersonateCurrentUser** (usar la identidad de seguridad del usuario actual para conectarse con el origen de datos). Esta opción solo es válida para las consultas de minería de datos que recuperan datos de un almacén de datos o de datos externos; no la elija para las conexiones de datos utilizadas para procesar, cargar o reescribir en una base de datos multidimensional.<br /><br /> **Inherit** o **default** (usar la configuración de suplantación de la base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contiene este objeto de origen de datos). Las propiedades de la base de datos incluyen opciones de suplantación.|  
+|**Información de suplantación**|Especifica la identidad de Windows con la que se ejecuta [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] al conectarse a un origen de datos que usa la autenticación de Windows. Las opciones incluyen el uso de un conjunto predefinido de credenciales de Windows, la cuenta de servicio, la identidad del usuario actual o una opción heredada que puede ser útil si el modelo contiene objetos de origen de datos. Para más información, vea [Establezca las opciones de suplantación &#40;SSAS - multidimensional&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md).<br /><br /> En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], la lista de valores válidos incluyen los siguientes:<br /><br /> **ImpersonateAccount** (usar un nombre de usuario y una contraseña de Windows específicos para conectarse con el origen de datos).<br /><br /> **ImpersonateServiceAccount** (usar la identidad de seguridad de la cuenta de servicio para conectarse con el origen de datos). Este es el valor predeterminado.<br /><br /> **ImpersonateCurrentUser** (usar la identidad de seguridad del usuario actual para conectarse con el origen de datos). Esta opción solo es válida para las consultas de minería de datos que recuperan datos de un almacén de datos o de datos externos; no la elija para las conexiones de datos utilizadas para procesar, cargar o reescribir en una base de datos multidimensional.<br /><br /> **Inherit** o **default** (usar la configuración de suplantación de la base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contiene este objeto de origen de datos). Las propiedades de la base de datos incluyen opciones de suplantación.|  
   
 ## <a name="see-also"></a>Vea también  
  [Orígenes de datos en modelos multidimensionales](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   

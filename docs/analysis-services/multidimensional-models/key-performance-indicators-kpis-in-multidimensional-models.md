@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 166c09d9d8b2c767767ffda7914f8d465af43829
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 396ac061fca578b06766830948001387c65b036e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Indicadores clave de rendimiento (KPI) en modelos multidimensionales
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]En la terminología empresarial, un indicador clave de rendimiento (KPI) es una medida cuantificable para calibrar el éxito empresarial.  
@@ -56,7 +53,7 @@ ms.lasthandoff: 12/08/2017
 |Término|Definición|  
 |----------|----------------|  
 |Objetivo|Expresión numérica MDX o cálculo que devuelve el valor de destino del KPI.|  
-|Value|Expresión númerica MDX que devuelve el valor real del KPI.|  
+|Valor|Expresión númerica MDX que devuelve el valor real del KPI.|  
 |Estado|Expresión MDX que representa el estado del KPI en un punto temporal específico.<br /><br /> La expresión MDX de estado debe devolver un valor normalizado entre -1 y 1. Los valores iguales o inferiores a -1 se interpretarán como "malos" o "bajos". El valor cero (0) se interpreta como "aceptable" o "medio." Los valores iguales o superiores a 1 se interpretarán como "correctos" o "altos".<br /><br /> Opcionalmente puede devolverse un número ilimitado de valores intermedios que se pueden utilizar para mostrar gran cantidad de estados adicionales, si la aplicación cliente lo admite.|  
 |Tendencia|Expresión MDX que evalúa el valor del KPI con el paso del tiempo. La tendencia puede ser cualquier criterio basado en el tiempo que sea útil en determinado contexto empresarial.<br /><br /> La expresión MDX de tendencia permite a un usuario corporativo determinar si el KPI mejora o empeora a lo largo del tiempo.|  
 |Indicador de estado|Elemento visual que proporciona una indicación rápida del estado de un KPI. La visualización del elemento se determina con el valor de la expresión MDX que evalúa el estado.|  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 09c8d0a538d539c54e304d220566345a96a5e2f1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cd17ad086169a53673d7c9ba48f79058dd87769d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>Códigos de tipo de objeto de Analysis Services usados en seguimientos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Esta página enumera el tipo de objeto (un número de seis dígitos) de cada objeto en un modelo de datos de Analysis Services. Estos códigos aparecen en registros de seguimiento y se usan para identificar el tipo de objeto asociado con un bloqueo concreto. Por ejemplo, un tiempo de espera de bloqueo en una base de datos indicará el tipo de objeto 100002, que es el tipo de objeto Database.  
@@ -33,15 +33,15 @@ ms.lasthandoff: 12/08/2017
   
 |Tipo de objeto|Nombre del objeto|  
 |-----------------|-----------------|  
-|100000|Server|  
-|100001|Command|  
+|100000|Servidor|  
+|100001|Comando|  
 |100002|Base de datos|  
 |100003|DataSource|  
 |100004|DatabasePermission|  
 |100005|Rol|  
 |100006|Dimensión|  
 |100007|DimensionAttribute|  
-|100008|Jerarquía|  
+|100008|Hierarchy|  
 |100009|Nivel|  
 |100010|Cube|  
 |100011|CubePermission|  
@@ -73,10 +73,10 @@ ms.lasthandoff: 12/08/2017
 |100047|CubeAttributePermission|  
 |100048|CellPermission|  
 |100049|CubeDimensionPermission|  
-|100050|Seguimiento|  
+|100050|Trace|  
 |100051|ServerAssembly|  
 |100052|CubeAssembly|  
-|100053|Command|  
+|100053|Comando|  
 |100054|KPI|  
 |100055|DataSourceView|  
 |100056|Perspective|  

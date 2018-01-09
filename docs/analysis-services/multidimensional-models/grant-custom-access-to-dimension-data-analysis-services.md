@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.roledesignerdialog.dimensiondata.f1
@@ -32,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9429721bd5349204d235b40edd3e7a49c7b7f0c0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 95cd49cfac7e318e427a4944182bf21cb16f8c3b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Conceder acceso personalizado a datos de dimensión (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Después de habilitar el acceso de lectura a un cubo, puede establecer permisos adicionales que permitan o denieguen el acceso a los miembros de dimensión (incluidas las medidas contenidas en la dimensión Measures que contiene todas las medidas utilizadas en un cubo) explícitamente. Por ejemplo, si hay varias categorías de distribuidores, conviene establecer permisos para excluir datos de un tipo de negocio específico. La ilustración siguiente representa el antes y el después a la denegación de acceso al tipo de negocio Warehouse en la dimensión Reseller.  
@@ -52,7 +49,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Las siguientes instrucciones presuponen que existe una conexión de cliente que emite consultas en MDX. Si el cliente usa DAX, como Power View en Power BI, la seguridad de dimensión no es evidente en los resultados de la consulta. Vea [Descripción de Power View para modelos multidimensionales](understanding-power-view-for-multidimensional-models.md) para obtener más información.
       
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  No todas las medidas o miembros de dimensión se pueden usar en escenarios de acceso personalizados. Si hay un rol que restringe el acceso a una medida o miembro predeterminado o a medidas que forman parte de expresiones de medida, se producirá un error en la conexión.  
   
  **Busque obstrucciones en la seguridad de dimensiones: medidas predeterminadas, miembros predeterminados y medidas usadas en expresiones de medida**  

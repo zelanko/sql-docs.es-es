@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bfe9352a73c2548bfa092eb88d04605b6721b4ed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7fb30b200d930a9827aee4b630d80df6e622842e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverdimensionstat-rowset"></a>Conjunto de filas DISCOVER_DIMENSION_STAT
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Proporciona información sobre una dimensión, incluidos el nombre de la base de datos que contiene, el nombre de la dimensión, sus atributos y un recuento de los miembros de cada atributo. En un modelo tabular, corresponde a las columnas de una tabla y el número de valores de cada columna.  
@@ -36,8 +34,8 @@ ms.lasthandoff: 12/08/2017
   
 |Nombre de columna|Indicador de tipo|Restricción|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**DATABASE_NAME**|**DBTYPE_WSTR**|Necesario|Nombre de la base de datos que contiene la dimensión.<br /><br /> Esta columna se requiere en la lista de restricciones.|  
-|**DIMENSION_NAME**|**DBTYPE_WSTR**|Necesario|Nombre de la dimensión.<br /><br /> Esta columna se requiere en la lista de restricciones.|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|Obligatorio|Nombre de la base de datos que contiene la dimensión.<br /><br /> Esta columna se requiere en la lista de restricciones.|  
+|**DIMENSION_NAME**|**DBTYPE_WSTR**|Obligatorio|Nombre de la dimensión.<br /><br /> Esta columna se requiere en la lista de restricciones.|  
 |**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||Nombre de un atributo en la dimensión.|  
 |**ATTRIBUTE_COUNT**|**DBTYPE_I8**||Recuento de valores del atributo con nombre. Para un modelo tabular, el valor es siempre igual al número de filas de la tabla.|  
   

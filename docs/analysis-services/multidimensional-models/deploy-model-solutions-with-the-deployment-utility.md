@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9f36bbe3858909a34154dbc0775678a67529bf74
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1e094ee032e236d39003fe6e2f572edfea6241a5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Implementar soluciones de modelos con la utilidad de implementación
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El **Microsoft.AnalysisServices.Deployment** utilidad le permite iniciar la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] motor de implementación desde el símbolo del sistema. Como archivo de entrada, la utilidad utiliza archivos de salida XML creados al construir un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Los archivos de entrada se pueden modificar fácilmente para personalizar la implementación de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . El script de implementación generado puede ejecutarse inmediatamente o guardarse para su implementación posterior.  
@@ -69,7 +66,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 > [!NOTE]  
 >  El argumento **/d** se usa solamente en modo de salida. Este argumento se omite si se especifica en modo silencioso o de respuesta. Para obtener más información sobre los modos, vea la sección [Modos](#Modes), más adelante en este tema.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La utilidad **Microsoft.AnalysisServices.Deployment** toma un conjunto de archivos que proporcionan definiciones de objetos, destinos de implementación y parámetros de configuración, e intenta implementar las definiciones de objetos en los destinos de implementación especificados mediante les opciones de implementación y los parámetros de configuración que se han indicado. Esta utilidad puede proporcionar una interfaz de usuario cuando se invoca en el modo de salida o en el archivo de salida. Para obtener más información sobre cómo usar la interfaz de usuario proporcionada por esta utilidad para crear archivos de respuesta, vea [Implementar soluciones de modelos con la utilidad de implementación](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  
   
  La utilidad está ubicada en la carpeta \Archivos de programa (x86)\Microsoft SQL Server\110\Binn\ManagementStudio.  
@@ -77,7 +74,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 ##  <a name="Modes"></a> Modos  
  La utilidad se puede ejecutar en los modos que se enumeran en la siguiente tabla.  
   
-|Modo|Description|  
+|Mode|Description|  
 |----------|-----------------|  
 |Modo silencioso|No se muestra ninguna interfaz de usuario y toda la información necesaria para la implementación la proporcionan los archivos de entrada. La utilidad no muestra el progreso en el modo silencioso. En su lugar, se puede usar un archivo de registro opcional para capturar el progreso y la información de errores para su posterior revisión.|  
 |Modo de respuesta|Se muestra la interfaz de usuario del Asistente para la implementación y las respuestas del usuario se guardan en los archivos de entrada especificados para la posterior implementación. La implementación no se produce en el modo de respuesta. El único propósito del modo de respuesta es capturar las respuestas del usuario|  
@@ -94,7 +91,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
   
  `/s: C:\ My Documents\Visual Studio 2010\Projects\AdventureWorksProject\Project1\bin\deployment.log`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Referencia de la utilidad del símbolo del sistema &#40;motor de base de datos&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

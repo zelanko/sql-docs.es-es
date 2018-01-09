@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.sqlserverstudio.impersonationinfo.f1
@@ -22,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5758391cdcc5e216bed3ec100b254c8f5f6e3a89
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 55ec66efd96a14bde8a9ea8b26488e18faadac0f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Establezca las opciones de suplantación (SSAS - multidimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Al crear un **origen de datos** de objeto en un modelo de Analysis Services, uno de los valores que debe configurar es una opción de suplantación. Esta opción determina si Analysis Services asume la identidad de una cuenta de usuario de Windows concreta al realizar las operaciones locales relacionadas con la conexión, como cargar un proveedor de datos OLE DB o resolver la información de perfil de usuario en entornos que admiten perfiles de itinerancia.  
@@ -65,7 +62,7 @@ ms.lasthandoff: 12/08/2017
  En las instrucciones DMX OPENQUERY, esta opción se omite, y se utilizarán las credenciales del usuario actual en lugar de la cuenta de usuario especificada.  
   
  **Utilizar cuenta de servicio**  
- Seleccione esta opción para que el objeto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] use las credenciales de seguridad asociadas al servicio de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que administra el objeto. Esta es la opción predeterminada. En las versiones anteriores, esta era la única opción que podía usar. Podría ser preferible esta opción para supervisar el acceso a los datos en el servicio en lugar de en cuentas de usuario individuales.  
+ Seleccione esta opción para que el objeto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] use las credenciales de seguridad asociadas al servicio de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que administra el objeto. Ésta es la opción predeterminada. En las versiones anteriores, esta era la única opción que podía usar. Podría ser preferible esta opción para supervisar el acceso a los datos en el servicio en lugar de en cuentas de usuario individuales.  
   
  En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], en función del sistema operativo que use, la cuenta de servicio puede ser NetworkService o una cuenta integrada virtual creada para una instancia específica de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si elige la cuenta de servicio para una conexión que utiliza la autenticación de Windows, recuerde crear un inicio de sesión de base de datos para esta cuenta y conceder permisos de lectura, ya que se utilizará para recuperar datos durante el procesamiento. Para obtener más información acerca de la cuenta de servicio, vea [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -105,7 +102,7 @@ ms.lasthandoff: 12/08/2017
 
  En las bases de datos multidimensionales, **Predeterminado** especifica que se debe utilizar la cuenta de servicio y el usuario actual para las operaciones de minería de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Crear un origen de datos &#40;SSAS multidimensional&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [Establecer propiedades de origen de datos &#40;SSAS multidimensional&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
 

@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 77b40db70cf3758f76d8e1773e6388fd6a833c49
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6ea3691ad03e5133d14f6aa8f99324957eb0c2b4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-relational-mining-structure"></a>Crear una estructura de minería de datos relacional
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Mayoría de los modelos de minería de datos se basa en orígenes de datos relacionales. Las ventajas de crear un modelo de minería de datos relacional son que puede reunir datos ad hoc y entrenar y actualizar un modelo sin la complejidad que supone crear un cubo.  
@@ -130,7 +128,7 @@ ms.lasthandoff: 12/08/2017
  ¿Por qué es esto útil? Supongamos que está viendo los resultados de un modelo de agrupación en clústeres y desea ver los clientes que se colocarán en un clúster concreto. Mediante la obtención de detalles, puede ver detalles como la información de contacto.  
   
 > [!WARNING]  
->  Para utilizar la obtención de detalles, debe habilitarla al crear la estructura de minería de datos. Puede habilitar la obtención de detalles en los modelos después, estableciendo una propiedad en el modelo, pero las estructuras de minería de datos requieren que esta opción se establezca al principio. Para más información, vea [Consultas de obtención de detalles &#40;minería de datos&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
+>  Para utilizar la obtención de detalles, debe habilitarla al crear la estructura de minería de datos. Puede habilitar la obtención de detalles en los modelos después, estableciendo una propiedad en el modelo, pero las estructuras de minería de datos requieren que esta opción se establezca al principio. Para obtener más información, vea [Consultas de obtención de detalles &#40;minería de datos&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Diseñador de minería de datos](../../analysis-services/data-mining/data-mining-designer.md)   

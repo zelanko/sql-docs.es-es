@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -31,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fbe2029742ba4df3c390820effa565055159f7dd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0b7139d1120e9b244ae4bc20e32951c52cc7f37d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="modeling-flags-data-mining"></a>Marcas de modelado (Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Puede utilizar marcas de modelado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para proporcionar información adicional a un algoritmo de minería de datos sobre los datos que se definen en una tabla de casos. El algoritmo puede usar esta información para crear un modelo de minería de datos más preciso.  
@@ -107,13 +105,13 @@ WHERE MODEL_NAME = '<model name>'
   
  Puede utilizar el parámetro FORCE_REGRESSOR para garantizar que el algoritmo utilizará un regresor determinado. Este parámetro se puede utilizar con el algoritmo de árboles de decisión y el algoritmo de regresión lineal.  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Utilice los vínculos siguientes para obtener más información acerca de cómo utilizar marcas de modelado.  
   
 |Tarea|Tema|  
 |----------|-----------|  
 |Modificar las marcas de modelado mediante el Diseñador de minería de datos|[Ver o cambiar marcas de modelado &#40;minería de datos&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
-|Especificar una sugerencia al algoritmo para recomendar regresores probables|[Especificar una columna para utilizar como regresor en un modelo](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
+|Especificar una sugerencia al algoritmo para recomendar regresores probables|[Especificar una columna para usar como regresor en un modelo](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
 |Ver las marcas de modelado admitidas por algoritmos concretos (en la sección Marcas de modelado de cada tema de referencia del algoritmo)|[Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
 |Obtener más información acerca de las columnas de la estructura de minería de datos y las propiedades que se pueden establecer en ellas|[Columnas de la estructura de minería de datos](../../analysis-services/data-mining/mining-structure-columns.md)|  
 |Obtener información sobre las marcas de modelado y las columnas del modelo de minería de datos que se pueden aplicar en el modelo|[Columnas del modelo de minería de datos](../../analysis-services/data-mining/mining-model-columns.md)|  

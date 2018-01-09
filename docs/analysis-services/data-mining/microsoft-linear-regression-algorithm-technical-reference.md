@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6e68aa664039d9fa7531c6563025c108687c2868
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2ad96596830cc3bb091a7f57639c0a7d0d84dd9c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Referencia técnica del algoritmo de regresión lineal de Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de regresión lineal es una versión especial del algoritmo de árboles de decisión de Microsoft que está optimizado para modelar pares de atributos continuos. Este tema explica la implementación del algoritmo, describe cómo personalizar su comportamiento y proporciona vínculos a información adicional sobre cómo consultar los modelos.  
@@ -82,9 +80,9 @@ ms.lasthandoff: 12/08/2017
  Un modelo de regresión lineal debe contener una columna de clave, columnas de entrada y al menos una columna de predicción.  
   
 ### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción  
- El algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se incluyen en la tabla siguiente. Para obtener más información sobre lo que significan los tipos de contenido cuando se usan en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
+ El algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se incluyen en la tabla siguiente. Para más información sobre el significado de los tipos de contenido usados en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Columna|Tipos de contenido|  
+|columna|Tipos de contenido|  
 |------------|-------------------|  
 |Atributo de entrada|Continuo, cíclico, clave, tabla y ordenado|  
 |Atributo de predicción|Continuo, cíclico y ordenado|  
@@ -92,7 +90,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Se admiten los tipos de contenido**Cyclical** y **Ordered**, pero el algoritmo los trata como valores discretos y no realiza un procesamiento especial.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Algoritmo de regresión lineal de Microsoft](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Ejemplos de consultas de modelo de regresión lineal](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
  [Contenido del modelo de minería de datos para los modelos de regresión lineal &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  

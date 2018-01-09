@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: df185344ea5af92a66c019c29b7a385ff309522b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6b164727506042ad2f202e0cc797ab8ede1e2903
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverlocks-rowset"></a>DISCOVER_LOCKS, conjunto de filas
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Proporciona información sobre los bloqueos pendientes actuales en el servidor.  
@@ -62,7 +60,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="lock-types"></a>Tipos de bloqueo  
   
-|Nombre de bloque|Valor|Descripción|  
+|Nombre de bloque|Valor|Description|  
 |---------------|-----------|-----------------|  
 |LOCK_NONE|0x0000000|Ningún bloqueo.|  
 |LOCK_SESSION_LOCK|0x0000001|Sesión inactiva; no interfiere con otros bloqueos.|  

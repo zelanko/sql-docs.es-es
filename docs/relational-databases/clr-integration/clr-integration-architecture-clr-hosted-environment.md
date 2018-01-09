@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -34,11 +34,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 62e51e155dbd230d3db7d6e84d71f5b1635a22be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0bbd3cffc1f5db0b07f0868b2ac1b6b6f78989a5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Arquitectura de integración de CLR - entorno hospedado CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integración con common language runtime (CLR) de .NET Framework permite a los programadores de la base de datos usar lenguajes como Visual C#, Visual Basic .NET y Visual C++. Las funciones, procedimientos almacenados, desencadenadores, tipos de datos y agregados pertenecen a los tipos de lógica de negocios que los programadores pueden escribir con estos lenguajes.  
@@ -132,8 +132,8 @@ ms.lasthandoff: 11/17/2017
 |Conjunto de permisos|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |Seguridad de acceso del código|Solo ejecución|Ejecución + acceso a recursos externos|No restringida|  
 |Restricciones del modelo de programación|Sí|Sí|Sin restricciones|  
-|Requisito de capacidad de comprobación|Sí|Sí|No|  
-|Capacidad de llamar a código nativo|No|No|Sí|  
+|Requisito de capacidad de comprobación|Sí|Sí|no|  
+|Capacidad de llamar a código nativo|no|no|Sí|  
   
  SAFE es el modo más confiable y seguro, con restricciones asociadas relativas al modelo de programación permitido. Los ensamblados SAFE tienen permisos suficientes para la ejecución, realización de cálculos y obtención de acceso a la base de datos local. Los ensamblados SAFE deben tener capacidad para comprobar la seguridad de los tipos y no pueden llamar a código no administrado.  
   

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: db5a4f94951de076e1076bb8b70ff796fecc9edd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 31909fbe1a60bca85249d7c28b11574a512f442d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de serie temporal (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Todos los modelos de minería de datos utilizan la misma estructura para almacenar su contenido. Esta estructura se define según el conjunto de filas de esquema de contenido de minería de datos. Sin embargo, dentro de esa estructura estándar, los nodos que contienen información están organizados de maneras diferentes que representan varios tipos de árboles. En este tema se describe cómo se organizan los nodos, y lo que significa cada uno de ellos, para los modelos de minería de datos basados en el algoritmo de serie temporal [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -415,9 +413,9 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  **NODE_DISTRIBUTION:** muestra los términos de la ecuación en una tabla anidada, que se puede consultar para obtener términos concretos. La tabla de distribución de nodos sigue la misma estructura jerárquica que las reglas XML. Es decir, el nodo raíz de la serie ARIMA (NODE_TYPE = 27) contiene el valor de intersección y las periodicidades de toda la ecuación, que puede incluir varias periodicidades; por su parte, los nodos secundarios contienen únicamente información específica de una estructura periódica determinada o de los nodos secundarios de esa estructura periódica.  
   
-|Tipo de nodo|Atributo|Tipo de valor|  
+|Tipo de nodo|Attribute|Tipo de valor|  
 |---------------|---------------|----------------|  
-|27 (Raíz ARIMA)|Interceptar<br /><br /> periodicidad|11|  
+|27 (Raíz ARIMA)|Interceptar<br /><br /> Periodicidad|11|  
 |28 (Estructura periódica ARIMA)|periodicidad<br /><br /> Orden de regresión automática<br /><br /> orden de diferencia<br /><br /> Orden de media móvil|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  
 |29 (Regresión automática ARIMA)|Coeficiente<br /><br /> (complemento de coeficiente)|7|  
 |30 (Media móvil ARIMA)|Valor en t<br /><br /> Valor en t-1<br /><br /> …<br /><br /> Valor en t-n|7|  

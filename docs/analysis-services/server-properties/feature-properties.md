@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -26,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5c78b965e827ad4b355563c7c698db2b8f063c78
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0c12d59deb8a039ed5d8af5033d65e2614d4feb2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="feature-properties"></a>Propiedades de características
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Propiedades de características corresponden a las características de producto, la mayoría de ellas avanzadas, incluidas las propiedades que controlan los vínculos entre las instancias de servidor.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="properties"></a>Propiedades  
   
-|Propiedad|Valor de DB-Library|Description|  
+|Propiedad|Valor predeterminado|Description|  
 |--------------|-------------|-----------------|  
 |**ManagedCodeEnabled**|1|Una propiedad booleana que indica si los procedimientos de almacenamiento CLR están habilitados.|  
 |**LinkInsideInstanceEnabled**|1|Una propiedad booleana que indica si se puede crear un objeto vinculado dentro de la misma instancia del servidor.|  

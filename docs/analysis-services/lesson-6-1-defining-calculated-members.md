@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2968ac67b1e7ca3652dd4ae2cbb7cfd3293e51ca
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8bd25c8fc175d58df10d1a85c0dfc8c434fb84cd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>Lección 6-1: definir miembros calculados
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Los miembros calculados son miembros de una dimensión o un grupo de medida que se definen según una combinación de datos del cubo, operadores aritméticos, números y funciones. Por ejemplo, puede crear un miembro calculado que calcule la suma de dos medidas físicas en el cubo. Las definiciones de miembros calculados se almacenan en cubos pero sus valores se calculan en el momento de la consulta.  
@@ -296,7 +296,7 @@ En las tareas de este tema se definen medidas calculadas para permitir que los u
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
 [Definir conjuntos con nombre](../analysis-services/lesson-6-2-defining-named-sets.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Cálculos](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  
 [Cálculos en modelos multidimensionales](../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
 [Crear miembros calculados](../analysis-services/multidimensional-models/create-calculated-members.md)  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: CALCULATIONPASSVALUE
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 2fd5ad1791d15353fd6c357e30d2430c593f9521
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: dd5ed7f5ef6eb60b37c5066f7535d34913572871
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +60,7 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
  ALL  
  Cuando se establece esta marca, todos los valores son NULL, excepto los cargados por el motor de almacenamiento. Cuando no se establece, los valores se agregan sin aplicar cálculos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si se proporciona una expresión numérica, la función devuelve un valor numérico mediante la evaluación de la expresión numérica MDX especificada en el paso de cálculo y, de manera opcional, modificada por una marca de acceso y un modificador de marca de acceso.  
   
  Si se proporciona una expresión de cadena, la función devuelve un valor de cadena mediante la evaluación de la expresión de cadena MDX especificada en el paso de cálculo especificado y modificado opcionalmente mediante una marca de acceso y un modificador de marca de acceso*.*  
@@ -70,7 +70,7 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
 > [!NOTE]  
 >  Solo los administradores pueden usar la **CalculationPassValue** función dentro de un script MDX. Se produce un error si un script de MDX que contiene esta función se ejecuta en el contexto de un rol que no tiene privilegios de administrador.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CalculationCurrentPass &#40; MDX &#41;](../mdx/calculationcurrentpass-mdx.md)   
  [IIf &#40; MDX &#41;](../mdx/iif-mdx.md)   
  [Referencia de funciones MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  

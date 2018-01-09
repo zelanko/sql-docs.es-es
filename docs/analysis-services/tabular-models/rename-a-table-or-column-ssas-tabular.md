@@ -5,13 +5,10 @@ ms.date: 05/22/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.bidtoolset.renametableorcolumn.f1
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bf322e42ce1913eef2a7cf03208192c3b1b6e4ea
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b22cc6d04ca3384accec6b1893a1fcd1297ca022
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>Cambiar el nombre de una tabla o una columna (SSAS tabular)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Puede cambiar el nombre de una tabla durante el proceso de importación escribiendo un **Nombre_descriptivo** en el **seleccionar tablas y vistas** página de la **Table Import Wizard**. También puede cambiar los nombres de tabla y de columna si importa los datos especificando una consulta en la página **Especificar una consulta SQL** del **Asistente para la importación de tablas**.  
@@ -63,7 +60,7 @@ ms.lasthandoff: 12/08/2017
   
  También se deben actualizar los cálculos que usan la tabla cuyo nombre ha cambiado, o que utilizan las columnas de la tabla cuyo nombre ha cambiado, y deben actualizarlo y calcular los datos derivados de esos cálculos. Esto puede tardar un tiempo que depende de cuántas tablas y cálculos se vean afectados. Por consiguiente, el mejor momento para cambiar el nombre de las tablas es bien durante el proceso de importación o antes de empezar a generar relaciones y cálculos complejos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Tablas y columnas](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
  [Importación desde PowerPivot](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)   
  [Importación desde Analysis Services](../../analysis-services/tabular-models/import-from-analysis-services-ssas-tabular.md)  

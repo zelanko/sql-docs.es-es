@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 54feb379272889d7bed97128b0d4eb7ca274cafa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bf47c53748e56fa455a62e8489839321e960493b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>Tipos de datos de SQL Server en .NET Framework
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]El **SqlTypes** biblioteca forma parte de la biblioteca de clases base de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Está diseñado para proporcionar a los tipos de datos la misma semántica y precisión que las encontradas en la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este tema se describe la nueva semántica para los programadores de .NET Framework y muestran los tipos implementados en el **System.Data.SqlTypes** espacio de nombres que se incluye en el **System.Data** biblioteca.  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: Session Events event category
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 663170f53391f844b6b94bcb5ffb615f150d0eed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2a11895ad8a966a95b9ea4b78fa78236bc3d88d9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="session-events-data-columns"></a>Columnas de datos de Eventos de sesión
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoría de eventos de eventos de sesión tiene la siguiente clase de evento:  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/08/2017
 |---------------------|-------------------|---------------------|----------------------------|  
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |CPUTime|6|2|Cantidad de tiempo de CPU (en milisegundos) que utiliza el evento.|  
 |ConnectionID|25|1|Identificador único de la conexión.|  
 |DatabaseName|28|8|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|  

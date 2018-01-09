@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cd5cb3548313be0a8a3b2350d27b60997deec963
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 12a11fce82fbb0ec3e75ee9908f07372e5cbb086
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-11-create-roles"></a>Lección 11: Crear Roles
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -44,7 +44,7 @@ Dado que las cuentas de usuario y grupo de Windows de su organización son únic
   
 Tiempo estimado para completar esta lección: **15 minutos**  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
 Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 10: crear particiones](../analysis-services/lesson-10-create-partitions.md).  
   
 ## <a name="create-roles"></a>Crear roles  
@@ -67,7 +67,7 @@ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe
   
 1.  En el Administrador de roles, haga clic en **nuevo**.    
   
-2.  Cambiar el nombre de la función para **analista de ventas EE. UU.**  
+2.  Cambiar el nombre de la función para **analista de ventas EE. UU.**.  
   
 3.  Asignar este rol **lectura** permiso.  
   
@@ -93,7 +93,7 @@ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe
 4.  Opcional: Haga clic en la pestaña **Miembros** y, después, en **Agregar**. En el cuadro de diálogo **Seleccionar usuario o grupo** , especifique los usuarios o grupos de Windows de su organización que quiera incluir en el rol. 
   
   
-## <a name="whats-next"></a>¿Qué debe hacer a continuación?
+## <a name="whats-next"></a>¿Qué sigue?
 Vaya a la siguiente lección: [lección 12: analizar en Excel](../analysis-services/lesson-12-analyze-in-excel.md).
 
   

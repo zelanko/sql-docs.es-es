@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 02027bfdd00a6808ec3511d85fae0fd158fa70c8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 24e661c0ba9bd5c143365c69282e2cdae91b174a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>Otorgar permisos Leer definición en metatados de objetos (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Permiso para leer una definición de objeto, o sus metadatos en objetos seleccionados permite a los administradores conceder permiso para ver información sobre los objetos sin conceder también permiso para modificar la definición del objeto, modificar la estructura del objeto o ver los datos reales datos para el objeto. Los permisos de**Leer definición** se pueden conceder en los niveles de base de datos, origen de datos, dimensión, estructura de minería de datos y modelo de minería de datos. Si necesita permisos de **Leer definición** para un cubo, deberá habilitar **Leer definición** para la base de datos. Recuerde que los permisos son acumulativos. Por ejemplo, un rol otorga permisos para leer los metadatos de un cubo, mientras que otro rol otorga al mismo usuario permisos para leer los metadatos de una dimensión. Los permisos de los dos roles diferentes se combinan para conceder al usuario permiso para leer tanto los metadatos para el cubo como los metadatos para la dimensión dentro de la base de datos.  
@@ -41,7 +38,7 @@ ms.lasthandoff: 12/08/2017
   
  Se recomienda que incluya permisos de **Leer definición** en el nivel de la base de datos cuando configure los roles para el procesamiento dedicado. Si se dispone de permisos de **Leer definición** , los usuarios que no sean administradores podrán ver la jerarquía de los objetos del modelo en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y navegar hasta objetos individuales para procesarlos posteriormente.  
   
-1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expanda **Roles** para la base de datos correspondiente en el Explorador de objetos y, después, haga clic en un rol de base de datos (o cree un rol de base de datos).  
+1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expanda **Roles** para la base de datos correspondiente en Explorador de objetos y, después, haga clic en un rol de base de datos (o cree un rol de base de datos).  
   
 2.  En la pestaña **General** , seleccione la opción **Leer definición** .  
   
@@ -67,7 +64,7 @@ ms.lasthandoff: 12/08/2017
   
 5.  Haga clic en **Aceptar** para completar la creación del rol.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Otorgar permisos de base de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
  [Otorgar permisos de procesamiento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   

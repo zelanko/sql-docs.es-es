@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 685e5d9b0586d0c97fa686507bc1934f8fb31c1e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fac07e924fb94ce9901f1aca771b1954b474aaff
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Implementar las soluciones de Power Pivot en SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Utilice las siguientes instrucciones para implementar manualmente dos paquetes de solución que agregan [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] características en un entorno de SharePoint Server 2010. La implementación de soluciones es un paso necesario para configurar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint en un servidor de SharePoint 2010. Para consultar la lista completa de pasos necesarios, vea [Administración y configuración del servidor de Power Pivot en Administración central](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  

@@ -1,13 +1,13 @@
 ---
 title: Crear un repositorio de paquete local mediante miniCRAN | Documentos de Microsoft
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 01/04/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27f2a1ce-316f-4347-b206-8a1b9eebe90b
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f78470d347c96186f0960530a7482d22e4bc4e49
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 066e09747684ede5837d93736f32792736b8985d
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-a-local-package-repository-using-minicran"></a>Crear un repositorio de paquete local mediante miniCRAN
 
@@ -34,7 +34,12 @@ Hay dos maneras en que se pueden preparar los paquetes de R para la instalación
 
 -   [Descargar manualmente y copiar paquetes uno a uno](#bkmk_manual)
 
-Este artículo describe cómo puede crear un repositorio de paquetes de R con ambos métodos, y recomienda el uso de la **miniCRAN** paquete.
+    Puede encontrar la lista de los paquetes dependientes en el archivo de descripción para el paquete descargado. 
+    
+    Sin embargo, los paquetes enumerados en **importaciones** podría tener dependencias de segundo nivel. Por este motivo, se recomienda el uso de la **miniCRAN** método.
+
+> [!TIP]
+> ¿Sabía que puede usar miniCRAN para preparar los paquetes para su uso en aprendizaje automático de Azure? Para obtener más información, consulte este blog: [mediante miniCRAN en aprendizaje automático de Azure, por Michele Usuelli](https://www.r-bloggers.com/using-minicran-in-azure-ml/) 
 
 ## <a name="prepare-packages-using-minicran"></a>Preparar los paquetes mediante miniCRAN
 
@@ -51,6 +56,9 @@ Hay muchas ventajas en el uso de miniCRAN para crear el repositorio:
 -   **Mejor administración de versión**: en un entorno multiusuario, hay buenos motivos para evitar la instalación sin restricciones de varias versiones de paquete en el servidor.
 
 Después de crear el repositorio, puede modificar mediante la adición de nuevos paquetes o actualizar la versión de los paquetes existentes.
+
+> [!NOTE]
+> El propio paquete miniCRAN es dependiente de 18 otros paquetes CRAN, entre los que es el paquete RCurl, que tiene una dependencia del sistema en el paquete de desarrollo curl. De forma similar, el paquete XML tiene una dependencia en desarrollo libxml2. Por lo tanto, se recomienda que compilar el repositorio local inicialmente en un equipo con acceso completo a Internet, por lo que pueden cumplir con facilidad todas estas dependencias. Una vez creado, puede mover el repositorio a una ubicación diferente.
 
 ### <a name="step-1-install-the-minicran-package"></a>Paso 1. Instalar el paquete miniCRAN
 
@@ -71,9 +79,11 @@ Empiece por crear un repositorio de miniCRAN para usarlo como un origen. Debe cr
     CRAN_mirror \<- c(CRAN = "https://mran.microsoft.com/snapshot/2017-08-01")
     ```
 
-2.  Indique una carpeta local donde se almacenarán los paquetes recopilados. No asigne un nombre a la miniCRAN carpeta; es posible que un nombre más descriptivo como "GeneticsPackages" o "ClientRPackages1.0.2".
+2.  Escriba el nombre de una carpeta local en el que se va a almacenar los paquetes recopilados. 
 
     Asegúrese de crear la carpeta de antemano. Se produce un error si el `local_repo` carpeta no existe cuando se ejecuta el código de R más adelante.
+
+    La carpeta debe tener un nombre descriptivo. Por ejemplo, evite utilizar "miniCRAN" y, en su lugar, escriba algo como "GeneticsPackages" o "TeamRPackages1.0.2".
 
     ```R
     local_repo <- "~/miniCRAN"
@@ -85,14 +95,14 @@ Empiece por crear un repositorio de miniCRAN para usarlo como un origen. Debe cr
 
 1.  Después de instalar miniCRAN, cree una lista que especifica los paquetes adicionales que desea descargar.
 
-    No agregar dependencias a esta lista inicial; el **igraph** paquete que utiliza miniCRAN genera la lista de dependencias para usted. Para obtener más información sobre cómo usar este gráfico, consulte [con miniCRAN para identificar las dependencias del paquete](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html).
+    No agregar dependencias a esta lista inicial; el **igraph** paquete que utiliza miniCRAN genera la lista de dependencias para usted. Para obtener más información sobre cómo usar el gráfico de dependencias generado, consulte [con miniCRAN para identificar las dependencias del paquete](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html).
 
     El siguiente script de R muestra cómo obtener los paquetes de destino, "zoo" y "previsión".
 
     ```R
     pkgs_needed <- c("zoo", "forecast")
     ```
-2. También puede trazar el gráfico de dependencias, que puede proporcionar información útil y parece interesante.
+2. No es necesario que trazar el gráfico de dependencias, pero puede proporcionar información útil.
     
     ```R
     plot(makeDepGraph(pkgs_needed))
@@ -124,15 +134,15 @@ Una vez haya creado el repositorio y agregar los paquetes que necesita, debe mov
 
 Según la versión de SQL Server, hay dos opciones para agregar nuevos paquetes a la biblioteca de R asociada a la instancia de SQL Server:
 
--   Instalar en la biblioteca de instancia mediante el repositorio de miniCRAN y herramientas de R.
+- Instalar en la biblioteca de instancia mediante el repositorio de miniCRAN y herramientas de R.
 
--   Cargar paquetes de una base de datos de SQL e instalar paquetes en una base de cada base de datos, utilizando la instrucción crear biblioteca externa. Vea [instalar paquetes de R adicionales en SQL Server](install-additional-r-packages-on-sql-server.md).
+- Cargar paquetes de una base de datos de SQL Server e instalar con la instrucción crear biblioteca externa. Esta opción requiere SQL Server 2017. Vea [instalar paquetes de R adicionales en SQL Server](install-additional-r-packages-on-sql-server.md).
 
 El siguiente procedimiento describe cómo instalar los paquetes con herramientas de R.
 
-1.  Copie la carpeta que contiene el repositorio miniCRAN, en su totalidad, en el servidor donde vaya a instalar los paquetes.
+1. Copie la carpeta que contiene el repositorio miniCRAN, en su totalidad, en el servidor donde va a instalar los paquetes.
 
-2.  Abra un símbolo del sistema de R mediante la herramienta de R asociada a la instancia.
+2. Abra un símbolo del sistema de R mediante la herramienta de R asociada a la instancia.
 
     - Para SQL Server 2017, la carpeta predeterminada es `C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library`.
 
@@ -142,16 +152,16 @@ El siguiente procedimiento describe cómo instalar los paquetes con herramientas
 
     -  Si ha instalado SQL Server en una unidad diferente, o ha realizado otros cambios en la ruta de instalación, asegúrese de introducir esos cambios también.
 
-3.  Obtener la ruta de acceso de la biblioteca de instancia (en caso de que esté en un directorio de usuarios) y agregarlo a la lista de rutas de acceso de biblioteca.
+3.  Obtener la ruta de acceso de la biblioteca de la instancia y agregarlo a la lista de rutas de acceso de biblioteca.
 
     ```R
     .libPaths()[1]  
     lib \<- .libPaths()[1]
     ```
 
-    Se debe devolver la ruta de acceso de instancia, "C:/programa archivos/Microsoft SQL Server/MSSQL14. MSSQLSERVER/R_SERVICES/biblioteca"
+    En SQL Server, este comando debe devolver la ruta de acceso de la biblioteca asociada a la instancia, como: "C:/programa archivos/Microsoft SQL Server/MSSQL14. MSSQLSERVER/R_SERVICES/biblioteca"
 
-2.  Especifique la ubicación en el servidor donde haya copiado el repositorio de mininCRAN en `server_repo`.
+4.  Especifique la ubicación en el servidor donde haya copiado el repositorio de mininCRAN en `server_repo`.
 
     En este ejemplo, se supone que ha copiado el repositorio en la carpeta de usuario en el servidor.
 
@@ -159,29 +169,26 @@ El siguiente procedimiento describe cómo instalar los paquetes con herramientas
     R server_repo <- "C:\\Users\\MyUserName\\miniCRAN"
     ```
 
-3.  Puesto que está trabajando en una nueva área de trabajo de R en el servidor, también debe proporcionar la lista de paquetes que se va a instalar.
+5.  Puesto que está trabajando en una nueva área de trabajo de R en el servidor, también debe proporcionar la lista de paquetes que se va a instalar.
 
     ```R
     tspackages <- c("zoo", "forecast")
     ```
 
-4.  Instale los paquetes, mediante la ruta de acceso a la copia local del repositorio miniCRAN.
+6.  Instale los paquetes, proporcionando la ruta de acceso a la copia local del repositorio miniCRAN.
 
     ```R
     install.packages(tspackages, repos = file.path("file://", normalizePath(server_repo, winslash = "/")), lib = lib, type = "win.binary", dependencies = TRUE)
     ```
 
-5.  Ahora, ver los paquetes instalados.
+7.  Desde la biblioteca de la instancia, puede ver los paquetes instalados con un comando similar al siguiente:
 
     ```R
     installed.packages()
     ```
 
 > [!NOTE] 
-> 
-> En SQL Server 2017, se proporcionan funciones adicionales de la base de datos y las instrucciones de T-SQL para ayudar a los administradores del servidor administrar permisos a través de paquetes. El Administrador de base de datos puede poseer la tarea de instalación de paquetes, con R o T-SQL, si así lo desea. Sin embargo, el DBA también puede utilizar roles para conceder a los usuarios la capacidad para instalar sus propios paquetes. Para obtener más información, consulte [administración de paquetes de R para SQL Server](r-package-management-for-sql-server-r-services.md).
-> 
-> En SQL Server 2016, un administrador del servidor debe instalar los paquetes del repositorio de miniCRAN en la biblioteca predeterminada utilizada por la instancia. Para ello, utilice las herramientas de R como se describe en el [sección anterior](#bkmk_Rtools).
+> En SQL Server, un administrador del servidor debe instalar los paquetes del repositorio de miniCRAN en la biblioteca predeterminada utilizada por la instancia. 
 
 ## <a name="manually-download-single-packages"></a>Descargar manualmente los paquetes únicos
 
@@ -189,11 +196,11 @@ Si no desea usar miniCRAN, puede descargar manualmente los paquetes que necesita
 
 Después de descargar los paquetes, debe instalar los paquetes de R de la ubicación del archivo comprimido.
 
-1.  Descargar los archivos zip de paquetes y guardarlos en una carpeta local
+1. Descargar los archivos zip de paquetes y guardarlos en una carpeta local
 
-2.  Copie esta carpeta a la [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] equipo.
+2. Copie esta carpeta a la [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] equipo.
 
-3.  Instale los paquetes en la biblioteca de la instancia de SQL Server.
+3. Instale los paquetes en la biblioteca de la instancia de SQL Server.
 
 > [!NOTE]
 > Al usar herramientas de R para instalar paquetes, se instalan para la instancia como un todo. 

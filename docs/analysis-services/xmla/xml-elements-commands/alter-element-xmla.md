@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Alter Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5af81d88ccb64fe8d16456111c4d238e46acfe7b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d6d234801cb298f15982bfc4ac1d75a493dd6aa8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="alter-element-xmla"></a>Elemento Alter (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contiene elementos de Analysis Services Scripting Language (ASSL) utilizados por el [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) método para modificar los objetos en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -49,12 +47,12 @@ ms.lasthandoff: 12/08/2017
 </Command>  
 ```  
   
-## <a name="element-characteristics"></a>Características de los elementos  
+## <a name="element-characteristics"></a>Características del elemento  
   
-|Característica|Descripción|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|Ninguno|  
-|Valor predeterminado|Ninguno|  
+|Tipo y longitud de los datos|None|  
+|Valor predeterminado|None|  
 |Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -66,7 +64,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |AllowCreate|(Atributo **Boolean** opcional). Indica si deberían crearse los objetos definidos en el comando **Alter** en caso de que no aún no existan.<br /><br /> Si establece en true, los objetos definidos en el **ObjectDefinition** elemento se crean en el [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia si aún no existen. En otras palabras, el comando **Alter** se trata como un comando **Create** si los objetos aún no existen en la instancia.<br /><br /> Si este atributo se omite o se establece a **false**, se producirá un error si los objetos aún no existen.|  
 |ObjectExpansion|(Atributo **Enum** opcional). Define la extensión de la modificación que va a realizar el método **Execute** .<br /><br /> Si está establecido en *ObjectProperties*, el elemento **ObjectDefinition** debería contener únicamente la definición completa del objeto principal a modificar, incluyendo los objetos secundarios subordinados. Los objetos principales subordinados al objeto que se va a modificar no se modificarán.<br /><br /> Nota: Cuando se usa el *ObjectProperties* establecer con el [ClrAssembly](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md) tipo de datos, el [datos](../../../analysis-services/scripting/objects/data-element-assl.md) elemento del asociado [ClrAssemblyFile](../../../analysis-services/scripting/data-type/clrassemblyfile-data-type-assl.md) no es necesario especificar los tipos de datos. Si no se especifica, **ClrAssembly** utiliza los archivos existentes.<br /><br /> Si está establecido en *ExpandFull*, el elemento **ObjectDefinition** debería contener no solo la definición completa del objeto a modificar, sino también las definiciones de todos los objetos principales que son descendientes del objeto que se va a modificar.<br /><br /> Nota: La *ExpandFull* configuración no se puede usar con el [Server](../../../analysis-services/scripting/objects/server-element-assl.md) elemento.|  

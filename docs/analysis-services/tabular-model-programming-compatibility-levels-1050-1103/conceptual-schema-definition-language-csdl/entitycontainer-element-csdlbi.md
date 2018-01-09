@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 21ad4c6d328c8c299a2ae34c4ac5aab27feec794
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 30b24a87a5d1915b16c18557b93abfabfe99ab12
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="entitycontainer-element-csdlbi"></a>EntityContainer, elemento (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]El elemento EntityContainer es un tipo complejo, según el tipo CSDL EntityContainer, que define una colección de entidades en un único modelo de datos. En una aplicación de Business Intelligence, un EntityContainer representa un modelo de datos que puede contener varias tablas con columnas vinculadas mediante relaciones, así como cálculos, medidas y KPI. Conceptualmente, es similar a una base de datos o un origen de datos.  
@@ -36,15 +34,15 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>Atributos y elementos  
  En la tabla siguiente se describen los elementos y atributos que definen el elemento EntityContainer.  
   
-|Nombre|Es obligatorio|Descripción|  
+|Nombre|Es obligatorio|Description|  
 |----------|-----------------|-----------------|  
 |Nombre|Sí|El nombre del modelo de datos.|  
-|Caption|No|Descripción de la base de datos o del modelo de datos.|  
+|Título|no|Descripción de la base de datos o del modelo de datos.|  
 |Culture|Sí|Cadena que contiene el LCID de la solicitud.|  
 |CompareOptions|Sí|Opciones de comparación de cadenas y de ordenación para el modelo específicas del idioma.|  
-|DirectQueryMode|No|Enumeración que indica el modo de consulta cuando el modelo utiliza el modo DirectQuery.|  
+|DirectQueryMode|no|Enumeración que indica el modo de consulta cuando el modelo utiliza el modo DirectQuery.|  
 |Elemento EntitySet|Sí|[EntitySet, elemento &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)|  
-|Elemento AssociationSet|No|[AssociationSet, elemento &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md)|  
+|Elemento AssociationSet|no|[AssociationSet, elemento &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md)|  
   
 ## <a name="compareoptions-element"></a>Elemento CompareOptions  
  El atributo CompareOptions define las propiedades de intercalación que se aplican al modelo de datos. Las propiedades definidas por este atributo se derivan de la configuración del criterio de ordenación, de la distinción de kana y de la distinción entre mayúsculas y minúsculas establecida en la base de datos de Analysis Services en tiempo de diseño del modelo. En la tabla siguiente se describen los valores que se incluyen como parte del atributo CompareOptions.  
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/08/2017
   
  El tipo simple, DirectQueryMode, define el tipo de consulta que se utiliza de forma predeterminada cuando el modelo está habilitado para recuperar datos directamente desde un origen de datos relacional. Esta propiedad solo se aplica a los modelos tabulares que se ejecutan en el modo DirectQuery. En la siguiente tabla se muestran los posibles valores para la enumeración del modo DirectQuery.  
   
-|Valor|Descripción|  
+|Valor|Description|  
 |-----------|-----------------|  
 |InMemory|Indica que las consultas que se realicen en el modelo utilizarán datos de la memoria caché.|  
 |InMemoryWithDirectQuery|Indica que, de forma predeterminada, las consultas que se realicen en el modelo utilizarán datos del origen de datos relacional.|  

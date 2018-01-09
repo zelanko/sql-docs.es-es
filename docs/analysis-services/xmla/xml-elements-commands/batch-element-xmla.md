@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Batch Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5e1edca7bbdaed14cf90d6fbe8cc92de5ad1f24d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8591a521cb1d3fce934e32be3d7b5cd3a4a977c4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="batch-element-xmla"></a>Elemento Batch (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Realiza XML de uno o más para los comandos de Analysis (XMLA) como una operación por lotes, ya sea de forma secuencial o en paralelo, en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -53,12 +51,12 @@ ms.lasthandoff: 12/08/2017
 </Command>  
 ```  
   
-## <a name="element-characteristics"></a>Características de los elementos  
+## <a name="element-characteristics"></a>Características del elemento  
   
-|Característica|Descripción|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|Ninguno|  
-|Valor predeterminado|Ninguno|  
+|Tipo y longitud de los datos|None|  
+|Valor predeterminado|None|  
 |Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -70,19 +68,19 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="attributes"></a>Atributos  
   
-|Atributo|Description|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |ProcessAffectedObjects|(Opcional **booleano** atributo) indica si se procesarán todos los objetos que requieren volver a procesar.<br /><br /> Si establece en true, el [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia procesa los objetos que requieren reprocesamiento como resultado del procesamiento de un objeto incluido en la **lote** comando.<br /><br /> Si establece en **false**, el [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia procesa solo los objetos incluidos en el **lote** comando.|  
 |Transaction|(Opcional **booleano** atributo) indica si el comando se incluye en el **lote** comando se tratan como una única transacción o transacciones individuales.<br /><br /> Si establece en true, todos los comandos incluidos en el **lote** comando se considera una sola transacción. Si cualquiera de los comandos se produce un error, los comandos ejecutados antes del comando con errores se revierten y el **lote** comando detiene sin ejecutar los comandos siguientes.<br /><br /> Si establece en **false**, **lote** comando intenta ejecutar todos los comandos y confirma los resultados de cada comando que se completa correctamente.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 > [!WARNING]  
 >  Command/Execute/Statement no se admite actualmente en una operación por lotes.  
   
  Para obtener más información acerca de cómo realizar operaciones por lotes en XMLA, vea [realizar operaciones por lotes &#40; XMLA &#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Comandos &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

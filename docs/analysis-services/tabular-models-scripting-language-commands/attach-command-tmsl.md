@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7a12d148-eac9-4e6c-a222-1439e0817c64
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0a32592d58d51c1504f88fb054cee688d657cb93
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 24a0af4329f543c43087f902e959963384def662
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attach-command-tmsl"></a>Attach, comando (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Adjunta un archivo de Analysis Services en un servidor.  
@@ -45,8 +43,8 @@ ms.lasthandoff: 12/08/2017
   
 ||||  
 |-|-|-|  
-|**Propiedad**|**Default**|**Description**|  
-|database|[Required]|El nombre del objeto de base de datos que se adjuntará.|  
+|**Propiedad**|**Default**|**Descripción**|  
+|Base de datos|[Required]|El nombre del objeto de base de datos que se adjuntará.|  
 |folder|[Required]|La carpeta que contiene la base de datos adjunta.|  
 |password|Vacía|La contraseña que se utilizará para cifrar secretos en la base de datos adjunta.|  
 |readWriteMode|Lectura y escritura|Un valor de enumeración que indica los modos de acceso permitidos a la base de datos.<br /><br /> **Los valores de enumeración son como sigue:**<br /><br /> lectura y escritura: se permite el acceso de lectura y escritura.<br /><br /> readOnly: se permite el acceso de solo lectura.<br /><br /> readOnlyExclusive: se permite el acceso exclusivo de solo lectura.|  

@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: BOTTOMCOUNT
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 3b75e2846d0cbafa798281b276f3bfac768473f8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 90362587d913e70447157a353b738410122c6c38
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +44,7 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ## <a name="return-type"></a>Tipo devuelto  
  \<expresión de tabla >  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El valor proporcionado por el \<rank expression > argumento determina el orden creciente de rango para las filas que se proporcionan en el \<expresión de tabla > argumento y el número de filas de la parte más inferior que se especifica en el \<recuento > se devuelve el argumento.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -111,7 +109,7 @@ NATURAL PREDICTION JOIN
   
  **Tenga en cuenta** en este ejemplo se proporciona únicamente para ilustrar el uso de BottomCount. Dependiendo del tamaño del conjunto de datos, esta consulta podría tardar mucho tiempo en ejecutarse.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Funciones &#40; DMX &#41;](../dmx/functions-dmx.md)   
  [Funciones de predicción generales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
  [BottomPercent &#40; DMX &#41;](../dmx/bottompercent-dmx.md)   

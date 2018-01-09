@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b593a2de59682d400c72d5242b078b3b7f2fadb5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c10be134f541434543c43c186181b122188a379f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurar el almacenamiento de cadenas para dimensiones y particiones
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Puede volver a configurar el almacenamiento de cadenas para dar cabida a cadenas muy grandes en atributos de dimensión o particiones que superan el límite de tamaño de archivo de 4 GB de almacenes de cadenas. Si las dimensiones o las particiones incluyen almacenes de cadenas de este tamaño, puede evitar la restricción del tamaño del archivo si cambia la propiedad **StringStoresCompatibilityLevel** en el nivel de la dimensión o de la partición, tanto en objetos locales como vinculados (locales o remotos).  
@@ -33,7 +30,7 @@ ms.lasthandoff: 12/08/2017
   
  Los valores válidos de esta propiedad incluyen los siguientes:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**1050**|Especifica la arquitectura predeterminada de almacenamiento de cadenas, que está sujeta a un tamaño de archivo máximo de 4 GB por almacén.|  
 |**1100**|Especifica el almacenamiento mayor de cadenas, que admite hasta 4 mil millones de cadenas únicas por almacén.|  

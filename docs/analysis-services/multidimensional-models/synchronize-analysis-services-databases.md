@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8824ea31de1d2dc2774f57ac70af05a30f442408
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3bb86dbcb264f7073847cce62dc9c3e200208821
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="synchronize-analysis-services-databases"></a>Sincronizar bases de datos de Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluye una característica de sincronización de base de datos que realiza dos [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bases de datos equivalentes copiando los datos y metadatos de una base de datos en un servidor de origen a una base de datos en un servidor de destino. Use la característica Sincronizar base de datos para realizar cualquiera de las tareas siguientes:  
@@ -51,7 +48,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Las notas del producto siguientes, escritas para versiones anteriores de Analysis Services, siguen siendo aplicables a las soluciones multidimensionales escalables compiladas con SQL Server 2012. Para obtener más información, vea [Scale-Out Querying with Analysis Services](http://go.microsoft.com/fwlink/?LinkId=253136) (Consulta de escalado horizontal con Analysis Services) y [Scale-Out Querying for Analysis Services with Read-Only Databases](http://go.microsoft.com/fwlink/?LinkId=253137.)(Consulta de escalado horizontal con Analysis Services con bases de datos de solo lectura).  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  En el servidor de destino (o destino) desde el que se inicia la sincronización de base de datos, debe ser miembro del rol de administrador del servidor de Analysis Services. En el servidor de origen, su cuenta de usuario de Windows debe tener permisos Control total en la base de datos de origen. Si va a sincronizar la base de datos de forma interactiva, recuerde que la sincronización se ejecuta en el contexto de seguridad de su identidad de usuario de Windows. Si su cuenta tiene denegado el acceso a determinados objetos, esos objetos se excluirán de la operación. Para obtener más información sobre los roles de administración del servidor y los permisos de base de datos, vea [Conceder permisos de administrador de servidor (Analysis Services)](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md) y [Otorgar permisos de base de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md).  
   
  El puerto TCP 2383 debe estar abierto en ambos servidores para permitir conexiones remotas entre las instancias predeterminadas. Para obtener más información sobre cómo crear una excepción en Firewall de Windows, vea [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
@@ -165,7 +162,7 @@ ms.lasthandoff: 12/08/2017
   
      En **Particiones en la ubicación seleccionada** se muestra una cuadrícula en la que se describen las particiones remotas almacenadas en la ubicación de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de origen especificada en la columna **Carpeta de origen** de la fila seleccionada en **Ubicaciones**. La cuadrícula contiene las columnas siguientes:  
   
-     **Cube**  
+     **Cubo**  
      Muestra el nombre del cubo que contiene la partición.  
   
      **Grupo de medida**  
@@ -192,10 +189,10 @@ ms.lasthandoff: 12/08/2017
   
 8.  Haga clic en **Finalizar** para sincronizar. Tras comprobar las opciones de la página **Finalización del asistente** , haga clic de nuevo en **Finalizar** .  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Next Steps  
  Si no sincronizó los roles o la pertenencia, recuerde especificar los permisos de acceso de usuario ahora en la base de datos de destino.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Elemento Synchronize &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [Implementar soluciones de modelo mediante XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
  [Implementar soluciones con el Asistente para la implementación](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  

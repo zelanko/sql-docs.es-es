@@ -5,7 +5,7 @@ author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 01/09/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 13bd5bde7e4e4ec63bb7e3bd7d8959440f499672
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: 3033651c005ce39bd0e2565dd51ed2d2b1089e62
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Instalar SQL Server Integration Services (SSIS) en Linux
 
@@ -119,6 +119,29 @@ Para quitar `mssql-server-is`, puede ejecutar el comando siguiente:
 ```bash
 sudo yum remove mssql-server-is
 ```
+
+## <a name="unattended-installation"></a>Instalación desatendida
+Para ejecutar una instalación desatendida cuando se ejecuta `ssis-conf setup`, haga lo siguiente:
+1.  Especifique el `-n` (sin preguntar) opción.
+2.  Proporcionar los valores necesarios mediante el establecimiento de variables de entorno.
+
+En el ejemplo siguiente se hace lo siguiente:
+-   Instala SSIS.
+-   Especifica la edición Developer, proporcionando un valor para el `SSIS_PID` variable de entorno.
+-   Acepta los términos de licencia proporcionando un valor para el `ACCEPT_EULA` variable de entorno.
+-   Se ejecuta una instalación desatendida mediante la especificación de la `-n` (sin preguntar) opción.
+
+```
+sudo SSIS_PID= Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup 
+```
+
+### <a name="environment-variables-for-unattended-installation"></a>Variables de entorno para la instalación desatendida
+
+| Variable de entorno | Description |
+|---|---|
+| **ACCEPT_EULA** | Acepta el contrato de licencia de SQL Server cuando se establece en cualquier valor (por ejemplo, `Y`).|
+| **SSIS_PID** | Establece la clave de producto o de edición de SQL Server. Estos son los valores posibles:<br/>Evaluation<br/>Desarrollador<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>Una clave de producto<br/><br/>Si especifica una clave de producto, la clave del producto debe tener la forma `#####-#####-#####-#####-#####`, donde `#` es una letra o un número.  |
+| | |
 
 ## <a name="next-steps"></a>Pasos siguientes
 

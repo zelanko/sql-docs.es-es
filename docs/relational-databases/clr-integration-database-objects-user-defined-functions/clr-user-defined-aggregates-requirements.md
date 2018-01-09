@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a46a1a0e60c7fbe667904388a4c1c8cae93ab827
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 158b2aaa95f289a558f0d186e359903252f6d90e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-user-defined-aggregates---requirements"></a>Agregados definidos por el usuario CLR - requisitos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Un tipo en un ensamblado de common language runtime (CLR) se puede registrar como una función de agregado definida por el usuario, siempre y cuando implementa el contrato de agregación necesario. Este contrato está compuesto de la **SqlUserDefinedAggregate** métodos del contrato de atributo y la agregación. El contrato de agregación incluye el mecanismo para guardar el estado intermedio de la agregación así como el mecanismo para acumular nuevos valores, que consta de cuatro métodos: **Init**, **Accumulate**,  **Mezcla**, y **finalizar**. Cuando cumpla estos requisitos, podrá aprovechar al máximo de agregados definidos por el usuario en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En las siguientes secciones de este tema se proporcionan detalles adicionales sobre la forma de crear y trabajar con agregados definidos por el usuario. Para obtener un ejemplo, vea [funciones de agregado de Invoking CLR User-Defined](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md).  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 |---------------------|  
 |Actualiza la descripción de la **Accumulate** método; ahora acepta más de un parámetro.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Tipos definidos por el usuario CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
  [Invocar funciones de agregado definidas por el usuario CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md)  
   

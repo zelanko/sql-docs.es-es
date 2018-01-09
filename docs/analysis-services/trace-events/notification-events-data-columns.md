@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: Notification Events event category
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 39c93ff427048fe1893dd78f8fe35abc0b52885b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 901c9935629b584a0eb9c1fa4320fe590efa5e3d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="notification-events-data-columns"></a>Columnas de datos de eventos de notificación
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eventos de notificación son aquéllos no provocados directamente por los usuarios de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por ejemplo, las notificaciones tienen lugar porque los usuarios actualizan tablas subyacentes para el almacenamiento automático en la caché.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/08/2017
 |CurrentTime|2|5|Contiene la hora actual del evento de notificación, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Contiene la hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Contiene la hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Contiene el tiempo (en milisegundos) que duró el evento.|  
+|Duration|5|2|Contiene el tiempo (en milisegundos) que duró el evento.|  
 |IntegerData|10|1|Contiene los datos enteros asociados al evento de notificación. Cuando la columna EventSubclass es 8, los valores son:<br /><br /> 1 = Creado<br /><br /> 2 = Eliminado<br /><br /> 3 = Propiedades del objeto cambiadas<br /><br /> 4 = Propiedades cambiadas de los elementos secundarios del objeto<br /><br /> 6 = Elementos secundarios agregados<br /><br /> 7 = Elementos secundarios eliminados<br /><br /> 8 = Objeto totalmente procesado<br /><br /> 9 = Objeto parcialmente procesado<br /><br /> 10 = Objeto no procesado<br /><br /> 11 = Objeto totalmente optimizado<br /><br /> 12 = Objeto parcialmente optimizado<br /><br /> 13 = Objeto no optimizado|  
 |ObjectID|11|8|Contiene el identificador de objeto (valor de cadena) para el cual se ha emitido esta notificación.|  
 |ObjectType|12|1|Contiene el tipo de objeto asociado al evento de notificación.|  

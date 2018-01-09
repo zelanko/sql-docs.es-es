@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bb044b96eecbbb5c6eb18dcc33eae1807b2fe8b4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7dc0ec5be4d6a0189e844ddfa24595b0cadade24
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Ver la fórmula de un modelo de serie temporal (Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Si ha creado un modelo de serie de tiempo con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] minería de datos, la manera más fácil encontrar la ecuación de regresión en el modelo consiste en usar la **leyenda de minería de datos** de la [Visor de Series temporales de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), que presenta todas las constantes en un formato legible.  
@@ -94,7 +92,7 @@ ms.lasthandoff: 12/08/2017
     > [!NOTE]  
     >  Si examina el contenido de un modelo mixto en el que se usan los modelos ARIMA y ARTXP, verá que los dos modelos están en árboles separados, unidos en el nodo raíz que representa el modelo. Aunque los modelos ARIMA y ARTXP se presentan en un visor para su comodidad, las estructuras son muy diferentes (como las ecuaciones, que no se combinan o se comparan). El árbol ARTXP es más bien como un árbol de decisión, mientras que el árbol ARIMA representa una serie de medias móviles.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Tareas y procedimientos del Visor de modelos de minería de datos](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Examinar un modelo usando el Visor de serie temporal de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   

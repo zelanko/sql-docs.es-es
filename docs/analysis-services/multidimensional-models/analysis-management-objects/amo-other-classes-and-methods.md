@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 50ac79584b61002a71c792fe485bce6f5115a0ef
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f4de10c612f0338cecbfbd2e106bee41c6115905
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="amo-other-classes-and-methods"></a>Otras clases y métodos de AMO
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Esta sección contiene clases comunes que no son específicas de OLAP o de minería de datos, y que son útiles cuando se administran objetos en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Estas clases incluyen características como procedimientos almacenados, seguimientos, excepciones y copias de seguridad y restauración.  
@@ -93,7 +91,7 @@ ms.lasthandoff: 12/08/2017
   
  Seguridad =**CopyAll**  
   
-##### <a name="restrictions"></a>Restricciones  
+##### <a name="restrictions"></a>Restrictions  
   
 1.  Una partición local no se puede restaurar como una partición remota.  
   
@@ -168,7 +166,7 @@ ms.lasthandoff: 12/08/2017
   
  AMO producirá excepciones en los diferentes problemas encontrados. En la tabla siguiente se enumera el tipo de excepciones que controla AMO. Las excepciones se derivan de la clase <xref:Microsoft.AnalysisServices.AmoException>.  
   
-|Exception|Origen|Description|  
+|Excepción|Origen|Description|  
 |---------------|------------|-----------------|  
 |<xref:Microsoft.AnalysisServices.AmoException>|Clase base|La aplicación recibe esta excepción cuando falta un objeto primario necesario o cuando no se encuentra en una colección un elemento solicitado.|  
 |<xref:Microsoft.AnalysisServices.OutOfSyncException>|Se deriva de AMOException|La aplicación recibe esta excepción cuando AMO no está sincronizado con el motor y el motor devuelve una referencia de objeto que AMO no conoce.|  

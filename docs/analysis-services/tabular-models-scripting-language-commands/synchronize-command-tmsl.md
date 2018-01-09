@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: a32ff053-f38f-49d7-afdc-e19f59c88135
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6912b3c73f898335853ff3ffe78021fad75bb357
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bdf14cf2c3ac199c1108cd8d1178ede676976baa
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="synchronize-command-tmsl"></a>Synchronize, comando (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,8 +46,8 @@ ms.lasthandoff: 12/08/2017
   
 ||||  
 |-|-|-|  
-|**Propiedad**|**Default**|**Description**|  
-|database||El nombre del objeto de base de datos que se sincronizarán.|  
+|**Propiedad**|**Default**|**Descripción**|  
+|Base de datos||El nombre del objeto de base de datos que se sincronizarán.|  
 |origen||Cadena de conexión que se va a usar para conectarse al servidor de origen.|  
 |synchronizeSecurity|skipMembership|Un valor de enumeración que especifica cómo restaurar definiciones de seguridad, incluidos los roles y permisos. Los valores válidos incluyen copyAll, skipMembership, e ignoreSecurity.|  
 |applyCompression|True|Un valor booleano que, cuando es true, indica que se aplicará la compresión durante la operación de sincronización; lo contrario, false.|  

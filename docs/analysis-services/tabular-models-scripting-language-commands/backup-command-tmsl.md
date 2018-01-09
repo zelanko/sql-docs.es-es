@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: fae1b267-0750-4dc5-9bf0-80ac4d8487a3
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f60d996499874ce76188529aadeebf9e1b8d677c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 50e6f8e6f5b01fce2eb0bb6a5dbcd84dd631d994
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="backup-command-tmsl"></a>Comando de copia de seguridad (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Realiza una copia de una base de datos de Analysis Services en un archivo de copia de seguridad de abf.  
@@ -58,8 +56,8 @@ ms.lasthandoff: 12/08/2017
   
 ||||  
 |-|-|-|  
-|**Propiedad**|**Default**|**Description**|  
-|database|[Required]|El nombre del objeto de base de datos para realizar copias de seguridad.|  
+|**Propiedad**|**Default**|**Descripción**|  
+|Base de datos|[Required]|El nombre del objeto de base de datos para realizar copias de seguridad.|  
 |archivo|[Required]|Nombre o ruta de acceso de la copia de seguridad.|  
 |password|Vacía|La contraseña que se utilizará para cifrar el archivo de copia de seguridad.|  
 |allowOverwrite|False|Un valor booleano que, cuando es true, indica que ya existe un archivo de copia de seguridad se sobrescribirá; lo contrario, false.|  

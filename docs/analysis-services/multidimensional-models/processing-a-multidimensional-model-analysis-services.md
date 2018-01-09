@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -31,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a919efd37f8e10259ee23b9d6b879c46812d2721
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3b53e351836edaecfc37230b389b4fba308eb3d3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="processing-a-multidimensional-model-analysis-services"></a>Procesar un modelo multidimensional (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El procesamiento es el paso, o serie de pasos, en el que Analysis Services carga datos de un origen de datos relacional en un modelo multidimensional. Para los objetos que utilizan el almacenamiento MOLAP, los datos se guardan en el disco en la carpeta de archivos de base de datos. Para el almacenamiento ROLAP, el procesamiento se produce a petición, en respuesta a una consulta MDX en un objeto. Para los objetos que utilizan el almacenamiento ROLAP, el procesamiento hace referencia a la actualización de la memoria caché antes de devolver los resultados de la consulta.  
@@ -87,7 +84,7 @@ ms.lasthandoff: 12/08/2017
   
  Si procesa objetos en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede seleccionar una opción de procesamiento o puede habilitar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para que determine el tipo de procesamiento adecuado. Los métodos de procesamiento disponibles difieren de un objeto a otro y se basan en el tipo de objeto. Además, los métodos disponibles se basan en los cambios producidos en el objeto desde el último procesamiento. Si habilita [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para seleccionar automáticamente un método de procesamiento, el programa utilizará el método que devuelve el objeto a un estado totalmente procesado en el menor tiempo posible. Para obtener más información, vea [Opciones y valores de procesamiento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Arquitectura lógica &#40;Analysis Services - Datos multidimensionales&#41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Objetos de base de datos &#40;Analysis Services - Datos multidimensionales&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   

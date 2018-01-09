@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c5a8d84d4e38cfb444f57392479332f328838aaf
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4e15a18c55318373b41c8a4fabe7377aad5d9f00
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="kpigoal-element-csdlbi"></a>KpiGoal, elemento (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]El elemento KpiGoal proporciona una referencia a la columna que se usa para definir el objetivo de una clave indicador de rendimiento (KPI).  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>Atributos y elementos  
  En la tabla siguiente se enumeran los atributos que definen el elemento KpiGoal.  
   
-|Nombre|Es obligatorio|Descripción|  
+|Nombre|Es obligatorio|Description|  
 |----------|-----------------|-----------------|  
 |PropertyRef|Sí|Referencia a la columna que contiene el valor objetivo del KPI.<br /><br /> El elemento Kpigoal debe contener exactamente un elemento PropertyRef.<br /><br /> Vea [PropertyRef, elemento &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/propertyref-element-csdlbi.md).|  
   

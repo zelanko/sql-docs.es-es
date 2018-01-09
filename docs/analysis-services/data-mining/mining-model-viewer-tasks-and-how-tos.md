@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 61bcf404f76a25b4003bbf96be87a2191c903b0f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 49b33d951d759ea941ad8944db5f9e515698bfc7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>Tareas y procedimientos del Visor de modelos de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contiene varias herramientas que puede usar para explorar los modelos de minería de datos. Los temas siguientes proporcionan instrucciones paso a paso para completar las tareas específicas del uso de la pestaña **Visor de modelos de minería de datos** en el diseñador.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [Cambiar los colores usados en los visores de minería de datos](../../analysis-services/data-mining/change-the-colors-used-in-the-data-mining-viewer.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Tutorial básico de minería de datos](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)   
  [Visores de modelos de minería de datos &#40; el Diseñador de modelo de minería de datos &#41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)  
   

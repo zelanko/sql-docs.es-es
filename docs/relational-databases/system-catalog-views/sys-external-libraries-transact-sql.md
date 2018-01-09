@@ -8,7 +8,7 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -21,11 +21,11 @@ helpviewer_keywords: sys.external_libraries catalog view
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: bb229022bcccfb9cdc8c419844d30335337575d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9370c00fa528f204f5f76cc3bba4c807ae82a173
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sysexternallibraries-transact-sql"></a>Sys.external_libraries (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,11 @@ El sys.external_libraries de la vista de catálogo muestra una fila para cada bi
 
 |Nombre de columna |Tipo de datos | Description|
 |------|------|------|
-|external_library_id |int | Identificador del objeto de biblioteca externa. |
-|name |sysname |Nombre de la biblioteca externa. Es único dentro de la base de datos por propietario.|
-|principal_id |int |Id. de la entidad que posee esta biblioteca externa. |
+|external_library_id |INT | Identificador del objeto de biblioteca externa. |
+|NAME |sysname |Nombre de la biblioteca externa. Es único dentro de la base de datos por propietario.|
+|principal_id |INT |Id. de la entidad que posee esta biblioteca externa. |
 |language | sysname | Nombre del idioma o en tiempo de ejecución que admite la biblioteca externa. Los valores válidos son 'R'. Tiempos de ejecución adicionales podrían agregarse en el futuro.|
-|ámbito |int |0 para el ámbito público; 1 para el ámbito privado |  
+|ámbito |INT |0 para el ámbito público; 1 para el ámbito privado |  
 |scope_desc |varchar(7) |Indica si el paquete es público o privado|
 
 

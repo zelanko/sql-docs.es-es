@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8fb40241f031cca90bd2be5069d0c61a0c100dd1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 04edc4aeea3123ad58775fddf3a821f65decd90b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>Complementario de lecciones: configurar propiedades de informes para informes de Power View
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +31,7 @@ En esta lección complementaria, establecerá propiedades para el proyecto AW In
   
 Tiempo estimado para completar esta lección: **30 minutos**  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
 Este tema de la lección complementaria forma parte de un tutorial de creación de modelos tabulares, que se debe completar de forma ordenada. Antes de realizar las tareas de esta lección complementaria, debe haber completado todas las lecciones anteriores.  
 Para completar esta lección complementaria concreta, también debe tener lo siguiente:  
   
@@ -155,7 +155,7 @@ Solo establecerá algunas propiedades de columna distintas aquí, pero hay mucha
   
     **Customer**  
   
-    |Columna|Propiedad|Value|  
+    |columna|Propiedad|Valor|  
     |----------|------------|---------|  
     |Geography Id|Hidden|True|  
     |Birth Date|Formato de datos|Short Date|  
@@ -165,9 +165,9 @@ Solo establecerá algunas propiedades de columna distintas aquí, pero hay mucha
     > [!NOTE]  
     > Dado que la tabla Date se seleccionó como la tabla de fechas de modelos con la opción Marcar como tabla de fechas, en la lección 7, Marcar como tabla de fechas, y la columna Date de la tabla Date como la columna que se usa como identificador único, la propiedad Identificador de fila de la columna Date se establecerá automáticamente en True y no se puede cambiar. Cuando se usan funciones de inteligencia temporal en fórmulas DAX, debe especificar una tabla de fechas. En este modelo, creó una serie de medidas con las funciones de inteligencia temporal para calcular los datos de ventas para varios periodos como los trimestres anteriores y actuales y también para usarse en KPI. Para obtener más información sobre cómo especificar una tabla de fechas, vea [Especificar Marcar como tabla de fechas con inteligencia de tiempo &#40;SSAS tabular&#41;](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) en los Libros en pantalla de SQL Server.  
   
-    |Columna|Propiedad|Value|  
+    |columna|Propiedad|Valor|  
     |----------|------------|---------|  
-    |Date|Formato de datos|Short Date|  
+    |date|Formato de datos|Short Date|  
     |Día de la semana|Hidden|True|  
     |Nombre del día|Sort By Column|Día de la semana|  
     |Día de la semana|Hidden|True|  
@@ -182,14 +182,14 @@ Solo establecerá algunas propiedades de columna distintas aquí, pero hay mucha
   
     **Geography**  
   
-    |Columna|Propiedad|Value|  
+    |columna|Propiedad|Valor|  
     |----------|------------|---------|  
     |Geography Id|Hidden|True|  
     |Sales Territory Id|Hidden|True|  
   
     **Product**  
   
-    |Columna|Propiedad|Value|  
+    |columna|Propiedad|Valor|  
     |----------|------------|---------|  
     |Product Id|Hidden|True|  
     |Product Alternate Id|Etiqueta predeterminada|True|  
@@ -199,7 +199,7 @@ Solo establecerá algunas propiedades de columna distintas aquí, pero hay mucha
   
     **Internet Sales**  
   
-    |Columna|Propiedad|Value|  
+    |columna|Propiedad|Valor|  
     |----------|------------|---------|  
     |Product Id|Hidden|True|  
     |Customer Id|Hidden|True|  
@@ -207,9 +207,9 @@ Solo establecerá algunas propiedades de columna distintas aquí, pero hay mucha
     |Id. de moneda|Hidden|True|  
     |Sales Territory Id|Hidden|True|  
     |Cantidad del pedido|Tipo de datos<br /><br />Formato de datos<br /><br />Posiciones decimales|Decimal Number<br /><br />Decimal Number<br /><br />0|  
-    |Fecha de pedido|Formato de datos|Short Date|  
-    |Fecha de vencimiento|Formato de datos|Short Date|  
-    |Fecha de envío|Formato de datos|Short Date|  
+    |Order Date|Formato de datos|Short Date|  
+    |Due Date|Formato de datos|Short Date|  
+    |Ship Date|Formato de datos|Short Date|  
   
 ## <a name="redeploy-the-adventure-works-internet-sales-tabular-model"></a>Volver a implementar el MT Ventas AW  
 Dado que ha cambiado el modelo, debe volver a implementarlo.  

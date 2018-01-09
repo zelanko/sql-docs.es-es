@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -27,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b713da243d7c97902ed0810509a18f97dbc0c3aa
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8780f95cab9d124b78d486e86b78897a2f2d6d39
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---alter-cube"></a>Definición de datos MDX - ALTER CUBE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -131,7 +131,7 @@ CELL CALCULATION Calculation_Name
  *Member_Name*  
  Expresión de cadena válida que proporciona un nombre de miembro o una clave de miembro.  
   
-### <a name="remarks"></a>Comentarios  
+### <a name="remarks"></a>Notas  
  Si no se utiliza la cláusula WITH DESCENDANTS, los elementos secundarios de un miembro quitado se convierten en elementos secundarios del elemento primario del miembro quitado. Si se utiliza la cláusula WITH DESCENDANTS, también se quitan todos los descendientes y sus filas de la tabla de dimensiones.  
   
 > [!NOTE]  
@@ -147,7 +147,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  Expresión MDX válida que devuelve un miembro único.  
   
-### <a name="remarks"></a>Comentarios  
+### <a name="remarks"></a>Notas  
  La expresión MDX especificada puede ser estática o dinámica.  
   
 ## <a name="moving-a-dimension-member"></a>Mover un miembro de dimensión  
@@ -181,7 +181,7 @@ CELL CALCULATION Calculation_Name
 ## <a name="creating-a-cell-calculation"></a>Crear un cálculo de celda  
  Para obtener más información acerca de cómo crear un cálculo de celda mediante la instrucción ALTER CUBE, vea [DROP CELL CALCULATION instrucción &#40; MDX &#41; ](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Instrucciones de definición de datos MDX &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

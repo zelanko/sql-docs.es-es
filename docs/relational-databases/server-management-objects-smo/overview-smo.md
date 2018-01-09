@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3a768d79345789dfbe9e33dc885e296928429e01
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 96293d1bf121ac3697d494f1c5a6fc22f4dffb64
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="overview-smo"></a>Información general (SMO)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) son objetos diseñados para la administración mediante programación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede usar SMO para crear aplicaciones de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizadas. Aunque [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] es una aplicación eficaz y completa para administrar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], habrá ocasiones en las que resultará más conveniente usar una aplicación SMO.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
  SMO también representa como nuevos objetos o propiedades muchas características y componentes que se introdujeron en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Entre estas características y componentes nuevos se incluyen los siguientes:  
   
--   Partición de tablas e índices para el almacenamiento de datos en un esquema de partición. Para obtener más información, consulte [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+-   Partición de tablas e índices para el almacenamiento de datos en un esquema de partición. Para obtener más información, vea [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
 -   Extremos HTTP para administrar solicitudes SOAP. Para obtener más información, consulte [Implementing Endpoints](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md).  
   

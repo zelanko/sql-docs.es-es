@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|applications
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 13e82915a2ddce9cb21dabb6ec2ad1aa96543069
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d2c72e6ab626db31ec329dce777f17e04774b01d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>Actualizar una aplicación de MDCA a SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -97,15 +97,15 @@ ms.lasthandoff: 11/17/2017
   
     -   Eliminar  
   
-    -   Backup  
+    -   Copia de seguridad  
   
 -   Cuando las aplicaciones MDAC se conecten a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], los tipos de datos introducidos en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] se mostrarán como tipos de datos compatibles con [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)], tal y como se indica en la tabla siguiente.  
   
     |Tipo de SQL Server 2005|Tipo de SQL Server 2000|  
     |--------------------------|--------------------------|  
-    |**varchar(max)**|**text**|  
+    |**ntext**|**text**|  
     |**nvarchar(max)**|**ntext**|  
-    |**varbinary(max)**|**image**|  
+    |**varbinary(max)**|**imagen**|  
     |**UDT**|**varbinary**|  
     |**xml**|**ntext**|  
   

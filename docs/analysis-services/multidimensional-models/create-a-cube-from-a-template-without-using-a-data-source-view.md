@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8ebf7113a80cecd58a98108a82caa26d21d5d158
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ed5bd7197fa455d5ea93f39e529961a16828ba77
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Crear un cubo a partir de una plantilla sin usar una vista del origen de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Seleccione **generar el cubo sin un origen de datos** en la primera página del Asistente para cubos para crear un cubo sin utilizar una vista del origen de datos. Posteriormente, podrá usar el Asistente para generar esquemas para generar el esquema relacional para la vista del origen de datos basándose en la estructura de cubo y, posiblemente, en otros objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para más información sobre cómo generar un esquema, vea [Asistente para generar esquemas &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md).  
@@ -48,7 +45,7 @@ ms.lasthandoff: 12/08/2017
   
  Las cuadrículas **Seleccionar medidas de plantilla** y **Agregar nuevas medidas** muestran valores debajo de las columnas descritas en la tabla siguiente. Puede hacer clic en un valor de cualquier lista para cambiarlo.  
   
-|Columna|Description|  
+|columna|Description|  
 |------------|-----------------|  
 |**Nombre de medida**|Cada valor de esta columna define el nombre de una medida del cubo. Haga clic en un valor de esta columna para escribir un nombre. Haga clic en **Agregar nueva medida** en esta columna para crear una nueva medida. Esta columna establece la propiedad **Name** del objeto de medida.|  
 |**Grupo de medida**|El nombre del grupo de medida que contiene la medida. Haga clic en este valor para elegir o escribir un nombre. Si elimina todas las medidas que pertenecen a un grupo de medida determinado, se quita el grupo de medida. Esta columna establece la propiedad **Name** del objeto de grupo de medida.|  
@@ -64,10 +61,10 @@ ms.lasthandoff: 12/08/2017
   
  Las cuadrículas **Seleccionar dimensiones de plantilla** y **Agregar nuevas dimensiones** muestran valores debajo de las columnas descritas en la tabla siguiente. Puede hacer clic en un valor de cualquier lista para cambiarlo.  
   
-|Columna|Description|  
+|columna|Description|  
 |------------|-----------------|  
 |**Tipo**|Muestra el tipo de dimensión de una dimensión de la plantilla. Haga clic en esta celda para cambiar el tipo de dimensión. Esta columna establece la propiedad **Type** del objeto de dimensión.|  
-|**Name**|Muestra el nombre de la dimensión. Haga clic en esta celda para escribir otro nombre. Este valor establece la propiedad **Name** del objeto de dimensión.|  
+|**Nombre**|Muestra el nombre de la dimensión. Haga clic en esta celda para escribir otro nombre. Este valor establece la propiedad **Name** del objeto de dimensión.|  
 |**DVL**|Especifica que se trata de una dimensión de variación lenta (DVL). Si se activa esta casilla, se agregan los atributos Fecha de inicio de DVL, Id. original de DVL y Estado de DVL a la dimensión. La opción**DVL** aparece seleccionada de forma predeterminada si se usa una plantilla para crear el cubo y el asistente detecta estos cuatro tipos de atributos en una dimensión de plantilla.|  
 |**Atributos**|Muestra los atributos que se crearán para la dimensión. Cada nombre de atributo de la lista está precedido del nombre de la dimensión. Esta lista es de solo lectura. Puede editar los atributos con el Diseñador de dimensiones una vez completado el asistente.|  
   

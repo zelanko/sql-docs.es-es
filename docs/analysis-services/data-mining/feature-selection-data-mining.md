@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 851262d2141413487aafe45456cba7748440fde6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: eb5669b2043c34cb9a960b92abae6b76df36daea
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="feature-selection-data-mining"></a>Selección de características (minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*Selección de características* es una parte importante del aprendizaje automático. La selección de características hace referencia al proceso de reducir las entradas para su procesamiento y análisis, o de encontrar las entradas más significativas. Un término relacionado, *ingeniería de características* (o *extracción de características*), hace referencia al proceso de extraer información útil o características de datos existentes.  
@@ -116,7 +114,7 @@ ms.lasthandoff: 12/08/2017
   
 |Algoritmo|Método de análisis|Comentarios|  
 |---------------|------------------------|--------------|  
-|Bayes naive|entropía de Shannon<br /><br /> Bayesiano con prioridad K2<br /><br /> Dirichlet bayesiano con prioridad uniforme (predeterminado)|El algoritmo Bayes naive de Microsoft solo acepta atributos discretos o de datos discretos, por lo que no puede utilizar la puntuación interestingness.<br /><br /> Para obtener más información acerca de este algoritmo, vea [Microsoft Naive Bayes Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md).|  
+|Bayes naive|Entropía de Shannon<br /><br /> Bayesiano con prioridad K2<br /><br /> Dirichlet bayesiano con prioridad uniforme (predeterminado)|El algoritmo Bayes naive de Microsoft solo acepta atributos discretos o de datos discretos, por lo que no puede utilizar la puntuación interestingness.<br /><br /> Para obtener más información acerca de este algoritmo, vea [Microsoft Naive Bayes Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md).|  
 |Árboles de decisión|Puntuación interestingness<br /><br /> Entropía de Shannon<br /><br /> Bayesiano con prioridad K2<br /><br /> Dirichlet bayesiano con prioridad uniforme (predeterminado)|Si alguna columna contiene valores continuos no binarios, se utiliza la puntuación interestingness (grado de interés) en todas las columnas para asegurar la coherencia. De lo contrario, se usa el método de selección de características predeterminado o el método que se haya especificado al crear el modelo.<br /><br /> Para obtener más información acerca de este algoritmo, vea [Microsoft Decision Trees Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md).|  
 |Red neuronal|Puntuación interestingness<br /><br /> Entropía de Shannon<br /><br /> Bayesiano con prioridad K2<br /><br /> Dirichlet bayesiano con prioridad uniforme (predeterminado)|El algoritmo de redes neuronales de Microsoft puede usar el método bayesiano y el método basado en la entropía, siempre y cuando los datos contengan columnas continuas.<br /><br /> Para obtener más información acerca de este algoritmo, vea [Microsoft Neural Network Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md).|  
 |Regresión logística|Puntuación interestingness<br /><br /> Entropía de Shannon<br /><br /> Bayesiano con prioridad K2<br /><br /> Dirichlet bayesiano con prioridad uniforme (predeterminado)|Aunque el algoritmo de regresión logística de Microsoft se basa en el algoritmo de red neuronal de Microsoft, no se pueden personalizar los modelos de regresión logística para controlar el comportamiento de la selección de características; por lo tanto, la selección de características siempre usa de manera predeterminada el método más apropiado para el atributo.<br /><br /> Si todos los atributos son discretos o de datos discretos, el valor predeterminado es BDEU.<br /><br /> Para obtener más información acerca de este algoritmo, vea [Microsoft Logistic Regression Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md).|  
@@ -139,7 +137,7 @@ ms.lasthandoff: 12/08/2017
   
  Además de estos métodos para la selección de características, es posible mejorar la capacidad del algoritmo para identificar o promover atributos significativos estableciendo *marcas de modelado* en el modelo o *marcas de distribución* en la estructura. Para más información sobre estos conceptos, vea [Marcas de modelado &#40;minería de datos&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md) y [Distribuciones de columnas &#40;minería de datos&#41;](../../analysis-services/data-mining/column-distributions-data-mining.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Personalizar la estructura y los modelos de minería de datos](../../analysis-services/data-mining/customize-mining-models-and-structure.md)  
   
   

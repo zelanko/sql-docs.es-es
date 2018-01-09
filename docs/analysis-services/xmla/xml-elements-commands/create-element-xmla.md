@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Create Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fc484789f5862c16ebfc95c6a7afd8d58e9b4f50
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f3e568fb190940822a6c6ef5cb65cf6b9476f4b1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-element-xmla"></a>Elemento Create (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contiene elementos de Analysis Services Scripting Language (ASSL) utilizados por el **Execute** método para crear objetos en un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia.  
@@ -49,12 +47,12 @@ ms.lasthandoff: 12/08/2017
 </Command>  
 ```  
   
-## <a name="element-characteristics"></a>Características de los elementos  
+## <a name="element-characteristics"></a>Características del elemento  
   
-|Característica|Descripción|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|Ninguno|  
-|Valor predeterminado|Ninguno|  
+|Tipo y longitud de los datos|None|  
+|Valor predeterminado|None|  
 |Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
@@ -66,7 +64,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |AllowOverwrite|Atributo **Boolean** opcional. Si se establece en True, los objetos definidos en el **ObjectDefinition** elemento puede sobrescribir objetos existentes en el [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia. Si este atributo se omite o se establece en False, la presencia de un objeto existente genera un error.|  
 |Ámbito|Atributo **Enum** opcional. Define la duración de objetos definidos en el elemento **ObjectDefinition** . Si se omite este atributo, los objetos definidos en el **ObjectDefinition** elemento se conservan en el [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia. El valor siguiente está disponible:<br /><br /> *Sesión*: los objetos definidos en el **ObjectDefinition** el elemento existe únicamente para la duración del XML de sesión de Analysis (XMLA).<br />                  Tenga en cuenta que, cuando se usa el *sesión* establecer, el **ObjectDefinition** solo puede contener el elemento [dimensión](../../../analysis-services/scripting/objects/dimension-element-assl.md), [cubo](../../../analysis-services/scripting/objects/cube-element-assl.md), o [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) elementos ASSL.|  

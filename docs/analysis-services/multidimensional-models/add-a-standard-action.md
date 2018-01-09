@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 542b50ce2d0e9f3bee53fd6fa5290a152dd03edd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 72a2181917ded838c8ab538fbd1c017147fc91d6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="add-a-standard-action"></a>Agregar una acción estándar
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Agregar una acción a una base de datos mediante la vista de acciones del Diseñador de cubos. Se puede tener acceso a esta vista desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Una vez creada la acción, estará disponible para los usuarios después de volver a procesar el cubo correspondiente. Para más información, consulte [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
@@ -45,7 +42,7 @@ ms.lasthandoff: 12/08/2017
         |Celdas|La única selección disponible es Todas las celdas. Si elige **Celdas** como tipo de destino, puede escribir una expresión en **Condición** para restringir las celdas con las que está asociada la acción.|  
         |Cube|La única selección disponible es CURRENTCUBE. La acción está asociada con el cubo actual.|  
         |miembros de dimensión|Seleccione una sola dimensión. La acción se asociará a todos los miembros de la dimensión.|  
-        |Jerarquía|Seleccione una sola jerarquía. La acción solo se asociará con el objeto de jerarquía. Las jerarquías de atributo solo aparecen en la lista si sus propiedades **AttributeHierarchyEnabled** y **AttributeHierarchyVisible** se establecen en **True**.|  
+        |Hierarchy|Seleccione una sola jerarquía. La acción solo se asociará con el objeto de jerarquía. Las jerarquías de atributo solo aparecen en la lista si sus propiedades **AttributeHierarchyEnabled** y **AttributeHierarchyVisible** se establecen en **True**.|  
         |Miembros de la jerarquía|Seleccione una sola jerarquía. La acción se asociará con todos los miembros de la jerarquía seleccionada. Las jerarquías de atributo solo aparecen en la lista si sus propiedades **AttributeHierarchyEnabled** y **AttributeHierarchyVisible** se establecen en **True**.|  
         |Nivel|Seleccione un solo nivel. La acción solo se asociará con el objeto de nivel.|  
         |Miembros del nivel|Seleccione un solo nivel. La acción se asociará con todos los miembros del nivel seleccionado.|  
@@ -58,7 +55,7 @@ ms.lasthandoff: 12/08/2017
   
         |Tipo|Description|  
         |----------|-----------------|  
-        |Conjunto de datos|Recupera un conjunto de datos.|  
+        |Dataset|Recupera un conjunto de datos.|  
         |Propietario|Ejecuta una operación con una interfaz que no aparece en esta tabla.|  
         |Conjunto de filas|Recupera un conjunto de filas.|  
         |.|Ejecuta un comando OLE DB.|  

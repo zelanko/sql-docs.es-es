@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: aggregate functions [Analysis Services]
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7a146e6be066f8669757d15f5fe76ac67c5c172b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b22f964bbc9659187cf67320951b75d93cb89331
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="use-aggregate-functions"></a>Usar funciones de agregado
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cuando se utiliza una dimensión para segmentar una medida, la medida se resume en las jerarquías contenidas en esa dimensión. El comportamiento de suma depende de la función de agregado especificada en la medida. Para la mayoría de las medidas que contienen datos numéricos, la función de agregado es **Sum**. El valor de la medida se suma a cantidades diferentes dependiendo del nivel de la jerarquía que esté activo.  
@@ -57,7 +54,7 @@ ms.lasthandoff: 12/08/2017
 |**Min**|Semiaditiva|Recupera el valor más bajo para todos los miembros secundarios.|  
 |**Max**|Semiaditiva|Recupera el valor más alto para todos los miembros secundarios.|  
 |**DistinctCount**|No aditiva|Recupera el recuento de todos los miembros secundarios únicos. Para más detalles, vea [About Distinct Count Measures](../../analysis-services/multidimensional-models/use-aggregate-functions.md#bkmk_distinct) en la próxima sección.|  
-|**None**|No aditiva|No se realiza una agregación y todos los valores para los miembros hoja y no hoja de una dimensión se suministran directamente desde la tabla de hechos para el grupo de medida que contiene la medida. Si no se puede leer ningún valor desde la tabla de hechos para un miembro, se establece el valor para dicho miembro en null.|  
+|**Ninguno**|No aditiva|No se realiza una agregación y todos los valores para los miembros hoja y no hoja de una dimensión se suministran directamente desde la tabla de hechos para el grupo de medida que contiene la medida. Si no se puede leer ningún valor desde la tabla de hechos para un miembro, se establece el valor para dicho miembro en null.|  
 |**ByAccount**|Semiaditiva|Calcula la agregación según la función de agregación asignada al tipo de cuenta para un miembro en una dimensión de cuenta. Si no existe ninguna dimensión de tipo de cuenta en el grupo de medida, se trata como la función de agregación **None** .<br /><br /> Para más información sobre las dimensiones de cuenta, vea [Crear una cuenta financiera de una dimensión de tipo primario-secundario](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).|  
 |**AverageOfChildren**|Semiaditiva|Calcula el promedio de los valores de todos los miembros secundarios no vacíos.|  
 |**FirstChild**|Semiaditiva|Recupera el valor del primer miembro secundario.|  

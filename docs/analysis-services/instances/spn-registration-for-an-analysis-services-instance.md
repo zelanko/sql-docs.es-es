@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b27946307c6ebb42cf83727e6e6e8c6f98b0e6b6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ecb1a5b33ede8c99150fd8b3ce1cf9babdb1f519
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>Registro de SPN para una instancia de Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un nombre principal de servicio (SPN) identifica de forma única una instancia de servicio en un dominio de Active Directory cuando se usa Kerberos para autenticar mutuamente las identidades de cliente y el servicio. Un SPN está asociado a la cuenta de inicio de sesión bajo la que se ejecuta la instancia del servicio.  
@@ -102,7 +99,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
   
  **Sintaxis de ejemplo para una instancia con nombre que se ejecuta como servicio nt\msolap$\<nombre de instancia >**  
   
- En este ejemplo se muestra la sintaxis de **setspn** para una instancia con nombre en ejecución en la cuenta virtual predeterminada. En este ejemplo, el nombre de host del equipo es **AW-SRV02**y el nombre de instancia es **AW-FINANCE**. De nuevo, es la cuenta de equipo que se especifica para el SPN, en lugar de la cuenta virtual **servicio nt\msolap $**\<nombre de instancia >.  
+ En este ejemplo se muestra la sintaxis de **setspn** para una instancia con nombre en ejecución en la cuenta virtual predeterminada. En este ejemplo, el nombre de host del equipo es **AW-SRV02** y el nombre de instancia es **AW-FINANCE**. De nuevo, es la cuenta de equipo que se especifica para el SPN, en lugar de la cuenta virtual **servicio nt\msolap $**\<nombre de instancia >.  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02  

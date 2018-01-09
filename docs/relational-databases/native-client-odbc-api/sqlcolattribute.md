@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-api
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
@@ -19,11 +19,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d53b7960373099635351b9450d401aee4e7b0cbe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d48e17d03ea0b224487b115faf407c3d43b5fc95
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Los atributos de identificador de columna de ODBC no están disponibles en todos los conjuntos de resultados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Identificador de campo|Descripción|  
+|Identificador de campo|Description|  
 |----------------------|-----------------|  
 |SQL_COLUMN_TABLE_NAME|Disponible en conjuntos de resultados recuperados de instrucciones que generan cursores de servidor o en instrucciones SELECT ejecutadas que contienen una cláusula FOR BROWSE.|  
 |SQL_DESC_BASE_COLUMN_NAME|Disponible en conjuntos de resultados recuperados de instrucciones que generan cursores de servidor o en instrucciones SELECT ejecutadas que contienen una cláusula FOR BROWSE.|  
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/17/2017
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]introdujo campos descriptores específicos del controlador para proporcionar información adicional para indicar el nombre de colección de esquemas XML, el nombre de esquema y el nombre del catálogo, respectivamente. Estas propiedades no requieren comillas ni un carácter de escape si contienen caracteres no alfanuméricos. En la tabla siguiente se enumeran estos nuevos campos descriptores:  
   
-|Nombre de columna|Tipo|Descripción|  
+|Nombre de columna|Tipo|Description|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|Nombre del catálogo donde se define el nombre de una colección de esquemas XML. Si no se encuentra el nombre de catálogo, esta variable contiene una cadena vacía.<br /><br /> Esta información se devuelve del campo de registro SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME de IRD, que es un campo de lectura y escritura.|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|CharacterAttributePtr|Nombre del esquema donde se define el nombre de una colección de esquemas XML. Si no se encuentra el nombre de esquema, esta variable contiene una cadena vacía.<br /><br /> Esta información se devuelve del campo de registro SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME de IRD, que es un campo de lectura y escritura.|  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
   
  Asimismo, en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] se introdujeron nuevos campos descriptores específicos del controlador para proporcionar información adicional para una columna de tipo definido por el usuario (UDT) de un conjunto de resultados o un parámetro UDT de un procedimiento almacenado o una consulta con parámetros. Estas propiedades no requieren comillas ni un carácter de escape si contienen caracteres no alfanuméricos. En la tabla siguiente se enumeran estos nuevos campos descriptores:  
   
-|Nombre de columna|Tipo|Descripción|  
+|Nombre de la columna|Tipo|Description|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|Nombre del catálogo que contiene el UDT.|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|Nombre del esquema que contiene el UDT.|  

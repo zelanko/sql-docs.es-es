@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 8c9c9e933c57a17e8b64846e25d6e9fe80f8f61d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ed3dbf6b45af894f4f2f841d7c8b3496a332028f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Configurar y ver el registro de diagnóstico y SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] las operaciones del servidor, eventos y mensajes se registran en los archivos de registro de SharePoint. Use la información de este tema para configurar los niveles de registro y ver la información del archivo de registro. Puede controlar qué eventos de servidor de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] se registran en el archivo. También puede controlar la gravedad de los mensajes que se registran. Para más información, vea [Configurar la recolección de datos de uso para Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
@@ -127,11 +124,11 @@ ms.lasthandoff: 12/08/2017
   
 |Procesar|Área|Categoría|Nivel|de mensaje|Detalles|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ssNoVersion|Uso|Detallado|No hay ninguna estadística de solicitudes actuales, nada para registrar.|En los intervalos predefinidos, el servicio notifica las estadísticas de respuesta de las consultas como un evento de uso al sistema de recopilación de datos de uso. Este mensaje indica que no hubo ninguna estadística de consulta que notificar.|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ssNoVersion|Front end web|Detallado|Empezar a buscar un servidor de aplicaciones para el origen de datos =\<*ruta de acceso*>|Cuando se recibe una solicitud de conexión, el servicio de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] identifica un [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] disponible para administrar la solicitud. Si hay solo un servidor en la granja, el servidor local acepta la solicitud en todos los casos.|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ssNoVersion|Front end web|Detallado|La búsqueda del servidor de aplicaciones tuvo éxito.|La solicitud se asignó a una aplicación de servicio de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ssNoVersion|Front end web|Detallado|Redireccionar la solicitud para la \< *origen de datos de PowerPivot*> a la [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|La solicitud se reenvió al [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ssNoVersion|Procesamiento de solicitudes|Detallado|Redireccionar la solicitud para el nombre de usuario\<*usuario de SharePoint*> a la base de datos|Una conexión suplantada con el origen de datos de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] se creó en nombre del usuario de SharePoint.|  
+|w3wp.exe|Servicio[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] |Uso|Verbose|No hay ninguna estadística de solicitudes actuales, nada para registrar.|En los intervalos predefinidos, el servicio notifica las estadísticas de respuesta de las consultas como un evento de uso al sistema de recopilación de datos de uso. Este mensaje indica que no hubo ninguna estadística de consulta que notificar.|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ssNoVersion|Front end web|Verbose|Empezar a buscar un servidor de aplicaciones para el origen de datos =\<*ruta de acceso*>|Cuando se recibe una solicitud de conexión, el servicio de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] identifica un [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] disponible para administrar la solicitud. Si hay solo un servidor en la granja, el servidor local acepta la solicitud en todos los casos.|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ssNoVersion|Front end web|Verbose|La búsqueda del servidor de aplicaciones tuvo éxito.|La solicitud se asignó a una aplicación de servicio de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ssNoVersion|Front end web|Verbose|Redireccionar la solicitud para la \< *origen de datos de PowerPivot*> a la [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|La solicitud se reenvió al [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|  
+|w3wp.exe|Servicio[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] |Procesamiento de solicitudes|Verbose|Redireccionar la solicitud para el nombre de usuario\<*usuario de SharePoint*> a la base de datos|Una conexión suplantada con el origen de datos de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] se creó en nombre del usuario de SharePoint.|  
   
 ## <a name="see-also"></a>Vea también  
  [Recopilación de datos de uso de Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)   

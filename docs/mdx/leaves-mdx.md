@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: LEAVES
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 5c81af0aca39840d867422ff2ed98768643342b8
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e8038145cf8587c6c0d5a86461302fd7075bcee9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="leaves-mdx"></a>Leaves (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ Leaves( [ Dimension_expression ] )
  *Dimension_Expression*  
  Expresión MDX válida que devuelve una dimensión.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Los miembros hoja son tuplas formadas por la combinación cruzada del nivel inferior de todas las jerarquías de atributo. Se excluyen los miembros calculados.  
   
 -   Si se especifica un nombre de dimensión, el **deja** función devuelve un conjunto que contiene los miembros hoja del atributo clave de la dimensión especificada.  
@@ -57,7 +57,7 @@ Leaves( [ Dimension_expression ] )
     > [!IMPORTANT]  
     >  Se genera un error si no todos los atributos tienen la misma granularidad en los grupos de medida del ámbito actual.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Referencia de funciones MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

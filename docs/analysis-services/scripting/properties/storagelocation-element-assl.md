@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: StorageLocation Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c70315d8853bc4c4cc0d25154bbf21e341033f0e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9c942079a21d4727e1c125bf15ac837045c162ba
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="storagelocation-element-assl"></a>Elemento StorageLocation (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contiene la ubicación de almacenamiento de sistema de archivos para el contenido del elemento primario.  
@@ -45,17 +43,17 @@ ms.lasthandoff: 12/08/2017
 </Cube>  
 ```  
   
-## <a name="element-characteristics"></a>Características de los elementos  
+## <a name="element-characteristics"></a>Características del elemento  
   
-|Característica|Descripción|  
+|Característica|Description|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|Cadena|  
+|Tipo y longitud de los datos|String|  
 |Valor predeterminado|Vea la siguiente tabla.|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
 |Antecesor o elemento primario|Valor predeterminado|  
 |------------------------|-------------------|  
-|[Cubo](../../../analysis-services/scripting/objects/cube-element-assl.md)|Ninguno|  
+|[Cubo](../../../analysis-services/scripting/objects/cube-element-assl.md)|None|  
 |[MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)|Valor de **StorageLocation** del elemento primario **Cube** .|  
 |[Partición](../../../analysis-services/scripting/objects/partition-element-assl.md)|Valor de **StorageLocation** del elemento primario **MeasureGroup** .|  
   
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Cubo](../../../analysis-services/scripting/objects/cube-element-assl.md), [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md), [partición](../../../analysis-services/scripting/objects/partition-element-assl.md)|  
-|Elementos secundarios|Ninguno|  
+|Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Comentarios  
  Los elementos que corresponden a los elementos primarios de **StorageLocation** en el modelo de objetos de Analysis Management Objects (AMO) son <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.MeasureGroup>, y <xref:Microsoft.AnalysisServices.Partition>.  

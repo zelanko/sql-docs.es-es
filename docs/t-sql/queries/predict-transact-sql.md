@@ -8,7 +8,7 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,11 +19,11 @@ helpviewer_keywords: PREDICT clause
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 8cc0e51a83b4c024a25caf2fe6501438a3ef8a18
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5f2ed3582341ff2824943a432e5877602b0b9ee7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="predict-transact-sql"></a>PREDECIR (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ El `MODEL` parámetro se utiliza para especificar el modelo que se usa para la p
 
 El objeto de modelo puede crearse mediante el uso de R o Python u otra herramienta.
 
-**datos**
+**data**
 
 El parámetro de datos se utiliza para especificar los datos usados para puntuar o la predicción. Datos se especifican en forma de un origen de tabla en la consulta. Origen de tabla puede ser una tabla, los alias de tabla, los alias CTE, vista o función con valores de tabla.
 

@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0215c2ebdd4a98607dcb60418e468fbe02f6663f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7c958feff44c2947c74f51eaec94abcd4ca8e543
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Instalación de Analysis Services en el modo PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Los procedimientos descritos en este tema le guiará a través de una instalación de servidor único de un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server en [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modo para una implementación de SharePoint. Los pasos incluyen la ejecución del Asistente para la instalación de SQL Server, así como tareas de configuración que usan Administración central de SharePoint.  
@@ -232,7 +232,7 @@ ms.lasthandoff: 12/08/2017
   
 6.  Haga clic en **Aceptar**.  
   
-7.  Los cambios surtirán efecto en unos minutos; o bien, puede **Detener** e **Iniciar** el servicio **Excel Calculation Services**. Para  
+7.  Los cambios surtirán efecto en unos minutos; o bien, puede **Detener** e **Iniciar** el servicio **Excel Calculation Services**. A  
   
      Otra opción es abrir un símbolo del sistema con privilegios de administrador y escribir `iisreset /noforce`.  
   

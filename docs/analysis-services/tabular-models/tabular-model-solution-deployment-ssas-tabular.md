@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fa6eac77d29470dce66970189173acf6d1842b1f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b00a88530d8917d45358cbd69a21b9b2555e1f82
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>Implementación de soluciones de modelos tabulares (SSAS tabular)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Después de crear un proyecto de modelo tabular, debe implementarlo en orden para que los usuarios examinen el modelo mediante el uso de una aplicación de cliente de informes. Este tema describe las diferentes propiedades y métodos que puede utilizar al implementar soluciones de modelo tabular en el entorno.  
@@ -59,7 +56,7 @@ ms.lasthandoff: 12/08/2017
   
 |Propiedad|Valor predeterminado|Description|  
 |--------------|---------------------|-----------------|  
-|**Opción de procesamiento**|**Predeterminado**|Esta propiedad especifica el tipo de procesamiento necesario cuando se implementan cambios en los objetos. Esta propiedad tiene las opciones siguientes:<br /><br /> **Valor predeterminado** : este valor especifica que Analysis Services determinará el tipo de procesamiento necesario. Los objetos sin procesar se procesarán y, si fuera necesario, se volverán a calcular las relaciones de atributo, las jerarquías de atributo, las jerarquías de usuario y las columnas calculadas. Esta configuración produce como resultado un menor tiempo de implementación que la opción de procesamiento completo.<br /><br /> **No Procesar** : este valor especifica que solamente se implementarán los metadatos. Después de la implementación, puede que sea necesario ejecutar una operación de procesamiento en el modelo implementado para actualizar y recalcular los datos.<br /><br /> **Completo** : este valor especifica que los metadatos están implementados y que se realiza una operación Proceso completo. Esto garantiza que el modelo implementado tiene las actualizaciones más recientes de los metadatos y los datos.|  
+|**Opción de procesamiento**|**Default**|Esta propiedad especifica el tipo de procesamiento necesario cuando se implementan cambios en los objetos. Esta propiedad tiene las opciones siguientes:<br /><br /> **Valor predeterminado** : este valor especifica que Analysis Services determinará el tipo de procesamiento necesario. Los objetos sin procesar se procesarán y, si fuera necesario, se volverán a calcular las relaciones de atributo, las jerarquías de atributo, las jerarquías de usuario y las columnas calculadas. Esta configuración produce como resultado un menor tiempo de implementación que la opción de procesamiento completo.<br /><br /> **No Procesar** : este valor especifica que solamente se implementarán los metadatos. Después de la implementación, puede que sea necesario ejecutar una operación de procesamiento en el modelo implementado para actualizar y recalcular los datos.<br /><br /> **Completo** : este valor especifica que los metadatos están implementados y que se realiza una operación Proceso completo. Esto garantiza que el modelo implementado tiene las actualizaciones más recientes de los metadatos y los datos.|  
 |**Implementación transaccional**|**False**|Esta propiedad especifica si la implementación es o no transaccional. De manera predeterminada, la implementación de todos los objetos modificados no es transaccional con el procesamiento de dichos objetos implementados. La implementación puede ser correcta y persistir aunque se produzca un error de procesamiento. Puede cambiar este comportamiento para incluir la implementación y el procesamiento en una sola transacción.|  
 |**Modo de consulta**|**In-Memory**|Esta propiedad especifica el modo en que se ejecuta el origen cuyos resultados de la consulta se devuelven: modo In-Memory (almacenamiento en caché) o modo de DirectQuery. Esta propiedad tiene las opciones siguientes:<br /><br /> **DirectQuery** : este valor especifica que todas las consultas del modelo deben utilizar solo el origen de datos relacional.<br /><br /> **DirectQuery con In-Memory** : este valor especifica que, de forma predeterminada, las consultas se deben responder con el origen relacional, a menos que se especifique lo contrario en la cadena de conexión desde el cliente.<br /><br /> **In-Memory** : este valor especifica que las consultas tienen que responderse únicamente con la caché.<br /><br /> **In-Memory con DirectQuery** : este valor especifica, de forma predeterminada, que las consultas se deben responder mediante caché, a menos que se especifique lo contrario en la cadena de conexión de cliente.<br /><br /> <br /><br /> Para más información, vea [Modo DirectQuery &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).|  
   
@@ -108,7 +105,7 @@ ms.lasthandoff: 12/08/2017
 |[Implementar soluciones de modelo mediante XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)|Describe cómo usar XMLA para implementar las soluciones tabulares y multidimensionales de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |[Sincronizar bases de datos de Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)|Describe cómo usar el Asistente para sincronizar bases de datos con el fin de sincronizar los metadatos y los datos entre dos bases de datos tabulares o multidimensionales de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Conectar a una base de datos de modelo tabular &#40;SSAS&#41;](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
   
   

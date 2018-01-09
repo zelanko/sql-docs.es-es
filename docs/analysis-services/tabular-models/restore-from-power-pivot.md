@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql11.asvs.ssmsimbi.RestoreFromPP.f1
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2cc8322e9a7208189ec7a8630e79a47baecaeb92
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7beb148b2090fcdcb7a150d3b5eb789beaf7bb08
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="restore-from-power-pivot"></a>Restaurar de Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Puede utilizar la restauración a partir de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] característica de SQL Server Management Studio para crear una nueva base de datos de modelo Tabular en una instancia de Analysis Services (ejecutándose en modo Tabular) o restaurar una base de datos existente desde un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] libro (.xlsx).  

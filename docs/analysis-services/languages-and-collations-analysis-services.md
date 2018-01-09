@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: Probar Analysis Services
@@ -26,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e7bb3fd81631b2e442cee440e3e0aa0a89c9e932
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 615b26c5dfc1ea45dfcef2494483ced1235e7cd0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="languages-and-collations-analysis-services"></a>Idiomas e intercalaciones (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite los idiomas e intercalaciones que proporcionan [!INCLUDE[msCoName](../includes/msconame-md.md)] sistemas operativos Windows. Las propiedades**Language** y **Collation** se establecen inicialmente en el nivel de instancia durante la instalación, pero se pueden cambiar posteriormente en diferentes niveles de la jerarquía de objetos.  
@@ -124,7 +124,7 @@ ms.lasthandoff: 12/08/2017
 |Orden (sufijo)|Descripción del orden|  
 |---------------------------|----------------------------|  
 |Binario (_BIN) o BIN2 (_BIN2)|Hay dos tipos de intercalaciones binarias en SQL Server; las intercalaciones BIN antiguas y las intercalaciones BIN2 nuevas. En una intercalación BIN2, todos los caracteres se ordenan en función de sus puntos de código. En una intercalación BIN, solo se ordena el primer carácter en función del punto de código, mientras que los demás caracteres se ordenan en función de sus valores de bytes (Dado que la plataforma de Intel tiene una arquitectura "litte endian", los caracteres de codificación Unicode siempre se intercambian por bytes).<br /><br /> En intercalaciones binarias de tipos de datos Unicode, la configuración regional no se tiene en cuenta a la hora de ordenar los datos. Por ejemplo, Latin_1_General_BIN y Japanese_BIN producen resultados de orden idénticos cuando se usan en datos Unicode.<br /><br /> El orden binario utiliza la distinción de mayúsculas y minúsculas, y de acentos. El orden binario es también el más rápido.|  
-|Distinguir mayúsculas de minúsculas (_CS)|Distingue entre letras mayúsculas y minúsculas. Si se selecciona, las letras minúsculas se ordenan por delante de sus versiones en mayúsculas. Puede establecer explícitamente la opción sin distinción de mayúsculas y minúsculas especificando _CI. La configuración de mayúsculas y minúsculas específica de la intercalación no se aplica a identificadores de objeto, como el identificador de una dimensión, el cubo y otros objetos. Para obtener información detallada, vea [Sugerencias de globalización y procedimientos recomendados &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .|  
+|Distinguir mayúsculas de minúsculas (_CS)|Distingue entre letras mayúsculas y minúsculas. Si se selecciona, las letras minúsculas se ordenan por delante de sus versiones en mayúsculas. Puede establecer explícitamente la opción sin distinción de mayúsculas y minúsculas especificando _CI. La configuración de mayúsculas y minúsculas específica de la intercalación no se aplica a identificadores de objeto, como el identificador de una dimensión, el cubo y otros objetos. Para más información, vea [Sugerencias de globalización y procedimientos recomendados &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .|  
 |Distinguir acentos (_AS)|Distingue entre caracteres acentuados y no acentuados. Por ejemplo, 'a' no es igual a 'ấ'. Si esta opción no se activa, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera que las letras acentuadas son idénticas a sus versiones no acentuadas en la ordenación. Puede establecer explícitamente la opción sin distinción de acentos especificando _AI.|  
 |Distinguir kana (_KS)|Distingue entre los dos tipos de caracteres Kana japoneses: Hiragana y Katakana. Si esta opción no se activa, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera los caracteres Hiragana y Katakana como caracteres iguales en la ordenación. No existe ningún sufijo de orden para el tipo de orden que no distingue los tipos de Kana.|  
 |Distinguir ancho (_WS)|Distingue entre un carácter de un solo byte y el mismo carácter representado como un carácter de doble byte. Si esta opción no se activa, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera que la representación de un solo byte y de doble byte del mismo carácter es idéntica en la ordenación. No existe ningún sufijo de orden para el tipo de orden que no distingue el ancho.|  
@@ -169,7 +169,7 @@ ms.lasthandoff: 12/08/2017
   
 1.  En Management Studio, haga clic con el botón derecho en la base de datos | **Incluir la base de datos como** | **ALTER para** | **Nueva ventana del Editor de consultas**.  
   
-2.  Busque el idioma o intercalación existente y reemplácelo por un valor alternativo.  
+2.  Busque y reemplace el idioma o la intercalación existente con otro valor.  
   
 3.  Presione F5 para ejecutar el script.  
   
@@ -181,7 +181,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_gb18030"></a> Compatibilidad con GB18030 en Analysis Services  
  GB18030 es un estándar independiente que se usa en la República Popular China para codificar caracteres chinos. En GB18030, los caracteres pueden tener una longitud de 1, 2 o 4 bytes. En Analysis Services, no se produce ninguna conversión de datos al procesar datos de orígenes externos. Los datos simplemente se almacenan como datos Unicode. En el momento de la consulta, se realiza una conversión de GB18030 a través de las bibliotecas de cliente de Analysis Services (específicamente, el proveedor OLE DB MSOLAP.dll) cuando se devuelven datos de texto en los resultados de la consulta, en función de la configuración del sistema operativo cliente. El motor de base de datos también es compatible con GB18030. Para obtener información detallada, vea [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Escenarios de globalización para Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [Sugerencias de globalización y mejores prácticas &#40; Analysis Services &#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
  [Compatibilidad con la intercalación y Unicode](../relational-databases/collations/collation-and-unicode-support.md)  

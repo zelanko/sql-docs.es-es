@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-results
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -29,11 +29,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 528662a8118cdd7d906fb214d04ffdcfdcd07f3f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f9e005a7076dd8491806370c739b0156644a484b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="fetching-result-data"></a>Capturar datos de resultados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
   
  Esta optimización se puede aplicar a las aplicaciones para que no **texto**, **ntext**, o **imagen** se muestran los datos mientras un usuario se desplaza arriba y abajo un cursor. Cuando el usuario selecciona una fila, la aplicación puede llamar a **SQLGetData** para recuperar la **texto**, **ntext**, o **imagen** datos. Esto ahorra la transmisión del **texto**, **ntext**, o **imagen** datos para cualquiera de las filas que el usuario no selecciona y puede ahorrar la transmisión de grandes cantidades de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Procesar resultados &#40; ODBC &#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

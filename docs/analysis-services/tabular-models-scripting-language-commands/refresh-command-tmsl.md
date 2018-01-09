@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 97ff6ba8-c236-4ba6-8220-b0fcb9e1dc5c
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b715a469718a168f0872e3f95cd817ec1e735d4e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 77bef111f20a6ccc72347b8e02bd967ef2d316b4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="refresh-command-tmsl"></a>Actualización de comandos (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Procesa los objetos en la base de datos actual.   
@@ -68,14 +66,14 @@ ms.lasthandoff: 12/08/2017
   
 ||||  
 |-|-|-|  
-|**Tipo de actualización**|**Se aplica a**|**Description**|  
+|**Tipo de actualización**|**Se aplica a**|**Descripción**|  
 |completas|Base de datos,<br />Tabla,<br />Partición|Para todas las particiones en la partición, tabla o base de datos especificada, actualice los datos y actualice todos los elementos dependientes. Para una partición de cálculo, actualice la partición y todos sus elementos dependientes.|  
 |clearValues|Base de datos,<br />Tabla,<br />Partición|Borre los valores de este objeto y todos los dependientes.|  
 |calcular|Base de datos,<br />Tabla,<br />Partición|Actualice este objeto y todos sus elementos dependientes, pero solo si es necesario. Este valor no fuerza la actualización, excepto en el caso de fórmulas volátiles.|  
 |dataOnly|Base de datos,<br />Tabla,<br />Partición|Actualice los datos de este objeto y borre todos los dependientes.|  
 |automatic|Base de datos,<br />Tabla,<br />Partición|Si el objeto se debe actualizar, actualice el objeto y todos sus elementos dependientes. Se aplica si la partición se encuentra en un estado que no sea Ready.|  
 |add|Partición|Anexe datos a esta partición y vuelva a calcular todos los dependientes. Este comando es válido solo para particiones normales y no para particiones de cálculo.|  
-|desfragmentar|Base de datos,<br />Tabla|Desfragmente los datos de la tabla especificada. Ya que los datos se agregan a una tabla o se quitan de ella, los diccionarios de cada columna pueden contaminarse con valores que ya no existen en los valores de columna reales. La opción de desfragmentar limpiará los valores de los diccionarios que ya no se usan.|  
+|desfragmentar|Base de datos,<br />Table|Desfragmente los datos de la tabla especificada. Ya que los datos se agregan a una tabla o se quitan de ella, los diccionarios de cada columna pueden contaminarse con valores que ya no existen en los valores de columna reales. La opción de desfragmentar limpiará los valores de los diccionarios que ya no se usan.|  
   
  Puede actualizar los objetos siguientes:  
   

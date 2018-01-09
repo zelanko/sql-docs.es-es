@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -23,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f7d13bdd9c8d5abd19e6b64d92e45bcd688feeef
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 87304b4a33daa7d9460983a403136974c46c1f81
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="operators-mdx-syntax"></a>Operadores (sintaxis de MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/27/2017
   
 -   XOR  
   
--   o  
+-   O BIEN  
   
  Para obtener más información acerca de los operadores en MDX, vea [referencia de operadores de MDX &#40; MDX &#41; ](../mdx/mdx-operator-reference-mdx.md).  
   
@@ -106,12 +106,12 @@ ms.lasthandoff: 11/27/2017
 |Tipo original|Tipo necesario|Conversión|  
 |-------------------|-----------------|----------------|  
 |Nivel|Establecer|\<nivel > .members|  
-|Jerarquía|Miembro|\<jerarquía > .defaultmember|  
+|Hierarchy|Miembro|\<jerarquía > .defaultmember|  
 |Miembro|Tuple|(\<Miembro >)|  
 |Tuple|Miembro|\<tupla > .item(0)|  
 |Tuple|Escalar|\<tupla > .value|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Referencia de operadores MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)   
  [Elementos de sintaxis MDX &#40; MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
   

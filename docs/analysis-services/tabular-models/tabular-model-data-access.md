@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 23f654a293447e562baf7a8785871417b2bfd975
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e004604829a9b7701744d41df53c4bf00afa432d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-data-access"></a>Acceso a datos de modelos tabulares
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Pueden tener acceso a bases de datos de modelo tabular de Analysis Services con la mayoría de los mismos clientes, interfaces e idiomas que se usan para recuperar datos o metadatos de un modelo multidimensional. Para más información, vea [Acceso a datos de modelos multidimensionales &#40;Analysis Services: datos multidimensionales&#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -56,7 +53,7 @@ Se puede conectar a una base de datos de modelo tabular de Analysis Services loc
   
 -   [Conectar a Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
--   [Supervisar una instancia de Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
+-   [Supervisión de una instancia de Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
  Puede utilizar las ventanas de consulta MDX y XMLA en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para recuperar datos y metadatos de una base de datos de modelo tabular. Sin embargo, tenga en cuenta que existen las siguientes restricciones:  
   
@@ -108,7 +105,7 @@ Se puede conectar a una base de datos de modelo tabular de Analysis Services loc
 ### <a name="schema-rowsets"></a>Conjuntos de filas de esquema  
  Las aplicaciones cliente pueden utilizar conjuntos de filas de esquema para examinar los metadatos de los modelos tabulares y recuperar la información de supervisión y soporte técnico del servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . En esta versión de SQL Server, se han agregado nuevos conjuntos de filas de esquema y los conjuntos de filas de esquema existentes se han ampliado para admitir características relacionadas con los modelos tabulares y mejorar el análisis del rendimiento y la supervisión mediante [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
--   [DISCOVER_CALC_DEPENDENCY, conjunto de filas](../../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md)  
+-   [Conjunto de filas DISCOVER_CALC_DEPENDENCY](../../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md)  
   
      Nuevo conjunto de filas de esquema para el seguimiento de dependencias entre columnas y referencias en un modelo tabular  
   

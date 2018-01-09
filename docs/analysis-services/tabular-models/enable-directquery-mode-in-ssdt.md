@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 71fc7ebd-2e86-4a76-994b-66d3a57bcc9b
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1866cd3c6194edf7065ebb2929cc77f8cc4acc3a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 905d3b2dc6938bb24eaf4f63ac6b4cc764840f09
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="enable-directquery-mode-in-ssdt"></a>Habilitar el modo DirectQuery en SSDT
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]En este tema, describiremos cómo habilitar el modo DirectQuery para un proyecto de modelo tabular en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -42,7 +42,7 @@ Si el modelo ya tiene una conexión con un origen de datos y los datos existente
 Si el modelo está total o parcialmente completo, antes de habilitar el modo DirectQuery, podría obtener errores sobre características incompatibles. Abra la **Lista de errores** en Visual Studio y solucione los problemas que impiden que el modelo se cambie al modo DirectQuery.  
 
 
-### <a name="whats-next"></a>¿Qué debe hacer a continuación? 
+### <a name="whats-next"></a>¿Qué sigue? 
 Ahora puede importar datos mediante el Asistente para la importación de tablas a fin de obtener metadatos para el modelo. No obtendrá filas de datos, pero sí tablas, columnas y relaciones que puede usar como base para el modelo. 
 
 Puede crear una partición de ejemplo para cada tabla y agregar datos de ejemplo para poder comprobar el comportamiento del modelo a medida que lo genera. Los datos de ejemplo que agregue se usan en **Analyze for Excel** (Analizar para Excel) o en otras herramientas de cliente que pueden conectarse a la base de datos del área de trabajo. Vea [Agregar datos de ejemplo a un modelo de DirectQuery en el modo de diseño](../../analysis-services/tabular-models/add-sample-data-to-a-directquery-model-in-design-mode.md) para obtener más información.  

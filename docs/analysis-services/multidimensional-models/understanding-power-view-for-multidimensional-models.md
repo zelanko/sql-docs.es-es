@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f12f3aaada759d91c77d56bb4fc199d2b038eab4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 103d42ffa1f2f4bc823c8b95327347323f0ccf86
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Descripción de Power View para modelos multidimensionales
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este artículo describe la característica Power View para modelos multidimensionales en SQL Server y proporciona información importante para profesionales de BI y los administradores que pretenden implementar Power View para modelos multidimensionales en su organización.  
@@ -37,7 +34,7 @@ ms.lasthandoff: 12/08/2017
   
  ![Power View para modelos multidimensionales arquitectura](../../analysis-services/multidimensional-models/media/daxmd-architecture.gif "Power View para modelos multidimensionales arquitectura")  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  **Requisitos de servidor**  
   
 -   Microsoft SQL Server 2016 Analysis Services ejecutándose en modo multidimensional.  
@@ -64,16 +61,16 @@ ms.lasthandoff: 12/08/2017
   
 |Objeto multidimensional|Objeto tabular|  
 |-----------------------------|--------------------|  
-|Cubo|Modelo|  
+|Cube|Modelo|  
 |Dimensión de cubo|Table|  
-|Atributos de dimensión (claves, nombre)|Columna|  
+|Atributos de dimensión (claves, nombre)|columna|  
 |Grupo de medida|Table|  
-|Medida|Medida|  
+|Measure|Measure|  
 |Medida sin grupo de medida|En una tabla denominada Medidas|  
 |Relación de la dimensión del cubo del grupo de medida|Relación|  
 |Perspective|Perspective|  
 |KPI|KPI|  
-|Jerarquías de usuario y elementos primarios y secundarios|Jerarquía|  
+|Jerarquías de usuario y elementos primarios y secundarios|Hierarchy|  
 |Carpeta para mostrar|Carpeta para mostrar|  
   
 ## <a name="measures-measure-groups-and-kpis"></a>Medidas, grupos de medida y KPI  
@@ -226,7 +223,7 @@ ms.lasthandoff: 12/08/2017
   
  La solicitud DISCOVER_CSDL_METADATA tiene las restricciones siguientes:  
   
-|Nombre|Necesario|Description|  
+|Nombre|Obligatorio|Description|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|Sí|El nombre de la base de datos o catálogo.|  
 |PERSPECTIVE_NAME|Sí, si el cubo contiene más de una perspectiva. Opcional si hay solo un cubo o una perspectiva predeterminada.|El nombre del cubo o de la perspectiva en la base de datos multidimensional.|  

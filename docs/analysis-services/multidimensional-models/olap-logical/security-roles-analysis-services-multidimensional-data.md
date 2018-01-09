@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -30,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5bb382b53436e7567df3b970a77c75e7e3fe2be0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 05863ae6e4ec85afecc3d19bf7ade4535ab54369
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>Roles de seguridad (Analysis Services - Datos multidimensionales)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Las funciones se utilizan en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] para administrar la seguridad para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos y datos. En términos simples, un rol asocia los identificadores de seguridad (SID) de usuarios de Microsoft Windows y grupos que tienen derechos de acceso específicos y los permisos definidos para los objetos administrados por una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Se proporcionan dos tipos de roles en [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
@@ -73,7 +71,7 @@ ms.lasthandoff: 12/08/2017
   
  La clase <xref:Microsoft.AnalysisServices.Permission> es una clase abstracta. Por consiguiente, debe usar las clases derivadas para definir los permisos en los objetos correspondientes. Para cada objeto se define una clase derivada de permiso.  
   
-|Object|Clase|  
+|Objeto|Clase|  
 |------------|-----------|  
 |<xref:Microsoft.AnalysisServices.Database>|<xref:Microsoft.AnalysisServices.DatabasePermission>|  
 |<xref:Microsoft.AnalysisServices.DataSource>|<xref:Microsoft.AnalysisServices.DataSourcePermission>|  
@@ -88,7 +86,7 @@ ms.lasthandoff: 12/08/2017
 |------------|------------|-----------------|  
 |Procesar|{**true**, **false**}<br /><br /> Valor predeterminado =**false**|Si es **true**, los miembros pueden procesar el objeto y cualquier objeto contenido en él.<br /><br /> Los permisos de proceso no se aplican a los modelos de minería de datos. <xref:Microsoft.AnalysisServices.MiningModel>siempre se heredan los permisos <xref:Microsoft.AnalysisServices.MiningStructure>.|  
 |Leer definición|{**None**, **Basic**, **Allowed**}<br /><br /> Valor predeterminado =**None**|Especifica si los miembros pueden leer la definición de datos (ASSL) asociada al objeto.<br /><br /> Si el valor es **Allowed**, los miembros pueden leer el ASSL asociado al objeto.<br /><br /> Los objetos incluidos en el objeto heredan**Basic** y **Allowed** . **Allowed** invalida **Basic** y **None**.<br /><br /> **Allowed** se requiere para usar DISCOVER_XML_METADATA en un objeto. **Basic** se requiere para crear objetos vinculados y cubos locales.|  
-|Leer|{**None**, **Allowed**}<br /><br /> Valor predeterminado =**None** (excepto en permisos de dimensión, donde el valor predeterminado =**Allowed**)|Especifica si los miembros disponen de acceso de lectura a los conjuntos de filas de esquema y contenido de datos.<br /><br /> **Allowed** proporciona acceso de lectura a una base de datos, lo que permite detectar una base de datos.<br /><br /> **Permite** en un cubo proporciona acceso de lectura en conjuntos de filas de esquema y acceso al contenido del cubo (a menos que restrinja por <xref:Microsoft.AnalysisServices.CellPermission> y <xref:Microsoft.AnalysisServices.CubeDimensionPermission>).<br /><br /> **Permite** en una dimensión concede permiso de lectura en todos los atributos de la dimensión (a menos que restrinja por <xref:Microsoft.AnalysisServices.CubeDimensionPermission>). El permiso de lectura solamente se usa para la herencia estática a <xref:Microsoft.AnalysisServices.CubeDimensionPermission>. **None** en una dimensión oculta la dimensión y solo proporciona acceso al miembro predeterminado para los atributos agregables; se produce un error si la dimensión contiene un atributo no agregable.<br /><br /> **Permite** en un <xref:Microsoft.AnalysisServices.MiningModelPermission> concede permisos para ver objetos en conjuntos de filas de esquema y realizar combinaciones de predicciones.<br /><br /> **NoteAllowed** es necesario para leer o escribir en cualquier objeto de la base de datos.|  
+|Lectura|{**None**, **Allowed**}<br /><br /> Valor predeterminado =**None** (excepto en permisos de dimensión, donde el valor predeterminado =**Allowed**)|Especifica si los miembros disponen de acceso de lectura a los conjuntos de filas de esquema y contenido de datos.<br /><br /> **Allowed** proporciona acceso de lectura a una base de datos, lo que permite detectar una base de datos.<br /><br /> **Permite** en un cubo proporciona acceso de lectura en conjuntos de filas de esquema y acceso al contenido del cubo (a menos que restrinja por <xref:Microsoft.AnalysisServices.CellPermission> y <xref:Microsoft.AnalysisServices.CubeDimensionPermission>).<br /><br /> **Permite** en una dimensión concede permiso de lectura en todos los atributos de la dimensión (a menos que restrinja por <xref:Microsoft.AnalysisServices.CubeDimensionPermission>). El permiso de lectura solamente se usa para la herencia estática a <xref:Microsoft.AnalysisServices.CubeDimensionPermission>. **None** en una dimensión oculta la dimensión y solo proporciona acceso al miembro predeterminado para los atributos agregables; se produce un error si la dimensión contiene un atributo no agregable.<br /><br /> **Permite** en un <xref:Microsoft.AnalysisServices.MiningModelPermission> concede permisos para ver objetos en conjuntos de filas de esquema y realizar combinaciones de predicciones.<br /><br /> **NoteAllowed** es necesario para leer o escribir en cualquier objeto de la base de datos.|  
 |Escribir|{**None**, **Allowed**}<br /><br /> Valor predeterminado =**None**|Especifica si los miembros tienen acceso de escritura a los datos del objeto primario.<br /><br /> El acceso se aplica a las subclases <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.Cube> y <xref:Microsoft.AnalysisServices.MiningModel>. No se aplica a la base de datos <xref:Microsoft.AnalysisServices.MiningStructure> subclases, lo que genera un error de validación.<br /><br /> **Permite** en un <xref:Microsoft.AnalysisServices.Dimension> concede el permiso de escritura en todos los atributos de la dimensión.<br /><br /> **Permite** en un <xref:Microsoft.AnalysisServices.Cube> concede permiso de escritura en las celdas del cubo de particiones definidas como tipo de reescritura.<br /><br /> **Permite** en un <xref:Microsoft.AnalysisServices.MiningModel> concede permiso para modificar el contenido del modelo.<br /><br /> **Permite** en un <xref:Microsoft.AnalysisServices.MiningStructure> no tiene ningún significado concreto [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].<br /><br /> Nota: No se puede establecer la escritura **permitido** a menos que la lectura también se establece en **permitido**|  
 |Administer<br /><br /> Nota: Solo en permisos de base de datos|{**true**, **false**}<br /><br /> Valor predeterminado =**false**|Especifica si los miembros pueden administrar una base de datos.<br /><br /> **true** permite el acceso de los miembros a todos los objetos en una base de datos.<br /><br /> Un miembro puede tener permisos para administrar una base de datos concreta, pero no otras.|  
   

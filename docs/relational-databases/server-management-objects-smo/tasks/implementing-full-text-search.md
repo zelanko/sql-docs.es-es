@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: full-text search [SMO]
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c2ae3c11901de210ae49a95eab1443b6e171fcba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0db7400457bb39daa082650a73f5fbdc9689a16d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="implementing-full-text-search"></a>Implementar la búsqueda de texto completo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Búsqueda de texto completo está disponible por instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y se representa en SMO mediante la <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A> objeto. El <xref:Microsoft.SqlServer.Management.Smo.FullTextService> objeto reside en el **Server** objeto. Se utiliza para administrar las opciones de configuración del servicio de búsqueda en texto completo de [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. El objeto <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> pertenece al objeto <xref:Microsoft.SqlServer.Management.Smo.Database> y es una colección de los objetos <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> que representan los catálogos de texto completo definidos para la base de datos. Solo puede tener un índice de texto completo definido para cada tabla, a diferencia de los índices normales. Un objeto <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> representa esto en el objeto <xref:Microsoft.SqlServer.Management.Smo.Table>.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
  Primero, cree un catálogo de texto completo en la base de datos llamando al constructor <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> y especificando el nombre del catálogo. A continuación, cree el índice de texto completo llamando al constructor y especificando la tabla en la que se creará. A continuación, puede agregar columnas de índices al índice de texto completo, utilizando el objeto <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> y proporcionando el nombre de la columna de la tabla. A continuación, establezca la propiedad <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.CatalogName%2A> en el catálogo que ha creado. Por último, llame al método <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.Create%2A> y cree el índice de texto completo en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Ejemplo  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear a Visual C &#35; Proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear a Visual C &#35; Proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-full-text-search-service-in-visual-basic"></a>Crear un servicio de búsqueda en texto completo en Visual Basic  
  En este ejemplo del código se crea un catálogo de búsqueda de texto completo para la tabla `ProductCategory` de la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]. Después se crea un índice de búsqueda de texto completo en la columna Name de la tabla `ProductCategory` . El índice de búsqueda de texto completo requiere que ya haya un índice único definido en la columna.  

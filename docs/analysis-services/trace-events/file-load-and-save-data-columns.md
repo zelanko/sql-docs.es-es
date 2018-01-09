@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 0101e809-d6ea-4d0c-95ec-65dd77acf665
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 788c4b0e0ff0b35a193f5af55b3e4949fb04e572
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8f10d93cf8670da5e14d2fb65193c43398ad1c6c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="file-load-and-save-data-columns"></a>Columnas de datos de la categoría de eventos Cargar y guardar archivos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoría de eventos cargar y guardar archivos tiene la siguiente clase de evento:  
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/08/2017
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |JobID|7|1|Identificador del trabajo para el progreso.|  
 |SessionType|8|8|Tipo de la sesión (qué entidad desencadenó la operación).|  
 |IntegerData|10|1|Datos enteros.|  
@@ -113,7 +113,7 @@ ms.lasthandoff: 12/08/2017
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |JobID|7|1|Identificador del trabajo para el progreso.|  
 |SessionType|8|8|Tipo de la sesión (qué entidad desencadenó la operación).|  
 |IntegerData|10|1|Datos enteros.|  
@@ -159,7 +159,7 @@ ms.lasthandoff: 12/08/2017
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |JobID|7|1|Identificador del trabajo para el progreso.|  
 |SessionType|8|8|Tipo de la sesión (qué entidad desencadenó la operación).|  
 |IntegerData|10|1|Datos enteros.|  
@@ -205,7 +205,7 @@ ms.lasthandoff: 12/08/2017
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |JobID|7|1|Identificador del trabajo para el progreso.|  
 |SessionType|8|8|Tipo de la sesión (qué entidad desencadenó la operación).|  
 |IntegerData|10|1|Datos enteros.|  
@@ -223,7 +223,7 @@ ms.lasthandoff: 12/08/2017
 |TextData|42|9|Datos de texto asociados al evento.|  
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Categoría de eventos Cargar y guardar archivos](../../analysis-services/trace-events/file-load-and-save-event-category.md)  
   
   

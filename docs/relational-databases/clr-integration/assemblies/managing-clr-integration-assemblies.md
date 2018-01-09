@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs: TSQL
@@ -22,21 +22,21 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0e95209ed47c5e49177ae43bc9bf5ae1026ca511
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c0e533e43c49bcd7bc32264cf1e59216ee0bc03a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="managing-clr-integration-assemblies"></a>Administrar ensamblados de integración CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Código administrado se compila y, a continuación, se implementan en unidades denominadas ensamblados. Un ensamblado se empaqueta como un archivo DLL o ejecutable (.exe). Aunque un archivo ejecutable se puede ejecutar solo, una DLL se debe hospedar en una aplicación existente. Los ensamblados DLL administrados pueden cargarse y hospedados por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requiere que el ensamblado se registre en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante la instrucción CREATE ASSEMBLY para poder cargarlo en el proceso y usarlo. Los ensamblados también pueden actualizarse a partir de una versión más reciente mediante la instrucción ALTER ASSEMBLY o quitarse de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante la instrucción DROP ASSEMBLY.  
   
  Información de ensamblado se almacena en la **sys.assembly_files** tabla en la base de datos que se ha instalado el ensamblado. El **sys.assembly_files** tabla contiene las columnas siguientes.  
   
-|Columna|Description|  
+|columna|Description|  
 |------------|-----------------|  
 |assembly_id|Identificador definido para el ensamblado. Este número se asigna a todos los objetos relacionados con el mismo ensamblado.|  
-|name|Nombre del objeto.|  
+|NAME|Nombre del objeto.|  
 |file_id|Número que identifica cada objeto, con el primer objeto asociado a una determinada **assembly_id** se le asigna el valor de 1. Si varios objetos están asociados con el mismo **assembly_id**, a continuación, cada **file_id** valor se incrementa en 1.|  
 |content|Representación hexadecimal del ensamblado o archivo.|  
   

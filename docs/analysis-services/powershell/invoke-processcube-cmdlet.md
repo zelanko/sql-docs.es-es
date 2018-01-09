@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: b10ba7c1-8f10-4e72-9626-f9285e4341fd
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cda2a49a9ae612a9b55fe3a4ba131d2bc5cf2155
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5564256b3953c9173f433201506204d7ca24677e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="invoke-processcube-cmdlet"></a>Cmdlet Invoke-ProcessCube
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Procesar un cubo utilizando una variable de tipo de procesamiento específico.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/08/2017
  `Invoke-ProcessCube –DatabaseCube <Microsoft.AnalysisServices.Cube> [-ProcessType] <Microsoft.AnalysisServices.ProcessType> [<CommonParameters>]`  
   
 ## <a name="description"></a>Description  
- El cmdlet Invoke-ProcessCube procesa un cubo al nivel especificado. Por ejemplo, ProcessFull sobrescribe los datos existentes con todos los nuevos datos. Al procesar un cubo, debe especificar el tipo de procesamiento. Para obtener más información, vea [Opciones y valores de procesamiento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
+ El cmdlet Invoke-ProcessCube procesa un cubo al nivel especificado. Por ejemplo, ProcessFull sobrescribe los datos existentes con todos los nuevos datos. Al procesar un cubo, debe especificar el tipo de procesamiento. Para más información, vea [Opciones y valores de procesamiento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
 ## <a name="parameters"></a>Parámetros  
   

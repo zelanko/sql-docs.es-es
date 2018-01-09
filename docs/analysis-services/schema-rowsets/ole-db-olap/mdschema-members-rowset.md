@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: MDSCHEMA_MEMBERS
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bff8fc8c121f88dbc8bf7cbdc0b2ce1705934702
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8ee6e7231d4a3a3696de68e3c22b8cad7eb05a92
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemamembers-rowset"></a>Conjunto de filas MDSCHEMA_MEMBERS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Se describen a los miembros dentro de una base de datos.  
@@ -83,7 +81,7 @@ ms.lasthandoff: 12/08/2017
 |**TREE_OP**|**DBTYPE_I4**|(Opcional) Solo se aplica a un único miembro:<br /><br /> **MDTREEOP_ANCESTORS** (**0 x 20**) devuelve todos los antecesores.<br /><br /> **MDTREEOP_CHILDREN** (**0 x 01**) devuelve solo los elementos secundarios inmediatos.<br /><br /> **MDTREEOP_SIBLINGS** (**0 x 02**) devuelve los miembros del mismo nivel.<br /><br /> **MDTREEOP_PARENT** (**0 x 04**) devuelve solo el elemento primario inmediato.<br /><br /> **MDTREEOP_SELF** (**0 x 08**) devuelve a sí mismo en la lista de filas devueltas.<br /><br /> **MDTREEOP_DESCENDANTS** (**0 x 10**) devuelve todos los descendientes.|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Opcional) La restricción predeterminada es un valor de 1. Un mapa de bits con uno de los siguientes valores válidos:<br /><br /> 1 CUBO<br /><br /> 2 DIMENSIÓN|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [OLE DB para los conjuntos de filas de esquema OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

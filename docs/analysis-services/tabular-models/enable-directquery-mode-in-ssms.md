@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fbce2dcf30bcdeded89ab0d8ea558d18585fe6a4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2779e5f09f447e0499e2eeb87ec89ba698cc8628
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>Habilitar el modo DirectQuery en SSMS
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Puede cambiar las propiedades de acceso de datos de un modelo tabular que ya se ha implementado, habilitar el modo DirectQuery, donde las consultas ejecutarán en un origen de datos relacional de back-end en lugar de en caché los datos que residen en memoria.  
@@ -69,7 +69,7 @@ ms.lasthandoff: 12/08/2017
   
     |||  
     |-|-|  
-    |**Valores válidos**|**Description**|  
+    |**Valores válidos**|**Descripción**|  
     |**DirectQuery**|Las consultas se ejecutan en una base de datos relacional back-end mediante la conexión de origen de datos definida para el modelo.<br /><br /> Las consultas del modelo se convierten en consultas de bases de datos nativas y se redirigen al origen de datos.<br /><br /> Al procesar un modelo establecido en el modo DirectQuery, solo se compilan e implementan los metadatos. Los datos en sí son externos al modelo y residen en los archivos de base de datos del origen de datos operativo.|  
     |**Importar**|Las consultas se ejecutan en la base de datos tabular en MDX o DAX.<br /><br /> Al procesar un modelo establecido en el modo de importación, los datos se recuperan desde un origen de datos back-end y se almacenan en disco. Cuando haya cargado la base de datos, los datos se copian por completo en la memoria para ofrecer consultas y recorridos de tabla muy rápidos.<br /><br /> Este es el modo predeterminado de los modelos tabulares y es el único modo para determinados orígenes de datos (no relacionales).|  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 12/08/2017
   
     |||  
     |-|-|  
-    |**Valores válidos**|**Description**|  
+    |**Valores válidos**|**Descripción**|  
     |**InMemory**|Las consultas utilizan únicamente los datos en memoria almacenados en caché.|  
     |**InMemorywithDirectQuery**|Las consultas usan la memoria caché de forma predeterminada, a menos que se especifique lo contrario en la cadena de conexión desde el cliente.<br /><br /> Se trata de un modo híbrido en el que las particiones se configuran por separado para usar en memoria o DirectQuery.|  
     |**DirectQuery**|Las consultas solo usan el origen de datos relacional.|  

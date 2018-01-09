@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 57c9413ed5a962c9bc2422e007d92ce88ffbebca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: caf634af86e7338d25ae18a2101cffabb9f5f762
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="stored-procedures---calling"></a>Procedimientos almacenados - llamada
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
  Estos son los pasos en el proceso de enlace de parámetro:  
   
-1.  Rellene la información de parámetros en una matriz de estructuras DBPARAMBINDINFO; es decir, el nombre del parámetro, el nombre específico del proveedor para el tipo de datos del parámetro o un nombre del tipo de datos estándar, etc.. Cada estructura de la matriz describe un parámetro. Esta matriz, a continuación, se pasa a la **SetParameterInfo** método.  
+1.  Rellene la información de parámetros en una matriz de estructuras DBPARAMBINDINFO; es decir, el nombre del parámetro, el nombre específico del proveedor para el tipo de datos del parámetro o un nombre del tipo de datos estándar, etc. Cada estructura de la matriz describe un parámetro. Esta matriz, a continuación, se pasa a la **SetParameterInfo** método.  
   
 2.  Llame a la **ICommandWithParameters:: SetParameterInfo** método para describir los parámetros al proveedor. **SetParameterInfo** especifica el tipo de datos nativos de cada parámetro. **SetParameterInfo** argumentos son:  
   

@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 152d8f844949ac0a27747e04b4d2ca55a257c39e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d5793220e57962f801573e8201688dd1c03b9c0e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Crear y administrar una partición remota (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Al crear particiones en un grupo de medida, puede configurar una base de datos secundaria en un equipo remoto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia como almacenamiento de partición.  
@@ -36,7 +33,7 @@ ms.lasthandoff: 12/08/2017
   
  Una base de datos secundaria dedicada puede almacenar particiones remotas para una y solo una base de datos maestra, pero la base de datos maestra puede usar varias bases de datos secundarias, siempre y cuando todas las bases de datos secundarias estén en la misma instancia remota de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Las dimensiones de una base de datos dedicada a las particiones remotas se crean como dimensiones vinculadas.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para poder crear una partición remota, deben cumplirse las siguientes condiciones:  
   
 -   Debe tener una segunda instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y una base de datos dedicada para almacenar las particiones. La base de datos secundaria se usa para un único fin: proporciona almacenamiento para las particiones remotas de una base de datos maestra.  

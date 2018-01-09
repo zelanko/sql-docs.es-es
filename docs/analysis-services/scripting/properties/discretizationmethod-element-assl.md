@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DiscretizationMethod Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0c521e8de3d734420442f51cb02470e607337dbd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fd84d0426afa9ee1272c26c8ca7ac302972748b4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discretizationmethod-element-assl"></a>Elemento DiscretizationMethod (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Define el método que se usará para la discretización.  
@@ -45,27 +43,27 @@ ms.lasthandoff: 12/08/2017
 </DimensionAttribute>  
 ```  
   
-## <a name="element-characteristics"></a>Características de los elementos  
+## <a name="element-characteristics"></a>Características del elemento  
   
-|Característica|Descripción|  
+|Característica|Description|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|String (enumeración)|  
 |Valor predeterminado|*Ninguno*|  
-|Cardinalidad|0-1: Elemento opcional que puede aparecer solo una vez.|  
+|Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md), [ScalarMiningStructureColumn](../../../analysis-services/scripting/data-type/scalarminingstructurecolumn-data-type-assl.md)|  
-|Elementos secundarios|Ninguno|  
+|Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Comentarios  
  El valor del elemento **DiscretizationMethod** determina cómo se crean u organizan muchos grupos o depósitos cuando se discretizan los valores de **DimensionAttribute** o **ScalarMiningStructureColumn** en conjuntos de grupos específicos. Para obtener más información acerca de los métodos de discretización, vea [métodos de discretización &#40; minería de datos &#41;](../../../analysis-services/data-mining/discretization-methods-data-mining.md).  
   
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   
-|Valor|Descripción|  
+|Valor|Description|  
 |-----------|-----------------|  
 |*Automático*|Equivale al método de discretización AUTOMATIC para las columnas de estructura de minería de datos.|  
 |*EqualAreas*|Equivale al método de discretización EQUAL_AREAS para las columnas de estructura de minería de datos.|  

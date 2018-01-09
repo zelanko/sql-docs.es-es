@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -32,11 +30,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 18621eba78a2e4c95de6373485044b5f88e1f744
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 012caa5210886a9c2f6e72a6c1b7338154358d1f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>Atributos y jerarquías de atributos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Las dimensiones son colecciones de atributos que están enlazados a una o más columnas de una tabla o vista en la vista del origen de datos.  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="attribute-relationships-star-schemas-and-snowflake-schemas"></a>Relaciones de atributo, esquemas en estrella y esquemas de copo de nieve  
  De forma predeterminada, en un esquema en estrella, todos los atributos se relacionan directamente con el atributo clave, lo que permite a los usuarios examinar los hechos del cubo basándose en cualquier jerarquía de atributo de la dimensión. En un esquema de copo de nieve, un atributo está directamente vinculado al atributo clave si la tabla subyacente está directamente vinculada a la tabla de hechos o indirectamente vinculado por medio del atributo enlazado a la clave de la tabla subyacente que vincula la tabla de copo de nieve a la tabla vinculada directamente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Crear jerarquías definidas por el usuario](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [Definir relaciones de atributo](../../analysis-services/multidimensional-models/attribute-relationships-define.md)   
  [Referencia de las propiedades de los atributos de dimensión](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  

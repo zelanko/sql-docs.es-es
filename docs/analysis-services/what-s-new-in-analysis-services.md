@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6456879f43d94dbe9883146b8d45cc5f5a433610
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b65634862df0d49c8f20383a873aafe386c2e32c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>¿Qué &#39; s nuevos en Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]SQL Server 2016 Analysis Services incluye muchas mejoras nuevas que proporciona un mejor rendimiento, creación de solución más fácil, administración automatizada de la base de datos, procesamiento de particiones, en paralelo relaciones mejoradas con bidireccional entre el filtrado, y mucho más. En el centro de la mayoría de las mejoras de esta versión se encuentra el nuevo nivel de compatibilidad 1200 para bases de datos de modelo tabular.     
@@ -68,7 +68,7 @@ Con esta versión, ya no necesita dos versiones de SSDT para generar proyectos B
 Ahora hay disponibles carpetas para mostrar para los modelos tabulares 1200. Definidas en SQL Server Data Tools y representadas en aplicaciones cliente como Excel o Power BI Desktop, las carpetas de visualización ayudan organizar grandes cantidades de medidas en carpetas individuales y agregan una jerarquía visual para explorar más fácilmente las listas de campos.
 ### <a name="bi-directional-cross-filtering"></a>Filtrado cruzado bidireccional
 Como novedad de esta versión se ha introducido un enfoque integrado para permitir los filtros cruzados bidireccionales en los modelos tabulares, lo que elimina la necesidad de usar soluciones DAX manuales para propagar el contexto de filtro en las relaciones entre tablas. Los filtros solo se generan automáticamente cuando la dirección se puede establecer con un alto grado de certeza. Si hay ambigüedad en el formulario de varias rutas de consultas en relaciones de tabla, no se creará automáticamente un filtro. Vea [Filtros cruzados bidireccionales para modelos tabulares en SQL Server 2016 Analysis Services](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) para obtener más información.
- ### <a name="translations"></a>Traducciones    
+ ### <a name="translations"></a>Translations    
  Ahora puede almacenar metadatos traducidos en un modelo tabular 1200. Los metadatos del modelo incluyen campos para **Culture**, títulos traducidos y descripciones traducidas. Para agregar traducciones, use el comando **Modelo** > **Traducciones** en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Vea [Traducciones en modelos tabulares &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md) para obtener más información.    
  ### <a name="pasted-tables"></a>Tablas pegadas    
  Ahora es posible actualizar un modelo tabular 1100 o 1103 a 1200 cuando el modelo contiene tablas pegadas. Recomendamos para ello usar [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. En SSDT, establezca **CompatibilityLevel** en 1200 y, a continuación, realice la implementación en una instancia [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para obtener información detallada, vea [Compatibility Level for Tabular models in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) .    

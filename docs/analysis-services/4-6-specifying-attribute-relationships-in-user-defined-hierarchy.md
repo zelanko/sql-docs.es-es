@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 03b086e70e3d1fdb085faac12392cc4265af5dcb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2c9d71ea7710736a17a404a997e43e6683894cd7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>4-6-especificar relaciones de atributo en la jerarquía definida por el usuario
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Como ya ha visto en este tutorial, puede organizar las jerarquías de atributo en niveles de jerarquías de usuario para proporcionar rutas de navegación para los usuarios de un cubo. Una jerarquía de usuario puede representar una jerarquía natural, como una ciudad, un estado o un país, o simplemente representar una ruta de navegación, como el nombre de un empleado, su cargo y el nombre de departamento. Para el usuario que navega por una jerarquía, estos dos tipos de jerarquía de usuario son el mismo.  
@@ -45,7 +45,7 @@ En las tareas de este tema, debe definir relaciones de atributo para los atribut
   
 3.  En el diagrama, haga clic con el botón derecho en el atributo **Full Name** y seleccione **Nueva relación de atributo**.  
   
-4.  En el cuadro de diálogo **Crear relación de atributo** , el **Atributo de origen** es **Full Name**. Establezca el **Atributo relacionado** en **Postal Code**. En la lista **Tipo de relación** , deje establecido el tipo de relación en **Flexible** , ya que las relaciones entre los miembros pueden cambiar con el tiempo.  
+4.  En el cuadro de diálogo **Crear relación de atributo** , el **Atributo de origen** es **Full Name**. Establezca el **Atributo relacionado** en **Postal Code**. En la lista **Tipo de relación**, deje establecido el tipo de relación en **Flexible**, ya que las relaciones entre los miembros pueden cambiar con el tiempo.  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -53,7 +53,7 @@ En las tareas de este tema, debe definir relaciones de atributo para los atribut
   
 6.  En el panel **Relaciones de atributo** , haga clic con el botón derecho en **Geography**-> **Postal Code** y, después, haga clic en **Eliminar**.  
   
-7.  Cuando aparezca el cuadro de diálogo **Eliminar objetos** , haga clic en **Aceptar**.  
+7.  Cuando aparezca el cuadro de diálogo **Eliminar objetos**, haga clic en **Aceptar**.  
   
 8.  En el diagrama, haga clic con el botón derecho en el atributo **Postal Code** y seleccione **Nueva relación de atributo**.  
   
@@ -111,7 +111,7 @@ En las tareas de este tema, debe definir relaciones de atributo para los atribut
   
 2.  En el diagrama, haga clic con el botón derecho en el atributo **Model Name** y seleccione **Nueva relación de atributo**.  
   
-3.  En el cuadro de diálogo **Crear relación de atributo** , el **Atributo de origen** es **Model Name**. Establezca el **Atributo relacionado** en **Product Line**. En la lista **Tipo de relación** , deje establecido el tipo de relación en **Flexible**.  
+3.  En el cuadro de diálogo **Crear relación de atributo** , el **Atributo de origen** es **Model Name**. Establezca el **Atributo relacionado** en **Product Line**. En la lista **Tipo de relación**, deje establecido el tipo de relación en **Flexible**.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -119,7 +119,7 @@ En las tareas de este tema, debe definir relaciones de atributo para los atribut
   
 1.  Cambie al Diseñador de dimensiones para la dimensión **Date** y, después, haga clic en la pestaña **Relaciones de atributo** .  
   
-2.  En el diagrama, haga clic con el botón derecho en el atributo **Month Name** y seleccione **Nueva relación de atributo**.  
+2.  En el diagrama, haga clic con el botón secundario en el atributo **Month Name** y seleccione **Nueva relación de atributo**.  
   
 3.  En el cuadro de diálogo **Crear relación de atributo** , el **Atributo de origen** es **Month Name**. Establezca el **Atributo relacionado** en **Fiscal Quarter**. En la lista **Tipo de relación** , establezca el tipo de relación en **Rígida**.  
   
@@ -141,7 +141,7 @@ En las tareas de este tema, debe definir relaciones de atributo para los atribut
   
 1.  En el diagrama, haga clic con el botón derecho en el atributo **Month Name** y seleccione **Nueva relación de atributo**.  
   
-2.  En el cuadro de diálogo **Crear relación de atributo** , el **Atributo de origen** es **Month Name**. Establezca el **Atributo relacionado** en **Calendar Quarter**. En la lista **Tipo de relación** , establezca el tipo de relación en **Rígida**.  
+2.  En el cuadro de diálogo **Crear relación de atributo**, el **Atributo de origen** es **Month Name**. Establezca el **Atributo relacionado** en **Calendar Quarter**. En la lista **Tipo de relación** , establezca el tipo de relación en **Rígida**.  
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -153,7 +153,7 @@ En las tareas de este tema, debe definir relaciones de atributo para los atribut
   
 7.  En el diagrama, haga clic con el botón derecho en el atributo **Calendar Semester** y seleccione **Nueva relación de atributo**.  
   
-8.  En el cuadro de diálogo **Crear relación de atributo** , el **Atributo de origen** es **Calendar Semester**. Establezca el **Atributo relacionado** en **Calendar Year**. En la lista **Tipo de relación** , establezca el tipo de relación en **Rígida**.  
+8.  En el cuadro de diálogo **Crear relación de atributo**, el **Atributo de origen** es **Calendar Semester**. Establezca el **Atributo relacionado** en **Calendar Year**. En la lista **Tipo de relación** , establezca el tipo de relación en **Rígida**.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -190,7 +190,7 @@ En las tareas de este tema, debe definir relaciones de atributo para los atribut
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
 [Definir las propiedades de miembro desconocido y de procesamiento de valores NULL](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Definir relaciones de atributo](../analysis-services/multidimensional-models/attribute-relationships-define.md)  
 [Propiedades de jerarquía de usuario](../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)  
   

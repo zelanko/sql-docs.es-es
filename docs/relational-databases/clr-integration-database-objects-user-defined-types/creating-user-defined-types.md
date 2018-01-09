@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs: TSQL
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f669f8a9b9e031d21bd95958b12ad4f111b72b89
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a98e8438ab41e1f8dad5dd333d033d86ffcc4da2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-user-defined-types"></a>Crear tipos definidos por el usuario
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Para crear un tipo definido por el usuario (UDT) capaz de instalarse en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], primero debe crear una clase en uno de los lenguajes, como Visual C# o Visual Basic, que se ajusta a las especificaciones para la creación de UDT de programación admitidas .NET Framework. A continuación, la clase puede compilarse como una biblioteca de vínculos dinámicos (DLL), que puede cargarse en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También puede crear e implementar UDT con Visual Studio.  

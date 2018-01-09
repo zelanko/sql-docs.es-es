@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 616877e3-464a-4c97-bc74-1fa6f4faa756
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bd09ebc71350f37803867f0c610135fd135bd413
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e5f72d312cff6b0660faa1ebbd30890d53c43f2d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-or-repair-power-pivot-for-sharepoint-2013"></a>Configurar o reparar PowerPivot para SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Para configurar o reparar una instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013, use la [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para la herramienta de configuración de SharePoint. La herramienta de configuración comienza examinando el sistema y devuelve una lista de las acciones necesarias para completar o reparar una instalación. El Asistente para la instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala la Herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2010 y una Herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013. En este tema se describe la Herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013. Para obtener más información sobre SharePoint 2010, vea [Configurar o reparar PowerPivot para SharePoint 2010 (Herramienta de configuración de PowerPivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
@@ -133,9 +130,9 @@ ms.lasthandoff: 12/08/2017
 ||Puerto de Administración central de SharePoint|Valor predeterminado, si es necesario|Si la granja no está configurada, la herramienta proporciona opciones para crearla, incluida la creación de un extremo HTTP en Administración central. Elige un número de puerto generado aleatoriamente que no esté en uso.|  
 ||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel Services ([NombreDelServidor]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|Datos proporcionados por el usuario|Para habilitar las funcionalidades básicas de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se necesita el servidor [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel Services. El nombre del servidor que escriba en esta página también se agrega a la lista de la página **Configurar servidores [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.|  
 |**Configurar una nueva granja**|Servidor de bases de datos<br /><br /> Cuenta de granja<br /><br /> Frase de contraseña<br /><br /> Puerto de Administración central de SharePoint|Valor predeterminado, si es necesario|Las configuraciones usan como valor predeterminado lo que especificó en la página principal.|  
-|**Crear una aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**|Nombre de la aplicación de servicio|Valor de DB-Library|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Nombre de la aplicación de servicio. El nombre predeterminado es **Valor de DB-Library [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service Application**. Podrá sustituirlo por otro valor de la herramienta.|  
-||Servidor de bases de datos|Valor de DB-Library|El servidor de bases de datos que va a hospedar la base de datos de aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . El nombre del servidor predeterminado es el mismo servidor de bases de datos usado para la granja. Puede sustituir el nombre del servidor predeterminado por un valor diferente.|  
-||Nombre de la base de datos|Valor de DB-Library|Nombre de la base de datos que se va a crear para la base de datos de aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . El nombre predeterminado de la base de datos se basa en el nombre de aplicación de servicio, seguido de un GUID para garantizar un nombre único. Podrá sustituirlo por otro valor de la herramienta.|  
+|**Crear una aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**|Nombre de la aplicación de servicio|Valor predeterminado|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Nombre de la aplicación de servicio. El nombre predeterminado es **Valor de DB-Library [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service Application**. Podrá sustituirlo por otro valor de la herramienta.|  
+||Servidor de bases de datos|Valor predeterminado|El servidor de bases de datos que va a hospedar la base de datos de aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . El nombre del servidor predeterminado es el mismo servidor de bases de datos usado para la granja. Puede sustituir el nombre del servidor predeterminado por un valor diferente.|  
+||Nombre de la base de datos|Valor predeterminado|Nombre de la base de datos que se va a crear para la base de datos de aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . El nombre predeterminado de la base de datos se basa en el nombre de aplicación de servicio, seguido de un GUID para garantizar un nombre único. Podrá sustituirlo por otro valor de la herramienta.|  
 |**Crear aplicación web predeterminada**|Nombre de aplicación web|Valor predeterminado, si es necesario|Si no existe ninguna aplicación web, la herramienta crea una. La aplicación web se configura para la autenticación en modo clásico y escucha en el puerto 80. El tamaño máximo de carga de archivos se establece en 2047, el máximo admitido por SharePoint. El tamaño máximo de carga de archivos es para incluir los archivos grandes de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que se cargarán en el servidor.|  
 ||Dirección URL|Valor predeterminado, si es necesario|La herramienta crea una dirección URL basada en el nombre del servidor, con las mismas convenciones de nomenclatura de archivos que SharePoint.|  
 ||Grupo de aplicaciones|Valor predeterminado, si es necesario|La herramienta crea un grupo de aplicaciones predeterminado en IIS.|  
@@ -220,7 +217,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="additional-resources"></a>Recursos adicionales  
  ![Configuración de SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "Configuración de SharePoint") [Enviar comentarios e información de contacto a través de Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Instalar o desinstalar el complemento PowerPivot para SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
  [Herramientas de configuración de Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)   
  [Administración y configuración del servidor de Power Pivot en Administración central](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   

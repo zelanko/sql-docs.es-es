@@ -1,7 +1,7 @@
 ---
 title: MODIFICAR el origen de datos externo (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
-ms.date: 11/13/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -24,16 +24,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 028a300c8dc6b295a0f10b3cb137809c81c4af95
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9257f2747d29933ce04f8e7faa2112c3f4231eaf
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="alter-external-data-source-transact-sql"></a>MODIFICAR el origen de datos externo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Modifica un origen de datos externo que se utiliza para crear una tabla externa. El origen de datos externo puede ser almacenamiento de blobs de Azure o Hadoop (WASB).  
+  Modifica un origen de datos externo que se utiliza para crear una tabla externa. El origen de datos externo puede ser almacenamiento de blobs de Azure o Hadoop (WASB).
   
 ## <a name="syntax"></a>Sintaxis  
   

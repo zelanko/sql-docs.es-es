@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: a90f1158-68d3-4330-98c1-fb0f81e13328
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 975bccedfefb18745036c9d9ae0ed8503d1586f1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 045979085e6d8e1622fef2a961f6c9fdb21d772a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="update-powerpivotsystemservice-cmdlet"></a>Cmdlet Update-PowerPivotSystemService
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Actualiza el objeto primario de la [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] servicio del sistema en la granja de servidores.  
@@ -62,7 +62,7 @@ Update-PowerPivotSystemService [-Confirm <switch>] [<CommonParameters>]
 ### <a name="commonparameters"></a>\<CommonParameters >  
  Este cmdlet admite los siguientes parámetros:  
   
--   Detallado  
+-   Verbose  
   
 -   Depuración  
   
@@ -86,6 +86,6 @@ Update-PowerPivotSystemService [-Confirm <switch>] [<CommonParameters>]
 |||  
 |-|-|  
 |Entradas|Ninguno.|  
-|Salidas|Ninguno.|  
+|Resultados|Ninguno.|  
   
   

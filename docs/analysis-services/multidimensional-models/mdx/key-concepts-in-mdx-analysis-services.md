@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cdfe16ab9a3b17d60f8e5a9ba30eeeda82d75b84
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 23aca9e6a5595c8597d13e2e832390988c50be3c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Conceptos clave de MDX (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Para poder usar expresiones multidimensionales (MDX) para consultar datos multidimensionales o crear expresiones MDX en un cubo, lo ayuda a comprender los términos y conceptos multidimensionales.  
@@ -144,7 +141,7 @@ ms.lasthandoff: 12/08/2017
   
  **Dimensiones de bases de datos y dimensiones de cubos**. En un modelo, se puede definir dimensiones independientes que después se incluyen en cualquier número de cubos en el mismo modelo. Cuando se agrega una dimensión a un cubo, se denomina dimensión de cubo. Por sí misma en un proyecto, como elemento independiente en el Explorador de objetos, se denomina dimensión de base de datos. ¿Por qué es necesario hacer una distinción? Porque se pueden definir las propiedades independientemente. En la documentación del producto, verá que se usan ambos términos, así que merece la pena entender qué significan.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Next Steps  
  Ahora que tiene ciertos conocimientos de los conceptos y la terminología más importante, puede continuar con otros temas, en los que se explican mejor conceptos fundamentales de Analysis Services:  
   
 -   [Consulta de MDX básica &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)  

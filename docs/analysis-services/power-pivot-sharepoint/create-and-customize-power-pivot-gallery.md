@@ -5,13 +5,10 @@ ms.date: 08/31/2015
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
@@ -20,13 +17,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3443f25a3a929f9bad6cbe394a4fe60b38785b65
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 11a372ebe9e40bc5800b8a38a35575aa66095dc7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="create-and-customize-power-pivot-gallery"></a>Creación y personalización de la Galería de PowerPivot
+# <a name="create-and-customize-power-pivot-gallery"></a>Create and Customize Power Pivot Gallery
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Es un tipo especial de biblioteca de documentos de SharePoint que proporciona administración de documento y vista previa enriquecida para los libros de Excel publicados y los informes de Reporting Services que contienen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] datos.  
   
 ##  <a name="bkmk_top"></a> En este tema  
@@ -68,7 +65,7 @@ ms.lasthandoff: 12/08/2017
   
  Las imágenes de vista previa se basan en el modo en que el libro se representa en Excel Services. La representación de la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] debería ser idéntica a lo que se ve en un libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] con un explorador. Sin embargo, la vista previa tiene un área expuesta limitada. Las partes de un libro o un informe podrían reducirse para ajustarse al espacio disponible. Es posible que tenga que abrir un libro o informe para ver todo el documento.  
   
- La actualización de los datos de libros de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] desde orígenes de datos externos se admite totalmente en la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , pero necesita una configuración adicional. Un administrador de granja o de servicios debe agregar la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] como una ubicación de confianza de Excel Services. Para más información, vea [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+ La actualización de los datos de libros de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] desde orígenes de datos externos se admite totalmente en la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , pero necesita una configuración adicional. Un administrador de granja o de servicios debe agregar la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] como una ubicación de confianza de Excel Services. Para más información, vea [Crear una ubicación de confianza para los sitios PowerPivot en Administración central](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 ##  <a name="createlib"></a> Crear la Galería de PowerPivot  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se crea automáticamente al instalar [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] mediante la opción de instalación Nuevo servidor. Si agregó [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] a una granja existente o si desea una biblioteca adicional, puede crear una nueva para la aplicación o el sitio.  

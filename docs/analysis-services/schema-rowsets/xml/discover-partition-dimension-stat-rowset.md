@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fe9721a2653f962865b6d5b180bff99d4043b306
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 42bbe583c494830308c021c1adc385ec48491007
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverpartitiondimensionstat-rowset"></a>Conjunto de filas DISCOVER_PARTITION_DIMENSION_STAT
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Devuelve estadísticas sobre la dimensión que está asociada a una partición  
@@ -36,10 +34,10 @@ ms.lasthandoff: 12/08/2017
   
 |Nombre de columna|Indicador de tipo|Restricción|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**DATABASE_NAME**|**DBTYPE_WSTR**|Necesario|El nombre de la base de datos.<br /><br /> Esta columna se requiere en la lista de restricciones.|  
-|**RESTRICCIONES OBLIGATORIAS CUBE_NAME**|**DBTYPE_WSTR**|Necesario|Nombre del cubo o modelo tabular.<br /><br /> Esta columna se requiere en la lista de restricciones.|  
-|**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|Necesario|Nombre del grupo de medida.<br /><br /> Esta columna se requiere en la lista de restricciones.|  
-|**PARTICIÓN**|**DBTYPE_WSTR**|Necesario|Nombre de la partición.<br /><br /> Esta columna se requiere en la lista de restricciones.|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|Obligatorio|El nombre de la base de datos.<br /><br /> Esta columna se requiere en la lista de restricciones.|  
+|**RESTRICCIONES OBLIGATORIAS CUBE_NAME**|**DBTYPE_WSTR**|Obligatorio|Nombre del cubo o modelo tabular.<br /><br /> Esta columna se requiere en la lista de restricciones.|  
+|**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|Obligatorio|Nombre del grupo de medida.<br /><br /> Esta columna se requiere en la lista de restricciones.|  
+|**PARTICIÓN**|**DBTYPE_WSTR**|Obligatorio|Nombre de la partición.<br /><br /> Esta columna se requiere en la lista de restricciones.|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**||Nombre de la dimensión.<br /><br /> Esta columna se requiere en la lista de restricciones.|  
 |**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||Nombre de un atributo en la dimensión.|  
 |**ATTRIBUTE_INDEXED**|**DBTYPE_BOOL**||Cuando es true, indica que el atributo está indizado; de lo contrario, es false.|  

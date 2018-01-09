@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f9acd136bdeb7c286ec4d110b3f5b4b70018685f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9b6cd10e1b2a9a76780b895ecb2325a14bd6386f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dimension-attribute-properties-reference"></a>Referencia de las propiedades de los atributos de dimensión
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], existen numerosas propiedades que determinan el funcionamiento dimensiones y sus atributos. En la siguiente tabla se enumeran y describen cada una de estas propiedades de los atributos.  
@@ -42,13 +39,13 @@ ms.lasthandoff: 12/08/2017
 |**CustomRollupColumn**|Especifica la columna que define una fórmula de resumen personalizado.|  
 |**CustomRollupPropertiesColumn**|Especifica la columna que contiene las propiedades de una fórmula de resumen personalizado.|  
 |**DefaultMember**|Especifica una expresión MDX (expresiones multidimensionales) que define la medida predeterminada para el atributo.|  
-|**Description**|Contiene la descripción del atributo.|  
+|**Descripción**|Contiene la descripción del atributo.|  
 |**DiscretizationBucketCount**|Contiene el número de depósitos en los que discretizar.|  
 |**DiscretizationMethod**|Define el método que se va a utilizar para la discretización.|  
 |**EstimatedCount**|Especifica el número estimado de miembros del atributo. El valor predeterminado es cero hasta que se ejecuta el Asistente para diseñar agregaciones. Puede dejar que el asistente cuente el número de registros o bien especificar un valor estimado. Especifique un valor manualmente si conoce el número de miembros y desea ahorrarse el tiempo necesario para realizar la consulta del recuento en la base de datos. Si trabaja con un subconjunto de prueba de los datos de producción, puede utilizar los recuentos de los datos de producción de forma que el diseño de agregaciones se optimice para los datos de producción en lugar de hacerlo para los datos de prueba.|  
 |**GroupingBehavior**|Un valor definido por el usuario que proporciona una sugerencia a las aplicaciones cliente sobre cómo agrupar atributos.|  
 |**ID**|Contiene el identificador (Id.) único de la dimensión.|  
-|**InstanceSelection**|Proporciona una sugerencia a las aplicaciones cliente sobre cómo se debe mostrar una lista de elementos, según el número estimado de elementos de la lista. Las opciones disponibles son las siguientes:<br /><br /> **None** No se proporciona ninguna sugerencia a la aplicación cliente. Es el valor predeterminado.<br /><br /> **DropDown** El número de elementos es lo suficientemente pequeño como para mostrarlos en una lista desplegable.<br /><br /> **List** El número de elementos es demasiado grande para una **lista**desplegable, pero no necesita filtrado.<br /><br /> **FilteredList** El número de elementos es lo suficientemente grande como para requerir que los usuarios filtren los elementos que se van a mostrar.<br /><br /> **MandatoryFilter** El número de elementos es tan grande que siempre se debe filtrar.|  
+|**InstanceSelection**|Proporciona una sugerencia a las aplicaciones cliente sobre cómo se debe mostrar una lista de elementos, según el número estimado de elementos de la lista. Las opciones disponibles son las siguientes:<br /><br /> **None** No se proporciona ninguna sugerencia a la aplicación cliente. Este es el valor predeterminado.<br /><br /> **DropDown** El número de elementos es lo suficientemente pequeño como para mostrarlos en una lista desplegable.<br /><br /> **List** El número de elementos es demasiado grande para una **lista**desplegable, pero no necesita filtrado.<br /><br /> **FilteredList** El número de elementos es lo suficientemente grande como para requerir que los usuarios filtren los elementos que se van a mostrar.<br /><br /> **MandatoryFilter** El número de elementos es tan grande que siempre se debe filtrar.|  
 |**IsAggregatable**|Especifica si se pueden agregar los valores de los miembros del atributo. El valor predeterminado es **True**, lo que significa que la jerarquía de atributo contiene un nivel (All). Si el valor de esta propiedad es **False**, la jerarquía de atributo no contiene ningún nivel (All).|  
 |**KeyColumns**|Contiene la columna o columnas que representan la clave del atributo, que es la columna de la tabla relacional subyacente de la vista del origen de datos a la que está enlazada el atributo. El valor de esta columna para cada miembro se muestra a los usuarios a menos que se especifique un valor para la propiedad **NameColumn** .|  
 |**MemberNamesUnique**|Determina si los nombres de miembros de la jerarquía de atributos deben ser únicos.|  
@@ -62,7 +59,7 @@ ms.lasthandoff: 12/08/2017
 |**RootMemberIf**|Determina cómo se identifican los miembros raíz o superiores de una jerarquía de elementos primarios y secundarios. Este valor de propiedad se utiliza únicamente cuando el valor de la propiedad **Usage** se ha establecido en Parent. Esto significa que se ha definido una jerarquía de atributos primarios y secundarios. El valor predeterminado es **ParentIsBlankSelfOrMissing**, lo que significa que solo se tratan como miembros raíz los miembros que cumplen una o más de las condiciones descritas para **ParentIsBlank**, **ParentIsSelf**o **ParentIsMissing** . También están disponibles los siguientes valores:<br /><br /> **ParentIsBlank** Únicamente los miembros con un valor NULL, cero o una cadena vacía en la columna de clave se tratan como miembros raíz.<br /><br /> **ParentIsSelf** Únicamente los miembros que son elementos primarios se tratan como miembros raíz.<br /><br /> **ParentIsMissing** Únicamente los miembros cuyos elementos primarios no se pueden encontrar se tratan como miembros raíz.|  
 |**Tipo**|Contiene el tipo del atributo. Para más información, vea [Configurar tipos de atributos](../../analysis-services/multidimensional-models/attribute-properties-configure-attribute-types.md).|  
 |**UnaryOperatorColumn**|Especifica la columna que proporciona operadores unarios. Es un enlace del tipo DataItem que define los detalles de una columna que proporciona un operador unario.|  
-|**Usage**|Describe cómo se utiliza un atributo.<br /><br /> Las opciones disponibles son las siguientes:<br /><br /> **Regular** El atributo es un atributo regular. Es el valor predeterminado.<br /><br /> **Key** El atributo es un atributo clave.<br /><br /> **Parent** El atributo es un atributo primario.|  
+|**Usage**|Describe cómo se utiliza un atributo.<br /><br /> Las opciones disponibles son las siguientes:<br /><br /> **Regular** El atributo es un atributo regular. Este es el valor predeterminado.<br /><br /> **Key** El atributo es un atributo clave.<br /><br /> **Parent** El atributo es un atributo primario.|  
 |**ValueColumn**|Identifica la columna que proporciona el valor del atributo. Si se especifica el elemento **NameColumn** del atributo, se utilizan los mismos valores **DataItem** como valores predeterminados para el elemento **ValueColumn** . Si no se especifica el elemento **NameColumn** del atributo y la colección **KeyColumns** del mismo contiene un único elemento **KeyColumn** que representa una columna de clave con un tipo de datos de cadena, se utilizan los mismos valores de **DataItem** como valores predeterminados para el elemento **ValueColumn** .|  
   
 > [!NOTE]  

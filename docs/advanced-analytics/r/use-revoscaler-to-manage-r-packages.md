@@ -1,13 +1,13 @@
 ---
 title: "Cómo utilizar las funciones de RevoScaleR para buscar o instalar R paquetes en SQL Server | Documentos de Microsoft"
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 01/08/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: R
@@ -16,11 +16,11 @@ caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 6d85c95a1aa0cba21c52142fa1a7599b208415ca
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 1cc59cad6bfb95ee0981604d336087809f9cb932
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>Cómo utilizar las funciones de RevoScaleR para buscar o instalar paquetes de R en SQL Server
 
@@ -38,7 +38,7 @@ En este artículo se describe estas funciones y se proporciona ejemplos de uso d
 
 + Si no especifica un nombre de usuario y una contraseña cuando se crea el contexto de proceso, se utiliza la identidad del usuario que ejecuta el código de R.
 
-+ Cuando se utilizan estas funciones desde un cliente remoto de R, debe crear un objeto de contexto de proceso en primer lugar, mediante la función RxInSQLServer. Por lo tanto, para cada función de administración de paquetes que usa, pase el contexto de proceso como argumento.
++ Cuando se utilizan estas funciones desde un cliente remoto de R, debe crear un objeto de contexto de proceso en primer lugar, mediante el [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) (función). Por lo tanto, para cada función de administración de paquetes que usa, pase el contexto de proceso como argumento.
 
 + Es posible ejecutar funciones de administración de paquetes mediante `sp_execute_external_script`. Al hacerlo, la función se ejecuta utilizando el contexto de seguridad del autor de la llamada de procedimiento almacenado.
 
@@ -46,22 +46,23 @@ En este artículo se describe estas funciones y se proporciona ejemplos de uso d
 
 Se proporcionan las siguientes funciones de administración de paquetes en RevoScaleR, para la instalación y eliminación de paquetes en un contexto de proceso especificado:
 
-+ [rxInstalledPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstalledpackages): buscar información acerca de los paquetes instalados en el contexto de proceso especificado.
++ [rxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages): buscar información acerca de los paquetes instalados en el contexto de proceso especificado.
 
-+ [rxInstallPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstallpackages): instalar paquetes en un contexto de proceso, ya sea desde un repositorio especificado o leyendo guardados localmente zip paquetes.
++ [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages): instalar paquetes en un contexto de proceso, ya sea desde un repositorio especificado o leyendo guardados localmente zip paquetes.
 
-+ [rxRemovePackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxremovepackages): quitar los paquetes instalados en un contexto de proceso.
++ [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages): quitar los paquetes instalados en un contexto de proceso.
 
-+ [rxFindPackage](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxfindpackage): obtener la ruta de acceso para uno o varios paquetes en el contexto de proceso especificado.
++ [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage): obtener la ruta de acceso para uno o varios paquetes en el contexto de proceso especificado.
 
-+ [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages): copia de una biblioteca de paquetes entre el sistema de archivos y bases de datos en los contextos de proceso especificado.
++ [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages): copia de una biblioteca de paquetes entre el sistema de archivos y bases de datos en los contextos de proceso especificado.
 
-+ [rxSqlLibPaths](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqllibpaths): obtener la ruta de acceso de búsqueda para los árboles de biblioteca para los paquetes mientras se ejecuta dentro de SQL Server.
++ [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths): obtener la ruta de acceso de búsqueda para los árboles de biblioteca para los paquetes mientras se ejecuta dentro de SQL Server.
 
-Estos paquetes se incluyen de forma predeterminada en SQL Server 2017. Para obtener información acerca de estas funciones, vea las páginas de referencia de la función de RevoScaleR: (https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)
+Estos paquetes se incluyen de forma predeterminada en SQL Server 2017. Para obtener información acerca de estas funciones, vea las páginas de referencia de la función de RevoScaleR: (https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)
 
 > [!NOTE]
 > Funciones de R para administración de paquetes son disponible a partir Microsoft R Server 9.0.1. Si no encuentra las funciones de RevoScaleR, probablemente deba actualizar a la versión más reciente. 
+
 ## <a name="examples"></a>Ejemplos
 
 Esta sección contiene ejemplos de cómo usar las funciones de administración del paquete con una instancia de SQL Server o la base de datos. 

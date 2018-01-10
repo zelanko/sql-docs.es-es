@@ -1,7 +1,7 @@
 ---
 title: Resolver problemas de memoria insuficiente | Microsoft Docs
 ms.custom: 
-ms.date: 11/24/2017
+ms.date: 12/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 838f604df21a87912db8d48f815a73c6af27c8f2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: cd2c56037edfc85932f8cb9ef0c7dbe8b5251ef4
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="resolve-out-of-memory-issues"></a>Resolver problemas de memoria insuficiente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.lasthandoff: 11/27/2017
 |[Prácticas recomendadas: usar OLTP en memoria en un entorno de máquinas virtuales](#bkmk_VMs)|Qué debe tener en cuenta al usar OLTP en memoria en un entorno virtualizado.|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> Resolver errores de restauración de bases de datos debidos a memoria insuficiente  
- Cuando intente restaurar una base de datos, es posible que obtenga el mensaje de error: "Error en la operación de restauración para la base de datos '*\<NombreBasedeDatos>*' debido a que la memoria es insuficiente en el grupo de recursos '*\<NombreGrupoRecursos>*'". Esto indica que el servidor no tiene suficiente memoria disponible para restaurar la base de datos.
+ Cuando intente restaurar una base de datos, es posible que obtenga el mensaje de error: "Error en la operación de restauración para la base de datos '*\<NombreBasedeDatos>*' debido a que la memoria es insuficiente en el grupo de recursos '*\<NombreGrupoRecursos>*'". Esto indica que el servidor no tiene suficiente memoria disponible para restaurar la base de datos. 
    
-El servidor en el que restaura una base de datos debe tener suficiente memoria disponible para las tablas optimizadas para memoria en la copia de seguridad de la base de datos; de lo contrario, la base de datos no se conectará.  
+El servidor en el que restaura una base de datos debe tener suficiente memoria disponible para las tablas optimizadas para memoria en la copia de seguridad de la base de datos; de lo contrario, la base de datos no se conectará y se marcará como sospechosa.  
   
 Si el servidor tiene suficiente memoria física, pero todavía aparece este error, es posible que otros procesos estén utilizando demasiada memoria o un problema de configuración hace que no haya suficiente memoria disponible para la restauración. Para esta clase de problemas, lleve a cabo las siguientes medidas para que haya más memoria disponible para la operación de restauración: 
   
@@ -54,7 +54,7 @@ Si el servidor tiene suficiente memoria física, pero todavía aparece este erro
     > Si el servidor se está ejecutando en una máquina virtual y no está dedicado, establezca el valor de MIN_MEMORY_PERCENT en el mismo valor que MAX_MEMORY_PERCENT.   
     > Vea el tema [Prácticas recomendadas: usar OLTP en memoria en un entorno de máquinas virtuales](#bkmk_VMs) para obtener más información.  
   
-    ```tsql  
+    ```sql  
     -- disable resource governor  
     ALTER RESOURCE GOVERNOR DISABLE  
   
@@ -117,7 +117,7 @@ Este fragmento de código cambia el valor MAX_MEMORY_PERCENT para el grupo de re
 >  Si el servidor se está ejecutando en una máquina virtual y no está dedicado, establezca el valor de MIN_MEMORY_PERCENT en el mismo valor que MAX_MEMORY_PERCENT.   
 > Vea el tema [Prácticas recomendadas: usar OLTP en memoria en un entorno de máquinas virtuales](#bkmk_VMs) para obtener más información.  
   
-```tsql  
+```sql  
 -- disable resource governor  
 ALTER RESOURCE GOVERNOR DISABLE  
   
@@ -163,7 +163,7 @@ Si sigue los procedimientos anteriores para una base de datos con tablas optimiz
 ### <a name="resolution"></a>Solución
 Para mitigar este problema, asigne previamente memoria suficiente a la base de datos para recuperar o reiniciar la base de datos; no especifique un valor mínimo confiando en que la memoria dinámica proporcionará memoria adicional cuando sea necesario.
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administrar memoria para OLTP en memoria](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
  [Supervisar y solucionar problemas del uso de la memoria](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)   
  [Enlazar una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   

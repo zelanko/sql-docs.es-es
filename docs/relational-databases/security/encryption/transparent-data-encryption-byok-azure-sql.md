@@ -6,26 +6,29 @@ services: sql-database
 documentationcenter: 
 author: aliceku
 manager: craigg
-editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
-ms.workload: Inactive
+ms.custom: 
+ms.component: security
+ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 11/15/2017
 ms.author: aliceku
-ms.openlocfilehash: 5a0b56974d85f63e3382f26b1388e7d30dfbd6f8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5aaa55cc04e4844889266dc434ac92a0ed22ed00
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Cifrado de datos transparente compatible con Bring Your Own Key para Azure SQL Database y SQL Data Warehouse
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+# <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Cifrado de datos transparente compatible con Bring Your Own Key (versión preliminar) para Azure SQL Database y SQL Data Warehouse
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-La compatibilidad con Bring Your Own Key (BYOK) del [Cifrado de datos transparente (TDE)](transparent-data-encryption.md) permite al usuario tomar el control de sus claves de cifrado de TDE y restringir quién y cuándo puede tener acceso a ellas. [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault), el sistema de administración de claves externas basado en la nube de Azure, es el primer servicio de administración de claves en el que TDE ha integrado la compatibilidad con BYOK. Con BYOK, la clave de cifrado de base de datos está protegida por una clave asimétrica almacenada en Key Vault. La clave asimétrica se establece en el nivel de servidor y la heredan todas las bases de datos de ese servidor. 
+La compatibilidad con Bring Your Own Key (BYOK) del [Cifrado de datos transparente (TDE)](transparent-data-encryption.md) permite al usuario tomar el control de sus claves de cifrado de TDE y restringir quién y cuándo puede tener acceso a ellas. [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault), el sistema de administración de claves externas basado en la nube de Azure, es el primer servicio de administración de claves en el que TDE ha integrado la compatibilidad con BYOK. Con BYOK, la clave de cifrado de base de datos está protegida por una clave asimétrica almacenada en Key Vault. La clave asimétrica se establece en el nivel de servidor y la heredan todas las bases de datos de ese servidor. Esta característica se encuentra en versión preliminar, y no se recomienda usarla para cargas de trabajo de producción hasta que se declare su disponibilidad general.
 
 Gracias a la compatibilidad con BYOK, los usuarios pueden controlar las tareas de administración de claves, como las rotaciones de claves, los permisos del almacén de claves, la eliminación de claves y la habilitación de auditorías o informes en todas las claves de cifrado. Key Vault ofrece una administración central de claves, aprovecha los módulos de seguridad de hardware (HSM) muy supervisados y permite la separación de las tareas entre la administración de claves y los datos para facilitar el cumplimiento normativo. 
 
@@ -57,6 +60,7 @@ Al usar TDE con BYOK, tiene a su disposición las dos tareas de administración 
 Asumir la administración de claves de cifrado de los recursos de una aplicación es una responsabilidad importante. Al usar TDE con BYOK a través de Key Vault, puede asumir estas tareas de administración de claves:
 - **Rotaciones de clave:** los protectores de TDE deben rotar según las normas internas o los requisitos de cumplimiento. Las rotaciones de clave pueden realizarse a través del almacén de claves del protector de TDE.  
 - **Permisos del almacén de claves**: los permisos en Key Vault se aprovisionan en el nivel de un almacén de claves y del servidor. Los permisos del servidor en un almacén de claves se pueden revocar en cualquier momento mediante la directiva de acceso del almacén de claves.
+- **Redundancia del almacén de claves**: como el material de clave nunca abandona Azure Key Vault y el servidor no tiene acceso a ninguna copia en caché externa al almacén de claves, debe configurar la replicación geográfica de Azure Key Vault para poder conservar el acceso al material de clave en caso de que se esté produciendo una interrupción en una región de Azure Key Vault.  Las bases de datos de replicación geográfica perderán el acceso a su material de clave si dependen de un solo almacén de Azure Key Vault.
 - **Eliminación de claves**: las claves se pueden quitar de Key Vault y del servidor SQL Server por motivos de seguridad adicional o requisitos de cumplimiento.
 - **Auditoría/Informes en todas las claves de cifrado**: Key Vault proporciona registros que son fáciles de insertar en otras herramientas de administración de eventos e información de seguridad (SIEM). Operations Management Suite (OMS) [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) es un ejemplo de un servicio que ya está integrado.
 
@@ -91,12 +95,11 @@ No se admiten protectores de TDE únicos para una base de datos o un almacén de
 
 ### <a name="high-availability-and-disaster-recovery"></a>Alta disponibilidad y recuperación ante desastres
   
-Hay dos maneras de configurar la replicación geográfica para servidores mediante Key Vault: 
+Se debe configurar la replicación geográfica para que el almacén de claves conserve una gran disponibilidad del material de clave en Azure Key Vault:
 
-- **Almacén de claves independiente**: cada servidor tiene acceso a un almacén de claves independiente (lo ideal es que cada uno tenga su propia región de Azure). Esta es la configuración recomendada, puesto que cada servidor tiene su propia copia del protector de TDE para las bases de datos cifradas con replicación geográfica. Si una de las regiones de Azure del servidor se desconecta, los demás servidores pueden seguir teniendo acceso a las bases de datos con replicación geográfica.   
+- **Almacén de claves redundante:** cada uno de los servidores con replicación geográfica tiene acceso a un almacén de claves distinto, colocados preferiblemente en la misma región de Azure. Esta es la configuración recomendada, puesto que cada servidor tiene su propia copia del protector de TDE para las bases de datos cifradas con replicación geográfica. Si una de las regiones de Azure del servidor se desconecta, los demás servidores pueden seguir teniendo acceso a las bases de datos con replicación geográfica.  La configuración debe hacerse con cuidado para asegurarse de que, si un almacén de claves deja de estar disponible, el servidor pueda acceder a la copia de seguridad del protector del TDE desde el otro almacén de claves.     
 
-- **Almacén de claves compartido**: todos los servidores comparten el mismo almacén de claves. Esta configuración es más sencilla, pero si se queda sin conexión la región de Azure donde se encuentra el almacén de claves, los servidores no podrán leer las bases de datos cifradas con replicación geográfica ni sus propias bases de datos cifradas. 
- 
+
 Para empezar, use el cmdlet [Add-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) para agregar cada clave de Key Vault del servidor a los otros servidores en el vínculo de replicación geográfica.  
 (Ejemplo de un identificador de clave de Key Vault: *https://contosokeyvault.vault.azure.net/keys/Key1/1a1a2b2b3c3c4d4d5e5e6f6f7g7g8h8h*)
 

@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 772e17a6f5b444b6d75719896bed74e3cd13ab67
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 31182384eaf0b9ae13cca070ac18eba76a14df1e
+ms.sourcegitcommit: 8b774eff53c1043dc3d4305ce8329fcab8945615
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/18/2017
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilidad de las tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,11 +112,11 @@ ms.lasthandoff: 11/17/2017
  No todos los CFP con espacio disponible con aptos para la combinación. Por ejemplo, si dos CFP adyacentes están completos al 60%, no optarán por la combinación y cada uno de estos CFP tendrá un almacenamiento del 40% no utilizado. En el peor de los casos, todos los CFP estarán completos al 50%, una utilización del almacenamiento de solo el 50%. Mientras que las filas eliminadas pueden existir en almacenamiento porque los CFP no son aptos para la combinación, es posible que el recolector de elementos no utilizados en memoria haya quitado ya las filas eliminadas. La administración de almacenamiento y de la memoria es independiente de la recolección de elementos no utilizados. El almacenamiento ocupado por los CFP (no todos los CFP se actualizan) puede ser hasta 2 veces mayor que el tamaño de las tablas durables en memoria.  
   
 ### <a name="life-cycle-of-a-cfp"></a>Ciclo de vida de un CFP  
- Los CPF realizan una transición por varios estados antes de que se puedan desasignar. Es necesario que se produzcan puntos de comprobación de base de datos y copias de seguridad de registros para que los archivos vayan avanzado por cada fase y, en última instancia, se limpien aquellos archivos que ya no sean necesarios. Para obtener una descripción de estas fases, vea [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md).  
+ Los CFP hacen una transición por varios estados antes de que se puedan desasignar. Es necesario que se produzcan puntos de comprobación de base de datos y copias de seguridad de registros para que los archivos vayan avanzado por cada fase y, en última instancia, se limpien aquellos archivos que ya no sean necesarios. Para obtener una descripción de estas fases, vea [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md).  
   
  Puede forzar manualmente el punto de comprobación seguido de una copia de seguridad de registros para acelerar la recolección de elementos no utilizados. En escenarios de producción, los puntos de comprobación automáticos y las copias de seguridad de registros realizados como parte de la estrategia de copia de seguridad simplificarán la transición de los CFP por estas fases sin que sea necesaria ninguna intervención manual. El efecto del proceso de recolección de elementos no utilizados es que las bases de datos con tablas optimizadas para memoria pueden tener un tamaño de almacenamiento máximo respecto a su tamaño en memoria. Si no se realizan puntos de comprobación ni copias de seguridad de registros, la superficie en disco de los archivos de punto de comprobación seguirá creciendo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Crear y administrar el almacenamiento de objetos con optimización para memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

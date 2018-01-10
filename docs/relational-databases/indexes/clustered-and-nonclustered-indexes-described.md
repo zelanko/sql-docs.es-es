@@ -1,7 +1,7 @@
 ---
 title: "Índices agrupados y no agrupados descritos | Microsoft Docs"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 11/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -20,17 +20,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 55498dc339c081da3e9c5fbeca1c464a93b2395e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c7267f4ab8ca17f2f4eefff78e34b55f5bd43b57
+ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Índices agrupados y no agrupados descritos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Índices agrupados y no agrupados descritos](https://msdn.microsoft.com/en-US/library/ms190457(SQL.120).aspx).
-
 
   Un índice es una estructura de disco asociada con una tabla o una vista que acelera la recuperación de filas de la tabla o de la vista. Un índice contiene claves generadas a partir de una o varias columnas de la tabla o la vista. Dichas claves están almacenadas en una estructura (árbol b) que permite que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] busque de forma rápida y eficiente la fila o filas asociadas a los valores de cada clave.  
   
@@ -59,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="indexes-and-constraints"></a>Índices y restricciones  
  Los índices se crean automáticamente cuando las restricciones PRIMARY KEY y UNIQUE se definen en las columnas de tabla. Por ejemplo, cuando cree una tabla e identifique una determinada columna como la clave principal, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] creará automáticamente una restricción PRIMARY KEY y un índice en esa columna. Para obtener más información, consulte [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md) y [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md).  
   
-## <a name="how-indexes-are-used-by-the-query-optimizer"></a>Cómo utiliza los índices el optimizador de consultas  
+## <a name="how-indexes-are-used-by-the-query-optimizer"></a>Cómo usa los índices el optimizador de consultas  
  Los índices bien diseñados pueden reducir las operaciones de E/S de disco y consumen menos recursos del sistema, con lo que mejoran el rendimiento de la consulta. Los índices pueden ser útiles para diversas consultas que contienen instrucciones SELECT, UPDATE, DELETE o MERGE. Fíjese en la consulta `SELECT Title, HireDate FROM HumanResources.Employee WHERE EmployeeID = 250` en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Cuando se ejecuta la consulta, el optimizador de consultas evalúa cada método disponible para recuperar datos y selecciona el método más eficiente. El método puede ser un recorrido de la tabla o puede ser recorrer uno o más índices si existen.  
   
  Al realizar un recorrido de la tabla, el optimizador de consultas leerá todas las filas de la tabla y extraerá las filas que cumplen con los criterios de la consulta. Un recorrido de la tabla genera muchas operaciones de E/S de disco y puede consumir recursos. No obstante, puede ser el método más eficaz si, por ejemplo, el conjunto de resultados de la consulta es un porcentaje elevado de filas de la tabla.  
@@ -68,9 +67,12 @@ ms.lasthandoff: 11/17/2017
   
  El optimizador de consultas normalmente selecciona el método más eficaz cuando ejecuta consultas. No obstante, si no hay índices disponibles, el optimizador de consultas debe utilizar un recorrido de la tabla. Su tarea consiste en designar y crear los índices que sean más educados para su entorno para que el optimizador de consultas tenga una selección de índices eficientes entre los cuales elegir. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona el [Asistente para la optimización de motor de base de datos](../../relational-databases/performance/database-engine-tuning-advisor.md) , que sirve de ayuda en el análisis del entorno de su base de datos y para seleccionar los índices apropiados.  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+> [!IMPORTANT] 
+> Para obtener más información sobre las directrices de diseño de índices y los datos internos, consulte la [Guía de diseño de índices de SQL Server](../../relational-databases/sql-server-index-design-guide.md).
+
+## <a name="related-content"></a>Contenido relacionado  
+ [Guía de diseño de índices de SQL Server](../../relational-databases/sql-server-index-design-guide.md)     
  [Crear índices clúster](../../relational-databases/indexes/create-clustered-indexes.md)  
-  
  [Crear índices no clúster](../../relational-databases/indexes/create-nonclustered-indexes.md)  
   
   

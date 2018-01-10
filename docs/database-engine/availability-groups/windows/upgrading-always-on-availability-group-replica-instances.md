@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a05d33191df12f115cea94a10eb1b2bd3a9a3498
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b4be12e82f4df3c15fbf465863174b0cdde051af
+ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/16/2017
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Actualización de instancias de la réplica del grupo de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  En este tema nos limitamos a explicar el proceso de actualización de SQL Server. No trataremos la actualización del sistema operativo que contiene el clúster de conmutación por error de Windows Server (WSFC). No se puede actualizar el sistema operativo Windows que hospeda el clúster de conmutación por error en sistemas operativos anteriores a Windows Server 2012 R2. Para actualizar un nodo de clúster que se ejecute en Windows Server 2012 R2, vea [Cluster Operating System Rolling Upgrade](https://technet.microsoft.com/library/dn850430.aspx)(Actualización gradual del sistema operativo de clústeres).  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Antes de empezar, revise la siguiente información importante:  
   
 -   [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Compruebe que puede actualizar a SQL Server 2016 desde su versión del sistema operativo Windows y la versión de SQL Server. Por ejemplo, no puede actualizar directamente desde una instancia de SQL Server 2005 a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -40,8 +40,11 @@ ms.lasthandoff: 11/20/2017
   
 -   [Planeamiento y prueba del plan de actualización del motor de base de datos](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): revise las notas de la versión y los problemas conocidos de actualización, la lista de comprobación previa a la actualización y desarrolle y pruebe el plan de actualización.  
   
--   [Requisitos de hardware y software para instalar SQL Server 2016:](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)revise los requisitos de software para instalar [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si es necesario software adicional, puede instalarlo en cada nodo antes de comenzar el proceso de actualización para reducir los posibles tiempos de inactividad.  
-  
+-   [Requisitos de hardware y software para instalar SQL Server 2016:](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)revise los requisitos de software para instalar [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si se requiere software adicional, puede instalarlo en cada nodo antes de comenzar el proceso de actualización para reducir los posibles tiempos de inactividad.  
+
+> [!NOTE]  
+>  No se permite mezclar versiones de SQL Server en el mismo AG. Para migrar a una versión nueva con grupos de disponibilidad, el único método admitido es un grupo de disponibilidad distribuido que esté en SQL Server 2016 Enterprise Edition o en una versión posterior.
+
 ## <a name="rolling-upgrade-best-practices-for-always-on-availability-groups"></a>Prácticas recomendadas de las actualizaciones graduales en grupos de disponibilidad AlwaysOn  
  Las siguientes prácticas recomendadas deberían tenerse en cuenta al realizar actualizaciones de servidor con el fin de reducir el tiempo de inactividad y la pérdida de datos en los grupos de disponibilidad:  
   
@@ -170,7 +173,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  En muchos casos, una vez completada la actualización gradual, se conmutará por recuperación a la réplica principal original.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Actualización a SQL Server 2016 mediante el Asistente para instalación &#40;programa de instalación&#41;](../../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [Instalar SQL Server 2016 desde el símbolo del sistema](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   

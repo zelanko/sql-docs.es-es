@@ -1,7 +1,8 @@
 ---
 title: Compatibilidad con la escalabilidad horizontal de SQL Server Integration Services (SSIS) para una alta disponibilidad | Microsoft Docs
+ms.description: This article describes how to configure SSIS Scale Out for high availability
 ms.custom: 
-ms.date: 07/18/2017
+ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
@@ -16,89 +17,94 @@ author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2202b61a9efce26edb0edcef53204351338ecee6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d5f6903671f3ed982263b27caaebd7b4682717cb
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="scale-out-support-for-high-availability"></a>Compatibilidad con la escalabilidad horizontal para una alta disponibilidad
 
 En la escalabilidad horizontal de SSIS, la alta disponibilidad del trabajo se proporciona a través de la ejecución de paquetes con varios trabajos de escalabilidad horizontal.
-La alta disponibilidad del patrón se logra con [Always On para el catálogo de SSIS](../service/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) y el clúster de conmutación por error de Windows. Varias instancias del patrón de escalabilidad horizontal se hospedan en un clúster de conmutación por error de Windows. Si el servicio de patrón de escalabilidad horizontal o SSISDB están desactivados en el nodo principal, el servicio o SSISDB en el nodo secundario continuarán aceptando solicitudes de usuario y comunicándose con los trabajos de escalabilidad horizontal. 
 
-Para configurar la alta disponibilidad del patrón, realice los pasos siguientes.
+La alta disponibilidad del Servicio principal de escalabilidad horizontal se consigue con el [catálogo Always On para SSIS](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) y los clústeres de conmutación por error de Windows. En esta solución, hay varias instancias del Servicio principal de escalabilidad horizontal que se hospedan en un clúster de conmutación por error de Windows. Si el Servicio principal de escalabilidad horizontal o SSISDB están desactivados en el nodo principal, el servicio o SSISDB en el nodo secundario continuarán aceptando solicitudes de usuario y comunicándose con los trabajos de escalabilidad horizontal. 
 
-## <a name="1-prerequisites"></a>1. Requisitos previos
-Configure un clúster de conmutación por error de Windows. Consulte la entrada de blog [Installing the Failover Cluster Feature and Tools for Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Instalación de las herramientas y la característica de clúster de conmutación por error para Windows Server 2012) a fin de obtener instrucciones. Debe instalar la característica y las herramientas en todos los nodos del clúster.
+Para configurar la alta disponibilidad del Servicio principal de escalabilidad horizontal, haga lo siguiente:
 
-## <a name="2-install-scale-out-master-on-primary-node"></a>2. Instalar el patrón de escalabilidad horizontal en el nodo principal
-Instale Servicios de Motor de base de datos, Integration Services y el patrón de escalabilidad horizontal en el nodo principal del patrón de escalabilidad horizontal. 
+## <a name="1-prerequisites"></a>1. Prerequisites
+Configure un clúster de conmutación por error de Windows. Vea la entrada de blog [Installing the Failover Cluster Feature and Tools for Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Instalación de las herramientas y la característica de clúster de conmutación por error para Windows Server 2012) para obtener instrucciones. Instale la característica y las herramientas en todos los nodos del clúster.
 
-Durante la instalación, debe 
-### <a name="21-set-the-account-running-scale-out-master-service-to-a-domain-account"></a>2.1 Establecer la cuenta que ejecuta el servicio del patrón de escalabilidad horizontal en una cuenta de dominio.
-Esta cuenta debe ser capaz de acceder a SSISDB en el nodo secundario del clúster de conmutación por error de Windows en el futuro. Dado que la comutación por error del servicio del patrón de escalabilidad y de SSISDB se puede realizar por separado, es posible que no estén en el mismo nodo.
+## <a name="2-install-scale-out-master-on-the-primary-node"></a>2. Instalación del Servicio principal de escalabilidad horizontal en el nodo principal
+Instale los servicios de motor de base de datos de SQL Server, Integration Services y el Servicio principal de escalabilidad horizontal en el nodo principal del servicio. 
+
+Durante la instalación, haga lo siguiente:
+
+### <a name="21-set-the-account-running-scale-out-master-service-to-a-domain-account"></a>2.1. Establecer la cuenta que ejecuta el servicio del Servicio principal de escalabilidad horizontal en una cuenta de dominio
+Esta cuenta debe ser capaz de acceder a SSISDB en el nodo secundario del clúster de conmutación por error de Windows en el futuro. Dado que la conmutación por error del Servicio principal de escalabilidad horizontal y SSISDB se puede realizar por separado, es posible que no estén en el mismo nodo tras la conmutación por error.
 
 ![Configuración del servidor HA](media/ha-server-config.PNG)
 
-### <a name="22-include-scale-out-master-service-dns-host-name-in-the-cns-of-scale-out-master-certificate"></a>2.2 Incluir el nombre de host DNS del servicio del patrón de escalabilidad horizontal en los nombres comunes del certificado del patrón de escalabilidad horizontal.
+### <a name="22-include-the-dns-host-name-for-the-scale-out-master-service-in-the-cns-of-the-scale-out-master-certificate"></a>2.2. Incluir el nombre de host DNS del servicio del Servicio principal de escalabilidad horizontal en los nombres comunes del certificado del servicio
 
-Este nombre de host se usará en el punto de conexión del patrón de escalabilidad horizontal. 
+Este nombre de host se utilizará en el punto de conexión del Servicio principal de escalabilidad horizontal. 
 
 ![Configuración del patrón HA](media/ha-master-config.PNG)
 
-## <a name="3-install-scale-out-master-on-secondary-node"></a>3. Instalar el patrón de escalabilidad horizontal en el nodo secundario
-Instale Servicios de Motor de base de datos, Integration Services y el patrón de escalabilidad horizontal en el nodo secundario del patrón de escalabilidad horizontal. 
+## <a name="3-install-scale-out-master-on-the-secondary-node"></a>3. Instalación del Servicio principal de escalabilidad horizontal en el nodo secundario
+Instale los servicios de motor de base de datos de SQL Server, Integration Services y el Servicio principal de escalabilidad horizontal en el nodo secundario del servicio. 
 
-Debe usar el mismo certificado del patrón de escalabilidad horizontal con el nodo principal. Exporte el certificado SSL del patrón de escalabilidad horizontal en el nodo principal con clave privada e instálelo en el almacén de certificados raíz de la máquina local en el nodo secundario. Seleccione este certificado cuando instale el patrón de escalabilidad horizontal.
+Use el mismo certificado del Servicio principal de escalabilidad horizontal que usó con el nodo principal. Exporte el certificado SSL del Servicio principal de escalabilidad horizontal en el nodo principal con una clave privada e instálelo en el almacén de certificados raíz del equipo local en el nodo secundario. Seleccione este certificado cuando instale el Servicio principal de escalabilidad horizontal en el nodo secundario.
 
 ![Configuración del patrón HA 2](media/ha-master-config2.PNG)
 
-> [!Note]
-> Puede configurar varios patrones de escalabilidad horizontal de copia de seguridad mediante la repetición de las operaciones del patrón de escalabilidad horizontal secundaria.
+> [!NOTE]
+> Puede configurar varios patrones del Servicio principal de escalabilidad horizontal de copia de seguridad mediante la repetición de las operaciones del servicio en los nodos secundarios.
 
-## <a name="4-set-up-ssisdb-always-on"></a>4. Configurar Always On de SSISDB
+## <a name="4-set-up-ssisdb-always-on"></a>4. Configuración de Always On de SSISDB
 
-Las instrucciones para configurar Always On para SSISDB pueden consultarse en [Always On para el catálogo de SSIS (SSISDB)](../service/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb).
+Siga las instrucciones para configurar Always On para SSISDB que encontrará en [Always On para el catálogo de SSIS (SSISDB)](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb).
 
-Además, debe crear un agente de escucha de grupo de disponibilidad para SSISDB del grupo de disponibilidad agregado. Consulte [Create or Configure an Availability Group Listener](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md) (Crear o configurar un agente de escucha de grupo de disponibilidad).
+Además, tendrá que crear un agente de escucha de grupo de disponibilidad para el grupo de disponibilidad en el que agregue SSISDB. Consulte [Create or Configure an Availability Group Listener](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md) (Crear o configurar un agente de escucha de grupo de disponibilidad).
 
-## <a name="5-update-scale-out-master-service-configuration-file"></a>5. Actualizar el archivo de configuración del servicio del patrón de escalabilidad horizontal
-Actualice el archivo de configuración del servicio del patrón de escalabilidad horizontal, \<unidad\>:\Archivos de programa\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config, en los nodos principal y secundario. Actualice **SqlServerName** a *[Nombre DNS del agente de escucha de grupo de disponibilidad],[Puerto]*.
+## <a name="5-update-the-scale-out-master-service-configuration-file"></a>5. Actualización del archivo de configuración del Servicio principal de escalabilidad horizontal
+Actualice el archivo de configuración del Servicio principal de escalabilidad horizontal, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`, tanto en el nodo principal como en los secundarios. Actualice **SqlServerName** a *[Nombre DNS del agente de escucha de grupo de disponibilidad],[Puerto]*.
 
 ## <a name="6-enable-package-execution-logging"></a>6. Habilitar el registro de la ejecución de paquetes
 
-El registro en SSISDB se realiza mediante el inicio de sesión **##MS_SSISLogDBWorkerAgentLogin##**, cuya contraseña se genera automáticamente. Para que el registro funcione para todas las réplicas de SSISDB, realice las siguientes acciones.
+El registro en SSISDB se realiza mediante el inicio de sesión **##MS_SSISLogDBWorkerAgentLogin##**, cuya contraseña se genera automáticamente. Para que el registro funcione para todas las réplicas de SSISDB, haga lo siguiente:
 
-### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-primary-sql-server"></a>6.1 Cambiar la contraseña de **##MS_SSISLogDBWorkerAgentLogin##** en la instancia de SQL Server principal.
-### <a name="62-add-the-login-to-secondary-sql-server"></a>6.2 Agregar el inicio de sesión a la instancia de SQL Server secundaria.
-### <a name="63-update-connection-string-of-logging"></a>6.3 Actualizar la cadena de conexión del registro.
-Llame al procedimiento almacenado [catalog].[update_logdb_info] con 
+### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1. Cambio de la contraseña de **##MS_SSISLogDBWorkerAgentLogin##** en la instancia de SQL Server principal
 
-@server_name = '*[Nombre DNS del agente de escucha de grupo de disponibilidad],[Puerto]*'. 
+### <a name="62-add-the-login-to-the-secondary-sql-server"></a>6.2. Agregar el inicio de sesión a la instancia secundaria de SQL Server
 
-y @connection_string = 'Data Source=*[Nombre DNS del agente de escucha de grupo de disponibilidad]*,*[Puerto]*;Initial Catalog=SSISDB;User Id=##MS_SSISLogDBWorkerAgentLogin ##;Password=*[Contraseña]*];'.
+### <a name="63-update-the-connection-string-used-for-logging"></a>6.3. Actualización de la cadena de conexión que se usa para el registro
+Llame al procedimiento almacenado `[catalog].[update_logdb_info]` con los siguientes valores de parámetro:
 
-## <a name="7-congifure-scale-out-master-service-role-of-windows-failover-cluster"></a>7. Configurar el rol de servicio del patrón de escalabilidad horizontal del clúster de conmutación por error de Windows
+-   `@server_name = '[Availability Group Listener DNS name],[Port]' `
 
-En el Administrador de clústeres de conmutación por error, conéctese al clúster de escalabilidad horizontal. Seleccione el clúster y haga clic en **Acción** en el menú. A continuación, seleccione **Configurar rol...**.
+-   `@connection_string = 'Data Source=[Availability Group Listener DNS name],[Port];Initial Catalog=SSISDB;User Id=##MS_SSISLogDBWorkerAgentLogin##;Password=[Password]];'`
 
-En el **Asistente para alta disponibilidad** que aparece, seleccione **Servicio genérico** en la página **Seleccionar rol** y elija SQL Server Integration Services Scale Out Master 14.0 en la página **Seleccionar servicio**.
+## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-failover-cluster"></a>7. Configuración del rol del Servicio principal de escalabilidad horizontal del clúster de conmutación por error de Windows
 
-En la página **Punto de acceso de cliente**, escriba el nombre de host DNS del servicio de patrón de escalabilidad horizontal.
+1.  En el Administrador de clústeres de conmutación por error, conéctese al clúster de escalabilidad horizontal. Seleccione el clúster. Seleccione **Acción** en el menú y, a continuación, **Configurar rol**.
 
-![Asistente HA 1](media/ha-wizard1.PNG)
+2.  En el cuadro de diálogo **Asistente para alta disponibilidad**, seleccione **Servicio genérico** en la página **Seleccionar rol**. En la página **Seleccionar servicio**, seleccione Servicio principal de escalabilidad horizontal de SQL Server Integration Services 14.0.
 
-Finalice al asistente.
+3.  En la página **Punto de acceso de cliente**, escriba el nombre de host DNS del Servicio principal de escalabilidad horizontal.
 
-## <a name="8-update-master-address-in-ssisdb"></a>8. Actualizar la dirección del patrón en SSISDB
+    ![Asistente HA 1](media/ha-wizard1.PNG)
 
-En el servidor principal de SQL Server, ejecute el procedimiento almacenado [SSIS].[catalog].[update_master_address] con el parámetro @MasterAddress = N'https://[nombre de host DNS del servicio de patrón de escalabilidad horizontal]:[Puerto maestro]'. 
+4.  Finalice al asistente.
 
-## <a name="9-add-scale-out-worker"></a>9. Agregar el trabajo de escalabilidad horizontal
+## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8. Actualización de la dirección del Servicio principal de escalabilidad horizontal en SSISDB
 
-Ahora, puede agregar trabajos de escalabilidad horizontal con la ayuda del [Administrador de escalabilidad horizontal](integration-services-ssis-scale-out-manager.md). Escriba *[Nombre DNS del agente de escucha de grupo disponibilidad de SQL Server]*,*[Puerto]* en la página de conexión.
+En el servidor SQL Server principal, ejecute el procedimiento almacenado `[catalog].[update_master_address]` con el valor de parámetro `@MasterAddress = N'https://[Scale Out Master service DNS host name]:[Master Port]'`. 
 
+## <a name="9-add-the-scale-out-workers"></a>9. Agregar trabajos de escalabilidad horizontal
 
+Ahora puede agregar trabajos de escalabilidad horizontal con la ayuda del [Administrador de escalabilidad horizontal de Integration Services](integration-services-ssis-scale-out-manager.md). Escriba `[SQL Server Availability Group Listener DNS name],[Port]` en la página de conexión.
 
-
+## <a name="next-steps"></a>Pasos siguientes
+Para obtener más información, vea los artículos siguientes:
+-   [Servicio principal de escalabilidad horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
+-   [Trabajo de escalabilidad horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)

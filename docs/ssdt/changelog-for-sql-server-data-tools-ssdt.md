@@ -1,9 +1,9 @@
 ---
 title: Registro de cambios para SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: 
-ms.date: 10/19/2017
+ms.date: 12/22/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssdt
 ms.reviewer: 
@@ -17,16 +17,102 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 06b6fbdbf9d53273abe660ca6d16ba2afb51fa26
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 98c27d595b2cb849bdca3ccd72bd51cc8378a8b7
+ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Registro de cambios para SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Este registro de cambios hace referencia a [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 Para ver entradas detalladas sobre las novedades y los cambios, consulte [el blog del equipo de SSDT](https://blogs.msdn.microsoft.com/ssdt/).
+
+## <a name="ssdt-for-visual-studio-2017-1551"></a>SSDT para Visual Studio 2017 (15.5.1)
+Número de compilación: 14.0.16148.0
+  
+### <a name="whats-new"></a>Novedades
+
+Visual Studio 2017 (15.5.1) es la misma versión que la 15.5.0 excepto por las siguientes correcciones de errores del instalador:
+
+1.  Se ha corregido un problema que provocaba que el instalador se bloquease en el proceso posterior a la instalación de SQL Server Integration Services.
+2.  Se ha corregido un problema que provocaba un error en la instalación con el siguiente mensaje de error: "La operación de metarchivo solicitada no es compatible (0x800707D3)".
+
+Además de estas dos correcciones de errores, todavía se aplican los siguientes detalles de la versión 15.5.0 a la versión 15.5.1.
+
+## <a name="ssdt-for-visual-studio-2017-1550"></a>SSDT para Visual Studio 2017 (15.5.0)
+Número de compilación: 14.0.16146.0
+  
+### <a name="whats-new"></a>Novedades
+
+SSDT para Visual Studio 2017 (15.5.0) deja de estar en versión preliminar y pasa a disponibilidad general (GA).
+
+**Instalador**
+1. La interfaz de usuario del programa de instalación está localizada.
+1. Se reemplaza el icono con uno de mayor calidad.
+
+**Integration Services (IS)**
+1. Se ha agregado el paso de validación de paquetes en el Asistente para implementación al implementar Azure SSIS IR en ADF, con el que se pueden detectar potenciales errores de compatibilidad en paquetes de SSIS cuando se ejecutan en Azure SSIS IR. Para obtener más información, vea [Validación de paquetes de SSIS implementados en Azure](..\integration-services\lift-shift\ssis-azure-validate-packages.md).
+1. Se ha localizado la extensión SSIS.
+
+### <a name="bug-fixes"></a>Correcciones de errores
+
+**Integration Services (IS)**
+1. Se ha corregido un problema que provocaba que el diseño del administrador de conexiones de OLEDB y ADO.NET estuviese dañado.
+2. Se ha corregido un problema que provocaba un error de ensamblado no encontrado al intentar editar una tarea de procesamiento de dimensiones.
+
+### <a name="known-issues"></a>Problemas conocidos
+
+La tarea Ejecutar paquete de **Integration Services (IS)** SSIS no admite la depuración cuando ExecuteOutofProcess está establecido en True. Este problema solo se aplica a la depuración. Las funciones de guardado, implementación y ejecución mediante DTExec.exe o el catálogo de SSIS no se verán afectadas.
+
+
+
+## <a name="ssdt-174-for-visual-studio-2015"></a>SSDT 17.4 para Visual Studio 2015
+Número de compilación: 14.0.61712.050
+
+### <a name="whats-new"></a>Novedades
+
+**Proyectos de Analysis Services (AS)**
+- Se han agregado tres opciones nuevas a los proyectos tabulares (en Opciones > Tabular de Analysis Services > Importación de datos):
+  - Habilitar orígenes de datos heredados: permite que el usuario cree orígenes de datos de "modo de compatibilidad 1200" más antiguos en nuevos modos de compatibilidad.
+  - Detección de tipos automática: cuando se habilita el Editor de consultas para orígenes de datos modernos, se intentarán detectar los tipos de datos para consultas no estructuradas cuando se cargan. Si la detección se realiza correctamente, puede que se agregue un paso a la consulta.
+  - Ejecución de análisis en segundo plano: cuando se habilita el Editor de consultas para orígenes de datos modernos, se ejecutarán consultas en el origen de datos, ya que las consultas se cargan para analizar el esquema de salida de la consulta.
+
+**Integration Services (IS)**
+- Se ha agregado el paso de validación de paquetes en el Asistente para implementación al implementar Azure SSIS IR en ADF, con el que se pueden detectar potenciales errores de compatibilidad en paquetes de SSIS cuando se ejecutan en Azure SSIS IR. Para obtener más información, vea [Validación de paquetes de SSIS implementados en Azure](..\integration-services\lift-shift\ssis-azure-validate-packages.md).
+
+
+### <a name="bug-fixes"></a>Correcciones de errores
+
+**Proyectos de Analysis Services (AS):**
+- Se ha corregido un problema que podía provocar una excepción no controlada durante la comprobación de cambios del modelo en TFS.
+- Se ha corregido un problema que podía provocar una excepción al agregar una tabla con expresión M compleja a un modelo 1400.
+- Se ha corregido un problema que podía provocar un bloqueo en Visual Studio al buscar metadatos en la vista de diagrama de modelo.
+- Se ha corregido un problema con modelos 1400 que podía provocar que las columnas calculadas se quitasen de la definición de tabla al guardar los cambios en consultas M de partición.
+- Se ha corregido un problema al usar Cambiar nombre de consulta en los modelos 1400 en la UI de Obtener datos o Editor de tablas que podía provocar un bloqueo al validar la compatibilidad con el modelo de datos actual.
+- Se ha corregido un problema que provocaba la falta de una referencia de ensamblado de Newtonsoft al implementar el modelo 1400 en Azure Analysis Services.
+- Se ha corregido un problema que provocaba un error al importar datos a través de PQ en un modelo 1400 en ciertos casos.
+- Se ha corregido un problema de escala en los cuadros de diálogo de la interfaz de usuario de PowerQuery que podía aparecer con un escalado de Windows establecido.
+- Se ha corregido un problema al cambiar el nombre de los roles.
+- Se han corregido problemas con las configuraciones de proyecto que pueden haber causado que los cambios no se guarden o sincronicen correctamente en algunos casos.
+- Se ha corregido un problema en el editor de PowerQuery que provocaba que se agregasen pasos de "Cambiar tipo" automáticamente.
+- Se ha corregido un problema que provocaba un error al abrir el archivo BIM después de cambiar al modo de área de trabajo integrada o al salir de esta.
+- Ahora, la propiedad MaxConnections es visible en los orígenes de datos de los modelos tabulares.
+- Se ha aumentado el tamaño inicial de la ventana del editor de PowerQuery.
+- Las palabras clave de consultas M, como "Source", ahora se mostrarán localizadas en el editor de PowerQuery.
+- Las credenciales se almacenan en caché al trabajar con modelos 1400 y orígenes de datos estructurados para evitar tener que indicar las mismas credenciales para cada tabla editada.
+
+**Proyectos de RS:**
+- Se ha corregido un problema que provocaba que se evitase la implementación de un único informe en un proyecto de varios informes.
+- Se ha corregido un problema con orígenes de datos compartidos que puede haber causado un problema en la implementación.
+- Se ha corregido un problema que provocaba que el administrador de Deshacer se bloquease al cambiar entre la vista de código, de diseño y la ventana del editor de consultas.
+- Se ha corregido un problema que podía causar que el panel de parámetros desapareciese después de que se produjese un error en tiempo de ejecución.
+- Se ha corregido un problema con los proyectos de informe que podía causar que se perdiesen las asignaciones de controles de orígenes.
+
+**Integration Services:**
+- Se ha corregido un problema que podía producirse al cambiar una conexión en una tarea de proceso de Analysis Services.
+- Se ha corregido un problema que hacía que algunos componentes o tareas no se localizaran correctamente.
+- Se ha corregido un problema que provocaba que algunos componentes de CDC se rompiesen después de aplicar una corrección de SQL para CDC que agrega la columna \__$command\_id.
 
 
 ## <a name="ssdt-for-visual-studio-2017-1540-preview"></a>SSDT para Visual Studio 2017 (versión preliminar 15.4.0)

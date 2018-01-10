@@ -1,12 +1,13 @@
 ---
-title: Ejecutar paquetes en la escalabilidad horizontal de SQL Server Integration Services (SSIS) | Microsoft Docs
+title: Ejecutar paquetes en escalabilidad horizontal de SQL Server Integration Services (SSIS) | Microsoft Docs
+ms.description: This article describes how to run SSIS packages in Scale Out
 ms.custom: 
-ms.date: 07/18/2017
+ms.date: 12/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
 ms.component: scale-out
-ms.reviewer: 
+ms.reviewer: douglasl
 ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: 
@@ -14,67 +15,73 @@ ms.topic: article
 caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
-manager: jhubbard
+manager: craigg
 f1_keywords: sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.workload: Inactive
-ms.openlocfilehash: 88537ff52ada042d642b8915342e374ecca3246e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 091d67122b07e8787ccfce914236a4ff9f793b27
+ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/13/2017
 ---
-# <a name="run-packages-in-integration-services-ssis-scale-out"></a>Ejecutar paquetes en la escalabilidad horizontal de Integration Services (SSIS)
-Una vez implementados los paquetes en el servidor de Integration Services, puede ejecutarlos en el escalado horizontal.
+# <a name="run-packages-in-integration-services-ssis-scale-out"></a>Ejecutar paquetes en escalabilidad horizontal de Integration Services (SSIS)
+Tras implementar los paquetes en el servidor de Integration Services, puede ejecutarlos en escalabilidad horizontal con uno de los siguientes métodos:
 
-## <a name="run-packages-with-execute-package-in-scale-out-dialog"></a>Ejecutar paquetes con el cuadro de diálogo Ejecutar paquete en escalabilidad horizontal 
+-   [Cuadro de diálogo Ejecutar paquete en escalabilidad horizontal](#scale_out_dialog)
 
-1. Abrir el cuadro de diálogo Ejecutar paquete en escalado horizontal
+-   [Procedimientos almacenados](#stored_proc)
 
-    En [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)], conecte con el servidor de Integration Services. En el Explorador de objetos, expanda el árbol para ver los nodos de **Catálogos de Integration Services**. Haga clic en el nodo **SSISDB** o el proyecto o el paquete que quiera ejecutar y, luego, haga clic en **Ejecutar en escalado horizontal**.
+-   [trabajos del Agente SQL Server](#sql_agent)
 
-2. Seleccionar paquetes y establecer las opciones
+## <a name="scale_out_dialog"></a> Ejecutar paquetes con el cuadro de diálogo Ejecutar paquete en escalabilidad horizontal
 
-    En la página **Selección de paquetes** , seleccione varios paquetes para ejecutar y establecer el entorno, los parámetros, los administradores de conexión y las opciones avanzadas para cada paquete. Haga clic en un paquete para establecer estas opciones.
+1. Abra el cuadro de diálogo Ejecutar paquete en escalabilidad horizontal.
+
+    En [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)], conecte con el servidor de Integration Services. En el Explorador de objetos, expanda el árbol para ver los nodos de **Catálogos de Integration Services**. Haga clic en el nodo **SSISDB** o el proyecto o el paquete que quiera ejecutar y, luego, haga clic en **Ejecutar en escalabilidad horizontal**.
+
+2. Seleccione los paquetes y establezca las opciones.
+
+    En la página **Selección de paquetes**, seleccione uno o varios paquetes para ejecutarlos. Establezca el entorno, los parámetros, los administradores de conexiones y las opciones avanzadas de cada paquete. Haga clic en un paquete para establecer estas opciones.
     
-    En la pestaña **Avanzadas** , establezca una opción de escalado horizontal denominada **Número de reintentos**. Establece el número de veces que se vuelve a intentar ejecutar un paquete si se produce un error.
+    En la pestaña **Avanzadas**, establezca la opción de escalabilidad horizontal **Número de reintentos** para especificar el número de veces que se reintentará ejecutar el paquete en caso de error.
 
-    > [!Note]
-    > La opción **Volcado de errores** solo surte efecto cuando la cuenta que ejecuta el servicio Trabajador de escalabilidad horizontal es un administrador del equipo local.
+    > [!NOTE]
+    > La opción **Volcado de errores** solo funciona cuando la cuenta que ejecuta el servicio Trabajo de escalabilidad horizontal es un administrador del equipo local.
 
-3. Seleccionar equipos
+3. Seleccione los equipos de trabajo.
 
-    En la página **Selección de equipo** , seleccione los equipos de trabajador de escalado horizontal para ejecutar los paquetes. De forma predeterminada, cualquier máquina puede ejecutar los paquetes. 
+    En la página **Selección de equipo**, seleccione los equipos de trabajo de escalabilidad horizontal para ejecutar los paquetes. De forma predeterminada, los paquetes se pueden ejecutar en cualquier equipo. 
 
-   > [!Note] 
-   > Los paquetes se ejecutan con las credenciales de las cuentas de usuario de los servicios de trabajador de escalado horizontal, que se muestran en la página **Selección de equipo** . De forma predeterminada, la cuenta es NT Service\SSISScaleOutWorker140. Es posible que quiera cambiar a sus propias cuentas de laboratorio.
+   > [!NOTE] 
+   > Los paquetes se ejecutan con las credenciales de las cuentas de usuario de los servicios de trabajo de escalabilidad horizontal. Revise estas credenciales en la página **Selección de equipo**. De forma predeterminada, la cuenta es `NT Service\SSISScaleOutWorker140`.
 
-   >[!WARNING]
-   >Las ejecuciones de paquetes que desencadenan usuarios diferentes en el mismo trabajo se ejecutan con la misma cuenta. No presentan ningún límite de seguridad entre sí. 
+   > [!WARNING]
+   > Las ejecuciones de paquetes que desencadenan usuarios diferentes en el mismo trabajo se ejecutan con las mismas credenciales. No presentan ningún límite de seguridad entre sí. 
 
-4. Ejecutar los paquetes y ver informes 
+4. Ejecute los paquetes y vea los informes.
 
     Haga clic en **Aceptar** para iniciar las ejecuciones de paquetes. Para ver el informe de ejecución de un paquete, haga clic con el botón derecho en el paquete en el Explorador de objetos, haga clic en **Informes**, en **Todas las ejecuciones**y busque la ejecución.
     
-## <a name="run-packages-with-stored-procedures"></a>Ejecutar paquetes con procedimientos almacenados
+## <a name="stored_proc"></a> Ejecución de paquetes con procedimientos almacenados
 
-1. Crear ejecuciones
+1.  Cree las ejecuciones.
 
-    Llame a [catalog].[create_execution] para cada paquete. Establezca el parámetro **@runinscaleout** en True. Si no se permite a todas las máquinas de trabajador de escalado horizontal ejecutar el paquete, establezca el parámetro **@useanyworker** en False.   
+    Llame a `[catalog].[create_execution]` para cada paquete. Establezca el parámetro **@runinscaleout** en `True`. Si no se permite a todos los equipos de trabajo de escalabilidad horizontal ejecutar el paquete, establezca el parámetro **@useanyworker** en `False`.   
 
-2. Establecer parámetros de ejecución
+2. Establezca los parámetros de ejecución.
 
-    Llame a [catalog].[set_execution_parameter_value] para cada ejecución.
+    Llame a `[catalog].[set_execution_parameter_value]` para cada ejecución.
 
-3. Establecer trabajadores de escalado horizontal
+3. Establezca los trabajos de escalabilidad horizontal.
 
-    Llame a [catalog].[add_execution_worker]. Si se permite a cualquier máquina ejecutar el paquete, no tiene que llamar a este procedimiento almacenado. 
+    Llame a `[catalog].[add_execution_worker]`. Si se permite ejecutar el paquete en cualquier equipo, no es necesario llamar a este procedimiento almacenado. 
 
-4. Iniciar ejecuciones
+4. Inicie las ejecuciones.
 
-    Llame a [catalog].[start_execution]. Establezca el parámetro **@retry_count** para definir el número de veces que se vuelve a intentar ejecutar un paquete si se produce un error.
+    Llame a `[catalog].[start_execution]`. Establezca el parámetro **@retry_count** para definir el número de veces que se volverá a intentar ejecutar un paquete en caso de error.
     
-#### <a name="example"></a>Ejemplo
-En el ejemplo siguiente se ejecutan dos paquetes, package1.dtsx y package2.dtsx, en escalado horizontal con un trabajador de escalado horizontal.  
+### <a name="example"></a>Ejemplo
+En el ejemplo siguiente se ejecutan dos paquetes, `package1.dtsx` y `package2.dtsx`, en escalabilidad horizontal con un trabajo de escalabilidad horizontal.  
 
 ```sql
 Declare @execution_id bigint
@@ -96,8 +103,8 @@ EXEC [SSISDB].[catalog].[start_execution] @execution_id,  @retry_count=0
 GO
 ```
 
-### <a name="permissions"></a>Permissions
-Para ejecutar paquetes en escalado horizontal se necesita alguno de los siguientes permisos:
+### <a name="permissions"></a>Permisos
+Para ejecutar paquetes en escalabilidad horizontal, es necesario disponer de uno de los siguientes permisos:
 
 -   Pertenencia al rol de base de datos **ssis_admin**  
 
@@ -106,14 +113,20 @@ Para ejecutar paquetes en escalado horizontal se necesita alguno de los siguient
 -   Pertenencia al rol de servidor **sysadmin**  
 
 ## <a name="set-default-execution-mode"></a>Establecer el modo de ejecución predeterminado
-Para establecer el modo de ejecución predeterminado en "Escalabilidad horizontal", haga clic en el nodo **SSISDB** del Explorador de objetos de SSMS y seleccione **Propiedades**.
-En el cuadro de diálogo **Propiedades del catálogo**, establezca **Modo de ejecución predeterminado de todo el servidor** en **Escalabilidad horizontal**.
+Para establecer el modo de ejecución predeterminado para los paquetes en **Escalabilidad horizontal**, haga lo siguiente:
 
-Después de esta configuración, no es necesario especificar el parámetro **@runinscaleout** para [catalog].[create_execution]. Las ejecuciones se ejecutan automáticamente con Escalabilidad horizontal. 
+1.  En SSMS, en el Explorador de objetos, haga clic con el botón derecho en el nodo **SSISDB** y seleccione **Propiedades**.
+
+2.  En el cuadro de diálogo **Propiedades del catálogo**, establezca **Modo de ejecución predeterminado de todo el servidor** en **Escalabilidad horizontal**.
+
+Una vez que haya establecido este modo de ejecución predeterminado, ya no tendrá que especificar el parámetro **@runinscaleout** al llamar al procedimiento almacenado `[catalog].[create_execution]`. Los paquetes se ejecutan en escalabilidad horizontal de forma automática. 
 
 ![Modo de ejecución](media\exe-mode.PNG)
 
-Para volver a cambiar el modo de ejecución predeterminado a Escalabilidad horizontal, establezca **Modo de ejecución predeterminado de todo el servidor** en **Servidor**.
+Para volver a cambiar el modo de ejecución predeterminado de modo que los paquetes no se ejecuten de forma automática en el modo de escalabilidad horizontal, establezca **Modo de ejecución predeterminado de todo el servidor** en **Servidor**.
 
-## <a name="run-package-in-sql-agent-job"></a>Ejecutar el paquete en el trabajo del Agente SQL
-En el trabajo del agente SQL, puede optar por ejecutar un paquete SSIS como un paso del trabajo. Para ejecutar el paquete con Escalabilidad horizontal, puede aprovechar el modo de ejecución predeterminado anterior. Después de configurar el modo de ejecución predeterminado en "Escalabilidad horizontal", los trabajos del agente SQL se ejecutarán con Escalabilidad horizontal.
+## <a name="sql_agent"></a> Ejecución del paquete en el trabajo del Agente SQL Server
+En un trabajo del Agente SQL Server, puede ejecutar un paquete SSIS como paso del trabajo. Para ejecutar el paquete en escalabilidad horizontal, establezca el modo de ejecución en **Escalabilidad horizontal**. Una vez configurado el modo de ejecución predeterminado en **Escalabilidad horizontal**, los trabajos del Agente SQL Server se ejecutarán en dicho modo.
+
+## <a name="next-steps"></a>Pasos siguientes
+-   [Solución de problemas de escalabilidad horizontal](troubleshooting-scale-out.md)

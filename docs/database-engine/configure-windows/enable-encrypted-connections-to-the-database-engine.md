@@ -1,7 +1,7 @@
 ---
 title: Habilitar conexiones cifradas en el motor de base de datos | Microsoft Docs
 ms.custom: 
-ms.date: 09/11/2017
+ms.date: 12/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -27,11 +27,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0408459ba5ef287cb583962a536d1780fa9f6769
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1123fe0698e9b5e38ba77f5ca1aa634904281e3b
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Habilitar conexiones cifradas en el motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Complete el **Asistente para exportación de certificados**y guarde el archivo del certificado en una ubicación adecuada.  
   
-##  <a name="ConfigureServerConnections"></a> Para configurar el servidor de modo que acepte conexiones cifradas  
+##  <a name="ConfigureServerConnections"></a> Para configurar el servidor para forzar conexiones cifradas  
   
 1.  En **Administrador de configuración de SQL Server**, expanda **Configuración de red de SQL Server**, haga clic con el botón derecho en **Protocolos de** *\<instancia de servidor>* y, después, seleccione **Propiedades**.  
   
@@ -90,11 +90,18 @@ ms.lasthandoff: 11/20/2017
   
 4.  Reinicie el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
+
+> [!NOTE]
+> Para garantizar que la conectividad entre el cliente y el servidor es segura, configure el cliente para que solicite conexiones cifradas. Se explican más detalles [más adelante en este artículo](#client-request-encrypt-connect-23h).
+
+
+
 ### <a name="wildcard-certificates"></a>Certificados comodín  
 A partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client admiten los certificados comodín. Es posible que otros clientes no admitan los certificados comodín. Para más información, vea la documentación del cliente. El certificado comodín no se puede seleccionar con el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para usar un certificado comodín, debe editar la clave del Registro `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` y escribir la huella digital del certificado, sin espacios en blanco, en el valor **Certificado**.  
 > [!WARNING]  
 > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry_md.md)]  
-  
+
+<a name="client-request-encrypt-connect-23h"/>
 ##  <a name="ConfigureClientConnections"></a> Para configurar el cliente de modo que solicite conexiones cifradas  
   
 1.  Copie el certificado original o el archivo del certificado exportado en el equipo cliente.  
@@ -113,7 +120,7 @@ A partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!IN
   
 3.  En la pestaña **Propiedades de conexión** , haga clic en **Cifrar conexión**.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Ver también
 
 [Soporte de TLS 1.2 para Microsoft SQL Server](https://support.microsoft.com/kb/3135244)  
 

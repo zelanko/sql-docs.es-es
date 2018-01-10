@@ -1,7 +1,7 @@
 ---
 title: "Guía de diseño de índices de almacén de columnas | Microsoft Docs"
 ms.custom: 
-ms.date: 01/27/2017
+ms.date: 12/1/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -17,20 +17,20 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2166cfa2f5ab944ac302916085c7abbebb687457
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 81afdfbd75f9a6862851319e81929a2b5dbd6ef7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Guía de diseño de índices de almacén de columnas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Recomendaciones de alto nivel para diseñar índices de almacén de columnas. Unas pocas decisiones adecuadas en cuanto al diseño le pueden ayudar a lograr el alto rendimiento de compresión de datos y de consultas para el que se han diseñado los índices de almacén de columnas. 
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
-En este artículo se supone que está familiarizado con la terminología y arquitectura de almacenes de columna. Para más información, vea [Columnstore indexes - overview](../../relational-databases/indexes/columnstore-indexes-overview.md) (Introducción a los índices de almacén de columnas) y [Columnstore indexes - architecture](../../relational-databases/indexes/columnstore-indexes-architecture.md) (Arquitectura de los índices de almacén de columnas).
+En este artículo se supone que está familiarizado con la terminología y arquitectura de almacenes de columna. Para obtener más información, vea [Introducción a los índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-overview.md) y [Arquitectura de índices de almacén de columnas](../../relational-databases/sql-server-index-design-guide.md#columnstore_index).
 
 ### <a name="know-your-data-requirements"></a>Conocer los requisitos de datos
 Antes de diseñar un índice de almacén de columnas, comprenda tanto como sea posible los requisitos de datos. Por ejemplo, piense las respuestas a estas preguntas:
@@ -52,10 +52,9 @@ A continuación se muestra un resumen de las opciones y recomendaciones.
 | Opción de almacén de columnas | Recomendaciones sobre cuándo usar | Compresión |
 | :----------------- | :------------------- | :---------- |
 | Índice de almacén de columnas agrupado | Se utiliza para:<br></br>1) Carga de trabajo de almacenamiento de datos tradicional con un esquema de estrella o copo de nieve<br></br>2) Cargas de trabajo de Internet de las cosas (IoT) que insertan grandes volúmenes de datos con mínimas actualizaciones y eliminaciones. | Promedio de 10 veces |
-| Índices de árbol B en índice no agrupados en un índice de almacén de columnas agrupado | Se utiliza para:<br></br>    1) Exigir restricciones de clave principal y clave externa en un índice de almacén de columnas agrupado.<br></br>    2) Acelerar consultas que buscan valores específicos o pequeños rangos de valores.<br></br>    3) Acelerar actualizaciones y eliminaciones de filas específicas.| Promedio de 10 veces más algún tipo de almacenamiento adicional para las NCI.|
+| Índices de árbol B no agrupados en un índice de almacén de columnas agrupado | Se utiliza para:<br></br>    1. Exigir restricciones de clave principal y clave externa en un índice de almacén de columnas agrupado.<br></br>    2. Acelerar consultas que buscan valores específicos o pequeños rangos de valores.<br></br>    3. Acelerar actualizaciones y eliminaciones de filas específicas.| Promedio de 10 veces más algún tipo de almacenamiento adicional para las NCI.|
 | Índice de almacén de columnas no agrupado en un montón basado en disco o índice de árbol B | Se utiliza para: <br></br>1) Una carga de trabajo OLTP que tiene algunas consultas de análisis. Puede quitar los índices de árbol B creados para el análisis y reemplazarlos por un índice de almacén de columnas no agrupado.<br></br>2) Muchas cargas de trabajo OLTP tradicionales que realizan operaciones de extracción, transformación y carga (ETL) para mover datos a un almacenamiento de datos independiente. Puede eliminar ETL y un almacenamiento de datos independiente mediante la creación de un índice de almacén de columnas no agrupado en algunas de las tablas OLTP. | NCCI es un índice adicional que requiere un 10 % más de almacenamiento de promedio.|
 | Índice de almacén de columnas en una tabla en memoria | Se aplican las mismas recomendaciones que para el índice de almacén de columnas no agrupado en una tabla basada en disco, salvo que la tabla base es una tabla en memoria. | El índice de almacén de columnas es un índice adicional.|
-
 
 ## <a name="use-a-clustered-columnstore-index-for-large-data-warehouse-tables"></a>Utilizar un índice de almacén de columnas agrupado para tablas de almacenamiento de datos de gran tamaño
 El índice de almacén de columnas agrupado es más que un índice: es el almacenamiento de la tabla principal. Consigue una compresión de datos alta y una mejora significativa en el rendimiento de las consultas en las tablas de dimensiones y hechos de almacenamiento de datos de gran tamaño. Los índices de almacén de columnas agrupados son más adecuados para las consultas de análisis que para las consultas transaccionales, puesto que las consultas de análisis tienden a realizar operaciones en grandes rangos de valores en lugar de buscar valores específicos. 
@@ -75,13 +74,13 @@ No utilice un índice de almacén de columnas agrupado cuando:
 
 Para más información, vea [Columnstore indexes - data warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md) (Almacenamiento de datos de índices de almacén de columnas).
 
-## <a name="add-btree-nonclustered-indexes-for-efficient-table-seeks"></a>Agregar índices no agrupados de árbol B para búsquedas eficientes de tabla
+## <a name="add-b-tree-nonclustered-indexes-for-efficient-table-seeks"></a>Agregar índices no agrupados de árbol B para búsquedas eficientes de tabla
 
-A partir de SQL Server 2016, puede crear índices no agrupados de árbol B como índices secundarios en un índice de almacén de columnas agrupado. El índice no agrupado de árbol B se actualiza cuando se producen cambios en el índice de almacén de columnas. Se trata de una característica eficaz que puede usar en su propio beneficio. 
+A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede crear índices no agrupados de árbol B como índices secundarios en un índice de almacén de columnas agrupado. El índice no agrupado de árbol B se actualiza cuando se producen cambios en el índice de almacén de columnas. Se trata de una característica eficaz que puede usar en su propio beneficio. 
 
-Mediante el uso del índice de árbol B secundario, puede buscar eficazmente filas específicas sin recorrer todas las filas.  También habrá disponibles otras opciones. Por ejemplo, puede aplicar una restricción de clave principal o externa mediante una restricción UNIQUE en el índice de árbol B. Puesto que un valor que no es único no se insertará en el índice de árbol B, SQL Server no podrá insertar ese valor en el almacén de columnas. 
+Mediante el uso del índice de árbol B secundario, puede buscar eficazmente filas específicas sin recorrer todas las filas.  También habrá disponibles otras opciones. Por ejemplo, puede aplicar una restricción de clave principal o externa mediante una restricción UNIQUE en el índice de árbol B. Puesto que un valor que no es único no se insertará en el índice de árbol B, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no podrá insertar ese valor en el almacén de columnas. 
 
-Considere la posibilidad de utilizar un índice de árbol B en un índice de almacén de columnas para:
+Considere la posibilidad de usar un índice de árbol B en un índice de almacén de columnas para:
 * Ejecutar consultas que busquen valores específicos o rangos pequeños de valores.
 * Exigir una restricción, como puede ser una restricción de clave principal o clave externa.
 * Realizar las operaciones de actualización y eliminación eficientemente. El índice de árbol B puede localizar rápidamente las filas específicas para las actualizaciones y eliminaciones sin recorrer la tabla completa o una partición de una tabla.
@@ -99,7 +98,7 @@ Puesto que un índice de almacén de columnas consigue una compresión de datos 
   
 *   Elimine la necesidad de un almacenamiento de datos independiente. Tradicionalmente, las empresas ejecutan transacciones en una tabla de almacén de filas y luego cargan los datos en un almacenamiento de datos independiente para ejecutar el análisis. Para muchas cargas de trabajo, puede eliminar el proceso de carga y el almacenamiento de datos independiente mediante la creación de un índice de almacén de columnas no agrupado en tablas transaccionales.
 
-  SQL Server 2016 ofrece varias estrategias para hacer que este escenario sea más eficaz. Es muy fácil probarlo, ya que puede habilitar un índice de almacén de columnas no agrupado sin realizar cambios en su aplicación OLTP. 
+  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ofrece varias estrategias para hacer que este escenario sea más eficaz. Es muy fácil probarlo, ya que puede habilitar un índice de almacén de columnas no agrupado sin realizar cambios en su aplicación OLTP. 
 
 Para agregar recursos de procesamiento adicionales, puede ejecutar el análisis en un lugar secundario legible. El uso de un elemento secundario legible separa el procesamiento de la carga de trabajo transaccional y la carga de trabajo de análisis. 
 
@@ -148,14 +147,14 @@ La compresión de archivos está diseñada para una compresión máxima cuando e
 
 ## <a name="use-optimizations-when-you-convert-a-rowstore-table-to-a-columnstore-index"></a>Usar optimizaciones al convertir una tabla de almacén de filas en un índice de almacén de columnas
 
-Si los datos ya están en una tabla de almacén de filas, puede utilizar [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md) para convertir la tabla en un índice de almacén de columnas agrupado. Hay algunas optimizaciones que mejorarán el rendimiento de consultas después de convertir la tabla.
+Si los datos ya están en una tabla de almacén de filas, puede utilizar [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md) para convertir la tabla en un índice de almacén de columnas agrupado. Hay algunas optimizaciones que mejorarán el rendimiento de consultas después de convertir la tabla, tal y como se describe a continuación.
 
 ### <a name="use-maxdop-to-improve-rowgroup-quality"></a>Utilice MAXDOP para mejorar la calidad del grupo de filas
-Puede configurar el número máximo de procesadores para convertir un índice agrupado de árbol B o montón en un índice de almacén de columnas. Para configurar los procesadores, utilice el grado máximo de la opción de paralelismo (MAXDOP). 
+Puede configurar el número máximo de procesadores para convertir un índice agrupado de árbol B o de montón en un índice de almacén de columnas. Para configurar los procesadores, utilice el grado máximo de la opción de paralelismo (MAXDOP). 
 
-Si tiene grandes cantidades de datos, MAXDOP 1 probablemente será demasiado lento.  El aumento de MAXDOP a 4 funciona bien. Si el resultado es que algunos grupos de filas no tienen el número óptimo de filas, puede ejecutar [ALTER INDEX REORG](../../t-sql/statements/alter-index-transact-sql.md) para mezclarlos en segundo plano.
+Si tiene grandes cantidades de datos, MAXDOP 1 probablemente será demasiado lento.  El aumento de MAXDOP a 4 funciona bien. Si el resultado es que algunos grupos de filas no tienen el número óptimo de filas, puede ejecutar [ALTER INDEX REORGANIZE](../../t-sql/statements/alter-index-transact-sql.md) para mezclarlos en segundo plano.
 
-### <a name="keep-the-sorted-order-of-a-btree-index"></a>Mantener el orden de clasificación de un índice de árbol B
+### <a name="keep-the-sorted-order-of-a-b-tree-index"></a>Mantener el orden de clasificación de un índice de árbol B
 Dado que el índice de árbol B ya almacena filas en un orden determinado, conservar ese orden cuando las filas se comprimen en el índice de almacén de columnas puede mejorar el rendimiento de consultas.
 
 El índice del almacén de columnas no ordena los datos, pero utiliza metadatos para realizar el seguimiento de los valores mínimo y máximo de cada segmento de columna en cada grupo de filas.  Al recorrer un rango de valores, puede calcular rápidamente cuándo omitir el grupo de filas. Cuando los datos se ordenan, se pueden omitir más grupos de filas. 
@@ -163,7 +162,7 @@ El índice del almacén de columnas no ordena los datos, pero utiliza metadatos 
 Para conservar el orden de clasificación durante la conversión:
 * Utilice [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md) con la cláusula DROP_EXISTING. Esto también conserva el nombre del índice. Si tiene scripts que ya utilizan el nombre del índice del almacén de filas, no necesitará actualizarlos. 
 
-    En este ejemplo se convierte un índice de almacén de filas agrupado en una tabla denominada ```MyFactTable``` en un índice clúster. El nombre del índice, ```ClusteredIndex_d473567f7ea04d7aafcac5364c241e09```, permanece igual.
+    En este ejemplo se convierte un índice de almacén de filas agrupado en una tabla denominada `MyFactTable` en un índice clúster. El nombre del índice, `ClusteredIndex_d473567f7ea04d7aafcac5364c241e09`, permanece igual.
 
     ```sql
     CREATE CLUSTERED COLUMNSTORE INDEX ClusteredIndex_d473567f7ea04d7aafcac5364c241e09  
@@ -171,7 +170,7 @@ Para conservar el orden de clasificación durante la conversión:
     WITH (DROP_EXISTING = ON);  
     ```
 
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
 Se trata de tareas para crear y mantener índices de almacén de columnas. 
   
 |Tarea|Temas de referencia|Notas|  
@@ -181,10 +180,10 @@ Se trata de tareas para crear y mantener índices de almacén de columnas.
 |Convertir una tabla de almacén de filas en un almacén de columnas.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Convierta un árbol binario o un montón existentes en un almacén de columnas. Los ejemplos muestran cómo tratar los índices existentes, así como el nombre del índice, al realizar esta conversión.|  
 |Convertir una tabla de almacén de columnas en un almacén de filas.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Normalmente esto no es necesario, pero puede haber ocasiones en que necesite realizar esta conversión. Los ejemplos muestran cómo convertir un almacén de columnas en un montón o un índice agrupado.|  
 |Crear un índice de almacén de columnas en una tabla de almacén de filas.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Una tabla de almacén de filas puede tener un índice de almacén de columnas.  Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], los índices de almacén de columnas pueden tener una condición de filtrado. En los ejemplos se usa la sintaxis básica.|  
-|Crear índices de rendimiento para análisis operativos.|[Introducción al almacén de columnas para análisis operativos en tiempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|Se describe cómo crear índices de almacén de columnas y de árbol b complementarios para que las consultas OLTP usen los índices de árbol b y, las consultas de análisis, los índices de almacén de columnas.|  
-|Crear índices de almacén de columnas de rendimiento para el almacenamiento de datos.|[Almacenamiento de datos de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Se describe cómo usar índices de árbol b en las tablas de almacén de columnas para crear consultas de almacenamiento de datos de rendimiento.|  
-|Usar un índice de árbol b para aplicar una restricción de clave principal en un índice de almacén de columnas.|[Almacenamiento de datos de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Se muestra cómo combinar índices de árbol b y de almacén de columnas para aplicar restricciones de clave principal en el índice de almacén de columnas.|  
-|Eliminar un índice de almacén de columnas.|[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)|Para eliminar un índice de almacén de columnas, se usa la sintaxis de DROP INDEX estándar que usan los índices de árbol b. Si se elimina un índice de almacén de columnas agrupado, la tabla de almacén de columnas se convertirá en un montón.|  
+|Crear índices de rendimiento para análisis operativos.|[Introducción al almacén de columnas para análisis operativos en tiempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|Se describe cómo crear índices de almacén de columnas y de árbol B complementarios para que las consultas OLTP usen los índices de árbol B y, las consultas de análisis, los índices de almacén de columnas.|  
+|Crear índices de almacén de columnas de rendimiento para el almacenamiento de datos.|[Almacenamiento de datos de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Se describe cómo usar índices de árbol B en las tablas de almacén de columnas para crear consultas de almacenamiento de datos de rendimiento.|  
+|Usar un índice de árbol B para aplicar una restricción de clave principal en un índice de almacén de columnas.|[Almacenamiento de datos de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Se muestra cómo combinar índices de árbol B y de almacén de columnas para aplicar restricciones de clave principal en el índice de almacén de columnas.|  
+|Eliminar un índice de almacén de columnas.|[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)|Para eliminar un índice de almacén de columnas, se usa la sintaxis de DROP INDEX estándar que usan los índices de árbol B. Si se elimina un índice de almacén de columnas agrupado, la tabla de almacén de columnas se convertirá en un montón.|  
 |Eliminar una fila de un índice de almacén de columnas.|[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Use [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) para eliminar una fila.<br /><br /> fila**almacén de columna** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marca la fila como eliminada lógicamente, pero no recupera el almacenamiento físico de la fila hasta que se vuelva a generar el índice.<br /><br /> fila**almacén delta** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elimina la fila lógica y físicamente.|  
 |Actualizar una fila en el índice de almacén de columnas.|[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|Use [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) para actualizar una fila.<br /><br /> fila**almacén de columna** :  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marca la fila como eliminada lógicamente y, después, inserta la fila actualizada en el almacén delta.<br /><br /> fila**almacén delta** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] updates the row in the almacén delta.|  
 |Forzar que todas las filas del almacén delta vayan al almacén de columnas.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... REBUILD<br /><br /> [Desfragmentación de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)|ALTER INDEX con la opción REBUILD hace que todas las filas vayan al almacén de columnas.|  
@@ -195,19 +194,8 @@ Se trata de tareas para crear y mantener índices de almacén de columnas.
 ## <a name="next-steps"></a>Pasos siguientes
 Para crear un índice de almacén de columnas vacío para:
 
-* SQL Server, utilice [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
-* SQL Database, utilice [CREATE TABLE en Azure SQL Database](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1)
-* SQL Data Warehouse, utilice [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
+* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consulte [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
+* [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], consulte [CREATE TABLE (almacenamiento de datos de SQL Azure)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).
 
-Para convertir un índice de árbol B o de montón de almacén de filas existente en un índice de almacén de columnas agrupado, o para crear un índice de almacén de columnas no agrupado, utilice:
-
-* [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)
-
-
-
-
-
-
-
-  
+Para obtener más información sobre cómo convertir un índice de montón o de árbol B de almacén de filas existente en un índice de almacén de columnas agrupado, o para crear un índice de almacén de columnas, consulte [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md).
 

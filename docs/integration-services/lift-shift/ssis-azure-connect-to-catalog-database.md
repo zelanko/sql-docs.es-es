@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10be16cbc85cccce51fafbcd733045c653b7be0a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a9b3a63d93d9d1e27147783f6c745addcd31fac8
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Conectarse a la base de datos del catálogo de SSISDB en Azure
 
@@ -26,7 +26,10 @@ Obtenga la información de conexión necesaria para conectarse a la base de dato
 - El nombre de la base de datos
 - La información de inicio de sesión 
 
-## <a name="prerequisites"></a>Requisitos previos
+> [!IMPORTANT]
+> En la versión 2 de Azure Data Factory, en estos momentos no se puede crear la base de datos del catálogo SSISDB en Azure SQL Database, independientemente de la creación del entorno de ejecución de integración de Azure-SSIS. El entorno de ejecución de Azure-SSIS es el que ejecuta los paquetes SSIS en Azure. Para obtener más información y un script de PowerShell de ejemplo, vea [Implementación de paquetes de SQL Server Integration Services en Azure](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure). 
+
+## <a name="prerequisites"></a>Prerequisites
 Antes de comenzar, asegúrese de que tiene instalada la versión 17.2 (o posterior) de SQL Server Management Studio. Para descargar la versión más reciente de SSMS, consulte [Download SQL Server Management Studio (SSMS) (Descargar SQL Server Management Studio [SSMS])](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>Obtener la información de conexión desde Azure Portal
@@ -41,7 +44,7 @@ Antes de comenzar, asegúrese de que tiene instalada la versión 17.2 (o posteri
 ## <a name="connect-with-ssms"></a>Conectarse con SSMS
 1. Abra SQL Server Management Studio.
 
-2. **Conéctese al servidor**. Escriba la información siguiente en el cuadro de diálogo **Conectarse al servidor**:
+2. **Conéctese al servidor**. En el cuadro de diálogo **Conectar con el servidor**, escriba la información siguiente:
 
    | Configuración       | Valor sugerido | Description | 
    | ------------ | ------------------ | ------------------------------------------------- | 

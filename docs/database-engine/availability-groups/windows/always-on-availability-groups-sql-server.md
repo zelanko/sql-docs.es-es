@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e9f4d16edf50228c00c805d6a8f723426d2cdca1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7221637a17f0e21b2448a10cb9c7458fa0c4f161
+ms.sourcegitcommit: 8b774eff53c1043dc3d4305ce8329fcab8945615
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/18/2017
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Grupos de disponibilidad AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,6 +35,8 @@ ms.lasthandoff: 11/20/2017
   La característica [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] es una solución de alta disponibilidad y de recuperación ante desastres que proporciona una alternativa empresarial a la creación de reflejo de la base de datos. Incorporada en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] maximiza la disponibilidad de un conjunto de bases de datos de usuario para una empresa. Un *grupo de disponibilidad* admite un entorno de conmutación por error para un conjunto discreto de bases de datos de usuario, conocido como *bases de datos de disponibilidad*, que realizan la conmutación por error conjuntamente. Un grupo de disponibilidad admite un conjunto de bases de datos principales de lectura y escritura y de uno a ocho conjuntos de bases de datos secundarias correspondientes. Opcionalmente, las bases de datos secundarias pueden estar disponibles para el acceso de solo lectura o para algunas operaciones de copia de seguridad.  
   
  Un grupo de disponibilidad realiza la conmutación por error en el nivel de réplica de disponibilidad. Las conmutaciones por error no se deben a problemas de bases de datos como que una base de datos pase a ser sospechosa debido a la pérdida de un archivo de datos, la eliminación de una base de datos o los daños de un registro de transacciones.  
+ 
+ >[NOTA] Grupos de disponibilidad Always On es el nombre completo, formal para esta característica de disponibilidad. La abreviatura es AG, no AOAG ni AAG. 
   
 ##  <a name="Benefits"></a> Ventajas  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] proporciona un amplio conjunto de opciones que mejoran la disponibilidad de las bases de datos y que permiten el uso de recursos mejorado. Los componentes clave son los siguientes:  
@@ -50,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
     -   *Modo de confirmación sincrónica*. Este modo de disponibilidad resalta alta disponibilidad y protección de datos del rendimiento, a costa de aumentar la latencia de las transacciones. Un grupo de disponibilidad determinado puede admitir hasta tres réplicas de disponibilidad de confirmación sincrónica, incluida la réplica principal actual.  
   
-     Para obtener más información, vea [Modos de disponibilidad &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
+     Para obtener más información, vea [Modos de disponibilidad &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
 -   Admite varias formas de conmutación por error de un grupo de disponibilidad: conmutación automática por error, conmutación por error manual planeada (suele denominarse simplemente "conmutación por error manual") y conmutación por error manual forzada (suele denominarse simplemente "conmutación por error forzada"). Para obtener más información, vea [Conmutación por error y modos de conmutación por error &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
@@ -176,7 +178,7 @@ ms.lasthandoff: 11/20/2017
   
      [Notas del producto del equipo de asesoramiento al cliente de SQL Server](http://sqlcat.com/)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Configuración de una instancia del servidor para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)   

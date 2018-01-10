@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 514b16de05b03b43f8187f66e06cf6ff9f94209c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 996d73149e364263e0cda1ecd1ffb2aa8b8f14e0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="contained-database-collations"></a>Intercalaciones de bases de datos independientes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Varias propiedades afectan a la semántica de igualdad y al criterio de ordenación de los datos de texto, como son la distinción entre mayúsculas y minúsculas y de los acentos, y el idioma básico que se usa. Estas cualidades se expresan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de la opción de intercalación de los datos. Para obtener una explicación más detallada de las intercalaciones, vea [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
@@ -37,13 +37,13 @@ ms.lasthandoff: 11/17/2017
 ### <a name="example-1"></a>Ejemplo 1  
  Por ejemplo, si estuviéramos trabajando en Beijing, podríamos utilizar una intercalación china:  
   
-```tsql  
+```sql  
 ALTER DATABASE MyDB COLLATE Chinese_Simplified_Pinyin_100_CI_AS;  
 ```  
   
  Ahora, si creamos una columna, su intercalación predeterminada será esta intercalación china, pero podemos elegir otra si lo deseamos:  
   
-```tsql  
+```sql  
 CREATE TABLE MyTable  
       (mycolumn1 nvarchar,  
       mycolumn2 nvarchar COLLATE Frisian_100_CS_AS);  
@@ -56,7 +56,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```tsql  
+```sql  
 name            collation_name  
 --------------- ----------------------------------  
 mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS  
@@ -68,7 +68,7 @@ mycolumn2       Frisian_100_CS_AS
 ### <a name="example-2"></a>Ejemplo 2  
  Por ejemplo, considere la base de datos (chino) anterior cuando se usa en una instancia con una intercalación **Latin1_General** :  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max)) ;  
@@ -92,7 +92,7 @@ JOIN #T2
   
  Podemos corregir esto intercalando la tabla temporal explícitamente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] facilita esto proporcionando la palabra clave **DATABASE_DEFAULT** para la cláusula **COLLATE** .  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max) COLLATE DATABASE_DEFAULT);  
@@ -142,7 +142,7 @@ END;
   
  En el ejemplo de la tabla temporal descrito previamente, podemos ver que este comportamiento de la intercalación elimina la necesidad de una cláusula **COLLATE** explícita en la mayor parte de los usos de las tablas temporales. En una base de datos independiente, este código se ejecuta ahora sin error, aun cuando las intercalaciones de instancia y base de datos difieren:  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max));  
@@ -283,7 +283,7 @@ GO
 ## <a name="conclusion"></a>Conclusión  
  El comportamiento de la intercalación de bases de datos independientes difiere sutilmente del comportamiento en las bases de datos dependientes. Este comportamiento suele ser beneficioso y proporciona independencia de la instancia y simplicidad. Algunos usuarios pueden tener problemas, en concreto cuando una sesión accede tanto a bases de datos independientes como a dependientes.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Bases de datos independientes](../../relational-databases/databases/contained-databases.md)  
   
   

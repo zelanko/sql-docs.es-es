@@ -18,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ad780f4f49f99c0537e5ff560d1addab59627d9c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 09801cfab4da23ee4c4b082d649d0ff40649b257
+ms.sourcegitcommit: 27f1143cf9b52dd27acf81234a516c32a239a320
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="lesson-4-restore-database-to-virtual-machine-from-url"></a>Lección 4: Restaurar la base de datos a la máquina virtual desde la dirección URL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En esta lección, restaurará la base de datos AdventureWorks2014 en la instancia de SQL Server 2016 de la máquina virtual de Azure.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En esta lección, restaurará la base de datos AdventureWorks2014 en la instancia de SQL Server 2016 de la máquina virtual de Azure.
   
 > [!NOTE]  
 > Para simplificar este tutorial, usamos el mismo contenedor para los archivos de datos y de registros que se usan para la copia de seguridad de la base de datos. En un entorno de producción, usaría varios contenedores y, con frecuencia, varios archivos de datos. Con SQL Server 2016, también puede considerar la posibilidad de crear bandas de la copia de seguridad en varios blobs para aumentar el rendimiento de la copia de seguridad al realizar la copia de seguridad de una base de datos de gran tamaño.  

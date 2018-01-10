@@ -35,11 +35,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 740339a82c745fe610fc47a9a33b45483f587a39
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8b89940bf96eb5cf4b6a9d5f4555891babe138cc
+ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="server-configuration-options-sql-server"></a>Opciones de configuración de servidor (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ Las opciones de configuración automática son aquellas que [!INCLUDE[ssNoVersio
   
 -   SC = Opciones de configuración automática.  
   
-    |Opción de configuración|Valor mínimo|Valor máximo|Predeterminado|  
+    |Opción de configuración|Valor mínimo|Valor máximo|Valor predeterminado|  
     |--------------------------|-------------------|-------------------|-------------|  
     |[access check cache bucket count](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
     |[access check cache quota](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  
@@ -91,7 +91,7 @@ Las opciones de configuración automática son aquellas que [!INCLUDE[ssNoVersio
     |[blocked process threshold](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  
     |[c2 audit mode](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md) (A, RR)|0|1|0|  
     |[clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)|0|1|0|  
-    |[clr strict security](../../database-engine/configure-windows/clr-strict-security.md) (A) <br /> **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658). |0|1|0|  
+    |[clr strict security](../../database-engine/configure-windows/clr-strict-security.md) (A) <br /> **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|0|1|0|  
     |[common criteria compliance enabled](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md) (A, RR)|0|1|0|  
     |[autenticación de la base de datos independiente (A)](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)|0|1|0|  
     |[cost threshold for parallelism](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) (A)|0|32767|5|  
@@ -103,7 +103,7 @@ Las opciones de configuración automática son aquellas que [!INCLUDE[ssNoVersio
     |[default trace enabled](../../database-engine/configure-windows/default-trace-enabled-server-configuration-option.md) (A)|0|1|1|  
     |[disallow results from triggers](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md) (A)|0|1|0|  
     |[EKM provider enabled](../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)|0|1|0|  
-    |[external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md) (RR)<br /><br /> **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658).|0|1|0|  
+    |[external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md) (RR)<br /><br /> **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|0|1|0|  
     |[filestream_access_level](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)|0|2|0|  
     |[fill factor](../../database-engine/configure-windows/configure-the-fill-factor-server-configuration-option.md) (A, RR)|0|100|0|  
     |ft crawl bandwidth (max); vea [ft crawl bandwidth](../../database-engine/configure-windows/ft-crawl-bandwidth-server-configuration-option.md)(A)|0|32767|100|  
@@ -118,7 +118,7 @@ Las opciones de configuración automática son aquellas que [!INCLUDE[ssNoVersio
     |[max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|16|2147483647|2147483647|  
     |[max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (1024 es el valor máximo recomendado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de 32 bits y 2048, para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de 64 bits.[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fue la última versión disponible en el sistema operativo de 32 bits).|0<br /><br /> Cero configura automáticamente el número máximo de subprocesos de trabajo dependientes del número de procesadores mediante la fórmula (256 + (*\<procesadores>* -4) * 8) para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 32 bits, y dos veces la misma fórmula para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 64 bits. ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fue la última versión disponible en el sistema operativo de 32 bits).|  
+    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 1024 es el máximo recomendado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 32 bits y 2048 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 64 bits. **Nota:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fue la última versión disponible en el sistema operativo de 32 bits.|0<br /><br /> Cero configura automáticamente el número máximo de subprocesos de trabajo dependientes del número de procesadores mediante la fórmula (256 + (*\<procesadores>* -4) * 8) para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 32 bits, y (512 + *\<procesadores>* - 4) * 8) para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 64 bits. **Nota:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fue la última versión disponible en el sistema operativo de 32 bits.|  
     |[media retention](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) (A, RR)|0|365|0|  
     |[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|0|2147483647|0|  
@@ -128,7 +128,7 @@ Las opciones de configuración automática son aquellas que [!INCLUDE[ssNoVersio
     |[open objects](../../database-engine/configure-windows/open-objects-server-configuration-option.md) (A, RR, obsoleto)|0|2147483647|0|  
     |[optimize for ad hoc workloads](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
     |[PH_timeout](../../database-engine/configure-windows/ph-timeout-server-configuration-option.md) (A)|1|3600|60|  
-    |[PolyBase Hadoop y Azure Blob Storage](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br /> **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658).|0|7|0|   
+    |[PolyBase Hadoop y Azure Blob Storage](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br /> **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|0|7|0|   
     |[precompute rank](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md) (A)|0|1|0|  
     |[priority boost](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) (A, RR)|0|1|0|  
     |[query governor cost limit](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md) (A)|0|2147483647|0|  

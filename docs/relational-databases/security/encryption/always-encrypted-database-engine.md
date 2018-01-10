@@ -23,18 +23,18 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 312c12a57368de2e4d27d5a27403dcffde4181e2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d56c906c87ef69e444ee1424324cc99e3fa05ed8
+ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (motor de base de datos)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
- Always Encrypted es una característica diseñada para proteger la información confidencial, como números de tarjeta de crédito o números de identificación nacional (por ejemplo, los números del seguro social de los EE. UU.), almacenada en bases de datos [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Always Encrypted permite a los clientes cifrar información confidencial en aplicaciones cliente y nunca revelar las claves de cifrado en [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Como resultado, Always Encrypted proporciona una separación entre aquellos que poseen los datos (y pueden verlos) y aquellos que los administran (pero que no deberían tener acceso). Al asegurar que los administradores de base de datos local, los operadores de base de datos en la nube y otros con usuarios con privilegios elevados, pero no autorizados, no pueden obtener acceso a los datos cifrados, Always Encrypted permite a los clientes almacenar información confidencial tranquilamente fuera de su control directo. Esto permite a las organizaciones cifrar los datos en reposo y usarlos para su almacenamiento en Azure, para permitir la delegación de la administración de la base de datos local a terceros, o para reducir los requisitos de autorización de seguridad para su propio personal de DBA.  
+ Always Encrypted es una característica diseñada para proteger la información confidencial, como números de tarjeta de crédito o números de identificación nacional (por ejemplo, los números de seguridad social de EE. UU.), almacenada en bases de datos [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Always Encrypted permite a los clientes cifrar información confidencial en aplicaciones cliente y nunca revelar las claves de cifrado en [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Como resultado, Always Encrypted proporciona una separación entre aquellos que poseen los datos (y pueden verlos) y aquellos que los administran (pero que no deberían tener acceso). Al asegurar que los administradores de base de datos local, los operadores de base de datos en la nube y otros con usuarios con privilegios elevados, pero no autorizados, no pueden obtener acceso a los datos cifrados, Always Encrypted permite a los clientes almacenar información confidencial tranquilamente fuera de su control directo. Esto permite a las organizaciones cifrar los datos en reposo y usarlos para su almacenamiento en Azure, para permitir la delegación de la administración de la base de datos local a terceros, o para reducir los requisitos de autorización de seguridad para su propio personal de DBA.  
   
  Always Encrypted realiza cifrado transparente en las aplicaciones. Un controlador habilitado para Always Encrypted instalado en el equipo cliente consigue esto al cifrar y descifrar automáticamente la información confidencial en la aplicación cliente. El controlador cifra los datos en columnas confidenciales antes de pasar los datos a [!INCLUDE[ssDE](../../../includes/ssde-md.md)]y vuelve a escribir las consultas automáticamente para que se conserve la semántica de la aplicación. De forma similar, el controlador descifra de forma transparente los datos almacenados en columnas de base de datos cifradas contenidos en los resultados de la consulta.  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/21/2017
  Un cliente tiene una aplicación cliente local en su ubicación de la empresa. La aplicación trabaja sobre la información confidencial almacenada en una base de datos hospedada en Azure ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se ejecutan en una máquina virtual en Microsoft Azure). El cliente usa Always Encrypted y almacena las claves de Always Encrypted en un almacén de claves de confianza hospedado en local, para garantizar que los administradores de nube de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] no tengan acceso a la información confidencial.  
   
 ### <a name="client-and-data-in-azure"></a>Cliente y datos en Azure  
- Un cliente tiene una aplicación cliente hospedada en Microsoft Azure (por ejemplo, en un rol de trabajo o un rol web) que trabaja sobre la información confidencial almacenada en una base de datos hospedada en Azure (Base de datos SQL o SQL Server se ejecutan en una máquina virtual en Microsoft Azure). Aunque Always Encrypted no proporciona un aislamiento completo de los datos ante los administradores de la nube, dado que tanto los datos como las claves están expuestos a los administradores de la nube de la plataforma que hospeda el nivel de cliente, el cliente se sigue beneficiando de la reducción del área expuesta de ataque de seguridad (los datos siempre se cifran en la base de datos).  
+ Un cliente tiene una aplicación cliente hospedada en Microsoft Azure (por ejemplo, en un rol de trabajo o un rol web) que trabaja sobre la información confidencial almacenada en una base de datos hospedada en Azure (SQL Database o SQL Server se ejecutan en una máquina virtual en Microsoft Azure). Aunque Always Encrypted no proporciona un aislamiento completo de los datos ante los administradores de la nube, dado que tanto los datos como las claves están expuestos a los administradores de la nube de la plataforma que hospeda el nivel de cliente, el cliente se sigue beneficiando de la reducción del área expuesta de ataque de seguridad (los datos siempre se cifran en la base de datos).  
  
 ## <a name="how-it-works"></a>Funcionamiento
 
@@ -85,10 +85,10 @@ Para obtener detalles sobre los algoritmos criptográficos de Always Encrypted, 
 
 |Tarea|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
-|Aprovisionamiento de claves maestras de columna, claves de cifrado de columna y claves de cifrado de columna cifrada con sus claves maestras de columna correspondientes.|Sí|Sí|No|
+|Aprovisionamiento de claves maestras de columna, claves de cifrado de columna y claves de cifrado de columna cifrada con sus claves maestras de columna correspondientes.|Sí|Sí|no|
 |Creación de metadatos de clave en la base de datos.|Sí|Sí|Sí|
 |Creación de nuevas tablas con columnas cifradas|Sí|Sí|Sí|
-|Cifrado de los datos existentes en las columnas seleccionadas de la base de datos|Sí|Sí|No|
+|Cifrado de los datos existentes en las columnas seleccionadas de la base de datos|Sí|Sí|no|
 
 > [!NOTE]
 > Asegúrese de ejecutar las herramientas de aprovisionamiento de claves o de cifrado de datos en un entorno seguro, en un equipo que no sea el que hospeda la base de datos. De lo contrario, podría filtrarse información confidencial o las claves al entorno de servidor, lo que reduciría las ventajas del empleo de Always Encrypted.  
@@ -236,7 +236,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
 [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
 [CREATE TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql.md)   

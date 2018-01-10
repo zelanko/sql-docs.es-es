@@ -1,9 +1,9 @@
 ---
 title: Versiones anteriores de SQL Server Data Tools (SSDT y SSDT-BI) | Microsoft Docs
 ms.custom: 
-ms.date: 09/28/2017
+ms.date: 12/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssdt
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7ab22071b1f85d14e1a1e01f50a2924af702334e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 72f038b58f16dfaebb7ca64569afe76757ff3540
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Versiones anteriores de SQL Server Data Tools (SSDT y SSDT-BI)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SQL Server Data Tools (SSDT) proporciona plantillas de proyecto y superficies de diseño para crear diversos tipos de contenido de SQL Server: bases de datos relacionales, modelos de Analysis Services, informes de Reporting Services y paquetes de Integration Services.  
@@ -39,6 +39,7 @@ Las últimas descargas se proporcionan para el caso improbable de que experiment
 
 |Versión| Visual Studio 2015|Visual Studio 2013|
 |:---|:---|:---|
+|17.3|[SSDT para VS2015 17.3](https://go.microsoft.com/fwlink/?linkid=858660)| \* n/d|
 |17.2|[SSDT para VS2015 17.2](https://go.microsoft.com/fwlink/?linkid=852922)| \* n/d|
 |17.1|[SSDT para VS2015 17.1](https://go.microsoft.com/fwlink/?linkid=849393)| \* n/d|
 |17.0|[SSDT para VS2015 17.0](https://go.microsoft.com/fwlink/?linkid=846626)| \* n/d|
@@ -76,7 +77,7 @@ Business Intelligence Development Studio (BIDS) se instala mediante el programa 
   
 Para SQL Server 2012 o 2014, puede usar **SSDT-BI para Visual Studio 2012** o **SSDT-BI fo Visual Studio 2013**. La única diferencia entre ambos es la versión de Visual Studio.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Descargar SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Descargar SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)  
 [Herramientas y utilidades de SQL](../tools/overview-sql-tools.md)

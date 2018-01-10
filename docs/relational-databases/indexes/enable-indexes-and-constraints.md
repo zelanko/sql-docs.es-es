@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 05993c2ce383b65938712557cd82db47aaaf28bb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bc82c95d6bed2f0479a576d2cab04a24f4ab2176
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enable-indexes-and-constraints"></a>Habilitar índices y restricciones
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -75,10 +75,12 @@ ms.lasthandoff: 11/17/2017
     |ALTER INDEX REBUILD.|Se produce un error en la acción.|La acción se realiza correctamente.|  
     |DROP INDEX.|La acción se realiza correctamente.|La acción se realiza correctamente.|  
     |CREATE INDEX WITH DROP_EXISTING.|Se produce un error en la acción.|La acción se realiza correctamente.|  
-  
+
+-   Al recompilar índices no agrupados comprimidos y deshabilitados, el valor predeterminado de data_compression es "none". Por tanto, los índices se descomprimirán. Esto se debe a que los metadatos de configuración de compresión se pierden al deshabilitar los índices no agrupados. Para resolverlo, debe especificar una compresión de datos explícita en la instrucción de recompilación.
+
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Requiere el permiso ALTER en la tabla o la vista. Si se usa DBCC DBREINDEX, el usuario debe ser el propietario de la tabla o debe ser miembro del rol fijo de servidor **sysadmin** , o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  

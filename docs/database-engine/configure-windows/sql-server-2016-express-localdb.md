@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: a50727ec3560bf2d5f0cef41c13be050026366df
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8e9500bdeffd9c7e9e9480f30a87e1678074cc57
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +47,11 @@ Microsoft SQL Server 2016 Express **LocalDB** es una característica de [SQL Ser
 ## <a name="install-localdb"></a>Instalar LocalDB  
  Instale **LocalDB** mediante el asistente para la instalación o mediante el programa SqlLocalDB.msi. **LocalDB** es una opción cuando se instala [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]. 
  
-Seleccione **LocalDB** en la página **Selección de características/Características compartidas** durante la instalación. Solo puede haber una instalación de los archivos binarios de **LocalDB** para cada versión principal de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Se pueden iniciar varios procesos de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y todos usarán los mismos binarios. Una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] iniciada como **LocalDB** tiene las mismas limitaciones que [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]  
+Seleccione **LocalDB** en la página **Selección de características/Características compartidas** durante la instalación. Solo puede haber una instalación de los archivos binarios de **LocalDB** para cada versión principal de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Se pueden iniciar varios procesos de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y todos usarán los mismos binarios. Una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] iniciada como **LocalDB** tiene las mismas limitaciones que [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
 
  Una instancia de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** se administra con la utilidad **SqlLocalDB.exe** . [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** en lugar de la característica de instancia de usuario de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , que ha quedado obsoleta. 
   
-## <a name="description"></a>Descripción  
+## <a name="description"></a>Description  
  El programa de instalación de **LocalDB** usa el programa SqlLocalDB.msi para instalar los archivos necesarios en el equipo. Una vez instalado, **LocalDB** es una instancia de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] que puede crear y abrir las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los archivos de base de datos del sistema para la base de datos se almacenan normalmente en la ruta de acceso de AppData local de los usuarios, que suele estar oculta. Por ejemplo, **C:\Users\\<usuario\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**. Los archivos de base de datos de usuario se almacenan donde indique el usuario, normalmente en alguna ubicación de la carpeta **C:\Usuarios\\<usuario\>\Documentos\\**.  
   
  Para obtener más información sobre cómo incluir **LocalDB** en una aplicación, vea la documentación de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [Información general de datos locales](http://msdn.microsoft.com/library/ms233817\(VS.110\).aspx), [Walkthrough: Creating a SQL Server LocalDB Database (Tutorial: creación de una base de datos LocalDB de SQL Server)](http://msdn.microsoft.com/library/ms233763\(VS.110\).aspx) y [Walkthrough: Connecting to Data in a SQL Server LocalDB Database (Windows Forms) (Tutorial: conexión a datos en una base de datos LocalDB de SQL Server (Windows Forms))](http://msdn.microsoft.com/library/ms171890\(VS.110\).aspx).  
@@ -62,7 +62,7 @@ Seleccione **LocalDB** en la página **Selección de características/Caracterí
   
  La intercalación de la instancia de **LocalDB** está establecida en SQL_Latin1_General_CP1_CI_AS y no se puede cambiar. Normalmente se admiten las intercalaciones de nivel de base de datos, nivel de columna y nivel de expresión. Las bases de datos independientes siguen las reglas de las intercalaciones de metadatos y tempdb definidas por [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md).  
   
-### <a name="restrictions"></a>Restricciones  
+### <a name="restrictions"></a>Restrictions  
  **LocalDB** no puede ser un suscriptor de replicación de mezcla.  
   
  **LocalDB** no admite FILESTREAM.  
@@ -113,7 +113,7 @@ REM Gather information about the instance of LocalDB
 |Versión|\<Versión actual>|  
 |Nombre compartido|""|  
 |Propietario|"\<Su usuario de Windows>"|  
-|Creación automática|No|  
+|Creación automática|no|  
 |State|ejecución|  
 |Última hora de inicio|\<Fecha y hora>|  
 |Nombre de canalización de instancia|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|  
@@ -133,7 +133,7 @@ REM Gather information about the instance of LocalDB
 > [!NOTE]  
 >  **LocalDB** siempre se ejecuta en el contexto de seguridad de los usuarios; es decir, **LocalDB** nunca se ejecuta con credenciales del grupo local Administradores. Esto significa que todos los archivos de base de datos usados por una instancia de **LocalDB** deben ser accesibles mediante la cuenta de Windows del usuario propietario, sin considerar la pertenencia al grupo local Administradores.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [SqlLocalDB (utilidad)](../../tools/sqllocaldb-utility.md)  
   
   

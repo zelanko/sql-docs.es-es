@@ -8,22 +8,20 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 caps.latest.revision: "19"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5ed1fd8ec1ddd485c51eca690ca459ef4c52d641
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4d4a2081da55117fa6fa6b6ad84ac4ec21b84ee6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planeación del diseño y la implementación de informes | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona varios enfoques para la creación e implementación de informes paginados. Sepa cómo planear un entorno de servidor de informes y creación de informes que operen en conjunto.
@@ -71,7 +69,7 @@ En este tema se proporciona información general sobre la compatibilidad de defi
 |Versión del servidor de informes|Versión de esquema RDL|  
 |---------------------------|------------------------|  
 |SQL Server 2016|RDL 2016<br /><br />RDL 2010<br /><br /> RDL 2008<br /><br /> RDL 2005<br /><br /> RDL 2000
-|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> O bien<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> O bien<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|RDL 2010<br /><br /> RDL 2008<br /><br /> RDL 2005<br /><br /> RDL 2000|  
+|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> o bien<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> o bien<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|RDL 2010<br /><br /> RDL 2008<br /><br /> RDL 2005<br /><br /> RDL 2000|  
 |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|RDL 2008<br /><br /> RDL 2005<br /><br /> RDL 2000|  
   
  Cuando se carga una definición de informe en el servidor de informes o se actualiza un servidor de informes que contiene informes, el servidor de informes conserva la definición de informe en el formato original. **Cuando se usa por primera vez**, el servidor de informes actualiza el informe en la base de datos del servidor de informes a un formato binario que se conserva para vistas posteriores. La definición de informe (.rdl) propiamente dicha no se actualiza.  
@@ -91,7 +89,7 @@ En este tema se proporciona información general sobre la compatibilidad de defi
 |---------------------------|--------------------------|------------------------|--------------------------------------|  
 |Generador de informes de SQL Server 2016|Crea RDL 2016<br /><br /> Actualizará las versiones anteriores de RDL a RDL 2016|RDL 2016|SQL Server 2016|
 |Diseñador de informes en SQL Server 2016 Data Tools - Business Intelligence para Microsoft Visual Studio 2015|Crea RDL 2016<br /><br /> Actualizará las versiones anteriores de RDL a RDL 2016|RDL 2016|SQL Server 2016|
-|Diseñador de informes en SQL Server 2014 Data Tools - Business Intelligence para Microsoft Visual Studio 2012<br /><br /> O bien<br /><br /> Diseñador de informes en SQL Server 2012 Data Tools - Business Intelligence para Microsoft Visual Studio 2012<br /><br /> O bien<br /><br /> Diseñador de informes de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Data Tools, incluido en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].|Crea RDL 2010<br /><br /> Actualizará las versiones anteriores de RDL a RDL 2010|RDL 2010|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Diseñador de informes en SQL Server 2014 Data Tools - Business Intelligence para Microsoft Visual Studio 2012<br /><br /> o bien<br /><br /> Diseñador de informes en SQL Server 2012 Data Tools - Business Intelligence para Microsoft Visual Studio 2012<br /><br /> o bien<br /><br /> Diseñador de informes de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Data Tools, incluido en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].|Crea RDL 2010<br /><br /> Actualizará las versiones anteriores de RDL a RDL 2010|RDL 2010|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |Diseñador de informes de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Business Intelligence Development Studio|Crea RDL 2010<br /><br /> Actualizará las versiones anteriores de RDL a RDL 2010|RDL 2010|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |Diseñador de informes de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Business Intelligence Development Studio|Crea RDL 2008<br /><br /> Actualizará las versiones anteriores de RDL a RDL 2008|RDL 2008|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|
   
@@ -106,8 +104,8 @@ En este tema se proporciona información general sobre la compatibilidad de defi
   
 |Control ReportViewer del producto|Versión de RDL para la vista previa local|  
 |-------------------------------------|--------------------------------------|  
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2015 <br/><br/>O bien<br/><br/>[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> O bien<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> O bien<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|RDL 2008|  
-|[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]<br /><br /> O bien<br /><br /> [!INCLUDE[vsOrcas](../includes/vsorcas-md.md)]|RDL 2005|  
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2015 <br/><br/>o bien<br/><br/>[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> o bien<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> o bien<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|RDL 2008|  
+|[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]<br /><br /> o bien<br /><br /> [!INCLUDE[vsOrcas](../includes/vsorcas-md.md)]|RDL 2005|  
   
  Para obtener más información, vea:  
   
@@ -117,7 +115,7 @@ En este tema se proporciona información general sobre la compatibilidad de defi
   
 -   [Agregar y configurar los controles ReportViewer](http://msdn.microsoft.com/library/ms252104.aspx)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Informes, elementos de informe y definiciones de informe &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Herramientas de Reporting Services](../reporting-services/tools/reporting-services-tools.md)   
  [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  

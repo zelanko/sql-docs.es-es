@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,13 +24,13 @@ ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: f765c32963d149c42bda40849f67e9206a1ff3b2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ec9e18aeee47b023b6afcf8dbac2e733fd2c6223
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtrar, agrupar y ordenar datos (Generador de informes y SSRS)
   En un informe, las expresiones sirven para ayudar a controlar, organizar y ordenar los datos de informe. De forma predeterminada, cuando se crean conjuntos de datos y se diseñan informes, las propiedades de los elementos de informe están se establecen de forma automática en las expresiones basadas en los campos de conjunto de datos, los parámetros y otros elementos que aparecen en el panel Datos de informe. Puede agregar también un botón de ordenación interactivo a una tabla o a una celda de la matriz para permitir a los usuarios cambiar el criterio de ordenación de las filas para los grupos o las filas dentro de los grupos.  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/05/2017
   
 -   **Ordenación interactiva** : para permitir a los usuarios ordenar o invertir el criterio de ordenación de una columna, puede agregar un botón de ordenación interactivo a un encabezado de columna o a una celda del encabezado de grupo en una tabla o matriz.  
   
- Para ayudar a los usuarios a personalizar las expresiones de filtro, grupo u ordenación, puede cambiar una expresión para agregar una referencia a un parámetro de informe. Para obtener más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+ Para ayudar a los usuarios a personalizar las expresiones de filtro, grupo u ordenación, puede cambiar una expresión para agregar una referencia a un parámetro de informe. Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
  Para obtener más información y ejemplos, vea los siguientes temas:  
   
@@ -93,7 +91,7 @@ ms.lasthandoff: 12/05/2017
   
  En una región de datos de tabla o de matriz, puede crear varios grupos de filas y de columnas. Para mostrar los datos en una jerarquía visual, organice grupos anidados, grupos adyacentes y grupos de jerarquía recursiva (por ejemplo, un organigrama).  
   
- El nombre de grupo identifica un ámbito de expresión. Puede especificar el nombre de un grupo como un ámbito en el que calcular agregados, organizar datos jerárquicamente y alternar la presentación de los nodos secundarios de los nodos primarios en un informe detallado, mostrar vistas diferentes de los mismos datos en varias regiones de datos y visualizar datos de resumen en una tabla, matriz, gráfico, medidor o mapa. Para obtener más información, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ El nombre de grupo identifica un ámbito de expresión. Puede especificar el nombre de un grupo como un ámbito en el que calcular agregados, organizar datos jerárquicamente y alternar la presentación de los nodos secundarios de los nodos primarios en un informe detallado, mostrar vistas diferentes de los mismos datos en varias regiones de datos y visualizar datos de resumen en una tabla, matriz, gráfico, medidor o mapa. Para obtener más información, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)subyacente.  
   
  Para realizar la agrupación según varios campos de conjunto de datos, agregue cada campo al conjunto de expresiones de grupo. También puede escribir sus propias expresiones de grupo en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Por ejemplo, puede agrupar por un intervalo de valores o usando un parámetro de informe que permita al usuario seleccionar el modo de agrupar los datos de una región de datos. Para obtener más información, vea [Ejemplos de expresión de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
   
@@ -214,7 +212,7 @@ FROM Production.Product
   
  [Vincular varias regiones de datos al mismo conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   

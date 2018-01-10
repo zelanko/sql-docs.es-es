@@ -8,7 +8,7 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b836c6af9d5862949ec7844d7a88dbc0d349228d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5c135d96f93aea211b260c104b260eb9378a5d2a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="database-engine-developer-documentation"></a>Documentación para desarrolladores de motor de base de datos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona un completo conjunto de herramientas para desarrollar, administrar y controlar las aplicaciones de base de datos.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
  [Programación de cuadros de mensajes de excepción](http://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)  
  Describe cómo puede utilizar la interfaz de programación del cuadro de mensajes de excepción en sus aplicaciones para proporcionar más control sobre la experiencia de mensajería, dar a los usuarios la opción de guardar el contenido de los mensajes de error para consultarlos posteriormente y obtener ayuda con los mensajes.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Programación de minería de datos](../analysis-services/data-mining-programming.md)   
  [Guía del desarrollador (Analysis Services)](../analysis-services/analysis-services-developer-documentation.md)   
  [Documentación para desarrolladores de Integration Services](../integration-services/integration-services-developer-documentation.md)   

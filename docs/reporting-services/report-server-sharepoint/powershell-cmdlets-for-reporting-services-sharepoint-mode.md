@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 96e9ea12df36219b11fe74e3328e6817b03471e9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7b2d501e76e281716d1d88f858d6642c3a0a1ef5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Cmdlets de PowerShell para el modo de SharePoint de Reporting Services
 
@@ -117,7 +115,7 @@ Al instalar SQL Server 2016 Reporting Services en modo de SharePoint, se instala
 |New-SPRSExtension|Registra una nueva extensión con una aplicación de servicio de Reporting Services.|  
 |Set-SPRSExtension|Establece las propiedades de una extensión de Reporting Services existente.|  
 |Remove-SPRSExtension|Quita una extensión de una aplicación de servicio de Reporting Services.|  
-|Get-SPRSExtension|Obtiene una o más extensiones de Reporting Services para un aplicación de servicio de Reporting Services.<br /><br /> Los valores válidos son:<br /><br /> <br /><br /> Entrega<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> Datos<br /><br /> Seguridad<br /><br /> Autenticación<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> Diseñador<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
+|Get-SPRSExtension|Obtiene una o más extensiones de Reporting Services para un aplicación de servicio de Reporting Services.<br /><br /> Los valores válidos son:<br /><br /> <br /><br /> Entrega<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> data<br /><br /> Seguridad<br /><br /> Autenticación<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> Diseñador<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
 |Get-SPRSSite|Obtiene los sitios de SharePoint basándose en si está habilitada la característica "ReportingService". De forma predeterminada, se devuelven los sitios que habilitan la característica "ReportingService".|  
   
 ## <a name="basic-samples"></a>Ejemplos básicos

@@ -8,9 +8,7 @@ ms.service:
 ms.component: reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,15 +22,15 @@ helpviewer_keywords:
 - reports [Reporting Services], definitions
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 caps.latest.revision: "52"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 735811c38ce6073e9dee4dd5b35cf18645a74a3a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a0acf3ce891459589445e28b73ef762e3a82da8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-definition-language-ssrs"></a>Report Definition Language (SSRS)
   El lenguaje RDL (Report Definition Language) es una representación XML de una definición de informe de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una definición de informe contiene información acerca de la recuperación y el diseño de los datos de un informe. RDL está formado por elementos XML que cumplen la sintaxis XML creada para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Puede agregar sus propias funciones personalizadas para controlar los valores de elemento de informe, los estilos y el formato si obtiene acceso a los ensamblados de código en los archivos de definición de informe.  
@@ -58,7 +56,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="bkmk_Creating_RDL"></a> Crear RDL  
  Debido a la naturaleza abierta y extensible de RDL, se pueden compilar diversas herramientas y aplicaciones que generan RDL basándose en su esquema XML.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona varias herramientas para crear archivos RDL. Para más información, vea [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona varias herramientas para crear archivos RDL. Para obtener más información, vea [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
   
  Una de las maneras más fáciles de generar RDL desde una aplicación es usar las clases [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] del espacio de nombres <xref:System.Xml> y del espacio de nombres <xref:System.Linq> . Una clase en particular, la clase **XmlTextWriter** , se puede utilizar para escribir RDL. Con **XmlTextWriter**, puede generar una definición de informe completa en cualquier aplicación [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Los programadores también pueden ampliar RDL agregando elementos de informe personalizados con propiedades personalizadas. Para más información sobre la clase **XmlTextWriter** y el espacio de nombres <xref:System.Xml> , vea la Guía del programador de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Para obtener más información sobre Language-Integrated Query (LINQ), busque "LINQ to XML" en MSDN.  
   
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="bkmk_RDL_Types"></a> Tipos de RDL  
  En la tabla siguiente se enumeran los tipos usados en los atributos y elementos del lenguaje RDL.  
   
-|Type|Description|  
+|Tipo|Description|  
 |----------|-----------------|  
 |**Binario**|Una propiedad con un valor binario codificado de base 64.|  
 |**Boolean**|Propiedad con **true** o **false** como valor del objeto. A menos que se especifique lo contrario, el valor de un objeto booleano opcional omitido es **False**.|  
@@ -91,10 +89,10 @@ ms.lasthandoff: 12/05/2017
 |Boolean|Boolean|  
 |DateTime, DateTimeOffset|DateTime|  
 |Int16, Int32, UInt16, Byte, SByte|Integer|  
-|Single, Double|Float|  
+|Single, Double|float|  
 |String, Char, GUID, Timespan|String|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Buscar la versión del esquema de definición de informe &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)   
  [Usar ensamblados personalizados con informes](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Elementos de informe personalizados](../../reporting-services/custom-report-items/custom-report-items.md)  

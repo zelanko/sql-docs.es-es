@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 048cf935a981c0c86c1d11ec90c4064abea03ac9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4c0d92d44a11aad84fe249649ef921123f78aa0b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Colecciones integradas: referencias a campos globales y de usuario integrados (Generador de informes)
   La colección de campos integrados, que incluye las colecciones **Globals** y **User** , representa valores globales proporcionados por Reporting Services al procesar un informe. La colección **Globals** proporciona valores como el nombre del informe, la hora a la que comenzó el procesamiento del informe y el número de la página actual para el encabezado o el pie de página del informe. La colección **User** proporciona el identificador de usuario y la configuración de idioma. Estos valores se pueden usar en expresiones para filtrar los resultados de un informe.  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="using-the-globals-collection"></a>Usar la colección Globals  
  La colección **Globals** contiene las variables globales del informe. En la superficie de diseño, estas variables aparecen con el prefijo & (y comercial); por ejemplo, `[&ReportName]`. En la siguiente tabla, se describen los miembros de la colección **Globals** .  
   
-|**Miembro**|**Tipo**|**Description**|  
+|**Miembro**|**Tipo**|**Descripción**|  
 |----------------|--------------|---------------------|  
 |ExecutionTime|**DateTime**|Fecha y hora en que se empezó a ejecutar el informe.|  
 |PageNumber|**Integer**|Número de página actual relativo a los saltos de página que restablecieron el número de página. Al principio del procesamiento del informe, el valor inicial está establecido en 1. El número de página aumenta en cada página representada.<br /><br /> Para numerar las páginas dentro de los saltos de página para un rectángulo, una región de datos, un grupo de regiones de datos o una asignación, en la propiedad PageBreak, establezca la propiedad ResetPageNumber en **True**. No se admite en grupos de jerarquías de columnas de Tablix.<br /><br /> PageNumber solo se puede usar en una expresión en un encabezado o pie de página.|  
@@ -80,7 +78,7 @@ ms.lasthandoff: 12/05/2017
   
  En la siguiente tabla, se describen los miembros de la colección **User** .  
   
-|**Miembro**|**Tipo**|**Description**|  
+|**Miembro**|**Tipo**|**Descripción**|  
 |----------------|--------------|---------------------|  
 |**Lenguaje**|**String**|Idioma del usuario que ejecuta el informe. Por ejemplo, `en-US`.|  
 |**UserID**|**String**|Identificador del usuario que ejecuta el informe. Si está utilizando la autenticación de Windows, este valor será la cuenta de dominio del usuario actual. El valor viene determinado por la extensión de seguridad de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , que puede utilizar la autenticación de Windows o una autenticación personalizada.|  
@@ -96,7 +94,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="identifying-userid-for-snapshot-or-history-reports"></a>Identificar el identificador de usuario para informes de historial o instantánea  
  En algunas ocasiones, los informes que incluyen la variable *User!UserID* no podrán mostrar los datos de informe específicos del usuario que está viendo el informe en ese momento.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Expresión &#40;cuadro de diálogo del Generador de informes&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

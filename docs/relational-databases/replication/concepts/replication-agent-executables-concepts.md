@@ -8,7 +8,7 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 911c44b3cbacf3fa9a59ed8b78c77acf8532bd6a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 655cf93a8959c0aeb195503f5145048e3c5b3fde
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="replication-agent-executables-concepts"></a>Conceptos de los ejecutables del Agente de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +47,11 @@ ms.lasthandoff: 11/17/2017
   
 -   [Agente de registro del LOG de replicación](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
--   [Agente de mezcla de replicación](../../../relational-databases/replication/agents/replication-merge-agent.md)  
+-   [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   
 -   [Agente de lectura de cola de replicación](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
--   [Agente de instantáneas de replicación](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+-   [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
  Al invocar los agentes de replicación, puede utilizar los perfiles de rendimiento para pasar automáticamente un conjunto definido de parámetros a la aplicación ejecutable del agente. Para obtener más información, consulte [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

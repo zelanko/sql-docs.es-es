@@ -21,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f387e9c2dae2da689476a4b38290569c8b5c6cc9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 33e750a4fbbd1dc7ae9d1cdec930189f85f3d129
+ms.sourcegitcommit: 9b8c7883a6c5ba38b6393a9e05367fd66355d9a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="use-sparse-columns"></a>Usar columnas dispersas
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Las columnas dispersas son columnas normales que disponen de un almacenamiento optimizado para los valores NULL. Este tipo de columnas reducen los requisitos de espacio de los valores NULL a costa de una mayor sobrecarga a la hora de recuperar valores no NULL. Considere la posibilidad de utilizar columnas dispersas si el ahorro de espacio se sitúa entre el 20 y el 40 por ciento. Las columnas dispersas y los conjuntos de columnas se definen mediante las instrucciones [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) o [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) .  
   
@@ -176,11 +176,11 @@ ms.lasthandoff: 11/17/2017
   
      La replicación de mezcla no admite el uso de columnas dispersas ni de conjuntos de columnas.  
   
--   Seguimiento de cambios  
+-   seguimiento de cambios  
   
      El seguimiento de cambios admite el uso de columnas dispersas y de conjuntos de columnas. Cuando se actualiza un conjunto de columnas en una tabla, el seguimiento de cambios lo considera como una actualización de la fila completa. No se proporciona ningún seguimiento de cambios detallado que permita obtener el número exacto de columnas dispersas que se actualizan mediante la operación de actualización del conjunto de columnas. Si las columnas dispersas se actualizan de forma explícita mediante una instrucción DML, el seguimiento de cambios funcionará normalmente en ellas y permitirá identificar el número exacto de columnas modificadas.  
   
--   Captura de datos modificados  
+-   captura de datos modificados  
   
      La captura de datos modificados admite el uso de columnas dispersas, pero no de conjuntos de columnas.  
   
@@ -241,7 +241,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `1      Tire Spec 1  AXZZ217                  27`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Usar conjuntos de columnas](../../relational-databases/tables/use-column-sets.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   

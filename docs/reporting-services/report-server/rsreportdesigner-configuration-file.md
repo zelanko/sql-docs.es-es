@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - RSReportDesigner configuration file
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
 caps.latest.revision: "47"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6b23c29de71985635eaf98720bb3e6f32dae3edf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fcc7025e74656da02806d81cef9fc26295bc3a1b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rsreportdesigner-configuration-file"></a>archivo de configuración RSReportDesigner
   En el archivo RSReportDesigner.config se almacenan las configuraciones de las extensiones de representación y procesamiento de datos disponibles para el Diseñador de informes. La información de la extensión de procesamiento de datos se almacena en el elemento **Data** . La información de la extensión de representación se almacena en el elemento **Render** . El elemento **Designer** enumera los generadores de consultas que se utilizan en el Diseñador de informes.  
@@ -75,7 +73,7 @@ ms.lasthandoff: 12/05/2017
 |**Designer**|Enumera los generadores de consultas que están disponibles para el Diseñador de informes. Los generadores de consultas proporcionan una interfaz de usuario para crear consultas que recuperan los datos utilizados en los informes. Los generadores de consultas pueden variar entre las diferentes extensiones de procesamiento de datos. De forma predeterminada, Reporting Services proporciona una interfaz de usuario de herramienta de datos visual para todas las extensiones de procesamiento de datos que se incluyen en el producto. Sin embargo, si genera o utiliza extensiones de procesamiento de datos de otros fabricantes, es posible que se apliquen otras interfaces de generador de consultas.|  
 |**PreviewProcessingServiceStartupTimeoutSeconds**|Especifica el período que el servicio de procesamiento de vista previa debe esperar para iniciarse antes de mostrar un mensaje de error. El valor predeterminado es 15 segundos.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Archivos de configuración de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Herramientas de diseño de consulta &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)  
   

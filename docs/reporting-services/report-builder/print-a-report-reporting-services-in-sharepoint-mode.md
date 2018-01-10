@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,13 +18,13 @@ ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
 caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d0d6ee23c5cb0518b532d851bc259b6d2b2e9d60
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 69ce18de1901a873a4eaf0f39854af2512122e72
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Imprimir un informe (Reporting Services en el modo de SharePoint)
   Para un servidor de informes que se ejecuta en el modo integrado de SharePoint, existen tres formas de imprimir un informe desde una aplicación web de SharePoint:  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/05/2017
   
      Para ver el informe antes de imprimirlo, haga clic en el botón **Vista previa** . Se abre la primera página del informe en una ventana de vista previa independiente. A medida que el informe se representa en el servidor de informes, se proporcionan más páginas. Un informe en vista previa se representa en formato EMF. Puede navegar hasta la página anterior o siguiente hasta llegar a la última página y hasta que el botón **Siguiente** aparezca deshabilitado. Para modificar los márgenes de impresión de la página de vista previa, haga clic en el botón **Márgenes** . Se mostrará el cuadro de diálogo **Márgenes** . Configure los márgenes superior, inferior, derecho e izquierdo y haga clic en **Aceptar**. El cuadro de diálogo se cierra y la configuración se almacena para representar la vista previa y la impresión.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Habilitar y deshabilitar la impresión del lado cliente para Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a3fa3c62effc46f0c30754000c83bb8916a91087
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a448bea8dcefd44e625ad910b4d4099b5a3bbb59
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>Trabajar con tipos de datos del flujo de datos
   Al desarrollar un componente de flujo de datos personalizado en Integration Services, trabaja constantemente con tipos de datos, copiando datos en y fuera de búferes de flujo de datos y transformando valores. La información de este tema le ayuda a elegir los tipos de datos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] correctos y a utilizar los métodos correctos al trabajar con ellos.  
@@ -162,7 +162,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  El método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> no devuelve un valor para el tipo de datos DT_DBTIMESTAMPOFFSET y se produce una excepción <xref:Microsoft.SqlServer.Dts.Pipeline.UnsupportedBufferDataTypeException>. Debe convertir el tipo de datos DT_DBTIMESTAMPOFFSET en uno de los tipos de datos de fecha y hora de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] que se pueden asignar a un tipo de datos administrado. Para obtener una lista de los tipos de datos de fecha y hora de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] que se pueden asignar a los tipos de datos administrados, vea la tabla de la sección anterior, "Realizar asignaciones entre los tipos de datos de Integration Services y los administrados". Para obtener información acerca de la conversión de tipos de datos, vea [Tipos de datos de Integration Services](../../../integration-services/data-flow/integration-services-data-types.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>   
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>   
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>   

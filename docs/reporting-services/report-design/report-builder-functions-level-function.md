@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5ed59cf792bb62b1930ce3bcf6cf9ea0e505b028
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 07c04ef8576eaeec00b629c045c54136cb10e463
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---level-function"></a>Funciones del Generador de informes: función Level
   Devuelve el nivel actual de profundidad de una jerarquía recursiva.  
@@ -45,7 +43,7 @@ Level(scope)
 ## <a name="return-type"></a>Tipo devuelto  
  Devuelve un **Integer**. Si el parámetro *scope* especifica un conjunto de datos o una región de datos, o bien una agrupación no recursiva (es decir, una agrupación que no contenga el elemento **Parent** ), la función **Level** devuelve 0. Si se omite el parámetro *scope* , devuelve el nivel del ámbito actual.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El valor que devuelve la función **Level** se basa en cero; es decir, el primer nivel de una jerarquía es 0.  
   
  La función **Level** puede utilizarse para aplicar sangría en una jerarquía recursiva, como puede ser una lista de empleados.  
@@ -59,7 +57,7 @@ Level(scope)
 =Level("Employees")  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

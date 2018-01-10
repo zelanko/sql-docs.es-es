@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -42,13 +40,13 @@ ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 310e1f5c45187d5065203f86cafd384318d72ed3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1caed0f401f74ad420475aae125ba47558d0163a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tablas, matrices y listas (Generador de informes y SSRS)
  En [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], las tablas, matrices y listas son *regiones de datos* en las que se muestran los datos del informe paginado en celdas organizadas en filas y columnas. Normalmente, las celdas contienen datos como texto, fechas y números, pero también pueden contener medidores, gráficos o elementos de informe como imágenes. Colectivamente, las tablas, matrices y listas se denominan a menudo regiones de datos *Tablix* .  
@@ -66,7 +64,7 @@ ms.lasthandoff: 12/05/2017
  Para empezar a trabajar rápidamente con tablas, matrices y listas, vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md), [Tutorial: Crear un informe de matriz &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md) y [Tutorial: Crear un informe de forma libre &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
   
 > [!NOTE]  
->  Puede publicar tablas, matrices y listas por separado de un informe como elementos de informe. Obtenga más información sobre [Elementos de informe](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
+>  Puede publicar tablas, matrices y listas por separado de un informe como elementos de informe. Para más información, vea [Elementos de informe](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
 ##  <a name="Table"></a> Table  
  use una tabla para mostrar datos detallados, para organizar los datos en grupos de filas, o para ambas cosas. La plantilla Tabla contiene tres columnas con una fila de encabezado de tabla y una fila de detalles para los datos. En la ilustración siguiente, se muestra la plantilla de tabla inicial, seleccionada en la superficie de diseño:  
@@ -114,7 +112,7 @@ ms.lasthandoff: 12/05/2017
  El asistente indica todos los pasos para generar y configurar rápidamente una tabla o una matriz. Después de completar el asistente o generar las regiones de datos Tablix desde cero, puede configurarlas y refinarlas. Los cuadros de diálogo, disponible en los menús contextuales en las regiones de datos, facilitan el establecimiento de las propiedades más utilizadas para los saltos de página, repeticiones y visibilidad de encabezados y pies de página, opciones de pantalla, filtros y orden. La región de datos Tablix ofrece muchas otras propiedades, que solo puede establecer en el panel Propiedades de Generador de informes. Por ejemplo, si quiere mostrar un mensaje cuando el conjunto de datos de una tabla, matriz o lista esté vacío, debe especificar el texto del mensaje en la propiedad de Tablix NoRowsMessage en el panel Propiedades.  
   
 ##  <a name="ChangingBetweenTablixTemplates"></a> Cambiar entre las plantillas de Tablix  
- La plantilla inicial de Tablix que elija no es necesariamente definitiva. Mientras agrega grupos, totales y etiquetas, es posible que decida modificar el diseño de Tablix. Por ejemplo, puede comenzar con una tabla y, a continuación, eliminar la fila de detalles y agregar grupos de columnas. Para obtener más información, vea [Explorar la flexibilidad de una región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
+ La plantilla inicial de Tablix que elija no es necesariamente definitiva. Mientras agrega grupos, totales y etiquetas, es posible que decida modificar el diseño de Tablix. Por ejemplo, puede comenzar con una tabla y, a continuación, eliminar la fila de detalles y agregar grupos de columnas. Para más información, vea [Explorar la flexibilidad de una región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
  Para continuar el desarrollo de una tabla, matriz o lista, puede agregar cualquier característica de Tablix. Entre las características de Tablix se incluye la visualización de datos detallados o agregados para los datos agrupados en filas y columnas. Puede crear grupos anidados, grupos adyacentes independientes o grupos recursivos. Puede filtrar y ordenar datos agrupados, y combinar grupos fácilmente mediante la inclusión de varias expresiones de grupo en una definición de grupo.  
   
@@ -168,7 +166,7 @@ ms.lasthandoff: 12/05/2017
  [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)  
  Se explica qué son los grupos y cuándo utilizarlos, y se describen los grupos disponibles para las distintas regiones de datos Tablix.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Anidar regiones de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
  [Vincular varias regiones de datos al mismo conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   

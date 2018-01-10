@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 caps.latest.revision: "41"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8458127daae58d63376f80dc1b67302928f9f943
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1177b4cf7db3d55e839608f45fb036ae95e7baf5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Registro de ejecución del servidor de informes y la vista ExecutionLog3
   El registro de la ejecución del servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]contiene información sobre los informes que se ejecutan en el servidor o en varios servidores de una implementación escalada en modo nativo o de una granja de servidores de SharePoint. Puede usar el registro de la ejecución de informes para averiguar con qué frecuencia se solicita el informe, qué formatos de salida se usan más y cuántos milisegundos del tiempo de procesamiento se dedica a cada fase del procesamiento. El registro contiene información sobre el tiempo de ejecución de la consulta de conjunto de datos de un informe y el tiempo empleado en el procesamiento de los datos. Si es administrador del servidor de informes, puede revisar la información del registro e identificar las tareas de ejecución prolongada, y realizar sugerencias a los autores de informes en las áreas del informe (conjunto de datos o procesamiento) que se puedan mejorar.  
@@ -116,7 +114,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  La siguiente tabla describe los datos que se capturan en el registro de ejecución de informes  
   
-|Columna|Description|  
+|columna|Description|  
 |------------|-----------------|  
 |InstanceName|Nombre de la instancia de servidor de informes que procesó la solicitud. Si el entorno tiene más de un servidor de informes, puede analizar la distribución de InstanceName para supervisar y determinar si el equilibrador de carga de red distribuye las solicitudes entre los servidores de informes como se esperaba.|  
 |ItemPath|Ruta de acceso donde se almacena un informe o un elemento de informe.|  
@@ -125,7 +123,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |RequestType|Valores posibles:<br /><br /> Interactiva<br /><br /> Suscripción<br /><br /> <br /><br /> El análisis de los datos de registro filtrados por RequestType=Subscription y ordenados por TimeStart pueden revelar los periodos de mucho uso de suscripciones y puede indicar la conveniencia de modificar algunas de las suscripciones de informe a un momento diferente.|  
 |Formato|Formato de representación.|  
 |Parámetros|Valores de parámetros utilizados para la ejecución de un informe.|  
-|ItemAction|Valores posibles:<br /><br /> Render<br /><br /> Ordenar<br /><br /> BookMarkNavigation<br /><br /> DocumentNavigation<br /><br /> GetDocumentMap<br /><br /> Findstring<br /><br /> Execute<br /><br /> RenderEdit|  
+|ItemAction|Valores posibles:<br /><br /> Render<br /><br /> Sort<br /><br /> BookMarkNavigation<br /><br /> DocumentNavigation<br /><br /> GetDocumentMap<br /><br /> Findstring<br /><br /> Execute<br /><br /> RenderEdit|  
 |TimeStart|Horas de inicio y detención que indican la duración del procesamiento de un informe.|  
 |TimeEnd||  
 |TimeDataRetrieval|Número de milisegundos empleados en recuperar los datos.|  
@@ -331,7 +329,7 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  La siguiente tabla describe los datos que se capturan en el registro de ejecución de informes  
   
-|Columna|Description|  
+|columna|Description|  
 |------------|-----------------|  
 |InstanceName|Nombre de la instancia de servidor de informes que procesó la solicitud.|  
 |ReportPath|La estructura de ruta de acceso al informe.  Por ejemplo un informe denominado 'test' que está en la carpeta raíz en el Administrador de informes, tendría un ReportPath de '/test'.<br /><br /> Un informe denominado 'test' guardado en la carpeta 'samples' en el Administrador de informes, tendrá un ReportPath de '/Samples/test/'|  
@@ -363,7 +361,7 @@ select * from ExecutionLog order by TimeStart DESC
   
  La siguiente tabla describe los datos que se capturan en el registro de ejecución de informes  
   
-|Columna|Description|  
+|columna|Description|  
 |------------|-----------------|  
 |InstanceName|Nombre de la instancia de servidor de informes que procesó la solicitud.|  
 |ReportID|Identificador del informe.|  
@@ -381,7 +379,7 @@ select * from ExecutionLog order by TimeStart DESC
 |ByteCount|Tamaño de los informes representados en bytes|  
 |RowCount|Número de filas devueltas de consultas.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Activar eventos de Reporting Services para el registro de seguimiento de SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Referencia de errores y eventos &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

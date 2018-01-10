@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 08630eac8299c1086e75338cc6354bf4ba926622
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 47d1cf1399a788e271240f7b233115f6f3669b3a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>Crear facturas y formularios con listas (Generador de informes y SSRS)
   Una región de datos de lista se repite con cada grupo o fila del conjunto de datos de informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Las listas se pueden utilizar para crear informes o formularios de forma libre, por ejemplo facturas, o conjuntamente con otras regiones de datos. Puede definir listas que contengan cualquier número de elementos de informe. Una lista se puede anidar  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
  ![Nueva lista agregada desde el cuadro de herramientas, seleccionada](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "Nueva lista agregada desde el cuadro de herramientas, seleccionada")  
   
- La lista inicial es una plantilla basada en la región de datos Tablix. Después de agregar una lista, puede seguir mejorando el diseño cambiando el contenido o la apariencia de la lista especificando expresiones de filtro, de ordenación o de grupo, o cambiando la forma en la que se muestra la lista en las páginas del informe. Para más información, vea [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md). Aunque la lista comienza con una sola columna y una sola fila, puede seguir desarrollando su diseño agregando grupos de filas o de columnas anidados o adyacentes, o filas de detalles adicionales. Para obtener más información, vea [Explorar la flexibilidad de una región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
+ La lista inicial es una plantilla basada en la región de datos Tablix. Después de agregar una lista, puede seguir mejorando el diseño cambiando el contenido o la apariencia de la lista especificando expresiones de filtro, de ordenación o de grupo, o cambiando la forma en la que se muestra la lista en las páginas del informe. Para más información, vea [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md). Aunque la lista comienza con una sola columna y una sola fila, puede seguir desarrollando su diseño agregando grupos de filas o de columnas anidados o adyacentes, o filas de detalles adicionales. Para más información, vea [Explorar la flexibilidad de una región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
   
 ##  <a name="DisplayingLayout"></a> Mostrar datos en un diseño de forma libre  
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/05/2017
  ![Vista previa, 2 tablas, una con gráfico anidado](../../reporting-services/report-design/media/rs-basiclistgrouppreview.gif "Vista previa, 2 tablas, una con gráfico anidado")  
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   

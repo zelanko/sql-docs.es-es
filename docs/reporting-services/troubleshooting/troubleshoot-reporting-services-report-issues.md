@@ -8,22 +8,20 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7f74bae865a6d2fe3ec5fbd86c77b24af2284ff7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9546aaea0b177552fa83095c342a24a2e0f954e9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Solución de problemas de informes de Reporting Services
 Este tema contiene información útil para solucionar problemas con el diseño de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] , la vista previa de un informe, la publicación de un informe en un servidor de informes en modo nativo o en modo de SharePoint, la visualización de un informe en el servidor de informes o la exportación de un informe en un formato de archivo diferente.  
@@ -63,7 +61,7 @@ Para controlar si [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull.
 ```  
 Siempre que el valor esté establecido en 1, solo se utilizan los datos del informe almacenado en memoria caché. Asegúrese de quitar esta sección cuando termine de depurar el informe.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Errores y eventos (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

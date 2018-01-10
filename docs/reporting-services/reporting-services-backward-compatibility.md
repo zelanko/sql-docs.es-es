@@ -8,9 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - backward compatibility [Reporting Services]
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
 caps.latest.revision: "44"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 29e229961a0ffa3c91da604219587b75d6dd5372
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d4924fee006b0e40eb60a0525e80c71cefe558ea
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Compatibilidad con versiones anteriores de Reporting Services
 Obtenga información sobre los cambios de comportamiento de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Incluye características que ya no están disponibles o cuya eliminación está prevista para una versión posterior.
@@ -44,7 +42,7 @@ También se describen cambios fundamentales en el producto que afectan a aplicac
 |[Cambios substanciales de SQL Server Reporting Services en SQL Server 2016](http://msdn.microsoft.com/en-us/39c7aafd-dcb9-4317-b8f7-d15828eb4f9a)|Describe los problemas que se pueden encontrar cuando se actualiza [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
 |[Cambios de comportamiento de SQL Server Reporting Services en SQL Server 2016](http://msdn.microsoft.com/en-us/2a767f0f-84f2-4099-8784-1e37790f858e)|Describe las características que se han cambiado en [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Compatibilidad con versiones anteriores | Analysis Services](http://msdn.microsoft.com/en-us/618b6c3a-e20d-47a9-b2c6-6d848dfba05a)  
   
   

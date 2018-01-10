@@ -8,9 +8,7 @@ ms.service:
 ms.component: reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords: Reporting Services, report creation
@@ -18,13 +16,13 @@ ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 caps.latest.revision: "54"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b5d023c1f2fa7c8795f83e610c49e03f50f38032
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 11bf9da4b78262f75a411f847c721309abc2457b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-reports-ssrs"></a>Informes de Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Los informes paginados son definiciones de informes basados en XML donde se incluyen datos y elementos de diseño de informes. En un sistema de archivos de cliente, las definiciones de informe tienen la extensión de archivo .rdl. Una vez que se publica un informe paginado, se convierte en un elemento de informe que se almacena en el servidor de informes o en el sitio de SharePoint. Los informes paginados son una parte de la plataforma de generación de informes basada en servidor que proporciona [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. También puede [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
@@ -168,7 +166,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="create-notifications-based-on-report-data"></a>Crear notificaciones basadas en datos del informe  
  Puede crear alertas de datos de los informes publicados en un sitio de SharePoint. Las alertas de datos se basan en las fuentes de distribución de datos de las regiones de datos del informe. De forma predeterminada, las regiones de datos se asignan automáticamente. Los autores de informes pueden facilitar la creación de alertas de datos en sus informes asignando los nombres de las regiones de datos en función de su objetivo comercial. Cuando cree una alerta de datos, recibirá un mensaje de correo electrónico en el que se le notificará cuándo los datos cumplen las condiciones especificadas. Para más información, vea [Generar fuentes de distribución de datos a partir de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md), [Crear una alerta de datos en el Diseñador de alertas de datos](../../reporting-services/create-a-data-alert-in-data-alert-designer.md) y [Alertas de datos de Reporting Services](../../reporting-services/reporting-services-data-alerts.md).  
   
-## <a name="upgrade-reports"></a>Actualizar informes  
+## <a name="upgrade-reports"></a>Upgrade Reports  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admite varias versiones de las definiciones de informe, de los servidores de informes y de los sitios de SharePoint. Para actualizar un informe:  
   
 -   Actualice una instalación del servidor de informes. Los informes compilados que se almacenan en el servidor de informes se actualizan automáticamente al usarse por primera vez. La definición de informe (.rdl) no se modifica. Para obtener más información, vea [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
@@ -182,7 +180,7 @@ ms.lasthandoff: 12/05/2017
   
 -   **Determine dónde puede buscar más información.** Por ejemplo, si el diseño de informe incluye expresiones, la herramienta Diseñador de informes proporciona más información sobre los problemas de evaluación de expresiones que la herramienta Generador de informes. Si se producen errores de procesamiento de informes, los archivos de registro contienen información detallada.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Extensiones &#40;SSRS&#41;](../../reporting-services/extensions-ssrs.md)   
  [Servidor de informes de Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  

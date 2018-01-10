@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -26,11 +26,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9c15c407c7fae442d7d96b6679d177e864aa632
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fea3020fe77c6f5ac3f69f489a4ab1f0c4af8ccb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="coding-a-custom-task"></a>Codificar una tarea personalizada
   Una vez que haya creado una clase que herede de la clase base <xref:Microsoft.SqlServer.Dts.Runtime.Task> y haya aplicado el atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> a la clase, debe invalidar la implementación de las propiedades y los métodos de la clase base para proporcionar su funcionalidad personalizada.  
@@ -176,7 +176,7 @@ End Class
 |<xref:Microsoft.SqlServer.Dts.Runtime.VariableDispenser>|Contiene las variables disponibles para la tarea. Las tareas usan variables a través de VariableDispenser; las tareas no usan directamente las variables. VariableDispenser bloquea y desbloquea las variables y evita los interbloqueos o sobrescrituras.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents>|Contiene los métodos que la tarea llama para producir eventos en el motor en tiempo de ejecución.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSLogging>|Contiene los métodos y propiedades que usa la tarea para escribir entradas en el registro de eventos.|  
-|Object|Contiene el objeto de transacción del que forma parte el contenedor, si existe. Este valor se pasa como un parámetro al método <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> de un objeto <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.|  
+|Objeto|Contiene el objeto de transacción del que forma parte el contenedor, si existe. Este valor se pasa como un parámetro al método <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> de un objeto <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.|  
   
 ### <a name="providing-execution-feedback"></a>Proporcionar comentarios de ejecución  
  Las tareas ajustan su código en bloques **try/catch** para evitar que se generen excepciones en el motor en tiempo de ejecución. Esto asegura que el paquete termina la ejecución y no se detiene de forma inesperada. Sin embargo, el motor en tiempo de ejecución proporciona otros mecanismos para controlar las condiciones de error que se pueden producir durante la ejecución de una tarea. Estos mecanismos incluyen la exposición de mensajes de error y advertencia, la devolución de un valor de la estructura <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>, la exposición de mensajes, la devolución del valor <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> y la divulgación de información acerca de los resultados de ejecución de la tarea a través de la propiedad <xref:Microsoft.SqlServer.Dts.Runtime.Task.ExecutionValue%2A>.  
@@ -292,9 +292,9 @@ Public Class SampleTask
 End Class  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Creating a Custom Task](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)  (Crear una tarea personalizada)  
- [Coding a Custom Task](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)  (Programar una tarea personalizada)  
+ [Programar una tarea personalizada](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)   
  [Desarrollar una interfaz de usuario para una tarea personalizada](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
   
   

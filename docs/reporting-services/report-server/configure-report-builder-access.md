@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - configuring servers [Reporting Services]
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
 caps.latest.revision: "47"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2018c910537ea73bc36d1a41f074d9aeae0e9a37
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9e4181a11fafb1629ce10e8ac21a462a1d95f5b2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-report-builder-access"></a>Configurar el acceso al Generador de informes
   El Generador de informes es una herramienta de notificación ad hoc que se instala con un servidor de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurado para modo nativo o para modo de integración con SharePoint.  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
  Para utilizar el Generador de informes, debe tener un modelo de informe publicado con el que trabajar.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  El Generador de informes no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  El equipo cliente debe tener instalado [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proporciona la infraestructura para ejecutar aplicaciones [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
@@ -170,7 +168,7 @@ ms.lasthandoff: 12/05/2017
 |Autenticación básica|ClickOnce no admite la autenticación básica. No formulará solicitudes que especifiquen la autenticación básica en el encabezado de autenticación. No pasará credenciales ni pedirá al usuario que las proporcione. Estos problemas se pueden evitar habilitando el acceso anónimo a los archivos de aplicación del Generador de informes.<br /><br /> Las solicitudes tendrán éxito si se habilita el acceso anónimo a los archivos de aplicación del Generador de informes porque el servidor de informes omite el encabezado de autenticación. Para más información sobre cómo habilitar el acceso anónimo al Generador de informes, vea [Configurar la autenticación básica en el servidor de informes](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md).<br /><br /> Una vez que ClickOnce recupera los archivos de aplicación, el Generador de informes abre una conexión independiente con un servidor de informes. Los usuarios deben volver a escribir sus credenciales para conseguir que el Generador de informes se conecte al servidor de informes. El Generador de informes no recopila credenciales de Internet Explorer o de ClickOnce.<br /><br /> Se producirá un error en las solicitudes si el servidor de informes se configura para la autenticación básica y no se ha habilitado el acceso anónimo a los archivos de programa del Generador de informes. Se produce un error en la solicitud porque ClickOnce especifica la seguridad integrada de Windows en sus solicitudes. Si configura el servidor de informes para autenticación básica, el servidor rechazará la solicitud porque especifica un paquete de seguridad no válido y porque carece de las credenciales que el servidor de informes espera.<br /><br /> Además, si el servidor de informes se configura para utilizar el modo integrado de SharePoint y el sitio de SharePoint utiliza la autenticación básica, los usuarios encontrarán un error 401 cuando intenten utilizar ClickOnce para instalar el Generador de informes en sus equipos cliente. Esto ocurre porque SharePoint utiliza una cookie para conservar un usuario autenticado mientras dure la sesión, pero ClickOnce no admite la cookie. Cuando un usuario inicia una aplicación ClickOnce, como el Generador de informes, la aplicación no pasa la cookie a SharePoint y, por tanto, SharePoint deniega el acceso y devuelve un error 401.<br /><br /> Puede solucionar este problema con una de las opciones siguientes:<br /><br /> -Seleccione la opción **Recordar mi contraseña** al especificar las credenciales de usuario.<br /><br /> -Habilite el acceso anónimo a la colección de sitios de SharePoint.<br /><br /> -Configure el entorno para que el usuario no tenga que especificar credenciales. Por ejemplo, en un entorno de intranet puede configurar el servidor de SharePoint para que pertenezca a un grupo de trabajo y, a continuación, crear las cuentas de usuario en el equipo local.|  
 |Personalizado|Cuando se configura un servidor de informes para utilizar la autenticación personalizada, el acceso anónimo se habilita en el servidor de informes y las solicitudes se aceptan sin comprobación de la autenticación.<br /><br /> Una vez que ClickOnce recupera los archivos de aplicación, el Generador de informes abre una conexión independiente con un servidor de informes. Los usuarios deben volver a escribir sus credenciales para conseguir que el Generador de informes se conecte al servidor de informes. El Generador de informes no recopila credenciales de Internet Explorer o de ClickOnce.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Autenticación con el servidor de informes](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [Iniciar el Generador de informes](../../reporting-services/report-builder/start-report-builder.md)   

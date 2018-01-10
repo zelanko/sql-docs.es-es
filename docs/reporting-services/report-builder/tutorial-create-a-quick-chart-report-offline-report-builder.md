@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,13 +19,13 @@ ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 caps.latest.revision: "31"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7aeaa7ce698d5fd2b7f0d9823fb89a201bed96eb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3851cd1793ddb98c29fddd82654adfba887b44d3
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Crear un informe de gráfico rápido sin conexión (Generador de informes)
 
@@ -37,7 +35,7 @@ Puede hacerlo de dos maneras diferentes: Ambos métodos tienen como resultado un
   
  ![Gráfico circular rápido del Generador de informes](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Gráfico circular rápido del Generador de informes")  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Si usa datos XML o una consulta [!INCLUDE[tsql](../../includes/tsql-md.md)], necesita tener acceso al Generador de informes. Puede iniciar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] desde un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo o en modo integrado de SharePoint, o bien puede descargar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] desde Centro de descarga de Microsoft. Para obtener más información, consulte [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).  
   
 ##  <a name="TwoWays"></a> Dos maneras de hacer este tutorial  

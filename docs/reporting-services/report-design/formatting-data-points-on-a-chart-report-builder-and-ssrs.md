@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,13 +18,13 @@ ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ef5d6f5c0abbe09505de7608ec18d309a112d0c9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7dedffd365d48a18f896815660585c5b602a5688
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a los puntos de datos de un gráfico (Generador de informes y SSRS)
 En el informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , un punto de datos es la entidad individual más pequeña del gráfico. En los gráficos que no son de formas, los puntos de datos se representan en función del tipo de gráfico. Por ejemplo, una serie de líneas está formada por uno o más puntos de datos conectados. En los gráficos de formas, los puntos de datos se representan por sectores o segmentos individuales que se agregan al gráfico. Por ejemplo, en un gráfico circular, cada sector es un punto de datos. Para más información, vea [Tipos de gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
@@ -68,21 +66,21 @@ En el informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-
   
 |Palabra clave de gráfico|Description|Aplicable al tipo de gráfico|Ejemplo de una expresión simple equivalente|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
-|#VALY|Valor Y del punto de datos.|Todos|`=Fields!MyDataField.Value`|  
-|#VALY2|Valor Y nº 2 del punto de datos.|De intervalo y de burbuja|Ninguno|  
-|#VALY3|Valor Y nº 3 del punto de datos.|De cotizaciones y de vela japonesa|Ninguno|  
-|#VALY4|Valor Y nº 4 del punto de datos.|De cotizaciones y de vela japonesa|Ninguno|  
-|#SERIESNAME|Nombre de la serie.|Todos|Ninguno|  
-|#LABEL|Etiqueta de punto de datos.|Todos|Ninguno|  
+|#VALY|Valor Y del punto de datos.|All|`=Fields!MyDataField.Value`|  
+|#VALY2|Valor Y nº 2 del punto de datos.|De intervalo y de burbuja|None|  
+|#VALY3|Valor Y nº 3 del punto de datos.|De cotizaciones y de vela japonesa|None|  
+|#VALY4|Valor Y nº 4 del punto de datos.|De cotizaciones y de vela japonesa|None|  
+|#SERIESNAME|Nombre de la serie.|All|None|  
+|#LABEL|Etiqueta de punto de datos.|All|None|  
 |#AXISLABEL|Etiqueta de punto de datos de eje.|Forma|`=Fields!MyDataField.Value`|  
-|#INDEX|Índice de punto de datos.|Todos|Ninguno|  
-|#PERCENT|Porcentaje del valor Y del punto de datos.|Todos|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
-|#TOTAL|Total de todos los valores Y de la serie.|Todos|`=Sum(Fields!MyDataField.Value)`|  
-|#LEGENDTEXT|Texto correspondiente al texto del elemento de la leyenda.|Todos|Ninguno|  
-|#AVG|Promedio de todos los valores Y de la serie.|Todos|`=Avg(Fields!MyDataField.Value)`|  
+|#INDEX|Índice de punto de datos.|All|None|  
+|#PERCENT|Porcentaje del valor Y del punto de datos.|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
+|#TOTAL|Total de todos los valores Y de la serie.|All|`=Sum(Fields!MyDataField.Value)`|  
+|#LEGENDTEXT|Texto correspondiente al texto del elemento de la leyenda.|All|None|  
+|#AVG|Promedio de todos los valores Y de la serie.|All|`=Avg(Fields!MyDataField.Value)`|  
 |#MIN|Mínimo de todos los valores Y de la serie.|Todos|`=Min(Fields!MyDataField.Value)`|  
-|#MAX|Máximo de todos los valores Y de la serie.|Todos|`=Max(Fields!MyDataField.Value)`|  
-|#FIRST|El primero de todos los valores Y de la serie.|Todos|`=First(Fields!MyDataField.Value)`|  
+|#MAX|Máximo de todos los valores Y de la serie.|All|`=Max(Fields!MyDataField.Value)`|  
+|#FIRST|El primero de todos los valores Y de la serie.|All|`=First(Fields!MyDataField.Value)`|  
   
  Para dar formato a la palabra clave, incluya una cadena de formato de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] entre paréntesis. Por ejemplo, para especificar el valor del punto de datos en una información sobre herramientas como un número con dos posiciones decimales, incluya la cadena de formato "N2" entre llaves (por ejemplo, "#VALY {N2}" para la propiedad **ToolTip** de la serie). Para obtener más información sobre las cadenas de formato de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , vea [Aplicar formato a tipos](http://go.microsoft.com/fwlink/?LinkId=112024) en MSDN. Para obtener más información sobre cómo dar formato a los números en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
@@ -103,7 +101,7 @@ En el informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-
   
  [Mostrar valores de porcentaje en un gráfico circular &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   

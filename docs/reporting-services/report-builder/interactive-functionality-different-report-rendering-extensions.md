@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2a3a1e2dc58250da1a2d0d8e0a3a1e78374ba2cc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4b6eb94e8511be6d1e2f5ccf2cc12eea7ced9198
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>Funcionalidad interactiva para diferentes extensiones de representación de informes
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona características para interactuar con un informe paginado en tiempo de ejecución. No todos los formatos de representación de informes son compatibles con todas las características interactivas. Use la tabla siguiente para comprender el funcionamiento de las características interactivas en los diferentes formatos.  
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/05/2017
 |PDF|Los vínculos de obtención de detalles no están disponibles en PDF. Considere la posibilidad de utilizar hipervínculos para informes en PDF que se vinculan a otras páginas.|  
 |Excel|Los vínculos de obtención de detalles se representan en Excel.<br /><br /> El vínculo se convierte en un hipervínculo que apunta al informe al que hace referencia el vínculo de obtención de detalles. Al hacer clic en el vínculo se abre un informe en una ventana del explorador.|  
 |Word|Los vínculos de obtención de detalles se representan en Word.<br /><br /> El vínculo se convierte en un hipervínculo que apunta al informe al que hace referencia el vínculo de obtención de detalles. Al hacer clic en el vínculo se abre un informe en una ventana del explorador.|  
-|Otro|No disponible en XML, CSV ni Image.|  
+|Otros|No disponible en XML, CSV ni Image.|  
   
 ### <a name="toggle-items-within-a-report"></a>Alternar elementos dentro de un informe  
   
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/05/2017
 |PDF|El servidor de informes exporta el estado de mostrar u ocultar actual del informe a formato PDF. No se admite la alternancia interactiva.|  
 |Excel|Los vínculos y los elementos de obtención de detalles que pueden alternarse se representan como esquemas contraíbles en Excel. Excel permite expandir y contraer secciones del informe. Para más información sobre las limitaciones impuestas por Excel, vea [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |Word|El servidor de informes exporta el estado de mostrar u ocultar actual del informe a formato PDF. No se admite la alternancia interactiva.|  
-|Otro|No disponible en MHTML, XML ni CSV. Al exportar a un formato Imagen, el servidor de informes exporta el estado de mostrar u ocultar actual del informe al formato PDF. No se admite la alternancia interactiva.|  
+|Otros|No disponible en MHTML, XML ni CSV. Al exportar a un formato Imagen, el servidor de informes exporta el estado de mostrar u ocultar actual del informe al formato PDF. No se admite la alternancia interactiva.|  
   
 ### <a name="interactive-sorting"></a>Ordenar de manera interactiva  
   
@@ -74,7 +72,7 @@ ms.lasthandoff: 12/05/2017
 |PDF|No disponible en PDF.|  
 |Excel|No disponible en Excel.|  
 |Word|No disponible en Word.|  
-|Otro|No disponible en MHTML, XML, CSV ni Image.|  
+|Otros|No disponible en MHTML, XML, CSV ni Image.|  
   
 ### <a name="hyperlinks-to-external-web-content-or-images"></a>Hipervínculos a imágenes o contenido web de tipo externo  
   
@@ -84,7 +82,7 @@ ms.lasthandoff: 12/05/2017
 |PDF|Los hipervínculos se representan mediante la extensión de representación en PDF. Cuando un usuario hace clic en un hipervínculo, se abren las páginas vinculadas en el explorador.|  
 |Excel|Los hipervínculos se representan en Excel.|  
 |Word|Los hipervínculos se representan en Word.|  
-|Otro|Los hipervínculos no están disponibles en MHTML, XML, CSV ni Image.<br /><br /> En MHTML e Imagen, las imágenes externas se representan de forma estática.|  
+|Otros|Los hipervínculos no están disponibles en MHTML, XML, CSV ni Image.<br /><br /> En MHTML e Imagen, las imágenes externas se representan de forma estática.|  
   
 ### <a name="bookmark-or-anchor"></a>Marcador o delimitador  
   
@@ -94,7 +92,7 @@ ms.lasthandoff: 12/05/2017
 |PDF|No disponible en PDF.|  
 |Excel|Los marcadores se representan en Excel.<br /><br /> El marcador se convierte en un hipervínculo que apunta al nombre del elemento de informe.|  
 |Word|Los marcadores se representan en Word.<br /><br /> El marcador se convierte en un hipervínculo que apunta al elemento de informe marcado. Al exportar el informe, solo se convierten 40 caracteres de los nombres de los marcadores o los delimitadores, lo que puede generar nombres de marcadores o de delimitadores duplicados. Los espacios se convierten en caracteres de subrayado (_).|  
-|Otro|No disponible en XML, CSV ni Image.|  
+|Otros|No disponible en XML, CSV ni Image.|  
   
 ### <a name="prompted-parameters-obtained-at-run-time"></a>Parámetros solicitados obtenidos en tiempo de ejecución  
   
@@ -114,9 +112,9 @@ ms.lasthandoff: 12/05/2017
 |PDF|El servidor de informes exporta el informe a PDF utilizando los datos filtrados en el informe actual.|  
 |Excel|El servidor de informes exporta el informe a Excel utilizando los datos filtrados en el informe actual.|  
 |Word|El servidor de informes exporta el informe a Word utilizando los datos filtrados en el informe actual.|  
-|Otro|El servidor de informes exporta el informe a otros formatos utilizando los datos filtrados en el informe actual.|  
+|Otros|El servidor de informes exporta el informe a otros formatos utilizando los datos filtrados en el informe actual.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Exportación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Ordenación interactiva, mapas de documento y vínculos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
     

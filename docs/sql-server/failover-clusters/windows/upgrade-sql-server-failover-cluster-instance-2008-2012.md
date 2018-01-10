@@ -1,7 +1,10 @@
 ---
 title: "Actualizar instancias de SQL Server que se ejecutan en clústeres de Windows Server 2008/2008 R2/2012 | Microsoft Docs"
 ms.date: 11/10/2017
-ms.prod: sql-server-2017
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: database engine
+ms.component: failover-clustuers
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 91fe880168482d29e796c2bbe23c278c60bfa6c1
-ms.sourcegitcommit: f2fde1c324466530f92006561a9a29decb711e1b
+ms.openlocfilehash: bac006539f14341ff07d6af2ba7fd73c1e73a917
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Actualizar instancias de SQL Server que se ejecutan en clústeres de Windows Server 2008/2008 R2/2012
 
@@ -127,7 +130,7 @@ Si tiene una configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 
 Si tiene una configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] que no usa ninguna instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] independiente, sino que solo usa FCI de SQL contenidas en al menos un grupo de disponibilidad, podrá realizar la migración de esta configuración a un nuevo clúster usando métodos parecidos al escenario en el que no hay ningún grupo de disponibilidad ni ninguna instancia independiente. Antes de copiar las tablas del sistema en los discos compartidos de FCI de destino, deberá quitar todos los grupos de disponibilidad del entorno original. Después de que se haya realizado la migración de todas las bases de datos a los equipos de destino, volverá a crear los grupos de disponibilidad con los mismos nombres de esquema y agente de escucha. Al hacerlo, los recursos de clúster de conmutación por error de Windows Server se formarán y administrarán correctamente en el clúster de destino. **Always On debe estar habilitado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] Configuration Manager en cada equipo del entorno de destino antes de la migración.**
 
-###  <a name="to-perform-the-upgrade"></a>Para realizar la actualización
+### <a name="to-perform-the-upgrade"></a>Para realizar la actualización
 
 1.  Detenga el tráfico hacia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)].
 

@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,15 +24,15 @@ helpviewer_keywords:
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
 caps.latest.revision: "80"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9cc8974ff85c595e97de7fc795a8a7908c983300
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d5027e12a7cc0bfe310c4eb6b291667cfa4d0c4f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-tools"></a>Herramientas de Reporting Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contiene un conjunto de herramientas gráficas y de scripting que admiten el desarrollo y la utilización de informes completos en un entorno administrado. El conjunto de herramientas incluye herramientas de desarrollo, herramientas de configuración y administración, y herramientas de visualización de informes. Este tema proporciona una breve información general de cada herramienta de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y cómo se puede obtener acceso a ella.  
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/05/2017
 |Herramienta|Description|Cómo obtener acceso|  
 |----------|-----------------|-------------------|  
 |Administración central de SharePoint|Use la Administración central de SharePoint para crear, consultar, y administrar las aplicaciones de servicio compartidas para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> Para obtener más información, vea [Configuración y administración de un servidor de informes &#40;modo de SharePoint de Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md).|Explorador para la dirección URL del sitio de SharePoint para administración central|  
-|Cmdlets de PowerShell|Use cmdlets de PowerShell para crear, consultar y administrar las aplicaciones de servicio compartido para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> Para más información, vea [Cmdlets de PowerShell para el modo de SharePoint de Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).|Shell de administración de SharePoint 2010|  
+|Cmdlets de PowerShell|Use cmdlets de PowerShell para crear, consultar y administrar las aplicaciones de servicio compartido para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> Para obtener más información, vea [Cmdlets de PowerShell para el modo de SharePoint de Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).|Shell de administración de SharePoint 2010|  
   
 ## <a name="tools-for-report-content-management"></a>Herramientas para la administración de contenido del informe  
  Hay disponible un conjunto de herramientas gráficas y de scripting para administrar el contenido en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Las herramientas que se usan dependen del modo de implementación del servidor de informes.  
@@ -83,7 +81,7 @@ ms.lasthandoff: 12/05/2017
 |Portal web|**(Solo modo nativo)** Use esta herramienta para administrar una única instancia del servidor de informes desde una ubicación remota con una conexión HTTP. Puede hacer lo siguiente:<br /><br /> Ver, buscar, imprimir y suscribirse a informes.<br /><br /> Crear, proteger y mantener la jerarquía de carpetas para organizar elementos en el servidor.<br /><br /> Configurar una seguridad basada en roles que determine el acceso a elementos y operaciones.<br /><br /> Configurar propiedades de ejecución del informe, historial del informe y parámetros del informe.<br /><br /> Crear modelos de informe que se conectan a un origen de datos de Microsoft SQL Server Analysis Services o a un origen de datos relacionales de SQL Server y recuperan los datos.<br /><br /> Establecer la seguridad de los elementos del modelo para permitir el acceso a entidades concretas del modelo o asignar entidades a informes click-through predefinidos creados previamente.<br /><br /> Crear programaciones compartidas y orígenes de datos compartidos para que las programaciones y las conexiones de orígenes de datos sean más fáciles de administrar.<br /><br /> Crear suscripciones controladas por datos que distribuyen informes en una lista de destinatarios extensa.<br /><br /> Crear informes vinculados para volverlos a utilizar y cambiar la finalidad de un informe existente de distintas maneras.<br /><br /> Iniciar el Generador de informes para crear informes que se pueden guardar y ejecutar en el servidor de informes. Para más información, vea [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).| Browser  
 |Utilidad RS|Esta herramienta es un host de script que se puede usar para llevar a cabo operaciones de script. Utilice esta herramienta para ejecutar scripts de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] que copian datos entre distintas bases de datos del servidor de informes, publican informes, crean elementos en una base de datos del servidor de informes, etc. Para más información, vea [Utilidades del símbolo del sistema del servidor de informes &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md).|Símbolo del sistema|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Servidor de informes de Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
  [Conceptos de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
  [Reporting Services &#40;SSRS&#41;](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  

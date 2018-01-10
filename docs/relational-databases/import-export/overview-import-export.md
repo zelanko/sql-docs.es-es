@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83f524dbbd4062735ea596b58d460ba93d590366
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 74f7d68b9e3feb4e65c1a287b69a580802719199
+ms.sourcegitcommit: fbbb050f43ecb780281b370ec73fdcd472eb0ecc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>Importar y exportar datos de SQL Server y de Azure SQL Database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede usar diversos métodos para importar y exportar datos de SQL Server y Azure SQL Database. Estos métodos incluyen instrucciones Transact-SQL, herramientas de línea de comandos y asistentes.
@@ -55,7 +55,7 @@ Si quiere diseñar una importación de datos personalizada, puede usar una de la
 Puede importar y exportar datos a archivos planos o a muchos otros formatos de archivos, bases de datos relacionales y servicios en la nube. Para obtener más información sobre estas opciones para herramientas específicas, vea los temas siguientes.
 -   Para el Asistente para importación y exportación de SQL Server, vea [Conectarse a orígenes de datos con el Asistente para importar y exportar de SQL Server](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md).
 -   Para SQL Server Integration Services, vea [Conexiones de Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md).
--   Para Azure Data Factory, vea [Conectores de Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-amazon-redshift-connector).
+-   Para Azure Data Factory, vea [Conectores de Azure Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-amazon-redshift-connector).
 
 ### <a name="commonly-used-data-formats"></a>Formatos de datos de uso frecuente
 

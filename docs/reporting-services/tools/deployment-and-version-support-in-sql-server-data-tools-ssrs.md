@@ -8,22 +8,20 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 caps.latest.revision: "19"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4889d5aabf66b97c4dfaae3c59117f678da4f6a1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 891047c2d748e5c3c07afc26af790619eda5e315
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Implementación y compatibilidad de versiones en SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] admite los escenarios siguientes:  
@@ -69,15 +67,15 @@ ms.lasthandoff: 12/05/2017
   
 |Tipo de archivo o proyecto|Versión|Crear informes|Publicar informes|Notas|  
 |--------------------------|-------------|--------------------|---------------------|-----------|  
-|Proyecto de servidor de informes<br /><br /> o bien<br /><br /> Proyecto de asistente de proyectos de servidor de informes|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]|Esquema de RDL 2016|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]||  
-|Proyecto de servidor de informes<br /><br /> o bien<br /><br /> Proyecto de asistente de proyectos de servidor de informes|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Esquema RDL 2014|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|Proyecto de servidor de informes<br /><br /> o bien<br /><br /> Proyecto de asistente de proyectos de servidor de informes|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Esquema RDL 2012|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|Proyecto de servidor de informes<br /><br /> o bien<br /><br /> Proyecto de asistente de proyectos de servidor de informes|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|Esquema RDL 2008 R2|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|Proyecto de servidor de informes<br /><br /> o bien<br /><br /> Proyecto de asistente de proyectos de servidor de informes|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Esquema RDL 2008|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Solo el servidor de informes|Actualiza localmente el esquema RDL 2003 y RDL 2005 al esquema RDL 2008.|  
+|Proyecto de servidor de informes<br /><br /> o Administrador de configuración de<br /><br /> Proyecto de asistente de proyectos de servidor de informes|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]|Esquema de RDL 2016|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]||  
+|Proyecto de servidor de informes<br /><br /> o Administrador de configuración de<br /><br /> Proyecto de asistente de proyectos de servidor de informes|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Esquema RDL 2014|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|Proyecto de servidor de informes<br /><br /> o Administrador de configuración de<br /><br /> Proyecto de asistente de proyectos de servidor de informes|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Esquema RDL 2012|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|Proyecto de servidor de informes<br /><br /> o Administrador de configuración de<br /><br /> Proyecto de asistente de proyectos de servidor de informes|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|Esquema RDL 2008 R2|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|Proyecto de servidor de informes<br /><br /> o Administrador de configuración de<br /><br /> Proyecto de asistente de proyectos de servidor de informes|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Esquema RDL 2008|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Solo el servidor de informes|Actualiza localmente el esquema RDL 2003 y RDL 2005 al esquema RDL 2008.|  
   
  Para obtener más información sobre la forma de abrir informes en una versión anterior del esquema de definición de informes, vea [Actualizar informes](../../reporting-services/install-windows/upgrade-reports.md). Para obtener más información sobre esquemas de definición de informe concretos, vea la [SQL Server RDL Specification](http://go.microsoft.com/fwlink/?linkid=116865).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Publicar orígenes de datos e informes](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
   
   

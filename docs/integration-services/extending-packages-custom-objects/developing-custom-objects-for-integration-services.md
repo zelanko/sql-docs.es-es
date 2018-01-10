@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c44e3342fa9c15ecb9924c9fa64a4bc5163a484b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 15c30b516ec8d2b19d0f54fb47281c74f7442ec0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Desarrollar objetos personalizados para Integration Services
   Cuando los objetos de flujo de datos y flujo de control que se incluyen con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no cumplen completamente los requisitos, puede desarrollar muchos tipos de objetos personalizados, entre los que se incluyen:  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/20/2017
   
  El modelo de objetos [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] facilita este desarrollo personalizado con clases base que proporcionan un marco coherente y confiable para su implementación personalizada.  
   
- Si no tiene que reutilizar la funcionalidad personalizada por varios paquetes, la tarea Script y el componente de script le proporcionan toda la eficacia de un lenguaje de programación administrado con significativamente menos código de infraestructura para escribir. Para obtener más información, consulte [Comparing Scripting Solutions and Custom Objects (Comparar soluciones de scripting y objetos personalizados)](../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md).  
+ Si no tiene que reutilizar la funcionalidad personalizada por varios paquetes, la tarea Script y el componente de script le proporcionan toda la eficacia de un lenguaje de programación administrado con significativamente menos código de infraestructura para escribir. Para obtener más información, consulte [Comparing Scripting Solutions and Custom Objects](../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md) (Comparar soluciones de scripting y objetos personalizados).  
   
 ## <a name="steps-in-developing-a-custom-object-for-integration-services"></a>Pasos para desarrollar un objeto personalizado para Integration Services  
  Cuando se desarrollar un objeto personalizado para su uso en [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], se desarrolla una biblioteca de clases (una DLL) que se cargará en tiempo de diseño y tiempo de ejecución por el Diseñador SSIS y por el tiempo de ejecución de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Los métodos más importantes que debe implementar no son métodos a los que llama desde su propio código, sino métodos que el tiempo de ejecución llama en los momentos adecuados para inicializar y validar su componente e invocar su funcionalidad.  
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Entrada de Blog, [Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references (El proceso de compilación de la solución de Visual Studio muestra una advertencia acerca de la dependencia indirecta del ensamblado de .NET Framework debido a referencias SSIS)](http://go.microsoft.com/fwlink/?LinkId=215662) en blogs.msdn.com.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Conservar objetos personalizados](../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)   
  [Generar, implementar y depurar objetos personalizados](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
   

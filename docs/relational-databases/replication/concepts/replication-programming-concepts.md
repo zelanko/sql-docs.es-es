@@ -8,7 +8,7 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cb1ef22a3a460926dc99f2afda21d7c1ecc0ad11
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f9f002cf0de0f7e6e78cd529182cb5e3d63ee3f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="replication-programming-concepts"></a>Conceptos de la programación de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ ms.lasthandoff: 11/17/2017
 |<xref:Microsoft.SqlServer.Replication>|Código administrado|Sincronización.|  
 |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|Código administrado|Creación de controladores de lógica de negocios para integrar la lógica personalizada con el proceso de sincronización de mezcla.|  
 |[Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Scripting|Administración y supervisión.|  
-|[Conceptos de los ejecutables del Agente de replicación](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|Scripting|Sincronización.|  
+|[Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|Scripting|Sincronización.|  
   
 ## <a name="example"></a>Ejemplo  
  En [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)], tienen que publicarse los datos de 200 representantes de ventas de todo el mundo. Los representantes de ventas viajan a menudo y necesitan utilizar equipos portátiles o asistentes digitales personales (PDA) para cambiar los datos de los clientes y agregar los pedidos nuevos. A continuación, los cambios tendrán que sincronizarse con el publicador cuando el representante de ventas conecte el portátil a la red.  

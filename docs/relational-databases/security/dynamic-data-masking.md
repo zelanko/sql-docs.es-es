@@ -17,11 +17,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bcd7c5ce901bf1083aa48ee2e1236226b13ce5ae
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a40b52ccc4839f63acbd1be1f9b2643552a44430
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="dynamic-data-masking"></a>Enmascaramiento de datos dinámicos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,14 +46,14 @@ Por ejemplo, un técnico de soporte técnico de un centro de llamadas puede iden
 ## <a name="defining-a-dynamic-data-mask"></a>Definición de una máscara dinámica de datos  
  Es posible definir una regla de enmascaramiento en una columna de una tabla, con el objetivo de ofuscar los datos de esa columna. Existen cuatro tipos de máscaras.  
   
-|Función|Descripción|Ejemplos|  
+|Función|Description|Ejemplos|  
 |--------------|-----------------|--------------|  
-|Valor de DB-Library|Enmascaramiento completo de acuerdo con los tipos de datos de los campos designados.<br /><br /> Para los tipos de datos String, use XXXX o un número menor de X si el tamaño del campo es inferior a 4 caracteres (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Para los tipos de datos numéricos, use un valor cero (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> En el caso de los tipos de datos de fecha y hora, use 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />En lo que respecta a los tipos de datos binarios, use un solo byte de valor 0 de ASCII (**binary**, **varbinary**, **image**).|Ejemplo de sintaxis de definición de columna: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Sintaxis modificada de ejemplo: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
-|Email|Método de enmascaramiento que expone la primera letra de una dirección de correo electrónico y el sufijo constante ".com", en el formato de una dirección de correo electrónico. . `aXXX@XXXX.com`.|Ejemplo de sintaxis de definición: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Sintaxis modificada de ejemplo: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()'`)|  
+|Valor predeterminado|Enmascaramiento completo de acuerdo con los tipos de datos de los campos designados.<br /><br /> Para los tipos de datos String, use XXXX o un número menor de X si el tamaño del campo es inferior a 4 caracteres (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Para los tipos de datos numéricos, use un valor cero (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> En el caso de los tipos de datos de fecha y hora, use 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />En lo que respecta a los tipos de datos binarios, use un solo byte de valor 0 de ASCII (**binary**, **varbinary**, **image**).|Ejemplo de sintaxis de definición de columna: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Sintaxis modificada de ejemplo: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
+|Email|Método de enmascaramiento que expone la primera letra de una dirección de correo electrónico y el sufijo constante ".com", en el formato de una dirección de correo electrónico. . `aXXX@XXXX.com`.|Ejemplo de sintaxis de definición: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Sintaxis modificada de ejemplo: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |Aleatorio|Una función de enmascaramiento aleatorio que se puede usar con cualquier tipo numérico a fin de enmascarar el valor original con uno aleatorio dentro de un intervalo especificado.|Ejemplo de sintaxis de definición: `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> Sintaxis modificada de ejemplo: `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
 |Cadena personalizada|Método de enmascaramiento que expone la primera y última letra y agrega una cadena de relleno personalizada en el medio. `prefix,[padding],suffix`<br /><br /> Nota: Si el valor original es demasiado corto como para que se complete toda la máscara, no se expondrá parte del prefijo o sufijo.|Ejemplo de sintaxis de definición: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> Sintaxis modificada de ejemplo: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> Otros ejemplos:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  No se necesita ningún permiso especial para crear una tabla una máscara dinámica de datos, solo los permisos de esquema estándares **CREATE TABLE** y **ALTER** .  
   
  Para agregar, reemplazar o quitar la máscara de una columna, se precisan los permisos **ALTER ANY MASK** y **ALTER** (este último, en la tabla). Se recomienda otorgar el permiso **ALTER ANY MASK** a un responsable de seguridad.  
@@ -197,7 +197,7 @@ ALTER TABLE Membership
 ALTER COLUMN LastName DROP MASKED;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   

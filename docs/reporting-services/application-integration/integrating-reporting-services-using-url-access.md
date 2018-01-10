@@ -8,9 +8,7 @@ ms.service:
 ms.component: application-integration
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - integrating reports [Reporting Services]
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
 caps.latest.revision: "32"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1706d9ad033ccb1517e73ebee6d13f0d749b9f9e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5f82228cfa6f52195c7d0836fe557aad9da068f2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>Integrar Reporting Services utilizando un acceso URL
   Con el acceso URL, el acceso a los informes se realiza a través de una dirección URL del servidor de informes. Una solicitud URL permite tener acceso a un servidor de informes concreto así como a los informes, recursos y otros elementos en la base de datos del servidor de informes. También puede personalizar la experiencia de visualización y navegación en los informes para los usuarios. La cadena de consulta de la dirección URL contiene la configuración de la información de los dispositivos, así como los parámetros de informe de destino del informe y la salida de representación elegida. La manera en el servidor de informes administra las solicitudes URL depende de los parámetros, los prefijos de parámetro y el tipo de elemento al que está teniendo acceso a través de la dirección URL.  
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/05/2017
  [Usar un acceso URL en una aplicación para Windows](../../reporting-services/application-integration/integrating-reporting-services-using-url-access-windows-application.md)  
  Describe cómo utilizar el acceso URL para integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en un entorno [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Integración de Reporting Services en las aplicaciones](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
  [Acceso URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)  
   

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 caps.latest.revision: "20"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 5f01391991a8e57d09da1888c541183962e488e5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 312db6c9454c0fca1f50d63d2d5135f2fb20f6db
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>Archivo de configuración RSReportServer.config
 El archivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** almacena valores que utiliza el servicio web del servidor de informes y los procesamientos en segundo plano. Todas las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se ejecutan dentro de un proceso único que lee la configuración almacenada en el archivo RSReportServer.config. Los servidores de informes de modo nativo y SharePoint usan el archivo RSReportServer.config, pero los dos modos no usan los mismos valores en el archivo de configuración. La versión del modo de SharePoint del archivo es más pequeña porque muchas de las configuraciones del modo de SharePoint se almacenan en las bases de datos de configuración de SharePoint y no en el archivo. En este tema se describe el archivo de configuración predeterminado que se instala en el modo nativo y en el modo de SharePoint, y algunos de los valores y comportamientos importantes que se controlan mediante el archivo de configuración.  
@@ -69,7 +67,7 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
 > [!NOTE]  
 >  En este tema, "entero máximo" hace referencia al valor INT_MAX de 2147483647.  Para obtener más información, vea [Límites enteros](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
   
-|Configuración|Description|Modo|  
+|Configuración|Description|Mode|  
 |-------------|-----------------|----------|  
 |**Dsn**|Especifica la cadena de conexión al servidor de base de datos que hospeda la base de datos del servidor de informes. Este valor está cifrado y se agrega al archivo de configuración al crear la base de datos del servidor de informes. Para SharePoint, la información de conexión de la base de datos se toma de la base de datos de configuración de SharePoint.|N,S|  
 |**ConnectionType**|Especifica el tipo de credenciales que el servidor de informes utiliza para conectarse a la base de datos del servidor de informes. Los valores válidos son **Default** e **Impersonate**. Se especifica**Default** si el servidor de informes se configura para utilizar un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o la cuenta de servicio para conectarse con la base de datos del servidor de informes. Se especifica**Impersonate** si el servidor de informes usa una cuenta de Windows para conectarse con la base de datos del servidor de informes.|N|  
@@ -108,7 +106,7 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
   
  La última columna de la tabla indica si el valor se aplica a un servidor de informes de modo nativo (N), un servidor de modo de SharePoint (S) o ambos.  
   
-|Configuración|Description|Modo|  
+|Configuración|Description|Mode|  
 |-------------|-----------------|----------|  
 |**Aplicación**|Contiene la configuración para las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|N|  
 |**Nombre**|Especifica las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Los valores válidos son ReportServerWebService o ReportManager.|N|  
@@ -137,7 +135,7 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
   
  La última columna de la tabla siguiente indica si el valor se aplica a un servidor de informes de modo nativo (N), un servidor de modo de SharePoint (S) o ambos.  
   
-|Configuración|Description|Modo|  
+|Configuración|Description|Mode|  
 |-------------|-----------------|----------|  
 |**AuthenticationTypes**|Especifica uno o más tipos de autenticación. Los valores válidos son: **RSWindowsNegotiate**, **RSWindowsKerberos**, **RSWindowsNTLM**, **RSWindowsBasic**y **Custom**.<br /><br /> Los tipos**RSWindows** y **Custom** se excluyen mutuamente.<br /><br /> **RSWindowsNegotiate**, **RSWindowsKerberos**, **RSWindowsNTLM**y **RSWindowsBasic** son acumulativos y se pueden utilizar juntos, como se muestra en el ejemplo de valor predeterminado anteriormente en esta sección.<br /><br /> Es necesario especificar varios tipos de autenticación si espera las solicitudes de una variedad de exploradores o aplicaciones cliente que utilizan diferentes tipos de autenticación.<br /><br /> No quite **RSWindowsNTLM**, de lo contrario limitará la compatibilidad del explorador a una parte de los tipos de explorador compatibles. Para obtener más información, vea [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).|N|  
 |**RSWindowsNegotiate**|El servidor de informes acepta tokens de seguridad de Kerberos o NTLM. Esta es la configuración predeterminada cuando el servidor de informes se ejecuta en modo nativo y la cuenta de servicio es de tipo Servicio de red. Dicha configuración se omite cuando el servidor de informes se ejecuta en modo nativo y la cuenta de servicio está configurada como cuenta de usuario de dominio.<br /><br /> Si se ha configurado una cuenta de dominio para la cuenta de servicio del servidor de informes y no se ha configurado un Nombre principal de servicio (SPN) para el servidor de informes, puede que esta configuración impida a los usuarios iniciar sesión en el servidor.|N|  
@@ -157,7 +155,7 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
   
  La última columna de la tabla siguiente indica si el valor se aplica a un servidor de informes de modo nativo (N), un servidor de modo de SharePoint (S) o ambos.  
   
-|Configuración|Description|Modo|  
+|Configuración|Description|Mode|  
 |-------------|-----------------|----------|  
 |**IsSchedulingService**|Especifica si el servidor de informes mantiene un conjunto de trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondientes a las programaciones y las suscripciones creadas por usuarios de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Los valores válidos son **True** (predeterminado) y **False**.<br /><br /> Este valor se ve afectado si se habilitan o deshabilitan características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usando la faceta Configuración de área expuesta para Reporting Services de Administración basada en directivas. Para obtener más información, vea [Iniciar y detener el servicio del servidor de informes](../../reporting-services/report-server/start-and-stop-the-report-server-service.md).|N,S|  
 |**IsNotificationService**|Especifica si el servidor de informes procesa notificaciones y entregas. Los valores válidos son **True** (predeterminado) y **False**. Cuando el valor es **False**, no se entregan suscripciones.<br /><br /> Este valor se ve afectado si se habilitan o deshabilitan características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usando la faceta Configuración de área expuesta para Reporting Services de Administración basada en directivas. Para obtener más información, vea [Iniciar y detener el servicio del servidor de informes](../../reporting-services/report-server/start-and-stop-the-report-server-service.md).|N,S|  
@@ -183,7 +181,7 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
   
  La última columna de la tabla siguiente indica si el valor se aplica a un servidor de informes de modo nativo (N), un servidor de modo de SharePoint (S) o ambos.  
   
-|Configuración|Description|Modo|  
+|Configuración|Description|Mode|  
 |-------------|-----------------|----------|  
 |**ReportServerUrl**|Especifica la URL del servidor de informes a la que se conecta el portal web. Solo modifique este valor si configura el portal web para conectarse a un servidor de informes en otra instancia o en un equipo remoto.|N,S|  
 |**ReportBuilderTrustLevel**|No modifique este valor; no es configurable. En [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y versiones posteriores, el Generador de informes solo se ejecuta en **FullTrust**. Para obtener más información, vea [Configurar el acceso al Generador de informes](../../reporting-services/report-server/configure-report-builder-access.md) . Para obtener más información sobre cómo interrumpir el modo de confianza parcial, vea [Funcionalidad de SQL Server Reporting Services no incluida en SQL Server 2016](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md).|N,S|  
@@ -236,14 +234,14 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
 |**Extension Name**|Especifica un ensamblado y un nombre descriptivo de la extensión de entrega. No modifique este valor.|  
 |**MaxRetries**|Especifica el número de veces que un servidor de informes reintentará una entrega si se produce un error en el primer intento. El valor predeterminado es 3.|  
 |**SecondsBeforeRetry**|Especifica el intervalo de tiempo (en segundos) entre cada reintento. El valor predeterminado es 900.|  
-|**Configuration**|Contiene el valor de configuración específico de cada extensión de entrega.|  
+|**Configuración**|Contiene el valor de configuración específico de cada extensión de entrega.|  
   
 ####  <a name="bkmk_fileshare_extension"></a> Opciones de configuración para de la extensión de entrega a recursos compartidos de archivos  
  La entrega a recursos compartidos de archivos envía un informe exportado a un formato de archivo de aplicación a una carpeta compartida de la red. Para obtener más información, vea [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md).  
   
 |Configuración|Description|  
 |-------------|-----------------|  
-|**ExcludedRenderFormats**, **RenderingExtension**|Esta configuración se utiliza para excluir de forma intencionada los formatos de exportación que no funcionan correctamente con la entrega a recursos compartidos de archivos. Estos formatos se utilizan normalmente para informes interactivos, vistas previas o la carga previa de la caché de informes. No generan archivos de aplicación que puedan verse fácilmente desde una aplicación de escritorio.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> Null|  
+|**ExcludedRenderFormats**, **RenderingExtension**|Esta configuración se utiliza para excluir de forma intencionada los formatos de exportación que no funcionan correctamente con la entrega a recursos compartidos de archivos. Estos formatos se utilizan normalmente para informes interactivos, vistas previas o la carga previa de la caché de informes. No generan archivos de aplicación que puedan verse fácilmente desde una aplicación de escritorio.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> NULL|  
   
 ####  <a name="bkmk_email_extension"></a> Opciones de configuración de la extensión de correo electrónico del servidor de informes  
  El correo electrónico del servidor de informes utiliza un dispositivo de red SMTP para enviar los informes a las direcciones de correo electrónico. Esta extensión de entrega se debe configurar antes de poderse utilizar. Para obtener más información, vea [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83) y [Entrega por correo electrónico en Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
@@ -261,8 +259,8 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
 |**De**|Especifica una dirección de correo electrónico desde la que se envían informes, en el formato *abc@host.xyz*. La dirección aparece en la línea **De** de un mensaje de correo electrónico saliente. Este valor se requiere si se utiliza un servicio SMTP remoto. Debe ser una cuenta de correo electrónico válida que tenga permiso para enviar mensajes.|  
 |**EmbeddedRenderFormats, RenderingExtension**|Especifica el formato de representación utilizado para encapsular un informe en el cuerpo de un mensaje de correo electrónico. Las imágenes dentro del informe se incrustan a continuación en el mismo. Los valores válidos son MHTML y HTML4.0.|  
 |**PrivilegedUserRenderFormats**|Especifica los formatos de representación que puede seleccionar un usuario para la suscripción a un informe cuando la suscripción se haya habilitado mediante la tarea "Administrar todas las suscripciones". Si no se ha establecido este valor, todos los formatos de representación que no se hayan excluido de forma intencionada estarán disponibles.|  
-|**ExcludedRenderFormats, RenderingExtension**|Excluye explícitamente los formatos que no funcionan bien con una extensión de entrega determinada. No se pueden excluir varias instancias de la misma extensión de representación. Si se excluyen varias instancias, se producirá un error cuando el servidor de informes lea el archivo de configuración. De forma predeterminada, las siguientes extensiones se excluyen para la entrega por correo electrónico:<br /><br /> HTMLOWC<br /><br /> Null<br /><br /> RGDI|  
-|**SendEmailToUserAlias**|Este valor funciona con **DefaultHostName**.<br /><br /> Cuando **SendEmailToUserAlias** se establece en **True**, los usuarios que definan suscripciones individuales se especificarán automáticamente como destinatarios del informe. El campo **Para** está oculto. Si el valor es **False**, el campo **Para** está visible. Establezca este valor en **True** si desea ejercer el máximo control sobre la distribución de informes. Los valores válidos incluyen los siguientes:<br /><br /> **True**: se usa la dirección de correo electrónico del usuario que crea la suscripción. Es el valor predeterminado.<br /><br /> **False**: se puede especificar cualquier dirección de correo electrónico.|  
+|**ExcludedRenderFormats, RenderingExtension**|Excluye explícitamente los formatos que no funcionan bien con una extensión de entrega determinada. No se pueden excluir varias instancias de la misma extensión de representación. Si se excluyen varias instancias, se producirá un error cuando el servidor de informes lea el archivo de configuración. De forma predeterminada, las siguientes extensiones se excluyen para la entrega por correo electrónico:<br /><br /> HTMLOWC<br /><br /> NULL<br /><br /> RGDI|  
+|**SendEmailToUserAlias**|Este valor funciona con **DefaultHostName**.<br /><br /> Cuando **SendEmailToUserAlias** se establece en **True**, los usuarios que definan suscripciones individuales se especificarán automáticamente como destinatarios del informe. El campo **Para** está oculto. Si el valor es **False**, el campo **Para** está visible. Establezca este valor en **True** si desea ejercer el máximo control sobre la distribución de informes. Los valores válidos incluyen los siguientes:<br /><br /> **True**: se usa la dirección de correo electrónico del usuario que crea la suscripción. Este es el valor predeterminado.<br /><br /> **False**: se puede especificar cualquier dirección de correo electrónico.|  
 |**DefaultHostName**|Este valor funciona con **SendEmailToUserAlias**.<br /><br /> Especifica un valor de cadena que indica el nombre de host que se anexará al alias de usuario cuando se haya establecido **SendEmailToUserAlias** en True. Este valor puede ser un nombre del Sistema de nombres de dominio (DNS) o una dirección IP.|  
 |**PermittedHosts**|Limita la distribución de informes especificando explícitamente qué hosts pueden recibir entregas por correo electrónico. En **PermittedHosts**, cada host se especifica como un elemento **HostName** , donde el valor es una dirección IP o un nombre DNS.<br /><br /> Los únicos destinatarios válidos son las cuentas de correo electrónico definidas para el host. Si especificó **DefaultHostName**, asegúrese de incluir ese host como elemento **HostName** de **PermittedHosts**. Este valor debe ser uno o varios nombres DNS o direcciones IP. De manera predeterminada, este valor no está establecido. En ese caso, no existen restricciones sobre quién puede recibir informes por correo electrónico.|  
   
@@ -328,9 +326,9 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
   
  Para obtener información sobre los atributos del elemento secundario **\<Extension>**, supeditado a **\<Render>**, consulte lo siguiente:  
   
--   [Personalizar los parámetros de extensión de representación en RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
+-   [Personalización de los parámetros de extensión de representación en RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
--   [Implementar una extensión de representación](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)  
+-   [Implementación de una extensión de representación](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)  
   
  No modifique esta sección a menos que esté implementando una extensión de representación personalizada. Para obtener más información, vea [Implementing a Rendering Extension](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md).  
   
@@ -843,7 +841,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
 </Configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Configurar la memoria disponible para las aplicaciones del servidor de informes](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
  [Archivos de configuración de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   

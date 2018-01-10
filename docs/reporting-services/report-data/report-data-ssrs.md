@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e22b7c24-edab-42d6-82f6-95068e1c6043
 caps.latest.revision: "16"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d1581775de3bf36ecfd3153918ff4457b8d6dde7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 17eb836e4784a5f846f769b63c6002fc60af0bf5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-data-ssrs"></a>Datos de informe (SSRS)
   Los datos del informe pueden proceder de varios orígenes de datos de la organización. El primer paso para diseñar un informe es crear orígenes de datos y conjuntos de datos que representan los datos de informes subyacentes. Cada origen de datos incluye información de conexión de datos. Cada conjunto de datos incluye un comando de consulta que define el conjunto de campos que se van a usar como datos de un origen de datos. Para ver los datos de cada conjunto de datos, agregue una región de datos, como una tabla, una matriz, un gráfico o un mapa. Cuando se procesa el informe, las consultas se ejecutan en el origen de datos y cada región de datos se expande según sea necesario para mostrar los resultados de la consulta para el conjunto de datos.  
@@ -81,7 +79,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Las credenciales del origen de datos varían según el tipo de origen de datos y de si los informes se muestran en el cliente, en el servidor de informes o en el sitio de SharePoint. Para más información, vea [Establecer permisos para elementos del servidor de informes en un sitio de SharePoint &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md), [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) e información de credenciales específica de cada herramienta en [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Las tareas relacionadas con crear conexiones de datos, agregar datos de orígenes externos, conjuntos de datos y consultas.  
   
 |||  
@@ -90,7 +88,7 @@ ms.lasthandoff: 12/05/2017
 |Crear conexiones de datos|[Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |Crear conjuntos de datos y consultas|[Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|  
 |Administrar orígenes de datos después de que se publican|[Administrar orígenes de datos de informe](../../reporting-services/report-data/manage-report-data-sources.md)|  
-|Administrar conjuntos de datos compartidos cuando se publican|[Administrar conjuntos de datos compartidos](../../reporting-services/report-data/manage-shared-datasets.md)|  
+|Administrar conjuntos de datos compartidos cuando se publican|[Administración de conjuntos de datos compartidos](../../reporting-services/report-data/manage-shared-datasets.md)|  
 |Crear y administrar alertas de datos|[Alertas de datos de Reporting Services](../../reporting-services/reporting-services-data-alerts.md)|  
 |Almacenar en caché un conjunto de datos compartido|[Almacenar en caché conjuntos de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)|  
 |Programar un conjunto de datos compartido para cargar previamente la memoria caché|[Programaciones](../../reporting-services/subscriptions/schedules.md)|  

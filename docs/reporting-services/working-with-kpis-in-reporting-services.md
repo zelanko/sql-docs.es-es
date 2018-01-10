@@ -8,20 +8,20 @@ ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 caps.latest.revision: "13"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 815c9eee34a0104f08958a9bbdf01407ac601e3d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a565e8722385438bddf7b4f01d93ca0be05986f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Uso de los KPI en Reporting Services
 
@@ -61,7 +61,7 @@ Puede asignar valores estáticos o utilizar los datos de un conjunto de datos co
 |Campo|Description|  
 |---|---|  
 |Formato del valor|  Se utiliza para cambiar el formato del valor que se muestra.|   
-|Value|El valor para mostrar del KPI.|  
+|Valor|El valor para mostrar del KPI.|  
 |Objetivo|Se utiliza como comparación con un valor numérico y se muestra en forma de diferencia porcentual.|  
 |Estado|Valor numérico que se usa para determinar el color del icono de KPI. Los valores válidos son 1 (verde), 0 (ámbar) y -1 (rojo).|  
 |Conjunto de tendencias|Valores numéricos separados por comas usados para la visualización de gráficos. También puede establecerse en una columna de un conjunto de datos con valores que representen la tendencia.|  

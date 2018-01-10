@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ea493c80dba54d0c9b497c7c41423d24764a9533
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: addd20b5bf083ad99b0d877f519f86170ac2a57c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Imágenes, cuadros de texto rectángulos y líneas (Generador de informes y SSRS)
   Además de regiones de datos como tablas, matrices y gráficos, los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] usan otros elementos de informe, como imágenes, cuadros de texto y rectángulos, para agregar interés visual, resaltar información clave o proporcionar información relacionada. Puede cambiar el formato de un elemento de informe. Por ejemplo, puede agregar un borde o un relleno, cambiar la visibilidad o la dirección inicial, o especificar una ubicación y un tamaño determinados para el elemento.  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/05/2017
  [Imágenes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)  
  Las imágenes muestran los datos de imagen binarios de un informe. Debe proporcionar el origen para la imagen. El origen puede ser una referencia de URL a una imagen almacenada en un servidor web, una referencia a datos de imagen incrustados o una referencia a datos de imagen binarios de una base de datos. El Generador de informes y el Diseñador de informes admiten archivos .bmp, .jpeg, .gif y .png.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Aplicar formato a los elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
   
   

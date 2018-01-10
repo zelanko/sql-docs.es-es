@@ -32,11 +32,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 12291b23c9204aaf030c3a8f093fe05bf4712721
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: dfc99736884d458bdbce890bfcc4f80185115b29
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Convenciones de sintaxis de Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,8 +52,8 @@ ms.lasthandoff: 11/18/2017
 |&#124; (barra vertical)|Separa los elementos de sintaxis escritos entre corchetes o llaves. Solo puede utilizar uno de los elementos.|  
 |`[ ]` (corchetes)|Elementos opcionales de sintaxis. No escriba los corchetes.|  
 |{} (llaves)|Elementos obligatorios de sintaxis. No escriba las llaves.|  
-|[**,**…*n*]|Indica que el elemento anterior puede repetirse *n* veces. Cada repetición se separa de la siguiente con una coma.|  
-|[...*n*]|Indica que el elemento anterior puede repetirse *n* veces. Cada repetición se separa del siguiente con un espacio en blanco.|  
+|[**,**...*n*]|Indica que el elemento anterior puede repetirse  *n*  número de veces. Cada repetición se separa de la siguiente con una coma.|  
+|[...*n*]|Indica que el elemento anterior puede repetirse  *n*  número de veces. Cada repetición se separa del siguiente con un espacio en blanco.|  
 |;|Terminador de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)]. Aunque el punto y coma no se requiere en la mayoría de las instrucciones de esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se requerirá en una versión futura.|  
 |\<etiqueta >:: =|Nombre de un bloque de sintaxis. Esta convención sirve para agrupar y etiquetar secciones de sintaxis extensas o una unidad de sintaxis que se puede usar en varias ubicaciones dentro de una instrucción. Cada ubicación en la que se puede utilizar el bloque de sintaxis se indica con la etiqueta incluida entre comillas angulares: \<etiqueta >.<br /><br /> Un conjunto es una colección de expresiones, por ejemplo \<conjunto de agrupaciones >; y una lista es una colección de conjuntos, por ejemplo \<lista de elementos compuestos >.|  
   
@@ -118,9 +118,9 @@ ms.lasthandoff: 11/18/2017
  Constantes de cadena de caracteres Unicode con la letra de prefijo de muchos ejemplos de código **N**. Sin el **N** prefijo, la cadena se convierte en la página de códigos predeterminada de la base de datos. Esta página de códigos predeterminada puede no reconocer determinados caracteres.  
   
 ## <a name="applies-to-references"></a>Referencias de "Se aplica a"  
- El [!INCLUDE[tsql](../../includes/tsql-md.md)] referencia incluye temas relacionados con [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], y [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]. En la parte superior de cada tema hay una sección que indica qué productos son compatibles con el tema. Si se omite un producto, la función descrita en el tema no estará disponible en ese producto. Por ejemplo, los grupos de disponibilidad se introdujeron en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. El **crear grupo de disponibilidad** tema indica que se aplica a **SQL Server (SQL Server 2012 a través de la versión actual)** porque no se aplica a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ El [!INCLUDE[tsql](../../includes/tsql-md.md)] referencia incluye artículos relacionados con [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], y [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]. En la parte superior de cada artículo es una sección que indica qué productos son compatibles con el asunto del artículo. Si se omite un producto, la característica descrita en este artículo no está disponible en ese producto. Por ejemplo, los grupos de disponibilidad se introdujeron en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. El **CREATE AVAILABILITY GROUP** artículo indica que se aplica a **SQL Server (SQL Server 2012 a través de la versión actual)** porque no se aplica a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- En algunos casos, puede utilizarse el tema general de un producto, pero no se admiten todos los argumentos. Por ejemplo, los usuarios de bases de datos independientes se introdujeron en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. El **CREATE USER** instrucción se puede usar en cualquier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] producto, sin embargo, el **WITH PASSWORD** sintaxis no se puede usar con versiones anteriores. En este caso, las secciones **Se aplica a** adicionales se insertan en las descripciones del argumento correspondiente en el cuerpo del tema.  
+ En algunos casos, el asunto general del artículo puede usarse en un producto, pero no se admiten todos los argumentos. Por ejemplo, los usuarios de bases de datos independientes se introdujeron en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. El **CREATE USER** instrucción se puede usar en cualquier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] producto, sin embargo, el **WITH PASSWORD** sintaxis no se puede usar con versiones anteriores. En este caso, adicional **se aplica a** secciones se insertan en las descripciones del argumento correspondiente en el cuerpo del artículo.  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de Transact-SQL &#40;motor de base de datos&#41;](../../t-sql/transact-sql-reference-database-engine.md)  

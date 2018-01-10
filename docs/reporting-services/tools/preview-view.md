@@ -8,30 +8,28 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rtp.rptdesigner.previewview.f1
 helpviewer_keywords: Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 caps.latest.revision: "36"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8bc7aa1def90295e81b98ab91a505219b3ce08f7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6ff72cb8ca44709cabd38f122c87150f901bb476
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="preview-view"></a>Vista previa, vista
 En el Diseñador de informes de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , use la vista **Vista previa** para mostrar el informe representado. Antes de abrir un informe en Vista previa, el Diseñador de informes lo ejecuta localmente. En el modo de vista previa, el informe se procesa por completo. Si el informe tiene una consulta compleja o una gran cantidad de datos, es posible que se necesiten algunos minutos para que se complete la vista previa la primera vez que la muestre. Para los cambios posteriores que solo afectan al formato del informe, la vista previa utiliza datos en caché.
 
   ![ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png)  
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  Use la barra de herramientas para administrar las funciones de vista previa.  
 
 ![ssrs_ssdt_viewer_toolbar](../../reporting-services/tools/media/ssrs-ssdt-viewer-toolbar.png)
@@ -90,8 +88,8 @@ En el Diseñador de informes de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsn
  **(18) Buscar siguiente**  
  Elija esta opción para buscar la siguiente aparición del texto de búsqueda.  
   
-## <a name="see-also"></a>Vea también  
-+ [Obtener la vista previa de informes](../../reporting-services/reports/previewing-reports.md)
+## <a name="see-also"></a>Ver también  
++ [Vista previa de informes](../../reporting-services/reports/previewing-reports.md)
 + [Diseñador de informes (Ayuda F1)](../../reporting-services/tools/report-designer-f1-help.md)  
   
   

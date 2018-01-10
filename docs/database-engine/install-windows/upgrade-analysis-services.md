@@ -8,7 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +26,11 @@ caps.latest.revision: "79"
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.openlocfilehash: ec21983a07b5f61359912f90a4e32731de7ce8b4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4286f2266d115d39ad97ff3f6255187e7a01d968
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="upgrade-analysis-services"></a>Actualizar Analysis Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Es posible actualizar las instancias de Analysis Services a una versión de SQL Server del mismo modo de servidor con el objetivo de aprovechar las características que incorpora la nueva versión, tal y como se describe en [What's New in Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md) (Novedades de Analysis Services).  

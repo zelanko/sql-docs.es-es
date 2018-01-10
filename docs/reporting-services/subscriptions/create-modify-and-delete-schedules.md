@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,17 +25,17 @@ helpviewer_keywords:
 - shared schedules [Reporting Services], deleting
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 caps.latest.revision: "50"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 32fe1afefa899880710a818c56eef4079fe90622
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6d89557d71739545d4f119363273951a20953429
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="create-modify-and-delete-schedules"></a>Crear, modificar y eliminar programaciones
+# <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   Use este tema para obtener información sobre cómo crear, modificar y eliminar programaciones compartidas de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] .  Para administrar programaciones compartidas para el modo nativo, use la página Programaciones del portal web o la carpeta Programaciones compartidas de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para el modo de SharePoint, use las páginas de administración para la aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Use uno de los métodos siguientes para determinar si una programación compartida se usa de forma activa:  
@@ -146,7 +144,7 @@ Haga clic en **Cancelar**.
 4.  Seleccione la programación y haga clic en **Eliminar**.  
  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Schedules](../../reporting-services/subscriptions/schedules.md)   
  [Pausar y reanudar las programaciones compartidas](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
  [Almacenar en caché un informe &#40;Administrador de informes&#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   

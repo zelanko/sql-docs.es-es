@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,15 +24,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services]
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 caps.latest.revision: "56"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 403303e6820196353b8365975d83ed8368d8e372
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 00bc203ff747d93febf4ac625fcc261b497bc3ff
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Suscripciones y entrega (Reporting Services)
   Una suscripción [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es una configuración que entrega un informe a una hora concreta o a raíz de un evento. Lo hace en el formato de archivo que se especifique. Por ejemplo, todos los miércoles, se guarda el informe VentasMensuales en formato de documento Microsoft Word en un recurso compartido de archivos. Las suscripciones se pueden utilizar para programar y automatizar la entrega de un informe con un conjunto concreto de valores de parámetros de informes.  
@@ -109,7 +107,7 @@ ms.lasthandoff: 12/05/2017
   
 |Requisito|Description|  
 |-----------------|-----------------|  
-|Permissions|Debe tener acceso al informe. Para poder suscribirse a un informe, debe tener permiso para verlo.<br /><br /> Para los servidores de informes en modo nativo, las asignaciones de roles siguientes afectan a las suscripciones:<br /><br /> - La tarea "Administrar suscripciones individuales" permite a los usuarios crear, modificar y eliminar suscripciones correspondientes a un informe específico. En los roles predefinidos, esta tarea forma parte de los roles Explorador y Generador de informes. Las asignaciones de roles que incluyen esta tarea permiten al usuario administrar únicamente las suscripciones que crea.<br />- La tarea "Administrar todas las suscripciones" permite a los usuarios acceder a todas las suscripciones y modificarlas. Esta tarea es necesaria para crear suscripciones controladas por datos. En los roles predefinidos, solo el rol Administrador de contenido incluye esta tarea.|  
+|Permisos|Debe tener acceso al informe. Para poder suscribirse a un informe, debe tener permiso para verlo.<br /><br /> Para los servidores de informes en modo nativo, las asignaciones de roles siguientes afectan a las suscripciones:<br /><br /> - La tarea "Administrar suscripciones individuales" permite a los usuarios crear, modificar y eliminar suscripciones correspondientes a un informe específico. En los roles predefinidos, esta tarea forma parte de los roles Explorador y Generador de informes. Las asignaciones de roles que incluyen esta tarea permiten al usuario administrar únicamente las suscripciones que crea.<br />- La tarea "Administrar todas las suscripciones" permite a los usuarios acceder a todas las suscripciones y modificarlas. Esta tarea es necesaria para crear suscripciones controladas por datos. En los roles predefinidos, solo el rol Administrador de contenido incluye esta tarea.|  
 |Credenciales almacenadas|Para crear una suscripción, el informe debe utilizar credenciales almacenadas o ninguna credencial para recuperar datos en tiempo de ejecución. No puede suscribirse a un informe configurado para usar las credenciales representadas o delegadas del usuario actual para conectarse a un origen de datos externo. Las credenciales almacenadas pueden ser una cuenta de Windows o una cuenta de usuario de base de datos. Para más información, vea [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).<br /><br /> Debe tener el permiso para ver el informe y crear suscripciones individuales. La opción**Eventos programados y entrega de informes** debe estar habilitada en el servidor de informes. Para más información, vea [Crear y administrar suscripciones para servidores de informes en modo nativo](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).|  
 |Valores dependientes de usuario en un informe|Únicamente en el caso de las suscripciones estándar, es posible crear suscripciones a informes que incluyan información de cuenta de usuario en un filtro o como texto que aparezca en el informe. En el informe, el nombre de la cuenta de usuario se especifica con una expresión **User!UserID** que da como resultado el usuario actual. Cuando se crea una suscripción, se considera que el usuario actual es el que la crea.|  
 |Sin seguridad de elemento de modelo|No es posible suscribirse a un informe del Generador de informes que utilice como origen de datos un modelo si éste contiene una configuración de seguridad de elementos de modelo. Esta restricción solo se aplica a los informes que utilizan seguridad de elementos de modelo.|  
@@ -125,7 +123,7 @@ ms.lasthandoff: 12/05/2017
 |Recurso compartido de archivos de Windows|Entrega un informe como un archivo de aplicación estática a una carpeta compartida accesible en la red.|  
 |Correo electrónico|Entrega una notificación o un informe como datos adjuntos de correo electrónico o como vínculo de dirección URL.|  
 |Biblioteca de SharePoint|Entrega un informe como un archivo de aplicación estática a una biblioteca de SharePoint accesible desde un sitio de SharePoint. El sitio se debe integrar con un servidor de informes que se ejecuta en el modo integrado con SharePoint.|  
-|Null|El proveedor de entrega NULL es una extensión de entrega muy especializada que se usa para cargar previamente una memoria caché con informes con parámetros listos para ver. Este método no está disponible para los usuarios en suscripciones individuales. La entrega NULL la usan los administradores en suscripciones controladas por datos para mejorar el rendimiento del servidor de informes, mediante una carga previa en la memoria caché.|  
+|NULL|El proveedor de entrega NULL es una extensión de entrega muy especializada que se usa para cargar previamente una memoria caché con informes con parámetros listos para ver. Este método no está disponible para los usuarios en suscripciones individuales. La entrega NULL la usan los administradores en suscripciones controladas por datos para mejorar el rendimiento del servidor de informes, mediante una carga previa en la memoria caché.|  
   
 > [!NOTE]  
 >  La entrega de informes es una parte extensible de la arquitectura de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Otros fabricantes pueden crear extensiones de entrega personalizadas para enrutar informes a distintas ubicaciones o dispositivos. Para obtener más información acerca de las extensiones de entrega personalizadas, vea [Implementing a Delivery Extension](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md).  
@@ -180,7 +178,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="bkmk_code"></a> Control programático de suscripciones  
  El modelo de objetos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le permite auditar y controlar las suscripciones y el procesamiento de las suscripciones mediante programación.  Consulte lo siguiente para obtener ejemplos y una introducción:  
   
--   [Use PowerShell para cambiar y enumerar a los propietarios de una suscripción de Reporting Services y ejecutar una suscripción](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
+-   [Uso de PowerShell para cambiar y enumerar a los propietarios de una suscripción de Reporting Services y ejecutar una suscripción](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   
 -   Para obtener ejemplos de cómo usar PowerShell para habilitar y deshabilitar las suscripciones, consulte [Disable or Pause Report and Subscription Processing](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).  
   
@@ -188,7 +186,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Para ver un script de PowerShell de ejemplo donde se muestra una lista de todas las suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que están configuradas para usar la **Cuenta de recurso compartido de archivos**, vea [Configuración de la suscripción y una cuenta de recurso compartido de archivos &#40;Configuration Manager&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Programaciones](../../reporting-services/subscriptions/schedules.md)   
  [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   

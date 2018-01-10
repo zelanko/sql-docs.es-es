@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 caps.latest.revision: "7"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 946210d52bfd883e4cf26e2664fef9254f7e6086
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9a7cc41553ca20061bebb29a5956cf48ebede673
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="manage-shared-datasets"></a>Administrar conjuntos de datos compartidos
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], los conjuntos de datos compartidos recuperan los datos de los orígenes de datos compartidos que se conectan a los orígenes de datos externos. Un conjunto de datos compartido proporciona una manera de compartir una consulta para ayudar a proporcionar un conjunto coherente de datos para varios informes. La consulta del conjunto de datos puede incluir parámetros de conjunto de datos. Puede configurar un conjunto de datos compartido para almacenar en memoria caché los resultados de la consulta para combinaciones de parámetros concretas al usarse por primera vez o especificando una programación. Puede utilizar el almacenamiento en caché del conjunto de datos compartido en combinación con el almacenamiento en caché de los informes y las fuentes de datos de informe para ayudar a administrar el acceso a un origen de datos.  
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/05/2017
  Para utilizar un conjunto de datos compartido en un informe, abra una aplicación como el Generador de informes, busque el servidor de informes o el sitio de SharePoint y seleccione el conjunto de datos compartido. De este modo, agrega una instancia del conjunto de datos compartido al informe. En el informe, no puede ver ni cambiar la consulta o el origen de datos compartido para el conjunto de datos compartido. Puede especificar un conjunto adicional de valores de propiedad del conjunto de datos que se apliquen a la instancia en el informe. Por ejemplo, puede agregar un filtro o cambiar opciones de datos como la distinción entre mayúsculas y minúsculas. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) en la [documentación del Generador de informes](http://go.microsoft.com/fwlink/?LinkId=154494) en msdn.microsoft.com.  
   
 ## <a name="managing-shared-datasets"></a>Administrar los conjuntos de datos compartidos  
- Para administrar las propiedades de un conjunto de datos compartidos publicado, puede usar el Administrador de informes para un servidor de informes en modo nativo o las páginas de aplicación de un sitio de SharePoint, si implementó el servidor de informes en el modo integrado de SharePoint. Las tareas que puede realizar en un conjunto de datos compartido dependen de sus asignaciones de roles y de los permisos del nivel de sitio y de elemento, incluidos los permisos de la carpeta, si la herencia de permisos está en vigor. La seguridad en el nivel de elemento de los conjuntos de datos compartidos sigue el mismo modelo que la de los informes. Para más información, vea [Proteger los elementos de un conjunto de datos compartido](../../reporting-services/security/secure-shared-dataset-items.md).  
+ Para administrar las propiedades de un conjunto de datos compartidos publicado, puede usar el Administrador de informes para un servidor de informes en modo nativo o las páginas de aplicación de un sitio de SharePoint, si implementó el servidor de informes en el modo integrado de SharePoint. Las tareas que puede realizar en un conjunto de datos compartido dependen de sus asignaciones de roles y de los permisos del nivel de sitio y de elemento, incluidos los permisos de la carpeta, si la herencia de permisos está en vigor. La seguridad en el nivel de elemento de los conjuntos de datos compartidos sigue el mismo modelo que la de los informes. Para obtener más información, vea [Proteger los elementos de un conjunto de datos compartido](../../reporting-services/security/secure-shared-dataset-items.md).  
   
  Puede administrar las propiedades de elementos de conjuntos de datos compartidas, incluido el origen de datos compartido que se utilizará, independientemente del informe que use el conjunto de datos compartido o el origen de datos compartido del que dependa. Para cambiar la consulta u otras propiedades de conjunto de datos que forman parte de la definición del conjunto de datos compartido, debe modificar la definición.  
   
@@ -127,7 +125,7 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 -   Siguen las mismas reglas para especificar los valores de parámetros que las suscripciones.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Concesión de permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   

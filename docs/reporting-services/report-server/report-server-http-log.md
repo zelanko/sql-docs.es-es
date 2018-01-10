@@ -8,23 +8,21 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 caps.latest.revision: "15"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e7e004056a630e55ef90112c909b77ca7e801c4d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0c05dfdbb99322caa42412c9d2bc2636625cf0b7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-http-log"></a>Registro HTTP del servidor de informes
   El archivo de registro HTTP del servidor de informes guarda un registro de cada solicitud y respuesta HTTP administradas por el servidor de informes. Dado que los errores de desbordamiento y de tiempo de espera de la solicitud no alcanzan el servidor de informes, no se graban en el archivo de registro.  
@@ -63,29 +61,29 @@ ms.lasthandoff: 12/05/2017
 ## <a name="log-file-fields"></a>Campos del archivo de registro  
  En la tabla siguiente se describen los campos disponibles en el registro. La lista de campos es configurable; puede especificar qué campos desea incluir mediante el valor de configuración **HTTPTraceSwitches** . La columna **Predeterminado** indica si el campo se incluirá automáticamente en el archivo de registro si no especifica **HTTPTraceSwitches**.  
   
-|Campo|Description|Predeterminado|  
+|Campo|Description|Valor predeterminado|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|Este valor es opcional. El valor predeterminado es ReportServerServiceHTTP_. Puede especificar un valor diferente si desea utilizar una convención de nomenclatura de archivos diferente (por ejemplo, para incluir el nombre de servidor si guarda los archivos de registro en una ubicación central).|Sí|  
-|HTTPTraceSwitches|Este valor es opcional. Si lo especifica, puede configurar los campos utilizados en el archivo de registro con un formato separado por comas.|No|  
-|Date|Fecha en que se produjo la actividad.|No|  
-|Time|Hora en que se produjo la actividad.|No|  
+|HTTPTraceSwitches|Este valor es opcional. Si lo especifica, puede configurar los campos utilizados en el archivo de registro con un formato separado por comas.|no|  
+|date|Fecha en que se produjo la actividad.|no|  
+|Time|Hora en que se produjo la actividad.|no|  
 |ClientIp|Dirección IP del cliente que tiene acceso al servidor de informes.|Sí|  
-|UserName|Nombre del usuario que tuvo acceso al servidor de informes.|No|  
-|ServerPort|Número de puerto utilizado para la conexión.|No|  
-|Host|Contenido del encabezado de host.|No|  
+|UserName|Nombre del usuario que tuvo acceso al servidor de informes.|no|  
+|ServerPort|Número de puerto utilizado para la conexión.|no|  
+|Host|Contenido del encabezado de host.|no|  
 |Método|Acción o método SOAP llamado desde el cliente.|Sí|  
 |UriStem|Recurso al que se obtuvo acceso.|Sí|  
-|UriQuery|Consulta utilizada para tener acceso al recurso.|No|  
+|UriQuery|Consulta utilizada para tener acceso al recurso.|no|  
 |ProtocolStatus|Código de estado HTTP.|Sí|  
-|BytesReceived|Número de bytes recibidos por el servidor.|No|  
-|TimeTaken|Tiempo transcurrido (en milisegundos) desde que el HTTP.SYS instantáneo devuelve los datos de la solicitud hasta que el servidor finaliza el último envío, excluido el tiempo de transmisión por la red.|No|  
-|ProtocolVersion|Versión de protocolo utilizada por el cliente.|No|  
-|UserAgent|Tipo de explorador utilizado por el cliente.|No|  
-|CookieReceived|Contenido de la cookie recibida por el servidor.|No|  
-|CookieSent|Contenido de la cookie enviada por el servidor.|No|  
-|Referrer|Sitio anterior visitado por el cliente.|No|  
+|BytesReceived|Número de bytes recibidos por el servidor.|no|  
+|TimeTaken|Tiempo transcurrido (en milisegundos) desde que el HTTP.SYS instantáneo devuelve los datos de la solicitud hasta que el servidor finaliza el último envío, excluido el tiempo de transmisión por la red.|no|  
+|ProtocolVersion|Versión de protocolo utilizada por el cliente.|no|  
+|UserAgent|Tipo de explorador utilizado por el cliente.|no|  
+|CookieReceived|Contenido de la cookie recibida por el servidor.|no|  
+|CookieSent|Contenido de la cookie enviada por el servidor.|no|  
+|Referrer|Sitio anterior visitado por el cliente.|no|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Registro de seguimiento del servicio del servidor de informes](../../reporting-services/report-server/report-server-service-trace-log.md)   
  [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Referencia de errores y eventos &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

@@ -8,21 +8,19 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 caps.latest.revision: "15"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.openlocfilehash: efcee36bb392786b5af57492e919da902f423679
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 6f554b9ec04d894fbcd3da37e1bd326b39508571
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protección ampliada para la autenticación con Reporting Services
 
@@ -52,7 +50,7 @@ SSRS admite y aplica la protección ampliada que se ha habilitado en el sistema 
 >   
 >  La documentación de una tecnología de acceso a datos debe tener información sobre la compatibilidad con la protección ampliada.  
   
-### <a name="upgrade"></a>Actualización  
+### <a name="upgrade"></a>UPGRADE  
   
 -   La actualización de un servidor de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a SQL Server 2016 agrega opciones de configuración con valores predeterminados al archivo **rsreportserver.config**. Si la configuración ya se ha realizado, la instalación de SQL Server 2016 la conservará en el archivo **rsreportserver.config**.  
   
@@ -90,8 +88,8 @@ SSRS admite y aplica la protección ampliada que se ha habilitado en el sistema 
 |Escenario|Diagrama del escenario|Protección|  
 |--------------|----------------------|-------------------|  
 |Comunicación HTTP. El servidor de informes aplicará el cliente en el enlace de servicio del servidor de informes.|![RS_ExtendedProtection_Indirect](../../reporting-services/security/media/rs-extendedprotection-indirect.gif "RS_ExtendedProtection_Indirect")<br /><br /> 1) Aplicación cliente<br /><br /> 2) Servidor de informes<br /><br /> 3) Proxy|Establezca **RSWindowsExtendedProtectionLevel** en **Allow** o **Require**.<br /><br /> Establezca **RSWindowsExtendedProtectionScenario** en **Any**.<br /><br /> <br /><br /> -No existe ningún canal SSL y, por tanto, no es posible la aplicación del enlace de canal.<br /><br /> -El servidor de informes se debe configurar para saber el nombre del servidor proxy con el fin de asegurarse de que se aplica el enlace de servicio correctamente.|  
-|Comunicación HTTP.<br /><br /> El servidor de informes aplicará el cliente en el enlace de canal de proxy y en el enlace de servicio del servidor de informes.|![RS_ExtendedProtection_Indirect_SSL](../../reporting-services/security/media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) Aplicación cliente<br /><br /> 2) Servidor de informes<br /><br /> 3) Proxy|Establezca <br />                    Establezca**RSWindowsExtendedProtectionLevel** en **Allow** o **Require**.<br /><br /> Establezca **RSWindowsExtendedProtectionScenario** en **Proxy**.<br /><br /> <br /><br /> -El canal SSL al proxy está disponible. Por tanto, se puede aplicar el enlace de canal en el proxy.<br /><br /> -También se puede aplicar el enlace de servicio.<br /><br /> El servidor de informes debe saber el nombre del proxy y el administrador del servidor de informes debe crear una reserva de direcciones URL para este, con un encabezado de host o configurar el nombre de proxy en la entrada del Registro de Windows **BackConnectionHostNames**.|  
-|Comunicación HTTPS indirecta con un proxy seguro. El servidor de informes aplicará el cliente en el enlace de canal de proxy y en el enlace de servicio del servidor de informes.|![RS_ExtendedProtection_IndirectSSLandHTTPS](../../reporting-services/security/media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) Aplicación cliente<br /><br /> 2) Servidor de informes<br /><br /> 3) Proxy|Establezca <br />                    Establezca**RSWindowsExtendedProtectionLevel** en **Allow** o **Require**.<br /><br /> Establezca **RSWindowsExtendedProtectionScenario** en **Proxy**.<br /><br /> <br /><br /> -El canal SSL al proxy está disponible. Por tanto, se puede aplicar el enlace de canal en el proxy.<br /><br /> -También se puede aplicar el enlace de servicio.<br /><br /> El servidor de informes debe saber el nombre del proxy y el administrador del servidor de informes debe crear una reserva de direcciones URL para este, con un encabezado de host o configurar el nombre de proxy en la entrada del Registro de Windows **BackConnectionHostNames**.|  
+|Comunicación HTTP.<br /><br /> El servidor de informes aplicará el cliente en el enlace de canal de proxy y en el enlace de servicio del servidor de informes.|![RS_ExtendedProtection_Indirect_SSL](../../reporting-services/security/media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) Aplicación cliente<br /><br /> 2) Servidor de informes<br /><br /> 3) Proxy|Establecer <br />                    Establezca**RSWindowsExtendedProtectionLevel** en **Allow** o **Require**.<br /><br /> Establezca **RSWindowsExtendedProtectionScenario** en **Proxy**.<br /><br /> <br /><br /> -El canal SSL al proxy está disponible. Por tanto, se puede aplicar el enlace de canal en el proxy.<br /><br /> -También se puede aplicar el enlace de servicio.<br /><br /> El servidor de informes debe saber el nombre del proxy y el administrador del servidor de informes debe crear una reserva de direcciones URL para este, con un encabezado de host o configurar el nombre de proxy en la entrada del Registro de Windows **BackConnectionHostNames**.|  
+|Comunicación HTTPS indirecta con un proxy seguro. El servidor de informes aplicará el cliente en el enlace de canal de proxy y en el enlace de servicio del servidor de informes.|![RS_ExtendedProtection_IndirectSSLandHTTPS](../../reporting-services/security/media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) Aplicación cliente<br /><br /> 2) Servidor de informes<br /><br /> 3) Proxy|Establecer <br />                    Establezca**RSWindowsExtendedProtectionLevel** en **Allow** o **Require**.<br /><br /> Establezca **RSWindowsExtendedProtectionScenario** en **Proxy**.<br /><br /> <br /><br /> -El canal SSL al proxy está disponible. Por tanto, se puede aplicar el enlace de canal en el proxy.<br /><br /> -También se puede aplicar el enlace de servicio.<br /><br /> El servidor de informes debe saber el nombre del proxy y el administrador del servidor de informes debe crear una reserva de direcciones URL para este, con un encabezado de host o configurar el nombre de proxy en la entrada del Registro de Windows **BackConnectionHostNames**.|  
   
 ### <a name="gateway"></a>Puerta de enlace  
  En este escenario se describen las aplicaciones cliente que se conectan a un dispositivo o software que realiza SSL y autentica al usuario. Después, el dispositivo o software suplanta el contexto del usuario o un contexto de usuario distinto antes de efectuar una solicitud al servidor de informes.  

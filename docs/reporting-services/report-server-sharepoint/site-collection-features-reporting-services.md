@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4d3a72452ef0383c4d05d1758bab92570db0df51
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2bf533a432526a99dfaca1b46caf95f274dd562b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-site-collection-features"></a>Características de la colección de sitios de Reporting Services
 
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/05/2017
 El modo de SharePoint de Reporting Services proporciona tres características de la colección de sitios de SharePoint. Las características admiten el entorno de informes del modo de SharePoint de Reporting Services general, [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], una característica del Complemento SQL Server 2016 Reporting Services y las operaciones de administración para Reporting Services en Administración central de SharePoint.
 
 > [!NOTE]
-> La integración de Reporting Services con SharePoint ya no está disponible después de SQL Server 2016.
+> La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
   
 ## <a name="site-collection-features"></a>Características de la colección de sitios
 

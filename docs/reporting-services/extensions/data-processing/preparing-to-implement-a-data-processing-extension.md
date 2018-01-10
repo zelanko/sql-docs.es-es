@@ -8,9 +8,7 @@ ms.service:
 ms.component: extensions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], implementing
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 caps.latest.revision: "36"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae9b5358621f27a8a7f90ae60e63b23c75421bc9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 424e36f6be32da0aafb6981e923f66aed7c22139
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Prepararse para implementar una extensión de procesamiento de datos
   Antes de implementar la extensión de procesamiento de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], debería definir las interfaces que se van a implementar. Puede que quiera proporcionar implementaciones específicas de la extensión del conjunto completo de interfaces o simplemente centrar la implementación en un subconjunto, como las interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> y <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> en las que los clientes interactuarían principalmente con un conjunto de resultados como un objeto **DataReader** y usarían la extensión de procesamiento de datos de [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] como un puente entre el conjunto de resultados y el origen de datos.  
@@ -75,21 +73,21 @@ ms.lasthandoff: 12/05/2017
   
 |Interfaz|Description|Implementación|  
 |---------------|-----------------|--------------------|  
-|IDbConnection|Representa una sesión única con un origen de datos. En el caso de un sistema de bases de datos cliente/servidor, la sesión puede ser equivalente a una conexión de red al servidor.|Necesario|  
+|IDbConnection|Representa una sesión única con un origen de datos. En el caso de un sistema de bases de datos cliente/servidor, la sesión puede ser equivalente a una conexión de red al servidor.|Obligatorio|  
 |IDbConnectionExtension|Representa propiedades de conexión adicionales que pueden ser implementadas por extensiones de procesamiento de datos de [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] con respecto a la seguridad y autenticación.|Opcional|  
-|IDbTransaction|Representa una transacción local.|Necesario|  
+|IDbTransaction|Representa una transacción local.|Obligatorio|  
 |IDbTransactionExtension|Representa las propiedades de transacción adicionales que pueden ser implementadas por extensiones de procesamiento de datos de [!INCLUDE[ssRS](../../../includes/ssrs-md.md)].|Opcional|  
-|IDbCommand|Representa una consulta o comando que se utiliza al conectarse a un origen de datos.|Necesario|  
+|IDbCommand|Representa una consulta o comando que se utiliza al conectarse a un origen de datos.|Obligatorio|  
 |IDbCommandAnalysis|Representa información del comando adicional para analizar una consulta y devolver una lista de los nombres de parámetros que se usan en la consulta.|Opcional|  
-|IDataParameter|Representa un parámetro o un par de nombre y valor que se pasa a un comando o consulta.|Necesario|  
-|IDataParameterCollection|Representa una colección de todos los parámetros pertinentes para un comando o consulta.|Necesario|  
-|IDataReader|Proporciona un método para leer un flujo de solo lectura y solo avance de datos del origen de datos.|Necesario|  
+|IDataParameter|Representa un parámetro o un par de nombre y valor que se pasa a un comando o consulta.|Obligatorio|  
+|IDataParameterCollection|Representa una colección de todos los parámetros pertinentes para un comando o consulta.|Obligatorio|  
+|IDataReader|Proporciona un método para leer un flujo de solo lectura y solo avance de datos del origen de datos.|Obligatorio|  
 |IDataReaderExtension|Proporciona un método para leer uno o varios flujos de solo avance de conjuntos de resultados, obtenidos al ejecutar un comando en un origen de datos. Esta interfaz proporciona compatibilidad adicional para los agregados de campo.|Opcional|  
-|IExtension|Proporciona la clase base para la extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. También permite a un implementador incluir un nombre traducido para la extensión y pasar la configuración del archivo de configuración a la extensión.|Necesario|  
+|IExtension|Proporciona la clase base para la extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. También permite a un implementador incluir un nombre traducido para la extensión y pasar la configuración del archivo de configuración a la extensión.|Obligatorio|  
   
  Las interfaces de extensión de procesamiento de datos son idénticas a un subconjunto de las interfaces, métodos y propiedades del proveedor de datos de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], siempre que sea posible. Para obtener más información sobre cómo implementar un proveedor de datos de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] completo, vea el tema sobre la implementación de un proveedor de datos de .NET Framework en la documentación del Kit de desarrollo de software (SDK) de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Extensiones de Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [Implementar una extensión de procesamiento de datos](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Biblioteca de extensiones de Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  

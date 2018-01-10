@@ -8,21 +8,21 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 caps.latest.revision: "50"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 22674e21246c98201fdb1ed9ae56d303e4f66756
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 94e39c709c030c29d88bd874b279024c60f57fd7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 En esta lección del tutorial [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , usará las páginas de suscripción controlada por datos de los portales web de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para conectarse a un origen de datos de suscripción, crear una consulta que recupere datos de suscripción y asignar el conjunto de resultados a las opciones de informe y entrega.  
@@ -52,7 +52,7 @@ En esta lección se supone que completó la lección 1 y la lección 2, y que el
 ## <a name="destination"></a>Destino  
 1.  En la sección Destino, seleccione **Recurso compartido de archivos de Windows** para el método de entrega.  
 
-## <a name="dataset"></a>Conjunto de datos
+## <a name="dataset"></a>Dataset
 1. Haga clic en **Editar conjunto de datos**.
 2. Seleccione **Un origen de datos personalizado**.
 3. Seleccione **Microsoft SQL Server** como tipo de **Conexión** de origen de datos.
@@ -68,7 +68,7 @@ En esta lección se supone que completó la lección 1 y la lección 2, y que el
  3.  En **Nombre de usuario** y **Contraseña**, escriba el nombre de usuario y la contraseña del dominio. Incluya tanto el dominio como la cuenta de usuario al especificar **Nombre de usuario**.
      > [!NOTE]  
     > Las credenciales usadas para conectarse a un origen de datos de suscriptor no se devuelven a [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Si modifica la suscripción más adelante, deberá volver a escribir la contraseña utilizada para conectarse al origen de datos.
-## <a name="query"></a>Query      
+## <a name="query"></a>Consulta      
 1.  En el cuadro de consultas, escriba la consulta siguiente:  
   
     ```  
@@ -95,7 +95,7 @@ Parámetro  |Origen del valor  | Valor/campo
  1. En el campo **OrderNumber** , seleccione **Obtener valor del conjunto de datos**. En Valor, seleccione **Order**. 
  2. Haga clic en **Crear suscripción**.
    
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Next Steps  
 Cuando se ejecute la suscripción, se entregarán cuatro archivos de informe al recurso compartido de archivos que ha especificado, uno por cada pedido del origen de datos *Subscribers* . Cada entrega debe ser única en cuanto a datos (los datos deben ser específicos de cada pedido), formato de representación y formato de archivo. Puede abrir cada informe desde la carpeta compartida para comprobar que todas las versiones se hayan personalizado en función de las opciones de suscripción que haya definido.  
   
 ![Lista de archivos creados por la suscripción](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "Lista de archivos creados por la suscripción")  
@@ -107,7 +107,7 @@ La página de suscripción del portal web contendrá la fecha de **Última ejecu
   
 Con este paso finaliza el tutorial "Definir una suscripción controlada por datos".   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Suscripciones y entrega &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
 [Suscripciones controladas por datos](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [Cómo crear, modificar y eliminar suscripciones controladas por datos](../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  

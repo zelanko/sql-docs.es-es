@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 37bfede873cdcfebd34c8fba985614adc41305e9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d4189ef6535396998bf9e250a3714efc102201b4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="glossary-report-builder"></a>Glosario (Generador de informes)
   
@@ -107,7 +105,7 @@ ms.lasthandoff: 12/05/2017
 |nombre del origen de datos|En un informe, nombre del objeto de origen de datos.|  
 |tipo de datos|Atributo que especifica el tipo de información que se puede almacenar en una columna, parámetro o variable.|  
 |almacenamiento de datos|Base de datos estructurada específicamente para consultas y análisis.|  
-|database|Colección de información, tablas y otros objetos organizados y presentados para un propósito específico como búsqueda, clasificación y nueva combinación de datos.|  
+|Base de datos|Colección de información, tablas y otros objetos organizados y presentados para un propósito específico como búsqueda, clasificación y nueva combinación de datos.|  
 |catálogo de base de datos|Parte de una base de datos que contiene la definición de todos los objetos de la base de datos, así como la definición de la base de datos.|  
 |motor de base de datos|El módulo o los módulos de programa que proporcionan acceso a un sistema de administración de bases de datos (DBMS).|  
 |archivo de base de datos|Uno de los archivos físicos que forman una base de datos.|  
@@ -377,7 +375,7 @@ ms.lasthandoff: 12/05/2017
 |eje X|Véase: eje de categorías (X)|  
 |eje Y|Véase: eje de valores (Y)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Conceptos de creación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

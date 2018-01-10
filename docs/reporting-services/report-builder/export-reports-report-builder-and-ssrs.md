@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10437"
@@ -18,13 +16,13 @@ ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
 caps.latest.revision: "23"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: be5b29f8f01eaaee1f1ea225ec47c0665762984f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ed5a8e47a39df2d7d521181fff55fe6734062ce8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>Exportación de informes (Generador de informes y SSRS)
 
@@ -124,8 +122,8 @@ ms.lasthandoff: 12/05/2017
 |Formato|Tipo de extensión de presentación|Description|  
 |------------|------------------------------|-----------------|  
 |Archivo PDF de Acrobat|Salto de página duro|La extensión de representación en PDF representa un informe en archivos que se pueden abrir en Adobe Acrobat y en visores de PDF de otros fabricantes que admiten PDF 1.3. Aunque PDF 1.3 es compatible con Adobe Acrobat 4.0 y versiones posteriores, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admite Adobe Acrobat 6 o posterior. La extensión de representación no requiere el software Adobe para representar el informe. Sin embargo, se necesitan visores de PDF, como Adobe Acrobat, para ver o imprimir un informe en formato PDF.<br /><br /> Para más información, vea [Exportar a un archivo PDF](../../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md).|  
-|Atom|Datos|La extensión de presentación Atom genera fuentes de distribución de datos compatibles con Atom desde los informes. Las fuentes de distribución de datos son legibles y se pueden intercambiar con aplicaciones como Power Pivot o Power BI que pueden usar fuentes de distribución de datos compatibles con Atom.<br /><br /> El resultado es un documento de servicio de Atom que enumera las fuentes de los datos disponibles de un informe. Se crea al menos una fuente de datos para cada región de datos de un informe. Según el tipo de región de datos y los datos que esta muestra, podrían generarse varias fuentes de distribución de datos.<br /><br /> Para más información, vea [Generar fuentes de distribución de datos a partir de informes](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).|  
-|CSV|Datos|La extensión de representación de valores separados por comas (CSV) representa los informes como una representación sin estructura jerárquica de los datos a partir de un informe estándar y sin formato para que resulten fáciles de leer e intercambiar con muchas aplicaciones.<br /><br /> Para más información, vea [Exportar a un archivo CSV](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).|  
+|Atom|data|La extensión de presentación Atom genera fuentes de distribución de datos compatibles con Atom desde los informes. Las fuentes de distribución de datos son legibles y se pueden intercambiar con aplicaciones como Power Pivot o Power BI que pueden usar fuentes de distribución de datos compatibles con Atom.<br /><br /> El resultado es un documento de servicio de Atom que enumera las fuentes de los datos disponibles de un informe. Se crea al menos una fuente de datos para cada región de datos de un informe. Según el tipo de región de datos y los datos que esta muestra, podrían generarse varias fuentes de distribución de datos.<br /><br /> Para más información, vea [Generar fuentes de distribución de datos a partir de informes](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).|  
+|CSV|data|La extensión de representación de valores separados por comas (CSV) representa los informes como una representación sin estructura jerárquica de los datos a partir de un informe estándar y sin formato para que resulten fáciles de leer e intercambiar con muchas aplicaciones.<br /><br /> Para más información, vea [Exportar a un archivo CSV](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).|  
 |EXCELOPENXML|Salto de página automático|Se muestra como "Excel" en los menús de exportación al revisar informes. La extensión de representación en Excel representa un informe como un documento de Excel (.xlsx) compatible con [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2013.  Para más información, vea [Exportar a Microsoft Excel](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |PowerPoint|Salto de página duro|La extensión de representación de PowerPoint representa un informe como un documento de PowerPoint (.pptx) que es compatible con PowerPoint 2013.|  
 |Archivo TIFF|Salto de página duro|La extensión de presentación en imágenes presenta un informe en un mapa de bits o metarchivo. De manera predeterminada, una extensión de representación en imágenes genera un archivo TIFF del informe, que se puede ver en varias páginas. Cuando el cliente recibe la imagen, se puede mostrar en un visor de imágenes y se puede imprimir.<br /><br /> La extensión de presentación en imágenes puede generar archivos en cualquiera de los formatos que admite [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG y TIFF.<br /><br /> Para más información, vea [Exportar a un archivo de imagen](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).|  

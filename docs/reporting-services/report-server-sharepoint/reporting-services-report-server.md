@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e16bc12aa7361cd348caeb34fa73f974d4f74add
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3c595b197cab784eb3ccc1ab34257868ecdc9e87
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-report-server"></a>Servidor de informes de Reporting Services
 
@@ -56,25 +54,25 @@ Un servidor de informes de Reporting Services se ejecuta en uno de dos modos de 
   
 ## <a name="feature-comparison-of-sharepoint-and-native-mode"></a>Comparación de características de SharePoint en modo nativo
   
-|Componente o característica|Modo nativo|Modo de SharePoint|  
+|Componente o característica|en modo nativo|Modo de SharePoint|  
 |--------------------------|-----------------|---------------------|  
 |**Direcciones URL**|Sí|El direccionamiento de direcciones URL es distinto en el modo integrado de SharePoint. Las direcciones URL de SharePoint se utilizan para hacer referencia a informes, modelos de informe, orígenes de datos compartidos y recursos. No se utiliza la jerarquía de carpetas del servidor de informes. Si tiene aplicaciones personalizadas que dependen del acceso de direcciones URL como las admitidas en un servidor de informes en modo nativo, esa funcionalidad ya no funcionará cuando el servidor de informes se configure para la integración de SharePoint.<br /><br /> Para más información sobre el acceso URL, vea [Referencia de parámetros de acceso URL](../../reporting-services/url-access-parameter-reference.md).|  
 |**Extensiones de seguridad personalizadas**|Sí|Las extensiones de seguridad personalizadas de Reporting Services no se pueden implementar ni usar en el servidor de informes. El servidor de informes incluye una extensión de seguridad para fines especiales que se utiliza siempre que se configura un servidor de informes para que se ejecute en el modo integrado de SharePoint. Esta extensión de seguridad es un componente interno que se requiere para las operaciones integradas.|  
 |**Administrador de configuración**|Sí|**\*\* Importante \*\*** El Administrador de configuración no se puede usar para administrar un servidor de informes en modo de SharePoint. En su lugar, utilice Administración central de SharePoint.|  
 |**Administrador de informes**|Sí|El Administrador de informes no se puede usar para administrar el modo de SharePoint. Use las páginas de aplicación de SharePoint. Para más información, vea [Aplicaciones de servicio y servicio de SharePoint de Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**Informes vinculados**|Sí|No.|  
-|**Mis informes**|Sí|No|  
-|**Mis suscripciones** y métodos de procesamiento por lotes.|Sí|No|  
-|**Alertas de datos**|No|Sí|  
-|**Power View**|No|Sí<br /><br /> Requiere Silverlight en el explorador cliente. Para más información sobre los requisitos del explorador, vea [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).|  
+|**Mis informes**|Sí|no|  
+|**Mis suscripciones** y métodos de procesamiento por lotes.|Sí|no|  
+|**Alertas de datos**|no|Sí|  
+|**Power View**|no|Sí<br /><br /> Requiere Silverlight en el explorador cliente. Para más información sobre los requisitos del explorador, vea [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).|  
 |**Informes .RDL**|Sí|Sí<br /><br /> Los informes .RDL se pueden ejecutar en servidores de informes de Reporting Services en modo nativo o en modo de SharePoint.|  
-|**Informes .RDLX**|No|Sí<br /><br /> Los informes .RDLX de Power View solo se pueden ejecutar en servidores de informes de Reporting Services en modo de SharePoint.|  
-|**Credenciales de token de usuario de SharePoint para la extensión de lista de SharePoint**|No|Sí|  
-|**Zonas de AAM para implementaciones con conexión a Internet**|No|Sí|  
-|**Copias de seguridad y recuperación de SharePoint**|No|Sí|  
-|**Compatibilidad con registros de ULS**|No|Sí|  
+|**Informes .RDLX**|no|Sí<br /><br /> Los informes .RDLX de Power View solo se pueden ejecutar en servidores de informes de Reporting Services en modo de SharePoint.|  
+|**Credenciales de token de usuario de SharePoint para la extensión de lista de SharePoint**|no|Sí|  
+|**Zonas de AAM para implementaciones con conexión a Internet**|no|Sí|  
+|**Copias de seguridad y recuperación de SharePoint**|no|Sí|  
+|**Compatibilidad con registros de ULS**|no|Sí|  
   
-## <a name="native-mode"></a>Modo nativo
+## <a name="native-mode"></a>en modo nativo
 
  En el modo nativo, un servidor de informes es un servidor de aplicaciones independiente que proporciona todas las operaciones de visualización, administración, procesamiento y entrega de informes y modelos de informe. Se trata del modo predeterminado para las instancias del servidor de informes. Puede instalar un servidor de informes en modo nativo que se configure durante la instalación o puede configurarlo para las operaciones en modo nativo una vez completado el programa de instalación.  
   
@@ -129,7 +127,7 @@ Un servidor de informes de Reporting Services se ejecuta en uno de dos modos de 
   
  Reporting Services proporciona extensiones predeterminadas para que se puedan utilizar todas las características de servidor sin tener que desarrollar componentes personalizados. En la tabla siguiente se describen las extensiones predeterminadas que contribuyen a una instancia del servidor de informes completa con la funcionalidad lista para su uso:  
   
-|Tipo|Valor de DB-Library|  
+|Tipo|Valor predeterminado|  
 |----------|-------------|  
 |Autenticación|Una instancia del servidor de informes predeterminada admite la autenticación de Windows, incluso las características de suplantación y delegación si están habilitadas en el dominio.|  
 |Procesamiento de datos|Una instancia del servidor de informes predeterminada incluye extensiones de procesamiento de datos para orígenes de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion Essbase, SAPBW, OLE DB, Almacenamiento de datos paralelo y ODBC.|  
@@ -160,7 +158,7 @@ Un servidor de informes de Reporting Services se ejecuta en uno de dos modos de 
 [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
 [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
 [Base de datos del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
-[Implementar una extensión de seguridad](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
+[Implementación de una extensión de seguridad](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
 [Implementar una extensión de procesamiento de datos](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
 [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
 

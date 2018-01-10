@@ -8,24 +8,22 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rtp.rptdesigner.layoutview.f1
 helpviewer_keywords: Layout View dialog box
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 caps.latest.revision: "38"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6d683ce26988ec3edda4706f3fa6903bb52ca556
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 43b324699b0e462f452b106846fe86d5e5e0919a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="design-view"></a>Vista de diseño
 En el Diseñador de informes de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , use la vista Diseño para organizar los elementos del informe. En ocasiones, la vista Diseño se conoce como vista de presentación o vista de superficie de diseño.  
@@ -41,7 +39,7 @@ Use el Cuadro de herramientas para seleccionar los elementos que desee colocar e
 ## <a name="toolbox"></a>Cuadro de herramientas  
  El Cuadro de herramientas muestra las regiones de datos y otros elementos de informe que están disponibles para el informe. Para agregar elementos de informe del Cuadro de herramientas, haga doble clic en el elemento o arrástrelo hacia la superficie de diseño. A continuación puede cambiar la forma y tamaño utilizando los controladores de objeto.  
   
-## <a name="report-data-pane"></a>Panel Datos de informe  
+## <a name="report-data-pane"></a>panel Datos de informe  
  Para ver el panel Datos de informe, en el menú **Ver** , haga clic en **Datos de informe**. Utilice este panel para definir parámetros, imágenes, orígenes de datos y conjuntos de datos, y para hacer referencia a los campos integrados como ReportName. Para agregar un elemento nuevo, haga clic en el menú **Nuevo** y seleccione un elemento. Para agregar campos calculados a un conjunto de datos existente, haga clic en **Conjunto de datos**y, en el cuadro de diálogo **Propiedades del conjunto de datos** , seleccione **Campos**. Seleccione un elemento y haga clic en **Edición** para abrir el cuadro de diálogo **Propiedades** . También puede hacer clic con el botón secundario en los elementos del panel Datos de informe para agregarlos o actualizar sus propiedades.  
   
  Arrastre los elementos del panel Datos de informe a las regiones de datos y cuadros de texto de la superficie de diseño para agregar datos e imágenes a un informe.  
@@ -61,7 +59,7 @@ Use el Cuadro de herramientas para seleccionar los elementos que desee colocar e
 ## <a name="properties-pane"></a>Panel Propiedades  
  Utilice el panel Propiedades para ver las propiedades del elemento de informe seleccionado en la superficie de diseño o el grupo seleccionado en el panel de agrupación. También puede hacer clic con el botón derecho en un elemento de informe o grupo seleccionado y hacer clic después en **Propiedades** para abrir el cuadro de diálogo **Propiedades** correspondiente del elemento de informe o grupo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Encabezados y pies de página &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Sugerencias para el diseño de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
   

@@ -8,9 +8,7 @@ ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 caps.latest.revision: "34"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bbb4d1492bb3abf35d9e3bc3047b9f1d4f3fcfa5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a00f751dbb765e8835fa40430dfdd00a8079f3c6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visor HTML y la barra de herramientas del informe
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona un Visor HTML que se usa para mostrar informes a petición conforme se solicitan del servidor de informes. El Visor HTML ofrece un marco para ver informes en HTML. Incluye una barra de herramientas de informe, una sección de parámetros, una sección de credenciales y un mapa del documento. La barra de herramientas de informe del Visor HTML incluye características que se pueden usar para trabajar con un informe, incluidas las opciones de exportación para verlo con formatos distintos de HTML. La sección de parámetros y el mapa del documento solamente aparecen cuando se abren informes configurados para usar parámetros y un control de mapa de documento.  
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/05/2017
   
  En la tabla siguiente se describen las características más comunes de la barra de herramientas de informe. Cada característica se identifica con el control que se utiliza para obtener acceso a ella.  
   
-|Utilice este icono o control||Para|  
+|Utilice este icono o control||A|  
 |------------------------------|-|--------|  
 |![Controles de navegación en páginas](../reporting-services/media/htmlviewer-pagenav.gif "Controles de navegación en páginas")|**Controles de navegación en páginas**|Abrir la primera o la última página de un informe, ver un informe página a página y abrir una página concreta de un informe. Para ver una página específica, escriba el número de página y presione ENTRAR.|  
 |![Controles para mostrar páginas](../reporting-services/media/htmlviewer-pagesize.gif "Controles para mostrar páginas")|**Controles para mostrar páginas**|Aumentar o reducir el tamaño de la página del informe. Además de los cambios basados en porcentajes, puede seleccionar **Ancho de página** para que la página del informe se ajuste al ancho de la ventana del explorador o **Toda la página** para que la página del informe se ajuste al alto de la ventana. **Internet Explorer 5.5 y versiones posteriores admiten la opción** Zoom [!INCLUDE[msCoName](../includes/msconame-md.md)] .|  
@@ -81,7 +79,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="credentials"></a>Credenciales  
  Las credenciales son valores de nombre de usuario y contraseña que conceden acceso a un origen de datos. Después de especificar las credenciales, haga clic en **Ver informe** para obtener los datos. Si un informe requiere que se inicie sesión, los datos que puede ver un usuario pueden ser diferentes de los datos que puede ver otro usuario. En consecuencia, dos usuarios pueden procesar el mismo informe y obtener resultados distintos. Además, algunos informes contienen áreas ocultas que se revelan en función de las credenciales de inicio de sesión del usuario o de las selecciones realizadas en el propio informe. Las áreas ocultas del informe no se incluyen en las operaciones de búsqueda, por lo que se pueden obtener resultados diferentes a cuando están visibles todas las partes del informe.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Especificar información de credenciales y conexión para los orígenes de datos de informes](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportación de informes &#40;Generador de informes y SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  

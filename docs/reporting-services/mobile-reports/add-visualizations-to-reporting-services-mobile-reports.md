@@ -8,20 +8,20 @@ ms.service:
 ms.component: mobile-reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7c068430c44eaad1df894fc5c67849ff438ffcbc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 04a6baad7239d9a9203e4b71bbe23ea0e7318f2b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Agregar visualizaciones a informes móviles de Reporting Services
 Los gráficos son una parte esencial de la visualización de datos. Obtenga más información sobre los gráficos que puede utilizar en los informes móviles de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para cubrir una variedad de escenarios. 
@@ -124,7 +124,7 @@ En gráficos de comparación, puede elegir tener los mismos colores de gráfico 
 ## <a name="pie-and-funnel-charts"></a>Gráficos circulares y gráficos de embudo  
   
 Los gráficos circulares y de embudo se encuentran entre los más sencillos para las visualizaciones. Puede estructurar los datos por filas o columnas. 
-* Los**gráficos circulares** en informes móviles de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile reports can be pies, donuts, or donuts with a total en informes móviles de the center. Los gráficos circulares son adecuados para mostrar el tamaño relativo de las diferentes partes de un total. Si hay demasiados segmentos, puede resultar difícil verlos.
+* Los **gráficos circulares** en informes móviles de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] pueden ser circulares, de anillos o de anillos con un total en el centro. Los gráficos circulares son adecuados para mostrar el tamaño relativo de las diferentes partes de un total. Si hay demasiados segmentos, puede resultar difícil verlos.
 * Los**gráficos de embudo** suelen usarse para mostrar las fases de un proceso, como ventas.
 
 ![mobile-report-funnel-chart](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)
@@ -196,9 +196,9 @@ Los gráficos de cascada son una buena opción en estos casos:
    Los meses con ganancias, como septiembre, octubre y noviembre, se muestran en verde. 
 
 ## <a name="see-also"></a>Vea también 
-* [Mapas en informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
+* [Mapas de informes móviles de Reporting Services](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Navigators in Reporting Services mobile reports (Navegadores en informes para dispositivos móviles de Reporting Services)](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Agregar cuadrículas de datos a informes móviles | Reporting Services](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)
-* [Agregar medidores a informes móviles | Reporting Services](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
+* [Medidores en informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
   
 

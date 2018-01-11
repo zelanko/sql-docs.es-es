@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -165,13 +163,13 @@ ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f7368c5ab7fb528862d12ab79aa0e4f90365a4ed
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fa277221c184a30af7680cb6371c9c5220ceae63
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Medidores (Generador de informes y SSRS)
   En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , una región de datos de medidor muestra un solo valor del conjunto de datos. Los medidores siempre se sitúan dentro de un panel de medidores, en el que pueden agregarse medidores secundarios o adyacentes. En un mismo panel de medidores, puede crear varios medidores que comparten funciones comunes como el filtrado, la agrupación o la ordenación.  
@@ -191,7 +189,7 @@ ms.lasthandoff: 12/05/2017
  Para obtener más información sobre el uso de medidores como KPI, vea [Tutorial: Agregar un KPI a un informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
->  Puede publicar medidores por separado de un informe como elementos de informe. Obtenga más información sobre [Elementos de informe](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
+>  Puede publicar medidores por separado de un informe como elementos de informe. Para más información, vea [Elementos de informe](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
 ##  <a name="GaugeTypes"></a> Tipos de medidor  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona dos tipos de medidores: radial y lineal. Normalmente, el medidor radial se utiliza cuando los datos se quieren expresar como una velocidad. El medidor lineal se usa para expresar los datos como una temperatura o valor de escala.  
@@ -306,7 +304,7 @@ ms.lasthandoff: 12/05/2017
 |[Aplicar formato a los punteros de un medidor &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|Proporciona información general acerca de cómo dar formato a los punteros en los medidores, e información detallada sobre las opciones de formato para los estilos de puntero disponibles para los medidores radiales y lineales.|  
 |[Aplicar formato a los rangos de un medidor &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|Proporciona información acerca de cómo dar formato a intervalos en medidores para indicar una subsección importante de valores en el medidor o indicar visualmente cuándo el valor de puntero entra en un intervalo de valores determinado.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   

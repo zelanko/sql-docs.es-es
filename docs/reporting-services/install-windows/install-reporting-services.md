@@ -1,40 +1,38 @@
 ---
-title: Instalar SQL Server Reporting Services | Microsoft Docs
-ms.date: 10/10/2017
+title: "Instalación de SQL Server Reporting Services (2017 y posterior) | Microsoft Docs"
+ms.date: 12/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.service: 
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+ms.topic: get-started-article
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 3cc3d78c22bbb4b32696692074e2dad2d6809a3a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2f09b475d42657c8c9ce8ef60d6b5b7c36b30cc2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="install-sql-server-reporting-services"></a>Instalar SQL Server Reporting Services
+# <a name="install-sql-server-reporting-services-2017-and-later"></a>Instalación de SQL Server Reporting Services (2017 y posterior)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-La instalación de SQL Server Reporting Services implica componentes de servidor para almacenar elementos de informe, informes de representación y procesamiento de suscripción, así como otros servicios de informes.  Aprenda cómo instalar Power BI Report Server.
+La instalación de SQL Server Reporting Services implica componentes de servidor para almacenar elementos de informe, informes de representación y procesamiento de suscripción, así como otros servicios de informes. 
 
 Para descargar SQL Server 2017 Reporting Services, vaya al [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=55252).
 
 > [!NOTE]
 > ¿Busca Power BI Report Server? Vea [Instalar Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/).
 
-## <a name="before-you-begin"></a>Antes de empezar
+## <a name="before-you-begin"></a>Antes de comenzar
 
 Antes de instalar Reporting Services, lea los [Requisitos de hardware y software para instalar SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
@@ -55,11 +53,11 @@ La instalación de un servidor de informes es sencilla. Solo se necesitan unos c
 
     ![Elegir edición](media/install-reporting-services/report-server-install-edition.png)
 
-    Puede elegir la edición Evaluation o Developer en la lista desplegable.
+    Si quiere una edición gratuita, elija Evaluation o Developer en la lista desplegable.
 
     ![Ediciones Evaluation o Developer](media/install-reporting-services/report-server-install-edition-select.png)
 
-    De lo contrario, puede especificar una clave de producto.
+    De lo contrario, especifique una clave de producto. [Busque la clave de producto de SQL Server 2017 Reporting Services](find-reporting-services-product-key-ssrs.md).
 
 4. Lea y acepte los términos y condiciones de licencia y luego seleccione **Siguiente**.
 
@@ -104,7 +102,7 @@ Se crea un servicio de Windows como parte de la instalación. Aparece como **SQL
 
 Las reservas de direcciones URL están compuestas de un prefijo, un nombre de host, un puerto y un directorio virtual:
 
-|Parte|Descripción|
+|Parte|Description|
 |----------|-----------------|
 |Prefijo|El prefijo predeterminado es HTTP. Si ha instalado anteriormente un certificado de Capa de sockets seguros (SSL), el programa de instalación intenta crear reservas de direcciones URL que usen el prefijo HTTPS.|
 |Nombre de host|El nombre de host predeterminado es un carácter comodín (+) seguro. Especifica que el servidor de informes acepta cualquier solicitud HTTP en el puerto designado para cualquier nombre de host que se resuelva en el equipo, incluidos `http://<computername>/reportserver`, `http://localhost/reportserver` o `http://<IPAddress>/reportserver.`.|

@@ -2,28 +2,30 @@
 title: TDE para Azure SQL Database y Data Warehouse | Microsoft Docs
 description: "Información general del Cifrado de datos transparente para SQL Database y Data Warehouse. En el documento se describen sus ventajas y las opciones de configuración, como Bring Your Own Key y el TDE administrado por un servicio."
 keywords: 
-services: sql-database
-documentationcenter: 
 author: becczhang
 manager: craigg
 editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
+ms.component: security
+ms.custom: 
 ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.openlocfilehash: d486dd7b9d3019cfb3f3cf88482cdb578e9f9066
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 39e1807178f536a1bac2148deae406b1e3bb44b5
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="transparent-data-encryption-for-azure-sql-database-and-data-warehouse"></a>Cifrado de datos transparente para Azure SQL Database y Data Warehouse
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 El Cifrado de datos transparente (TDE) permite proteger Azure SQL Database y Data Warehouse frente a amenazas de actividad malintencionada mediante llevando a cabo un cifrado y descifrado de la base de datos en tiempo real, copias de seguridad asociadas y archivos de registro de transacciones en reposo sin necesidad de efectuar cambios en la aplicación.
 
@@ -43,9 +45,9 @@ Microsoft también mueve y administra sin problemas las claves según sea necesa
 > Todas las bases de datos SQL recién creadas se cifran de forma predeterminada mediante el TDE administrado por un servicio. Las bases de datos existentes antes de mayo de 2017 y las bases de datos creadas mediante restauración, replicación geográfica y copia de base de datos no se cifran de forma predeterminada.
 >
 
-## <a name="bring-your-own-key"></a>Bring Your Own Key
+## <a name="bring-your-own-key-preview"></a>Bring Your Own Key (versión preliminar)
 
-La compatibilidad de Bring Your Own Key (BYOK) permite al usuario tomar el control de sus claves de cifrado del TDE y controlar quién y cuándo puede tener acceso a ellas. Azure Key Vault (AKV), el sistema de administración de claves externas basado en la nube de Azure, es el primer servicio de administración de claves con el que se ha integrado el TDE para la compatibilidad con BYOK. Con BYOK, la clave de cifrado de base de datos está protegida por una clave asimétrica almacenada en AKV. La clave asimétrica nunca sale de Key Vault. Cuando el servidor tiene los permisos de un almacén de claves, el servidor le envía solicitudes básicas de operación de claves mediante el servicio de Key Vault. La clave asimétrica se establece en el nivel del servidor y la heredan todas las bases de datos de ese servidor. Gracias a la compatibilidad con BYOK, los usuarios ahora pueden controlar las tareas de administración de claves, como las rotaciones de claves, los permisos del almacén de claves, la eliminación de claves y la habilitación de auditorías o de generación de informes en todas las claves de cifrado. Key Vault ofrece una administración central de claves, aprovecha los módulos de seguridad de hardware (HSM) muy supervisados y promueve la separación de la administración de claves y de datos para poder cumplir las normativas. Para obtener más información sobre Key Vault, visite la [página de documentación de Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault).
+La compatibilidad de Bring Your Own Key (BYOK) (en versión preliminar) permite al usuario tomar el control de sus claves de cifrado del TDE y controlar quién y cuándo puede tener acceso a ellas. Azure Key Vault (AKV), el sistema de administración de claves externas basado en la nube de Azure, es el primer servicio de administración de claves con el que se ha integrado el TDE para la compatibilidad con BYOK. Con BYOK, la clave de cifrado de base de datos está protegida por una clave asimétrica almacenada en AKV. La clave asimétrica nunca sale de Key Vault. Cuando el servidor tiene los permisos de un almacén de claves, el servidor le envía solicitudes básicas de operación de claves mediante el servicio de Key Vault. La clave asimétrica se establece en el nivel del servidor y la heredan todas las bases de datos de ese servidor. Gracias a la compatibilidad con BYOK, los usuarios ahora pueden controlar las tareas de administración de claves, como las rotaciones de claves, los permisos del almacén de claves, la eliminación de claves y la habilitación de auditorías o de generación de informes en todas las claves de cifrado. Key Vault ofrece una administración central de claves, aprovecha los módulos de seguridad de hardware (HSM) muy supervisados y promueve la separación de la administración de claves y de datos para poder cumplir las normativas. Para obtener más información sobre Key Vault, visite la [página de documentación de Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault).
 
 Para obtener más información sobre el TDE con compatibilidad para BYOK para Azure SQL Database y Data Warehouse, vea [Transparent Data Encryption with Bring Your Own Key support](transparent-data-encryption-byok-azure-sql.md) (Cifrado de datos transparente con compatibilidad para Bring Your Own Key).
 
@@ -85,8 +87,8 @@ Para configurar el TDE mediante PowerShell, debe estar conectado como propietari
 | Cmdlet | Description |
 | --- | --- |
 | [Set-AzureRmSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/set-azurermsqldatabasetransparentdataencryption) |Habilita o deshabilita el TDE para una base de datos.|
-| [Get-AzureRmSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) |Obtiene el estado del TDE para una base de datos. |
-| [Get-AzureRmSqlDatabaseTransparentDataEncryptionActivity](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryptionactivity) |Comprueba el progreso de cifrado de una base de datos. |
+| [Get-Azure-Rm-Sql-Database-Transparent-Data-Encryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) |Obtiene el estado del TDE para una base de datos. |
+| [Get-Azure-Rm-Sql-Database-Transparent-Data-Encryption-Activity](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryptionactivity) |Comprueba el progreso de cifrado de una base de datos. |
 | [Add-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) |Agrega una clave de Key Vault a un servidor de SQL Server. |
 | [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey) |Obtiene las claves de Key Vault de un servidor de SQL Server. |
 | [Set-AzureRmSqlServerTransparentDataEncryptionProtector](/powershell/module/azurerm.sql/set-azurermsqlservertransparentdataencryptionprotector) |Establece el protector del TDE para un servidor de SQL Server. |
@@ -98,11 +100,11 @@ Para configurar el TDE mediante PowerShell, debe estar conectado como propietari
 
 Conéctese a la base de datos mediante un inicio de sesión de administrador o de miembro del rol **dbmanager** de la base de datos maestra.
 
-| Command | Description |
+| Comando | Description |
 | --- | --- |
 | [ALTER DATABASE (Azure SQL Database)](/sql/t-sql/statements/alter-database-azure-sql-database) | Use SET ENCRYPTION ON/OFF para cifrar o descifrar una base de datos. |
 | [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) |Devuelve información sobre el estado de cifrado de una base de datos y sus claves de cifrado de la base de datos asociadas. |
-| [sys.dm_pdw_nodes_database_encryption_keys](https://docs.microsoft.com/en-us/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql) |Devuelve información sobre el estado de cifrado de todos los nodos del almacén de datos y de sus claves de cifrado de base de datos asociadas. | 
+| [sys.dm_pdw_nodes_database_encryption_keys](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql) |Devuelve información sobre el estado de cifrado de todos los nodos del almacén de datos y de sus claves de cifrado de base de datos asociadas. | 
 |  | |
 
 El protector del TDE no se puede cambiar a una clave de Azure Key Vault mediante Transact-SQL. Debe usar PowerShell o Azure Portal.
@@ -111,7 +113,7 @@ El protector del TDE no se puede cambiar a una clave de Azure Key Vault mediante
  
 Para configurar el TDE mediante una API de REST, debe estar conectado como propietario de Azure, colaborador o administrador de seguridad de SQL. 
 
-| Command | Description |
+| Comando | Description |
 | --- | --- |
 |[Crear o actualizar el servidor](/rest/api/sql/servers/createorupdate)|Agrega una identidad de AAD a un servidor de SQL Server (que se usa para conceder acceso a Key Vault).|
 |[Crear o actualizar la clave del servidor](/rest/api/sql/serverkeys/createorupdate)|Agrega una clave de Key Vault a un servidor de SQL Server.|

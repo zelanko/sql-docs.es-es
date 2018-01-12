@@ -1,7 +1,7 @@
 ---
 title: "Estadísticas | Microsoft Docs"
 ms.custom: 
-ms.date: 11/20/2017
+ms.date: 12/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -30,18 +30,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 73102f9a2640a9d3481b9e5fd0b613d50c6b1710
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c4fc025cd2026ee0310f67c80a3a05fbd3da45c7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="statistics"></a>Estadísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] El Optimizador de consultas utiliza estadísticas para crear planes de consulta que mejoren el rendimiento de las consultas. En el caso de la mayoría de las consultas, el Optimizador de consultas genera ya las estadísticas necesarias para un plan de consulta de alta calidad. En algunos casos, para obtener los mejores resultados, es necesario crear estadísticas adicionales o modificar el diseño de la consulta. En este tema se explican los conceptos de estadísticas y se proporcionan directrices para usar las estadística de optimización de consultas de forma eficaz.  
   
 ##  <a name="DefinitionQOStatistics"></a> Componentes y conceptos  
 ### <a name="statistics"></a>Estadísticas  
- Las estadísticas para la optimización de consulta son objetos que contienen información estadística acerca de la distribución de valores en una o más columnas de una tabla o vista indizada. El Optimizador de consultas utiliza estas estadísticas para estimar la *cardinalidad*, es decir, el número de filas, en el resultado de la consulta. Estas *estimaciones de cardinalidad* permiten al Optimizador de consultas crear un plan de consulta de alta calidad. Por ejemplo, dependiendo de los predicados, el Optimizador de consultas podría utilizar las estimaciones de cardinalidad para elegir el operador Index Seek en lugar del operador Index Scan, con un uso más intensivo de los recursos, mejorando con ello el rendimiento de la consulta.  
+ Las estadísticas para la optimización de consulta son objetos binarios grandes (BLOB) que contienen información estadística sobre la distribución de valores en una o más columnas de una tabla o vista indizada. El Optimizador de consultas utiliza estas estadísticas para estimar la *cardinalidad*, es decir, el número de filas, en el resultado de la consulta. Estas *estimaciones de cardinalidad* permiten al Optimizador de consultas crear un plan de consulta de alta calidad. Por ejemplo, dependiendo de los predicados, el Optimizador de consultas podría utilizar las estimaciones de cardinalidad para elegir el operador Index Seek en lugar del operador Index Scan, con un uso más intensivo de los recursos, mejorando con ello el rendimiento de la consulta.  
   
  Cada objeto de estadísticas se crea en una lista de una o más columnas de la tabla e incluye un *histograma* que muestra la distribución de valores en la primera columna. Los objetos de estadísticas en varias columnas también almacenan la información estadística relativa a la correlación de valores entre las columnas. Estas estadísticas de la correlación, o *densidades*, derivan del número de filas distintas de valores de columna. 
 
@@ -64,7 +64,7 @@ Más concretamente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cr
 
 En el diagrama siguiente se muestra un histograma con seis pasos. El área a la izquierda del primer valor límite superior es el primer paso.
   
-![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
+![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histograma") 
   
 En cada paso del histograma anterior:
 -   La línea gruesa representa el valor de límite superior (*range_high_key*) y el número de veces que tiene lugar (*equal_rows*).  
@@ -73,7 +73,7 @@ En cada paso del histograma anterior:
   
 -   Las líneas de puntos representan los valores de las muestras utilizados para estimar el número total de valores distintos que hay en el rango (*distinct_range_rows*) y el número total de valores que hay en el rango (*range_rows*). El optimizador de consultas utiliza *range_rows* y *distinct_range_rows* para calcular *average_range_rows* y no almacena los valores de las muestras.   
   
-#### <a name="density"></a> Vector de densidad  
+#### <a name="density"></a>Vector de densidad  
 **Densidad** es la información sobre el número de duplicados en una determinada columna o combinación de columnas, y se calcula como 1/(número de valores distintos). El optimizador de consultas utiliza las densidades para mejorar las estimaciones de cardinalidad de las consultas que devuelven varias columnas de la misma tabla o vista indizada. El vector de densidad contiene una densidad para cada prefijo de columnas del objeto de estadísticas. 
 
 > [!NOTE]
@@ -89,16 +89,16 @@ Por ejemplo, si un objeto de estadísticas tiene las columnas de clave `Customer
 
 ### <a name="filtered-statistics"></a>Estadísticas filtradas  
  Las estadísticas filtradas pueden mejorar el rendimiento de las consultas que se seleccionan desde subconjuntos de datos bien definidos. Las estadísticas filtradas utilizan un predicado de filtro para seleccionar el subconjunto de datos que se incluye en las estadísticas. Las estadísticas filtradas bien diseñadas pueden mejorar el plan de ejecución de la consulta en comparación con las estadísticas de tabla completa. Para obtener más información sobre el predicado de filtro, vea [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md). Para obtener más información acerca de cuándo crear las estadísticas filtradas, vea la sección [Cuándo crear las estadísticas](#CreateStatistics) en este tema.  
-  
+ 
 ### <a name="statistics-options"></a>Opciones de estadísticas  
  Hay tres opciones que puede establecer que afectan al momento y al modo en que se crean y actualizan las estadísticas. Estas opciones se establecen únicamente en el nivel de base de datos.  
   
-#### <a name="autocreatestatistics-option"></a>Opción AUTO_CREATE_STATISTICS  
+#### <a name="AutoUpdateStats"></a>Opción AUTO_CREATE_STATISTICS  
  Cuando está activada la opción automática de creación de estadísticas, [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics), el optimizador de consultas crea las estadísticas en columnas individuales en el predicado de consulta, según sea necesario, para mejorar las estimaciones de cardinalidad para el plan de consulta. Estas estadísticas de columna única se crean en las columnas que aún no tienen un [histograma](#histogram) en un objeto de estadísticas existente. La opción AUTO_CREATE_STATISTICS no determina si las estadísticas se crean para los índices. Esta opción tampoco genera estadísticas filtradas. Se aplica estrictamente a estadísticas de columna única para la tabla completa.  
   
  Cuando el Optimizador de consultas crea las estadísticas como resultado de usar la opción AUTO_CREATE_STATISTICS, el nombre de las estadísticas comienza con `_WA`. Puede utilizar la consulta siguiente para determinar si el Optimizador de consultas ha creado estadísticas para una columna de predicado de consulta.  
   
-```t-sql  
+```sql  
 SELECT OBJECT_NAME(s.object_id) AS object_name,  
     COL_NAME(sc.object_id, sc.column_id) AS column_name,  
     s.name AS statistics_name  
@@ -118,8 +118,8 @@ ORDER BY s.name;
 
 * A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y en el [nivel de compatibilidad de base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa un umbral de actualización de estadísticas dinámico y decreciente que se ajusta según el número de filas de la tabla. Esto se calcula como la raíz cuadrada de 1000 multiplicada por la cardinalidad de tabla actual. Con este cambio, las estadísticas en tablas de gran tamaño se actualizarán con más frecuencia. Sin embargo, si una base de datos tiene un nivel de compatibilidad inferior a 130, se aplicará el umbral de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
 
-  > [!IMPORTANT]
-  > A partir de [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] a través de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], o bien en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en el [nivel de compatibilidad de base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) inferior a 130, use la [marca de seguimiento 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará un umbral de actualización de estadísticas dinámico y decreciente que se ajusta según el número de filas de la tabla.
+> [!IMPORTANT]
+> A partir de [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] a través de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], o bien en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en el [nivel de compatibilidad de base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) inferior a 130, use la [marca de seguimiento 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará un umbral de actualización de estadísticas dinámico y decreciente que se ajusta según el número de filas de la tabla.
   
 El Optimizador de consultas comprueba que hay estadísticas obsoletas antes de compilar una consulta y antes de ejecutar un plan de consulta almacenado en la memoria caché. Antes de compilar una consulta, el Optimizador de consultas utiliza las columnas, tablas y vistas indexadas en el predicado de consulta para determinar qué estadísticas podrían estar obsoletas. Antes de ejecutar un plan de consulta almacenado en la memoria caché, [!INCLUDE[ssDE](../../includes/ssde-md.md)] comprueba que el plan de consulta hace referencia a las estadísticas actualizadas.  
   
@@ -143,25 +143,19 @@ Para obtener más información sobre el control de AUTO_UPDATE_STATISTICS, consu
   
 * Su aplicación ha experimentado tiempos de espera de solicitud de cliente causados por una o varias consultas que aguardaban la actualización de estadísticas. En algunos casos, la espera por las estadísticas sincrónicas podría causar errores en aplicaciones con tiempos de espera agresivos.  
   
-#### <a name="incremental-stats"></a>INCREMENTAL STATS  
- Cuando se establece en ON, se crean estadísticas por cada partición. Cuando se establece en OFF, se quita el árbol de estadísticas y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recalcula las estadísticas. El valor predeterminado es OFF. Este valor invalida la propiedad INCREMENTAL de la base de datos.  
+#### <a name="incremental"></a>INCREMENTAL  
+ Cuando la opción INCREMENTAL de CREATE STATISTICS está establecida en ON, se generan estadísticas por partición. Cuando se establece en OFF, se quita el árbol de estadísticas y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recalcula las estadísticas. El valor predeterminado es OFF. Este valor invalida la propiedad INCREMENTAL de la base de datos. Para obtener más información sobre cómo crear estadísticas incrementales, vea [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md). Para obtener más información sobre cómo crear estadísticas por partición automáticamente, vea [Propiedades de la base de datos &#40;Página Opciones&#41;](../../relational-databases/databases/database-properties-options-page.md#automatic) y [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) (Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;). 
   
  Cuando se agregan particiones a una tabla grande, las estadísticas deben actualizarse para que incluyan las particiones nuevas. Sin embargo, el tiempo necesario para examinar la tabla completa (opción FULLSCAN o SAMPLE) puede ser bastante largo. Además, no es necesario examinar toda la tabla porque puede que solo se necesiten las estadísticas de las particiones nuevas. La opción incremental crea y almacena estadísticas sobre cada partición y, cuando se actualiza, solo actualiza las estadísticas de las particiones que necesitan estadísticas nuevas.  
   
  Si no se admiten las estadísticas por partición, la opción se omite y se genera una advertencia. Las estadísticas incrementales no se admiten para los siguientes tipos de estadísticas:  
   
 * Estadísticas creadas con índices que no están alineados por partición con la tabla base.  
-  
 * Estadísticas creadas sobre bases de datos secundarias legibles AlwaysOn.  
-  
 * Estadísticas creadas sobre bases de datos de solo lectura.  
-  
 * Estadísticas creadas sobre índices filtrados.  
-  
 * Estadísticas creadas sobre vistas.  
-  
 * Estadísticas creadas sobre tablas internas.  
-  
 * Estadísticas creadas con índices espaciales o índices XML.  
   
 **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
@@ -179,12 +173,9 @@ Al crear las estadísticas con la instrucción CREATE STATISTICS, recomendamos m
   
 Considere la creación de estadísticas con la instrucción CREATE STATISTICS cuando se aplique cualquiera de los escenarios siguientes:  
 
-* El Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] sugiere crear las estadísticas.  
-
+* El Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] sugiere crear las estadísticas. 
 * El predicado de consulta contiene varias columnas correlacionadas que ya no están en el mismo índice.  
-
 * La consulta realiza la selección entre un subconjunto de datos.  
-
 * La consulta ha perdido estadísticas.  
   
 ### <a name="query-predicate-contains-multiple-correlated-columns"></a>Predicado de consulta con varias columnas correlacionadas  
@@ -196,7 +187,7 @@ Al crear las estadísticas de varias columnas, el orden de las columnas en la de
   
 Para crear densidades que sean útiles para las estimaciones de cardinalidad, las columnas del predicado de consulta deben coincidir con uno de los prefijos de columnas de la definición del objeto de estadísticas. Por ejemplo, lo siguiente crea un objeto de estadísticas de varias columnas en las columnas `LastName`, `MiddleName`y `FirstName`.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.stats  
@@ -223,7 +214,7 @@ La instrucción siguiente crea las estadísticas filtradas `BikeWeights` en toda
   
 El Optimizador de consultas puede utilizar estadísticas filtradas de `BikeWeights` para mejorar el plan de consulta correspondiente a la consulta siguiente. Esta segunda selecciona todas las bicicletas cuyo peso es superior a `25`.  
   
-```t-sql  
+```sql  
 SELECT P.Weight AS Weight, S.Name AS BikeName  
 FROM Production.Product AS P  
     JOIN Production.ProductSubcategory AS S   
@@ -241,9 +232,7 @@ Las estadísticas perdidas se indican mediante advertencias (el nombre de la tab
  Si se han perdido estadísticas, siga estos pasos:  
   
 * Compruebe que [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) y [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) están activadas.  
-  
 * Compruebe que la base de datos no es de solo lectura. Si la base de datos es de solo lectura, no se puede guardar un nuevo objeto de estadísticas.  
-  
 * Cree las estadísticas perdidas usando la instrucción [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md).  
   
 Cuando faltan las estadísticas de una base de datos de solo lectura o de una instantánea de solo lectura o son obsoletas, [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea y mantiene estadísticas temporales en **tempdb**. Cuando [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea estadísticas temporales, el nombre de las estadísticas se anexan con el sufijo *_readonly_database_statistic* para diferenciar las estadísticas temporales de las permanentes. El sufijo *_readonly_database_statistic* está reservado para las estadísticas que genera [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los scripts para las estadísticas temporales se pueden crear y reproducir en una base de datos de lectura-escritura. Cuando se crea el script, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] cambia el sufijo del nombre de las estadísticas de *_readonly_database_statistic* a *_readonly_database_statistic_scripted*.  
@@ -251,7 +240,6 @@ Cuando faltan las estadísticas de una base de datos de solo lectura o de una in
 Solo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede crear y actualizar las estadísticas temporales. No obstante, puede eliminar las estadísticas temporales y supervisar las propiedades de estadísticas mediante las mismas herramientas que se usan para las estadísticas permanentes:  
   
 * Elimine las estadísticas temporales con la instrucción [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md).  
-  
 * Supervise las estadísticas con las vistas de catálogo **[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)** y **[sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)**. **sys_stats** incluye la columna **is_temporary** para indicar las estadísticas que son permanentes y las que son temporales.  
   
  Debido a que las estadísticas temporales se almacenan en **tempdb**, el reinicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provoca que desaparezcan todas las estadísticas temporales.  
@@ -268,11 +256,9 @@ Solo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede crear y act
  Considere la actualización de las estadísticas en las condiciones siguientes:  
   
 * Los tiempos de ejecución de la consulta son lentos.  
-  
 * Se producen operaciones de inserción en columnas de clave ascendentes o descendentes.  
-  
 * Después de las operaciones de mantenimiento.  
-  
+
 ### <a name="query-execution-times-are-slow"></a>Tiempos de ejecución de las consultas lentos  
  Si los tiempos de respuesta de la consulta son lentos o impredecibles, asegúrese de que las consultas tienen estadísticas actualizadas antes de realizar los pasos adicionales de la solución de problemas.  
   
@@ -316,7 +302,7 @@ Para mejorar las estimaciones de cardinalidad en las variables y funciones, siga
   
      Por ejemplo, el procedimiento almacenado siguiente `Sales.GetRecentSales` cambia el valor del parámetro `@date` cuando `@date` es NULL.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -335,7 +321,7 @@ Para mejorar las estimaciones de cardinalidad en las variables y funciones, siga
   
      Si la primera llamada al procedimiento almacenado `Sales.GetRecentSales` pasa un NULL para el parámetro `@date`, el Optimizador de consultas compilará el procedimiento almacenado con la estimación de cardinalidad para `@date = NULL` aunque no se llame al predicado de consulta con `@date = NULL`. Esta estimación de cardinalidad podría ser significativamente diferente del número de filas del resultado de la consulta real. Como resultado, el Optimizador de consultas podría elegir un plan de consulta poco óptimo. Para ayudar a evitar esto, puede rescribir el procedimiento almacenado en dos procedimientos del modo siguiente:  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetNullRecentSales', 'P') IS NOT NULL  
@@ -365,7 +351,7 @@ Para mejorar las estimaciones de cardinalidad en las variables y funciones, siga
   
  En algunas aplicaciones, volver a compilar la consulta cada vez que la ejecuta podría tardar demasiado tiempo. La sugerencia de consulta `OPTIMIZE FOR` puede servir de ayuda incluso si no usa la opción `RECOMPILE`. Por ejemplo, podría agregar una opción `OPTIMIZE FOR` al procedimiento almacenado Sales.GetRecentSales para especificar una fecha concreta. En el ejemplo siguiente se agrega la opción `OPTIMIZE FOR` al procedimiento Sales.GetRecentSales.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -387,7 +373,7 @@ GO
  En algunas aplicaciones, podrían no aplicarse las instrucciones de diseño de consulta, porque no puede cambiar la consulta o porque usar la sugerencia de consulta RECOMPILE podría ser la causa de demasiadas recompilaciones. Puede utilizar las guías de plan para especificar otras sugerencias, como USE PLAN, para controlar el comportamiento de la consulta mientras investiga los cambios de la aplicación con el proveedor de la aplicación. Para obtener más información acerca de las guías de plan, vea [Plan Guides](../../relational-databases/performance/plan-guides.md).  
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
@@ -401,4 +387,5 @@ GO
  [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)   
  [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
  [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
- 
+ [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)  
+ [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)

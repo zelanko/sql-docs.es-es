@@ -34,14 +34,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 022786e7c6b1e23780b7acf373efe677f121686b
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5501732e0551a1142ea5bf1a8bc48122aaff6a25
+ms.sourcegitcommit: 5763d63a3c455ec8743b75c057a2254a96a1d4fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>Seleccione - INTO (cláusula de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   SELECT...INTO crea una nueva tabla en el grupo de archivos predeterminado e inserta las filas resultantes de la consulta en ella. Para ver la sintaxis completa de SELECT, vea [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
@@ -99,7 +99,7 @@ Si se cumple alguna de estas condiciones, la columna se crea como NOT NULL en lu
  Cuando se incluye una columna calculada en la lista de selección, la columna correspondiente de la nueva tabla no es una columna calculada. Los valores de la nueva columna son los que se calcularon en el momento en que se ejecutó SELECT...INTO.  
   
 ## <a name="logging-behavior"></a>Comportamiento del registro  
- La cantidad de registro para SELECT...INTO depende del modelo de recuperación en vigor para la base de datos. En el modelo de recuperación simple o en el optimizado para cargas masivas de registros, las operaciones masivas se registran mínimamente. Con registro mínimo, con la instrucción SELECT... EN la instrucción puede ser más eficaz que crear una tabla y, a continuación, rellenar la tabla con una instrucción INSERT. Para más información, consulte [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ La cantidad de registro para SELECT...INTO depende del modelo de recuperación en vigor para la base de datos. En el modelo de recuperación simple o en el optimizado para cargas masivas de registros, las operaciones masivas se registran mínimamente. Con registro mínimo, con la instrucción SELECT... EN la instrucción puede ser más eficaz que crear una tabla y, a continuación, rellenar la tabla con una instrucción INSERT. Para obtener más información, vea [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 ## <a name="permissions"></a>Permissions  
  Requiere el permiso CREATE TABLE en la base de datos de destino.  
@@ -230,7 +230,7 @@ ORDER BY YearlyIncome
   
 ```  
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. Crea una nueva tabla como una copia de otra tabla y cargarla en un grupo de archivos especificado
-El ejemplo siguiente se muestra la creación de una tabla nueva como una copia de otra tabla y cargarlos en un grupo de archivos especificado difiere del grupo de archivos predeterminado del usuario.
+En el ejemplo siguiente se muestra cómo crear una nueva tabla como una copia de otra tabla y cargarlos en un grupo de archivos especificado difiere del grupo de archivos predeterminado del usuario.
 
  **Se aplica a:**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 

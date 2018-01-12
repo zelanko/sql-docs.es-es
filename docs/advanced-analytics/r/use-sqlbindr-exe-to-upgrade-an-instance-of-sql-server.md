@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 424e7d86a00901c22220d19e86b1bbced698d850
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 54e685e285f2040ec13b84aa7e0e4b020457560b
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>Actualizar los componentes de aprendizaje de máquina en una instancia de SQL Server
 
@@ -38,7 +38,7 @@ Si en cualquier momento en que desea detener la actualización en la programaci�
 
 El proceso de actualización de los componentes de aprendizaje automático se conoce como **enlace**, debido a que cambia el modelo de soporte técnico para componentes de aprendizaje de máquina de SQL Server usar la nueva directiva de ciclo de vida de Software modernas. 
 
-En general, al cambiar al nuevo modelo de licencias se garantiza que los científicos de datos pueden usar siempre la versión más reciente de R o Python. Para obtener más información acerca de los términos de la directiva de ciclo de vida moderno, consulte [escala de tiempo del soporte técnico de Microsoft R Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support).
+En general, el cambio al nuevo modelo de servicio garantiza que los científicos de datos pueden usar siempre la versión más reciente de R o Python. Para obtener más información acerca de los términos de la directiva de ciclo de vida moderno, consulte [escala de tiempo del soporte técnico de Microsoft R Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support).
 
 > [!NOTE]
 > La actualización no cambia el modelo de compatibilidad para la base de datos de SQL Server y no cambia la versión de SQL Server.

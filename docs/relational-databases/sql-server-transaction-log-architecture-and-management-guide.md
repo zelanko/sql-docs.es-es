@@ -1,7 +1,7 @@
 ---
 title: "Guía de arquitectura y administración de registros de transacciones de SQL Server | Microsoft Docs"
 ms.custom: 
-ms.date: 10/21/2016
+ms.date: 01/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -14,17 +14,21 @@ ms.topic: article
 helpviewer_keywords:
 - transaction log architecture guide
 - guide, transaction log architecture
+- vlf
+- transaction log guidance
+- vlfs
+- virtual log files
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 caps.latest.revision: "3"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9d778d6a5fe6340e1a5125b60f16a2dbe7dfa781
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d98d7d65ebfa88ca9bdaa620c136f78dfe6c339c
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guía de arquitectura y administración de registros de transacciones de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
  Los registros de modificaciones de datos registran la operación lógica llevada a cabo o las imágenes anterior y posterior de los datos modificados. La imagen anterior es una copia de los datos antes de llevar a cabo la operación; la imagen posterior es una copia de los datos después de haber realizado la operación.  
   
- Los pasos para recuperar una operación dependen del tipo de registro:  
+Los pasos para recuperar una operación dependen del tipo de registro:  
   
 -   Registro de la operación lógica  
   
@@ -51,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
     -   Para revertir la operación, se aplica la imagen anterior.  
   
- En el registro de transacciones se registran muchos tipos de operaciones. Entre las operaciones se incluyen:  
+En el registro de transacciones se registran muchos tipos de operaciones. Entre las operaciones se incluyen:  
   
 -   El inicio y el final de cada transacción.  
   
@@ -63,23 +67,30 @@ ms.lasthandoff: 11/17/2017
   
  También se registran las operaciones de reversión. Cada transacción reserva espacio en el registro de transacciones para asegurarse de que existe suficiente espacio de registro para admitir una reversión provocada por una instrucción de reversión explícita o cuando se produce un error. La cantidad de espacio reservado depende de las operaciones realizadas en la transacción, pero normalmente equivale a la cantidad de espacio empleado para registrar cada operación. Este espacio reservado se libera cuando se completa la transacción.  
   
- La sección del archivo de registro a partir de la primera entrada de registro que debe estar presente para una reversión correcta en toda la base de datos hasta la última entrada de registro escrita se denomina parte activa del registro o *registro activo*. Esta es la sección del registro necesaria para una recuperación completa de la base de datos. No se puede truncar ninguna parte del registro activo. El número de secuencia de registro (LSN) de este primer registro se denomina el LSN de recuperación mínimo (*MinLSN*).  
+<a name="minlsn"></a> La sección del archivo de registro a partir de la primera entrada de registro que debe estar presente para una reversión correcta en toda la base de datos hasta la última entrada de registro escrita se denomina parte activa del registro o *registro activo*. Esta es la sección del registro necesaria para una recuperación completa de la base de datos. No se puede truncar ninguna parte del registro activo. El [número de secuencia de registro (LSN)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) de este primer registro se denomina el **LSN de recuperación mínimo (*MinLSN*)**.  
   
 ##  <a name="physical_arch"></a> Arquitectura física del registro de transacciones  
- El registro de transacciones de una base de datos está asignado a uno o varios archivos físicos. Conceptualmente, el archivo de registro es una cadena de entradas de registro. Físicamente, la secuencia de entradas del registro se almacena de forma eficaz en el conjunto de archivos físicos que implementa el registro de transacciones. Cada base de datos debe tener al menos un archivo de registro.  
+El registro de transacciones de una base de datos está asignado a uno o varios archivos físicos. Conceptualmente, el archivo de registro es una cadena de entradas de registro. Físicamente, la secuencia de entradas del registro se almacena de forma eficaz en el conjunto de archivos físicos que implementa el registro de transacciones. Cada base de datos debe tener al menos un archivo de registro.  
   
- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] segmenta cada archivo de registro físico internamente en una serie de archivos de registro virtuales (VLF). Los archivos de registro virtuales no tienen un tamaño fijo y no hay un número fijo de archivos de registro virtuales para un archivo de registro físico. [!INCLUDE[ssDE](../includes/ssde-md.md)] elige dinámicamente el tamaño de los archivos de registro virtuales al crear o ampliar los archivos de registro. [!INCLUDE[ssDE](../includes/ssde-md.md)] intenta mantener un número reducido de archivos virtuales. El tamaño de los archivos virtuales después de ampliar un archivo de registro equivale a la suma del tamaño del registro existente y el tamaño del nuevo incremento del archivo. El tamaño o número de archivos de registro virtuales no lo pueden configurar ni establecer los administradores.  
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] segmenta cada archivo de registro físico internamente en una serie de archivos de registro virtuales (VLF). Los archivos de registro virtuales no tienen un tamaño fijo y no hay un número fijo de archivos de registro virtuales para un archivo de registro físico. [!INCLUDE[ssDE](../includes/ssde-md.md)] elige dinámicamente el tamaño de los archivos de registro virtuales al crear o ampliar los archivos de registro. [!INCLUDE[ssDE](../includes/ssde-md.md)] intenta mantener un número reducido de archivos virtuales. El tamaño de los archivos virtuales después de ampliar un archivo de registro equivale a la suma del tamaño del registro existente y el tamaño del nuevo incremento del archivo. El tamaño o número de archivos de registro virtuales no lo pueden configurar ni establecer los administradores.  
 
 > [!NOTE]
-> El proceso para crear VLF es el siguiente:
+> La creación de archivos de registro virtual (VLF) sigue este método:
 > - Si el siguiente crecimiento es inferior a 1/8 del tamaño físico actual del registro, cree 1 VLF que cubra el tamaño del crecimiento (a partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]).
 > - Si el crecimiento es inferior a 64 MB, cree 4 VLF que cubran el tamaño del crecimiento (p. ej., en el caso de un crecimiento de 1 MB, cree 4 VLF de 256 KB).
 > - Si el crecimiento oscila entre 64 MB y 1 GB, cree 8 VLF que cubran el tamaño del crecimiento (p. ej., en el caso de un crecimiento de 512 MB, cree 8 VLF de 64 MB).
 > - Si el crecimiento es superior a 1 GB, cree 16 VLF que cubran el tamaño del crecimiento (p. ej., en el caso de un crecimiento de 8 GB, cree 16 VLF de 512 MB).
 
- Los archivos de registro virtuales solo afectan al rendimiento del sistema si se definen archivos de registros físicos mediante valores pequeños para *size* y *growth_increment* . El valor *size* es el tamaño inicial del archivo de registro y el valor de *growth_increment* es la cantidad de espacio que se agrega al archivo cada vez que se necesita más espacio. Si los archivos de registro crecen hasta un tamaño grande debido a muchos incrementos pequeños, tendrán numerosos archivos de registro virtuales. Esto puede retrasar el inicio de la base de datos, así como las operaciones de copias de seguridad y restauración del registro. Se recomienda que los archivos de registro se definan con un valor *size* cercano al tamaño final necesario y que tengan también un valor de *growth_increment* relativamente alto. Para obtener más información sobre estos parámetros, consulte [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
+Si los archivos de registro crecen hasta un tamaño grande debido a muchos incrementos pequeños, tendrán numerosos archivos de registro virtuales. **Esto puede retrasar el inicio de la base de datos, así como las operaciones de copias de seguridad y restauración del registro.** Se recomienda que los archivos de registro se definan con un valor *size* cercano al tamaño final necesario y que tengan también un valor de *growth_increment* relativamente alto. Vea la siguiente sugerencia para determinar la distribución de VLF óptima para el tamaño del registro de transacciones actual.
+ - El valor *size*, establecido por el argumento `SIZE` de `ALTER DATABASE`, es el tamaño inicial del archivo de registro.
+ - El valor *growth_increment*, establecido por el argumento `FILEGROWTH` de `ALTER DATABASE`, es la cantidad de espacio que se agrega al archivo cada vez que se necesita más espacio. 
+ 
+Para obtener más información sobre los argumentos `FILEGROWTH` y `SIZE` de `ALTER DATABASE`, vea [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+
+> [!TIP]
+> Para determinar la distribución de VLF óptima para el tamaño actual del registro de transacciones de todas las bases de datos en una instancia determinada, vea este [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
   
- El registro de transacciones es un archivo de registro circular. Considere, por ejemplo, una base de datos con un archivo de registro físico dividido en cuatro archivos de registros virtuales. Cuando se crea la base de datos, el archivo de registro lógico empieza en el principio del archivo de registro físico. Las nuevas entradas del registro se agregan al final del registro lógico y se expanden hacia el final del archivo físico. El truncamiento del registro libera los registros virtuales cuyas entradas son anteriores al número de flujo de registro de recuperación mínimo (MinLSN). *MinLSN* es el número de flujo de registro de la entrada del registro más antigua necesaria para una reversión correcta de toda la base de datos. El registro de transacciones de ejemplo sería similar al de la siguiente ilustración.  
+ El registro de transacciones es un archivo de registro circular. Considere, por ejemplo, una base de datos con un archivo de registro físico dividido en cuatro VLF. Cuando se crea la base de datos, el archivo de registro lógico empieza en el principio del archivo de registro físico. Las nuevas entradas del registro se agregan al final del registro lógico y se expanden hacia el final del archivo físico. El truncamiento del registro libera los registros virtuales cuyas entradas son anteriores al número de flujo de registro de recuperación mínimo (MinLSN). *MinLSN* es el número de flujo de registro de la entrada del registro más antigua necesaria para una reversión correcta de toda la base de datos. El registro de transacciones de ejemplo sería similar al de la siguiente ilustración.  
   
  ![tranlog3](../relational-databases/media/tranlog3.gif)  
   
@@ -89,11 +100,14 @@ ms.lasthandoff: 11/17/2017
   
  El ciclo se repite indefinidamente, siempre que el final del registro lógico no alcance el inicio del registro lógico. Si las entradas antiguas se truncan con la frecuencia suficiente para disponer siempre de espacio para todas las nuevas entradas de registro que se van a crear hasta el próximo punto de comprobación, el registro no se llena nunca. Sin embargo, si el final del registro lógico llega al principio del registro lógico, se produce una de estas dos situaciones:  
   
--   Si el registro tiene habilitada la opción FILEGROWTH y hay espacio disponible en el disco, el archivo se amplía en la cantidad especificada en el parámetro *growth_increment* y las nuevas entradas del registro se escriben en la extensión. Para obtener más información sobre la opción FILEGROWTH, consulte [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
+-   Si el registro tiene habilitada la opción `FILEGROWTH` y hay espacio disponible en el disco, el archivo se amplía en la cantidad especificada en el parámetro *growth_increment* y las nuevas entradas del registro se escriben en la extensión. Para obtener más información sobre la opción `FILEGROWTH`, vea [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
--   Si la opción FILEGROWTH no está habilitada o el disco que almacena el archivo de registro tiene menos espacio disponible que la cantidad especificada en *growth_increment*, se genera el error 9002. Para obtener más información, consulte [Solucionar problemas de un registro de transacciones lleno](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
+-   Si la opción `FILEGROWTH` no está habilitada o el disco que almacena el archivo de registro tiene menos espacio disponible que la cantidad especificada en *growth_increment*, se genera el error 9002. Para obtener más información, consulte [Solucionar problemas de un registro de transacciones lleno](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
- Si el registro contiene varios archivos de registro físicos, el registro lógico pasará por todos los archivos de registro físicos antes de volver a empezar por el principio del primer archivo de registro físico.  
+ Si el registro contiene varios archivos de registro físicos, el registro lógico pasará por todos los archivos de registro físicos antes de volver a empezar por el principio del primer archivo de registro físico. 
+ 
+> [!IMPORTANT]
+> Para obtener más información sobre la administración de tamaño del registro de transacciones, vea [Administrar el tamaño del archivo de registro de transacciones](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).
   
 ### <a name="log-truncation"></a>Truncamiento del registro  
  El truncamiento del registro es esencial para evitar que se llene. El truncamiento del registro elimina los archivos de registro virtuales inactivos del registro de transacciones lógico de una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , liberando espacio en el registro lógico para que lo reutilice el registro de transacciones físico. Si no se truncara nunca un registro de transacciones, acabaría ocupando todo el espacio de disco asignado a sus archivo de registro físicos. Sin embargo, para que se pueda truncar el registro, se debe realizar primero una operación de punto de comprobación. Un punto de comprobación escribe en el disco las páginas modificadas en memoria actuales (denominadas páginas desfasadas) y la información del registro de transacciones de la memoria. Cuando se lleva a cabo el punto de comprobación, la parte inactiva del registro de transacciones se marca como reutilizable. A partir de ese momento, se puede liberar la parte inactiva mediante el truncamiento del registro. Para obtener más información sobre los puntos de comprobación, consulte [Puntos de comprobación de base de datos &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
@@ -109,10 +123,9 @@ ms.lasthandoff: 11/17/2017
  El truncamiento del registro se produce automáticamente después de los eventos siguientes, excepto cuando se retrasa por alguna razón:  
   
 -   En el modelo de recuperación simple, después de un punto de comprobación.  
-  
 -   Bajo el modelo de recuperación completa o el modelo de recuperación optimizado para cargas masivas de registros, después de una copia de seguridad del registro, si un punto de comprobación ha producirse desde la copia de seguridad anterior.  
   
- El truncamiento del registro se puede retrasar por diferentes factores. En caso de un retraso largo en el truncamiento del registro, el registro de transacciones se puede llenar. Para obtener información, consulte [Factores que pueden ralentizar el truncamiento del registro](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation) y [Solucionar problemas de un registro de transacciones lleno &#40;Error 9002 de SQL Server&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
+ El truncamiento del registro se puede retrasar por diferentes factores. En caso de un retraso largo en el truncamiento del registro, el registro de transacciones se puede llenar. Para obtener información, vea [Factores que pueden ralentizar el truncamiento del registro](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation) y [Solucionar problemas de un registro de transacciones lleno &#40;Error 9002 de SQL Server&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
 ##  <a name="WAL"></a> Registro de transacciones de escritura anticipada  
  En esta sección se describe el rol que desempeña el registro de transacciones de escritura anticipada en la grabación de modificaciones de datos en disco. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa un algoritmo de registro de escritura previa (WAL), lo cual garantiza que no se escriba ninguna modificación de datos en el disco antes de escribir en él la entrada de registro asociada. Así se mantienen las propiedades ACID para una transacción.  
@@ -126,14 +139,20 @@ ms.lasthandoff: 11/17/2017
   
  Antes de crear la primera copia de seguridad de registros, debe crear una copia de seguridad completa, como una copia de seguridad de la base de datos o la primera de un conjunto completo de copias de seguridad de archivos. La restauración de una base de datos utilizando únicamente copias de seguridad de archivos puede llegar a ser un proceso complejo. Por lo tanto, es recomendable que comience con una copia de seguridad de la base de datos completa si es posible. Posteriormente, será necesario realizar copias de seguridad del registro de transacciones con regularidad. De esta forma, no solo se minimiza el riesgo de pérdida de trabajo, sino que también se permite el truncamiento del registro de transacciones. Normalmente, el registro de transacciones se trunca tras cada copia de seguridad de registros convencional.  
   
- Es aconsejable realizar copias de seguridad de registros suficientemente regulares para ajustarse a los requisitos de su empresa, específicamente a la tolerancia a la pérdida de trabajo que una unidad de registro dañada podría provocar. La frecuencia adecuada para realizar copias de seguridad de registros varía en función de la tolerancia al riesgo de pérdida de trabajo y, por otra parte, de la cantidad de copias de seguridad de registros que puede almacenar, administrar y, potencialmente, restaurar. Una copia de seguridad de registros cada 15 ó 30 minutos puede ser suficiente. Si su empresa necesita minimizar el riesgo de pérdida de trabajo, piense en la posibilidad de realizar copias de seguridad de registros más frecuentemente. La existencia de copias de seguridad más frecuentes de los registros tiene la ventaja añadida de aumentar la frecuencia de truncamiento del registro, lo que genera archivos de registro menores.  
+> [!IMPORTANT]
+> Es aconsejable realizar copias de seguridad de registros suficientemente regulares para ajustarse a los requisitos de su empresa, específicamente a la tolerancia a la pérdida de trabajo que un almacenamiento de registro dañada podría provocar. La frecuencia adecuada para realizar copias de seguridad de registros varía en función de la tolerancia al riesgo de pérdida de trabajo y, por otra parte, de la cantidad de copias de seguridad de registros que puede almacenar, administrar y, potencialmente, restaurar. Tenga en cuenta los [RTO](http://wikipedia.org/wiki/Recovery_time_objective) y [RPO](http://wikipedia.org/wiki/Recovery_point_objective) necesarios al implementar la estrategia de recuperación, específicamente el ritmo de realización de copias de seguridad de registros.
+> Una copia de seguridad de registros cada 15 ó 30 minutos puede ser suficiente. Si su empresa necesita minimizar el riesgo de pérdida de trabajo, piense en la posibilidad de realizar copias de seguridad de registros más frecuentemente. La existencia de copias de seguridad más frecuentes de los registros tiene la ventaja añadida de aumentar la frecuencia de truncamiento del registro, lo que genera archivos de registro menores.  
   
- Para limitar el número de copias de seguridad del registro que necesita restaurar, es esencial que realice una copia de seguridad de sus datos periódicamente. Por ejemplo, podría programar una copia de seguridad completa de la base de datos cada semana y copias de seguridad diferenciales de la base de datos a diario.  
+> [!IMPORTANT]
+> Para limitar el número de copias de seguridad del registro que necesita restaurar, es esencial que realice una copia de seguridad de sus datos periódicamente. Por ejemplo, podría programar una copia de seguridad completa de la base de datos cada semana y copias de seguridad diferenciales de la base de datos a diario.  
+> Una vez más, tenga en cuenta los [RTO](http://wikipedia.org/wiki/Recovery_time_objective) y [RPO](http://wikipedia.org/wiki/Recovery_point_objective) necesarios al implementar la estrategia de recuperación, específicamente el ritmo de realización de copias de seguridad de base de datos completas y diferenciales.
+
+Para obtener más información sobre las copias de seguridad del registro de transacciones, vea [Copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md).
   
 ### <a name="the-log-chain"></a>La cadena de registros  
  Una secuencia continua de copias de seguridad de registros se denomina *cadena de registros*. Una cadena de registros empieza con una copia de seguridad completa de la base de datos. Normalmente, una cadena de registro nueva solo empieza cuando se realiza la primera copia de seguridad de la base de datos o después de que se cambie del modelo de recuperación simple al modelo de recuperación completa o al modelo de recuperación optimizado para cargas masivas de registros. A menos que se elija sobrescribir los conjuntos de copia de seguridad existentes al crear una copia de seguridad completa de la base de datos, la cadena de registros existente permanece intacta. Con la cadena de registros intacta, se puede restaurar la base de datos a partir de cualquier copia de seguridad completa de la base de datos del conjunto de medios, seguida de todas las copias de seguridad de los registros subsiguientes hasta el punto de recuperación. El punto de recuperación puede ser el final de la última copia de seguridad de registros o un punto de recuperación concreto de cualquiera de las copias de seguridad de registros. Para obtener más información, consulte [Copias de seguridad de registros de transacciones &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
- Para restaurar una base de datos al momento del error, es preciso que la cadena de registros esté intacta. De esta forma, es necesario que una secuencia ininterrumpida de las copias de seguridad del registro de transacciones se extienda hasta el momento del error. El lugar en el que esta secuencia de registros debe comenzar depende del tipo de copias de seguridad de datos que esté restaurando: de base de datos, parcial o de archivos. En las copias de seguridad de base de datos o parciales, la secuencia de copias de seguridad de registros debe extenderse desde el final de la copia de seguridad de base de datos o parcial. En un conjunto de copia de seguridad de archivos, la secuencia de copias de seguridad de registros debe comenzar desde el principio del conjunto completo de copias de seguridad de archivos. Para obtener más información, consulte [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
+ Para restaurar una base de datos al momento del error, es preciso que la cadena de registros esté intacta. De esta forma, es necesario que una secuencia ininterrumpida de las copias de seguridad del registro de transacciones se extienda hasta el momento del error. El lugar en el que esta secuencia de registros debe comenzar depende del tipo de copias de seguridad de datos que esté restaurando: de base de datos, parcial o de archivos. En las copias de seguridad de base de datos o parciales, la secuencia de copias de seguridad de registros debe extenderse desde el final de la copia de seguridad de base de datos o parcial. En un conjunto de copia de seguridad de archivos, la secuencia de copias de seguridad de registros debe comenzar desde el principio del conjunto completo de copias de seguridad de archivos. Para obtener más información, vea [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
 ### <a name="restore-log-backups"></a>Restaurar copias de seguridad de registros  
  Al restaurar una copia de seguridad de registros se ponen al día los cambios que se registraron en el registro de transacciones para volver a crear el estado exacto de la base de datos en el momento en que se inició la operación de copia de seguridad de registros. Al restaurar una base de datos, será necesario restaurar las copias de seguridad de registros creadas tras la copia de seguridad de la base de datos completa que esté restaurando o al principio de la primera copia de seguridad de archivos que esté restaurando. Normalmente, se debe restaurar una serie de copias de seguridad de registros hasta llegar al punto de recuperación después de haber restaurado la copia de seguridad de los datos o la copia de seguridad diferencial más recientes. A continuación, se realiza la recuperación de la base de datos. De esta manera, todas las transacciones que estaban incompletas cuando comenzó la recuperación se revertirán y la base de datos se conectará. Una vez recuperada la base de datos, ya no es posible restaurar más copias de seguridad. Para obtener más información, consulte [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
@@ -194,12 +213,11 @@ El intervalo entre los puntos de comprobación automáticos depende también del
 Para más información sobre la configuración del intervalo de recuperación, consulte [Establecer la opción de configuración del servidor Intervalo de recuperación](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).
 
 > [!TIP]  
->  La opción de configuración avanzada -k de SQL Server permite a un administrador de base de datos limitar el comportamiento de E/S de los puntos de comprobación según el rendimiento de E/S para algunos tipos de puntos de comprobación. La opción de configuración -k es válida para los puntos de comprobación y para cualquier punto de comprobación sin limitar. 
+> La opción de configuración avanzada -k de SQL Server permite a un administrador de base de datos limitar el comportamiento de E/S de los puntos de comprobación según el rendimiento de E/S para algunos tipos de puntos de comprobación. La opción de configuración -k es válida para los puntos de comprobación y para cualquier punto de comprobación sin limitar. 
  
 Los puntos de comprobación automáticos truncan la parte no utilizada del registro de transacciones si la base de datos utiliza el modelo de recuperación simple. No obstante, el registro no se trunca mediante puntos de comprobación automáticos si la base de datos utiliza el modelo de recuperación completa o el modelo optimizado para cargas masivas de registros. Para obtener más información, consulte [El registro de transacciones](../relational-databases/logs/the-transaction-log-sql-server.md). 
 
 Ahora la instrucción CHECKPOINT ofrece un argumento checkpoint_duration opcional que especifica en segundos el tiempo necesario para que finalicen los puntos de comprobación. Para obtener más información, consulte [CHECKPOINT](../t-sql/language-elements/checkpoint-transact-sql.md).
-
 
 ### <a name="active-log"></a>registro activo
 
@@ -222,15 +240,15 @@ El registro activo debe incluir cada una de las partes de todas las transaccione
 
 El Agente de registro del LOG supervisa el registro de transacciones de cada base de datos configurada para la replicación transaccional y copia las transacciones marcadas para la replicación desde el registro de transacciones a la base de datos de distribución. El registro activo debe contener todas las transacciones marcadas para la replicación, pero que aún no se han entregado a la base de datos de distribución. Si estas transacciones no se replican puntualmente, pueden evitar el truncamiento del registro. Para obtener más información, consulte [Replicación transaccional](../relational-databases/replication/transactional/transactional-replication.md).
 
+## <a name="see-also"></a>Vea también 
+Se recomiendan los artículos y libros siguientes para obtener información adicional sobre el registro de transacciones y las prácticas recomendadas de administración de registros.  
   
-## <a name="additional-reading"></a>Lecturas adicionales  
- Se recomiendan los artículos y libros siguientes para obtener información adicional sobre el registro de transacciones.  
-  
- [Administrar el tamaño del archivo de registro de transacciones](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
- [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
- [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)     
- [El registro de transacciones &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)        
- [Descripción del registro y la recuperación en SQL Server por Paul Randal](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
- [Administración de registros de transacciones de SQL Server por Tony Davis y Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
+[El registro de transacciones &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)    
+[Administrar el tamaño del archivo de registro de transacciones](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
+[Copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
+[sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
+[sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
+[Descripción del registro y la recuperación en SQL Server por Paul Randal](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
+[Administración de registros de transacciones de SQL Server por Tony Davis y Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   

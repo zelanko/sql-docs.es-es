@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3abcab5e233c45e1fda0bf5fb53499ac9ca21732
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ea11babb95bfd727d4171f78f819b66eafc682b1
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="attach-a-database"></a>Adjuntar una base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="Recommendations"></a> ¿Adjuntar es la mejor opción?  
  Se recomienda mover las bases de datos mediante el procedimiento de reubicación programada ALTER DATABASE, en lugar del método de separar y adjuntar, al mover archivos de bases de datos dentro de la misma instancia. Para más información, consulte [Move User Databases](../../relational-databases/databases/move-user-databases.md). 
  
-No se recomienda usar separar y adjuntar para el proceso de copia de seguridad y recuperación. No hay copias de seguridad del registro de transacciones, y se pueden eliminar accidentalmente los archivos.
+No se recomienda usar separar y adjuntar para el proceso de copia de seguridad y recuperación. No hay copias de seguridad del registro de transacciones y se pueden eliminar accidentalmente los archivos.
   
 ###  <a name="Security"></a> Seguridad  
  Los permisos de acceso a archivos se establecen durante una serie de operaciones de base de datos, incluidas las operaciones de desasociar o adjuntar una base de datos. Para obtener información sobre los permisos de archivo que se establecen siempre que se separa y se adjunta una base de datos, vea [Proteger archivos de datos y de registro](http://technet.microsoft.com/library/ms189128.aspx) en los Libros en pantalla de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (sigue siendo una lectura válida). 
@@ -91,11 +91,11 @@ No se recomienda usar separar y adjuntar para el proceso de copia de seguridad y
      **Estado**  
      Muestra el estado de la base de datos de acuerdo con la tabla siguiente.  
   
-    |Icono|Texto de estado|Descripción|  
+    |Icono|Texto de estado|Description|  
     |----------|-----------------|-----------------|  
     |(Sin icono)|(Sin texto)|La operación de adjuntar no se ha iniciado o puede estar pendiente para este objeto. Es la opción predeterminada al abrir el diálogo.|  
     |Triángulo verde hacia la derecha|En curso|La operación de adjuntar se ha iniciado, pero no ha finalizado.|  
-    |Marca de verificación verde|Success|El objeto se ha adjuntado correctamente.|  
+    |Marca de verificación verde|Correcto|El objeto se ha adjuntado correctamente.|  
     |Círculo rojo con una cruz blanca|Error|La operación de adjuntar ha detectado un error y no ha finalizado correctamente.|  
     |Círculo con dos cuadrantes negros (a la izquierda y la derecha) y dos cuadrantes blancos (en la parte superior e inferior)|Detenido|La operación de adjuntar no ha finalizado correctamente porque el usuario la ha detenido.|  
     |Círculo con una flecha curvada que apunta hacia la izquierda|Revertido|La operación de adjuntar se ha ejecutado correctamente, pero se ha revertido debido a un error al adjuntar otro objeto.|  
@@ -131,7 +131,7 @@ No se recomienda usar separar y adjuntar para el proceso de copia de seguridad y
   
 #### <a name="to-attach-a-database"></a>Para adjuntar una base de datos  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Desde la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -162,7 +162,7 @@ No se recomienda usar separar y adjuntar para el proceso de copia de seguridad y
   EXEC sys.sp_cdc_vupgrade  
   ``` 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Separar una base de datos](../../relational-databases/databases/detach-a-database.md)  
   

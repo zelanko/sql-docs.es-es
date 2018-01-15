@@ -1,0 +1,169 @@
+---
+title: Almacenamiento de documentos JSON en SQL Server o SQL Database | Microsoft Docs
+ms.description: This article describes why and how to store and index JSON documents in SQL Server or SQL Database, and how to optimize queries over the JSON documents.
+ms.custom: 
+ms.date: 01/04/2018
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: json
+ms.reviewer: 
+ms.suite: sql
+ms.technology: dbe-json
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: 
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 26aed92ee48c2dfd13605a9b830d1b33b4fd7f66
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/05/2018
+---
+# <a name="store-json-documents-in-sql-server-or-sql-database"></a>Almacenamiento de documentos JSON en SQL Server o SQL Database
+SQL Server y Azure SQL Database tienen funciones JSON nativas que permiten analizar documentos JSON con el lenguaje SQL estándar. Ahora puede almacenar documentos JSON en SQL Server o SQL Database, y consultar datos JSON como en una base de datos NoSQL. En este artículo se describen las opciones para almacenar documentos JSON en SQL Server o SQL Database.
+
+## <a name="classic-tables"></a>Tablas clásicas
+
+La manera más sencilla para almacenar documentos JSON en SQL Server o SQL Database es crear una simple tabla de dos columnas que contenga el id. del documento y el contenido de este. Por ejemplo:
+
+```sql
+create table WebSite.Logs (
+    _id bigint primary key identity,
+    log nvarchar(max)
+);
+```
+
+Esta estructura es equivalente a las colecciones que se pueden encontrar en las bases de datos de documento clásicas. La clave principal `_id` es un valor de incremento automático que proporciona un identificador único para cada documento y habilita las búsquedas rápidas. Esta estructura es una buena elección para los escenarios NoSQL clásicos en los que quiera recuperar un documento mediante su id. o actualizar un documento almacenado mediante este.
+
+El tipo de datos nvarchar (max) permite almacenar documentos JSON de hasta 2 GB de tamaño. Aunque esté seguro de que los documentos JSON no ocupan más de 8 KB, le recomendamos que use NVARCHAR (4000) en lugar de NVARCHAR (max) por motivos de rendimiento.
+
+En la tabla de ejemplo creada en el ejemplo anterior se supone que los documentos JSON válidos se almacenan en la columna `log`. Si quiere estar seguro de que el JSON válido se guarda en la columna `log`, puede agregar una restricción CHECK en la columna. Por ejemplo:
+
+```sql
+ALTER TABLE WebSite.Logs
+    ADD CONSTRAINT \[Log record should be formatted as JSON\]
+                   CHECK (ISJSON(log)=1)
+```
+
+Cada vez que alguien inserta o actualiza un documento en la tabla, esta restricción comprueba que el documento JSON tiene un formato correcto. Sin la restricción, la tabla está optimizada para inserciones, porque cualquier documento JSON se agrega directamente a la columna sin procesarse.
+
+Al almacenar los documentos JSON en la tabla, puede usar lenguaje Transact-SQL estándar para realizar consultas a los documentos. Por ejemplo:
+
+```sql
+SELECT TOP 100 JSON\_VALUE(log, ‘$.severity’), AVG( CAST( JSON\_VALUE(log,’$.duration’) as float))
+ FROM WebSite.Logs
+ WHERE CAST( JSON_VALUE(log,’$.date’) as datetime) > @datetime
+ GROUP BY JSON_VALUE(log, ‘$.severity’)
+ HAVING AVG( CAST( JSON_VALUE(log,’$.duration’) as float) ) > 100
+ ORDER BY CAST( JSON_VALUE(log,’$.duration’) as float) ) DESC
+```
+
+El poder usar *cualquier* función de T-SQL y realizar consultas a cláusulas para realizar consultas a documentos JSON es una gran ventaja. SQL Server y SQL Database no introducen ninguna restricción en las consultas que se pueden usar para analizar documentos JSON. Puede extraer directamente los valores de un documento JSON con la función `JSON_VALUE` y usarlos en la consulta como cualquier otro valor.
+
+Esta es la diferencia principal entre SQL Server y SQL Database, y las bases de datos NoSQL clásicas: en Transact-SQL seguramente tenga alguna función que puede necesitar para procesar datos JSON.
+
+## <a name="indexes"></a>Índices
+
+Si descubre que las consultas buscan con frecuencia documentos por alguna propiedad (por ejemplo, una propiedad `severity` en un documento JSON), puede agregar un índice no agrupado clásico a la propiedad para acelerar las consultas.
+
+Puede crear una columna calculada que exponga valores JSON de las columnas JSON en la ruta de acceso especificada (es decir, en la ruta de acceso `$.severity`) y crear un índice estándar en esta columna calculada. Por ejemplo:
+
+```sql
+create table WebSite.Logs (
+    _id bigint primary key identity,
+    log nvarchar(max),
+
+    severity AS JSON_VALUE(log, '$.severity'),
+    index ix_severity (severity)
+);
+```
+
+La columna calculada usada en este ejemplo es una columna virtual o no persistente que no agrega espacio adicional a la tabla. La usa el índice `ix_severity` para mejorar el rendimiento de las consultas como en el siguiente ejemplo:
+
+```sql
+SELECT log
+FROM Website.Logs
+WHERE JSON_VALUE(log, '$.severity') = 'P4'
+```
+
+Una característica importante de este índice es que es compatible con la intercalación. Si la columna NAVCHAR original tiene una propiedad COLLATION (por ejemplo, idioma japonés o diferenciación entre mayúsculas y minúsculas), el índice se organiza según las reglas del idioma o las de diferenciación entre mayúsculas y minúsculas asociadas con la columna NVARCHAR. Esta puede ser una característica importante si está desarrollando aplicaciones para mercados globales que necesiten usar reglas de idioma personalizadas al procesar documentos JSON.
+
+## <a name="large-tables--columnstore-format"></a>Formato de almacén de columnas y tablas grandes
+
+Si espera tener una gran cantidad de documentos JSON en la colección, le recomendamos que agregue un índice de almacén de columnas agrupadas a la colección, tal y como se muestra en el siguiente ejemplo:
+
+```sql
+create sequence WebSite.LogID as bigint;
+go
+create table WebSite.Logs (
+    _id bigint default(next value for WebSite.LogID),
+    log nvarchar(max),
+
+    INDEX cci CLUSTERED COLUMNSTORE
+);
+```
+
+Un índice de almacén de columnas agrupadas proporciona alta compresión de datos (hasta 25 veces), lo que puede reducir significativamente los requisitos de espacio de almacenamiento, reducir el coste de este y aumentar el rendimiento de E/S de la carga de trabajo. Además, los índices de almacén de columnas agrupadas están optimizados para análisis y recorridos de tablas en los documentos JSON, por lo que puede ser la mejor opción para registrar análisis.
+
+En el ejemplo anterior se usa un objeto de secuencia para asignar valores a la columna `_id`. Tanto las secuencias como las identidades son opciones válidas para la columna ID.
+
+## <a name="frequently-changing-documents--memory-optimized-tables"></a>Tablas optimizadas para memoria y documentos que cambian con frecuencia
+
+Si espera que se realicen muchas operaciones de actualización, inserción y eliminación en las colecciones, puede almacenar los documentos JSON en tablas optimizadas para memoria. Las colecciones JSON optimizadas para memoria siempre mantienen los datos en la memoria, por lo que no se producen sobrecargas en la E/S de almacenamiento. Además, las colecciones JSON optimizadas para memoria no tienen ningún tipo de bloqueo, por lo que las acciones de los documentos no bloquearán ninguna otra operación.
+
+Lo único que puede hacer para convertir una colección clásica en una colección optimizada para memoria es especificar la opción **with (memory_optimized=on)** después de la definición de tabla, tal y como se muestra en el ejemplo siguiente. Así conseguirá una versión optimizada para memoria de la colección JSON.
+
+```sql
+create table WebSite.Logs (
+  _id bigint identity primary key nonclustered,
+  log nvarchar(4000)
+) with (memory_optimized=on)
+```
+
+Una tabla optimizada para memoria es la mejor opción para documentos que sufren cambios frecuentes. En los casos de tablas optimizadas para memoria, también es importante tener en cuenta el rendimiento. Use NVARCHAR(4000) en vez de NVARCHAR(max) para los documentos JSON en las colecciones optimizadas para memoria, si es posible, ya que puede aumentar increíblemente el rendimiento.
+
+Como sucede con las tablas clásicas, puede agregar índices en los campos que expone en tablas optimizadas para memoria con columnas calculadas. Por ejemplo:
+
+```sql
+create table WebSite.Logs (
+
+  _id bigint identity primary key nonclustered,
+  log nvarchar(4000),
+
+  severity AS cast(JSON_VALUE(log, '$.severity') as tinyint) persisted,
+  index ix_severity (severity)
+
+) with (memory_optimized=on)
+```
+
+Para maximizar el rendimiento, convierta el valor JSON en el tipo más pequeño posible que pueda usarse para retener el valor de la propiedad. En el ejemplo anterior, se usa **tinyint**.
+
+También puede colocar consultas de SQL que actualicen los documentos JSON en procedimientos almacenados para obtener las ventajas de la compilación nativa. Por ejemplo:
+
+```sql
+CREATE PROCEDURE WebSite.UpdateData(@Id int, @Property nvarchar(100), @Value nvarchar(100))
+WITH SCHEMABINDING, NATIVE_COMPILATION
+
+AS BEGIN
+    ATOMIC WITH (transaction isolation level = snapshot,  language = N'English')
+
+    UPDATE WebSite.Logs
+    SET log = JSON_MODIFY(log, @Property, @Value)
+    WHERE _id = @Id;
+
+END
+```
+
+En este procedimiento compilado de forma nativa se toma la consulta y se crea código .DLL que ejecuta la consulta. Este es el enfoque más rápido para realizar consultas y actualizar datos.
+
+## <a name="conclusion"></a>Conclusión
+
+Las funciones JSON nativas en SQL Server y SQL Database le permiten procesar documentos JSON como si fuesen bases de datos NoSQL. Las bases de datos (relacionales o NoSQL) tienen sus puntos a favor y en contra para el procesamiento de datos JSON. La ventaja principal del almacenamiento de documentos JSON en SQL Server o SQL Database es la compatibilidad completa con lenguaje SQL. Puede usar el lenguaje enriquecido Transact-SQL para procesar datos y configurar varias opciones de almacenamiento (desde índices de almacén de columnas para grandes compresiones y análisis rápidos a tablas optimizadas para memoria para procesamiento sin bloqueos). Al mismo tiempo, obtendrá la ventaja de las características de internacionalización y seguridad madura que puede usar de forma sencilla en su escenario NoSQL. Estas son razones excelentes que tener en cuenta a la hora de almacenar documentos JSON en SQL Server o SQL Database.
+
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Más información sobre la compatibilidad integrada de JSON en SQL Server  
+Para obtener una gran cantidad de soluciones específicas, casos de uso y recomendaciones, consulte las [entradas de blog sobre la compatibilidad integrada de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) en SQL Server y en Azure SQL Database ofrecidas por el director de programas de Microsoft Jovan Popovic.

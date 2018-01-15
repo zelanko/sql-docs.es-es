@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - command prompt utilities [SQL Server], rsconfig
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 caps.latest.revision: "47"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d47221585f9bf08f4493043224390ff2d82bb30e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1aaac66ec2c47b50801696217c8a53f7add9ef2e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig (utilidad) (SSRS)
   La utilidad **rsconfig.exe** cifra y almacena valores de cuenta y conexión en el archivo RSReportServer.config. Los valores cifrados incluyen la información de conexión de la base de datos del servidor de informes y los valores de cuenta utilizados para el procesamiento de informes desatendido.  
@@ -60,29 +58,29 @@ rsconfig {-?}
 |**-e**|Necesario si no se usa el argumento **-c** .|Especifica la cuenta de ejecución desatendida del informe.<br /><br /> Este argumento no toma ningún valor. Sin embargo, deben incluirse argumentos adicionales en la línea de comandos para especificar los valores que están cifrados en el archivo de configuración.<br /><br /> Los argumentos que se pueden especificar con **-e** son **-u** y **-p**. También puede establecer **-t**.|  
 |**-m**  *nombreDeEquipo*|Requerido si configura una instancia de servidor de informes remoto.|Especifica el nombre del equipo donde está hospedado el servidor de informes. Si se omite este argumento, el valor predeterminado es **localhost**.|  
 |**-s**  *nombreDeServidor*|Requerido.|Especifica la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos del servidor de informes.|  
-|**-i**  *nombreDeInstancia*|Requerido si utiliza instancias con nombre.|Si ha utilizado una instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para hospedar la base de datos del servidor de informes, este valor especifica la instancia con nombre.|  
+|**-i**  *nombreDeInstancia*|Requerido si utiliza instancias con nombre.|Si usa una instancia de Reporting Services con nombre, este valor especifica el nombre de la instancia de Reporting Services.|  
 |**-d**  *nombreDeBaseDeDatos*|Requerido.|Especifica el nombre de la base de datos de servidor de informes.|  
 |**-a**  *métodoDeAutenticación*|Requerido.|Especifica el método de autenticación que el servidor de informes utiliza para conectarse a la base de datos de servidor de informes. Los valores válidos son **Windows** o **SQL** (este argumento no distingue mayúsculas de minúsculas).<br /><br /> **Windows** especifica que el servidor de informes utilice la autenticación de Windows.<br /><br /> **SQL** especifica que el servidor de informes utilice la autenticación de SQL Server.|  
 |**-u**  *[dominio\\]nombreUsuario*|Necesario con **-e** y opcional con **-c**.|Especifica una cuenta de usuario para la conexión de base de datos del servidor de informes o para la cuenta desatendida.<br /><br /> Para **rsconfig -e**, este argumento es obligatorio. Debe ser una cuenta de usuario de dominio.<br /><br /> Para **rsconfig -c** y **-a SQL**, este argumento necesita especificar un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Para **rsconfig -c** y **-a Windows**, este argumento puede especificar un usuario de dominio, una cuenta integrada o credenciales de cuenta de servicio. Si especifica una cuenta de dominio, especifique un *dominio* y un *nombre de usuario* en el formato *dominio\nombre de usuario*. Si está utilizando una cuenta integrada, este argumento es opcional. Si desea utilizar las credenciales de la cuenta de servicio, omita este argumento.|  
 |**-p**  *contraseña*|Obligatorio si se especifica **-u** .|Especifica la contraseña que se utilizará con el argumento *username* . Este argumento se puede establecer en un valor en blanco si la cuenta no requiere una contraseña. Este valor distingue entre mayúsculas y minúsculas para cuentas de dominio.|  
 |**-t**|Opcional.|Registra los mensajes de error en el registro de seguimiento. Este argumento no toma ningún valor. Para obtener más información, consulte [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe ser administrador local del equipo que hospeda el servidor de informes que va a configurar.  
   
 ## <a name="file-location"></a>Ubicación del archivo  
  Rsconfig.exe se encuentra en **\Archivos de programa\Microsoft SQL Server\110\Tools\Binn**. Puede ejecutar la utilidad desde cualquier carpeta del sistema de archivos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Rsconfig.exe se utiliza con dos objetivos:  
   
 -   Modificar la información de conexión que un servidor de informes utiliza para conectar con una base de datos de servidor de informes.  
   
 -   Para configurar una cuenta especial que el servidor de informes usa para iniciar sesión en un servidor de bases de datos remoto cuando otras credenciales no están disponibles.  
   
- Puede ejecutar la utilidad**rsconfig** en una instancia local o remota de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. No puede usar la utilidad **rsconfig** para descifrar y ver los valores que ya están establecidos.  
+Puede ejecutar la utilidad **rsconfig** en una instancia local o remota de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. No puede usar la utilidad **rsconfig** para descifrar y ver los valores que ya están establecidos.  
   
- Para ejecutar esta utilidad, es necesario que Instrumental de administración de Windows (WMI) esté instalado en el equipo que va a configurarse.  
+Para ejecutar esta utilidad, es necesario que Instrumental de administración de Windows (WMI) esté instalado en el equipo que va a configurarse.  
   
 ## <a name="examples"></a>Ejemplos  
  Los siguientes ejemplos muestran algunas formas de usar **rsconfig**.  
@@ -129,7 +127,7 @@ rsconfig -e -u <DOMAIN\ACCOUNT> -p <PASSWORD> -t
 rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <PASSWORD> -t  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   

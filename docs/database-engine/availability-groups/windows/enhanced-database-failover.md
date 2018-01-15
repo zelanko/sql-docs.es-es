@@ -20,11 +20,11 @@ author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3ac86ebd88dd793a0da204ace0feba02f2a055fa
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2050eed47dbe036cf0b51c9acb3fb823f4c6fa60
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>Agregar conmutación por error de base de datos mejorada a un grupo de disponibilidad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Tenemos la misma configuración de grupos de disponibilidad que en el escenario 
 
 Hay un grupo de disponibilidad configurado entre la instancia A y la instancia B que contiene dos bases de datos: DB1 y DB2. El modo de disponibilidad está establecido en confirmación sincrónica y el modo de conmutación por error, en automático. La conmutación por error de base de datos mejorada está habilitada. Se pierde el acceso al disco que contiene los archivos de registro de transacciones y los datos de DB2. Cuando el problema se detecte, el grupo de disponibilidad conmutará por error automáticamente a la instancia B.
 
-## <a name="configure-and-viewv-the-enhanced-database-failover-option"></a>Configurar y ver la opción de conmutación por error de base de datos mejorada
+## <a name="configure-and-view-the-enhanced-database-failover-option"></a>Configurar y ver la opción de conmutación por error de base de datos mejorada
 
 La conmutación por error de base de datos mejorada se puede configurar a través de SQL Server Management Studio o de Transact-SQL. Actualmente, esto no se puede realizar con cmdlets de PowerShell. La conmutación por error de base de datos mejorada está deshabilitada de forma predeterminada.
 
@@ -55,11 +55,11 @@ La conmutación por error de base de datos mejorada se puede habilitar durante e
 
 *Creación manual de grupos de disponibilidad*
 
-Use las instrucciones que encontrará en el tema [Usar el cuadro de diálogo Nuevo grupo de disponibilidad (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md) para crear el grupo de disponibilidad. Para habilitar la conmutación por error de base de datos mejorada, active la casilla junto a *Detección del estado del nivel de base de datos*.
+Use las instrucciones que encontrará en el artículo [Usar el cuadro de diálogo Nuevo grupo de disponibilidad (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md) para crear el grupo de disponibilidad. Para habilitar la conmutación por error de base de datos mejorada, active la casilla junto a *Detección del estado del nivel de base de datos*.
 
 *Usar el Asistente para grupo de disponibilidad*
 
-Use las instrucciones que encontrará en el tema [Usar el Asistente para grupo de disponibilidad (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md). La opción para habilitar la conmutación por error de base de datos mejorada se encuentra en el cuadro de diálogo Especificar nombre de grupo de disponibilidad. Para habilitarla, active la casilla junto a *Detección del estado del nivel de base de datos*.
+Use las instrucciones que encontrará en el artículo [Usar el Asistente para grupo de disponibilidad (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md). La opción para habilitar la conmutación por error de base de datos mejorada se encuentra en el cuadro de diálogo Especificar nombre de grupo de disponibilidad. Para habilitarla, active la casilla junto a *Detección del estado del nivel de base de datos*.
 
 ### <a name="transact-sql"></a>Transact-SQL
 
@@ -79,7 +79,7 @@ Para deshabilitar este comportamiento, emita el siguiente comando ALTER AVAILABI
 ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
 ```
 ### <a name="dynamic-management-view"></a>Vista de administración dinámica
-Para saber si un grupo de disponibilidad tiene habilitada la conmutación por error de base de datos mejorada, realice una consulta a la vista de administración dinámica `sys.availablity_groups`. La columna `db_failover` tendrá un cero si está deshabilitada o 1 si está habilitada. 
+Para saber si un grupo de disponibilidad tiene habilitada la conmutación por error de base de datos mejorada, realice una consulta a la vista de administración dinámica `sys.availability_groups`. La columna `db_failover` tendrá un cero si está deshabilitada o 1 si está habilitada. 
 
 ## <a name="next-steps"></a>Pasos siguientes 
 

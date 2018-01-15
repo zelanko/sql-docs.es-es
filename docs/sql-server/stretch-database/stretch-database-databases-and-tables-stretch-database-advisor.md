@@ -1,5 +1,5 @@
 ---
-title: Identificar bases de datos y tablas para Stretch Database con Data Migration Assistant | Microsoft Docs
+title: "Identificación de bases de datos y tablas para Stretch Database | Microsoft Docs"
 ms.custom: 
 ms.date: 10/30/2017
 ms.prod: sql-non-specified
@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3fe01369c0dc9ab2f8556cafd932d6c624ed9554
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7793add9d2d6e8aceee795cf19e80347df5c14a9
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>Identificar bases de datos y tablas para Stretch Database con Data Migration Assistant
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ Con el lanzamiento de Data Migration Assistant, que reemplaza a Upgrade Advisor 
   
 -   Para habilitar Stretch Database en otra **tabla**, si Stretch ya está habilitado en la base de datos, vea [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md). 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Limitaciones del área expuesta y problemas de bloqueo de Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md)   
  [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
  [Enable Stretch Database for a table (Habilitar Stretch Database para una tabla)](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  

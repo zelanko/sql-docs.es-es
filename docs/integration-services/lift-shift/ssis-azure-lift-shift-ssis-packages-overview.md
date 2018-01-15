@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1fd45ef05d5469acb83a80e3463329976b9a843
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d534f3118cbc8d9516d7db6033c490a9ab59dd1c
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift
 Los paquetes y las cargas de trabajo de SQL Server Integration Services (SSIS) se pueden mover ahora a la nube de Azure.
@@ -34,7 +34,7 @@ El movimiento de las cargas de trabajo de SSIS local a Azure presenta las siguie
 ## <a name="architecture-overview"></a>Información general sobre la arquitectura
 En la tabla siguiente se resaltan las diferencias entre SSIS local y SSIS en Azure. La diferencia más importante es la separación del almacenamiento y el proceso.
 
-| Almacenamiento | Tiempo de ejecución | Escalabilidad |
+| Storage | Tiempo de ejecución | Escalabilidad |
 |---|---|---|
 | Local (SQL Server) | Tiempo de ejecución de SSIS hospedado por SQL Server | Escalabilidad horizontal de SSIS (en SQL Server 2017 y versiones posteriores)<br/><br/>Soluciones personalizadas (en versiones anteriores de SQL Server) |
 | En Azure (SQL Database) | Azure SSIS Integration Runtime, un componente de Azure Data Factory versión 2. | Opciones de escalabilidad para SSIS IR |
@@ -54,7 +54,7 @@ Solamente debe aprovisionar SSIS IR una vez. Después de eso, puede usar herrami
 
 Data Factory también admite otros tipos de Integration Runtime. Para obtener más información sobre SSIS IR y los otros tipos de Integration Runtime, vea [Integration Runtime en Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 Las funcionalidades descritas en este artículo no requieren SQL Server 2017 ni SQL Server 2016.
 
 Estas funcionalidades requieren las siguientes versiones de SQL Server Data Tools (SSDT):
@@ -68,7 +68,7 @@ Para obtener más información sobre los requisitos previos de Azure, consulte [
 
 ## <a name="ssis-features-on-azure"></a>Características de SSIS en Azure
 
-Al aprovisionar una instancia de SQL Database para hospedar SSISDB, también se instalan Azure Feature Pack para SSIS y el componente redistribuible de Access. Estos componentes proporcionan conectividad a archivos de **Excel y Access**, y a los diversos orígenes de datos de **Azure**, así como a los orígenes de datos compatibles con componentes integrados. No puede instalar **componentes de terceros** para SSIS (incluidos los componentes de terceros de Microsoft, como Attunity y SAP BI) en este momento.
+Al aprovisionar una instancia de SQL Database para hospedar SSISDB, también se instalan Azure Feature Pack para SSIS y el componente redistribuible de Access. Estos componentes proporcionan conectividad a archivos de **Excel y Access**, y a los diversos orígenes de datos de **Azure**, así como a los orígenes de datos compatibles con componentes integrados. No puede instalar **componentes de terceros** para SSIS en este momento (incluidos los componentes de terceros de Microsoft, como los componentes Oracle y Teradata de Attunity, y los componentes BI de SAP).
 
 El **nombre de SQL Database** que hospeda SSISDB se convierte en la primera parte del nombre de cuatro partes que se usará al implementar y administrar paquetes de SSDT y SSMS (`<sql_database_name>.database.windows.net`).
 

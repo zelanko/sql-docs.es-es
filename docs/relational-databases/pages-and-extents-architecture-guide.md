@@ -20,26 +20,26 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 991def989273019e4a58d7ffc6b37a42b73953dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2ccdd2397b21b5a1e5e04b567cec25c0723122a7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guía de arquitectura de páginas y extensiones
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-La página es la unidad fundamental del almacenamiento de datos en SQL Server. Una extensión es una colección de ocho páginas físicamente contiguas. Las extensiones ayudan a administrar las páginas con eficacia. En esta guía se describen las estructuras de datos que se utilizan para administrar páginas y extensiones en todas las versiones de SQL Server. Comprender la arquitectura de las páginas y las extensiones es importante para diseñar y desarrollar bases de datos que funcionen eficazmente.
+La página es la unidad fundamental del almacenamiento de datos en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Una extensión es una colección de ocho páginas físicamente contiguas. Las extensiones ayudan a administrar las páginas con eficacia. En esta guía se describen las estructuras de datos que se utilizan para administrar páginas y extensiones en todas las versiones de SQL Server. Comprender la arquitectura de las páginas y las extensiones es importante para diseñar y desarrollar bases de datos que funcionen eficazmente.
 
 ## <a name="pages-and-extents"></a>Páginas y extensiones
 
-La unidad fundamental del almacenamiento de datos en SQL Server es la página. El espacio en disco asignado a un archivo de datos (.mdf o .ndf) en una base de datos se divide lógicamente en páginas numeradas de forma contigua de 0 a n. Las operaciones de E/S de disco se realizan en el nivel de página. Es decir, SQL Server lee o escribe páginas de datos enteras.
+La unidad fundamental del almacenamiento de datos en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es la página. El espacio en disco asignado a un archivo de datos (.mdf o .ndf) en una base de datos se divide lógicamente en páginas numeradas de forma contigua de 0 a n. Las operaciones de E/S de disco se realizan en el nivel de página. Es decir, SQL Server lee o escribe páginas de datos enteras.
 
 Las extensiones son una colección de ocho páginas físicamente contiguas; se utilizan para administrar las páginas de forma eficaz. Todas las páginas se almacenen en extensiones.
 
 ### <a name="pages"></a>Páginas
 
-En SQL Server, el tamaño de página es de 8 KB. Esto significa que las bases de datos de SQL Server tienen 128 páginas por megabyte. Cada página empieza con un encabezado de 96 bytes, que se utiliza para almacenar la información del sistema acerca de la página. Esta información incluye el número de página, el tipo de página, el espacio disponible en la página y el Id. de unidad de asignación del objeto propietario de la página.
+En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el tamaño de página es de 8 KB. Esto significa que las bases de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tienen 128 páginas por megabyte. Cada página empieza con un encabezado de 96 bytes, que se utiliza para almacenar la información del sistema acerca de la página. Esta información incluye el número de página, el tipo de página, el espacio disponible en la página y el Id. de unidad de asignación del objeto propietario de la página.
 
 En la siguiente tabla se muestran los tipos de página utilizados en los archivos de datos de una base de datos de SQL Server.
 
@@ -61,20 +61,22 @@ Las filas de datos se colocan en las páginas una a continuación de otra, empez
 
 ![page_architecture](../relational-databases/media/page-architecture.gif)
 
-**Compatibilidad con filas largas**  
+#### <a name="large-row-support"></a>Compatibilidad con filas largas  
 
-Las filas no pueden abarcar páginas; no obstante, se pueden apartar de la página de la fila ciertas partes de la fila para que ésta pueda tener un tamaño mucho mayor. La cantidad máxima de datos y de sobrecarga que está contenida en una única fila de una página es de 8.060 bytes (8 KB). Sin embargo, esto no incluye los datos almacenados en el tipo de página Texto o imagen. Esta restricción es menos estricta para tablas que contienen columnas varchar, nvarchar, varbinary o sql_variant. Cuando el tamaño de fila total de todas las columnas variables y fijas de una tabla excede el límite de 8060 bytes, SQL Server mueve dinámicamente una o más columnas de longitud variable a páginas de la unidad de asignación ROW_OVERFLOW_DATA, empezando por la columna con el mayor ancho. Esto se realiza cuando una operación de inserción o actualización aumenta el tamaño total de la fila más allá del límite de 8060 bytes. Cuando una columna se mueve a una página de la unidad de asignación ROW_OVERFLOW_DATA, se mantiene un puntero de 24 bytes de la página original de la unidad de asignación IN_ROW_DATA. Si una operación posterior reduce el tamaño de la fila, SQL Server vuelve a mover las columnas dinámicamente a la página de datos original. 
+Las filas no pueden abarcar páginas; no obstante, se pueden apartar de la página de la fila ciertas partes de la fila para que ésta pueda tener un tamaño mucho mayor. La cantidad máxima de datos y de sobrecarga que está contenida en una única fila de una página es de 8.060 bytes (8 KB). Sin embargo, esto no incluye los datos almacenados en el tipo de página Texto o imagen. 
 
+Esta restricción es menos estricta para tablas que contienen columnas varchar, nvarchar, varbinary o sql_variant. Cuando el tamaño de fila total de todas las columnas variables y fijas de una tabla excede el límite de 8.060 bytes, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mueve dinámicamente una o más columnas de longitud variable a páginas de la unidad de asignación ROW_OVERFLOW_DATA, empezando por la columna con el mayor ancho. 
+
+Esto se realiza cuando una operación de inserción o actualización aumenta el tamaño total de la fila más allá del límite de 8060 bytes. Cuando una columna se mueve a una página de la unidad de asignación ROW_OVERFLOW_DATA, se mantiene un puntero de 24 bytes de la página original de la unidad de asignación IN_ROW_DATA. Si una operación posterior reduce el tamaño de la fila, SQL Server vuelve a mover las columnas dinámicamente a la página de datos original. 
 
 ### <a name="extents"></a>Extents 
 
 Las extensiones son la unidad básica en la que se administra el espacio. Una extensión consta de ocho páginas contiguas físicamente, es decir 64 KB. Esto significa que las bases de datos de SQL Server tienen 16 extensiones por megabyte.
 
-Para hacer que la asignación de espacio sea eficaz, SQL Server no asigna extensiones completas a tablas con pequeñas cantidades de datos. SQL Server tiene dos tipos de extensiones: 
+Para hacer que la asignación de espacio sea eficaz, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no asigna extensiones completas a tablas con pequeñas cantidades de datos. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene dos tipos de extensiones: 
 
-* Las extensiones uniformes son propiedad de un único objeto; solo el objeto propietario puede utilizar las ocho páginas de la extensión.
-* Las extensiones mixtas, que pueden estar compartidas por hasta ocho objetos. Cada una de las 8 páginas de la extensión puede ser propiedad de un objeto diferente.
-
+* Las extensiones **uniformes** son propiedad de un único objeto; solo el objeto propietario puede usar las ocho páginas de la extensión.
+* Las extensiones **mixtas**, que pueden estar compartidas por hasta ocho objetos. Cada una de las 8 páginas de la extensión puede ser propiedad de un objeto diferente.
 
 A las tablas o índices nuevos se les suelen asignar páginas de extensiones mixtas. Cuando la tabla o el índice crecen hasta el punto de ocupar ocho páginas, se pasan a extensiones uniformes para las posteriores asignaciones. Si crea un índice de una tabla existente que dispone de filas suficientes para generar ocho páginas en el índice, todas las asignaciones del índice están en extensiones uniformes.
 
@@ -82,7 +84,7 @@ A las tablas o índices nuevos se les suelen asignar páginas de extensiones mix
 
 ## <a name="managing-extent-allocations-and-free-space"></a>Administrar las asignaciones de extensiones y el espacio disponible 
 
-Las estructuras de datos de SQL Server que administran asignaciones de extensiones y realizan un seguimiento del espacio disponible tienen una estructura relativamente sencilla. Esto tiene las siguientes ventajas: 
+Las estructuras de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que administran asignaciones de extensiones y realizan un seguimiento del espacio disponible tienen una estructura relativamente sencilla. Esto tiene las siguientes ventajas: 
 
 * La información del espacio libre está densamente empaquetada, de modo que esta información está contenida en relativamente pocas páginas.   
   Esto aumenta la velocidad al reducir la cantidad de lecturas del disco necesarias para recuperar la información de asignación. También incrementa la posibilidad de que las páginas de asignación permanezcan en la memoria, lo que elimina aún más lecturas. 
@@ -92,12 +94,12 @@ Las estructuras de datos de SQL Server que administran asignaciones de extension
 
 ### <a name="managing-extent-allocations"></a>Administrar las asignaciones de extensiones
 
-SQL Server utiliza dos tipos de mapas de asignación para registrar la asignación de las extensiones: 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa dos tipos de mapas de asignación para registrar la asignación de las extensiones: 
 
-* Mapa de asignación global (GAM, Global Allocation Map)   
+- **Mapa de asignación global (GAM)**   
   Las páginas GAM registran las extensiones que han sido asignadas. Cada GAM cubre 64.000 extensiones o casi 4 GB de datos. La página GAM tiene un bit por cada extensión del intervalo que cubre. Si el bit es 1, la extensión está disponible; si el bit es 0, la extensión está asignada. 
 
-* Mapa de asignación global compartido (SGAM, Shared Global Allocation Map)   
+- **Mapa de asignación global compartido (SGAM)**   
   Las páginas SGAM registran las extensiones que actualmente se están utilizando como extensiones mixtas y además tienen al menos una página sin utilizar. Cada SGAM cubre 64.000 extensiones o casi 4 GB de datos. La página SGAM tiene un bit por cada extensión del intervalo que cubre. Si el bit es 1, la extensión se está utilizando como extensión mixta y tiene una página disponible. Si el bit es 0, la extensión no se utiliza como extensión mixta o se trata de una extensión mixta cuyas páginas están todas en uso. 
 
 Todas las extensiones tienen establecidos los siguientes patrones de bits en las página GAM y SGAM, basados en su uso actual. 
@@ -108,29 +110,33 @@ Todas las extensiones tienen establecidos los siguientes patrones de bits en las
 |Extensión uniforme o extensión mixta completa |0 |0 |
 |Extensión mixta con páginas disponibles |0 |1 |
  
-Esto hace que los algoritmos de administración de las extensiones sean sencillos. Para asignar una extensión uniforme, el motor de base de datos busca un bit 1 en la página GAM y lo establece en 0. Para buscar una extensión mixta con páginas disponibles, el motor de base de datos busca un bit 1 en la página SGAM. Para asignar una extensión mixta, el motor de base de datos busca 1 bit en la página GAM, lo establece en 0 y, a continuación, establece también en 1 el bit correspondiente de la página SGAM. Para desasignar una extensión, el motor de base de datos se asegura de que el bit de la página GAM esté establecido en 1 y el bit de la página SGAM en 0. Los algoritmos internos usados realmente por el motor de base de datos son más complejos que los mencionados aquí, puesto que el motor de base de datos distribuye los datos en la base de datos de manera uniforme. Sin embargo, incluso los algoritmos reales quedan simplificados al no tener que administrar cadenas de información de asignación de extensiones.
+Esto hace que los algoritmos de administración de las extensiones sean sencillos. 
+-   Para asignar una extensión uniforme, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] busca un bit 1 en la página GAM y lo establece en 0. 
+-   Para buscar una extensión mixta con páginas disponibles, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] busca un bit 1 en la página SGAM. 
+-   Para asignar una extensión mixta, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] busca 1 bit en la página GAM, lo establece en 0 y, a continuación, establece también en 1 el bit correspondiente de la página SGAM. 
+-   Para desasignar una extensión, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] se asegura de que el bit de la página GAM esté establecido en 1 y el bit de la página SGAM en 0. Los algoritmos internos usados realmente por [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] son más complejos que los mencionados aquí, puesto que [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] distribuye los datos en la base de datos de manera uniforme. Sin embargo, incluso los algoritmos reales quedan simplificados al no tener que administrar cadenas de información de asignación de extensiones.
 
 ### <a name="tracking-free-space"></a>Realizar un seguimiento del espacio libre
 
-Las páginas Espacio disponible en páginas (PFS, Page Free Space) registran el estado de asignación de cada página, si una página concreta está asignada y la cantidad de espacio libre en cada página. La PFS tiene un byte por página, que registra si la página está asignada y, en tal caso, si está vacía, llena entre el 1 y el 50%, entre el 51 y el 80%, entre el 81 y el 95% o entre el 96 y el 100%.
+Las páginas **Espacio disponible en páginas (PFS)** registran el estado de asignación de cada página, si una página concreta está asignada y la cantidad de espacio libre en cada página. La PFS tiene un byte por página, que registra si la página está asignada y, en tal caso, si está vacía, llena entre el 1 y el 50%, entre el 51 y el 80%, entre el 81 y el 95% o entre el 96 y el 100%.
 
 Una vez que se ha asignado una extensión a un objeto, el motor de base de datos utiliza las páginas PFS para registrar las páginas de la extensión que están asignadas o libres. Esta información se utiliza cuando el motor de base de datos tiene que asignar una nueva página. La cantidad de espacio libre de una página solo se mantiene en páginas de texto e imagen y de montón. Se utiliza cuando el motor de base de datos tiene que buscar una página con espacio libre disponible para almacenar una fila recién insertada. Los índices no necesitan que se haga un seguimiento del espacio libre en páginas, porque el punto en el que se inserta una nueva fila se establece mediante los valores de clave del índice.
 
-La página PFS es la primera página que sigue a la página de encabezado de archivo en un archivo de datos (con el número de página 1). A continuación aparece una página GAM (con el número de página 2), seguida de una página SGAM (página 3). Hay una página PFS de aproximadamente 8.000 páginas de tamaño después de la primera página PFS. Hay otras 64.000 extensiones de la página GAM después de la primera página GAM en la página 2, y otras 64.000 extensiones de la página SGAM después de la primera página SGAM en la página 3. En la siguiente ilustración se muestra la secuencia de páginas que usa el motor de base de datos para asignar y administrar extensiones.
+La página PFS es la primera que sigue a la página de encabezado de archivo en un archivo de datos (con el id. de página 1). A continuación aparece una página GAM (con el id. de página 2), seguida de una página SGAM (id. de página 3). Hay una página PFS de aproximadamente 8.000 páginas de tamaño después de la primera página PFS. Hay otras 64.000 extensiones de la página GAM después de la primera página GAM en la página 2, y otras 64.000 extensiones de la página SGAM después de la primera página SGAM en la página 3. En la siguiente ilustración se muestra la secuencia de páginas que usa [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] para asignar y administrar extensiones.
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
-## <a name="managing-space-used-by-objects"></a>Administrar el espacio utilizado por los objetos 
+## <a name="managing-space-used-by-objects"></a>Administrar el espacio usado por los objetos 
 
-Una página del Mapa de asignación de índices (IAM) asigna las extensiones en una parte de 4 GB de un archivo de base de datos utilizado por una unidad de asignación. Existen tres tipos de unidades de asignación:
+Una página del **Mapa de asignación de índices (IAM)** asigna las extensiones en una parte de 4 GB de un archivo de base de datos usado por una unidad de asignación. Existen tres tipos de unidades de asignación:
 
-* IN_ROW_DATA   
+- IN_ROW_DATA   
     Contiene una partición de un montón o un índice.
 
-* LOB_DATA   
+- LOB_DATA   
    Contiene tipos de datos de objetos grandes (LOB), como xml, varbinary(max) y varchar(max).
 
-* ROW_OVERFLOW_DATA   
+- ROW_OVERFLOW_DATA   
    Contiene datos de longitud variable almacenados en columnas varchar, nvarchar, varbinary o sql_variant que superan el límite de tamaño de fila de 8060 bytes. 
 
 Cada partición de un montón o un índice contiene al menos una unidad de asignación IN_ROW_DATA. También puede contener una unidad de asignación LOB_DATA o ROW_OVERFLOW_DATA en función del esquema del montón o el índice. Para obtener más información acerca de las unidades de asignación, vea Organización de tablas e índices.
@@ -148,20 +154,21 @@ Las páginas IAM se asignan según se necesitan para cada unidad de asignación 
  
 Páginas IAM vinculadas en una cadena por unidad de asignación Una página IAM tiene un encabezado que indica la extensión inicial del intervalo de extensiones asignado por la página IAM. La página IAM también tiene un mapa de bits grande en el que cada bit representa una extensión. El primer bit del mapa representa la primera extensión del intervalo, el segundo bit representa la segunda extensión, etc. Si un bit es 0, la extensión que representa no está asignada a la unidad de asignación propietaria de IAM. Si el bit es 1, la extensión que representa está asignada a la unidad de asignación propietaria de la página IAM.
 
-Si el motor de base de datos de SQL Server necesita insertar una fila nueva y no hay espacio disponible en la página actual, utiliza las páginas IAM y PFS para buscar una página para la asignación o, en el caso de un montón o una página de texto o imagen, una página con espacio suficiente para contener la fila. El motor de base de datos utiliza las páginas IAM para buscar las extensiones asignadas a la unidad de asignación. Para cada extensión, el motor de base de datos busca las páginas PFS para ver si existe una página que se pueda utilizar. Cada página IAM y PFS cubre muchas páginas de datos, por lo que en una base de datos hay pocas páginas IAM y PFS. Esto significa que las páginas IAM y PFS están generalmente en el grupo de búferes de SQL Server y se pueden buscar con rapidez. Para los índices, el punto de inserción de una nueva fila lo establece la clave de índice. En este caso, el proceso de búsqueda descrito anteriormente no se produce.
+Si [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] necesita insertar una fila nueva y no hay espacio disponible en la página actual, utiliza las páginas IAM y PFS para buscar una página para la asignación o, en el caso de un montón o una página de texto o imagen, una página con espacio suficiente para contener la fila. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utiliza las páginas IAM para buscar las extensiones asignadas a la unidad de asignación. Para cada extensión, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] busca las páginas PFS para ver si existe una página que se pueda utilizar. Cada página IAM y PFS cubre muchas páginas de datos, por lo que en una base de datos hay pocas páginas IAM y PFS. Esto significa que las páginas IAM y PFS están generalmente en el grupo de búferes de SQL Server y se pueden buscar con rapidez. Para los índices, el punto de inserción de una nueva fila lo establece la clave de índice. En este caso, el proceso de búsqueda descrito anteriormente no se produce.
 
-El motor de base de datos solo asigna una nueva extensión a una unidad de asignación cuando no puede encontrar rápidamente una página en una extensión existente con espacio suficiente para almacenar la fila que se va a insertar. El motor de base de datos asigna las extensiones entre las que están disponibles en el grupo de archivos siguiendo un algoritmo de asignación proporcional. Si un grupo de archivos tiene dos archivos, uno de los cuales tiene el doble de espacio disponible que el otro, asignará dos páginas del archivo con más espacio disponible por cada página asignada del otro archivo. Esto significa que los archivos de un grupo de archivos tienen un porcentaje de espacio utilizado similar. 
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] solo asigna una nueva extensión a una unidad de asignación cuando no puede encontrar rápidamente una página en una extensión existente con espacio suficiente para almacenar la fila que se va a insertar. 
 
- 
+<a name="ProportionalFill"></a> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] asigna las extensiones entre las que están disponibles en el grupo de archivos siguiendo un **algoritmo de asignación de relleno proporcional**. Si en el mismo grupo de archivos con dos archivos, uno de ellos tiene el doble de espacio disponible que el otro, se asignarán dos páginas del archivo con más espacio disponible por cada página asignada del otro archivo. Esto significa que los archivos de un grupo de archivos tienen un porcentaje de espacio utilizado similar. 
+
 ## <a name="tracking-modified-extents"></a>Realizar un seguimiento de las extensiones modificadas 
 
-SQL Server utiliza dos estructuras de datos internas para realizar un seguimiento de las extensiones modificadas mediante operaciones de copia masiva y de las extensiones modificadas desde la última copia de seguridad completa. Esas estructuras de datos aceleran en gran medida las copias de seguridad diferenciales. También aceleran el registro de las operaciones de copia masiva cuando una base de datos utiliza el modelo de recuperación optimizado para cargas masivas de registros. Al igual que las páginas del mapa de asignación global (GAM) y del mapa de asignación global compartido (SGAM), estas nuevas estructuras son mapas de bits en los que cada bit representa una única extensión. 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa dos estructuras de datos internas para realizar un seguimiento de las extensiones modificadas mediante operaciones de copia masiva y de las extensiones modificadas desde la última copia de seguridad completa. Esas estructuras de datos aceleran en gran medida las copias de seguridad diferenciales. También aceleran el registro de las operaciones de copia masiva cuando una base de datos utiliza el modelo de recuperación optimizado para cargas masivas de registros. Al igual que las páginas del mapa de asignación global (GAM) y del mapa de asignación global compartido (SGAM), estas nuevas estructuras son mapas de bits en los que cada bit representa una única extensión. 
 
-* Mapa cambiado diferencial (DCM)   
-   Realiza un seguimiento de las extensiones que han cambiado desde la última instrucción BACKUP DATABASE. Si el bit de una extensión es 1, ésta se ha modificado desde la última instrucción BACKUP DATABASE. Si el bit es 0, la extensión no se ha modificado. Las copias de seguridad diferenciales solo leen las páginas DCM para determinar las extensiones que se han modificado. Esto reduce enormemente el número de páginas que debe recorrer una copia de seguridad diferencial. El tiempo de ejecución de una copia de seguridad diferencial es proporcional al número de extensiones modificadas desde la última instrucción BACKUP DATABASE y no al tamaño global de la base de datos. 
+- **Mapa cambiado diferencial (DCM)**   
+   Realiza un seguimiento de las extensiones que han cambiado desde la última instrucción `BACKUP DATABASE`. Si el bit de una extensión es 1, esta se ha modificado desde la última instrucción `BACKUP DATABASE`. Si el bit es 0, la extensión no se ha modificado. Las copias de seguridad diferenciales solo leen las páginas DCM para determinar las extensiones que se han modificado. Esto reduce enormemente el número de páginas que debe recorrer una copia de seguridad diferencial. El tiempo de ejecución de una copia de seguridad diferencial es proporcional al número de extensiones modificadas desde la última instrucción BACKUP DATABASE y no al tamaño global de la base de datos. 
 
-* Mapa cambiado masivamente (BCM)   
-   Realiza un seguimiento de las extensiones que se han modificado mediante operaciones de registro masivo desde la última instrucción BACKUP LOG. Si el bit de una extensión es 1, ésta se ha modificado mediante una operación de registro masivo después de la última instrucción BACKUP LOG. Si el bit es 0, la extensión no se ha modificado mediante operaciones de registro masivo. Aunque las páginas BCM aparecen en todas las bases de datos, son relevantes únicamente cuando la base de datos está utilizando el modelo de recuperación optimizado para cargas masivas de registros. En este modelo de recuperación, cuando se ejecuta BACKUP LOG, el proceso de copia de seguridad recorre los BCM buscando extensiones que se hayan modificado. A continuación incluye dichas extensiones en la copia de seguridad del registro. Esto permite recuperar operaciones de registro masivo si se restaura la base de datos a partir de una copia de seguridad y una secuencia de copias de seguridad de registro de transacciones. Las páginas BCM no son relevantes en una base de datos que está utilizando el modelo de recuperación simple, porque no se registran las operaciones de registro masivo. No son relevantes en una base de datos que utiliza el modelo de recuperación completa, porque este modelo trata las operaciones de registro masivo como operaciones de registro completo. 
+- **Mapa cambiado masivamente (BCM)**   
+   Realiza un seguimiento de las extensiones que se han modificado mediante operaciones de registro masivo desde la última instrucción `BACKUP LOG`. Si el bit de una extensión es 1, esta se ha modificado mediante una operación de registro masivo después de la última instrucción `BACKUP LOG`. Si el bit es 0, la extensión no se ha modificado mediante operaciones de registro masivo. Aunque las páginas BCM aparecen en todas las bases de datos, son relevantes únicamente cuando la base de datos está utilizando el modelo de recuperación optimizado para cargas masivas de registros. En este modelo de recuperación, cuando se ejecuta `BACKUP LOG`, el proceso de copia de seguridad recorre los BCM buscando extensiones que se hayan modificado. A continuación incluye dichas extensiones en la copia de seguridad del registro. Esto permite recuperar operaciones de registro masivo si se restaura la base de datos a partir de una copia de seguridad y una secuencia de copias de seguridad de registro de transacciones. Las páginas BCM no son relevantes en una base de datos que está utilizando el modelo de recuperación simple, porque no se registran las operaciones de registro masivo. No son relevantes en una base de datos que utiliza el modelo de recuperación completa, porque este modelo trata las operaciones de registro masivo como operaciones de registro completo. 
 
 El intervalo entre las páginas DCM y BCM es el mismo que el intervalo entre las páginas GAM y SGAM, es decir, 64.000 extensiones. Las páginas DCM y BCM se colocan después de las páginas GAM y SGAM en un archivo físico:
 

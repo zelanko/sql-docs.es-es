@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5f9c6d6327b2f658ce2e71ecf7107d3c8636bcbf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 883d6283f191827caf4de79e3f148f4680ccfe8a
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ catalog.create_execution [@folder_name = folder_name
   
 ## <a name="arguments"></a>Argumentos  
  [@folder_name =] *folder_name*  
- El nombre de la carpeta que contiene el paquete que se va a ejecutar. El parámetro *folder_name* es de tipo **nvarchar(128)**.  
+ El nombre de la carpeta que contiene el paquete que se va a ejecutar. *folder_name* es **nvarchar(128)**.  
   
  [@project_name =] *project_name*  
  Nombre del proyecto que contiene el paquete que se va a ejecutar. El parámetro *project_name* es de tipo **nvarchar(128)**.  
@@ -54,7 +54,7 @@ catalog.create_execution [@folder_name = folder_name
  El nombre del paquete que se va a ejecutar. El parámetro *package_name* es de tipo **nvarchar(260)**.  
   
  [@reference_id =] *reference_id*  
- Un identificador único para una referencia de entorno. Este parámetro es opcional. El parámetro *reference_id* es de tipo **bigint**.  
+ Un identificador único para una referencia de entorno. Este parámetro es opcional. *reference_id* es **bigint**.  
   
  [@use32bitruntime =] *use32bitruntime*  
  Indica si el motor en tiempo de ejecución de 32 bits se debe usar para ejecutar el paquete en un sistema operativo de 64 bits. Use el valor 1 para ejecutar el paquete con el motor de tiempo de ejecución de 32 bits cuando se ejecute en un sistema operativo de 64 bits. Use el valor 0 para ejecutar el paquete con el motor de tiempo de ejecución de 64 bits cuando se ejecute en un sistema operativo de 64 bits. Este parámetro es opcional. El parámetro *Use32bitruntime* es de tipo **bit**.  
@@ -62,14 +62,20 @@ catalog.create_execution [@folder_name = folder_name
  [@runinscaleout =] *runinscaleout*  
  Indique si la ejecución está en Escalabilidad horizontal. Use el valor 1 para ejecutar el paquete en la escalabilidad horizontal. Use el valor 0 para ejecutar el paquete sin escalabilidad horizontal. Este parámetro es opcional. Si no se especifica, su valor se establece en DEFAULT_EXECUTION_MODE en [SSISDB].[catalog].[catalog_properties]. El parámetro *runinscaleout* es de tipo **bit**. 
  
- [@useanyworker =] *useanyworker*  
-  Indique si se permite al trabajo de escalabilidad horizontal para realizar la ejecución. Use el valor 1 para ejecutar el paquete con cualquier trabajo de escalabilidad horizontal. Use el valor 0 para indicar que no todos los trabajos de escalabilidad horizontal tienen permiso para ejecutar el paquete. Este parámetro es opcional. Si no se especifica, su valor se establece en 1. El parámetro *useanyworker* es de tipo **bit**. 
+[@useanyworker =] *useanyworker*  
+Indique si se permite al trabajo de escalabilidad horizontal para realizar la ejecución.
+
+-   Use el valor 1 para ejecutar el paquete con cualquier trabajo de escalabilidad horizontal. Al establecer `@useanyworker` en true, cualquier trabajo cuyo número máximo de tareas (tal y como se especifica en el archivo de configuración del trabajo) aún no se haya alcanzado, estará disponible para ejecutar el paquete.
+
+-   Use el valor 0 para indicar que no todos los trabajos de escalabilidad horizontal tienen permiso para ejecutar el paquete. Al establecer `@useanyworker` en false, tendrá que especificar los trabajos que están autorizados a ejecutar el paquete mediante el Administrador de escalabilidad horizontal o mediante una llamada al procedimiento almacenado `[catalog].[add_execution_worker]`.
+
+Este parámetro es opcional. Si no se especifica, su valor se establece en 1. El parámetro *useanyworker* es de tipo **bit**. 
   
  [@execution_id =] *execution_id*  
  Devuelve el identificador único de una instancia de ejecución. El parámetro *execution_id* es de tipo **bigint**.  
 
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Una ejecución se utiliza para especificar los valores de parámetro que va a usar un paquete durante una instancia única de ejecución del paquete.  
   
  Si una referencia de entorno se especifica con el parámetro *reference_id*, el procedimiento almacenado rellena los parámetros de paquete y proyecto con los valores literales o los valores a los que se hace referencia de las variables de entorno correspondientes. Si se especifica la referencia de entorno, los valores de parámetro predeterminados se utilizan durante la ejecución del paquete. Para determinar exactamente qué valores se usan para una instancia determinada de ejecución, utilice el valor del parámetro de salida *execution_id* de este de procedimiento almacenado y consulte la vista [execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md).  
@@ -97,24 +103,24 @@ GO
  0 (correcto)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Ninguno  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
 -   Permisos de lectura y ejecución en el proyecto y, si es aplicable, permisos de lectura en el entorno al que se hace referencia  
   
--   Pertenencia al rol de base de datos **ssis_admin**  
+-   Pertenencia al rol de base de datos de **ssis_admin**  
   
--   Pertenencia al rol de servidor **sysadmin**  
+-   Pertenencia al rol de servidor de **sysadmin**  
 
  Si @runinscaleout es 1, el procedimiento almacenado necesita uno de los permisos siguientes:
  
--   Pertenencia al rol de base de datos **ssis_admin**
+-   Pertenencia al rol de base de datos de **ssis_admin**
 
 -   Pertenencia al rol de base de datos **ssis_cluster_executor**
 
--   Pertenencia al rol de servidor **sysadmin**
+-   Pertenencia al rol de servidor de **sysadmin**
   
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
  La siguiente lista describe algunas condiciones que pueden producir un error o una advertencia:  
@@ -133,8 +139,8 @@ GO
   
 -   Las variables de entorno a las que se hace referencia no se encuentran en el entorno especificado por la referencia de entorno, *reference_id*.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [catalog.start_execution &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)   
- [catalog.set_execution_parameter_value &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
+ [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) (catalog.set_execution_parameter_value [base de datos de SSISDB];)  
  [catalog.add_execution_worker &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)  
   

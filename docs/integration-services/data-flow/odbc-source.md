@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8af8fe7422b0f58c99fa95dd63bd2c0408b6e624
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 42eb0885558003d4810e873d95876bd8ac6da14b
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="odbc-source"></a>Origen ODBC
   El origen ODBC extrae los datos de una base de datos con ODBC mediante una tabla de base de datos, una vista o una instrucción SQL.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
  Según la configuración del comportamiento de los errores, el origen ODBC permite devolver los errores (conversión de datos, truncamiento) que aparecerán durante el proceso de extracción en la salida de error. Para obtener más información, vea [Editor de destino de ODBC &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md).  
   
 ## <a name="data-type-support"></a>Compatibilidad con tipos de datos  
- Para obtener información acerca de los tipos de datos admitidos por el origen ODBC, vea Connector for Open Database Connectivity (ODBC) de Attunity.  
+ Para obtener información sobre los tipos de datos admitidos por el origen ODBC, vea Conector para conectividad abierta de base de datos (ODBC).  
   
 ## <a name="extract-options"></a>Opciones de extracción  
  El origen ODBC funciona en modo **Lote** o **Fila a fila** . La propiedad **FetchMethod** determina el modo usado. En la lista siguiente, se describen los modos.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
   
  Para obtener más información acerca de la la propiedad **FetchMethod** , vea [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md).  
   
-## <a name="parallelism"></a>Paralelismo  
+## <a name="parallelism"></a>Parallelism  
  No hay límite en el número de componentes de origen ODBC que se pueden ejecutar en paralelo en la misma tabla o en tablas diferentes, en el mismo equipo o en equipos diferentes (que no sean los límites normales de la sesión global).  
   
  Sin embargo, las limitaciones del proveedor ODBC que se usa pueden restringir el número de conexiones simultáneas a través del proveedor. Estas limitaciones limitan el número de instancias en paralelo admitidas posibles para el origen ODBC. El desarrollador de SSIS debe tener en cuenta las limitaciones de cualquier proveedor ODBC que se vaya a usar y tomarlas en cuenta al generar paquetes SSIS.  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/20/2017
   
 -   En la pestaña **Flujo de datos** , haga doble clic en el origen de ODBC.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
   
 #### <a name="connection-manager"></a>Administrador de conexiones  
  Seleccione un administrador de conexiones de ODBC existente en la lista o haga clic en **Nueva** para crear una nueva conexión. La conexión puede ser a cualquier base de datos compatible con ODBC.  
@@ -137,7 +137,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  En el **Editor de origen de ODBC**, haga clic en **Columnas**.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
   
 #### <a name="available-external-columns"></a>Columnas externas disponibles  
  Lista de las columnas externas disponibles en el origen de datos. Esta tabla no se puede usar para agregar o quitar columnas. Seleccione las columnas que se van a usar desde el origen. Las columnas seleccionadas se agregan a la lista **Columna externa** en el orden en que se seleccionan.  
@@ -158,16 +158,16 @@ ms.lasthandoff: 11/20/2017
   
 -   En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], abra el paquete [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] que tiene el origen de ODBC.  
   
--   En la pestaña **Flujo de datos** , haga doble clic en el origen ODBC.  
+-   En la pestaña **Flujo de datos** , haga doble clic en el origen de ODBC.  
   
 -   En el **Editor de origen de ODBC**, haga clic en **Salida de error**.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
   
 #### <a name="inputoutput"></a>Entrada/salida  
  Muestra el nombre del origen de datos.  
   
-#### <a name="column"></a>Columna  
+#### <a name="column"></a>columna  
  No se usa.  
   
 #### <a name="error"></a>Error  

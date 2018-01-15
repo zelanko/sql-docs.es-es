@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 35d6cd398b2bac3a4a7be85ba32ace3ea7a033a7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ae63f120997ba5018b131f8a946b0f9ae9e384d0
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="integration-services-ssis-variables"></a>Variables de Integration Services (SSIS)
   Las variables almacenan valores que un paquete de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y sus contenedores, tareas y controladores de eventos pueden usar en tiempo de ejecución. Los scripts en la tarea Script y el componente Script también pueden usar variables. Las restricciones de precedencia que ordenan tareas y contenedores en un flujo de trabajo pueden usar variables cuando sus definiciones de restricciones incluyen expresiones.  
@@ -133,7 +133,17 @@ ms.lasthandoff: 12/21/2017
  Cuando el sistema restablece la opción **IncludeInDebugDump** en **false**, podría invalidarse el valor seleccionado por el usuario.  
   
 **Value**    
- El valor de una variable definida por el usuario puede ser un literal o una expresión. Una variable incluye opciones para establecer el valor de la variable y el tipo de datos del valor. Las dos propiedades deben ser compatibles: por ejemplo, el uso de un valor de cadena junto con el tipo de datos de número entero no es válido.  
+El valor de una variable definida por el usuario puede ser un literal o una expresión. El valor de una variable no puede ser null. Las variables tienen los siguientes valores predeterminados:
+
+| Tipo de datos | Valor predeterminado |
+|---|---|
+| Boolean | False |
+| Tipos de datos numeric y binary | 0 (cero) |
+| Tipos de datos char y string | (cadena vacía) |
+| Object | System.Object |
+| | |
+
+Una variable tiene opciones para establecer el valor de la variable y el tipo de datos del valor. Las dos propiedades deben ser compatibles: por ejemplo, el uso de un valor de cadena junto con el tipo de datos de número entero no es válido.  
   
  Si la variable está configurada para evaluarse como una expresión, se debe proporcionar una expresión. En el tiempo de ejecución, se evalúa la expresión, y se establece la variable con el resultado de la evaluación. Por ejemplo, si una variable usa la expresión `DATEPART("month", GETDATE())` , el valor de la variable es el equivalente numérico del mes de la fecha actual. La expresión debe ser una expresión válida que use la sintaxis de gramática de expresiones de [!INCLUDE[ssIS](../includes/ssis-md.md)] . Cuando una expresión se usa con variables, la expresión puede usar literales y los operadores y funciones que proporciona la gramática de la expresión, pero la expresión no puede hacer referencia a las columnas desde un flujo de datos en el paquete. La longitud máxima de una expresión es 4000 caracteres. Para más información, vea [Expresiones de Integration Services &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md).  
   

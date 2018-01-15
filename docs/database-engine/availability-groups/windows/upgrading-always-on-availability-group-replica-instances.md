@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b4be12e82f4df3c15fbf465863174b0cdde051af
-ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
+ms.openlocfilehash: 76d8f9fd55eb9129f31dba4dcbea9799e09148da
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/16/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Actualización de instancias de la réplica del grupo de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/16/2017
 -   [Requisitos de hardware y software para instalar SQL Server 2016:](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)revise los requisitos de software para instalar [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si se requiere software adicional, puede instalarlo en cada nodo antes de comenzar el proceso de actualización para reducir los posibles tiempos de inactividad.  
 
 > [!NOTE]  
->  No se permite mezclar versiones de SQL Server en el mismo AG. Para migrar a una versión nueva con grupos de disponibilidad, el único método admitido es un grupo de disponibilidad distribuido que esté en SQL Server 2016 Enterprise Edition o en una versión posterior.
+>  No se permite mezclar versiones de SQL Server en el mismo AG fuera de una actualización gradual que actualiza las réplicas locales. Esto implica que no se puede agregar una versión superior de SQL Server como réplica nueva a un AG existente. Por ejemplo, no se puede agregar una réplica de SQL Server 2017 a un AG de SQL Server 2016. Para migrar a una versión nueva de SQL Server con grupos de disponibilidad, el único método admitido es un grupo de disponibilidad distribuido que esté en SQL Server 2016 Enterprise Edition o en una versión posterior.
 
 ## <a name="rolling-upgrade-best-practices-for-always-on-availability-groups"></a>Prácticas recomendadas de las actualizaciones graduales en grupos de disponibilidad AlwaysOn  
  Las siguientes prácticas recomendadas deberían tenerse en cuenta al realizar actualizaciones de servidor con el fin de reducir el tiempo de inactividad y la pérdida de datos en los grupos de disponibilidad:  

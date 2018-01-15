@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3396d9d6ec351550509300f760db8e5fc58836d6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2a1254e44ac2fcc110a81d9ac7f566a348812f80
+ms.sourcegitcommit: 1eac335235847c3578e376e0854413710d345dee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="tail-log-backups-sql-server"></a>Copias del final del registro (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tema solamente se aplica a copias de seguridad y restauración de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usan el modelo de recuperación optimizado para cargas masivas de registros o el modelo de recuperación completa.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 |Opción BACKUP LOG|Comentarios|  
 |-----------------------|--------------|  
-|NORECOVERY|Use NORECOVERY cada vez que desee continuar con una operación de restauración en la base de datos. NORECOVERY pone la base de datos en el estado de restauración. Esto garantiza que la base de datos no cambie después de realizar la copia del final del registro. El registro se truncará a menos que también se especifique la opción NO_TRUNCATE o COPY_ONLY.<br /><br /> **\*\* Importante \*\*** Evite usar NO_TRUNCATE, salvo cuando la base de datos esté dañada.|  
+|NORECOVERY|Use NORECOVERY cada vez que desee continuar con una operación de restauración en la base de datos. NORECOVERY pone la base de datos en el estado de restauración. Esto garantiza que la base de datos no cambie después de realizar la copia del final del registro. El registro se truncará a menos que también se especifique la opción NO_TRUNCATE o COPY_ONLY.<br /><br /> **Importante** Evite usar NO_TRUNCATE, salvo cuando la base de datos esté dañada.|  
 |CONTINUE_AFTER_ERROR|Utilice CONTINUE_AFTER_ERROR solo si va a crear una copia del final de una base de datos dañada.<br /><br /> Al realizar una copia de seguridad del final del registro de una base de datos dañada, es posible que parte de los metadatos que comúnmente se capturan en las copias de seguridad de registros no estén disponibles. Para más información, consulte [Copias del final del registro con metadatos de copia de seguridad incompletos](#IncompleteMetadata)que aparece en este tema.|  
   
 ##  <a name="IncompleteMetadata"></a> Copias del final del registro con metadatos de copia de seguridad incompletos  
@@ -63,13 +63,9 @@ ms.lasthandoff: 11/17/2017
  Si los metadatos de la copia del final del registro están incompletos, a la tabla [backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md) le faltará la mayoría de la información sobre grupos de archivos en el momento de realizar la copia del final del registro. La mayoría de las columnas de la tabla **backupfilegroup** son NULL; las únicas columnas significativas son las siguientes:  
   
 -   **backup_set_id**  
-  
 -   **filegroup_id**  
-  
 -   **tipo**  
-  
 -   **type_desc**  
-  
 -   **is_readonly**  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
@@ -77,12 +73,12 @@ ms.lasthandoff: 11/17/2017
   
  Para restaurar una copia de seguridad del registro de transacciones, vea [Restaurar una copia de seguridad de registros de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  
     
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Copias de seguridad de solo copia &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)   
  [Copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
- [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
-  
+ [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)    
+ [Guía de arquitectura y administración de registros de transacciones de SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)
   

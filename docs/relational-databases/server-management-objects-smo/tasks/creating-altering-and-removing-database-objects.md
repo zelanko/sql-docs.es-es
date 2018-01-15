@@ -16,18 +16,20 @@ helpviewer_keywords:
 - objects [SMO]
 ms.assetid: 702fd63d-8734-4a02-872e-aecfb037c787
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc43e77e099c216dbe13f2df5facbdb60a83c63b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 556403a013ee348e836c059ef9b246b4d5606a87
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-database-objects"></a>Crear, modificar y quitar objetos de base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Las fases de la creación de objetos SMO son los siguientes:  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Éstas son las fases de la creación de objetos SMO:  
   
 1.  Crear una instancia del objeto.  
   
@@ -46,6 +48,6 @@ ms.lasthandoff: 01/08/2018
  La instrucción **Drop** se utiliza para quitar un objeto y todos los objetos secundarios codependientes que hicieron falta para crear el objeto inicialmente.  
   
 ## <a name="see-also"></a>Vea también  
- [Modelo de objetos de SMO](../../../relational-databases/server-management-objects-smo/smo-object-model.md)  
+ [Modelo de objetos SMO](../../../relational-databases/server-management-objects-smo/smo-object-model.md)  
   
   

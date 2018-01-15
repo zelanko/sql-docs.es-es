@@ -12,10 +12,8 @@ ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- SYS.QUERY_STORE_WAIT_STATS_TSQL
-- QUERY_STORE_WAIT_STATS_TSQL
-- SYS.QUERY_STORE_WAIT_STATS
-- QUERY_STORE_WAIT_STATS
+- sys.query_store_wait_stats
+- query_store_wait_stats
 dev_langs: TSQL
 helpviewer_keywords:
 - query_store_wait_stats catalog view
@@ -26,11 +24,11 @@ author: AndrejsAnt
 ms.author: AndrejsAnt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a75e00467fbee053a05144d67f9d9a68469daeed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bed8035413a61c2bc5e4e644874bec9115c07d68
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>Sys.query_store_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -43,10 +41,10 @@ ms.lasthandoff: 11/17/2017
 |**plan_id**|**bigint**|Clave externa. Se combina con [sys.query_store_plan &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
 |**runtime_stats_interval_id**|**bigint**|Clave externa. Se combina con [sys.query_store_runtime_stats_interval &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**wait_category**|**tinyint**|Tipos de espera se clasifican según la tabla siguiente y, a continuación, se agrega el tiempo de espera en estas categorías de espera. Las distintas categorías de espera exigen un análisis de seguimiento diferente para resolver el problema, pero los tipos de espera de la misma categoría dan lugar a experiencias de solución de problemas muy similares; el proporcionar la consulta afectada además de las esperas sería la pieza que falta para completar correctamente la mayoría de las investigaciones de este tipo.|
-|**wait_category_desc**|**nvarchar (128)**|Para una descripción textual del campo de categoría de espera, consulte la tabla siguiente.|
+|**wait_category_desc**|**nvarchar(128)**|Para una descripción textual del campo de categoría de espera, consulte la tabla siguiente.|
 |**execution_type**|**tinyint**|Determina el tipo de ejecución de consulta:<br /><br /> 0 – normal de ejecución (terminado correctamente)<br /><br /> 3-cliente iniciado anuló la ejecución<br /><br /> 4 - excepción anuló la ejecución|  
-|**execution_type_desc**|**nvarchar (128)**|Descripción textual del campo de tipo de ejecución:<br /><br /> 0 – normal<br /><br /> 3 – anuladas<br /><br /> 4 - excepción|  
-|**total_query_wait_time_ms**|**bigint**|Total de CPU de tiempo de espera para el plan de consulta dentro del intervalo de agregación y cada categoría (notificado en microsegundos) de espera.|
+|**execution_type_desc**|**nvarchar(128)**|Descripción textual del campo de tipo de ejecución:<br /><br /> 0 – normal<br /><br /> 3 – anuladas<br /><br /> 4 - excepción|  
+|**total_query_wait_time_ms**|**bigint**|Total de CPU de tiempo de espera para el plan de consulta dentro del intervalo de agregación y cada categoría (notificada en milisegundos) de espera.|
 |**avg_query_wait_time_ms**|**float**|Promedio de duración del plan de consulta por cada ejecución dentro de la categoría de espera y de intervalo de agregación (notificada en milisegundos) de espera.|
 |**last_query_wait_time_ms**|**bigint**|Última duración para el plan de consulta dentro del intervalo de agregación de la espera y cada categoría (notificada en milisegundos) de espera.|
 |**min_query_wait_time_ms**|**bigint**|Tiempo mínimo de CPU tiempo de espera para el plan de consulta dentro del intervalo de agregación y cada categoría (notificada en milisegundos) de espera.|
@@ -96,7 +94,7 @@ ms.lasthandoff: 11/17/2017
  [Sys.query_store_query &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
  [Sys.query_store_query_text &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
  [Sys.query_store_runtime_stats_interval &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [Supervisar el rendimiento mediante el almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Almacén de consultas almacenados procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   

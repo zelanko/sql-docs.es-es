@@ -1,7 +1,7 @@
 ---
 title: Sys.dm_exec_trigger_stats (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 01/10/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 67c6d5765ee5259134f6d9985a88bf94768490cf
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5f0c102ba4f43cbd81d228945dc3e27143f7ce5a
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sysdmexectriggerstats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,36 +39,40 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Identificador de base de datos en que reside el desencadenador.|  
 |**object_id**|**int**|Número de identificación del objeto del desencadenador.|  
-|**tipo**|**Char(2)**|Tipo del objeto:<br /><br /> TA = Desencadenador de ensamblado (CLR)<br /><br /> TR = Desencadenador SQL|  
+|**Tipo**|**Char(2)**|Tipo del objeto:<br /><br /> TA = Desencadenador de ensamblado (CLR)<br /><br /> TR = Desencadenador SQL|  
 |**Type_desc**|**nvarchar (60)**|Descripción del tipo de objeto:<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**sql_handle**|**varbinary(64)**|Esto puede usarse para poner en correlación con las consultas en **sys.dm_exec_query_stats** que se ejecutaron desde dentro de este desencadenador.|  
 |**plan_handle**|**varbinary(64)**|Identificador del plan en memoria. Este identificador es transitorio y permanece constante solo mientras el plan permanece en la memoria caché. Este valor se puede usar con el **sys.dm_exec_cached_plans** vista de administración dinámica.|  
 |**cached_time**|**datetime**|Momento en que el desencadenador se agregó a la caché.|  
 |**last_execution_time**|**datetime**|Última vez que se ejecutó el desencadenador vez.|  
-|**entre execution_count**|**bigint**|Número de veces que se ha ejecutado el desencadenador desde que se compiló por última vez.|  
-|**total_worker_time**|**bigint**|Tiempo total de CPU, en microsegundos, consumido por las ejecuciones de este desencadenador desde que se compiló.|  
+|**entre execution_count**|**bigint**|El número de veces que el desencadenador se ha ejecutado desde que se compiló por última vez.|  
+|**total_worker_time**|**bigint**|La cantidad total de tiempo de CPU, en microsegundos, consumido por las ejecuciones de este desencadenador desde que se compiló.|  
 |**last_worker_time**|**bigint**|Tiempo de CPU, en microsegundos, consumido la última vez que se ejecutó el desencadenador.|  
-|**min_worker_time**|**bigint**|Tiempo máximo de CPU, en microsegundos, consumido por este desencadenador durante una ejecución.|  
-|**max_worker_time**|**bigint**|Tiempo máximo de CPU, en microsegundos, consumido por este desencadenador durante una ejecución.|  
-|**número**|**bigint**|Número total de lecturas físicas realizadas por las ejecuciones de este desencadenador desde que se compiló.|  
-|**last_physical_reads**|**bigint**|Número de lecturas físicas realizadas la última vez que se ejecutó el desencadenador.|  
-|**min_physical_reads**|**bigint**|Número mínimo de lecturas físicas realizadas por este desencadenador durante una ejecución.|  
-|**max_physical_reads**|**bigint**|Número máximo de lecturas físicas realizadas por este desencadenador durante una ejecución.|  
-|**total_logical_writes**|**bigint**|Número total de escrituras lógicas realizadas por las ejecuciones de este desencadenador desde que se compiló.|  
-|**last_logical_writes**|**bigint**|**número**número de escrituras lógicas realizadas la última vez que se ejecutó el desencadenador.|  
-|**min_logical_writes**|**bigint**|Número mínimo de escrituras lógicas realizadas por este desencadenador durante una ejecución.|  
-|**max_logical_writes**|**bigint**|Número máximo de escrituras lógicas realizadas por este desencadenador durante una ejecución.|  
-|**total_logical_reads**|**bigint**|Número total de lecturas lógicas realizadas por las ejecuciones de este desencadenador desde que se compiló.|  
-|**last_logical_reads**|**bigint**|Número de lecturas lógicas realizadas la última vez que se ejecutó el desencadenador.|  
-|**min_logical_reads**|**bigint**|Número mínimo de lecturas lógicas realizadas por este desencadenador durante una ejecución.|  
-|**max_logical_reads**|**bigint**|Número máximo de lecturas lógicas realizadas por este desencadenador durante una ejecución.|  
-|**total_elapsed_time**|**bigint**|Tiempo total transcurrido, en microsegundos, hasta la finalización de las ejecuciones de este desencadenador.|  
+|**min_worker_time**|**bigint**|Tiempo de CPU máximo, en microsegundos, que ha utilizado este desencadenador durante una ejecución.|  
+|**max_worker_time**|**bigint**|Tiempo de CPU máximo, en microsegundos, que ha utilizado este desencadenador durante una ejecución.|  
+|**número**|**bigint**|El número total de lecturas físicas realizadas por las ejecuciones de este desencadenador desde que se compiló.|  
+|**last_physical_reads**|**bigint**|El número de lecturas físicas realizadas la última vez que se ejecutó el desencadenador.|  
+|**min_physical_reads**|**bigint**|El número mínimo de lecturas físicas que ha realizado este desencadenador durante una ejecución.|  
+|**max_physical_reads**|**bigint**|El número máximo de lecturas físicas que ha realizado este desencadenador durante una ejecución.|  
+|**total_logical_writes**|**bigint**|El número total de lecturas lógicas realizadas por las ejecuciones de este desencadenador desde que se compiló.|  
+|**last_logical_writes**|**bigint**|El número de escrituras lógicas realizadas la última vez que se ejecutó el desencadenador.|  
+|**min_logical_writes**|**bigint**|El número mínimo de escrituras lógicas que ha realizado este desencadenador durante una ejecución.|  
+|**max_logical_writes**|**bigint**|El número máximo de escrituras lógicas que ha realizado este desencadenador durante una ejecución.|  
+|**total_logical_reads**|**bigint**|El número total de lecturas lógicas realizadas por las ejecuciones de este desencadenador desde que se compiló.|  
+|**last_logical_reads**|**bigint**|El número de lecturas lógicas realizadas la última vez que se ejecutó el desencadenador.|  
+|**min_logical_reads**|**bigint**|El número mínimo de lecturas lógicas que ha realizado este desencadenador durante una ejecución.|  
+|**max_logical_reads**|**bigint**|El número máximo de lecturas lógicas que ha realizado este desencadenador durante una ejecución.|  
+|**total_elapsed_time**|**bigint**|El tiempo total transcurrido, en microsegundos para las ejecuciones completadas de este desencadenador.|  
 |**last_elapsed_time**|**bigint**|Tiempo transcurrido, en microsegundos, hasta la finalización de la ejecución más reciente de este desencadenador.|  
-|**min_elapsed_time**|**bigint**|Tiempo mínimo transcurrido, en microsegundos, hasta la finalización de cualquier ejecución de este desencadenador.|  
-|**max_elapsed_time**|**bigint**|Tiempo máximo transcurrido, en microsegundos, hasta la finalización de cualquier ejecución de este desencadenador.|  
+|**min_elapsed_time**|**bigint**|El tiempo mínimo transcurrido, en microsegundos, para cualquier ejecución completada de este desencadenador.|  
+|**max_elapsed_time**|**bigint**|El tiempo máximo transcurrido, en microsegundos, para cualquier ejecución completada de este desencadenador.| 
+|**total_spills**|**bigint**|El número total de páginas derramado mediante la ejecución de este desencadenador desde que se compiló.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|El número de páginas derramado la última vez que se ejecutó el desencadenador.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|El número mínimo de páginas que alguna vez ha derramado este desencadenador durante una ejecución.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|El número máximo de páginas que alguna vez ha derramado este desencadenador durante una ejecución.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
   
 ## <a name="remarks"></a>Comentarios  
- En SQL Database de Microsoft Azure, las vistas de administración dinámica no pueden mostrar información que afecte a la contención de la base de datos o que exponga datos acerca de otras bases de datos a las que el usuario tenga acceso. Para evitar exponer esta información, cada fila que contiene datos que no pertenecen al inquilino conectado se filtra.  
+ En [!INCLUDE[ssSDS](../../includes/sssds-md.md)], las vistas de administración dinámica no pueden exponer información que impactaría a la contención de la base de datos ni acerca de otras bases de datos a las que el usuario tenga acceso. Para evitar exponer esta información, cada fila que contiene datos que no pertenecen al inquilino conectado se filtra.  
 
 Cuando se completa una consulta, se actualizan las estadísticas en la vista.  
   
@@ -81,8 +85,6 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles de Premium, requiere
  En el ejemplo siguiente se devuelve información acerca de los cinco principales desencadenadores identificados por el promedio de tiempo transcurrido.  
   
 ```sql  
-PRINT '--top 5 CPU consuming triggers '  
-  
 SELECT TOP 5 d.object_id, d.database_id, DB_NAME(database_id) AS 'database_name',   
     OBJECT_NAME(object_id, database_id) AS 'trigger_name', d.cached_time,  
     d.last_execution_time, d.total_elapsed_time,   
@@ -93,10 +95,10 @@ ORDER BY [total_worker_time] DESC;
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones y vistas de administración dinámica &#40; relacionada con la ejecución Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Sys.dm_exec_sql_text &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [Sys.dm_exec_query_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
-  [Sys.dm_exec_procedure_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)   
- [Sys.dm_exec_cached_plans &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+[Funciones y vistas de administración dinámica &#40; relacionada con la ejecución Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+[Sys.dm_exec_sql_text &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+[Sys.dm_exec_query_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+[Sys.dm_exec_procedure_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)   
+[Sys.dm_exec_cached_plans &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
   

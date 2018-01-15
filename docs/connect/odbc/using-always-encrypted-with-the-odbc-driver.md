@@ -1,7 +1,7 @@
 ---
-title: Uso de Always Encrypted with the ODBC Driver 13.1 para SQL Server | Documentos de Microsoft
+title: Uso de Always Encrypted con el controlador ODBC para SQL Server | Documentos de Microsoft
 ms.custom: 
-ms.date: 07/12/2017
+ms.date: 10/01/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -17,18 +17,25 @@ ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: 4e56c987938aa3cb8645dc9bef94f2f97b8c0649
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
+ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/12/2018
 ---
-# <a name="using-always-encrypted-with-the-odbc-driver-131-for-sql-server"></a>Uso de Always Encrypted with the ODBC Driver 13.1 para SQL Server
+# <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso de Always Encrypted con el controlador ODBC para SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-Este artículo proporciona información sobre cómo desarrollar aplicaciones de ODBC mediante [Always Encrypted (motor de base de datos)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) y [ODBC Driver 13.1 para SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
+### <a name="applicable-to"></a>Aplicable a
 
-Always Encrypted permite a las aplicaciones cliente cifrar la información confidencial y nunca revelar los datos ni las claves de cifrado en SQL Server o Azure SQL Database. Un Always Encrypted habilitado el controlador, como ODBC Driver 13.1 para SQL Server, consigue esto al cifrar y descifrar datos confidenciales en la aplicación cliente de forma transparente. El controlador determina automáticamente qué parámetros de consulta corresponden a columnas de bases de datos confidenciales (protegidas mediante Always Encrypted) y cifra los valores de esos parámetros antes de pasar los datos a SQL Server o Azure SQL Database. De forma similar, el controlador descifra de manera transparente los datos que se han recuperado de las columnas de bases de datos cifradas de los resultados de la consulta. Para obtener más información, vea [Always Encrypted (motor de base de datos)](../../relational-databases/security/encryption/always-encrypted-database-engine.md).
+- ODBC Driver 13.1 for SQL Server
+- 17 de controlador ODBC para SQL Server
+
+### <a name="introduction"></a>Introducción
+
+Este artículo proporciona información sobre cómo desarrollar aplicaciones de ODBC mediante [Always Encrypted (motor de base de datos)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) y [el controlador ODBC para SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
+
+Always Encrypted permite a las aplicaciones cliente cifrar la información confidencial y nunca revelar los datos ni las claves de cifrado en SQL Server o Azure SQL Database. Un Always Encrypted habilitado el controlador, como el controlador ODBC para SQL Server, consigue esto al cifrar y descifrar datos confidenciales en la aplicación cliente de forma transparente. El controlador determina automáticamente qué parámetros de consulta corresponden a columnas de bases de datos confidenciales (protegidas mediante Always Encrypted) y cifra los valores de esos parámetros antes de pasar los datos a SQL Server o Azure SQL Database. De forma similar, el controlador descifra de manera transparente los datos que se han recuperado de las columnas de bases de datos cifradas de los resultados de la consulta. Para obtener más información, vea [Always Encrypted (motor de base de datos)](../../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
 ### <a name="prerequisites"></a>Requisitos previos
 
@@ -282,11 +289,11 @@ Como Always Encrypted es una tecnología de cifrado en el cliente, la mayor part
 
 - Llamadas a un almacén de claves maestras de columna para tener acceso a una clave maestra de columna.
 
-En esta sección se describe las optimizaciones de rendimiento integrados en ODBC Driver 13.1 para SQL Server y cómo se puede controlar el impacto de los dos factores anteriores en el rendimiento.
+Esta sección describen las optimizaciones de rendimiento integrados en el controlador ODBC para SQL Server y cómo se puede controlar el impacto de los dos factores anteriores en el rendimiento.
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Control de ida y vuelta para recuperar los metadatos para los parámetros de consulta
 
-Si Always Encrypted está habilitado para una conexión, ODBC Driver 13.1 para SQL Server, de forma predeterminada, llame a [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) para cada consulta con parámetros, pasar la instrucción de consulta (sin ningún parámetro los valores) a SQL Server. Este procedimiento almacenado se analiza la instrucción de consulta para averiguar si algún parámetro necesita cifrarse y si es así, se devuelve la información relacionada con el cifrado para cada parámetro para permitir que el controlador cifrarlos. El comportamiento anterior garantiza un alto nivel de transparencia para la aplicación cliente: la aplicación (y el programador de aplicaciones) no necesitan ser consciente de las consultas que acceden a columnas cifradas, siempre y cuando se pasan los valores que se dirigen a columnas cifradas a el controlador de parámetros.
+Si Always Encrypted está habilitado para una conexión, el controlador, de forma predeterminada, llamará a [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) para cada consulta con parámetros, pasar la instrucción de consulta (sin ningún valor de parámetro) a SQL Server. Este procedimiento almacenado se analiza la instrucción de consulta para averiguar si algún parámetro necesita cifrarse y si es así, se devuelve la información relacionada con el cifrado para cada parámetro para permitir que el controlador cifrarlos. El comportamiento anterior garantiza un alto nivel de transparencia para la aplicación cliente: la aplicación (y el programador de aplicaciones) no necesitan ser consciente de las consultas que acceden a columnas cifradas, siempre y cuando se pasan los valores que se dirigen a columnas cifradas a el controlador de parámetros.
 
 ### <a name="per-statement-always-encrypted-behavior"></a>Por cada instrucción Always Encrypted comportamiento
 
@@ -294,7 +301,7 @@ Para controlar el impacto en el rendimiento de recuperación de metadatos de cif
 
 Para controlar el comportamiento de Always Encrypted de una instrucción, llame a SQLSetStmtAttr para establecer el `SQL_SOPT_SS_COLUMN_ENCRYPTION` atributo de instrucción a uno de los siguientes valores:
 
-|Valor|Description|
+|Value|Description|
 |-|-|
 |`SQL_CE_DISABLED` (0)|Always Encrypted está deshabilitado para la instrucción|
 |`SQL_CE_RESULTSETONLY` (1)|Solo el descifrado. Conjuntos de resultados y valores devueltos se descifran y parámetros no están cifrados|
@@ -329,7 +336,7 @@ Si SQL Server indica al controlador que no es necesario cifrar el parámetro, se
 Para reducir el número de llamadas a un almacén de claves maestras de columna para descifrar las claves de cifrado de columna, el controlador almacena en caché el CEK de texto simple en la memoria. Después de recibir el ECEK de metadatos de la base de datos, primero el controlador intenta encontrar la CEK de texto simple correspondiente al valor de clave de cifrado en la memoria caché. El controlador llama al almacén de claves que contiene la CMK solo si no encuentra el CEK de texto sin formato correspondiente en la memoria caché.
 
 > [!NOTE]
-> En ODBC Driver 13.1 para SQL Server, las entradas de la memoria caché se desalojan después de un tiempo de espera de dos horas. Esto significa que para una ECEK determinada, el controlador se pone en contacto el almacén de claves sólo una vez durante la duración de la aplicación o cada dos horas, lo que sea menor.
+> En el controlador ODBC para SQL Server, las entradas de la memoria caché se desalojan después de un tiempo de espera de dos horas. Esto significa que para una ECEK determinada, el controlador se pone en contacto el almacén de claves sólo una vez durante la duración de la aplicación o cada dos horas, lo que sea menor.
 
 ## <a name="working-with-column-master-key-stores"></a>Trabajar con almacenes de claves maestras de columna
 
@@ -339,7 +346,7 @@ Para obtener el valor de texto simple de un ECEK, el controlador obtiene los met
 
 ### <a name="built-in-keystore-providers"></a>Proveedores de almacén de claves integradas
 
-ODBC Driver 13.1 para SQL Server incluye los siguientes proveedores de almacén de claves integradas:
+El controlador ODBC para SQL Server incluye los siguientes proveedores de almacén de claves integradas:
 
 | Nombre | Description | Nombre del proveedor (metadatos) |Disponibilidad|
 |:---|:---|:---|:---|
@@ -352,7 +359,7 @@ ODBC Driver 13.1 para SQL Server incluye los siguientes proveedores de almacén 
 
 ### <a name="using-the-azure-key-vault-provider"></a>Mediante el proveedor de almacén de claves de Azure
 
-El Almacén de claves de Azure es una opción adecuada para almacenar y administrar claves maestras de columna para Always Encrypted (especialmente si sus aplicaciones se hospedan en Azure). ODBC Driver 13.1 for SQL Server en Linux, Mac OS y Windows incluye un proveedor de almacén de claves maestras de columna integrada para el almacén de claves de Azure. Vea [almacén de claves de Azure: paso a paso](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [Introducción al almacén de claves](https://azure.microsoft.com/documentation/articles/key-vault-get-started/), y [crear claves maestras de columna en el almacén de claves de Azure](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2) para obtener más información acerca de cómo configurar una clave de Azure Almacén de Always Encrypted.
+El Almacén de claves de Azure es una opción adecuada para almacenar y administrar claves maestras de columna para Always Encrypted (especialmente si sus aplicaciones se hospedan en Azure). El controlador ODBC para SQL Server en Linux, Mac OS y Windows incluye un proveedor de almacén de claves maestras de columna integrada para el almacén de claves de Azure. Vea [almacén de claves de Azure - paso a paso](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [Introducción al almacén de claves](https://azure.microsoft.com/documentation/articles/key-vault-get-started/), y [crear claves maestras de columna en el almacén de claves de Azure](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2) para obtener más información acerca de cómo configurar una clave de Azure Almacén de Always Encrypted.
 
 El controlador admite la autenticación en el almacén de claves de Azure mediante los siguientes tipos de credencial:
 
@@ -387,11 +394,11 @@ Ningún otro cambio de aplicación de ODBC es necesarios para usar claves para e
 
 ### <a name="using-the-windows-certificate-store-provider"></a>Mediante el proveedor de almacén de certificados de Windows
 
-ODBC Driver 13.1 for SQL Server en Windows incluye un proveedor de almacén de claves maestras de columna integrada para el almacén de certificados de Windows, denominado `MSSQL_CERTIFICATE_STORE`. (Este proveedor no está disponible en Mac OS o Linux). Con este proveedor, la CMK se almacena localmente en el equipo cliente y no es necesaria para usar con el controlador ninguna configuración adicional por la aplicación. Sin embargo, la aplicación debe tener acceso al certificado y su clave privada en el almacén. Vea [Create and Store Column Master Keys (Always Encrypted)](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted) para obtener más información.
+El controlador ODBC para SQL Server en Windows incluye un proveedor de almacén de claves maestras de columna integrada para el almacén de certificados de Windows, denominado `MSSQL_CERTIFICATE_STORE`. (Este proveedor no está disponible en Mac OS o Linux). Con este proveedor, la CMK se almacena localmente en el equipo cliente y no es necesaria para usar con el controlador ninguna configuración adicional por la aplicación. Sin embargo, la aplicación debe tener acceso al certificado y su clave privada en el almacén. Vea [Create and Store Column Master Keys (Always Encrypted)](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted) para obtener más información.
 
 ### <a name="using-custom-keystore-providers"></a>Usar proveedores de almacén de claves personalizados
 
-ODBC Driver 13.1 para SQL Server también admite los proveedores de almacén de claves personalizados de terceros mediante la interfaz CEKeystoreProvider. Esto permite que una aplicación cargar la consulta y configurar los proveedores de almacén de claves de modo que pueden ser usados por el controlador para tener acceso a las columnas cifradas. Las aplicaciones pueden interactuar directamente con un proveedor de almacén de claves con el fin de cifrar las CEK para su almacenamiento en SQL Server y realizar tareas más allá de tener acceso a las columnas cifradas con ODBC; Para obtener más información, consulte [proveedores de almacén de claves personalizados](../../connect/odbc/custom-keystore-providers.md).
+El controlador ODBC para SQL Server también admite los proveedores de almacén de claves personalizados de terceros mediante la interfaz CEKeystoreProvider. Esto permite que una aplicación cargar la consulta y configurar los proveedores de almacén de claves de modo que pueden ser usados por el controlador para tener acceso a las columnas cifradas. Las aplicaciones pueden interactuar directamente con un proveedor de almacén de claves con el fin de cifrar las CEK para su almacenamiento en SQL Server y realizar tareas más allá de tener acceso a las columnas cifradas con ODBC; Para obtener más información, consulte [proveedores de almacén de claves personalizados](../../connect/odbc/custom-keystore-providers.md).
 
 Dos atributos de conexión se utilizan para interactuar con proveedores de almacén de claves personalizados. Estas sobrecargas son:
 
@@ -515,11 +522,44 @@ Para obtener un ejemplo de la implementación de su propio proveedor de almacén
 
 ## <a name="limitations-of-the-odbc-driver-when-using-always-encrypted"></a>Limitaciones del controlador ODBC cuando se usa Always Encrypted
 
-### <a name="bulk-copy-function-usage"></a>Uso de funciones de copia masiva
-El uso de la [funciones de copia masiva de SQL](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) no se admite cuando se usa el controlador ODBC con Always Encrypted. No se producirá ningún cifrado/descifrado transparente en las columnas cifradas que se usan con las funciones de copia masiva de SQL.
-
 ### <a name="asynchronous-operations"></a>Operaciones asincrónicas
 Mientras que el controlador ODBC permitirá el uso de [operaciones asincrónicas](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md) con Always Encrypted, hay un impacto en el rendimiento en las operaciones cuando se habilita Always Encrypted. La llamada a `sys.sp_describe_parameter_encryption` para determinar los metadatos de cifrado para la instrucción está bloqueando y hará que el controlador de espera para que el servidor devolver los metadatos antes de devolver `SQL_STILL_EXECUTING`.
+
+### <a name="retrieve-data-in-parts-with-sqlgetdata"></a>Recuperar datos de partes con SQLGetData
+Antes de 17 de controlador ODBC para SQL Server, cifrado de caracteres y las columnas binarias no se puede recuperar en partes con SQLGetData. Puede realizarse solo una llamada a SQLGetData con un búfer de longitud suficiente para contener los datos de la columna completa.
+
+### <a name="send-data-in-parts-with-sqlputdata"></a>Enviar datos en partes con SQLPutData
+No se puede enviar datos de inserción o de comparación en partes con SQLPutData. Sólo una llamada a SQLPutData puede realizarse con un búfer que contiene todos los datos. Para insertar datos largos en las columnas cifradas, use la API de copia masiva, se describe en la siguiente sección, con un archivo de datos de entrada.
+
+### <a name="encrypted-money-and-smallmoney"></a>Smallmoney y money cifrado
+Cifra **dinero** o **smallmoney** columnas no se puede destinar por parámetros, puesto que no es no específica el que está asignado a esos tipos, lo que da lugar a errores de conflicto de tipo de operando de tipo de datos ODBC.
+
+## <a name="bulk-copy-of-encrypted-columns"></a>Copia masiva de las columnas cifradas
+
+El uso de la [funciones de copia masiva de SQL](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) y **bcp** utilidad es compatible con Always Encrypted desde 17 del controlador ODBC para SQL Server. Texto simple (cifrados de inserción y extracción descifrado en) y el texto cifrado (transferida literalmente) se pueden insertar y recuperar mediante la copia masiva (bcp_ *) las API y el **bcp** utilidad.
+
+- Para recuperar el texto cifrado en forma de varbinary (max) (por ejemplo, para la carga masiva en una base de datos diferente), conectarse sin el `ColumnEncryption` opción (o establézcalo en `Disabled`) y realizar una operación BCP OUT.
+
+- Para insertar y recuperar texto simple y dejar que el controlador de forma transparente realizar el cifrado y descifrado como la configuración necesaria, `ColumnEncryption` a `Enabled` es suficiente. En caso contrario, se modifica la funcionalidad de la API de BCP.
+
+- Para insertar texto cifrado en forma de varbinary (max) (p. ej., que recuperó anteriormente), establezca el `BCPMODIFYENCRYPTED` opción en TRUE y realizar una operación BCP IN. En el orden de los datos resultantes se decryptable, asegúrese de que el destino CEK de la columna es igual que desde la que se obtuvo originalmente el texto cifrado.
+
+Cuando se usa el **bcp** utilidad: para controlar la `ColumnEncryption` establecer, use la opción -D y especifique un DSN que contiene el valor deseado. Para insertar texto cifrado, asegúrese del `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` del usuario está habilitada.
+
+En la tabla siguiente proporciona un resumen de las acciones cuando se trabaja en una columna cifrada:
+
+|`ColumnEncryption`|Dirección de BCP|Description|
+|----------------|-------------|-----------|
+|`Disabled`|OUT (al cliente)|Recupera el texto cifrado. El tipo de datos observado es **varbinary (max)**.|
+|`Enabled`|OUT (al cliente)|Recupera el texto simple. El controlador descifrará los datos de columna.|
+|`Disabled`|IN (al servidor)|Inserta el texto cifrado. Esto sirve para mover de manera opaca los datos cifrados sin necesidad de se descifren. La operación se producirá un error si el `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` opción no está establecida en el usuario o BCPMODIFYENCRYPTED no está establecida en el identificador de conexión. Para obtener más información, vea a continuación.|
+|`Enabled`|IN (al servidor)|Inserta texto simple. El controlador, se cifrarán los datos de columna.|
+
+### <a name="the-bcpmodifyencrypted-option"></a>La opción BCPMODIFYENCRYPTED
+
+Para evitar daños en los datos, el servidor normalmente no permite insertar texto cifrado directamente en una columna cifrada, y, por tanto, se producirá un error si intenta hacerlo; Sin embargo, para la carga masiva de datos cifrados mediante la API de BCP, establecer el `BCPMODIFYENCRYPTED` [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) opción en TRUE permitirá texto cifrado que se va a insertar directamente y reduce el riesgo de dañar los datos cifrados a través de la configuración de la `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` opción en la cuenta de usuario. No obstante, las claves deben coincidir con los datos y es una buena idea para realizar algunas comprobaciones de solo lectura de los datos insertados después de la inserción masiva y antes de su uso posterior.
+
+Vea [migrar información confidencial protegida mediante Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md) para obtener más información.
 
 ## <a name="always-encrypted-api-summary"></a>Resumen de la API de Always Encrypted
 
@@ -551,6 +591,12 @@ Mientras que el controlador ODBC permitirá el uso de [operaciones asincrónicas
 |Campo IPD|Tipo de tamaño /|Valor predeterminado|Description|
 |-|-|-|-|  
 |`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 bytes)|0|Cuando 0 (valor predeterminado): decisión para cifrar este parámetro está determinado por la disponibilidad de los metadatos de cifrado.<br><br>Si es distinto de cero: si hay metadatos de cifrado para este parámetro, se cifra. En caso contrario, produce un error en la solicitud con error [CE300] cifrado obligatorio [Microsoft] [ODBC Driver 13 for SQL Server] se especificó para un parámetro pero no hay metadatos de cifrado se proporcionan el servidor.|
+
+### <a name="bcpcontrol-options"></a>Opciones de bcp_control
+
+|Nombre de opción|Valor predeterminado|Description|
+|-|-|-|
+|`BCPMODIFYENCRYPTED` (21)|FALSE|Cuando sea TRUE, permite valores varbinary (max) va a insertar en una columna cifrada. Cuando sea FALSE, impide la inserción a menos que se proporcionen metadatos correctos de tipo y el cifrado.|
 
 ## <a name="see-also"></a>Vea también
 

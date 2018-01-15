@@ -22,18 +22,20 @@ helpviewer_keywords:
 - service master key [SMO]
 ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a5069931c6e144dc574664e71c8f2a5d8964403
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ad74e5242702ace386fb8c14a034a56886f27191
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-encryption"></a>Utilizar el cifrado
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]En SMO, la clave maestra de servicio se representa mediante el <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> objeto. Esto se hace referencia por la <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> propiedad de la <xref:Microsoft.SqlServer.Management.Smo.Server> objeto. Se puede regenerar utilizando el <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> método.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  En SMO, la clave maestra de servicio se representa mediante el <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> objeto. Esto se hace referencia por la <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> propiedad de la <xref:Microsoft.SqlServer.Management.Smo.Server> objeto. Se puede regenerar utilizando el <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> método.  
   
  La clave maestra de base de datos está representada por la <xref:Microsoft.SqlServer.Management.Smo.MasterKey> objeto. El <xref:Microsoft.SqlServer.Management.Smo.MasterKey.IsEncryptedByServer%2A> propiedad indica si la clave maestra de base de datos se cifra con la clave maestra de servicio. La copia cifrada en la base de datos maestra se actualiza automáticamente siempre que se cambia la clave maestra de base de datos.  
   

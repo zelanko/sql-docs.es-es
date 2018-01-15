@@ -16,18 +16,20 @@ helpviewer_keywords:
 - SMO [SQL Server], about SQL Server Management Objects
 ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7
 caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8854a9d7edef76144688a56f94409f4d5448574a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6a445c54edd24685fd1e25eedc25615e2fb4121a
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="getting-started-in-smo"></a>Introducción a SMO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Esta página proporciona vínculos a temas diseñados para ayudarle a empezar a utilizar objetos de administración de SQL Server (SMO). Los temas muestran la jerarquía de objetos SMO, escribir programas en SMO, SMO y lenguajes de programación diferentes y tareas de programación específicas de la portada.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+Esta página proporciona vínculos a temas diseñados para ayudarle a empezar a utilizar objetos de administración de SQL Server (SMO). Los temas muestran la jerarquía de objetos SMO, escribir programas en SMO, SMO y lenguajes de programación diferentes y tareas de programación específicas de la portada.  
  
 ##<a name="installing-smo"></a>Instalar SMO
 [Instalar SMO](installing-smo.md) proporciona instrucciones para instalar y hacer referencia a los ensamblados SMO.

@@ -33,13 +33,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 711ac727b68dbd6ee3c1697e7933ead413919a29
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 44464415177cffc2e09c5218ecd9440801be7d96
+ms.sourcegitcommit: 0c6d858a507bd38b9b06eb7676736de5d38a1c87
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="sqlcmd-utility"></a>sqlcmd Utility
+# <a name="sqlcmd-utility"></a>sqlcmd (utilidad)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > Para SQL Server 2014 e inferior, consulte [utilidad sqlcmd](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx).
@@ -49,6 +49,8 @@ ms.lasthandoff: 12/21/2017
   
 > [!NOTE]
 > La versión más reciente de la utilidad sqlcmd está disponible como una versión web en el [Centro de descarga](http://go.microsoft.com/fwlink/?LinkID=825643). Necesita la versión 13.1 o posterior para admitir Always Encrypted (`-g`) y la autenticación de Azure Active Directory (`-G`). (Puede tener varias versiones de sqlcmd.exe instaladas en el equipo. Asegúrese de que está utilizando la versión correcta. Para determinar el número de versión, ejecute `sqlcmd -?`.)
+
+Puede probar la utilidad sqlcmd desde Shell de nube de Azure como previamente se instala de forma predeterminada: [ ![inicie el Shell de nube](https://shell.azure.com/images/launchcloudshell.png "inicie el Shell de nube")](https://shell.azure.com)
 
   Para ejecutar instrucciones sqlcmd en SSMS, seleccione Modo SQLCMD en la lista desplegable del menú de consulta de la navegación superior.  
   
@@ -214,14 +216,14 @@ Establece el valor de cifrado de columnas en `Enabled`. Para obtener más inform
   
  Si la opción **-P** va seguida de más de un argumento, se genera un mensaje de error y el programa se cierra.  
   
- **-S** [*protocolo*:]*servidor*[**\\***nombre_de_instancia*][**,***puerto*]  
+ **-S** [*protocol*:]*server*[**\\***instance_name*][**,***port*]  
  Especifica la instancia de SQL Server que se va a conectar. Establece la variable de scripting de **sqlcmd** SQLCMDSERVER.  
   
- Especifique *nombre_servidor* para conectarse a la instancia predeterminada de SQL Server en ese equipo servidor. Especifique *nombre_servidor* [  **\\**  *instance_name* ] para conectarse a una instancia con nombre de SQL Server en ese equipo servidor. Si no se especifica ningún equipo de servidor, **sqlcmd** se conecta a la instancia predeterminada de SQL Server en el equipo local. Esta opción es necesaria si **sqlcmd** se ejecuta desde un equipo remoto conectado a la red.  
+ Especifique *nombre_servidor* para conectarse a la instancia predeterminada de SQL Server en ese equipo servidor. Especifique *nombre_servidor* [**\\*** instance_name* ] para conectarse a una instancia con nombre de SQL Server en ese equipo servidor. Si no se especifica ningún equipo de servidor, **sqlcmd** se conecta a la instancia predeterminada de SQL Server en el equipo local. Esta opción es necesaria si **sqlcmd** se ejecuta desde un equipo remoto conectado a la red.  
   
  *protocolo* puede ser **tcp** (TCP/IP), **lpc** (memoria compartida) o **np** (canalizaciones con nombre).  
   
- Si no especifica un *nombre_servidor* [  **\\**  *instance_name* ] al iniciar **sqlcmd**, SQL Server busca y usa la variable de entorno SQLCMDSERVER.  
+ Si no especifica un *nombre_servidor* [**\\*** instance_name* ] al iniciar **sqlcmd**, SQL Server busca y usa el entorno SQLCMDSERVER variable.  
   
 > [!NOTE]  
 >  La variable de entorno OSQLSERVER se ha conservado por motivos de compatibilidad. La variable de entorno SQLCMDSERVER tiene prioridad sobre la variable de entorno OSQLSERVER; esto significa que **sqlcmd** y **osql** se pueden usar una junto a la otra sin interferencias y que los scripts anteriores seguirán funcionando.  
@@ -236,18 +238,18 @@ Establece el valor de cifrado de columnas en `Enabled`. Para obtener más inform
   
  Si se usa la opción **-U** junto con la opción **-E** (descrita más adelante en este tema), se genera un mensaje de error. Si la opción **-U** va seguida de más de un argumento, se genera un mensaje de error y el programa se cierra.  
   
- **-z** *nueva_contraseña*  
+ **-z** *new_password*  
  Cambiar contraseña:  
   
  `sqlcmd -U someuser -P s0mep@ssword -z a_new_p@a$$w0rd`  
   
- **-Z** *nueva_contraseña*  
+ **-Z** *new_password*  
  Cambiar contraseña y salir:  
   
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **Opciones de entrada o salida**  
-  **-f** *página_de_códigos* | **i:***página_de_códigos*[**,o:***página_de_códigos*] | **o:***página_de_códigos*[**,i:***página_de_códigos*]  
+  **-f** *codepage* | **i:***codepage*[**,o:***codepage*] | **o:***codepage*[**,i:***codepage*]  
  Especifica las páginas de códigos de entrada y de salida. El número de página de códigos es un valor numérico que especifica una página de códigos instalada en Windows.  
   
  Reglas de conversión de páginas de códigos:  
@@ -262,7 +264,7 @@ Establece el valor de cifrado de columnas en `Enabled`. Para obtener más inform
   
  Escriba **chcp** en el símbolo del sistema para comprobar la página de códigos de Cmd.exe.  
   
- **-i** *archivo_de_entrada*[**,***archivo_de_entrada2*...]  
+ **-i** *input_file*[**,***input_file2*...]  
  Identifica el archivo que contiene un lote de instrucciones SQL o procedimientos almacenados. Se pueden especificar varios archivos que se leerán y se procesarán en orden. No use ningún espacio entre los nombres de archivo. **sqlcmd** comprobará primero si todos los archivos especificados existen. Si uno o más archivos no existen, **sqlcmd** se cerrará. Las opciones -i y -Q/-q se excluyen mutuamente.  
   
  Ejemplos de rutas de acceso:  
@@ -275,7 +277,7 @@ Establece el valor de cifrado de columnas en `Enabled`. Para obtener más inform
   
  Las rutas de acceso a archivos que contengan espacios deben escribirse entre comillas.  
   
- Esta opción se puede usar más de una vez: **-i***archivo_de_entrada* **-I***I archivo_de_entrada.*  
+ Esta opción se puede utilizar más de una vez: **-i *** input_file* **-I *** I archivo_entrada.*  
   
  **-o** *output_file*  
  Identifica el archivo que recibe la salida de **sqlcmd**.  
@@ -338,13 +340,13 @@ Establece el valor de cifrado de columnas en `Enabled`. Para obtener más inform
  Si se especifica **-b** junto con esta opción, **sqlcmd** se cierra en caso de error. **-b** se describe más adelante en este tema.  
   
  **-t** *tiempo_de_espera_de_consulta*  
- Especifica el número de segundos que tienen que transcurrir antes de que un comando (o la instrucción de SQL) exceda el tiempo de espera. Esta opción establece la variable de scripting de **sqlcmd** SQLCMDSTATTIMEOUT. Si no se especifica ningún valor para *tiempo_de_espera* , el comando no tiene tiempo de espera. *tiempo_de_espera**de consulta* debe ser un número comprendido entre 1 y 65534. Si el valor proporcionado no es numérico o no está dentro de ese intervalo, **sqlcmd** generará un mensaje de error.  
+ Especifica el número de segundos que tienen que transcurrir antes de que un comando (o la instrucción de SQL) exceda el tiempo de espera. Esta opción establece la variable de scripting de **sqlcmd** SQLCMDSTATTIMEOUT. Si no se especifica ningún valor para *tiempo_de_espera* , el comando no tiene tiempo de espera. El *consulta ** tiempo_de_espera* debe ser un número entre 1 y 65534. Si el valor proporcionado no es numérico o no está dentro de ese intervalo, **sqlcmd** generará un mensaje de error.  
   
 > [!NOTE]  
 >  El tiempo de espera real puede variar unos segundos con respecto al valor de *tiempo_de_espera* especificado.  
   
  **-vvar =**  *valor*[ **var =** *valor*...]  
- Crea una variable de scripting de **sqlcmd**que puede usarse en un script de **sqlcmd** . Si el valor contiene espacios en blanco, especifíquelo entre comillas. Puede especificar varios valores ***var***=**"***valores***"** . Si hay errores en alguno de los valores especificados, **sqlcmd** genera un mensaje de error y después se cierra.  
+ Crea una variable de scripting de **sqlcmd**que puede usarse en un script de **sqlcmd** . Si el valor contiene espacios en blanco, especifíquelo entre comillas. Puede especificar varios ***var***=**"***valores***"** valores. Si hay errores en alguno de los valores especificados, **sqlcmd** genera un mensaje de error y después se cierra.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -505,24 +507,24 @@ Establece el valor de cifrado de columnas en `Enabled`. Para obtener más inform
   
 ## <a name="sqlcmd-scripting-variables"></a>Variables de scripting sqlcmd  
   
-|Variable|Modificador relacionado|L/E|Valor predeterminado|  
+|Variable|Modificador relacionado|L/E|Predeterminado|  
 |--------------|--------------------|----------|-------------|  
-|SQLCMDUSER|-U|R|""|  
+|SQLCMDUSER|-U|L|""|  
 |SQLCMDPASSWORD|-P|--|""|  
-|SQLCMDSERVER|-S|R|"DefaultLocalInstance"|  
-|SQLCMDWORKSTATION|-H|R|"ComputerName"|  
-|SQLCMDDBNAME|-d|R|""|  
+|SQLCMDSERVER|-S|L|"DefaultLocalInstance"|  
+|SQLCMDWORKSTATION|-H|L|"ComputerName"|  
+|SQLCMDDBNAME|-d|L|""|  
 |SQLCMDLOGINTIMEOUT|-l|L/E|"8" (segundos)|  
 |SQLCMDSTATTIMEOUT|-t|L/E|"0" = esperar indefinidamente|  
 |SQLCMDHEADERS|-H|L/E|"0"|  
 |SQLCMDCOLSEP|-S|L/E|"|  
 |SQLCMDCOLWIDTH|-w|L/E|"0"|  
-|SQLCMDPACKETSIZE|-A|R|"4096"|  
+|SQLCMDPACKETSIZE|-A|L|"4096"|  
 |SQLCMDERRORLEVEL|-M|L/E|0|  
 |SQLCMDMAXVARTYPEWIDTH|-y|L/E|"256"|  
 |SQLCMDMAXFIXEDTYPEWIDTH|-y|L/E|"0" = ilimitado|  
 |SQLCMDEDITOR||L/E|"edit.com"|  
-|SQLCMDINI||R|""|
+|SQLCMDINI||L|""|
 |SQLCMDUSEAAD  | -G | L/E | "" |  
   
  SQLCMDUSER, SQLCMDPASSWORD y SQLCMDSERVER se establecen cuando se usa **:Connect** .  
@@ -687,7 +689,7 @@ Establece el valor de cifrado de columnas en `Enabled`. Para obtener más inform
   
  **Otros comandos**  
   **:r \<** *filename***>**  
- Analiza las instrucciones de Transact-SQL adicionales y **sqlcmd** comandos desde el archivo especificado por  **\<**  *filename***>**en la caché de instrucciones.  
+ Analiza las instrucciones de Transact-SQL adicionales y **sqlcmd** comandos desde el archivo especificado por  **\< ***filename***>**en la instrucción memoria caché.  
   
  Si el archivo contiene instrucciones de Transact-SQL que no van seguidas **vaya**, debe escribir **vaya** en la línea que sigue a **: r**.  
   
@@ -702,7 +704,7 @@ Establece el valor de cifrado de columnas en `Enabled`. Para obtener más inform
  **:Serverlist**  
  Enumera los servidores configurados localmente y los nombres de los servidores que difunden en la red.  
   
- **:Connect**  *nombre_de_servidor*[**\\***nombre_de_instancia*] [-l *tiempo_de_espera*] [-U *nombre_del_usuario* [-P *password*]]  
+ **:Connect**  *server_name*[**\\***instance_name*] [-l *timeout*] [-U *user_name* [-P *password*]]  
  Se conecta a una instancia de SQL Server. También cierra la conexión actual.  
   
  Opciones de tiempo de espera:  
@@ -745,7 +747,7 @@ Establece el valor de cifrado de columnas en `Enabled`. Para obtener más inform
 ### <a name="sqlcmd-file-names"></a>Nombres de archivo de sqlcmd  
  Los archivos de entrada de**sqlcmd** se pueden especificar con la opción **-i** o con el comando **:r** . Los archivos de salida se pueden especificar con la opción **-o** o con los comandos **:Error**, **:Out** y **:Perftrace** . A continuación se incluyen algunas directrices para trabajar con estos archivos:  
   
--   **:Error**, **:Out** y **:Perftrace** deben usar valores de **\<***nombre_de_archivo***>**independientes. Si se usa el mismo **\<***nombre_de_archivo***>** , es posible que las entradas de los comandos se entremezclen.  
+-   **: Error**, **: Out** y **: Perftrace** debe usar independiente  **\< ***filename***>**. Si el mismo  **\< ***filename*** >**  es usa, pueden combinadas entradas de los comandos.  
   
 -   Si **sqlcmd** llama a un archivo de entrada ubicado en un servidor remoto desde un equipo local y el archivo contiene una ruta de acceso de archivo del tipo :out c:\archivoDeSalida.txt. el archivo de salida se creará en el equipo local y no en el servidor remoto.  
   

@@ -18,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd6636cc4e2ee383fbd178b0f6b1e304f996570c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 612ee0b5301554b2a078493ed2df419d992b4391
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Prácticas recomendadas de seguridad con bases de datos independientes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Las bases de datos independientes tienen algunas amenazas únicas que los administradores de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] deben comprender y mitigar. La mayoría de ellas están relacionadas con el proceso de autenticación de **USER WITH PASSWORD** , que traslada el límite de autenticación del nivel de [!INCLUDE[ssDE](../../includes/ssde-md.md)] al de base de datos.  
   
@@ -92,7 +92,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ## <a name="denial-of-service-through-autoclose"></a>Denegación de servicio mediante AUTO_CLOSE  
  No configure bases de datos independientes para que se cierren automáticamente. Si se cierra la base de datos, su apertura para autenticar un usuario consume recursos adicionales y podría contribuir a un ataque de denegación de servicio.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Bases de datos independientes](../../relational-databases/databases/contained-databases.md)   
  [Migrar a una base de datos parcialmente independiente](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)  
   

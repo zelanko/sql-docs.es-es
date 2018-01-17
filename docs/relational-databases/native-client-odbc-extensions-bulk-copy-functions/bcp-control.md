@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0af6c90954aff66d17d7fafb3115138e7d71708f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77f8e1c2faa9900f8b41f356e3dd7411f12ff6c0
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ RETCODE bcp_control (
   
  También se producirá un error de secuencia si se llama a `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)FALSE)` después de llamar a `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)TRUE)` y bcp_writefmt.  
   
- Para obtener más información, consulte [de detección de metadatos](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Para obtener más información, vea [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
   
  BCPFILECP  
  *iValue* contiene el número de la página de códigos del archivo de datos. Puede especificar el número de la página de códigos, como 1252 o 850, o uno de estos valores:  
@@ -116,7 +116,7 @@ RETCODE bcp_control (
  Es el número de errores permitido antes de que la operación de copia masiva genere un error. El valor predeterminado es 10; un valor menor que 1 restablece esta opción a su valor predeterminado. La copia masiva impone un máximo de 65.535 errores. Si se intenta establecer esta opción en un valor mayor que 65.535, la opción se establece en 65.535.  
   
  BCPODBC  
- Cuando es TRUE, especifica que **datetime** y **smalldatetime** valores guardados en el formato de caracteres usará el prefijo de la secuencia de escape ODBC marca de tiempo y el sufijo. La opción BCPODBC solo se aplica a BCP_OUT.  
+ Cuando es TRUE, especifica que **datetime** y **smalldatetime** valores guardados en el formato de caracteres usará el prefijo de la secuencia de escape ODBC marca de tiempo y el sufijo. La opción BCPODBC solo se aplica a DB_OUT.  
   
  Cuando sea FALSE, una **datetime** valor que corresponde al 1 de enero de 1997 se convierte en la cadena de caracteres: 00:00:00.000 1997-01-01. Cuando es TRUE, el mismo **datetime** valor se representa como: {ts ' 1997-01-01 00:00:00.000'}.  
   

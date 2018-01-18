@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2edea069c05e7ac0316042250f336f1a8c455af0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6e87461fb2973bec630ed21975a80cdbc17cd1cd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="user-and-workspace-settings"></a>Configuración de área de trabajo y de usuario
 
@@ -48,11 +48,21 @@ Cambios en la configuración se vuelven a cargar por [!INCLUDE[name-sos](../incl
 Dependiendo de la plataforma, el archivo de configuración de usuario se encuentra aquí:
 
 * **Windows**`%APPDATA%\sqlops\User\settings.json`
-* **Mac**`$HOME/Library/Application Support/sqlops/User/settings.json`
+* **Mac** `$HOME/Library/Application Support/sqlops/User/settings.json`
 * **Linux**`$HOME/.config/sqlops/User/settings.json`
 
 El archivo de configuración de área de trabajo se encuentra en la `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` carpeta del proyecto.
 
+## <a name="hot-exit"></a>Salida activa
+
+Operaciones de SQL Studio recordará los cambios no guardados a los archivos cuando se cierra de forma predeterminada. Esto es igual que la característica de salida activas en el código de Visual Studio.
+
+De forma predeterminada, la salida activa está desactivada. Habilitar activa salida mediante la edición de la `files.hotExit` configuración. Para obtener más información, consulte [salida activa (en la documentación de Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
+
+
+## <a name="tab-color"></a>Color de etiqueta
+
+Para simplificar la identificación de las conexiones que se trabaja con, pestañas abiertas en el editor pueden tener sus colores establecidos para que coincida con el color del grupo de servidores al que pertenece la conexión. De forma predeterminada, los colores de la ficha están desactivadas de forma predeterminada. Habilitar colores de pestaña editando el `sql.tabColorMode` configuración.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 

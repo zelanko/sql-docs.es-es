@@ -2,7 +2,7 @@
 title: "Notas de la versión de Microsoft SQL operaciones Studio (versión preliminar) | Documentos de Microsoft"
 description: "Notas de la versión de Microsoft SQL operaciones Studio (versión preliminar)"
 ms.custom: tools|sos
-ms.date: 12/19/2017
+ms.date: 01/17/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,19 +14,38 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55fbeea99298aa2dcb0245d9b570dcee1e438ab3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: eded99dffd8029431a127e6cbf4b125ab5e0ac97
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Notas de la versión de las operaciones de SQL Studio (versión preliminar)
 
-**[Descarga de las operaciones de SQL Studio (versión preliminar)](download.md)**
+**[Descargue la versión preliminar pública de enero](download.md)**
+
+## <a name="january-2018-january-public-preview"></a>Enero de 2018 (vista previa pública de enero)
+
+fecha de lanzamiento: 17 de enero de 2018  
+versión: 0.25.4
+
+El *Public Preview de enero* incluye algunas sugerencias sobre características y correcciones de errores de alta prioridad. Esta versión incluye las siguientes mejoras:
+
+- Conexiones de servidor guardadas están disponibles en el cuadro de diálogo de conexión.
+- Habilitar salida activa. Salida activa está desactivada de forma predeterminada, para habilitar vea [configuración de salida activa](settings.md#hot-exit).
+- En función de grupo de servidores de sintaxis de pestaña. Color de la ficha está desactivada de forma predeterminada, para habilitar vea [ficha Configuración de color](settings.md#tab-color).
+- Cambio *nombre del servidor* a *Server* en el cuadro de diálogo de conexión.
+- Arreglado roto *ejecutar la consulta actual* comando.
+- Corregir errores de secuencias de comandos de separación de arrastrar y colocar.
+- Corregir incorrectos de los iconos anclados menú Inicio.
+- Corregir falta la cuenta de Azure icono de personalización de marca.
+
+Para obtener más información, consulte el [registro de cambios](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
+
 
 ## <a name="december-2017-december-public-preview"></a>Diciembre de 2017 (vista previa pública de diciembre)
 
-fecha de lanzamiento: 19/12/2017  
+fecha de lanzamiento: 19 de diciembre de 2017  
 versión: 0.24.1
 
 El *diciembre Public Preview* incluye varias correcciones de errores en todas las áreas de características, así como a las siguientes mejoras:
@@ -40,18 +59,16 @@ El *diciembre Public Preview* incluye varias correcciones de errores en todas la
 - Habilitar los archivos de instalación de prueba de extensión VSIX.
 - Admite la sintaxis de iteración de lote "Vaya N".
 
-Para obtener más información, consulte el [registro de cambios](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
-
 
 ## <a name="november-2017"></a>Noviembre de 2017
 
-fecha de lanzamiento: 11/15/2017  
+fecha de lanzamiento: 15 de noviembre de 2017  
 versión: 0.23.6
 
 - Versión de inicial [!INCLUDE[name-sos](../includes/name-sos-short.md)].
 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Pasos siguientes
 
 Vea uno de los tutoriales siguientes para empezar a trabajar:
 - [Conectar & consultas SQL Server](quickstart-sql-server.md)

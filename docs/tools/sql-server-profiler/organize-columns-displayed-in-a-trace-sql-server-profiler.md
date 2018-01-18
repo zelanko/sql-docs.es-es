@@ -17,15 +17,15 @@ helpviewer_keywords:
 - traces [SQL Server], data columns
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
 caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 35692d5068e1dfcbe446d3a9bd79ee7f35ef1e18
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e33c1452d14aecf1d5120ff876ae55aea6b83830
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>Organizar las columnas mostradas en un seguimiento (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Puede agrupar las columnas de datos en un seguimiento seleccionando **organizar columnas** en la tabla de seguimiento o **propiedades de archivo de seguimiento** cuadro de diálogo, o bien al definir un seguimiento. La agrupación de las columnas de datos permite analizar mejor la salida del seguimiento del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Para obtener más información, vea [Ver y analizar seguimientos con SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
@@ -89,7 +89,7 @@ ms.lasthandoff: 12/21/2017
 7.  Para volver a una vista normal de los datos del seguimiento, haga clic en **Vista agrupada** en el menú **Ver** , lo que cancela la selección. Si desea volver a la vista agregada, haga clic de nuevo en **Vista agregada** en el menú **Ver** para volver a seleccionarla. Recuerde que también puede hacer clic en **Vista agrupada** en el menú **Ver** para mostrar los eventos del seguimiento sin contraerlos.  
   
 ## <a name="see-also"></a>Vea también  
- [Crear un seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [Crear un seguimiento &#40; Analizador de SQL Server &#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
  [Abrir una tabla de seguimiento &#40; Analizador de SQL Server &#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [Abrir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   

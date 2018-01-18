@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7b5587d6def935cf31d4bf96056b21cfd2c263a1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 492a21e51a6bdc1dbcf0a39451a81caee737dba4
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>Revisar y generar scripts de registro complementario
   Use la pestaña **Scripts** para ejecutar o volver a ejecutar un script en la base de datos de origen de Oracle que configura el registro complementario.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Al ejecutar los scripts de registro complementario, se abre el cuadro de diálogo Credenciales de Oracle para ejecutar script donde debe proporcionar un nombre de usuario y una contraseña válidos de Oracle. Para obtener información acerca de cómo proporcionar las credenciales adecuadas de Oracle, vea [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md).  
   
- También puede ejecutar los scripts manualmente mediante SQL * Plus, si es necesario.  
+ También puede ejecutar los scripts manualmente mediante SQL\*Plus, si es necesario.  
   
 ### <a name="to-run-the-scripts-manually"></a>Para ejecutar los scripts manualmente  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Asigne un nombre al archivo y haga clic en **Guardar** para guardar el archivo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Cómo editar las propiedades de la instancia CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [Credenciales de Oracle para ejecutar script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   

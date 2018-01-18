@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: File element
 ms.assetid: 73dce835-9a80-4aef-8e0f-9dcf07dd5b80
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18132a9eaf3be086e2508c7508a4823e290b65db
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 65d4f2334b180c7307d95bea0cb13a2c6ce33a5a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="file-element-dta"></a>File (DTA, elemento)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica el archivo de carga de trabajo. Una carga de trabajo es un conjunto de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se ejecuta en una o varias bases de datos que se desean optimizar. Los archivos de carga de trabajo pueden ser scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] (.sql) o archivos de seguimiento (.trc). Para obtener más información, consulte[Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
@@ -39,9 +39,9 @@ ms.lasthandoff: 12/21/2017
   </Workload>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|Utilice el tipo de datos **string** para especificar la ruta de acceso del directorio al archivo de carga de trabajo. Por ejemplo:<br /><br /> `<File>C:\Tuning\tun.sql</File>`<br /><br /> Tenga en cuenta que el servidor aplica el límite de longitud.|  
 |**Valor predeterminado**|Ninguno.|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Workload &#40;DTA, elemento&#41;](../../tools/dta/workload-element-dta.md)|  
+|**Elemento primario**|[Workload, elemento &#40; DTA &#41;](../../tools/dta/workload-element-dta.md)|  
 |**Elementos secundarios**|Ninguno.|  
   
 ## <a name="example"></a>Ejemplo  

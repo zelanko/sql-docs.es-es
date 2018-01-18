@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: DropOnlyMode element
 ms.assetid: 80960676-7581-4074-889b-80ee665963dd
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27b7db70bf4ee3a7e775c25dba130f1546b1bb82
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6c30ec1f3a06e0bb2142dd889852ddb071b68d96
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode (DTA, elemento)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica que el Asistente para la optimización de motor de base de datos solo debe quitar los índices existentes, vistas indizadas o particiones durante la sesión de optimización. Cuando se especifica esta opción de optimización, no se consideran nuevas estructuras de diseño físico.  
@@ -38,16 +38,16 @@ ms.lasthandoff: 12/21/2017
       <DropOnlyMode>...</DropOnlyMode>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
  **Tipo y longitud de los datos**  
   
  **Valor predeterminado**  
   
  **Repetición**: opcional. Se puede utilizar una sola vez por cada elemento **TuningOptions** . No se puede utilizar si se especifican los siguientes elementos en el elemento **TuningOptions** :  
   
--   [FeatureSet &#40;DTA, elemento&#41;](../../tools/dta/featureset-element-dta.md)  
+-   [FeatureSet, elemento &#40; DTA &#41;](../../tools/dta/featureset-element-dta.md)  
   
--   [Partitioning &#40;DTA, elemento&#41;](../../tools/dta/partitioning-element-dta.md)  
+-   [Creación de particiones elemento &#40; DTA &#41;](../../tools/dta/partitioning-element-dta.md)  
   
 -   [KeepExisting &#40;DTA, elemento&#41;](../../tools/dta/keepexisting-element-dta.md) se establece en **ALL**  
   

@@ -18,22 +18,22 @@ helpviewer_keywords:
 - Named Pipes [SQL Server], listening on pipes
 ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6122004c46c36f21d2b301e70be91b26fa06c701
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 72fecdede46024eae399d9a762b0f8cdf7bb3a6b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="named-pipes-properties"></a>Propiedades de Canalizaciones con nombre
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use la **protocolo**página en el **propiedades de canalizaciones con nombre** cuadro de diálogo para ver o cambiar la instancia con nombre que canalizar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escucha, cuando se utiliza el protocolo de canalizaciones con nombre.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para habilitar o deshabilitar el protocolo, o cambiar la canalización con nombre.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]debe reiniciarse para habilitar o deshabilitar el protocolo o cambiar la canalización con nombre.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  **Enabled**  
  Los valores posibles **Yes** y **No**.  
   

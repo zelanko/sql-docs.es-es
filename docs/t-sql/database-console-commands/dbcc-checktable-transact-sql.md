@@ -32,11 +32,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9d6ef6adb1d9a10b93e938842de2661eb9202d16
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: aeb292cac514b2f9253fa35369ddea190176538e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,8 +47,7 @@ Comprueba la integridad de todas las páginas y estructuras que constituyen la t
     
 ## <a name="syntax"></a>Sintaxis    
     
-```sql
-    
+```    
 DBCC CHECKTABLE     
 (    
     table_name | view_name    
@@ -72,72 +71,74 @@ DBCC CHECKTABLE
  *table_name* | *view_name*  
  Es la tabla o la vista indizada para la que se ejecutan las comprobaciones de integridad. Nombres de tabla o vista deben cumplir las reglas de [identificadores](../../relational-databases/databases/database-identifiers.md).  
     
- NOINDEX  
+NOINDEX  
  Especifica que no se deben realizar comprobaciones intensivas de índices no clúster para las tablas de usuario. Esto reduce el tiempo total de ejecución. NOINDEX no afecta a las tablas del sistema porque las comprobaciones de integridad siempre se ejecutan en todos los índices de las tablas del sistema.  
     
  *index_id*  
  Es el número de identificación (Id.) del índice para el que se van a ejecutar las comprobaciones de integridad. Si *index_id* se especifica, DBCC CHECKTABLE ejecuta las comprobaciones de integridad solo en ese índice, junto con el índice agrupado o montón.  
     
- REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD  
+REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD  
  Especifica que DBCC CHECKTABLE repare los errores que encuentre. Para utilizar una opción de reparación, la base de datos debe estar en modo de usuario único.  
     
- REPAIR_ALLOW_DATA_LOSS  
+REPAIR_ALLOW_DATA_LOSS  
  Intenta reparar todos los errores indicados. Estas reparaciones pueden ocasionar alguna pérdida de datos.  
     
- REPAIR_FAST  
+REPAIR_FAST  
  La sintaxis solo se mantiene por razones de compatibilidad con versiones anteriores. No se realizan acciones de reparación.  
     
- REPAIR_REBUILD  
+REPAIR_REBUILD  
  Realiza reparaciones que no tienen ninguna posibilidad de pérdida de datos. Pueden ser reparaciones rápidas, como la reparación de las filas que faltan en índices no clúster, y reparaciones que consumen más tiempo, como regenerar un índice.  
  Este argumento no repara los errores que implican datos de FILESTREAM.  
     
  > [!NOTE]  
- >  Utilice las opciones REPAIR solo como último recurso. Para reparar errores, se recomienda restaurar a partir de una copia de seguridad. Las operaciones de reparación no tienen en cuenta ninguna de las restricciones que puede haber en las tablas o entre ellas. Si la tabla especificada está implicada en una o más restricciones, se recomienda ejecutar DBCC CHECKCONSTRAINTS tras una operación de reparación. Si debe usar REPAIR, ejecute DBCC CHECKTABLE sin una opción de reparación para localizar el nivel de reparación que se va a utilizar. Si va a utilizar el nivel REPAIR_ALLOW_DATA_LOSS, se recomienda realizar una copia de seguridad de la base de datos antes de ejecutar DBCC CHECKTABLE con esta opción.  
+ > Utilice las opciones REPAIR solo como último recurso. Para reparar errores, se recomienda restaurar a partir de una copia de seguridad. Las operaciones de reparación no tienen en cuenta ninguna de las restricciones que puede haber en las tablas o entre ellas. Si la tabla especificada está implicada en una o más restricciones, se recomienda ejecutar `DBCC CHECKCONSTRAINTS` después de una operación de reparación.
+ > Si debe utilizar REPAIR, ejecute `DBCC CHECKTABLE` sin una opción de reparación para localizar el nivel de reparación que se usará. Si va a utilizar el nivel REPAIR_ALLOW_DATA_LOSS, se recomienda realizar copias de seguridad de la base de datos antes de ejecutar `DBCC CHECKTABLE` con esta opción.  
     
- ALL_ERRORMSGS  
+ALL_ERRORMSGS  
  Muestra un número ilimitado de errores. De forma predeterminada, se muestran todos los mensajes de error. Especificar u omitir esta opción no tiene ningún efecto.  
     
- EXTENDED_LOGICAL_CHECKS  
+EXTENDED_LOGICAL_CHECKS  
  Si el nivel de compatibilidad es 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) o superior, realiza comprobaciones de coherencia lógica en una vista indizada, en índices XML y en índices espaciales, en caso de que los haya.  
- Para obtener más información, vea "Realizar comprobaciones de coherencia lógica en índices" en la sección "Notas", más adelante en este tema.  
+ Para obtener más información, consulte *realizar comprobaciones lógicas de coherencia en índices* en el [comentarios](#remarks) sección más adelante en este tema.  
     
- NO_INFOMSGS  
+NO_INFOMSGS  
  Suprime todos los mensajes de información.  
     
- TABLOCK  
+TABLOCK  
  Hace que DBCC CHECKTABLE reciba un bloqueo de tabla compartido en vez de utilizar una instantánea de base de datos interna. TABLOCK hará que DBCC CHECKTABLE se ejecute más rápido en una tabla con mucha carga, pero disminuirá la simultaneidad disponible sobre la tabla mientras DBCC CHECKTABLE está ejecutándose.  
     
- ESTIMATEONLY  
+ESTIMATEONLY  
  Muestra la cantidad estimada de espacio de tempdb necesario para ejecutar DBCC CHECKTABLE con todas las demás opciones especificadas.  
     
- PHYSICAL_ONLY  
+PHYSICAL_ONLY  
  Limita la comprobación de la integridad a la estructura física de la página, los encabezados de registro y la estructura física de árboles b. Se ha diseñado para proporcionar una pequeña comprobación de sobrecarga de la coherencia física de la tabla; esta comprobación también puede detectar páginas rasgadas y errores de hardware comunes que pueden comprometer los datos. Una ejecución completa de DBCC CHECKTABLE puede tardar mucho más tiempo que en versiones anteriores. Este comportamiento se debe a las razones siguientes:  
  -   Las comprobaciones lógicas son más exhaustivas.  
  -   Algunas de las estructuras subyacentes que hay que comprobar son más complejas.  
  -   Se han agregado muchas comprobaciones nuevas para incluir las nuevas características.  
    
- Por tanto, el uso de la opción PHYSICAL_ONLY puede llevar mucho menos tiempo para DBCC CHECKTABLE en tablas grandes y, por ello, se recomienda para su uso frecuente en sistemas de producción. Aun así, se recomienda realizar periódicamente una ejecución completa DBCC CHECKTABLE. La frecuencia de estas ejecuciones depende de factores específicos de cada empresa y de los entornos de producción. PHYSICAL_ONLY siempre implica NO_INFOMSGS y no se permite con ninguna de las opciones de reparación.  
+Por tanto, el uso de la opción PHYSICAL_ONLY puede llevar mucho menos tiempo para DBCC CHECKTABLE en tablas grandes y, por ello, se recomienda para su uso frecuente en sistemas de producción. Aun así, se recomienda realizar periódicamente una ejecución completa DBCC CHECKTABLE. La frecuencia de estas ejecuciones depende de factores específicos de cada empresa y de los entornos de producción. PHYSICAL_ONLY siempre implica NO_INFOMSGS y no se permite con ninguna de las opciones de reparación.  
     
  > [!NOTE]  
- >  Si se especifica PHYSICAL_ONLY, DBCC CHECKTABLE omite todas las comprobaciones de datos de FILESTREAM.  
+ > Si se especifica PHYSICAL_ONLY, DBCC CHECKTABLE omite todas las comprobaciones de datos de FILESTREAM.  
     
- DATA_PURITY  
+DATA_PURITY  
  Hace que DBCC CHECKTABLE compruebe si la tabla contiene valores de columna que no son válidos o están fuera del intervalo correcto. Por ejemplo, DBCC CHECKTABLE detecta las columnas con valores de fecha y hora son superiores o inferiores el intervalo para la **datetime** tipo de datos; o **decimal** o tipo de datos numérico aproximado columnas con valores de escala o precisión que no son válidos.  
  Las comprobaciones de integridad de valores de columna están habilitadas de manera predeterminada y no requieren la opción DATA_PURITY. En las bases de datos actualizadas desde versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede usar DBCC CHECKTABLE WITH DATA_PURITY para buscar y corregir errores en una tabla concreta; sin embargo, la comprobación de los valores de columnas de la tabla no se habilitan de forma predeterminada hasta que se ejecute DBCC CHECKDB WITH DATA_PURITY sin errores en la base de datos. Después, DBCC CHECKDB y DBCC CHECKTABLE comprueban la integridad de los valores de columnas de forma predeterminada.  
  Los errores de validación de los que informe esta opción no se pueden corregir con las opciones de reparación de DBCC. Para obtener información acerca de cómo corregir manualmente estos errores, vea el artículo 923247 de Knowledge Base: [solucionar el error DBCC 2570 en SQL Server 2005 y versiones posteriores](http://support.microsoft.com/kb/923247).  
  Si se especifica PHYSICAL_ONLY, no se realizan comprobaciones de integridad de columna.  
     
- MAXDOP  
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 a través de [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+MAXDOP  
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ 
  Invalida el **grado máximo de paralelismo** opción de configuración de **sp_configure** para la instrucción. El MAXDOP puede superar el valor configurado con sp_configure. Si MAXDOP supera el valor configurado con el regulador de recursos, el motor de base de datos usa el valor de MAXDOP regulador de recursos, que se describe en ALTER WORKLOAD GROUP (Transact-SQL). Se pueden aplicar todas las reglas semánticas utilizadas con la opción de configuración max degree of parallelism cuando se utiliza la sugerencia de consulta MAXDOP. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
     
- > [!CAUTION]  
- >  Si MAXDOP se establece en cero, el servidor elige el grado máximo de paralelismo.  
+ > [!NOTE]  
+ > Si MAXDOP se establece en cero, el servidor elige el grado máximo de paralelismo.  
     
 ## <a name="remarks"></a>Comentarios    
     
 > [!NOTE]    
->  Para ejecutar DBCC CHECKTABLE en todas las tablas de la base de datos, utilice [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).    
+> Para ejecutar DBCC CHECKTABLE en todas las tablas de la base de datos, utilice [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).    
     
 En la tabla especificada, DBCC CHECKTABLE comprueba lo siguiente:
 -   Las páginas de índice, consecutivas, de objetos grandes (LOB) y de datos de desbordamiento de fila están vinculadas correctamente.    
@@ -157,8 +158,8 @@ La comprobación de coherencia lógica en índices varía según el nivel de com
          Estas comprobaciones de coherencia lógica realizan una comprobación cruzada de la tabla de índices interna del objeto de índice con la tabla de usuario a la que hace referencia. Para buscar las filas periféricas, se crea una consulta interna que lleve a cabo una intersección completa de las tablas internas y del usuario. La ejecución de esta consulta puede afectar mucho al rendimiento y no se puede realizar el seguimiento de su progreso. Por consiguiente, se recomienda especificar únicamente WITH EXTENDED_LOGICAL_CHECKS si cree que existen problemas del índice que no estén relacionados con daños físicos, o si las sumas de comprobación del nivel de página se han desactivado y sospecha que puedan existir daños de hardware de nivel de columna.    
     -   Si el índice es un índice filtrado, DBCC CHECKDB realizará las comprobaciones de coherencia para comprobar que las entradas de índice satisfacen el predicado de filtro.   
       
-- A partir de SQL Server 2016, comprobaciones adicionales en las columnas calculadas persistentes, las columnas UDT y los índices filtrados no se ejecutarán de forma predeterminada para evitar las evaluaciones de expresiones costoso. Este cambio reduce en gran medida el tiempo que dure CHECKDB en bases de datos que contiene estos objetos. Sin embargo, las comprobaciones de coherencia física de estos objetos siempre se completa. Cuando se especifica la opción de EXTENDED_LOGICAL_CHECKS las evaluaciones de expresiones se realizará además de las comprobaciones lógicas ya está presentes (vista indizada, índices XML e índices espaciales) como parte de la opción EXTENDED_LOGICAL_CHECKS.
--  Si el nivel de compatibilidad es 90 o menos, a menos que se especifique NOINDEX, DBCC CHECKTABLE realizará las comprobaciones de coherencia física y lógica en una tabla única o vista indizada y en todos sus índices XML y no agrupados. Los índices espaciales no se admiten.
+- A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], comprobaciones adicionales en las columnas calculadas persistentes, las columnas UDT y los índices filtrados no se ejecutarán de forma predeterminada para evitar las evaluaciones de expresiones costoso. Este cambio reduce en gran medida el tiempo que dure CHECKDB en bases de datos que contiene estos objetos. Sin embargo, las comprobaciones de coherencia física de estos objetos siempre se completa. Cuando se especifica la opción de EXTENDED_LOGICAL_CHECKS las evaluaciones de expresiones se realizará además de las comprobaciones lógicas ya está presentes (vista indizada, índices XML e índices espaciales) como parte de la opción EXTENDED_LOGICAL_CHECKS.
+-  Si el nivel de compatibilidad es 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]) o menos, a menos que se especifique NOINDEX, DBCC CHECKTABLE realiza comprobaciones de coherencia física y lógica en una sola tabla o vista indizada y en todas sus no clúster y los índices XML. Los índices espaciales no se admiten.
     
  **Para obtener información sobre el nivel de compatibilidad de una base de datos**    
 [Ver o cambiar el nivel de compatibilidad de una base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
@@ -179,7 +180,7 @@ De forma predeterminada, DBCC CHECKTABLE realiza comprobaciones paralelas de los
 La comprobación del paralelismo se puede deshabilitar utilizando el marcador de seguimiento 2528. Para obtener más información, vea [Marcas de seguimiento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
     
 > [!NOTE]    
->  Durante una operación DBCC CHECKTABLE, los bytes almacenados en una columna de tipo definido por el usuario ordenada por bytes deben ser iguales a la serialización calculada del valor del tipo definido por el usuario. Si no es así, la rutina DBCC CHECKTABLE indicará un error de coherencia.    
+> Durante una operación DBCC CHECKTABLE, los bytes almacenados en una columna de tipo definido por el usuario ordenada por bytes deben ser iguales a la serialización calculada del valor del tipo definido por el usuario. Si no es así, la rutina DBCC CHECKTABLE indicará un error de coherencia.    
     
 ## <a name="understanding-dbcc-error-messages"></a>Descripción de los mensajes de error de DBCC    
 Cuando finaliza el comando DBCC CHECKTABLE, se escribe un mensaje en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si el comando DBCC se ejecuta correctamente, el mensaje lo indica, así como el tiempo de ejecución del comando. Si el comando DBCC se detiene antes de completar la comprobación debido a un error, el mensaje indica que se ha cancelado el comando, un valor de estado y la cantidad de tiempo de ejecución del comando. En la tabla siguiente se muestran y describen los valores de estado que pueden aparecer en el mensaje.
@@ -194,7 +195,7 @@ Cuando finaliza el comando DBCC CHECKTABLE, se escribe un mensaje en el registro
 |5|Error desconocido que cancela el comando DBCC.|    
     
 ## <a name="error-reporting"></a>Informes de errores    
-Un archivo de minivolcado (SQLDUMP*nnnn*.txt) se crea en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directorio de registro cada vez que DBCC CHECKTABLE detecta un error por daños. Si la recopilación de datos de uso de características y la creación informes de errores están habilitadas para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el archivo se reenvía automáticamente a [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Los datos recopilados se utilizan para mejorar la funcionalidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Un archivo de minivolcado (`SQLDUMP*nnnn*.txt`) se crea en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directorio de registro cada vez que DBCC CHECKTABLE detecta un error por daños. Cuando el *uso de características* la recopilación de datos y *informe de errores de* características están habilitadas para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el archivo se reenvía automáticamente a [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Los datos recopilados se utilizan para mejorar la funcionalidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 El archivo de volcado contiene los resultados del comando DBCC CHECKTABLE y salida de diagnóstico adicional. El archivo tiene listas de control de acceso discrecional (DACL) restringidas. Acceso está limitado a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta y los miembros del rol sysadmin de servicio. De forma predeterminada, el rol de administrador del sistema contiene a todos los miembros del grupo BUILTIN\Administradores de Windows y grupo de administradores local. El comando DBCC no producirá error en caso de que se produzca un error en el proceso de recopilación de datos.
     
 ## <a name="resolving-errors"></a>Resolver errores    
@@ -212,7 +213,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
     
 Si se especifica la opción ESTIMATEONLY, DBCC CHECKTABLE devuelve el siguiente conjunto de resultados:
     
-```sql
+```
 Estimated TEMPDB space needed for CHECKTABLES (KB)     
 --------------------------------------------------     
 21    
@@ -254,7 +255,7 @@ DBCC CHECKTABLE ('Production.Product',@indid);
 ```    
     
 ## <a name="see-also"></a>Vea también    
-[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
- [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)    
+[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)     
+[DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)    
     
   

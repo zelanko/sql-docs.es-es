@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Server element
 ms.assetid: da9ff870-9cfd-42fe-994b-7b9292681f7d
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0095ab65cec1fd56b26cc42c29ae4e77a61bae1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4df65dc3db8f8c23aa0fd012ee834020839d1ce9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="server-element-for-configuration-dta"></a>Server (DTA, elemento de Configuration)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Contiene la información de identificación para el servidor donde desea Database Engine Tuning Advisor para evaluar la configuración hipotética (especificada por el **configuración** elemento).  
@@ -38,9 +38,9 @@ ms.lasthandoff: 12/21/2017
     </Server>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|Ninguno.|  
 |**Valor predeterminado**|Ninguno.|  
@@ -50,8 +50,8 @@ ms.lasthandoff: 12/21/2017
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Elemento Configuration &#40;DTA&#41;](../../tools/dta/configuration-element-dta.md)|  
-|**Elementos secundarios**|[Name &#40;DTA, elemento de Server&#41;](../../tools/dta/name-element-for-server-dta.md)<br /><br /> [Database &#40;DTA, elemento de Configuration&#41;](../../tools/dta/database-element-for-configuration-dta.md)|  
+|**Elemento primario**|[Elemento de configuración &#40; DTA &#41;](../../tools/dta/configuration-element-dta.md)|  
+|**Elementos secundarios**|[Elemento de nombre de servidor &#40; DTA &#41;](../../tools/dta/name-element-for-server-dta.md)<br /><br /> [Elemento de la base de datos de configuración &#40; DTA &#41;](../../tools/dta/database-element-for-configuration-dta.md)|  
   
 ## <a name="remarks"></a>Comentarios  
  Solo es posible especificar un elemento **Server** para el elemento **Configuration** . Este elemento tiene el nombre **ServerTypecomplexType** en el [esquema XML del Asistente para la optimización de motor de base de datos](http://go.microsoft.com/fwlink/?linkid=43100). No confunda este elemento **Server** con el elemento secundario de **DTAInput** . Para obtener más información, vea [Server &#40;DTA, elemento&#41;](../../tools/dta/server-element-dta.md).  

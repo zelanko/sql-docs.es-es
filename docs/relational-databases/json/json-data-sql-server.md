@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 03be01e0efe2a6cf437f448cf952c7949d45026d
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 1f6ecf8c1970a3e7fa78dc78b83afce4082f0e63
+ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="json-data-sql-server"></a>Datos JSON (SQL Server)
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ JSON es un formato de datos de texto muy popular que se usa para intercambiar da
   
  ![Información general de la compatibilidad de JSON integrada](../../relational-databases/json/media/jsonslides1overview.png "Información general de la compatibilidad de JSON integrada")  
   
-## <a name="key-json-capabilities-of-sql-server"></a>Funcionalidades clave de JSON de SQL Server 
+## <a name="key-json-capabilities-of-sql-server-and-sql-database"></a>Funcionalidades clave de JSON de SQL Server y SQL Database
 A continuación, se indica más información sobre las funcionalidades clave que proporciona SQL Server con su compatibilidad de JSON integrada.
 
 ### <a name="extract-values-from-json-text-and-use-them-in-queries"></a>Extraer valores de texto JSON y usarlos en consultas
@@ -125,11 +125,11 @@ FROM OPENJSON(@json)
 |2|John|Smith|25||  
 |5|Jane|Smith||2005-11-04T12:00:00|  
   
- **OPENJSON** transforma la matriz de objetos JSON en una tabla, donde cada objeto se representa como una fila y los pares clave-valor se devuelven en forma de celdas. El resultado obedece las siguientes reglas.
+ **OPENJSON** transforma la matriz de objetos JSON en una tabla, donde cada objeto se representa como una fila y los pares clave-valor se devuelven en forma de celdas. El resultado detecta las siguientes reglas:
 -   **OPENJSON** convierte valores JSON a los tipos especificados en la cláusula **WITH**.
 -   **OPENJSON** se puede encargar tanto de los pares clave-valor sin formato como de los objetos anidados organizados jerárquicamente.
 -   No hay que devolver todos los campos incluidos en el texto JSON.
--   **OPENJSON** devuelve valores NULL cuando no existen valores JSON.
+-   Si no existen valores JSON, **OPENJSON** devuelve valores NULL.
 -   Opcionalmente, puede especificar una ruta de acceso después de la especificación de tipo para hacer referencia a una propiedad anidada o a una propiedad mediante un nombre diferente.
 -   El prefijo opcional **strict** en la ruta de acceso señala que los valores de las propiedades especificadas deben existir en el texto JSON.
 
@@ -178,51 +178,22 @@ El texto JSON se suele almacenar en columnas varchar o nvarchar y se indexa como
 Si tiene cargas de trabajo JSON puras en las que quiera usar algún tipo de lenguaje de consulta personalizado para procesar documentos JSON, sopese la posibilidad de usar Microsoft Azure [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/).  
   
  Estos son algunos casos de uso que muestran cómo se puede usar la compatibilidad integrada de JSON en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+
+## <a name="store-and-index-json-data-in-sql-server"></a>Almacenamiento e índice de datos JSON en SQL Server
+
+Para obtener más información sobre las opciones para almacenar, indexar y optimizar datos JSON en SQL Server, consulte los siguientes artículos:
+-   [Almacenamiento de documentos JSON en SQL Server o SQL Database](store-json-documents-in-sql-tables.md)
+-   [Indexación de datos JSON](index-json-data.md)
+-   [Optimización del procesamiento de OLTP en memoria JSON](optimize-json-processing-with-in-memory-oltp.md)
+
+### <a name="load-json-files-into-sql-server"></a>Cargar archivos JSON en SQL Server  
+ Se puede aplicar formato JSON o JSON delimitado por filas estándar a la información almacenada en archivos. SQL Server puede importar el contenido de archivos JSON, analizarlo mediante las funciones **OPENJSON** o **JSON_VALUE**, y cargarlo en tablas.  
   
-## <a name="return-data-from-a-sql-server-table-formatted-as-json"></a>Obtener datos de una tabla de SQL Server con formato JSON  
- Si tiene un servicio web que toma datos de la capa de base de datos y los devuelve en formato JSON o en bibliotecas o marcos de trabajo de JavaScript que aceptan datos con formato JSON, puede dar formato JSON a los resultados directamente en una consulta de SQL. En lugar de escribir código o incluir una biblioteca para convertir los resultados de consulta tabulares para, luego, serializar esos objetos en formato JSON, puede usar FOR JSON para delegar en SQL Server la aplicación de formato JSON.  
+-   Si los documentos JSON están almacenados en archivos locales, en unidades de red compartidas o en ubicaciones de Azure File Storage a los que SQL Server tenga acceso, puede realizar una operación de importación en bloque para cargar los datos JSON en SQL Server. Para obtener más información sobre este escenario, vea [Importing JSON files into SQL Server using OPENROWSET (BULK)](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2015/10/07/importing-json-files-into-sql-server-using-openrowset-bulk.aspx)(Importar archivos JSON a SQL Server con OPENROWSET (BULK)).  
   
- Por ejemplo, imaginemos que quiere generar un resultado JSON que sea compatible con la especificación OData. El servicio web espera una solicitud y una respuesta en el siguiente formato.  
-  
--   Solicitud: `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
-  
--   Respuesta: `{"@odata.context":"http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
-  
- Esta dirección URL de OData representa una solicitud de las columnas ProductID y ProductName del producto con el identificador 1. Puede usar **FOR JSON** para aplicar al resultado el formato que SQL Server espera.  
-  
-```sql  
-SELECT 'http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
- AS '@odata.context',   
- ProductID, Name as ProductName   
-FROM Production.Product  
-WHERE ProductID = 1  
-FOR JSON AUTO  
-```  
-  
-El resultado de esta consulta es un texto JSON totalmente compatible con la especificación OData. SQL Server se encarga de aplicar el formato y las secuencias de escape. SQL Server también puede aplicar cualquier tipo de formato a los resultados de una consulta, como JSON de OData o GeoJSON. Para obtener más información, vea [Returning spatial data in GeoJSON format](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/returning-spatial-data-in-geojson-format-part-1) (Devolver datos espaciales en formato GeoJSON).  
-  
-## <a name="analyze-json-data-with-sql-queries"></a>Analizar datos JSON con consultas SQL  
- Si necesita filtrar o agregar datos JSON para elaborar informes, puede usar **OPENJSON** para transformar JSON en formato relacional. Luego, use el lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)] estándar y las funciones integradas para preparar los informes.  
-  
-```sql  
-SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date  
-FROM   SalesOrderRecord AS Tab  
-          CROSS APPLY  
-     OPENJSON (Tab.json, N'$.Orders.OrdersArray')  
-           WITH (  
-              Number   varchar(200) N'$.Order.Number',   
-              Date     datetime     N'$.Order.Date',  
-              Customer varchar(200) N'$.AccountNumber',   
-              Quantity int          N'$.Item.Quantity'  
-           )  
-  AS SalesOrderJsonData  
-WHERE JSON_VALUE(Tab.json, '$.Status') = N'Closed'  
-ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified  
-```  
-  
- En la misma consulta se pueden usar tanto valores como columnas de tabla estándar de texto JSON. Puede agregar índices a la expresión `JSON_VALUE(Tab.json, '$.Status')` para mejorar el rendimiento de la consulta. Para obtener más información, vea [Indexación de datos JSON](../../relational-databases/json/index-json-data.md).
-  
-## <a name="import-json-data-into-sql-server-tables"></a>Importar datos JSON a tablas de SQL Server  
+-   Si los archivos JSON delimitados por línea se encuentran en un sistema de archivos de Hadoop o de un almacenamiento de blobs de Azure, puede usar Polybase para cargar el texto JSON, analizarlo en código de Transact-SQL y cargarlo en tablas.  
+
+### <a name="import-json-data-into-sql-server-tables"></a>Importar datos JSON a tablas de SQL Server  
  Si tiene que cargar los datos JSON a SQL Server desde un servicio externo, puede usar **OPENJSON** para importar los datos a SQL Server en lugar de analizarlos en el nivel de la aplicación.  
   
 ```sql  
@@ -265,20 +236,56 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
   AS SalesOrderJsonData;  
 ```  
   
- El contenido de la variable JSON puede proceder de algún servicio REST externo, enviarse como un parámetro desde un marco de trabajo de JavaScript de cliente o bien cargarse desde archivos externos. Los resultados de texto JSON se pueden insertar, actualizar o combinar fácilmente en tablas de SQL Server. Para obtener más información sobre este escenario, vea las siguentes entradas de blog.
+ El contenido de la variable JSON puede proceder de algún servicio REST externo, enviarse como un parámetro desde un marco de trabajo de JavaScript de cliente o bien cargarse desde archivos externos. Los resultados de texto JSON se pueden insertar, actualizar o combinar fácilmente en tablas de SQL Server. Para obtener más información sobre este escenario, vea las siguientes entradas de blog:
 -   [Importing JSON data in SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/09/22/openjson-the-easiest-way-to-import-json-text-into-table/)
 -   [Upsert JSON documents in SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/03/upsert-json-documents-in-sql-server-2016)
 -   [Loading GeoJSON data into SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/loading-geojson-data-into-sql-server/).  
+
+## <a name="analyze-json-data-with-sql-queries"></a>Analizar datos JSON con consultas SQL  
+ Si necesita filtrar o agregar datos JSON para elaborar informes, puede usar **OPENJSON** para transformar JSON en formato relacional. Luego, use el lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)] estándar y las funciones integradas para preparar los informes.  
   
-## <a name="load-json-files-into-sql-server"></a>Cargar archivos JSON en SQL Server  
- Se puede aplicar formato JSON o JSON delimitado por filas estándar a la información almacenada en archivos. SQL Server puede importar el contenido de archivos JSON, analizarlo mediante las funciones **OPENJSON** o **JSON_VALUE**, y cargarlo en tablas.  
+```sql  
+SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date  
+FROM   SalesOrderRecord AS Tab  
+          CROSS APPLY  
+     OPENJSON (Tab.json, N'$.Orders.OrdersArray')  
+           WITH (  
+              Number   varchar(200) N'$.Order.Number',   
+              Date     datetime     N'$.Order.Date',  
+              Customer varchar(200) N'$.AccountNumber',   
+              Quantity int          N'$.Item.Quantity'  
+           )  
+  AS SalesOrderJsonData  
+WHERE JSON_VALUE(Tab.json, '$.Status') = N'Closed'  
+ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified  
+```  
   
--   Si los documentos JSON están almacenados en archivos locales, en unidades de red compartidas o en ubicaciones de Azure File Storage a los que SQL Server tenga acceso, puede realizar una operación de importación en bloque para cargar los datos JSON en SQL Server. Para obtener más información sobre este escenario, vea [Importing JSON files into SQL Server using OPENROWSET (BULK)](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2015/10/07/importing-json-files-into-sql-server-using-openrowset-bulk.aspx)(Importar archivos JSON a SQL Server con OPENROWSET (BULK)).  
+ En la misma consulta se pueden usar tanto valores como columnas de tabla estándar de texto JSON. Puede agregar índices a la expresión `JSON_VALUE(Tab.json, '$.Status')` para mejorar el rendimiento de la consulta. Para obtener más información, vea [Indexación de datos JSON](../../relational-databases/json/index-json-data.md).
+ 
+## <a name="return-data-from-a-sql-server-table-formatted-as-json"></a>Obtener datos de una tabla de SQL Server con formato JSON  
+ Si tiene un servicio web que toma datos de la capa de base de datos y los devuelve en formato JSON o en bibliotecas o marcos de trabajo de JavaScript que aceptan datos con formato JSON, puede dar formato JSON a los resultados directamente en una consulta de SQL. En lugar de escribir código o incluir una biblioteca para convertir los resultados de consulta tabulares para, luego, serializar esos objetos en formato JSON, puede usar FOR JSON para delegar en SQL Server la aplicación de formato JSON.  
   
--   Si los archivos JSON delimitados por línea se encuentran en un sistema de archivos de Hadoop o de un almacenamiento de blobs de Azure, puede usar Polybase para cargar el texto JSON, analizarlo en código de Transact-SQL y cargarlo en tablas.  
+ Por ejemplo, imaginemos que quiere generar un resultado JSON que sea compatible con la especificación OData. El servicio web espera una solicitud y una respuesta en el siguiente formato: 
+  
+-   Solicitud: `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
+  
+-   Respuesta: `{"@odata.context":"http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
+  
+ Esta dirección URL de OData representa una solicitud de las columnas ProductID y ProductName del producto con el `id` 1. Puede usar **FOR JSON** para aplicar al resultado el formato que SQL Server espera.  
+  
+```sql  
+SELECT 'http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
+ AS '@odata.context',   
+ ProductID, Name as ProductName   
+FROM Production.Product  
+WHERE ProductID = 1  
+FOR JSON AUTO  
+```  
+  
+El resultado de esta consulta es un texto JSON totalmente compatible con la especificación OData. SQL Server se encarga de aplicar el formato y las secuencias de escape. SQL Server también puede aplicar cualquier tipo de formato a los resultados de una consulta, como JSON de OData o GeoJSON. Para obtener más información, vea [Returning spatial data in GeoJSON format](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/returning-spatial-data-in-geojson-format-part-1) (Devolver datos espaciales en formato GeoJSON).  
   
 ## <a name="test-drive-built-in-json-support"></a>Probar la compatibilidad integrada de JSON  
- **Pruebe la compatibilidad integrada de JSON con la base de datos de ejemplo de AdventureWorks.** Para obtener la base de datos de ejemplo de AdventureWorks, descargue al menos el archivo de base de datos y el archivo de ejemplos y scripts [aquí](https://www.microsoft.com/download/details.aspx?id=49502). Después de restaurar la base de datos de ejemplo en una instancia de SQL Server 2016, descomprima el archivo de ejemplos y abra el archivo "JSON Sample Queries procedures views and indexes.sql" desde la carpeta JSON. Ejecute los scripts de este archivo para cambiar el formato de algunos datos existentes a datos JSON, ejecutar consultas de ejemplo e informes basados en los datos JSON, indexar los datos JSON e importar y exportar JSON.  
+ **Pruebe la compatibilidad integrada de JSON con la base de datos de ejemplo de AdventureWorks.** Para obtener la base de datos de ejemplo de AdventureWorks, descargue al menos el archivo de base de datos y el archivo de ejemplos y scripts [aquí](https://www.microsoft.com/download/details.aspx?id=49502). Después de restaurar la base de datos de ejemplo en una instancia de SQL Server 2016, descomprima el archivo de ejemplos y abra el archivo "JSON Sample Queries procedures views and indexes.sql" desde la carpeta JSON. Ejecute los scripts de este archivo para cambiar el formato de algunos datos existentes a datos JSON, probar consultas de ejemplo e informes basados en los datos JSON, indexar los datos JSON e importar y exportar JSON.  
   
  Esto es lo que se puede hacer con los scripts incluidos en el archivo.  
   
@@ -299,25 +306,6 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
 6.  Limpiar scripts. No lleve esto a cabo si quiere conservar las vistas y procedimientos almacenados creados en los pasos 2 y 4.  
   
 ## <a name="learn-more-about-built-in-json-support"></a>Más información sobre la compatibilidad integrada de JSON  
-  
-### <a name="topics-in-this-section"></a>Temas de esta sección  
- [Format Query Results as JSON with FOR JSON &#40;SQL Server&#41; (Dar formato JSON a los resultados de consulta con FOR JSON &#40;SQL Server&#41;)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)  
- Use la cláusula FOR JSON para delegar en SQL Server la aplicación de formato a los resultados de JSON procedentes de aplicaciones cliente.  
-  
- [Convert JSON Data to Rows and Columns with OPENJSON &#40;SQL Server&#41; (Convertir datos JSON en filas y columnas con OPENJSON &#40;SQL Server&#41;)](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)  
- Use OPENJSON para importar datos JSON a SQL Server o para convertir datos JSON en un formato relacional para una aplicación o servicio que actualmente no puede usar JSON directamente (como SQL Server Integration Services).  
-  
- [Validar, consultar y cambiar datos JSON con funciones integradas &#40;SQL Server&#41;](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)  
- Use estas funciones integradas para validar texto JSON y para extraer un valor escalar, un objeto o una matriz.  
-  
- [Expresiones de ruta de acceso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)  
- Use una expresión de ruta para especificar el texto JSON que quiera usar.  
-  
- [Indexación de datos JSON](../../relational-databases/json/index-json-data.md)  
- Use columnas calculadas para crear índices de intercalación de las propiedades de documentos JSON.  
-  
-[Solve common issues with JSON in SQL Server](../../relational-databases/json/solve-common-issues-with-json-in-sql-server.md) (Resolver problemas comunes con JSON en SQL Server)  
- Encuentre respuestas a algunas preguntas habituales sobre la compatibilidad integrada de JSON en SQL Server.  
   
 ### <a name="microsoft-blog-posts"></a>Entrada de blog de Microsoft  
   

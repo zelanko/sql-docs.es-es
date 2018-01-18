@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 835b2c27dfaf8e4003cd009e3c20146af32d2bca
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 559847d392fa744b32fc2aa0cdb70eeb9b2c4ebd
+ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="index-json-data"></a>Indexación de datos JSON
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-En SQL Server 2016, JSON no es un tipo de datos integrado, y SQL Server no tiene índices personalizados JSON. En cambio, puede optimizar las consultas en documentos JSON mediante índices estándar. 
+En SQL Server y SQL Database, JSON no es un tipo de datos integrado, y SQL Server no tiene índices personalizados JSON. En cambio, puede optimizar las consultas en documentos JSON mediante índices estándar. 
 
 Los índices de la base de datos mejoran el rendimiento de las operaciones de filtro y ordenación. Sin ellos, SQL Server debe realizar un examen completo de la tabla cada vez que realice consultas de datos.  
   
@@ -79,7 +79,7 @@ Este es el plan de ejecución de la consulta de este ejemplo.
 En lugar examinar toda la tabla, SQL Server busca un índice en el índice no agrupado e identifica las filas que satisfacen las condiciones especificadas. Después, realiza una búsqueda de claves en la tabla `SalesOrderHeader` para capturar las otras columnas a las que se hace referencia en la consulta (en este ejemplo, `SalesOrderNumber` y `OrderDate`).  
  
 ### <a name="optimize-the-index-further-with-included-columns"></a>Mayor optimización del índice con la inclusión de columnas
-Puede evitar esta búsqueda adicional en la tabla si agrega las columnas necesarias en el índice. Puede agregar estas columnas como columnas incluidas estándar, tal y como se muestra en el ejemplo siguiente, que amplía el ejemplo `CREATE INDEX` anterior.  
+Si agrega las columnas necesarias al índice, podrá evitar esta búsqueda adicional en la tabla. Puede agregar estas columnas como columnas incluidas estándar, tal y como se muestra en el ejemplo siguiente, que amplía el ejemplo `CREATE INDEX` anterior.  
   
 ```sql  
 CREATE INDEX idx_soh_json_CustomerName
@@ -87,12 +87,12 @@ ON Sales.SalesOrderHeader(vCustomerName)
 INCLUDE(SalesOrderNumber,OrderDate)
 ```  
   
-En este caso, SQL Server no tiene que leer más datos de la tabla `SalesOrderHeader`, ya que todo lo que necesita se incluye en el índice JSON no agrupado. Se trata de una buena forma de combinar datos JSON y de columna en las consultas y de crear índices óptimos para la carga de trabajo.  
+En este caso, SQL Server no tiene que leer más datos de la tabla `SalesOrderHeader`, ya que todo lo que necesita se incluye en el índice JSON no agrupado. Este tipo de índice es una buena forma de combinar datos JSON y de columna en las consultas y de crear índices óptimos para la carga de trabajo.  
   
 ## <a name="json-indexes-are-collation-aware-indexes"></a>Los índices JSON son índices de intercalación  
 Una característica importante de los índices basados en datos JSON es que son compatibles con la intercalación. El resultado de la función `JSON_VALUE` que usa al crear la columna calculada es un valor de texto que hereda la intercalación de la expresión de entrada. Por tanto, los valores del índice se ordenan con las reglas de intercalación definidas en las columnas de origen.  
   
-Para demostrar esto, en el ejemplo siguiente se crea una tabla de colección simple con una clave principal y el contenido JSON.  
+Para demostrar que los índices son de intercalación, en el ejemplo siguiente se crea una tabla de colección simple con una clave principal y el contenido JSON.  
   
 ```sql  
 CREATE TABLE JsonCollection
@@ -146,7 +146,7 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  Aunque la consulta tiene una cláusula `ORDER BY`, el plan de ejecución no usa un operador Sort. El índice JSON ya está ordenado según reglas del serbio (cirílico). Por lo tanto, SQL Server puede utilizar el índice no agrupado donde los resultados ya están ordenados.  
   
- Pero si cambiamos la intercalación de la expresión `ORDER BY` (por ejemplo, si colocamos `COLLATE French_100_CI_AS_SC` después de la función `JSON_VALUE`), obtenemos un plan de ejecución de consulta diferente.  
+ A pesar de esto, si cambia la intercalación de la expresión `ORDER BY` (por ejemplo, si agrega `COLLATE French_100_CI_AS_SC` después de la función `JSON_VALUE`), recibirá otro plan de ejecución de consulta.  
   
  ![Plan de ejecución](../../relational-databases/json/media/jsonindexblog3.png "Plan de ejecución")  
   

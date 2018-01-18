@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: 501fd7eac7f7905a03a2861a462d4c1179beb15c
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 797cc24d46fc5a51f514508dd35226d07cda74f4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurar clúster Ubuntu y grupo de disponibilidad de recursos
 
@@ -32,7 +32,7 @@ Este documento explica cómo crear un clúster de tres nodos en Ubuntu y agregar
 
 En las siguientes secciones abordan los pasos necesarios para configurar una solución de clúster de conmutación por error. 
 
-## <a name="roadmap"></a>Guía básica
+## <a name="roadmap"></a>Roadmap
 
 Los pasos para crear un grupo de disponibilidad en servidores Linux para lograr alta disponibilidad son diferentes de los pasos en un clúster de conmutación por error de Windows Server. En la lista siguiente se describe los pasos de alto niveles: 
 
@@ -116,7 +116,7 @@ sudo systemctl enable pacemaker
 1. Crear el clúster. 
 
    >[!WARNING]
-   >Debido a un problema conocido que el proveedor de la agrupación en clústeres está investigando el problema, a partir de generará un error con el clúster ('inicio de clúster de equipos') debajo de error. Esto es porque el archivo de registro configurado en /etc/corosync/corosync.conf es incorrecto. Para solucionar este problema, cambie el archivo de registro: /var/log/corosync/corosync.log. También puede crear el archivo /var/log/cluster/corosync.log.
+   >Debido a un problema conocido que el proveedor de la agrupación en clústeres está investigando el problema, a partir de generará un error con el clúster ('inicio de clúster de equipos') debajo de error. Esto es porque el archivo de registro configurado en /etc/corosync/corosync.conf que se crea cuando el comando de instalación de clúster se ejecute, es incorrecto. Para solucionar este problema, cambie el archivo de registro: /var/log/corosync/corosync.log. También puede crear el archivo /var/log/cluster/corosync.log.
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 

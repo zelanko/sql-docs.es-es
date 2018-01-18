@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: EventString element
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b51de55832ddd13103fb67f41f937a1efdd0b999
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 93b5886a489f4570dd62249f8620d11b868ee663
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="eventstring-element-dta"></a>EventString (DTA, elemento)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica un [!INCLUDE[tsql](../../includes/tsql-md.md)] cargas de trabajo de secuencia de comandos directamente en el archivo de entrada XML.  
@@ -41,13 +41,13 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-attributes"></a>Atributos del elemento  
   
-|Attribute|Description|  
+|Atributo|Description|  
 |---------------|-----------------|  
-|**Weight**|Opcional. Especifica el factor de peso de la consulta (un factor de importancia) del evento especificado. Utilice un tipo de datos **float** para especificar el peso. Por ejemplo, **Weight**="100.01". El valor mínimo que se puede especificar para **Weight** es "0".|  
+|**Peso**|Opcional. Especifica el factor de peso de la consulta (un factor de importancia) del evento especificado. Utilice un tipo de datos **float** para especificar el peso. Por ejemplo, **Weight**="100.01". El valor mínimo que se puede especificar para **Weight** es "0".|  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|**string**, longitud ilimitada.|  
 |**Valor predeterminado**|Ninguno.|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Workload &#40;DTA, elemento&#41;](../../tools/dta/workload-element-dta.md)|  
+|**Elemento primario**|[Workload, elemento &#40; DTA &#41;](../../tools/dta/workload-element-dta.md)|  
 |**Elementos secundarios**|Ninguno.|  
   
 ## <a name="example"></a>Ejemplo  

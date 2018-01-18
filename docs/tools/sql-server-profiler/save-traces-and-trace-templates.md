@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SQL Server Profiler, templates
 ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e447a1b51919fcece9560a0d37cb5f526a615a3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 77aa4dc8d36f7d46cf7685c1d371516044bc6427
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="save-traces-and-trace-templates"></a>Guardar seguimientos y plantillas de seguimiento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Es importante distinguir guardar archivos de seguimiento de guardar plantillas de seguimiento. Guardar un archivo de seguimiento implica guardar los datos de eventos capturados en un lugar especificado. Guardar una plantilla de seguimiento implica guardar la definición del seguimiento, como las columnas de datos, las clases de eventos o los filtros especificados.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/21/2017
  La definición de la plantilla de un seguimiento incluye las clases de eventos, columnas de datos, filtros y todas las demás propiedades (excepto los datos de eventos capturados) que se utilizan para crear un seguimiento. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] proporciona plantillas del sistema predefinidas para las tareas de seguimiento comunes y para tareas específicas, como crear una carga de trabajo que el Asistente para la optimización de motor de base de datos pueda utilizar para ajustar el diseño físico de la base de datos. También se pueden crear y guardar plantillas definidas por el usuario.  
   
 ### <a name="importing-and-exporting-templates"></a>Importar y exportar plantillas  
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite importar y exportar plantillas de un servidor a otro. Al exportar una plantilla se mueve una copia de una plantilla existente al directorio especificado. Al importar una plantilla se realiza una copia de una plantilla especificada. Cuando estas plantillas se ven en el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], se pueden distinguir de las plantillas del sistema por el término "(usuario)" que sigue al nombre de la plantilla. Las plantillas del sistema predefinidas no se pueden sobrescribir ni modificar directamente.  
+ El [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite importar y exportar plantillas de un servidor a otro. Al exportar una plantilla se mueve una copia de una plantilla existente al directorio especificado. Al importar una plantilla se realiza una copia de una plantilla especificada. Cuando estas plantillas se ven en el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], se pueden distinguir de las plantillas del sistema por el término "(usuario)" que sigue al nombre de la plantilla. Las plantillas del sistema predefinidas no se pueden sobrescribir ni modificar directamente.  
   
 ### <a name="analyzing-performance-with-templates"></a>Analizar el rendimiento con plantillas  
  Si supervisa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]con frecuencia, utilice plantillas para analizar el rendimiento. Las plantillas capturan los mismos datos de eventos cada vez y utilizan la misma definición de seguimiento para supervisar los mismos eventos. No tendrá que definir las clases de eventos y las columnas de datos cada vez que cree un seguimiento. Además, se puede proporcionar una plantilla a otro usuario para supervisar eventos específicos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por ejemplo, un proveedor de asistencia técnica puede proporcionar una plantilla a un cliente. El cliente puede utilizar la plantilla para capturar los datos de eventos necesarios, que posteriormente enviará al proveedor de asistencia técnica para que los analice.  
@@ -68,8 +68,8 @@ ms.lasthandoff: 12/21/2017
  [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Guardar los resultados de un seguimiento en una tabla &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
- [Crear una plantilla de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [Guardar los resultados de seguimiento en una tabla &#40; Analizador de SQL Server &#41;](../../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
+ [Crear una plantilla de seguimiento &#40; Analizador de SQL Server &#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [Derivar una plantilla a partir de un seguimiento en ejecución &#40; Analizador de SQL Server &#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [Derivar una plantilla de un archivo de seguimiento o tabla de seguimiento &#40; Analizador de SQL Server &#41;](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [Exportar una plantilla de seguimiento &#40; Analizador de SQL Server &#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   

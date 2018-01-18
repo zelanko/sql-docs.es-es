@@ -16,15 +16,15 @@ helpviewer_keywords:
 - PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1869cd0a65ab63d5d579eb8c11b2329a8fbbebe8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd4e67397b52b3e7248ce061312517841eef38e5
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlps-utility"></a>sqlps, utilidad
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]El **sqlps** utilidad inicia una sesión de Windows PowerShell con la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proveedor de PowerShell y los cmdlets cargados y registrados. Puede escribir scripts o comandos de PowerShell que usen los componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell para trabajar con instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y sus objetos.  
@@ -75,7 +75,7 @@ sqlps
  Especifica un bloque de comandos de PowerShell que se han de ejecutar; el bloque debe incluirse entre llaves: {}. *Script_block* solo se puede especificar cuando se llama a la utilidad **sqlps** desde **PowerShell** o desde otra sesión de la utilidad **sqlps** . *argument_array* es una matriz de variables de PowerShell que contiene los argumentos de los comandos de PowerShell en *script_block*.  
   
  *string* [ *command_parameters* ]  
- Especifica una cadena que contiene los comandos de PowerShell que se han de ejecutar. Use el formato **"&{***command***}"**. Las comillas indican una cadena y el operador de invocación (&) hace que la utilidad **sqlps** ejecute el comando.  
+ Especifica una cadena que contiene los comandos de PowerShell que se han de ejecutar. Use el formato **"& {***comando***}"**. Las comillas indican una cadena y el operador de invocación (&) hace que la utilidad **sqlps** ejecute el comando.  
   
  [ **-?** | **-Help** ]  
  Muestra el resumen de la sintaxis de las opciones de la utilidad **sqlps** .  

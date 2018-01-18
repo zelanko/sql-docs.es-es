@@ -23,15 +23,15 @@ helpviewer_keywords:
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 caps.latest.revision: "58"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 21deb8edf30db7281ebacfd7b1176070ce13cc6e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e003329968d6ebd960f66c56051a20ac91523e47
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dta-utility"></a>dta, utilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]El **dta** utilidad es la versión de línea de comandos del Asistente para la optimización de motor de base de datos. La utilidad **dta** está diseñada para permitir usar la funcionalidad del Asistente para la optimización de motor de base de datos en aplicaciones y scripts.  
@@ -171,7 +171,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  Especifica los tipos de estructuras de diseño físico que **dta** debe incluir en la recomendación. En la tabla siguiente se muestran y describen los valores que se pueden especificar para este argumento. Cuando no se especifica ningún valor, **dta** usa el parámetro **-fa****IDX**predeterminado.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |IDX_IV|Índices y vistas indizadas.|  
 |IDX|Solo índices.|  
@@ -192,7 +192,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  Especifica las estructuras de diseño físico existentes que **dta** debe conservar cuando genere su recomendación. En la tabla siguiente se muestran y describen los valores que se pueden especificar para este argumento:  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Ninguno|Ninguna estructura existente|  
 |ALL|Todas las estructuras existentes|  
@@ -203,7 +203,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  Especifica si se deben crear particiones de las nuevas estructuras de diseño físico (índices y vistas indexadas) que **dta** propone y cómo se deben crear esas particiones. En la tabla siguiente se muestran y describen los valores que se pueden especificar para este argumento:  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Ninguno|No crear particiones|  
 |FULL|Particiones completas (para mejorar el rendimiento)|  
@@ -231,7 +231,7 @@ dta -d AdventureWorks2012 ...
  Especifica el nombre y la ruta del archivo de carga de trabajo que se desea usar como entrada para la optimización. El archivo debe estar en uno de estos formatos: .trc (archivo de seguimiento de SQL Server Profiler) o .log (archivo de Seguimiento de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Debe especificarse un archivo de carga de trabajo o una tabla de carga de trabajo.  
   
  **-it** *workload_trace_table_name*  
- Especifica el nombre de una tabla que contiene el seguimiento de carga de trabajo para la optimización. El nombre se debe especificar en el formato [*database_name*]**.**[*owner_name*]**.***table_name*.  
+ Especifica el nombre de una tabla que contiene el seguimiento de carga de trabajo para la optimización. El nombre se especifica en el formato: [*database_name*]**.** [*owner_name*] **. *** table_name*.  
   
  En la tabla siguiente se muestran los valores predeterminados para cada parámetro:  
   
@@ -253,7 +253,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  Especifica si las estructuras de diseño físico se crean en línea. En la tabla siguiente se muestran y describen los valores que pueden especificarse para este argumento:  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |OFF|No se pueden crear en línea las estructuras recomendadas de diseño físico.|  
 |ON|Se pueden crear en línea todas las estructuras recomendadas de diseño físico.|  
@@ -306,7 +306,7 @@ En este caso, DTA se usar almacén de consultas como el origen de carga de traba
  **-rl** *analysis_report_list*  
  Especifica la lista de informes de análisis que se generarán. En la tabla siguiente se muestran los valores que se pueden especificar para este argumento:  
   
-|Valor|Informe|  
+|Value|Informe|  
 |-----------|------------|  
 |ALL|Todos los informes de análisis|  
 |STMT_COST|Informe de costo de instrucciones|  

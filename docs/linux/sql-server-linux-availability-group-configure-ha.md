@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: 25fc141818d0e0d638cf463990da8d44955fef17
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: e75ae9a6f3c48f0ece0c95be9f3836c8205a1b8c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-always-on-availability-group-for-sql-server-on-linux"></a>Configurar grupo de disponibilidad AlwaysOn para SQL Server en Linux
 
@@ -33,7 +33,7 @@ Las configuraciones que garantizan alta disponibilidad y protección de datos qu
 
 Todos los servidores deben ser físicos o virtuales y servidores virtuales deben estar en la misma plataforma de virtualización. Este requisito es porque los agentes de barrera son específicas de la plataforma. Vea [directivas para clústeres invitados](https://access.redhat.com/articles/29440#guest_policies).
 
-## <a name="roadmap"></a>Guía básica
+## <a name="roadmap"></a>Roadmap
 
 Los pasos para crear un grupo de disponibilidad en servidores Linux para lograr alta disponibilidad son diferentes de los pasos en un clúster de conmutación por error de Windows Server. En la lista siguiente se describe los pasos de alto niveles: 
 
@@ -64,7 +64,7 @@ Los pasos para crear un grupo de disponibilidad en servidores Linux para lograr 
    La manera de agregar el grupo de disponibilidad como un recurso del clúster depende de la distribución de Linux. Vea los siguientes vínculos para obtener instrucciones específicas de distribución: 
 
    * [RHEL](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource)
-   * [SLES GRANDE](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server)
+   * [SLES](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server)
    * [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md#create-availability-group-resource)
 
 [!INCLUDE [Create Prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
@@ -92,7 +92,7 @@ Ejecutar **sola** de las secuencias de comandos siguientes:
 
 - [Crear grupo de disponibilidad con tres réplicas sincrónicas](#threeSynch).
 - [Crear grupo de disponibilidad con dos réplicas sincrónicas y una réplica de configuración](#configOnly)
-- [Crear grupo de disponibilidad con tres réplicas sincrónicas](#readScale).
+- [Crear grupo de disponibilidad con dos réplicas sincrónicas](#readScale).
 
 <a name="threeSynch"></a>
 

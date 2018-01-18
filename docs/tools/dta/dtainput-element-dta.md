@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: DTAInput element
 ms.assetid: 40c19abf-ded5-43de-be96-5b43b1b81b03
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0ee58e6b5ec7215353296a1b17151b2354eb5e2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2ac4b1252abed4d02100e3891cdc2a22e4c3854e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dtainput-element-dta"></a>DTAInput (DTA, elemento)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Contiene la definición de entrada XML para el Asistente para la optimización de motor de base de datos.  
@@ -38,9 +38,9 @@ ms.lasthandoff: 12/21/2017
     </DTAInput>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Características|Description|  
+|Características|Descripción|  
 |---------------------|-----------------|  
 |**Tipo y longitud de los datos**|Ninguno.|  
 |**Valor predeterminado**|Ninguno.|  
@@ -50,8 +50,8 @@ ms.lasthandoff: 12/21/2017
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[DTAXML &#40;DTA, elemento&#41;](../../tools/dta/dtaxml-element-dta.md)|  
-|**Elementos secundarios**|[Server &#40;DTA, elemento&#41;](../../tools/dta/server-element-dta.md)<br /><br /> [Workload &#40;DTA, elemento&#41;](../../tools/dta/workload-element-dta.md)<br /><br /> [Elemento TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)<br /><br /> [Configuration &#40;DTA, elemento&#41;](../../tools/dta/configuration-element-dta.md)|  
+|**Elemento primario**|[Elemento DTAXML &#40; DTA &#41;](../../tools/dta/dtaxml-element-dta.md)|  
+|**Elementos secundarios**|[Elemento Server &#40; DTA &#41;](../../tools/dta/server-element-dta.md)<br /><br /> [Workload, elemento &#40; DTA &#41;](../../tools/dta/workload-element-dta.md)<br /><br /> [Tuningoptions, elemento &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)<br /><br /> [Elemento de configuración &#40; DTA &#41;](../../tools/dta/configuration-element-dta.md)|  
   
 ## <a name="remarks"></a>Comentarios  
  Este elemento es la raíz de la jerarquía del esquema de entrada del Asistente para la optimización de motor de base de datos. La entrada del Asistente para la optimización de motor de base de datos pueden ser argumentos que especifiquen los servidores cuyas bases de datos se desean optimizar, cargas de trabajo, opciones de optimización o una configuración especificada por el usuario.  

@@ -13,20 +13,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1e84232f8ef7287e3b3c2447c364284b024d8ea
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0ccb4a7798b1517d21e8a3c656cb94b9b4a9a8a4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-properties-advanced-tab"></a>Propiedades de SQL Server (pestaña Avanzadas)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Las propiedades siguientes aparecen en la **avanzadas** pestaña de forma predeterminada. Si se han definido propiedades personalizadas, aparecen también en esta pestaña junto con los valores correspondientes.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  **Agrupado**  
  Indica si este servicio está instalado como un recurso de un servidor en clúster.  
   

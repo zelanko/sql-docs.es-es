@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: "1"
 author: shkale-msft
-ms.author: shkale
+ms.author: shkale;barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a093d431510891d0bac9616aa1058134cb168ec7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ffc2bcd906e0d975d763d12aaa899cb414ef6b5e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Crear una base de datos del gráfico y ejecutar algunas consultas mediante T-SQL de coincidencia de patrones
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -174,4 +174,4 @@ Este script utiliza la nueva sintaxis de T-SQL para crear tablas de nodo y de bo
 |---  |---  |
 |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)  |Crear tabla de borde o nodo de gráfico  |
 |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)  |Insertar en una tabla de nodo o arista.  |
-|[COINCIDENCIA &#40; Transact-SQL &#41;](../../t-sql/queries/match-sql-graph.md)  |Usar a MATCH para coincidir con un patrón o recorrer el gráfico  |
+|[MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)  |Usar a MATCH para coincidir con un patrón o recorrer el gráfico  |

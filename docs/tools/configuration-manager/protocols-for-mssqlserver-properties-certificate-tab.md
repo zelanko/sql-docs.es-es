@@ -15,15 +15,15 @@ f1_keywords: sql13.swb.computermgr.cert.general.f1
 helpviewer_keywords: MSSQLSERVER property protocols
 ms.assetid: 776addd6-25f3-4875-9a71-064035787090
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 22aed889fcc7884a34f770e7931cf82ac6983061
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 811489d75af39d9b7cd33eb3f8aaadec5ae045cf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>Propiedades de Protocolos de MSSQLSERVER (pestaña Certificado)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use la **certificado** pestaña en el **protocolos para MSSQLSERVER propiedades** cuadro de diálogo para seleccionar un certificado de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o para ver las propiedades de un certificado. Todos los campos están en blanco hasta que se selecciona un certificado.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/21/2017
  **Certificado**  
  Nombre del certificado determinado por el proveedor de seguridad. Seleccione un certificado para ver los detalles en la cuadrícula de propiedades.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  Fecha de expiración  
  Fecha final del período de validez del certificado.  
   

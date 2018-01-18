@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: StorageBoundInMB element
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da0825fe578e3c908fd4b0728b98fb9e6b8c1326
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e0584999dc8e98243c00f4bbd174d1bfa8b14ba2
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB (DTA, elemento)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica el espacio máximo en megabytes que pueden consumir la recomendación de optimización del Asistente para la optimización de motor de base de datos (índices y particiones conjunto).  
@@ -38,9 +38,9 @@ ms.lasthandoff: 12/21/2017
       <StorageBoundInMB>...</ StorageBoundInMB >  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|**unsignedInt**, longitud ilimitada.|  
 |**Valor predeterminado**|Ninguno.|  
@@ -50,8 +50,8 @@ ms.lasthandoff: 12/21/2017
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[TuningOptions &#40;DTA, elemento&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**Elementos secundarios**|None|  
+|**Elemento primario**|[Tuningoptions, elemento &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**Elementos secundarios**|Ninguno|  
   
 ## <a name="remarks"></a>Comentarios  
  Cuando se optimizan varias bases de datos, se tienen en cuenta las recomendaciones para todas las bases de datos sobre el cálculo del espacio. De forma predeterminada, el Asistente para la optimización de motor de base de datos asume el menor de los siguientes tamaños de almacenamiento:  
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="example"></a>Ejemplo  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descripción  
  El siguiente ejemplo de código muestra cómo establecer un límite de 1500 megabytes como el máximo espacio en disco que una recomendación de optimización puede utilizar:  
   
 ## <a name="code"></a>código  

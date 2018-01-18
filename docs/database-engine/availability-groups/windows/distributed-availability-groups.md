@@ -1,7 +1,7 @@
 ---
 title: Grupos de disponibilidad distribuidos (SQL Server) | Microsoft Docs
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 01/12/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -18,11 +18,11 @@ author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 245eb466e756017c3ae70a5fc408d4ce876370d4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: efa0ea34a2b5432f3c7059d98cee4cbd35fa18ab
+ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="distributed-availability-groups"></a>Grupos de disponibilidad distribuidos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los grupos de disponibilidad distribuidos son una característica nueva que se incluyó en SQL Server 2016 como variante de la característica Grupos de disponibilidad AlwaysOn existente. En este artículo se aclaran algunos aspectos de los grupos de disponibilidad distribuidos y se complementa la [documentación de SQL Server](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation) existente.
@@ -147,7 +147,11 @@ En la siguiente imagen, AG 1 es la réplica principal de dos grupos de disponibi
 
 En los dos ejemplos anteriores, puede haber hasta 27 réplicas en total entre los tres grupos de disponibilidad, y todas ellas se pueden usar para consultas de solo lectura. 
 
-Actualmente, el [enrutamiento de solo lectura]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) no funciona con los grupos de disponibilidad distribuidos. Si usan el agente de escucha para conectarse, todas las consultas van a la réplica principal. Si no, tendrá que configurar cada réplica para permitir todas las conexiones como una réplica secundaria y tener acceso a ellas directamente. Este comportamiento podría cambiar en una actualización de SQL Server 2016 o en una versión futura de SQL Server.
+El [enrutamiento de solo lectura]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) no funciona completamente con los grupos de disponibilidad distribuidos. Más específicamente:
+
+1. El enrutamiento de solo lectura se puede configurar, y funcionará con el grupo de disponibilidad principal del grupo de disponibilidad distribuido. 
+2. El enrutamiento de solo lectura se puede configurar, pero no funcionará con el grupo de disponibilidad secundario del grupo de disponibilidad distribuido. Todas las consultas, si usan el agente de escucha para conectarse al grupo de disponibilidad secundario, irán a la réplica principal del grupo de disponibilidad secundario. Si no, tendrá que configurar cada réplica para permitir todas las conexiones como una réplica secundaria y tener acceso a ellas directamente. A pesar de ello, el enrutamiento de solo lectura funcionará si el grupo de disponibilidad secundario se convierte en principal tras una conmutación por error. Este comportamiento podría cambiar en una actualización de SQL Server 2016 o en una versión futura de SQL Server.
+
 
 ## <a name="initialize-secondary-availability-groups-in-a-distributed-availability-group"></a>Inicializar grupos de disponibilidad secundarios en un grupo de disponibilidad distribuido
 

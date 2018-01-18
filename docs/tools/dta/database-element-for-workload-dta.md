@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Database element
 ms.assetid: 112fca2a-37e5-4162-b2e7-b56eb8ab0c6f
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bd00572b79a564dc61ef18edd12052152a401a5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 02bf075186f8bc9c8efc6fb05b9288f636494a7c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="database-element-for-workload-dta"></a>Database (DTA, elemento de Workload)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica la base de datos donde se encuentra la tabla de seguimiento de la carga de trabajo.  
@@ -38,9 +38,9 @@ ms.lasthandoff: 12/21/2017
   </Database>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|Ninguno.|  
 |**Valor predeterminado**|Ninguno.|  
@@ -50,8 +50,8 @@ ms.lasthandoff: 12/21/2017
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Workload &#40;DTA, elemento&#41;](../../tools/dta/workload-element-dta.md)|  
-|**Elementos secundarios**|[Name &#40;DTA, elemento de Database&#41;](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [Schema &#40;DTA, elemento de Database&#41;](../../tools/dta/schema-element-for-database-dta.md)|  
+|**Elemento primario**|[Workload, elemento &#40; DTA &#41;](../../tools/dta/workload-element-dta.md)|  
+|**Elementos secundarios**|[Elemento de nombre de base de datos &#40; DTA &#41;](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [Elemento de esquema de base de datos &#40; DTA &#41;](../../tools/dta/schema-element-for-database-dta.md)|  
   
 ## <a name="remarks"></a>Comentarios  
  Este elemento tiene el nombre **DatabaseDetailsTypecomplexType** en el esquema XML del Asistente para la optimización de motor de base de datos. No confunda este elemento **Database** con el que tiene al elemento **Configuration** como raíz primaria. (Vea [Elemento Database de Configuration &#40;DTA&#41;](../../tools/dta/database-element-for-configuration-dta.md)).  

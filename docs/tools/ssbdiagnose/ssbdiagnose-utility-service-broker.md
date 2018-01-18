@@ -28,15 +28,15 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cac73fa5276aeb6d3323201a59979979c999a61
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ee4dfdfeb9dd22130a287000731d656fbcfb803c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>utilidad ssbdiagnose (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]El **ssbdiagnose** utilidad informa de los problemas de [!INCLUDE[ssSB](../../includes/sssb-md.md)] conversaciones o la configuración de [!INCLUDE[ssSB](../../includes/sssb-md.md)] servicios. Las comprobaciones de la configuración se pueden realizar en dos servicios o en un único servicio. La existencia de problemas se indica en la ventana del símbolo del sistema en forma de texto legible, o como XML con formato que se puede redirigir a un archivo o a otro programa.  
@@ -122,7 +122,7 @@ ssbdiagnose
  **-IGNORE** *error_id*  
  Especifica que los errores o los mensajes con el *error_id* especificado no se deben incluir en los informes. Puede especificar **-IGNORE** varias veces para suprimir varios identificadores de mensaje.  
   
- **\<baseconnectionoptions >**  
+ **\<baseconnectionoptions>**  
  Especifica la información de conexión base que se usa en **ssbdiagnose** cuando no se incluyen opciones de conexión en una cláusula determinada. La información de conexión proporcionada en una cláusula específica invalida la información de **baseconnectionoption** . Este proceso se realiza para cada parámetro de forma individual. Por ejemplo, si tanto **-S** como **-d** se especifican en **baseconnetionoptions**y solo se especifica **-d** en **toconnetionoptions**, **ssbdiagnose** usará -S de **baseconnetionoptions** y -d de **toconnetionoptions**.  
   
  **CONFIGURATION**  
@@ -131,7 +131,7 @@ ssbdiagnose
  **FROM SERVICE** *service_name*  
  Especifica el servicio que inicia las conversaciones.  
   
- **\<fromconnectionoptions >**  
+ **\<fromconnectionoptions>**  
  Especifica la información requerida para conectar con la base de datos que contiene el servicio del iniciador. Si no se especifica **fromconnectionoptions** , **ssbdiagnose** usa la información de conexión de **baseconnectionoptions** para conectarse a la base de datos del iniciador. Si se especifica **fromconnectionoptions** , se debe incluir la base de datos que contiene el servicio del iniciador. Si **fromconnectionoptions** no se especifica, **baseconnectionoptions** debe especificar la base de datos del iniciador.  
   
  **TO SERVICE** *service_name*[, *broker_id* ]  
@@ -147,13 +147,13 @@ FROM sys.databases
 WHERE database_id = DB_ID();  
 ```  
   
- **\<toconnectionoptions >**  
+ **\<toconnectionoptions>**  
  Especifica la información requerida para conectar con la base de datos que contiene el servicio de destino. Si **toconnectionoptions** no se especifica, **ssbdiagnose** usa la información de conexión de **baseconnectionoptions** para conectarse a la base de datos de destino.  
   
  **MIRROR**  
  Especifica que el servicio de [!INCLUDE[ssSB](../../includes/sssb-md.md)] asociado se hospeda en una base de datos reflejada. **ssbdiagnose** comprueba que la ruta al servicio es una ruta reflejada, donde se ha especificado MIRROR_ADDRESS en CREATE ROUTE.  
   
- **\<mirrorconnectionoptions >**  
+ **\<mirrorconnectionoptions>**  
  Especifica la información requerida para conectar con la base de datos reflejada. Si no se especifica **mirrorconnectionoptions** , **ssbdiagnose** usa la información de conexión de **baseconnectionoptions** para conectarse a la base de datos reflejada.  
   
  **ON CONTRACT** *contract_name*  
@@ -208,7 +208,7 @@ WHERE database_id = DB_ID();
  **-TIMEOUT** *timeout_interval*  
  Especifica el número de segundos durante los que se debe ejecutar un informe **RUNTIME** . Si no se especifica **-TIMEOUT** , el informe RUNTIME se ejecuta de forma indefinida. **-TIMEOUT** solo se usa en informes **RUNTIME** , no en informes **CONFIGURATION** . Use CTRL+C para salir de **ssbdiagnose** si no se ha especificado **-TIMEOUT** o si quiere finalizar un informe RUNTIME antes de que expire el intervalo de tiempo de espera.**-** *timeout_interval* debe ser un número comprendido entre 1 y 2 147 483 647.  
   
- **\<runtimeconnectionoptions >**  
+ **\<runtimeconnectionoptions>**  
  Especifica la información de conexión para las bases de datos que contienen los servicios asociados a los elementos de conversación que se están supervisando. Si todos los servicios se encuentran en la misma base de datos, solo es necesario especificar una cláusula **CONNECT TO** . Por el contrario, si los servicios se encuentran en bases de datos independientes, será necesario especificar una cláusula **CONNECT TO** para cada base de datos. Si **runtimeconnectionoptions** no se especifica, **ssbdiagnose** usa la información de conexión de **baseconnectionoptions**.  
   
  **–E**  
@@ -249,7 +249,7 @@ WHERE database_id = DB_ID();
  **-S** *server_name*[\\*instance_name*]  
  Especifica la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que contiene los servicios de [!INCLUDE[ssSB](../../includes/sssb-md.md)] que se van a analizar.  
   
- Especifique *server_name* para conectar con la instancia predeterminada de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para conectar con una instancia con nombre de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en ese servidor. Si no se especifica **-S** , **ssbdiagnose** usa el valor de la variable de entorno SQLCMDSERVER. Si tampoco se establece SQLCMDSERVER, **ssbdiagnose** se conecta a la instancia predeterminada de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en el equipo local.  
+ Especifique *server_name* para conectar con la instancia predeterminada de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en ese servidor. Especifique *nombre_servidor***\\***instance_name* para conectarse a una instancia con nombre de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] en ese servidor. Si no se especifica **-S** , **ssbdiagnose** usa el valor de la variable de entorno SQLCMDSERVER. Si tampoco se establece SQLCMDSERVER, **ssbdiagnose** se conecta a la instancia predeterminada de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en el equipo local.  
   
  **-d** *database_name*  
  Especifica la base de datos que contiene los servicios de [!INCLUDE[ssSB](../../includes/sssb-md.md)] que se van a analizar. Si la base de datos no existe, se genera un mensaje de error. Si no se especifica **-d** , el valor predeterminado es la base de datos especificada en la propiedad de base de datos predeterminada del inicio de sesión.  
@@ -456,7 +456,7 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
  [EMPEZAR conversación de diálogo &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [CREATE BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [Crear contrato &#40; Transact-SQL &#41;](../../t-sql/statements/create-contract-transact-sql.md)   
+ [CREATE CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
  [Crear tipo de mensaje &#40; Transact-SQL &#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
@@ -464,9 +464,9 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
  [CREATE REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/create-remote-service-binding-transact-sql.md)   
  [CREATE ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/create-route-transact-sql.md)   
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [RECIBIR &#40; Transact-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)   
- [Sys.transmission_queue &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
- [Sys.conversation_endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
- [Sys.conversation_groups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
+ [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
+ [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
+ [sys.conversation_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
   
   

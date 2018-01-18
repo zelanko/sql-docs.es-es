@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c49b865f8db2b57e95f4c2c5746e1d40090b15d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3779b55923a5fd3ac803060c0ed8990dcffcead8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="distributed-replay-security"></a>Seguridad de reproducción distribuida
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Antes de instalar y usar el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] característica Distributed Replay, debe revisar la información de seguridad importante en este tema. Aquí se describen los pasos para la configuración de seguridad posteriores a la instalación, necesarios para poder utilizar Distributed Replay. En este tema también se describen consideraciones importantes relacionadas con la protección de datos y pasos importantes de eliminación.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Cuenta virtual y MSA (cuenta de servicio administrada)  
   
--   Network Services, servicios locales y sistema  
+-   Servicios de red, servicios locales y sistema  
   
  No se aceptan cuentas de grupo (locales o de dominio) y otras cuentas integradas (como Todos).  
   
@@ -135,7 +135,7 @@ ms.lasthandoff: 12/21/2017
 -   Elimine cualquier archivo de seguimiento, intermedio, de distribución y de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se haya utilizado para realizar pruebas. Los archivos intermedios y de distribución se almacenan en el directorio de trabajo del controlador y el cliente, respectivamente.  
   
 ## <a name="see-also"></a>Vea también  
- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Reproducción distribuida de SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Install Distributed Replay - Overview (Instalar Distributed Replay: información general)](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
   

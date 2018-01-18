@@ -17,15 +17,15 @@ helpviewer_keywords:
 - exporting trace templates
 ms.assetid: 5aa5f400-4aba-4081-9ed4-62cf38828438
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d052ac98b13277d366867d8e95e1f56a3b2cdfaa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 11a382d4256d99321a305137952a0ecee1d50145
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>Exportar una plantilla de seguimiento (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Este tema describe cómo exportar una plantilla de seguimiento existente para guardar un archivo de plantilla (.tdf) mediante [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Si exporta una plantilla de seguimiento y la guarda como un archivo, puede utilizar la plantilla con otra instancia de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 3.  Escriba un nombre para el archivo de plantilla exportado y, después, haga clic en **Guardar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Crear una plantilla de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [Crear una plantilla de seguimiento &#40; Analizador de SQL Server &#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [Modificar una plantilla de seguimiento &#40; Analizador de SQL Server &#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
  [Derivar una plantilla a partir de un seguimiento en ejecución &#40; Analizador de SQL Server &#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [Derivar una plantilla de un archivo de seguimiento o tabla de seguimiento &#40; Analizador de SQL Server &#41;](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   

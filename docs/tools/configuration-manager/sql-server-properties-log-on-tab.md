@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 623948bfc41640e1aebe0b492872fbc095c056f6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cb658dd1907f8f78259c82b89f8aaeef3616906d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-properties-log-on-tab"></a>Propiedades de SQL Server (pestaña Iniciar sesión)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use la **iniciar sesión** pestaña de la **propiedades de SQL Server** cuadro de diálogo para especificar la cuenta utilizada por el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio, para cambiar la contraseña de una cuenta y para iniciar y detener el servicio. Cambiar la contraseña de una cuenta surte efecto inmediato.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/21/2017
 >   
 >  Para obtener información acerca de cómo seleccionar una cuenta para ejecutar el servicio, vea el tema sobre la configuración de cuentas de servicios de Windows en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  **Cuenta integrada**  
  **Sistema local**  
  -   Especifique la cuenta de sistema local. Esta cuenta no requiere ninguna contraseña. No obstante, la cuenta del sistema local puede impedir la interacción del servicio con otros servidores, en función de los privilegios que se hayan concedido a la cuenta.  

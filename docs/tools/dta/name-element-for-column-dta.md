@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Name element
 ms.assetid: f93b61de-01fe-4237-ada4-f1e481550564
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c1ef1bb1f4b952515217981fbd2d1ca301ec45e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9bb4027f057fdfcd3c6aa4802708bfe39361ecff
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="name-element-for-column-dta"></a>Name (DTA, elemento de Column)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica el nombre de una columna de índice en una configuración especificada por el usuario.  
@@ -37,9 +37,9 @@ ms.lasthandoff: 12/21/2017
         <Name>...</Name>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|**string**, longitud ilimitada.|  
 |**Valor predeterminado**|Ninguno.|  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Column &#40;DTA, elemento de Index&#41;](../../tools/dta/column-element-for-index-dta.md)|  
+|**Elemento primario**|[Elemento de columna de índice &#40; DTA &#41;](../../tools/dta/column-element-for-index-dta.md)|  
 |**Elementos secundarios**|Ninguno.|  
   
 ## <a name="example"></a>Ejemplo  

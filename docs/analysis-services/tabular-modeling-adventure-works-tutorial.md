@@ -1,7 +1,7 @@
 ---
-title: "Creación de modelos (Tutorial de Adventure Works) tabulares | Documentos de Microsoft"
+title: "(Nivel de compatibilidad de 1200) de creación de modelos tabulares | Documentos de Microsoft"
 ms.custom: 
-ms.date: 04/19/2017
+ms.date: 01/17/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -23,13 +23,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: f8c49a838abe5cc6948c59f3d0d67984122136a0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 20248d68dc0371ef158f287d1f3a8bc9e87360d3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="tabular-modeling-adventure-works-tutorial"></a>Creación de modelos tabulares (tutorial de Adventure Works)
+# <a name="tabular-modeling-1200-compatibility-level"></a>Modelado tabular (nivel de compatibilidad 1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Este tutorial ofrece lecciones sobre cómo crear un modelo tabular de Analysis Services en el [nivel de compatibilidad 1200](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) utilizando [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)e implementar el modelo en Analysis Services servidor local o en Azure.  
@@ -66,7 +66,7 @@ El propósito de las lecciones es guiarle por la creación de un modelo tabular 
   
 Este tutorial no proporciona lecciones ni información sobre cómo administrar una base de datos del modelo tabular implementado utilizando SQL Server Management Studio o una aplicación cliente de informes para conectarse a un modelo implementado con objeto de examinar los datos del modelo.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
 Para completar este tutorial, necesitará los siguientes requisitos previos:  
   
 -   La versión más reciente de [! INCLUIR[ssBIDevStudioFull](../ssdt/download-sql-server-data-tools-ssdt.md).

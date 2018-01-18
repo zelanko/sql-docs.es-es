@@ -13,20 +13,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b66babbd500209c7eece61064fa30a9a4a3a7ee2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fec320e6753d278020fef16c8e197ce6b9cd6421
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-properties-service-tab"></a>Propiedades de SQL Server (pestaña Servicio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use la **servicio**pestaña en el **propiedades de MSSQLSERVER** cuadro de diálogo para ver o especificar las siguientes opciones.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  **Ruta de acceso binaria**  
  Muestra la ubicación de los archivos de programa utilizados por el servicio.  
   

@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Database element
 ms.assetid: 5cd9a87a-af4b-45f3-8c18-f7fd7e7d3064
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6506c6cbc96283c1f4b11a03ee7ad263847415d8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d5150ec15a3cdd1f218bb108b8e305eaae7f2121
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="database-element-for-server-dta"></a>Elemento Database para servidor (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Especifica la base de datos que desea optimizar en un servidor específico.  
@@ -37,9 +37,9 @@ ms.lasthandoff: 12/21/2017
     <Database>...</Database>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|Ninguno.|  
 |Valor predeterminado|Ninguno.|  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/21/2017
 |Relación|Elementos|  
 |------------------|--------------|  
 |Elemento primario|[Server &#40;DTA, elemento&#41;](../../tools/dta/server-element-dta.md)|  
-|Elementos secundarios|[Name &#40;DTA, elemento de Database&#41;](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [Schema &#40;DTA, elemento de Database&#41;](../../tools/dta/schema-element-for-database-dta.md)|  
+|Elementos secundarios|[Name &#40;DTA, elemento de Database&#41;](../../tools/dta/name-element-for-database-dta.md)<br /><br /> [Elemento de esquema de base de datos & #40; DTA & #41;](../../tools/dta/schema-element-for-database-dta.md)|  
   
 ## <a name="remarks"></a>Comentarios  
  Este elemento tiene el nombre **DatabaseDetailsTypecomplexType** en el esquema XML del Asistente para la optimización de motor de base de datos. No confunda este elemento **Database** con el que tiene al elemento **Configuration** como raíz primaria. Para obtener más información, vea [Database &#40;DTA, elemento de Configuration&#41;](../../tools/dta/database-element-for-configuration-dta.md).  

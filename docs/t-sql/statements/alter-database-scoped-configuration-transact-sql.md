@@ -28,30 +28,24 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cc17063b8f74e296562a460677121c5ef1c85016
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 9638d94c2bd6f461650b15f96c7a75c95eaeb861
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>Modificar configuración de ámbito de base de datos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Esta instrucción permite varios valores de configuración de base de datos en el **base de datos individual** nivel. Esta instrucción está disponible en [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] y en a partir de SQL Server [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Los valores son:  
+  Esta instrucción permite varios valores de configuración de base de datos en el **base de datos individual** nivel. Esta instrucción está disponible en [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] y en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] partir [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Los valores son:  
   
 - Borrar la caché de procedimientos.  
-  
 - Establece el parámetro MAXDOP en un valor arbitrario (1, 2,...) para la base de datos principal en función de lo que adapte mejor a esa base de datos determinada y defina un valor diferente (por ejemplo, 0) para todas las base de datos secundaria utiliza (por ejemplo consultas de notificación).  
-  
 - Definir el modelo de estimación de la cardinalidad del optimizador de consultas independiente de la base de datos en el nivel de compatibilidad.  
-  
 - Habilitar o deshabilitar el examen de parámetros en el nivel de base de datos.
-  
 - Habilitar o deshabilitar las revisiones de optimización de consulta en el nivel de base de datos.
-
 - Habilitar o deshabilitar la memoria caché de identidad en el nivel de base de datos.
-
-- Habilitar o deshabilitar un código auxiliar del plan compilado que se almacenará en memoria caché cuando se compila un lote por primera vez. 
+- Habilitar o deshabilitar un código auxiliar del plan compilado que se almacenará en memoria caché cuando se compila un lote por primera vez.    
   
  ![icono de vínculo](../../database-engine/configure-windows/media/topic-link.gif "icono de vínculo") [convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -84,7 +78,7 @@ PARA LA BASE DE DATOS SECUNDARIA
 Especifica la configuración de bases de datos secundarias (todas las bases de datos secundarias deben tener los valores idénticos).  
   
 MAXDOP  **=**  {\<valor > | PRINCIPAL}  
-**\<valor >**  
+**\<value>**  
   
 Especifica el valor predeterminado MAXDOP configuración que debe utilizarse para las instrucciones. 0 es el valor predeterminado y se indica que se utilizará en su lugar la configuración del servidor. Reemplaza a la MAXDOP en el ámbito de la base de datos (a menos que se establece en 0) la **grado máximo de paralelismo** establece en el nivel de servidor mediante sp_configure. Sugerencias de consulta aún pueden reemplazar a la base de datos con ámbito de MAXDOP con el fin de optimizar las consultas específicas que requieran configuración diferente. Todas estas configuraciones están limitadas por el MAXDOP establecidos para el grupo de cargas de trabajo.   
 
@@ -151,7 +145,7 @@ OPTIMIZE_FOR_AD_HOC_WORKLOADS  **=**  {ON | **OFF** }
 
 Habilita o deshabilita un código auxiliar del plan compilado que se almacenará en memoria caché cuando se compila un lote por primera vez. El valor predeterminado es OFF. Una vez que la configuración de ámbito de la base de datos que optimize_for_ad_hoc_workloads está habilitada para una base de datos, un código auxiliar de plan compilado se almacenará en memoria caché cuando un lote se compila por primera vez. Códigos auxiliares de plan tienen una superficie de memoria menor en comparación con el tamaño del plan compilado completo.  Si un lote se compila o se ejecuta de nuevo, el código auxiliar del plan compilado se quitan y se reemplazan con un plan compilado completo.
 
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permisos  
  Requiere modificar cualquier configuración de ámbito de base de datos   
 en la base de datos. Este permiso se puede conceder a un usuario con permiso CONTROL en una base de datos.  
   
@@ -163,6 +157,8 @@ en la base de datos. Este permiso se puede conceder a un usuario con permiso CON
  Para las consultas de nombre de parte 3, la configuración de la conexión de base de datos actual para la consulta se cumplirá distinto para los módulos SQL (por ejemplo, procedimientos, funciones y desencadenadores) que se compilan en el contexto de base de datos actual y, por tanto, utiliza las opciones de la base de datos en las que residen.  
   
  El evento ALTER_DATABASE_SCOPED_CONFIGURATION se agrega como un evento DDL que puede usarse para activar un desencadenador DDL. Se trata de un elemento secundario del grupo de desencadenador ALTER_DATABASE_EVENTS.  
+ 
+ El ámbito de base de datos de configuración se transferirán a con la base de datos de configuración. Esto significa que cuando se restaura o adjunta una base de datos, las opciones de configuración existentes permanecen.
   
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
 **MAXDOP**  
@@ -311,8 +307,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 * [SQL Server modelo optimizador de consultas revisión seguimiento marca 4199 mantenimiento](https://support.microsoft.com/en-us/kb/974006)
 
 ## <a name="more-information"></a>Más información  
- [Sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
- [Sys.Configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+ [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
+ [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [Vistas de catálogo de archivos y bases de datos](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [Opciones de configuración de servidor](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
  

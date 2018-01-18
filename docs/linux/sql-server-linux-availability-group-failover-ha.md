@@ -15,13 +15,13 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: f80ae6bfb7b6c9b2aea60e3e929b1cc7202dacb2
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 23eedac40aff1fcab50c2e05406d3c87b988e392
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="operate-ha-availability-group-for-sql-server-on-linux"></a>Funcionar el grupo de disponibilidad de alta disponibilidad para SQL Server en Linux
+# <a name="operate-always-on-availability-groups-on-linux"></a>Siempre funcionan en grupos de disponibilidad en Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
@@ -188,9 +188,9 @@ Una vez réplicas del grupo de disponibilidad en las instancias de SQL Server en
 1. Antes de comenzar, cada base de datos de copia de seguridad.
 2. Actualizar las instancias de SQL Server que hospeden las réplicas secundarias.
 
-    a. Actualice primero las réplicas secundarias asincrónicas.
+    A. Actualice primero las réplicas secundarias asincrónicas.
 
-    b. Actualizar las réplicas secundarias sincrónicas.
+    B. Actualizar las réplicas secundarias sincrónicas.
 
    >[!NOTE]
    >Si un grupo de disponibilidad solo tiene asincrónica réplicas - para evitar la pérdida de datos cambiar una réplica al sincrónica y esperan hasta que se sincronicen. A continuación, actualice esta réplica.
@@ -232,13 +232,13 @@ Una vez réplicas del grupo de disponibilidad en las instancias de SQL Server en
    >Los pasos siguientes solo se aplican a grupos de disponibilidad que no tienen un administrador de clústeres.  
    Si el tipo de clúster del grupo de disponibilidad es `NONE`, manualmente una conmutación por error. Realice los pasos siguientes en el orden indicado:
 
-      a. El siguiente comando establece la réplica principal al secundario. Reemplace `AG1` con el nombre del grupo de disponibilidad. Ejecute el comando de Transact-SQL en la instancia de SQL Server que hospeda la réplica principal.
+      A. El siguiente comando establece la réplica principal al secundario. Reemplace `AG1` con el nombre del grupo de disponibilidad. Ejecute el comando de Transact-SQL en la instancia de SQL Server que hospeda la réplica principal.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      b. El comando siguiente establece una réplica secundaria sincrónica a principal. Ejecute el siguiente comando de Transact-SQL en la instancia de destino de SQL Server: la instancia que hospeda la réplica secundaria sincrónica.
+      B. El comando siguiente establece una réplica secundaria sincrónica a principal. Ejecute el siguiente comando de Transact-SQL en la instancia de destino de SQL Server: la instancia que hospeda la réplica secundaria sincrónica.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;

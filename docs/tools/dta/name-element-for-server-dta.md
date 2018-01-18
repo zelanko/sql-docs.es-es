@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Name element
 ms.assetid: 4c94754d-6d62-4357-8ce7-f107ebf90c71
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 511be1083c4771183366b1e8341a2fb58419970a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d7feb4a5dc420b10bfb8db5b41d425645534080b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="name-element-for-server-dta"></a>Name (DTA, elemento de Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Contiene el nombre del servidor donde residen las bases de datos que desea optimizar.  
@@ -37,9 +37,9 @@ ms.lasthandoff: 12/21/2017
     <Name>...</Name>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|**string**, entre 1 y 255 caracteres.|  
 |**Valor predeterminado**|Ninguno.|  
@@ -49,11 +49,11 @@ ms.lasthandoff: 12/21/2017
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Elemento Server &#40;DTA&#41;](../../tools/dta/server-element-dta.md)|  
+|**Elemento primario**|[Elemento Server &#40; DTA &#41;](../../tools/dta/server-element-dta.md)|  
 |**Elementos secundarios**|Ninguno.|  
   
 ## <a name="example"></a>Ejemplo  
- Para obtener un ejemplo de cómo se usa el elemento **Name** , vea [Elemento Server &#40;DTA&#41;](../../tools/dta/server-element-dta.md).  
+ Para obtener un ejemplo de cómo se usa el elemento **Name** , vea [Server Element &#40;DTA&#41;](../../tools/dta/server-element-dta.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aaa8f844875745aff792771df4085e59f7808a54
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fc385ac38ff22a0b07231aa1ae81c332eb91c63f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>Analizar consultas con resultados de SHOWPLAN en SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Puede agregar clases de eventos Showplan a una definición de seguimiento que permitan que [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para recopilar y mostrar información del plan de consulta en el seguimiento. También es posible extraer los eventos Showplan de los otros eventos recopilados en el seguimiento y guardarlos en un archivo XML independiente.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="showplan-events"></a>Showplan (eventos)  
  Los eventos de seguimiento Showplan se enumeran y describen en la siguiente tabla:  
   
-|Nombre del evento|Description|  
+|Nombre del evento|Descripción|  
 |----------------|-----------------|  
 |**Performance statistics**|Indica la primera vez que se guarda en caché un plan de presentación compilado, cuándo se vuelve a compilar y cuándo se quita de la caché del plan. La columna **TextData** contiene el plan de presentación en formato XML. Para obtener más información, vea [Performance Statistics (clase de eventos)](../../relational-databases/event-classes/performance-statistics-event-class.md).|  
 |**Showplan All**|Muestra el plan de consulta con detalles completos de la compilación de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] ejecutada. Por ejemplo, puede mostrar listas de columnas y estimaciones de costes. Para más información, consulte [Showplan All Event Class](../../relational-databases/event-classes/showplan-all-event-class.md).|  

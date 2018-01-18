@@ -18,17 +18,20 @@ helpviewer_keywords:
 - transaction log guidance
 - vlfs
 - virtual log files
+- virtual log size
+- vlf size
+- transaction log internals
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 caps.latest.revision: "3"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d98d7d65ebfa88ca9bdaa620c136f78dfe6c339c
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: dcc274dcde55b2910b96404c2c3a06c647518dc5
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guía de arquitectura y administración de registros de transacciones de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +70,7 @@ En el registro de transacciones se registran muchos tipos de operaciones. Entre 
   
  También se registran las operaciones de reversión. Cada transacción reserva espacio en el registro de transacciones para asegurarse de que existe suficiente espacio de registro para admitir una reversión provocada por una instrucción de reversión explícita o cuando se produce un error. La cantidad de espacio reservado depende de las operaciones realizadas en la transacción, pero normalmente equivale a la cantidad de espacio empleado para registrar cada operación. Este espacio reservado se libera cuando se completa la transacción.  
   
-<a name="minlsn"></a> La sección del archivo de registro a partir de la primera entrada de registro que debe estar presente para una reversión correcta en toda la base de datos hasta la última entrada de registro escrita se denomina parte activa del registro o *registro activo*. Esta es la sección del registro necesaria para una recuperación completa de la base de datos. No se puede truncar ninguna parte del registro activo. El [número de secuencia de registro (LSN)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) de este primer registro se denomina el **LSN de recuperación mínimo (*MinLSN*)**.  
+<a name="minlsn"></a> La sección del archivo de registro a partir de la primera entrada de registro que debe estar presente para una reversión correcta en toda la base de datos hasta la última entrada de registro escrita se denomina parte activa del registro o *registro activo*. Esta es la sección del registro necesaria para una recuperación completa de la base de datos. No se puede truncar ninguna parte del registro activo. El [número de secuencia de registro (LSN)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) de este primer registro se denomina el ***LSN de recuperación mínimo (*MinLSN**).  
   
 ##  <a name="physical_arch"></a> Arquitectura física del registro de transacciones  
 El registro de transacciones de una base de datos está asignado a uno o varios archivos físicos. Conceptualmente, el archivo de registro es una cadena de entradas de registro. Físicamente, la secuencia de entradas del registro se almacena de forma eficaz en el conjunto de archivos físicos que implementa el registro de transacciones. Cada base de datos debe tener al menos un archivo de registro.  
@@ -77,9 +80,10 @@ El registro de transacciones de una base de datos está asignado a uno o varios 
 > [!NOTE]
 > La creación de archivos de registro virtual (VLF) sigue este método:
 > - Si el siguiente crecimiento es inferior a 1/8 del tamaño físico actual del registro, cree 1 VLF que cubra el tamaño del crecimiento (a partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]).
-> - Si el crecimiento es inferior a 64 MB, cree 4 VLF que cubran el tamaño del crecimiento (p. ej., en el caso de un crecimiento de 1 MB, cree 4 VLF de 256 KB).
-> - Si el crecimiento oscila entre 64 MB y 1 GB, cree 8 VLF que cubran el tamaño del crecimiento (p. ej., en el caso de un crecimiento de 512 MB, cree 8 VLF de 64 MB).
-> - Si el crecimiento es superior a 1 GB, cree 16 VLF que cubran el tamaño del crecimiento (p. ej., en el caso de un crecimiento de 8 GB, cree 16 VLF de 512 MB).
+> - Si el siguiente crecimiento es superior a 1/8 del tamaño actual del registro, use el método para versiones anteriores a 2014:
+>    -  Si el crecimiento es inferior a 64 MB, cree 4 VLF que cubran el tamaño del crecimiento (p. ej., en el caso de un crecimiento de 1 MB, cree 4 VLF de 256 KB).
+>    -  Si el crecimiento oscila entre 64 MB y 1 GB, cree 8 VLF que cubran el tamaño del crecimiento (p. ej., en el caso de un crecimiento de 512 MB, cree 8 VLF de 64 MB).
+>    -  Si el crecimiento es superior a 1 GB, cree 16 VLF que cubran el tamaño del crecimiento (p. ej., en el caso de un crecimiento de 8 GB, cree 16 VLF de 512 MB).
 
 Si los archivos de registro crecen hasta un tamaño grande debido a muchos incrementos pequeños, tendrán numerosos archivos de registro virtuales. **Esto puede retrasar el inicio de la base de datos, así como las operaciones de copias de seguridad y restauración del registro.** Se recomienda que los archivos de registro se definan con un valor *size* cercano al tamaño final necesario y que tengan también un valor de *growth_increment* relativamente alto. Vea la siguiente sugerencia para determinar la distribución de VLF óptima para el tamaño del registro de transacciones actual.
  - El valor *size*, establecido por el argumento `SIZE` de `ALTER DATABASE`, es el tamaño inicial del archivo de registro.

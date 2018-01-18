@@ -1,0 +1,75 @@
+---
+title: Identificadores de SQL Server en PowerShell | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.prod_service: powershell
+ms.service: 
+ms.component: powershell
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Cmdlets [SQL Server], Encode-Sqlname
+- PowerShell [SQL Server], identifiers
+- Encode-Sqlname cmdlet
+- PowerShell [SQL Server], Encode-Sqlname
+- Decode-Sqlname cmdlet
+- PowerShell [SQL Server], Decode-Sqlname
+- identifiers [SQL Server], PowerShell
+- Cmdlets [SQL Server], Decode-Sqlname
+ms.assetid: 651099b0-33b4-453a-a864-b067f21eb8b9
+caps.latest.revision: "24"
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: a9e0c6458702647e3f7acd12b7ee4994fc396d72
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/16/2018
+---
+# <a name="sql-server-identifiers-in-powershell"></a>Identificadores de SQL Server en PowerShell
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+El proveedor de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para Windows PowerShell usa identificadores [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en las rutas de acceso de Windows PowerShell. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pueden contener caracteres que Windows PowerShell no admite en las rutas de acceso. Debe definir estos caracteres como caracteres de escape o usar una codificación especial para ellos al usar los identificadores en las rutas de acceso de Windows PowerShell.  
+  
+> [!NOTE]
+> Hay dos módulos de SQL Server PowerShell: **SqlServer** y **SQLPS**. El módulo **SQLPS** está incluido en la instalación de SQL Server (por motivos de compatibilidad con versiones anteriores), pero ya no se actualiza. El módulo de PowerShell más actualizado es **SqlServer**. El módulo **SqlServer** contiene versiones actualizadas de los cmdlets en **SQLPS**, así como nuevos cmdlets para admitir las características más recientes de SQL.  
+> Las versiones anteriores del módulo **SqlServer** *estaban incluidas* en SQL Server Management Studio (SSMS), pero solo con las versiones 16.x de SSMS. Para usar PowerShell con SSMS 17.0 y versiones posteriores, debe tener el módulo **SqlServer** instalado desde la Galería de PowerShell.
+> Para instalar el módulo **SqlServer**, consulte [Instalar SQL Server PowerShell](download-sql-server-ps-module.md).
+
+
+## <a name="sql-server-identifiers-in-windows-powershell-paths"></a>Identificadores de SQL Server en rutas de Windows PowerShell  
+ Los proveedores de Windows PowerShell exponen las jerarquías de datos mediante una estructura de ruta similar al sistema de archivos de Windows. El proveedor de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implementa rutas a los objetos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . En el [!INCLUDE[ssDE](../includes/ssde-md.md)], la unidad se establece en SQLSERVER:, la primera carpeta se establece en \SQL y se hace referencia a los objetos de la base de datos como contenedores y elementos. Esta es la ruta de acceso a la tabla Vendor en el esquema Purchasing de la base de datos [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] en una instancia predeterminada de [!INCLUDE[ssDE](../includes/ssde-md.md)]:  
+  
+```  
+SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.Vendor  
+```  
+  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] son los nombres de los objetos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , tales como nombres de tabla o de columna. Hay dos tipos de identificadores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
+  
+-   Los identificadores normales se limitan a un juego de caracteres que también se admite en las rutas de Windows PowerShell. Estos nombres se pueden utilizar en las rutas de Windows PowerShell sin cambiarse.  
+  
+-   Los identificadores delimitados pueden utilizar caracteres no admitidos en los nombres de ruta de Windows PowerShell. Los identificadores delimitados se denominan identificadores entre corchetes si se escriben entre corchetes ([nombreDeIdentificador]) e identificadores entrecomillados si se escriben entre comillas dobles ("nombreDeIdentificador"). Si un identificador delimitado utiliza caracteres no admitidos en las rutas de Windows PowerShell, estos se deben codificar o hacer que se eludan antes de utilizar el identificador como contenedor o nombre de elemento. La codificación funciona con todos los caracteres. En el caso de ciertos caracteres, como el carácter de dos puntos (:), no se puede hacer que se eludan.  
+  
+## <a name="sql-server-identifiers-in-cmdlets"></a>Identificadores de SQL Server en cmdlets  
+ Algunos cmdlets de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tienen un parámetro que toma un identificador como entrada. Los valores de los parámetros se suelen proporcionar como constantes de cadena entrecomilladas o en variables de cadena. Cuando los identificadores se proporcionan como constantes de cadena o en variables, no hay ningún conflicto con el juego de caracteres admitidos por Windows PowerShell.  
+  
+## <a name="sql-server-identifier-tasks"></a>Tareas de identificador de SQL Server  
+  
+|Descripción de la tarea|Artículo|  
+|----------------------|-----------|  
+|Describe cómo especificar un nombre de instancia, incluido el nombre del equipo en el que se ejecuta la instancia.|[Especificar instancias del proveedor de PowerShell de SQL Server](specify-instances-in-the-sql-server-powershell-provider.md)|  
+|Describe cómo especificar la codificación hexadecimal para los caracteres en identificadores delimitados que no se admiten en las rutas de acceso de Windows PowerShell. También describe cómo descodificar los caracteres hexadecimales.|[Codificar y descodificar identificadores de SQL Server](encode-and-decode-sql-server-identifiers.md)|  
+|Describe cómo usar el carácter de escape de Windows PowerShell para los caracteres no admitidos en las rutas de acceso de PowerShell.|[Identificadores de SQL Server de escape](escape-sql-server-identifiers.md)|  
+  
+## <a name="see-also"></a>Ver también  
+ [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell](sql-server-powershell.md)   
+ [Identificadores de base de datos](../relational-databases/databases/database-identifiers.md)  
+  
+  

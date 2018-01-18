@@ -13,20 +13,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15243df46fad807a3078c9dfcd2c9043670ab05f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 91141f2ae083baf9792e4de9248de488b4146d07
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Propiedades de SQL Server (pestaña Parámetros de inicio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Utilice este cuadro de diálogo para agregar o quitar parámetros de inicio para el [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Los parámetros de inicio pueden tener una gran influencia en el rendimiento del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Antes de agregar o cambiar los parámetros de inicio, vea el tema "Usar las opciones de inicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  **Especifique un parámetro de inicio**  
  Para agregar un parámetro, escríbalo y haga clic en **Agregar**.  
   
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/21/2017
  Para quitar un parámetro, selecciónelo y haga clic en **Quitar**.  
   
 ## <a name="parameter-format"></a>Formato de parámetros  
- No incluya un separador entre parámetros. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo agrega automáticamente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplica los requisitos de parámetro siguientes.  
+ No incluya un separador entre parámetros. El Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo agrega automáticamente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Aplica los siguientes requisitos de parámetro.  
   
 -   Los espacios iniciales y finales se recortan de los parámetros de inicio.  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/21/2017
   
 |Parámetro|Descripción breve|  
 |---------------|-----------------------|  
-|-M|Inicia una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único.|  
+|-m|Inicia una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único.|  
 |-T1204|Devuelve los recursos y los tipos de bloqueos que participan en un interbloqueo, además del comando actual afectado.|  
 |-T1224|Deshabilita la extensión de bloqueo en función del número de bloqueos.|  
 |-T3608|Evita que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inicie automáticamente y recupere bases de datos excepto la base de datos maestra.|  

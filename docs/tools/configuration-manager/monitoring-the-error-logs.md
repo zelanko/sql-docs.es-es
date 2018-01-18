@@ -27,15 +27,15 @@ helpviewer_keywords:
 - logs [SQL Server], Windows application logs
 ms.assetid: e250336b-0695-44f6-a42f-23222f94e377
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f4d0ddce880cbb3ba3ca2cd422543ced125c08f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dad9cc5bae465697932b88986e4eb45deabb3bc9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="monitoring-the-error-logs"></a>Supervisar los registros de errores
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registra ciertos eventos del sistema y eventos definidos por el usuario para la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registro de errores y la [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro de aplicación de Windows. Ambos registros marcan automáticamente el tiempo de todos los eventos registrados. Utilice la información del registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para solucionar problemas relacionados con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
 |Tema|Description|  
 |-----------|-----------------|  
-|[Ver el registro de errores de SQL Server](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)|Contiene información acerca del registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y cómo verlo.|  
-|[Ver el registro de la aplicación Windows](../../tools/configuration-manager/viewing-the-windows-application-log.md)|Contiene información acerca del registro de aplicación Windows y cómo verlo.|  
+|[Ver el registro de errores SQL Server](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)|Contiene información acerca del registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y cómo verlo.|  
+|[Ver el registro de aplicación de Windows](../../tools/configuration-manager/viewing-the-windows-application-log.md)|Contiene información acerca del registro de aplicación Windows y cómo verlo.|  
   
   

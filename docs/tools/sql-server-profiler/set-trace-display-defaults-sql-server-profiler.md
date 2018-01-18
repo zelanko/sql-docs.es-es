@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: traces [SQL Server], defaults
 ms.assetid: d471aaed-c40c-4c55-a993-835e6394b5d2
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80fe4bde3fdbd2aad03ca328f4efcbffbecba183
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ea66415c239ddceeb7ee75997b3052a3f34a472f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>Establecer los valores predeterminados de presentación de seguimiento (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Este tema describe cómo establecer las opciones de la herramienta que especifican los tipos de fuente, tamaño y estilo que [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] usa para mostrar los seguimientos en la ventana de seguimiento. También puede especificar que el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestre todas las fechas y horas con la misma configuración regional del sistema operativo.  

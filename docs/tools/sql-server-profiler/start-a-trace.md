@@ -26,15 +26,15 @@ helpviewer_keywords:
 - starting traces
 ms.assetid: aeeb38eb-229a-4c8b-ad66-57e9ce45fb6a
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bce247fa86806a4acd40bdfefd11a167a5c614f0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ef0d4c1015fa70145f8539a4dd10f4f8f6ffc35b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="start-a-trace"></a>Iniciar un seguimiento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Después de haber definido un nuevo seguimiento o creada una plantilla mediante [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], puede iniciar, pausar o detener la captura de datos con la nueva definición de seguimiento o plantilla.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/21/2017
 >  Si trabaja con seguimientos existentes, puede ver las propiedades, pero no modificarlas. Para modificar las propiedades, detenga o pause el seguimiento.  
   
 ## <a name="see-also"></a>Vea también  
- [Iniciar un seguimiento automáticamente después de conectarse a un servidor &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [Iniciar un seguimiento automáticamente después de conectarse a un servidor &#40; Analizador de SQL Server &#41;](../../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
  [Pausar un seguimiento &#40; Analizador de SQL Server &#41;](../../tools/sql-server-profiler/pause-a-trace-sql-server-profiler.md)   
  [Detener un seguimiento &#40; Analizador de SQL Server &#41;](../../tools/sql-server-profiler/stop-a-trace-sql-server-profiler.md)   
  [Borrar una ventana de seguimiento &#40; Analizador de SQL Server &#41;](../../tools/sql-server-profiler/clear-a-trace-window-sql-server-profiler.md)   

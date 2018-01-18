@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: client protocols [SQL Server]
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 306ceeb731627e5cfc5e6fe868920a66d82f76f6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8ebba597240d5e456b8c132a6b5c52be81ed6b73
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="client-protocols-properties-order-tab"></a>Propiedades de los protocolos de cliente (pestaña Ordenar)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use la **orden**página en el **propiedades de protocolos de cliente** cuadro de diálogo para ver y habilitar los protocolos de cliente.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]  
 >  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET SqlClient, no se utiliza esta configuración. El orden de los protocolos para .NET SqlClient es primero TCP y, después, las canalizaciones con nombre, que no se pueden modificar.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  **Protocolos deshabilitados**  
  Muestra una lista de los protocolos que están instalados pero no se utilizan actualmente.  
   

@@ -16,20 +16,20 @@ helpviewer_keywords:
 - client protocols [SQL Server]
 ms.assetid: 941369bd-cd4d-4a64-8e42-724d9a866eb7
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53582937116f3acfb819ab460dc166ce1f50360a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 547cdea92354132d8ed2bf9804625763ae6d8ab0
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="client-protocols---shared-memory-properties-protocol-tab"></a>Protocolos de cliente: Propiedades de Memoria compartida (pestaña Protocolo)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uso de Configuration Manager la **protocolo** pestaña en el **propiedades de memoria compartida** cuadro de diálogo para ver o modificar la memoria compartida. Para obtener más información sobre cadenas de conexión, vea [Creating a Valid Connection String Using Shared Memory Protocol](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md).  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  **Enabled**  
  Los valores posibles son **Yes** y **No**.  
   

@@ -26,15 +26,15 @@ helpviewer_keywords:
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 caps.latest.revision: "49"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 13a41dd247105dcce2580027c014aa266df5ed9c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bbd6a75a0ff9e3be746c46882ee93e201d7955ef
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="osql-utility"></a>osql (utilidad)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]El **osql** utilidad le permite escribir [!INCLUDE[tsql](../includes/tsql-md.md)] instrucciones, procedimientos del sistema y archivos de script. Esta herramienta utiliza ODBC para comunicarse con el servidor.  
@@ -100,7 +100,7 @@ C:\>osql
  Utiliza una conexión de confianza en lugar de solicitar una contraseña.  
   
  **-S** *server_name*[ **\\***instance_name*]  
- Especifica la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a la que hay que conectarse. Especifique *server_name* para conectar con la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para conectar con una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en ese servidor. Si no se especifica ningún servidor, **osql** se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el equipo local. Esta opción es necesaria cuando se ejecuta **osql** desde un equipo remoto conectado a la red.  
+ Especifica la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a la que hay que conectarse. Especifique *server_name* para conectar con la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en ese servidor. Especifique *nombre_servidor***\\***instance_name* para conectarse a una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en ese servidor. Si no se especifica ningún servidor, **osql** se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el equipo local. Esta opción es necesaria cuando se ejecuta **osql** desde un equipo remoto conectado a la red.  
   
  **-H** *wksta_name*  
  Es el nombre de una estación de trabajo. El nombre de la estación de trabajo se almacena en **sysprocesses.hostname** y se muestra mediante **sp_who**. Si no se especifica esta opción, se supone el nombre actual del equipo.  
@@ -124,7 +124,7 @@ C:\>osql
  Permite al usuario ajustar el ancho de la pantalla para la salida. El valor predeterminado es 80 caracteres. Cuando una línea de salida ha alcanzado el ancho máximo de pantalla, se divide en varias líneas.  
   
  **-a** *packet_size*  
- Permite solicitar un paquete de diferente tamaño. Los valores válidos de *packet_size* son de 512 a 65 535. El valor predeterminado de **osql** es el servidor predeterminado. Si se aumenta el tamaño del paquete, se puede mejorar el rendimiento durante la ejecución de scripts grandes en las que hay muchas instrucciones SQL entre comandos GO. [!INCLUDE[msCoName](../includes/msconame-md.md)] indican que 8192 suele ser la configuración más rápida para operaciones de copia masiva. Se puede solicitar un tamaño mayor para los paquetes, pero **osql** adopta el valor predeterminado para el servidor si no puede cumplirse la solicitud.  
+ Permite solicitar un paquete de diferente tamaño. Los valores válidos de *packet_size* son de 512 a 65 535. El valor predeterminado de **osql** es el servidor predeterminado. Si se aumenta el tamaño del paquete, se puede mejorar el rendimiento durante la ejecución de scripts grandes en las que hay muchas instrucciones SQL entre comandos GO. Las pruebas de [!INCLUDE[msCoName](../includes/msconame-md.md)] indican que 8192 suele ser la configuración más rápida para operaciones de copia masiva. Se puede solicitar un tamaño mayor para los paquetes, pero **osql** adopta el valor predeterminado para el servidor si no puede cumplirse la solicitud.  
   
  **-e**  
  Muestra lo escrito.  
@@ -175,7 +175,7 @@ osql -E -q "select name, object_id from %table%"
  Imprime las estadísticas de rendimiento.  
   
  **-b**  
- Especifica que **osql** se cierre y devuelva un valor de DOS ERRORLEVEL cuando se produce un error. El valor que se devuelve a la variable DOS ERRORLEVEL es 1 cuando el mensaje de error de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene una gravedad superior a 11; de lo contrario, el valor devuelto es 0. [!INCLUDE[msCoName](../includes/msconame-md.md)] Los archivos por lotes de MS-DOS pueden probar el valor de DOS ERRORLEVEL y tratar el error apropiadamente.  
+ Especifica que **osql** se cierre y devuelva un valor de DOS ERRORLEVEL cuando se produce un error. El valor que se devuelve a la variable DOS ERRORLEVEL es 1 cuando el mensaje de error de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene una gravedad superior a 11; de lo contrario, el valor devuelto es 0. [!INCLUDE[msCoName](../includes/msconame-md.md)]Archivos por lotes de MS-DOS pueden probar el valor de DOS ERRORLEVEL y tratar el error apropiadamente.  
   
  **-u**  
  Especifica que el archivo *output_file* se almacene en formato Unicode, independientemente del formato del archivo *input_file*.  
@@ -195,12 +195,12 @@ osql -E -q "select name, object_id from %table%"
  También establece -1 como valor predeterminado de ERRORLEVEL de DOS.  
   
 > [!NOTE]  
->  La utilidad **-n**, **-O** y **-D** han dejado de admitirse en **osql**.  
+>  El  **-n** , **- O** y **-D** opciones ya no son compatibles con **osql**.  
   
 ## <a name="remarks"></a>Comentarios  
  La utilidad **osql** se inicia directamente desde el sistema operativo con las opciones en mayúsculas o en minúsculas, tal como se muestran aquí. Después de iniciar **osql**acepta instrucciones SQL y las envía a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de forma interactiva. Se da formato a los resultados y se muestran en la pantalla (**stdout**). Utilice QUIT o EXIT para salir de **osql**.  
   
- Si no especifica un nombre de usuario cuando inicia **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] comprueba las variables de entorno y las usa, por ejemplo, **osqluser=(***user***)** u **osqlserver=(***server***)**. Si no se establecen variables de entorno, se utilizará el nombre de usuario de la estación de trabajo. Si no especifica un servidor, se utilizará el nombre de la estación de trabajo.  
+ Si no especifica un nombre de usuario al iniciar **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] comprueba las variables de entorno y las utiliza, por ejemplo, **osqluser = (***usuario***)** o **osqlserver = (***server***)**. Si no se establecen variables de entorno, se utilizará el nombre de usuario de la estación de trabajo. Si no especifica un servidor, se utilizará el nombre de la estación de trabajo.  
   
  Si no se usan las opciones **-U** ni **-P** , [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] intenta conectarse usando el modo de autenticación de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. La autenticación se basa en la cuenta de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows del usuario que ejecuta **osql**.  
   
@@ -212,7 +212,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>Comandos OSQL  
  Además de las instrucciones de [!INCLUDE[tsql](../includes/tsql-md.md)] de **osql**, los siguientes comandos también están disponibles.  
   
-|Comando|Description|  
+|Command|Descripción|  
 |-------------|-----------------|  
 |GO|Ejecuta todas las instrucciones escritas después del último GO.|  
 |RESET|Borra cualquier instrucción que haya escrito.|  
@@ -259,7 +259,7 @@ osql -E -i titles.qry -o titles.res
 > [!IMPORTANT]  
 >  Siempre que sea posible, use la opción **-E**(conexión de confianza).  
   
- Cuando use **osql** de forma interactiva, podrá leer un archivo del sistema operativo en el búfer de comandos con **:r***file_name*. De esta manera, se enviará el script SQL de *file_name* directamente al servidor como un lote único.  
+ Cuando se usa **osql** de forma interactiva, podrá leer un archivo del sistema operativo en el búfer de comandos con **: r *** file_name*. De esta manera, se enviará el script SQL de *file_name* directamente al servidor como un lote único.  
   
 > [!NOTE]  
 >  Cuando se usa **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] trata el separador de lotes GO, si aparece en el archivo de script de SQL, como un error de sintaxis.  
@@ -300,7 +300,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  Ejecuta el lote y, a continuación, sale sin devolver ningún valor.  
   
--   EXIT**(***query***)**  
+-   SALIDA**(***consulta***)**  
   
 > [!NOTE]  
 >  Ejecuta el lote, incluida la consulta, y, a continuación, sale tras devolver el resultado de la consulta.  
@@ -341,7 +341,7 @@ GO
  Esta instrucción da como resultado `10.3496`, que indica que el valor se almacena con todos los decimales intactos.  
   
 ## <a name="see-also"></a>Vea también  
- [Comentario &#40;MDX&#41;](../mdx/comment-mdx.md)   
+ [Comentario &#40; MDX &#41;](../mdx/comment-mdx.md)   
  [--&#40; Comentario &#41; &#40; MDX &#41;](../mdx/comment-mdx-operator-reference.md)   
  [CAST y CONVERT &#40; Transact-SQL &#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
  [RAISERROR &#40; Transact-SQL &#41;](../t-sql/language-elements/raiserror-transact-sql.md)  

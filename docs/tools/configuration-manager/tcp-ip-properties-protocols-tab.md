@@ -14,22 +14,22 @@ ms.topic: article
 helpviewer_keywords: TCP/IP [SQL Server], configuration options
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e090b89ed827e1ea8a7700a2503fed95ace84501
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: eacd9f77d0794038ce3d4df00f4af06d8e232e6e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tcpip-properties-protocols-tab"></a>Propiedades de TCP/IP (pestaña Protocolos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Use la **propiedades TCP/IP** cuadro de diálogo para configurar las opciones para el protocolo TCP/IP. Haga clic en **TCP/IP** en el panel izquierdo para mostrar configuraciones de direcciones IP individuales en el panel de detalles.  
   
  Es necesario reiniciar Microsoft SQL Server para que se apliquen los cambios.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  **Enabled**  
  Los valores posibles son **Yes** y **No**.  
   
@@ -44,6 +44,6 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="see-also"></a>Vea también  
  [Elegir un protocolo de red](https://msdn.microsoft.com/library/ms187892(v=sql.130).aspx)   
- [Crear una cadena de conexión válida con TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)  
+ [Crear una cadena de conexión válida con TCP / IP](creating-a-valid-connection-string-using-tcp-ip.md)  
   
   

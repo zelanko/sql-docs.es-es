@@ -15,13 +15,13 @@ ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
 caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa1ebb116e83725355975dddc31108a9365d190b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6b43b611e45de9da98954417d5e7a1bfad009eac
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>Modificar las cuentas de servicios de controlador y de cliente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]En este tema, obtendrá información sobre cómo modificar las cuentas de servicio de cliente y el controlador de Distributed Replay y, a continuación, volver a aplicar las listas de control de acceso (ACL).  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
     -   Cuenta virtual y MSA (cuenta de servicio administrada)  
   
-    -   Network Services, servicios locales y sistema  
+    -   Servicios de red, servicios locales y sistema  
   
      No se aceptan cuentas de grupo (locales o de dominio) y otras cuentas integradas (como Todos).  
   

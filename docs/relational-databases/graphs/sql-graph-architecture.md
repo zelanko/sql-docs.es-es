@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: "1"
 author: shkale-msft
-ms.author: shkale
+ms.author: shkale;barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4ca6de15012a8fb929c207ab1a79a41607bd74cc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 30748d9c5cf8a53b7e04c9897ba2fe70fa32972e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-graph-architecture"></a>Arquitectura de gráfico SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -104,20 +104,20 @@ En la tabla siguiente se enumera los valores válidos para `graph_type` columna
 Columnas implícitas en una tabla de nodo  
 |Nombre de la columna    |Tipo de datos  |is_hidden  |Comentario  |
 |---  |---|---|---  |
-|graph_id_\<cadena_hex > |bigint |1  |columna de graph_id interno  |
-|$node_id_\<cadena_hex > |NVARCHAR   |0  |Columna de Id. de nodo externo  |
+|graph_id_\<hex_string> |bigint |1  |columna de graph_id interno  |
+|$node_id_\<hex_string> |NVARCHAR   |0  |Columna de Id. de nodo externo  |
 
 Columnas implícitas en una tabla irregular  
 |Nombre de la columna    |Tipo de datos  |is_hidden  |Comentario  |
 |---  |---|---|---  |
-|graph_id_\<cadena_hex > |bigint |1  |columna de graph_id interno  |
-|$edge_id_\<cadena_hex > |NVARCHAR   |0  |columna de Id. de borde externo  |
-|from_obj_id_\<cadena_hex >  |INT    |1  |interno de Id. de objeto de nodo  |
-|from_id_\<cadena_hex >  |bigint |1  |Interno de nodo graph_id  |
-|$from_id_\<cadena_hex > |NVARCHAR   |0  |desde Id. de nodo  |
-|to_obj_id_\<cadena_hex >    |INT    |1  |Id. de objeto de nodo interno  |
-|to_id_\<cadena_hex >    |bigint |1  |Nodo graph_id interno  |
-|$to_id_\<cadena_hex >   |NVARCHAR   |0  |fuera del Id. de nodo  |
+|graph_id_\<hex_string> |bigint |1  |columna de graph_id interno  |
+|$edge_id_\<hex_string> |NVARCHAR   |0  |columna de Id. de borde externo  |
+|from_obj_id_\<hex_string>  |INT    |1  |interno de Id. de objeto de nodo  |
+|from_id_\<hex_string>  |bigint |1  |Interno de nodo graph_id  |
+|$from_id_\<hex_string> |NVARCHAR   |0  |desde Id. de nodo  |
+|to_obj_id_\<hex_string>    |INT    |1  |Id. de objeto de nodo interno  |
+|to_id_\<hex_string>    |bigint |1  |Nodo graph_id interno  |
+|$to_id_\<hex_string>   |NVARCHAR   |0  |fuera del Id. de nodo  |
  
 ### <a name="system-functions"></a>Funciones del sistema
 Se agregan las siguientes funciones integradas. Le ayudarán a los usuarios extraer información de las columnas generadas. Tenga en cuenta que, estos métodos no valida la entrada del usuario. Si el usuario especifica un válido `sys.node_id` el método extraer la parte adecuada y devolverlo. Por ejemplo, llevará a cabo OBJECT_ID_FROM_NODE_ID una `$node_id` como entrada y devolverá el object_id de la tabla, pertenece este nodo. 
@@ -142,7 +142,7 @@ Obtenga información acerca de la [!INCLUDE[tsql-md](../../includes/tsql-md.md)]
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE `Ahora se ha ampliado para admitir la creación de una tabla en el borde de AS o nodo de AS. Tenga en cuenta que una tabla irregular puede o que no haya ningún usuario definido atributos.  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|Se pueden modificar tablas de borde y el nodo del mismo modo que una tabla relacional, usa el `ALTER TABLE`. Los usuarios pueden agregar o modificar las columnas definidas por el usuario, índices o restricciones. Sin embargo, modificar las columnas de gráfico interno, como `$node_id` o `$edge_id`, se producirá un error.  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Los usuarios pueden crear índices en pseudocolumnas y las columnas definidas por el usuario en tablas de nodo y de borde. Se admiten todos los tipos de índices, incluidos los índices de almacén de columnas agrupados y no agrupados.  |
-|DROP TABLE |[Eliminar tabla &#40; Transact-SQL &#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Pueden quitar tablas de nodo y el borde del mismo modo que una tabla relacional, usa el `DROP TABLE`. Sin embargo, en esta versión, no hay ninguna restricción para asegurarse de que ningún bordes apuntar a un nodo se eliminó y no se admite la eliminación en cascada de bordes, tras la eliminación de un nodo o una tabla de nodos. Se recomienda que, si se quita una tabla de nodo, los usuarios quitar los bordes que se conecta a los nodos de esa tabla nodo manualmente para mantener la integridad del gráfico.  |
+|DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Pueden quitar tablas de nodo y el borde del mismo modo que una tabla relacional, usa el `DROP TABLE`. Sin embargo, en esta versión, no hay ninguna restricción para asegurarse de que ningún bordes apuntar a un nodo se eliminó y no se admite la eliminación en cascada de bordes, tras la eliminación de un nodo o una tabla de nodos. Se recomienda que, si se quita una tabla de nodo, los usuarios quitar los bordes que se conecta a los nodos de esa tabla nodo manualmente para mantener la integridad del gráfico.  |
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>Instrucciones de lenguaje de manipulación (DML) de datos
@@ -158,7 +158,7 @@ Obtenga información acerca de la [!INCLUDE[tsql-md](../../includes/tsql-md.md)]
 |Tarea   |Tema relacionado  |Notas
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|Nodos y bordes se almacenan internamente como tablas, por lo tanto, admite la mayoría de las operaciones admitidas en una tabla de SQL Server o base de datos de SQL Azure en las tablas de nodo y de borde  |
-|MATCH  | [COINCIDENCIA &#40; Transact-SQL &#41;](../../t-sql/queries/match-sql-graph.md)|COINCIDENCIA integrados se introdujeron para admitir la coincidencia de patrones y recorrido a través del gráfico.  |
+|MATCH  | [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)|COINCIDENCIA integrados se introdujeron para admitir la coincidencia de patrones y recorrido a través del gráfico.  |
 
 
 

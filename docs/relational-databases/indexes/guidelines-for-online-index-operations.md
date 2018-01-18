@@ -24,11 +24,11 @@ ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.workload: On Demand
-ms.openlocfilehash: 5e0705c480157e7958b18ff8bdb6d996ae2f94ff
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+ms.openlocfilehash: c69295e84e5bd6ef1162bb007c206b0addd8656c
+ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="guidelines-for-online-index-operations"></a>Directrices para operaciones de índices en línea
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,8 +95,7 @@ Para más información, consulte [Disk Space Requirements for Index DDL Operatio
 ## <a name="resumable-index-rebuild-considerations"></a>Consideraciones sobre la recompilación de índices reanudables
 
 > [!NOTE]
-> Vea [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
->
+> La opción de índice reanudable se aplica a SQL Server (a partir de SQL Server 2017) y SQL Database. Vea [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
 
 Al realizar la recompilación de índices en línea reanudables, se aplican las siguientes directrices:
 -   Administración, planeamiento y ampliación de los períodos de mantenimiento del índice. Puede pausar y reiniciar una operación de recompilación de índice varias veces para que se ajuste a los períodos de mantenimiento.
@@ -108,7 +107,6 @@ Al realizar la recompilación de índices en línea reanudables, se aplican las 
 
 > [!IMPORTANT]
 > La recompilación reanudable no le exige que mantenga abierta una transacción de larga ejecución, lo que permite el truncamiento del registro durante esta operación y una mejor administración del espacio de registro. Con el nuevo diseño, se consigue mantener los datos necesarios en una base de datos junto con todas las referencias necesarias para reiniciar la operación reanudable.
->
 
 Por lo general, no hay ninguna diferencia de rendimiento entre la recompilación de índices en línea reanudables y no reanudables. Al actualizar un índice reanudable mientras una operación de regeneración de índice está en pausa:
 - Para las cargas de trabajo principalmente de solo lectura, el impacto de rendimiento es insignificante. 

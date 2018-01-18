@@ -15,15 +15,15 @@ applies_to: SQL Server 2016
 helpviewer_keywords: tuning reports [SQL Server]
 ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a1a567a2f29073f73033182fd14867540a95b93
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c986b13e3c38e168f7384a6552befca085f9be2f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-3---viewing-tuning-reports"></a>Lección 1: 3: ver informes de optimización
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]En la práctica anterior de esta lección, ha visto la [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts que crean o quitan objetos de base de datos en las recomendaciones del Asistente para la optimización de motor de base de datos que se generaron como resultado de la sesión de optimización MySession. La sesión MySession se creó en [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md).  

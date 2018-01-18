@@ -14,20 +14,20 @@ ms.topic: article
 helpviewer_keywords: aliases [SQL Server], <Alias> properties
 ms.assetid: 2d1498e2-129c-4ce7-88e5-408e4037243c
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cadb0bdb27b29c3f1a34e5db94154d0aaeda0382
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2a181114aabbd109bad9d3c77688f8bc28b40a3f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>&lt;Alias&gt; propiedades (pestaña Alias)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Un alias es un nombre alternativo que puede usarse para realizar una conexión. El alias encapsula los elementos necesarios de una cadena de conexión y los expone con un nombre elegido por el usuario. Use la página **Alias** del cuadro de diálogo **\<**Nombre de alias**> Propiedades** para ver o especificar los elementos de la cadena de conexión de un alias.  
   
-## <a name="options"></a>.  
+## <a name="options"></a>Opciones  
  **Alias Name**  
  Nombre (alias) que desee usar para hacer referencia a esta conexión.  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="see-also"></a>Vea también  
  [Crear una cadena de conexión válida con el protocolo de memoria compartida](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
- [Crear una cadena de conexión válida con TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
+ [Crear una cadena de conexión válida con TCP / IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
  [Crear una cadena de conexión válida con canalizaciones con nombre](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   

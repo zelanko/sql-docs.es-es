@@ -1,5 +1,5 @@
 ---
-title: ESTABLECER @local_variable (Transact-SQL) | Documentos de Microsoft
+title: SET @local_variable (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - local variables [SQL Server]
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b7d855f491a4f9482308df6f3ed2dcca8b067398
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: fd65fea39ac3f9a9cba0d47ec94365bff9155332
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="set-localvariable-transact-sql"></a>ESTABLECER @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,13 +74,13 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **@***local_variable*  
+ **@** *local_variable*  
  Es el nombre de una variable de cualquier tipo excepto **cursor**, **texto**, **ntext**, **imagen**, o **tabla**. Los nombres de variable deben comenzar con un signo de arroba (**@**). Los nombres de variable deben cumplir las reglas de [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
  *property_name*  
  Es el nombre de una propiedad definida por el usuario.  
   
- *Nombre_de_campo*  
+ *field_name*  
  Es un campo público de un tipo definido por el usuario.  
   
  *udt_name*  
@@ -92,7 +92,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  *NombreMétodo* **(** *argumento* [ **,**... *n* ] **)**  
  Es un método de un tipo definido por el usuario que toma uno o más argumentos para modificar el estado de la instancia de un tipo. Los métodos estáticos deben ser públicos.  
   
- **@***SQLCLR_local_variable*  
+ **@** *SQLCLR_local_variable*  
  Es una variable cuyo tipo se encuentra en un ensamblado. Para obtener más información, consulte [Conceptos de programación en el ámbito de la integración de Common Language Runtime &#40;CLR&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
   
  *mutator_method*  
@@ -181,7 +181,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  Las variables solo se pueden utilizar en expresiones y no en lugar de nombres de objeto o palabras clave. Para formar instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] dinámicas, utilice EXECUTE.  
   
- Las reglas de sintaxis de SET  **@**  *cursor_variable* no incluyen las palabras clave LOCAL y GLOBAL. Cuando el conjunto de  **@**  *cursor_variable* = CURSOR... se utilizan la sintaxis, el cursor se crea como GLOBAL o LOCAL, según la configuración de manera predeterminada para la opción de base de datos de cursor local.  
+ Las reglas de sintaxis de SET **@*** cursor_variable* no incluyen las palabras clave LOCAL y GLOBAL. Cuando el conjunto **@*** cursor_variable* = CURSOR... se utilizan la sintaxis, el cursor se crea como GLOBAL o LOCAL, según la configuración de manera predeterminada para la opción de base de datos de cursor local.  
   
  Las variables de cursor son siempre locales, incluso cuando hacen referencia a un cursor global. Cuando una variable de cursor hace referencia a un cursor global, éste tiene a la vez una referencia de cursor global y otra local. Para obtener más información, vea el ejemplo C.  
   
@@ -192,7 +192,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  No use una variable en una instrucción SELECT para concatenar valores (es decir, para calcular valores de agregado). Pueden producirse resultados de consulta inesperados. Esto se debe a que no se garantiza que todas las expresiones de la lista de SELECT (incluidas las asignaciones) se ejecuten exactamente una vez por cada fila de salida. Para obtener más información, consulte [este artículo de KB](http://support.microsoft.com/kb/287515).  
   
 ## <a name="permissions"></a>Permissions  
- Debe pertenecer al rol public. Todos los usuarios pueden usar conjunto  **@**  *local_variable*.  
+ Debe pertenecer al rol public. Todos los usuarios pueden usar conjunto **@*** local_variable*.  
   
 ## <a name="examples"></a>Ejemplos  
   

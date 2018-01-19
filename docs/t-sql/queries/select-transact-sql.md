@@ -26,15 +26,15 @@ helpviewer_keywords:
 - queries [SQL Server], results
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 012853c97e01250bf5aee62d95ae7971549f5094
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6dba1b14498cef9e06d9bde5741cb9e37cd31633
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,11 +47,11 @@ ms.lasthandoff: 11/17/2017
   
  [Desde *table_source* ] [donde *search_condition* ]  
   
- [GROUP BY *group_by_expression* ]  
+ [ GROUP BY *group_by_expression* ]  
   
  [Tener *search_condition* ]  
   
- [ORDER BY *expresiónOrden* [ASC | DESC]]  
+ [ ORDER BY *order_expression* [ ASC | DESC ] ]  
   
  La UNION, EXCEPT y operadores INTERSECT se pueden utilizar entre consultas para combinar o comparar sus resultados en un conjunto de resultados.  
   
@@ -269,6 +269,6 @@ ORDER BY OrderDateKey;
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplos SELECT &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)  
- [Sugerencias de &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)
+ [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)
   
 

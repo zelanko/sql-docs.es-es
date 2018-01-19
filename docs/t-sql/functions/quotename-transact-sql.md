@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 650892048daea0a86dc357ebbe2dd08b7eea5184
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 701d229ae745cee4a237f35b69cd00e899d5c6a5
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
  Es una cadena de un solo carácter que se utiliza como delimitador. Puede ser una comilla simple ( **'** ), un corchete izquierdo o derecho ( **[]** ), o un signo de comillas dobles ( **"** ). Si *quote_character* no se especifica, se utilizarán corchetes.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- **nvarchar (258)**  
+ **nvarchar(258)**  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se toma la cadena de caracteres `abc[]def` y se utilizan los caracteres `[` y `]` para crear un identificador delimitado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido.  
@@ -89,6 +89,16 @@ SELECT QUOTENAME('abc def');
 ```  
   
 ## <a name="see-also"></a>Vea también  
+ [PARSENAME &#40;Transact-SQL&#41;](../../t-sql/functions/parsename-transact-sql.md)  
+ [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [Funciones de cadena &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   

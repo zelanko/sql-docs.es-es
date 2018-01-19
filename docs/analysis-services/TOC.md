@@ -19,7 +19,7 @@
 ## [Ejemplos de Analysis Services](analysis-services-samples.md)
 
 # Tutoriales
-## [Creación de modelos tabulares (tutorial de Adventure Works)](tabular-modeling-adventure-works-tutorial.md)  
+## [Modelado tabular (nivel de compatibilidad 1200)](tabular-modeling-adventure-works-tutorial.md)  
 ### [Lección 1: Crear un nuevo proyecto de modelo tabular](lesson-1-create-a-new-tabular-model-project.md)  
 ### [Lección 2: Agregar datos](lesson-2-add-data.md)  
 ### [Lección 3: Marcar como tabla de fechas](lesson-3-mark-as-date-table.md)  
@@ -36,7 +36,7 @@
 ### [Lección complementaria: Implementar seguridad dinámica usando filtros de filas](supplemental-lesson-implement-dynamic-security-by-using-row-filters.md)  
 ### [Lección complementaria: Configurar las propiedades de notificación para los informes de Power View](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)  
 
-## [Creación de modelos multidimensionales (tutorial de Adventure Works)](multidimensional-modeling-adventure-works-tutorial.md)  
+## [Modelado multidimensional](multidimensional-modeling-adventure-works-tutorial.md)  
 ### [Escenario del tutorial](analysis-services-tutorial-scenario.md)  
 ### [Instalar los datos y proyectos de ejemplo para el tutorial de modelado multidimensional de Analysis Services](install-sample-data-and-projects.md)  
 ### [Lección 1: Definir una vista del origen de datos en un proyecto de Analysis Services](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)  

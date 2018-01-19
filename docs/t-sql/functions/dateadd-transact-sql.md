@@ -31,11 +31,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: db5499d73b4eab7ff4ba3079469412cc30a111a3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f3aa417b85782fa806961b107658403e51f7afe6
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,23 +54,23 @@ DATEADD (datepart , number , date )
   
 ## <a name="arguments"></a>Argumentos  
 *parte de fecha*  
-Es la parte de *fecha* a la que un **entero***número* se agrega. La siguiente tabla se recogen válidos *datepart* argumentos. Los equivalentes de variables definidas por el usuario no son válidos.
+Es la parte de *fecha* a la que un **entero *** número* se agrega. La siguiente tabla se recogen válidos *datepart* argumentos. Los equivalentes de variables definidas por el usuario no son válidos.
   
 |*parte de fecha*|Abreviaturas|  
 |---|---|
-|**año**|**AA**, **aaaa**|  
-|**trimestre**|**TT**, **preguntas**|  
+|**año**|**yy**, **yyyy**|  
+|**trimestre**|**qq**, **q**|  
 |**mes**|**mm**, **m**|  
-|**DAYOFYEAR**|**dy**, **y**|  
-|**día**|**dd**, **d.**|  
+|**dayofyear**|**dy**, **y**|  
+|**day**|**dd**, **d**|  
 |**semana**|**wk**, **ww**|  
-|**día de la semana**|**almacenamiento de datos**, **w**|  
+|**día de la semana**|**dw**, **w**|  
 |**hora**|**hh**|  
-|**minuto**|**Mi**,**n**|  
-|**segundo**|**ss**, **s**|  
-|**milisegundo**|**MS**|  
-|**microsegundos**|**MCS**|  
-|**nanosegundos**|**NS**|  
+|**minuto**|**mi**, **n**|  
+|**second**|**ss**, **s**|  
+|**millisecond**|**ms**|  
+|**microsecond**|**mcs**|  
+|**nanosecond**|**ns**|  
   
 *number*  
 Es una expresión que se pueda resolver como un [int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) que se agrega a un *datepart* de *fecha*. Las variables definidas por el usuario son válidas.  
@@ -93,24 +93,24 @@ Cada *datepart* y sus abreviaturas devuelven el mismo valor.
 Si *datepart* es **mes** y *fecha* mes tiene más días que el mes de retorno y la *fecha* día no existe en el mes de retorno se devuelve el último día del mes de retorno. Por ejemplo, septiembre tiene 30 días; por consiguiente, las dos instrucciones siguientes devuelven 2006-09-30 00:00:00.000:
   
 ```sql
-SELECT DATEADD(month, 1, '2006-08-30');
-SELECT DATEADD(month, 1, '2006-08-31');
+SELECT DATEADD(month, 1, '20060830');
+SELECT DATEADD(month, 1, '20060831');
 ```
   
 ## <a name="number-argument"></a>Argumento number  
 El *número* argumento no puede superar el intervalo de **int**. En las instrucciones siguientes, el argumento para *número* supera el intervalo de **int** en 1. Se devuelve un mensaje de error que indica lo siguiente: "`Msg 8115, Level 16, State 2, Line 1. Arithmetic overflow error converting expression to data type int."`
   
 ```sql
-SELECT DATEADD(year,2147483648, '2006-07-31');  
-SELECT DATEADD(year,-2147483649, '2006-07-31');  
+SELECT DATEADD(year,2147483648, '20060731');  
+SELECT DATEADD(year,-2147483649, '20060731');  
 ```  
   
 ## <a name="date-argument"></a>Argumento date  
 El *fecha* no se puede incrementar el argumento en un valor fuera del intervalo de su tipo de datos. En las instrucciones siguientes, el *número* valor que se agrega a la *fecha* valor supera el intervalo de la *fecha* tipo de datos. Se devuelve un mensaje de error que indica lo siguiente: "`Msg 517, Level 16, State 1, Line 1 Adding a value to a 'datetime' column caused overflow`".
   
 ```sql
-SELECT DATEADD(year,2147483647, '2006-07-31');  
-SELECT DATEADD(year,-2147483647, '2006-07-31');  
+SELECT DATEADD(year,2147483647, '20060731');  
+SELECT DATEADD(year,-2147483647, '20060731');  
 ```  
   
 ## <a name="return-values-for-a-smalldatetime-date-and-a-second-or-fractional-seconds-datepart"></a>Valores devueltos para una fecha smalldatetime y datepart de un segundo o fracciones de segundo  

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_sessions (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_exec_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/21/2017
 ms.prod: sql-non-specified
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 48af63d80b801b677d9f0f6225f84ba63c09f344
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5e0cd35b044d4a5016442ddae4384aea094cc655
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ ms.lasthandoff: 01/02/2018
 |program_name|**nvarchar(128)**|Nombre del programa cliente que inició la sesión. El valor es NULL para las sesiones internas. Acepta valores NULL.|  
 |host_process_id|**int**|Identificador de proceso del programa cliente que inició la sesión. El valor es NULL para las sesiones internas. Acepta valores NULL.|  
 |client_version|**int**|Versión del protocolo TDS de la interfaz utilizada por el cliente para conectarse al servidor. El valor es NULL para las sesiones internas. Acepta valores NULL.|  
-|client_interface_name|**nvarchar (32)**|Nombre de biblioteca/controlador utilizada por el cliente para comunicarse con el servidor. El valor es NULL para las sesiones internas. Acepta valores NULL.|  
+|client_interface_name|**nvarchar(32)**|Nombre de biblioteca/controlador utilizada por el cliente para comunicarse con el servidor. El valor es NULL para las sesiones internas. Acepta valores NULL.|  
 |security_id|**varbinary(85)**|Identificador de seguridad de Microsoft Windows asociado al inicio de sesión. No admite valores NULL.|  
 |login_name|**nvarchar(128)**|Nombre de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se está ejecutando la sesión. Para saber qué nombre de inicio de sesión original ha creado la sesión, vea original_login_name. Puede ser un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autentica el nombre de inicio de sesión o un nombre de usuario de dominio autenticado de Windows. No admite valores NULL.|  
 |nt_domain|**nvarchar(128)**|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Dominio de Windows para el cliente si la sesión utiliza la autenticación de Windows o una conexión de confianza. Este valor es NULL para las sesiones internas y los usuarios que no son del dominio. Acepta valores NULL.|  
 |nt_user_name|**nvarchar(128)**|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nombre de usuario de Windows para el cliente si la sesión utiliza la autenticación de Windows o una conexión de confianza. Este valor es NULL para las sesiones internas y los usuarios que no son del dominio. Acepta valores NULL.|  
-|status|**nvarchar (30)**|Estado de la sesión. Valores posibles:<br /><br /> **Ejecuta** -ejecutando una o varias solicitudes actualmente<br /><br /> **En modo de suspensión** -no hay solicitudes en ejecución actualmente<br /><br /> **Inactivo** : sesión se ha restablecido debido a la agrupación de conexiones y ahora está en estado de inicio de sesión previo.<br /><br /> **Preconnect** -sesión está en el clasificador del regulador de recursos.<br /><br /> No admite valores NULL.|  
+|status|**nvarchar(30)**|Estado de la sesión. Valores posibles:<br /><br /> **Ejecuta** -ejecutando una o varias solicitudes actualmente<br /><br /> **En modo de suspensión** -no hay solicitudes en ejecución actualmente<br /><br /> **Inactivo** : sesión se ha restablecido debido a la agrupación de conexiones y ahora está en estado de inicio de sesión previo.<br /><br /> **Preconnect** -sesión está en el clasificador del regulador de recursos.<br /><br /> No admite valores NULL.|  
 |context_info|**varbinary(128)**|Valor CONTEXT_INFO para la sesión. La información de contexto se establece por el usuario mediante el [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) instrucción. Acepta valores NULL.|  
 |cpu_time|**int**|Tiempo de CPU, en milisegundos, utilizado por esta sesión. No admite valores NULL.|  
 |memory_usage|**int**|Número de páginas de memoria de 8 KB utilizadas por esta sesión. No admite valores NULL.|  
@@ -109,6 +109,10 @@ Todos pueden ver su propia información de sesión.
 -   unsuccessful_logons  
   
  Si esta opción no está habilitada, estas columnas devuelven valores NULL. Para obtener más información acerca de cómo establecer esta opción de configuración servidor, consulte [compatibilidad con criterio común habilitada la opción de configuración del servidor](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md).  
+ 
+ 
+ Las conexiones de administrador de base de datos de SQL Azure verá una fila por cada sesión autenticada, mientras que las conexiones de administrador no solo verá información relacionada con sus sesiones de usuario de base de datos. 
+ 
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
@@ -117,7 +121,7 @@ Todos pueden ver su propia información de sesión.
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|Uno a ninguno o uno a varios|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|Uno a ninguno o uno a varios|  
 |sys.dm_exec_sessions|[sys.dm_tran_session_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)|session_id|Uno a ninguno o uno a varios|  
-|sys.dm_exec_sessions|[Sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id &#124; 0)|session_id CROSS APPLY<br /><br /> OUTER APPLY|Uno a ninguno o uno a varios|  
+|sys.dm_exec_sessions|[sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id &#124; 0)|session_id CROSS APPLY<br /><br /> OUTER APPLY|Uno a ninguno o uno a varios|  
 |sys.dm_exec_sessions|[sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|session_id|Uno a uno|  
   
 ## <a name="examples"></a>Ejemplos  

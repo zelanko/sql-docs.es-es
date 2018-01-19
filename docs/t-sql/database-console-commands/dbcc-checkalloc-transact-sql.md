@@ -1,5 +1,5 @@
 ---
-title: DBCC CHECKALLOC (Transact-SQL) | Documentos de Microsoft
+title: DBCC CHECKALLOC (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -32,11 +32,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 09d190a3a27344d60fe3861b87443165f39ac352
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6e9fa0db095ce2f18fa622b2f1f6406f3cd73fa6
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ Comprueba la coherencia de las estructuras de asignación de espacio en disco de
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql
+```
 DBCC CHECKALLOC   
 [  
     ( database_name | database_id | 0   
@@ -107,7 +107,7 @@ DBCC CHECKALLOC comprueba la asignación de todas las páginas de la base de dat
 Si no se especifica NO_INFOMSGS, DBCC CHECKALLOC recopila información sobre uso de espacio de todos los objetos de la base de datos. Esta información se imprimirá junto con los errores que se encuentran.
   
 > [!NOTE]  
->La funcionalidad de DBCC CHECKALLOC se incluye en [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) y [DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md). Esto significa que no tiene que ejecutar DBCC CHECKALLOC independientemente de estas instrucciones.   DBCC CHECKALLOC no comprueba los FILESTREAM datos. FILESTREAM almacena los objetos binarios grandes (BLBS) en el sistema de archivos.  
+> La funcionalidad de DBCC CHECKALLOC se incluye en [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) y [DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md). Esto significa que no tiene que ejecutar DBCC CHECKALLOC independientemente de estas instrucciones.   DBCC CHECKALLOC no comprueba los FILESTREAM datos. FILESTREAM almacena los objetos binarios grandes (BLBS) en el sistema de archivos.  
   
 ## <a name="internal-database-snapshot"></a>Instantánea de base de datos interna  
 DBCC CHECKALLOC utiliza una instantánea interna de base de datos para proporcionar la coherencia transaccional necesaria para realizar estas comprobaciones. Si no es posible crear una instantánea o se especifica TABLOCK, DBCC CHECKALLOC intenta adquirir un bloqueo exclusivo (X) de la base de datos para obtener la coherencia necesaria.
@@ -160,7 +160,7 @@ DBCC CHECKALLOC también devuelve un resumen de asignación de cada índice y pa
   
 DBCC CHECKALLOC devuelve el siguiente conjunto de resultados (los valores pueden variar), excepto si se especifica ESTIMATEONLY o NO_INFOMSGS.
   
-```sql
+```
 DBCC results for 'master'.  
 ***************************************************************  
 Table sysobjects                Object ID 1.  
@@ -222,7 +222,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 Cuando se especifica ESTIMATEONLY, DBCC CHECKALLOC devuelve el siguiente conjunto de resultados.
   
-```sql
+```
 Estimated TEMPDB space needed for CHECKALLOC (KB)   
 -------------------------------------------------   
 34  

@@ -49,9 +49,9 @@
 ### [Seguridad de SQL Server](https://blogs.msdn.microsoft.com/sqlsecurity/)
 
 ## Comentarios y ayuda
+### [Sugerencias para SQL Server](https://feedback.azure.com/forums/908035-sql-server)
 ### [Cambio de la pila DBA](https://dba.stackexchange.com/questions/tagged/sql-server)
 ### [Desbordamiento de pila](http://stackoverflow.com/questions/tagged/sql-server)
 ### [Foros de MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)
 ### [Reddit](https://www.reddit.com/r/SQLServer)
 ## [Contenido local con Visor de ayuda](sql-server-help-installation.md)

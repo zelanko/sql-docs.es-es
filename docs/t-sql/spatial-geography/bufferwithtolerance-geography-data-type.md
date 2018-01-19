@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: BefferWithTolerance method
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fea21e57554a1ff68e83ba8cc85ea004d250ca2c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 07c9278bc7c277a0991f0f55cad18f496c514cde
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,12 +43,12 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *distancia*  
+ *distance*  
  Es un **float** expresión que especifica la distancia desde la **geography** instancia alrededor de la cual se puede calcular el búfer.  
   
  La distancia máxima del búfer no puede superar 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 circunferencia Terráquea) o todo el globo terráqueo.  
   
- *tolerancia*  
+ *tolerance*  
  Es un **float** expresión que especifica la tolerancia de la distancia de búfer.  
   
  El *tolerancia* valor hace referencia a la variación máxima en la distancia de búfer ideal para la aproximación lineal devuelta.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
  El límite mínimo es el 0,1 por ciento de la distancia, y cualquier tolerancia menor se redondeará hasta el límite mínimo.  
   
- *relativa*  
+ *relative*  
  Es un **bits** especifica si la *tolerancia* valor es relativo o absoluto. Si 'TRUE' o 1, la tolerancia es relativa y se calcula como el producto de la *tolerancia* parámetro y la magnitud angular \* radio Ecuatorial de la elipsoide. Si 'FALSE' o 0, la tolerancia es absoluta y *tolerancia* valor es la variación máxima absoluta en la distancia de búfer ideal para la aproximación lineal devuelta.  
   
 ## <a name="return-types"></a>Tipos devueltos  

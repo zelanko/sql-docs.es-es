@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: BufferWithCurves method (geography)
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 12b9abd82133c7f2c42f43dd436e223b1b0173f1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 777f5d7a412cccc8b5757b2bf4f22404d12a9a77
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (tipo de datos de geografía)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *distancia*  
+ *distance*  
  Es un **float** que indica la distancia máxima a la que apunta forman el búfer puede provenir de la instancia de geography.  
   
 ## <a name="return-types"></a>Tipos devueltos  

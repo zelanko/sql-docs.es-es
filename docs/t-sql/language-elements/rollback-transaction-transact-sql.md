@@ -26,15 +26,15 @@ helpviewer_keywords:
 - savepoints [SQL Server]
 ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
 caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: be1bbb9e63ccb710b42e007c91c1c588a1e8ae1d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c0480f1c295c45f32f4ca3bdaec761a6bd2fa924
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -57,13 +57,13 @@ ROLLBACK { TRAN | TRANSACTION }
  *transaction_name*  
  Es el nombre asignado a la transacción en BEGIN TRANSACTION. *transaction_name* debe ajustarse a las reglas para identificadores, pero se utilizan solo los 32 primeros caracteres del nombre de transacción. Cuando se anidan transacciones, *transaction_name* debe ser el nombre de la instrucción BEGIN TRANSACTION más externa. *transaction_name* no distingue entre mayúsculas y minúsculas, incluso cuando la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no distingue mayúsculas de minúsculas.  
   
- **@***tran_name_variable*  
+ **@** *tran_name_variable*  
  Se trata del nombre de una variable definida por el usuario que contiene un nombre de transacción válido. La variable debe declararse con una **char**, **varchar**, **nchar**, o **nvarchar** tipo de datos.  
   
  *savepoint_name*  
  Es *savepoint_name* de una instrucción SAVE TRANSACTION. *savepoint_name* debe ajustarse a las reglas para identificadores. Use *savepoint_name* cuando una operación de reversión condicional debería afectar a solo una parte de la transacción.  
   
- **@***savepoint_variable*  
+ **@** *savepoint_variable*  
  Es el nombre de una variable definida por el usuario que contiene un nombre de punto de retorno válido. La variable debe declararse con una **char**, **varchar**, **nchar**, o **nvarchar** tipo de datos.  
   
 ## <a name="error-handling"></a>Tratamiento de errores  
@@ -141,8 +141,8 @@ value
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [TRABAJO de confirmación &#40; Transact-SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
- [ROLLBACK WORK &#40; Transact-SQL &#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
+ [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
+ [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [SAVE TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/save-transaction-transact-sql.md)  
   
   

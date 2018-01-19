@@ -1,5 +1,5 @@
 ---
-title: UPDATETEXT (Transact-SQL) | Documentos de Microsoft
+title: UPDATETEXT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - UPDATETEXT statement
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 97d10776082f3e4aaa80bfc3f09c662838087518
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2561f089f8982bfed4e0b48c673dea17be22de89
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  Es el nombre de la tabla y **texto**, **ntext**, o **imagen** columna que se va a actualizar. Los nombres de tabla y los nombres de columna deben cumplir las reglas de [identificadores](../../relational-databases/databases/database-identifiers.md). La especificación de los nombres de la base de datos y del propietario es opcional.  
   
  *dest_text_ptr*  
- Es un puntero de texto valor (devuelto por la función TEXTPTR) que señala a la **texto**, **ntext**, o **imagen** que se actualicen los datos. *dest_text_ptr* debe ser **binario (**16**)**.  
+ Es un puntero de texto valor (devuelto por la función TEXTPTR) que señala a la **texto**, **ntext**, o **imagen** que se actualicen los datos. *dest_text_ptr* must be **binary(**16**)**.  
   
  *insert_offset*  
  Es la posición de inicio de la actualización a partir de cero. Para **texto** o **imagen** columnas, *insert_offset* es el número de bytes que se van a omitir desde el principio de la columna existente antes de insertar nuevos datos. Para **ntext** columnas, *insert_offset*es el número de caracteres (cada **ntext** caracteres utiliza 2 bytes). Existente **texto**, **ntext**, o **imagen** datos a partir de esta posición inicial basada en cero se desplazan a la derecha para dejar espacio a los nuevos datos. Un valor 0 inserta los nuevos datos al principio de los datos existentes. Un valor NULL anexa los nuevos datos al valor de datos existente.  
@@ -76,7 +76,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  WITH LOG  
  El registro está determinado por el modelo de recuperación vigente para la base de datos.  
   
- *i nserted_data*  
+ *inserted_data*  
  Son los datos que se va a insertar en las existentes **texto**, **ntext**, o **imagen** columna en el *insert_offset* ubicación. Se trata de una sola **char**, **nchar**, **varchar**, **nvarchar**, **binario**,  **varbinary**, **texto**, **ntext**, o **imagen** valor. *i nserted_data* puede ser un literal o una variable.  
   
  *table_name.src_column_name*  
@@ -130,7 +130,7 @@ GO
   
 ## <a name="see-also"></a>Vea también  
  [READTEXT &#40; Transact-SQL &#41;](../../t-sql/queries/readtext-transact-sql.md)   
- [TEXTPTR &#40; Transact-SQL &#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
+ [TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
  [WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  
   
   

@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
-ms.openlocfilehash: a17c62aeddd0ed898d2a43931965bb7052a58412
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: b6e34da74f96e8941fff67afe24cdbc271381fa7
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-on-linux"></a>SQL Server en Linux
 
@@ -59,5 +59,5 @@ Si ya está familiarizado con SQL Server, revise la [notas de la versión](sql-s
 - [Cambio de la pila de DBA](https://dba.stackexchange.com/questions/tagged/sql-server): formular preguntas de administración de base de datos
 - [Desbordamiento de pila](http://stackoverflow.com/questions/tagged/sql-server): formular preguntas de desarrollo
 - [Foros de MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): hacer preguntas técnicas
-- [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback): informe de errores y la característica de solicitud
+- [Enviar comentarios](https://feedback.azure.com/forums/908035-sql-server): informe de errores y la característica de solicitud
 - [Reddit](https://www.reddit.com/r/SQLServer/): analizar SQL Server

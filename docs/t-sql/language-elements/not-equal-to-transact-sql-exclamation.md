@@ -23,15 +23,15 @@ helpviewer_keywords:
 - not equal to operator (!=)
 ms.assetid: f1054809-04f2-4995-9ebd-cb67098e6708
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 694bfc52a9b06e61cd3d96c5863d98ea148c0bd1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7a62af817e30c1181beada08b9327b05a24a9ad0
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="not-equal-to-transact-sql---exclamation"></a>No es igual a (Transact SQL) - signo de exclamación
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   Prueba si una expresión es distinta de otra expresión (es un operador de comparación). Si uno o los dos operandos son NULL, se devuelve NULL. Funciona igual que el [<> (no es igual a)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md) operador de comparación.  
   
 ## <a name="see-also"></a>Vea también  
- [Expresiones &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

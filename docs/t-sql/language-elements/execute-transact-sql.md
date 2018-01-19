@@ -32,15 +32,15 @@ helpviewer_keywords:
 - EXECUTE statement
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 caps.latest.revision: "104"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 52a896293ad991509884b45979be0129bd56f287
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5c9081d53346bda14d507688547f37589bd153da
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -206,12 +206,12 @@ Execute a character string
   
  Cuando se utiliza para invocar una función con valores escalares de definido por el usuario, el @*return_status* variable puede ser de cualquier tipo de datos escalar.  
   
- *Nombre_Del_Módulo*  
+ *module_name*  
  Es el nombre, completo o no, del procedimiento almacenado o la función escalar definida por el usuario a la que debe llamar. Los nombres de módulo deben cumplir las reglas de [identificadores](../../relational-databases/databases/database-identifiers.md). Los nombres de los procedimientos almacenados extendidos distinguen siempre entre mayúsculas y minúsculas, sin tener en cuenta la intercalación del servidor.  
   
  Un módulo que se haya creado en otra base de datos se puede ejecutar si el usuario que lo ejecuta es el propietario del módulo o dispone de los permisos adecuados para ejecutar el módulo en esa base de datos. Un módulo puede ejecutarse en otro servidor que esté ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si el usuario que ejecuta el módulo tiene los permisos adecuados para utilizar ese servidor (acceso remoto) y para ejecutar el módulo en dicha base de datos. Si se especifica un nombre de servidor, pero no se especifica nombre de base de datos, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] busca el módulo en la base de datos predeterminada del usuario.  
   
- ; *número*  
+ ;*number*  
 **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Es un entero opcional que se utiliza para agrupar procedimientos que tengan el mismo nombre. Este parámetro no se utiliza para los procedimientos almacenados extendidos.  
@@ -265,7 +265,7 @@ Execute a character string
  [N] '*tsql_string*'  
  Es una cadena constante. *tsql_string* puede ser cualquier **nvarchar** o **varchar** tipo de datos. Si se incluye la N, la cadena se interpreta como **nvarchar** tipo de datos.  
   
- AS \<context_specification >  
+ AS \<context_specification>  
  Especifica el contexto en el que se ejecuta la instrucción.  
   
  Login  
@@ -279,7 +279,7 @@ Execute a character string
 > [!IMPORTANT]  
 >  Mientras el cambio de contexto al usuario de base de datos esté activo, cualquier intento de acceso a recursos fuera de la base de datos provocará que la instrucción genere errores. Esto incluye uso *base de datos* instrucciones, las consultas distribuidas y las consultas que hacen referencia a otra base de datos mediante el uso de identificadores de tres o cuatro partes.  
   
- '*nombre*'  
+ '*name*'  
  Es un nombre válido de inicio de sesión o de usuario. *nombre* debe ser miembro del rol fijo de servidor sysadmin o existir como entidad de seguridad en [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) o [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md), respectivamente.  
   
  *nombre de* no puede ser una cuenta integrada, como NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService o NT AUTHORITY\LocalSystem.  
@@ -292,7 +292,7 @@ Execute a character string
  [?]  
  Indica los parámetros para el que se suministran valores en el \<arg-list > de comandos de acceso directo que se usan en EXEC('...', \<arg-list>) en \<linkedsrv > instrucción.  
   
- EN *linked_server_name*  
+ AT *linked_server_name*  
 **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Especifica que *command_string* se ejecuta en *linked_server_name* y resultados, si los hay, se devuelven al cliente. *nombreServidorVinculado* debe hacer referencia a una definición de servidor vinculado existente en el servidor local. Servidores vinculados se definen mediante [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
@@ -305,7 +305,7 @@ Execute a character string
 |RECOMPILE|Fuerza que se compile, use y descarte un nuevo plan después de ejecutar el módulo. Si hay algún plan de consulta existente para el módulo, este plan permanece en la memoria caché.<br /><br /> Utilice esta opción si el parámetro que está proporcionando es atípico o si los datos han cambiado de forma significativa. Esta opción no se utiliza para los procedimientos almacenados extendidos. Se recomienda que use esta opción con cautela, porque es costosa.<br /><br /> **Nota:** no se puede utilizar WITH RECOMPILE cuando una llamada a un procedimiento almacenado que utiliza la sintaxis OPENDATASOURCE. La opción WITH RECOMPILE se omite cuando se especifica un nombre de objeto de cuatro partes.<br /><br /> **Nota:** RECOMPILE no es compatible con funciones definidas por el usuario compiladas de forma nativa, escalares. Si necesita volver a compilar, use [sp_recompile &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
 |**CONJUNTOS DE RESULTADOS SIN DEFINIR**|**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Esta opción no proporciona ninguna garantía de que se devuelvan los resultados, si hay alguno, y no se proporciona ninguna definición. La instrucción se ejecuta sin errores si se devuelve algún resultado o si no se devuelve ninguno. RESULT SETS UNDEFINED es el comportamiento predeterminado si no se proporciona una opción de conjuntos de resultados.<br /><br /> Para que interprete funciones escalares definidas por el usuario y compilados de forma nativa funciones escalares definidas por el usuario, esta opción no está operativa porque las funciones no devuelven nunca un conjunto de resultados.|  
 |RESULT SETS NONE|**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Garantiza que la instrucción de ejecución no devolverá ningún resultado. Si se devuelve algún resultado, se anula el lote.<br /><br /> Para que interprete funciones escalares definidas por el usuario y compilados de forma nativa funciones escalares definidas por el usuario, esta opción no está operativa porque las funciones no devuelven nunca un conjunto de resultados.|  
-|*\<result_sets_definition >*|**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Proporciona una garantía de que el resultado se devolverá tal y como se especifique en result_sets_definition. Para instrucciones que devuelvan varios conjuntos de resultados, proporcione varias *result_sets_definition* secciones. Agregue cada *result_sets_definition* entre paréntesis, separados por comas. Para obtener más información, consulte \<result_sets_definition > más adelante en este tema.<br /><br /> Esta opción siempre genera un error para las funciones definidas por el usuario compilados de forma nativa, escalares porque las funciones no devuelven nunca un conjunto de resultados.|
+|*\<result_sets_definition>*|**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Proporciona una garantía de que el resultado se devolverá tal y como se especifique en result_sets_definition. Para instrucciones que devuelvan varios conjuntos de resultados, proporcione varias *result_sets_definition* secciones. Agregue cada *result_sets_definition* entre paréntesis, separados por comas. Para obtener más información, consulte \<result_sets_definition > más adelante en este tema.<br /><br /> Esta opción siempre genera un error para las funciones definidas por el usuario compilados de forma nativa, escalares porque las funciones no devuelven nunca un conjunto de resultados.|
   
 \<result_sets_definition > **se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
@@ -732,14 +732,14 @@ GO
  [EXECUTE AS &#40;cláusula de Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)   
  [osql (utilidad)](../../tools/osql-utility.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [REVERTIR &#40; Transact-SQL &#41;](../../t-sql/statements/revert-transact-sql.md)   
+ [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sqlcmd (utilidad)](../../tools/sqlcmd-utility.md)   
- [SUSER_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/suser-name-transact-sql.md)   
+ [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [User_name &#40; Transact-SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)   
- [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
+ [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)   
+ [OPENDATASOURCE &#40; Transact-SQL &#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [Funciones escalares definidas por el usuario para OLTP en memoria](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)  
   
   

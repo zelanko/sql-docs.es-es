@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: BufferWithTolerance (geometry Data Type)
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a6a932ffe43e978bdc9e06f96cac300d45a035b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d929476cd48275249c5ac78a75ed22d6822fb21a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,17 +41,17 @@ Devuelve un objeto geométrico que representa la unión del punto de todos los v
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *distancia*  
+ *distance*  
  Es un **float** expresión que especifica la distancia desde la **geometry** instancia alrededor de la cual se puede calcular el búfer.  
   
- *tolerancia*  
+ *tolerance*  
  Es un **float** expresión que especifica la tolerancia de la distancia de búfer.  
   
  *Tolerancia* hace referencia a la variación máxima en la distancia de búfer ideal para la aproximación lineal devuelta.  
   
  Por ejemplo, la distancia de búfer ideal de un punto es un círculo, pero un círculo debe conseguirse de forma aproximada mediante un polígono. Cuanto más pequeña sea la tolerancia, más puntos tendrá el polígono, lo que aumenta la complejidad del resultado, pero disminuye el error.  
   
- *relativa*  
+ *relative*  
  Es un **bits** especifica si la *tolerancia* valor es relativo o absoluto. Si 'TRUE' o 1, a continuación, tolerancia es relativa y se calcula como el producto de la *tolerancia* parámetro y el diámetro del cuadro de límite de la instancia. Si 'FALSE' o 0, la tolerancia es absoluta y *tolerancia* valor es la variación máxima absoluta en la distancia de búfer ideal para la aproximación lineal devuelta.  
   
 ## <a name="return-types"></a>Tipos devueltos  

@@ -40,11 +40,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: dd3db7627c4190a51db01082138677bc2b6d40d9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 56326d7862c004ac056e329e6cc05f7bbe056aea
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST y CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int,
     CONVERT(decimal(6,4), 9.5) AS decimal;
 ```  
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-|Texto original en   |int    |decimal |  
+|Original   |int    |decimal |  
 |----|----|----|  
 |9.5 |9 |9.5000 |  
 
@@ -87,7 +87,7 @@ Es el tipo de datos de destino. Esto incluye **xml**, **bigint**, y **sql_varian
 *length*  
 Es un número entero opcional que especifica la longitud del tipo de datos de destino. El valor predeterminado es 30.
   
-*estilo*  
+*style*  
 Expresión entera que especifica cómo la función CONVERT convertir *expresión*. Si style es NULL, se devuelve NULL. Determina el intervalo por *data_type*. 
   
 ## <a name="return-types"></a>Tipos de valor devuelto
@@ -147,7 +147,7 @@ Cuando se convierte a **datetimeoffset** de datos de caracteres con un estilo qu
 ## <a name="float-and-real-styles"></a>estilos float y real
 Cuando *expresión* es **float** o **real**, *estilo* puede ser uno de los valores mostrados en la tabla siguiente. Otros valores se procesan como 0.
   
-|Valor|Salida|  
+|Value|Salida|  
 |---|---|
 |**0** (valor predeterminado)|Un máximo de 6 dígitos. Utilícelo en notación científica cuando proceda.|  
 |**1**|Siempre 8 dígitos. Utilícelo siempre en notación científica.|  
@@ -158,7 +158,7 @@ Cuando *expresión* es **float** o **real**, *estilo* puede ser uno de los valor
 ## <a name="money-and-smallmoney-styles"></a>estilos Money y smallmoney
 Cuando *expresión* es **dinero** o **smallmoney**, *estilo* puede ser uno de los valores mostrados en la tabla siguiente. Otros valores se procesan como 0.
   
-|Valor|Salida|  
+|Value|Salida|  
 |---|---|
 |**0** (valor predeterminado)|Sin separadores de millar cada tres dígitos a la izquierda del separador decimal y dos dígitos a la derecha del separador decimal; por ejemplo, 4235,98.|  
 |**1**|Separadores de millar cada tres dígitos a la izquierda del separador decimal y dos dígitos a la derecha del separador decimal; por ejemplo, 3.510,92.|  
@@ -166,9 +166,9 @@ Cuando *expresión* es **dinero** o **smallmoney**, *estilo* puede ser uno de lo
 |**126**|Equivalente al estilo 2 al convertir a char(n) o varchar(n)|  
   
 ## <a name="xml-styles"></a>estilos de XML
-Cuando *expresión* es **xml***, estilo* puede ser uno de los valores mostrados en la tabla siguiente. Otros valores se procesan como 0.
+Cuando *expresión* es **xml ***, estilo* puede ser uno de los valores mostrados en la tabla siguiente. Otros valores se procesan como 0.
   
-|Valor|Salida|  
+|Value|Salida|  
 |---|---|
 |**0** (valor predeterminado)|Utiliza el comportamiento de análisis predeterminado que descarta los espacios en blanco insignificantes y no permite un subconjunto DTD interno.<br /> **Nota:** cuando se convierte a la **xml** tipo de datos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] espacios en blanco no significativos se tratan de forma diferente que en XML 1.0. Para obtener más información, consulte [crear instancias de datos de XML](../../relational-databases/xml/create-instances-of-xml-data.md).|  
 |**1**|Conserva los espacios en blanco insignificantes. Esta configuración establece el valor predeterminado **XML: space** control se comporte de la misma como si **XML: space = "preserve"** se ha especificado en su lugar.|  
@@ -178,7 +178,7 @@ Cuando *expresión* es **xml***, estilo* puede ser uno de los valores mostrados 
 ## <a name="binary-styles"></a>Estilos binarios
 Cuando *expresión* es **Binary**, **varbinary**, **char**, o **varchar**, *estilo* puede ser uno de los valores mostrados en la tabla siguiente. Los valores de estilos que no se enumeran en la tabla devuelven un error.
   
-|Valor|Salida|  
+|Value|Salida|  
 |---|---|
 |**0** (valor predeterminado)|Traduce caracteres ASCII a bytes binarios o bytes binarios a caracteres ASCII. Cada carácter o byte se convierte con una proporción 1:1.<br /> Si el *data_type* es un tipo binario, los caracteres 0 x se agregan a la izquierda del resultado.|  
 |**1**, **2**|Si el *data_type* es un tipo binario, la expresión debe ser una expresión de caracteres. El *expresión* debe estar formada por un número par de dígitos hexadecimales (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). Si el *estilo* está establecido en 1 los caracteres 0 x deben ser los primeros dos caracteres en la expresión. Si la expresión contiene un número impar de caracteres o si alguno de los caracteres no es válido, se produce un error.<br /> Si la longitud de la expresión convertida es mayor que la longitud de la *data_type* derecha se trunca el resultado.<br /> Longitud fija *data_types* que serán más grandes que el resultado convertido tiene ceros agregados a la derecha del resultado.<br /> Si data_type es un tipo de caracteres, la expresión debe ser binaria. Cada carácter binario se convierte en dos caracteres hexadecimales. Si la longitud de la expresión convertida es mayor que el *data_type* longitud, se truncará derecha.<br /> Si el *data_type* es un tipo de carácter de tamaño fijo y la longitud del resultado convertido es menor que la longitud de la *data_type*; espacios se agregan a la derecha de la expresión convertida para mantener un par número de dígitos hexadecimales.<br /> Los caracteres 0 x se agregarán a la izquierda del resultado convertido para *estilo* 1.|  
@@ -275,7 +275,7 @@ Gail        Erickson      Ms.    *
   
 Al convertir tipos de datos que difieren en los decimales, algunas veces el valor resultante se trunca y otras se redondea. En la siguiente tabla se muestra el comportamiento.
   
-|De|Para|Comportamiento|  
+|De|A|Comportamiento|  
 |---|---|---|
 |**numeric**|**numeric**|Redondear|  
 |**numeric**|**int**|Truncamiento|  
@@ -711,8 +711,10 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 ```  
   
 ## <a name="see-also"></a>Vea también
-[Conversiones de tipos de datos &#40; motor de base de datos &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
-[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
-[Funciones del sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
-[Escribir instrucciones Transact-SQL internacionales](../../relational-databases/collations/write-international-transact-sql-statements.md)
+ [Conversiones de tipos de datos &#40; motor de base de datos &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+ [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)  
+ [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
+ [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
+ [Funciones del sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Escribir instrucciones Transact-SQL internacionales](../../relational-databases/collations/write-international-transact-sql-statements.md)
   

@@ -35,15 +35,15 @@ helpviewer_keywords:
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 caps.latest.revision: "97"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cafa4381c52b3b884883f61e6e5f232ac894ee8a
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 9ddc3ee291d4e3b498dd6dfd9bbb49ca4299bea6
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -161,7 +161,7 @@ FROM { <table_source> [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-\<table_source >  
+\<table_source>  
  Especifica el origen de una tabla, una vista, una tabla variable o una tabla derivada, con o sin alias, para utilizarlo en la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se pueden utilizar hasta 256 orígenes de tabla en una instrucción, aunque el límite varía en función de la memoria disponible y de la complejidad del resto de las expresiones de la consulta. Las consultas individuales pueden no admitir un máximo de 256 orígenes de tabla.  
   
 > [!NOTE]  
@@ -169,14 +169,14 @@ FROM { <table_source> [ ,...n ] }
   
  El orden de los orígenes de tabla después de la palabra clave FROM no afecta al conjunto de resultados devuelto. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve errores si aparecen nombres duplicados en la cláusula FROM.  
   
- *nombre_tabla_o_vista*  
+ *table_or_view_name*  
  Es el nombre de una tabla o una vista.  
   
  Si la tabla o vista existe en otra base de datos en la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilice un nombre completo con el formato *base de datos*. *esquema*. *object_name*.  
   
  Si la tabla o la vista existen fuera de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l, utilice un nombre de cuatro partes con el formato *servidor_vinculado*. *catálogo*. *esquema*. *objeto*. Para obtener más información, vea [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Un nombre de cuatro partes que se construye utilizando el [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) funcionar como la parte de servidor del nombre también se puede usar para especificar el origen de la tabla remota. Cuando se especifica OPENDATASOURCE, *database_name* y *schema_name* no pueden aplicarse a todos los orígenes de datos y está sujeta a las capacidades del proveedor OLE DB que tiene acceso al objeto remoto.  
   
- [COMO] *aliasTabla*  
+ [AS] *table_alias*  
  Es un alias para *table_source* que puede usarse ya sea por comodidad o para distinguir una tabla o vista en una autocombinación o una subconsulta. El alias suele ser un nombre de tabla abreviado que se utiliza para hacer referencia a columnas específicas de las tablas en una combinación. Si el mismo nombre de columna existe en más de una tabla en una combinación, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere que el nombre de columna sea calificado mediante un nombre de tabla, un nombre de vista o un alias. No se puede utilizar el nombre de la tabla si se ha definido un alias.  
   
  Cuando se usa una tabla derivada, el conjunto de filas o la función con valores de tabla o la cláusula de operador (por ejemplo, PIVOT o UNPIVOT), requerido *aliasTabla* al final de la cláusula es el nombre de tabla asociada para todas las columnas, incluidas las columnas de agrupación Devuelve.  
@@ -206,7 +206,7 @@ FROM { <table_source> [ ,...n ] }
  *user_defined_function*  
  Especifica una función con valores de tabla.  
   
- OPENXML \<openxml_clause >  
+ OPENXML \<openxml_clause>  
 
 **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
@@ -218,17 +218,17 @@ FROM { <table_source> [ ,...n ] }
   
  *derivados* *_table* puede utilizar el [!INCLUDE[tsql](../../includes/tsql-md.md)] característica de constructor de valor de tabla para especificar varias filas. Por ejemplo, `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. Para obtener más información, vea [Constructor con valores de tabla &#40; Transact-SQL &#41; ](../../t-sql/queries/table-value-constructor-transact-sql.md).  
   
- *usar column_alias*  
+ *column_alias*  
  Es un alias opcional para sustituir el nombre de una columna en el conjunto de resultados de la tabla derivada. Incluya un alias de columna para cada columna de la lista de selección y delimite la lista de alias de columna con paréntesis.  
   
- *nombre_tabla_o_vista* FOR SYSTEM_TIME \<system_time >  
+ *table_or_view_name* FOR SYSTEM_TIME \<system_time>  
 
 **Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Especifica que se devuelve una versión específica de datos de la tabla temporal especificada y su tabla de historial de versión del sistema vinculado  
   
-\<tablesample_clause >  
+\<tablesample_clause>  
  Especifica que se devuelva un ejemplo de los datos de la tabla. El ejemplo puede ser aproximado. Esta cláusula se puede utilizar en cualquier tabla principal o combinada de una instrucción SELECT, UPDATE o DELETE. TABLESAMPLE no se puede especificar con vistas.  
   
 > [!NOTE]  
@@ -252,10 +252,10 @@ FROM { <table_source> [ ,...n ] }
  *repeat_seed*  
  Es una expresión de tipo entero constante utilizada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para generar un número aleatorio. *repeat_seed* es **bigint**. Si *repeat_seed* no se especifica, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna un valor de forma aleatoria. Para un determinado *repeat_seed* valor, el resultado del muestreo es siempre el mismo si no se han aplicado ningún cambio a la tabla. El *repeat_seed* expresión debe evaluarse como un entero mayor que cero.  
   
- \<joined_table >  
+ \<joined_table>  
  Es un conjunto de resultados producto de dos o más tablas. Para varias combinaciones, utilice paréntesis para cambiar el orden natural de las combinaciones.  
   
-\<join_type >  
+\<join_type>  
  Especifica el tipo de operación de combinación.  
   
  **INTERNA**  
@@ -270,7 +270,7 @@ FROM { <table_source> [ ,...n ] }
  RIGHT [OUTER]  
  Especifica que todas las filas de la tabla derecha que no cumplan la condición de combinación se incluyan en el conjunto de resultados, con las columnas de resultados de la otra tabla establecidas en NULL, además de todas las filas devueltas por la combinación interna.  
   
-\<las sugerencias join_hint >  
+\<join_hint>  
  Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)], especifica que la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consulta optimizador utiliza una sugerencia de combinación o algoritmo de ejecución por cada combinación especificada en la cláusula FROM de consulta. Para obtener más información, vea [sugerencias de combinación &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-join.md).  
   
  Para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], estas sugerencias de combinación se aplican a combinaciones INNER en dos columnas incompatibles de distribución. Para mejorar el rendimiento puede restringir la cantidad de movimiento de datos que se produce durante el procesamiento de consultas. Sugerencias de la combinación permitida para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] son los siguientes:  
@@ -322,7 +322,7 @@ ON (p.ProductID = v.ProductID);
  *right_table_source*  
  Es un origen de tabla según se ha definido en el argumento anterior. Para obtener más información, vea la sección Comentarios.  
   
- *table_source* PIVOT \<pivot_clause >  
+ *table_source* PIVOT \<pivot_clause>  
  Especifica que la *table_source* se dinamiza según la *pivot_column*. *table_source* es una tabla o expresión de tabla. El resultado es una tabla que contiene todas las columnas de la *table_source* excepto la *pivot_column* y *value_column*. Las columnas de la *table_source*, excepto el *pivot_column* y *value_column*, se llama a las columnas de agrupamiento del operador pivot. Para obtener más información acerca de PIVOT y UNPIVOT, consulte [usar PIVOT y UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
  PIVOT realiza una operación de agrupamiento en la tabla de entrada con respecto a las columnas de agrupamiento y devuelve una fila para cada grupo. Además, la salida contiene una columna para cada valor especificado en el *column_list* que aparece en el *pivot_column* de la *input_table*.  
@@ -337,7 +337,7 @@ ON (p.ProductID = v.ProductID);
  *value_column*  
  Es la columna de valores del operador PIVOT. Cuando se utiliza con UNPIVOT, *value_column* no puede ser el nombre de una columna existente en la entrada *table_source*.  
   
- PARA *pivot_column*  
+ FOR *pivot_column*  
  Es la columna dinámica del operador PIVOT. *pivot_column* debe ser de un tipo convertible de forma implícita o explícita a **nvarchar()**. Esta columna no puede ser **imagen** o **rowversion**.  
   
  Cuando se utiliza UNPIVOT, *pivot_column* es el nombre de la columna de salida restringida a partir del *table_source*. No puede haber una columna existente de *table_source* con ese nombre.  
@@ -347,27 +347,27 @@ ON (p.ProductID = v.ProductID);
   
  En la cláusula UNPIVOT, muestra las columnas de *table_source* que se va a restringir en una sola *pivot_column*.  
   
- *aliasTabla*  
+ *table_alias*  
  Es el nombre de alias de la tabla de salida. *pivot_table_alias* debe especificarse.  
   
  Anulación de DINAMIZACIÓN \< unpivot_clause >  
  Especifica que la tabla de entrada se restringe a partir de varias columnas en *column_list* en una sola columna denominada *pivot_column*. Para obtener más información acerca de PIVOT y UNPIVOT, consulte [usar PIVOT y UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
- COMO de \<Fecha_Hora >  
+ AS OF \<date_time>  
 
 **Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Devuelve una tabla con un único registro por cada fila que contenga los valores que fueran reales (actuales) en el momento determinado especificado en el pasado. Internamente, se realiza una unión entre la tabla temporal y su tabla de historial y los resultados se filtran para devolver los valores de la fila que era válida en el momento en el tiempo especificado por el  *\<Fecha_Hora >* parámetro. El valor de una fila se considera válido si la *system_start_time_column_name* valor es menor o igual que el  *\<Fecha_Hora >* el valor del parámetro y el *system_end_time_ column_name* valor es mayor que el  *\<Fecha_Hora >* el valor del parámetro.   
   
- DE \<start_date_time > TO \<end_date_time >
+ FROM \<start_date_time> TO \<end_date_time>
 
 **Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
   
  Devuelve una tabla con los valores de todas las versiones de registro que estaban activas dentro del intervalo de tiempo especificado, independientemente de si empezaron a ser activas antes del  *\<start_date_time >* valor de parámetro para el campo de argumento o dejaron de estar activa después de la  *\<end_date_time >* valor de parámetro para el argumento TO. Internamente, se realiza una unión entre la tabla temporal y su tabla de historial y los resultados se filtran para devolver los valores de todas las versiones de fila que estaban activas en cualquier momento dentro del intervalo de tiempo especificado. Se incluyen las filas que se activaron exactamente en el límite inferior definido por el extremo FROM y no se incluyen las filas que se activaron exactamente en el límite superior definido por el extremo TO.  
   
- ENTRE \<start_date_time > AND \<end_date_time >  
+ BETWEEN \<start_date_time> AND \<end_date_time>  
 
 **Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
@@ -858,8 +858,8 @@ INNER REDISTRIBUTE JOIN FactInternetSales AS fis
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [OPENQUERY &#40; Transact-SQL &#41;](../../t-sql/functions/openquery-transact-sql.md)   
+ [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [DONDE &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  

@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 43d702accc0611030c1c7ad0eda74d456711b694
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 46c7becb151b1942b411aefe337717172f207bb9
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,12 +45,12 @@ FORMAT ( value, format [, culture ] )
  *value*  
  Expresión de un tipo de datos compatible a la que se va a dar formato. Para obtener una lista de tipos válidos, vea la tabla de la sección Comentarios.  
   
- *formato*  
+ *format*  
  **nvarchar** modelo de formato.  
   
  El *formato* argumento debe contener una cadena de formato de .NET Framework válida, como una cadena de formato estándar (por ejemplo, "C" o "D") o como un modelo de caracteres personalizados para las fechas y los valores numéricos (por ejemplo, "DD de MMMM, aaaa (dddd)") . No se admite el formato compuesto. Para obtener una explicación completa de estos modelos de formato, consulte la documentación de .NET Framework en la cadena de formato en general, fechas personalizado y formatos de hora y formatos de número personalizados. Un buen punto de partida es el tema "[aplicar formato a tipos](http://go.microsoft.com/fwlink/?LinkId=211776)."  
   
- *referencia cultural*  
+ *culture*  
  Opcional **nvarchar** argumento especifica una referencia cultural.  
   
  Si el *referencia cultural* no se proporciona un argumento, se utiliza el idioma de la sesión actual. Este idioma se establece implícitamente, o explícitamente mediante la instrucción SET LANGUAGE. *referencia cultural* acepta cualquier referencia cultural compatible con .NET Framework como argumento; no se limita a los idiomas admitidos explícitamente por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si el *referencia cultural* argumento no es válido, FORMAT producirá un error.  
@@ -81,8 +81,8 @@ FORMAT ( value, format [, culture ] )
 |Numérico|tinyint|Byte|  
 |Numérico|decimal|SqlDecimal|  
 |Numérico|numeric|SqlDecimal|  
-|Numérico|float|Double|  
-|Numérico|real|Single|  
+|Numérico|float|Doble|  
+|Numérico|real|Único|  
 |Numérico|smallmoney|Decimal|  
 |Numérico|money|Decimal|  
 |Fecha y hora|date|DateTime|  
@@ -212,5 +212,7 @@ SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35
   
 ## <a name="see-also"></a>Vea también  
  [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+ [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
+ [Funciones de cadena &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   

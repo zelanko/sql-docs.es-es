@@ -26,15 +26,15 @@ helpviewer_keywords:
 - OVER clause
 ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 caps.latest.revision: "75"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3bb439adf4e60fec1eeda76d2fefce440b9d8700
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d70183e7c52c4fb9eabed51a8df5acc68625397d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - sobre (cláusula de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -125,7 +125,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Especifica la columna o expresión según la cual se va a realizar la ordenación. *order_by_expression* solo puede hacer referencia a las columnas disponibles en la cláusula FROM. No se puede especificar un número entero para representar un nombre de columna o alias.  
   
  COLLATE *collation_name*  
- Especifica que la operación ORDER BY debe realizarse según la intercalación especificada en *collation_name*. *collation_name* puede ser un nombre de intercalación de Windows o un nombre de intercalación de SQL. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE sólo es aplicable para las columnas de tipo **char**, **varchar**, **nchar**, y **nvarchar**.  
+ Especifica que la operación ORDER BY debe realizarse según la intercalación especificada en *collation_name*. *collation_name* puede ser un nombre de intercalación de Windows o un nombre de intercalación de SQL. Para más información, consulte [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE sólo es aplicable para las columnas de tipo **char**, **varchar**, **nchar**, y **nvarchar**.  
   
  **ASC** | DESC  
  Indica que los valores de la columna especificada se deben ordenar en sentido ascendente o descendente. ASC es el criterio de ordenación predeterminado. Los valores NULL se tratan como los valores más bajos posibles.  

@@ -24,17 +24,17 @@ helpviewer_keywords:
 - INTERSECT operator
 ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e3580ace2c5b4295c0fecbfd7239a988137f8949
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 706aeaab949399ab6d235a368fa354c32cc54d98
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="set-operators---except-and-intersect-transact-sql"></a>Juego de operadores - excepto e INTERSECT (Transact-SQL)
+# <a name="set-operators---except-and-intersect-transact-sql"></a>Juego de operadores - EXCEPT e INTERSECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Devuelve filas distintas al comparar los resultados de dos consultas.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- \<*query_specification*> | ( \< *query_expression*>)  
+ \<*query_specification*> | ( \<*query_expression*> )  
  Es una especificación o expresión de consulta que devuelve datos que se van a comparar con los de otra especificación o expresión de consulta. No es preciso que las definiciones de las columnas que forman parte de una operación EXCEPT o INTERSECT sean idénticas, pero deben ser comparables por medio de una conversión implícita. Cuando los tipos de datos difieren, el tipo que se utiliza para realizar la comparación y devolver resultados se determina según las reglas para [prioridad de tipo de datos](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
  Cuando los tipos son los mismos pero varían en cuanto a precisión, escala o longitud, el resultado se determina según las mismas reglas para combinar expresiones. Para más información, vea [Precisión, escala y longitud &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  

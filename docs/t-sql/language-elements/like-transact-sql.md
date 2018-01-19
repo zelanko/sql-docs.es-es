@@ -32,15 +32,15 @@ helpviewer_keywords:
 - NOT LIKE keyword
 ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d8883f7a71a72a005323458bc96ca1d795d86513
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 993ba7467ada3a69fed043e2d6322efa7538b190
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,7 @@ match_expression [ NOT ] LIKE pattern
  *match_expression*  
  Se trata de cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md) del tipo de datos de caracteres.  
   
- *patrón*  
+ *pattern*  
  Es la cadena de caracteres que se va a buscar en específica *match_expression*y pueden incluir los siguientes caracteres comodín válidos. *patrón de* puede tener un máximo de 8.000 bytes.  
   
 |Carácter comodín|Description|Ejemplo|  
@@ -187,7 +187,7 @@ GO
 |Símbolo|Significado|  
 |------------|-------------|  
 |LIKE ‘5[%]’|5 %|  
-|LIKE ‘[_]n’|_N|  
+|LIKE ‘[_]n’|_n|  
 |LIKE ‘[a-cdf]’|a, b, c, d o f|  
 |LIKE ‘[-acdf]’|-, a, c, d o f|  
 |LIKE ‘[ [ ]’|[|  
@@ -357,8 +357,8 @@ ORDER by LastName;
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Expresiones &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [DONDE &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
  

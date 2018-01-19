@@ -32,15 +32,15 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 caps.latest.revision: "94"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1c56150f81604473f87ae9c220ac916be30ce3c8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a709097e12b435cbf32f88e13c067135aa3e77ad
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT (cláusula de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/17/2017
   
  Si *column_list* no se especifica, la tabla debe tener el mismo número de columnas que el conjunto de resultados de salida. Las excepciones son las columnas de identidad y calculadas. Éstas deben omitirse. Si *column_list* se especifica, las columnas omitidas deben permitir valores null o tener predeterminada valores asignados a ellos.  
   
- *output_table* no se puede:  
+ *output_table* cannot:  
   
 -   Tener definidos desencadenadores habilitados.  
   
@@ -138,13 +138,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- Es una referencia explícita a una columna. Cualquier referencia a la tabla que se va a modificar debe certificarse correctamente, ya sea el el prefijo INSERTED o DELETED según corresponda, por ejemplo: INSERTED**.** *column_name*.  
+ Es una referencia explícita a una columna. Cualquier referencia a la tabla que se va a modificar debe certificarse correctamente, ya sea el el prefijo INSERTED o DELETED según corresponda, por ejemplo: INSERTED **. *** column_name*.  
   
  $action  
  Solo está disponible para la instrucción MERGE. Especifica una columna de tipo **nvarchar (10)** en la cláusula OUTPUT en una instrucción MERGE que devuelve uno de estos tres valores para cada fila: 'INSERT', 'UPDATE' o 'DELETE', según la acción que se realizó en esa fila.  
   
 ## <a name="remarks"></a>Comentarios  
- La salida \<dml_select_list > cláusula y la salida \<dml_select_list > INTO {  **@**  *table_variable*  |   *output_table* } pueden definirse en una sola instrucción INSERT, UPDATE, DELETE o MERGE.  
+ La salida \<dml_select_list > cláusula y la salida \<dml_select_list > INTO {**@*** table_variable* | *output_table* } pueden definirse en una única instrucción INSERT, UPDATE, DELETE o MERGE.  
   
 > [!NOTE]  
 >  A menos que se indique lo contrario, las referencias a la cláusula OUTPUT se refieren tanto a la cláusula OUTPUT como a la cláusula OUTPUT INTO.  
@@ -672,7 +672,7 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [tabla &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)   
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   

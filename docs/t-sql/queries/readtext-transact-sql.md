@@ -1,5 +1,5 @@
 ---
-title: READTEXT (Transact-SQL) | Documentos de Microsoft
+title: READTEXT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/24/2017
 ms.prod: sql-non-specified
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - reading columns
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 02bf4a96756b8bf3a63a75dec97fe6f58abc8a6d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 17d233bf75593d8b27a458120dbcb2035bc7d2ec
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,16 +49,16 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *tabla* **.** *columna*  
+ *tabla* **.** *column*  
  Es el nombre de la tabla y de la columna donde se va a leer. Nombres de tablas y columnas deben cumplir las reglas de [identificadores](../../relational-databases/databases/database-identifiers.md). Es necesario especificar los nombres de la tabla y de la columna; sin embargo, es opcional especificar el nombre de la base de datos y del propietario.  
   
  *text_ptr*  
  Es un puntero de texto válido. *text_ptr* debe ser **binary (16)**.  
   
- *desplazamiento*  
+ *offset*  
  Es el número de bytes (cuando la **texto** o **imagen** se utilizan tipos de datos) o caracteres (cuando la **ntext** se utiliza el tipo de datos) que se omiten antes de comenzar a leer el **texto**, **imagen**, o **ntext** datos.  
   
- *tamaño*  
+ *size*  
  Es el número de bytes (cuando la **texto** o **imagen** se utilizan tipos de datos) o caracteres (cuando la **ntext** se utiliza el tipo de datos) de datos que se va a leer. Si *tamaño* es 0, se leen 4 KB de datos.  
   
  HOLDLOCK  

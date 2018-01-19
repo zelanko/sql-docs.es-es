@@ -18,14 +18,14 @@ helpviewer_keywords:
 - hints [SQL Server], locking
 ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
-ms.openlocfilehash: 7f13bd2886aaf2363cde83461f246bf034c89de5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 220cbbb856bc96aa4e44ea5a3d665fc9ce09da77
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="transaction-isolation-levels"></a>Niveles de aislamiento de transacción
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,12 +52,12 @@ ms.lasthandoff: 11/17/2017
   
  En la siguiente tabla se proporciona un resumen de acceso a metadatos en distintos niveles de aislamiento.  
   
-|Nivel de aislamiento|Admitida|Respetado|  
+|Nivel de aislamiento|Compatible|Respetado|  
 |---------------------|---------------|-------------|  
-|READ UNCOMMITTED|No|Sin garantizar|  
+|READ UNCOMMITTED|no|Sin garantizar|  
 |READ COMMITTED|Sí|Sí|  
-|REPEATABLE READ|No|No|  
-|SNAPSHOT ISOLATION|No|No|  
-|SERIALIZABLE|No|No|  
+|REPEATABLE READ|no|no|  
+|SNAPSHOT ISOLATION|no|no|  
+|SERIALIZABLE|no|no|  
   
   

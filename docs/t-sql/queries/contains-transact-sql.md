@@ -36,15 +36,15 @@ helpviewer_keywords:
 - prefix searches [full-text search]
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 caps.latest.revision: "117"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 317b65134ca49dc3305fe03871a88b5c1ad3fadc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6c2f2f2f6bca2048ead7dc9565b5338bc2505c8e
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -178,7 +178,7 @@ CONTAINS (
  \<*contains_search_condition*>  
  Especifica el texto que se va a buscar en *column_name* y las condiciones para una coincidencia.  
   
-*\<contains_search_condition >* es **nvarchar**. Se realiza una conversión implícita cuando se usa otro tipo de datos de carácter como entrada. No se puede usar varchar (max) y nvarchar (max) tipos de datos de cadena grande. En el siguiente ejemplo, la variable `@SearchWord`, definida como una variable de tipo `varchar(30)`, provoca una conversión implícita en el predicado `CONTAINS`.
+*\<contains_search_condition>* is **nvarchar**. Se realiza una conversión implícita cuando se usa otro tipo de datos de carácter como entrada. No se puede usar varchar (max) y nvarchar (max) tipos de datos de cadena grande. En el siguiente ejemplo, la variable `@SearchWord`, definida como una variable de tipo `varchar(30)`, provoca una conversión implícita en el predicado `CONTAINS`.
   
 ```sql  
 USE AdventureWorks2012;  
@@ -204,26 +204,26 @@ WHERE CONTAINS(Description, @SearchWord);
   
  También puede usar la sugerencia de consulta OPTIMIZE FOR para los casos en los que se genera un plan poco óptimo.  
   
- *Word*  
+ *word*  
  Es una cadena de caracteres sin espacios ni signos de puntuación.  
   
- *frase*  
+ *phrase*  
  Es una o varias palabras con espacios entre cada una de ellas.  
   
 > [!NOTE]  
 >  Algunos idiomas, como los de algunas partes de Asia, pueden tener frases que contengan una o varias palabras sin espacios entre ellas.  
   
-\<simple_term >  
+\<simple_term>  
 Especifica una coincidencia para una palabra o frase exactas. Ejemplos de términos simples válidos son "blue berry", blueberry y "Microsoft SQL Server". Las frases tienen que ir entre comillas dobles (""). Las palabras en una frase deben aparecer en el mismo orden que se especifica en  *\<contains_search_condition >* tal y como aparecen en la columna de base de datos. La búsqueda de caracteres en la palabra o la frase no distingue mayúsculas de minúsculas. Las palabras irrelevantes (o [las palabras irrelevantes](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) (como un y, o) en las columnas indizadas de texto completo no se almacenan en el índice de texto completo. Si se utiliza una palabra irrelevante en la búsqueda de una sola palabra, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve un mensaje de error que indica que la consulta contiene solo palabras irrelevantes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye una lista estándar de palabras irrelevantes en el directorio \Mssql\Binn\FTERef de cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Los signos de puntuación se omiten. Por lo tanto, `CONTAINS(testing, "computer failure")` coincide con una fila que contiene el valor "Where is my computer? Failure to find it would be expensive". Para obtener más información sobre el comportamiento del separador de palabras, vea [configurar y administrar separadores de palabras y lematizadores para la búsqueda](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
- \<prefix_term >  
+ \<prefix_term>  
  Especifica la coincidencia de palabras o frases que comiencen con el texto especificado. Incluya un término prefijo entre comillas dobles ("") y agregue un asterisco (\*) antes de la comilla final, para que cualquier texto que comience con el término sencillo especificado antes del asterisco se compara. La cláusula debe especificarse de esta manera:`CONTAINS (column, '"text*"')`. El asterisco representa cero, uno o más caracteres (de la palabra raíz o de las palabras de la palabra o la frase). Si el texto y el asterisco no se delimitan con comillas dobles de modo que el predicado sea `CONTAINS (column, 'text*')`, la búsqueda de texto completo considera el asterisco un carácter y busca coincidencias exactas con `text*`. El motor de texto completo no encontrará palabras con el asterisco (\*) como separadores de palabras suelen omitir dichos caracteres de caracteres.  
   
  Cuando  *\<prefix_term >* es una frase, cada palabra de dicha frase se considera un prefijo separado. Por tanto, una consulta que especifique el prefijo "local wine*" hace que se devuelvan todas las filas que contengan el texto "local winery", "locally wined and dined", etc.  
   
- \<generation_term >  
+ \<generation_term>  
  Especifica la coincidencia de palabras cuando los términos simples incluyen variaciones de la palabra original que se busca.  
   
  INFLECTIONAL  
@@ -234,7 +234,7 @@ Especifica una coincidencia para una palabra o frase exactas. Ejemplos de térmi
  THESAURUS  
  Especifica que se utiliza el diccionario de sinónimos correspondiente al idioma de texto completo de la columna o el idioma especificado en la consulta. El patrón o patrones de mayor el  *\<simple_term >* se comparan con el diccionario de sinónimos y se generan términos adicionales para expandir o reemplazar el patrón original. Si no se encuentra una coincidencia para la totalidad o parte de la  *\<simple_term >*, la parte no coincidente se trata como un *simple_term*. Para obtener más información sobre el diccionario de sinónimos de búsqueda de texto completo, vea [configurar y administrar archivos de diccionario de sinónimos para búsquedas de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
- \<término de proximidad genérico >  
+ \<generic_proximity_term>  
  Especifica una coincidencia de palabras o frases que deben estar en el documento en el que se busca.  
   
 > [!IMPORTANT]  
@@ -249,7 +249,7 @@ Especifica una coincidencia para una palabra o frase exactas. Ejemplos de térmi
   
  Para obtener más información acerca de los términos de proximidad genérico, vea [buscar palabras cerca de otra palabra con NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).  
   
- \<término_proximidad_personalizado >  
+ \<custom_proximity_term>  
 **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
  Especifica una coincidencia entre palabras o frases y, opcionalmente, la distancia máxima permitida entre los términos de búsqueda. También puede especificar que los términos de búsqueda deben encontrarse en el orden exacto en que se especifica (\<orden_coincidencia >).  
@@ -264,7 +264,7 @@ CONTAINS(column_name, 'NEAR(term1,"term3 term4")')
   
  Los parámetros opcionales son los siguientes:  
   
- \<distancia_máxima >  
+ \<maximum_distance>  
  Especifica la distancia máxima permitida entre los términos de búsqueda inicial y final de una cadena para que la cadena se considere una coincidencia.  
   
  *integer*  
@@ -291,12 +291,12 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  **MAX**  
  Devuelve todas las filas que contengan los términos especificados sin tener en cuenta la distancia a la que se encuentran. Ésta es la opción predeterminada.  
   
- \<orden_coincidencia >  
+ \<match_order>  
  Especifica si los términos deben encontrarse en el orden especificado para que los devuelva una consulta de búsqueda. Para especificar \<orden_coincidencia >, también debe especificar \<distancia_máxima >.  
   
  \<orden_coincidencia > toma uno de los siguientes valores:  
   
- **ES TRUE**  
+ **TRUE**  
  Exige que los términos estén en el orden especificado. Por ejemplo, `NEAR(A,B)` solo consideraría como coincidencia `A … B`.  
   
  **FALSE**  
@@ -312,13 +312,13 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
   
  Para obtener más información sobre el uso de términos de proximidad personalizado, consulte [buscar palabras cerca de otra palabra con NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).  
   
- \<weighted_term >  
+ \<weighted_term>  
  Especifica que las filas coincidentes (devueltas por la consulta) coinciden con una lista de palabras y frases a las que se asigna opcionalmente un valor ponderado.  
   
  ISABOUT  
  Especifica la  *\<weighted_term >* (palabra clave).  
   
- PESO (*weight_value*)  
+ WEIGHT(*weight_value*)  
  Especifica el valor de ponderación como un número entre 0,0 y 1,0. Cada componente de  *\<weighted_term >* puede incluir un *weight_value*. *weight_value* es una manera de modificar cómo varias partes de una consulta afectan al valor de rango asignado a cada fila que coincide con la consulta. WEIGHT no influye en los resultados de las consultas CONTAINS, pero sí en el rango de [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) consultas.  
   
 > [!NOTE]  
@@ -358,7 +358,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  Puede utilizar un nombre de cuatro partes en la CONTAINS o [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) predicado de consulta de texto completo indizadas columnas de las tablas de destino en un servidor vinculado. Para preparar un servidor remoto para recibir consultas de texto completo, es necesario crear un índice de texto completo en las tablas y columnas de destino en el servidor remoto y, posteriormente, agregar el servidor remoto como un servidor vinculado.  
   
 ## <a name="comparison-of-like-to-full-text-search"></a>Comparación de LIKE con la búsqueda de texto completo  
- A diferencia de la búsqueda de texto completo, el predicado [LIKE](../../t-sql/language-elements/like-transact-sql.md) de [!INCLUDE[tsql](../../includes/tsql-md.md)] funciona solamente en patrones de caracteres. Además, no es posible utilizar el predicado de LIKE para consultar datos binarios con formato. Por otro lado, una consulta LIKE contra una cantidad grande de datos de texto no estructurados es mucho más lenta que una consulta de texto completo equivalente contra los mismos datos. Una consulta LIKE realizada en millones de filas de datos de texto puede tardar minutos en devolver resultados, mientras que una consulta de texto completo en los mismos datos puede tardar únicamente segundos, en función del número de filas que se devuelvan y su tamaño. También hay que tener en cuenta que LIKE realiza solo un análisis de patrón simple de toda una tabla. Por el contrario, una consulta de texto completo reconoce el lenguaje y aplica transformaciones concretas al realizar el índice y la consulta. Por ejemplo, filtra las palabras irrelevantes y amplía el diccionario de sinónimos y las inflexiones. Estas transformaciones contribuyen a mejorar los resultados de las consultas de texto completo y su orden final.  
+ A diferencia de la búsqueda de texto completo, el [como](../../t-sql/language-elements/like-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] predicado funciona en patrones de caracteres solo. Además, no es posible utilizar el predicado de LIKE para consultar datos binarios con formato. Por otro lado, una consulta LIKE contra una cantidad grande de datos de texto no estructurados es mucho más lenta que una consulta de texto completo equivalente contra los mismos datos. Una consulta LIKE realizada en millones de filas de datos de texto puede tardar minutos en devolver resultados, mientras que una consulta de texto completo en los mismos datos puede tardar únicamente segundos, en función del número de filas que se devuelvan y su tamaño. También hay que tener en cuenta que LIKE realiza solo un análisis de patrón simple de toda una tabla. Por el contrario, una consulta de texto completo reconoce el lenguaje y aplica transformaciones concretas al realizar el índice y la consulta. Por ejemplo, filtra las palabras irrelevantes y amplía el diccionario de sinónimos y las inflexiones. Estas transformaciones contribuyen a mejorar los resultados de las consultas de texto completo y su orden final.  
   
 ## <a name="querying-multiple-columns-full-text-search"></a>Consultar varias columnas (búsqueda de texto completo)  
  Puede consultar varias columnas especificando una lista de columnas en las que realizar la búsqueda. Las columnas deben ser de la misma tabla.  
@@ -552,7 +552,7 @@ GO
  [Consultar con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md)   
  [Búsqueda de texto completo](../../relational-databases/search/full-text-search.md)   
  [Crear consultas de búsqueda de texto completo &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
- [DONDE &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [Buscar propiedades de documento con listas de propiedades de búsqueda](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
   

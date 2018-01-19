@@ -25,15 +25,15 @@ helpviewer_keywords:
 - data updates [SQL Server], WRITETEXT statement
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 534fa1494ec97efb8258222f512902d15efa1f36
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d8c66e4a785fd1d731bd55730a8439f5e796b01f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ WRITETEXT [BULK]
 > [!IMPORTANT]  
 >  Recomendamos que la opción BULK no se utilice en las aplicaciones basadas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es posible que esta opción se modifique o quite en versiones futuras de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- *tabla* **.column**  
+ *table* **.column**  
  Es el nombre de la tabla y **texto**, **ntext**, o **imagen** columna que se va a actualizar. Nombres de tablas y columnas deben cumplir las reglas de [identificadores](../../relational-databases/databases/database-identifiers.md). La especificación de los nombres de la base de datos y del propietario es opcional.  
   
  *text_ptr*  
@@ -70,7 +70,7 @@ WRITETEXT [BULK]
  WITH LOG  
  Omitido por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El registro está determinado por el modelo de recuperación vigente para la base de datos.  
   
- *datos*  
+ *data*  
  Es el nombre de **texto**, **ntext** o **imagen** datos que se va a almacenar. *datos* puede ser un literal o un parámetro. La longitud máxima del texto que se pueden insertar interactivamente con WRITETEXT es de 120 KB aproximadamente para **texto**, **ntext**, y **imagen** datos.  
   
 ## <a name="remarks"></a>Comentarios  

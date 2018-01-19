@@ -1,7 +1,7 @@
 ---
-title: Sys.sql_modules (Transact-SQL) | Documentos de Microsoft
+title: sys.sql_modules (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/17/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 496ed3e4d3aad1cea7a0b9c153f4e85da1a46489
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a2ed39676fc1bd477cce716b5c9d86c721df40fe
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="syssqlmodules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Id. de objeto del objeto contenedor. Es único en una base de datos.|  
-|**definición**|**nvarchar(max)**|Texto SQL que define este módulo.<br /><br /> NULL = Cifrado.|  
+|**definition**|**nvarchar(max)**|Texto SQL que define este módulo. Este valor también se puede obtener mediante la [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) función integrada.<br /><br /> NULL = Cifrado.|  
 |**uses_ansi_nulls**|**bit**|Módulo creado con SET ANSI_NULLS ON.<br /><br /> Siempre será = 0 para reglas y valores predeterminados.|  
 |**uses_quoted_identifier**|**bit**|Módulo creado con SET QUOTED_IDENTIFIER ON.|  
 |**is_schema_bound**|**bit**|El módulo se ha creado con la opción SCHEMABINDING.<br /><br /> Siempre contiene el valor 1 para los procedimientos almacenados generados de forma nativa.|  

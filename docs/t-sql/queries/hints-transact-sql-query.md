@@ -60,11 +60,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c678854df4be6f4d228ad3c02edd8ee29bc9d0e8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: MT
+ms.openlocfilehash: b394e34eaf3a8389f4aae97e2676e07ece301c2d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="hints-transact-sql---query"></a>Sugerencias (Transact-SQL) - consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -158,7 +158,7 @@ ms.lasthandoff: 01/02/2018
   
  Esta sugerencia de consulta virtualmente no permite el uso directo de vistas indizadas ni índices en vistas indizadas en el plan de consulta.  
   
- La vista indizada no se expande solo si se hace referencia a la vista directamente en la parte SELECT de la consulta y WITH (NOEXPAND) o WITH (NOEXPAND, INDEX ( *index_value* [ **,***.. .n*])) se especifica. Para obtener más información acerca de la sugerencia de consulta WITH (NOEXPAND), consulte [FROM](../../t-sql/queries/from-transact-sql.md).  
+ La vista indizada no se expande solo si se hace referencia a la vista directamente en la parte SELECT de la consulta y WITH (NOEXPAND) o WITH (NOEXPAND, INDEX ( *index_value* [**, ***.. .n* ])) se especifica. Para obtener más información acerca de la sugerencia de consulta WITH (NOEXPAND), consulte [FROM](../../t-sql/queries/from-transact-sql.md).  
   
  La sugerencia solo afecta a las vistas en la parte SELECT de las instrucciones, incluidas las vistas en las instrucciones INSERT, UPDATE, MERGE y DELETE.  
   
@@ -185,12 +185,12 @@ ms.lasthandoff: 01/02/2018
   
  Impide que la consulta use un índice de almacén de columnas optimizado de memoria no agrupado. Si la consulta contiene la sugerencia de consulta para evitar el uso del índice de almacén de columnas y una sugerencia de índice para usar un índice de almacén de columnas, las sugerencias están en conflicto y la consulta devuelve un error.  
   
- MAX_GRANT_PERCENT = *por ciento*  
+ MAX_GRANT_PERCENT = *percent*  
  La memoria máxima conceder tamaño en porcentaje. Se garantiza que la consulta no debe superar este límite. El límite real puede ser menor si el regulador de recursos configuración es inferior a esto. Los valores válidos oscilan entre 0,0 y 100,0.  
   
 **Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- MIN_GRANT_PERCENT = *por ciento*  
+ MIN_GRANT_PERCENT = *percent*  
  La memoria mínima conceder tamaño en porcentaje = % de límite predeterminado. Se garantiza que la consulta para obtener el máximo (memoria necesaria, grant min) porque requiere al menos la memoria necesaria para iniciar una consulta. Los valores válidos oscilan entre 0,0 y 100,0.  
   
 **Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -201,7 +201,7 @@ ms.lasthandoff: 01/02/2018
  Invalida el **grado máximo de paralelismo** opción de configuración de **sp_configure** y el regulador de recursos para la consulta que se especifica esta opción. La sugerencia de consulta MAXDOP puede superar el valor configurado con sp_configure. Si MAXDOP supera el valor configurado con el regulador de recursos, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] utiliza el valor de MAXDOP del regulador de recursos, se describe en [ALTER WORKLOAD GROUP &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-workload-group-transact-sql.md). Todas las reglas semánticas utilizadas con la **grado máximo de paralelismo** opción de configuración son aplicables cuando se utiliza la sugerencia de consulta MAXDOP. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
 > [!WARNING]  
->  Si MAXDOP se establece en cero, el servidor elige el grado máximo de paralelismo.  
+> Si MAXDOP se establece en cero, el servidor elige el grado máximo de paralelismo.  
   
  MAXRECURSION *número*  
  Especifica el número máximo de recursiones permitidas para esta consulta. *número* es un entero no negativo entre 0 y 32767. Cuando se especifica 0, no se aplica ningún límite. Si no se especifica esta opción, el límite predeterminado para el servidor es 100.  
@@ -223,7 +223,7 @@ ms.lasthandoff: 01/02/2018
  *@variable_name*  
  Es el nombre de una variable local que se utiliza en una consulta, a la que se puede asignar un valor para utilizarlo con la sugerencia de consulta OPTIMIZE FOR.  
   
- *DESCONOCIDO*  
+ *UNKNOWN*  
  Indica al optimizador de consultas que use datos estadísticos en lugar del valor inicial para determinar el valor de una variable local durante la optimización de la consulta.  
   
  *literal_constant*  
@@ -240,7 +240,7 @@ ms.lasthandoff: 01/02/2018
  Especifica las reglas de parametrización que aplica el optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se compila la consulta.  
   
 > [!IMPORTANT]  
->  La sugerencia de consulta PARAMETERIZATION solo puede especificarse en una guía de plan. No se puede especificar directamente en una consulta.  
+> La sugerencia de consulta PARAMETERIZATION solo puede especificarse en una guía de plan. No se puede especificar directamente en una consulta.  
   
  SIMPLE indica al optimizador de consultas para que intente la parametrización simple. FORCED indica al optimizador que intente la parametrización forzada. La sugerencia de consulta PARAMETERIZATION se utiliza para invalidar la configuración actual de la opción SET de base de datos PARAMETERIZATION de una guía de plan. Para obtener más información, consulte [especificar comportamiento de parametrización de consultas mediante guías de Plan utilizando](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
   
@@ -254,11 +254,10 @@ ms.lasthandoff: 01/02/2018
   
  Si no es posible realizar tal plan, el optimizador de consultas devuelve un error en lugar de diferir la detección de errores hasta la ejecución de la consulta. Las filas pueden contener columnas de longitud variable; el [!INCLUDE[ssDE](../../includes/ssde-md.md)] permite definir filas con un tamaño potencial máximo que supere la capacidad del [!INCLUDE[ssDE](../../includes/ssde-md.md)] para procesarlas. Normalmente, a pesar del tamaño potencial máximo, una aplicación almacena filas cuyo tamaño real se encuentra dentro de los límites que puede procesar el [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Si el [!INCLUDE[ssDE](../../includes/ssde-md.md)] encuentra una fila demasiado larga, devuelve un error de ejecución.  
  
- Sugerencia de USE ( **'***hint_name***'** )  
- **Se aplica a**: se aplica a SQL Server (a partir de 2016 SP1) y la base de datos de SQL Azure.
+<a name="use_hint"></a>Sugerencia de USE ( **'***hint_name***'** )  
+ **Se aplica a**: se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
  
  Proporciona una o varias sugerencias adicionales para el procesador de consultas según lo especificado por un nombre de la sugerencia **entre comillas simples**. 
-  **Se aplica a**: a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
 
  Se admiten los siguientes nombres de sugerencia:
  
@@ -291,7 +290,7 @@ ms.lasthandoff: 01/02/2018
  USE PLAN N**'***xml_plan***'**  
  Obliga al optimizador de consultas a usar un plan de consulta existente para una consulta que se especifica por **'***xml_plan***'**. USE PLAN no puede especificarse con las instrucciones INSERT, UPDATE, MERGE ni DELETE.  
   
-Sugerencia de tabla **(***exposed_object_name* [ **,** \<sugerenciatabla > [ [**,** ]...  *n*  ] ] **)** Aplica la sugerencia de tabla especificada a la tabla o vista que corresponde a *exposed_object_name*. Se recomienda usar una sugerencia de tabla como una sugerencia de consulta únicamente en el contexto de un [Guía de plan](../../relational-databases/performance/plan-guides.md).  
+Sugerencia de tabla  **(*** exposed_object_name* [ **,** \<sugerenciatabla > [[**,**]...  *n*  ]] **)** Aplica la sugerencia de tabla especificada a la tabla o vista que corresponde a *exposed_object_name*. Se recomienda usar una sugerencia de tabla como una sugerencia de consulta únicamente en el contexto de un [Guía de plan](../../relational-databases/performance/plan-guides.md).  
   
  *exposed_object_name* puede ser una de las siguientes referencias:  
   
@@ -301,7 +300,7 @@ Sugerencia de tabla **(***exposed_object_name* [ **,** \<sugerenciatabla > [ [**
   
  Cuando *exposed_object_name* se especifica sin también especificar una sugerencia de tabla, los índices especificados en la consulta como parte de una sugerencia de tabla para el objeto se descartan y uso de índice viene determinado por el optimizador de consultas. Puede emplear esta técnica para eliminar el efecto de una sugerencia de tabla INDEX cuando no se puede modificar la consulta original. Vea el ejemplo J.  
   
-**\<sugerenciatabla >:: =** {[NOEXPAND] {INDEX ( *index_value* [,...*n* ] ) | ÍNDICE = ( *index_value* ) | FORCESEEK [**(***index_value***(***index_column_name* [**,**...] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | INSTANTÁNEA | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK} es la sugerencia de tabla para aplicar a la tabla o vista que corresponde a *exposed_object_name* como una sugerencia de consulta. Para obtener una descripción de estas sugerencias, vea [sugerencias de tabla &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<sugerenciatabla >:: =** {[NOEXPAND] {INDEX ( *index_value* [,... *n* ] ) | ÍNDICE = ( *index_value* ) | FORCESEEK [**(***index_value***(*** index_column_name* [**,**...] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | INSTANTÁNEA | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK} es la sugerencia de tabla para aplicar a la tabla o vista que corresponde a *exposed_object_name* como una sugerencia de consulta. Para obtener una descripción de estas sugerencias, vea [sugerencias de tabla &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Las sugerencias de tabla distintas de INDEX, FORCESCAN y FORCESEEK no están permitidas como sugerencias de consulta, a menos que la consulta ya tenga una cláusula WITH que especifique la sugerencia de tabla. Para obtener más información, vea la sección Comentarios.  
   
@@ -554,9 +553,9 @@ GO
 ```  
     
 ## <a name="see-also"></a>Vea también  
- [Sugerencias de &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
+ [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
- [sp_control_plan_guide &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
+ [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
  [Marcas de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - searched CASE expression
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 283484ce00b3f0c19dea00b47826926a2b86df43
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: df29d72722d665e9595105a01a3a89841ec2b4ac
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,16 +79,16 @@ END
  *input_expression*  
  Es la expresión evaluada cuando se utiliza el formato CASE sencillo. *input_expression* se trata de cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- Cuando *when_expression*  
+ WHEN *when_expression*  
  Es una expresión simple que *input_expression* se compara cuando se utiliza el formato CASE sencillo. *when_expression* es cualquier expresión válida. Los tipos de datos de *input_expression* y cada *when_expression* deben ser iguales o deben ser una conversión implícita.  
   
- A continuación, *result_expression*  
+ THEN *result_expression*  
  Es la expresión devuelta cuando *input_expression* es igual a *when_expression* se evalúa como TRUE, o *Boolean_expression* se evalúa como TRUE. *expresión de resultado* se trata de cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  ELSE *else_result_expression*  
  Es la expresión que se devuelve si ninguna comparación se evalúa como TRUE. Si se omite este argumento y ninguna comparación se evalúa como TRUE, CASE devuelve NULL. *else_result_expression* es cualquier expresión válida. Los tipos de datos de *else_result_expression* y cualquier *result_expression* deben ser iguales o deben ser una conversión implícita.  
   
- Cuando *Boolean_expression*  
+ WHEN *Boolean_expression*  
  Es la expresión booleana que se evalúa cuando se utiliza el formato CASE de búsqueda. *Boolean_expression* es cualquier expresión booleana válida.  
   
 ## <a name="return-types"></a>Tipos devueltos  
@@ -355,11 +355,11 @@ WHERE SalariedFlag = 0;
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Expresiones &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [COALESCE &#40; Transact-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
- [IIF &#40; Transact-SQL &#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
- [Elija &#40; Transact-SQL &#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
+ [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
+ [IIF &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
+ [CHOOSE &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
   
   
 

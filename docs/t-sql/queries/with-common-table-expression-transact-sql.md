@@ -28,15 +28,15 @@ helpviewer_keywords:
 - clauses [SQL Server], WITH common_table_expression
 ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 caps.latest.revision: "60"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: a45cb91754fdff2aaafb90d33b7d89a70702dfb2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3b0f259b51b993c777b27fe8c43c58268ca3dace
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +63,7 @@ Es un identificador válido para la expresión de tabla común. *expression_name
  *column_name*  
  Especifica un nombre de columna en la expresión de tabla común. No se permiten nombres duplicados en una misma definición de CTE. El número de nombres de columna especificado debe coincidir con el número de columnas del conjunto de resultados de la *definiciones*. La lista de nombres de columna es opcional solamente si en la definición de la consulta se suministran nombres diferentes para todas las columnas resultantes.  
   
- *Definiciones*  
+ *CTE_query_definition*  
  Especifica una instrucción SELECT cuyo conjunto de resultados llena la expresión de tabla común. La instrucción SELECT para *definiciones* debe cumplir los mismos requisitos que para crear una vista, excepto una CTE no puede definir otra expresión CTE. Para obtener más información, vea la sección Comentarios y [CREATE VIEW &#40; Transact-SQL &#41; ](../../t-sql/statements/create-view-transact-sql.md).  
   
  Si más de un *definiciones* está definido, las definiciones de consulta deben combinarse mediante uno de estos operadores de conjuntos: UNION ALL, UNION, EXCEPT o INTERSECT.  
@@ -528,7 +528,7 @@ WHERE Generation.ID = Person.ID;
 GO  
 ```  
   
-###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a>K. Utilizar funciones analíticas en una CTE recursiva  
+###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> K. Utilizar funciones analíticas en una CTE recursiva  
  En el siguiente ejemplo se muestra un error que puede producirse al utilizar una función analítica o de agregado en la parte recursiva de una CTE.  
   
 ```  

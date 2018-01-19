@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a924bb7f9eb521e3c9637e69aeb5055c69bfeb11
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1f3a1ef2b55b2f67b6b2e01ceb1965a5076e8476
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -42,7 +42,7 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-*valor_cadena*  
+*string_value*  
 Valor de cadena que se va a concatenar con los demás valores.
   
 ## <a name="return-types"></a>Tipos de valor devuelto
@@ -57,7 +57,7 @@ El tipo devuelto depende del tipo de los argumentos. En la tabla siguiente se mu
 |---|---|
 |Si cualquier argumento es un tipo de sistema SQL-CLR, SQL-CLR UDT o `nvarchar(max)`|**nvarchar(max)**|  
 |En caso contrario, si algún argumento es **varbinary (max)** o **varchar (max)**|**varchar (max)** a menos que uno de los parámetros sea un **nvarchar** de cualquier longitud. Si es así, a continuación, el resultado es **nvarchar (max)**.|  
-|En caso contrario, si algún argumento es **nvarchar**(< = 4000)|**nvarchar**(< = 4000)|  
+|En caso contrario, si algún argumento es **nvarchar**(< = 4000)|**nvarchar**(<= 4000)|  
 |De lo contrario, en todos los demás casos|**varchar**(< = 8000) a menos que uno de los parámetros sea un nvarchar de cualquier longitud. Si es así, a continuación, el resultado es **nvarchar (max)**.|  
   
 Cuando los argumentos son < = 4000 para **nvarchar**, o < = 8000 para **varchar**, las conversiones implícitas pueden afectar a la longitud del resultado. Otros tipos de datos tienen distintas longitudes cuando se convierten implícitamente a cadenas. Por ejemplo, un **int** (14) tiene una longitud de cadena de 12, mientras que un **float** tiene una longitud de 32. Por tanto, el resultado de concatenar dos enteros tiene una longitud no menor que 24.
@@ -108,8 +108,16 @@ NameLastname
 ```  
   
 ## <a name="see-also"></a>Vea también
-[Funciones de cadena (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
-[CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)   
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)   
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
+ [Funciones de cadena &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
 
 

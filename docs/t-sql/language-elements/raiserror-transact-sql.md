@@ -30,15 +30,15 @@ helpviewer_keywords:
 - messages [SQL Server], RAISERROR statement
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 caps.latest.revision: "73"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: eaebe21d731916e0ed6906e7d916df4c8cac2d90
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: de9b90e46c344c4d287d677c9aa17e5d635aca6d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,7 +82,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  Los parámetros que pueden utilizarse en *msg_str* son:  
   
- *marca*  
+ *flag*  
   
  Es un código que determina el espaciado y la justificación del valor sustituido.  
   
@@ -94,7 +94,7 @@ RAISERROR ( { msg_str | @local_variable }
 |# (número)|Prefijo 0x del tipo hexadecimal de x o X|Cuando se utiliza con el formato o, x o X, la marca del signo de número (#) se coloca delante de los valores distintos de cero con 0, 0x o 0X, respectivamente. Cuando d, i, o u llevan delante la marca del signo de número (#), se omite la marca.|  
 |' ' (espacio en blanco)|Relleno con espacios|Coloca delante del valor de salida espacios en blanco si el valor tiene signo y es positivo. Se omite cuando se incluye con la marca del signo más (+).|  
   
- *Ancho*  
+ *width*  
   
  Es un entero que define el ancho mínimo del campo en el que se coloca el valor del argumento. Si la longitud del valor del argumento es igual o mayor que *ancho*, el valor se imprime sin relleno. Si el valor es menor que *ancho*, el valor se rellena hasta la longitud especificada en *ancho*.  
   
@@ -126,10 +126,10 @@ RAISERROR ( { msg_str | @local_variable }
 > [!NOTE]  
 >  Para convertir un valor para el [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint** tipo de datos, especifique **% I64d**.  
   
- **@***local_variable*  
- Es una variable de cualquier tipo de datos de carácter válido que contiene una cadena con formato de la misma manera que *msg_str*. **@***local_variable* debe ser **char** o **varchar**, o se pueda convertir implícitamente a estos tipos de datos.  
+ **@** *local_variable*  
+ Es una variable de cualquier tipo de datos de carácter válido que contiene una cadena con formato de la misma manera que *msg_str*. **@*** local_variable* debe ser **char** o **varchar**, o se pueda convertir implícitamente a estos tipos de datos.  
   
- *gravedad*  
+ *severity*  
  Es el nivel de gravedad definido por el usuario asociado a este mensaje. Cuando se usa *msg_id* para generar un mensaje definido por el usuario creado mediante sp_addmessage, la gravedad especificada en RAISERROR invalida la gravedad especificada en sp_addmessage.  
   
  Todos los usuarios pueden especificar los niveles de gravedad del 0 al 18. Niveles de gravedad entre 19 y 25 solo pueden especificarse los miembros del rol sysadmin rol fijo de servidor o los usuarios con permisos ALTER TRACE. Para los niveles de gravedad del 19 al 25, se necesita la opción WITH LOG. Los niveles de gravedad menores que 0 se interpretan como 0. Los niveles de gravedad mayores que 25 se interpretan como 25.  
@@ -150,18 +150,18 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  An invalid parameter or option was specified for procedure 'mysp_CreateCustomer'.
  ```  
   
- *estado*  
+ *state*  
  Entero entre 0 y 255. Valor predeterminado de los valores negativos en 1. Los valores mayores que 255 no deben usarse. 
   
  Si se genera el mismo error definido por el usuario en varias ubicaciones, el uso de un único número de estado para cada ubicación puede ayudar a averiguar qué sección del código está generando los errores.  
   
- *argumento*  
+ *argument*  
  Son los parámetros utilizados en la sustitución de las variables definidas en *msg_str* o el mensaje correspondiente a *msg_id*. Puede haber 0 o más parámetros de sustitución, pero el número total no puede superar 20. Cada parámetro de sustitución puede ser una variable local o cualquiera de estos tipos de datos: **tinyint**, **smallint**, **int**, **char**, **varchar**, **nchar**, **nvarchar**, **binario**, o **varbinary**. No se admiten otros tipos de datos.  
   
  *Opción*  
  Es una opción personalizada del error. Puede tener uno de los valores de la tabla siguiente.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |LOG|Registra el error en el registro de errores y el registro de aplicación para la instancia de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Los errores guardados en el registro de errores tienen un límite máximo de 440 bytes. Solo los miembros del rol fijo de servidor sysadmin o un usuario con permisos ALTER TRACE pueden especificar WITH LOG.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|Envía inmediatamente los mensajes al cliente.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
@@ -289,10 +289,10 @@ GO
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
- [sp_addmessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
- [sp_dropmessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
+ [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
- [xp_logevent &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/xp-logevent-transact-sql.md)   
+ [xp_logevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logevent-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   

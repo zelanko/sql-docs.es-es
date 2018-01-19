@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4407538e956f268f4d9bb868c1fcb70c2447cf6b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2c78c77953dc60bdcd73ec29ba542a12478783fb
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ SUBSTRING ( expression ,start , length )
  *expression*  
  Es un **caracteres**, **binario**, **texto**, **ntext**, o **imagen**[expresión](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- *Inicio*  
+ *start*  
  Es un entero o **bigint** expresión que especifica dónde comienzan los caracteres devueltos. (La numeración es 1 significado en función, que el primer carácter de la expresión es 1). Si *iniciar* es menor que 1, la expresión devuelta comenzará en el primer carácter que se especifica en *expresión*. En este caso, el número de caracteres que se devuelve es el mayor valor de la suma de *iniciar* + *longitud*– 1 o 0. Si *iniciar* es mayor que el número de caracteres de la expresión de valor, se devuelve una expresión de longitud cero.  
   
  *length*  
@@ -63,7 +63,7 @@ SUBSTRING ( expression ,start , length )
   
 |Expresión especificada|Tipo de valor devuelto|  
 |--------------------------|-----------------|  
-|**char**/**varchar**/**texto**|**varchar**|  
+|**char**/**varchar**/**text**|**varchar**|  
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
 |**binario**/**varbinary**/**imagen**|**varbinary**|  
   
@@ -73,7 +73,7 @@ SUBSTRING ( expression ,start , length )
  El *expresión* debe ser **varchar (max)** o **varbinary (max)** cuando el *iniciar* o *longitud* contiene un valor mayor que 2147483647.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres adicionales (pares suplentes)  
- Al utilizar intercalaciones de caracteres suplementarios (SC), ambos *iniciar* y *longitud* contarán cada par suplente *expresión* como un único carácter. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Al utilizar intercalaciones de caracteres suplementarios (SC), ambos *iniciar* y *longitud* contarán cada par suplente *expresión* como un único carácter. Para más información, consulte [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -92,9 +92,9 @@ WHERE database_id < 5;
 |name |Initial |ThirdAndFourthCharacters|
 |---|--|--|
 |maestra  |m  |St |
-|tempdb  |t  |módulo de administración |
+|tempdb  |t  |mp |
 |model   |m  |de |
-|msdb    |m  |base de datos |
+|msdb    |m  |db |
 
 
   
@@ -222,6 +222,12 @@ bcd
 ```  
   
 ## <a name="see-also"></a>Vea también  
+ [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
+ [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
  [Funciones de cadena &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   

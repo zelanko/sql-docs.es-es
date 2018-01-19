@@ -22,15 +22,15 @@ helpviewer_keywords:
 - declaring variables
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 caps.latest.revision: "76"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 182e3443a9baf73fdbda096c11b4320feb53edda
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 70bfea2777f5f96769d4296c8fbb7f2acbd20e4f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="declare-localvariable-transact-sql"></a>DECLARAR @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,7 +95,7 @@ DECLARE
   
  Para obtener más información acerca de los tipos de datos del sistema, consulte [tipos de datos &#40; Transact-SQL &#41; ](../../t-sql/data-types/data-types-transact-sql.md). Para obtener más información acerca de los tipos de datos de alias o tipos definidos por el usuario CLR, vea [CREATE TYPE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-type-transact-sql.md).  
   
- =*valor*  
+ =*value*  
  Asigna un valor a la variable en línea. El valor puede ser una constante o una expresión, pero debe coincidir con el tipo de declaración de la variable o poder convertirse implícitamente a ese tipo. Para obtener más información, vea [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 @*cursor_variable_name*  
@@ -132,16 +132,16 @@ Define la **tabla** tipo de datos. La declaración de tabla incluye definiciones
  DEFAULT  
  Especifica el valor suministrado para la columna cuando no se ha especificado explícitamente un valor durante una inserción. Las definiciones DEFAULT se pueden aplicar a cualquier columna excepto los definidos como **timestamp** o aquellos con la propiedad IDENTITY. Las definiciones DEFAULT desaparecen cuando se quita la tabla. Solo se puede utilizar un valor constante como valor predeterminado, por ejemplo, una cadena de caracteres, una función del sistema como SYSTEM_USER() o el valor NULL. Para mantener la compatibilidad con las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se puede asignar un nombre de restricción a DEFAULT.  
   
- *expresiónConstante*  
+ *constant_expression*  
  Es una constante, el valor NULL o una función del sistema que se utiliza como el valor predeterminado de una columna.  
   
  IDENTITY  
  Indica que la nueva columna es una columna de identidad. Cuando se agrega una nueva fila a la tabla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un valor incremental único para la columna. Las columnas de identidad se utilizan normalmente junto con restricciones PRIMARY KEY para que actúen como identificador exclusivo de fila para la tabla. La propiedad IDENTITY se puede asignar a **tinyint**, **smallint**, **int**, **decimal(p,0)**, o **numeric(p,0)** columnas. Solo se puede crear una columna de identidad para cada tabla. Las restricciones DEFAULT y los valores predeterminados enlazados no se pueden utilizar en las columnas de identidad. Se debe especificar los dos argumentos, seed e increment, o ninguno. Si no se especifica ninguno, el valor predeterminado es (1,1).  
   
- *valor de inicialización*  
+ *seed*  
  Es el valor que se utiliza para la primera fila cargada en la tabla.  
   
- *incremento*  
+ *increment*  
  Es el valor incremental que se agrega al valor de identidad de la fila anterior que se cargó.  
   
  ROWGUIDCOL  
@@ -159,7 +159,7 @@ Define la **tabla** tipo de datos. La declaración de tabla incluye definiciones
  CHECK  
  Es una restricción que exige la integridad del dominio al limitar los valores posibles que se pueden escribir en una o varias columnas.  
   
- *Filter*  
+ *logical_expression*  
  Es una expresión lógica que devuelve TRUE o FALSE.  
   
 ## <a name="remarks"></a>Comentarios  
@@ -321,7 +321,7 @@ WHERE LastName LIKE @lastName AND FirstName LIKE @firstName;
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [tabla &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)   
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [Comparar XML con tipo y XML sin tipo](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)  
   
   

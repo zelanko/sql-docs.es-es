@@ -28,15 +28,15 @@ helpviewer_keywords:
 - syntax [SQL Server], Transact-SQL
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 caps.latest.revision: "55"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: dfc99736884d458bdbce890bfcc4f80185115b29
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f7cb61a12af903aa444462a7a67c9c71231b96fa
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Convenciones de sintaxis de Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/09/2018
 |MAYÚSCULAS|Palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |*cursiva*|Parámetros proporcionados por el usuario para la sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |**Negrita**|Nombres de bases de datos, tablas, columnas e índices, procedimientos almacenados, utilidades, nombres de tipos de datos y texto que debe escribirse exactamente como se muestra.|  
-|**subrayado**|Indica el valor predeterminado que se aplica cuando la cláusula que contiene el valor subrayado se omite en la instrucción.|  
+|**underline**|Indica el valor predeterminado que se aplica cuando la cláusula que contiene el valor subrayado se omite en la instrucción.|  
 |&#124; (barra vertical)|Separa los elementos de sintaxis escritos entre corchetes o llaves. Solo puede utilizar uno de los elementos.|  
 |`[ ]` (corchetes)|Elementos opcionales de sintaxis. No escriba los corchetes.|  
 |{} (llaves)|Elementos obligatorios de sintaxis. No escriba las llaves.|  
@@ -60,15 +60,15 @@ ms.lasthandoff: 01/09/2018
 ## <a name="multipart-names"></a>Nombres de varias partes  
  A menos que se especifique lo contrario, todas las referencias de [!INCLUDE[tsql](../../includes/tsql-md.md)] al nombre de un objeto de base de datos pueden ser un nombre de cuatro partes con el formato siguiente:  
   
- *nombre_servidor* **.** [*database_name*]**.** [*schema_name*]**.** *object_name*  
+ *server_name* **.**[*database_name*]**.**[*schema_name*]**.***object_name*  
   
- | *database_name***.** [*schema_name*]**.** *object_name*  
+ | *database_name***.**[*schema_name*]**.***object_name*  
   
- | *schema_name***.** *object_name*  
+ | *schema_name***.***object_name*  
   
  *| object_name*  
   
- *nombre_servidor*  
+ *server_name*  
  Especifica un nombre de servidor vinculado o un nombre de servidor remoto.  
   
  *database_name*  
@@ -89,13 +89,13 @@ ms.lasthandoff: 01/09/2018
   
 |Formato de referencia a objetos|Description|  
 |-----------------------------|-----------------|  
-|*servidor* **.** *base de datos* **.** *esquema* **.** *objeto*|Nombre de cuatro partes.|  
-|*servidor* **.** *base de datos* **...** *objeto*|Se omite el nombre del esquema.|  
-|*servidor* **...** *esquema* **.** *objeto*|Se omite el nombre de la base de datos.|  
-|*servidor* **...**  *objeto*|Se omiten los nombres de la base de datos y el esquema.|  
-|*base de datos* **.** *esquema* **.** *objeto*|Se omite el nombre del servidor.|  
-|*base de datos* **...** *objeto*|Se omiten los nombres del servidor y el esquema.|  
-|*esquema* **.** *objeto*|Se omiten los nombres del servidor y la base de datos.|  
+|*servidor* **.** *database* **.** *schema* **.** *objeto*|Nombre de cuatro partes.|  
+|*servidor* **.** *database* **..** *objeto*|Se omite el nombre del esquema.|  
+|*server* **..** *schema* **.** *objeto*|Se omite el nombre de la base de datos.|  
+|*server* **...** *object*|Se omiten los nombres de la base de datos y el esquema.|  
+|*database* **.** *schema* **.** *objeto*|Se omite el nombre del servidor.|  
+|*database* **..** *objeto*|Se omiten los nombres del servidor y el esquema.|  
+|*schema* **.** *objeto*|Se omiten los nombres del servidor y la base de datos.|  
 |*objeto*|Se omiten los nombres del servidor, la base de datos y el esquema.|  
   
 ## <a name="code-example-conventions"></a>Convenciones de los ejemplos de código  

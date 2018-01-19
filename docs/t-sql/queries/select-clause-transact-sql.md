@@ -28,15 +28,15 @@ helpviewer_keywords:
 - queries [SQL Server], results
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 caps.latest.revision: "54"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: acc0566abe5865284a39680136f0535e8b801d90
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8aa26314b450d859760f69b61887827b73b456fc
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select-clause-transact-sql"></a>SELECT (cláusula de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ SELECT [ ALL | DISTINCT ]
  \*  
  Especifica que se deben devolver todas las columnas de todas las tablas y vistas de la cláusula FROM. Las columnas se devuelven por tabla o vista, tal como se especifique en la cláusula FROM, en el orden en que se encuentran en la tabla o vista.  
   
- *table_name* | *view_name* | *tabla*_*alias*. *  
+ *table_name* | *view_name* | *table*_*alias*.*  
  Limita el ámbito de la \* a la tabla o vista especificada.  
   
  *column_name*  
@@ -116,10 +116,10 @@ SELECT [ ALL | DISTINCT ]
  *property_name*  
  Es una propiedad pública de *udt_column_name*.  
   
- *Nombre_de_campo*  
+ *field_name*  
  Es un miembro de datos públicos de *udt_column_name*.  
   
- *NombreMétodo*  
+ *method_name*  
  Es un método público de *udt_column_name* que toma uno o más argumentos. *NombreMétodo* no puede ser un método mutador.  
   
  En el ejemplo siguiente se seleccionan los valores de la columna `Location`, definida como de tipo `point`, de la tabla `Cities`, mediante la invocación de un método del tipo denominado `Distance`:  
@@ -163,7 +163,7 @@ FROM Cities;
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplos SELECT &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
- [Expresiones &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   

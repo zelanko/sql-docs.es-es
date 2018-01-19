@@ -1,5 +1,5 @@
 ---
-title: IF... ELSE (Transact-SQL) | Documentos de Microsoft
+title: IF...ELSE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/11/2016
 ms.prod: sql-non-specified
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - IF keyword
 ms.assetid: 676c881f-dee1-417a-bc51-55da62398e81
 caps.latest.revision: "49"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3eca1a794ea4676b8f3922840802ca44791e100d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cddbd853fb167d6eb393dd2ab713414e91545ee1
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ IF Boolean_expression
  *Boolean_expression*  
  Es una expresión que devuelve TRUE o FALSE. Si la expresión booleana contiene una instrucción SELECT, la instrucción SELECT debe ir entre paréntesis.  
   
- { *sql_statement*| *bloqueInstrucción* }  
+ { *sql_statement*| *statement_block* }  
  Es cualquier [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones o agrupación tal como se define mediante el uso de un bloque de instrucciones. A menos que se utilice un bloque de instrucciones, la condición IF o ELSE puede afectar al rendimiento de una sola instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Para definir un bloque de instrucciones, utilice las palabras clave de control de flujo BEGIN y END.  
@@ -96,11 +96,11 @@ ELSE
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [BEGIN... Terminar &#40; Transact-SQL &#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
- [Terminar &#40; BEGIN... Terminar &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)   
+ [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
+ [END &#40;BEGIN...END&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [MIENTRAS &#40; Transact-SQL &#41;](../../t-sql/language-elements/while-transact-sql.md)   
- [CASO &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
+ [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)   
+ [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [Lenguaje de control de flujo &#40; Transact-SQL &#41; ](~/t-sql/language-elements/control-of-flow.md) [ELSE &#40; IF... ELSE &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/else-if-else-transact-sql.md) 
   
   

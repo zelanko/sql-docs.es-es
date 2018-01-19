@@ -24,15 +24,15 @@ helpviewer_keywords:
 - conditionally returning messages [SQL Server]
 ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: bc40ee58fe6037d7ad29ced76232f84fe91c2c15
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 320c54c81b8c4bdb782d4b685816f10150a075e0
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,8 +51,8 @@ PRINT msg_str | @local_variable | string_expr
  *msg_str*  
  Es una cadena de caracteres o una constante de cadena Unicode. Para obtener más información, vea [constantes &#40; Transact-SQL &#41; ](../../t-sql/data-types/constants-transact-sql.md).  
   
- **@***local_variable*  
- Es una variable de cualquier tipo de datos de caracteres válido. **@***local_variable* debe ser **char**, **nchar**, **varchar**, o **nvarchar**, o debe ser capaz de ser convierte implícitamente a esos tipos de datos.  
+ **@** *local_variable*  
+ Es una variable de cualquier tipo de datos de caracteres válido. **@*** local_variable* debe ser **char**, **nchar**, **varchar**, o **nvarchar**, o debe ser capaz de ser convierte implícitamente a esos tipos de datos.  
   
  *string_expr*  
  Es una expresión que devuelve una cadena. Puede incluir valores literales concatenados, funciones y variables. Para obtener más información, vea [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  

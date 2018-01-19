@@ -21,15 +21,15 @@ helpviewer_keywords:
 - OR operator
 ms.assetid: b730a256-4a63-4880-9906-65b05cd9caf2
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 05fcf73b02b0ea1f049db32828bc0eeb5a17d2f6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 49c74e20949b47afd40b154a13e7fe3db5e8ab8c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="or-transact-sql"></a>OR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,9 +59,9 @@ boolean_expression OR boolean_expression
   
 ||TRUE|FALSE|UNKNOWN|  
 |------|----------|-----------|-------------|  
-|**ES TRUE**|TRUE|TRUE|TRUE|  
+|**TRUE**|TRUE|TRUE|TRUE|  
 |**FALSE**|TRUE|FALSE|UNKNOWN|  
-|**DESCONOCIDO**|TRUE|UNKNOWN|UNKNOWN|  
+|**UNKNOWN**|TRUE|UNKNOWN|UNKNOWN|  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se utiliza la vista `vEmployeeDepartmentHistory` para recuperar los nombres del personal de `Quality Assurance` que trabaja en el turno de tarde o en el de noche. Si se omiten los paréntesis, la consulta devuelve los empleados de `Quality Assurance` que trabajan en el turno de tarde y todos los empleados que trabajan en el turno de noche.  
@@ -96,11 +96,11 @@ WHERE BaseRate < 10 OR HireDate >= '2001-01-01';
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Expresiones &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [DONDE &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
 

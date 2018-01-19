@@ -181,5 +181,5 @@
 ### [Foro de SSIS en MSDN](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
 ### [Etiqueta SSIS en Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
 ## Enviar comentarios
-### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
+### [SQL Server Foro de comentarios](https://feedback.azure.com/forums/908035-sql-server)  
 ## [Obtención de documentos en el equipo](../sql-server/sql-server-help-installation.md)

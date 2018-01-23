@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: dec2c20c2450f4db1d0671f365714647c47c7db6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dd263b08584b0ba13f6486e72bcf6c9f083ca896
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="recordset-object-ado"></a>Objeto de conjunto de registros (ADO)
 Representa todo el conjunto de registros de una tabla base o los resultados de un comando ejecutado. En cualquier momento, el **Recordset** objeto hace referencia a solo un único registro dentro del conjunto como el registro actual.  
@@ -54,7 +54,7 @@ Representa todo el conjunto de registros de una tabla base o los resultados de u
   
  Puede usar el [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), **MoveLast**, **MoveNext**, y **MovePrevious** métodos; el [mover](../../../ado/reference/ado-api/move-method-ado.md) método; y el [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), y [filtro](../../../ado/reference/ado-api/filter-property.md) propiedades para volver a colocar el registro actual, suponiendo que el proveedor es compatible con la correspondiente funcionalidad. Solo avance **Recordset** objetos admiten solo el [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) método. Cuando se usa el **mover** métodos para consultar cada registro (o enumerar el **Recordset**), puede usar el **BOF** y **EOF** propiedades para determinar si se ha movido más allá al principio o al final de la **conjunto de registros**.  
   
- Antes de usar cualquier funcionalidad de un **Recordset** objeto, debe llamar a la **admite** método del objeto que se va a comprobar que la funcionalidad es compatible o disponible. No debe utilizar la funcionalidad cuando la **admite** método devuelve false. Por ejemplo, puede usar el **MovePrevious** solo si de método `Recordset.Supports(adMovePrevious)` devuelve **True**. De lo contrario, obtendrá un error, porque la **Recordset** objetos que se han cerrado y deja de estar disponible en la instancia de la funcionalidad. Si no se admite una característica que le interesen, **admite** devolverá false también. En este caso, no debe llamar a la correspondiente propiedad o método en el **Recrodset** objeto.  
+ Antes de usar cualquier funcionalidad de un **Recordset** objeto, debe llamar a la **admite** método del objeto que se va a comprobar que la funcionalidad es compatible o disponible. No debe utilizar la funcionalidad cuando la **admite** método devuelve false. Por ejemplo, puede usar el **MovePrevious** solo si de método `Recordset.Supports(adMovePrevious)` devuelve **True**. De lo contrario, obtendrá un error, porque la **Recordset** objetos que se han cerrado y deja de estar disponible en la instancia de la funcionalidad. Si no se admite una característica que le interesen, **admite** devolverá false también. En este caso, no debe llamar a la correspondiente propiedad o método en el **Recordset** objeto.  
   
  **Conjunto de registros** objetos pueden admitir dos tipos de actualizaciones: inmediata y por lotes. En la actualización inmediata, todos los cambios a los datos se escriben de inmediato en el origen de datos subyacente una vez que se llama a la [actualización](../../../ado/reference/ado-api/update-method.md) método. También puede pasar matrices de valores como parámetros con el [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) y **actualizar** métodos y actualizar simultáneamente varios campos en un registro.  
   

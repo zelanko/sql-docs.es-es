@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b92074c5a43c81673cb3464780ae878d78c14276
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6dbb05ab73e9994d4f3c14a9bdfd919ec48c6f29
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Herramientas y aplicaciones utilizadas en Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Encuentre las herramientas y las aplicaciones que necesitará para la creación de modelos de Analysis Services y administrar bases de datos implementadas.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  Encuentre las herramientas y las aplicaciones que necesitará para la creación de modelos de Analysis Services y administrar bases de datos implementadas.  
   
 ## <a name="analysis-services-model-designers"></a>Diseñadores de modelo de Analysis Services  
  Los modelos se crean mediante plantillas de proyecto de SQL Server Data Tools (SSDT), un shell de Visual Studio. Plantillas de proyecto proporcionan los diseñadores de modelos para crear los objetos de modelo de datos que conforman una solución de Analysis Services. SSDT es una descarga web gratuita que se actualiza mensualmente.
@@ -54,7 +56,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="community-and-third-party-tools"></a>Herramientas de la comunidad y de terceros  
  Consulte la [página de codeplex Analysis Services](http://sqlsrvanalysissrvcs.codeplex.com/) para obtener ejemplos de código de la comunidad. Los[foros](http://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlanalysisservices) pueden ser útiles para buscar recomendaciones de herramientas de terceros compatibles con Analysis Services.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Nivel de compatibilidad de una base de datos Multidimensional](../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [Nivel de compatibilidad para los modelos tabulares](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   

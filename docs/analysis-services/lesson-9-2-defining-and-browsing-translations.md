@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f340e182d8867a1560d1bf31945aced7ecfa0f22
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ac86f038e382be591b8974f36cd03fee6a80144d
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-9-2---defining-and-browsing-translations"></a>Lección 9-2: definir y examinar traducciones
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Una traducción es una representación de los nombres de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objetos en un idioma específico. Entre estos objetos se incluyen grupos de medida, medidas, dimensiones, atributos, jerarquías, KPI, acciones y miembros calculados. Las traducciones ofrecen compatibilidad de servidor para aplicaciones cliente que admitan varios idiomas. Mediante el uso de dicho cliente, éste pasa el identificador local (LCID) a la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], que utiliza el LCID para determinar el conjunto de traducciones que se va a utilizar al proporcionar metadatos para los objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Si un objeto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no contiene una traducción para ese idioma o no contiene una traducción para un objeto determinado, al devolver los metadatos de objeto al cliente se usa el idioma predeterminado. Por ejemplo, si un usuario corporativo de Francia tiene acceso a un cubo de una estación de trabajo con configuración regional francesa, el usuario corporativo verá los títulos y valores de propiedades de miembro en francés si existe una traducción al francés. Sin embargo, si un usuario corporativo de Alemania tiene acceso al mismo cubo desde una estación de trabajo con una configuración regional alemana, verá los títulos y los valores de propiedades de miembro en alemán. Para obtener más información, vea [Traducciones de dimensiones](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), [Traducciones de cubos](../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md)y [Compatibilidad con traducción en Analysis Services](../analysis-services/translation-support-in-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Una traducción es una representación de los nombres de objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en un idioma específico. Entre estos objetos se incluyen grupos de medida, medidas, dimensiones, atributos, jerarquías, KPI, acciones y miembros calculados. Las traducciones ofrecen compatibilidad de servidor para aplicaciones cliente que admitan varios idiomas. Mediante el uso de dicho cliente, éste pasa el identificador local (LCID) a la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], que utiliza el LCID para determinar el conjunto de traducciones que se va a utilizar al proporcionar metadatos para los objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Si un objeto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no contiene una traducción para ese idioma o no contiene una traducción para un objeto determinado, al devolver los metadatos de objeto al cliente se usa el idioma predeterminado. Por ejemplo, si un usuario corporativo de Francia tiene acceso a un cubo de una estación de trabajo con configuración regional francesa, el usuario corporativo verá los títulos y valores de propiedades de miembro en francés si existe una traducción al francés. Sin embargo, si un usuario corporativo de Alemania tiene acceso al mismo cubo desde una estación de trabajo con una configuración regional alemana, verá los títulos y los valores de propiedades de miembro en alemán. Para obtener más información, vea [Traducciones de dimensiones](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), [Traducciones de cubos](../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md)y [Compatibilidad con traducción en Analysis Services](../analysis-services/translation-support-in-analysis-services.md).  
   
 En las tareas de este tema, se definen las traducciones de metadatos de un conjunto limitado de objetos de dimensión de la dimensión Date y de objetos de cubo del cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. Entonces podrá buscar entre estos objetos de dimensión y de cubo para examinar las traducciones de metadatos.  
   
@@ -130,9 +132,9 @@ En las tareas de este tema, se definen las traducciones de metadatos de un conju
     Observe que los nombres de los meses aparecen ahora en francés y que el nombre de la medida aparece ahora también en francés.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
-[Lección 10: definir roles administrativos](../analysis-services/lesson-10-defining-administrative-roles.md)  
+[Lección 10: Definir Roles administrativos](../analysis-services/lesson-10-defining-administrative-roles.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
 [Traducciones de dimensiones](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)  
 [Traducciones de cubo](../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md)  
 [Compatibilidad con traducción en Analysis Services](../analysis-services/translation-support-in-analysis-services.md)  

@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fe4681b3f4125242e51b41ac594bd556d06f058e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f388389edcd3546f94bc120862e8933b3f790c7c
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-5-1---defining-a-referenced-relationship"></a>Lección 5-1: definir una relación referenciada
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Hasta este punto del tutorial, cada dimensión de cubo que definió se basaba en una tabla que estaba directamente vinculada a la tabla de hechos para un grupo de medida mediante una clave principal para la relación de clave externa. En las tareas de este tema, debe vincular la dimensión **Geography** a la tabla de hechos de ventas por distribuidor a través de la dimensión **Reseller** , denominada *dimensión de referencia*. Esto permite a los usuarios dimensionar las ventas de distribuidor por geografía. Para obtener más información, consulte [Definir relaciones referenciadas y propiedades de las relaciones referenciadas](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Hasta este punto del tutorial, cada dimensión de cubo que definió se basaba en una tabla que estaba directamente vinculada a la tabla de hechos para un grupo de medida a través de una relación de clave principal a clave externa. En las tareas de este tema, debe vincular la dimensión **Geography** a la tabla de hechos de ventas por distribuidor a través de la dimensión **Reseller** , denominada *dimensión de referencia*. Esto permite a los usuarios dimensionar las ventas de distribuidor por geografía. Para obtener más información, consulte [Definir relaciones referenciadas y propiedades de las relaciones referenciadas](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
   
 ## <a name="dimensioning-reseller-sales-by-geography"></a>Dimensionar las ventas de distribuidor por geografía  
   

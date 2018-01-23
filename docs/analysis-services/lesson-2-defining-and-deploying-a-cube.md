@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: caa23a04caddbe488111cd2fcb9cf68eb134b59f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8ccb4cd8fc3b9c71b2edec58b57172c4ecb60515
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>Lección 2: Definir e implementar un cubo
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Después de definir una vista del origen de datos en su [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proyecto, está listo para definir un inicial [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Ahora que ha definido una vista del origen de datos en un proyecto de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , está preparado para definir el cubo inicial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 Puede definir un cubo y sus dimensiones en un solo paso mediante el Asistente para cubos. También puede definir una o más dimensiones y usar el Asistente para cubos con objeto de definir un cubo que use dichas dimensiones. Si está diseñando una solución compleja, generalmente empezará definiendo las dimensiones. Para obtener más información, consulte [Dimensiones en modelos multidimensionales](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md) o [Cubos en modelos multidimensionales](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md).  
   
@@ -43,7 +45,7 @@ En esta tarea, debe usar el Asistente para cubos con objeto de definir un cubo d
 [Agregar atributos a dimensiones](../analysis-services/lesson-2-3-adding-attributes-to-dimensions.md)  
 En esta tarea, debe agregar atributos a las dimensiones que creó.  
   
-[Revisar las propiedades de cubo y dimensión](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
+[Revisar las propiedades de dimensión y el cubo](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
 En esta tarea, debe revisar la estructura del cubo que definió utilizando el Asistente para cubos.  
   
 [Implementar un proyecto de Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
@@ -57,10 +59,10 @@ En esta tarea, examinará los datos de cubo y de dimensión usando Excel o el di
   
 ## <a name="see-also"></a>Vea también  
 [Escenario de Tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Creación de modelos multidimensionales &#40;tutorial de Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modelado multidimensional &#40; Tutorial de Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Dimensiones en modelos multidimensionales](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
 [Cubos en modelos multidimensionales](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
-[Configurar las propiedades de un proyecto de Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
+[Configurar propiedades de proyecto de Analysis Services &#40; SSDT &#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
 [Generar proyectos de Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)  
 [Implementar proyectos de Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   

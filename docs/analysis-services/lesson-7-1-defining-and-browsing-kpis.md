@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 88b23c96ad23f4761ca05dafa685cdba026a484a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 304f42d1e177e25a0aa44c071af27c4723647802
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-7-1---defining-and-browsing-kpis"></a>Lección 7-1: definir y examinar KPI
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Para definir los indicadores clave de rendimiento (KPI), define un nombre de KPI y el grupo de medida al que está asociado el KPI. Un KPI se puede asociar con todos los grupos de medida o con un solo grupo de medida. Se definirán entonces los siguientes elementos del KPI:  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Para definir indicadores clave de rendimiento (KPI), deberá primero definir un nombre de KPI y el grupo de medida con el que desea asociar el KPI. Un KPI se puede asociar con todos los grupos de medida o con un solo grupo de medida. Se definirán entonces los siguientes elementos del KPI:  
   
 -   La expresión de valor  
   
@@ -275,5 +277,5 @@ En las tareas de esta lección definirá los KPI del proyecto Tutorial de [!INCL
     Aparecerá el margen de beneficio bruto para la venta de bicicletas por distribuidor en Norteamérica en el tercer trimestre de 2007.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
-[Lección 8: definir acciones](../analysis-services/lesson-8-defining-actions.md)  
+[Lección 8: Definir acciones](../analysis-services/lesson-8-defining-actions.md)  
   

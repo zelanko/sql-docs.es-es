@@ -25,14 +25,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 751680ddab38980f539364dc1566fb94c9816352
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f577134d61829f5c491462901c96f69f0f1e9973
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Escenarios de globalización para Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] almacena y manipula datos y metadatos para los dos modelos de datos tabulares y multidimensionales multilingües. El almacenamiento de datos es Unicode (UTF-16), en los juegos de caracteres que utilizan la codificación Unicode. Si carga datos ANSI en un modelo de datos, los caracteres se almacenan con puntos de código equivalentes de Unicode.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] almacena y manipula datos y metadatos multilingües en modelos de datos tabulares y multidimensionales. El almacenamiento de datos es Unicode (UTF-16), en los juegos de caracteres que utilizan la codificación Unicode. Si carga datos ANSI en un modelo de datos, los caracteres se almacenan con puntos de código equivalentes de Unicode.  
   
  Con la compatibilidad con Unicode, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] puede almacenar datos en cualquiera de los idiomas admitidos por los sistemas operativos de servidor y cliente Windows, y permite la lectura, escritura, ordenación y comparación de datos en todos los juegos de caracteres que se usan en un equipo Windows. Las aplicaciones cliente de BI que consumen datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pueden representar datos en el idioma que elija el usuario, siempre que haya datos en ese idioma dentro del modelo.  
   

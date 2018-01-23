@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4bdf8563587ef08dd89634676a56324dc0191edb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b4cc8514f957d0b9337d8466b5cd130c852b334c
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-1-3---defining-a-data-source-view"></a>Lección 1: 3: definir una vista del origen de datos
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Después de definir los orígenes de datos que va a utilizar en una [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proyecto, el siguiente paso es generalmente definir una vista del origen de datos para el proyecto. Una vista del origen de datos es una sola vista unificada de metadatos de las tablas y vistas especificadas que el origen de datos define en el proyecto. Almacenar metadatos en la vista del origen de datos permite trabajar con los metadatos durante el proceso de desarrollo sin ninguna conexión abierta con ningún origen de datos subyacente. Para más información, vea [Vistas del origen de datos en modelos multidimensionales](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Tras definir los orígenes de datos que utilizará en un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], el paso siguiente generalmente consiste en definir una vista del origen de datos para el proyecto. Una vista del origen de datos es una sola vista unificada de metadatos de las tablas y vistas especificadas que el origen de datos define en el proyecto. Almacenar metadatos en la vista del origen de datos permite trabajar con los metadatos durante el proceso de desarrollo sin ninguna conexión abierta con ningún origen de datos subyacente. Para más información, vea [Vistas del origen de datos en modelos multidimensionales](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
 En la tarea siguiente, definirá una vista del origen de datos que incluye cinco tablas del origen de datos **AdventureWorksDW2012** .  
   
@@ -38,7 +40,7 @@ En la tarea siguiente, definirá una vista del origen de datos que incluye cinco
 3.  En **Orígenes de datos relacionales**, el origen de datos **Adventure Works DW 2012** aparece seleccionado. Haga clic en **Siguiente**.  
   
     > [!NOTE]  
-    > Para crear una vista del origen de datos que se base en varios orígenes de datos, defina primero una vista del origen de datos que se base en un único origen de datos. Este origen de datos luego se llama origen de datos principal. A continuación, puede agregar tablas y vistas a partir de un origen de datos secundario. Al diseñar dimensiones que contengan atributos basados en tablas relacionadas en varios orígenes de datos, puede que necesite definir un origen de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como el origen de datos principal para usar sus capacidades del motor de consultas distribuidas.  
+    > Para crear una vista del origen de datos que se base en varios orígenes de datos, defina primero una vista del origen de datos que se base en un único origen de datos. Este origen de datos luego se llama origen de datos principal. A continuación, puede agregar tablas y vistas a partir de un origen de datos secundario. Al diseñar dimensiones que contengan atributos basados en tablas relacionadas en varios orígenes de datos, tendrá que definir una [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] origen de datos como origen de datos principal para usar sus capacidades de motor de consulta distribuida.  
   
 4.  En la página **Seleccionar tablas y vistas** , seleccione las tablas y vistas de la lista de objetos disponibles del origen de datos seleccionado. Puede filtrar esta lista para ayudarle a seleccionar las tablas y vistas.  
   
@@ -86,7 +88,7 @@ En la tarea siguiente, definirá una vista del origen de datos que incluye cinco
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
 [Modificar los nombres de tabla predeterminados](../analysis-services/lesson-1-4-modifying-default-table-names.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
 [Vistas del origen de datos en modelos multidimensionales](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

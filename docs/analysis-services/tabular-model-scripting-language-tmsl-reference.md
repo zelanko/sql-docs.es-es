@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3e1a38f2d4466c70259d9f58787b88c939459f59
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: de637476cd0aa2577c850062dffebc0e4fc66238
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="tabular-model-scripting-language-tmsl-reference"></a>Scripting Language (TMSL) referencia del modelo tabular
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Tabular Model Scripting Language (TMSL) se muestra la sintaxis de definición de modelo de comandos y objetos de bases de datos de modelo tabular de Analysis Services en el nivel de compatibilidad 1200 o superior. TMSL se comunica con Analysis Services a través del protocolo XMLA, donde el [XMLA. Ejecutar](../analysis-services/xmla/xml-elements-methods-execute.md) método acepta tanto basada en JSON **instrucción** scripts en TMSL, así como los scripts tradicionales basado en XML en [Analysis Services Scripting Language &#40; ASSL para XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  Tabular Model Scripting Language (TMSL) se muestra la sintaxis de definición de modelo de comandos y objetos de bases de datos de modelo tabular de Analysis Services en el nivel de compatibilidad 1200 o superior. TMSL se comunica con Analysis Services a través del protocolo XMLA, donde el [XMLA. Ejecutar](../analysis-services/xmla/xml-elements-methods-execute.md) método acepta tanto basada en JSON **instrucción** scripts en TMSL, así como los scripts tradicionales basado en XML en [Analysis Services Scripting Language &#40; ASSL para XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
   
  Elementos clave de TMSL incluyen lo siguiente:  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 01/08/2018
 
 ||||||  
 |-|-|-|-|-|  
-|**Versión**|**Multidimensional**|**Tabulares 110 x**|**Tabulares 1200.**| **1400 tabular** |
+|**Versión**|**Multidimensionales**|**Tabulares 110 x**|**Tabulares 1200.**| **1400 tabular** |
 |Azure Analysis Services|N/D|N/D|TMSL|TMSL| 
 |SQL Server 2017|ASSL|ASSL|TMSL|TMSL| 
 |SQL Server 2016|ASSL|ASSL|TMSL|TMSL| 

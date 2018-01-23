@@ -39,11 +39,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 47a4d008318277ff684e1c627549187d9aca797a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0d22d6fd46939b435cc0a8a6f25268aea0a192d6
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="cube-properties---multidimensional-model-programming"></a>Programación del modelo de propiedades del cubo - multidimensionales
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Los cubos tienen un número de propiedades que se pueden establecer para modificar el comportamiento de todo el cubo. Estas propiedades se resumen en la tabla siguiente.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/08/2018
 |**AggregationPrefix**|Especifica el prefijo normal que se utiliza para los nombres de agregación.|  
 |**Intercalación**|Especifica el identificador de configuración regional (LCID) y la marca de comparación, separados por un carácter de subrayado. por ejemplo, Latin1_General_C1_AS.|  
 |**DefaultMeasure**|Contiene una expresión MDX (Expresiones multidimensionales) que define la medida predeterminada para el cubo.|  
-|**Descripción**|Proporciona una descripción del cubo, que se puede mostrar en aplicaciones cliente.|  
+|**Description**|Proporciona una descripción del cubo, que se puede mostrar en aplicaciones cliente.|  
 |**ErrorConfiguration**|Contiene valores de control de errores configurables para controlar claves duplicadas, claves desconocidas, límites de error, acciones al detectar errores, archivos de registro de errores y control de claves nulas.|  
 |**EstimatedRows**|Especifica el número de filas estimadas del cubo.|  
 |**ID**|Contiene el identificador único (Id.) del cubo.|  
@@ -71,7 +71,7 @@ ms.lasthandoff: 01/08/2018
 |**ScriptErrorHandlingMode**|Determina el control de errores. Opciones son **IgnoreNone** o **IgnoreAll**|  
 |**Source**|Muestra la vista del origen de datos utilizada para el cubo.|  
 |**StorageLocation**|Especifica la ubicación de almacenamiento del sistema de archivos para el cubo. Si no se especifica ninguna ubicación, se hereda de la base de datos que contiene el objeto de cubo.|  
-|**StorageMode**|Especifica el modo de almacenamiento del cubo. Los valores son **MOLAP**, **ROLAP**, o **HOLAP ***.**|  
+|**StorageMode**|Especifica el modo de almacenamiento del cubo. Los valores son **MOLAP**, **ROLAP**, o **HOLAP**.|  
 |**Visible**|Determina la visibilidad del cubo|  
   
 > [!NOTE]  

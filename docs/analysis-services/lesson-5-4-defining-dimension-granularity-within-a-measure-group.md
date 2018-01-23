@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1cf1f2d08108f5516ad0249d1f8e3c4314b6adf8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d3140b2022e312094df84693acb69b2ea04917a7
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Lección 5-4-definición granularidad de dimensión dentro de un grupo de medida
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Los usuarios desearán dimensionar los datos de hechos con una granularidad o especificidad distinta para distintos fines. Por ejemplo, los datos de venta para las ventas de proveedor o ventas por Internet pueden registrarse cada día, mientras que es posible que la información sobre cuotas de venta solo exista en el nivel de mes o trimestre. En estos casos, los usuarios desearán una dimensión de tiempo con otra granularidad o un nivel de detalle distinto para cada una de las distintas tablas de hechos. Si bien puede definirse una nueva dimensión de base de datos como una dimensión de tiempo con esta granularidad diferente, hay una forma más fácil de hacerlo con [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Los usuarios desearán dimensionar los datos de hechos con una granularidad o especificidad distinta para distintos objetivos. Por ejemplo, los datos de venta para las ventas de proveedor o ventas por Internet pueden registrarse cada día, mientras que es posible que la información sobre cuotas de venta solo exista en el nivel de mes o trimestre. En estos casos, los usuarios desearán una dimensión de tiempo con otra granularidad o un nivel de detalle distinto para cada una de las distintas tablas de hechos. Si bien puede definirse una nueva dimensión de base de datos como una dimensión de tiempo con esta granularidad diferente, hay una forma más fácil de hacerlo con [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 De forma predeterminada, cuando en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]se usa una dimensión dentro de un grupo de medida, el nivel de detalle de los datos de esa dimensión se basa en el atributo clave de la dimensión. Por ejemplo, cuando se incluye una dimensión de tiempo en un grupo de medida y el nivel de detalle predeterminado de la dimensión de tiempo es diariamente, el nivel de detalle predeterminado de dicha dimensión dentro del grupo de medida es diariamente. Esto es a menudo muy apropiado, como en el caso de los grupos de medida **Internet Sales** y **Reseller Sales** de este tutorial. No obstante, cuando se incluye una dimensión de este tipo en otros tipos de grupos de medida, como en el grupo de medida de cuotas de venta o de presupuestos, generalmente es más apropiado utilizar un nivel de detalle mensual o trimestral.  
   
@@ -229,7 +231,7 @@ En las tareas de este tema, debe agregar un grupo de medida Sales Quotas y defin
 ## <a name="next-lesson"></a>Lección siguiente  
 [Lección 6: Definir cálculos](../analysis-services/lesson-6-defining-calculations.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
 [Relaciones de dimensión](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [Definir relaciones normales y propiedades de las relaciones normales](../analysis-services/multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)  
 [Trabajar con diagramas en el Diseñador de vistas del origen de datos &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  

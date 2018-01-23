@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8bd25c8fc175d58df10d1a85c0dfc8c434fb84cd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 38cc23d0b24748cf47fac78419d545eea98dea4e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>Lección 6-1: definir miembros calculados
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Los miembros calculados son miembros de una dimensión o un grupo de medida que se definen según una combinación de datos del cubo, operadores aritméticos, números y funciones. Por ejemplo, puede crear un miembro calculado que calcule la suma de dos medidas físicas en el cubo. Las definiciones de miembros calculados se almacenan en cubos pero sus valores se calculan en el momento de la consulta.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Los miembros calculados son miembros de una dimensión o un grupo de medida que se definen según una combinación de datos del cubo, operadores aritméticos, números y funciones. Por ejemplo, puede crear un miembro calculado que calcule la suma de dos medidas físicas en el cubo. Las definiciones de miembros calculados se almacenan en cubos pero sus valores se calculan en el momento de la consulta.  
   
 Para crear un miembro calculado, utilice el comando **Nuevo miembro calculado** en la pestaña **Cálculos** del Diseñador de cubos. Puede crear un miembro calculado dentro de cualquier dimensión, incluida la dimensión de medidas. También puede colocar un miembro calculado en una carpeta para mostrar en el cuadro de diálogo **Propiedades de cálculo** . Para obtener más información, vea [Cálculos](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md), [Cálculos en modelos multidimensionales](../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)y [Crear miembros calculados](../analysis-services/multidimensional-models/create-calculated-members.md).  
   
@@ -296,7 +298,7 @@ En las tareas de este tema se definen medidas calculadas para permitir que los u
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
 [Definir conjuntos con nombre](../analysis-services/lesson-6-2-defining-named-sets.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
 [Cálculos](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  
 [Cálculos en modelos multidimensionales](../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
 [Crear miembros calculados](../analysis-services/multidimensional-models/create-calculated-members.md)  

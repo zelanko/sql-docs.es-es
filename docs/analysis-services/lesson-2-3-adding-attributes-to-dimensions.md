@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d4d2a87b4e387d48c6f9537ee402a10a253bf202
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d48a36254eb24dd59a9f915d6129b090ae2e7ebc
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-3---adding-attributes-to-dimensions"></a>Lección 2: 3: agregar atributos a dimensiones
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Ahora que ha definido las dimensiones, puede rellenarlas con atributos que representan cada elemento de datos de la dimensión. Los atributos suelen estar basados en campos de una vista del origen de datos. Al agregar atributos a una dimensión, puede incluir campos de cualquier tabla de la vista del origen de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Ahora que ha definido las dimensiones, puede rellenarlas con atributos que representan cada elemento de datos de la dimensión. Los atributos suelen estar basados en campos de una vista del origen de datos. Al agregar atributos a una dimensión, puede incluir campos de cualquier tabla de la vista del origen de datos.  
   
 En esta tarea, usará el Diseñador de dimensiones para agregar atributos a las dimensiones Customer y Product. La dimensión Customer incluirá atributos basados en campos de las tablas Customer y Geography.  
   
@@ -130,10 +132,10 @@ En esta tarea, usará el Diseñador de dimensiones para agregar atributos a las 
 5.  En el menú Archivo, haga clic en **Guardar todo**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
-[Revisar las propiedades de cubo y dimensión](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
+[Revisar las propiedades de dimensión y el cubo](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Referencia de las propiedades de los atributos de dimensión](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+[Referencia de propiedades de atributos de dimensión](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   
   

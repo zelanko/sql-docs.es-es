@@ -18,19 +18,21 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 3d535cf6f8bc65ef44393527a46441332fd5aea0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6a2578633c1ccce72d866c40882eaf4c95669d6c
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Tutoriales de Analysis Services (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Esta sección contiene tutoriales de SQL Server Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Esta sección contiene tutoriales de SQL Server Analysis Services.  
   
 [Creación de modelos tabulares &#40;tutorial de Adventure Works&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
 Este tutorial ofrece lecciones sobre cómo crear un modelo tabular básico de Analysis Services para la empresa ficticia, Adventure Works, mediante el uso de SQL Server Data Tools (SSDT).  
   
-[Creación de modelos multidimensionales &#40;tutorial de Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modelado multidimensional &#40; Tutorial de Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 Este tutorial enseñan los conocimientos fundamentales y conceptos de creación de modelos multidimensionales en SSDT. Cuando haya terminado, tendrá una base de datos de cubo basada en datos de Adventure Works que se pueden acceder desde Excel, Reporting Services o cualquier otra aplicación de cliente que se conecta a Analysis Services.  
   
 [Minería de datos](../analysis-services/data-mining-tutorials-analysis-services.md)  

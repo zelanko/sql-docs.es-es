@@ -25,14 +25,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3c2d9626ff12593f6192ab6b3a6bec1bb6ab4a7b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b454d405b6175c200d8be9426fafb7e79be25e70
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="currency-conversions-analysis-services"></a>Conversiones de moneda (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[applies](../includes/applies-md.md)] Multidimensional únicamente  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  [!INCLUDE[applies](../includes/applies-md.md)] Solo multidimensional  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa una combinación de características, guiadas por scripts MDX (Expresiones multidimensionales), para proporcionar compatibilidad con la conversión de divisa en cubos que admiten varias divisas.  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="defining-currency-conversions"></a>Definir las conversiones de moneda  
  Puede utilizar el Asistente de Business Intelligence para definir la funcionalidad de conversión de moneda en un cubo o puede definir manualmente las conversiones de moneda mediante scripts MDX.  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Requisitos previos  
  Antes de que pueda definir una conversión de moneda en un cubo mediante el Asistente de Business Intelligence, debe definir, al menos, una dimensión de moneda, una dimensión temporal y un grupo de medida de tarifas. Desde estos objetos, el Asistente de Business Intelligence puede recuperar los datos y metadatos que se usan para construir la dimensión de moneda del informe y el script MDX necesarios para proporcionar la funcionalidad de conversión de moneda.  
   
 ### <a name="decisions"></a>Decisiones  
@@ -154,7 +156,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="local-currencies"></a>Monedas locales  
  Si elige un tipo de conversión varios a varios o varios a uno para su conversión de moneda, deberá especificar cómo se identifican las monedas locales para las que el script MDX generado por el Asistente de Business Intelligence realiza los cálculos de conversión de moneda. La moneda local de una transacción en una tabla de hechos puede identificarse de una de estas dos formas:  
   
--   El grupo de media contiene una relación de dimensión normal con la dimensión de moneda. Por ejemplo, en la base de datos de ejemplo [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , el grupo de medida Internet Sales tiene una relación de dimensión normal con la dimensión Currency. La tabla de hechos para el grupo de medida contiene una columna de clave externa que hace referencia a los identificadores de moneda de la tabla de dimensiones para dicha dimensión. En este caso, puede seleccionar el atributo de la dimensión de moneda a la que hace referencia el grupo de medida para identificar la moneda local de las transacciones en la tabla de hechos de ese grupo de medida. Esta situación se produce, generalmente, en las aplicaciones bancarias, donde la propia transacción determina la moneda utilizada en la transacción.  
+-   El grupo de media contiene una relación de dimensión normal con la dimensión de moneda. Por ejemplo, en la base de datos de ejemplo [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , el grupo de medida Internet Sales tiene una relación de dimensión normal con la dimensión Currency. La tabla de hechos de ese grupo de medida contiene una columna de clave externa que hace referencia a los identificadores de moneda de la tabla de dimensiones de esa dimensión. En este caso, puede seleccionar el atributo de la dimensión de moneda a la que hace referencia el grupo de medida para identificar la moneda local de las transacciones en la tabla de hechos de ese grupo de medida. Esta situación se produce, generalmente, en las aplicaciones bancarias, donde la propia transacción determina la moneda utilizada en la transacción.  
   
 -   El grupo de medida contiene una relación de dimensión referenciada con la dimensión de moneda a través de otra dimensión que hace referencia directamente a la dimensión de moneda. Por ejemplo, en la base de datos de ejemplo [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , el grupo de medida Financial Reporting tiene una relación de dimensión de referencia con la dimensión Currency a través de la dimensión Organization. La tabla de hechos de ese grupo de medida contiene una columna de clave externa que hace referencia a los miembros de la tabla de dimensiones de la dimensión Organization. A su vez, la tabla de dimensiones de la dimensión Organization contiene una columna de clave externa que hace referencia a los identificadores de moneda de la tabla de dimensiones de la dimensión Currency. Esta situación se produce, generalmente, en las aplicaciones de informes financieros, donde la ubicación o delegación de una transacción determina la moneda de esa transacción. En este caso, puede seleccionar el atributo que hace referencia a la dimensión de la moneda desde la dimensión de la entidad de empresa.  
   

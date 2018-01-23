@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9d10942e6942e4c307bc6c8fed9c7cb391d5f368
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e81b2dda4ddf65105da50dede9b3a82a5436dcec
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>Lección 6-2 - definir conjuntos con nombre
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Un conjunto con nombre es una expresión de expresiones multidimensionales (MDX) que devuelve un conjunto de miembros de dimensión. Puede definir conjuntos con nombre y guardarlos como parte de la definición del cubo; también puede crear conjuntos con nombre en aplicaciones cliente. Puede crear conjuntos con nombre combinando datos del cubo, operadores aritméticos, números y funciones. Los usuarios pueden usar los conjuntos con nombre en consultas MDX en aplicaciones cliente y también pueden usarse para definir conjuntos en subcubos. Un subcubo es una colección de conjuntos unidos de forma cruzada que restringe el espacio del cubo al subespacio definido para instrucciones posteriores. La definición de un espacio del cubo restringido es un concepto fundamental para el scripting de MDX.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Un conjunto con nombre es una expresión de Expresiones multidimensionales (MDX) que devuelve un conjunto de miembros de dimensión. Puede definir conjuntos con nombre y guardarlos como parte de la definición del cubo; también puede crear conjuntos con nombre en aplicaciones cliente. Puede crear conjuntos con nombre combinando datos del cubo, operadores aritméticos, números y funciones. Los usuarios pueden usar los conjuntos con nombre en consultas MDX en aplicaciones cliente y también pueden usarse para definir conjuntos en subcubos. Un subcubo es una colección de conjuntos unidos de forma cruzada que restringe el espacio del cubo al subespacio definido para instrucciones posteriores. La definición de un espacio del cubo restringido es un concepto fundamental para el scripting de MDX.  
   
 Los conjuntos con nombre simplifican las consultas MDX y ofrecen alias útiles para expresiones de conjunto complejas utilizadas con normalidad. Por ejemplo, puede definir un conjunto con nombre denominado Large Resellers que contenga el conjunto de miembros de dimensión Reseller que tenga la mayoría de los empleados. Los usuarios finales podrían entonces utilizar el conjunto con nombre Large Resellers en consultas, o utilizar el conjunto con nombre para definir un conjunto en un subcubo. Las definiciones de los conjuntos con nombre se almacenan, pero sus valores solo existen en la memoria. Para crear un conjunto con nombre, utilice el comando **Nuevo conjunto con nombre** en la pestaña **Cálculos** del Diseñador de cubos. Para obtener más información, consulte [Cálculos](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md), [Crear conjuntos con nombre](../analysis-services/multidimensional-models/create-named-sets.md).  
   
@@ -139,9 +141,9 @@ En las tareas de este tema, definirá dos conjuntos con nombre: un conjunto con 
     ![Panel de filtro que contiene dos denominado establece](../analysis-services/media/l6-named-set-05.gif "establece el panel de filtro que contiene dos denominado")  
   
 ## <a name="next-lesson"></a>Lección siguiente  
-[Lección 7: Definir indicadores clave de rendimiento &#40;KPI&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[Lección 7: Definir indicadores clave de rendimiento &#40; KPI &#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
 [Cálculos](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  
 [Crear conjuntos con nombre](../analysis-services/multidimensional-models/create-named-sets.md)  
   

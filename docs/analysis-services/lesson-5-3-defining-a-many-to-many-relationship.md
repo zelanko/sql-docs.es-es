@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a5edd0a3c672b5186a97423e0cf2d1ad22b8509d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ec51909c0d333ead023cf695b5d63cbdb734f276
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Lección 5: 3: definir una relación de varios a varios
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Al definir una dimensión, normalmente cada hecho se combina con uno y solo un miembro de dimensión, mientras que un único miembro de dimensión puede asociarse a varios hechos distintos. Por ejemplo, cada cliente puede tener varios pedidos, pero cada pedido pertenece a un solo cliente. En terminología de bases de datos relacionales, esto se conoce como *relación uno a varios*. No obstante, algunas veces un único hecho puede combinarse con varios miembros de dimensión. En terminología de bases de datos relacionales, esto se conoce como *relación de varios a varios*. Por ejemplo, un cliente puede tener varios motivos para realizar una compra, y un motivo de compra puede estar asociado a varias compras. Para definir los motivos de venta que se relacionan con cada compra, se utiliza una tabla de combinación. Una dimensión de motivo de venta creada a partir de relaciones de este tipo tendría varios miembros que estarían relacionados a una única transacción de venta. Las dimensiones de varios a varios amplían el modelo dimensional más allá del esquema de estrella y admiten análisis complejos cuando las dimensiones no están directamente relacionadas con una tabla de hechos.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Generalmente, cuando se define una dimensión cada hecho se combina con un único miembro de dimensión, mientras que un mismo miembro puede estar asociado a varios hechos distintos. Por ejemplo, cada cliente puede tener varios pedidos, pero cada pedido pertenece a un solo cliente. En terminología de bases de datos relacionales, esto se conoce como *relación uno a varios*. No obstante, algunas veces un único hecho puede combinarse con varios miembros de dimensión. En terminología de bases de datos relacionales, esto se conoce como *relación de varios a varios*. Por ejemplo, un cliente puede tener varios motivos para realizar una compra, y un motivo de compra puede estar asociado a varias compras. Para definir los motivos de venta que se relacionan con cada compra, se utiliza una tabla de combinación. Una dimensión de motivo de venta creada a partir de relaciones de este tipo tendría varios miembros que estarían relacionados a una única transacción de venta. Las dimensiones de varios a varios amplían el modelo dimensional más allá del esquema de estrella y admiten análisis complejos cuando las dimensiones no están directamente relacionadas con una tabla de hechos.  
   
 En [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], para definir una relación de varios a varios entre una dimensión y un grupo de medida se especifica una tabla de hechos intermedia que está combinada con la tabla de dimensiones. Una tabla de hechos intermedia, a su vez, se combina con una tabla de dimensiones intermedia con la que la tabla de hechos está combinada. Las relaciones de varios a varios entre la tabla de hechos intermedia y las tablas de dimensiones de la relación y la dimensión intermedia crean las relaciones de varios a varios entre los miembros de dimensión primaria y las medidas del grupo de medida especificado por la relación. Para definir una relación de varios a varios entre una dimensión y un grupo de medida a través de un grupo de medida intermedio, el grupo de medida intermedio debe compartir una o varias dimensiones con el grupo de medida original.  
   
@@ -86,7 +88,7 @@ En las tareas de este tema, debe definir la dimensión Sales Reasons y el grupo 
   
 5.  Seleccione **Internet Sales Reason Count** y revise las propiedades de esta medida en la ventana Propiedades.  
   
-    Observe que la propiedad **AggregateFunction** para esta medida está definida como **Recuento** en lugar de como **Suma**. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] seleccionó **Recuento** porque el tipo de datos subyacente es un tipo de datos de cadena. Las otras dos columnas de la tabla de hechos subyacente no estaban seleccionadas como medias porque [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] las detectó como claves numéricas y no como medidas reales. Para obtener más información, consulte [Definir el comportamiento de suma parcial](../analysis-services/multidimensional-models/define-semiadditive-behavior.md).  
+    Observe que la propiedad **AggregateFunction** para esta medida está definida como **Recuento** en lugar de como **Suma**. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]eligió **recuento** porque el tipo de datos subyacente es un tipo de datos de cadena. Las otras dos columnas de la tabla de hechos subyacente no estaban seleccionadas como medias porque [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] las detectó como claves numéricas y no como medidas reales. Para obtener más información, consulte [Definir el comportamiento de suma parcial](../analysis-services/multidimensional-models/define-semiadditive-behavior.md).  
   
 6.  En la ventana Propiedades, cambie la propiedad **Visible** de la medida **Internet Sales Reason Count** a **False**.  
   
@@ -177,10 +179,10 @@ En las tareas de este tema, debe definir la dimensión Sales Reasons y el grupo 
     ![Paneles filtro y datos del Diseñador de cubos](../analysis-services/media/l5-many-to-many-5.gif "paneles filtro y datos del Diseñador de cubos")  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
-[Definir la granularidad de las dimensiones en un grupo de medida](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
+[Definir la granularidad de dimensión en un grupo de medida](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Trabajar con diagramas en el Diseñador de vistas del origen de datos &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+[Trabajar con diagramas en el Diseñador de vistas del origen de datos &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
 [Relaciones de dimensión](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [Definir una relación de varios a varios y las propiedades de las relaciones de varios a varios](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   

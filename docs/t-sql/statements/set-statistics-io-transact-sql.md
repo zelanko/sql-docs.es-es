@@ -31,11 +31,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8d19ec8f11ae314dd4c420ba8b72689169e5e29b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3b2aad11610a23c3686e279daa60c57bf7c8154f
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ SET STATISTICS IO { ON | OFF }
 |Elemento de salida|Significado|  
 |-----------------|-------------|  
 |**Table**|Nombre de la tabla.|  
-|**Recuento de exploraciones**|Número de búsquedas y exploraciones iniciadas tras alcanzar el nivel hoja en cualquier dirección para recuperar todos los valores y generar el conjunto de datos final de la salida.<br /><br /> El recuento de la exploración es 0 si el índice utilizado es un índice único o un índice clúster en una clave principal y está buscando un solo valor. Por ejemplo, `WHERE Primary_Key_Column = <value>`.<br /><br /> El número de exploraciones es 1 cuando está buscando un valor con un índice clúster que no es único y que se define en una columna de clave de no principal. Esto se hace para comprobar si hay valores duplicados para el valor de clave que está buscando. Por ejemplo, `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> El recuento de exploraciones es N si N es el número de exploraciones y búsquedas diferentes comenzó hacia la izquierda o la derecha del nivel hoja después de encontrar un valor de clave mediante la clave de índice.|  
+|**Recuento de exploraciones**|Número de búsquedas y exploraciones iniciadas tras alcanzar el nivel hoja en cualquier dirección para recuperar todos los valores y generar el conjunto de datos final de la salida.<br /><br /> El recuento de la exploración es 0 si el índice utilizado es un índice único o un índice clúster en una clave principal y está buscando un solo valor. Por ejemplo, `WHERE Primary_Key_Column = <value>`.<br /><br /> Recuento de exámenes es 1 cuando está buscando un valor con un índice clúster no único que se define en una columna de clave no principal. Esto se hace para comprobar si hay valores duplicados para el valor de clave que está buscando. Por ejemplo, `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> El recuento de exploraciones es N si N es el número de exploraciones y búsquedas diferentes comenzó hacia la izquierda o la derecha del nivel hoja después de encontrar un valor de clave mediante la clave de índice.|  
 |**lecturas lógicas**|Número de páginas leídas de la caché de datos.|  
 |**lecturas físicas**|Número de páginas leídas del disco.|  
 |**lecturas anticipadas**|Número de páginas llevadas a la caché por la consulta.|  
@@ -103,7 +103,7 @@ lob read-ahead reads 0.
   
 ## <a name="see-also"></a>Vea también  
  [Instrucciones SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [ESTABLECER STATISTICS TIME &#40; Transact-SQL &#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)  
+ [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET STATISTICS TIME &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)  
   
   

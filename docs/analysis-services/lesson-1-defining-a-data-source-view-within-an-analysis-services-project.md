@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d8f91c18a5150bd769c53ac24ad49346a4c6af60
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0fe40b4deeb6fa929be969a0d84a61bcad85f9a1
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Lección 1: definir una vista del origen de datos en un proyecto de Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Diseñar una aplicación de business intelligence en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] comienza con la creación de un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proyecto en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. En este proyecto, debe definir todos los elementos de la solución, empezando por una vista del origen de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Para diseñar una aplicación de Business Intelligence en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , primero debe crear un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. En este proyecto, debe definir todos los elementos de la solución, empezando por una vista del origen de datos.  
   
 Esta lección contiene las siguientes tareas:  
   
@@ -51,5 +53,5 @@ Compare sus resultados en un archivo de proyecto de ejemplo que se creó para es
 [Orígenes de datos admitidos &#40;SSAS - Multidimensionales&#41;](https://msdn.microsoft.com/library/ms175608(v=sql.110).aspx)  
 [Vistas del origen de datos en modelos multidimensionales](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
 [Escenario de Tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Creación de modelos multidimensionales &#40;tutorial de Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modelado multidimensional &#40; Tutorial de Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   

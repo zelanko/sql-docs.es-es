@@ -41,11 +41,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 777f08cf0a05e195ca5086f7af25eb8d95ef4010
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 7c6e52f8e36ed40e18c2aeab162a75c39f186c97
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="create-database-sql-server-transact-sql"></a>CREATE DATABASE (Transact-SQL de SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,10 +55,10 @@ ms.lasthandoff: 01/02/2018
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
-  
+
+Crear una base de datos    
+
 ```  
-  
-      Create a database  
 CREATE DATABASE database_name   
 [ CONTAINMENT = { NONE | PARTIAL } ]  
 [ ON   
@@ -113,10 +113,10 @@ FILEGROUP filegroup name [ [ CONTAINS FILESTREAM ] [ DEFAULT ] | CONTAINS MEMORY
 }  
   
 ```  
-  
+ 
+Adjuntar una base de datos    
+
 ```  
-  
-      Attach a database  
 CREATE DATABASE database_name   
     ON <filespec> [ ,...n ]   
     FOR { { ATTACH [ WITH <attach_database_option> [ , ...n ] ] }  
@@ -128,13 +128,12 @@ CREATE DATABASE database_name
       <service_broker_option>  
     | RESTRICTED_USER  
     | FILESTREAM ( DIRECTORY_NAME = { 'directory_name' | NULL } )  
-}  
-  
+}   
 ```  
   
+Crear una instantánea de base de datos    
+
 ```  
-  
-      Create a database snapshot  
 CREATE DATABASE database_snapshot_name   
     ON   
     (  
@@ -183,14 +182,14 @@ CREATE DATABASE database_snapshot_name
 >  Las bases de datos independientes se intercalan de modo diferente al de las bases de datos dependientes. Vea [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) para obtener más información.  
   
  CON \<opción >  
- -   **\<filestream_options >** 
+ -   **\<filestream_options>** 
   
      NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | COMPLETA}  
 **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
      Especifica el nivel de acceso no transaccional de FILESTREAM a la base de datos.  
   
-    |Valor|Description|  
+    |Value|Description|  
     |-----------|-----------------|  
     |OFF|El acceso no transaccional está deshabilitado.|  
     |READONLY|Los procesos no transaccionales pueden leer los datos de FILESTREAM en esta base de datos.|  
@@ -296,14 +295,15 @@ CREATE DATABASE database_snapshot_name
 -   Si adjunta la base de datos a otra instancia de servidor, independientemente de la versión, debe ejecutar [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) para quitar la replicación una vez completada la operación de adjuntar.  
   
 > [!NOTE]  
->  Adjunte los trabajos con el **vardecimal** el formato de almacenamiento, pero la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] debe actualizarse al menos [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2. No puede adjuntar ninguna base de datos que use el formato de almacenamiento vardecimal a una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información sobre la **vardecimal** el formato de almacenamiento, consulte [compresión de datos](../../relational-databases/data-compression/data-compression.md).  
+> Adjunte los trabajos con el **vardecimal** el formato de almacenamiento, pero la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] debe actualizarse al menos [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2. No puede adjuntar ninguna base de datos que use el formato de almacenamiento vardecimal a una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información sobre la **vardecimal** el formato de almacenamiento, consulte [compresión de datos](../../relational-databases/data-compression/data-compression.md).  
   
  La primera vez que se adjunta una base de datos o se restaura en una instancia nueva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], aún no se ha almacenado una copia de la clave maestra de la base de datos (cifrada por la clave maestra de servicio) en el servidor. Debe usar la instrucción **OPEN MASTER KEY** para descifrar la clave maestra de la base de datos (DMK). Una vez que se ha descifrado la clave maestra de la base de datos, tiene la posibilidad de habilitar el descifrado automático en el futuro usando la instrucción **ALTER MASTER KEY REGENERATE** para proporcionar al servidor una copia de la clave maestra de la base de datos cifrada con la clave maestra de servicio (SMK). Cuando una base de datos se haya actualizado desde una versión anterior, se debe volver a generar la DMK para usar el algoritmo AES más reciente. Para obtener más información sobre cómo volver a generar la DMK, vea [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md). El tiempo necesario para volver a generar la DMK con el fin de actualizarse a AES depende del número de objetos protegidos por la DMK. Solo es necesario volver a generar la DMK una vez y no tiene ningún efecto sobre las nuevas generaciones futuras como parte de una estrategia de rotación de claves. Para obtener información sobre cómo actualizar una base de datos mediante el uso de adjuntar, vea [actualizar una base de datos mediante separar y adjuntar &#40; Transact-SQL &#41; ](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md).  
   
- **Nota de seguridad** se recomienda no adjuntar bases de datos de orígenes desconocidos o que no se confía. Es posible que dichas bases de datos contengan código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Antes de usar una base de datos desde un origen desconocido o no es de confianza, ejecute [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) en la base de datos en un servidor no sea de producción y examine también el código, como procedimientos almacenados u otro código definido por el usuario, en la base de datos.  
+> [!IMPORTANT]  
+> Se recomienda no adjuntar bases de datos de orígenes desconocidos o que no sean de confianza. Es posible que dichas bases de datos contengan código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Antes de usar una base de datos desde un origen desconocido o no es de confianza, ejecute [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) en la base de datos en un servidor no sea de producción y examine también el código, como procedimientos almacenados u otro código definido por el usuario, en la base de datos.  
   
 > [!NOTE]  
->  El **TRUSTWORTHY** y **DB_CHAINING** opciones no tienen ningún efecto cuando se adjunta una base de datos.  
+> El **TRUSTWORTHY** y **DB_CHAINING** opciones no tienen ningún efecto cuando se adjunta una base de datos.  
   
  FOR ATTACH_REBUILD_LOG  
  Especifica que la base de datos se crea adjuntando un conjunto existente de archivos del sistema operativo. Esta opción está limitada a las bases de datos de lectura y escritura. Debe haber un  *\<filespec >* entrada que especifica el archivo principal. Si no se encuentran uno o varios archivos de registro de transacciones, se volverá a generar el archivo de registro. ATTACH_REBUILD_LOG crea automáticamente un nuevo archivo de registro de 1 MB. Este archivo se coloca en la ubicación del archivo de registro predeterminado. Para obtener información acerca de esta ubicación, consulte [ver o cambiar las ubicaciones predeterminadas para los datos y archivos de registro &#40; SQL Server Management Studio &#41; ](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md).  
@@ -318,7 +318,7 @@ CREATE DATABASE database_snapshot_name
 -   Todos los archivos de datos (MDF y NDF) deben estar disponibles.  
   
 > [!IMPORTANT]  
->  Esta operación interrumpe la cadena de copias de seguridad de registros. Se recomienda realizar una copia de seguridad completa de la base de datos después de finalizar la operación. Para obtener más información, vea [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
+> Esta operación interrumpe la cadena de copias de seguridad de registros. Se recomienda realizar una copia de seguridad completa de la base de datos después de finalizar la operación. Para obtener más información, vea [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   
  Normalmente, FOR ATTACH_REBUILD_LOG se utiliza cuando se copia una base de datos de lectura/escritura con un registro grande en otro servidor donde la copia se va a utilizar mayoritariamente, o únicamente, para operaciones de lectura y, por lo tanto, requiere menos espacio de registro que la base de datos original.  
   
@@ -329,16 +329,16 @@ CREATE DATABASE database_snapshot_name
  \<especificación de archivo >  
  Controla las propiedades de archivo.  
   
- NOMBRE *nombre_de_archivo_lógico*  
+ NAME *logical_file_name*  
  Especifica un nombre lógico para el archivo. NAME es obligatorio si se especifica FILENAME, excepto cuando se especifica una de las cláusulas FOR ATTACH. Un grupo de archivos FILESTREAM no se puede denominar PRIMARY.  
   
- *nombre_de_archivo_lógico*  
+ *logical_file_name*  
  Es el nombre lógico utilizado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se hace referencia al archivo. *Nombre_de_archivo_lógico* deben ser únicos en la base de datos y cumplir las reglas de [identificadores](../../relational-databases/databases/database-identifiers.md). El nombre puede ser una constante de caracteres o Unicode, o un identificador regular o delimitado.  
   
- Nombre de archivo { **'***nombre_de_archivo_de_sistema_operativo***'** | **'***filestream_path* **'** }  
+ FILENAME { **'***os_file_name***'** | **'***filestream_path***'** }  
  Especifica el nombre de archivo (físico) del sistema operativo.  
   
- **'** *nombre_de_archivo_de_sistema_operativo* **'**  
+ **'** *os_file_name* **'**  
  Es la ruta de acceso y el nombre de archivo que el sistema operativo utiliza cuando se crea el archivo. El archivo debe residir en uno de los siguientes dispositivos: el servidor local en el que se ha instalado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], una red de área de almacenamiento (SAN) o una red basada en iSCSI. La ruta de acceso especificada debe existir antes de ejecutar la instrucción CREATE DATABASE. Para obtener más información, vea "Archivos y grupos de archivos de base de datos" en la sección Comentarios.  
   
  Los parámetros SIZE, MAXSIZE y FILEGROWTH se pueden establecer si se ha especificado una ruta UNC para el archivo.  
@@ -376,7 +376,7 @@ CREATE DATABASE database_snapshot_name
  Especifica que el archivo crecerá hasta que el disco esté lleno. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si se especifica un crecimiento ilimitado para un archivo de registro, su tamaño máximo será de 2 TB, y para un archivo de datos será de 16 TB.  
   
 > [!NOTE]  
->  No hay un tamaño máximo cuando esta opción se especifica para un contenedor de FILESTREAM. Continúa creciendo hasta que el disco se completa.  
+> No hay un tamaño máximo cuando esta opción se especifica para un contenedor de FILESTREAM. Continúa creciendo hasta que el disco se completa.  
   
  FILEGROWTH *growth_increment*  
  Especifica el incremento de crecimiento automático del archivo. El valor FILEGROWTH de un archivo no puede superar el valor MAXSIZE. FILEGROWTH no se puede especificar si el *nombre_de_archivo_de_sistema_operativo* se especifica como una ruta de acceso UNC. FILEGROWTH no se aplica a un grupo de archivos FILESTREAM.  
@@ -392,14 +392,14 @@ CREATE DATABASE database_snapshot_name
   
 |Versión|Valores predeterminados|  
 |-------------|--------------------|  
-|Principio[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Datos de 64 MB. Los archivos de registro de 64 MB.|  
-|Principio[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Datos de 1 MB. Archivos de registro de 10%.|  
-|Antes de[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Datos de 10%. Archivos de registro de 10%.|  
+|Principio[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Datos: 64 MB. Archivos de registro: 64 MB.|  
+|Principio[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Datos: 1 MB. Archivos de registro: 10 %.|  
+|Antes de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Datos: 10 %. Archivos de registro: 10 %.|  
   
- \<grupo de archivos >  
+ \<filegroup>  
  Controla las propiedades del grupo de archivos. Filegroup no se puede especificar en una instantánea de base de datos.  
   
- Grupo de archivos *filegroup_name*  
+ FILEGROUP *filegroup_name*  
  Es el nombre lógico del grupo de archivos.  
   
  *filegroup_name*  
@@ -417,16 +417,16 @@ CREATE DATABASE database_snapshot_name
  DEFAULT  
  Especifica que el grupo de archivos indicado es el grupo de archivos predeterminado de la base de datos.  
   
- *nombre_base_de_datos_de_instantánea*  
+ *database_snapshot_name*  
  Es el nombre de la nueva instantánea de base de datos. Los nombres de instantánea de base de datos deben ser únicos dentro de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y cumplir las reglas de los identificadores. *nombre_base_de_datos_de_instantánea* puede tener un máximo de 128 caracteres.  
   
- ON **(** nombre  **=**  *nombre_de_archivo_lógico***,** FILENAME **='**  *nombre_de_archivo_de_sistema_operativo***')** [ **,**... *n* ]  
+ ON **(** nombre  **= ***nombre_de_archivo_lógico***,** FILENAME **='***nombre_de_archivo_de_sistema_operativo***')** [ **,**... *n* ]  
  Para la creación de una instantánea de base de datos, especifica una lista de archivos de la base de datos de origen. Para que la instantánea funcione, todos los archivos de datos deben especificarse individualmente. Sin embargo, no se permiten archivos de registro para las instantáneas de base de datos. Los grupos de archivos FILESTREAM no son compatibles con instantáneas de base de datos. Si se incluye un archivo de datos FILESTREAM en una cláusula CREATE DATABASE ON, se producirá un error en la instrucción y se generará el mensaje correspondiente.  
   
  Para obtener descripciones de NAME y FILENAME y sus valores, consulte las descripciones del equivalente \<filespec > valores.  
   
 > [!NOTE]  
->  Cuando se crea una instantánea de base de datos, el otro \<especificación de archivo > Opciones y la palabra clave PRIMARY no están permitidos.  
+> Cuando se crea una instantánea de base de datos, el otro \<especificación de archivo > Opciones y la palabra clave PRIMARY no están permitidos.  
   
  AS SNAPSHOT OF *nombre_de_base_de_datos_de_origen*  
  Especifica que la base de datos que se va a crear es una instantánea de base de datos de la base de datos de origen especificado por *nombre_de_base_de_datos_de_origen*. La instantánea y la base de datos de origen deben estar en la misma instancia.  
@@ -468,7 +468,7 @@ Algunas características de base de datos dependen de características o capacid
  Puede usar la instrucción CREATE DATABASE para crear una vista de solo lectura, estática, un *instantánea de base de datos* de la *base de datos de origen*. Desde el punto de vista transaccional, una instantánea de base de datos es coherente con la base de datos de origen tal como se encontraba en el momento de crear la instantánea. Una base de datos de origen puede tener varias instantáneas.  
   
 > [!NOTE]  
->  Cuando se crea una instantánea de base de datos, la instrucción CREATE DATABASE no puede hacer referencia a archivos de registro, archivos sin conexión, archivos de restauración ni archivos inactivos.  
+> Cuando se crea una instantánea de base de datos, la instrucción CREATE DATABASE no puede hacer referencia a archivos de registro, archivos sin conexión, archivos de restauración ni archivos inactivos.  
   
  Si se produce un error al crear una instantánea de base de datos, se sospecha de la instantánea y debe eliminarse. Para obtener más información, vea [DROP DATABASE &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-database-transact-sql.md).  
   
@@ -496,7 +496,7 @@ Algunas características de base de datos dependen de características o capacid
   
  En el ejemplo siguiente se proporciona el permiso para crear una base de datos al usuario de base de datos Fay.  
   
-```  
+```sql  
 USE master;  
 GO  
 GRANT CREATE DATABASE TO [Fay];  
@@ -515,14 +515,14 @@ GO
  Los permisos evitan que los archivos se modifiquen accidentalmente si residen en un directorio sin restricción de permisos.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] no establece permisos en archivos de datos y de registro.  
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] no establece permisos en archivos de datos y de registro.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-creating-a-database-without-specifying-files"></a>A. Crear una base de datos sin especificar archivos  
  En este ejemplo se crea la base de datos `mytest`, y los archivos principal y de registro de transacciones correspondientes. Dado que la instrucción no tiene ningún \<filespec > elementos, el archivo de base de datos principal es el tamaño del archivo principal de base de datos de modelo. El registro de transacciones se establece en el mayor de estos valores: 512 KB o el 25 % del tamaño del archivo de datos principal. Como no se ha especificado MAXSIZE, los archivos pueden crecer hasta llenar todo el espacio disponible en el disco. En este ejemplo también se muestra la forma de quitar la base de datos denominada `mytest` si existe, antes de crear la base de datos `mytest`.  
   
-```  
+```sql  
 USE master;  
 GO  
 IF DB_ID (N'mytest') IS NOT NULL
@@ -535,7 +535,6 @@ SELECT name, size, size*1.0/128 AS [Size in MBs]
 FROM sys.master_files  
 WHERE name = N'mytest';  
 GO  
-  
 ```  
   
 ### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. Crear una base de datos que especifica los archivos de datos y de registro de transacciones  
@@ -706,7 +705,6 @@ SELECT name, collation_name, is_trustworthy_on, is_db_chaining_on
 FROM sys.databases  
 WHERE name = N'MyOptionsTest';  
 GO  
-  
 ```  
   
 ### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>H. Adjuntar un catálogo de texto completo que se ha movido  
@@ -840,10 +838,10 @@ GO
  [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sp_changedbowner &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
- [sp_detach_db &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
- [sp_removedbreplication &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   
- [Instantáneas de bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
+ [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+ [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
+ [sp_removedbreplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   
+ [Instantáneas de base de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [Mover archivos de base de datos](../../relational-databases/databases/move-database-files.md)   
  [Bases de datos](../../relational-databases/databases/databases.md)   
  [Datos de objeto binario grande &#40;Blob&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  

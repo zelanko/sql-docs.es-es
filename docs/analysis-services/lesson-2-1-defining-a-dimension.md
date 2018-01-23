@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 25f648f53ca3af33b846711076eb91b3548174a6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0a6a1056c4b778dbc4cb71faa4e7b05111512285
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-1---defining-a-dimension"></a>Lección 2-1: definir una dimensión
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]En la tarea siguiente, utilizará al Asistente para dimensiones para crear una dimensión de fecha.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+En la tarea siguiente, usará el Asistente para dimensiones con objeto de generar una dimensión Date.  
   
 > [!NOTE]  
 > Para realizar esta lección es necesario haber completado todos los procedimientos de la lección 1.  

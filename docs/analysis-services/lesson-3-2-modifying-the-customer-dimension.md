@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bfb369e21e5d57768d79e07cfe066d89033909ca
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4fe3a7adab5e0c4f87abaf09b04efa64f27e124f
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>Lección 3-2-modificar la dimensión Customer
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Hay muchas maneras diferentes que puede aumentar la facilidad de uso y la funcionalidad de las dimensiones de un cubo. En las tareas de este tema, debe modificar la dimensión Customer.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Existen varios métodos para hacer que las dimensiones de un cubo sean más fáciles de usar y tengan más funciones. En las tareas de este tema, debe modificar la dimensión Customer.  
   
 ## <a name="renaming-attributes"></a>Cambiar el nombre de los atributos  
 Use la pestaña **Estructura de dimensión** del Diseñador de dimensiones para cambiar los nombres de los atributos.  
@@ -271,7 +273,7 @@ Una vez que ha cambiado los atributos y las jerarquías, debe implementar los ca
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
 [Modificar la dimensión Product](../analysis-services/lesson-3-3-modifying-the-product-dimension.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
 [Referencia de las propiedades de los atributos de dimensión](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
 [Quitar un atributo de una dimensión](../analysis-services/multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md)  
 [Cambiar el nombre de un atributo](../analysis-services/multidimensional-models/attribute-properties-rename-an-attribute.md)  

@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2c9d71ea7710736a17a404a997e43e6683894cd7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 77b8a5621b71eec40546d79d73ab1672dfff6a7e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>4-6-especificar relaciones de atributo en la jerarquía definida por el usuario
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Como ya ha visto en este tutorial, puede organizar las jerarquías de atributo en niveles de jerarquías de usuario para proporcionar rutas de navegación para los usuarios de un cubo. Una jerarquía de usuario puede representar una jerarquía natural, como una ciudad, un estado o un país, o simplemente representar una ruta de navegación, como el nombre de un empleado, su cargo y el nombre de departamento. Para el usuario que navega por una jerarquía, estos dos tipos de jerarquía de usuario son el mismo.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Como ya ha visto en este tutorial, es posible organizar jerarquías de atributo en niveles dentro de jerarquías de usuario para proporcionar rutas de navegación a los usuarios de un cubo. Una jerarquía de usuario puede representar una jerarquía natural, como una ciudad, un estado o un país, o simplemente representar una ruta de navegación, como el nombre de un empleado, su cargo y el nombre de departamento. Para el usuario que navega por una jerarquía, estos dos tipos de jerarquía de usuario son el mismo.  
   
 Con una jerarquía natural, si define relaciones de atributo entre los atributos que forman los niveles, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] puede utilizar una agregación de un atributo para obtener los resultados de un atributo relacionado. Si no hay ninguna relación definida entre los atributos, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] agregará todos los atributos que no sean de clave del atributo de clave. Por lo tanto, si los datos subyacentes lo permiten, debería definir relaciones de atributo entre atributos. La definición de relaciones de atributo mejora el rendimiento del procesamiento de las dimensiones, las particiones y las consultas. Para obtener más información, consulte [Definir relaciones de atributo](../analysis-services/multidimensional-models/attribute-relationships-define.md) y [Relaciones de atributo](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   
@@ -188,9 +190,9 @@ En las tareas de este tema, debe definir relaciones de atributo para los atribut
 14. En el menú **Generar** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], haga clic en **Implementar Tutorial de Analysis Services**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
-[Definir las propiedades de miembro desconocido y de procesamiento de valores NULL](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+[Definir el miembro desconocido y propiedades de procesamiento de valores Null](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
 [Definir relaciones de atributo](../analysis-services/multidimensional-models/attribute-relationships-define.md)  
 [Propiedades de jerarquía de usuario](../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)  
   

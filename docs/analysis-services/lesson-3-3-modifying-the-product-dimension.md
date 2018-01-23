@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4352e05555c713c5b979e4ac8e3fc279d6099fe1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8bbed44f2b02b0d94678513185dbf682a537e9e5
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-3-3---modifying-the-product-dimension"></a>Lección 3: 3: modificar la dimensión Product
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]En las tareas de este tema, se utiliza un cálculo con nombre para proporcionar nombres más descriptivos para las líneas de producto, definir una jerarquía en la dimensión Product y especificar el nombre del miembro (All) para la jerarquía. También agrupará los atributos en carpetas para mostrar.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+En las tareas de este tema, usará un cálculo con nombre para proporcionar nombres más descriptivos a las líneas de producto, definir una jerarquía en la dimensión Product y especificar el nombre de miembro (Todos) para dicha jerarquía. También agrupará los atributos en carpetas para mostrar.  
   
 ## <a name="adding-a-named-calculation"></a>Agregar un cálculo con nombre  
 Puede agregar un cálculo con nombre a una tabla de una vista del origen de datos. En la tarea siguiente, creará un cálculo con nombre que mostrará el nombre completo de la línea de producto.  
@@ -189,7 +191,7 @@ Si los datos subyacentes lo permiten, debería definir relaciones de atributo en
 [Modificar la dimensión Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Definir cálculos con nombre en una vista del origen de datos &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+[Definir cálculos con nombre en una vista del origen de datos &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
 [Crear jerarquías definidas por el usuario](../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
 [Configurar el nivel &#40;All&#41; para las jerarquías de atributo](../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   

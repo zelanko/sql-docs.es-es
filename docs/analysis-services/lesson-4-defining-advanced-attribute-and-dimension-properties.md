@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 486d4c78c92f9de8f70a8d3cdb70cced525b3e4e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: de9c7debe0b21d3f5d72a021f8bf6eb03bf7d06f
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lección 4: Definir propiedades de dimensiones y de atributos avanzados
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]En esta lección, aprenderá a utilizar algunas de las propiedades avanzadas de atributos, jerarquías de atributos y propiedades de la dimensión.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+En esta lección, aprenderá a utilizar algunas de las propiedades avanzadas de atributos, jerarquías de atributos y propiedades de dimensiones.  
   
 > [!NOTE]  
 > Esta lección se basa en una versión mejorada del proyecto Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que completó en las tres primeras lecciones de este tutorial. En la primera tarea de esta lección se describe dónde buscar el proyecto de ejemplo adecuado que debe utilizar para la lección, así como la diferencia existente entre este proyecto y el proyecto que ha creado en las tres primeras lecciones.  
@@ -58,7 +60,7 @@ En esta tarea, debe configurar las propiedades UnknownMember y UnknownMemberName
   
 ## <a name="see-also"></a>Vea también  
 [Escenario de Tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Creación de modelos multidimensionales &#40;tutorial de Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modelado multidimensional &#40; Tutorial de Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Dimensiones en modelos multidimensionales](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

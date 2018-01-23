@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fe5945d4d6dce5b6afff025289793127cb8c9988
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d37f4c7e9c21231e99bf8cce8e588969d824b40b
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lección 4-1: uso de una versión modificada del proyecto Tutorial de Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]El resto de las lecciones de este tutorial se basa en una versión mejorada de la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proyecto Tutorial que completó en las tres primeras lecciones. Se han agregado tablas y cálculos con nombre adicionales a la vista del origen de datos **Adventure Works DW 2012** , se han agregado más dimensiones al proyecto y estas nuevas dimensiones se han agregado al cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Además, se ha agregado un segundo grupo de medidas, que contiene medidas de una segunda tabla de hechos. Este proyecto mejorado le permitirá continuar aprendiendo a agregar funciones adicionales a la aplicación de Business Intelligence sin necesidad de tener que repetir las técnicas ya aprendidas.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Las lecciones restantes de este tutorial se basan en una versión mejorada del proyecto Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que completó en las tres primeras lecciones. Se han agregado tablas y cálculos con nombre adicionales a la vista del origen de datos **Adventure Works DW 2012** , se han agregado más dimensiones al proyecto y estas nuevas dimensiones se han agregado al cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Además, se ha agregado un segundo grupo de medidas, que contiene medidas de una segunda tabla de hechos. Este proyecto mejorado le permitirá continuar aprendiendo a agregar funciones adicionales a la aplicación de Business Intelligence sin necesidad de tener que repetir las técnicas ya aprendidas.  
   
 Para poder continuar con el tutorial, debe descargar, extraer, cargar y procesar la versión mejorada del proyecto Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  Siga las instrucciones de esta lección para asegurarse de que ha realizado todos los pasos.  
   
@@ -68,7 +70,7 @@ Observe que, con diez tablas en la vista del origen de datos, el diagrama <All T
 #### <a name="internet-sales-diagram"></a>Diagrama Internet Sales  
 El diagrama **Internet Sales** contiene las tablas que están relacionadas con la venta directa de productos de [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] a los clientes a través de Internet. Las tablas del diagrama son las cuatro tablas de dimensiones y la tabla de hechos que agregó a la vista del origen de datos **Adventure Works DW 2012** en la Lección 1. Estas tablas son las siguientes:  
   
--   **Geography**  
+-   **Geografía**  
   
 -   **Customer**  
   

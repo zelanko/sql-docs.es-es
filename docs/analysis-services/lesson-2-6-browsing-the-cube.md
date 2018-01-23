@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9a97816c16eda294e89d1c9f9b21aa854c398846
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f7b95813f17802e22e4b9308cc0a3805f65f5ff2
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-6---browsing-the-cube"></a>Lección 2-6-examinar el cubo
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Después de implementar un cubo, los datos del cubo están visibles en el **explorador** pestaña del Diseñador de cubos y los datos de dimensión es visible en el **explorador** ficha en el Diseñador de dimensiones. La exploración de los datos de cubos y dimensiones es una forma de comprobar el trabajo incrementalmente. Puede comprobar que los pequeños cambios en las propiedades, las relaciones y otros objetos tienen el efecto deseado una vez que se procesa el objeto. Si bien la pestaña Explorador se usa para ver datos de cubos y dimensiones, también ofrece diversas funciones dependiendo del objeto que se está examinando.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Una vez implementado un cubo, los datos de este pueden verse en la pestaña **Explorador** del Diseñador de cubos y los datos de dimensión pueden verse en la pestaña **Explorador** del Diseñador de dimensiones. La exploración de los datos de cubos y dimensiones es una forma de comprobar el trabajo incrementalmente. Puede comprobar que los pequeños cambios en las propiedades, las relaciones y otros objetos tienen el efecto deseado una vez que se procesa el objeto. Si bien la pestaña Explorador se usa para ver datos de cubos y dimensiones, también ofrece diversas funciones dependiendo del objeto que se está examinando.  
   
 Para las dimensiones, la pestaña Explorador proporciona una manera de ver los miembros o de navegar por una jerarquía hasta el nodo hoja. Puede examinar datos de dimensiones en distintos idiomas, suponiendo que se hayan agregado las traducciones al modelo.  
   

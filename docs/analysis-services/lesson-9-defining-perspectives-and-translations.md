@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8b6d074b6aee9d6fe70258f22e95b48cb690419c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 13bfc06cb0a9d2e5a61d023a2b0ea24f91d48446
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>Lección 9: Definir perspectivas y traducciones
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]En esta lección, aprenderá a definir perspectivas y traducciones. Puede definir perspectivas para reducir la complejidad aparente de un cubo y definir traducciones que permitan a los usuarios ver los metadatos del cubo en el idioma que desee.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+En esta lección, aprenderá a definir perspectivas y traducciones. Puede definir perspectivas para reducir la complejidad aparente de un cubo y definir traducciones que permitan a los usuarios ver los metadatos del cubo en el idioma que desee.  
   
 > [!NOTE]  
 > Los proyectos completos para todas las lecciones de este tutorial están disponibles en línea. Puede saltar a continuación a cualquier lección con el proyecto completado de la lección anterior como punto de partida. [Haga clic aquí](http://go.microsoft.com/fwlink/?LinkID=221866) para descargar los proyectos de ejemplo que tienen que ver con este tutorial.  
@@ -39,11 +41,11 @@ En esta tarea, se definen y examinan perspectivas para simplificar la vista del 
 En esta tarea, se definen y examinan traducciones de metadatos específicos en determinados idiomas.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
-[Lección 10: definir roles administrativos](../analysis-services/lesson-10-defining-administrative-roles.md)  
+[Lección 10: Definir Roles administrativos](../analysis-services/lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>Vea también  
 [Escenario de Tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Creación de modelos multidimensionales &#40;tutorial de Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modelado multidimensional &#40; Tutorial de Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Perspectivas](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)  
 [Perspectivas de modelos multidimensionales](../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)  
 [Traducciones de dimensiones](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)  

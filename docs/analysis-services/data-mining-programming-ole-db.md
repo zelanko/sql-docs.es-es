@@ -21,14 +21,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3fae54870409e11ed94050dd621784e57625eb02
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d6d0c4561b4c913799857774fa19dd35999614d1
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="data-mining-programming---ole-db"></a>Programación de minería de datos - OLE DB
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Las características de minería de datos en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cumplir con la [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB para la especificación de minería de datos 1.0 publicada en junio de 2000.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+  Las características de minería de datos en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cumplir con la [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB para la especificación de minería de datos 1.0 publicada en junio de 2000.  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ha ampliado la especificación mediante la adición de nuevos conjuntos de filas de esquema, la adición de columnas a los conjuntos de filas de esquema existentes y la adición de sintaxis al lenguaje DMX (Extensiones de Minería de Datos) para crear y administrar las estructuras de minería de datos.  
   

@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e5c678f53cbf6ffe66d8713e7c847137330eb7e1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 692d6b3567f9f9ea3e3fe404a85f8d9e09f44c5f
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Lección 3: Modificar medidas, atributos y jerarquías
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Después de definir el cubo inicial, está listo para mejorar la utilidad y la facilidad de uso del cubo. Puede hacerlo agregando jerarquías que admitan navegación y agregación en varios niveles, aplicando formatos a la medida específica, y definiendo cálculos y relaciones.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Una vez definido el cubo inicial, estará listo para mejorar la utilidad y la facilidad de uso del cubo. Puede hacerlo agregando jerarquías que admitan navegación y agregación en varios niveles, aplicando formatos a la medida específica, y definiendo cálculos y relaciones.  
   
 > [!NOTE]  
 > Los proyectos completos para todas las lecciones de este tutorial están disponibles en línea. Puede saltar a continuación a cualquier lección con el proyecto completado de la lección anterior como punto de partida. [Haga clic aquí](http://go.microsoft.com/fwlink/?LinkID=221866) para descargar los proyectos de ejemplo que tienen que ver con este tutorial.  
@@ -49,7 +51,7 @@ En esta tarea, debe explorar los datos del cubo usando el explorador del Diseña
   
 ## <a name="see-also"></a>Vea también  
 [Escenario de Tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Creación de modelos multidimensionales &#40;tutorial de Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modelado multidimensional &#40; Tutorial de Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
   
   

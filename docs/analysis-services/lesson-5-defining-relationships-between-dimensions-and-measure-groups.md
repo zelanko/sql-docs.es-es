@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c3000dfc2ecd94fb70061eead07ef92cfd643f73
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5b3637cc09617b51663ac2bc65dea13c764981c2
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Lección 5: definir relaciones entre dimensiones y grupos de medida
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]En las lecciones anteriores de este tutorial, ha aprendido que dimensiones de base de datos que se agregan a un cubo pueden utilizarse como base para una o más dimensiones de cubo. En esta lección, aprenderá a definir distintos tipos de relaciones entre dimensiones de cubo y grupos de medida, así como a especificar las propiedades de estas relaciones.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+En las lecciones anteriores de este tutorial, ha aprendido que las dimensiones de base de datos que se agregan a un cubo pueden utilizarse como base para una o más dimensiones de cubo. En esta lección, aprenderá a definir distintos tipos de relaciones entre dimensiones de cubo y grupos de medida, así como a especificar las propiedades de estas relaciones.  
   
 Para obtener más información, consulte [Relaciones de dimensiones](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
@@ -43,15 +45,15 @@ En esta tarea, aprende a definir una dimensión basada en datos de la tabla de h
 [Definir una relación de varios a varios](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  
 En esta tarea, aprende a relacionar un hecho con varios miembros de dirección a través de la definición de una relación de varios a varios entre tablas de dimensiones y tablas de hechos.  
   
-[Definir la granularidad de las dimensiones en un grupo de medida](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
+[Definir la granularidad de dimensión en un grupo de medida](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
 En esta tarea, aprende a modificar la granularidad de una dimensión para un grupo de medida específico.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
 [Lección 6: Definir cálculos](../analysis-services/lesson-6-defining-calculations.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
 [Escenario de Tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Creación de modelos multidimensionales &#40;tutorial de Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modelado multidimensional &#40; Tutorial de Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Relaciones de dimensiones](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   
   

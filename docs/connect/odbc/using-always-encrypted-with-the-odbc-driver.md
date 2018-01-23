@@ -18,10 +18,10 @@ manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
 ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
-ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso de Always Encrypted con el controlador ODBC para SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -350,7 +350,7 @@ El controlador ODBC para SQL Server incluye los siguientes proveedores de almac�
 
 | Nombre | Description | Nombre del proveedor (metadatos) |Disponibilidad|
 |:---|:---|:---|:---|
-|Azure Key Vault |Almacenes CMK en un almacén de claves de Azure | `AZURE_KEY_VAULT` |Windows, Mac OS, Linux|
+|Azure Key Vault |Almacenes CMK en un almacén de claves de Azure | `AZURE_KEY_VAULT` |Windows, macOS, Linux|
 |Almacén de certificados de Windows|Almacena CMK localmente en el almacén de claves de Windows| `MSSQL_CERTIFICATE_STORE`|Windows|
 
 - Usted (o su DBA) debe asegurarse de que el nombre del proveedor, configurado en los metadatos de clave maestra de columna es correcto y la ruta de acceso de clave maestra de columna cumple con el formato de ruta de la clave para el proveedor en cuestión. Se recomienda que configure las claves mediante herramientas como SQL Server Management Studio, que genera automáticamente las rutas de acceso a la clave y los nombres de proveedor válidos al emitir la instrucción [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) (Transact-SQL).
@@ -384,7 +384,7 @@ Las cadenas de conexión siguientes muestran cómo autenticar al almacén de cla
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**Nombre de usuario/contraseña**
+**Username/Password**
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>

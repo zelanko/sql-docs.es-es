@@ -20,14 +20,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 12b3c89ac68cd633c50ea96ded258a91cc066ae8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 69f16ef4141ca467063a84bf2305ccbe6d8f8996
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="analysis-services-developer-documentation"></a>Documentación para desarrolladores de Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]En Analysis Services, prácticamente cualquier objeto y la carga de trabajo son programable y, a menudo hay más de un enfoque que puede elegir.  Las opciones incluyen escribir código administrado, secuencias de comandos o mediante unos estándares abiertos como XMLA y MSOLAP si los requisitos de la solución impiden mediante .NET framework.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+En Analysis Services, prácticamente cualquier objeto y la carga de trabajo son programable y, a menudo hay más de un enfoque que puede elegir.  Las opciones incluyen escribir código administrado, secuencias de comandos o mediante unos estándares abiertos como XMLA y MSOLAP si los requisitos de la solución impiden mediante .NET framework.
 
 ## <a name="what-you-can-accomplish-in-code"></a>¿Qué puede realizar en el código
 Escenarios de programación habituales incluyen servidor e implementación de base de datos, administración, modelo y creación de base de datos y acceso a datos desde sus aplicaciones personalizadas e informes que usan datos de Analysis Services. Comunes a todos estos escenarios es una fijo arquitectura y el objeto de definición jerarquía, con las operaciones bien también se entiende que abarcan la definición de datos, el procesamiento y cargas de trabajo de consulta.

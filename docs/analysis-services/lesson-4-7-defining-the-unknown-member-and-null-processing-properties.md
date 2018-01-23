@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8bcf00aa80484209477179ef34e4a795000f4cdc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7fca2e2c4920130ba3387d7881c63fdefa6ed4eb
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Lección 4-7-definir el miembro desconocido y propiedades de procesamiento de valores Null
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Cuando [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] procesa una dimensión, todos los valores distintos de las columnas subyacentes de las tablas o vistas en la vista del origen de datos, rellena los atributos de la dimensión. Si [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] encuentra una valor NULL durante el procesamiento, de forma predeterminada, convierte este valor NULL en un cero en las columnas numéricas o en una cadena vacía en las columnas de cadena. Puede modificar estas opciones predeterminadas o convertir los valores NULL en el proceso de extracción, transformación y carga (si existe) del almacenamiento de datos relacional subyacente. También puede hacer que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] convierta el valor NULL en un valor determinado configurando tres propiedades: las propiedades **UnknownMember** y **UnknownMemberName** de la dimensión y la propiedad **NullProcessing** del atributo clave de la dimensión.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Cuando [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] procesa una dimensión, todos los valores distintos de las columnas subyacentes de las tablas o las vistas de la vista del origen de datos rellenan los atributos de la dimensión. Si [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] encuentra una valor NULL durante el procesamiento, de forma predeterminada, convierte este valor NULL en un cero en las columnas numéricas o en una cadena vacía en las columnas de cadena. Puede modificar estas opciones predeterminadas o convertir los valores NULL en el proceso de extracción, transformación y carga (si existe) del almacenamiento de datos relacional subyacente. También puede hacer que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] convierta el valor NULL en un valor determinado configurando tres propiedades: las propiedades **UnknownMember** y **UnknownMemberName** de la dimensión y la propiedad **NullProcessing** del atributo clave de la dimensión.  
   
 El Asistente para dimensiones y el Asistente para cubos habilitarán estas propiedades dependiendo de si el atributo clave de una dimensión admite valores NULL o si el atributo del elemento raíz de una dimensión de copo de nieve se basa en una columna que puede admitir valores NULL. En estos casos, la propiedad **NullProcessing** del atributo clave se establecerá en **UnknownMember** y la propiedad **UnknownMember** se establecerá en **Visible**.  
   
@@ -185,7 +187,7 @@ Para modificar el comportamiento mencionado en la tarea anterior, habilitará la
     ![Nivel de nombre de producto que muestra los componentes del ensamblado](../analysis-services/media/l4-assemblycomponents-1.gif "nivel Product Name que muestra los componentes del ensamblado")  
   
 ## <a name="next-lesson"></a>Lección siguiente  
-[Lección 5: definir relaciones entre dimensiones y grupos de medida](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+[Lección 5: Definir relaciones entre las dimensiones y grupos de medida](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
   
   

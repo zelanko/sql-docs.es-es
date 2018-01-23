@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 876c15beb1fc62e805a4c86718da0590c19244bd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 969a3952f113521b5f584533fd0676b33b873b53
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Comparar soluciones tabulares y multidimensionales
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services proporciona varios enfoques para crear un modelo semántico de business intelligence: Tabular, Multidimensional y Power Pivot para SharePoint.
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+  SQL Server Analysis Services proporciona varios enfoques para crear un modelo semántico de business intelligence: Tabular, Multidimensional y Power Pivot para SharePoint.
   
  El uso de más de un método permite una experiencia de modelado adaptada a los diferentes requisitos empresariales y del usuario. El modelo multidimensional es una tecnología consolidada basada en estándares abiertos que adoptan muchos proveedores de software de BI, pero puede ser difícil de dominar. El modelo tabular ofrece un enfoque de modelado relacional que muchos desarrolladores consideran más intuitivo. El modelo PowerPivot es todavía más sencillo, ya que ofrece el modelado visual de datos en Excel, con compatibilidad de servidor proporcionada a través de SharePoint.  
   
@@ -77,11 +79,11 @@ ms.lasthandoff: 01/08/2018
 |Jerarquías desiguales|Sí|Sí<sup>1</sup>|  
 |Jerarquías de elementos primarios y secundarios|Sí|Sí (mediante DAX)|
 |Particiones|Sí|Sí| 
-|perspectivas|Sí|Sí|
+|Perspectivas|Sí|Sí|
 |Seguridad de filas|Sí|Sí| 
 |Seguridad de nivel de objeto|Sí|Sí<sup>1</sup>|
 |Medidas de suma parcial|Sí|Sí| 
-|Translations|[Sí](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Sí| 
+|Traducciones|[Sí](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Sí| 
 |Jerarquías definidas por el usuario|Sí|Sí|
 |Reescritura|Sí|no| 
   

@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a09461909c86014aeb459cdc602ee9e96985d88a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6cfbba4598bad19dc0b581131f977fa2f3e9b40e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-2---defining-a-cube"></a>Lección 2: 2: definir un cubo
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]El Asistente para cubos le ayuda a definir los grupos de medida y dimensiones de un cubo. En la tarea siguiente, usará el Asistente para cubos para generar un cubo.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+El Asistente para cubos le ayuda a definir los grupos de medida y las dimensiones de un cubo. En la tarea siguiente, usará el Asistente para cubos para generar un cubo.  
   
 ### <a name="to-define-a-cube-and-its-properties"></a>Para definir un cubo y sus propiedades  
   

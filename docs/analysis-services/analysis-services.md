@@ -25,14 +25,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 0a11280eca74da75737d30fe795c856988d422ae
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 00b88b320118df9649b546b35259ec1c8acdc7cf
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="what-is-analysis-services"></a>¿Qué es Analysis Services?
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services es un motor de datos analíticos utilizado en la toma de decisiones y análisis de negocios, proporciona los datos analíticos para informes empresariales y aplicaciones cliente como Power BI, Excel, informes de Reporting Services y otras herramientas de visualización de datos.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  Analysis Services es un motor de datos analíticos utilizado en la toma de decisiones y análisis de negocios, proporciona los datos analíticos para informes empresariales y aplicaciones cliente como Power BI, Excel, informes de Reporting Services y otras herramientas de visualización de datos.  
   
  Un flujo de trabajo típico incluye la creación de un modelo de datos multidimensional o tabular, implementar el modelo como una base de datos a una instancia de servidor de SQL Server Analysis Services o Azure Analysis Services local, configuración de procesamiento de datos periódico y asignar permisos para permitir el acceso a los datos por los usuarios finales. Cuando esté listo, el modelo de datos semántica son accesibles por cualquier aplicación de cliente compatible con Analysis Services como un origen de datos.  
  

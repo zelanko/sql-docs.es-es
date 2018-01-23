@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 0fcd5cefc02359d407b1799e4cc31ed5afa3c818
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 0cfea0b32221f6aa1ebb8cb947640de3b670c79c
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Ejecutar la imagen de contenedor de SQL Server 2017 con Docker
 
@@ -32,7 +32,7 @@ Esta imagen se compone de SQL Server que se ejecutan en Linux en función de Ubu
 > [!NOTE]
 > Este tutorial se centra específicamente en usando el mssql-server -**linux** imagen. La imagen de Windows no está cubierta, pero puede obtener más información sobre la [mssql-server-windows-página para desarrolladores Docker Hub](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
-## <a id="requirements"></a> Prerequisites
+## <a id="requirements"></a> Requisitos previos
 
 - Motor de docker 1.8 + en cualquier admite la distribución de Linux o Docker para Mac y Windows. Para obtener más información, consulte [instalar Docker](https://docs.docker.com/engine/installation/).
 - Mínimo de 2 GB de espacio en disco
@@ -68,17 +68,20 @@ Esta imagen se compone de SQL Server que se ejecutan en Linux en función de Ubu
    ```
 
    > [!NOTE]
+   > La contraseña debe seguir la directiva de contraseñas predeterminada de SQL Server, en caso contrario, el contenedor no puede instalar SQL server y dejará de funcionar. De forma predeterminada, la contraseña debe tener al menos 8 caracteres y contener caracteres de tres de los siguientes conjuntos de cuatro: mayúsculas, letras, letras minúsculas, dígitos de Base 10 y símbolos. Puede examinar el registro de errores mediante la ejecución de la [docker registros](https://docs.docker.com/engine/reference/commandline/logs/) comando.
+
+   > [!NOTE]
    > De forma predeterminada, esto crea un contenedor con la edición para desarrolladores de SQL Server 2017. El proceso para ejecutar las ediciones de producción en contenedores es ligeramente diferente. Para obtener más información, consulte [ejecutar producción imágenes del contenedor](sql-server-linux-configure-docker.md#production).
 
    En la tabla siguiente proporciona una descripción de los parámetros en la versión anterior `docker run` ejemplo:
 
    | Parámetro | Description |
    |-----|-----|
-   | **-e ' ACCEPT_EULA = S '** |  Establecer el **ACCEPT_EULA** variable en cualquier valor para confirmar la aceptación de la [el contrato de licencia de usuario final](http://go.microsoft.com/fwlink/?LinkId=746388). Requiere configuración para la imagen de SQL Server. |
-   | **-e ' MSSQL_SA_PASSWORD =\<YourStrong! Passw0rd\>'** | Especifique su propia contraseña segura que es al menos 8 caracteres y se ajuste el [requisitos de contraseña de SQL Server](../relational-databases/security/password-policy.md). Requiere configuración para la imagen de SQL Server. |
+   | **-e 'ACCEPT_EULA=Y'** |  Establecer el **ACCEPT_EULA** variable en cualquier valor para confirmar la aceptación de la [el contrato de licencia de usuario final](http://go.microsoft.com/fwlink/?LinkId=746388). Requiere configuración para la imagen de SQL Server. |
+   | **-e 'MSSQL_SA_PASSWORD=\<YourStrong!Passw0rd\>'** | Especifique su propia contraseña segura que es al menos 8 caracteres y se ajuste el [requisitos de contraseña de SQL Server](../relational-databases/security/password-policy.md). Requiere configuración para la imagen de SQL Server. |
    | **-p 1401:1433** | Asignar un puerto TCP en el entorno de host (el primer valor) con un puerto TCP en el contenedor (el segundo valor). En este ejemplo, SQL Server está escuchando en TCP 1433 en el contenedor y se expone al puerto, 1401, en el host. |
    | **--nombre sql1** | Especifique un nombre personalizado para el contenedor en lugar de uno generada aleatoriamente. Si ejecuta más de un contenedor, no se puede reutilizar este mismo nombre. |
-   | **Microsoft/mssql-server-linux:2017-más reciente** | La imagen de contenedor de SQL Server para Linux de 2017. |
+   | **microsoft/mssql-server-linux:2017-latest** | La imagen de contenedor de SQL Server para Linux de 2017. |
 
 1. Para ver los contenedores de Docker, use el `docker ps` comando.
 
@@ -238,7 +241,7 @@ Los siguientes pasos se usa **sqlcmd** fuera de su contenedor para conectarse a 
 
 Otras herramientas comunes para conectarse a SQL Server incluyen:
 
-- [Código de Visual Studio](sql-server-linux-develop-use-vscode.md)
+- [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) en Windows](sql-server-linux-develop-use-ssms.md)
 - [Studio de operaciones de SQL Server (versión preliminar)](../sql-operations-studio/what-is.md)
 - [MSSQL-cli (versión preliminar)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)

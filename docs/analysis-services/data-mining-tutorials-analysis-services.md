@@ -19,15 +19,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 33717f3b72c46ba55e2e774fde62eba0646fa9c9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0e1c600dddc4ab87c0f5290d90fdecda49f95045
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Tutoriales de minería de datos (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] facilita el proceso crear soluciones de minería de datos mediante asistentes y visualizaciones integrados. Especialmente si no está familiarizado con el aprendizaje automático, las herramientas de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] son una forma fácil de diseñar, entrenar y explorar los modelos de minería de datos. Los datos de los modelos pueden almacenarse en un cubo, base de datos relacional o cualquier otro origen compatible con [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Después de crear un modelo, puede ponerlo en producción; para ello, acceda al modelo para crear predicciones mediante varios clientes de predicción, incluidos [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y ASP.NET.  
+
+[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] facilita la creación de soluciones de minería de datos mediante asistentes y visualizaciones integradas. Especialmente si no está familiarizado con el aprendizaje automático, las herramientas de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] son una forma fácil de diseñar, entrenar y explorar los modelos de minería de datos. Los datos de los modelos pueden almacenarse en un cubo, base de datos relacional o cualquier otro origen compatible con [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Después de crear un modelo, puede ponerlo en producción; para ello, acceda al modelo para crear predicciones mediante varios clientes de predicción, incluidos [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y ASP.NET.  
   
 > [!NOTE]  
 >Los tutoriales descritos aquí no se han actualizado para [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Puede usar los tutoriales creados para SQL Server 2014. Funcionalmente, no hay ningún cambio en las características de minería de datos para [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Los pasos deberían ser idénticos.  

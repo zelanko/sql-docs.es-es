@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 19d9c5cae52ed4eee5ee553905475bcbf62c38c4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d6717a94aeacf2891c48050b6bb33f706cb2c2c0
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>Lección 2-5: implementar un proyecto de Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Para ver los datos de cubos y dimensiones de los objetos en el [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo Tutorial en el [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proyecto Tutorial, debe implementar el proyecto en una instancia especificada de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y, a continuación, procesar el cubo y sus dimensiones. Al *implementar* un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] se crean y definen objetos en una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Cuando se*procesan* los objetos en una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , se copian los datos de los orígenes de datos subyacentes en los objetos del cubo. Para obtener más información, consulte [Implementar proyectos de Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md) y [Configurar las propiedades de un proyecto de Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Para ver los datos de dimensión y de cubo de los objetos del cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] del proyecto Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], debe implementar el proyecto en una instancia determinada de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y luego procesar el cubo y sus dimensiones. Al *implementar* un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] se crean y definen objetos en una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Cuando se*procesan* los objetos en una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , se copian los datos de los orígenes de datos subyacentes en los objetos del cubo. Para obtener más información, consulte [Implementar proyectos de Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md) y [Configurar las propiedades de un proyecto de Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
 En este punto del proceso de implementación, generalmente se implementa el cubo en una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en un servidor de implementación. Una vez finalizado el proceso de implementación del proyecto de Business Intelligence, generalmente utilizará el Asistente para la implementación de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para implementarlo desde el servidor de desarrollo en un servidor de producción. Para obtener más información, consulte [Implementación de soluciones de modelos multidimensionales](../analysis-services/multidimensional-models/multidimensional-model-solution-deployment.md) e [Implementar soluciones de modelos con el Asistente para la implementación](../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  
   
@@ -39,10 +41,10 @@ En la tarea siguiente, revisará las propiedades de implementación del proyecto
   
 2.  En el nodo **Propiedades de configuración** del panel de la izquierda, haga clic en **Implementación**.  
   
-    Revise las propiedades de implementación del proyecto. De forma predeterminada, la plantilla del proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] configura un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para implementar de forma incremental todos los proyectos en la instancia predeterminada de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en el equipo local, crear una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] con el mismo nombre que el proyecto y procesar los objetos después de la implementación utilizando la opción de procesamiento predeterminada. Para obtener más información, consulte [Configurar las propiedades de un proyecto de Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
+    Revise las propiedades de implementación del proyecto. De forma predeterminada, la plantilla del proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] configura un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para implementar de forma incremental todos los proyectos en la instancia predeterminada de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en el equipo local, crear una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] con el mismo nombre que el proyecto y procesar los objetos después de la implementación utilizando la opción de procesamiento predeterminada. Para más información, vea [Configurar las propiedades de un proyecto de Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
     > [!NOTE]  
-    > Si desea implementar el proyecto en una instancia con nombre de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en el equipo local o en una instancia de un servidor remoto, cambiar el **Server** nombre de propiedad a la instancia adecuada, como \<  *ServerName**>\\<**nombreDeInstancia**>*.  
+    > Si desea implementar el proyecto en una instancia con nombre de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en el equipo local o en una instancia de un servidor remoto, cambiar el **Server** nombre de propiedad a la instancia adecuada, como \<  *ServerName**>\\<**nombreDeInstancia ** >*.  
   
 3.  Haga clic en **Aceptar**.  
   
@@ -51,7 +53,7 @@ En la tarea siguiente, revisará las propiedades de implementación del proyecto
     > [!NOTE]  
     > Si obtiene errores durante la implementación, utilice SQL Server Management Studio para comprobar los permisos de base de datos. La cuenta que especificó para la conexión a un origen de datos debe tener un inicio de sesión en la instancia de SQL Server. Haga doble clic en el inicio de sesión para ver las propiedades de la asignación de usuarios. La cuenta debe tener permisos db_datareader para la base de datos **AdventureWorksDW2012** .  
   
-    [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] genera e implementa el proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , Tutorial en la instancia especificada de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , mediante un script de implementación. El progreso de la implementación se muestra en dos ventanas: la ventana **Salida** y la ventana **Progreso de la implementación: Tutorial de Analysis Services** .  
+    [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] genera e implementa el proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Tutorial en la instancia especificada de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], mediante un script de implementación. El progreso de la implementación se muestra en dos ventanas: la ventana **Salida** y la ventana **Progreso de la implementación: Tutorial de Analysis Services** .  
   
     Para abrir la ventana Resultados, si es necesario, haga clic en **Resultados** en el menú **Ver** . La ventana **Resultados** muestra el progreso global de la implementación. La ventana **Progreso de la implementación – Tutorial de Analysis Services** muestra los detalles de cada paso realizado durante la implementación. Para obtener más información, consulte [Generar proyectos de Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md) e [Implementar proyectos de Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
   
@@ -67,7 +69,7 @@ Ha implementado correctamente el cubo Tutorial de [!INCLUDE[ssASnoversion](../in
 [Examinar el cubo](../analysis-services/lesson-2-6-browsing-the-cube.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Implementar proyectos de Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+[Implementar proyectos de Analysis Services &#40; SSDT &#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
 [Configurar las propiedades de un proyecto de Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
   
   

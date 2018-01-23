@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cc3614124b6e47f4da3526351927218dba8b03ba
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5ffe10857e0111735cd92fefdae106641ad2954e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>Lección 5-2: definir una relación de hechos
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]A veces, los usuarios desean poder dimensionar las medidas según los elementos de datos que se encuentran en la tabla de hechos, o consultar la tabla de hechos para determinada información relacionada adicional, como números de factura o relacionados con hechos de venta específicos de números de pedido de compra. Cuando se define una dimensión basada en un elemento de tabla de hechos de este tipo, la dimensión se conoce como *dimensión de hechos*. Las dimensiones de hechos también se denominan dimensiones degeneradas. Las dimensiones de hechos son útiles para agrupar filas de tablas de hechos relacionadas, como todas las filas que están relacionadas con un número de factura determinado. Aunque esta información puede colocarse en una tabla de dimensiones independiente de la base de datos relacional, crear una tabla de dimensiones independiente para la información no supone ninguna ventaja, ya que la tabla de dimensiones crecerá al mismo ritmo que la tabla de hechos, y simplemente crearía datos duplicados y una complejidad innecesaria.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+A veces, los usuarios desean poder dimensionar las medidas según los elementos de datos que se encuentran en la tabla de hechos o realizar consultas en la tabla de hechos sobre determinada información relacionada adicional, como números de factura o números de pedidos de compra relacionados con hechos de venta específicos. Cuando se define una dimensión basada en un elemento de tabla de hechos de este tipo, la dimensión se conoce como *dimensión de hechos*. Las dimensiones de hechos también se denominan dimensiones degeneradas. Las dimensiones de hechos son útiles para agrupar filas de tablas de hechos relacionadas, como todas las filas que están relacionadas con un número de factura determinado. Aunque esta información puede colocarse en una tabla de dimensiones independiente de la base de datos relacional, crear una tabla de dimensiones independiente para la información no supone ninguna ventaja, ya que la tabla de dimensiones crecerá al mismo ritmo que la tabla de hechos, y simplemente crearía datos duplicados y una complejidad innecesaria.  
   
 En [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], puede determinar si los datos de las dimensiones de hechos deben duplicarse en una estructura de dimensiones MOLAP para incrementar el rendimiento de las consultas o si es necesario definir una dimensión de hechos como dimensión ROLAP para ahorrar espacio a costa del rendimiento de las consultas. Cuando se almacena una dimensión en modo de almacenamiento MOLAP, todos los miembros de la dimensión se almacenan en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en una estructura MOLAP muy comprimida, además de almacenarse en las particiones del grupo de medida. Cuando se almacena una dimensión con el modo de almacenamiento ROLAP, en la estructura MOLAP solo se almacena la definición de la dimensión, y, en el momento de la consulta, los miembros de la dimensión propiamente dichos se consultan desde la tabla de hechos relacionales subyacente. El modo de almacenamiento adecuado se decide en función de la frecuencia con la que se consultan las dimensiones de hechos, el número de filas que devuelve una consulta típica, el rendimiento de la consulta y el costo de procesamiento. Para definir una dimensión como ROLAP, no es necesario almacenar todos los cubos que utilizan la dimensión con el mismo modo de almacenamiento ROLAP. El modo de almacenamiento de cada dimensión se puede configurar independientemente.  
   
@@ -129,7 +131,7 @@ En las tareas de este tema, debe agregar una nueva dimensión de cubo basada en 
   
 ## <a name="see-also"></a>Vea también  
 [Relaciones de dimensión](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
-[Definir relaciones de hechos y propiedades de las relaciones de hechos](../analysis-services/multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
+[Definir una relación de hechos y las propiedades de relación de hechos](../analysis-services/multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   
   

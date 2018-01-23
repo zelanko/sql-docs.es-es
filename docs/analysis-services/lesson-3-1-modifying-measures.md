@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 00b1110e3deba08207cda1c71c75d6603660c019
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 322abebe579106c03f4855f7b9e2e7573f5d5580
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-3-1---modifying-measures"></a>Lección 1 de 3: modificar medidas
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Puede usar el **FormatString** propiedad para definir parámetros de formato que controlan cómo se presentan las medidas a los usuarios. En esta tarea, debe especificar las propiedades de formato para las medidas de moneda y porcentaje del cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Puede usar la propiedad **FormatString** para definir parámetros de formato que controlen cómo se presentan las medidas a los usuarios. En esta tarea, debe especificar las propiedades de formato para las medidas de moneda y porcentaje del cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ### <a name="to-modify-the-measures-of-the-cube"></a>Para modificar las medidas del cubo  
   
@@ -74,7 +76,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
 [Modificar la dimensión Customer](../analysis-services/lesson-3-2-modifying-the-customer-dimension.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
 [Definir dimensiones de base de datos](../analysis-services/multidimensional-models/define-database-dimensions.md)  
 [Configurar propiedades de medidas](../analysis-services/multidimensional-models/configure-measure-properties.md)  
   

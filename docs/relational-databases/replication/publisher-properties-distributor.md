@@ -15,20 +15,20 @@ f1_keywords: sql13.rep.configdistwizard.distpubproperties.f1
 helpviewer_keywords: Publisher Properties dialog box
 ms.assetid: ab6ada76-0f99-43fe-b524-baac7b1bc483
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: befe4ba107a2e9fd37a106668c9b87fa5c068060
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8cdec591e5ab9ee25158277668af4abf24cbf0da
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publisher-properties---distributor"></a>Propiedades del publicador: Distribuidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El cuadro de diálogo **Propiedades del publicador** le permitirá ver y modificar las propiedades asociadas con la relación entre el publicador y el distribuidor.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Conexión del agente al publicador**  
  Especifique el contexto en el que los siguientes agentes establecerán conexiones del distribuidor al publicador:  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
  **Varios**  
  Las propiedades **Tipo de publicador** y **Nombre de base de datos de distribución** son de solo lectura. Es posible cambiar la propiedad **Carpeta de instantáneas predeterminada** . Para obtener más información sobre la carpeta de instantáneas, vea [Proteger la carpeta de instantáneas](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Ver y modificar las propiedades del distribuidor y del publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [Referencia de propiedades &#40;replicación&#41;](../../relational-databases/replication/properties-reference-replication.md)  

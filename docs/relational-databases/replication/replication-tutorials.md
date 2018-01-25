@@ -18,15 +18,15 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 501582405c40f5688514c9ce5fbcfe06ca2952c1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e081c0e361ac7c52a4afc52adcdd2207f3465781
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-tutorials"></a>Tutoriales de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La replicación incluye tutoriales que se pueden utilizar para aprender a configurar y a ejecutar topologías de replicación con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -46,7 +46,7 @@ Aprenda cómo utilizar la replicación transaccional para replicar datos entre s
 [Replicar datos con clientes móviles](../../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md)  
 Aprenda cómo utilizar la replicación de mezcla para intercambiar datos entre un servidor y uno o más clientes que solo se conectan en determinadas ocasiones.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Seguridad y protección &#40;replicación&#41;](../../relational-databases/replication/security/security-and-protection-replication.md)  
   
   

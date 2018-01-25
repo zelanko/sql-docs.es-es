@@ -18,15 +18,15 @@ helpviewer_keywords:
 - column filters [SQL Server replication]
 ms.assetid: d7c3186a-9a8c-45d8-ab34-05beec4c26dd
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 703402f2956fcc2a5ab84cd8da7e570b58a624f9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 40a9767d36457ca4ade31ab77b15f8f1bbe2d4f0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="define-and-modify-a-column-filter"></a>Definir y modificar un filtro de columna
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo definir y modificar un filtro de columna en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -43,11 +43,11 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
--   Algunas columnas no se pueden filtrar. Para obtener más información, vea [Filtrar datos publicados](../../../relational-databases/replication/publish/filter-published-data.md). Si modifica un filtro de columna después de que las suscripciones se hayan inicializado, deberá generar una nueva instantánea y reinicializar todas las suscripciones después de efectuar el cambio. Para obtener más información sobre los requisitos para los cambios de propiedad, consulte [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
+-   Algunas columnas no se pueden filtrar. Para obtener más información, vea [Filtrar datos publicados](../../../relational-databases/replication/publish/filter-published-data.md). Si modifica un filtro de columna después de que las suscripciones se hayan inicializado, deberá generar una nueva instantánea y reinicializar todas las suscripciones después de efectuar el cambio. Para obtener más información sobre los requisitos para los cambios de propiedad, consulte [Cambiar las propiedades de la publicación y de los artículos](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
  Defina los filtros de columna en la página **Artículos** del Asistente para nueva publicación. Para obtener más información sobre cómo usar el Asistente para nueva publicación, vea [Crear una publicación](../../../relational-databases/replication/publish/create-a-publication.md).  
@@ -108,7 +108,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-define-a-column-filter-for-an-article-published-in-a-merge-publication"></a>Para definir un filtro de columna para un artículo publicado en una publicación de combinación  
   
-1.  Defina el artículo que se va a filtrar. Para obtener más información, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  Defina el artículo que se va a filtrar. Para más información, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  En la base de datos de publicación del publicador, ejecute [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md). Esto define las columnas que se van a incluir o quitar del artículo.  
   
@@ -141,7 +141,7 @@ ms.lasthandoff: 11/17/2017
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-colu_2.sql)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Cambiar las propiedades de la publicación y de los artículos](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Filtrar datos publicados](../../../relational-databases/replication/publish/filter-published-data.md)   
  [Filtrar datos publicados para la replicación de mezcla](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  

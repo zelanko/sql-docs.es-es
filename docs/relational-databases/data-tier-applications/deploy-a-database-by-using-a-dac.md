@@ -22,15 +22,15 @@ helpviewer_keywords:
 - database deploy [SQL Server]
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf70035387f68c17913ba152101cf1417f6e8741
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 110cea8f6a219fad5121e88a19ed5608b2afcb59
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Implementar una base de datos mediante una DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use el **asistente para implementar una base de datos en SQL Azure** para implementar una base de datos entre una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y un servidor de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] o entre dos servidores de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
@@ -145,7 +145,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  Use el método de **Import** del tipo **Microsoft.SqlServer.Management.Dac.DacStore** para importar el archivo BACPAC. Especifique el archivo BACPAC creado por la exportación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Exportar una aplicación de capa de datos](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [Importar un archivo de bacpac para crear una nueva base de datos de usuario](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)  

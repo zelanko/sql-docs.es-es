@@ -18,13 +18,13 @@ ms.assetid: a263483e-87ba-49c4-b154-3e7bdf33063b
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 684e7f2769dd2ae65e18cc56db02937ee3c7e88e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3648fff573d8f687f7d91a99bd58a7c7525a76bf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="rename-queries-visual-database-tools"></a>Cambiar el nombre de las consultas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede cambiar el nombre de una consulta que no esté abierta para su edición. En el procedimiento siguiente se presupone que la consulta cuyo nombre quiere cambiar está cerrada.  

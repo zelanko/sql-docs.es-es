@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 898177d27b1c580d8cf40f6d2966ab91c7b01733
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 30f25b5b1c71f6a84bdd114173c8fc04c0b3902d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-linked-domain"></a>Crear dominio vinculado
   En este tema se describe cómo crear un dominio vinculado en una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Los dominios vinculados se crean a partir de otros dominios previamente existentes, y heredan todos los valores, reglas y propiedades de los dominios a los que están vinculados, con la excepción del nombre y la descripción. Es posible administrar un conjunto de dominios vinculados como si fuera un único dominio. Al vincular un dominio al otro, se crea un dominio que hereda su contenido de otro dominio.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear un dominio vinculado.  
   
 ##  <a name="Create"></a> Crear dominio vinculado  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/20/2017
   
 6.  Si fuera necesario, puede cambiar el nombre o la descripción del dominio vinculado en la pestaña Propiedades del dominio.  
   
-7.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+7.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="Map"></a> Map two fields to linked domains  
   

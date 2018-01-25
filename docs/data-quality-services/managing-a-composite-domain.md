@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 75047e413cbc55d5e5a9431a6c6ab7cc7b92b017
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c9a7ebf0d795639f59106afc0573f42d088926fa
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="managing-a-composite-domain"></a>Administrar un dominio compuesto
   En este tema se describe el uso de los dominios compuestos en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). En ocasiones, un dominio individual no representa los datos de un campo de forma satisfactoria, y estos solo se pueden representar agrupando varios dominios individuales. Para ello, es necesario crear un dominio compuesto. Un dominio compuesto consta de dos o más dominios individuales y se asigna a un campo de datos que consta de varios términos relacionados que no están analizados, sino que se incluyen en un valor compuesto único. Cada término de dicho valor se representará mediante un dominio individual distinto. Una vez que se han incluido dominios individuales en dominios compuestos y se ha asignado el dominio compuesto al campo de datos, es posible generar conocimiento en la base de conocimiento sobre los datos de dicho campo generando conocimiento en los dominios individuales. Un dominio compuesto, al igual que un dominio individual, es una representación semántica de los datos de un solo campo de datos.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/20/2017
 |Crear una regla entre dominios cuando el valor de un dominio individual de un dominio compuesto afecta al valor de otro.|[Crear una regla entre dominios](../data-quality-services/create-a-cross-domain-rule.md)|  
 |Identificar combinaciones de valores para que DQS pueda informar sobre su frecuencia.|[Usar relaciones de valor en un dominio compuesto](../data-quality-services/use-value-relations-in-a-composite-domain.md)|  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  

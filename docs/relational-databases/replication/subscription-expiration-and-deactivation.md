@@ -23,22 +23,22 @@ helpviewer_keywords:
 - deactivating subscriptions
 ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a5568d5e75605430ad78fd38c5832971f2e2ae8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ebf798f5575af888afa8dc3935174d9a6d916d6c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Desactivación y expiración de las suscripciones
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Las suscripciones se pueden desactivar o pueden expirar si no se sincronizan en un *período de retención* especificado. La acción que se produce depende del tipo de replicación y del período de retención que se supere.  
   
  Para establecer períodos de retención, vea [Establecer el período de expiración para las suscripciones](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md), [Establecer el período de retención de distribución para las publicaciones transaccionales &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md) y [Configurar la publicación y la distribución](../../relational-databases/replication/configure-publishing-and-distribution.md).  
   
-## <a name="transactional-replication"></a>Replicación transaccional  
+## <a name="transactional-replication"></a>replicación transaccional  
  La replicación transaccional utiliza el período máximo de retención de distribución (el parámetro **@max_distretention** de [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)) y el período de retención de la publicación (el parámetro **@retention** de [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)):  
   
 -   Si una suscripción no se sincroniza dentro del período máximo de retención de distribución (el valor predeterminado es de 72 horas) y existen cambios en la base de datos de distribución que no se han entregado al suscriptor, el trabajo **Limpieza de la distribución** que se ejecuta en el distribuidor marcará la suscripción como desactivada. Debe reinicializarse la suscripción.  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Si después de realizar una limpieza se aumenta el período de retención y se intenta mezclar una suscripción con el publicador (que ya ha eliminado los metadatos), la suscripción no expirará debido al aumento del valor de retención. No obstante, el publicador no tendrá suficientes metadatos para descargar los cambios en el suscriptor, lo que daría lugar a la falta de convergencia.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Reinicializar suscripciones](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Administración del Agente de replicación](../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md)  

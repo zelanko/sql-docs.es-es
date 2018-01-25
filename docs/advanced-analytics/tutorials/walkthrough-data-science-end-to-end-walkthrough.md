@@ -16,12 +16,12 @@ ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
 caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 5ff7287937e2bddd57d4b155c254bcd29bfc0d68
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 2fc213534da32bf529acdb85fd5b0288bf686068
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>Tutorial de ciencia de datos to-end para R y SQL Server
 
@@ -57,7 +57,7 @@ Este tutorial está pensado para desarrolladores de R o SQL. Proporciona una int
 + Se incluyen todos los scripts SQL y R.
 + Tendrá que modificar las cadenas en las secuencias de comandos, para que se ejecute en su entorno. Puede hacerlo con cualquier editor de código, como [código de Visual Studio](https://code.visualstudio.com/Download).
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Requisitos previos
 
 + Debe tener acceso a una instancia de SQL Server 2016 o una versión de evaluación de SQL Server 2017.
 + Al menos una instancia en el equipo de SQL Server debe tener instalado [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].

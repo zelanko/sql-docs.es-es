@@ -15,12 +15,12 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 caps.latest.revision: "26"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 9fca2543543bc508d3fc232ba75c05f19a561ebb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+manager: craigg
+ms.openlocfilehash: 8c86ddf9555dbdac83821d7f16a7000415ec7b2d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Archivos de datos de SQL Server en Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ![Archivos de datos en Azure](../../relational-databases/databases/media/data-files-on-azure.png "Archivos de datos en Azure")  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
 >  Almacenar bases de datos del sistema en Blob Storage de Azure no es recomendable y no se admite. 
 
   
- En este tema se describen los conceptos y los factores básicos a la hora de almacenar archivos de datos de SQL Server en el Servicio de almacenamiento de Microsoft Azure.  
+ En este tema se describen los conceptos y los factores básicos a la hora de almacenar archivos de datos de SQL Server en el Servicio de Azure Storage.  
   
  Para ver una experiencia práctica sobre cómo usar esta nueva característica, consulte [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases ](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)(Tutorial: Uso del servicio Blob Storage de Microsoft Azure con bases de datos de SQL Server 2016).  
   

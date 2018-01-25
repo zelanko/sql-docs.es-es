@@ -19,17 +19,17 @@ helpviewer_keywords:
 - heterogeneous Subscribers, IBM DB2
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 caps.latest.revision: "74"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 14680465db9798d198685b3e9a556816a33057a3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 402675d8725ca5e571261e700b9eb8ec2a035a90
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="ibm-db2-subscribers"></a>suscriptores de IBM DB2
+# <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite suscripciones de inserción a IBM DB2/AS 400, DB2/MVS y DB2/Universal Database a través de los proveedores de OLE DB incluidos con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server.  
@@ -115,7 +115,7 @@ ms.lasthandoff: 11/17/2017
 |**char(1-254)**|CHAR(1-254)|  
 |**char(255-8000)**|VARCHAR(255-8000)|  
 |**date**|DATE|  
-|**datetime**|TIMESTAMP|  
+|**datetime**|timestamp|  
 |**datetime2(0-7)**|VARCHAR(27)|  
 |**datetimeoffset(0-7)**|VARCHAR(34)|  
 |**decimal(1-31, 0-31)**|DECIMAL(1-31, 0-31)|  
@@ -134,8 +134,8 @@ ms.lasthandoff: 11/17/2017
 |**numeric(32-38, 0-38)**|VARCHAR(41)|  
 |**nvarchar(1-4000)**|VARCHAR(1-4000)|  
 |**ssNoVersion**|VARCHAR(0)*|  
-|**real**|REAL|  
-|**smalldatetime**|TIMESTAMP|  
+|**real**|real|  
+|**smalldatetime**|timestamp|  
 |**smallint**|SMALLINT|  
 |**smallmoney**|DECIMAL(10,4)|  
 |**sql_variant**|N/D|  
@@ -167,13 +167,13 @@ ms.lasthandoff: 11/17/2017
     > [!NOTE]  
     >  La longitud especificada para el tipo DB2, al combinarse con otras longitudes de columna, no puede superar el tamaño máximo de fila especificado, basado en el espacio de tabla de DB2 al que están asignados los datos de la tabla.  
   
-     Si no hay ninguna asignación apropiada para una columna de objetos grandes, puede utilizar el filtrado de columna en el artículo para que no se replique. Para más información, vea [Filtrar datos publicados](../../../relational-databases/replication/publish/filter-published-data.md).  
+     Si no hay ninguna asignación apropiada para una columna de objetos grandes, puede utilizar el filtrado de columna en el artículo para que no se replique. Para obtener más información, vea [Filtrar datos publicados](../../../relational-databases/replication/publish/filter-published-data.md).  
   
 -   Al replicar los tipos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** y **ssNoVersion** en CHAR y VARCHAR de DB2, la replicación utiliza el mismo especificador de longitud para el tipo de DB2 que para el de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Sin embargo, es posible que la longitud del tipo de datos sea demasiado reducida para la tabla DB2 generada.  
   
      En algunos entornos de DB2, un elemento de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char** no se limita a caracteres de un solo byte; esto debe tenerse en cuenta para la longitud de un elemento CHAR o VARCHAR. También debe tener en cuenta los caracteres de *desplazamiento hacia dentro* y *desplazamiento hacia fuera* si se necesitan. Si desea replicar tablas con columnas **nchar** y **nvarchar** , es posible que necesite especificar una longitud máxima mayor para el tipo de datos en un script de creación personalizado. Para obtener información acerca de cómo especificar un script de creación personalizado, vea el paso 5 de la sección "Configuración de un suscriptor de IBM DB2", en este tema.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
  [Suscribirse a publicaciones](../../../relational-databases/replication/subscribe-to-publications.md)  
   

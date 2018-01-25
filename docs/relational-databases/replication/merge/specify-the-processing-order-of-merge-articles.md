@@ -16,15 +16,15 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], article processing order
 ms.assetid: d151e2c5-cf50-4cb3-a829-8f32455dbd66
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cb9d8b566766e23bfb17bc93b53d9d222fa3895
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a4476f6aaa996dff5ed88258a2cb9430a62774cd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-the-processing-order-of-merge-articles"></a>Especificar el orden de procesamiento de los artículos de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Desde [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], es posible invalidar el orden predeterminado del procesamiento de artículos para las publicaciones de combinación. Esto resulta útil, por ejemplo, si define la integridad referencial a través de desencadenadores que se deben activar en un orden determinado.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
  Cuando la integridad referencial se mantiene a través de los desencadenadores o en el nivel de aplicación, debe especificar el orden en el que se deben procesar los artículos. En el ejemplo con desencadenadores, debería especificar que la tabla **SalesOrderHeader** se debe procesar antes que **SalesOrderDetail**, puesto que el orden de los artículos se basa en el orden de inserción. La replicación de mezcla invertirá automáticamente el orden de las eliminaciones. La replicación de mezcla no producirá ningún error sin el orden de los artículos, porque el Agente de mezcla sigue procesando artículos si se produce una infracción de restricción. Lo que hace es reintentar las operaciones que hayan dado error cuando los otros artículos se hayan terminado de procesar. Especificar el orden de los artículos únicamente impide los reintentos y los procesos adicionales asociados con ellos. Si especifica un orden incorrecto (por ejemplo, uno que dé como resultado el procesamiento de los registros de detalle antes que el de los registros de encabezado), la replicación de mezcla volverá a realizar el proceso hasta que lo consiga.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  (Opciones de artículos para replicación de mezcla)  
  [Agrupar cambios en filas relacionadas con registros lógicos](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)   
  [Join Filters](../../../relational-databases/replication/merge/join-filters.md)  

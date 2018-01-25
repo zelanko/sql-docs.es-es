@@ -26,15 +26,15 @@ helpviewer_keywords:
 - transactional replication, subscribing
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d4613a7ee6306ba86b5748377f20c1cf48117815
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a8f88fca63abe24ce7093d628062c4ae90b40733
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscribe-to-publications"></a>Suscribirse a publicaciones
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Una suscripción es una solicitud de copia de datos y objetos de base de datos en una publicación. Una suscripción define qué publicación se recibirá, dónde y cuándo. Al planear suscripciones, tenga en cuenta dónde se realizará el proceso del agente. El tipo de suscripción que elige controla dónde se ejecuta el agente. Con una suscripción de inserción, el Agente de mezcla o el Agente de distribución se ejecutan en el distribuidor, mientras que en una suscripción de extracción los agentes se ejecutan en los suscriptores. Después de crear una suscripción, no se puede cambiar de un tipo a otro.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="merge-replication-subscription-types"></a>Tipos de suscripción de replicación de mezcla  
  Todos los tipos de replicación permiten suscripciones de inserción y extracción. La replicación de mezcla utiliza dos términos adicionales para distinguir las suscripciones: suscripciones de cliente y suscripciones de servidor. Ambos tipos de suscripción se pueden utilizar con suscripciones de inserción o extracción. Las suscripciones de cliente son adecuadas para la mayoría de suscriptores, mientras que las suscripciones de servidor se utilizan normalmente en suscriptores que vuelven a publicar datos en otros suscriptores. La elección de la suscripción también afecta a la resolución de conflictos.  
   
-## <a name="non-sql-server-subscribers"></a>Suscriptores que no son de SQL Server  
+## <a name="non-sql-server-subscribers"></a>suscriptores que no son de SQL Server  
  Oracle e IBM DB2 pueden suscribirse a publicaciones de instantáneas y transaccionales con suscripciones de inserción. Para más información, consulte [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
 ## <a name="creating-subscriptions"></a>Crear suscripciones  
@@ -94,8 +94,8 @@ ms.lasthandoff: 11/17/2017
   
  [Eliminar una suscripción de extracción](../../relational-databases/replication/delete-a-pull-subscription.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Proteger el suscriptor](../../relational-databases/replication/security/secure-the-subscriber.md)   
- [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
+ [Desactivación y expiración de la suscripción](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   
   

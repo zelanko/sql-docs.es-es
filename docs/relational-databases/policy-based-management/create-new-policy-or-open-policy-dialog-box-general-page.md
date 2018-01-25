@@ -17,25 +17,25 @@ f1_keywords:
 - sql13.swb.dmf.newgroup.f1
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c03db3581e9a01f23eb81c7d4c2a706785abcbb7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 028b2e39f916f29a4332f9a04b2d2af6fbcf2304
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>Cuadro de diálogo Crear nueva directiva o Abrir directiva, página General
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice este cuadro de diálogo para crear una directiva nueva de administración basada en directivas o modificar una directiva existente. Utilice las áreas **Para destinos** y **Restricción de servidor** como filtro para limitar las directivas a un subconjunto de todos los destinos posibles. Las condiciones que se usan como filtros de destino se deben definir en una faceta física y no deben contener funciones ni el operador LIKE. Cuando el sistema calcula el conjunto de objetos para una directiva, los objetos del sistema se excluyen de forma predeterminada.  Por ejemplo, si el conjunto de objetos de la directiva hace referencia a todas las tablas, la directiva no se aplicará a las tablas del sistema. Si los usuarios desean evaluar una directiva con los objetos del sistema, pueden agregar explícitamente objetos del sistema al conjunto de objetos. Sin embargo, aunque se admiten todas las directivas para el modo de evaluación **Comprobar en la programación** , por razones de rendimiento, no todas las directivas con conjuntos de objetos arbitrarios se admiten para el modo de evaluación **Comprobar en los cambios** . Para obtener más información, vea [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx).  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Nombre**  
  Si la directiva es nueva, escriba un nombre para ella. Si la directiva ya existe, se muestra el nombre.  
   
- **Habilitado**  
- Active la casilla **Habilitada** para habilitar la directiva. Desactive la casilla **Habilitada** para deshabilitar la directiva. El cuadro **Habilitada** se aplica a la automatización de las directivas. Crea o quita el sistema de automatización para la directiva. La automatización utiliza los mecanismos siguientes:  
+ **Enabled**  
+ Active la casilla **Habilitada** para habilitar la directiva. Desactive la casilla **Habilitada** para deshabilitar la directiva. El cuadro **Habilitada** se aplica a la automatización de las directivas. Crea o quita el sistema de automatización para la directiva. Automation utiliza los mecanismos siguientes:  
   
  **Al cambiar: impedir**  
  Un desencadenador de base de datos exige la compatibilidad.  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/17/2017
  **Restricción de servidor**  
  Seleccione los tipos de servidores que son adecuados para esta directiva. Las opciones son **Ninguno** o seleccionar una condición que filtre los servidores posibles.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

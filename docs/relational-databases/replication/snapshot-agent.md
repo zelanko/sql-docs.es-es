@@ -15,20 +15,20 @@ f1_keywords: sql13.rep.monitor.snapshotagent.f1
 helpviewer_keywords: Snapshot Agent dialog box
 ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0e2a93a43691f361692bda75f1545c1e3317650
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 133f4775bedcb3ab193a53865424426fbabddfbc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="snapshot-agent"></a>Agente de instantáneas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El cuadro de diálogo **Agente de instantáneas** muestra información detallada acerca del Agente de instantáneas, como el estado, el historial, mensajes informativos y mensajes de error.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  Seleccione en el menú **Ver** las sesiones del Agente de instantáneas que desea ver y seleccione a continuación una sesión específica en la cuadrícula con la etiqueta **Sesiones del Agente de instantáneas**. En la cuadrícula con la etiqueta **Acciones en la sesión seleccionada**se muestra información detallada de la sesión. Si la sesión seleccionada finalizó con un error, también se muestra el área de texto con la etiqueta **Detalles del error o mensaje de la sesión seleccionada** .  
   
  **Ver**  
@@ -66,10 +66,10 @@ ms.lasthandoff: 11/17/2017
  **Detalles del error o mensaje de la sesión seleccionada**  
  Solo se muestra si la sesión seleccionada presenta un valor de **Error** en la columna **Estado** . El área de texto muestra la información detallada del error y el comando que se intentaba ejecutar en el momento de producirse el error. También incluye vínculos a la información adicional relativa al error.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Ver información y realizar tareas para los agentes asociados a una publicación &#40;Monitor de replicación&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
- [Supervisar la replicación](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  (Supervisar la replicación)  
+ [Información general sobre los agentes de replicación](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

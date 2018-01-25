@@ -16,15 +16,15 @@ helpviewer_keywords:
 - skipping data fields when importing
 ms.assetid: 6a76517e-983b-47a1-8f02-661b99859a8b
 caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fbe24a2b8a4865121a3bf949be1434a23c0383de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 202385ebd84ef8ba9798be4f188d8cb4c82facf2
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>Usar un archivo de formato para omitir un campo de datos (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Un archivo de datos puede contener más campos que el número de columnas de la tabla. En este tema se describe la modificación de archivos de formato XML y no XML para adaptarse a un archivo de datos con más campos asignando las columnas de la tabla a los campos de datos correspondientes y omitiendo los campos adicionales.  Revise [Crear un archivo de formato (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) para información adicional.
@@ -170,7 +170,7 @@ El archivo de formato modificado ahora refleja:
 * FIELD 4, que corresponde a COLUMN 4, se asigna a la tercera columna de tabla, `myTestSkipField.. LastName`
 
 ## Importación de datos con un archivo de formato para omitir un campo de datos<a name="import_data"></a>
-Los ejemplos siguientes usan la base de datos, el archivo de datos y los archivos de formato creados anteriormente.
+Los ejemplos siguientes usan la base de datos, el archivo de datos y los archivos de formato que se han creado anteriormente.
 
 ### Uso de [bcp](../../tools/bcp-utility.md) y un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bcp_nonxml"></a>
 En el símbolo del sistema, escriba el siguiente comando:
@@ -255,7 +255,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 ```
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

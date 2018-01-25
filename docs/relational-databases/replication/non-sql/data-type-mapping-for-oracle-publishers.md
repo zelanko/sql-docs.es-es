@@ -17,17 +17,17 @@ helpviewer_keywords:
 - mapping data types [SQL Server replication]
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8c754c1796f76236b5efeda3f53bb785c8daf76f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4078e78f9f1e8879d709ef154a11e44055e2dcd5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="data-type-mapping-for-oracle-publishers"></a>Asignar tipos de datos para publicadores de Oracle
+# <a name="data-type-mapping-for-oracle-publishers"></a>Data Type Mapping for Oracle Publishers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los tipos de datos de Oracle y de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no siempre coinciden de forma exacta. En la medida de lo posible, el tipo de datos coincidentes se selecciona automáticamente al publicar en una tabla Oracle. En los casos en que no queda clara una asignación de tipos de datos única, se proporcionan asignaciones alternativas de tipos de datos. Para obtener información acerca de cómo seleccionar asignaciones alternativas, vea la sección "Especificar asignaciones de tipos de datos alternativas" más adelante en este tema.  
   
  En la siguiente tabla se muestra cómo se asignan los tipos de datos de manera predeterminada entre Oracle y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuando se mueven datos del publicador de Oracle al distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La columna Alternativas indica si existen asignaciones alternativas disponibles.  
@@ -39,30 +39,30 @@ ms.lasthandoff: 11/17/2017
 |CHAR([1-2000])|CHAR([1-2000])|Sí|  
 |CLOB|VARCHAR(MAX)|Sí|  
 |DATE|DATETIME|Sí|  
-|FLOAT|FLOAT|No|  
-|FLOAT([1-53])|FLOAT([1-53])|No|  
-|FLOAT([54-126])|FLOAT|No|  
+|FLOAT|FLOAT|no|  
+|FLOAT([1-53])|FLOAT([1-53])|no|  
+|FLOAT([54-126])|FLOAT|no|  
 |INT|NUMERIC(38)|Sí|  
 |INTERVAL|DATETIME|Sí|  
 |LONG|VARCHAR(MAX)|Sí|  
 |LONG RAW|IMAGE|Sí|  
-|NCHAR([1-1000])|NCHAR([1-1000])|No|  
+|NCHAR([1-1000])|NCHAR([1-1000])|no|  
 |NCLOB|NVARCHAR(MAX)|Sí|  
 |NUMBER|FLOAT|Sí|  
-|NUMBER([1-38])|NUMERIC([1-38])|No|  
+|NUMBER([1-38])|NUMERIC([1-38])|no|  
 |NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Sí|  
-|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|No|  
-|RAW([1-2000])|VARBINARY([1-2000])|No|  
-|REAL|FLOAT|No|  
-|ROWID|CHAR(18)|No|  
+|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|no|  
+|RAW([1-2000])|VARBINARY([1-2000])|no|  
+|real|FLOAT|no|  
+|ROWID|CHAR(18)|no|  
 |TIMESTAMP|DATETIME|Sí|  
 |MARCA DE TIEMPO(0-7)|DATETIME|Sí|  
 |TIMESTAMP(8-9)|DATETIME|Sí|  
 |MARCA DE TIEMPO (0-7) CON ZONA HORARIA|VARCHAR(37)|Sí|  
-|MARCA DE TIEMPO (8-9) CON ZONA HORARIA|VARCHAR(37)|No|  
+|MARCA DE TIEMPO (8-9) CON ZONA HORARIA|VARCHAR(37)|no|  
 |MARCA DE TIEMPO (0-7) CON ZONA HORARIA LOCAL|VARCHAR(37)|Sí|  
-|MARCA DE TIEMPO (8-9) CON ZONA HORARIA LOCAL|VARCHAR(37)|No|  
-|UROWID|CHAR(18)|No|  
+|MARCA DE TIEMPO (8-9) CON ZONA HORARIA LOCAL|VARCHAR(37)|no|  
+|UROWID|CHAR(18)|no|  
 |VARCHAR2([1-4000])|VARCHAR([1-4000])|Sí|  
   
 ## <a name="considerations-for-data-type-mapping"></a>Consideraciones para la asignación de tipos de datos  
@@ -110,9 +110,9 @@ ms.lasthandoff: 11/17/2017
   
  Para especificar asignaciones de datos alternativas, vea [Specify Data Type Mappings for an Oracle Publisher](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Configurar un publicador de Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Consideraciones y limitaciones de diseño de los publicadores de Oracle](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Información general de la publicación de Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

@@ -16,20 +16,20 @@ helpviewer_keywords:
 - Broker Statistics object
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9c0829d863a9f42516385ac8f50c12813ed4524
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4dfb78d1b381649353ef872ed22e0bb4725d65cc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-broker-statistics-object"></a>Broker Statistics (objeto de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El objeto de rendimiento SQLServer:Broker Statistics contiene contadores de rendimiento que notifican información general de [!INCLUDE[ssSB](../../includes/sssb-md.md)] para una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. En la tabla siguiente se muestran los contadores incluidos en este objeto:  
   
-|Contadores de Broker Statistics de SQL Server|Descripción|  
+|Contadores de Broker Statistics de SQL Server|Description|  
 |-------------------------------------------|-----------------|  
 |**Total de errores de activación**|Número de veces que un procedimiento almacenado de activación de [!INCLUDE[ssSB](../../includes/sssb-md.md)] terminó con un error.|  
 |**Reversiones de transacciones de Broker**|Número de transacciones revertidas que contenían instrucciones DML relacionadas con [!INCLUDE[ssSB](../../includes/sssb-md.md)], como SEND y RECEIVE.|  
@@ -69,8 +69,8 @@ ms.lasthandoff: 11/17/2017
 |**Total de SQL SEND**|Número total de instrucciones SEND [!INCLUDE[tsql](../../includes/tsql-md.md)] ejecutadas.|  
 |**SQL SEND/seg.**|Número de instrucciones SEND [!INCLUDE[tsql](../../includes/tsql-md.md)] ejecutadas por segundo.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+ [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

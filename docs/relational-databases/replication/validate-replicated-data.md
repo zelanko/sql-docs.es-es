@@ -22,15 +22,15 @@ helpviewer_keywords:
 - validating replicated data
 ms.assetid: f7500a2b-61cb-41b5-816d-27609a6c58e7
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9834f7c0d65ab05a7dda5f68b05438760abef21
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 65c3d00ab7ebdfdf99b6ad52f5b9b5460ef6c29f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="validate-replicated-data"></a>Validar datos replicados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La replicación transaccional y de mezcla le permiten validar que los datos del suscriptor coinciden con los del publicador. Es posible realizar la validación de determinadas suscripciones o de todas las suscripciones a una publicación. Especifique uno de los siguientes tipos de validación y el Agente de distribución o el Agente de mezcla validarán los datos la próxima vez que se ejecuten:  
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
   
  Cuando se utilizan sumas de comprobación binarias, se produce una comprobación de redundancia cíclica (CRC) de 32 bits columna por columna en vez de una comprobación CRC en la fila física de la página de datos. Esto permite que las columnas de la tabla estén en cualquier orden físicamente en la página de datos, pero se calcula la misma comprobación CRC para la fila. Es posible utilizar la validación de suma de comprobación binaria cuando hay filtros de fila o de columna en la publicación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Best Practices for Replication Administration](../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   
   

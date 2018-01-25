@@ -18,15 +18,15 @@ helpviewer_keywords:
 - system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8c204e1ed53a4969b903d7821e151dd6cb183848
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c267615cb7970d7833821662cfd97662093a2edb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="rebuild-system-databases"></a>Volver a generar bases de datos del sistema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Las bases de datos del sistema deben volver a generarse para corregir problemas por daños en las bases de datos [maestra](../../relational-databases/databases/master-database.md), [modelo](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md) o [de recurso](../../relational-databases/databases/resource-database.md), o para modificar la intercalación de nivel de servidor predeterminada. En este tema se ofrecen instrucciones paso a paso para volver a generar las bases de datos del sistema en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
      [Solucionar errores de recompilación](#Troubleshoot)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  Cuando se vuelven a generar las bases de datos maestra, modelo, msdb y tempdb del sistema, las bases de datos se quitan y se vuelven a crear en su ubicación original. Si se especifica una nueva intercalación en la instrucción para volver a generar las bases de datos del sistema, estas se crearán con esa configuración de intercalación. Se perderán las modificaciones que los usuarios hayan realizado en esas bases de datos. Por ejemplo, es posible que haya objetos definidos por los usuarios en la base de datos maestra, trabajos programados en msdb o cambios en la configuración predeterminada de la base de datos modelo.  
@@ -105,7 +105,7 @@ ms.lasthandoff: 11/17/2017
   
      **Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=nombreDeInstancia /SQLSYSADMINACCOUNTS=cuentas [ /SAPWD=contraseñaSegura ] [ /SQLCOLLATION=nombreDeIntercalación]**  
   
-    |Nombre del parámetro|Descripción|  
+    |Nombre del parámetro|Description|  
     |--------------------|-----------------|  
     |/QUIET o /Q|Especifica que el programa de instalación se ejecute sin ninguna interfaz de usuario.|  
     |/ACTION=REBUILDDATABASE|Especifica que el programa de instalación vuelva a crear las bases de datos del sistema.|  
@@ -204,7 +204,7 @@ ms.lasthandoff: 11/17/2017
   
  Cuando se haya completado el proceso de volver a generar la base de datos, examine los registros de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en busca de errores. De manera predeterminada, están en C:\Archivos de programa\Microsoft SQL Server\130\Setup Bootstrap\Logs. Para encontrar el archivo de registro que contiene los resultados del proceso de volver a generar bases de datos, cambie el directorio a la carpeta Logs en un símbolo del sistema y, a continuación, ejecute `findstr /s RebuildDatabase summary*.*`. Esta búsqueda indicará los archivos de registro que contengan los resultados del proceso de volver a generar las bases de datos del sistema. Abra los archivos de registro y examine si contienen mensajes de error relevantes.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Bases de datos del sistema](../../relational-databases/databases/system-databases.md)  
   
   

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4e8ba40ef0b4c224620a1d01f27bd712403c118
-ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
+ms.openlocfilehash: b2466c376c36403ec9f529e6dfb6b9242c10a7a3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="modify-a-partition-function"></a>Modificar una función de partición
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Puede cambiar el modo en que se crean las particiones de una tabla o un índice en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] al sumar o restar el número de particiones especificadas, en aumentos de 1, en la función de partición de la tabla o el índice con particiones mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]. Lo que sucede al agregar una partición es que se "divide" una partición existente en dos particiones y se vuelven a definir los límites de las particiones nuevas. Al quitar una partición, se "mezclan" los límites de dos particiones en una sola. Lo que hace esta última acción es volver a llenar una partición y dejar la otra sin asignar.  

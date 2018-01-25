@@ -16,13 +16,13 @@ ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 caps.latest.revision: "15"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49b34cb2867b26be38f9d6c9086f5ea038d8cbdc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 43306a76937572c93f01642e5943d24a141690b6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>Propiedades de grupo de disponibilidad: Nuevo grupo de disponibilidad (página General)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tema se aplica a la pestaña **General** del cuadro de diálogo **Nuevo grupo de disponibilidad** y el cuadro de diálogo **Propiedades de grupo de disponibilidad**.  El cuadro de diálogo **Nuevo grupo de disponibilidad** permite crear un nuevo grupo de disponibilidad sin utilizar [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. El cuadro de diálogo **Propiedades de grupo de disponibilidad** permite ver y modificar la configuración de un grupo de disponibilidad existente.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
  Nombre del grupo de disponibilidad. Es un nombre definido por el usuario que debe ser único dentro del clúster de conmutación por error de Windows Server (WSFC).  
   
 ## <a name="availability-databases"></a>Bases de datos de disponibilidad  
- **Nombre de la base de datos**  
+ **Database Name**  
  Nombre de una base de datos que se ha agregado al grupo de disponibilidad.  
   
  **Agregar**  
@@ -114,7 +114,7 @@ ms.lasthandoff: 11/20/2017
  **Quitar**  
  Haga clic para quitar una réplica secundaria del grupo de disponibilidad.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

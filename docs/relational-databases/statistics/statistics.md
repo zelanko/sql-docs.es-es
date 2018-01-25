@@ -26,15 +26,15 @@ helpviewer_keywords:
 - statistics [SQL Server]
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 caps.latest.revision: "70"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c4fc025cd2026ee0310f67c80a3a05fbd3da45c7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2ed0124e677f79bd25b11a4ac994f60e65f8fe82
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="statistics"></a>Estadísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] El Optimizador de consultas utiliza estadísticas para crear planes de consulta que mejoren el rendimiento de las consultas. En el caso de la mayoría de las consultas, el Optimizador de consultas genera ya las estadísticas necesarias para un plan de consulta de alta calidad. En algunos casos, para obtener los mejores resultados, es necesario crear estadísticas adicionales o modificar el diseño de la consulta. En este tema se explican los conceptos de estadísticas y se proporcionan directrices para usar las estadística de optimización de consultas de forma eficaz.  

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 84bf4654-3ef7-4d7f-a269-c8bb4ed4acad
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ce11b76c47faa36406452c707c8246a3dfd1d7b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8a6656e904451913580d537ac4e98e351e6195b2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-xtp-cursors"></a>Cursores SQL Server XTP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
   
  En esta tabla se describen los contadores de **Cursores XTP** .  
   
-|Contador|Descripción|  
+|Contador|Description|  
 |-------------|-----------------|  
 |**Eliminaciones de cursor/s**|Número de eliminaciones de cursor (en promedio), por segundo.|  
 |**Inserciones de cursor/s**|Número de inserciones de cursor (en promedio), por segundo.|  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |**Filas tocadas/s**|Número de filas tocadas mediante cursores (en promedio), por segundo.|  
 |**Filas tocadas eliminadas provisionalmente/s**|Número de filas que van a expirar tocadas mediante cursores (en promedio), por segundo. Una fila va a expirar si la transacción que la eliminó permanece activa (es decir, no se confirma o anula).|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Contadores de rendimiento de XTP &#40;OLTP en memoria&#41;](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
   
   

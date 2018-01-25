@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Windows System Monitor [SQL Server], logs
 ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9bfe93f96bc9c5b4b2c887e3935916fc2fad01b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0c84f299a27b69def3acf965f7a3cf6d4ab74017
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>Crear gráficos, alertas, registros e informes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Monitor de sistema le permite crear gráficos, alertas, registros e informes para supervisar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
   
  Los gráficos son útiles para la supervisión a corto plazo en tiempo real de equipos locales o remotos, por ejemplo, cuando se desea supervisar un evento a medida que se produce.  
   
-## <a name="alerts"></a>Alertas  
+## <a name="alerts"></a>Trabajos  
  Mediante las alertas, el Monitor de sistema realiza un seguimiento de eventos específicos y le notifica dichos eventos cuando lo solicite. El registro de alertas permite supervisar el rendimiento actual de contadores e instancias seleccionados de objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando un contador supera un valor determinado, se guardan en el registro la fecha y hora del evento. Un evento también puede generar una alerta de red. Puede establecer la ejecución de un programa específico la primera vez o cada vez que se produzca un evento. Por ejemplo, una alerta puede enviar un mensaje de red a todos los administradores del sistema acerca de que la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se está quedando sin espacio en disco.  
   
 ## <a name="logs"></a>Registros  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
  Para obtener más información acerca de la creación gráficos, alertas, registros e informes, o acerca de objetos y contadores de Windows, consulte la documentación de Windows.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.files.f1
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a9c11a4593e3712083513d5edc9374edd392022
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d68409591b5243ecf56b8c5707c61a5a7c33493
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-files-page"></a>Propiedades de la base de datos (página Archivos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice esta página para crear una nueva base de datos o para ver o modificar las propiedades de la base de datos seleccionada. Este tema se aplica a **Propiedades de la base de datos (página Archivos)** de las bases de datos existentes y a **Nueva base de datos (página General)**.  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
   
  Para obtener información acerca de los archivos, vea [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

@@ -14,20 +14,20 @@ ms.topic: article
 f1_keywords: sql13.rep.newsubwizard.initializesubscriptions.f1
 ms.assetid: 7b170e4e-470d-4828-a9ed-7435b0b03514
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7207993940a0875513e095f61cb21be74d60ff87
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 11573e80fe10775fd567d4ef11eb3e139421ab2f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="initialize-subscriptions"></a>Inicializar suscripciones
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Deberá inicializar los suscriptores antes de que puedan comenzar a recibir datos replicados. No se requiere un conjunto de datos inicial, pero el suscriptor deberá poseer al menos el esquema de cada objeto replicado y todas las tablas de metadatos y los procedimientos necesarios para la replicación.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Propiedades de la suscripción**  
  Active la casilla de la columna **Inicializar** para cada suscriptor que necesite un conjunto de datos inicial. Si desactiva la casilla, solo se inicializarán los procedimientos y metadatos de replicación. Para más información, vea [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) (Inicializar una suscripción transaccional sin una instantánea).  
   
@@ -36,8 +36,8 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  El asistente podría solicitar una conexión al distribuidor para iniciar un trabajo adecuado del Agente de distribución o el Agente de mezcla.  
   
-## <a name="see-also"></a>Vea también  
- [Crear una suscripción de extracción](../../relational-databases/replication/create-a-pull-subscription.md)   
+## <a name="see-also"></a>Ver también  
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Inicializar una suscripción](../../relational-databases/replication/initialize-a-subscription.md)   
  [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md)  

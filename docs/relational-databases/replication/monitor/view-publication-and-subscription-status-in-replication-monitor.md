@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Replication Monitor, publication and subscription status
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ea47f9f50242003e4aa933da2e5657bb7e2ed5f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ab769d9d4a6c5c311fa6695056ef503999455d8f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Ver el estado de la suscripción y la publicación en el Monitor de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En el Monitor de replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se muestra información de estado de las publicaciones y suscripciones:  
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
 |------------|----------|  
 |Error|![Icono de la interfaz de usuario: error](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Icono de la interfaz de usuario: error")|  
 |Rendimiento crítico|![Icono de la interfaz de usuario: advertencia](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
-|Con expiración en breve/Expirado|![Icono de la interfaz de usuario: advertencia](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
+|Con expiración en breve/Expirada|![Icono de la interfaz de usuario: advertencia](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
 |Suscripción no inicializada|![Icono de la interfaz de usuario: advertencia](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
 |Reintentando comando con errores|![Icono de la interfaz de usuario: reintento del agente de replicación](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Icono de la interfaz de usuario: reintento del agente de replicación")|  
 |No está en ejecución|![Icono de la interfaz de usuario: agente de replicación detenido](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Icono de la interfaz de usuario: agente de replicación detenido")|  
@@ -99,7 +99,7 @@ ms.lasthandoff: 11/17/2017
 |Error|![Icono de la interfaz de usuario: error](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Icono de la interfaz de usuario: error")|  
 |Rendimiento crítico|![Icono de la interfaz de usuario: advertencia](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
 |Mezcla de ejecución prolongada|![Icono de la interfaz de usuario: advertencia](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
-|Con expiración en breve/Expirado|![Icono de la interfaz de usuario: advertencia](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
+|Con expiración en breve/Expirada|![Icono de la interfaz de usuario: advertencia](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
 |Suscripción no inicializada|![Icono de la interfaz de usuario: advertencia](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
 |Reintentando comando con errores|![Icono de la interfaz de usuario: reintento del agente de replicación](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Icono de la interfaz de usuario: reintento del agente de replicación")|  
 |Sincronizando|![Icono de la interfaz de usuario: agente de replicación en ejecución](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Icono de la interfaz de usuario: agente de replicación en ejecución")|  
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/17/2017
 |Sincronizando|![Icono de la interfaz de usuario: agente de replicación en ejecución](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Icono de la interfaz de usuario: agente de replicación en ejecución")|  
 |No se están sincronizando|![Icono de la interfaz de usuario: agente de replicación detenido](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Icono de la interfaz de usuario: agente de replicación detenido")|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Supervisar la replicación](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

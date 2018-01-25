@@ -19,15 +19,15 @@ helpviewer_keywords:
 - OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e1d8a0a29b6d92aeab9c1c6e4afa01a2665add6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ffde4891d1481b628012a64d58b73f904e131f7e
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Especificar metapropiedades en OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Los atributos de las metapropiedades de un documento XML son atributos que describen las propiedades de un elemento XML (como un elemento, atributo o cualquier otro nodo DOM). Estos atributos no existen físicamente en el texto del documento XML. Sin embargo, OPENXML proporciona estas metapropiedades para todos los elementos XML. Estas metapropiedades permiten extraer información, como la posición local e información de espacio de nombres, de los nodos XML. Esta información ofrece más detalles de los que aparentemente hay en la representación textual.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  No se puede hacer referencia a estas metapropiedades en ninguna navegación XPath.  
   
-|Atributo de metapropiedad|Descripción|  
+|Atributo de metapropiedad|Description|  
 |----------------------------|-----------------|  
 |**@mp:id**|Proporciona un identificador del nodo DOM generado por el sistema para todo el documento. Este Id. hace referencia al mismo nodo XML siempre y cuando no se vuelva a analizar el documento.<br /><br /> Si el Id. XML es **0** , significa que se trata de un elemento raíz. El Id. XML del elemento primario es NULL.|  
 |**@mp:localname**|Almacena la parte local del nombre del nodo. Se utiliza con un prefijo y un URI del espacio de nombres para asignar nombres a los nodos de elemento o atributo.|  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
   
  Esta tabla muestra las propiedades adicionales que se proporcionan para los elementos primarios, que permiten recuperar información acerca de la jerarquía.  
   
-|Atributo de metapropiedad Parent|Descripción|  
+|Atributo de metapropiedad Parent|Description|  
 |-----------------------------------|-----------------|  
 |**@mp:parentid**|Se corresponde con **../@mp:id**|  
 |**@mp:parentlocalname**|Se corresponde con **../@mp:localname**|  
@@ -217,7 +217,7 @@ O3    1999-07-14 00:00:00.000     <Order amount="100" note="Wrap it blue
 O4    1996-01-20 00:00:00.000     <Order amount="10000"/>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   
  [OPENXML &#40;SQL Server&#41;](../../relational-databases/xml/openxml-sql-server.md)  
   

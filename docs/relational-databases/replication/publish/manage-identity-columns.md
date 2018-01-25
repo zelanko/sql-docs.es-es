@@ -19,15 +19,15 @@ helpviewer_keywords:
 - identity columns [SQL Server], replication
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69355e8a2908efc77cba9fd4e12b1156fb5dbea3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 46d22fff51904ae27e64def3aaebacfe39bab40f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-identity-columns"></a>Administrar columnas de identidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo administrar columnas de identidad en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Cuando las inserciones del Suscriptor se replican de nuevo al Publicador, se deben administrar las columnas de identidad para evitar la asignación del mismo valor de identidad en el Suscriptor y el Publicador. La replicación puede administrar automáticamente intervalos de identidad o puede elegir procesar manualmente la administración de intervalos de identidad.  Para obtener información sobre las opciones de administración de intervalos de identidad proporcionadas por la replicación, vea [Replicar columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  Si seleccionó **Automático** o **True** en el paso 4, escriba los valores de las opciones en la siguiente tabla. Para obtener más información sobre cómo usar estos valores, vea la sección "Asignar intervalos de identidad"de [Replicar columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
-    |Opción|Valor|Descripción|  
+    |Opción|Valor|Description|  
     |------------|-----------|-----------------|  
     |**Tamaño de intervalo del publicador**|Valor entero para el tamaño del intervalo (por ejemplo, 20 000).|Vea la sección "Asignar intervalos de identidad"de [Replicar columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md).|  
     |**Tamaño de intervalo del suscriptor**|Valor entero para el tamaño del intervalo (por ejemplo, 10000).|Vea la sección "Asignar intervalos de identidad"de [Replicar columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md).|  
@@ -153,8 +153,8 @@ ms.lasthandoff: 11/17/2017
   
     -   Para deshabilitar la administración automática de intervalos de identidad, ejecute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) en el Publicador de la base de datos de publicación. Especifique un valor de **identityrangemanagementoption** para **@property** y **manual** o **none** para **@value**.  
   
-## <a name="see-also"></a>Vea también  
- [Replicación transaccional punto a punto](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+## <a name="see-also"></a>Ver también  
+ [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Replicar columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
   

@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.monitor.beta2.f1
 helpviewer_keywords: Replication Monitor, help
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0224e490d519d5d62828d43e4aac07bca7693f80
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4875b39c775e1e62b81c325386833a3be7860b46
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-monitor"></a>Monitor de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Esta sección de la documentación incluye información sobre el Monitor de replicación. Las páginas y cuadros de diálogo mostrados en el monitor son diferentes según el tipo de replicación y la versión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se supervise.  
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Suscripción, Historial de Distribuidor a suscriptor &#40;Suscripción de instantánea&#41;](../../relational-databases/replication/subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
   
--   [Agente de registro del LOG](../../relational-databases/replication/log-reader-agent.md)  
+-   [Agente de lector del registro](../../relational-databases/replication/log-reader-agent.md)  
   
 -   [Agente de lectura de cola](../../relational-databases/replication/queue-reader-agent.md)  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Ordenar columnas](../../relational-databases/replication/sort-columns.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  (Supervisar la replicación)  
  [Referencia de propiedades &#40;replicación&#41;](../../relational-databases/replication/properties-reference-replication.md)  

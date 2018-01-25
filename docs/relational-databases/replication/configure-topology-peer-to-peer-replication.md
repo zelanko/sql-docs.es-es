@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.p2pwizard.peers.f1
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc8f91a4da3bfa31f6eab0bcb492e16c9bccba0d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ba3f308aaa3e5eea99a7cae23630c8462414a1fb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Configurar topología (replicación punto a punto)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice la página **Configurar topología** para realizar las tareas de configuración comunes, como agregar nuevos nodos, eliminar nodos y agregar las nuevas conexiones entre los nodos existentes. El nodo que seleccionó en la página **Publicación** de este asistente se muestra en la superficie de diseño. Para especificar las opciones de configuración, haga clic con el botón secundario en un nodo, una conexión o la superficie de diseño.  
@@ -30,10 +30,10 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  El Asistente de configuración de la topología punto a punto solicita información de la topología cuando se cierra el asistente. Si el asistente se cierra y se vuelve a abrir antes de que todos los nodos respondan a la solicitud de información, el asistente puede mostrar una red parcial.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  La página **Configurar topología** contiene los elementos de interfaz y las opciones que están disponibles al hacer clic con el botón secundario en un elemento. En la tabla siguiente se describe cada elemento de interfaz.  
   
-|Elemento de interfaz.|Descripción|  
+|Elemento de interfaz.|Description|  
 |-----------------------|-----------------|  
 |Superficie de diseño|Muestra otros elementos de interfaz. Para agregar elementos, haga clic con el botón secundario en la superficie de diseño.|  
 |![El primer nodo de una topología](../../relational-databases/replication/media/p2pwizard-firstnode.gif "El primer nodo de una topología")|El nodo original en la topología. Los nodos nuevos se inicializan utilizando una copia de la base de datos de publicación del nodo original.|  
@@ -85,9 +85,9 @@ ms.lasthandoff: 11/17/2017
  **Quitar conexión del mismo nivel**  
  Quita una conexión entre dos nodos. Por ejemplo, si quita una conexión entre el Nodo A y el Nodo B, la replicación elimina dos suscripciones: la que habilita el Nodo A para recibir los cambios de la publicación en el Nodo B y la que permite al Nodo B recibir cambios de la publicación en el Nodo A.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Configurar la publicación y la distribución](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Administrar una topología punto a punto &#40;programación de la replicación con Transact-SQL&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Replicación transaccional punto a punto](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

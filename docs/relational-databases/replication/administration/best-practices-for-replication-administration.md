@@ -16,15 +16,15 @@ helpviewer_keywords:
 - replication [SQL Server], administering
 ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2d98762b93d118bb7b8f03839440ca799500defd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1aade2a55ca0af319c84ddff35ced1f22b675839
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="best-practices-for-replication-administration"></a>Prácticas recomendadas para la administración de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Después de configurar la replicación, es importante entender cómo administrar una topología de replicación. En este tema se proporciona una guía básica de prácticas recomendadas en varias áreas con vínculos a más información de cada área. Además de seguir la guía de procedimientos recomendados que se presenta en este tema, puede leer el tema de preguntas más frecuentes para familiarizarse con preguntas y problemas comunes: [Preguntas más frecuentes para administradores de replicación](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
@@ -130,7 +130,7 @@ ms.lasthandoff: 11/17/2017
  Se recomienda realizar la validación de acuerdo con la programación de copia de seguridad de la base de datos de publicaciones. Por ejemplo, si se realiza una copia de seguridad completa de la base de datos de publicaciones una vez a la semana, se podría ejecutar la validación una vez a la semana tras finalizar la copia de seguridad. Para obtener más información, vea [Validar datos replicados](../../../relational-databases/replication/validate-replicated-data.md).  
   
 ## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>Utilizar perfiles para cambiar los parámetros de agentes si es necesario  
- Los perfiles de agente proporcionan un método cómodo para establecer los parámetros de los agentes de replicación. También se pueden especificar los parámetros en la línea de comandos del agente, pero normalmente es más apropiado utilizar un perfil de agente predefinido o crear un perfil nuevo si necesita cambiar el valor de un parámetro. Por ejemplo, si está utilizando la replicación de mezcla y un suscriptor pasa de una conexión de banda ancha a una conexión telefónica, considere la posibilidad de utilizar el perfil **slow link** para el Agente de mezcla; este perfil utiliza un conjunto de parámetros que se ajustan mejor al vínculo de comunicaciones más lento. Para más información, consulte [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
+ Los perfiles de agente proporcionan un método cómodo para establecer los parámetros de los agentes de replicación. También se pueden especificar los parámetros en la línea de comandos del agente, pero normalmente es más apropiado utilizar un perfil de agente predefinido o crear un perfil nuevo si necesita cambiar el valor de un parámetro. Por ejemplo, si está utilizando la replicación de mezcla y un suscriptor pasa de una conexión de banda ancha a una conexión telefónica, considere la posibilidad de utilizar el perfil **slow link** para el Agente de mezcla; este perfil utiliza un conjunto de parámetros que se ajustan mejor al vínculo de comunicaciones más lento. Para obtener más información, consulte [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
 ## <a name="adjust-publication-and-distribution-retention-periods-if-necessary"></a>Ajustar los períodos de retención de publicación y distribución si es necesario  
  La replicación transaccional y la replicación de mezcla utilizan períodos de retención para determinar, respectivamente, cuánto tiempo se almacenan las transacciones en la base de datos de distribución y la frecuencia con que se debe sincronizar una suscripción. Se recomienda utilizar la configuración predeterminada inicialmente, pero supervisar la topología para determinar si la configuración necesita ajustes. Por ejemplo, en el caso de la replicación de mezcla, el período de retención de publicación (que es de 14 días de manera predeterminada) determina cuánto tiempo se almacenan los metadatos en las tablas del sistema. Si las suscripciones se sincronizan siempre en un plazo de cinco días, considere el ajuste de la configuración a un número inferior, que reducirá los metadatos y posiblemente proporcionará un mejor rendimiento. Para más información, consulte [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
@@ -153,7 +153,7 @@ ms.lasthandoff: 11/17/2017
   
  Para obtener más información, vea [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Realizar cambios de esquema en bases de datos de publicaciones).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administración &#40;replicación&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
   
   

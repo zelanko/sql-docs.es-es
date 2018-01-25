@@ -15,12 +15,12 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 caps.latest.revision: "27"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 1b9a66523d0d56a8e357ef31ee29545ec2fea3c0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 58b90e91e05c20716faa72063090696f88af4076
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>Actualizar a una edición diferente de SQL Server (programa de instalación)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La instalación de 
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 > **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una instancia de clúster de conmutación por error:** basta con ejecutar una actualización de edición en uno de los nodos de la instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este nodo puede ser activo o pasivo y el motor no pone los recursos sin conexión durante la actualización de la edición. Después de actualizar la edición, es necesario reiniciar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o conmutar por error a otro nodo diferente.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
 En instalaciones locales, debe ejecutar el programa de instalación como administrador. Si instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un recurso compartido remoto, deberá usar una cuenta de dominio que tenga permisos de lectura para dicho recurso.  
   
 > [!IMPORTANT]  
@@ -82,7 +82,7 @@ En instalaciones locales, debe ejecutar el programa de instalación como adminis
   
 -   Las bases de datos de plantilla permanecen en el equipo después de la actualización.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Actualizar SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Compatibilidad con versiones anteriores](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   

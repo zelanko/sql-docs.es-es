@@ -18,20 +18,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffb136514dfbad1d4dc05209459fecab3cbde6f2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cea5ae007fde8634631ca223e5d98367dae56717
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, réplica de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El objeto de rendimiento **SQLServer:Database Replica** contiene contadores de rendimiento que ofrecen información sobre las bases de datos secundarias de un grupo de disponibilidad AlwaysOn en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Este objeto solamente es válido en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda una réplica secundaria.  
   
-|Nombre de contador|Descripción|Vista en…|  
+|Nombre de contador|Description|Vista en…|  
 |------------------|-----------------|--------------|  
 |**Bytes de archivo recibidos/s**|Cantidad de datos de FILESTREAM recibidos por la réplica secundaria para la base de datos secundaria en el último segundo.|Réplica secundaria|  
 |**Cola de aplicación de registro pendiente**|Número de bloques de registros en espera de aplicarse a la réplica de base de datos.|Réplica secundaria|
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |**Registro total que requiere la operación de deshacer**|Kilobytes totales del registro que se deben deshacer.|Réplica secundaria|  
 |**Retraso de transacción**|Retraso en la espera de reconocimiento de confirmación no terminada, en milisegundos.|Réplica principal|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, réplica de disponibilidad](../../relational-databases/performance-monitor/sql-server-availability-replica.md)   
  [Databases (objeto de SQL Server)](../../relational-databases/performance-monitor/sql-server-databases-object.md)   

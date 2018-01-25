@@ -16,13 +16,13 @@ ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
 caps.latest.revision: "6"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf041215c96e0acc59fd4d773562867dcc20313f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7b682c71e77188ea46cea5f85590953c17d61bda
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>agregar un informe personalizado a Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En este tema se describe cómo crear un informe sencillo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] que se guarda como archivo .rdl y, después, cómo agregar ese archivo a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] como un informe personalizado. [!INCLUDE[ssRS](../../includes/ssrs_md.md)] puede crear una gran variedad de informes complejos. Para crear un informe siguiendo las instrucciones de este tema, debe tener instalado [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] en el equipo. No es necesario instalar [!INCLUDE[ssRS](../../includes/ssrs_md.md)] en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] para ejecutar un informe personalizado mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  

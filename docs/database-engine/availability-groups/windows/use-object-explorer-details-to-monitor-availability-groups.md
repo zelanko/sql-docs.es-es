@@ -20,13 +20,13 @@ ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 caps.latest.revision: "28"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f83e241a5360b7edcdf6739d4d7bdbc96517cea7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dc0896ba691bac565cd116a2f5da6cc70951063d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Usar los detalles del Explorador de objetos para supervisar los grupos de disponibilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo se usa el panel **Detalles del Explorador de objetos** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para supervisar y administrar grupos de disponibilidad AlwaysOn, réplicas de disponibilidad y bases de datos de disponibilidad existentes.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/20/2017
   
      [Detalles de la base de datos de disponibilidad](#AvDbDetails)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Debe estar conectado a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instancia del servidor) que hospeda la réplica principal o una réplica secundaria.  
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/20/2017
   
  Los valores posibles son los siguientes:  
   
-|Valor|Descripción|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**No permitir conexiones**|No se permiten conexiones directas a las bases de datos de disponibilidad cuando esta réplica de disponibilidad está actuando como réplica secundaria. Las bases de datos secundarias no están disponibles para acceso de lectura.|  
 |**Permitir solo conexiones de lectura**|Solo se permiten conexiones de solo lectura directas cuando esta réplica actúa como réplica secundaria. Todas las bases de datos de la réplica están disponibles para acceso de lectura.|  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/20/2017
  **Estado de conexión**  
  Indica si la réplica secundaria está conectada actualmente a la réplica principal. Los valores posibles son los siguientes:  
   
-|Valor|Descripción|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Desconectado**|En el caso de una réplica de disponibilidad remota, indica que está desconectada de la réplica de disponibilidad local. La respuesta de la réplica local al estado Desconectado depende de su rol, del siguiente modo:<br /><br /> En la réplica principal, si una réplica secundaria está desconectada, las bases de datos secundarias se marcan como **No sincronizadas** en la réplica principal y la réplica principal espera a que la réplica secundaria vuelva a conectarse.<br /><br /> En la réplica secundaria, cuando detecta que está desconectada, intenta volver a conectarse a la réplica principal.|  
 |**Conectado**|Una réplica de disponibilidad remota que está conectada actualmente a la réplica local.|  
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/20/2017
  **Estado de sincronización**  
  Indica si una réplica secundaria está sincronizada actualmente con la réplica principal. Los valores posibles son los siguientes:  
   
-|Valor|Descripción|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**No sincronizadas**|La base de datos no está sincronizada o no se ha unido todavía al grupo de disponibilidad.|  
 |**Sincronizado**|La base de datos está sincronizada con la base de datos principal en la réplica principal actual, si existe, o en la última réplica principal.<br /><br /> Nota: En modo de rendimiento, la base de datos nunca está en estado Sincronizado.|  
@@ -130,7 +130,7 @@ ms.lasthandoff: 11/20/2017
   
  Los estados posibles de sincronización son los siguientes:  
   
-|Valor|Descripción|  
+|Valor|Description|  
 |-----------|-----------------|  
 |Sincronizando|La base de datos secundaria ha recibido las entradas del registro de transacciones de la base de datos principal no escritas todavía en el disco (protegido).<br /><br /> Nota: En el modo de confirmación asincrónica, el estado de sincronización siempre es **Sincronizando**.|  
 |||  
@@ -138,7 +138,7 @@ ms.lasthandoff: 11/20/2017
  **Suspendida**  
  Indica si la base de datos de disponibilidad está actualmente en línea. Los valores posibles son los siguientes:  
   
-|Valor|Descripción|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Suspendida**|Este estado indica que la base de datos está suspendida localmente y necesita ser reanudada manualmente.<br /><br /> En la réplica principal, el valor no es confiable para una base de datos secundaria. Para determinar de forma confiable si una base de datos secundaria está suspendida, consúltela en la réplica secundaria que hospeda la base de datos.|  
 |**Sin unir**|Indica que la base de datos secundaria no se ha unido al grupo de disponibilidad o se ha quitado del grupo.|  
@@ -148,7 +148,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Para obtener información sobre los contadores de rendimiento para las bases de datos de disponibilidad, vea [SQL Server, réplica de base de datos](../../../relational-databases/performance-monitor/sql-server-database-replica.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
  [Ver las propiedades del grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)   

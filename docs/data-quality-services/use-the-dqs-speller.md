@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9389568b31c445d66713b68efea8c312f5df9dec
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e336447f1719999505d03fff77d0343ff5adf5ef
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-the-dqs-speller"></a>Utilizar el corrector ortográfico de DQS
   El corrector ortográfico de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) comprueba la sintaxis, la ortografía y la estructura de las frases de los valores de cadena de un dominio. El corrector ortográfico es una característica independiente, del lado cliente, que no se integra con los motores del servidor y no tiene ninguna implicación en los flujos o estados actuales. El corrector ortográfico identifica los valores de cadena que considera posibles errores, y los marca con un carácter de subrayado rojo en la misma ubicación en la que se realizan otros cambios manuales en los valores de dominio. Entre estas ubicaciones se incluyen:  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para ejecutar el corrector ortográfico.  
   
 ##  <a name="Enable"></a> Habilitar el corrector ortográfico  

@@ -28,15 +28,15 @@ helpviewer_keywords:
 - restoring database state [SQL Server]
 ms.assetid: b7f1f111-ca73-4a89-b567-a98d64d6ecb3
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d4743b5a903630f267c48c42aced53776e8bc073
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e6acde3a545115bc189da2cfdad0297789fea6a1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-states"></a>Estados de base de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Una base de datos siempre está en un estado específico. Por ejemplo, esos estados pueden ser ONLINE, OFFLINE o SUSPECT. Para comprobar el estado actual de una base de datos, seleccione la columna **state_desc** de la vista de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) o la propiedad **Status** en la función [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) .  

@@ -16,13 +16,13 @@ ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85ecfe90f8821623156f5a343197cc7b20ce8802
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3d3f5dd740387c0ba38cf9ad54f915ef2fd1f5eb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Lección 1: Crear y aplicar una directiva Desactivado de forma predeterminada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El uso de directivas de administración basada en directivas permite administrar una o varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uno o varios objetos de instancia, instancias de servidor, una o varias bases de datos, o uno o varios objetos de base de datos. Como administrador de bases de datos, debe asegurarse de que ciertos servidores no tienen habilitado Correo electrónico de base de datos. En esta lección, creará una condición y una directiva que establezca esa opción de servidor. Probará el servidor para ver si cumple con la directiva. A continuación, utilizará la directiva para volver a configurar el servidor de modo que cumpla con ella.  

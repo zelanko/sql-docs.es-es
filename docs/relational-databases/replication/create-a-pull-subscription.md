@@ -19,17 +19,17 @@ helpviewer_keywords:
 - transactional replication, subscribing
 ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bca4071c25a248b235b59e71957f7ecbe0149de1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b05513645f78b39129d9d738c344e049f532a7ba
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="create-a-pull-subscription"></a>Crear una suscripción de extracción
+# <a name="create-a-pull-subscription"></a>Create a Pull Subscription
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo crear una suscripción de extracción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] o Replication Management Objects (RMO).  
   
  Es posible configurar una suscripción de extracción para la replicación P2P mediante un script, pero no está disponible a través del asistente.  
@@ -300,7 +300,7 @@ GO
         > [!NOTE]  
         >  No es necesario configurar <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> cuando un miembro del rol fijo de servidor **sysadmin** crea la suscripción; sin embargo, es recomendable. En este caso, el agente suplantará a la cuenta del Agente SQL Server. Para más información, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-    -   (Opcional) El valor **true** para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> para crear un trabajo de agente que se utilice para sincronizar la suscripción. Si especifica **false** (el valor predeterminado), solamente se puede sincronizar la suscripción mediante programación y deberá especificar las propiedades adicionales del <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> cuando obtenga acceso a este objeto desde la propiedad <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> . Para más información, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+    -   (Opcional) El valor **true** para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> para crear un trabajo de agente que se utilice para sincronizar la suscripción. Si especifica **false** (el valor predeterminado), solamente se puede sincronizar la suscripción mediante programación y deberá especificar las propiedades adicionales del <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> cuando obtenga acceso a este objeto desde la propiedad <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> . Para obtener más información, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
         > [!NOTE]  
         >  Agente SQL Server no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Cuando se especifica el valor **true** para suscriptores de Express, no se crea el trabajo de agente. Sin embargo, los metadatos importantes relacionados con la suscripción se almacenan en el suscriptor.  
@@ -342,7 +342,7 @@ GO
         > [!NOTE]  
         >  No es necesario configurar <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> cuando un miembro del rol fijo de servidor **sysadmin** crea la suscripción; sin embargo, es recomendable. En este caso, el agente suplantará a la cuenta del Agente SQL Server. Para más información, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-    -   (Opcional) El valor **true** para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> para crear un trabajo de agente que se utilice para sincronizar la suscripción. Si especifica **false** (el valor predeterminado), solamente se puede sincronizar la suscripción mediante programación y deberá especificar las propiedades adicionales del <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> cuando obtenga acceso a este objeto desde la propiedad <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> . Para más información, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+    -   (Opcional) El valor **true** para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> para crear un trabajo de agente que se utilice para sincronizar la suscripción. Si especifica **false** (el valor predeterminado), solamente se puede sincronizar la suscripción mediante programación y deberá especificar las propiedades adicionales del <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> cuando obtenga acceso a este objeto desde la propiedad <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> . Para obtener más información, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
     -   (Opcional) Configure los campos <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> y <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> o <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> de <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> si utiliza la autenticación de SQL Server para conectarse al distribuidor.  
   
@@ -1125,11 +1125,11 @@ Finally
 End Try  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Conceptos de los Replication Management Objects (RMO)](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
- [Ver y modificar las propiedades de una suscripción de extracción](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
+## <a name="see-also"></a>Ver también  
+ [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+ [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)  (Ver y modificar las propiedades de una suscripción de extracción)  
  [Configurar sincronización web](../../relational-databases/replication/configure-web-synchronization.md)   
- [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

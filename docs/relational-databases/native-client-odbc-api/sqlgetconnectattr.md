@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLGetConnectAttr function
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 caps.latest.revision: "60"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ec92c6f38bec112705e29cda021ab6e5a7b49d0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4a075d06b4425a5f07e3e805fdefe73b1c5eabba
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  El atributo de conexión ODBC estándar SQL_ATTR_CONNECTION_DEAD devuelve el estado más reciente de la conexión. Éste podría no ser el estado de la conexión actual.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|Se ha perdido la conexión al servidor.|  
 |SQL_CD_FALSE|La conexión está abierta y disponible para procesar una instrucción.|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/08/2018
   
  Para obtener más información, consulte [acceso a información de diagnóstico en el registro de eventos extendidos](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |SQL_ERROR|Error en la conexión.|  
 |SQL_SUCCESS|La conexión se realizó correctamente. El identificador de conexión del cliente se encuentra en el búfer de salida.|  
@@ -63,7 +63,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="sqlcoptssperfdata"></a>SQL_COPT_SS_PERF_DATA  
  El atributo SQL_COPT_SS_PERF_DATA devuelve un puntero a una estructura SQLPERF que contiene las estadísticas de rendimiento del controlador actual. **SQLGetConnectAttr** devolverá NULL si el registro de rendimiento no está habilitado. El controlador no actualiza de manera dinámica las estadísticas en la estructura SQLPERF. Llama a **SQLGetConnectAttr** cada vez que se actualicen las estadísticas de rendimiento.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |NULL|El registro de rendimiento no está habilitado.|  
 |Cualquier otro valor|Un puntero a una estructura SQLPERF.|  
@@ -74,7 +74,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="sqlcoptssuserdata"></a>SQL_COPT_SS_USER_DATA  
  El atributo SQL_COPT_SS_USER_DATA recupera el puntero de datos de usuario. Los datos de usuario se almacenan en la memoria propiedad del cliente y se registran por conexión. Si el puntero de datos de usuario no se ha establecido, SQL_UD_NOTSET, se devuelve un puntero NULL.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|No se establece ningún puntero de datos de usuario.|  
 |Cualquier otro valor|Un puntero a los datos de usuario.|  
@@ -94,6 +94,6 @@ ms.lasthandoff: 01/08/2018
  [SET QUOTED_IDENTIFIER &#40; Transact-SQL &#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
- [SET ANSI_WARNINGS &#40; Transact-SQL &#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
+ [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
   
   

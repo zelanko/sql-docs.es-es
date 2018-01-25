@@ -16,15 +16,15 @@ helpviewer_keywords:
 - default protocols, after install
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 caps.latest.revision: "4"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d56a9141ce472f9419eca3504dae859dab886689
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5549947b718e1303d1c6a065cb5790b7af5dabe7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>Configuración predeterminada de protocolo de red de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para mejorar la seguridad, [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] deshabilita la conectividad de red de algunas instalaciones nuevas. La conectividad de red a través de TCP/IP no se deshabilitará si se usa la edición Enterprise, Standard, Evaluation o Workgroup, o si hay una instalación anterior de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. El protocolo de memoria compartida se habilita para todas las instalaciones con el fin de permitir las conexiones locales con el servidor. Puede que el servicio Explorador de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] se detenga, según las condiciones y opciones de instalación.
@@ -45,7 +45,7 @@ Desarrollador   | Nueva instalación  | Habilitado   | Deshabilitado  | Deshabil
 Evaluation  | Nueva instalación  | Habilitado   | Habilitado   | Deshabilitadas para las conexiones de red.
 SQL Server Express  | Nueva instalación  | Habilitado   | Deshabilitado  | Deshabilitadas para las conexiones de red.
 Todas las ediciones    | Hay una instalación anterior presente, pero no se actualiza.   | Igual que en una instalación nueva  | Igual que en una instalación nueva  | Igual que en una instalación nueva
-Todas las ediciones    | Actualización   | Habilitado   | Se conserva la configuración de la instalación anterior.    | Se conserva la configuración de la instalación anterior.
+Todas las ediciones    | UPGRADE   | Habilitado   | Se conserva la configuración de la instalación anterior.    | Se conserva la configuración de la instalación anterior.
 
 
 >[!NOTE]
@@ -72,7 +72,7 @@ El servicio [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser
 * Cuando se instala una instancia con nombre del motor de base de datos que incluye todas las instancias de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Express.
 * Cuando se instala una instancia con nombre de Analysis Services.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Ver también
 
 [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 

@@ -16,13 +16,13 @@ ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3137ff6c86a40986f8788c391fa45b213ee06bca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1f997d0457ea5472328cd9b109d5f3f3224b462c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Lección 2: Crear y aplicar una directiva de normas de denominación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Algunos tipos de directivas de administración basada en directivas pueden crear desencadenadores para exigir el cumplimiento futuro con la directiva. En esta lección, va a crear una directiva que exige una denominación estándar para tablas. A continuación, va a probar la directiva intentando crear una tabla que infrinja dicha directiva.  

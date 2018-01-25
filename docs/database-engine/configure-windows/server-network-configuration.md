@@ -21,15 +21,15 @@ helpviewer_keywords:
 - server configuration [SQL Server]
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 88db862493213badd36cfcaf4301cc1be6da5881
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4dbf50b3d48d83d3df69ec285a22379164f883e0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-network-configuration"></a>Configuración de red del servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Entre las tareas de configuración de red del servidor se incluyen las siguientes: habilitar protocolos, modificar el puerto o canalización que usa un protocolo, configurar el cifrado, configurar el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, mostrar u ocultar el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en la red y registrar el nombre de la entidad de seguridad del servidor. La mayoría de las veces, no es necesario cambiar la configuración de red del servidor. Solo debe volver a configurar los protocolos de red del servidor si la red tiene requisitos especiales.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/20/2017
   
  Los SPN también se pueden utilizar para hacer que la autenticación del cliente sea más segura al conectar con NTLM. Para obtener más información, vea [Conectar al motor de base de datos con protección ampliada](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).  
   
-## <a name="sql-server-browser-service"></a>Servicio SQL Server Browser  
+## <a name="sql-server-browser-service"></a>servicio SQL Server Browser  
  El servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser se ejecuta en el servidor y ayuda a los equipos cliente a encontrar instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No es necesario configurar el servicio Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero se debe ejecutar según ciertos escenarios de conexión. Para obtener más información sobre cómo usar el Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Servicio SQL Server Browser &#40;motor de base de datos y SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).  
   
 ## <a name="hiding-sql-server"></a>Ocultar SQL Server  

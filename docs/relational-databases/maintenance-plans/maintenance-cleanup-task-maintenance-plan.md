@@ -15,15 +15,15 @@ f1_keywords: sql13.swb.maint.cleanup.f1
 helpviewer_keywords: Maintenance Cleanup Task dialog box
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a2339a873b593f3c9fc689212739ab1f66adfba7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d083329514a3e8a12362bc7277ee50bd34add7d3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Tarea Limpieza de mantenimiento (Plan de mantenimiento)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice la **Tarea Limpieza de mantenimiento** para quitar archivos antiguos que estén relacionados con los planes de mantenimiento, incluidos los informes de texto creados por planes de mantenimiento y los archivos de copia de seguridad de la base de datos.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  La tarea Limpieza de mantenimiento no elimina automáticamente archivos incluidos en las subcarpetas del directorio especificado. Esta característica reduce la posibilidad de un ataque malintencionado que utilice la tarea Limpieza de mantenimiento para eliminar archivos. Si quiere eliminar archivos en las subcarpetas de primer nivel, debe seleccionar **Incluir subcarpetas de primer nivel**.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Conexión**  
  Muestra la conexión actual.  
   
@@ -93,13 +93,13 @@ ms.lasthandoff: 11/17/2017
  **Utilizar un nombre de usuario y una contraseña específicos**  
  Se conecta a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] con la autenticación de SQL Server. Esta opción no está disponible.  
   
- **Nombre de usuario.**  
+ **User name**  
  Proporcione un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la autenticación. Esta opción no está disponible.  
   
  **Contraseña**  
  Proporcione una contraseña para que se utilice en la autenticación. Esta opción no está disponible.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Planes de mantenimiento](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

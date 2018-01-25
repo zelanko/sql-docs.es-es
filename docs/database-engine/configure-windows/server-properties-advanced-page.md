@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.serverproperties.advanced.f1
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
 caps.latest.revision: "65"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9db1fe5e47e062e2fa1a4563d54059b0ecfdc0af
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e6fdf75cd720e6463a41475212beb07ee4a79819
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-properties---advanced-page"></a>Propiedades del servidor (página Opciones avanzadas)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice esta página para ver o modificar la configuración avanzada del servidor.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Ver o cambiar las propiedades del servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)  
   
-## <a name="containment"></a>Contenedores  
+## <a name="containment"></a>Containment  
  Habilitar bases de datos independientes  
  Indica si esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite bases de datos independientes. Cuando es **True**, una base de datos independiente puede crearse, restaurarse o conectarse. Cuando es **False**, una base de datos independiente no puede crearse, restaurarse ni conectarse a esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cambiar la propiedad de independencia puede afectar a la seguridad de la base de datos. Habilitar las bases de datos independientes permite a los propietarios de bases de datos conceder acceso a este [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si se deshabilitan las bases de datos independientes, se puede impedir que los usuarios se conecten. Para conocer el impacto en la propiedad de independencia, vea [Contained Databases](../../relational-databases/databases/contained-databases.md) y [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
  Muestra el nivel actual de compatibilidad con FILESTREAM en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para cambiar el nivel de acceso, seleccione uno de los valores siguientes:  
   
  **Deshabilitado**  
- Los datos de objeto binario grande (BLOB) no pueden almacenarse en el sistema de archivos. Es el valor predeterminado.  
+ Los datos de objeto binario grande (BLOB) no pueden almacenarse en el sistema de archivos. Este es el valor predeterminado.  
   
  **Acceso Transact-SQL habilitado**  
  Los datos FILESTREAM son accesibles mediante [!INCLUDE[tsql](../../includes/tsql-md.md)], pero no a través del sistema de archivos.  
@@ -105,7 +105,7 @@ ms.lasthandoff: 11/20/2017
   
  Por ejemplo, el valor predeterminado 2049 indica que la fecha escrita como "14/3/49" se interpretará como 14 de marzo de 2049 y la fecha escrita como "14/3/50", como 14 de marzo de 1950. Para más información, consulte [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
   
-## <a name="network"></a>Red  
+## <a name="network"></a>red  
  **Tamaño de paquete de red**  
  Establece el tamaño de paquete (en bytes) que se utiliza en toda la red. El valor predeterminado es 4.096 bytes. Si una aplicación realiza operaciones de copia masiva, o bien envía o recibe una gran cantidad de datos de tipo **text** o **image** , el uso de paquetes de un tamaño superior al predeterminado puede mejorar la eficacia, ya que tiene como resultado un número menor de operaciones de lectura y escritura en la red. Si una aplicación envía y recibe pequeñas cantidades de información, puede establecer un tamaño de 512 bytes para cada paquete, lo que es suficiente para la mayor parte de las transferencias de datos. Para más información, consulte [Configure the network packet size Server Configuration Option](../../database-engine/configure-windows/configure-the-network-packet-size-server-configuration-option.md).  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 11/20/2017
  **Espera de consulta**  
  Especifica el tiempo en segundos (de 0 a 2.147.483.647) que espera una consulta para utilizar los recursos antes de agotarse el tiempo de espera. Si se utiliza el valor predeterminado -1, el tiempo de espera calculado será 25 veces el costo estimado de la consulta. Para más información, consulte [Configure the query wait Server Configuration Option](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

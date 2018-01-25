@@ -1,5 +1,5 @@
 ---
-title: SQLGetTypeInfo | Documentos de Microsoft
+title: SQLGetTypeInfo | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLGetTypeInfo function
 ms.assetid: 13b982c3-ae03-4155-bc0d-e225050703ce
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27e02520cffa658b9c7a59b1848ee349eed698f5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c59bc2a6f4571d7ceff9b0a6b89328e5fe0095f0
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,6 +54,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Vea también  
  [SQLGetTypeInfo, función](http://go.microsoft.com/fwlink/?LinkId=59356)   
- [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Detalles de implementación de API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

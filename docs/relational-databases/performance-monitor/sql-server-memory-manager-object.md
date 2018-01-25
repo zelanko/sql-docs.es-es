@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Memory Manager object
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c4994f77321278c9f923cb5899e70c10a688d95
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e385362666a573b97579a3f0e99924152b1bcdd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-memory-manager-object"></a>Memory Manager (objeto de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El objeto **Memory Manager** de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona contadores para supervisar el uso de memoria en el servidor. La supervisión de la utilización total de la memoria en el servidor para medir la actividad de los usuarios y el uso de los recursos puede ayudar a identificar cuellos de botella en el rendimiento. Supervisar la memoria que utiliza una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ayuda a determinar:  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="memory-manager-counters"></a>Contadores de Memory Manager  
  En esta tabla se describen los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Memory Manager** .  
   
-|Contadores de Memory Manager de SQL Server|Descripción|  
+|Contadores de Memory Manager de SQL Server|Description|  
 |----------------------------------------|-----------------|  
 |**Memoria de conexión (KB)**|Especifica la cantidad total de memoria dinámica que utiliza el servidor para mantener las conexiones.|  
 |**Memoria caché de base de datos (KB)**|Especifica la cantidad de memoria que el servidor está utilizando actualmente para la memoria caché de páginas de base de datos.|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 |**Memoria del servidor de destino (KB)**|Indica la cantidad ideal de memoria dinámica que el servidor puede usar.|  
 |**Memoria total del servidor (KB)**|Especifica la cantidad de memoria que el servidor ha confirmado con el administrador de memoria.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [Buffer Manager (objeto de SQL Server)](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)   
 [sys.dm_os_performance_counters (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  

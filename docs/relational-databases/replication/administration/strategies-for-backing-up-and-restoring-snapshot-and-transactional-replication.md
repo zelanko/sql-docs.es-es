@@ -23,15 +23,15 @@ helpviewer_keywords:
 - backups [SQL Server replication], transactional replication
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 69c0da57bc8bf51162dcc26771726bf2e9f6091d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5d7e9c5e24951afe3a997dce86f10b63b6fcfdf4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Estrategias para hacer copias de seguridad y restaurar replicación de instantáneas o replicación transaccional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Hay tres áreas que hay que considerar al diseñar una estrategia de copias de seguridad y restauración para la replicación de instantáneas o transaccional:  
@@ -351,7 +351,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Asegúrese de que la base de datos sea coherente con la base de datos de publicación en términos de configuración general y configuración de la replicación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Hacer copias de seguridad y restaurar bases de datos replicadas](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  [Configurar distribución](../../../relational-databases/replication/configure-distribution.md)   

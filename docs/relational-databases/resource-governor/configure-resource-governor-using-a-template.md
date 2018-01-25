@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Resource Governor, templates
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea7a49280b610c153f8cef9c0ef6cac8d659c307
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: df7896e10efd804a93ea6ef76254df60c3845e67
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-resource-governor-using-a-template"></a>Configurar el regulador de recursos utilizando una plantilla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Puede configurar Resource Governor utilizando una plantilla que se proporciona en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -31,10 +31,10 @@ ms.lasthandoff: 11/17/2017
   
 -   **Creación de un grupo de cargas de trabajo utilizando lo siguiente:**  [una plantilla](#ConfRGTemplate)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
  Siga los pasos que se detallan a continuación para abrir y modificar una plantilla que crea un grupo de recursos de servidor y un grupo de cargas de trabajo para el grupo de recursos. Además, esta plantilla le permite crear una función clasificadora definida por el usuario que enruta las nuevas conexiones al grupo predeterminado o al grupo de cargas de trabajo que está creando.  
   
-###  <a name="Permissions"></a> Permisos  
+###  <a name="Permissions"></a> Permissions  
  Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] del regulador de recursos de la plantilla requieren el permiso CONTROL SERVER.  
   
 ##  <a name="ConfRGTemplate"></a> Configurar el regulador de recursos utilizando una plantilla  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  Para ejecutar la consulta, haga clic en **Ejecutar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Habilitar el regulador de recursos](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Grupo de recursos de servidor del regulador de recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

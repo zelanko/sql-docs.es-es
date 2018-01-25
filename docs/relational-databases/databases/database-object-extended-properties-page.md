@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.common.extendedproperties.f1
 ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ada959607aff6c1482194b19e91284cf1aaef67e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a40f19346fe5c40c4c7f6aa1426d2a58081e564a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-object-extended-properties-page"></a>Objeto de base de datos (página Propiedades extendidas)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Las propiedades extendidas permiten agregar propiedades personalizadas a los objetos de base de datos. Utilice esta página para ver o modificar las propiedades extendidas del objeto seleccionado. La página **Propiedades extendidas** es la misma para todos los tipos de objeto de base de datos.  
@@ -40,10 +40,10 @@ ms.lasthandoff: 11/17/2017
  **Botón Examinar**  
  Haga clic en el botón Examinar (…) que se encuentra después de **Valor** para abrir el cuadro de diálogo **Valor para propiedad extendida** . Escriba o muestre el valor de la propiedad extendida en esta ubicación mayor.  
   
- **Delete**  
+ **Eliminar**  
  Elimina la propiedad extendida que se ha seleccionado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Vistas de catálogo de propiedades extendidas &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/f39fd324-efd4-4468-884c-bf77ed1a026f)  
   
   

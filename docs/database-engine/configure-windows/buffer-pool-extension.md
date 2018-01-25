@@ -13,17 +13,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 63567e05218f3b5a042ef4d2aa41c9aa358433de
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e1d856188d2266ebb7321c0f0e75ee7f23950dff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="buffer-pool-extension"></a>Extensión del grupo de búferes
+# <a name="buffer-pool-extension"></a>Buffer Pool Extension
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], la extensión del grupo de búferes proporciona una perfecta integración de una extensión de la memoria de acceso aleatorio no volátil (es decir, una unidad de estado sólido) con el grupo de búferes de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para mejorar considerablemente el rendimiento de E/S. La extensión del grupo de búferes no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ## <a name="benefits-of-the-buffer-pool-extension"></a>Ventajas de la extensión del grupo de búferes  
@@ -93,14 +93,14 @@ ms.lasthandoff: 11/20/2017
   
  Están disponibles los siguientes Xevents.  
   
-|XEvent|Descripción|Parámetros|  
+|XEvent|Description|Parámetros|  
 |------------|-----------------|----------------|  
 |sqlserver.buffer_pool_extension_pages_written|Se desencadena cuando una página o un grupo de páginas se expulsan del grupo de búferes y se escriben en el archivo de extensión del grupo de búferes.|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  
 |sqlserver.buffer_pool_extension_pages_read|Se desencadena cuando se lee en el grupo de búferes una página del archivo de la extensión del grupo de búferes.|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  
 |sqlserver.buffer_pool_extension_pages_evicted|Se desencadena cuando se expulsa una página del archivo de la extensión del grupo de búferes.|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  
 |sqlserver.buffer_pool_eviction_thresholds_recalculated|Se desencadena cuando se calcula el umbral de expulsión.|*warm_threshold*<br /><br /> *cold_threshold*<br /><br /> *pages_bypassed_eviction*<br /><br /> *eviction_bypass_reason*<br /><br /> *eviction_bypass_reason_description*|  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  

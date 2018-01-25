@@ -16,13 +16,13 @@ ms.assetid: 59e23ff3-d7ee-4e32-9629-0b54d3a258f7
 caps.latest.revision: "25"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ba31bacc6b6172218e915e598063ac079c3a55b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 27a9b06d3afb1f0a5bd6e94907becbbaa7592950
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="choose-servers-to-configure-configure-database-mirroring-security-wizard"></a>Elegir los servidores que configurar (Asistente para la configuración de seguridad de la creación de reflejo de bases de datos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice esta página para especificar las instancias de servidor que desea configurar ahora. Debe seleccionar al menos una instancia de servidor antes de continuar con el asistente.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Instancia de servidor principal**  
  Seleccione esta opción para configurar la seguridad del servidor principal.  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
  **Instancia de servidor testigo**  
  Seleccione para configurar la seguridad del servidor testigo (si está presente).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Propiedades de la base de datos &#40;página Creación de reflejo&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   

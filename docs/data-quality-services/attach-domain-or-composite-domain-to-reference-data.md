@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e5ed6d30db3643d9e027d7d7c2a537a9deb72d60
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d87911a70dd4f1c891fade863804af7c7f5fd3ea
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>Adjuntar un dominio o un dominio compuesto a datos de referencia
   En este tema se describe cómo adjuntar dominios o dominios compuestos de una base de conocimiento de calidad de datos a un servicio de datos de referencia en Windows Azure Marketplace para generar conocimiento con los datos de referencia de alta calidad. Cada servicio de datos de referencia contiene un esquema (columnas de datos). Después de adjuntar un dominio o un dominio compuesto a un servicio de datos de referencia, debe asignar el dominio adjunto o los dominios individuales dentro del dominio compuesto adjunto a las columnas adecuadas de un esquema del servicio de datos de referencia. Adjuntar un dominio compuesto a un servicio de datos de referencia permite adjuntar solo un dominio a un servicio de datos de referencia y, a continuación, asignar los dominios individuales incluidos en el dominio compuesto a las columnas adecuadas del esquema del servicio de datos de referencia.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
   
  En este tema, crearemos cuatro dominios: **Address line**, **City**, **State**y **Zip**, bajo un dominio compuesto, **Address Verification**, adjuntaremos el dominio compuesto al servicio de datos de referencia **Melissa Data – Address Check** y después asignaremos los dominios individuales dentro del dominio compuestas a las columnas adecuadas del esquema del servicio de datos de referencia.  
   
-## <a name="before-you-begin"></a>Antes de empezar  
+## <a name="before-you-begin"></a>Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Es necesario configurar [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) para utilizar los servicios de datos de referencia. Vea [Configurar DQS para usar datos de referencia](../data-quality-services/configure-dqs-to-use-reference-data.md).  
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="FollowUp"></a> Seguimiento: después de asignar un dominio a datos de referencia  
  Cree un proyecto de calidad de datos y ejecute la actividad de limpieza en los datos de origen que incluyan direcciones de EE. UU., comparándolos con la base de conocimiento creada en este tema. Vea [Limpiar datos mediante el conocimiento de datos de referencia &#40;externo&#41;](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Servicios de datos de referencia en DQS](../data-quality-services/reference-data-services-in-dqs.md)   
  [Limpieza de datos](../data-quality-services/data-cleansing.md)  
   

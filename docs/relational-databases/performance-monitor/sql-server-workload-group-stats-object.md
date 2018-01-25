@@ -16,22 +16,22 @@ helpviewer_keywords:
 - 'SQLServer: Workload Group Stats'
 ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc179bf580e3499f64eb2ca9f3ec73c0b08f8350
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 80da02219c14d213d758af746eb13acb35d2f433
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-workload-group-stats-object"></a>Objeto SQL Server: Estadísticas de grupo de cargas de trabajo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El objeto SQLServer:Workload Group Stats contiene contadores de rendimiento que notifican información sobre las estadísticas de grupo de cargas de trabajo de Resource Governor.  
   
  Cada grupo de cargas de trabajo activo crea una instancia del objeto de rendimiento SQLServer:Estadísticas de grupo de cargas de trabajo que tiene el mismo nombre de instancia que el grupo de cargas de trabajo del regulador de recursos. En la tabla siguiente se describen los contadores admitidos en esta instancia.  
   
-|Nombre de contador|Descripción|  
+|Nombre de contador|Description|  
 |------------------|-----------------|  
 |**Subprocesos paralelos activos**|Recuento actual de uso de subprocesos paralelos.|  
 |**Solicitudes activas**|El número de solicitudes que están ejecutándose actualmente en este grupo de cargas de trabajo. Este número debería ser equivalente al recuento de filas procedentes de sys.dm_exec_requests filtrado por identificador de grupo.|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 |**Solicitudes completadas/s**|Número de solicitudes que se han completado en este grupo de cargas de trabajo. Este número es acumulativo.|  
 |**Planes poco óptimos/s**|Número de planes poco óptimos que se generan en este grupo de cargas de trabajo por segundo.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [Objeto SQL Server: Estadísticas de grupo de recursos de servidor](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)   
  [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)  

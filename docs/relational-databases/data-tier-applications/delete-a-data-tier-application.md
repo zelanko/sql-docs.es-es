@@ -23,15 +23,15 @@ helpviewer_keywords:
 - delete DAC
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7181ebd6219df4a3b016ea0b366fae7c883399d8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d54016fe377d7ed10fffd8831bfe07d5c26e1ce8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="delete-a-data-tier-application"></a>Eliminar una aplicación de capa de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Puede eliminar una aplicación de capa de datos mediante el asistente para eliminar aplicación de capa de datos o un script de Windows PowerShell. Puede especificar si la base de datos asociada se conserva, se separa o se quita.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **Para actualizar una DAC mediante:**  [Asistente para registrar aplicación de capa de datos](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
   
-## <a name="before-you-begin"></a>Antes de empezar  
+## <a name="before-you-begin"></a>Antes de comenzar  
  Cuando elimine una instancia de la aplicación de capa de datos (DAC), elija una de tres opciones que especifican lo que se va a hacer con la base de datos asociada a la aplicación de capa de datos. Las tres opciones eliminan los metadatos de la definición de DAC. Las opciones difieren en lo que hacen con la base de datos asociada a la aplicación de capa de datos. El asistente no elimina ninguno de los objetos del nivel de instancia asociado a la DAC o la base de datos, como los inicios de sesión.  
   
 |Opción|Acciones de base de datos|  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
 > [!WARNING]  
 >  Recompilar una instancia de la DAC mediante el registro de una DAC desde una base de datos restaurada o adjuntada no volverá a crear algunas partes de la DAC original, como la directiva de selección de servidor.  
   
-###  <a name="Permissions"></a> Permisos  
+###  <a name="Permissions"></a> Permissions  
  Solo los miembros de los roles fijos de servidor **sysadmin** o **serveradmin** , o el propietario de la base de datos, pueden eliminar una DAC. La cuenta de administrador del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrada denominada **sa** también puede iniciar el asistente.  
   
 ##  <a name="UsingDeleteDACWizard"></a> Usar el asistente Eliminar aplicación de capa de datos  
@@ -238,7 +238,7 @@ $dacName  = "MyApplication"
   
  [Eliminar una DAC mediante PowerShell](#DeleteDACPowerShell)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Implementar una aplicación de capa de datos](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   

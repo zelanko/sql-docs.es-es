@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.selectbackupdest.f1
 ms.assetid: f79e824b-1525-45de-8ede-513563af41b6
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ddf5610c86220c08a17f6d830959623d9c80775d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 08a629ac319f874312d6bb3878c721d783a5fe12
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="select-backup-destination"></a>Seleccionar destino de la copia de seguridad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,9 +37,9 @@ ms.lasthandoff: 11/17/2017
   
 -   [Realizar copias de seguridad de archivos y grupos de archivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)  
   
--   [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
+-   [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  Las opciones de este cuadro de diálogo dependen de si ha seleccionado o no un destino en disco o en cinta.  
   
  **Destinos en disco**  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 |**Unidad de cinta**|Elija esta opción para seleccionar una unidad de cinta como destino de la copia de seguridad en la lista de unidades de cinta, conectadas físicamente al equipo en el que se ejecuta la instancia del servidor.<br /><br /> Nota: Los dispositivos de copia de seguridad en cinta de equipos remotos no son destinos de copia de seguridad válidos.|  
 |**Dispositivo de copia de seguridad**|Elija esta opción para seleccionar un dispositivo lógico de copia de seguridad existente. Estos dispositivos lógicos de copia de seguridad corresponden a unidades de cinta que están físicamente conectadas al equipo en el que se ejecuta la instancia del servidor.<br /><br /> Nota: Para obtener más información sobre cómo crear un dispositivo de copia de seguridad de cinta, vea [Definir un dispositivo lógico de copia de seguridad en una unidad de cinta&#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md).|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

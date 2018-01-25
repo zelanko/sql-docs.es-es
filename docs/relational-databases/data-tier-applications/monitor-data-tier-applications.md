@@ -17,20 +17,20 @@ helpviewer_keywords:
 - data-tier application [SQL Server], monitor
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 caps.latest.revision: "11"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3cb93f6f2644966696f7d7c48f2dac7f72cde06b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a8bfc10f588c868693eb0d24308730a618db9df7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="monitor-data-tier-applications"></a>Supervisar aplicaciones de capa de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Una aplicación de capa de datos (DAC) se puede supervisar desde el **Explorador de Utilidad** y el **Explorador de objetos** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS), junto con las vistas de sistema y las tablas. Además, todos los objetos de la base de datos contenida en la DAC se pueden supervisar usando las técnicas de supervisión de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y base de datos estándar.  
   
-## <a name="before-you-begin"></a>Antes de empezar  
+## <a name="before-you-begin"></a>Antes de comenzar  
  Si implementa una DAC en una instancia administrada del [!INCLUDE[ssDE](../../includes/ssde-md.md)], la información acerca de la DAC implementada se incorpora a la Utilidad de SQL Server la próxima vez que el conjunto de recopilación de utilidades se envíe desde la instancia al punto de control de la utilidad. Después puede ver la información básica de estado acerca de la DAC mediante el **Explorador de la utilidad** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  El **Explorador de objetos** SSMS muestra información de configuración básica acerca de cada DAC implementada en una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)], independientemente de si la instancia está administrada en la utilidad de SQL Server. Además, la base de datos asociada con la DAC implementada puede supervisarse con los mismos procedimientos usados para supervisar cualquier base de datos.  
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="monitoring-dac-databases"></a>Supervisar las bases de datos de DAC  
  Una vez implementada correctamente una DAC, la base de datos contenida en ella funciona igual que cualquier otra. Utilice técnicas y herramientas estándar de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para supervisar el rendimiento, el registro, los eventos y la utilización de recursos de la base de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Implementar una aplicación de capa de datos](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)  
   

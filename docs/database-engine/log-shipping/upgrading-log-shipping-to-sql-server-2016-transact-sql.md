@@ -16,13 +16,13 @@ ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 caps.latest.revision: "59"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c8aaf28bcecf61984bdf524e02031325600a0c2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e2aae5c92052e2a08c2b6ab5ef1d48fd8f3f83dd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Actualización del trasvase de registros a SQL Server 2016 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Al actualizar desde una configuración de trasvase de registros de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a una nueva versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], un nuevo service pack de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o una actualización acumulativa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la actualización de los servidores de trasvase de registros en el orden adecuado conservará la solución de recuperación ante desastres de trasvase de registros.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Planeamiento y prueba del plan de actualización del motor de base de datos](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): revise las notas de la versión y los problemas conocidos de actualización, la lista de comprobación previa a la actualización y desarrolle y pruebe el plan de actualización.  
   
--   [Requisitos de hardware y software para instalar SQL Server 2016:](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)revise los requisitos de software para instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Si es necesario software adicional, puede instalarlo en cada nodo antes de comenzar el proceso de actualización para reducir los posibles tiempos de inactividad.  
+-   [Requisitos de hardware y software para instalar SQL Server 2016:](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)revise los requisitos de software para instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Si se requiere software adicional, puede instalarlo en cada nodo antes de comenzar el proceso de actualización para reducir los posibles tiempos de inactividad.  
   
 ##  <a name="ProtectData"></a> Proteger los datos antes de la actualización  
  Como práctica recomendada, es aconsejable que proteja sus datos antes de realizar una actualización del trasvase de registros.  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  El trasvase de registros también admite la opción [Conmutar por error a una base de datos secundaria de trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) y, opcionalmente, [Cambiar los roles entre el servidor de trasvase de registros primario y secundario &#40;SQL Server&#41;](../../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md). Sin embargo, dado que el trasvase de registros ya rara vez se configura como una solución de alta disponibilidad (las opciones más recientes son mucho más sólidas), la conmutación por error generalmente no minimiza el tiempo de inactividad porque no se sincronizarán los objetos de base de datos del sistema y porque puede ser una odisea permitir que los clientes busquen un elemento secundario promovido y se conecten a él fácilmente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Actualización a SQL Server 2016 mediante el Asistente para instalación &#40;programa de instalación&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [Instalar SQL Server 2016 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Configurar el trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)   

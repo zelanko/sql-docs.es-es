@@ -18,13 +18,13 @@ ms.assetid: f80735dd-06aa-4d69-b226-32dc57e3223f
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d12ad3f6d43440aefc8beeb8f815fba28f65dbef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b5aa7b70862a06b7c2817783917b8d61012f3b1e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="object-already-exists"></a>El objeto ya existe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] El objeto que intenta guardar tiene el mismo nombre que otro objeto de la base de datos. Elija otro nombre y continúe.  

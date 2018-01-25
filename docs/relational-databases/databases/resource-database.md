@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Resource database [SQL Server]
 ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
 caps.latest.revision: "71"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 28c3a118942874c2c68ec22ae1b0574cd35def34
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 83f2db0cd4e4b046eb6b5dc1a6fa7b1557420df4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="resource-database"></a>Base de datos Resource
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La base de datos Resource es de solo lectura y contiene todos los objetos del sistema que se incluyen con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos del sistema, tales como sys.objects, persisten físicamente en la base de datos Resource, pero aparecen lógicamente en el esquema sys de cada base de datos. La base de datos Resource no contiene datos o metadatos del usuario.  

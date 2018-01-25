@@ -16,13 +16,13 @@ ms.assetid: 126b4c4c-2a1c-4701-a0ad-8de23fbd7306
 caps.latest.revision: "24"
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43ecb337ed0e54282b7347287481fd4ce7a84f5a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 247af1bcdb8e3d3293792fb52a5d0e8149ce6ccc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-2---subscribe-to-and-check-the-finance-name-policy"></a>Lección 2-2: Suscripción a la directiva Finance Name y comprobación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En esta tarea, configurará la base de datos Finance para suscribirse a la categoría de directivas Finance. A continuación, probará la directiva Finance Name.  
@@ -79,7 +79,7 @@ Este tutorial ha finalizado. Para volver al inicio, haga clic en [Tutorial: Admi
   
 Para obtener una lista de tutoriales, vea [Tutoriales para SQL Server 2016](../../sql-server/tutorials-for-sql-server-2016.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

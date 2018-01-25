@@ -13,17 +13,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cda0e712bd4473972c1beb0afc6c530a6d48ef1c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 61bdf391348154a3b395c5934ab7b60173f4eb47
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="manage-dqs-databases"></a>Administrar bases de datos de DQS
+# <a name="manage-dqs-databases"></a>Manage DQS Databases
   En esta sección se proporciona información sobre las actividades de administración de bases de datos que se pueden realizar en las bases de datos de DQS, como la copia de seguridad/restauración o las operaciones de separar/adjuntar.  
   
 ##  <a name="BackupRestore"></a> Copia de seguridad y restauración de las bases de datos de DQS  
@@ -53,14 +53,14 @@ ms.lasthandoff: 11/20/2017
   
  Para obtener información detallada sobre los aspectos que se deben considerar tanto antes de las operaciones para separar y adjuntar bases de datos en SQL Server como durante dichas operaciones, vea [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
 |Describe cómo realizar copias de seguridad de las bases de datos de DQS y cómo restaurarlas.|[Realizar copias de seguridad de bases de datos de DQS y restaurarlas](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |Describe cómo adjuntar y separar las bases de datos de DQS.|[Separar y adjuntar bases de datos de DQS](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administración de DQS](../data-quality-services/dqs-administration.md)  
   
   

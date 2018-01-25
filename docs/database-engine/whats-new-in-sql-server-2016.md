@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Database Engine [SQL Server], what's new
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 caps.latest.revision: "431"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0ca847dd4e836fbfd350a8c92df263f50347ae99
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0e5018b6b111790d2ff0415180e0608798da44ac
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novedades de Motor de base de datos de Microsoft SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -271,7 +271,7 @@ La actualización automática de estadísticas es ahora más agresiva en tablas 
 La instrucción Insert in an Insert-select es multiproceso o puede tener un plan paralelo (en el nivel de compatibilidad 130). Para obtener un plan paralelo, INSERT... La instrucción SELECT debe utilizar la sugerencia TABLOCK. Para más información, consulte [Parallel Insert Select](https://blogs.msdn.microsoft.com/sqlcat/2016/07/06/sqlsweet16-episode-3-parallel-insert-select/)(Insert Select en paralelo)
 
 ####  <a name="LiveStats"></a> Estadísticas de consultas activas
- [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ofrece la posibilidad de ver el plan de ejecución de una consulta activa. Este plan de consulta activa ofrece conocimientos en tiempo real sobre el proceso de ejecución de consulta a medida que los controles fluyen desde un operador de plan de consulta a otro. Para obtener más información, consulte [Live Query Statistics](../relational-databases/performance/live-query-statistics.md).
+ [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ofrece la posibilidad de ver el plan de ejecución de una consulta activa. Este plan de consulta activa ofrece conocimientos en tiempo real sobre el proceso de ejecución de consulta a medida que los controles fluyen desde un operador de plan de consulta a otro. Para más información, consulte [Estadísticas de consultas dinámicas](../relational-databases/performance/live-query-statistics.md).
 
 ####  <a name="QueryStore"></a> Almacén de consultas
 Almacén de consultas es una característica nueva que ofrece a los administradores de base de datos los conocimientos sobre el rendimiento y la elección del plan de consulta. Esta característica simplifica la solución de problemas de rendimiento al permitirle encontrar rápidamente diferencias de rendimiento provocadas por cambios en los planes de consulta. Captura automáticamente un historial de consultas, planes y estadísticas en tiempo de ejecución, y los conserva para su revisión. Separa los datos por ventanas de tiempo, lo que permite ver patrones de uso la base de datos y comprender cuándo se produjeron cambios del plan de consultas en el servidor. El Almacén de consultas presenta la información mediante un cuadro de diálogo de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] y le permite forzar la consulta a uno de los planes de consultas seleccionados. Para obtener más información, consulte [Monitoring Performance By Using the Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).
@@ -452,7 +452,7 @@ La vista previa del Asesor de actualizaciones de SQL Server 2016 es una herramie
 
  Puede descargar la vista previa del Asesor de actualizaciones [aquí](https://www.microsoft.com/en-us/download/details.aspx?id=48119) o puede instalarla con el Instalador de plataforma web.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Ver también
 [Novedades de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
  
 [Notas de la versión de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0280a49bf91f078355dedab297ffd75102f5faa
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7374751ae2fd74f93ed0744853eb472689538347
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promover los valores XML usados con frecuencia con columnas calculadas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Si se efectúan consultas principalmente en una cantidad pequeña de valores de elementos y atributos, puede que sea conveniente promover estas cantidades a columnas relacionales. Esto es útil cuando se ejecutan consultas en una pequeña parte de los datos XML mientras se recupera toda la instancia XML. No es necesario crear un índice XML en la columna XML. En lugar de ello, se puede indizar la columna promocionada. Las consultas se deben escribir de modo que usen la columna promocionada. Es decir, que el optimizador de consultas no dirige de nuevo las consultas de la columna XML a la columna promocionada.  
@@ -259,7 +259,7 @@ as
   
  El desencadenador delete es idéntico a la versión no CLR. Sin embargo, el desencadenador update simplemente reemplaza la función udf_XML2Table() por CLR_udf_XML2Table().  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Usar XML en columnas calculadas](../../relational-databases/xml/use-xml-in-computed-columns.md)  
   
   

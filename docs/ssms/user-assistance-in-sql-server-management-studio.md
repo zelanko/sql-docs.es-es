@@ -18,13 +18,13 @@ ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af99082f7ec0d39d59c7aa20fc1f6ba1d51596ed
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 94bba147f35fe23d2276f4f32596c5a2890f56f1
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Asistencia al usuario en SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)], la asistencia al usuario está disponible mediante el menú Ayuda y los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. El menú Ayuda de [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] ofrece diferentes rutas a la información sobre [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. También proporciona acceso a la comunidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] y a los recursos de MSDN Online no disponibles anteriormente desde el entorno de la Ayuda. Además, el entorno de la Ayuda ahora se puede configurar de modo que se inicie dentro del entorno de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] o en una ventana externa asociada independiente.  

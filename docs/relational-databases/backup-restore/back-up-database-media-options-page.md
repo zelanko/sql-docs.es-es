@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.swb.backupdatabase.mediaoptions.f1
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36f6bc6f33194ce8bb4cf110fa8bbd44fd870a40
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a220cb8eb2218843e460741c016120787b943b0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-database-media-options-page"></a>Copia de seguridad de la base de datos (página Opciones multimedia)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice la página **Opciones de medios** del cuadro de diálogo **Copia de seguridad de base de datos** para ver o modificar las opciones de medios de la base de datos.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Cuando especifica una tarea de copia de seguridad con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script [BACKUP](../../t-sql/statements/backup-transact-sql.md) de [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondiente si hace clic en el botón **Script** y, después, selecciona un destino para el script.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
   
 ### <a name="overwrite-media"></a>Sobrescribir medios  
  Las opciones del panel **Sobrescribir medios** controlan la forma en que las copias de seguridad se escriben en los medios. Si seleccionó la dirección URL (Almacenamiento de Windows Azure) como el destino de la copia de seguridad en la página General del cuadro de diálogo Copia de seguridad de base de datos, las opciones de la sección Sobrescribir medios estarán deshabilitadas. Puede sobrescribir una copia de seguridad con la instrucción Transact-SQL **BACKUP TO URL. WITH FORMAT**. Para más información, consulte [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
 >  Para obtener más información sobre las copias de seguridad del registro de transacciones, vea [Copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
  **Truncar el registro de transacciones**  
- Realice una copia de seguridad del registro de transacciones y trúnquelo para liberar espacio de registro. La base de datos permanece en línea. Esta es la opción predeterminada.  
+ Realice una copia de seguridad del registro de transacciones y trúnquelo para liberar espacio de registro. La base de datos permanece en línea. Ésta es la opción predeterminada.  
   
  **Realizar copia de seguridad del final del registro y dejar la base de datos en estado de restauración**  
  Realice una copia de seguridad del final del registro y deje la base de datos en estado de restauración. Esta opción crea una *copia del final del registro*, que realiza una copia de seguridad de los registros de los que todavía no se ha realizado ninguna (registro activo), generalmente, para la preparación de la restauración de una base de datos. La base de datos no estará disponible para los usuarios hasta que haya finalizado su restauración.  
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/17/2017
  **Rebobinar la cinta antes de descargar**  
  Antes de descargar la cinta, se libera y rebobina. Solo se habilitará si está seleccionada la opción **Descargar la cinta después de realizar la copia de seguridad** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Realizar copias de seguridad de archivos y grupos de archivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   

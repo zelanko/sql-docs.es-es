@@ -20,13 +20,13 @@ ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 caps.latest.revision: "13"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 222e727dbfea11ecd334bd6d88f01ce7294359e0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 80fad41153c117a5b76c3e7023bb9eb40b268d4b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="progress-page-always-on-availability-group-wizards"></a>Página Progreso (asistentes para grupos de disponibilidad AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,11 @@ ms.lasthandoff: 11/20/2017
  **Estado**  
  Indica el resultado de los pasos completados y el porcentaje de finalización del paso actual, del siguiente modo:  
   
-|Resultado|Descripción|  
+|Resultado|Description|  
 |------------|-----------------|  
 |**Error**|Indica que la operación para este paso ha experimentado un error. Haga clic en el vínculo para mostrar un cuadro de diálogo de mensaje que describe el error.|  
 |**En curso (** *porcentaje completado* **)**|Indica que la operación se está produciendo ahora y calcula el porcentaje completado de este paso.|  
-|**Success**|Indica que la operación correspondiente a este paso se ha completado correctamente.|  
+|**Correcto**|Indica que la operación correspondiente a este paso se ha completado correctamente.|  
   
  **Menos detalles**  
  Haga clic para ocultar la cuadrícula de progreso.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Usar el Asistente para grupo de disponibilidad de conmutación por error &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

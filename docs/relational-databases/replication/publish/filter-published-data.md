@@ -23,15 +23,15 @@ helpviewer_keywords:
 - column filters [SQL Server replication]
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6b8a32e40c44b7cdc0ec8bb082ebc08a95d2221
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c33c6903f664437076c06f12fb2be3b231f7e0f1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="filter-published-data"></a>Filtrar datos publicados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Filtrar artículos de tabla permite crear particiones de los datos que se van a publicar. Si filtra los datos publicados, podrá:  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Filtros de fila con parámetros que están disponibles solamente con la replicación de mezcla.  
   
-     Al utilizar los filtros de fila con parámetros, puede elegir un subconjunto de filas para publicarlo. A diferencia de los filtros estáticos que envían el mismo subconjunto de filas a cada suscriptor, los filtros de fila con parámetros utilizan un valor de datos suministrado por el suscriptor para enviar a los suscriptores diferentes subconjuntos de filas. Para más información, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+     Al utilizar los filtros de fila con parámetros, puede elegir un subconjunto de filas para publicarlo. A diferencia de los filtros estáticos que envían el mismo subconjunto de filas a cada suscriptor, los filtros de fila con parámetros utilizan un valor de datos suministrado por el suscriptor para enviar a los suscriptores diferentes subconjuntos de filas. Para obtener más información, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Filtros de combinación que están disponibles solamente con la replicación de mezcla.  
   
@@ -137,7 +137,7 @@ ms.lasthandoff: 11/17/2017
   
  Los filtros de fila no están diseñados para funcionar entre bases de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limita intencionadamente la ejecución de **sp_replcmds** (que filtra la ejecución debajo) al propietario de la base de datos (**dbo**). El **dbo** no tiene privilegios entre bases de datos. Con la incorporación de CDC (Captura de datos modificados) a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] the **sp_replcmds** rellena las tablas de seguimiento de cambios con información a la que el usuario puede volver y que puede consultar. Por razones de seguridad, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limita la ejecución de esta lógica de modo que un **dbo** malintencionado no pueda asaltar esta ruta de acceso de ejecución. Por ejemplo, un **dbo** malintencionado podría agregar desencadenadores a las tablas de CDC que se ejecutarían en el contexto del usuario que llama a **sp_replcmds**, en este caso el agente del lector de registros.  Si la cuenta bajo la que se está ejecutando el agente tiene privilegios mayores, el **dbo** malintencionado podría escalar sus privilegios.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Publicar datos y objetos de base de datos](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

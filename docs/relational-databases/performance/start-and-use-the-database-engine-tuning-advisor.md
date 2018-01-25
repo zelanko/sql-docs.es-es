@@ -21,15 +21,15 @@ f1_keywords:
 helpviewer_keywords: Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 21efab98503bc82485097c87b04623bf38366a68
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c827fd810238c823cd40ab11b47109876234b646
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Iniciar y utilizar el Asistente para la optimización de motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo iniciar y usar el Asistente para la optimización de motor de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información sobre cómo ver y trabajar con los resultados después de optimizar una base de datos, vea [Ver y trabajar con la salida del Asistente para la optimización de motor de base de datos](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
@@ -368,7 +368,7 @@ Para más información, vea [Optimización de la base de datos mediante carga de
  **Archivo**  
  Especifica un script .sql o un archivo de seguimiento para una carga de trabajo. Especifique la ruta de acceso y el nombre de archivo en el cuadro de texto asociado. El Asistente para la optimización de motor de base de datos considera que el archivo de seguimiento de la carga de trabajo es un archivo de sustitución incremental. Para obtener más información sobre los archivos de sustitución incremental, vea [Limit Trace File and Table Sizes](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md).  
   
- **Tabla**  
+ **Table**  
  Especifica una tabla de seguimiento para una carga de trabajo. Especifique el nombre completo de la tabla de seguimiento en el cuadro de texto asociado, tal y como se indica a continuación:  
   
 ```  
@@ -520,7 +520,7 @@ database_name.owner_name.table_name
  **Registro de optimización**  
  Contiene información sobre esta sesión de optimización. Para imprimir este registro, haga clic con el botón derecho en él y, después, haga clic en **Imprimir**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Ver y trabajar con la salida del Asistente para la optimización de motor de base de datos](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
  [dta Utility](../../tools/dta/dta-utility.md)  
   

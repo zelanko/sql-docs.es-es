@@ -19,13 +19,13 @@ ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fde99df0bca010b8920267b1b41de87fbe38e2bf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e1532ade775800e7688fca8efa844ba535b95bab
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Posibles errores durante sesiones entre las réplicas de disponibilidad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los problemas físicos, del sistema operativo o de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden producir un error en una sesión entre dos réplicas de disponibilidad. Una réplica de disponibilidad no comprueba con regularidad los componentes de los que depende Sqlservr.exe para comprobar si están funcionando de forma correcta o si se ha producido un error. Sin embargo, en algunos tipos de errores, el componente afectado informa a Sqlservr.exe. Cuando otro componente informa del error, éste se denomina *error de hardware*. Para detectar otros errores que podrían pasar desapercibidos, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implementa su propio mecanismo de tiempo de espera de la sesión. Especifica el período de espera de la sesión en segundos. El período de espera es el tiempo máximo durante el que una instancia de servidor espera hasta recibir un mensaje PING de otra instancia, antes de considerar que la otra instancia está desconectada. Cuando se agota el tiempo de espera de sesión entre dos réplicas de disponibilidad, las réplicas de disponibilidad suponen que se ha producido un error y declaran *un error de software*.  
@@ -97,7 +97,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="responding-to-an-error"></a>Responder a un error  
  Independientemente del tipo de error, una instancia de servidor que detecta un error responde apropiadamente según el rol de la instancia, el modo de disponibilidad de la sesión y el estado de las demás conexiones de la sesión. Para obtener más información sobre lo que pasa cuando se pierde un asociado, vea [Modos de disponibilidad &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  **Para cambiar el valor de tiempo de espera (solo en modo de disponibilidad de confirmación sincrónica)**  
   
 -   [Cambiar el tiempo de espera de la sesión en una réplica de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Consulte **session_timeout** en [sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

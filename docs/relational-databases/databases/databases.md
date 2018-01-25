@@ -17,15 +17,15 @@ helpviewer_keywords:
 - databases [SQL Server], about databases
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 013855b3dee3d610a34ec3171c98bdae03ccc1d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 947bbd87fca45f0647bffe38af8e51591799778c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="databases"></a>Bases de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consta de una colección de tablas en las que se almacena un conjunto específico de datos estructurados. Una tabla contiene una colección de filas, también denominadas tuplas o registros, y columnas, también denominadas atributos. Cada columna de la tabla se ha diseñado para almacenar un determinado tipo de información; por ejemplo, fechas, nombres, importes en moneda o números.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 |[Agregar archivos de datos o de registro a una base de datos](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)|[Ver o cambiar el nivel de compatibilidad de una base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)|  
 |[Cambiar los valores de configuración de una base de datos](../../relational-databases/databases/change-the-configuration-settings-for-a-database.md)|[Usar el Asistente para planes de mantenimiento](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)|  
 |[Crear una base de datos](../../relational-databases/databases/create-a-database.md)|[Crear un alias de tipo de datos definido por el usuario](../../relational-databases/databases/create-a-user-defined-data-type-alias.md)|  
-|[Eliminar una base de datos](../../relational-databases/databases/delete-a-database.md)|[Instantáneas de base de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)|  
+|[Eliminar una base de datos](../../relational-databases/databases/delete-a-database.md)|[Instantáneas de bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  
  [Índices](../../relational-databases/indexes/indexes.md)  

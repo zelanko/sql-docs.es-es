@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 614f07b5-f221-4013-9f8d-22964cf42270
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb7cb98417cf8eaf78647f4a52fd984be6c338d3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4b8b2c608c77443858f915cb9e7b3a84c96d2e86
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshoot-sql-server-resource-health-sql-server-utility"></a>Solucionar problemas de estado de recursos de SQL Server (Utilidad de SQL Server).
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La solución de los problemas de mantenimiento de recursos identificados por un UCP de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría incluir mitigar la sobreutilización de la CPU en un equipo o en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o mitigar la sobreutilización de la CPU para una aplicación de capa de datos. Otros problemas podrían consistir en solucionar el uso excesivo de espacio de archivo para archivos de base de datos o el uso excesivo de espacio en disco asignado en un volumen de almacenamiento.  

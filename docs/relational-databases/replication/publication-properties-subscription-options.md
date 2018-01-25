@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.pubproperties.subscriptionoptions.f1
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5517df85eefa69980aa212e573165ef7cf0c1d5d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5272dd5ecda16685468431245c91b1c03c7296da
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-properties-subscription-options"></a>Propiedades de la publicación, Opciones de suscripción
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación** permite ver y establecer propiedades de nivel de publicación asociadas con suscripciones. Las propiedades se agrupan en las siguientes categorías:  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/17/2017
  Se aplica solamente a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Determina si la publicación admite la replicación punto a punto. Si se establece esta opción en **True** , se configuran otras propiedades de la publicación para admitir la replicación punto a punto. Esta opción es de solo lectura si existen suscripciones. Esta opción no se puede establecer en **True** si las opciones **Permitir suscripciones de actualización inmediata** , **Permitir suscripciones de actualización en cola**o **Permitir suscriptores que no sean de SQL** están establecidas en **True**. Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
  **Permitir detección de conflictos de replicación punto a punto**  
- Se aplica solamente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores. Especifica si la detección de conflictos está habilitada para esta publicación. Para utilizar la detección de conflictos, todos los nodos deben estar ejecutando [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o una versión posterior, y debe haberse habilitado la detección para todos los ellos. Para utilizar la detección de conflictos también debe especificar un valor para **Identificador del autor del mismo nivel**. Para obtener más información, consulte [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
+ Se aplica solamente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores. Especifica si la detección de conflictos está habilitada para esta publicación. Para utilizar la detección de conflictos, todos los nodos deben estar ejecutando [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o una versión posterior, y debe haberse habilitado la detección para todos los ellos. Para utilizar la detección de conflictos también debe especificar un valor para **Identificador del autor del mismo nivel**. Para más información, consulte [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
  **Identificador del autor del mismo nivel**  
  Se aplica solamente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores. Especifica un Id. para un nodo en una topología punto a punto. Este Id. se utiliza para la detección de conflictos si **Permitir detección de conflictos de replicación punto a punto** se establece en **True**. Especifique un id. positivo distinto de cero que no se haya utilizado jamás en la topología. Para obtener una lista de identificadores que ya se hayan utilizado, consulte la tabla del sistema [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) .  
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/17/2017
  Determina qué funciones se utilizan al validar si un suscriptor tiene la partición correcta de datos. Debe utilizarse una coma para separar múltiples valores. Para obtener más información, vea [Validar la información de particiones para un suscriptor de mezcla](../../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md).  
   
  **Calcular particiones previamente**  
- Solo para[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Determina si se debe optimizar la sincronización calculando previamente las filas de datos que pertenecen a cada partición. Tiene como valor predeterminado **True** si la publicación cumple los criterios de las particiones calculadas previamente. Para obtener más información, vea [Optimizar el rendimiento de los filtros con parámetros con particiones calculadas previamente](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
+ Solo para[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Determina si se debe optimizar la sincronización calculando previamente las filas de datos que pertenecen a cada partición. Tiene como valor predeterminado **True** si la publicación cumple los criterios de las particiones calculadas previamente. Para obtener más información, vea [Optimización del rendimiento de los filtros con parámetros con particiones calculadas previamente](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
  **Optimizar sincronización**  
  Determina si se optimiza el proceso de mezcla almacenando metadatos adicionales en cada suscriptor. Esta optimización se ha sustituido con las particiones calculadas previamente; la opción **Optimizar sincronización** solo es relevante si la opción **Calcular particiones previamente** está establecida en **False**. Para más información, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
@@ -129,8 +129,8 @@ ms.lasthandoff: 11/17/2017
  **Máximo de procesos simultáneos**  
  Indica el número máximo de Agentes de mezcla que se pueden ejecutar simultáneamente (requiere **Limitar procesos simultáneos**). Si el número de agentes que se están sincronizando supera el máximo, los agentes se ponen en cola hasta que el número es inferior al máximo.  
   
-## <a name="see-also"></a>Vea también  
- [Crear una publicación](../../relational-databases/replication/publish/create-a-publication.md)   
+## <a name="see-also"></a>Ver también  
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Ver y modificar propiedades de publicación](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Publicar datos y objetos de base de datos](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

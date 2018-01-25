@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26bba253f4e74b7d42f0bf6adf02f981234f7c92
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 20a65fb532fd8a37402c9ce09e6095907715d1f3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-properties---connections-page"></a>Propiedades del servidor (página Conexiones)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice esta página para ver o modificar sus opciones de conexión.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
  **Default connection options**  
  Especifica las opciones de conexión predeterminadas, tal y como se describen en la siguiente tabla.  
   
-|Opción de configuración|Descripción|  
+|Opción de configuración|Description|  
 |--------------------------|-----------------|  
 |**disable deferred constraint checking**|Controla la comprobación de restricciones provisionales o diferidas.|  
 |**transacciones implícitas**|Controla si una transacción se inicia de manera implícita al ejecutar una instrucción.|  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/20/2017
  **Valores actuales**  
  Presenta los valores actuales de las opciones de este panel. Estos valores son de solo lectura.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Opciones &#40;Ejecución de la consulta/SQL Server/página Avanzadas&#41;](http://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   

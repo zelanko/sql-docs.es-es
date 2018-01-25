@@ -16,14 +16,14 @@ helpviewer_keywords:
 - master database [SQL Server]
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.openlocfilehash: 69ac660e66f9d997d2b7227d13f9c007dc68d7ed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 179ae8ba7d0a420863397caa080f1dd98b7b4dd9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="master-database"></a>Base de datos maestra
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La base de datos **maestra** registra toda la información de sistema de un sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dentro de esta información se incluyen los metadatos de una sola instancia, como las cuentas de inicio de sesión, los extremos, los servidores vinculados y la configuración del sistema. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los objetos de sistema ya no se almacenan en la base de datos **maestra** , sino en la [base de datos de recursos](../../relational-databases/databases/resource-database.md). Asimismo, **maestra** es la base de datos que registra la existencia de las demás bases de datos, la ubicación de los archivos de las bases de datos y la información de inicialización de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por lo tanto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede iniciarse si la base de datos **maestra** no está disponible.  
@@ -43,39 +43,39 @@ ms.lasthandoff: 11/17/2017
   
 |Opción de base de datos|Valor predeterminado|Se puede modificar|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|No|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|no|  
 |ANSI_NULL_DEFAULT|OFF|Sí|  
 |ANSI_NULLS|OFF|Sí|  
 |ANSI_PADDING|OFF|Sí|  
 |ANSI_WARNINGS|OFF|Sí|  
 |ARITHABORT|OFF|Sí|  
-|AUTO_CLOSE|OFF|No|  
+|AUTO_CLOSE|OFF|no|  
 |AUTO_CREATE_STATISTICS|ON|Sí|  
-|AUTO_SHRINK|OFF|No|  
+|AUTO_SHRINK|OFF|no|  
 |AUTO_UPDATE_STATISTICS|ON|Sí|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sí|  
-|CHANGE_TRACKING|OFF|No|  
+|CHANGE_TRACKING|OFF|no|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sí|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Sí|  
 |CURSOR_DEFAULT|GLOBAL|Sí|  
-|Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> No<br /><br /> No|  
+|Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|no<br /><br /> no<br /><br /> no|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sí|  
-|DB_CHAINING|ON|No|  
-|ENCRYPTION|OFF|No|  
-|MIXED_PAGE_ALLOCATION|ON|No|  
+|DB_CHAINING|ON|no|  
+|ENCRYPTION|OFF|no|  
+|MIXED_PAGE_ALLOCATION|ON|no|  
 |NUMERIC_ROUNDABORT|OFF|Sí|  
 |PAGE_VERIFY|CHECKSUM|Sí|  
 |PARAMETERIZATION|SIMPLE|Sí|  
 |QUOTED_IDENTIFIER|OFF|Sí|  
-|READ_COMMITTED_SNAPSHOT|OFF|No|  
+|READ_COMMITTED_SNAPSHOT|OFF|no|  
 |RECOVERY|SIMPLE|Sí|  
 |RECURSIVE_TRIGGERS|OFF|Sí|  
-|Opciones de Service Broker|DISABLE_BROKER|No|  
+|Opciones de Service Broker|DISABLE_BROKER|no|  
 |TRUSTWORTHY|OFF|Sí|  
   
  Para obtener una descripción de estas opciones de la base de datos, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## <a name="restrictions"></a>Restricciones  
+## <a name="restrictions"></a>Restrictions  
  Las siguientes operaciones no se pueden realizar en la base de datos **maestra** :  
   
 -   Agregar archivos o grupos de archivos.  

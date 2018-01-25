@@ -21,15 +21,15 @@ helpviewer_keywords:
 - modifying subscriptions, SQL Server Management Studio
 ms.assetid: 1601e54f-86f0-49e8-b023-87a5d1def033
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a33ec3a63c7dcc88349afafb40a5284db37a91a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c43213314ab7853215e953743bc5c2e946b547ae
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>Ver y modificar las propiedades de una suscripción de extracción
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo ver y modificar las propiedades de una suscripción de extracción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] o Replication Management Objects (RMO).  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
- Vea las propiedades de las suscripciones de extracción del publicador o el suscriptor en el cuadro de diálogo **Propiedades de suscripción: \<Publicador>: \<baseDeDatosDePublicación>**, disponible en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. En el suscriptor se pueden ver más propiedades y éstas se pueden modificar. También se pueden ver propiedades del publicador en la pestaña **Todas las suscripciones** , que está disponible en el Monitor de replicación. Para obtener información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+ Vea las propiedades de las suscripciones de extracción del publicador o el suscriptor en el cuadro de diálogo **Propiedades de suscripción: \<Publicador>: \<baseDeDatosDePublicación>**, disponible en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. En el suscriptor se pueden ver más propiedades y éstas se pueden modificar. También se pueden ver propiedades del publicador en la pestaña **Todas las suscripciones** , que está disponible en el Monitor de replicación. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 #### <a name="to-view-pull-subscription-properties-from-the-publisher-in-management-studio"></a>Para ver las propiedades de las suscripciones de extracción en el publicador en Management Studio  
   
@@ -164,7 +164,7 @@ ms.lasthandoff: 11/17/2017
   
 8.  Cierre todas las conexiones.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Ver información y realizar tareas para una suscripción &#40;Monitor de replicación&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  (Prácticas recomendadas de seguridad de replicación)  
  [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md)  

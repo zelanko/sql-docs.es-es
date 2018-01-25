@@ -25,15 +25,15 @@ helpviewer_keywords:
 - query-to-plan guide matching [SQL Server]
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 023bed41d0bdc228f114fd37cba47123faa5589e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5bbb800f0f0bd06e32357cda69d9a01a5c25e866
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Usar SQL Server Profiler para crear y probar guías de plan
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cuando cree una guía de plan, puede usar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para capturar el texto exacto de la consulta con el fin de usarlo en el argumento *statement_text* del procedimiento almacenado **sp_create_plan_guide**. Esto contribuye a garantizar que la guía de plan coincidirá con la consulta en tiempo de compilación. Una vez creada la guía de plan, se puede utilizar también el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para probar que, realmente, esa guía de plan coincidirá con la consulta. Por lo general, debe probar las guías de plan mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para comprobar que se buscan las coincidencias de la consulta con la guía de plan.  
@@ -102,7 +102,7 @@ EXEC sp_create_plan_guide
   
 5.  Si la guía de plan es de tipo OBJECT o SQL, compruebe que el evento **Showplan XML** contiene los atributos **PlanGuideDB** y **PlanGuideName** para la guía de plan que espera que coincida con la consulta. O bien, en el caso de una guía de plan TEMPLATE, compruebe que el evento **Showplan XML** contiene los atributos **TemplatePlanGuideDB** y **TemplatePlanGuideName** de la guía de plan que se espera. Esto comprueba que la guía de plan funciona. Estos atributos se incluyen en el elemento **\<StmtSimple>** del plan.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)  
   
   

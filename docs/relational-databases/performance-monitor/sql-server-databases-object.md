@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 03d12d8216ce6b92251355c41b1f0bdc90303003
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c92dc55eedaf801ad283ecb18bb55a25ba49f4b1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-databases-object"></a>Databases (objeto de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El objeto **SQLServer:Databases** de SQL Server proporciona contadores para supervisar las operaciones de copia masiva, el rendimiento de las copias de seguridad y restauración, y las actividades del registro de transacciones. La supervisión de las transacciones y del registro de transacciones determina el volumen de actividad de los usuarios en la base de datos y el espacio libre que queda en el registro de transacciones. El volumen de actividad de los usuarios puede determinar el rendimiento de la base de datos y puede afectar al tamaño del registro, los bloqueos y la replicación. La supervisión de la actividad de registro de bajo nivel para medir la actividad de los usuarios y el uso de los recursos puede ayudar a identificar cuellos de botella en el rendimiento.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  En la siguiente tabla se describen los contadores de **Databases** de SQL Server.  
   
-|Contadores de Databases de SQL Server|Descripción|  
+|Contadores de Databases de SQL Server|Description|  
 |-----------------------------------|-----------------|  
 |**Transacciones activas**|Número de transacciones activas de la base de datos|  
 |**Dist promedio desde EOL/Solicitud de LP**|Distancia promedio en bytes desde el final del registro por solicitud de grupo de registros, para solicitudes en el último VLF.| 
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/17/2017
 |**Procesados/seg por el registro del controlador de XTP**|La cantidad de bytes del registro procesada por el subproceso controlador del XTP, por segundo.|
 |**Memoria XTP usada (KB)**|Cantidad de memoria usada por XTP en la base de datos.| 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, réplica de base de datos](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   

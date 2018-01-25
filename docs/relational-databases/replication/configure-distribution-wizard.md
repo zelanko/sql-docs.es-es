@@ -14,17 +14,17 @@ ms.topic: article
 helpviewer_keywords: Configure Distribution Wizard
 ms.assetid: f7d97977-0e2b-40c6-a4ce-2d5bc32a91a7
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62555783d1d449ce972bc15b9cb75b1ca2678bdd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b700916165340f23dfe73e7364ff0bb27f2f984a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="configure-distribution-wizard"></a>Asistente para configurar la distribución
+# <a name="configure-distribution-wizard"></a>Configure Distribution Wizard
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En esta sección se ofrece información acerca de las siguientes páginas del Asistente para configurar la distribución:  
   
 -   [Distribuidor](../../relational-databases/replication/distributor.md)  
@@ -37,8 +37,8 @@ ms.lasthandoff: 11/17/2017
   
 -   [Contraseña del distribuidor](../../relational-databases/replication/distributor-password.md)  
   
-## <a name="see-also"></a>Vea también  
- [Configurar la distribución](../../relational-databases/replication/configure-distribution.md)   
+## <a name="see-also"></a>Ver también  
+ [Configurar distribución](../../relational-databases/replication/configure-distribution.md)   
  [Configurar la publicación y la distribución](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Referencia de propiedades &#40;replicación&#41;](../../relational-databases/replication/properties-reference-replication.md)  
   

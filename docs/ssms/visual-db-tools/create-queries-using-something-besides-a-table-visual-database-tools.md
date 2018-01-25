@@ -18,13 +18,13 @@ ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc1923dcca1052c3c0bcdc2d1ba9abfb7935803a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ac44c00dd2ffb0a37a4a7a53a33dbddb54df49f9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Crear consultas a partir de otro objeto distinto de una tabla (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Al escribir una consulta de recuperación, puede enunciar qué columnas y filas quiere obtener, y dónde tiene que buscar el procesador de consultas los datos originales. Normalmente, estos datos originales están formados por una o varias tablas combinadas entre sí. Pero los datos originales pueden proceder de orígenes que no sean tablas. De hecho, pueden provenir de vistas, consultas, sinónimos o funciones definidas por el usuario que devuelven una tabla.  

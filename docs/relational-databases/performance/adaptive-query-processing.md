@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 
 author: joesackmsft
 ms.author: josack;monicar
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6be92bfbfdd149eb51c4151c3f4ff0d8fe0b4e91
-ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.openlocfilehash: 139d73430346cdad7baa27d90c14ad692be5bbeb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Procesamiento de consultas adaptable en bases de datos SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -224,7 +224,7 @@ Una instrucción con OPTION(RECOMPILE) creará un plan con ejecución intercalad
 ### <a name="interleaved-execution-and-query-store-interoperability"></a>Ejecución intercalada e interoperabilidad del Almacén de consultas
 Los planes con ejecución intercalada se pueden aplicar. El plan es la versión que ha corregido las estimaciones de cardinalidad basándose en la ejecución inicial.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Ver también
 
 [Centro de rendimiento para el motor de base de datos SQL Server y Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 

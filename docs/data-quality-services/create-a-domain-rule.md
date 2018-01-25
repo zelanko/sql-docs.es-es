@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b9bdf255f25c8b23dc4a34e882716fe87a14a1c0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d5c7e6f027352d3d8fbd79304d6454340a438d9b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-domain-rule"></a>Cree una regla de dominio
   En este tema se describe cómo crear una regla de dominio en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una regla de dominio es una condición que se utiliza para validar, corregir y normalizar valores de dominio. Una regla de dominio debe cumplirse en todo el dominio para que los valores de dominio se consideren precisos y compatibles con los requisitos empresariales. Las reglas de dominio pueden incluir reglas de validación que se utilizan para validar valores de dominio, pero no para corregir datos en los proyectos de calidad de datos. Las reglas también incluyen reglas de normalización que se aplican a los datos válidos y se utilizan en la corrección de datos.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear una regla de dominio.  
   
 ##  <a name="Build"></a> Crear reglas de dominio  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Haga clic en **Descartar todos los cambios** para quitar los cambios realizados en las reglas de dominio y volver a las reglas aplicadas previamente, con lo que los cambios efectuados después de la última aplicación de las reglas no se aplicarán. La validez de cada uno de los valores del dominio se actualizará de acuerdo con las reglas previamente aplicadas, no con los cambios descartados.  
   
-3.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+3.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Seguimiento: después de crear una regla de dominio  
  Una vez creada una regla de dominio, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  
@@ -115,7 +115,7 @@ ms.lasthandoff: 11/20/2017
   
  Puede elegir entre distintas alternativas al crear una regla de dominio. Por ejemplo, para validar si los valores comienzan por la letra A, B o C, podría crear una regla simple con una condición compleja (como una expresión regular con caracteres de barra vertical), o una regla compleja que contenga varias condiciones simples. Un ejemplo de la primera regla sería “El valor coincide con la expresión regular (^A|^B|^C)”. Un ejemplo de la segunda regla sería “’El valor comienza por A’ OR ‘El valor comienza por B’ OR ‘El valor comienza por C’”.  
   
-|Condición|Descripción|Ejemplo|  
+|Condición|Description|Ejemplo|  
 |---------------|-----------------|-------------|  
 |La longitud es igual a|Solo serán válidos los valores que constan del número de caracteres designado por el operando.|Operando de ejemplo: 3<br /><br /> Valor válido: BB1<br /><br /> Valor no válido: AA|  
 |La longitud es mayor o igual que|Solo serán válidos los valores que constan al menos del número de caracteres designado por el operando.|Operando de ejemplo: 3<br /><br /> Valores válidos: BB1, BBAA<br /><br /> Valor no válido: AA|  

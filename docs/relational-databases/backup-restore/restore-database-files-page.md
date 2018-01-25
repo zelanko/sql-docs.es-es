@@ -16,20 +16,20 @@ f1_keywords:
 - sql13.swb.restoredb.files.f1 in the code
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43c7026aa357587fea7d4a9611b88237ed7896fd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dff6aada8273e1e994ce321213cee66ae0b0bbb0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-database-files-page"></a>Restaurar base de datos (página Archivos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use la página **Archivos** del cuadro de diálogo **Restaurar base de datos** para administrar los archivos concretos que ha elegido restaurar dentro de la base de datos.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
   
 ### <a name="restore-database-files-as"></a>Restaurar archivos de base de datos como  
  Se usa para asignar y administrar la nueva ruta de acceso de archivo a los archivos restaurados.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
  **Reubicar todos los archivos a la carpeta**  
  Reubica los archivos restaurados.  
   
-|Opción|Descripción|  
+|Opción|Description|  
 |------------|-----------------|  
 |**Carpeta de archivos de datos**|Escriba o busque el nombre de la carpeta de archivos de datos donde se deben reubicar el archivo o los archivos de datos restaurados.|  
 |**Carpeta del archivo de registro**|Escriba o busque la carpeta del archivo o los archivos de registro donde se debe reubicar el archivo de registro restaurado.|  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
  **Restaurar como**  
  Enumera los nombres de archivo como los que se guardarán los archivos restaurados. Escriba o busque el nombre de archivo adecuado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Restaurar la base de datos &#40;página General&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)   
  [Restaurar base de datos &#40;página Opciones&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)   
  [Argumentos RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)   

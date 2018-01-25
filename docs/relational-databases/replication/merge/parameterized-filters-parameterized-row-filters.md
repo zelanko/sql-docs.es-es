@@ -23,15 +23,15 @@ helpviewer_keywords:
 - dynamic filters [SQL Server replication]
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 caps.latest.revision: "69"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 859646732d7add898319c11193aedebb77c7239a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ae3c32d0636b37afb15005eb823629f7dfd5194e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtros con parámetros: filtros de fila con parámetros
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los filtros de filas con parámetros permiten enviar diferentes particiones de datos a diferentes suscriptores sin necesidad de crear varias publicaciones (los filtros con parámetros se denominaban filtros dinámicos en versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Una partición es un subconjunto de filas de una tabla; dependiendo de la configuración elegida al crear un filtro de filas con parámetros, cada fila de una tabla publicada puede pertenecer a una sola partición (lo que produce particiones no superpuestas) o a dos o más particiones (lo que produce particiones superpuestas).  
@@ -130,7 +130,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 ### <a name="setting-partition-options"></a>Configurar 'partition options'  
  Al crear un artículo, se especifica un valor para la propiedad **partition options** , en función de cómo van a compartir los suscriptores los datos de la tabla filtrada. Es posible asignar a la propiedad uno de cuatro valores usando [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)y el cuadro de diálogo **Propiedades del artículo** . La propiedad se puede establecer en uno de dos valores en los cuadros de diálogo **Agregar filtro** o **Editar filtro** , disponibles desde el Asistente para nueva publicación y el cuadro de diálogo **Propiedades de la publicación** . La tabla siguiente resume los valores disponibles:  
   
-|Descripción|Valor en Agregar filtro y Editar filtro|Valor en Propiedades del artículo|Valor en procedimientos almacenados|  
+|Description|Valor en Agregar filtro y Editar filtro|Valor en Propiedades del artículo|Valor en procedimientos almacenados|  
 |-----------------|-----------------------------------------|---------------------------------|--------------------------------|  
 |Los datos de las particiones se superponen y el suscriptor puede actualizar las columnas a las que se hace referencia en un filtro con parámetros.|**Una fila de esta tabla irá a varias suscripciones**|**Superpuestas**|**0**|  
 |Los datos de las particiones se superponen y el suscriptor no puede actualizar las columnas a las que se hace referencia en un filtro con parámetros.|N/A*|**Superpuestas, no permitir cambios de datos fuera de la partición**|**1**|  
@@ -190,7 +190,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   Si dos tablas del publicador tienen una relación de filtro de combinación y la tabla secundaria tiene filas que no tienen una fila correspondiente en la tabla primaria, la inserción de la fila que falta en la tabla primaria no hará que las filas relacionadas se descarguen al suscriptor (las filas se descargarían con particiones superpuestas). Por ejemplo, si la tabla **SalesOrderDetail** tiene filas sin una fila correspondiente en la tabla **SalesOrderHeader** , e inserta la fila que falta en **SalesOrderHeader**, la fila se descargará en el suscriptor, pero las filas correspondientes en **SalesOrderDetail** no lo harán.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Prácticas recomendadas para filtros de fila basados en el tiempo](../../../relational-databases/replication/merge/best-practices-for-time-based-row-filters.md)   
  [Filtrar datos publicados](../../../relational-databases/replication/publish/filter-published-data.md)   
  [Filtrar datos publicados para la replicación de mezcla](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  

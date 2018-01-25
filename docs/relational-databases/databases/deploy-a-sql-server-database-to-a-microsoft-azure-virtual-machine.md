@@ -37,15 +37,15 @@ helpviewer_keywords:
 - Azure VM
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a571327d912f4b9f8ee96477db49be0ffa69e829
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cbec6e7020dce77da6fc3a78c97e676b7bb81cad
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Implementar una base de datos de SQL Server en una máquina virtual de Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use el asistente para **implementar una base de datos en una VM de Microsoft Azure** para implementar una base de datos desde una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una máquina virtual (VM) de Microsoft Azure. El asistente emplea una operación de copia de seguridad completa de la base de datos, por lo que siempre copia todo el esquema de la base de datos y los datos de una base de datos de usuario de SQL Server. El asistente también realiza toda la configuración de Azure VM, por lo que no se requiere ninguna configuración previa de la VM.  
@@ -291,7 +291,7 @@ Especifique o confirme el nombre de una base de datos nueva. Si el nombre de la 
   
  Haga clic en **Finalizar** para cerrar el asistente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [adaptador para la nube de SQL Server](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877)   
  [Administración del ciclo de vida de base de datos](../../relational-databases/database-lifecycle-management.md)   
  [Exportar una aplicación de capa de datos](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   

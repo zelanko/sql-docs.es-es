@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.addeditfilter.f1
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a859ba6929e849ea753b3cf5c86c428afbaaadfb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0461e699bbf3593f87567d3972aa7e260bca3111
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-or-edit-filter"></a>Agregar filtro o Editar filtro
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los cuadros de diálogo **Agregar filtro** y **Editar filtro** le permiten agregar y editar filtros de filas estáticos y filtros de filas con parámetros.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
   
  Mediante los filtros de fila, puede especificar un subconjunto de filas de la tabla que desea publicar. Puede utilizar filtros de filas para eliminar filas que no necesitan ver los usuarios (como las filas que contienen información importante o confidencial) o crear distintas particiones de datos que se enviarán a distintos suscriptores. La publicación de distintas particiones de datos para distintos suscriptores también puede ayudar a evitar conflictos que podrían causar la actualización simultánea de los mismos datos realizada por varios suscriptores.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  Este cuadro de diálogo incluye un proceso de dos pasos para las publicaciones transaccionales y de instantáneas y un proceso de tres pasos para las publicaciones de combinación. Todos los tipos de publicaciones requieren que seleccione la tabla que desea filtrar y una o más columnas que se incluirán en el filtro, en donde el filtro se define como una cláusula WHERE estándar.  
   
 1.  **Seleccione la tabla que desea filtrar**  
@@ -64,11 +64,11 @@ ms.lasthandoff: 11/17/2017
   
  Una vez agregado o editado un filtro, haga clic en **Aceptar** para guardar los cambios y cerrar el cuadro de diálogo. El filtro que ha especificado se analiza y se ejecuta según la tabla de la cláusula SELECT. Si la instrucción de filtro contiene errores de sintaxis u otros problemas, se le notificará para que pueda editar la instrucción de filtro.  
   
-## <a name="see-also"></a>Vea también  
- [Crear una publicación](../../relational-databases/replication/publish/create-a-publication.md)   
+## <a name="see-also"></a>Ver también  
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Ver y modificar propiedades de publicación](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Filtrar datos publicados](../../relational-databases/replication/publish/filter-published-data.md)   
- [Filtros de combinación](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Publicar datos y objetos de base de datos](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

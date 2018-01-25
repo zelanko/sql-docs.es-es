@@ -17,15 +17,15 @@ helpviewer_keywords:
 - replication [SQL Server], interoperability
 ms.assetid: 47c613e4-7fe9-462a-89b4-659b14825b70
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fff6d14c8303b4f627492c258177331f8d7db2a2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5a1b9183f8a9cf1c60bd399baf43825c4a3949f6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-features-and-tasks"></a>Características y tareas de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Busque información que cualquiera (como un diseñador, programador, analista o administrador) requiera para diseñar e implementar soluciones de replicación.  
@@ -44,11 +44,11 @@ ms.lasthandoff: 11/17/2017
   
 -   [Volver a publicar datos](../../relational-databases/replication/republish-data.md)  
   
--   [Replicación por Internet](../../relational-databases/replication/replication-over-the-internet.md)  
+-   [Replicación a través de Internet](../../relational-databases/replication/replication-over-the-internet.md)  
   
 -   [Seguridad y protección &#40;Replicación&#41;](../../relational-databases/replication/security/security-and-protection-replication.md)  
   
--   [Supervisar &#40;replicación&#41;](../../relational-databases/replication/monitor/monitoring-replication.md)  
+-   [Monitoring &#40;Replication&#41;](../../relational-databases/replication/monitor/monitoring-replication.md) (Monitorización [replicación])  
   
 -   [Crear script para la replicación](../../relational-databases/replication/scripting-replication.md)  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Replicación y creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Replicación de SQL Server](../../relational-databases/replication/sql-server-replication.md)   
  [Referencia técnica &#40;replicación&#41;](../../relational-databases/replication/technical-reference-replication.md)  
   

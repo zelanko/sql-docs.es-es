@@ -16,13 +16,13 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 caps.latest.revision: "22"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 664c1bf039edfafe035752ef9a8cfaa196074c28
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8c716fa65c68b44c6a4eb53e9c63bbe378298633
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-operating-modes"></a>Modos de funcionamiento de la creación de reflejo de la base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describen los modos de funcionamiento sincrónico y asincrónico para las sesiones de creación de reflejo de la base de datos.  
@@ -251,7 +251,7 @@ ms.lasthandoff: 11/20/2017
 ###  <a name="ViewWitness"></a> Ver la configuración de seguridad y el estado del testigo  
  Para ver la configuración de seguridad y el estado del testigo de una base de datos, use la vista de catálogo **sys.database_mirroring** . Las columnas relevantes son:  
   
-|Factor|Columnas|Descripción|  
+|Factor|Columnas|Description|  
 |------------|-------------|-----------------|  
 |Seguridad de las transacciones|**mirroring_safety_level** o **mirroring_safety_level_desc**|La configuración de seguridad de las transacciones para las actualizaciones de la base de datos reflejada es una de las siguientes:<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL= la base de datos no está en línea.|  
 |¿Existe un testigo?|**mirroring_witness_name**|Nombre de servidor del testigo de creación de reflejo de la base de datos o NULL, que indica que no existe ningún testigo.|  
@@ -287,7 +287,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
 -   [Cambiar la seguridad de las transacciones en una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Testigo de creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: feb8bb22579b8ed7c1c6c62e193ae5bce910269c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e9d8368d268caf86958ce90229c69f792a1ff036
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Eliminar archivos de blob de copia de seguridad con concesiones activas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cuando se hace una copia de seguridad en Microsoft Azure Storage, o cuando se restaura del mismo, SQL Server adquiere una concesión infinita para bloquear el acceso exclusivo al blob. Cuando el proceso de copia de seguridad o de restauración se ha completado correctamente, se libera la concesión. Si una copia de seguridad o una restauración dan error, el proceso de copia de seguridad intenta limpiar los blobs no válidos. Sin embargo, si el error de la copia de seguridad se debe a un error de conectividad en la red mantenido o prolongado, es posible que el proceso de copia de seguridad no pueda obtener acceso al blob y este podría quedar huérfano. Esto significa que no se puede escribir en el blob o que el blob no se puede eliminar hasta que no se libera la concesión. En este tema, se describe cómo liberar (interrumpir) la concesión y eliminar el blob. 

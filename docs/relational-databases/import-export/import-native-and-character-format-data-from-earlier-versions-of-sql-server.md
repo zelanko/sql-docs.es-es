@@ -18,15 +18,15 @@ helpviewer_keywords:
 - previous versions [SQL Server], import and export data formats
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ad1a28975d20c9fbf47e5788ef30e8d897c0c4a2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a03de887dbb2ac231b3663900ed6fbe106d9e392
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Importar datos con formato nativo y de caracteres de versiones anteriores de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], puede usar **bcp** para importar datos con formato nativo y de caracteres de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] con el modificador **-V**. El modificador **-V** hace que [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] use los tipos de datos de la versión anterior especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], y el formato del archivo de datos es el mismo que el de esa versión anterior.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |---------------------------------------|-------------------------------------------|-----------------------------------------|-----------------------------------------|  
 |**bigint**|**decimal**|**decimal**|*|  
 |**sql_variant**|**texto**|**nvarchar(4000)**|*|  
-|**varchar(max)**|**texto**|**texto**|**texto**|  
+|**ntext**|**texto**|**texto**|**texto**|  
 |**nvarchar(max)**|**ntext**|**ntext**|**ntext**|  
 |**varbinary(max)**|**imagen**|**imagen**|**imagen**|  
 |XML|**ntext**|**ntext**|**ntext**|  
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Usar el formato nativo Unicode para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

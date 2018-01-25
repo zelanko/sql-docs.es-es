@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Best Practices [Database Engine]
 ms.assetid: 307a4ad0-675a-4f97-9a3c-cedd61bdfae5
 caps.latest.revision: "11"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce4d4891a2d48bd59dbd94025d55204540efc94c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 333cd51f53e63a62043115f520a6fa468af24678
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="outdated-backup"></a>Copia de seguridad no actualizada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Esta regla comprueba que una base de datos tiene copias de seguridad recientes. Programar copias de seguridad regulares es importante para proteger las bases de datos contra la pérdida de datos que provocan numerosos errores diferentes. La frecuencia adecuada para la copia de seguridad de los datos depende del modelo de recuperación de la base de datos, de los requisitos comerciales sobre la pérdida de datos potencial y de la frecuencia con que se actualiza la base de datos. En una base de datos actualizada frecuentemente, el riesgo de perder parte del trabajo aumenta con bastante rapidez entre las copias de seguridad.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
  [Copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Statistics object
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7290b3701425411f0ba7d05e6790737057274762
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5ab8c2fa693b264707e89f4438d408f4c513e565
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Statistics (objeto de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El objeto **SQLServer:SQL Statistics** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona contadores para supervisar la compilación y el tipo de solicitudes que se envían a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La supervisión del número de compilaciones y recompilaciones de consultas y el número de lotes que recibe una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona información acerca de la rapidez con la que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procesa las consultas de usuarios y la eficacia con la que el optimizador de consultas las procesa.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  Estos son los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Statistics** .  
   
-|Contadores de SQLServer:SQL Statistics|Descripción|  
+|Contadores de SQLServer:SQL Statistics|Description|  
 |----------------------------------------|-----------------|  
 |**Intentos de parametrización automática/seg.**|Número de intentos de parametrización automática por segundo. El número total deber ser la suma de las parametrizaciones automáticas seguras, no seguras y con errores. La parametrización automática tiene lugar cuando una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta parametrizar una solicitud de [!INCLUDE[tsql](../../includes/tsql-md.md)] reemplazando algunos literales por parámetros, de forma que se posibilita la reutilización del plan de ejecución almacenado en caché resultante en varias solicitudes parecidas. Tenga en cuenta que las parametrizaciones automáticas también se denominan parametrizaciones simples en las versiones más recientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este contador no incluye las parametrizaciones forzadas.|  
 |**Solicitudes de lotes/seg.**|Número de lotes de comandos de [!INCLUDE[tsql](../../includes/tsql-md.md)] recibidos por segundo. Esta estadística se ve afectada por todas las restricciones (como E/S, número de usuarios, tamaño de la memoria caché, complejidad de las solicitudes, etc.). Un número alto de solicitudes de lotes significa un buen rendimiento.|  
@@ -53,8 +53,8 @@ ms.lasthandoff: 11/17/2017
 |**Recompilaciones SQL/seg.**|Número de recompilaciones de instrucciones por segundo. Cuenta el número de veces que se desencadenan las recompilaciones de instrucciones. En general, es conveniente que el número de recompilaciones sea bajo.|  
 |**Parametrizaciones automáticas no seguras/seg.**|Número de intentos de parametrización automática no segura por segundo. Por ejemplo, la consulta dispone de algunas características que impiden compartir el plan almacenado en caché. Estas parametrizaciones se designan como no seguras. Esta opción no cuenta el número de parametrizaciones forzadas.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Plan Cache (objeto de SQL Server)](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)   
- [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+ [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

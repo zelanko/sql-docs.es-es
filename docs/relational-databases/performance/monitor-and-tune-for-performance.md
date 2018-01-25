@@ -31,15 +31,15 @@ helpviewer_keywords:
 - monitoring server performance [SQL Server], about monitoring server performance
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f9825e46e8f39d8077df64a2e15b6a2eeec47c03
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 32bb41096ecb83b0a1bd5b9cd51f406788419b4d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-and-tune-for-performance"></a>Supervisión y optimización del rendimiento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] El objetivo de supervisar bases de datos es evaluar el rendimiento de un servidor. Una supervisión eficaz implica tomar instantáneas periódicas del rendimiento actual para aislar procesos que causan problemas y recopilar datos de forma continua a lo largo del tiempo para realizar el seguimiento de las tendencias de rendimiento.  
@@ -77,7 +77,7 @@ Las condiciones cambiantes se traducen en cambios en el rendimiento. En sus eval
 |[Establecer una línea base del rendimiento](../../relational-databases/performance/establish-a-performance-baseline.md)|Proporciona información sobre cómo establecer una línea base de rendimiento.|  
 |[Aislar problemas de rendimiento](../../relational-databases/performance/isolate-performance-problems.md)|Describe cómo aislar problemas de rendimiento de base de datos.|  
 |[Identificar los cuellos de botella](../../relational-databases/performance/identify-bottlenecks.md)|Describe cómo supervisar y seguir el rendimiento del servidor para identificar cuellos de botella.|  
-|[Supervisión de la actividad y rendimiento del servidor](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|Describe cómo usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y las herramientas de supervisión de rendimiento y actividad de Windows.|  
+|[Supervisión de la actividad y el rendimiento del servidor](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|Describe cómo usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y las herramientas de supervisión de rendimiento y actividad de Windows.|  
 |[Mostrar y guardar planes de ejecución](../../relational-databases/performance/display-and-save-execution-plans.md)|Describe cómo mostrar y guardar planes de ejecución en un archivo de formato XML.|  
 |[Estadísticas de consultas activas](../../relational-databases/performance/live-query-statistics.md)|Muestra estadísticas en tiempo real sobre los pasos de ejecución de consultas.|  
 |[Supervisar el rendimiento mediante el almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)|El almacén de consultas captura automáticamente un historial de consultas, planes y estadísticas en tiempo de ejecución, y las conserva para su revisión.|  

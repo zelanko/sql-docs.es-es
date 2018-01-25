@@ -16,13 +16,13 @@ ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a30c75098d6c3211ae0b961867d156356566dba6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1bacc1904e7a509c98653683211b9d0cbeda86d7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-designers---maintenance-plans-page"></a>Opciones (Diseñadores - página Planes de mantenimiento)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Use el cuadro de diálogo **Opciones** para determinar el comportamiento predeterminado del diseñador cuando se agregan nuevas formas a la superficie de diseño. En el menú **Herramientas** , haga clic en **Opciones**, expanda **Diseñadores**y seleccione **Planes de mantenimiento**.  

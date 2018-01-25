@@ -19,13 +19,13 @@ ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 caps.latest.revision: "44"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8b3e3b72900fe64a8925b6ebc9e8901b63e2dde
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 06f9d525bc46843dcf5456fc70db0cdd4bd78b74
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrading-mirrored-instances"></a>Actualización de instancias reflejadas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Al actualizar una instancia reflejada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a una nueva versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], a un Service Pack o una actualización acumulativa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a un nuevo Service Pack o actualización acumulativa de Windows, puede reducir el tiempo de inactividad de cada base de datos reflejada a solo una conmutación por error manual realizando una actualización gradual (o dos conmutaciones por error manuales si conmuta por recuperación a la base de datos primaria original). Una actualización gradual es un proceso de varias etapas que, en su forma más simple, implica la actualización de la instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que está actuando actualmente como servidor reflejado en una sesión de creación de reflejo, la conmutación por error manual de la base de datos reflejada, la actualización de la instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de la base de datos principal anterior y la reanudación de la creación de reflejo. En la práctica, el proceso exacto dependerá del modo de funcionamiento y del número y diseño de la sesión de creación de reflejo que se ejecute en las instancias de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que se van a actualizar.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Para obtener más información sobre el uso de la creación de reflejo de la base de datos con el trasvase de registros durante una migración, descargue este [documento](https://t.co/RmO6ruCT4J).  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Antes de empezar, revise la siguiente información importante:  
   
 -   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Compruebe que puede actualizar a SQL Server 2016 desde su versión del sistema operativo Windows y la versión de SQL Server. Por ejemplo, no puede actualizar directamente desde una instancia de SQL Server 2005 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Planeamiento y prueba del plan de actualización del motor de base de datos](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): revise las notas de la versión y los problemas conocidos de actualización, la lista de comprobación previa a la actualización y desarrolle y pruebe el plan de actualización.  
   
--   [Requisitos de hardware y software para instalar SQL Server 2016:](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)revise los requisitos de software para instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Si es necesario software adicional, puede instalarlo en cada nodo antes de comenzar el proceso de actualización para reducir los posibles tiempos de inactividad.  
+-   [Requisitos de hardware y software para instalar SQL Server 2016:](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)revise los requisitos de software para instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Si se requiere software adicional, puede instalarlo en cada nodo antes de comenzar el proceso de actualización para reducir los posibles tiempos de inactividad.  
   
 ## <a name="recommended-preparation-best-practices"></a>Preparación recomendada (prácticas recomendadas)  
  Antes de iniciar una actualización gradual, es recomendable que:  
@@ -158,7 +158,7 @@ ms.lasthandoff: 11/20/2017
   
     -   [Agregar un testigo de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Actualización a SQL Server 2016 mediante el Asistente para instalación &#40;programa de instalación&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [Instalar SQL Server 2016 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Reflejo de la base de datos ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   

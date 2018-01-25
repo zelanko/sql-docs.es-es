@@ -13,20 +13,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 87883705cb8af3f2e5d1d9cc8bb457ec94773441
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a068286adbcacf5edf77e44e4f9b91059663e58f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Separar y adjuntar bases de datos de DQS
   En este tema se describe cómo adjuntar y separar las bases de datos de DQS.  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Limitations"></a> Limitaciones y restricciones  
  Para obtener una lista de las limitaciones y restricciones, vea [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md).  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
   
 -   La cuenta de usuario de Windows debe ser miembro del rol fijo de servidor db_owner en la instancia de SQL Server para separar bases de datos de DQS.  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 11/20/2017
   
  También se pueden adjuntar bases de datos de DQS utilizando las instrucciones Transact-SQL. Para obtener más información sobre cómo adjuntar bases de datos mediante instrucciones Transact-SQL, vea [Using Transact-SQL](../relational-databases/databases/attach-a-database.md#TsqlProcedure) en [Attach a Database](../relational-databases/databases/attach-a-database.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administrar bases de datos de DQS](../data-quality-services/manage-dqs-databases.md)  
   
   

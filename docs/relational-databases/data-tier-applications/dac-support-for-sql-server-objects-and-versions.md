@@ -16,15 +16,15 @@ helpviewer_keywords:
 - objects [SQL Server], data-tier applications
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 939f92fab054aefc60c23500ed6207c3adef0e21
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 12b99446025274f0f3652a7552f53775283af7ac
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>Compatibilidad de DAC con las versiones y objetos de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Una aplicación de capa de datos (DAC) admite los objetos [!INCLUDE[ssDE](../../includes/ssde-md.md)] que se usan más.  
@@ -121,7 +121,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **Soluciones alternativas:** las operaciones de extracción y exportación escribirán archivos de datos BCP totalmente exactos en archivos .dacpac o .bacpac. Para evitar limitaciones, utilice la utilidad de línea de comandos SQL Server BCP.exe con el fin de implementar datos totalmente exactos en una base de datos de destino a partir de un paquete DAC.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   

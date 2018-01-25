@@ -18,15 +18,15 @@ helpviewer_keywords:
 - restoring [SQL Server], piecemeal restore scenario
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 caps.latest.revision: "74"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 74cd98740e15437e44fc782cf71389daccd1beea
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 82b43b985c462d5748079a8e9b6eea84a7fe2a53
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="piecemeal-restores-sql-server"></a>Restauraciones por etapas (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tema solo se aplica a las bases de datos de la edición Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que incluyen varios archivos o grupos de archivos y, en el modelo simple, únicamente para grupos de archivos de solo lectura.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
   
      Para obtener información sobre las restauraciones por etapas de bases de datos de OLTP en memoria, vea [Copias de seguridad y restauración por etapas de bases de datos con tablas con optimización para memoria](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
   
-## <a name="restrictions"></a>Restricciones  
+## <a name="restrictions"></a>Restrictions  
  Si una secuencia de restauración parcial excluye cualquier grupo de archivos [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) , no se admite la restauración a un momento dado. Puede forzarse la continuación de la secuencia de restauración. Sin embargo, no se podrán restaurar los grupos de archivos FILESTREAM omitidos en la instrucción RESTORE. Para forzar una restauración a un momento específico, especifique la opción CONTINUE_AFTER_ERROR junto con la opción STOPAT, STOPATMARK o STOPBEFOREMARK, que debe especificar también en las instrucciones RESTORE LOG siguientes. Si se especifica CONTINUE_AFTER_ERROR, la secuencia de restauración parcial será correcta y el grupo de archivos FILESTREAM no será recuperable.  
   
 ## <a name="piecemeal-restore-under-the-simple-recovery-model"></a>Restauración por etapas con el modelo de recuperación simple  
@@ -178,7 +178,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Una copia de seguridad diferencial se realiza después de otras copias de seguridad restauradas en la secuencia de restauración por etapas original para restaurar los datos hasta el punto de recuperación original.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   

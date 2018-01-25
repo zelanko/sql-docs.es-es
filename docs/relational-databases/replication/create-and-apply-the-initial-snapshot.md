@@ -16,15 +16,15 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], initial snapshots
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d9be4d647441a82413c908a5207adec8efdf3e4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 982f9d9f347e664e72363d13c6e10fa016162d59
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Crear y aplicar la instantánea inicial
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo crear y aplicar la instantánea inicial en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] o Replication Management Objects (RMO). Las publicaciones de mezcla que usan filtros con parámetros necesitan una instantánea de dos partes. Para más información, consulte [Create a Snapshot for a Merge Publication with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
- De forma predeterminada, si se está ejecutando el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el Agente de instantáneas genera una instantánea inmediatamente después de que se cree una publicación con el Asistente para nueva publicación. A continuación, el Agente de distribución (para la replicación de instantáneas y transaccional) o el Agente de mezcla (para las suscripciones de mezcla) la aplican a todas las suscripciones. Las instantáneas también se pueden generar mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y el Monitor de replicación. Para obtener información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+ De forma predeterminada, si se está ejecutando el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el Agente de instantáneas genera una instantánea inmediatamente después de que se cree una publicación con el Asistente para nueva publicación. A continuación, el Agente de distribución (para la replicación de instantáneas y transaccional) o el Agente de mezcla (para las suscripciones de mezcla) la aplican a todas las suscripciones. Las instantáneas también se pueden generar mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y el Monitor de replicación. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 #### <a name="to-create-a-snapshot-in-management-studio"></a>Para crear una instantánea en Management Studio  
   
@@ -82,13 +82,13 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-create-and-run-a-snapshot-agent-job-to-generate-the-initial-snapshot"></a>Para crear y ejecutar un trabajo del Agente de instantáneas que genere la instantánea inicial  
   
-1.  Cree una publicación de instantáneas, transaccional o de combinación. Para obtener más información, consulte [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
+1.  Cree una publicación de instantáneas, transaccional o de combinación. Para más información, consulte [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
 2.  Ejecute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Especifique **@publication** y los siguientes parámetros:  
   
     -   **@job_login, que especifica** las credenciales de autenticación de Windows con las que se ejecuta el Agente de instantáneas en el distribuidor.  
   
-    -    **@job_password**, que es la contraseña para las credenciales de Windows proporcionadas.  
+    -   **@job_password**, que es la contraseña para las credenciales de Windows proporcionadas.  
   
     -   (Opcional) El valor **0** para **@publisher_security_mode** si el agente va a utilizar autenticación de SQL Server para conectarse al publicador. En este caso, debe especificar también la información de inicio de sesión de autenticación de SQL Server para **@publisher_login** y **@publisher_password**.  
   
@@ -248,15 +248,15 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
  [!code-vb[HowTo#rmo_vb_GenerateSnapshot_WithJob](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_generatesnapshot_withjob)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [Crear una suscripción de extracción](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)   
  [Crear y aplicar una instantánea](../../relational-databases/replication/create-and-apply-the-snapshot.md)   
  [Inicializar una suscripción con una instantánea](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
- [Conceptos de los Replication Management Objects (RMO)](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
- [Prácticas recomendadas de seguridad de replicación](../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Usar sqlcmd con variables de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
   

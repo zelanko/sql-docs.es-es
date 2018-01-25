@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.restoredb.general.f1
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
 caps.latest.revision: "89"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31fc3012f234601db7d24b80b4499b78138e709c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: db20fb80e64e3ffecee629dd5fc9310755ff58b0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-database-general-page"></a>Restaurar la base de datos (página General)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.lasthandoff: 11/17/2017
   
  La restauración de una copia de seguridad cifrada requiere permisos **VIEW DEFINITION** al certificado o a la clave asimétrica que se usó para el cifrado durante la copia de seguridad.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
   
-### <a name="source"></a>Origen  
+### <a name="source"></a>Source  
  Las opciones del panel **Restore from**(Restaurar desde) identifican la ubicación de los conjuntos de copia de seguridad para la base de datos y los conjuntos de copia de seguridad que quiere restaurar.  
   
 |Término|Definición|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="restoring-from-microsoft-azure-storage"></a>Restaurar desde Almacenamiento de Microsoft Azure  
 Seleccione **URL** en la lista desplegable **Tipo de medio de copia de seguridad:** del cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** .  Después, haga clic en **Agregar** para abrir el cuadro de diálogo **Seleccionar una ubicación de archivo de copia de seguridad** , donde puede seleccionar un contenedor de almacenamiento de Azure o de credenciales de SQL Server existente, agregar un nuevo contenedor de almacenamiento de Azure con una firma de acceso compartido o generar una firma de acceso compartido y las credenciales de SQL Server para un contenedor de almacenamiento existente. Una vez conectado a la cuenta de almacenamiento, los archivos de copia de seguridad se muestran en el cuadro de diálogo **Buscar el archivo de copia de seguridad de Microsoft Azure** , donde puede seleccionar el archivo que se va a usar para la restauración.  Vea también [Conectarse a una suscripción de Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Restaurar una copia de seguridad desde un dispositivo &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)   
  [Restaurar una base de datos en una transacción marcada &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)   

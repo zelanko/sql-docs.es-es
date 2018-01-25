@@ -21,15 +21,15 @@ helpviewer_keywords:
 - native data access [SQL Server Native Client]
 ms.assetid: 14ba2cb1-a424-4e4d-b224-0bf1015ab801
 caps.latest.revision: "66"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a60ee91484043192ee6998266b04f9b73b9f5424
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 80e90fe4e92edb1cc3cd7dd60e8f948b00cf4377
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-native-client-programming"></a>Programación de SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/08/2018
  [Características de SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md)  
  Describe las características compatibles con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- [Generar aplicaciones con SQL Server Native Client](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [Creación de aplicaciones con SQL Server Native Client](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
  Proporciona información general sobre el desarrollo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, como las diferencias que existen con Windows DAC, los componentes que utiliza y la forma en que puede utilizarse con ADO.  
   
  En esta sección también se explica la instalación e implementación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, incluida la forma de redistribuir la biblioteca de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -81,6 +81,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>Vea también  
  [Actualizar una aplicación de SQL Server 2005 Native Client](../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)   
  [Temas de procedimientos de ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
- [Temas de procedimientos de OLE DB](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [Temas "Cómo..." de OLE DB](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

@@ -16,13 +16,13 @@ ms.assetid: da265482-3953-440a-ac23-0ab7e42a55eb
 caps.latest.revision: "35"
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 59a0fecfbf924b2ce4ab4d9e559dac678dfcb661
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f5a0c419e0c59a171011f2dc4d1e7c6d57fca9d1
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>Crear un servidor de administración central y un grupo de servidores
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En este tema se describe cómo designar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como servidor de administración central de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Los servidores de administración central almacenan una lista de instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se organizan en uno o varios grupos de este tipo de servidores. Las acciones que se llevan a cabo mediante un servidor de administración central actúan en todos los servidores del grupo. Esto incluye la conexión a los servidores mediante el Explorador de objetos y la ejecución de instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] y de directivas de administración basada en directivas en varios servidores al mismo tiempo.  

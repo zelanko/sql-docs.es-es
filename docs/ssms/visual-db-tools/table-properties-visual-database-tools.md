@@ -18,13 +18,13 @@ ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe0a195866ec219190d9c2c2ae5a21c8ebc7b194
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8e4b490245618493bbe5c13c169421643135239a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="table-properties-visual-database-tools"></a>Propiedades de la tabla (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Estas propiedades aparecen en la ventana Propiedades cuando se hace clic con el botón derecho en Diseñador de tablas y se selecciona Propiedades. A menos que se especifique lo contrario, podrá modificar estas propiedades en la ventana Propiedades cuando la tabla esté seleccionada.  

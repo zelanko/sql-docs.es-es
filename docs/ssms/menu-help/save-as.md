@@ -17,13 +17,13 @@ ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 caps.latest.revision: "6"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8957cd743dd7f358d7f451f5d6e0879d040974d4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 16e9002516156238be7eac9faa203b64f0d23318
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="save-as"></a>Guardar como
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Se usa para guardar una instancia del elemento actual en una ubicación especificada y en un formato de archivo determinado. Haga clic en **Guardar** *<file>* **como** en el menú **Archivo** (donde *<file>* es el nombre del elemento actual), o bien presione ALT+F, A en el Editor de código.  

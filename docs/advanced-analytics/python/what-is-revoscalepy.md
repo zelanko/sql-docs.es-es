@@ -12,12 +12,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: aa07f181ef8a17b79bd978ffd58174bf28d870f0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: dd64f680a288f144e14104aedc99d4c6eda85934
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="introducing-revoscalepy"></a>Introducción a revoscalepy
 

@@ -21,13 +21,13 @@ ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb2bc5a6ba90fb46d4d5329a3d8c8a16d7f9fe8d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 77d9cd92950ddecc334fd5d75c3092bc5b3b4214
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Crear consultas de inserción de resultados (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede copiar filas de una tabla a otra o dentro de una misma tabla mediante una consulta de inserción de resultados. Por ejemplo, en una tabla `titles` , puede utilizar una consulta de inserción de resultados para copiar la información de todos los títulos de una editorial en una segunda tabla y proporcionar esa tabla a la editorial. Una consulta de inserción de resultados es similar a una consulta de creación de tabla, con la diferencia de que la primera copia las filas en una tabla existente.  

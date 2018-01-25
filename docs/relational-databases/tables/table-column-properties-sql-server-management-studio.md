@@ -17,15 +17,15 @@ f1_keywords:
 - vdt.ppg.columns
 ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 66ebe137da10784f3999e9039538895afa701abe
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2d2860c28663df8c5b2fc9ef995dafdefcb892e2
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Propiedades de columnas de tablas (SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/17/2017
  **Tipo de datos comprimido**  
  Muestra información sobre el tipo de datos del campo con el mismo formato que la instrucción SQL CREATE TABLE. Por ejemplo, un campo que contenga una cadena de longitud variable con una longitud máxima de 20 caracteres se representará como "varchar(20)". Para cambiar esta propiedad, escriba el valor directamente.  
   
- **Description**  
+ **Descripción**  
  Muestra la descripción de esta columna. Para editar la descripción, seleccione la propiedad, haga clic en los puntos suspensivos (...) que aparecen a la derecha del valor de propiedad y edite la descripción en el cuadro de diálogo **Propiedad Description** .  
   
  **Determinista**  

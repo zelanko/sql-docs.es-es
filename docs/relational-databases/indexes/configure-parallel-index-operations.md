@@ -19,15 +19,15 @@ helpviewer_keywords:
 - parallel index operations [SQL Server]
 ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 53114677b0aa3635e4c031c4b24309bcb7b4ab9d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8f6d408cdf02885ce9d3ec56a228bc9341cc7776
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-parallel-index-operations"></a>Configurar operaciones de índice en paralelo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 -   La opción de índice MAXDOP reemplaza la opción de configuración max degree of parallelism solo para la consulta que especifica esta opción. En la tabla siguiente se muestran los valores enteros válidos que se pueden especificar con la opción de configuración max degree of parallelism y la opción de índice MAXDOP.  
   
-    |Valor|Descripción|  
+    |Valor|Description|  
     |-----------|-----------------|  
     |0|Especifica que el servidor determina el número de CPU que se usan, según la carga de trabajo del sistema actual. Éste es el valor predeterminado y recomendado.|  
     |1|Suprime la generación de planes paralelos. La operación se ejecutará en serie.|  
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Requiere el permiso ALTER en la tabla o la vista.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  

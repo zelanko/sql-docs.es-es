@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.articleissues.f1
 ms.assetid: bde57da2-dd47-412f-9df7-9224968b2448
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a92717aaa6a367fb7ce357aa379d159beb62fb6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4935f6e607270401c095f78bd6142828e8581071
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="article-issues"></a>Problemas de los artículos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La página **Problemas de los artículos** muestra los problemas encontrados en los artículos y los cambios necesarios para solucionar dichos problemas. La siguiente tabla muestra los posibles problemas y las acciones necesarias para garantizar que la replicación y las aplicaciones existentes funcionen correctamente.  
@@ -35,8 +35,8 @@ ms.lasthandoff: 11/17/2017
 |Son necesarias las tablas a las que hacen referencia las vistas.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere que todas las tablas a las que hacen referencia las vistas y las vistas indexadas publicadas estén disponibles en el suscriptor. Si las tablas a las que se hace referencia no se publican como artículos en esta publicación, se deben crear manualmente en el suscriptor.|Use el botón **Atrás** para navegar a la página **Artículos** . Agregue los objetos necesarios.|  
 |Se requieren los objetos a los que hacen referencia los procedimientos almacenados.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere que todos los objetos a los que hacen referencia los procedimientos almacenados publicados, como tablas y funciones definidas por el usuario, estén disponibles en el suscriptor. Si los objetos a los que se hace referencia no se publican como artículos en esta publicación, se deben crear manualmente en el suscriptor.|Use el botón **Atrás** para navegar a la página **Artículos** . Agregue los objetos necesarios.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Publicar datos y objetos de base de datos](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Crear una publicación](../../relational-databases/replication/publish/create-a-publication.md)  
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)  
   
   

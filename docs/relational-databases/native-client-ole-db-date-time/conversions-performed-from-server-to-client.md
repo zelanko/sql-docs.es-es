@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: conversions [OLE DB], server to client
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0f86d6337913eee857e3575eb23dc52417c6e8f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d336c8e61a51967c84535bac977f2cd85fbcf570
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Conversiones realizadas de servidor a cliente
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,12 +35,12 @@ ms.lasthandoff: 01/08/2018
   
 |A -><br /><br /> De|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|date|1,7|Aceptar|-|-|1|1,3|1,7|-|ACEPTAR (VT_BSTR)|Aceptar|Aceptar|4|4|  
-|Time|5,6,7|-|9|Aceptar|6|3,6|5,6|-|ACEPTAR (VT_BSTR)|Aceptar|Aceptar|4|4|  
+|Date|1,7|Aceptar|-|-|1|1,3|1,7|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
+|Time|5,6,7|-|9|Aceptar|6|3,6|5,6|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
 |Smalldatetime|7|8|9,10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  
-|DATETIME|5,7|8|9,10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  
-|Datetime2|5,7|8|9,10|10|7|3|5,7|-|ACEPTAR (VT_BSTR)|Aceptar|Aceptar|4|4|  
-|Datetimeoffset|5,7,11|8,11|9,10,11|10,11|7,11|Aceptar|5,7,11|-|ACEPTAR (VT_BSTR)|Aceptar|Aceptar|4|4|  
+|Fecha y hora|5,7|8|9,10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  
+|Datetime2|5,7|8|9,10|10|7|3|5,7|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
+|Datetimeoffset|5,7,11|8,11|9,10,11|10,11|7,11|Aceptar|5,7,11|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
 |Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12,9|12|12|12|7,13|N/D|N/D|N/D|N/D|N/D|N/D|  
 |Sql_variant<br /><br /> (datetime)|7|8|9,10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  

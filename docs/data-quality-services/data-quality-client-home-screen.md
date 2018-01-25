@@ -14,20 +14,20 @@ ms.topic: article
 f1_keywords: sql13.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 518ea2fbf0a3e6f667a2d7a488de19d64b1b20ac
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 370c6cc6e18c7064db092a92d3b8a5d826927689
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-quality-client-home-screen"></a>Página de inicio del cliente de calidad de datos
   Utilice esta pantalla para obtener acceso a las interfaces de usuario de cada uno de los tres grupos principales de tareas de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): administración de bases de conocimiento, proyectos de calidad de datos y administración.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
   
 ### <a name="knowledge-base-management"></a>Administración de bases de conocimiento  
  Una base de conocimiento de DQS es un repositorio de metadatos que DQS utiliza para mejorar la calidad de los datos. Estos metadatos los crean tanto la plataforma DQS en un proceso de detección de conocimiento asistido por PC como el administrador de datos en un proceso interactivo de administración de dominios.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/20/2017
  **Configuración**  
  Muestre las propiedades de configuración de cuentas de servicio de datos de referencia (a través de Windows Azure Marketplace y directamente para los servicios de datos de referencia), las opciones generales de configuración (limpieza interactiva, coincidencias y generación de perfiles) y los valores de gravedad del registro.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Bases de conocimiento y dominios de DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
  [Proyectos de calidad de datos &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
  [Administración de DQS](../data-quality-services/dqs-administration.md)  

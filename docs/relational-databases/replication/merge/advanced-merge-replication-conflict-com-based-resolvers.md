@@ -16,15 +16,15 @@ helpviewer_keywords:
 - custom resolvers [SQL Server replication]
 ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 198d50f997ae034c1377dfb1d340a1e0d46949f1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 409a397589bd7add43ffcb29e9bcf1a9c9e67f59
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-merge-replication-conflict---com-based-resolvers"></a>Conflictos de replicación de mezcla avanzada: solucionadores basados en COM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Todos los solucionadores basados en COM suministrados con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden controlar conflictos de actualización y, cuando así se indica, también conflictos de inserción y de eliminación. Todos pueden controlar el seguimiento de columnas; la mayor parte de ellos pueden controlar también el seguimiento de filas. Estos y todos los demás solucionadores basados en COM declaran los tipos de conflicto que pueden controlar, y el Agente de mezcla utiliza el solucionador predeterminado para los demás tipos de conflicto.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  En la siguiente tabla se describen los atributos de los solucionadores específicos.  
   
-|Nombre|Entrada necesaria|Descripción|Comentarios|  
+|Nombre|Entrada necesaria|Description|Comentarios|  
 |----------|--------------------|-----------------|--------------|  
 |Solucionador de conflictos de suma de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |Nombre de la columna que se va a sumar. Debe tener un tipo de datos aritmético (como **int**, **smallint**, **numeric**, etc.).|El ganador del conflicto se determina a partir del valor de prioridad. Los valores de las columnas especificadas se establecen en la suma de los valores de las columnas de origen y de destino. Si se establece uno como NULL, se establecen al valor de la otra columna.|Admite solamente conflictos de actualización y seguimiento de columnas.|  
 |Solucionador de conflictos de Cálculo de media de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |Nombre de la columna que se va a promediar. Debe tener un tipo de datos aritmético (como **int**, **smallint**, **numeric**, etc.).|El ganador del conflicto se determina a partir del valor de prioridad. Los valores de las columnas resultantes se establecen en el promedio de los valores de las columnas de origen y de destino. Si se establece uno como NULL, se establecen al valor de la otra columna.|Admite solamente conflictos de actualización y seguimiento de columnas.|  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
 |Solucionador de conflictos de Solo descargar de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |No tiene entradas.|Se rechazan los cambios cargados en el publicador; los cambios se descargan en el suscriptor.|Admite todos los tipos de conflictos.|  
 |Resolvedor de procedimientos almacenados de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQL Server|Nombre del procedimiento almacenado que debe utilizar el solucionador para solucionar el conflicto.|La resolución de conflictos depende de la lógica del procedimiento almacenado que se especifique.|Admite conflictos de actualización. Para obtener más información, consulte [Implementar un solucionador de conflictos personalizado para un artículo de mezcla](../../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)  
   

@@ -18,13 +18,13 @@ ms.assetid: 6e8b5900-1990-48e9-8666-d9a20ed786be
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d756b3dac37c11172a186dc4683ba15c958a482b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2011789bbecd15c199049e1a50335b77885c9efb
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="browse-for-objects-object-explorer"></a>Buscar objetos (Explorador de objetos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Muestra una lista de objetos del tipo seleccionado. Seleccione uno o más objetos de esta lista activando la casilla correspondiente. En el cuadro **Buscar objetos** solo se muestran los elementos que corresponden a la acción y para los que se tienen permisos de visualización.  

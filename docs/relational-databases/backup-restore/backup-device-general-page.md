@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.backupdevice.general.f1
 ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
 caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b7aff7cfef8a57056964cc688c563edce84cbe92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 783ec3d28cac152932ffd2088d0aa53c92f9dcb7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-device-general-page"></a>Dispositivo de copia de seguridad (página General)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice la página **General** para especificar o ver las propiedades generales de un dispositivo lógico de copia de seguridad.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Ver las propiedades y el contenido de un dispositivo lógico de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Nombre de dispositivo**  
  Muestra el nombre de un dispositivo lógico de copia de seguridad existente o especifica el nombre de un dispositivo lógico de copia de seguridad nuevo.  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
     > [!IMPORTANT]  
     >  La realización de copias de seguridad de datos a través de una red está expuesta a errores; una vez completada, es recomendable comprobar la operación de copia de seguridad. Para obtener más información, vea [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Las copias de seguridad de uno o varios dispositivos de copia de seguridad constituyen un solo conjunto de medios. Un *conjunto de medios* es una colección ordenada de medios de copia de seguridad, cintas o archivos de disco en la que se han escrito una o más operaciones de copia de seguridad mediante un tipo y un número fijos de dispositivos de copia de seguridad. Para obtener más información sobre los conjuntos de medios, vea [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
  El dispositivo físico de copia de seguridad correspondiente a un dispositivo lógico de copia de seguridad se inicializa cuando la primera copia de seguridad del conjunto de medios se escribe en el dispositivo lógico. Si el dispositivo físico de copia de seguridad es un archivo que aún no existe, se crea en ese momento.  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Restaurar una copia de seguridad desde un dispositivo &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

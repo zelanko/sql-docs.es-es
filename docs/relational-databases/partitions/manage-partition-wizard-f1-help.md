@@ -25,15 +25,15 @@ f1_keywords:
 helpviewer_keywords: wizards [SQL Server Management Studio] See Manage Partition Wizard
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 25be7d99d07300731a9395b096f316faef973eef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: edef05d3a9cd1ae3a363a4cdead10130ee42459f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Ayuda F1 del Asistente para la administración de particiones
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice el **Asistente para la administración de particiones** con el fin de administrar y modificar las tablas con particiones existentes a través de la activación de particiones o de la implementación de un escenario de ventanas deslizantes. Este asistente puede facilitar la administración de las particiones y simplificar la migración normal de los datos en las tablas.  
@@ -120,7 +120,7 @@ ms.lasthandoff: 11/17/2017
  **Tabla de desactivación**  
  Seleccione una tabla nueva o una tabla existente en la que desea desactivar los datos.  
   
- **Nuevo**  
+ **Nueva**  
  Escriba un nombre nuevo para la tabla de ensayo que desea utilizar para desactivar la partición de la tabla de origen actual.  
   
  **Existente**  
@@ -180,7 +180,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="NewJob"></a> Página Nueva programación del trabajo  
  Utilice la página **Nueva programación del trabajo** para ver y cambiar las propiedades de la programación.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  Seleccionar el tipo de programación que desea para el trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Nombre**  
@@ -192,7 +192,7 @@ ms.lasthandoff: 11/17/2017
  **Tipo de programación**  
  Seleccione el tipo de programación.  
   
- **Habilitado**  
+ **Enabled**  
  Habilite o deshabilite la programación.  
   
 ### <a name="recurring-schedule-types-options"></a>Opciones de tipos de programación periódica  
@@ -272,7 +272,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="Progress"></a> Página Progreso  
  Utilice la página **Progreso** para supervisar la información de estado sobre las acciones del **Asistente para la administración de particiones**. Según las opciones que se seleccionen en el asistente, la página **Progreso** puede contener una o varias acciones. El cuadro superior muestra el estado general del asistente y el número de mensajes de estado, error y advertencia que ha recibido.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Detalles**  
  Proporciona la acción, el estado y los mensajes devueltos por la acción llevada a cabo por el asistente.  
   
@@ -307,7 +307,7 @@ ms.lasthandoff: 11/17/2017
   
  ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[En esta sección](#Top)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

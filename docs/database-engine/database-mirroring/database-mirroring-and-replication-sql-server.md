@@ -18,13 +18,13 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 caps.latest.revision: "39"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3c54a32f33bb5c74218f597c04451bd4d194a980
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3e4757ca79a259ac4d7ddbc554954d139828f0f9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Replicación y creación de reflejo de la base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La creación de reflejo de la base de datos se puede usar conjuntamente con la replicación para mejorar la disponibilidad para la base de datos de publicación. La creación de reflejo de la base de datos incluye la creación de dos copias de una sola base de datos que suelen residir en diferentes equipos. En cada momento, solo una copia de la base de datos está disponible para los clientes. Esta copia se conoce como la base de datos principal. Las actualizaciones realizadas por los clientes en la base de datos de la entidad de seguridad se aplican a la otra copia de la base de datos, conocida como la base de datos reflejada. La creación de reflejo incluye la aplicación a la base de datos reflejada del registro de transacciones con todas las inserciones, actualizaciones o eliminaciones efectuadas en la base de datos de la entidad de seguridad.  
@@ -166,7 +166,7 @@ ms.lasthandoff: 11/20/2017
 |Modo de alto rendimiento|Si la entidad reflejada no está disponible, la base de datos de la entidad de seguridad se ejecuta de forma expuesta (es decir, sin reflejo). Sin embargo, el Agente de registro del LOG solo replica las transacciones reforzadas en la entidad reflejada. Si se fuerza el servicio y el servidor reflejado asume el rol de la entidad de seguridad, el Agente de registro del LOG trabajará con la entidad reflejada y comenzará a recoger las transacciones nuevas.<br /><br /> Tenga en cuenta que aumentará la latencia de replicación si la entidad reflejada se retrasa con respecto a la entidad de seguridad.|  
 |Modo de alta seguridad sin conmutación automática por error|Se garantiza que todas las transacciones confirmadas se refuerzan en disco en la entidad reflejada. El Agente de registro del LOG solo replica las transacciones reforzadas en la entidad reflejada. Si la entidad reflejada no está disponible, la entidad de seguridad no permite que continúe la actividad en la base de datos; por lo tanto, el Agente de registro del LOG no contará con transacciones para replicar.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Características y tareas de replicación](../../relational-databases/replication/replication-features-and-tasks.md)   
  [Trasvase de registros y replicación &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)  
   

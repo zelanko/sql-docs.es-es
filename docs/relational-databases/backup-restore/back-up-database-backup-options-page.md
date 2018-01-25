@@ -16,15 +16,15 @@ f1_keywords:
 - swb.backupdatabase.options.f1
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 caps.latest.revision: "62"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f1d587759b7c57accdc4836346446e181f7df60
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b476e0436b392d2b3c093a6a4424dc3445d8e27e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-database-backup-options-page"></a>Copia de seguridad de la base de datos (página Opciones de copia de seguridad)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice la página **Opciones de copia de seguridad** del cuadro de diálogo **Copia de seguridad de base de datos** para ver o modificar las opciones de copia de seguridad de la base de datos.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Cuando especifica una tarea de copia de seguridad con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script [BACKUP](../../t-sql/statements/backup-transact-sql.md) de [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondiente si hace clic en el botón **Script** y, después, selecciona un destino para el script.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
   
 ### <a name="backup-set"></a>Conjunto de copia de seguridad  
  Las opciones del panel **Conjunto de copia de seguridad** permiten especificar información adicional acerca del conjunto de copia de seguridad creado en la operación de copia de seguridad.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
  Para obtener más información sobre los conjuntos de copia de seguridad, vea [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
- **Description**  
+ **Descripción**  
  Escriba una descripción del conjunto de copia de seguridad.  
   
  **El conjunto de copia de seguridad expira**  
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/17/2017
 >   
 >  Solo se admiten las claves que residen en Administración extensible de claves (EKM).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Realizar copias de seguridad de archivos y grupos de archivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   

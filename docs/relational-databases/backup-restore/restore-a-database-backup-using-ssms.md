@@ -22,15 +22,15 @@ helpviewer_keywords:
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 caps.latest.revision: "79"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d0c0f0112eee81379e2c1548dd9938e27088dea8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d51837413865aedb9b4610b045355556634ea6df
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ Para obtener más información sobre la restauración de SQL Server en el servic
             **Agregar**  
             En función del tipo de medio que seleccione en la lista desplegable **Tipo de medio de copia de seguridad** , al hacer clic en **Agregar** , se abrirá uno de los siguientes cuadros de diálogo. (Si la lista del cuadro de lista **Medio de copia de seguridad** está llena, el botón **Agregar** no está disponible).
 
-            |Tipo de medio|Cuadro de diálogo|Descripción|    
+            |Tipo de medio|Cuadro de diálogo|Description|    
             |----------------|----------------|-----------------|    
             |**Archivo**|**Buscar archivo de copia de seguridad**|En este cuadro de diálogo, puede seleccionar un archivo local en el árbol, o bien especificar un archivo remoto mediante su nombre UNC (convención de nomenclatura universal) completo. Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|    
             |**Dispositivo**|**Seleccionar dispositivo de copia de seguridad**|En este cuadro de diálogo, puede seleccionar un dispositivo de una lista de dispositivos lógicos de copia de seguridad en la instancia del servidor.|    
@@ -147,7 +147,7 @@ En el ejemplo siguiente se restaura una copia de seguridad de disco anterior de 
 
 3.  En la página **General** , seleccione **Dispositivo** en la sección **Origen** .
 
-4.  Haga clic en el botón Examinar (**...**) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . Haga clic en **Agregar** y vaya a la copia de seguridad.  Haga clic en **Aceptar** después de seleccionar los archivos de la copia de seguridad de disco.
+4.  Haga clic en el botón de exploración (**...**) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . Haga clic en **Agregar** y vaya a la copia de seguridad.  Haga clic en **Aceptar** después de seleccionar los archivos de la copia de seguridad de disco.
 
 5.  Haga clic en **Aceptar** para volver a la página **General** .
 
@@ -177,7 +177,7 @@ En el ejemplo siguiente se restaura una copia de seguridad de disco anterior de 
 
 3.  En la página **General** , seleccione **Dispositivo** en la sección **Origen** .
 
-4.  Haga clic en el botón Examinar (**...**) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . Haga clic en **Agregar** y vaya a la copia de seguridad.  Haga clic en **Aceptar** después de seleccionar los archivos de la copia de seguridad de disco.
+4.  Haga clic en el botón de exploración (**...**) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . Haga clic en **Agregar** y vaya a la copia de seguridad.  Haga clic en **Aceptar** después de seleccionar los archivos de la copia de seguridad de disco.
 
 5.  Haga clic en **Aceptar** para volver a la página **General** .
 
@@ -203,7 +203,7 @@ En el ejemplo siguiente se restaura una base de datos al estado en que se encont
 
 3.  En la página **General** , seleccione **Dispositivo** en la sección **Origen** .
 
-4.  Haga clic en el botón Examinar (**...**) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . Haga clic en **Agregar** y vaya a la copia de seguridad completa y a todas las copias de seguridad del registro de transacciones pertinentes.  Haga clic en **Aceptar** después de seleccionar los archivos de la copia de seguridad de disco.
+4.  Haga clic en el botón de exploración (**...**) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . Haga clic en **Agregar** y vaya a la copia de seguridad completa y a todas las copias de seguridad del registro de transacciones pertinentes.  Haga clic en **Aceptar** después de seleccionar los archivos de la copia de seguridad de disco.
 
 5.  Haga clic en **Aceptar** para volver a la página **General** .
 
@@ -277,11 +277,11 @@ La base de datos `Sales` se restaurará en el contenedor de almacenamiento de Mi
 12. Haga clic en **Aceptar**.
 
 
-## <a name="see-also"></a>Vea también    
+## <a name="see-also"></a>Ver también    
  [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)     
  [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)     
  [Restaurar una base de datos a una nueva ubicación &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)     
- [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)     
+ [Restaurar una copia de seguridad de registros de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)     
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)     
  [Restaurar base de datos &#40;página Opciones&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)     
  [Restaurar la base de datos &#40;página General&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)    

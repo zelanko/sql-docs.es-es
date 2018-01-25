@@ -20,15 +20,15 @@ helpviewer_keywords:
 - statements [ODBC], prepared execution
 ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af15198f0c876933a9ab2ff5583b903e279e665b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cedfb3926904af0a9d7393a1ff896c3c2f08a61f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="prepared-execution"></a>Ejecución preparada
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/08/2018
   
  Algunas aplicaciones ODBC anteriores utilizados **SQLPrepare** cualquier momento [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md) se utilizó. **SQLBindParameter** no requiere el uso de **SQLPrepare**, se puede utilizar con **SQLExecDirect**. Por ejemplo, utilice **SQLExecDirect** con **SQLBindParameter** para recuperar el código de retorno o parámetros de salida de un procedimiento almacenado que se ejecuta solo una vez. No utilice **SQLPrepare** con **SQLBindParameter** a menos que la misma instrucción se ejecutará varias veces.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Ejecutar instrucciones &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

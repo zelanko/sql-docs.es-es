@@ -18,15 +18,15 @@ helpviewer_keywords:
 - wizard [DAC]
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 102a18fdb5a3f183a15ef719e6d85e9d1bbb28bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d42c7d587e18e306a15a95e4576e312a0e7c31c0
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="data-tier-applications"></a>Aplicaciones de capa de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Una aplicación de capa de datos (DAC) es una entidad de administración de bases de datos lógicas que define todos los objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asociados a una base de datos de usuario, como tablas, vistas y objetos de instancia, incluidos los inicios de sesión. Una DAC es una unidad independiente de implementación de bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite a los desarrolladores y los administradores de bases de datos en el nivel de capa de datos empaquetar objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un artefacto portátil denominado paquete DAC y también conocido como DACPAC.  

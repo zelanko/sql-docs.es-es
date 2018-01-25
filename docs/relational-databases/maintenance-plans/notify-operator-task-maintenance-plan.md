@@ -15,26 +15,26 @@ f1_keywords: sql13.swb.maint.notifyoperator.f1
 helpviewer_keywords: Notify Operator Task dialog box
 ms.assetid: 39c0797c-ad2b-4591-85c9-a23a7f902895
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e8e10a98a1d2ee8328d4124b9949abf33943821
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b272b5d52fc3bcfadfee095f03b061c436f4508d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="notify-operator-task-maintenance-plan"></a>Tarea Notificar al operador (Plan de mantenimiento)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice el cuadro de diálogo **Tarea Notificar al operador** para agregar una notificación automática a este plan de mantenimiento. Para usar esta tarea, el Correo electrónico de base de datos deberá haberse habilitado y configurado adecuadamente con MSDB como base de datos host de correo y se deberá disponer de un operador del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una dirección de correo electrónico válida.  
   
  Esta tarea usa el procedimiento almacenado sp_notify_operator.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Conexión**  
  Seleccione la conexión al servidor que va a utilizar para la realización de esta tarea.  
   
- **Nuevo**  
+ **Nueva**  
  Cree una nueva conexión de servidor que utilizará al realizar esta tarea. El cuadro de diálogo **Nueva conexión** se describe a continuación.  
   
  **Operadores a los que notificar**  
@@ -71,13 +71,13 @@ ms.lasthandoff: 11/17/2017
  **Utilizar un nombre de usuario y una contraseña específicos**  
  Se conecta a una instancia del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. Esta opción no está disponible.  
   
- **Nombre de usuario.**  
+ **User name**  
  Proporcione un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la autenticación. Esta opción no está disponible.  
   
  **Contraseña**  
  Proporcione una contraseña para que se utilice en la autenticación. Esta opción no está disponible.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)   
  [sp_notify_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-notify-operator-transact-sql.md)  
   

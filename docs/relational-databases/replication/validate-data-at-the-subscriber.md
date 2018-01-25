@@ -19,22 +19,22 @@ helpviewer_keywords:
 - merge replication data validation [SQL Server replication], SQL Server Management Studio
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d78ec0ec5dcbb0fa259cc26950a9de9742bfaa6c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 43528ddbe29580c30ca15d0588b5bd6d24d66a48
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="validate-data-at-the-subscriber"></a>Validar datos en el suscriptor
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] En este tema se describe cómo validar datos en el suscriptor en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] o Replication Management Objects (RMO).  
   
  La validación de datos es un proceso de tres partes:  
   
-1.  Una sola suscripción o todas las suscripciones en una publicación se *marcan* para validación. Marque las suscripciones para la validación en los cuadros de diálogo **Validar suscripción**, **Validar suscripciones** y **Validar todas las suscripciones**, que están disponibles en la carpeta **Publicaciones locales** y en la carpeta **Suscripciones locales** en [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. También puede marcar suscripciones desde la pestaña **Todas las suscripciones** , la pestaña **Lista de supervisión de suscripciones** y el nodo de publicaciones del Monitor de replicación. Para obtener información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+1.  Una sola suscripción o todas las suscripciones en una publicación se *marcan* para validación. Marque las suscripciones para la validación en los cuadros de diálogo **Validar suscripción**, **Validar suscripciones** y **Validar todas las suscripciones**, que están disponibles en la carpeta **Publicaciones locales** y en la carpeta **Suscripciones locales** en [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. También puede marcar suscripciones desde la pestaña **Todas las suscripciones** , la pestaña **Lista de supervisión de suscripciones** y el nodo de publicaciones del Monitor de replicación. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 2.  Una suscripción se valida la próxima vez que la sincroniza el Agente de distribución (en la replicación transaccional) o el Agente de mezcla (en la replicación de mezcla). El Agente de distribución normalmente se ejecuta de forma continua, en cuyo caso la validación se produce inmediatamente; el Agente de mezcla normalmente se ejecuta a petición, en cuyo caso la validación se produce después de ejecutar el agente.  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-validate-data-for-subscriptions-to-a-transactional-publication-management-studio"></a>Para validar datos de suscripciones en una publicación transaccional (Management Studio)  
   
-1.  Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y, a continuación, expanda el nodo del servidor.  
+1.  Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y luego expanda el nodo del servidor.  
   
 2.  Expanda la carpeta **Replicación** y, a continuación, expanda la carpeta **Publicaciones locales** .  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-validate-data-for-a-single-subscription-to-a-merge-publication-management-studio"></a>Para validar datos de una sola suscripción en una publicación de combinación (Management Studio)  
   
-1.  Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y, a continuación, expanda el nodo del servidor.  
+1.  Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y luego expanda el nodo del servidor.  
   
 2.  Expanda la carpeta **Replicación** y, a continuación, expanda la carpeta **Publicaciones locales** .  
   
@@ -118,7 +118,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-validate-data-for-all-subscriptions-to-a-merge-publication-management-studio"></a>Para validar datos de todas las suscripciones en una publicación de combinación (Management Studio)  
   
-1.  Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y, a continuación, expanda el nodo del servidor.  
+1.  Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y luego expanda el nodo del servidor.  
   
 2.  Expanda la carpeta **Replicación** y, a continuación, expanda la carpeta **Publicaciones locales** .  
   
@@ -221,7 +221,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  (Opcional) Iniciar el Agente de distribución de cada suscripción si aún no se está ejecutando. Para obtener más información, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) y [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
-3.  Compruebe el resultado de la validación en la salida del agente. Para más información, vea [Validar datos replicados](../../relational-databases/replication/validate-replicated-data.md).  
+3.  Compruebe el resultado de la validación en la salida del agente. Para obtener más información, vea [Validar datos replicados](../../relational-databases/replication/validate-replicated-data.md).  
   
 #### <a name="to-validate-data-for-a-single-article-in-a-transactional-publication"></a>Para validar los datos de un único artículo de una publicación transaccional  
   
@@ -236,7 +236,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  (Opcional) Iniciar el Agente de distribución de cada suscripción si aún no se está ejecutando. Para obtener más información, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) y [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
-3.  Compruebe el resultado de la validación en la salida del agente. Para más información, vea [Validar datos replicados](../../relational-databases/replication/validate-replicated-data.md).  
+3.  Compruebe el resultado de la validación en la salida del agente. Para obtener más información, vea [Validar datos replicados](../../relational-databases/replication/validate-replicated-data.md).  
   
 #### <a name="to-validate-data-for-a-single-subscriber-to-a-transactional-publication"></a>Para validar datos de un suscriptor único en una publicación transaccional  
   

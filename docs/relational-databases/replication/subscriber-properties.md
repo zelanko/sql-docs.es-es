@@ -15,20 +15,20 @@ f1_keywords: sql13.rep.configdistwizard.subscribers.f1
 helpviewer_keywords: Subscriber Properties dialog box
 ms.assetid: 32aa0347-64e4-4aa4-ac57-6bd3e5d52070
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d85bb0e9b2c756c6fa50bb6eeb1fd04c81878100
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ccced37e2c29aa47c2d5ce67d3adeebba6ec5c58
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscriber-properties"></a>Propiedades del suscriptor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El cuadro de diálogo **Propiedades del suscriptor** contiene información importante de los suscriptores que ejecutan versiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Conexión del agente al suscriptor**  
  Contexto bajo el que el Agente de distribución y el Agente de mezcla conectan desde el distribuidor al suscriptor. Se aplica solamente a versiones anteriores a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
  **Varios**  
  Incluye información sobre el suscriptor y el tipo de suscriptor.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Ver y modificar las propiedades del distribuidor y del publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [Referencia de propiedades &#40;replicación&#41;](../../relational-databases/replication/properties-reference-replication.md)   
  [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md)  

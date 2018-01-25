@@ -17,15 +17,15 @@ helpviewer_keywords:
 - publishing [SQL Server replication], configuring
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 309d63222c4863c7a8a85fc7d36f1d19bcc2cc32
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fb54d609ebaafeab5c358d0cbf089d0d71194337
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurar la publicación y la distribución
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo configurar la publicación y distribución en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] o Replication Management Objects (RMO).  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
     -   Opcionalmente, habilite otros publicadores para utilizar el distribuidor. Si se habilitan otros publicadores para utilizar el distribuidor, debe escribir una contraseña en la página **Contraseña del distribuidor** para las conexiones realizadas desde esos publicadores al distribuidor.  
   
-    -   Opcionalmente, genere un script de opciones de configuración. Para obtener más información, consulte [Scripting Replication](../../relational-databases/replication/scripting-replication.md).  
+    -   Opcionalmente, genere un script de opciones de configuración. Para más información, consulte [Scripting Replication](../../relational-databases/replication/scripting-replication.md).  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  La publicación y distribución de replicaciones se puede configurar mediante programación usando procedimientos almacenados de replicación.  
@@ -168,11 +168,11 @@ ms.lasthandoff: 11/17/2017
   
  [!code-vb[HowTo#rmo_vb_AddDistPub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_adddistpub)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Ver y modificar las propiedades del distribuidor y del publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Configurar distribución](../../relational-databases/replication/configure-distribution.md)   
- [Conceptos de los Replication Management Objects (RMO)](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+ [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Configurar la replicación para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
   
   

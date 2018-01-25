@@ -25,15 +25,15 @@ helpviewer_keywords:
 - monitoring server performance [SQL Server], CPU usage
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ad8ff221557c1ecbfe1d8fe5cf453c7b99e96203
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 873cf5a337f18dc9faa8e095d438de79843fde7d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-cpu-usage"></a>Supervisar el uso de la CPU
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Supervise una instancia de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periódicamente para determinar si los índices de uso de la CPU son normales. Un índice de uso de la CPU constantemente alto puede indicar la necesidad de actualizar la CPU o de agregar varios procesadores. Además, un uso alto de la CPU puede indicar que hay una aplicación mal optimizada o diseñada. La optimización de la aplicación puede reducir el uso de la CPU.  

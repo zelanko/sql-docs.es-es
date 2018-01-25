@@ -24,27 +24,27 @@ helpviewer_keywords:
 - wizard [DAC], extract
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a3fe80df8624968a5bf71f3fd7976bc838a0abf4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 510eb23505fde879a82d3ded7282cabd410cacaf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extraer una DAC de una base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use el **Asistente para extraer aplicación de capa de datos** o un script de Windows PowerShell para extraer un paquete de aplicación de capa de datos (DAC) de una base de datos de SQL Server existente. El proceso de extracción crea un archivo de paquete DAC que contiene definiciones de los objetos de base de datos y sus elementos relacionados a nivel de instancia. Por ejemplo, un archivo de paquete DAC contiene las tablas de base de datos, procedimientos almacenados, vistas y usuarios, junto con los inicios de sesión que se asignan a los usuarios de la base de datos.  
   
  
-## <a name="before-you-begin"></a>Antes de empezar  
+## <a name="before-you-begin"></a>Antes de comenzar  
  Puede extraer una DAC de las bases de datos que residen en instancias de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 o posterior. Si el proceso de extracción se ejecuta en una base de datos que se implementó a partir de una DAC, solo las definiciones de los objetos de la base de datos se extraen. El proceso no hace referencia a la DAC registrada en **msdb** (**maestra** en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). El proceso de extracción no registra la definición de DAC en la instancia actual del motor de base de datos. Para obtener más información sobre el registro de una DAC, vea [Register a Database As a DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md).  
   
 ##  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  Una DAC se puede extraer solo de una base de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o posterior. No puede extraer ninguna DAC si la base de datos tiene objetos que no se admiten en una DAC o usuarios contenidos. Para obtener más información acerca de los objetos admitidos por una DAC, vea [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
-##  <a name="Permissions"></a> Permisos  
+##  <a name="Permissions"></a> Permissions  
  La extracción de una DAC requiere al menos permisos ALTER ANY LOGIN y VIEW DEFINITION en el ámbito de la base de datos, así como permisos SELECT en **sys.sql_expression_dependencies**. La extracción de una DAC la pueden realizar los miembros del rol fijo de servidor securityadmin que sean también miembros del rol fijo de base de datos database_owner en la base de datos de la que se extrae la DAC. Los miembros del rol fijo de servidor sysadmin o de la cuenta de administrador del sistema de SQL Server integrada denominada **sa** también pueden extraer una DAC.  
   
 ##  <a name="UsingDACExtractWizard"></a> Usar el Asistente de Extraer aplicación de capa de datos  

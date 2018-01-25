@@ -15,12 +15,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 caps.latest.revision: "23"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: c568ec23e5f64e65afb794a7e0c60a0eeb693622
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: fef7f02b15fee27e3e18a5eac23e0ee6ab97959c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Elegir un método de actualización del motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Existen varios métodos que se deben considerar a la hora de planear la actualización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] de una versión previa de SQL Server si se pretende reducir al mínimo el tiempo de inactividad y los riesgos. Puede realizar una actualización local, migrar a una nueva instalación o efectuar una actualización gradual. El siguiente diagrama le ayudará a elegir uno de estos enfoques. Además, más adelante en este artículo se describen todos los enfoques presentes en el diagrama. Si quiere obtener ayuda para tomar las decisiones que se le presentan en el diagrama, consulte también [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  

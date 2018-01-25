@@ -16,15 +16,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], defining
 ms.assetid: e66d06ec-a12b-444d-875b-77f958af2f21
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e8edc949b81a6b8c6d336ecaf3fd955d406a3648
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ee95ce967637c9b1be05d0ee4de552b1cb7ea4e4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-modify-and-delete-publications-and-articles-replication"></a>Crear, modificar y eliminar publicaciones y artículos (replicación)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Esta sección de la documentación contiene información acerca de los procedimientos de las tareas relacionadas con la creación de publicaciones y la definición de artículos.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
   
--   [Ver y modificar las propiedades de un artículo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  
+-   [er y modificar las propiedades de un artículo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  
   
 -   [Eliminar una publicación](../../../relational-databases/replication/publish/delete-a-publication.md)  
   
@@ -109,7 +109,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Especificar la resolución interactiva de conflictos para artículos de mezcla](../../../relational-databases/replication/publish/specify-interactive-conflict-resolution-for-merge-articles.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Publicar datos y objetos de base de datos](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

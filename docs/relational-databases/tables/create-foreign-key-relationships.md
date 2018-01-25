@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: relationships [SQL Server], creating
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 103210e4164a9d4faf014a044a22ee13a28fcee9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4f90816f11420f3bef3885c66199144666e903bb
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-foreign-key-relationships"></a>Crear relaciones de clave externa
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,11 +46,11 @@ ms.lasthandoff: 11/17/2017
     
 -   Una restricción FOREIGN KEY especificada en el nivel de tabla debe tener el mismo número de columnas de referencia que la lista de columnas de la restricción. El tipo de datos de cada columna de referencia debe ser también el mismo que el de la columna correspondiente de la lista de columnas.    
     
--   El [!INCLUDE[ssDE](../../includes/ssde-md.md)] no tiene un límite predefinido para el número de restricciones FOREIGN KEY que una tabla que hace referencia a otras tablas puede contener, o para el número de restricciones FOREIGN KEY pertenecientes a otras tablas que hacen referencia a una tabla específica. No obstante, el número real de restricciones FOREIGN KEY que se puede utilizar está limitado por la configuración del hardware y por el diseño de la base de datos y de la aplicación.  Una tabla puede hacer referencia a otras 253 tablas y columnas como claves externas (referencias de salida) como máximo. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] aumenta el límite para la cantidad de otras tablas y columnas que pueden hacer referencia a las columnas de una sola tabla (referencias de entrada) de 253 a 10 000.  (Requiere al menos el nivel de compatibilidad 130). El aumento conlleva las siguientes restricciones:    
+-   El [!INCLUDE[ssDE](../../includes/ssde-md.md)] no tiene un límite predefinido para el número de restricciones FOREIGN KEY que una tabla que hace referencia a otras tablas puede contener, o para el número de restricciones FOREIGN KEY pertenecientes a otras tablas que hacen referencia a una tabla específica. No obstante, el número real de restricciones FOREIGN KEY que se puede utilizar está limitado por la configuración del hardware y por el diseño de la base de datos y de la aplicación.  Una tabla puede hacer referencia a un máximo de 253 otras tablas y columnas como claves externas (referencias de salida). [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] aumenta el límite para la cantidad de otras tablas y columnas que pueden hacer referencia a las columnas de una sola tabla (referencias de entrada) de 253 a 10 000.  (Requiere al menos el nivel de compatibilidad 130). El aumento tiene las siguientes restricciones:    
     
     -   Se admiten más de 253 referencias de clave externa para las operaciones DELETE y UPDATE DML. Las operaciones MERGE no se admiten.    
     
-    -   Una tabla con una referencia de clave externa a sí misma sigue estando limitada a 253 referencias de clave externa.    
+    -   Una tabla con una referencia de clave externa a sí misma seguirá limitada a 253 referencias de clave externa.    
     
     -   Actualmente, no hay disponibles más de 253 referencias de clave externa para índices de almacén de columnas, tablas optimizadas para memoria o Stretch Database.    
     
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
     
 
     
-##   <a name="permissions"></a>Permissions    
+##   <a name="permissions"></a>Permisos    
  La creación de una tabla nueva con una clave externa requiere el permiso CREATE TABLE en la base de datos y el permiso ALTER en el esquema en el que se crea la tabla.    
     
  La creación de una clave externa en una tabla existente requiere el permiso ALTER en la tabla.    

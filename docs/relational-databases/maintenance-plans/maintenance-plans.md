@@ -18,15 +18,15 @@ helpviewer_keywords:
 - maintenance plans [SQL Server]
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7db2ba76a3be5099075ef56871794b59066eb538
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 62c07a1aacaf0d2cc30808b41d0f58360144acff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="maintenance-plans"></a>Planes de mantenimiento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los planes de mantenimiento crean un flujo de trabajo de las tareas necesarias para asegurarse de que la base de datos está optimizada, se realizan copias de seguridad de esta con regularidad y no tiene incoherencias. El Asistente para planes de mantenimiento también crea planes de mantenimiento principales, pero la creación manual de planes le da mucha más flexibilidad.  
@@ -63,12 +63,12 @@ ms.lasthandoff: 11/17/2017
   
  Los resultados generados por las tareas de mantenimiento pueden escribirse en forma de informe en un archivo de texto o en las tablas del plan de mantenimiento, (**sysmaintplan_log** y **sysmaintplan_logdetail**) en **msdb**. Para ver los resultados en el visor de archivos de registro, haga clic con el botón derecho en **Planes de mantenimiento** y, luego, haga clic en **Ver historial**.  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Use los temas siguientes para empezar a trabajar con planes de mantenimiento.  
   
 |||  
 |-|-|  
-|**Description**|**Tema**|  
+|**Descripción**|**Tema**|  
 |Configure la opción de configuración de servidor de **Agent XPs** para habilitar los procedimientos almacenados extendidos del Agente SQL Server.|[Agent XPs (opción de configuración del servidor)](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
 |Describe cómo crear un plan de mantenimiento mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].|[Crear un plan de mantenimiento](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)|  
 |Describe cómo crear un plan de mantenimiento mediante la superficie de diseño Plan de mantenimiento.|[Crear un plan de mantenimiento &#40;superficie de diseño del plan de mantenimiento&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)|  

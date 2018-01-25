@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Resource Governor, workload group move
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1dd84ba40afa6cfaa6edee527c07d0418446d1d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9059139e5ccdc4327095a913752d55a84443d810
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="move-a-workload-group"></a>Mover un grupo de cargas de trabajo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Puede mover un grupo de cargas de trabajo de Resource Governor a un grupo de recursos diferente mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o Transact-SQL.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  No puede mover un grupo de cargas de trabajo si hay una operación de configuración del regulador de recursos pendiente. Es posible determinar si existe una configuración pendiente consultando la vista de administración dinámica [sys.dm_resource_governor_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) para obtener el estado actual de is_configuration_pending.  
   
-###  <a name="Permissions"></a> Permisos  
+###  <a name="Permissions"></a> Permissions  
  Mover un grupo de cargas de trabajo requiere un permiso CONTROL SERVER.  
   
 ##  <a name="MoveWGSSMS"></a> Mover un grupo de cargas de trabajo mediante SQL Server Management  
@@ -78,7 +78,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Habilitar el regulador de recursos](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Crear un grupo de recursos de servidor](../../relational-databases/resource-governor/create-a-resource-pool.md)   

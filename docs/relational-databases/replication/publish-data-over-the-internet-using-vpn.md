@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Internet [SQL Server replication], VPNs
 ms.assetid: 9ffb6546-9973-4574-aaa0-8fe0017e3601
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 60900fc1134fbe6da352ff05a30edf4607da9319
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0a851ec36920e6300a25ebf815e8f1c6998263d5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publish-data-over-the-internet-using-vpn"></a>Publicar datos a través de Internet mediante VPN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La tecnología de red privada virtual (VPN) permite a los usuarios que trabajan en su casa, oficinas subsidiarias, clientes remotos y otras empresas conectarse a una red corporativa por Internet, al tiempo que se mantiene una comunicación segura. Los usuarios pueden utilizar la autenticación de Windows como si estuvieran en una red de área local (LAN). Todos los tipos de replicación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden replicar datos a través de una red privada virtual (VPN), pero se puede usar la sincronización web si se está usando la replicación de mezcla, porque con la sincronización web no es necesario usar una VPN. Para más información, consulte [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
  Para obtener más información acerca de la configuración de una VPN, vea la documentación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Replicación por Internet](../../relational-databases/replication/replication-over-the-internet.md)  
   
   

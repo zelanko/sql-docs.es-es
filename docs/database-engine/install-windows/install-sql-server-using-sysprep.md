@@ -15,12 +15,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: f8f670c4eb380a5fb4a43d547133c64d616e1b54
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 87615ca4a3601ab92b37e97a8392b392accb1695
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="install-sql-server-with-sysprep"></a>Instalar SQL Server con SysPrep
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Se puede acceder a las acciones de configuración relacionadas de SysPrep de 
@@ -32,7 +32,7 @@ También puede preparar y completar una instancia de [!INCLUDE[ssNoVersion](../.
   
 - [Instalar SQL Server mediante un archivo de configuración](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
 Antes de instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], revise los temas de [Planear una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md). 
   
 Para más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los requisitos de hardware y software, vea [Requisitos de hardware y software para instalar SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). 
@@ -92,7 +92,7 @@ Para más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../inclu
   
 4. En la página Actualizaciones del producto se muestran las actualizaciones del producto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] más recientes disponibles. Si no quiere incluir las actualizaciones, desactive la casilla **Incluir actualizaciones de productos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Si no se detectan actualizaciones de producto, el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no muestra esta página y pasa automáticamente a la página **Instalar archivos de instalación** . 
   
-5. En la página Instalar archivos de instalación, el programa de instalación proporciona el progreso de descarga, extracción e instalación de los archivos de instalación. Si se encuentra una actualización para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , y se especifica que debe incluirse, esa actualización también se instalará. 
+5. En la página Instalar archivos de instalación, el programa de instalación proporciona el progreso de descarga, extracción e instalación de los archivos de instalación. Si se encuentra una actualización para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], y se especifica que debe incluirse, esa actualización también se instalará. 
   
 6. El Comprobador de configuración del sistema comprueba el estado del sistema del equipo antes de seguir con la instalación. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles**o, como un informe HTML, haciendo clic en **Ver informe detallado**. 
   
@@ -307,7 +307,7 @@ Para más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../inclu
   
 - [Desinstalar una instancia existente de SQL Server &#40;programa de instalación&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Qué es Windows SysPrep](http://go.microsoft.com/fwlink/?LinkId=143546)   
  [Cómo funciona Windows SysPrep](http://go.microsoft.com/fwlink/?LinkId=143547)  
   

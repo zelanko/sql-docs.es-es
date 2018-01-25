@@ -14,20 +14,20 @@ ms.topic: article
 f1_keywords: sql13.swb.dmf.condition.advancededit.f1
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
 caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cbb1759fcdf89686498698c4bd77ce529da4ed1d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f7d494c40e02e96d53f827e9553c743d72660d0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>Cuadro de diálogo Edición avanzada (condición)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use el cuadro de diálogo **Edición avanzada** para crear expresiones complejas para las condiciones de administración basada en directivas.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Valor de celda**  
  Muestra la función o expresión que se utilizará para el valor de celda al crearlo. Al hacer clic en **Aceptar**, el valor de celda aparecerá en la celda **Campo** o **Valor** en el cuadro de expresión de condición del cuadro de diálogo **Crear nueva condición** o **Abrir condición** en la página **General** .  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
 > **IMPORTANTE:** Las funciones que puede utilizar para crear condiciones de administración basada en directivas no siempre utilizan la sintaxis [!INCLUDE[tsql](../../includes/tsql-md.md)] . Asegúrese de seguir la sintaxis del ejemplo. Por ejemplo, al utilizar las funciones **DateAdd** o **DatePart** , debe incluir el argumento *datepart* entre comillas simples.  
   
-|Función|Signature|Descripción|Argumentos|Valor devuelto|Ejemplo|  
+|Función|Signature|Description|Argumentos|Valor devuelto|Ejemplo|  
 |--------------|---------------|-----------------|---------------|------------------|-------------|  
 |**Add()**|Numeric Add (Numeric *expression1*, Numeric *expression2*)|Suma dos números.|*expression1* y *expression2* : es cualquier expresión válida de cualquiera de los tipos de datos de la categoría numeric, excepto el tipo de datos **bit** . Puede ser una constante, propiedad o función que devuelva un tipo numérico.|Devuelve el tipo de datos del argumento que tenga mayor prioridad.|`Add(Property1, 5)`|  
 |**Array()**|Array Array (VarArgs *expression*)|Crea una matriz a partir de una lista de valores. Se puede utilizar con funciones de agregado como Sum() y Count().|*expression* : es una expresión que se convertirá en una matriz.|La matriz|`Array(2,3,4,5,6)`|  
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/17/2017
 |**ExecuteSQL()**|Variant ExecuteSQL (String *returnType*, String *sqlQuery*)|Ejecuta la consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] con el servidor de destino.<br /><br /> Para obtener más información sobre ExecuteSql(), vea el tema sobre la [función ExecuteSql()](http://blogs.msdn.com/b/sqlpbm/archive/2008/07/03/executesql.aspx).|*returnType* : especifica el tipo de los datos devueltos por la instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Los literales válidos para *returnType* son los siguientes: **Numeric**, **String**, **Bool**, **DateTime**, **Array**y **Guid**.<br /><br /> *sqlQuery* : es la cadena que contiene la consulta que se va a ejecutar.||`ExecuteSQL ('Numeric', 'SELECT COUNT(*) FROM msdb.dbo.sysjobs') <> 0`<br /><br /> Ejecuta una consulta de Transact-SQL con valores escalares en una instancia de destino de SQL Server. Solo se puede especificar una columna en una instrucción `SELECT` ; se omiten las columnas posteriores a la primera. La consulta resultante debe devolver solo una fila; se omiten las filas posteriores a la primera. Si la consulta devuelve un conjunto vacío, la expresión de condición creada en torno a `ExecuteSQL` se evaluará como FALSE. `ExecuteSql` admite los modos de evaluación **A petición** y **Al programar** .<br /><br /> -`@@ObjectName`:<br />                      Se corresponde con el campo de nombre en [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). La variable será reemplazada por el nombre del objeto actual.<br /><br /> -`@@SchemaName`: corresponde al campo de nombre en [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md). La variable será reemplazada por el nombre del esquema para el objeto actual, si es aplicable.<br /><br /> Nota: para incluir una comilla simple en una instrucción ExecuteSQL, defina la comilla simple como carácter de escape mediante dos comillas simples. Por ejemplo, para incluir una referencia a un usuario cuyo nombre es O'Brian, escriba O"Brian.|  
 |**ExecuteWQL()**|Variant ExecuteWQL (string *returnType* , string *namespace*, string *wql*)|Ejecuta el script WQL con el espacio de nombres que se proporciona. La instrucción Select puede contener solo una única columna de retorno. Si se proporciona más de una columna, se producirá un error.|*returnType* : especifica el tipo de datos devuelto por WQL. Los literales válidos son **Numeric**, **String**, **Bool**, **DateTime**, **Array**y **Guid**.<br /><br /> *namespace* : es el espacio de nombres de WMI con el que se realiza la ejecución.<br /><br /> *wql* : es la cadena que contiene el lenguaje WQL que se va a ejecutar.||`ExecuteWQL('Numeric', 'root\CIMV2', 'select NumberOfProcessors from win32_ComputerSystem') <> 0`|  
 |**False()**|Bool False()|Devuelve el valor booleano FALSE.|Ninguno|Devuelve el valor booleano FALSE.|`IsDatabaseMailEnabled = False()`|  
-|**GetDate()**|DateTime GetDate()|Devuelve la fecha del sistema.|Ninguno|Devuelve la fecha del sistema como DateTime.|`@DateLastModified = GetDate()`|  
+|**GetDate()**|DateTime GetDate()|Devuelve la fecha del sistema.|None|Devuelve la fecha del sistema como DateTime.|`@DateLastModified = GetDate()`|  
 |**Guid()**|Guid Guid(String *guidString*)|Devuelve un GUID a partir de una cadena.|*guidString* : es la representación de cadena del GUID que se va a crear.|Devuelve el GUID creado a partir de la cadena.|`Guid('12340000-0000-3455-0000-000000000454')`|  
 |**IsNull()**|Variant IsNull (Variant *check_expression*, Variant *replacement_value*)|Se devuelve el valor de *check_expression* si no es NULL; en caso contrario, se devuelve *replacement_value* . Si los tipos son diferentes, *replacement_value* se convierte implícitamente en el tipo de *check_expression*.|*check_expression* : es la expresión que se va a comprobar si es NULL. *check_expression* : puede ser de cualquier tipo compatible de administración basada en directivas: Numeric, String, Bool, DateTime, Array y Guid.<br /><br /> *replacement_value* : es la expresión que se devuelve si *check_expression* es NULL. *replacement_value* debe ser de un tipo que se convierta implícitamente en el tipo de *check_expression*.|Se devuelve el tipo de *check_expression* si *check_expression* no es NULL; de lo contrario, se devuelve el tipo de *replacement_value* .||  
 |**Len()**|Numeric Len (*string_expression*)|Devuelve el número de caracteres de la expresión de cadena dada, excluyendo los espacios en blanco del final.|*string_expression* : es la expresión de cadena que se va a evaluar.|Devuelve un valor de categoría con el tipo de datos integer.|`Len('Hello')` devuelve `5` en este ejemplo.|  

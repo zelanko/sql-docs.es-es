@@ -16,15 +16,15 @@ helpviewer_keywords:
 - character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 53a3bd656302c47c1ccd69fa484a4d87b050c41f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e9c15b0e22e91fb3a478a7b91a14292609b81a22
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Usar el formato de caracteres para importar o exportar datos (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Se recomienda utilizar el formato de caracteres al exportar datos de forma masiva a un archivo de texto que se va a utilizar en otro programa o al importar datos de forma masiva desde un archivo de texto generado por otro programa.  
@@ -67,9 +67,9 @@ Puede importar datos en formato de caracteres en una tabla usando [bcp](../../to
   
 El formato de caracteres se puede usar con las siguientes opciones de comando:  
   
-|Command|Opción|Descripción|  
+|Comando|Opción|Description|  
 |-------------|------------|-----------------|  
-|bcp|**-c**|Hace que la utilidad bcp use datos de caracteres.*|  
+|BCP|**-c**|Hace que la utilidad bcp use datos de caracteres.*|  
 |BULK INSERT|DATAFILETYPE **='char'**|Utiliza el formato de caracteres al importar datos masivamente.|  
 |OPENROWSET|N/D|Debe usar un archivo de formato|
   
@@ -222,7 +222,7 @@ Para usar formatos de datos para la importación o exportación masivas
   
 -   [Usar el formato nativo Unicode para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

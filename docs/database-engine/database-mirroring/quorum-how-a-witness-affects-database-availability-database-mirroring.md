@@ -26,13 +26,13 @@ ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dae91182bc6cbfc48f06ebfa8b079969a088e86b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2f01ca52594ddf49dc65f48099822b2a61a92f11
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quórum: cómo un testigo afecta a la disponibilidad de la base de datos (reflejo de base de datos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Siempre que se establece un testigo para una sesión de creación de reflejo de la base de datos, es necesario disponer de *cuórum*. Quórum es una relación que existe cuando dos o más instancias de servidor en una sesión de creación de reflejo de la base de datos están conectadas entre sí. Normalmente, el quórum implica a tres instancias de servidor interconectadas. Cuando se establece un testigo, se requiere quórum para que la base de datos esté disponible. El quórum se ha diseñado para sesiones en modo de alta seguridad con conmutación automática por error y garantiza que una base de datos pertenezca a un solo asociado cada vez.  
@@ -107,7 +107,7 @@ ms.lasthandoff: 11/20/2017
   
  En el escenario 2, el testigo pierde el cuórum, mientras que los asociados, **Partner_A** y **Partner_B**, conservan el cuórum entre sí y la base de datos permanece en línea. A continuación, los asociados pierden también su quórum y la base de datos se queda sin conexión. Más adelante, el servidor principal, **Partner_A**, se vuelve a conectar al testigo y recupera el cuórum. El testigo confirma que **Partner_A** sigue siendo el propietario del rol principal y **Partner_A** vuelve a poner la base de datos en línea.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Modos de funcionamiento de la creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Testigo de creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-witness.md)   

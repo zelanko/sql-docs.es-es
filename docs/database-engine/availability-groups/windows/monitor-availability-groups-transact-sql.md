@@ -22,13 +22,13 @@ ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 caps.latest.revision: "49"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 27a259a48aee0f852e6088bb17e6765ea37c057c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7269f0e591ec1846af196a6b7c996b8eeb852351
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Supervisar grupos de disponibilidad (Transact-SQL)
 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Para supervisar réplicas y grupos de disponibilidad y las bases de datos asociadas mediante [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] proporciona un conjunto de vistas de administración dinámica y de catálogo, y propiedades del servidor. Mediante instrucciones SELECT de [!INCLUDE[tsql](../../../includes/tsql-md.md)] , puede utilizar las vistas para supervisar los grupos de disponibilidad y sus réplicas y bases de datos. La información devuelta para un grupo de disponibilidad determinado depende de si está conectado a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda la réplica principal o una réplica secundaria.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="Permissions"></a> Permisos  
+##  <a name="Permissions"></a> Permissions  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] requieren el permiso VIEW ANY DEFINITION en la instancia de servidor. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] requieren el permiso VIEW SERVER STATE en el servidor.  
   
 ##  <a name="AoAgFeatureOnSI"></a> Supervisar la característica de grupos de disponibilidad AlwaysOn en una instancia de servidor  
@@ -122,7 +122,7 @@ ms.lasthandoff: 11/20/2017
  [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md)  
  Devuelve una fila para cada grupo de disponibilidad que posee una réplica de disponibilidad en la instancia local de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Cada fila muestra los estados que definen el estado de un grupo de disponibilidad determinado.  
   
- **Nombres de columna:** group_id, primary_replica, primary_recovery_health, primary_recovery_health_desc, secondary_recovery_health, secondary_recovery_health_desc, synchronization_health, synchronization_health_desc  
+ **Nombres de columna:** group_id, primary_replica, primary_recovery_health, primary_recovery_health_desc, secondary_recovery_health, secondary_recovery_health_desc, synchronization_health y synchronization_health_desc  
   
 ##  <a name="AvReplicas"></a> Supervisar réplicas de disponibilidad  
  Para supervisar réplicas de disponibilidad, utilice las siguientes vistas y función del sistema:  
@@ -294,9 +294,9 @@ ms.lasthandoff: 11/20/2017
   
 -   [Usar directivas de AlwaysOn para ver el estado de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
--   [Usar el Panel AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Supervisión de los grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  

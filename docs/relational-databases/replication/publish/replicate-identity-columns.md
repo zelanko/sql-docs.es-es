@@ -20,15 +20,15 @@ helpviewer_keywords:
 - identity columns [SQL Server], replication
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3c4e1d9a170eecea88a5e929bcc21f84f2074714
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c69e39305a23fafee8c264db3fdb315b6595d01
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replicate-identity-columns"></a>Replicar columnas de identidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cuando asigna una propiedad IDENTITY a una columna, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] genera automáticamente números que se incrementan secuencialmente para las nuevas filas insertadas en la tabla que contiene la columna de identidad. Para obtener más información, vea [IDENTITY &#40;propiedad &#41; &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md). Debido a que las columnas de identidad pueden estar incluidas como parte de la clave principal, resulta importante evitar los valores duplicados en las columnas de identidad. Para utilizar columnas de identidad en una topología de replicación que tenga actualizaciones en más de un nodo, cada nodo de la topología de replicación debe usar diferentes valores en el intervalo de identidad con el fin de que no se produzcan duplicados.  
@@ -128,7 +128,7 @@ ms.lasthandoff: 11/17/2017
     > [!NOTE]  
     >  Si el valor de la columna de identidad está establecido para que se reduzca y no para que se incremente, registre el valor más bajo encontrado y regenere con ese valor.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [BACKUP &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
  [IDENT_CURRENT &#40;Transact-SQL&#41;](../../../t-sql/functions/ident-current-transact-sql.md)   

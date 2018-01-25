@@ -15,15 +15,15 @@ applies_to: SQL Server 2016
 helpviewer_keywords: optimizing tables
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1bef7b50cb8f67baeca6e17c9406fc542a8e73fd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e2526b0a159349655b68f6364e6a070e4661e422
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-1-3---optimizing-the-neworg-table"></a>Lección 1-3: Optimizar la tabla NewOrg
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] La tabla **NewOrd** que ha creado en la tarea [Rellenar una tabla con los datos jerárquicos existentes](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) contiene toda la información del empleado y representa la estructura jerárquica mediante un tipo de datos **hierarchyid**. Esta tarea agrega los nuevos índices que admiten las búsquedas en la columna **hierarchyid** .  

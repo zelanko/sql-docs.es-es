@@ -18,15 +18,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], schema options
 ms.assetid: 1f85a479-bd6e-4023-abf7-7435a7e5b567
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75c95fd5c5497b0b9f80dd0bfd10579b06f38147
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1e90de846e7d7dddc6ded2eac73f6aea9b1cf8c6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-schema-options"></a>Especificar las opciones del esquema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo especificar las opciones de esquema en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Al publicar una tabla o una vista, puede controlar las opciones de creación de objetos que se replican para el objeto publicado. Puede establecer estas opciones cuando se haya creado el artículo y también puede modificarlas posteriormente. Si no especifican explícitamente estas opciones para un artículo, se definirá un conjunto predeterminado de opciones.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-specify-schema-options-when-defining-an-article-for-a-merge-publication"></a>Para especificar las opciones de esquema al definir un artículo para una publicación de combinación  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Especifique el nombre de la publicación a la que pertenece el artículo para **@publication**, un nombre de artículo para **@article**, el objeto de base de datos que se publica para **@source_object**y el resultado [| (OR bit a bit)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) de una o más opciones de esquema para **@schema_option**. Para obtener más información, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  En la base de datos de publicación del publicador, ejecute [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Especifique el nombre de la publicación a la que pertenece el artículo para **@publication**, un nombre de artículo para **@article**, el objeto de base de datos que se publica para **@source_object**y el resultado [| (OR bit a bit)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) de una o más opciones de esquema para **@schema_option**. Para más información, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 #### <a name="to-change-schema-options-for-an-existing-article-in-a-snapshot-or-transactional-publication"></a>Para cambiar las opciones de esquema para un artículo existente en una publicación transaccional o de instantáneas  
   
@@ -126,7 +126,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  Ejecute el Agente de instantáneas para generar una nueva instantánea. Para obtener más información, consulte [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Publicar datos y objetos de base de datos](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Opciones de artículos para la replicación transaccional](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   

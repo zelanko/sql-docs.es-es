@@ -21,13 +21,13 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ef372c7a1716fe9e928b3567c52c654268f7a3e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3605540ac694a2597e607428d5928d42f42ce14b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="column-properties-visual-database-tools"></a>Propiedades de columna (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Hay dos conjuntos de propiedades para columnas: un conjunto completo que se puede ver en la pestaña **Propiedades de columna** del Diseñador de tablas (solo disponible para las bases de datos de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]) y un subconjunto que se puede ver en la ventana Propiedades con el Explorador de servidores.  

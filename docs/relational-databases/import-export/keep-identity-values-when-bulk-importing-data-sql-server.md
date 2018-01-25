@@ -17,15 +17,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server], identity values
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 95788f86ca16782ed8e51f888004926bf174e950
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 483471ce594ba3ae2c2b731e197290d2059af049
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Mantener valores de identidad al importar datos de forma masiva (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Archivos de datos que contienen valores de identidad que pueden importarse de forma masiva en una instancia de Microsoft SQL Server.  De manera predeterminada, los valores de la columna de identidad del archivo de datos que se importa se omiten y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna automáticamente valores únicos.  Los valores únicos se basan en los valores de inicialización y de incremento especificados durante la creación de la tabla.
@@ -39,9 +39,9 @@ Si el archivo de datos no contiene valores para la columna de identificadores de
 ## Mantener valores de identidad <a name="keep_identity"></a>  
 Para impedir que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigne valores de identidad al importar de forma masiva filas de datos en una tabla, utilice el calificador de comando adecuado para mantener la identidad.  Al especificar un calificador para mantener la identidad, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza los valores de identidad del archivo de datos.  Estos calificadores son:
 
-|Command|Calificador para mantener la identidad|Tipo de calificador|  
+|Comando|Calificador para mantener la identidad|Tipo de calificador|  
 |-------------|------------------------------|--------------------|  
-|bcp|-E|Switch|  
+|BCP|-E|Switch|  
 |BULK INSERT|KEEPIDENTITY|Argumento|  
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|KEEPIDENTITY|Sugerencia de tabla|  
    
@@ -326,7 +326,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 3.  [Especificar el tipo de almacenamiento en archivo mediante bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [bcp (utilidad)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   

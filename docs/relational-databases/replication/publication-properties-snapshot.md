@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.pubproperties.snapshotformat.f1
 ms.assetid: 8e9133b1-fc37-4a85-8a7c-d5eaf172fbef
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26335cccf77aced43c3db73976bccde394b766d1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 38e2f81f0b5f1c0de7a07989e9b768e595c0670b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-properties-snapshot"></a>Propiedades de la publicación, Instantánea
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La página **Instantánea** del cuadro de diálogo **Propiedades de la publicación** permite establecer el formato de instantánea, la ubicación de la carpeta de instantáneas y los scripts que deben ejecutarse antes y después de aplicar la instantánea. La carpeta de instantáneas debe designarse como recurso compartido y debe disponer de los permisos necesarios para que los agentes puedan leer y escribir archivos en ella. Para obtener más información sobre cómo proteger la carpeta adecuadamente, vea [Proteger la carpeta de instantáneas](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Los cambios requieren una nueva instantánea para la publicación. Para obtener más información, vea [Cambiar las propiedades de la publicación y de los artículos](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Formato de instantánea**  
  Permite seleccionar el modo nativo o el modo de carácter para el formato de instantánea.  
   
@@ -54,8 +54,8 @@ ms.lasthandoff: 11/17/2017
   
 -   Escriba una ruta en el cuadro de texto **Después de aplicar la instantánea, ejecutar este script** o haga clic en **Examinar** para especificar una ubicación para el script.  
   
-## <a name="see-also"></a>Vea también  
- [Crear una publicación](../../relational-databases/replication/publish/create-a-publication.md)   
+## <a name="see-also"></a>Ver también  
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Ver y modificar propiedades de publicación](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Crear y aplicar la instantánea inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [Inicializar una suscripción con una instantánea](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   

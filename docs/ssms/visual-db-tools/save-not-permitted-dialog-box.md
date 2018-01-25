@@ -16,13 +16,13 @@ ms.assetid: 7efda8e3-739f-4c97-a497-b8808a0acbea
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 188f544161ee56e63d92e381fa4cd5485eeba05e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e20cf232c629564cb43bcaaa0e3e8ce184ec04f8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="save-not-permitted-dialog-box"></a>Guardar (no se permite), (cuadro de diálogo)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] El cuadro de diálogo **Guardar** (no permitido) advierte de que no se permite guardar cambios porque los cambios realizados requieren que se quiten y se vuelvan a crear las tablas enumeradas.  

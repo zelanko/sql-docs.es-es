@@ -22,15 +22,15 @@ helpviewer_keywords:
 - monitoring performance [SQL Server replication]
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6857b015aa68329885c337a007cd3a93e7e378f0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f21560e068dab73097f517bce249724e391a6701
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Supervisar el rendimiento con el Monitor de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Monitor de replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le ofrece las siguientes posibilidades para supervisar el rendimiento de la replicación transaccional y de mezcla:  
@@ -102,8 +102,8 @@ ms.lasthandoff: 11/17/2017
 ## <a name="view-transactions-and-delivery-time-for-transactional-replication"></a>Ver transacciones y tiempos de entrega en la replicación transaccional  
  En la replicación transaccional, el Monitor de replicación muestra información sobre el número de transacciones en la base de datos de distribución que no se han distribuido todavía a un suscriptor y el tiempo estimado para distribuir dichas transacciones. Para obtener más información, vea [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
-## <a name="see-also"></a>Vea también  
- [Supervisar la replicación](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
+## <a name="see-also"></a>Ver también  
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  (Supervisar la replicación)  
  [Establecer umbrales y advertencias en el Monitor de replicación](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

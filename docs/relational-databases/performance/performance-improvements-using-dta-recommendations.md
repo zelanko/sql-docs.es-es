@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Database Engine Tuning Advisor, performance improvements
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bca7b1d7ce1a0dfeade10654a1f4242b188d5d0a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 935483efd524b85c24e11716c5499b25b81ff651
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="performance-improvements-using-dta-recommendations"></a>Mejoras de rendimiento con las recomendaciones de DTA
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ En cada caso, implementamos los índices recomendados. Informamos sobre el prome
 
 En resumen, los ejemplos anteriores muestran la capacidad de DTA para aprovechar adecuadamente los índices de almacén de columnas y de filas compatibles en el motor de base de datos de SQL Server y recomienda una combinación adecuada de índices que puede reducir significativamente el tiempo de CPU para la carga de trabajo. 
 
-<a name="see-also"></a>Vea también
+<a name="see-also"></a>Ver también
 ---
 [Asistente para la optimización de motor de base de datos](../../relational-databases/performance/database-engine-tuning-advisor.md)
 

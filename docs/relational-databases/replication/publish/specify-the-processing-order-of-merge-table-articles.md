@@ -17,15 +17,15 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], article processing order
 ms.assetid: 9fe576a2-f5fb-4fdf-bd7d-cb322021b669
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 476f3dffae00ab68403d92fd76b1cbac585dcdc1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aa13d01bb92f37a7e7c68f0e9f7f2dbbffa1f628
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-the-processing-order-of-merge-table-articles"></a>Especificar el orden de procesamiento de los artículos de tabla de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La replicación de mezcla le permite especificar el orden en el que el Agente de mezcla procesa los artículos durante el proceso de sincronización. Al crear cada artículo, puede asignarle un orden mediante programación utilizando los procedimientos almacenados de replicación. Los artículos se procesan en orden desde el valor menor al mayor. Si existen dos artículos que tienen el mismo valor, se procesan al mismo tiempo. Para obtener más información, vea [Especificar el orden de procesamiento de los artículos de mezcla](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  En el publicador de la base de datos de publicación, ejecute [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique el valor **processing_order** para **@property** y un valor entero que represente el orden de procesamiento para **@value**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Especificar el orden de procesamiento de los artículos de mezcla](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)  
   
   

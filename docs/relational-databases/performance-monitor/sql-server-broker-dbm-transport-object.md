@@ -16,20 +16,20 @@ helpviewer_keywords:
 - SQLServer:Broker/DBM Transport
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b910314a3320a242f696876e875025a7f85da5a5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2939dbbd505021da7a8623c5671ad7bd3063cc7a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-broker---dbm-transport-object"></a>Broker - DBM Transport (objeto de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El objeto de rendimiento **Broker / DBM Transport** contiene contadores de rendimiento que proporcionan información de red sobre Service Broker y sobre la creación de reflejo de la base de datos. En la siguiente tabla se enumeran los contadores incluidos en este objeto.  
   
-|Contador de Broker / DBM Transport de SQL Server|Descripción|  
+|Contador de Broker / DBM Transport de SQL Server|Description|  
 |------------------------------------------------|-----------------|  
 |**Bytes actuales para E/S de recepción**|Este contador informa del número de bytes que deben leer las operaciones de recepción de transporte que están en ejecución.|  
 |**Bytes actuales para E/S de envío**|Este contador informa del número de bytes en fragmentos de mensaje que están en proceso de ser enviados a través de la red.|  
@@ -68,9 +68,9 @@ ms.lasthandoff: 11/17/2017
 |**Base de longitud promedio de E/S de envío**|Exclusivamente para uso interno.|
 |**E/S de envío/seg.**|Este contador informa del número de operaciones de E/S de envío de transporte por segundo que han finalizado. Tenga en cuenta que una operación de envío de transporte puede incluir varios fragmentos de mensajes.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sys.dm_broker_forwarded_messages &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+ [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

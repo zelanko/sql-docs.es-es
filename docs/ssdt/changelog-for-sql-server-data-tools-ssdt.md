@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 98c27d595b2cb849bdca3ccd72bd51cc8378a8b7
-ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.openlocfilehash: e516b5d29e975236e9fa002a7d258caca706663d
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Registro de cambios para SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Este registro de cambios hace referencia a [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
@@ -251,7 +251,6 @@ Esta versión preliminar es la primera versión de SSDT para Visual Studio 2017.
 - SSIS no está localizado.
 - La tarea Ejecutar paquete de SSIS no admite la depuración cuando *ExecuteOutofProcess* está establecido en *True*. Este problema solo se aplica a la depuración. Las funciones de guardado, implementación y ejecución mediante DTExec.exe o el catálogo de SSIS no se verán afectadas.
 - Para ver la lista completa de cambios, consulte el [registro de cambios](changelog-for-sql-server-data-tools-ssdt.md).
-- Notifique problemas en el sitio de [comentarios de Connect sobre SSDT](https://connect.microsoft.com/SQLServer/Feedback).
 - Los paquetes de SSIS que contengan extensiones de terceros no se pueden modificar para que tengan como objetivo otras versiones de servidor.
 
 

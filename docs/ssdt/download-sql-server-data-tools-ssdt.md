@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 554993ec4b6b687a2335c3ea6192c40ead327820
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 36b87035d4a578622d9bff9bb2b4aea159cf55b2
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>Descargar SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -149,13 +149,13 @@ Después de instalar SSDT, siga estos tutoriales para aprender a crear bases de 
 -   [Crear un informe de tabla básico (Tutorial de SSRS)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 
 ## <a name="see-also"></a>Ver también  
 [Herramientas de datos de SQL Server](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  
 [Foro MSDN de SSDT](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
 [Blog del equipo de SSDT](http://blogs.msdn.com/b/ssdt/)  
-[Comentarios Connect sobre SSDT](https://connect.microsoft.com/SQLServer/Feedback)  
 [Documentación de SSDT](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  
 [Referencia de la API de DACFx](https://msdn.microsoft.com/library/dn645454.aspx)  
 [Descarga de SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  

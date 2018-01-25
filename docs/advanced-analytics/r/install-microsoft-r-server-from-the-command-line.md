@@ -14,13 +14,13 @@ ms.assetid: fb4446ba-e9ce-4b93-9854-5e8a58507da0
 caps.latest.revision: "4"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 19ecd44707cd6a94b9a521184b0c588806a63869
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 35194b08e43c98985e0ae0d03f1e470fe8370383
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>Instalar servidor de aprendizaje de máquina (independiente) o Microsoft R Server (independiente) desde la línea de comandos
 
@@ -33,7 +33,7 @@ Un **desatendida** instalación requiere que especifique la ubicación de la uti
 
 Para efectuar una instalación **silenciosa** , proporcione los mismos argumentos y agregue el conmutador **/q** . No se proporciona ningún mensaje y se requiere ninguna interacción. Sin embargo, el programa de instalación produce un error si se omiten los argumentos necesarios.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 Debe saber cómo realizar una instalación de línea de comandos de SQL Server y estar familiarizado con los argumentos de secuencias de comandos.
 

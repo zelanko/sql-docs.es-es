@@ -20,12 +20,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 caps.latest.revision: "148"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: cd0b3b84613720d825102f2676c2c07fb49a7cfc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 81810a418fd7f36dcadabdac5c535fa8bdaadcd3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>Actualizaciones de ediciones y versiones admitidas de SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Puede actualizar de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]. En este tema se enumeran las formas de actualización admitidas desde estas versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y las actualizaciones de edición admitidas para [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
@@ -149,7 +149,7 @@ Los escenarios no especificados en la lista anterior no se admiten, incluidos pe
 - Compatibilidad con componentes personalizados de terceros de Integration Services de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , por ejemplo de ejecución y actualización.  
   
 ## <a name="includesssqlv14-mdincludessssqlv14-mdmd-edition-upgrade"></a>[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Actualización de edición  
-En la tabla siguiente se enumeran los escenarios de actualización de edición de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] admitidos.  
+En la tabla siguiente se enumeran los escenarios de actualización de edición de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]admitidos.  
   
 Para obtener instrucciones paso a paso sobre cómo realizar una actualización de edición, vea [Actualizar a una edición diferente de SQL Server &#40;programa de instalación&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md).  
   
@@ -181,7 +181,7 @@ Para obtener instrucciones paso a paso sobre cómo realizar una actualización d
   
 -   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Evaluation a [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 
  [Características compatibles con las ediciones de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
  

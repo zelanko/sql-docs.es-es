@@ -20,13 +20,13 @@ ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 caps.latest.revision: "9"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f95b84f259ba5abf6f74574e315c767aa1acbc9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b05916edacd132c1e151b77f3be7935a369fe85a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>Página Resultados (asistentes para grupos de disponibilidad Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ ms.lasthandoff: 11/20/2017
  **Resultado**  
  Para cada paso completado, muestra una de los textos de hipervínculo siguientes.  
   
-|Resultado|Descripción|  
+|Resultado|Description|  
 |------------|-----------------|  
 |**Error**|Indica que se produjo un error en el paso de la validación. Haga clic en el vínculo para ver el mensaje de error.|  
-|**Success**|Indica que el paso de la validación se completó correctamente.|  
+|**Correcto**|Indica que el paso de la validación se completó correctamente.|  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Usar el Asistente para grupo de disponibilidad de conmutación por error &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

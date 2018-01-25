@@ -22,13 +22,13 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d945149c7bb6dc583f378c0d8823e2eff0e925b0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b73573c8fb57c50bbca5e74587952e7ed50fa307
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>Acerca del acceso de conexión de cliente a réplicas de disponibilidad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En un grupo de disponibilidad AlwaysOn, puede configurar una o varias réplicas de disponibilidad para permitir conexiones de solo lectura cuando se ejecutan en el rol secundario (es decir, cuando se ejecutan como réplica secundaria). También puede configurar cada réplica de disponibilidad para permitir o excluir conexiones de solo lectura cuando se ejecutan bajo el rol principal (es decir, cuando se ejecutan como réplica principal).  
@@ -86,13 +86,13 @@ ms.lasthandoff: 11/20/2017
   
 |Rol de réplica|Acceso de conexión admitido en la réplica|Intento de conexión|Resultado del intento de conexión|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|Secundario|Todos|Se ha especificado una intención de lectura, una intención de lectura/escritura o ninguna intención de conexión|Success|  
+|Secundario|All|Se ha especificado una intención de lectura, una intención de lectura/escritura o ninguna intención de conexión|Correcto|  
 |Secundario|Ninguno (este es el comportamiento secundario predeterminado).|Se ha especificado una intención de lectura, una intención de lectura/escritura o ninguna intención de conexión|Failure|  
-|Secundario|Solo intento de lectura|Intención de lectura|Success|  
+|Secundario|Solo intento de lectura|Intención de lectura|Correcto|  
 |Secundario|Solo intento de lectura|Se ha especificado una intención de lectura/escritura o ninguna intención de conexión|Failure|  
-|Principal|Todos (este es el comportamiento principal predeterminado).|Se ha especificado una intención de solo lectura, una intención de lectura/escritura o ninguna intención de conexión|Success|  
+|Principal|Todos (este es el comportamiento principal predeterminado).|Se ha especificado una intención de solo lectura, una intención de lectura/escritura o ninguna intención de conexión|Correcto|  
 |Principal|Lectura-escritura|Solo intento de lectura|Failure|  
-|Principal|Lectura-escritura|Se ha especificado una intención de lectura/escritura o ninguna intención de conexión|Success|  
+|Principal|Lectura-escritura|Se ha especificado una intención de lectura/escritura o ninguna intención de conexión|Correcto|  
   
  Para obtener información sobre cómo configurar un grupo de disponibilidad para aceptar conexiones de cliente a sus réplicas, vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
@@ -103,8 +103,8 @@ ms.lasthandoff: 11/20/2017
   
 |Réplica|Modo de confirmación|Rol inicial|Acceso de conexión para el rol secundario|Acceso de conexión para el rol principal|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Réplica1|Sincrónica|Principal|Ninguno|Lectura-escritura|  
-|Réplica2|Sincrónica|Secundario|Ninguno|Lectura-escritura|  
+|Réplica1|Sincrónica|Principal|None|Lectura-escritura|  
+|Réplica2|Sincrónica|Secundario|None|Lectura-escritura|  
 |Réplica3|Asincrónica|Secundario|Solo intención de lectura|Lectura-escritura|  
 |Réplica4|Asincrónica|Secundario|Solo intento de lectura|Lectura-escritura|  
   
@@ -128,7 +128,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Estadísticas](../../../relational-databases/statistics/statistics.md)  

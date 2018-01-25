@@ -19,17 +19,17 @@ helpviewer_keywords:
 - Oracle publishing [SQL Server replication], about Oracle publishing
 ms.assetid: 2e013259-0022-4897-a08d-5f8deb880fa8
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 888fdaaa1943e3b8e31010b9f6f695abf0cd2180
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fe478b1073f41b13eb010d09d39f58d089e9afb1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="oracle-publishing-overview"></a>Información general de la publicación de Oracle  
+# <a name="oracle-publishing-overview"></a>Oracle Publishing Overview  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 A partir de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], puede incluir Publicadores de Oracle en su topología de replicación, empezando por Oracle versión 9i. Los servidores de publicación se pueden implementar en cualquier hardware y sistema operativo admitido por Oracle. La característica se ha creado sobre la sólida base de la replicación transaccional y la replicación de instantáneas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , lo que proporciona un rendimiento y una capacidad de uso similares.  
@@ -56,7 +56,7 @@ A partir de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssV
   
  Cuando se crea una publicación de Oracle, se crean los desencadenadores y las tablas de seguimiento para cada tabla publicada en la base de datos de Oracle. Cuando se realizan cambios en las tablas publicadas, los desencadenadores de la base de datos de las tablas se activan e insertan información en las tablas de seguimiento de la replicación de cada fila modificada. A continuación, el Agente de registro del LOG en el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mueve la información de los cambios de datos de las tablas de seguimiento a la base de datos de distribución en el distribuidor. Finalmente, como sucede en la replicación transaccional estándar, el Agente de distribución mueve los cambios del distribuidor a los suscriptores.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Configurar un publicador de Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Glosario de términos de publicaciones de Oracle](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
  [Replicación de bases de datos heterogéneas](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)  

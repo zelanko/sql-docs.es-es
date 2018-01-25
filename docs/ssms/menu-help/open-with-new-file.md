@@ -17,13 +17,13 @@ ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9f40b2c05b2868c83c0a80d1fab2de85fe35d381
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f7df416a20f8b8bae22e10e72fd35904c460808b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-with-new-file"></a>Abrir con (Nuevo archivo)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede abrir un documento en uno o varios editores si hace clic en **Abrir** en el menú **Archivo** y, después, hace clic en **Archivo**. En el cuadro de diálogo **Abrir archivo** , seleccione el archivo, haga clic en la flecha de **Abrir** y, después, haga clic en **Abrir con**. En el cuadro de diálogo **Abrir con** , haga clic en el programa que desee de la lista **Seleccione el programa que desee usar** y, a continuación, haga clic en **Abrir**.  

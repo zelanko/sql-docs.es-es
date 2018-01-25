@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ae937ebb-24ff-4a33-be3c-8f85328dfc75
 caps.latest.revision: "7"
-author: MightyPen
-ms.author: genemi
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c6ea2379e393deb918330f87fb35be109dddc8e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0bbc82f05c8bd82abf999602a2881a47b435d7a1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016"></a>Migración de la configuración de copia de seguridad administrada de SQL Server 2014 a SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se tratan las consideraciones de migración para [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] al actualizar de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Los procedimientos de **smart_admin** no se admiten para las nuevas configuraciones de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Debe usar los procedimientos y la funcionalidad nuevos de **managed_backup** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

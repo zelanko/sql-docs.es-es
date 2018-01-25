@@ -15,15 +15,15 @@ f1_keywords: vs.toolbox
 helpviewer_keywords: Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d1295c3b760386380c626e1afde9b98401ef3bd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a339068c7fe7f467a40f0b04bb3f08a6eecaefa9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="toolbox-component-f1-help"></a>Cuadro de herramientas (Ayuda F1)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El **cuadro de herramientas** muestra varios elementos que se utilizan en los proyectos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. El **cuadro de herramientas** puede abrirse desde el menú **Ver** , y esta ventana puede acoplarse como se desee. Cuando está acoplado, el **cuadro de herramientas** puede estar abierto de forma permanente o puede configurarse de modo que se **oculte automáticamente** si no se utiliza.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="add-azure-components-to-the-toolbox"></a>Agregar componentes de Azure al cuadro de herramientas  
  Azure Feature Pack para Integration Services contiene administradores de conexiones para conectarse a orígenes de datos de Azure y tareas para realizar operaciones comunes de Azure. Instale el Feature Pack para agregar estos elementos al cuadro de herramientas. Para obtener más información, vea [Azure Feature Pack para Integration Services &#40;SSIS&#41;](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Usar el cuadro de herramientas](http://msdn.microsoft.com/library/16733e39-4dc5-416f-ab10-c1d823f79d2d)   
  [Elegir elementos del cuadro de herramientas &#40;página Tareas de mantenimiento&#41;](http://msdn.microsoft.com/library/b92c9054-7479-45d8-a54c-c1bb6699bdb3)  
   

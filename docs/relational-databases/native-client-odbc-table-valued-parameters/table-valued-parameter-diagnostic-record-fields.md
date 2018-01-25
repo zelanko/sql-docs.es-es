@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: table-valued parameters (ODBC), diagnostic records
 ms.assetid: 281482ba-f9f7-4548-b5c4-96c9fd7b0286
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6a378e9eeb20a634ffa8e32179c437c02f2d486
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a1c5d83a9da2fe52419129800aca349b0b7f2e24
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="table-valued-parameter-diagnostic-record-fields"></a>Campos de registros de diagnóstico para parámetros con valores de tabla
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

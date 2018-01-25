@@ -15,20 +15,20 @@ f1_keywords: sql13.rep.profiles.perfprofileprops.f1
 helpviewer_keywords: Agent Profile Properties dialog box
 ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 56b92cbb9d6303a5b8fc22b46ad995dbe453665f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3511ae543ca1b4a46d4bb3d9d43932c6c73d3b98
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="ltagentprofilenamegt-properties"></a>Propiedades de &lt;Nombredeperfildeagente&gt;
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice el cuadro de diálogo **Propiedades del perfil de agente** para ver los valores especificados para cada parámetro de agente y modificar los valores de los perfiles definidos por el usuario.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Nombre**  
  El nombre del perfil.  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
  **Parámetro**  
  Parámetros de agente incluidos en el perfil. Los perfiles no especifican necesariamente un valor para cada parámetro. Para ver todos los parámetros válidos para un agente determinado, desactive la casilla **Mostrar solo los parámetros utilizados en este perfil** . Para obtener una descripción de cada parámetro, vea:  
   
--   [Agente de instantáneas de replicación](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+-   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
 -   [Agente de registro del LOG de replicación](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
  **Mostrar solo los parámetros utilizados en este perfil**  
  Desactive esta opción si desea mostrar todos los parámetros válidos para un agente determinado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Trabajar con perfiles del Agente de replicación](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  (Información general sobre los agentes de replicación)  
  [Perfiles del Agente de replicación](../../relational-databases/replication/agents/replication-agent-profiles.md)  

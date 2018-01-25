@@ -15,20 +15,20 @@ f1_keywords: sql13.rep.validate.options.f1
 helpviewer_keywords: Subscription Validation Options dialog box
 ms.assetid: fd66ad1f-df01-4240-9e89-8f41bff12c1e
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 77e1e620f4adc3fc44a937a12b2ab74dc3302bc0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1f6945e61fb5d5d530a4a147259cbc7347020517
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-validation-options-transactional-subscriptions"></a>Opciones de validación de suscripciones (suscripciones transaccionales)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Utilice el cuadro de diálogo **Opciones de validación de suscripciones** para especificar si la validación debe utilizar solo un recuento de filas o un recuento de filas y una suma de comprobación binaria.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Comprobar que el suscriptor tiene el mismo número de filas de datos replicados que el publicador**  
  Seleccione el tipo de validación de número de fila que debe realizarse. Para publicaciones de Oracle, la única opción disponible es **Calcular un recuento de filas real consultando las tablas directamente**.  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
  **Detener el Agente de distribución después de finalizar la validación**  
  De forma predeterminada, el Agente de distribución se ejecuta sin interrupción. Seleccione esta opción para detener el agente una vez realizada la validación. Esto permite comprobar si la validación ha sido correcta antes de continuar replicando datos en el suscriptor.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Validar datos en el suscriptor](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [Validar datos replicados](../../relational-databases/replication/validate-replicated-data.md)  
   

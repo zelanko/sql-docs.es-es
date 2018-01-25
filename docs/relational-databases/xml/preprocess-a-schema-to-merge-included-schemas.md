@@ -22,15 +22,15 @@ helpviewer_keywords:
 - XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d74cb58d143170bcef3c0e976ef786d87e92d1f1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: de002920f313d9a8ce61c1eccde0e02b67468510
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Preprocesar un esquema para combinar esquemas incluidos
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]El elemento **include** de W3C XSD proporciona compatibilidad con la modularidad de esquemas en la que un esquema XML se puede dividir en más de un archivo físico. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite este elemento. El servidor rechazará los esquemas XML que incluyan este elemento.  
@@ -218,7 +218,7 @@ public class XmlSchemaIncludeNormalizer
 </xsd:schema>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Colecciones de esquemas XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

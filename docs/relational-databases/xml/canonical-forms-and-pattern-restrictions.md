@@ -16,15 +16,15 @@ helpviewer_keywords:
 - canonical forms
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a20cb4d1a23ed32f7bddf1aa79d5428f46b9926e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8f6682717a70bc98358a3cb010f38b773c0b44ca
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>Formas canónicas y restricciones de patrón
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] La faceta de patrón XSD permite la restricción del espacio léxico de tipos simples. Cuando se aplica una restricción de patrón en un tipo para el cual existen varias representaciones léxicas posibles, algunos valores pueden provocar un comportamiento inesperado en el momento de la validación.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
  La serialización imprecisa de valores de coma o punto flotante tiene un problema similar. Puesto que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]usa un algoritmo de serialización de coma flotante, los valores similares pueden compartir la misma forma canónica. Cuando se serializa un valor de coma flotante y a continuación se vuelve a insertar, puede que su valor cambie ligeramente. En casos excepcionales, puede obtenerse un valor que infrinja alguna de las siguientes facetas para este tipo en la reinserción: **enumeration**, **minInclusive**, **minExclusive**, **maxInclusive**o **maxExclusive**. Para evitarlo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rechaza los valores de tipos derivados de `xs:float` o `xs:double` que no se pueden serializar y volver a insertar.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Requisitos y limitaciones de las colecciones de esquemas XML en el servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

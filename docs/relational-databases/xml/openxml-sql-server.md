@@ -26,15 +26,15 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 493e78f36abc0e45c74278407f607a56b1572d88
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fd801f6a94a10e43432fc650b689ffccf88ced7b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] OPENXML, palabra clave de [!INCLUDE[tsql](../../includes/tsql-md.md)], proporciona un conjunto de filas en documentos XML en memoria que es similar a una tabla o una vista. OPENXML permite el acceso a los datos XML a pesar de ser un conjunto de filas relacional. Para ello, proporciona una vista de conjunto de filas de la representación interna de un documento XML. Los registros del conjunto de filas pueden almacenarse en tablas de base de datos.  
@@ -143,7 +143,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  En la tabla siguiente se describe la estructura de la tabla irregular.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|Es el id. único del nodo del documento.<br /><br /> El elemento raíz tiene un valor de identificador de 0. Los valores de identificador negativos están reservados.|  
 |**parentid**|**bigint**|Identifica el elemento primario del nodo. El elemento primario identificado por este Id. no es necesariamente el elemento primario. Sin embargo, esto depende del valor de NodeType del nodo cuyo elemento primario identifique este identificador Por ejemplo, si se trata de un nodo de texto, su elemento primario puede ser un nodo de atributo.<br /><br /> Si el nodo está en el nivel superior del documento XML, su **ParentID** es NULL.|  
@@ -202,7 +202,7 @@ EXEC sp_xml_removedocument @docHandle;
   
 -   Si varios subelementos tienen el mismo nombre, se devuelve el primer nodo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sp_xml_preparedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)   
  [sp_xml_removedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   

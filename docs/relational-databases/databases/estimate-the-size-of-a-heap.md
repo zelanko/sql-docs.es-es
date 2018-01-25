@@ -19,15 +19,15 @@ helpviewer_keywords:
 - heaps
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 584a02e689f5f39b995aa014d11273aeeaf7aaeb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ec79282019d86f452df08676e8fa0d51f015c370
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Estimar el tamaño de un montón
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Los siguientes pasos pueden utilizarse para calcular el espacio necesario para almacenar datos en un montón:  
@@ -111,7 +111,7 @@ ms.lasthandoff: 11/17/2017
   
      Para obtener información sobre los requisitos de espacio de las columnas dispersas, vea [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Montones &#40;tablas sin índices agrupados&#41;](../../relational-databases/indexes/heaps-tables-without-clustered-indexes.md)   
  [Índices agrupados y no agrupados descritos](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [Crear índices clúster](../../relational-databases/indexes/create-clustered-indexes.md)   

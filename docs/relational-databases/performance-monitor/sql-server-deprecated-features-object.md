@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: "61"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4ed295cab6b932ba39a2a6417b8977dc5791e6e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 336fea7b5f3ea9fec4dc559933477086f4cca5ed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-deprecated-features-object"></a>Objeto SQL Server, Características en desuso
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -273,7 +273,7 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
 |Opción de tabla Text in row|Se encontraron referencias a la opción de tabla 'text in row'. Utilice sp_tableoption 'large value types out of row' en su lugar. Se produce una vez por cada consulta.|  
 |TEXTPTR|Se encontraron referencias a la función TEXTPTR. Reescriba las aplicaciones para usar el tipo de datos **varchar(max)** y quite la sintaxis de los tipos de datos **text**, **ntext**y **image** . Se produce una vez por cada consulta.|  
 |TEXTVALID|Se encontraron referencias a la función TEXTVALID. Reescriba las aplicaciones para usar el tipo de datos **varchar(max)** y quite la sintaxis de los tipos de datos **text**, **ntext**y **image** . Se produce una vez por cada consulta.|  
-|TIMESTAMP|Número total de veces que el tipo de datos **timestamp** obsoleto se encontró en una instrucción DDL. En su lugar, use el tipo de datos **rowversion** .|  
+|timestamp|Número total de veces que el tipo de datos **timestamp** obsoleto se encontró en una instrucción DDL. En su lugar, use el tipo de datos **rowversion** .|  
 |UPDATETEXT o WRITETEXT|Se encontró la instrucción WRITETEXT o UPDATETEXT. Reescriba las aplicaciones para usar el tipo de datos **varchar(max)** y quite la sintaxis de los tipos de datos **text**, **ntext**y **image** . Se produce una vez por cada consulta.|  
 |USER_ID|Se encontraron referencias a la función USER_ID. Utilice en su lugar la función DATABASE_PRINCIPAL_ID. Se produce una vez por cada compilación.|  
 |Uso de OLEDB para servidores vinculados||  
@@ -284,7 +284,7 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
 |xp_loginconfig|Se encontró el procedimiento xp_loginconfig. Utilice en su lugar el argumento IsIntegratedSecurityOnly de SERVERPROPERTY. Se produce una vez por cada consulta.|  
 |xp_revokelogin|Se encontró el procedimiento xp_revokelogin. Use ALTER LOGIN DISABLE o DROP LOGIN en su lugar. Se produce una vez por cada compilación.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Características desusadas del motor de base de datos de SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [Características en desuso de búsqueda de texto completo en SQL Server 2016](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Deprecation Announcement (clase de eventos)](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   

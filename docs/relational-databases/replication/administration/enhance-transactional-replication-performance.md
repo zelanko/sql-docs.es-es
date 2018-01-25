@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Log Reader Agent, performance
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac5c385cfdff8c4c024c02534d8c040534c400ca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 63a14e8eb3342d0d03f61028d20aea9ba018f3a8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enhance-transactional-replication-performance"></a>Aumentar el rendimiento de la replicación transaccional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Una vez que haya considerado las sugerencias generales sobre el rendimiento que se describen en [Aumentar el rendimiento general de la replicación](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), tenga en cuenta estas áreas adicionales específicas de la replicación transaccional.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Configure el distribuidor en un servidor dedicado.  
   
-     Puede reducir la carga de procesamiento en el publicador configurando un distribuidor remoto. Para más información, vea [Configurar la distribución](../../../relational-databases/replication/configure-distribution.md).  
+     Puede reducir la carga de procesamiento en el publicador configurando un distribuidor remoto. Para más información, consulte [Configure Distribution](../../../relational-databases/replication/configure-distribution.md).  
   
 -   Ajustar la base de datos de distribución a un tamaño apropiado.  
   
@@ -106,6 +106,6 @@ ms.lasthandoff: 11/17/2017
   
 -   [Ver y modificar parámetros del símbolo del sistema de los agentes de replicación &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [Conceptos de los ejecutables del Agente de replicación](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+-   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
   

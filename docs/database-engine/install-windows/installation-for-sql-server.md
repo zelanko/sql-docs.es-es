@@ -20,12 +20,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 caps.latest.revision: "34"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 5a37ff592c7ee2bc997d85bf98ad728b485f9c8d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 8b8a7d9783111cff136b2ac576da7ccb2705c57a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-installation"></a>Instalación de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un único árbol de características para instalar todos los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
@@ -85,6 +85,6 @@ Describe cómo preparar el equipo para [!INCLUDE[ssNoVersion](../../includes/ssn
   
 Vaya al [centro de actualizaciones de SQL Server](https://msdn.microsoft.com/library/ff803383.aspx) para obtener vínculos e información sobre todas las versiones compatibles de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Novedades de la instalación de SQL Server](../../sql-server/install/what-s-new-in-sql-server-installation.md)   
 [Requisitos de hardware y software para instalar SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  

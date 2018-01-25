@@ -15,20 +15,20 @@ ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 caps.latest.revision: "7"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bdac67ec17d4dd47ce413822833db543cbbe6043
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5bd4678f0a17e570f089f3c532df5a32e284787d
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Consulta de los datos de una tabla temporal con control de versiones del sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Cuando quiera obtener el último estado de datos (actual) de una tabla temporal, puede consultarlo de la misma manera que lo haría en una tabla no temporal. Si no se ocultan las columnas PERIOD, sus valores se mostrarán en una consulta SELECT \* . Si especificó las columnas **PERIOD** como ocultas, sus valores no se mostrarán en una consulta SELECT \* . Cuando las columnas de **PERIOD** están ocultas, haga referencia a las columnas de **PERIOD** específicamente en la cláusula SELECT para devolver los valores de estas columnas.  
   
- Para realizar cualquier tipo de análisis basado en tiempo, use la nueva cláusula  **FOR SYSTEM_TIME** con cuatro subcláusulas temporales específicas para consultar datos en las tablas actuales y de historial. Para obtener más información sobre estas cláusulas, vea [Tablas temporales](../../relational-databases/tables/temporal-tables.md) y [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
+ Para realizar cualquier tipo de análisis basado en tiempo, use la nueva cláusula  **FOR SYSTEM_TIME** con cuatro subcláusulas temporales específicas para consultar datos en las tablas actuales y de historial. Para obtener más información sobre estas cláusulas, vea [Tablas temporales](../../relational-databases/tables/temporal-tables.md) y [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
 -   AS OF <date_time>  
   
@@ -141,7 +141,7 @@ ORDER BY [DeptID], [SysStartTime] Desc
 ## <a name="did-this-article-help-you-were-listening"></a>¿Le ayudó este artículo? Le escuchamos  
  ¿Qué información está buscando? ¿La encontró? Escuchamos sus comentarios para mejorar el contenido. Envíe sus comentarios a [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Queryinging%20a%20System-Versioned%20Temporal%20Table%20page)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Tablas temporales](../../relational-databases/tables/temporal-tables.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [Creación de una tabla temporal con control de versiones del sistema](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - persisted data source objects
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8daca7dc24acc6a290a515435cb77f202c3f133
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ad9a783383cb243ffc21097300bfabcc1762acac
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="persisted-data-source-objects"></a>Objetos de origen de datos persistentes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -236,7 +236,7 @@ HRESULT InitFromPersistedDS
   
  El **IPersistFile:: Save** se puede llamar antes o después de llamar al método **IDBInitialize:: Initialize**. Llamar al método después de una devolución correcta de **IDBInitialize:: Initialize** garantiza que se conserva una especificación de origen de datos válido.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Objetos de origen de datos &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

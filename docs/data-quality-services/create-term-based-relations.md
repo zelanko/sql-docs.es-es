@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55f89b361e4c210c252a0fc629f7b5664390c056
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fef7b422366598e1974a07e4ee36e0100157dfa2
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-term-based-relations"></a>Crear relaciones basadas en términos
   En este tema se describe cómo crear relaciones basadas en términos para un dominio de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una relación basada en términos (TBR) permite corregir términos que forman parte de los valores de un dominio. Permiten considerar como sinónimos idénticos varios valores que son idénticos salvo por la ortografía de una parte común. Por ejemplo, podría configurar una relación basada en términos que cambiara el término “Inc.” por “Incorporated”. El término “Inc.” se cambiará cada vez que aparezca en el dominio. Las instancias de “Contoso, Inc.” se cambiarán por “Contoso, Incorporated”, y ambos valores se considerarán sinónimos exactos.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear relaciones basadas en términos.  
   
 ##  <a name="Create"></a> Crear relaciones basadas en términos  
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/20/2017
   
     6.  Busque un valor en la tabla de relaciones; para ello, especifique uno o varios caracteres en el cuadro de texto **Buscar** . Se resaltarán las cadenas que coincidan con la especificada. Utilice las flechas arriba y abajo para desplazarse por las distintas instancias de la cadena en la tabla.  
   
-    7.  **Corrector ortográfico**: si un valor de la columna **Valor** o **Corregir a** tiene un carácter de subrayado rojo ondulado, el corrector ortográfico está sugiriendo una corrección al valor. Haga clic con el botón secundario en el valor que tiene el carácter de subrayado y seleccione uno de los valores propuestos por el corrector ortográfico. O bien, puede hacer clic en **Agregar** en el menú contextual para seguir usando el valor original. Para obtener más información, consulte [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) y [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
+    7.  **Corrector ortográfico**: si un valor de la columna **Valor** o **Corregir a** tiene un carácter de subrayado rojo ondulado, el corrector ortográfico está sugiriendo una corrección al valor. Haga clic con el botón secundario en el valor que tiene el carácter de subrayado y seleccione uno de los valores propuestos por el corrector ortográfico. O bien, puede hacer clic en **Agregar** en el menú contextual para seguir usando el valor original. Para obtener más información, consulte [Utilizar el corrector ortográfico de DQS](../data-quality-services/use-the-dqs-speller.md) y [Establecer propiedades de dominio](../data-quality-services/set-domain-properties.md).  
   
         > [!NOTE]  
         >  Para utilizar el corrector ortográfico, puede habilitarlo en la página **Propiedades del dominio** o, si está deshabilitado en la página **Propiedades del dominio** , puede hacer clic en el icono **Habilitar o deshabilitar el corrector ortográfico** de la página **Relaciones basadas en términos** para habilitarlo en esta página.  

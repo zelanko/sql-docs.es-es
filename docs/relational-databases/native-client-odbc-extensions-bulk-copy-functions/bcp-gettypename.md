@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f452b3c5e12b76ba2d1327b59f1cfa17f16bb46
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ccb5d8652421aa0d52fd941e99cbcd01a0cfb6b2
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,10 +43,10 @@ RETCODE bcp_gettypename (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *símbolo (token)*  
+ *token*  
  Valor que indica un token de tipo BCP.  
   
- *campo*  
+ *field*  
  Indica si el token solicitado es un tipo max.  
   
 ## <a name="returns"></a>Devuelve  
@@ -67,22 +67,22 @@ RETCODE bcp_gettypename (
 |**SQLMONEY**|Antes o después|**money**|  
 |**SQLFLT8**|Antes o después|**float**|  
 |**SQLDATETIME**|Antes o después|**datetime**|  
-|**SQLBITN**|Antes o después|**bits null**|  
+|**SQLBITN**|Antes o después|**bit-null**|  
 |**SQLBIT**|Antes o después|**bit**|  
-|**SQLBIGCHAR**|No|**char**|  
-|**SQLCHARACTER**|No|**char**|  
-|**SQLBIGVARCHAR**|No|**varchar**|  
-|**SQLVARCHAR**|No|**varchar**|  
-|**SQLTEXT**|Antes o después|**text**|  
-|**SQLBIGBINARY**|No|**binario**|  
-|**SQLBINARY**|No|**Binario**|  
-|**SQLBIGVARBINARY**|No|**Varbinary**|  
-|**SQLVARBINARY**|No|**Varbinary**|  
+|**SQLBIGCHAR**|no|**char**|  
+|**SQLCHARACTER**|no|**char**|  
+|**SQLBIGVARCHAR**|no|**varchar**|  
+|**SQLVARCHAR**|no|**varchar**|  
+|**SQLTEXT**|Antes o después|**texto**|  
+|**SQLBIGBINARY**|no|**binario**|  
+|**SQLBINARY**|no|**Binario**|  
+|**SQLBIGVARBINARY**|no|**Varbinary**|  
+|**SQLVARBINARY**|no|**Varbinary**|  
 |**SQLIMAGE**|Antes o después|**Imagen**|  
-|**SQLINTN**|Antes o después|**int null**|  
-|**SQLDATETIMN**|Antes o después|**fecha y hora null**|  
-|**SQLMONEYN**|Antes o después|**Money null**|  
-|**SQLFLTN**|Antes o después|**float null**|  
+|**SQLINTN**|Antes o después|**int-null**|  
+|**SQLDATETIMN**|Antes o después|**datetime-null**|  
+|**SQLMONEYN**|Antes o después|**money-null**|  
+|**SQLFLTN**|Antes o después|**float-null**|  
 |**SQLAOPSUM**|Antes o después|**Sum**|  
 |**SQLAOPAVG**|Antes o después|**Avg**|  
 |**SQLAOPCNT**|Antes o después|**Count**|  
@@ -92,15 +92,15 @@ RETCODE bcp_gettypename (
 |**SQLMONEY4**|Antes o después|**Smallmoney**|  
 |**SQLFLT4**|Antes o después|**Real**|  
 |**SQLUNIQUEID**|Antes o después|**uniqueidentifier**|  
-|**SQLNCHAR**|No|**Nchar**|  
-|**SQLNVARCHAR**|No|**Nvarchar**|  
+|**SQLNCHAR**|no|**Nchar**|  
+|**SQLNVARCHAR**|no|**Nvarchar**|  
 |**SQLNTEXT**|Antes o después|**Ntext**|  
 |**SQLVARIANT**|Antes o después|**sql_variant**|  
 |**SQLINT8**|Antes o después|**Bigint**|  
-|**SQLCHARACTER**|Sí|**varchar(max)**|  
-|**SQLBIGCHAR**|Sí|**varchar(max)**|  
-|**SQLBIGVARCHAR**|Sí|**varchar(max)**|  
-|**SQLVARCHAR**|Sí|**varchar(max)**|  
+|**SQLCHARACTER**|Sí|**ntext**|  
+|**SQLBIGCHAR**|Sí|**ntext**|  
+|**SQLBIGVARCHAR**|Sí|**ntext**|  
+|**SQLVARCHAR**|Sí|**ntext**|  
 |**SQLBINARY**|Sí|**varbinary(max)**|  
 |**SQLBIGBINARY**|Sí|**varbinary(max)**|  
 |**SQLBIGVARBINARY**|Sí|**varbinary(max)**|  
@@ -108,7 +108,7 @@ RETCODE bcp_gettypename (
 |**SQLNCHAR**|Sí|**nvarchar(max)**|  
 |**SQLNVARCHAR**|Sí|**nvarchar(max)**|  
 |**SQLXML**|Sí|**Xml**|  
-|**SQLUDT**|Antes o después|**UDT**|  
+|**SQLUDT**|Antes o después|**Udt**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename admite las características mejoradas de fecha y hora  
  Se describen los valores de parámetro de token para los tipos de fecha y hora en la columna "Tipo en sqlncli.h" de la tabla en [cambios en la copia masiva para mejoradas de fecha y hora tipos &#40; OLE DB y ODBC &#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). El valor devuelto está en la fila correspondiente de la columna " Tipo de almacenamiento de archivo".  

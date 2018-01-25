@@ -22,15 +22,15 @@ helpviewer_keywords:
 - agents [SQL Server replication], performance
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c9b6f552ef52af748dcce74977bfc74806c9546
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 10bc53216b65298837a5086adf89550ad97606a7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enhance-merge-replication-performance"></a>Aumentar el rendimiento de la replicación de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Tras considerar las sugerencias generales de rendimiento que se describen en [Aumentar el rendimiento general de la replicación](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), tenga en cuenta estas otras áreas específicas de la replicación de mezcla.  
@@ -114,7 +114,7 @@ ms.lasthandoff: 11/17/2017
   
     -   [Ver y modificar parámetros del símbolo del sistema de los agentes de replicación &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Conceptos de los ejecutables del Agente de replicación](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
 -   Considere aumentar el valor del parámetro **-MakeGenerationInterval** , especialmente si la sincronización implica más cargas de suscriptores que descargas a suscriptores.  
   

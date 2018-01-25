@@ -18,13 +18,13 @@ ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5847977926b80ef1cf98172b7b59c3e8a0a1c02
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7399c344d94920c76093883eb8cf5244222ce707
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Crear combinaciones externas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] De forma predeterminada, el [Diseñador de consultas y vistas](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) crea una combinación interna entre tablas. Las combinaciones internas eliminan las filas que no coinciden con alguna fila de la otra tabla. Sin embargo, las combinaciones externas devuelven todas las filas de una de las tablas o vistas mencionadas en la cláusula FROM, como mínimo, siempre que tales filas cumplan alguna de las condiciones de búsqueda de WHERE o HAVING. Si desea incluir filas de datos en el conjunto de resultados que no se correspondan con ninguna fila de la tabla combinada, puede crear una combinación externa.  

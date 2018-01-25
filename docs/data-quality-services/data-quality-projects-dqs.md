@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9fffe98d01164f8af7ebe5c59153eb7c0b06c79a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6ee5c4c70581b275ce19b597f505a8d577ea88a0
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-quality-projects-dqs"></a>Proyectos de calidad de datos (DQS)
   Un proyecto de calidad de datos de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) utiliza una base de conocimiento para mejorar la calidad de los datos de origen mediante la realización de actividades de *limpieza de datos* y *búsqueda de coincidencias de datos* , y la posterior exportación de los datos resultantes a una base de datos de SQL Server o a un archivo .csv. Puede crear un proyecto de calidad de datos como un proyecto de limpieza o como un proyecto de búsqueda de coincidencias para realizar las actividades respectivas. Los proyectos de limpieza y de búsqueda de coincidencias se pueden ejecutar usando la misma base de conocimiento, ya que el conocimiento de estos procesos se puede generar en la misma base de conocimiento.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="ProfilingNotification"></a> Generación de perfiles de datos y notificaciones  
  Mientras ejecuta las actividades de búsqueda de coincidencias y limpieza en un proyecto de calidad de datos, puede ver estadísticas e información en tiempo real de los datos que DQS está procesando. El proceso de generación de perfiles de datos le ayuda a evaluar la eficacia de los procesos de limpieza y búsqueda de coincidencias, y le permite determinar en qué medida le han ayudado estos procesos a mejorar la calidad de los datos. El proceso de generación de perfiles de DQS proporciona dos dimensiones de calidad de datos: *integridad* (la medida en que los datos están presentes) y *precisión* (la medida en que los datos se pueden utilizar para su uso previsto). Además, en función de la información de los perfiles de datos, el usuario verá notificaciones sobre las medidas que puede tomar para mejorar las operaciones de limpieza de datos y búsqueda de coincidencias de datos. Para obtener información detallada acerca de las notificaciones y la generación de perfiles de datos, vea [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/20/2017
 |Describe cómo abrir, desbloquear, cambiar el nombre y eliminar un proyecto de calidad de datos.|[Abrir, desbloquear, cambiar nombre y eliminar un proyecto de calidad de datos](open-unlock-rename-and-delete-a-data-quality-project.md)|  
 |Describe cómo abrir un proyecto de Integration Services en [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].|[Abrir proyectos de Integration Services en Data Quality Client](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Bases de conocimiento y dominios de DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 caps.latest.revision: "18"
 author: MikeRayMSFT
 ms.author: v-saume
-manager: jhubbard
-ms.openlocfilehash: 083530811bd1dcee460e10566d9ddf94b8aa5f71
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: aa2ce39b4cf932d5659adb2ccc1a85b4ff547cac
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Inicializar automáticamente grupos de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ Con SQL Server 2016, se introduce la propagación automática de grupos de dispo
 
 Para obtener información general, consulte [Propagación automática de réplicas secundarias](automatic-seeding-secondary-replicas.md).
  
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 En SQL Server 2016, la propagación automática exige que la ruta de acceso del archivo de datos y de registro sea la misma en cada instancia de SQL Server que participe en el grupo de disponibilidad. En SQL Server 2017, puede usar rutas de acceso diferentes. En cambio, Microsoft recomienda usar las mismas rutas cuando todas las réplicas se hospeden en la misma plataforma (por ejemplo, Windows o Linux). Los grupos de disponibilidad multiplataforma usan rutas de acceso diferentes para las réplicas. Para obtener más información, consulte [Diseño de disco](automatic-seeding-secondary-replicas.md#disklayout).
 
@@ -215,7 +215,7 @@ GO
 
 La tabla siguiente enumera los eventos extendidos relacionados con la propagación automática: 
 
-| Nombre | Descripción|
+| Nombre | Description|
 |------------ |---------------| 
 |hadr_db_manager_seeding_request_msg |  Mensaje de solicitud propagación.
 |hadr_physical_seeding_backup_state_change |    Cambio de estado del lado de copia de seguridad de propagación física.

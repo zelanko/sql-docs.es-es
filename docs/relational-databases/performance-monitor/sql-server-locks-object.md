@@ -16,22 +16,22 @@ helpviewer_keywords:
 - SQLServer:Locks
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 46adb9899754722c68350ee5c679b37c656a002a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 159bb57b8f8798a0e6043d57b0c033374482d079
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-locks-object"></a>Locks (objeto de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El objeto **SQLServer:Locks** de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona información acerca de los bloqueos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en tipos de recursos individuales. Se mantienen bloqueos en recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como filas leídas o modificadas durante una transacción, para evitar que varias transacciones utilicen simultáneamente los recursos. Por ejemplo, si una transacción mantiene un bloqueo exclusivo (X) en una fila de una tabla, ninguna otra transacción podrá modificar esa fila hasta que se libere el bloqueo. La reducción de bloqueos aumenta la simultaneidad, lo que puede mejorar el rendimiento. Se pueden supervisar al mismo tiempo varias instancias del objeto **Locks** ; cada instancia representa un bloqueo en un tipo de recurso.  
   
  En la siguiente tabla se describen los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Locks** .  
   
-|Contadores de bloqueos de SQL Server|Descripción|  
+|Contadores de bloqueos de SQL Server|Description|  
 |-------------------------------|-----------------|  
 |**Tiempo promedio de espera (ms)**|Promedio de tiempo de espera (en milisegundos) para cada solicitud de bloqueo que esperó.|  
 |**Tiempo promedio de espera de base**|Exclusivamente para uso interno.|
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede bloquear los siguientes recursos.  
   
-|Elemento|Descripción|  
+|Elemento|Description|  
 |----------|-----------------|  
 |**_Total**|Información sobre todos los bloqueos.|  
 |**Unidad de asignación**|Bloqueo en una unidad de asignación.|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 |**Página**|Bloqueo en una página de 8 kilobytes (KB) de una base de datos.|  
 |**RID**|Id. de fila. Un bloqueo sobre una sola fila en un montón.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

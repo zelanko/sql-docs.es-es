@@ -20,15 +20,15 @@ helpviewer_keywords:
 - publishing [SQL Server replication], schema changes
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 caps.latest.revision: "73"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8ef239563e768ee5044e07e8bca666bdd4169158
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: b37e7cc96300a3bba0e83f2458820afd20d1b004
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Realizar cambios de esquema en bases de datos de publicaciones
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La replicación admite una gran variedad de cambios en el esquema de objetos publicados. Cuando se realiza cualquiera de los siguientes cambios de esquema en el objeto publicado apropiado en un publicador de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , dicho cambio se propaga de manera predeterminada a todos los suscriptores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -123,7 +123,7 @@ ms.lasthandoff: 12/05/2017
   
     -   Las restricciones deben tener un nombre explícito para permitir la eliminación. Para obtener más información, vea la sección "Consideraciones generales" de este tema.  
   
-### <a name="transactional-replication"></a>Replicación transaccional  
+### <a name="transactional-replication"></a>replicación transaccional  
   
 -   Los cambios de esquema se propagan a los suscriptores que ejecutan versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], pero la instrucción DDL solo debe incluir sintaxis compatible con la versión instalada en el suscriptor.  
   
@@ -164,7 +164,7 @@ ms.lasthandoff: 12/05/2017
   
 -   La replicación de mezcla proporciona procedimientos almacenados para omitir los cambios de esquema durante la solución de problemas. Para obtener más información, vea [sp_markpendingschemachange &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md) y [sp_enumeratependingschemachanges &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER VIEW &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-view-transact-sql.md)   
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-procedure-transact-sql.md)   

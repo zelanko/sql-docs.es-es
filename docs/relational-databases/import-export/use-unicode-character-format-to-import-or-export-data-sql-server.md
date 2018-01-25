@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Unicode [SQL Server], bulk importing and exporting
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
 caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5fd105a2da0e4822ee3da0b2f8929f70d0185cb5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ca0bca9210691a4c53cc2c39cb0110159994192b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Usar el formato de caracteres Unicode para importar o exportar datos (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] El formato de caracteres Unicode se recomienda para las transferencias masivas de datos entre varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un archivo de datos que contenga caracteres DBCS o extendidos. El formato de datos de caracteres Unicode permite exportar datos desde un servidor mediante una página de códigos utilizada por el cliente que está realizando la operación. En esos casos, el uso del formato de caracteres Unicode tiene las siguientes ventajas:  
@@ -86,9 +86,9 @@ Puede importar datos del formato de caracteres Unicode en una tabla mediante [bc
   
 El formato de caracteres Unicode se puede usar con las siguientes opciones de comando:  
   
-|Command|Opción|Descripción|  
+|Comando|Opción|Description|  
 |-------------|------------|-----------------|  
-|bcp|**-w**|Usa el formato de caracteres Unicode.|  
+|BCP|**-w**|Usa el formato de caracteres Unicode.|  
 |BULK INSERT|DATAFILETYPE **='widechar'**|Utiliza el formato de caracteres Unicode al importar datos masivamente.|  
 |OPENROWSET|N/D|Debe usar un archivo de formato|
   
@@ -241,7 +241,7 @@ Para usar formatos de datos para la importación o exportación masivas
   
 -   [Usar el formato nativo Unicode para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

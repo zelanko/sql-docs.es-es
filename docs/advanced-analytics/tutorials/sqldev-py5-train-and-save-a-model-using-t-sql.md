@@ -18,12 +18,12 @@ ms.assetid:
 caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: d8c20752d69b066934d1981025633dffd740318e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 07777ff0752a68e574c5f7f1a0021a8817eb7ea0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="step-5-train-and-save-a-python-model-using-t-sql"></a>Paso 5: Entrenar y guardar un modelo de Python mediante T-SQL
 
@@ -131,7 +131,7 @@ Para que sea más fácil volver a entrenar el modelo con nuevos datos, incluya l
 
 3. Abra la tabla *nyc\_taxi_models*. Puede ver que se ha agregado una fila nueva, que contiene el modelo serializado en la columna _modelo_.
 
-    *linear_model* *0x800363736B6C6561726E2E6C696E6561...*
+    *linear_model* *0x800363736B6C6561726E2E6C696E6561....*
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
@@ -196,7 +196,7 @@ Mediante el uso de **revoscalepy**, puede crear contextos de proceso remoto, el 
 
 3. Abra la tabla *nyc_taxi_models*. Puede ver que se ha agregado una fila nueva, que contiene el modelo serializado en la columna _modelo_.
 
-    *rx_model* *0x8003637265766F7363616c...*
+    *rx_model* *0x8003637265766F7363616c....*
 
 En el paso siguiente, usa los modelos entrenados para crear predicciones.
 

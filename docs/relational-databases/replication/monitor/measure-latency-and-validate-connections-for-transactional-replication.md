@@ -19,15 +19,15 @@ helpviewer_keywords:
 - monitoring performance [SQL Server replication], tracer tokens
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3e0a79a2e7b35f921a642f09a12290bd194efe7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 18fdb025e8e3314e44c2441b2e9a037e743ac939
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Medir la latencia y validar las conexiones de la replicación transaccional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo medir la latencia y validar conexiones para la replicación transaccional en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante el Monitor de replicación, [!INCLUDE[tsql](../../../includes/tsql-md.md)] o Replication Management Objects (RMO). La replicación transaccional proporciona la característica de testigo de seguimiento, que ofrece una forma cómoda de medir la latencia en topologías de replicación transaccional y validar las conexiones entre el publicador, el distribuidor y los suscriptores. Se escribe un token (una pequeña cantidad de datos) en el registro de transacción de la base de datos de publicaciones, marcado como si fuese una transacción replicada, y se envía a través del sistema, de forma que permite calcular:  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
      [Replication Management Objects](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  Los testigos de seguimiento también pueden ser útiles al detener el sistema, lo que implica detener todas las actividades y comprobar que todos los nodos han recibido todos los cambios pendientes. Para más información, vea [Poner en modo inactivo una topología de replicación &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/17/2017
 -   Después de la conmutación por error a un elemento secundario, el Monitor de replicación no puede ajustar el nombre de la instancia de publicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y seguirá mostrando información de replicación bajo el nombre de la instancia principal original de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Después de la conmutación por error, el Monitor de replicación no puede especificar un token de seguimiento, aunque muestra un token de seguimiento especificado en el nuevo publicador mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 ##  <a name="SSMSProcedure"></a> Usar el Monitor de replicación de SQL Server  
- Para obtener información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+ Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 #### <a name="to-insert-a-tracer-token-and-view-information-on-the-token"></a>Para insertar un testigo de seguimiento y ver la información del token  
   

@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Web synchronization, security architecture
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a582eb3debf641b5704e051e67c49104a83f270c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 94de766b7e039aa2b66d900202fff0d458b0f358
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Arquitectura de seguridad para la sincronización web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite tener un control preciso sobre la configuración de la seguridad de la sincronización web. En este tema se proporciona una lista exhaustiva de todos los componentes que pueden incluirse en una configuración de la sincronización web e información acerca de las conexiones entre los componentes. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="f-connection-to-the-distributor"></a>F. Conexión al distribuidor  
  El Reconciliador de replicación de mezcla hospedado en el equipo en el que se ejecuta IIS también realiza conexiones al distribuidor. El Reconciliador de replicación de mezcla se conecta al distribuidor mediante la autenticación de Windows o la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El usuario de Windows o el inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que especifique debe cumplir lo siguiente:  
   
--   Estar en la lista de acceso de la publicación (PAL). Para más información, vea [Proteger el publicador](../../../relational-databases/replication/security/secure-the-publisher.md).  
+-   Estar en la lista de acceso de la publicación (PAL). Para obtener más información, vea [Proteger el publicador](../../../relational-databases/replication/security/secure-the-publisher.md).  
   
 -   Estar asociado a un usuario de base de datos en la base de datos de distribución. El usuario puede ser el usuario **Guest** .  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 11/17/2017
 |La autenticación de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se utiliza si se especifica uno de los siguientes:<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: el valor **0** para el parámetro **@distributor_security_mode** de [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />-   RMO: un valor de <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> para <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>.<br />- Línea de comandos del Agente de mezcla: el valor **0** para **-DistributorSecurityMode**.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: los parámetros **@distributor_login** y **@distributor_password** de [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> y <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A><br /><br /> Línea de comandos del Agente de mezcla: **-DistributorLogin** y **-DistributorPassword**.|  
   
 ## <a name="g-connection-to-an-ftp-server"></a>G. Conexión a un servidor FTP  
- Especifique un usuario de Windows para esta conexión solo si va a descargar archivos de instantáneas desde un servidor FTP, en lugar de desde una ubicación UNC, al equipo en el que se ejecuta IIS antes de aplicar la instantánea al suscriptor. Para más información, vea [Transferir instantáneas mediante FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+ Especifique un usuario de Windows para esta conexión solo si va a descargar archivos de instantáneas desde un servidor FTP, en lugar de desde una ubicación UNC, al equipo en el que se ejecuta IIS antes de aplicar la instantánea al suscriptor. Para obtener más información, vea [Transferir instantáneas mediante FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
   
 |Tipo de autenticación|Dónde se especifica la autenticación|  
 |----------------------------|-------------------------------------------|  
@@ -140,7 +140,7 @@ ms.lasthandoff: 11/17/2017
 |---------------------|------------------------------------|  
 |Cualquier usuario de Windows que tenga los permisos necesarios.|Administrador de Internet Information Services (IIS) |  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Configurar sincronización web](../../../relational-databases/replication/configure-web-synchronization.md)   
  [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   

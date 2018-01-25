@@ -20,15 +20,15 @@ helpviewer_keywords:
 - updatable subscriptions
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 caps.latest.revision: "60"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d146aaae7ef0a3e033deb1fb3a3cc51b49663abc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a31fed7f22953170b443c42b6394786e6fa9a60e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>Suscripciones actualizables para la replicación transaccional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
  **Para cambiar entre modos de actualización**  
   
- Para cambiar entre modos de actualización, debe habilitar la publicación y suscripción para ambos modos de actualización y, a continuación, cambiar entre ellos si es necesario. Para obtener más información, consulte  
+ Para cambiar entre modos de actualización, debe habilitar la publicación y suscripción para ambos modos de actualización y, a continuación, cambiar entre ellos si es necesario. Para obtener más información, vea  
 [Switch Between Update Modes for an Updatable Transactional Subscription](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>Consideraciones para el uso de suscripciones actualizables  
@@ -130,7 +130,7 @@ ms.lasthandoff: 11/17/2017
   
     -   Si se esperan conflictos, no debe utilizar restricciones de clave externa en el publicador o suscriptor si utiliza la resolución de conflictos "El suscriptor gana"; no debe utilizar restricciones de clave externa en el suscriptor si utiliza la resolución de conflictos "El publicador gana".  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  (Replicación transaccional punto a punto)  
  [Tipos de publicaciones para la replicación transaccional](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)   
  [Publicar datos y objetos de base de datos](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Replication Monitor, about Replication Monitor
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 977bcf0ef4265e3864fee580dd2a8bced177b334
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dedf784414d1eda02bd650bd46051950f22629ad
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Información general de la interfaz del Monitor de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Monitor de replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] presenta una vista centrada en el publicador o en el distribuidor de toda la actividad de replicación en un formato de dos recuadros. Se agrega un publicador al monitor en el panel izquierdo y, en el panel derecho, el monitor muestra información sobre el publicador, sus publicaciones, las suscripciones a esas publicaciones y los diversos agentes de replicación. Además de presentar información de la topología de replicación, el Monitor de replicación permite realizar varias tareas, como iniciar y detener agentes y validar datos.  
@@ -239,7 +239,7 @@ ms.lasthandoff: 11/17/2017
   
      Este cuadro de diálogo permite crear un perfil nuevo y, opcionalmente, incluye los valores de un perfil existente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Supervisar la replicación](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

@@ -18,13 +18,13 @@ ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 55051d755bb2fb2abec5668fb21328905c0dbf82
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 092a000b7b942a3b26a7bafedcc65ed2b19944f7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Crear reflejo de la base de datos y trasvase de registros (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Se puede crear el reflejo de una determinada base de datos o realizar un trasvase de registros; también es posible realizar ambos procesos de forma simultánea. Para elegir qué método se debe utilizar, tenga en cuenta los siguientes aspectos:  

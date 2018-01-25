@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.pubproperties.filterrows.f1
 ms.assetid: 2c5fdbed-9b10-4818-98cc-cc6b01351318
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9101fca39dc70f29e1681bdb6718d8847a66df67
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b9f279d06d1be056edf486e0a9a8c4ee0184a9bd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-properties-filter-rows"></a>Propiedades de la publicación, Filtrar filas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación** permite realizar operaciones de adición, edición o eliminación:  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Evitar la transmisión de datos reservados. Se pueden utilizar filtros de fila y filtros de columna para restringir el acceso de un suscriptor a los datos. Para la replicación de mezcla, existen consideraciones de seguridad que se deben tener en cuenta si utiliza un filtro con parámetros que incluya HOST_NAME(). Para obtener más información, vea la sección sobre cómo filtrar con HOST_NAME() en el tema [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Tablas filtradas**  
  Este panel se llena con filtros según se agregan a los artículos de la tabla en la publicación. Las tablas con filtros de fila se muestran como nodos de nivel superior en el panel. En las publicaciones de combinación, las tablas cuyo filtro se ha ampliado a filtro de combinación se muestran como nodos secundarios.  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/17/2017
  **Editar**  
  Seleccione un filtro de filas o un filtro de combinación en el panel de filtros y haga clic en **Editar** para abrir el cuadro de diálogo **Editar filtro** o **Editar combinación** .  
   
- **Delete**  
+ **Eliminar**  
  Seleccione un filtro de filas o un filtro de combinación en el panel de filtros y haga clic en **Eliminar** para eliminar el filtro.  
   
  **Buscar tabla**  
@@ -82,16 +82,16 @@ ms.lasthandoff: 11/17/2017
   
  Seleccione un nodo de acceso directo en el panel y haga clic en **Buscar tabla** . El panel se expande y la tabla se resalta. Si hace clic en **Buscar tabla** sin seleccionar un nodo de acceso directo, se abre un cuadro de diálogo **Buscar tabla** .  
   
- **Filtro**  
+ **Filter**  
  Contiene la definición de [!INCLUDE[tsql](../../includes/tsql-md.md)] para el filtro seleccionado en el panel de filtros.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Crear y aplicar la instantánea inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [Reinicializar una suscripción](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [Ver y modificar propiedades de publicación](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Filtrar datos publicados](../../relational-databases/replication/publish/filter-published-data.md)   
- [Filtros de combinación](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Publicar datos y objetos de base de datos](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

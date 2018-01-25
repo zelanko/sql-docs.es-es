@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Oracle publishing [SQL Server replication], performance tuning
 ms.assetid: 32c0b4ec-c166-45a3-b41e-38a30fd56813
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47a17240658da8b228d1493f8d94fc3f00e47acc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 48afc3f5b4123b4a08b4be4ffe248a01dbd10461
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="performance-tuning-for-oracle-publishers"></a>Optimizar el rendimiento de publicadores de Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La arquitectura de publicación de Oracle es similar a la arquitectura de publicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Por lo tanto, el primer paso para optimizar la replicación de Oracle para un mejor rendimiento es seguir las recomendaciones generales de optimización que se encuentran en [Enhance General Replication Performance](../../../relational-databases/replication/administration/enhance-general-replication-performance.md) (Mejorar el rendimiento general de replicación).  
@@ -45,8 +45,8 @@ ms.lasthandoff: 11/17/2017
   
  Para configurar el trabajo del conjunto de transacciones, consulte [Configuración del trabajo del conjunto de transacciones para un publicador de Oracle &#40;programa de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Configurar un publicador de Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Información general de la publicación de Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

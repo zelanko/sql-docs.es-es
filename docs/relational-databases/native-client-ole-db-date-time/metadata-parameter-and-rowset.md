@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: metadata [OLE DB]
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8dfe465757a4182803609ec24f3b2b28510ffb61
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0de69450f5aecceb87e56a76b9edb0e46a146d35
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="metadata---parameter-and-rowset"></a>Metadatos: parámetro y el conjunto de filas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,23 +32,23 @@ ms.lasthandoff: 01/08/2018
   
 -   Estructura DBBINDING  
   
--   **ICommandWithParameters:: getParameterInfo**  
+-   **ICommandWithParameters::GetParameterInfo**  
   
--   **ICommandWithParameters:: SetParameterInfo**  
+-   **ICommandWithParameters::SetParameterInfo**  
   
--   **IColumnsRowset:: GetColumnsRowset**  
+-   **IColumnsRowset::GetColumnsRowset**  
   
--   **IColumnsInfo:: GetColumnInfo**  
+-   **IColumnsInfo::GetColumnInfo**  
   
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  La siguiente información se devuelve en la estructura DBPARAMINFO a través de *prgParamInfo*:  
   
 |Tipo de parámetro|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|Date|DBTYPE_DBDATE|6|10|0|Desactivar|  
+|date|DBTYPE_DBDATE|6|10|0|Desactivar|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Establecer|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Desactivar|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Desactivar|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Desactivar|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19,21..27|0..7|Establecer|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26,28..34|0..7|Establecer|  
   
@@ -62,11 +62,11 @@ ms.lasthandoff: 01/08/2018
 |*pwszDataSourceType*<br /><br /> (depende del proveedor)|*pwszDataSourceType*<br /><br /> (OLE DB genérico)|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|Pasa por alto|  
-|Date|DBTYPE_DBDATE|6|Pasa por alto|  
+|date|DBTYPE_DBDATE|6|Pasa por alto|  
 ||DBTYPE_DBTIME|10|Pasa por alto|  
 |time|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|Pasa por alto|  
-|DATETIME||16|Pasa por alto|  
+|datetime||16|Pasa por alto|  
 |datetime2 o DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 01/08/2018
 |Tipo de enlace|*pwszDataSourceType*<br /><br /> (depende del proveedor)|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
-|DBTYPE_DBDATE|Date|  
+|DBTYPE_DBDATE|date|  
 |DBTYPE_DBTIME|time(0)|  
 |DBTYPE_DBTIME2|time(7)|  
 |DBTYPE_DBTIMESTAMP|datetime2(7)|  
@@ -90,10 +90,10 @@ ms.lasthandoff: 01/08/2018
   
 |Tipo de columna|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|Date|DBTYPE_DBDATE|6|10|0|Desactivar|  
+|date|DBTYPE_DBDATE|6|10|0|Desactivar|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Establecer|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Desactivar|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Desactivar|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Desactivar|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Establecer|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Establecer|  
   
@@ -124,10 +124,10 @@ ms.lasthandoff: 01/08/2018
   
 |Tipo de parámetro|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|Date|DBTYPE_DBDATE|6|10|0|Desactivar|  
+|date|DBTYPE_DBDATE|6|10|0|Desactivar|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Establecer|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Desactivar|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Desactivar|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Desactivar|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Establecer|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Establecer|  
   

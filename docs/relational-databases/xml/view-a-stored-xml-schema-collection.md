@@ -21,15 +21,15 @@ helpviewer_keywords:
 - viewing XML schema collections
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 60d143e53c01fb90e4c8c73c42f20463739d185c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2c54c5a8f9246ee58fe6b07b5b728531863bd48d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>Ver una colección de esquemas XML almacenada
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Después de importar una colección de esquema XML mediante [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md), los componentes del esquema se almacenan en los metadatos. Puede usar la función intrínseca [xml_schema_namespace](../../t-sql/xml/xml-schema-namespace.md)para reconstruir la colección de esquemas XML. La función devuelve una instancia de tipo de datos **xml** .  
@@ -72,7 +72,7 @@ GO
   
  La vista de catálogo [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md) también devuelve información sobre las colecciones de esquemas XML. La información consiste en el nombre la colección, la fecha de creación y el nombre del propietario.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Colecciones de esquemas XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

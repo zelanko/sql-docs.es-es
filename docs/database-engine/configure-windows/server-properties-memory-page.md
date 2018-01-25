@@ -14,20 +14,20 @@ ms.topic: article
 f1_keywords: sql13.swb.serverproperties.memory.f1
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b9ae03362f1dfb89aaebc09aabfed60c327a9d3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 57a2f7e2b4f0a75cf212d79284b85c00eda92d81
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-properties---memory-page"></a>Propiedades del servidor (página Memoria)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice esta página para ver o modificar las opciones de memoria del servidor. Cuando **Cantidad mínima de memoria del servidor** está establecida en 0 y **Cantidad máxima de memoria del servidor** está establecida en 2147483647 MB, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede aprovechar la cantidad óptima de memoria en un momento dado, dependiendo de la cantidad de memoria que utilicen en ese momento el sistema operativo y otras aplicaciones. Al cambiar la carga del equipo y de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , también cambia la memoria asignada. Puede limitar aún más esta asignación de memoria dinámica a los valores máximos y mínimos que se especifican a continuación.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Cantidad mínima de memoria del servidor (en MB)**  
  Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe empezar, al menos, con la cantidad mínima de memoria asignada y no debe liberar memoria por debajo de este valor. Establezca este valor basándose en el tamaño y la actividad de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Establezca siempre la opción en un valor razonable para asegurarse de que el sistema operativo no requiere demasiada memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no inhibe el rendimiento de Windows.  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/20/2017
  **Valores actuales**  
  Muestra los valores actuales de las opciones de este panel. Estos valores son de solo lectura.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Opciones de configuración de memoria del servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
   

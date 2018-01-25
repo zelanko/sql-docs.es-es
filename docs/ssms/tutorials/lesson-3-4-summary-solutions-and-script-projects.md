@@ -14,15 +14,15 @@ ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: 9421d20f-0c8b-48e2-8e97-31f3047b8177
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7fe194806dc60a604bcae54a3d170bf691a1b09a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d4a59808877873110ff96bf8f88676aa473d3488
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-3-4---summary---solutions-and-script-projects"></a>Lección 3.4: Resumen: Soluciones y proyectos de scripts
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Al mejorar las amplias características para desarrolladores con las que cuenta [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ofrece la funcionalidad que los desarrolladores necesitan para administrar código de nivel empresarial. Puede crear plantillas personalizadas para las tareas repetitivas, guardar y administrar proyectos de script complejos en un entorno centralizado y coordinado.  

@@ -37,15 +37,15 @@ helpviewer_keywords:
 - Database Maintenance Plan Wizard, starting
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 21c05a6f8d841bc32cbcebd0830042c8b17c2421
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f389187e628fde1bca50542449230264055a49f4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Usar el Asistente para planes de mantenimiento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo crear un plan de mantenimiento de un solo servidor o multiservidor mediante el Asistente para planes de mantenimiento de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. El Asistente para planes de mantenimiento crea un plan de mantenimiento que el Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede ejecutar periódicamente. Esto permite realizar diversas tareas de administración de bases de datos, incluidas copias de seguridad, comprobaciones de integridad de la base de datos o actualizaciones de las estadísticas de la base de datos a intervalos especificados.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 
 Para protegerse contra esta elevación de privilegio al ejecutar planes de mantenimiento, conjuntos de recopilación de datos y otros paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configure los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecutan paquetes para usar una cuenta de proxy con privilegios limitados o agregar solo los miembros de **sysadmin** a los roles **db_ssisadmin** y **dc_admin** .  
 
-##  <a name="Prerequisite"></a> Requisitos previos 
+##  <a name="Prerequisite"></a> Prerequisites 
 Debe habilitar la [opción de configuración del servidor Agent XPs](../../database-engine/configure-windows/agent-xps-server-configuration-option.md).
   
   
@@ -206,7 +206,7 @@ Casilla**Incluir índices**
      La base de datos se comprime en páginas contiguas, pero no se cancela la asignación de las páginas y los archivos de la base de datos no se comprimen. Utilice esta opción si espera que la base de datos se expanda de nuevo y no desea reasignar el espacio. Con esta opción, los archivos de la base de datos no se comprimen lo máximo posible. Utiliza la opción NOTRUNCATE.  
   
      **Devolver espacio liberado al sistema operativo**  
-     La base de datos se comprime en páginas contiguas y las páginas se devuelven al sistema operativo para que otros programas puedan utilizarlas. Utiliza la opción TRUNCATEONLY. Esta es la opción predeterminada.  
+     La base de datos se comprime en páginas contiguas y las páginas se devuelven al sistema operativo para que otros programas puedan utilizarlas. Utiliza la opción TRUNCATEONLY. Ésta es la opción predeterminada.  
   
 ## <a name="define-the-index-tasks"></a>Definir las tareas de índice  
   
@@ -243,7 +243,7 @@ Casilla**Incluir índices**
      Muestra opciones para aplicar un factor de relleno a índices y tablas.  
   
      **Espacio disponible predeterminado por página**  
-     Reorganiza las páginas con la cantidad predeterminada de espacio disponible. Se quitarán los índices de las tablas de la base de datos y se volverán a crear con el factor de relleno que se especificó al crear los índices. Esta es la opción predeterminada.  
+     Reorganiza las páginas con la cantidad predeterminada de espacio disponible. Se quitarán los índices de las tablas de la base de datos y se volverán a crear con el factor de relleno que se especificó al crear los índices. Ésta es la opción predeterminada.  
   
      Cuadro**Cambiar el espacio disponible por página a**   
      Quita los índices de las tablas de la base de datos y vuelve a crearlos con un nuevo factor de relleno calculado automáticamente, de forma que reserva la cantidad de espacio disponible especificada en las páginas de índice. Cuanto mayor sea el porcentaje, más espacio disponible se reservará en las páginas de índice y mayor tamaño tendrá el índice. Los valores válidos son de 0 a 100. Usa la opción `FILLFACTOR` .  

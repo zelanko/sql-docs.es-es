@@ -22,22 +22,22 @@ helpviewer_keywords:
 - clr strict security option
 ms.assetid: 
 caps.latest.revision: "0"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4902f0cbbdef0f7c684d154aad3bc896d138228b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 01eebbd834d8c1877743f65220af48dd23739f94
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="clr-strict-security"></a>CLR strict security   
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Controla la interpretación del permiso `SAFE`, `EXTERNAL ACCESS`, `UNSAFE` en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
 
-|Valor |Descripción | 
+|Valor |Description | 
 |----- |----- | 
 |0 |Deshabilitada: se proporciona para la compatibilidad con versiones anteriores. El valor `Disabled` no es recomendable. | 
 |1 |Habilitada: hace que el [!INCLUDE[ssde-md](../../includes/ssde-md.md)] pase por alto la información de `PERMISSION_SET` relativa a los ensamblados y los interprete siempre como `UNSAFE`.  `Enabled` es el valor predeterminado en [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]. | 
@@ -45,7 +45,7 @@ Controla la interpretación del permiso `SAFE`, `EXTERNAL ACCESS`, `UNSAFE` en [
 >  [!WARNING]
 >  CLR usa la seguridad de acceso del código (CAS) de .NET Framework, que ya no se admite como un límite de seguridad. Un ensamblado CLR creado con la opción `PERMISSION_SET = SAFE` puede tener acceso a los recursos externos del sistema, llamar a código no administrado y adquirir privilegios sysadmin. A partir de [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)], se incluye una opción de `sp_configure` denominada `clr strict security` para mejorar la seguridad de los ensamblados CLR. La opción `clr strict security` está habilitada de forma predeterminada y trata los ensamblados `SAFE` y `EXTERNAL_ACCESS` como si estuvieran marcados con `UNSAFE`. La opción `clr strict security` se puede deshabilitar para permitir la compatibilidad con versiones anteriores, pero no se recomienda hacerlo. Microsoft recomienda que todos los ensamblados estén firmados con un certificado o clave asimétrica con el correspondiente inicio de sesión que tenga concedido el permiso `UNSAFE ASSEMBLY` en la base de datos maestra. Los administradores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también pueden agregar ensamblados a una lista de los ensamblados en los que el motor de base de datos debe confiar. Para más información, vea [sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md).
 
-## <a name="remarks"></a>Comentarios   
+## <a name="remarks"></a>Notas   
 
 Cuando se habilita, la opción `PERMISSION_SET` en las instrucciones `CREATE ASSEMBLY` y `ALTER ASSEMBLY` se omite en tiempo de ejecución, pero las opciones `PERMISSION_SET` se conservan en los metadatos. Si la opción se omite, se reduce el riesgo de romper las instrucciones de código existentes.
 
@@ -54,7 +54,7 @@ Cuando se habilita, la opción `PERMISSION_SET` en las instrucciones `CREATE ASS
 >  [!IMPORTANT]  
 >  Después de habilitar la seguridad estricta, los ensamblados que no estén firmados no podrán cargarse. Debe modificar (o eliminar y volver a crear) cada ensamblado para que se firme con un certificado o clave asimétrica que tenga el inicio de sesión correspondiente con el permiso `UNSAFE ASSEMBLY` en el servidor.
 
-## <a name="permissions"></a>Permissions 
+## <a name="permissions"></a>Permisos 
 
 ### <a name="to-change-this-option"></a>Para cambiar esta opción  
 Debe disponer del permiso `CONTROL SERVER` o pertenecer al rol fijo de servidor `sysadmin`.
@@ -68,7 +68,7 @@ Los siguientes permisos son necesarios para crear un ensamblado CLR cuando la op
   - La base de datos tiene la propiedad `TRUSTWORTHY` establecida en `ON` y pertenece a un inicio de sesión que tiene el permiso `UNSAFE ASSEMBLY` en el servidor. Esta opción no se recomienda.  
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
   
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   

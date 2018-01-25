@@ -14,20 +14,20 @@ ms.topic: article
 f1_keywords: sql13.swb.maint.reportinglogging.f1
 ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c3a26d6e0cdf6e356fa65035cff28f99b86bbb6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 05d9eac7b81f5a17d5f2b9de71cc0a7027896354
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>Plan de mantenimiento (página de informes y registro)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use el cuadro de diálogo **Informes y registro** para configurar los informes y registros que se generan al ejecutar los planes de mantenimiento.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Generar un informe de archivo de texto**  
  Especifique si quiere que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escriba un informe de archivo de texto.  
   
@@ -52,10 +52,10 @@ ms.lasthandoff: 11/17/2017
  **Conexión**  
  Especifica la información de conexión que se va a usar al registrar en un servidor remoto.  
   
- **Nuevo**  
+ **Nueva**  
  Muestra el cuadro de diálogo **Propiedades de conexión** . Se usa para configurar información de conexión nueva para registrar en un servidor remoto.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Planes de mantenimiento](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)  
   

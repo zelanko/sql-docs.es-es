@@ -16,13 +16,13 @@ ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d415cfe737b8b559873b581e094b408495eb386
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8ff85dabb4dc02737ccd0379435c85c87902a8dc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="page-setup-dialog-box"></a>Configurar página (cuadro de diálogo)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede personalizar el diseño de la página seleccionando las opciones del cuadro de diálogo **Configurar página**. La disponibilidad de algunas opciones depende de los idiomas que estén instalados y habilitados para la edición.  

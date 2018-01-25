@@ -21,15 +21,15 @@ helpviewer_keywords:
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 47a0090ce4c927eb41d30b7d5e7f417bedd614fb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1d06987ca4d4f9bf0b9aee605effdeb78ab3f095
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Usar los resultados de FOR XML en el código de aplicación
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Al utilizar cláusulas FOR XML con consultas SQL, se pueden recuperar e incluso convertir los resultados de la consulta como datos XML. Esta funcionalidad permite realizar las siguientes operaciones cuando los resultados de las consultas FOR XML se pueden utilizar en el código de aplicación XML:  
@@ -298,7 +298,7 @@ SqlConnection closed.
 > [!NOTE]  
 >  La compatibilidad con el tipo de datos **xml** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite solicitar que el resultado de una consulta FOR XML se devuelva como un tipo de datos **xml** en lugar de datos con tipo cadena o imagen, especificando la [directiva TYPE](../../relational-databases/xml/type-directive-in-for-xml-queries.md). Cuando se usa la directiva TYPE en las consultas FOR XML, el tipo de acceso que se proporciona mediante programación a los resultados de FOR XML es similar al que se muestra en [Usar datos XML en las aplicaciones](../../relational-databases/xml/use-xml-data-in-applications.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

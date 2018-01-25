@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SRID
 ms.assetid: 0612658a-7d1b-4178-bdc2-42b914ea31a7
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2db558ab84f2eda8ea56c33ceb13d162a03ffdef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eded5bfe9022cdbc8a0c991d5eb1d5f621aaf825
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="spatial-reference-identifiers-srids"></a>Identificadores de referencia espacial (SRID)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Cada instancia espacial tiene un identificador de referencia espacial (SRID). El SRID corresponde a un sistema de referencia espacial basado en el elipsoide concreto usado para la creación de mapas de tierra plana o de tierra redonda.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  El sistema de identificación de referencia espacial está definido por la norma de [European Petroleum Survey Group (EPSG)](http://go.microsoft.com/fwlink/?LinkId=99349) , que consiste en un conjunto de normas desarrolladas para cartografía, sondeos y almacenamiento de datos geodésicos. Esta norma es propiedad del comité Surveying and Positioning Committee de Oil and Gas Producers (OGP).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Información general de los tipos de datos espaciales](../../relational-databases/spatial/spatial-data-types-overview.md)  
   
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - size [SQL Server], files
 ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb3a4845d48fb24d5ca97823b2844e1c3ca369cf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0a450e9f52065238bb2b3a91b5c52f4c4d8fba50
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>Limitar el tamaño de la tabla y el archivo de seguimiento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los resultados de Seguimiento de SQL difieren en cuanto a tamaño en función de las clases de evento que se incluyen en el seguimiento y la forma en que se utiliza el [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Si realiza el seguimiento de clases de evento que se producen con frecuencia, puede minimizar la cantidad de datos que recopila el seguimiento estableciendo el tamaño máximo del archivo o el número máximo de filas. Si especifica el tamaño máximo del archivo o las filas, se garantiza que el archivo o la tabla de seguimiento no crecerán más allá del límite especificado.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
  [Establecer un tamaño máximo de tabla para una tabla de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-a-maximum-table-size-for-a-trace-table-sql-server-profiler.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)  
   
   

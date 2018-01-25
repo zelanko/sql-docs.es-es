@@ -16,15 +16,15 @@ helpviewer_keywords:
 - nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 54b9f392468d4d9a5f284114bde030abba1e6ac4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f170fb28de50fcce0e1452a6f93ffa022b1b7791
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Generar elementos del mismo nivel con una consulta de modo AUTO anidada
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] En el siguiente ejemplo se muestra cómo generar elementos del mismo nivel utilizando una consulta en modo AUTO anidada. Solo hay otra forma de generar este XML, que es utilizar el modo EXPLICIT. Sin embargo, esto puede ser tedioso.  
@@ -171,7 +171,7 @@ FOR XML AUTO, TYPE
     FOR XML AUTO, TYPE ) as T(XmlCol)  
     ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Usar consultas FOR XML anidadas](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

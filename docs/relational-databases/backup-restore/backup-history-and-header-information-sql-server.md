@@ -36,15 +36,15 @@ helpviewer_keywords:
 - listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 caps.latest.revision: "54"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c7f10d27faf1c0fc658550f962c71c2419ff8607
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a44dc24eff94398ce3c33bab9d38ba58ab79ccaa
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Historial de copias de seguridad e información de encabezados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En la base de datos **msdb** se almacena un historial completo de todas las operaciones de copia de seguridad y restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de una instancia de servidor. En este tema se describen las tablas del historial de copias de seguridad y restauración, así como las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se usan para tener acceso al historial de copias de seguridad. En el tema también se explica cuándo resulta útil la lista de archivos de base de datos y de registro de transacciones, y cuándo se debe usar la información de encabezado de medios con respecto a cuándo se debe usar la información de encabezado de copia de seguridad.  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="BnRHistoryTables"></a> Tablas del historial de copias de seguridad y restauración  
  En esta sección se presentan las tablas del historial que almacenan metadatos de copias de seguridad y restauración en la base de datos del sistema **msdb** .  
   
-|Tabla del historial|Descripción|  
+|Tabla del historial|Description|  
 |-------------------|-----------------|  
 |[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Contiene una fila por cada archivo de datos o de registro del que se hace una copia de seguridad.|  
 |[backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)|Contiene una fila por cada grupo de archivos de un conjunto de copia de seguridad.|  
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  Las instrucciones Transact-SQL RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY y RESTORE VERIFYONLY requieren el permiso CREATE DATABASE. Este requisito proporciona una protección más completa que en versiones anteriores de los archivos de copia de seguridad y de la información que contienen. Para obtener información sobre este permiso, vea [GRANT &#40;permisos de base de datos de Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
-|Instrucción de información|Tabla del historial de copias de seguridad|Descripción|  
+|Instrucción de información|Tabla del historial de copias de seguridad|Description|  
 |---------------------------|--------------------------|-----------------|  
 |[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Devuelve un conjunto de resultados que contiene la lista de los archivos de base de datos y de registro del conjunto de copia de seguridad especificado.<br /><br /> Para obtener más información, vea "Enumerar los archivos de base de datos y del registro de transacciones" más adelante en este tema.|  
 |[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|Obtiene la información del encabezado sobre todos los conjuntos de copias de seguridad de un dispositivo determinado. El resultado de la ejecución de RESTORE HEADERONLY es un conjunto de resultados.<br /><br /> Para obtener más información, vea "Ver la información de encabezado de copia de seguridad" más adelante en este tema.|  
@@ -223,7 +223,7 @@ ms.lasthandoff: 11/17/2017
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> (SMO)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   

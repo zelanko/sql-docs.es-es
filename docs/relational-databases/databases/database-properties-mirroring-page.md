@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.mirroring.f1
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 caps.latest.revision: "86"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 267091bc845fdcbfa1c2eafd49bca20c673f966b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f1dece952a9aba10ef1dff5fe92d7747ae11f711
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-mirroring-page"></a>Propiedades de la base de datos (página Creación de reflejo)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Acceda a esta página desde la base de datos principal y utilícela para configurar y modificar las propiedades de la creación de reflejo de la base de datos. Utilícela también para iniciar el Asistente para la configuración de seguridad de la creación de reflejo de bases de datos, ver el estado de una sesión de creación de reflejo y pausar o quitar la sesión de creación de reflejo de la base de datos.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Configurar seguridad**  
  Haga clic en este botón para ejecutar el **Asistente para la configuración de seguridad de la creación de reflejo de bases de datos**.  
   
@@ -71,7 +71,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  Para obtener más información, vea [Especificar una dirección de red de servidor &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
-> **NOTA:** Durante una sesión de creación de reflejo de la base de datos, las instancias del servidor principal y reflejado no pueden modificarse; sin embargo, la instancia del servidor testigo puede cambiarse durante una sesión. Para obtener más información, vea la sección "Notas" más adelante en este tema.  
+> **NOTA:** Durante una sesión de creación de reflejo de la base de datos, las instancias del servidor principal y reflejado no pueden modificarse; sin embargo, la instancia del servidor testigo puede cambiarse durante una sesión. Para obtener más información, vea la sección "Comentarios" más adelante en este tema.  
   
  **Iniciar creación de reflejo**  
  Haga clic para iniciar la creación de reflejo, cuando se cumplan todas las condiciones siguientes:  
@@ -119,7 +119,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 |Opción|¿Testigo?|Explicación|  
 |------------|--------------|-----------------|  
 |**Rendimiento alto (asincrónico)**|Null (si existe, no se usa excepto cuando la sesión requiere un quórum)|Para maximizar el rendimiento, la base de datos reflejada siempre estará algo detrás de la base de datos principal, nunca acercándose demasiado. Sin embargo, el espacio entre las bases de datos suele ser pequeño. La pérdida de un asociado tiene el siguiente efecto:<br /><br /> Si la instancia de servidor reflejado deja de estar disponible, el principal continúa.<br /><br /> Si la instancia del servidor principal deja de estar disponible, el servidor reflejado se detiene. Sin embargo, si la sesión no tiene testigos (recomendado) o el testigo se conecta al servidor reflejado, éste permanecerá inaccesible en estado de espera activa; el propietario de la base de datos puede forzar el servicio en la instancia del servidor reflejado (con una posible pérdida de datos).|  
-|**Seguridad alta sin conmutación automática por error (sincrónico)**|No|Se garantiza que todas las transacciones confirmadas se escribirán en disco en el servidor reflejado.<br /><br /> La conmutación por error manual es posible cuando los asociados están conectados entre sí.<br /><br /> La pérdida de un asociado tiene el siguiente efecto:<br /><br /> Si la instancia de servidor reflejado deja de estar disponible, el principal continúa.<br /><br /> Si la instancia del servidor principal deja de estar disponible, el reflejo se detiene, pero está disponible como estado de espera activa; el propietario de la base de datos puede forzar el servicio en la instancia del servidor reflejado (con una posible pérdida de datos).|  
+|**Seguridad alta sin conmutación automática por error (sincrónico)**|no|Se garantiza que todas las transacciones confirmadas se escribirán en disco en el servidor reflejado.<br /><br /> La conmutación por error manual es posible cuando los asociados están conectados entre sí.<br /><br /> La pérdida de un asociado tiene el siguiente efecto:<br /><br /> Si la instancia de servidor reflejado deja de estar disponible, el principal continúa.<br /><br /> Si la instancia del servidor principal deja de estar disponible, el reflejo se detiene, pero está disponible como estado de espera activa; el propietario de la base de datos puede forzar el servicio en la instancia del servidor reflejado (con una posible pérdida de datos).|  
 |**Seguridad alta con conmutación automática por error (sincrónico)**|Sí (obligatorio)|Máxima disponibilidad al incluir una instancia del servidor testigo para permitir la conmutación automática por error. Tenga en cuenta que solo puede seleccionar la opción **Seguridad alta con conmutación automática por error (sincrónico)** si antes ha especificado una dirección del servidor testigo.<br /><br /> La conmutación por error manual es posible cuando los asociados están conectados entre sí.<br /><br /> **\*\* Importante \*\*** Si el testigo se desconecta, los asociados deben estar conectados entre ellos para que la base de datos esté disponible. Para obtener más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).<br /><br /> En los modos de funcionamiento sincrónicos, se garantiza que todas las transacciones confirmadas se escribirán en disco en el servidor reflejado. En la presencia de un testigo, la pérdida de un asociado tiene el siguiente efecto:<br /><br /> Si la instancia del servidor principal deja de estar disponible, se produce una conmutación automática por error. La instancia del servidor reflejado cambia al rol de servidor principal y ofrece su base de datos como base de datos principal.<br /><br /> Si la instancia de servidor reflejado deja de estar disponible, el principal continúa.<br /><br /> <br /><br /> Para más información, consulte [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).|  
   
  Una vez iniciada la creación de reflejo, puede cambiar el modo operativo y guardar el cambio haciendo clic en **Aceptar**.  
@@ -134,7 +134,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 |**Esta base de datos no se ha configurado para la creación de reflejo**|No existe ninguna sesión de creación de reflejo de la base de datos y no hay actividad de la que informar en la página **Creación de reflejo** .|  
 |**En pausa**|La base de datos principal está disponible, pero no envía ningún registro al servidor reflejado.|  
 |**Sin conexión**|La instancia del servidor principal no se puede conectar a su asociado.|  
-|**Sincronizando**|El contenido de la base de datos reflejada va por detrás del contenido de la base de datos principal. La instancia de servidor principal envía las entradas de registro a la instancia del servidor reflejado, que aplica los cambios en la base de datos reflejada para confirmarla.<br /><br /> Al inicio de una sesión de creación de reflejo de la base de datos, las bases de datos reflejada y principal se encuentran en este estado.|  
+|**Sincronizando**|El contenido de la base de datos reflejada va por detrás del contenido de la base de datos principal. La instancia de servidor principal envía las entradas de registro a la instancia del servidor reflejado, que aplica los cambios en la base de datos reflejada para confirmarla.<br /><br /> Al inicio de una sesión de creación de reflejo de la base de datos, las bases de datos principal y reflejada se encuentran en este estado.|  
 |**Conmutación por error**|En la instancia de servidor principal se ha iniciado una conmutación por error manual (intercambio de roles); el servidor actualmente está pasando al rol reflejado. En este estado, las conexiones de los usuarios a la base de datos principal finalizan rápidamente. La base de datos adopta el rol reflejado poco después.|  
 |**Sincronizado**|El estado de la base de datos cambia a **Sincronizado**cuando el servidor reflejado está suficientemente al día con respecto al servidor principal. La base de datos permanece en este estado mientras el servidor principal continúa con el envío de cambios al servidor reflejado, y el servidor reflejado continúa con la aplicación de los cambios en la base de datos reflejada.<br /><br /> En el modo de seguridad alta, es posible la conmutación por error sin pérdida de datos.<br /><br /> En el modo de rendimiento alto, siempre es posible que se pierdan datos, incluso en el estado **Sincronizado**.|  
   
@@ -143,7 +143,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  **Actualizar**  
  Haga clic para actualizar el cuadro **Estado** .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si no está familiarizado con la creación de reflejo de la base de datos, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 ### <a name="adding-a-witness-to-an-existing-session"></a>Agregar un testigo a una sesión existente  
@@ -179,7 +179,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
 -   [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - security [SQL Server replication], modifying settings
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1982ed9a207dad495d6e9e8555785a9260498cc6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 811b1d9e9ccc5d561ddc45b9b3c9e9c87443a27d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Ver y modificar la configuración de seguridad de la replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo ver y modificar la configuración de seguridad de la replicación en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o Replication Management Objects (RMO). Por ejemplo, puede que desee cambiar la conexión del Agente de registro del LOG al publicador de la autenticación de SQL Server a la autenticación de Windows integrada, o puede que necesite cambiar las credenciales utilizadas para ejecutar un trabajo de agente cuando la contraseña de la cuenta de Windows ha cambiado. Para obtener información sobre los permisos que necesita cada agente, vea [Modelo de seguridad del agente de replicación](../../../relational-databases/replication/security/replication-agent-security-model.md).  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **Seguimiento:**  [después de modificar la configuración de seguridad de la replicación](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="Security"></a> Seguridad  
  Por razones de seguridad, los valores reales de las contraseñas se enmascaran en los conjuntos de resultados devueltos por los procedimientos almacenados de replicación.  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
  Vea y modifique la configuración de seguridad en los siguientes cuadros de diálogo:  
@@ -575,13 +575,13 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="FollowUp"></a> Seguimiento: después de modificar la configuración de seguridad de la replicación  
  Después de cambiar un inicio de sesión o una contraseña de agente, debe detener y reiniciar el agente para que el cambio surta efecto.  
   
-## <a name="see-also"></a>Vea también  
- [Conceptos de los Replication Management Objects (RMO)](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+## <a name="see-also"></a>Ver también  
+ [Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Actualizar scripts de replicación &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
  [Administrar inicios de sesión y contraseñas en la replicación](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
  [Modelo de seguridad del Agente de replicación](../../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Seguridad y protección &#40;replicación&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
+ [Conceptos de procedimientos almacenados del sistema de replicación](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
   
   

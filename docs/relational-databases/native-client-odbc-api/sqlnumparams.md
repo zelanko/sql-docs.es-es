@@ -1,5 +1,5 @@
 ---
-title: SQLNumParams | Documentos de Microsoft
+title: SQLNumParams | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: 8e0c7d87-d7f2-455a-bfb8-67066adc04f9
 caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d4b676aba2d7971853d6e235252200c6c8e4e85c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 68486eacf265beae6d8e1589a61c909e61436a7c
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlnumparams"></a>SQLNumParams
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,10 +29,10 @@ ms.lasthandoff: 11/17/2017
 
   Mejoras en el principio del motor de base de datos con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] permitir SQLNumParams obtener descripciones más precisas de los resultados esperados. Estos resultados más precisos pueden diferir de los valores devueltos por SQLNumParams en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Para obtener más información, consulte [de detección de metadatos](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Para obtener más información, vea [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Función SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404)   
- [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Detalles de implementación de API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

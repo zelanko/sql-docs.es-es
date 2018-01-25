@@ -15,12 +15,12 @@ ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 caps.latest.revision: "18"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: c04481fbe3cb71606509483e542747140b565ca8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: cbbd9d7008457009925f20a74fd2a80866bc6419
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>Instalar actualizaciones desde el símbolo del sistema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Pruebe y modifique los scripts de instalación para adaptarlos a las necesidades de su organización. 
@@ -33,7 +33,7 @@ El nombre del paquete de actualización puede variar y es posible que incluya un
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance
     ```
-    o bien 
+    o Administrador de configuración de 
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<Instance ID>. 
     ```
@@ -76,7 +76,7 @@ El nombre del paquete de actualización puede variar y es posible que incluya un
 > [!IMPORTANT] 
 > Cuando sea posible, proporcione credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado. 
  
-|Switch|Descripción| 
+|Switch|Description| 
 |------------|-----------------| 
 |**/?**|Muestra la ayuda del símbolo del sistema para la instalación desatendida| 
 |**/action=Patch o /action=RemovePatch**|Especifica la acción de instalación: Patch o RemovePatch.| 

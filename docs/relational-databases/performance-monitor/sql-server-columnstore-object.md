@@ -15,13 +15,13 @@ ms.assetid: ae663a49-012f-4ffe-a332-f03157843052
 caps.latest.revision: "8"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb0f5a1872802fc5f623650902ab7a92fe72c6e0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 041279879116916b0d603e8c1f9a81f8ad180f70
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-columnstore-object"></a>Objeto Columnstore de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
   
  En la siguiente tabla se describen los contadores de rendimiento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Columnstore** counters.  
   
-|Contadores de Columnstore|Descripción|  
+|Contadores de Columnstore|Description|  
 |--------------------------|-----------------|  
 |**Grupos de filas delta cerrados**|Número de grupos de filas delta cerrados.|  
 |**Grupos de filas delta comprimidos**|Número de grupos de filas delta comprimidos.|  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |**Total de grupos de filas comprimidos de combinación**|Número de grupos de filas de destino comprimidos creados con MERGE desde el inicio de SQL Server.|  
 |**Total de grupos de filas de origen combinados**|Número de grupos de filas de origen combinados desde el inicio de SQL Server.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - join filters
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7873edc14c20b25cefa66a7c1602c056ab7b978f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 211bde4093eff61342659558e231fb29c13e5bd7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="join-filters"></a>filtros de combinación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Un filtro de combinación permite filtrar una tabla en función de cómo se haya filtrado una tabla relacionada en la publicación. Normalmente, una tabla primaria se filtra utilizando un filtro con parámetros; por tanto, los filtros de combinación se definen de manera muy similar a como se define una combinación entre tablas. Los filtros de combinación amplían el filtro con parámetros de modo que los datos de las tablas relacionadas solo se replican si coinciden con la cláusula del filtro de combinación.  
@@ -92,7 +92,7 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
   
      Se recomienda encarecidamente que todas las lógicas similares se expresen en un filtro de combinación en lugar de una subconsulta. Si la aplicación requiere que un filtro de fila utilice una subconsulta, asegúrese de que la subconsulta solo hace referencia a los datos de búsqueda que no cambian.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Filtrar datos publicados para la replicación de mezcla](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
  [Filtros de fila con parámetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   

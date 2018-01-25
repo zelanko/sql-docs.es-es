@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31cd1294590d81c25a0a09d67a7746ea7dee49ea
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f48c7d177acea6812a7b10610a2ab67930b3e9e2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La administración basada en directivas permite supervisar los procedimientos recomendados de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un conjunto de archivos de directivas que puede importar como directivas de procedimientos recomendados y después evalúa las directivas con un conjunto de destinos que incluye instancias, objetos de instancia, bases de datos u objetos de base de datos. Evalúe manualmente las directivas y establecer directivas para evaluar un conjunto de destinos según una programación o para evaluar un conjunto de destinos según un evento. Para obtener más información sobre la administración basada en directivas, vea [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
 |Error por superación de tiempo de espera de E/S en sistema de registro de eventos de Windows|[Tiempo de espera de entrada y salida del sistema de almacenamiento](../../relational-databases/policy-based-management/storage-system-input-output-time-out.md)|  
 |Error del sistema del registro de eventos de Windows|[Errores del sistema inesperados](../../relational-databases/policy-based-management/unexpected-system-failures.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Trabajar con facetas de administración basada en directivas](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)  
   
   

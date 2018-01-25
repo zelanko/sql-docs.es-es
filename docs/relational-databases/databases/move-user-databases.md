@@ -27,15 +27,15 @@ helpviewer_keywords:
 - databases [SQL Server], moving
 ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8ec85fee12e6cefb7020d02a96a21d54d630d6dd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eb72a2d6947406c8fc14d40571ada79151668422
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="move-user-databases"></a>Mover bases de datos de usuario
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede mover los archivos de datos, del registro y del catálogo de texto completo de una base de datos de usuario a una nueva ubicación. Para hacerlo, especifique la nueva ubicación en la cláusula FILENAME de la instrucción [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Este método se aplica para mover archivos de la base de datos dentro de la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para mover una base de datos a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a otro servidor, use las operaciones de [copias de seguridad y restauración](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) o [separar y adjuntar](../../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md).  
@@ -181,7 +181,7 @@ WHERE database_id = DB_ID(N'AdventureWorks2012')
     AND type_desc = N'LOG';  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   

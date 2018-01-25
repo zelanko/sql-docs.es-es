@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ba02d945babd10cca11d07f6aa9e6ac01545661
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 51b4813c67c7f7346bea533764b13fceef06db12
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-quality-services-concepts"></a>Conceptos de Data Quality Services
   En este tema se proporciona un breve resumen de los conceptos de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) en administración del conocimiento, proyectos de calidad de datos y administración de calidad de datos.  
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/20/2017
   
  Para obtener más información acerca de la administración de DQS, vea [DQS Administration](../data-quality-services/dqs-administration.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Data Quality Services](../data-quality-services/data-quality-services.md)  
   
   

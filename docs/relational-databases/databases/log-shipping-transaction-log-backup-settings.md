@@ -14,22 +14,22 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.logshipping.settings.tlogback.f1
 ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1a24073b312835faab6b54874dedfa0fc58d1ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 01a15e3ebf54cae459aad00052e009774d125c56
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>Configuración de copias de seguridad de trasvase de registros de transacciones
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice este cuadro de diálogo para configurar y modificar los parámetros de copia de seguridad de registros de transacciones para una configuración de trasvase de registros.  
   
  Para obtener una explicación de los conceptos relacionados con el trasvase de registros, vea [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Ruta de red a esta carpeta de copia de seguridad**  
  Escriba en este cuadro el recurso compartido de red para la carpeta de copia de seguridad. La carpeta local donde se guardan las copias de seguridad de registros de transacciones deben estar compartidas, de forma que los trabajos de copia del trasvase de registros puedan copiar estos archivos en el servidor secundario. Debe conceder permisos de lectura para este recurso compartido de red a la cuenta de proxy con la que se ejecuta el trabajo de copia en la instancia del servidor secundario. De forma predeterminada, ésta es la cuenta de servicio SQLServerAgent de la instancia del servidor secundario; el administrador puede elegir otra cuenta de proxy para el trabajo.  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/17/2017
 |**Comprimir copia de seguridad**|Haga clic para comprimir la copia de seguridad, sin tener en cuenta el valor predeterminado de nivel de servidor.<br /><br /> **\*\* Importante \*\*** De forma predeterminada, la compresión aumenta significativamente el uso de CPU y la CPU adicional que consume el proceso de compresión puede afectar negativamente a las operaciones simultáneas. Por tanto, podría ser conveniente crear copias de seguridad comprimidas de prioridad baja en una sesión en la que el [regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)limite el uso de CPU. Para obtener más información, vea [Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)limite el uso de CPU.|  
 |**No comprimir copia de seguridad**|Haga clic para crear una copia de seguridad sin comprimir, independientemente del valor predeterminado de nivel de servidor.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Configurar un usuario para crear y administrar trabajos del Agente SQL Server](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef)   
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

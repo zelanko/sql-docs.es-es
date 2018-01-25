@@ -20,15 +20,15 @@ helpviewer_keywords:
 - business logic handlers [SQL Server replication]
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2b5ba4a4f8b3a52859e4873e8f3eb9f76ea5e579
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fadbd13868423a4defc38dad56653e745634fdb4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Ejecutar lógica de negocios durante la sincronización de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El marco de trabajo de controladores de lógica de negocios permite escribir un ensamblado de código administrado al que se llama durante el proceso de sincronización de mezcla. El ensamblado incluye lógica de negocios que puede responder a varias condiciones durante la sincronización: cambios de datos, conflictos y errores. El marco de trabajo de controladores de lógica de negocios proporciona un modelo de programación simple y los datos que el proceso de mezcla suministra al ensamblado tienen el formato de un conjunto de datos ADO.NET, lo que permite aprovechar el conocimiento de ADO.NET en lugar de aprender el uso de una interfaz privada. Para obtener más información acerca de los controladores de lógica de negocios de programación, vea:  
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Un servidor con Internet Information Services (IIS), si se utiliza la sincronización web. Utilice una suscripción de extracción sincronizada con la sincronización web y el controlador de lógica de negocios se ejecutará en el servidor IIS.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Merge Replication](../../../relational-databases/replication/merge/merge-replication.md)  (Replicación de mezcla)  
  [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)   
  [Synchronize Data](../../../relational-databases/replication/synchronize-data.md)  (Sincronizar datos)  

@@ -14,22 +14,22 @@ ms.topic: article
 f1_keywords: sql13.rep.configuredistributionwizard.distributiondatabase.f1
 ms.assetid: 5b42a083-7a11-41d8-9e3f-320c7c907237
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cf405b6615840511309dcc3c9a233bdc12479249
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e409092572a5bc495eafe2da77c91eb99faea029
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distribution-database"></a>Base de datos de distribución
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En la base de datos de distribución se almacenan metadatos y datos del historial de todos los tipos de replicación, y transacciones de replicación transaccional.  
   
  En muchas ocasiones, una sola base de datos de distribución resulta suficiente. No obstante, si varios publicadores utilizan un único distribuidor, considere la posibilidad de crear una base de datos de distribución para cada publicador. De esta forma, se garantiza que los datos que pasan por cada base de datos de distribución son distintos. Para especificar una base de datos de distribución para el distribuidor, puede utilizar el Asistente para configurar la distribución. Si es necesario, especifique bases de datos de distribución adicionales en el cuadro de diálogo **Propiedades del distribuidor** .  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Nombre de base de datos de distribución**  
  Escriba el nombre de la base de datos de distribución. El nombre predeterminado de la base de datos de distribución es "distribution". Si especifica un nombre, éste puede tener como máximo 128 caracteres, debe ser único dentro de una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y debe respetar las reglas para los identificadores. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
@@ -39,8 +39,8 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Puede reducir el tiempo que se tarda en escribir las transacciones y mejorar el rendimiento de la replicación si coloca el registro de la base de datos de distribución en una unidad de disco separada de la base de datos de distribución.  
   
-## <a name="see-also"></a>Vea también  
- [Configurar la distribución](../../relational-databases/replication/configure-distribution.md)   
+## <a name="see-also"></a>Ver también  
+ [Configurar distribución](../../relational-databases/replication/configure-distribution.md)   
  [Configurar la publicación y la distribución](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Ver y modificar las propiedades del distribuidor y del publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)  
   

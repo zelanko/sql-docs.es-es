@@ -1,5 +1,5 @@
 ---
-title: bcp_setcolfmt | Documentos de Microsoft
+title: bcp_setcolfmt | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_setcolfmt function
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c01a4e7098524e14c8198894a4f282b602cb1166
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 553681c7e0e56978f5df44b23041e52a66f129a9
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,13 +53,13 @@ RETCODE bcp_setcolfmt (
  *HDBC*  
  Es el identificador de la conexión ODBC habilitada para la copia masiva.  
   
- *campo*  
+ *field*  
  Es el número de columnas ordinal para el que se establece la propiedad.  
   
  *propiedad*  
  Es una de las constantes de propiedad. Las constantes de propiedad se definen en esta tabla.  
   
-|propiedad|Valor|Descripción|  
+|propiedad|Value|Description|  
 |--------------|-----------|-----------------|  
 |BCP_FMT_TYPE|BYTE|Es el tipo de datos de esta columna del archivo de usuario. Si es distinto del tipo de datos de la columna correspondiente de la tabla de base de datos, la copia masiva convierte los datos si es posible.<br /><br /> Los tokens de tipo de datos de SQL Server enumeran el parámetro BCP_FMT_TYPE en sqlncli.h, en lugar de los enumeradores de tipo de datos de ODBC C. Por ejemplo, puede especificar una cadena de caracteres, tipo SQL_C_CHAR de ODBC, utilizando el tipo específico SQLCHARACTER de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Para especificar la representación de datos predeterminada para el tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], establezca este parámetro en 0.<br /><br /> Para una copia masiva de SQL Server en un archivo, cuando BCP_FMT_TYPE es SQLDECIMAL o SQLNUMERIC, si la columna de origen no es **decimal** o **numérico**, se utilizan la precisión y escala predeterminadas. En caso contrario, si la columna de origen es **decimal** o **numérico**, se usarán la precisión y escala de la columna de origen.|  
 |BCP_FMT_INDICATOR_LEN|INT|Es la longitud en bytes del indicador (prefijo).<br /><br /> Es la longitud, en bytes, de un indicador de longitud o nulo en los datos de columna. Los valores de longitud de indicador válidos son 0 (cuando no se utiliza ningún indicador), 1, 2 ó 4.<br /><br /> Para especificar el uso del indicador de copia masiva predeterminado, establezca este parámetro en SQL_VARLEN_DATA.<br /><br /> Los indicadores aparecen directamente en memoria antes de cualquier dato y en el archivo de datos directamente antes de los datos a los que se aplican.<br /><br /> Si se utiliza más de un medio de especificar una longitud de columna del archivo de datos (como un indicador y una longitud máxima de columna o un indicador y una secuencia de terminador) , la copia masiva elige aquél por el que se copia la cantidad mínima de datos.<br /><br /> Los archivos de datos generados mediante la copia masiva cuando ninguna intervención de usuario ajusta el formato de los datos contienen indicadores acerca de cuándo los datos de columna pueden variar en longitud o cuándo la columna puede aceptar como valores los valores NULL.|  
@@ -71,7 +71,7 @@ RETCODE bcp_setcolfmt (
  *pValue*  
  Es el puntero al valor que se va a asociar a la *property*. Permite establecer cada propiedad de formato de columna individualmente.  
   
- *cbValue*  
+ *cbvalue*  
  Es la longitud del búfer de propiedad en bytes.  
   
 ## <a name="returns"></a>Devuelve  

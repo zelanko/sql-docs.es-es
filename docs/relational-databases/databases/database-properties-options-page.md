@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.options.f1
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 caps.latest.revision: "67"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 367562c82bd9ed041dbd12e2fa195f75fcf99f05
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 342f7d2f57d8832ca0188ceea9112673746690b7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-options-page"></a>Propiedades de la base de datos (página Opciones)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  La habilitación de bases de datos parcialmente independientes delega el control sobre el acceso a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en los propietarios de la base de datos. Para más información, vea [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
-## <a name="automatic"></a>Automática  
+## <a name="automatic"></a>Automático  
  **Cerrar automáticamente**  
  Especifique si la base de datos se cierra sin problemas y libera los recursos cuando sale el último usuario. Los valores posibles son **True** o **False**. Con el valor **True**, la base de datos se cierra sin problemas y se liberan sus recursos después de que salga el último usuario.  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
   
  Establecer esta opción en **True** no tiene ningún efecto a menos que **Actualizar estadísticas automáticamente** también se establezca en **True**.  
   
-## <a name="containment"></a>Contenedores  
+## <a name="containment"></a>Containment  
  En las bases de datos independientes, algunos valores que se suelen configurar en el nivel de servidor se pueden configurar en el nivel de base de datos.  
   
  **LCID del idioma de texto completo predeterminado**  
@@ -239,7 +239,7 @@ Identificador de solo lectura.
   
 
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   

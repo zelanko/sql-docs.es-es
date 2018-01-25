@@ -19,15 +19,15 @@ helpviewer_keywords:
 - servers [SQL Server], backup
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
 caps.latest.revision: "57"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2732f2074bb144c5ae0357ef23127e6eba454bc1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e96e6f50db8029b24be5e3387f9248e11019c264
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>Realizar copias de seguridad y restaurar bases de datos del sistema (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,14 +36,14 @@ ms.lasthandoff: 11/17/2017
   
  En la tabla siguiente se resumen todas las bases de datos del sistema.  
   
-|Base de datos del sistema|Descripción|¿Son necesarias copias de seguridad?|Modelo de recuperación|Comentarios|  
+|Base de datos del sistema|Description|¿Son necesarias copias de seguridad?|modelo de recuperación|Comentarios|  
 |---------------------|-----------------|---------------------------|--------------------|--------------|  
 |[maestra](../../relational-databases/databases/master-database.md)|Base de datos en la que se registra toda la información del sistema de un sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Sí|Simple|Realice copias de seguridad de la base de datos **maestra** con la frecuencia necesaria para que los datos estén suficientemente protegidos según sus necesidades empresariales. Se recomienda llevar a cabo una programación periódica de copias de seguridad, que se puede complementar con copias de seguridad adicionales cuando exista una actualización sustancial.|  
 |[model](../../relational-databases/databases/model-database.md)|Plantilla para todas las bases de datos creadas en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Sí|Configurable por el usuario*|Haga una copia de seguridad de **model** solo cuando sea necesario para sus necesidades empresariales: por ejemplo, después de personalizar las opciones de la base de datos.<br /><br /> **Recomendación:** es aconsejable crear copias de seguridad completas de base de datos de **model**, solo cuando sea necesario. Puesto que **model** es de pequeño tamaño y no suele cambiar, no es necesario realizar copia de seguridad del registro.|  
 |[msdb](../../relational-databases/databases/msdb-database.md)|La base de datos usada por el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para programar alertas y trabajos y para registrar operadores. **msdb** también contiene tablas de historial y tablas de historial de copias de seguridad y restauración.|Sí|Simple (valor predeterminado)|Realice copias de seguridad de la base de datos **msdb** cuando se actualice.|  
-|[Resource](../../relational-databases/databases/resource-database.md) (RDB)|Base de datos de solo lectura que contiene copias de todos los objetos del sistema que se incluyen con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|No|—|La base de datos **Resource** se encuentra en el archivo mssqlsystemresource.mdf, que solo contiene código. Por lo tanto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede hacer una copia de seguridad de la base de datos **Resource** .<br /><br /> Nota: Para realizar una copia de seguridad basada en archivos o basada en disco del archivo mssqlsystemresource.mdf, trátelo como si fuera un archivo binario (.exe), en lugar de un archivo de base de datos. No obstante, no puede utilizar la restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en las copias de seguridad. La restauración de una copia de seguridad de mssqlsystemresource.mdf solo se puede hacer de forma manual y hay que tener cuidado de no sobrescribir la base de datos **Resource** actual con una versión obsoleta o potencialmente insegura.|  
-|[tempdb](../../relational-databases/databases/tempdb-database.md)|Área de trabajo que contiene conjuntos de resultados temporales o intermedios. Esta base de datos se vuelve a crear cada vez que se inicia una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando se cierra la instancia de servidor, los datos de la base de datos **tempdb** se eliminan de manera permanente.|No|Simple|No se pueden realizar copias de seguridad de la base de datos del sistema **tempdb** .|  
-|[Configurar la distribución](../../relational-databases/replication/configure-distribution.md)|Base de datos que solo existe si el servidor está configurado como un distribuidor de replicación. En esta base de datos se almacenan metadatos y datos del historial de todos los tipos de replicación y transacciones de replicación transaccional.|Sí|Simple|Para obtener más información sobre cuándo realizar copias de seguridad de la base de datos **distribution**, vea [Hacer copias de seguridad y restaurar bases de datos replicadas](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).|  
+|[Resource](../../relational-databases/databases/resource-database.md) (RDB)|Base de datos de solo lectura que contiene copias de todos los objetos del sistema que se incluyen con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|no|—|La base de datos **Resource** se encuentra en el archivo mssqlsystemresource.mdf, que solo contiene código. Por lo tanto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede hacer una copia de seguridad de la base de datos **Resource** .<br /><br /> Nota: Para realizar una copia de seguridad basada en archivos o basada en disco del archivo mssqlsystemresource.mdf, trátelo como si fuera un archivo binario (.exe), en lugar de un archivo de base de datos. No obstante, no puede utilizar la restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en las copias de seguridad. La restauración de una copia de seguridad de mssqlsystemresource.mdf solo se puede hacer de forma manual y hay que tener cuidado de no sobrescribir la base de datos **Resource** actual con una versión obsoleta o potencialmente insegura.|  
+|[tempdb](../../relational-databases/databases/tempdb-database.md)|Área de trabajo que contiene conjuntos de resultados temporales o intermedios. Esta base de datos se vuelve a crear cada vez que se inicia una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando se cierra la instancia de servidor, los datos de la base de datos **tempdb** se eliminan de manera permanente.|no|Simple|No se pueden realizar copias de seguridad de la base de datos del sistema **tempdb** .|  
+|[Configurar distribución](../../relational-databases/replication/configure-distribution.md)|Base de datos que solo existe si el servidor está configurado como un distribuidor de replicación. En esta base de datos se almacenan metadatos y datos del historial de todos los tipos de replicación y transacciones de replicación transaccional.|Sí|Simple|Para obtener más información sobre cuándo realizar copias de seguridad de la base de datos **distribution**, vea [Hacer copias de seguridad y restaurar bases de datos replicadas](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).|  
   
  *Para obtener más información sobre el modelo de recuperación actual del modelo, vea [Ver o cambiar el modelo de recuperación de una base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) o [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Mover bases de datos del sistema](../../relational-databases/databases/move-system-databases.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Base de datos de distribución](../../relational-databases/replication/distribution-database.md)   
  [Base de datos maestra](../../relational-databases/databases/master-database.md)   
  [Base de datos msdb](../../relational-databases/databases/msdb-database.md)   

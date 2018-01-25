@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Replication Monitor, adding and removing Publishers
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e36b7c4ca6eeb4ab5ec74407dfd0bd3ba4d6f745
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 730ea279e71fc0d4ce02790beeba0d8dbc8bfb34
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Agregar y quitar publicadores del Monitor de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El servidor desde el que inicia el Monitor de replicación se agrega automáticamente al monitor si es un publicador. Se pueden agregar más publicadores mediante el cuadro de diálogo **Agregar publicador** . Una vez agregado un publicador, se muestra en un grupo en el panel izquierdo del monitor. El grupo **Mis publicadores** se incluye de manera predeterminada, pero puede crear grupos nuevos para administrar una o más topologías de replicación. Para obtener información sobre cómo iniciar el Monitor de replicación, consulte [Iniciar el Monitor de replicación](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
@@ -109,7 +109,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Haga clic con el botón secundario en un grupo de publicador y, a continuación, haga clic en **Quitar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Configurar distribución](../../../relational-databases/replication/configure-distribution.md)   
  [Supervisar la replicación](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   

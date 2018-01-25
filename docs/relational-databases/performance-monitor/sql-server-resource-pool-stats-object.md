@@ -16,15 +16,15 @@ helpviewer_keywords:
 - 'SQLServer: Resource Pool Stats object'
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 11fb2808ac4f99f9778a7ab12c81e91a379d4ef7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 626e2db49945df2262db203dde46f78d5b5bde81
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>Objeto SQL Server: Estadísticas de grupo de recursos de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El objeto SQLServer:Resource Pool Stats contiene contadores de rendimiento que notifican información sobre las estadísticas del grupo de recursos de Resource Governor.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
 |**Memoria usada (KB)**|Cantidad de memoria utilizada, en kilobytes (KB), para el grupo de recursos de servidor.|  
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [Objeto SQL Server: Estadísticas de grupo de cargas de trabajo](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)   
  [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)  

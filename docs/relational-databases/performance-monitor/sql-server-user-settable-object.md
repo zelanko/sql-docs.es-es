@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQLServer:User Settable
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97c5a83f9a773f2d0894ed0ed7e4b11e3c7384d9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4d60d2059230ed74f72ef4e5ad7f32a3f91aa40b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-user-settable-object"></a>User Settable (objeto de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El objeto **User Settable** de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite crear instancias de contadores personalizadas. Utilice las instancias de contadores personalizadas para supervisar aspectos del servidor que los contadores existentes no supervisan, como los componentes únicos de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, para determinar el número de pedidos de clientes registrados o el inventario de productos).  
@@ -36,13 +36,13 @@ ms.lasthandoff: 11/17/2017
   
  En esta tabla se describe el objeto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** .  
   
-|Contadores de Establecidas por el usuario de SQL Server|Descripción|  
+|Contadores de Establecidas por el usuario de SQL Server|Description|  
 |---------------------------------------|-----------------|  
-|**Query**|El objeto **User Settable** contiene el contador de consultas. El usuario configura los **contadores del usuario** del objeto Query.|  
+|**Consulta**|El objeto **User Settable** contiene el contador de consultas. El usuario configura los **contadores del usuario** del objeto Query.|  
   
  En esta tabla se describen las **instancias** del contador **Consulta** .  
   
-|Instancias del contador de consultas|Descripción|  
+|Instancias del contador de consultas|Description|  
 |-----------------------------|-----------------|  
 |**User counter 1**|Definido mediante **sp_user_counter1**.|  
 |**User counter 2**|Definido mediante **sp_user_counter2**.|  
@@ -75,7 +75,7 @@ GO
 ## <a name="permissions"></a>Permisos  
  **sp_user_counter** está disponible para todos los usuarios, pero puede estar restringido para cualquier contador de consultas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

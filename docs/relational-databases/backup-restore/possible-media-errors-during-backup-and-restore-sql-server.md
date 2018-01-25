@@ -26,15 +26,15 @@ helpviewer_keywords:
 - checksums [SQL Server]
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8bf78aac25b2d9ab927dfe822f140c8dac7bcb9d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7422aabdffd7985332c669964f0eb518a210ec07
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Errores posibles de medios durante copia de seguridad y restauración (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ofrece la opción de recuperación de una base de datos a pesar de los errores detectados. Un importante mecanismo de detección de errores nuevo es la creación opcional de una suma de comprobación de copia de seguridad que se puede crear mediante una operación de copia de seguridad y validar mediante una operación de restauración. Puede controlar si una operación comprueba si hay errores y si la operación se detiene o continúa al encontrar un error. Si una copia de seguridad contiene una suma de comprobación de copia de seguridad, las instrucciones RESTORE y RESTORE VERIFYONLY pueden comprobar si hay errores.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
      Si la operación de copia de seguridad encuentra un error de página durante la comprobación, la copia de seguridad genera un error.  
   
     > [!NOTE]  
-    >  Para obtener más información acerca de las sumas de comprobación de página y la detección de página rasgada, vea la opción PAGE_VERIFY de la instrucción ALTER DATABASE. Para obtener más información, vea [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+    >  Para obtener más información acerca de las sumas de comprobación de página y la detección de página rasgada, vea la opción PAGE_VERIFY de la instrucción ALTER DATABASE. Para obtener más información, vea [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 2.  Aunque se incluyan sumas de comprobación de página, BACKUP genera una suma de comprobación de copia de seguridad independiente para las secuencias de copia de seguridad. Opcionalmente, las operaciones de restauración pueden utilizar la suma de comprobación de copia de seguridad para confirmar que la copia de seguridad no está dañada. La suma de comprobación de copia de seguridad se almacena en el medio de copia de seguridad y no en las páginas de la base de datos. La suma de comprobación de copia de seguridad se puede utilizar opcionalmente en el momento de la restauración.  
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Especificar si una operación de copia de seguridad o restauración continúa o se detiene después de encontrar un error &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   

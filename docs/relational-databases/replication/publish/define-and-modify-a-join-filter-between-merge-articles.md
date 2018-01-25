@@ -18,15 +18,15 @@ helpviewer_keywords:
 - join filters
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ae484c85f4b28bc56195d075caf4248893d3862
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c9046203c32967c53c5b663bda4c64ad4f01003e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Definir y modificar un filtro de combinación entre artículos de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema, se describe cómo definir y modificar un filtro de combinación entre artículos de mezcla en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La replicación de mezcla admite filtros de combinación, que se usan normalmente junto con los filtros con parámetros para extender la partición de tabla a otros artículos de tabla relacionados.  
@@ -45,20 +45,20 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Para crear un filtro de combinación, una publicación debe contener dos tablas relacionadas, como mínimo. Un filtro de combinación amplía un filtro de fila. Por tanto, debe definir un filtro de fila en una tabla para poder extender el filtro con una combinación a otra. Una vez definido un filtro de combinación, puede extenderlo con otro si la publicación contiene más tablas relacionadas.  
   
--   Si agrega, modifica o elimina un filtro de combinación una vez inicializadas las suscripciones a la publicación, deberá generar una instantánea nueva y reinicializar todas las suscripciones después de realizar el cambio. Para obtener más información sobre los requisitos para los cambios de propiedad, consulte [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
+-   Si agrega, modifica o elimina un filtro de combinación una vez inicializadas las suscripciones a la publicación, deberá generar una instantánea nueva y reinicializar todas las suscripciones después de realizar el cambio. Para obtener más información sobre los requisitos para los cambios de propiedad, consulte [Cambiar las propiedades de la publicación y de los artículos](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
 -   Los filtros de combinación se deben crear manualmente para un conjunto de tablas, o la replicación puede generar los filtros automáticamente en función de las relaciones entre las claves externas y las claves principales definidas en las tablas. Para obtener más información sobre cómo generar un conjunto de filtros de combinación automáticamente, consulte [Generar automáticamente un conjunto de filtros de combinación entre artículos de mezcla &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md).  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
- Defina, modifique y elimine filtros de combinación en la página **Filtrar filas de tabla** del Asistente para nueva publicación o en la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>**. Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, vea [Crear una publicación](../../../relational-databases/replication/publish/create-a-publication.md) y [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Defina, modifique y elimine filtros de combinación en la página **Filtrar filas de tabla** del Asistente para nueva publicación o en la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>**. Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-join-filter"></a>Para definir un filtro de combinación  
   
@@ -140,7 +140,7 @@ ms.lasthandoff: 11/17/2017
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_2.sql)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Filtros de combinación](../../../relational-databases/replication/merge/join-filters.md)   
  [Filtros de fila con parámetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Cambiar las propiedades de la publicación y de los artículos](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   

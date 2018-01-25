@@ -15,15 +15,15 @@ f1_keywords: sql13.swb.rg.properties.f1
 helpviewer_keywords: Resource Governor, properties
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 907bdce1b77273c8c5c5a4c93a407d14d6355e2a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 247d759d0ab40ce50383cf44f5af82566052c41b
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-resource-governor-properties"></a>Ver las propiedades del regulador de recursos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
   
  Es posible determinar si existe una configuración pendiente consultando la vista de administración dinámica [sys.dm_resource_governor_configuration](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) para obtener el estado actual de is_configuration_pending.  
   
-##  <a name="Permissions"></a> Permisos  
+##  <a name="Permissions"></a> Permissions  
  Para ver las propiedades del regulador de recursos se requiere el permiso VIEW SERVER STATER. Las tareas de configuración del regulador de recursos requieren el permiso CONTROL SERVER.  
   
 ##  <a name="ViewRGProp"></a> Página Propiedades del regulador de recursos  

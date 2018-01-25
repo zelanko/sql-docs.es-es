@@ -16,20 +16,20 @@ f1_keywords:
 - sql13.swb.databaseproperties.segments.f1
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ccea14579d4d4e181e102241831a9217c21fe7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b5239b20134c58cf828b9c35a3bd3802e4b15bf9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-general-page"></a>Propiedades de la base de datos (página General)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice esta página para ver o modificar las propiedades de la base de datos seleccionada.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Última copia de seguridad de la base de datos**  
  Muestra la fecha de la última copia de seguridad de la base de datos.  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/17/2017
  **Nombre de intercalación**  
  Muestra la intercalación usada para la base de datos. La intercalación puede modificarse en la página **Opciones** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

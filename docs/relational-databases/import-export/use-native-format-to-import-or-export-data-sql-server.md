@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2815c700005b9debb5ee02a675ad37b7e4444762
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8a691fe8063a6cfd62d8be010acf34244bd4d671
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Usar el formato nativo para importar o exportar datos (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Se recomienda usar el formato nativo cuando se realice una transferencia masiva de datos entre varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un archivo de datos que no contenga caracteres extendidos ni de doble byte (DBCS).  
@@ -90,9 +90,9 @@ Puede importar datos con formato nativo a una tabla mediante el uso de [bcp](../
 
 El formato nativo admite las siguientes opciones de comando:  
 
-|Command|Opción|Descripción|  
+|Comando|Opción|Description|  
 |-------------|------------|-----------------|  
-|bcp|**-n**|Hace que la utilidad bcp use los tipos de datos nativos de los datos.*|  
+|BCP|**-n**|Hace que la utilidad bcp use los tipos de datos nativos de los datos.*|  
 |BULK INSERT|DATAFILETYPE **='native'**|Utiliza los tipos de datos nativos o nativos anchos de los datos. Tenga en cuenta que DATAFILETYPE no es necesario si el archivo de formato especifica los tipos de datos.|  
 |OPENROWSET|N/D|Debe usar un archivo de formato|
 
@@ -247,7 +247,7 @@ Para usar formatos de datos para la importación o exportación masivas
   
 -   [Usar el formato nativo Unicode para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

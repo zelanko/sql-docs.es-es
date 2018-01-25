@@ -19,13 +19,13 @@ ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
 caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a6237b8211c04cf9c0fbb1f098856f1043fcb19d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: db1c0902b2de0a761e1a7558e9bbb71c946afe5b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>Reflejo e instantáneas de base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Puede aprovechar una base de datos reflejada de la cual se está realizando el mantenimiento con fines de disponibilidad para descargar informes. A fin de utilizar una base de datos reflejada para informes, puede crear una instantánea de base de datos en la base de datos reflejada y dirigir las solicitudes de conexión de cliente a la instantánea más reciente. Una instantánea de base de datos es una instantánea estática coherente con las transacciones y de solo lectura de la base de datos de origen tal como existía en el momento de la creación de la instantánea. Para crear la instantánea de una base de datos en una base de datos reflejada, la base de datos debe hallarse en estado de reflejo sincronizado.  
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/20/2017
 -   [Eliminar una instantánea de base de datos &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Instantáneas de bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [Conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)  
   

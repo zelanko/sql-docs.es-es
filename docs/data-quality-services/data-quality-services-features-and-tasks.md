@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d8d671822c66fdec0bb6a74762f0298c2ed4f81b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a25ca166e540ebc6708f369d2434776242ae6788
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Características y tareas de Data Quality Services
   Información que cualquier persona (el administrador de datos, el administrador de Data Quality Services o el administrador de SQL Server) puede necesitar para preparar y ejecutar un proyecto de calidad de datos.  

@@ -19,13 +19,13 @@ ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
 caps.latest.revision: "31"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: eafb023f631824a41ba4e86ebb51f1ca392e6f45
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fa26a8ce5bc17a2c1f0528321f01129b7d861782
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Crear un servidor registrado (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En este tema se describe cómo guardar la información de conexión para los servidores a los que tiene acceso frecuentemente, registrando el servidor en el componente Servidores registrados de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Un servidor puede registrarse antes de conectarlo o cuando se conecta desde el Explorador de objetos. Hay una opción de menú especial para registrar las instancias de servidor en el equipo local.  

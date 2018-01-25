@@ -16,17 +16,17 @@ helpviewer_keywords:
 - replication, SQL Database
 ms.assetid: e8484da7-495f-4dac-b38e-bcdc4691f9fa
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8733b33aa97e33daf1a7394d5e0df8fb2d97a6d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c06ca9a84504ca2ce9958e39e352a7ad93c9a56d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="replication-to-sql-database"></a>Replicación a Base de datos SQL
+# <a name="replication-to-sql-database"></a>Replicación a SQL Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   <a name="includessnoversionincludesssnoversion-mdmd-replication-can-be-configured-to-includesssdsfullincludessssdsfull-mdmd"></a>La replicación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se puede configurar para [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
@@ -155,7 +155,7 @@ ms.lasthandoff: 11/17/2017
  --   [Cree una suscripción de inserción](../../relational-databases/replication/create-a-push-subscription.md) mediante el nombre del servidor lógico de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] como suscriptor (por ejemplo, **N'azuresqldbdns.database.windows.net'**) y el nombre de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] como base de datos de destino (por ejemplo, **AdventureWorks**).  
  -  
  -## Vea también  
- - [Crear una publicación](../../relational-databases/replication/publish/create-a-publication.md)   
+ - [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  - [Crear una suscripción de inserción](../../relational-databases/replication/create-a-push-subscription.md)   
  - [Tipos de replicación](../../relational-databases/replication/types-of-replication.md)   
  - [Monitoring &#40;Replication&#41;](../../relational-databases/replication/monitor/monitoring-replication.md) (Monitorización [replicación])   

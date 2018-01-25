@@ -24,13 +24,13 @@ ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 caps.latest.revision: "50"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 61c067e2ece8cc222a281e48ebfa9026c48f9ae9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 93d9b6b359098577dfec9f7ba02b3c0e4d0de46d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Conmutación de roles durante una sesión de creación de reflejo de la base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En el contexto de una sesión de creación de reflejo de la base de datos, los roles principal y reflejado suelen ser intercambiables en un proceso conocido como *conmutación de roles*. En la conmutación de roles, el servidor reflejado actúa como el *asociado de conmutación por error* para el servidor principal al asumir el rol principal, y al recuperar su copia de la base de datos y ponerla en línea como la nueva base de datos principal. El servidor principal anterior, cuando esté disponible, asumirá el rol reflejado y su base de datos se convertirá en la nueva base de datos reflejada. Potencialmente, los roles pueden conmutarse como respuesta a varios errores o con fines administrativos.  
@@ -73,9 +73,9 @@ ms.lasthandoff: 11/20/2017
   
 ||Alto rendimiento|Modo de alta seguridad sin ningún testigo|Modo de alta seguridad con un testigo|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
-|Conmutación por error automática|No|No|Sí|  
-|Conmutación por error manual|No|Sí|Sí|  
-|Servicio forzado|Sí|Sí|No|  
+|conmutación automática por error|no|no|Sí|  
+|conmutación por error manual|no|Sí|Sí|  
+|Servicio forzado|Sí|Sí|no|  
   
  Tras una conmutación de roles, deben existir ciertos metadatos en ambos asociados para garantizar que todos los usuarios de bases de datos puedan tener acceso a la nueva base de datos principal. Además, se deben crear los trabajos de copia de seguridad en el nuevo servidor principal para garantizar que se siga realizando una copia de seguridad de la base de datos de acuerdo con su programación periódica. Para obtener más información, vea [Administración de inicios de sesión y trabajos tras la conmutación de roles &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
@@ -163,7 +163,7 @@ ms.lasthandoff: 11/20/2017
 -   El servidor principal ha perdido la comunicación con el resto de la configuración del reflejo de la base de datos, mientras que el servidor reflejado y el testigo conservan el quórum. Sin embargo, si todas las instancias de servidor pierden la comunicación, y el testigo y el servidor reflejado la recuperan después, no se produce la conmutación automática por error.  
   
     > [!NOTE]  
-    >  Para obtener más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Para obtener más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 -   El servidor reflejado ha detectado la pérdida del servidor principal.  
   
@@ -316,7 +316,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Calcular la interrupción del servicio durante la conmutación de roles &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
  [Posibles errores durante la creación de reflejo de la base de datos](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
  [Conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   

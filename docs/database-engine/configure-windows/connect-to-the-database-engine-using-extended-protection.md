@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0cdc286f5ab945e2897e69dcfe7f1a98dec1c4b8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d5bf850e985baccb1d16d77697ea7cd2611af222
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar al motor de base de datos con protección ampliada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la **protección ampliada** a partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protección ampliada para la autenticación** es una característica de los componentes de red que implementa el sistema operativo. La**protección ampliada** se admite en Windows 7 y Windows Server 2008 R2. **Protección ampliada** se incluye en Service packs para [!INCLUDE[msCoName](../../includes/msconame-md.md)] sistemas operativos antiguos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es más seguro cuando las conexiones se realizan con **Extended Protection**.  
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/20/2017
   
  Al utilizar IIS para tener acceso a los datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizando una conexión HTTPS o HTTP, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pueden sacar provecho de la protección ampliada que proporciona IIS. Para obtener más información acerca de cómo configurar IIS para utilizar la protección ampliada, vea el tema que trata cómo [configurar la protección ampliada en IIS 7.5](http://go.microsoft.com/fwlink/?LinkId=181105).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Configuración de red del servidor](../../database-engine/configure-windows/server-network-configuration.md)   
  [Configuración de red de cliente](../../database-engine/configure-windows/client-network-configuration.md)   
  [Introducción a la protección ampliada para la autenticación](http://go.microsoft.com/fwlink/?LinkID=177943)   

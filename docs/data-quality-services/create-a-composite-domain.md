@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd7202378a76fb0de0552685343fc681f39ea4bb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9c1676681c21b306c6df820957b07863c5db6c5a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-composite-domain"></a>Crear un dominio compuesto
   En este tema se describe cómo crear un dominio compuesto en una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio compuesto consta de uno o varios dominios individuales que se aplican a un único campo de datos. Para más información sobre los dominios compuestos, vea [Administrar un dominio compuesto](../data-quality-services/managing-a-composite-domain.md).  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear un dominio compuesto.  
   
 ##  <a name="ParsingKnowledgeDiscoveryActivity"></a> Crear un dominio compuesto en la actividad Detección de conocimiento  
@@ -81,7 +81,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  En la **Lista de dominios**, seleccione los dominios que formarán parte del dominio compuesto y, a continuación, haga clic en la flecha derecha para moverlos a la tabla **Dominios del dominio compuesto** . Esta lista contiene los dominios individuales disponibles para agregarlos al dominio compuesto que está creando. Solo están disponibles los dominios individuales que se han creado y que no se hayan agregado a un dominio compuesto existente. Un dominio individual no se puede agregar a más de un dominio compuesto de la knowledge base, y un dominio compuesto no se puede agregar a otro dominio compuesto.  
   
-3.  Haga clic en **Avanzado**.  
+3.  Haga clic en **Avanzadas**.  
   
 4.  En **Método de análisis**, seleccione una de las opciones siguientes:  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  Si selecciona **Delimitadores** como método de análisis, también puede seleccionar **Usar el análisis de bases de conocimiento**. Para obtener más información, consulte [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   
-6.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+6.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Seguimiento: después de crear un dominio compuesto  
  Una vez creado el dominio compuesto, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  

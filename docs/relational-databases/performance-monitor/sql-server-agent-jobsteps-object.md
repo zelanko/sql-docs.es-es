@@ -16,22 +16,22 @@ helpviewer_keywords:
 - SQLAgent:JobSteps
 ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6d6953a342ab24540da33464962712ea43579f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d6c2bfb8f1b628ba4515f3668b2a226e44b5c8fe
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>JobSteps (objeto del Agente SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El objeto de rendimiento **JobSteps** del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene contadores de rendimiento que informan sobre los pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En la siguiente tabla se enumeran los contadores incluidos en este objeto.  
   
  La siguiente tabla contiene los contadores de **SQLAgent:JobSteps** .  
   
-|Nombre|Descripción|  
+|Nombre|Description|  
 |----------|-----------------|  
 |**Pasos activos**|Este contador muestra el número de pasos de trabajo que se están ejecutando actualmente.|  
 |**Pasos en cola**|Este contador informa acerca del número de pasos de trabajo preparados para que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los ejecute, pero cuya ejecución aún no se ha iniciado.|  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  Cada contador del objeto contiene las instancias siguientes:  
   
-|Instancia|Descripción|  
+|Instancia|Description|  
 |--------------|-----------------|  
 |**_Total**|Información de todos los pasos de trabajo.|  
 |**ActiveScripting**|Información de los pasos de trabajo que utilizan el subsistema **ActiveScripting** .|  
@@ -55,9 +55,9 @@ ms.lasthandoff: 11/17/2017
 |**Snapshot**|Información de los pasos de trabajo que utilizan el subsistema **Snapshot** .|  
 |**TSQL**|Información de los pasos de trabajo que ejecutan [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administrar pasos de trabajo](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31)   
  [Usar objetos de rendimiento](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
- [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+ [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

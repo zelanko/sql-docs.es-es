@@ -15,13 +15,13 @@ ms.assetid: 1c1fc682-bf5b-4096-a0ff-3235d71c205a
 caps.latest.revision: "14"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bdbc79848f6484ccf4638d29b1e09221e7ca6e36
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 100804318b9ea0f7a24dd6f2503ab329e4760ecf
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="creating-a-memory-optimized-system-versioned-temporal-table"></a>Creación de una tabla temporal con control de versiones del sistema con optimización para memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Para crear tablas optimizadas para memoria, primero debe crear el [grupo de archivos optimizados para memoria](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md).  
   
- Esta opción es práctica en casos en los que quiera controlar la nomenclatura y, aun así, delegar en el sistema la generación de la tabla de historial con la configuración predeterminada. En el ejemplo siguiente, una tabla temporal con control de versiones del sistema optimizada para memoria se vincula a una nueva tabla de historial basada en disco.  
+ Esta opción es práctica en casos en los que quiera controlar la nomenclatura y, aun así, delegar al sistema la generación de la tabla de historial con la configuración predeterminada. En el ejemplo siguiente, una tabla temporal con control de versiones del sistema optimizada para memoria se vincula a una nueva tabla de historial basada en disco.  
   
 ```  
 CREATE SCHEMA History  
@@ -93,7 +93,7 @@ WITH
 ## <a name="did-this-article-help-you-were-listening"></a>¿Le ayudó este artículo? Le escuchamos  
  ¿Qué información está buscando? ¿La encontró? Escuchamos sus comentarios para mejorar el contenido. Envíe sus comentarios a [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Creating%20a%20Memory-Optimized%20System-Versioned%20Temporal%20Table%20page)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Tablas temporales con control de versiones del sistema con tablas con optimización para memoria](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
  [Trabajo con tablas temporales con control de versiones del sistema con optimización para memoria](../../relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md)   
  [Supervisión de tablas temporales con control de versiones del sistema con optimización para memoria](../../relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md)   

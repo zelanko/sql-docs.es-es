@@ -17,15 +17,15 @@ helpviewer_keywords:
 - model database [SQL Server]
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0f012597cacaf7058b8463183c5c20c1fa042a37
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6733a6d7440071e655004df7dc7926b33503ed1b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="model-database"></a>Base de datos model
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La base de datos **modelo** se utiliza como plantilla para todas las bases de datos creadas en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como **tempdb** se crea de nuevo cada vez que se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la base de datos **modelo** siempre tiene que existir en un sistema con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Todo el contenido de la base de datos **modelo** , incluidas las opciones de base de datos, se copia en la base de datos nueva. Algunos de los valores de configuración de la base de datos **model** también se usan para crear una base de datos **tempdb** nueva durante el inicio, de modo que la base de datos **model** siempre debe existir en un sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -68,15 +68,15 @@ ms.lasthandoff: 11/17/2017
 |AUTO_SHRINK|OFF|Sí|  
 |AUTO_UPDATE_STATISTICS|ON|Sí|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sí|  
-|CHANGE_TRACKING|OFF|No|  
+|CHANGE_TRACKING|OFF|no|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sí|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Sí|  
 |CURSOR_DEFAULT|GLOBAL|Sí|  
-|Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> Sí<br /><br /> Sí|  
+|Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|no<br /><br /> Sí<br /><br /> Sí|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sí|  
-|DB_CHAINING|OFF|No|  
-|ENCRYPTION|OFF|No|  
-|MIXED_PAGE_ALLOCATION|ON|No|  
+|DB_CHAINING|OFF|no|  
+|ENCRYPTION|OFF|no|  
+|MIXED_PAGE_ALLOCATION|ON|no|  
 |NUMERIC_ROUNDABORT|OFF|Sí|  
 |PAGE_VERIFY|CHECKSUM|Sí|  
 |PARAMETERIZATION|SIMPLE|Sí|  
@@ -84,14 +84,14 @@ ms.lasthandoff: 11/17/2017
 |READ_COMMITTED_SNAPSHOT|OFF|Sí|  
 |RECOVERY|Depende de la edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *|Sí|  
 |RECURSIVE_TRIGGERS|OFF|Sí|  
-|Opciones de Service Broker|DISABLE_BROKER|No|  
-|TRUSTWORTHY|OFF|No|  
+|Opciones de Service Broker|DISABLE_BROKER|no|  
+|TRUSTWORTHY|OFF|no|  
   
  *Para comprobar el modelo de recuperación actual de la base de datos, consulte [Ver o cambiar el modelo de recuperación de una base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) o [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
  Para obtener una descripción de estas opciones de la base de datos, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## <a name="restrictions"></a>Restricciones  
+## <a name="restrictions"></a>Restrictions  
  Las siguientes operaciones no se pueden realizar en la base de datos **modelo** :  
   
 -   Agregar archivos o grupos de archivos.  

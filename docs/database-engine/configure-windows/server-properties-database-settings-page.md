@@ -14,20 +14,20 @@ ms.topic: article
 f1_keywords: sql13.swb.serverproperties.databasesettings.f1
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0c02cc5137e018b41cd5220a4bbe84046d39e19
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6219f83025b6e2fdaceaa36958582f6c7ba73544
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-properties---database-settings-page"></a>Propiedades del servidor (página Configuración de base de datos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice esta página para ver o modificar la configuración de la base de datos.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Factor predeterminado de relleno de índices**  
  Especifica cuánto se debe llenar cada página de índice de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se crea un nuevo índice con los datos existentes. El factor de relleno influye en el rendimiento, ya que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe dedicar tiempo a dividir las páginas cuando se rellenan.  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
 -   Si la casilla **Comprimir copia de seguridad** se activa, las nuevas copias de seguridad se comprimirán de forma predeterminada.  
   
     > [!IMPORTANT]  
-    >  De forma predeterminada, la compresión aumenta significativamente el uso de CPU y la CPU adicional que consume el proceso de compresión puede afectar adversamente a las operaciones simultáneas. Por consiguiente, podría ser conveniente crear copias de seguridad comprimidas de prioridad baja en una sesión en la que el [regulador de recursos](../../relational-databases/resource-governor/resource-governor.md) limite el uso de CPU. Para obtener más información, vea [Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).  
+    >  De forma predeterminada, la compresión aumenta significativamente el uso de CPU y la CPU adicional que consume el proceso de compresión puede afectar adversamente a las operaciones simultáneas. Por consiguiente, podría ser conveniente crear copias de seguridad comprimidas de prioridad baja en una sesión en la que el [regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)limite el uso de CPU. Para obtener más información, vea [Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)limite el uso de CPU.  
   
  Si es miembro del rol fijo de servidor **sysadmin** o **serveradmin** , puede cambiar el valor haciendo clic en el cuadro **Comprimir copia de seguridad** .  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/20/2017
  **Intervalo de recuperación (min.)**  
  Establece el número máximo de minutos por base de datos para recuperar bases de datos. El valor predeterminado es 0, que indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]lo configura automáticamente. En la práctica, esto significa un tiempo de recuperación inferior a un minuto y un punto de comprobación aproximadamente cada minuto para bases de datos activas. Para más información, consulte [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).  
   
- **Datos**  
+ **Data**  
  Especifica la ubicación predeterminada de los archivos de datos. Haga clic en el botón de examinar para navegar a la nueva ubicación predeterminada. No surte efecto hasta que se reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Log**  
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/20/2017
  **Valores actuales**  
  Presenta los valores actuales de las opciones de este panel. Estos valores son de solo lectura.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Especificar el factor de relleno para un índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
   

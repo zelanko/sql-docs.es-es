@@ -16,22 +16,22 @@ helpviewer_keywords:
 - SQLServer:Cursor Manager by Type
 ms.assetid: d67fbd8a-7554-4a16-96f1-d9ee857a95e3
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b896d5a57046912fec183be926120dc98398bbd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b818f7a5222dc92896e9624ef7cbc89f05fe2af8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-cursor-manager-by-type-object"></a>Cursor Manager by Type (objeto de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El objeto **SQLServer:Cursor Manager by Type** proporciona contadores para supervisar cursores agrupados por tipo.  
   
  En la siguiente tabla se describen los contadores de **Cursor Manager by Type** de SQL Server.  
   
-|Contadores de Cursor Manager by Type|Descripción|  
+|Contadores de Cursor Manager by Type|Description|  
 |-------------------------------------|-----------------|  
 |**Cursores activos**|Número de cursores activos.|  
 |**Frecuencia de aciertos de caché**|Proporción entre los aciertos de caché y las búsquedas.|  
@@ -45,14 +45,14 @@ ms.lasthandoff: 11/17/2017
   
  Cada contador del objeto contiene las instancias siguientes:  
   
-|Instancia del administrador de cursor|Descripción|  
+|Instancia del administrador de cursor|Description|  
 |-----------------------------|-----------------|  
 |**_Total**|Información sobre todos los cursores.|  
 |**API Cursor**|Solo información del cursor de API.|  
 |**TSQL Global Cursor**|Solo información del cursor global de [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |**TSQL Local Cursor**|Solo información del cursor local de [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

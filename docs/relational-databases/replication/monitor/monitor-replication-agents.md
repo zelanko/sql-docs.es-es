@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Distribution Agent, monitoring
 ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 837bb9a07b2c6ed60bf36d7c2842a346005b07b9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4075c4e9ec834218d8fcfff6a4fbec6718b94bc6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-replication-agents"></a>Supervisar agentes de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Monitor de replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona una vista sistémica de la actividad de replicación, aunque también facilita la búsqueda de información sobre un agente concreto. En la siguiente lista se incluye cada agente, las pestañas del Monitor de replicación en las que se puede encontrar y un vínculo a un tema en el que se explica el modo de obtener acceso a dichas pestañas:  
@@ -122,8 +122,8 @@ ms.lasthandoff: 11/17/2017
   
 5.  Haga clic en **Cerrar**.  
   
-## <a name="see-also"></a>Vea también  
- [Supervisar la replicación](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
+## <a name="see-also"></a>Ver también  
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  (Supervisar la replicación)  
+ [Información general sobre los agentes de replicación](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

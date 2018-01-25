@@ -22,22 +22,22 @@ helpviewer_keywords:
 - server performance [SQL Server], tools
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0dc05a4ed58aaaa3daca198491f71825a896dfae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5121d6d12b0c009a6463f461204da027f67f16ef
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>Herramientas de supervisión y optimización del rendimiento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un conjunto de herramientas completo para supervisar los eventos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y para optimizar el diseño de la base de datos física. La elección de la herramienta depende del tipo de supervisión u optimización que se realice y de los eventos particulares que se supervisen.  
   
  A continuación se describen las herramientas de supervisión y optimización de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-|Herramienta|Descripción|  
+|Herramienta|Description|  
 |----------|-----------------|  
 |[sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] realiza un seguimiento de los eventos de procesos del motor, como el inicio de un lote o una transacción, lo que permite supervisar la actividad del servidor y de la base de datos (por ejemplo, interbloqueos, errores irrecuperables o actividad de inicio de sesión). Puede capturar datos de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] en un archivo o una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para su análisis posterior y también puede reproducir paso a paso los eventos capturados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ver qué sucedió exactamente.|  
 |[SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay puede usar varios equipos para reproducir los datos de seguimiento, simulando una carga de trabajo crítica.|  
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="windows-monitoring-tools"></a>Herramientas de supervisión de Windows  
  Los sistemas operativos Windows y Windows Server 2003 proporcionan además estas herramientas de supervisión.  
   
-|Herramienta|Descripción|  
+|Herramienta|Description|  
 |----------|-----------------|  
 |Administrador de tareas|Muestra una sinopsis de los procesos y las aplicaciones que se ejecutan en el sistema.|  
 |Agente de supervisión de red|Supervisa el tráfico de red.|  

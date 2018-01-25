@@ -18,15 +18,15 @@ helpviewer_keywords:
 - wizards [SQL Server replication]
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 256985a9c23bca91449dc5880e184d80a0e73d45
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0bbab3835829d35734992f11e20292b29d90b8f9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>Tutorial: Replicar datos entre servidores conectados de forma continua
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La replicación es una buena solución para el problema de mover datos entre servidores conectados de forma continua. La utilización de asistentes para replicación le facilitará la configuración y administración de una topología de replicación. Este tutorial le mostrará cómo configurar una topología de replicación para servidores conectados de forma continua.  
@@ -67,7 +67,7 @@ Para utilizar este tutorial, el sistema debe contar con los siguientes component
   
 [Iniciar el tutorial](../../relational-databases/replication/lesson-1-publishing-data-using-transactional-replication.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Conceptos de la programación de replicación](../../relational-databases/replication/concepts/replication-programming-concepts.md)  
   
   

@@ -15,12 +15,12 @@ dev_langs: Python
 caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 6b481e5e65616f70f1b66c9be2517a2da747b1dd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 2812e9529a9cdb4dc5fd8019a28ccc060ba68d1a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="run-python-using-t-sql"></a>Ejecución de Python mediante T-SQL
 
@@ -55,7 +55,7 @@ GO
 
 El código siguiente carga el archivo ejecutable de Python, pasa los datos de entrada y para cada fila de datos de entrada, actualiza el nombre de día de la tabla con un número que representa el índice del día de la semana.
 
-Tome nota del parámetro * @RowsPerRead *. Este parámetro especifica el número de filas que se pasan al tiempo de ejecución de Python de SQL Server.
+Tome nota del parámetro  *@RowsPerRead* . Este parámetro especifica el número de filas que se pasan al tiempo de ejecución de Python de SQL Server.
 
 La biblioteca de análisis de datos de Python, conocido como **pandas**, es necesario para pasar datos a SQL Server y se incluye de forma predeterminada con los servicios de aprendizaje de máquina.
 
@@ -175,7 +175,7 @@ ParamCharN=OUTPUT
 
     El GUID es el nombre de una carpeta temporal que se crea durante la ejecución del script para almacenar los artefactos de datos y la secuencia de comandos. Estas carpetas temporales están protegidas por SQL Server y se limpian mediante el objeto de trabajo de Windows una vez ha finalizado la secuencia de comandos.
 
-+ La sección que contiene el mensaje "Hello World" imprime dos veces. Esto sucede porque el valor de * @RowsPerRead * ha sido establecida en 5 y hay 10 filas en la tabla; por lo tanto, son necesarias dos llamadas a Python para procesar todas las filas de la tabla.
++ La sección que contiene el mensaje "Hello World" imprime dos veces. Esto sucede porque el valor de  *@RowsPerRead*  ha sido establecida en 5 y hay 10 filas en la tabla; por lo tanto, son necesarias dos llamadas a Python para procesar todas las filas de la tabla.
 
     En las ejecuciones de producción, se recomienda que experimente con valores diferentes para determinar el número máximo de filas que se deben pasar en cada lote. El número óptimo de filas es dependiente de los datos y se ve afectado por el número de columnas del conjunto de datos y el tipo de datos que está pasando.
 

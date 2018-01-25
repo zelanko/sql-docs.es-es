@@ -29,15 +29,15 @@ helpviewer_keywords:
 - DAC
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b105471806865b78a07c5478f08d7a1bf6cf49f6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d92da3c51843ee10b0c781bb400109abf04fefab
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importar un archivo de bacpac para crear una nueva base de datos de usuario
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Importe un archivo de aplicación de capa de datos (DAC), o archivo .bacpac, para crear una copia de la base de datos original, con los datos, en una instancia nueva de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o en [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Las operaciones de exportación e importación se pueden combinar para migrar una DAC o una base de datos de una instancia a otra o para crear una copia de seguridad lógica, como crear una copia local de una base de datos implementada en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -60,13 +60,13 @@ ms.lasthandoff: 11/17/2017
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
  Se puede importar una DAC en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o en una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que ejecute [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o posterior. Si exporta una DAC de una versión anterior, puede contener objetos que [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]no admita. No puede implementar dicha DAC en instancias de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Se recomienda no importar un archivo de exportación de DAC desde orígenes desconocidos o que no sean de confianza. Es posible que estos archivos contengan código malintencionado que podría ejecutar código Transact-SQL no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Antes de usar un archivo de exportación de un origen desconocido o que no sea de confianza, desempaquete la DAC y examine el código, como procedimientos almacenados y otro código definido por el usuario. Para más información sobre cómo realizar estas comprobaciones, consulte [Validar un paquete de DAC](https://msdn.microsoft.com/library/ee633948(SQL.130).aspx).  
   
 ## <a name="security"></a>Seguridad  
  Para mejorar la seguridad, los inicios de sesión de autenticación de SQL Server están almacenados en un archivo de exportación de DAC sin contraseña. Cuando el archivo se importa, el inicio de sesión se crea como un inicio de sesión deshabilitado con una contraseña generada. Para habilitar los inicios de sesión, use un inicio de sesión que disponga del permiso ALTER ANY LOGIN y emplee ALTER LOGIN para habilitar el inicio de sesión y asignar una nueva contraseña que pueda comunicar al usuario. Esto no se necesita para los inicios de sesión de Autenticación de Windows, porque SQL Server no administra sus contraseñas.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Una DAC solo la pueden importar miembros de los roles fijos de servidor **sysadmin** o **serveradmin** , o inicios de sesión que pertenezcan al rol fijo de servidor **dbcreator** y dispongan de permisos ALTER ANY LOGIN. La cuenta de administrador del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrada denominada **sa** también puede importar una DAC. La importación de una DAC con inicios de sesión en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiere la pertenencia a los roles loginmanager o serveradmin. La importación de una DAC sin inicios de sesión en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiere la pertenencia a los roles dbmanager o serveradmin.  
   
 ## <a name="using-the-import-data-tier-application-wizard"></a>Usar el Asistente Importar aplicación de capa de datos  
@@ -148,7 +148,7 @@ ms.lasthandoff: 11/17/2017
   
  Haga clic en **Cerrar** para cerrar el asistente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Importación de un archivo BACPAC para crear una Azure SQL Database nueva](https://azure.microsoft.com/en-us/documentation/articles/sql-database-import/)  
  [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Exportar una aplicación de capa de datos](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  

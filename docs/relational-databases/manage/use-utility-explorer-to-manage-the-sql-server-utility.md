@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f586f008a1a646698e01e75f3175f7b56f8a311
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 663d8b3a7f8dbb27813ecbdd3f2aafdb64ed94d5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Utilizar el explorador de Utilidad para administrar la utilidad de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Explorador de Utilidad, un componente de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], se conecta a instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para proporcionar una vista de árbol de todos los objetos de la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El panel de contenido del explorador de la utilidad proporciona varias maneras para ver datos de resumen y detallados sobre el estado de las instancias administradas de SQL Server. El explorador de la utilidad también proporciona una interfaz de usuario para ver y administrar las definiciones de directiva. Las capacidades del explorador de la utilidad varían ligeramente dependiendo de los objetos de la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pero, generalmente, incluyen objetos, datos y directivas administrados por la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
@@ -70,9 +70,9 @@ ms.lasthandoff: 11/17/2017
   
  PowerShell no tiene ayuda F1, pero incluye un cmdlet **Get-Help** que proporciona información sobre el uso de PowerShell. Para obtener más información sobre el uso de Get-Help, vea [Obtener ayuda de SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Configurar las directivas de mantenimiento &#40;Utilidad de SQL Server&#41;](../../relational-databases/manage/configure-health-policies-sql-server-utility.md)   
- [Explorador de objetos](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)  
+ [Ver](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)  
   
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - temporary stored procedures [SQL Server]
 - tempdb database [SQL Server]
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
-author: BYHAM
-ms.author: rickbyh
+author: stevestein
+ms.author: sstein
 manager: jhubbard
 ms.reviewer: carlrab
-ms.openlocfilehash: 162734e2bb90d83d3f84fce2467b0fab3175baff
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 813f361d52b4f4bbd3a9b9f5693278d08ac9432c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tempdb-database"></a>Base de datos tempdb
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La base de datos del sistema **tempdb** es un recurso global disponible para todos los usuarios conectados a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a SQL Database. Tempdb se usa para contener:  
@@ -111,7 +111,7 @@ Las operaciones de **tempdb** se registran de forma mínima, por lo que las tran
 |S1|14 225|1|14 225| 
 |S2|14 225| 1|14 225| 
 |S3|32 768|1|32 768| 
-|S4|32 768|2|65 536| 
+|S4|32 768|2|65,536| 
 |S6|32 768|3|98304| 
 |S7|32 768|6|196 608| 
 |S9|32 768|12|393 216| 

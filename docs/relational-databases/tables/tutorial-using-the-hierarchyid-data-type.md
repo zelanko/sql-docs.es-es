@@ -17,15 +17,15 @@ helpviewer_keywords:
 - hierarchyid [Database Engine], tutorial
 ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ed9d79b4dacf83513a41b4d33cd13ed7852be184
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 668177022a6032c906a97c1787ddac3b9a6771dc
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>Tutorial: Uso del tipo de datos hierarchyid
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Este tutorial está destinado a usuarios con experiencia en [!INCLUDE[tsql](../../includes/tsql-md.md)], pero que desconocen el tipo de datos **hierarchyid**.  
@@ -36,7 +36,7 @@ El tutorial está compuesto por dos lecciones:
 [Lección 1: Convertir una tabla en una estructura jerárquica](../../relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
 En esta lección, se toma una tabla existente de empleados, estructurada como una jerarquía de elementos primarios y secundarios, y se mueven los datos a una nueva tabla que representa la jerarquía mediante el tipo de datos **hierarchyid** . Esta lección requiere la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
-[Lección 2: Crear y administrar los datos de una tabla jerárquica](../../relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
+[Lección 2: Creación y administración de los datos de una tabla jerárquica](../../relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
 En esta lección, se crea una tabla mediante el tipo de datos **hierarchyid** para representar la estructura de la jerarquía. A continuación, se manipulan los datos de la tabla usando los métodos jerárquicos.  
   
 ## <a name="requirements"></a>Requisitos  
@@ -48,7 +48,7 @@ El sistema debe tener instalado lo siguiente:
   
 -   Internet Explorer versión 6 o posterior.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Tutorial: Introducción al motor de base de datos](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 [Tutorial: Escribir instrucciones Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
 [Referencia de los métodos del tipo de datos hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  

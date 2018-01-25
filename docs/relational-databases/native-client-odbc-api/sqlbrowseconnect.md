@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLBrowseConnect function
 ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 caps.latest.revision: "54"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ee1ff2472f603b6caca690d5ed83c73968ae5cc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8af521c2bd56d8d66386be324477b7f094052d73
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,18 +35,18 @@ ms.lasthandoff: 01/08/2018
   
 |Palabra clave|¿Se devuelve una lista?|¿Es opcional?|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN|N/D|no|Nombre del origen de datos devuelto por **SQLDataSources**. No se puede utilizar la palabra clave DSN si se utiliza la palabra clave DRIVER.|  
-|DRIVER|N/D|no|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nombre del controlador ODBC de Native Client es {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. No se puede utilizar la palabra clave DRIVER si se utiliza la palabra clave DSN.|  
+|DSN|N/D|No|Nombre del origen de datos devuelto por **SQLDataSources**. No se puede utilizar la palabra clave DSN si se utiliza la palabra clave DRIVER.|  
+|DRIVER|N/D|No|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nombre del controlador ODBC de Native Client es {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. No se puede utilizar la palabra clave DRIVER si se utiliza la palabra clave DSN.|  
   
 ## <a name="level-2"></a>Nivel 2  
   
 |Palabra clave|¿Se devuelve una lista?|¿Es opcional?|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|Sí|no|Nombre del servidor en la red en la que reside el origen de datos. El término"(local)" se puede escribir como el servidor, en cuyo caso se puede utilizar una copia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluso cuando se trata de una versión que no está en red.|  
-|UID|no|Sí|Id. de inicio de sesión de usuario.|  
-|PWD|no|Sí (depende del usuario)|Contraseña especificada por el usuario.|  
-|APP|no|Sí|Nombre de la aplicación llama a **SQLBrowseConnect**.|  
-|WSID|no|Sí|Id. de estación de trabajo. Normalmente, éste es el nombre de red del equipo en el que se ejecuta la aplicación.|  
+|SERVER|Sí|No|Nombre del servidor en la red en la que reside el origen de datos. El término"(local)" se puede escribir como el servidor, en cuyo caso se puede utilizar una copia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluso cuando se trata de una versión que no está en red.|  
+|UID|No|Sí|Id. de inicio de sesión de usuario.|  
+|PWD|No|Sí (depende del usuario)|Contraseña especificada por el usuario.|  
+|APP|No|Sí|Nombre de la aplicación llama a **SQLBrowseConnect**.|  
+|WSID|No|Sí|Id. de estación de trabajo. Normalmente, éste es el nombre de red del equipo en el que se ejecuta la aplicación.|  
   
 ## <a name="level-3"></a>Nivel 3  
   
@@ -81,6 +81,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Vea también  
  [SQLBrowseConnect, función](http://go.microsoft.com/fwlink/?LinkId=59329)   
- [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Detalles de implementación de API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

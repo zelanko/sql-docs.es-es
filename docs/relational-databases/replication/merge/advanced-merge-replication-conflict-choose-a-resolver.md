@@ -17,15 +17,15 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 02e8f1043c8b3337953dd300c67ad0d94343eb88
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1312413f12476c9be36ed3595fed82a75fd375fb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-merge-replication-conflict---choose-a-resolver"></a>Conflictos de replicación de mezcla avanzada: elegir un solucionador
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Al elegir un solucionador, tenga en cuenta la importancia que tiene la resolución de conflictos en la aplicación y considere si debe utilizar el solucionador de conflictos predeterminado basado en prioridad o un solucionador de artículos.  
@@ -40,16 +40,16 @@ ms.lasthandoff: 11/17/2017
   
 |Problema de resolución de conflictos|Recomendación|  
 |-------------------------------|--------------------|  
-|Diferentes categorías de usuarios necesitan diferentes valores de prioridad.|Utilice el solucionador predeterminado y cree suscripciones en el servidor con diferentes valores de prioridad.<br /><br /> O bien<br /><br /> Utilice un solucionador de artículos que reconozca una columna de valor de autoridad en el artículo para ayudar a solucionar el conflicto.|  
+|Diferentes categorías de usuarios necesitan diferentes valores de prioridad.|Utilice el solucionador predeterminado y cree suscripciones en el servidor con diferentes valores de prioridad.<br /><br /> o bien<br /><br /> Utilice un solucionador de artículos que reconozca una columna de valor de autoridad en el artículo para ayudar a solucionar el conflicto.|  
 |Se desea una solución del conflicto basada en la prioridad.|Utilice el solucionador predeterminado y cree suscripciones de cliente.|  
 |Es aceptable que varios usuarios cambien la misma fila de datos, siempre que no se hagan cambios conflictivos en la misma columna.|Utilice el solucionador predeterminado o un solucionador de artículos con el seguimiento por columnas habilitado.|  
 |Marcar como conflicto cualquier cambio múltiple en los valores de una fila.|Utilice el solucionador predeterminado o un solucionador de artículos con el seguimiento por filas habilitado.|  
 |Marcar como conflicto cualquier cambio múltiple en los valores de un registro lógico.|Utilice el solucionador predeterminado con seguimiento por registro lógico (la característica de registros lógicos no admite el uso de solucionadores personalizados ni controladores de lógica de negocios).|  
 |Los datos resultantes del conflicto deben ser diferentes de los datos originales en conflicto.|Utilice un solucionador de artículos que calcule nuevos valores.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Detectar y solucionar conflictos en registros lógicos](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
- [Detección y resolución de conflictos de replicación de mezcla avanzada](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Volver a publicar datos](../../../relational-databases/replication/republish-data.md)  
   
   

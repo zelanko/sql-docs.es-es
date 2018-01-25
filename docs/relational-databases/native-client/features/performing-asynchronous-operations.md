@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SQL Server Native Client, asynchronous operations
 ms.assetid: 8fbd84b4-69cb-4708-9f0f-bbdf69029bcc
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fb5743b009b9f53575a012cf1348820278ca6b0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2ba872822ecb904847861f6d02b27aad87373a17
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="performing-asynchronous-operations"></a>Realizar operaciones asincrónicas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="opening-and-closing-a-database-connection"></a>Abrir y cerrar una conexión a la base de datos  
  Cuando se usa el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client, las aplicaciones diseñadas para inicializar un objeto de origen de datos de forma asincrónica pueden establecer el bit DBPROPVAL_ASYNCH_INITIALIZE en la propiedad DBPROP_INIT_ASYNCH antes de llamar a  **IDBInitialize:: Initialize**. Cuando se establece esta propiedad, el proveedor devuelve inmediatamente de la llamada a **inicializar** con S_OK si la operación se ha completado inmediatamente, o DB_S_ASYNCHRONOUS si la inicialización continúa de forma asincrónica. Las aplicaciones pueden consultar para la **IDBAsynchStatus** o [ISSAsynchStatus](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)de interfaz en el objeto de origen de datos y, a continuación, llame a **idbasynchstatus:: GetStatus** o[ Issasynchstatus:: Waitforasynchcompletion](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) para obtener el estado de la inicialización.  
   
- Además, se ha agregado la propiedad SSPROP_ISSAsynchStatus al conjunto de propiedades DBPROPSET_SQLSERVERROWSET. Los proveedores que admiten el **ISSAsynchStatus** interfaz debe implementar esta propiedad con un valor de VARIANT_TRUE.  
+ Además, se ha agregado la propiedad SSPROP_ISSAsynchStatus al conjunto de propiedades DBPROPSET_SQLSERVERROWSET. Los proveedores que admiten la interfaz **ISSAsynchStatus** deben implementar esta propiedad con un valor de VARIANT_TRUE.  
   
  **Idbasynchstatus:: Abort** o [issasynchstatus:: Abort](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md) puede llamarse para cancelar la asincrónica **inicializar** llamar. El consumidor debe solicitar explícitamente la inicialización de origen de datos asincrónica. En caso contrario, **IDBInitialize:: Initialize** no vuelve hasta que se inicialice completamente el objeto de origen de datos.  
   
@@ -194,7 +194,7 @@ if (hr == DB_S_ASYNCHRONOUS)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Características de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [Características SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Propiedades y comportamientos de conjuntos de filas](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)   
  [ISSAsynchStatus &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f4ace90fa563041617e3c3ac5e1863322bc28fec
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dd289acfe5518dc484bfc1b368ff8326cebcea0b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Importar un dominio desde un archivo .dqs
   En este tema se describe cómo importar un dominio desde un archivo .dqs a una base de conocimiento existente de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Los archivos de datos .dqs se crean al exportar un dominio o una base de conocimiento desde la aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . El archivo de datos .dqs está cifrado, por lo que no se puede ver.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para poder importar un dominio desde un archivo de datos .dqs.  
   
 ##  <a name="Import"></a> Import a domain from a .dqs file  

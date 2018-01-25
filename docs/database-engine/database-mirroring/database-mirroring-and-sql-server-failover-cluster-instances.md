@@ -19,13 +19,13 @@ ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
 caps.latest.revision: "42"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4a180fe2ed117c92207a768745dd86a99fd39661
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e1ae46bb5ff40113cb61d27882c86f84c87ef546
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Creación de reflejo de la base de datos e instancias de clúster de conmutación por error
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Un clúster de conmutación por error es una combinación de uno o más discos físicos en un grupo de clústeres del servicio de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MSCS), conocido como grupo de recursos, que son nodos participantes en el clúster. El grupo de recursos está configurado como una instancia en clúster de conmutación por error que hospeda una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Una instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aparece en la red como si fuera un solo equipo, pero dispone de funcionalidad que proporciona conmutación por error de un nodo a otro si un nodo deja de estar disponible. Para obtener más información, vea [Instancias de clúster de conmutación por error de AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Modos de funcionamiento de la creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [Instancias de clúster de conmutación por error de AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  

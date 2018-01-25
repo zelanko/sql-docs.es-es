@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e69e6e0cd9c17b7fdd8f47480e5f47f3611b0bc6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ecfd4a72f00c5b8199f7db64ec0c9175c2487e7e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Prácticas recomendadas para filtros de fila basados en el tiempo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los usuarios de aplicaciones requieren con frecuencia un subconjunto de datos de una tabla basado en el tiempo. Por ejemplo, un vendedor puede requerir datos para pedidos de la semana pasada o un programador de eventos puede requerir datos para eventos de la semana próxima. En muchos casos, las aplicaciones usan consultas que contienen la función **GETDATE()** para llevar esto a cabo. Considere la siguiente instrucción de filtro de fila:  
@@ -95,9 +95,9 @@ GO
   
  Los eventos para la semana siguiente se marcan ahora como listos para replicación. La próxima vez que se ejecute el agente de mezcla para la suscripción que utiliza el coordinador de eventos 112, se descargarán las filas 2, 3 y 4 en el suscriptor y se quitará la fila 1 del suscriptor.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [GETDATE &#40;Transact-SQL&#41;](../../../t-sql/functions/getdate-transact-sql.md)   
  [Implementar trabajos](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
- [Filtros de fila con parámetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

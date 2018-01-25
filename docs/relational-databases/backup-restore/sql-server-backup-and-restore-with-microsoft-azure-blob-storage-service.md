@@ -15,15 +15,15 @@ ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5d39865f0c5bf683e83cea2f85fb365f0fc9da2e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 16c41c9d1898303b58a40f6acce36968b571b299
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure
+# <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   ![Copia de seguridad en un gráfico de blobs de Azure](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Copia de seguridad en un gráfico de blobs de Azure")  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
  **Transferencias de datos** : las transferencias de datos de entrada a Microsoft Azure son gratuitas. Las transferencias salientes se cobran por el uso de ancho de banda y se calculan según una escala graduada específica de la región. Para obtener más detalles, vea la sección [Transferencias de datos](http://go.microsoft.com/fwlink/?LinkId=277061) del artículo Detalles de precios.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 
 [Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
 

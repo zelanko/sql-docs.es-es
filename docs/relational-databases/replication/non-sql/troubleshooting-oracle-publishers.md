@@ -16,15 +16,15 @@ helpviewer_keywords:
 - troubleshooting [SQL Server replication], Oracle publishing
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 caps.latest.revision: "62"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1878b377957022e672dfec13f51e8f54e009c36b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 115bdbf97a35d4035c00a8e547a2c38125ce6970
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Solucionar problemas de los publicadores de Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describen varios problemas que pueden surgir al configurar y utilizar un publicador de Oracle.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
 -   La base de datos de Oracle está en línea y puede conectarse a ella con una herramienta como SQL*Plus.  
   
--   El inicio de sesión que utiliza la replicación para conectarse al publicador de Oracle tiene permisos suficientes. Para más información, vea [Configurar un publicador de Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
+-   El inicio de sesión que utiliza la replicación para conectarse al publicador de Oracle tiene permisos suficientes. Para obtener más información, vea [Configurar un publicador de Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
 -   Los nombres TNS definidos durante la configuración del publicador de Oracle aparecen en el archivo tnsnames.ora.  
   
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  Haga clic en **Aceptar** en todos los cuadros de diálogo abiertos para salir y guardar los cambios.  
   
- Si no encuentra sqlplus.exe en el distribuidor, instale la versión actual del software de cliente de Oracle en el distribuidor. Para más información, vea [Configurar un publicador de Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
+ Si no encuentra sqlplus.exe en el distribuidor, instale la versión actual del software de cliente de Oracle en el distribuidor. Para obtener más información, vea [Configurar un publicador de Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
 ## <a name="sql-server-error-21620-is-raised"></a>Aparece el error 21620 de SQL Server  
  Si va a conectar a una base de datos Oracle anterior a la versión 8.1, la publicación de Oracle requiere que el software de cliente Oracle instalado en el distribuidor sea de la versión 9. Si se va a conectar a una base de datos Oracle que es de la versión 8.1 o posterior, se recomienda que el software del cliente Oracle sea de la versión 10 o posterior.  
@@ -135,7 +135,7 @@ ms.lasthandoff: 11/17/2017
   
 -   "La clave del Registro CLSID que indica que el proveedor OLEDB de Oracle, OraOLEDB.Oracle, se ha registrado no está presente en el distribuidor. Compruebe que el proveedor OLEDB de Oracle se haya instalado y registrado en el distribuidor".  
   
- Si va a usar el software de cliente Oracle versión 10g, el proveedor es OraOLEDB10.dll; para la versión 9i, es OraOLEDB.dll. El proveedor está instalado en %ORACLE_HOME%\BIN (por ejemplo, C:\oracle\product\10.1.0\Client_1\bin). Si el proveedor Oracle OLEDB no está instalado en el distribuidor, instálelo desde el disco de instalación del software cliente de Oracle que proporciona Oracle. Para más información, vea [Configurar un publicador de Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
+ Si va a usar el software de cliente Oracle versión 10g, el proveedor es OraOLEDB10.dll; para la versión 9i, es OraOLEDB.dll. El proveedor está instalado en %ORACLE_HOME%\BIN (por ejemplo, C:\oracle\product\10.1.0\Client_1\bin). Si el proveedor Oracle OLEDB no está instalado en el distribuidor, instálelo desde el disco de instalación del software cliente de Oracle que proporciona Oracle. Para obtener más información, vea [Configurar un publicador de Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
  Si el proveedor Oracle OLEDB está instalado, asegúrese de que está registrado. Para registrar el archivo DLL del proveedor, ejecute el siguiente comando desde el directorio en que esté instalado el archivo DLL y, a continuación, detenga y reinicie la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
@@ -251,8 +251,8 @@ ms.lasthandoff: 11/17/2017
   
 -   Ejecute **sp_dropdistpublisher**. Para más información, vea [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Configurar un publicador de Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Información general de la publicación de Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

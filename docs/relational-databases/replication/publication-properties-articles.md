@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.pubproperties.articles.f1
 ms.assetid: bdeea318-a153-44b8-9e51-9155f3bad18b
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d3b75391bacc62e7d1b38743f8ab83db78d1e5a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d9c3cb3eab7b2145f9f49b8a340cf2215278dbd1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-properties-articles"></a>Propiedades de la publicación, Artículos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]La página **Artículos** del cuadro de diálogo **Propiedades de la publicación** contiene información acerca de los artículos incluidos en una publicación, le permite agregar artículos a publicaciones existentes o quitarlos y le permite cambiar las propiedades de los artículos y los filtros de columnas.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="column-filters"></a>Filtros de columnas  
  Para filtrar columnas en esta página, debe expandir una tabla en el panel **Objetos para publicar** y seleccionar solo las columnas que desea filtrar (puede filtrar filas en la página **Filtrar filas de tabla** de este asistente). Filtrar columnas es útil por diversas razones, entre las que se incluye la seguridad (evitar replicaciones de datos confidenciales) y el rendimiento (por ejemplo, evitar la replicación de columnas de objetos binarios grandes (BLOB)). Para más información sobre cómo filtrar columnas, incluida una lista de tipos de columnas que no pueden filtrarse, vea [Filtrar datos publicados](../../relational-databases/replication/publish/filter-published-data.md).  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  El panel **Objetos para publicar** le permite:  
   
 -   Ver todos los objetos disponibles para la replicación.  
@@ -85,8 +85,8 @@ ms.lasthandoff: 11/17/2017
  **Mostrar solamente los objetos seleccionados en la lista**  
  Active esta casilla para mostrar solamente aquellos artículos seleccionados en el panel de objetos.  
   
-## <a name="see-also"></a>Vea también  
- [Crear una publicación](../../relational-databases/replication/publish/create-a-publication.md)   
+## <a name="see-also"></a>Ver también  
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Ver y modificar propiedades de publicación](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Crear y aplicar la instantánea inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [Reinicializar una suscripción](../../relational-databases/replication/reinitialize-a-subscription.md)   

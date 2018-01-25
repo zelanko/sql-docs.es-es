@@ -14,20 +14,20 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.publicationinfo.downlevelagents.merge.f1
 ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7b8338fb5c58ba7ebf0a100b0f25a9bd6117991
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 70827d7aff090787f25f0cc8966e2647a51f9a9a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-information-agents-merge-publication"></a>Información de la Publicación, Agentes (Publicación de combinación)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La pestaña **Agentes** muestra información de resumen del Agente de instantáneas para la publicación seleccionada.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  Para obtener información más detallada y las tareas relacionadas con el Agente de instantáneas, haga clic con el botón secundario en la fila del agente y, a continuación, haga clic en una opción del menú contextual. Para cambiar la manera que la cuadrícula muestra los datos, haga clic con el botón secundario en la cuadrícula y, a continuación, haga clic en una de las opciones siguientes:  
   
 -   **Ordenar**: ordene en una o más columnas en el cuadro de diálogo **Ordenar columnas** .  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/17/2017
  **Última acción**  
  La última acción realizada durante la ejecución más reciente del agente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [View Information and Perform Tasks for a Publication &#40;Monitor de replicación&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  (Ver información y realizar tareas para una publicación [Monitor de replicación])  
  [Ver información y realizar tareas para los agentes asociados a una publicación &#40;Monitor de replicación&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dc8ffd4436d18c0b46b1dbeaa9b1d034c13117ca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 75c8ba6edd0aed89854e62f66b2011927fb4879e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>Publicar una base de datos (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Puede usar el **Asistente Generar y publicar scripts** para publicar una base de datos completa u objetos de base de datos individuales en un proveedor de hospedaje web.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  La funcionalidad descrita en este tema solía proporcionarla el Asistente para publicar bases de datos. La funcionalidad de publicación se ha agregado al Asistente Generar y publicar scripts y el Asistente para publicar bases de datos ha desparecido.  
   
-## <a name="generate-and-publish-scripts-wizard"></a>Asistente Generar y publicar scripts  
+## <a name="generate-and-publish-scripts-wizard"></a>Asistente generar y publicar scripts  
  El Asistente Generar y publicar scripts puede usarse para publicar una base de datos u objetos seleccionados de una base de datos en un proveedor de hospedaje web. Un proveedor de hospedaje web de SQL Server es una interfaz de conectividad con un servicio web. El servicio web se crea usando el proyecto Database Publishing Services de SQL Server Hosting Toolkit en CodePlex. El servicio web facilita a los clientes del anfitrión web publicar sus bases de datos en el servicio usando el Asistente Generar y publicar scripts. Para obtener más información sobre cómo descargar el SQL Server Hosting Toolkit, vea [SQL Server Database Publishing Services](http://go.microsoft.com/fwlink/?LinkId=142025).  
   
  El Asistente Generar y publicar scripts también se puede usar para crear un script para transferir una base de datos.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  En la página **Guardar o publicar scripts** , supervise el progreso de la publicación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Generar scripts &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)   
  [Copiar bases de datos en otros servidores](../../relational-databases/databases/copy-databases-to-other-servers.md)  
   

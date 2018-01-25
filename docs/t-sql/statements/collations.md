@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7cc579d5f4c5d84dcec335e69d12334725f60741
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 7a206f638b78a5e4311ab7889a7902aa39a17413
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="collations"></a>Intercalaciones
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,6 @@ ms.lasthandoff: 01/02/2018
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 COLLATE { <collation_name> | database_default }  
 <collation_name> :: =   
      { Windows_collation_name } | { SQL_collation_name }  
@@ -87,11 +86,11 @@ COLLATE { <collation_name> | database_default }
   
  COLLATE utiliza *collate_name* para hacer referencia al nombre de la intercalación de SQL Server o la intercalación de Windows que se aplicará a la expresión, la definición de columna o la definición de la base de datos. *collation_name* puede ser solo un determinado *Windows_collation_name* o un *SQL_collation_name* y el parámetro debe contener un valor literal. *collation_name* no se puede representar mediante una variable o expresión.  
   
- Las intercalaciones se suelen identificar mediante un nombre de intercalación, excepto en el programa de instalación. En el programa de instalación, se especifica en su lugar el designador de intercalación raíz (configuración regional de la intercalación) para las intercalaciones de Windows y, a continuación, se especifican las opciones de ordenación que distinguen o no las mayúsculas de minúsculas, o acentos.  
+ Las intercalaciones se suelen identificar mediante un nombre de intercalación, excepto en el programa de instalación. En el programa de instalación, en su lugar, especifique el designador de intercalación raíz (la configuración regional de la intercalación) para las intercalaciones de Windows y, a continuación, especifique las opciones de ordenación que se distingue o no mayúsculas y minúsculas o acentos.  
   
  Puede ejecutar la función de sistema [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) para recuperar una lista de todos los nombres de intercalación válidos para intercalaciones de Windows e intercalaciones de SQL Server:  
   
-```  
+```sql  
 SELECT name, description  
 FROM fn_helpcollations();  
 ```  
@@ -104,9 +103,11 @@ FROM fn_helpcollations();
   
 -   Al restaurar o adjuntar una base de datos, la intercalación predeterminada de la base de datos y la intercalación de cualquier **char**, **varchar**, y **texto** columnas o parámetros en la base de datos deben ser compatibles con el sistema operativo.  
   
-     Traducción de página de códigos se admite para **char** y **varchar** tipos de datos, pero no para **texto** tipo de datos. La pérdida de datos durante la traducción de páginas de códigos no se notifica.  
+> [!NOTE]
+> Traducción de página de códigos se admite para **char** y **varchar** tipos de datos, pero no para **texto** tipo de datos. La pérdida de datos durante la traducción de páginas de códigos no se notifica.  
   
- Si la intercalación especificada o la intercalación utilizada por el objeto que se hace referencia utiliza una página de códigos no admitida por Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra un error.  
+> [!NOTE]
+> Si la intercalación especificada o la intercalación utilizada por el objeto que se hace referencia utiliza una página de códigos no admitida por Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra un error.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -132,39 +133,39 @@ COLLATE Traditional_Spanish_ci_ai ASC;
 GO  
 ```  
 
- Estos son los resultados de la primera consulta.  
+Estos son los resultados de la primera consulta.  
   
- ```
- Place 
- ------------- 
- California 
- Chiapas 
- Cinco Rios 
- Colima
- ```  
+```
+Place 
+------------- 
+California 
+Chiapas 
+Cinco Rios 
+Colima
+```  
   
- Estos son los resultados de la segunda consulta.  
-  
- ```
- Place 
- ------------- 
- California 
- Cinco Rios 
- Colima 
- Chiapas
- ```  
+Estos son los resultados de la segunda consulta.  
+ 
+```
+Place 
+------------- 
+California 
+Cinco Rios 
+Colima 
+Chiapas
+```  
   
 ### <a name="b-additional-examples"></a>B. Ejemplos adicionales  
- Para obtener ejemplos adicionales que usan **COLLATE**, consulte [CREATE DATABASE &#40; Transact-SQL de SQL Server &#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md) ejemplo **g. crear una base de datos y especificar un nombre de intercalación y sus opciones**, y [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md) ejemplo **V. cambiar la intercalación de columnas**.  
+ Para obtener ejemplos adicionales que usan **COLLATE**, consulte [CREATE DATABASE &#40; Transact-SQL de SQL Server &#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples) ejemplo **g. crear una base de datos y especificar un nombre de intercalación y sus opciones**, y [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md#alter_column) ejemplo **V. cambiar la intercalación de columnas**.  
   
 ## <a name="see-also"></a>Vea también  
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md)   
- [Prioridad de intercalación &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)   
- [Constantes &#40; Transact-SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)   
- [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [tabla &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)  
+ [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)    
+ [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md)    
+ [Prioridad de intercalación &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)     
+ [Constantes &#40; Transact-SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)     
+ [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)     
+ [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)     
+ [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)     
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)     
   
   

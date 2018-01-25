@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.dmf.groupsubscription.f1
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb2c538987a02719bc35b605a4183a7edfa9b93c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 747b220659484754677428226d5eb7467a8bf443
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>Suscribir una base de datos a una categoría de directiva o anular la suscripción
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo se suscribe una base de datos a una categoría de directiva o se cancela la suscripción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -39,11 +39,11 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Requiere pertenencia al rol fijo de base de datos db_owner.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/17/2017
      **Directiva**  
      Cuando se expanden los grupos de directivas, muestra las directivas de la categoría de directiva.  
   
-     **Habilitado**  
+     **Enabled**  
      Indica si las directivas están habilitadas o deshabilitadas.  
   
      **Modo de ejecución**  

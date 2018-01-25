@@ -21,15 +21,15 @@ helpviewer_keywords:
 - upgrading replicated databases
 ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83f7b41bb5c2ad54f4b095a7d30aa2879688d2a4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 09f8ed7bf8cbd407a8bd9dc706d5e9aadf34ce65
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>Actualizar scripts de replicación (programación de la replicación con Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los archivos de script de [!INCLUDE[tsql](../../../includes/tsql-md.md)] se pueden utilizar para configurar mediante programación una topología de replicación. Para obtener más información, consulte [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md) (Conceptos sobre los procedimientos almacenados del sistema de replicación).  
@@ -94,7 +94,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  Después de ejecutar el procedimiento almacenado que crea la suscripción, asegúrese de que ejecuta el procedimiento almacenado que crea un trabajo de Agente de distribución para sincronizar la suscripción. El procedimiento almacenado que utilice dependerá del tipo de suscripción.  
   
-    -   Para una suscripción de extracción, actualice la ejecución de [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) para proporcionar las credenciales de Windows bajo las que se ejecuta el Agente de distribución en el suscriptor para **@job_name** y **@job_password**. Esto se hace después de la ejecución de [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Para más información, consulte [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).  
+    -   Para una suscripción de extracción, actualice la ejecución de [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) para proporcionar las credenciales de Windows bajo las que se ejecuta el Agente de distribución en el suscriptor para **@job_name** y **@job_password**. Esto se hace después de la ejecución de [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Para obtener más información, consulte [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
     -   Para una suscripción de inserción, ejecute [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) en el publicador. Especifique **@subscriber**, **@subscriber_db**, **@publication**, credenciales de Windows bajo las que se ejecuta el Agente de distribución en el distribuidor para **@job_name** y **@job_password**, y una programación para este trabajo del agente. Para más información, consulte [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md). Esto se hace después de la ejecución de [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Para más información, consulte [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md).  
   
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  Después de ejecutar el procedimiento almacenado que crea la suscripción, asegúrese de que ejecuta el procedimiento almacenado que crea un trabajo de Agente de mezcla para sincronizar la suscripción. El procedimiento almacenado que utilice dependerá del tipo de suscripción.  
   
-    -   Para una suscripción de extracción, actualice la ejecución de [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) para proporcionar las credenciales de Windows bajo las que se ejecuta el Agente de mezcla en el suscriptor para **@job_name** y **@job_password**. Esto se hace después de la ejecución de [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Para más información, consulte [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).  
+    -   Para una suscripción de extracción, actualice la ejecución de [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) para proporcionar las credenciales de Windows bajo las que se ejecuta el Agente de mezcla en el suscriptor para **@job_name** y **@job_password**. Esto se hace después de la ejecución de [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Para obtener más información, consulte [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
     -   Para una suscripción de inserción, ejecute [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) en el publicador. Especifique **@subscriber**, **@subscriber_db**, **@publication**, las credenciales de Windows bajo las que se ejecuta el Agente de mezcla en el distribuidor para **@job_name** y **@job_password**, y una programación para este trabajo del agente. Para más información, consulte [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md). Esto se hace después de la ejecución de [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Para más información, consulte [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md).  
   
@@ -192,7 +192,7 @@ ms.lasthandoff: 11/17/2017
   
  [!code-sql[HowTo#sp_createmergepullsub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_11.sql)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)   
  [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md)   

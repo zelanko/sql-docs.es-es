@@ -22,13 +22,13 @@ ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 caps.latest.revision: "4"
 author: JasonWHowell
 ms.author: jasonh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c9f10162900579bcf871b2a1bf63d8aa5cc4ac6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fe422c7445debc085f9d610550f365ccc4f1b8f2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Opción de conmutación por error de detección del estado del nivel de la base de datos de un grupo de disponibilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Desde SQL Server 2016, hay una opción disponible de detección del estado del nivel de la base de datos (DB_FAILOVER) al configurar un grupo de disponibilidad AlwaysOn. La detección del estado del nivel de la base de datos advierte cuando una base de datos deja de estar en estado en línea, cuando algo va mal, y activará la conmutación automática por error del grupo de disponibilidad. 
@@ -102,7 +102,7 @@ select name, db_failover from sys.availability_groups
 
 Ejemplo de resultado de esta DMV:
 
-name  |  db_failover  
+NAME  |  db_failover  
 ---------|---------
 | Contoso-ag |  1  |
 

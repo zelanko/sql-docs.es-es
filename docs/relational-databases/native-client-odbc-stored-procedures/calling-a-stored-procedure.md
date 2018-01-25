@@ -21,15 +21,15 @@ helpviewer_keywords:
 - CALL statement
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 06859de8da70eb1357802fdca1e758e1872a7f10
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 31c151ab9942e09149b6e244d4ec6eba0b9f22b5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="calling-a-stored-procedure"></a>Llamar a un procedimiento almacenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
  La secuencia de escape ODBC CALL para llamar a un procedimiento es:  
   
- {[**? =**]**llamar a***nombre_procedimiento*[([*parámetro*] [**,**[*parámetro*]] ...)]}  
+ {[**?=**]**call***procedure_name*[([*parameter*][**,**[*parameter*]]...)]}  
   
  donde *nombre_procedimiento* especifica el nombre de un procedimiento y *parámetro* especifica un parámetro de procedimiento. Los parámetros con nombre solo se admiten en instrucciones que utilizan la secuencia de escape ODBC CALL.  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
  Los parámetros de entrada y de entrada/salida pueden omitirse de las llamadas a procedimiento. Si se llama a un procedimiento con paréntesis pero sin ningún parámetro, el controlador indica al origen de datos que use el valor predeterminado para el primer parámetro. Por ejemplo:  
   
- {**llamar a** *nombre_procedimiento***()**}  
+ {**llamar a** * procedure_name ***()**}  
   
  Si el procedimiento no tiene ningún parámetro, puede producirse un error en el procedimiento. Si se llama a un procedimiento sin paréntesis, el controlador no envía ningún valor de parámetro. Por ejemplo:  
   

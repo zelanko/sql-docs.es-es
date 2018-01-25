@@ -14,20 +14,20 @@ ms.topic: article
 f1_keywords: sql13.swb.dmf.condition.f1
 ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1e539a7565fa1dc42f5c27cb9025f1dad362a95
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 69116441118315b2fa9bcf92ab5b20fcc725b73e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>Cuadro de diálogo Crear nueva condición o Abrir condición, página General
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice este cuadro de diálogo para crear o cambiar una condición de la administración basada en directivas. Una condición es una expresión booleana que especifica un conjunto de estados permitidos de un destino administrado mediante la administración basada en directivas con respecto a las facetas. Las propiedades que se pueden seleccionar en el cuadro **Expresión/Campo** dependen de la faceta que se use. Para obtener más información sobre cómo se relacionan las condiciones con las facetas y las directivas, vea [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Nombre**  
  Si la condición es nueva, escriba un nombre para ella. Si la condición ya existe, se muestra el nombre.  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
  **Operador**  
  Seleccione un operador de comparación para esta expresión. Los operadores son: =, !=, >, >=, <, <=, [NOT]LIKE, [NOT]IN. No todos los operadores están disponibles para algunas propiedades.  
   
- **Valor**  
+ **Value**  
  Configuración del valor para esta expresión. Los valores permitidos dependen de la faceta. Los valores pueden ser TRUE/FALSE, de tipo cadena o de tipo numérico. Los valores de tipo cadena se deben incluir entre comillas sencillas, por ejemplo: **'AdventureWorks'**. No todos los operadores están disponibles para algunas propiedades.  
   
 ## <a name="group-clauses"></a>Agrupar cláusulas  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Presione la tecla Mayús o Ctrl, y a continuación haga clic en dos o más cláusulas para seleccionar un intervalo. Haga clic con el botón derecho en el área seleccionada y luego haga clic en **Agrupar cláusulas**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

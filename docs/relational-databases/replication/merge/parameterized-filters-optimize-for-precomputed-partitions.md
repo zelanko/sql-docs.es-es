@@ -17,15 +17,15 @@ helpviewer_keywords:
 - merge replication precomputed partitions [SQL Server replication], about precomputed partitions
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7bb142518ea996d1344c71aed46e06645fb0d957
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c5e5341614b3da26ec21f84017b0e776000a3bb5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>Filtros con parámetros: optimizar para las particiones precalculadas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Las particiones precalculadas son una optimización del rendimiento que se puede utilizar con publicaciones de combinación filtradas. Las particiones precalculadas son también un requisito para utilizar registros locales en publicaciones filtradas. Para obtener más información sobre los registros lógicos, vea [Agrupar cambios en filas relacionadas con registros lógicos](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="performance-of-precomputed-partitions"></a>Rendimiento de las particiones precalculadas  
  Existe un pequeño costo de rendimiento con las particiones precalculadas cuando se cargan cambios desde el suscriptor al publicador, pero la mayor parte del tiempo de procesamiento de mezcla se dedica a evaluar las particiones y descargar los cambios del publicador al suscriptor, por lo que la ganancia neta puede ser importante. La ventaja en cuanto al rendimiento variará dependiendo del número de suscriptores que se sincronicen de forma simultánea y del número de actualizaciones por sincronización que desplacen filas de una partición a otra.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

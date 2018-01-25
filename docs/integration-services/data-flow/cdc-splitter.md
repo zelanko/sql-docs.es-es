@@ -16,25 +16,25 @@ ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a680f3d08dcc3cc9e6cb196e02bc3429ac526a6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 19b09b99c30e0dffd81b1778c3df25596d455110
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="cdc-splitter"></a>Divisor CDC
   El divisor CDC divide un único flujo de filas de un flujo de datos de origen de CDC en varios flujos de datos para las operaciones de inserción, actualización y eliminación. El flujo de datos se divide según la columna obligatoria `__$operation` y sus valores estándar en las tablas de cambios de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 |Valor de la operación|Salida|Description|  
 |------------------------|------------|-----------------|  
-|1|Delete|Fila eliminada|  
+|1|DELETE|Fila eliminada|  
 |2|Insert|Fila insertada (no está disponible cuando se usa el modo CDC **Neto con combinación** )|  
 |3|Update|Fila antes de la actualización (disponible solo cuando se usa el modo CDC **Todo con los valores antiguos** )|  
 |4|Update|Fila después de la actualización (sigue a la de antes de la actualización)|  
 |5|Update|Fila de mezcla (solo disponible cuando se usa el modo CDC **Neto con combinación** )|  
-|Otro|Error||  
+|Otros|Error||  
   
  Puede usar el divisor para conectarse a los resultados predefinidos de INSERT, UPDATE, DELETE y UPDATE para un procesamiento posterior.  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/20/2017
   
 -   En la pantalla **Flujo de datos** del proyecto de [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] , haga clic con el botón secundario en el divisor CDC y seleccione **Mostrar editor avanzado**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Dirigir el flujo CDC según el tipo de cambio](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
   
   

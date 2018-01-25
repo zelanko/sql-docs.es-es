@@ -16,15 +16,15 @@ helpviewer_keywords:
 - deployment security [SQL Server replication]
 ms.assetid: 9c8c284a-e497-48b7-b2e2-c96a0e940e67
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0740e86a27b4da29a54b90b45d4264ecf7ba88a9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 91887cd8440fbe7427d4bdba3c50fda151e80ee3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secure-deployment-replication"></a>Implementación segura (replicación)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En esta sección se proporciona información para ayudarle a mejorar la replicación segura.  
@@ -42,14 +42,14 @@ ms.lasthandoff: 11/17/2017
  [Proteger la carpeta de instantáneas](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
  Describe los permisos requeridos para tener acceso a la carpeta de instantáneas, las prácticas recomendadas para definir la ubicación de carpetas y consideraciones que se deben tener en cuenta para entregar instantáneas a través de FTP.  
   
- [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)  
+ [Proteger la replicación a través de Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)  
  Incluye información sobre redes privadas virtuales y sincronización web.  
   
  [Consideraciones de seguridad para la replicación de SQL Server Compact](../../../relational-databases/replication/security/security-considerations-for-sql-server-compact-replication.md)  
  Aborda la protección de la conectividad entre una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)] y [!INCLUDE[ssEW](../../../includes/ssew-md.md)].  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre seguridad &#40;replicación&#41;](../../../relational-databases/replication/security/security-overview-replication.md)   
+## <a name="see-also"></a>Ver también  
+ [Información general sobre seguridad &#40;Replicación&#41;](../../../relational-databases/replication/security/security-overview-replication.md)   
  [Desarrollo seguro &#40;replicación&#41;](../../../relational-databases/replication/security/secure-development-replication.md)  
   
   

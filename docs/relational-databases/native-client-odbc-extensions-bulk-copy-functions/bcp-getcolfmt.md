@@ -1,5 +1,5 @@
 ---
-title: bcp_getcolfmt | Documentos de Microsoft
+title: bcp_getcolfmt | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_getcolfmt function
 ms.assetid: f8bdada5-7b2d-4475-8c98-f93e9d77b130
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8056470fbe4f5ce7c6c78bf0e595a738354d0a37
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 642290f1093c1f0730417e4bcbed259322c3e630
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpgetcolfmt"></a>bcp_getcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ RETCODE bcp_getcolfmt (
  *HDBC*  
  Es el identificador de la conexión ODBC habilitada para la copia masiva.  
   
- *campo*  
+ *field*  
  Es el número de columnas para las que se recupera la propiedad.  
   
  *propiedad*  
@@ -71,7 +71,7 @@ RETCODE bcp_getcolfmt (
 ## <a name="remarks"></a>Comentarios  
  Valores de propiedad de formato de columna se muestran en la [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) tema. Los valores de propiedad del formato de columna se establecen llamando a la función **bcp_setcolfmt** , y se utiliza la función **bcp_getcolfmt** para buscar el valor de propiedad del formato de columna.  
   
- Cambios de comportamiento pueden observarse al conectarse a un [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (o posterior) equipo del servidor, en comparación con versiones anteriores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versiones. Para obtener más información, consulte [de detección de metadatos](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Cambios de comportamiento pueden observarse al conectarse a un [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (o posterior) equipo del servidor, en comparación con versiones anteriores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versiones. Para obtener más información, vea [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
   
 ## <a name="bcpgetcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_getcolfmt admite las características mejoradas de fecha y hora  
  Los tipos utilizados con el **BCP_FMT_TYPE** propiedad para los tipos de fecha y hora son como se especifica en [cambios en la copia masiva para mejoradas de fecha y hora tipos &#40; OLE DB y ODBC &#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  

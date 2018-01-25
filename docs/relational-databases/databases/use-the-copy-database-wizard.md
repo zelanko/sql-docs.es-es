@@ -28,15 +28,15 @@ helpviewer_keywords:
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 caps.latest.revision: "64"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 28f18fd090691e5aae6023fe7282ef235b12778c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 534d9cd96831bfc79475f99111580e36f3603add
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-the-copy-database-wizard"></a>Usar el Asistente para copiar bases de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Asistente para copiar bases de datos permite mover o copiar bases de datos y determinados objetos de servidor de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a otra fácilmente, sin tiempo de inactividad del servidor. Mediante este asistente, puede hacer lo siguiente: 
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/17/2017
   
 
   
-###  <a name="Permissions"></a> Permisos  
+###  <a name="Permissions"></a> Permissions  
  Debe ser miembro del rol fijo de servidor **sysadmin** tanto en el servidor de origen como en el servidor de destino.  
   
 ##  <a name="Overview"></a> Las páginas del Asistente para copiar bases de datos 
@@ -121,7 +121,7 @@ Permite que un usuario se conecte a través de una cuenta de usuario de Microsof
 -    **Utilizar autenticación de SQL Server**  
 Permite que un usuario se conecte proporcionando el nombre de usuario y la contraseña de autenticación de SQL Server.
 
-     -    **Nombre de usuario.**  
+     -    **User name**  
 Se usa para escribir el nombre de usuario con el que se va a conectar. Esta opción solo está disponible si ha seleccionado la **autenticación de SQL Server**para conectarse.
 
      -    **Contraseña**  
@@ -141,7 +141,7 @@ Permite que un usuario se conecte a través de una cuenta de usuario de Microsof
 -    **Utilizar autenticación de SQL Server**  
 Permite que un usuario se conecte proporcionando el nombre de usuario y la contraseña de autenticación de SQL Server.
 
-     -    **Nombre de usuario.**  
+     -    **User name**  
 Se usa para escribir el nombre de usuario con el que se va a conectar. Esta opción solo está disponible si ha seleccionado la **autenticación de SQL Server**para conectarse.
 
      -    **Contraseña**  

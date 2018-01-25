@@ -15,15 +15,15 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 caps.latest.revision: "14"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 831e5b4aa94ed320440e81afdd5234aea1ee6109
-ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
+ms.openlocfilehash: 8a620eefb1d9c679083cdafb67dfba27f5414826
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="upgrading-always-on-availability-group-replica-instances"></a>Actualización de instancias de la réplica del grupo de disponibilidad Always On
+# <a name="upgrading-always-on-availability-group-replica-instances"></a>Actualización de instancias de la réplica del grupo de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Si actualiza una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda un grupo de disponibilidad Always On (AG) a una nueva versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], a un Service Pack o una actualización acumulativa de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o bien si la instala en una nueva versión acumulativa o un nuevo Service Pack de Windows, podrá reducir el tiempo de inactividad de la réplica principal a solo una conmutación por error manual mediante una actualización gradual (o dos conmutaciones por error manuales en caso de efectuarla por recuperación en la base de datos principal original). Durante el proceso de actualización, no habrá una réplica secundaria disponible para la conmutación por error o para operaciones de solo lectura. Después de la actualización, puede pasar algún tiempo antes de que la réplica secundaria se ponga al día con el nodo de la réplica principal, según el volumen de actividad del nodo de la réplica principal, así que debe esperar un tráfico de red elevado.  

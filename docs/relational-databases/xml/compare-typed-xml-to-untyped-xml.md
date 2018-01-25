@@ -28,15 +28,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 caps.latest.revision: "57"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cf2185ff9c0aa70c97b4d067f4d58d5360b70948
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: a3aaf70933f08d804c3a186c91177a63982aa0e5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Comparar XML con tipo y XML sin tipo
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Se pueden crear variables, parámetros y columnas del tipo de datos **xml**. Opcionalmente, se puede asociar una colección de esquemas XML a una variable, a un parámetro o a una columna de tipo **xml** . En este caso, se dice que la instancia del tipo de datos **xml** es una instancia *con tipo*. En los demás casos, se dice que la instancia XML es una instancia *sin tipo*.  
@@ -161,9 +161,9 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
  Observe que todavía puede usar una instrucción SELECT de SQL para recuperar todo el tipo de datos XML, aun cuando contiene años negativos. Se recomienda que reemplace los años negativos por un año dentro del intervalo recientemente admitido o cambie el tipo del elemento o atributo a **xs:string**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Crear instancias de datos XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [Métodos de tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [métodos del tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Lenguaje de manipulación de datos XML &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   
  [Datos XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   

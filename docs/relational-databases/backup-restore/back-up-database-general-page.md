@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 caps.latest.revision: "64"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6096d9cbe627276898de55425c60b98a327de947
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: acb78ba1abb462f76dd26cd87062732b386f547e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-database-general-page"></a>Copia de seguridad de base de datos (página General)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice la página **General** del cuadro de diálogo **Copia de seguridad de base de datos** para ver o modificar la configuración de una operación de copia de seguridad de la base de datos.  
@@ -45,9 +45,9 @@ ms.lasthandoff: 11/17/2017
   
 -   Para crear una copia de seguridad parcial, debe usar la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) de con la opción PARTIAL.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
   
-### <a name="source"></a>Origen  
+### <a name="source"></a>Source  
  Las opciones del panel **Origen** identifican la base de datos y especifican el tipo de copia de seguridad y el componente para la operación de copia de seguridad.  
   
  **Base de datos**  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
  **Tipo de copia de seguridad**  
  Seleccione el tipo de copia de seguridad que desea realizar para la base de datos especificada.  
   
-|Tipo de copia de seguridad|Disponible para|Restricciones|  
+|Tipo de copia de seguridad|Disponible para|Restrictions|  
 |-----------------|-------------------|------------------|  
 |Completo|Bases de datos, archivos y grupos de archivos|En la base de datos **maestra** , solo son posibles copias de seguridad completas.<br /><br /> En el modelo de recuperación simple, las copias de seguridad de archivos y grupos de archivos solo están disponibles para los grupos de archivos de solo lectura.|  
 |Diferencial|Bases de datos, archivos y grupos de archivos|En el modelo de recuperación simple, las copias de seguridad de archivos y grupos de archivos solo están disponibles para los grupos de archivos de solo lectura.|  
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
  Seleccione esta opción para crear una copia de seguridad de solo copia. Una *copia de seguridad de solo copia* es una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] independiente de la secuencia de copias de seguridad convencionales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Copias de seguridad de solo copia &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
   
 > [!NOTE]  
->  Cuando la opción **Diferencial** está seleccionada, no se puede crear una copia de seguridad de solo copia.  
+>  Cuando la opción **Diferencial** está seleccionada, no puede crear una copia de seguridad de solo copia.  
   
  **Componente de copia de seguridad**  
  Seleccione el componente de la base de datos del que desea hacer una copia de seguridad. Si se selecciona **Registro de transacciones** en la lista **Tipo de copia de seguridad** , esta opción no estará activada.  
@@ -134,7 +134,7 @@ Si ha seleccionado la dirección **URL** como el destino de la copia de segurida
   **Nuevo contenedor:**  
 Se usa para registrar un contenedor existente para el que no tiene una firma de acceso compartido.  Vea [Connect to a Microsoft Azure Subscription (Conectarse a una suscripción de Microsoft Azure)](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Realizar copias de seguridad de archivos y grupos de archivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
  [Definir un dispositivo lógico de copia de seguridad para un archivo de disco &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   

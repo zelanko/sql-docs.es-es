@@ -18,13 +18,13 @@ ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 caps.latest.revision: "53"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 32004cf90c0e9847b91b144629ab1c093e495bf1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ad3286b87c3b0db9804a64291a4d30b8ab216e6a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="getting-started-with-always-on-availability-groups-sql-server"></a>Introducción a los grupos de disponibilidad de AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ En este tema se describen los pasos para las instancias de configuración de [!I
 |Tarea|Vínculo|  
 |----------|----------|  
 |Modificar la [directiva de conmutación por error flexible](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md) del grupo de disponibilidad para controlar las condiciones que producen una conmutación por error automática. Esta directiva es pertinente cuando la conmutación automática por error es posible.|[Configurar la directiva flexible de conmutación por error de un grupo de disponibilidad](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)|  
-|Realizar una conmutación por error manual planeada o una conmutación por error manual forzada (con posible pérdida de datos), denominada normalmente *conmutación por error forzada*. Para obtener más información, vea [Conmutación por error y modos de conmutación por error &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).|[Realizar una conmutación manual por error planeada](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br /> [Realizar una conmutación manual por error forzada](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)|  
+|Realizar una conmutación por error manual planeada o una conmutación por error manual forzada (con posible pérdida de datos), denominada normalmente *conmutación por error forzada*. Para obtener más información, vea [Conmutación por error y modos de conmutación por error &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).|[Realizar una conmutación manual por error planeada](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br /> [Realizar una conmutación manual por error forzada](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)|  
 |Usar un conjunto de directivas definidas previamente para ver el estado de un grupo de disponibilidad y sus réplicas y bases de datos.|[Usar la administración basada en directivas para ver el estado de los grupos de disponibilidad](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [Usar el Panel de grupo AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)|  
 |Agregar o quitar una réplica secundaria.|[Agregar una réplica secundaria](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [Quitar una réplica secundaria](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
 |Suspender o reanudar una base de datos de disponibilidad. Suspender una base de datos secundaria la mantiene en su momento actual en el tiempo hasta que se reanuda.|[Suspender una base de datos](../../../database-engine/availability-groups/windows/suspend-an-availability-database-sql-server.md)<br /><br /> [Reanudar una base de datos](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)|  
@@ -101,7 +101,7 @@ En este tema se describen los pasos para las instancias de configuración de [!I
   
 -   **Blogs:**  [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlAlwaysOn/)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Configuración de una instancia del servidor para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)   

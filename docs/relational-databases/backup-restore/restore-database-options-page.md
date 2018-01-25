@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.restoredb.options.f1
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 caps.latest.revision: "68"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 83d6c271c6d346881f7d1e7fdc7a0c3e4e0a5c25
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0bdd383335126a36265bc917c1679dbd5ab0dc3e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-database-options-page"></a>Restaurar base de datos (página Opciones)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice la página **Opciones** del cuadro de diálogo **Restaurar base de datos** para modificar el comportamiento y el resultado de la operación de restauración.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Cuando se especifica una tarea de restauración mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script de [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondiente que contenga las instrucciones RESTORE para esta operación de restauración. Para generar el script, haga clic en **Script** y seleccione un destino para este. Para obtener más información sobre la sintaxis de RESTORE, vea [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
   
 ### <a name="restore-options"></a>Opciones de restauración  
  Para modificar aspectos del comportamiento de la operación de restauración, utilice las opciones del panel **Opciones de restauración** .  
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Si la siguiente copia de seguridad es una copia de seguridad de registros, utilice la tarea **Restaurar registro de transacciones** . Para obtener más información sobre cómo reanudar una secuencia de restauración por medio de la restauración de un registro de transacciones, vea [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restaurar una copia de seguridad desde un dispositivo &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)   
  [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)   

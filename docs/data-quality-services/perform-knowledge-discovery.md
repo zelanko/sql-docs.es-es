@@ -18,15 +18,15 @@ f1_keywords:
 - sql13.dqs.kb.kbmap.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2071dfc0ea042138a9f6b5f00261b81847f7f909
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9c9cb4fb01f38cf1a65069dbd41ccc4d5d0aa91b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="perform-knowledge-discovery"></a>Realizar la detección de conocimiento
   En este tema se describe cómo crear una base de conocimiento mediante la detección de conocimiento. Durante el proceso de detección, [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) analiza los datos de un origen de datos de ejemplo mediante un proceso asistido por PC, y agrega el conocimiento adquirido a la base de conocimiento. Este conocimiento se puede modificar y mejorar en el paso **Administrar valores del dominio** de la actividad de detección de conocimiento, o en la actividad de administración de dominios.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Para crear una base de conocimiento, debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN.  
   
 ##  <a name="FirstStep"></a> Primer paso: iniciar la detección de conocimiento  

@@ -13,17 +13,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 48ab1d80a01cbcaf74f5ba11850ab61f358b24fe
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a20f02bf8c2e0c39c15e3b8209c43673fe697f28
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="data-cleansing"></a>Limpieza de datos
+# <a name="data-cleansing"></a>Data Cleansing
   La limpieza de datos es el proceso de analizar la calidad de los datos en un origen de datos; para ello, se aprueban o rechazan manualmente las sugerencias del sistema y, de esta manera, se hacen modificaciones en los datos. La limpieza de datos en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) incluye un proceso asistido por PC que analiza cómo se ajustan los datos al conocimiento de una base de conocimiento y un proceso interactivo que permite al administrador de datos revisar y modificar los resultados obtenidos en los procesos asistidos por PC con el fin de garantizar que la limpieza de datos resulta exactamente como se deseaba efectuar.  
   
  El administrador de datos también puede realizar la limpieza de datos en el proceso de empaquetado de Integration Services. En este caso, el administrador de datos utilizaría [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] para realizar automáticamente la limpieza de datos mediante una base de conocimiento existente. Para más información, vea [Transformación Limpieza de DQS](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md).  
@@ -109,7 +109,7 @@ ms.lasthandoff: 11/20/2017
 |Describe cómo limpiar datos con conocimiento desde un servicio de datos de referencia.|[Limpiar datos mediante el conocimiento de datos de referencia &#40;externo&#41;](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |Describe cómo limpiar un dominio compuesto.|[Limpiar datos en un dominio compuesto](../data-quality-services/cleanse-data-in-a-composite-domain.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Proyectos de calidad de datos &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
  [Coincidencia de datos](../data-quality-services/data-matching.md)  
   

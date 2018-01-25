@@ -25,15 +25,15 @@ helpviewer_keywords:
 - compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 caps.latest.revision: "60"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 996f547876031c29f975d85949d2ff300afdee5b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d999c313752ccbb23f31b9763463fc69e10ac20b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -191,7 +191,7 @@ La tabla siguiente muestra los valores de replicación que controlan la compresi
 |Comprimir la tabla en el suscriptor si todas las particiones se comprimen en el publicador, pero no replicar el esquema de partición.|False|True|Comprueba si todas las particiones están habilitadas para la compresión.<br /><br /> Se crean scripts para la compresión en el nivel de tabla.|  
   
 ## <a name="how-compression-affects-other-sql-server-components"></a>Cómo afecta la compresión a los demás componentes de SQL Server 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
    
  La compresión se produce en el motor de almacenamiento y los datos se presentan a la mayoría de los demás componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un estado sin comprimir. Esto limita los efectos de la compresión en los demás componentes para lo siguiente:  
 -   Operaciones de exportación e importación masivas  
@@ -203,7 +203,7 @@ La tabla siguiente muestra los valores de replicación que controlan la compresi
 -   La compresión de datos es incompatible con las columnas dispersas. Por consiguiente, las tablas que contienen columnas dispersas no pueden comprimirse y las columnas dispersas no se pueden agregar a una tabla comprimida.  
 -   Al habilitar la compresión, se puede hacer que los planes de consulta cambien porque los datos se almacenan utilizando un número diferente de páginas y de filas por cada página.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Implementación de la compresión de fila](../../relational-databases/data-compression/row-compression-implementation.md)   
  [Implementación de la compresión de página](../../relational-databases/data-compression/page-compression-implementation.md)   
  [Implementación de la compresión Unicode](../../relational-databases/data-compression/unicode-compression-implementation.md)   

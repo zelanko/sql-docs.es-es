@@ -19,13 +19,13 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3643ec9676ef251bb022b16e50529b1bdfeae45c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0b89518482de615615229457a7195311ece7ab6b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="logins-and-jobs-for-availability-group-databases"></a>Inicios de sesión y trabajos de las bases de datos de grupo de disponibilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Debe mantener de forma sistemática el mismo conjunto de inicios de sesión de usuario y de trabajos del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en cada base de datos principal de un grupo de disponibilidad AlwaysOn y sus correspondientes bases de datos secundarias. Los inicios de sesión y los trabajos se deben reproducir en cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospede una réplica de disponibilidad para el grupo de disponibilidad.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
   
      Las instancias de servidor que hospedan las réplicas de disponibilidad de un grupo de disponibilidad se pueden configurar de forma diferente, con letras de unidad de cinta distintas, etc. Los trabajos para cada réplica de disponibilidad deben permitir tales diferencias.  
   
-     Cabe mencionar que los trabajos de copia de seguridad pueden usar la función [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) para identificar si la réplica local es la preferida para las copias de seguridad, según las preferencias de copia de seguridad del grupo de disponibilidad. Los trabajos de copia de seguridad creados mediante el [Asistente para planes de mantenimiento](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) usan esta función de forma nativa. Para otros trabajos de copia de seguridad, se recomienda usar esta función como condición de los trabajos de copia de seguridad, de forma que solo se ejecuten en la réplica preferida. Para obtener más información, vea [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     Cabe mencionar que los trabajos de copia de seguridad pueden usar la función [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) para identificar si la réplica local es la preferida para las copias de seguridad, según las preferencias de copia de seguridad del grupo de disponibilidad. Los trabajos de copia de seguridad creados mediante el [Asistente para planes de mantenimiento](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) usan esta función de forma nativa. Para otros trabajos de copia de seguridad, se recomienda usar esta función como condición de los trabajos de copia de seguridad, de forma que solo se ejecuten en la réplica preferida. Para obtener más información, vea [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 -   **Inicios de sesión**  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
      Si ninguna de las aplicaciones usa la autenticación [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o un inicio de sesión local de Windows, vea [Inicios de sesión de aplicaciones que usan la autenticación de SQL Server o un inicio de sesión local de Windows](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md#SSauthentication), más adelante en este tema.  
   
     > [!NOTE]  
-    >  Un usuario de base de datos cuyo inicio de sesión de SQL Server está sin definir o se ha definido de forma incorrecta en una instancia de servidor no podrá iniciar una sesión en la instancia. Es lo que se denomina un *usuario huérfano* de la base de datos en esa instancia de servidor. Si un usuario está huérfano en una instancia de servidor determinada, puede configurar los inicios de sesión de usuario en cualquier momento. Para obtener más información, vea [Solucionar problemas de usuarios huérfanos &#40;SQL Server&#41;](../../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md).  
+    >  Un usuario de base de datos cuyo inicio de sesión de SQL Server está sin definir o se ha definido de forma incorrecta en una instancia de servidor no podrá iniciar una sesión en la instancia. Es lo que se denomina un *usuario huérfano* de la base de datos en esa instancia de servidor. Si un usuario está huérfano en una instancia de servidor determinada, puede configurar los inicios de sesión de usuario en cualquier momento. Para obtener más información, vea [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md).  
   
 -   **Metadatos adicionales**  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Bases de datos independientes](../../../relational-databases/databases/contained-databases.md)   
  [Crear trabajos](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b)  

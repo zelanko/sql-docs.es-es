@@ -1,5 +1,5 @@
 ---
-title: SQLGetStmtAttr | Documentos de Microsoft
+title: SQLGetStmtAttr | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLGetStmtAttr function
 ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1f1c3a65fed07267090b0294a7f427a63b33e57
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 713d2d18ab07c270865db355da3b0989851904e0
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="sqlsoptssnocountstatus"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
  El atributo SQL_SOPT_SS_NOCOUNT_STATUS indica la configuración actual de la NOCOUNT opción, que controla si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] notifica los números de filas afectadas por una instrucción cuando [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) se llama. El valor de *ValuePtr* es de tipo SQLLEN.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |SQL_NC_OFF|NOCOUNT es OFF. SQLRowCount devuelve el número de filas afectadas.|  
 |SQL_NC_ON|NOCOUNT es ON. No se devuelve el número de filas afectadas por SQLRowCount y el valor devuelto es 0.|  
@@ -58,6 +58,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Vea también  
  [SQLSetStmtAttr, función](http://go.microsoft.com/fwlink/?LinkId=59370)   
- [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Detalles de implementación de API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

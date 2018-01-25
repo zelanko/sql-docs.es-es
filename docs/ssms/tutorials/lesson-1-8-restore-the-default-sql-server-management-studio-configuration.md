@@ -14,15 +14,15 @@ ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: 4efb0f74-edd5-4b14-bca6-bee94fb48bcc
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b17d30c9849223b3c7ef868ea1a9ca8b45a00663
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 950da8016baf537197623dcdb501ff997474a9e2
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-8---restore-the-default-sql-server-management-studio-configuration"></a>Lección 1.8: Restaurar la configuración predeterminada de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Es posible que los usuarios que usen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] por primera vez hayan cerrado u ocultado ventanas sin darse cuenta y experimenten problemas a la hora de restaurar el diseño original de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Los pasos siguientes muestran cómo restaurar el diseño predeterminado del entorno de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  

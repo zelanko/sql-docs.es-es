@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.dmf.selectsource.f1
 ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1dba73f7bbfa6cb1ffee7d24a9f283e29e4649b0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9bd5115125244859cb147dbc4a5028f87111aaed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="select-source-dialog-box"></a>Seleccionar origen (cuadro de diálogo)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice este cuadro de diálogo para seleccionar el origen de las directivas que se van a ejecutar. Para seleccionar uno o más archivos XML que contienen directivas, seleccione **Archivos**. Para ejecutar las directivas que se buscan en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], seleccione **Servidor**.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
 -   En el Explorador de objetos, haga clic con el botón derecho en un servidor, una base de datos o un objeto de base de datos, seleccione **Directivas**y, después, seleccione **Evaluar**. En la página **Selección de directiva** del cuadro de diálogo **Evaluar directivas** , haga clic en el botón Examinar (**...**).  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Archivos**  
  Seleccione uno o más archivos XML que contienen directivas.  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  Siempre que sea posible, utilice la autenticación de Windows.  
   
- **Nombre de usuario.**  
+ **User name**  
  Escriba el nombre de usuario con el que se va a conectar. Esta opción solo está disponible si ha seleccionado la autenticación de Windows para conectarse.  
   
  **Inicio de sesión**  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
  **Contraseña**  
  Escriba la contraseña del inicio de sesión. Esta opción solo es editable si ha seleccionado la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectarse.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Nodo Administración de directivas &#40;Explorador de objetos&#41;](../../relational-databases/policy-based-management/policy-management-node-object-explorer.md)   
  [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   

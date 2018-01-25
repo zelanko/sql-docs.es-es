@@ -19,13 +19,13 @@ ms.assetid: 195dda61-308a-4c94-8f57-1fd01ab1e521
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe0d00e66789e1971df2db603cc90213c31067de
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5669c143e5e8c0f8da376b59d8e17a77a42a54dd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>Notificaciones después de guardar (cuadro de diálogo, Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Este cuadro de diálogo aparece cuando se producen errores al intentar guardar los cambios en una tabla. En este cuadro de diálogo se muestran los objetos que se guardaron correctamente en la base de datos, los objetos que no se guardaron y los errores que se encontraron.  

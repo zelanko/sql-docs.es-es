@@ -19,15 +19,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], conflict resolution
 ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b48c692d0f4992c46bcf27ffa80e2d1bf0740c39
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0720762973d0144393761b11b3997c4626de2088
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>Suscripciones actualizables: Resolución de conflictos de actualización en cola
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Como las suscripciones de actualización en cola permiten realizar modificaciones en los mismos datos en múltiples ubicaciones, pueden producirse conflictos cuando se sincronizan los datos en el publicador. La replicación detecta los conflictos cuando se sincronizan los cambios con el publicador y resuelve esos conflictos utilizando la directiva de resolución que ha seleccionado al crear la publicación. Pueden producirse los siguientes conflictos:  
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="subscriber-wins"></a>El suscriptor gana  
  La detección de conflictos con la directiva El suscriptor gana significa que la última transacción de suscriptor que actualice el publicador ganará. En este caso, cuando se detecte un conflicto, se seguirá utilizando la transacción enviada por el suscriptor y se actualizará el publicador. Esta directiva es apropiada para las aplicaciones en que estos cambios no pongan en peligro la integridad de los datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

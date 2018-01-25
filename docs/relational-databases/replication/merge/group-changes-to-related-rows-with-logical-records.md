@@ -17,15 +17,15 @@ helpviewer_keywords:
 - logical records [SQL Server replication]
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 caps.latest.revision: "55"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 026199b68479b9219984123bcc5958b037474986
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d2ae5beed7a724e7baa9783e411f8b2f656e3f8a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Agrupar cambios en filas relacionadas con registros lógicos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Si se utilizan registros lógicos en una publicación que incluye filtros con parámetros, debe inicializar cada suscripción con una instantánea para su partición. Si inicializa un suscriptor con otro método, se producirá un error en el Agente de mezcla. Para más información, consulte [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
   
--   Los conflictos que implican registros lógicos no se muestran en el Visor de conflictos. Para ver información acerca de estos conflictos, utilice procedimientos almacenados de replicación. Para obtener más información, consulte [Ver información de conflictos para publicaciones de mezcla &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
+-   Los conflictos que implican registros lógicos no se muestran en el Visor de conflictos. Para ver información acerca de estos conflictos, utilice procedimientos almacenados de replicación. Para obtener más información, vea [Ver información de conflictos para publicaciones de mezcla &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
   
 ### <a name="publication-settings"></a>Configuración de publicaciones  
   
@@ -122,7 +122,7 @@ ms.lasthandoff: 11/17/2017
   
     -   No puede utilizar filtros con parámetros no superpuestos. Para obtener más información, vea la sección la sección sobre cómo establecer opciones de partición en el tema [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
--   Si la publicación utiliza filtros de combinación, debe establecer la propiedad **join unique key** en **true** para todos los filtros de combinación involucrados en relaciones de registros lógicos. Para más información, consulte [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
+-   Si la publicación utiliza filtros de combinación, debe establecer la propiedad **join unique key** en **true** para todos los filtros de combinación involucrados en relaciones de registros lógicos. Para obtener más información, consulte [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
   
 ### <a name="relationships-between-tables"></a>Relaciones entre tablas  
   
@@ -147,7 +147,7 @@ ms.lasthandoff: 11/17/2017
   
  Si se utilizan registros lógicos, el Agente de mezcla debe procesar juntos los cambios de todo el registro lógico. Esto afecta al tiempo que tarda el Agente de mezcla en replicar las filas. Además, como el agente abre una transacción distinta para cada registro lógico, los requisitos de bloqueo pueden aumentar.  
   
-## <a name="see-also"></a>Vea también  
- [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
+## <a name="see-also"></a>Ver también  
+ [Opciones de artículos para replicación de mezcla](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
   
   

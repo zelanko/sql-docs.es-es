@@ -21,20 +21,20 @@ ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
 caps.latest.revision: "20"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e28994db70376a393276ed3bae630fb3dca93f3a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 85f6f5c81e154bd4fcc6da3f28790ba6dedd6673
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="log-shipping-tables-and-stored-procedures"></a>Tablas y procedimientos almacenados de trasvase de registros
+# <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describen todas las tablas y los procedimientos almacenados asociados con una configuración de trasvase de registros. Todas las tablas de trasvase de registros se almacenan en **msdb** en cada servidor. En las tablas siguientes se describe qué tablas y procedimientos almacenados se utilizan en qué servidores en una configuración de trasvase de registros.  
   
 ## <a name="primary-server-tables"></a>Tablas de servidor principal  
   
-|Tabla|Descripción|  
+|Table|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Almacena el Id. del trabajo de alerta. Esta tabla solo se usa en el servidor principal si no se ha configurado ningún servidor de supervisión remoto.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Almacena los detalles de error de los trabajos de trasvase de registros asociados con este servidor principal.|  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="primary-server-stored-procedures"></a>Procedimientos almacenados del servidor principal  
   
-|Procedimiento almacenado|Descripción|  
+|Procedimiento almacenado|Description|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)|Configura la base de datos principal de una configuración de trasvase de registros, incluido el trabajo de copia de seguridad, el registro de monitor local y el registro de monitor remoto.|  
 |[sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md)|Agrega un nombre de base de datos secundaria a una base de datos principal existente.|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="secondary-server-tables"></a>Tablas de servidor secundario  
   
-|Tabla|Descripción|  
+|Table|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Almacena el Id. del trabajo de alerta. Esta tabla solo se usa en el servidor secundario si no se ha configurado ningún servidor de supervisión remoto.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Almacena los detalles de error de los trabajos de trasvase de registros asociados con este servidor secundario.|  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="secondary-server-stored-procedures"></a>Procedimientos almacenados del servidor secundario  
   
-|Procedimiento almacenado|Descripción|  
+|Procedimiento almacenado|Description|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)|Configura una base de datos secundaria para el trasvase de registros.|  
 |[sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md)|Configura información principal, agrega vínculos al monitor local y remoto y crea trabajos de copia y restauración en el servidor secundario de la base de datos principal especificada.|  
@@ -88,7 +88,7 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="monitor-server-tables"></a>Tablas de servidor de supervisión  
   
-|Tabla|Descripción|  
+|Table|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Almacena el Id. del trabajo de alerta.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Almacena los detalles de errores de los trabajos de trasvase de registros.|  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="monitor-server-stored-procedures"></a>Procedimientos almacenados del servidor de supervisión  
   
-|Procedimiento almacenado|Descripción|  
+|Procedimiento almacenado|Description|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-add-log-shipping-alert-job-transact-sql.md)|Crea un trabajo de alerta de trasvase de registros si aún no se ha creado ninguno.|  
 |[sp_delete_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)|Quita un trabajo de alerta de trasvase de registros si no hay ninguna base de datos principal asociada.|  

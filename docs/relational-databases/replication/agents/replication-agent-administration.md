@@ -25,15 +25,15 @@ helpviewer_keywords:
 - independent agents [SQL Server replication]
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 634f38525ab7809da0ade7f002312cb203b767ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 86cebd3ab2286cc34ff25d45ec1837d75716c16f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-agent-administration"></a>Administración del Agente de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los agentes de replicación realizan muchas tareas asociadas con la replicación, lo que incluye la creación de copias de esquema y datos, detección de actualizaciones en el publicador o el suscriptor, y propagación de cambios entre servidores. De manera predeterminada, los agentes de replicación se ejecutan en los pasos de trabajo del Agente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Los agentes son simples ejecutables, por lo que se les puede llamar directamente desde la línea de comandos o desde scripts de proceso por lotes. Cada agente de replicación admite un conjunto de parámetros en tiempo de ejecución que se utilizan para controlar cómo se ejecuta; estos parámetros se especifican en un perfil de agente o en la línea de comandos.  
@@ -46,10 +46,10 @@ ms.lasthandoff: 11/17/2017
 |Ejecutable del agente|Nombre de archivo|  
 |----------------------|---------------|  
 |[Agente de instantáneas de replicación](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|snapshot.exe|  
-|[Agente de distribución de replicación](../../../relational-databases/replication/agents/replication-distribution-agent.md)|distrib.exe|  
+|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|distrib.exe|  
 |[Agente de registro del LOG de replicación](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|logread.exe|  
 |[Agente de lectura de cola de replicación](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|qrdrsvc.exe|  
-|[Agente de mezcla de replicación](../../../relational-databases/replication/agents/replication-merge-agent.md)|replmerg.exe|  
+|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|replmerg.exe|  
   
  Además de los trabajos de los agentes de replicación, la replicación tiene una serie de trabajos que realizan el mantenimiento a petición y programado.  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="replication-maintenance-jobs"></a>Trabajos de mantenimiento de replicación  
  La replicación utiliza los siguientes trabajos para realizar el mantenimiento a petición y programado.  
   
-|Trabajo de limpieza|Descripción|Programación predeterminada|  
+|Trabajo de limpieza|Description|Programación predeterminada|  
 |------------------|-----------------|----------------------|  
 |Limpieza de historial del agente: distribución|Quita de la base de datos de distribución el historial del agente de replicación.|Se ejecuta cada diez minutos.|  
 |Limpieza de la distribución: distribución|Quita las transacciones replicadas de la base de datos de distribución. Desactiva las suscripciones que no se han sincronizado dentro del período de retención máximo de la distribución.|Se ejecuta cada diez minutos.|  
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/17/2017
 |Comprobación de agentes de replicación|Detecta los agentes de replicación que no registran activamente un historial. Escribe en el registro de eventos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows si se produce un error en un trabajo.|Se ejecuta cada diez minutos.|  
 |Actualizador de supervisión de replicación para distribución|Actualiza las consultas almacenadas en la caché que utiliza el Monitor de replicación.|Se ejecuta continuamente.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Supervisar la replicación](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

@@ -14,22 +14,22 @@ ms.topic: article
 helpviewer_keywords: Resource Governor, enabling
 ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
 caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 193efa564c134682bfe8bc8d95387efa6ab73767
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3f40ebecdafe32b519908c65ce54468858f18df3
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enable-resource-governor"></a>Habilitar el regulador de recursos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Resource Governor está desactivado de forma predeterminada. Puede habilitar el regulador de recursos utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o Transact-SQL.  
   
 -   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [Permisos](#Permissions)  
   
--   **Para habilitar el regulador de recursos, use:**  [Explorador de objetos](#RGOnObjEx), [Propiedades del regulador de recursos](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
+-   **To enable Resource Governorn, using:**  [Object Explorer](#RGOnObjEx), [Resource Governor Properties](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
  Habilitar el regulador de recursos tiene como consecuencia lo siguiente:  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  No puede utilizar la instrucción **ALTER RESOURCE GOVERNOR** para habilitar el regulador de recursos durante una transacción del usuario.  
   
-###  <a name="Permissions"></a> Permisos  
+###  <a name="Permissions"></a> Permissions  
  Habilitar el regulador de recursos requiere el permiso CONTROL SERVER.  
   
 ##  <a name="RGOnObjEx"></a> Habilitar el regulador de recursos mediante el Explorador de objetos  
@@ -75,7 +75,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Deshabilitar el regulador de recursos](../../relational-databases/resource-governor/disable-resource-governor.md)   
  [Grupo de recursos de servidor del regulador de recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

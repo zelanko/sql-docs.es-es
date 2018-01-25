@@ -16,15 +16,15 @@ helpviewer_keywords:
 - peer-to-peer transactional replication, conflict detection
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d27cca1b3e5a35dfcf405b8f10cd0e099e2a756
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ec8c660444c11a95896c2d3e0cfd47a7d8bc8514
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>Detección de conflictos en la replicación punto a punto
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La replicación transaccional punto a punto permite insertar, actualizar o eliminar datos en cualquier nodo de una topología y propagar los cambios de los datos a los demás nodos. Dado que se pueden cambiar los datos de cualquier nodo, podrían producirse conflictos entre los datos modificados en los distintos nodos. Si una fila se modifica en más de un nodo, puede producirse un conflicto o incluso la pérdida de una actualización cuando la fila se propaga a otros nodos.  
@@ -105,7 +105,7 @@ ms.lasthandoff: 11/17/2017
   
     5.  Ejecute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md): especifique "p2p_continue_onconflict" para el parámetro @property y **false** para el parámetro @value.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

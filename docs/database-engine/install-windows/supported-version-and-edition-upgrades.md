@@ -20,13 +20,13 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 caps.latest.revision: "148"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: eda664aa9c3c69f8c4d515143b5aa38819ddc31a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ef0e3215cccf5cbece0036c79f73a10c25119c4e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Actualizaciones de ediciones y versiones admitidas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Puede actualizar de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. En este tema se enumeran las formas de actualización admitidas desde estas versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y las actualizaciones de edición admitidas para [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Antes de actualizar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], habilite la autenticación de Windows para el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y compruebe la configuración predeterminada: la cuenta de servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser miembro del grupo sysadmin de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Para actualizar a [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], debe ejecutar un sistema operativo admitido. Para obtener más información, vea [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+-   Para actualizar a [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], debe ejecutar un sistema operativo admitido. Para más información, vea [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 -   La actualización se bloqueará si hay un reinicio pendiente.  
   
@@ -176,7 +176,7 @@ SQL Server 2016 admite la actualización de las siguientes versiones de SQL Serv
   
 -   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation a [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 
  [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)
  

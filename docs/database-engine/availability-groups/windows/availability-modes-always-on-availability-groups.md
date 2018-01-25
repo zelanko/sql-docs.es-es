@@ -22,13 +22,13 @@ ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 095b40c8525e83a6d686a0d40d1f6aa1974a3442
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f7f1e90e1892eae4763b8afd1af575cc6b3ef16a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Modos de disponibilidad (grupos de disponibilidad AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,8 +74,8 @@ ms.lasthandoff: 11/20/2017
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
 |01|02|02 y 03|04|Sí|  
 |02|01|01 y 03|04|Sí|  
-|03||01 y 02|04|No|  
-|04|||01, 02 y 03|No|  
+|03||01 y 02|04|no|  
+|04|||01, 02 y 03|no|  
   
  Normalmente, el nodo 04 como réplica de confirmación asincrónica, se implementa en un sitio de recuperación ante desastres. El hecho de que los nodos 01, 02, 03 se mantengan en el modo de confirmación asincrónica después de conmutar por error al nodo 04 ayuda a evitar la degradación del rendimiento potencial en el grupo de disponibilidad debido a la alta latencia de red entre los dos sitios.  
   
@@ -137,7 +137,7 @@ ms.lasthandoff: 11/20/2017
  El modo de confirmación sincrónica protege los datos exigiendo que estos estén sincronizados entre dos lugares, a costa de un ligero aumento de la latencia de las transacciones.  
   
 ### <a name="SyncCommitWithManual"></a> Modo de confirmación sincrónica con modo de conmutación por error manual  
- Cuando estas réplicas están conectadas y la base de datos está sincronizada, se admite la conmutación por error manual. Si la réplica secundaria baja un nivel, la réplica principal no se ve afectada. La réplica principal se ejecuta expuesta si no existen réplicas SYNCHRONIZED (es decir, sin enviar datos a ninguna réplica secundaria). Si se pierde la réplica principal, las réplicas secundarias entran en el estado RESOLVING, pero el propietario de la base de datos puede forzar una conmutación por error a la réplica secundaria (con posible pérdida de datos). Para obtener más información, vea [Conmutación por error y modos de conmutación por error &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
+ Cuando estas réplicas están conectadas y la base de datos está sincronizada, se admite la conmutación por error manual. Si la réplica secundaria baja un nivel, la réplica principal no se ve afectada. La réplica principal se ejecuta expuesta si no existen réplicas SYNCHRONIZED (es decir, sin enviar datos a ninguna réplica secundaria). Si se pierde la réplica principal, las réplicas secundarias entran en el estado RESOLVING, pero el propietario de la base de datos puede forzar una conmutación por error a la réplica secundaria (con posible pérdida de datos). Para obtener más información, vea [Conmutación por error y modos de conmutación por error &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
 ###  <a name="SyncCommitWithAuto"></a> Modo de confirmación sincrónica con conmutación automática por error  
  La conmutación automática por error proporciona alta disponibilidad al asegurar que la base de datos estará de nuevo disponible rápidamente después de la pérdida de la réplica principal. Para configurar un grupo de disponibilidad para la conmutación automática por error, debe establecer la réplica principal actual y al menos una réplica secundaria en el modo de confirmación sincrónica con conmutación automática por error. Puede tener hasta tres réplicas de conmutación por error automática.  
@@ -156,9 +156,9 @@ ms.lasthandoff: 11/20/2017
   
  **Para ajustar los votos de quórum**  
   
--   [Ver la configuración de NodeWeight de quórum de clúster](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
+-   [Ver la configuración de NodeWeight de cuórum de clúster](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
   
--   [Configurar los valores de NodeWeight de quórum de clúster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
+-   [Configurar los valores de NodeWeight de cuórum de clúster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
 -   [Forzar el inicio de un clúster WSFC sin un quórum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
@@ -184,7 +184,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Conmutación por error y modos de conmutación por error &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   
  [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  

@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.main.f1
 ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 390fc9dbb3202793d1dcd80e253586adf193b6a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 384e72c84aedde0ecbeaf88e1345c6e2c175e36e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-monitor-main-page"></a>Monitor de replicación, página Principal
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Monitor de replicación permite realizar un seguimiento del estado y del rendimiento de las publicaciones y las suscripciones en una topología de replicación. Los siguientes temas proporcionan más información:  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
     -   [Permitir el uso del Monitor de replicación a los usuarios que no son administradores](../../relational-databases/replication/monitor/allow-non-administrators-to-use-replication-monitor.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Supervisar la replicación](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   

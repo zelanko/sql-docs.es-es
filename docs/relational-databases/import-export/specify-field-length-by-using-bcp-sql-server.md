@@ -19,15 +19,15 @@ helpviewer_keywords:
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a59b93a9877eb6e58c34fc1aeb54795aaee52d3c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 779cd2f34ae30c2e21d632e3359861452c4f652a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Especificar la longitud de campo mediante bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La longitud de campo indica el número máximo de caracteres necesarios para representar los datos en formato de carácter. La longitud de campo se conoce si los datos están almacenados en formato nativo; por ejemplo, el tipo de datos **int** ocupa 4 bytes. Si ha indicado 0 para la longitud del prefijo, el comando **bcp** le solicitará la longitud del campo, las longitudes predeterminadas de los campos y los efectos de la longitud del campo en el almacenamiento de datos en los archivos de datos que contienen datos de tipo **char** .  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
 |**numeric**|41*|  
 |**uniqueidentifier**|37|  
 |**timestamp**|17|  
-|**varchar(max)**|0|  
+|**ntext**|0|  
 |**varbinary(max)**|0|  
 |**nvarchar(max)**|0|  
 |UDT|Longitud de la columna del término definido por el usuario (UDT)|  
@@ -126,7 +126,7 @@ ms.lasthandoff: 11/17/2017
   
  En todos los casos anteriores, si desea crear un archivo de datos para recargarlo posteriormente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y mantener el espacio de almacenamiento mínimo, use un prefijo de longitud con el tipo de almacenamiento en archivo y la longitud de campo predeterminados.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [bcp (utilidad)](../../tools/bcp-utility.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Especificar terminadores de campo y de fila &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)   

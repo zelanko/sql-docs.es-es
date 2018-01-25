@@ -14,17 +14,17 @@ ms.topic: article
 f1_keywords: sql13.dta.general.f1
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c0c43bf59c4b45990c491f129598fe4210a8494b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 11720ea18ba01bd0cdaec11e4500dc5cba5ef24c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="database-engine-tuning-advisor"></a>Asistente para la optimización de motor de base de datos
+# <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Asistente para la optimización de motor de base de datos (DTA) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] analiza las bases de datos y hace recomendaciones que puede usar para optimizar el rendimiento de las consultas. Puede usar el Asistente para la optimización de motor de base de datos a fin de seleccionar y crear un conjunto óptimo de índices, vistas indizadas o particiones de tabla sin necesidad de conocer detalladamente la estructura de la base de datos ni el funcionamiento interno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Con DTA, puede realizar las siguientes tareas.  
   
 -   Solucionar problemas del rendimiento de una consulta específica  

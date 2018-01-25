@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: index types [SQL Server]
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2cfabd1c0d14719573ba8b648aa4510378d88bd7
-ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.openlocfilehash: 60cf032f683020523f84971f4aa574a7f1efd805
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="indexes"></a>Índices
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,10 +32,10 @@ En la tabla siguiente se indican los tipos de índice disponibles en [!INCLUDE[s
   
 |Tipo de índice|Description|Información adicional|  
 |----------------|-----------------|----------------------------|  
-|Hash|Con un índice hash, se accede a los datos a través de una tabla hash en memoria. Los índices hash utilizan una cantidad fija de memoria, que es una función del número de depósitos.|[Directrices para usar índices en las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [Directrices para diseñar índices de hash](../../relational-databases/sql-server-index-design-guide.md#hash_index)|  
+|Hash|Con un índice hash, se accede a los datos a través de una tabla hash en memoria. Los índices hash utilizan una cantidad fija de memoria, que es una función del número de cubos.|[Directrices para usar índices en las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [Directrices para diseñar índices de hash](../../relational-databases/sql-server-index-design-guide.md#hash_index)|  
 |Índice no agrupado optimizado para memoria|Para los índices no clúster optimizados para memoria, el consumo de memoria depende del número de filas y del tamaño de las columnas de clave de índice.|[Directrices para usar índices en las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [Directrices para diseñar índices no agrupados optimizados para memoria](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)|  
 |Clúster|Un índice clúster ordena y almacena las filas de datos de la tabla o vista por orden en función de la clave del índice clúster. El índice clúster se implementa como una estructura de árbol b que admite la recuperación rápida de las filas a partir de los valores de las claves del índice clúster.|[Índices agrupados y no agrupados descritos](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)<br /><br /> [Crear índices clúster](../../relational-databases/indexes/create-clustered-indexes.md)<br /><br /> [Directrices para diseñar índices agrupados](../../relational-databases/sql-server-index-design-guide.md#Clustered)|  
-|No agrupado|Los índices no clúster se pueden definir en una tabla o vista con un índice clúster o en un montón. Cada fila del índice no clúster contiene un valor de clave no agrupada y un localizador de fila. Este localizador apunta a la fila de datos del índice clúster o el montón que contiene el valor de clave. Las filas del índice se almacenan en el mismo orden que los valores de la clave del índice, pero no se garantiza que las filas de datos estén en un determinado orden a menos que se cree un índice clúster en la tabla.|[Índices agrupados y no agrupados descritos](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)<br /><br /> [Crear índices no agrupados](../../relational-databases/indexes/create-nonclustered-indexes.md)<br /><br /> [Directrices para diseñar índices no agrupados](../../relational-databases/sql-server-index-design-guide.md#Nonclustered)|  
+|No agrupado|Los índices no clúster se pueden definir en una tabla o vista con un índice clúster o en un montón. Cada fila del índice no clúster contiene un valor de clave no agrupada y un localizador de fila. Este localizador apunta a la fila de datos del índice clúster o el montón que contiene el valor de clave. Las filas del índice se almacenan en el mismo orden que los valores de la clave del índice, pero no se garantiza que las filas de datos estén en un determinado orden a menos que se cree un índice clúster en la tabla.|[Índices agrupados y no agrupados descritos](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)<br /><br /> [Crear índices no clúster](../../relational-databases/indexes/create-nonclustered-indexes.md)<br /><br /> [Directrices para diseñar índices no agrupados](../../relational-databases/sql-server-index-design-guide.md#Nonclustered)|  
 |Único|Un índice único se asegura de que la clave de índice no contenga valores duplicados y, por tanto, cada fila de la tabla o vista sea en cierta forma única.<br /><br /> La unicidad puede ser una propiedad tanto de índices clúster como de índices no clúster.|[Crear índices únicos](../../relational-databases/indexes/create-unique-indexes.md)<br /><br /> [Directrices para diseñar índices únicos](../../relational-databases/sql-server-index-design-guide.md#Unique)|  
 |columnstore|El índice de almacén de columnas en memoria almacena y administra los datos mediante el almacenamiento de datos basado en columnas y el procesamiento de consultas basado en columnas.<br /><br /> Los índices de almacén de columnas funcionan correctamente para las cargas de trabajo de almacenamiento de datos que ejecutan principalmente cargas masivas y consultas de solo lectura. Use el índice de almacén de columnas para aumentar **hasta en diez veces el rendimiento de las consultas** en relación con el almacenamiento tradicional orientado a filas, y hasta **en siete veces la compresión de datos** en relación con el tamaño de los datos sin comprimir.|[Guía de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-overview.md)<br /><br /> [Directrices para diseñar índices de almacén de columnas](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)|  
 |Índice con columnas incluidas|Índice no clúster que se extiende para incluir columnas sin clave además de las columnas de clave.|[Crear índices con columnas incluidas](../../relational-databases/indexes/create-indexes-with-included-columns.md)|  

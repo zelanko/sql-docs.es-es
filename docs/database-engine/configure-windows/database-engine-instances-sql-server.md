@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 906150705dabca37cfee4eae1d0e19cecc641e4c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 64065e9cf9ce2429ba98b8ca46bac3b000020d6b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-engine-instances-sql-server"></a>Instancias del motor de base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] es una copia del archivo ejecutable **sqlservr.exe** que se ejecuta como servicio de sistema operativo. Cada instancia administra varias bases de datos del sistema y una o varias bases de datos de usuario. Cada equipo puede ejecutar varias instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Las aplicaciones se conectan a la instancia para realizar el trabajo en una base de datos administrada por la instancia.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
   
  Puede ejecutar múltiples instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en un equipo. Una instancia puede ser la instancia predeterminada. La instancia predeterminada no tiene nombre. Si una solicitud de conexión especifica solo el nombre del equipo, se establece la conexión a la instancia predeterminada. Una instancia con nombre es una instancia en la que se especifica un nombre de instancia al instalar la instancia. Una solicitud de conexión debe especificar el nombre del equipo y el nombre de instancia para conectar a la instancia. No hay ningún requisito para instalar una instancia predeterminada; todas las instancias que se ejecutan en un equipo pueden ser instancias con nombre.  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/20/2017
 |Describe las capacidades de Service Broker para las aplicaciones de mensajería y de puesta en cola, y proporciona punteros a la documentación de Service Broker.|[Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)|  
 |Describe cómo se puede utilizar la extensión del grupo de búferes para proporcionar una integración sin problemas del almacenamiento de acceso aleatorio no volátil (unidades de estado sólido) con el grupo de búferes del motor de base de datos para mejorar significativamente el rendimiento de E/S.|[Archivo de la extensión del grupo de búferes](../../database-engine/configure-windows/buffer-pool-extension.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sqlservr (aplicación)](../../tools/sqlservr-application.md)   
  [Características de la base de datos](../../relational-databases/database-features.md)   
  [Características entre instancias del motor de base de datos](../../relational-databases/database-engine-cross-instance-features.md)  

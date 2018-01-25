@@ -17,20 +17,20 @@ f1_keywords:
 - sql13.swb.maint.subplaneditor.f1
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2e2c7e920b4f0a4ca5933efafce3dc09b2b5924b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e425cd4e4901b396ae08cc9586381120ab225745
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="maintenance-plan-design-tab"></a>Plan de mantenimiento (pestaña Diseño)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use el **Plan de mantenimiento (pestaña Diseño)** para especificar las propiedades de un plan de mantenimiento y sus subplanes. Arrastre las tareas del cuadro de herramientas al diseñador de planes. Haga clic con el botón secundario en grupos de tareas para crear rutas de ejecución bifurcadas. Los planes de mantenimiento se guardan como paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que se ejecutan mediante trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Agregar subplán**  
  Agrega un subplán que puede configurar.  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/17/2017
  **Superficie del diseñador**  
  Diseña y mantiene los planes de mantenimiento. Utilice la superficie del diseñador para agregar o eliminar tareas de mantenimiento a un plan, especificar los vínculos de precedencia entre las tareas e indicar la bifurcación y el paralelismo de tareas.  
   
- Un vínculo de precedencia entre dos tareas establece una relación entre ellas. La segunda tarea (la *tarea dependiente*) solo se ejecuta si el resultado de la ejecución de la primera tarea (la *tarea precedente*) coincide con el criterio especificado. Por lo general, el resultado de la ejecución es **Correcto**, **Error**o **Conclusión**. La superficie del diseñador del plan de mantenimiento se basa en la superficie del diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Para más información, consulte [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
+ Un vínculo de precedencia entre dos tareas establece una relación entre ellas. La segunda tarea (la *tarea dependiente*) solo se ejecuta si el resultado de la ejecución de la primera tarea (la *tarea precedente*) coincide con el criterio especificado. Por lo general, el resultado de la ejecución es **Correcto**, **Error**o **Conclusión**. La superficie del diseñador del plan de mantenimiento se basa en la superficie del diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Para obtener más información, vea [Restricciones de precedencia](../../integration-services/control-flow/precedence-constraints.md).  
   
  Como ejemplo, un tarea Desfragmentar índice puede especificarse para que solo se ejecute si ha finalizado correctamente una tarea Comprobar la integridad de la base de datos. La característica de vinculación de precedencia de la tarea también permite que el plan pueda hacer frente a condiciones de error. Por ejemplo, si la tarea Comprobar la integridad de la base de datos genera errores, una tarea Notificar al operador podría informar a un usuario u operador sobre la existencia del error.  
   
@@ -119,7 +119,7 @@ ms.lasthandoff: 11/17/2017
  **Zoom**  
  Cambia el tamaño de las tareas en el área de diseño.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Planes de mantenimiento](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Crear un plan de mantenimiento](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  
   

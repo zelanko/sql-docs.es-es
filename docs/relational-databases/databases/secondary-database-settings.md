@@ -14,29 +14,29 @@ ms.topic: article
 f1_keywords: sql13.swb.databaseproperties.logshipping.settings.dest.f1
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d64722c817bda6fd5f940371506b3737a80323c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 16e7f118afae0ca2f33ca8852ee4ac71e156fe52
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secondary-database-settings"></a>Configuración de base de datos secundaria
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice este cuadro de diálogo para configurar y modificar las propiedades de una base de datos secundaria en la configuración del trasvase de registros.  
   
  Para obtener una explicación de los conceptos relacionados con el trasvase de registros, vea [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Instancia del servidor secundario**  
  Muestra el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurada actualmente como servidor secundario en la configuración del trasvase de registros.  
   
  **Base de datos secundaria**  
  Muestra el nombre de la base de datos secundaria de la configuración del trasvase de registros. Cuando agregue una nueva base de datos secundaria a una configuración del trasvase de registros, puede elegir una base de datos de la lista o escribir el nombre de una nueva en el cuadro. Si especifica el nombre de una nueva base de datos, deberá seleccionar una opción en la pestaña **Inicialización** que restaure una copia de seguridad completa de la base de datos principal en la base de datos secundaria. La nueva base de datos se crea como parte de la operación de restauración.  
   
- **Connect**  
+ **Conectar**  
  Se conecta a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para utilizarla como servidor secundario en la configuración del trasvase de registros. La cuenta utilizada para la conexión debe ser miembro del rol fijo de servidor sysadmin en la instancia de servidor secundario.  
   
  **Pestaña Inicializar**  
@@ -120,7 +120,7 @@ ms.lasthandoff: 11/17/2017
  **Deshabilitar este trabajo**  
  Suspende las operaciones de restauración en la base de datos secundaria.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

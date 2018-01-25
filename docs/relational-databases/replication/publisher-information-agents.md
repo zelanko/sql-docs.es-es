@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.publisherinfo.commonjobs.f1
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af0fc926fff97f6c20331002d92aec47749e9d7b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: da6c5ffe47ed35e4389fef6fe5924d1b0ec1ae25
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publisher-information-agents"></a>Información de publicador, Agentes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La pestaña **Agentes** muestra información sobre los agentes y los trabajos de mantenimiento asociados con el publicador:  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  Para obtener más información sobre estos trabajos, vea [Administración del Agente de replicación](../../relational-databases/replication/agents/replication-agent-administration.md).  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  Para mostrar información sobre un agente o trabajo, seleccione la opción correspondiente en el menú desplegable **Tipos de agente y trabajo** . Para obtener información más detallada y ver cuáles son las tareas relacionadas con un agente o un trabajo, haga clic con el botón secundario en la fila del agente o el trabajo correspondiente y después elija una opción del menú contextual. Para cambiar la manera que la cuadrícula muestra los datos, haga clic con el botón secundario en la cuadrícula y, a continuación, haga clic en una de las opciones siguientes:  
   
 -   **Ordenar**: ordene en una o más columnas en el cuadro de diálogo **Ordenar columnas** .  
@@ -199,7 +199,7 @@ ms.lasthandoff: 11/17/2017
  **Última acción**  
  La última acción realizada durante la ejecución más reciente del trabajo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Ver información y realizar tareas para un publicador &#40;Monitor de replicación&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
  [Ver información y realizar tareas para los agentes asociados a una publicación &#40;Monitor de replicación&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   

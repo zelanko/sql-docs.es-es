@@ -22,15 +22,15 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47790c69d2f3fbfaf2af2d86b5bc6c6d3baf79fe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c52b8aa34c3f384e9ab1f638e6f6e9dac3bdf04
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Replicación de mezcla avanzada: detección y resolución de conflictos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cuando un publicador y un suscriptor se conectan y se produce la sincronización, el Agente de mezcla detecta si existen conflictos. Si se detectan conflictos, el Agente de mezcla utiliza un solucionador de conflictos (que se especifica cuando se agrega un artículo a una publicación) para determinar qué datos se aceptarán y se propagarán a otros sitios.  
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Especificar un tipo de suscripción de mezcla y la prioridad de resolución de conflictos &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   Programación de replicación [!INCLUDE[tsql](../../../includes/tsql-md.md)] y programación con Replication Management Objects (RMO): [Crear una suscripción de extracción](../../../relational-databases/replication/create-a-pull-subscription.md) y [Crear una suscripción de inserción](../../../relational-databases/replication/create-a-push-subscription.md)  
+-   Programación de replicación [!INCLUDE[tsql](../../../includes/tsql-md.md)] y programación con Replication Management Objects (RMO): [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md) y [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>Solucionador interactivo  
  La replicación proporciona una interfaz de usuario Solucionador interactivo que se puede utilizar junto con el solucionador de conflictos basado en prioridad predeterminado o un solucionador de artículos. Cuando se ejecuta una sincronización a petición a través del Administrador de sincronización de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, el Solucionador interactivo muestra los datos en conflicto en tiempo de ejecución y permite elegir la forma de solucionar los conflictos. Para obtener más información acerca de cómo habilitar la resolución interactiva e iniciar el Solucionador interactivo, vea [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
@@ -111,7 +111,7 @@ ms.lasthandoff: 11/17/2017
  La forma más directa de ver conflictos es utilizar el Visor de conflictos de replicación, disponible en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] también proporciona procedimientos almacenados que permiten consultar tablas de conflictos). El Visor de conflictos y el Solucionador interactivo son herramientas parecidas, pero el Solucionador interactivo permite solucionar los conflictos cuando se realiza la sincronización, mientras que el Visor de conflictos está diseñado para ver los conflictos después de haberlos resuelto. Si los metadatos en conflicto aún están disponibles en las tablas del sistema (los metadatos en conflicto se conservan, de forma predeterminada, durante 14 días), puede reemplazar el resultado de la resolución de conflictos en el Visor de conflictos, pero si se requiere con frecuencia una intervención directa, debe considerar la posibilidad de utilizar el Solucionador interactivo.  
   
 > [!NOTE]  
->  Los conflictos que implican registros lógicos no se muestran en el Visor de conflictos. Para ver información acerca de estos conflictos, utilice procedimientos almacenados de replicación. Para obtener más información, consulte [Ver información de conflictos para publicaciones de mezcla &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
+>  Los conflictos que implican registros lógicos no se muestran en el Visor de conflictos. Para ver información acerca de estos conflictos, utilice procedimientos almacenados de replicación. Para obtener más información, vea [Ver información de conflictos para publicaciones de mezcla &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
   
  El Visor de conflictos muestra información de tres tablas del sistema:  
   
@@ -137,7 +137,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Programación [!INCLUDE[tsql](../../../includes/tsql-md.md)] de la replicación: [Ver información de conflictos para publicaciones de mezcla &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Sincronizar datos](../../../relational-databases/replication/synchronize-data.md)  
   
   

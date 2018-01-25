@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ca2abbc8b7ebe6a123680c0ff59b8a162282cd7a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d2c40fcf9fb82db4a56e8d2985fab67190df8b1f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="building-a-knowledge-base"></a>Crear una base de conocimiento
   Una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) es un repositorio de conocimiento sobre los datos que le permite comprenderlos y mantener su integridad. Una base de conocimiento consta de dominios, cada uno de los cuales representa los datos de un campo de datos. DQS utiliza la base de conocimiento para realizar la limpieza de datos y la eliminación de datos duplicados en una base de datos. Para preparar la base de conocimiento para la limpieza de datos, puede ejecutar un análisis asistido por PC de una muestra de los datos, así como administrar de forma interactiva los valores de los dominios. DQS le permite importar conocimiento, crear reglas y relaciones, cambiar los valores de los datos directamente y utilizar una base de datos predeterminada.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
 |Agregar conocimiento a una base de conocimiento mediante la detección de conocimiento; la administración de los valores del dominio; la adición de una directiva de coincidencia; la importación de un conocimiento, un dominio o determinados valores; o el uso de la base de conocimiento predeterminada, Datos de DQS.|[Agregar conocimiento a una base de conocimiento](../data-quality-services/adding-knowledge-to-a-knowledge-base.md)|  
 |Analizar una muestra de datos para los criterios de calidad de los datos.|[Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md)|  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  

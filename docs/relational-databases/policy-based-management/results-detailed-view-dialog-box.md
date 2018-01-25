@@ -16,20 +16,20 @@ f1_keywords:
 - sql13.swb.dmf.policy.resultdetails.f1
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df78363c57e6ba59b4ff2878144c4e99b221e0a5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aa4a078b2e5e130e8bc4f739dab5b515b37852ec
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="results-detailed-view-dialog-box"></a>Cuadro de diálogo Vista detallada de resultados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este cuadro de diálogo muestra los resultados de la evaluación de una directiva cuando se ejecuta una mediante el cuadro de diálogo **Evaluar directivas** y se hace clic en **Evaluar**. Este cuadro de diálogo es de solo lectura y le ayuda a entender qué parte de una expresión de propiedad podría no ser correcta.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Y/O**  
  Cuando hay más de una expresión de propiedad, indica si las expresiones de propiedad son acumulativas o alternativas.  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
  **Ayuda adicional**  
  Haga clic en el hipervínculo para abrir una página web que esté relacionada con esta directiva. Al crear la directiva, se configura un hipervínculo de ayuda adicional que podría estar en blanco o no disponible.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Nodo Administración de directivas &#40;Explorador de objetos&#41;](../../relational-databases/policy-based-management/policy-management-node-object-explorer.md)   
  [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   

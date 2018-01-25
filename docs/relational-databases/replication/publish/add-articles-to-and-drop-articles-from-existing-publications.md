@@ -22,15 +22,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], adding
 ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9d6f6fc1ab13564faaab865410f9b9d132c3b6fa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 082b20b502afb8201ab63db204bf0fff25e17c66
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Agregar y quitar artículos de publicaciones existentes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Después de crear una publicación, se le pueden agregar y quitar artículos. Se pueden agregar artículos en cualquier momento, pero las acciones necesarias para quitar artículos dependen del tipo de replicación y del momento en que se quite el artículo.  
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
  > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** o versiones posteriores y **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** o versiones posteriores admiten eliminar una tabla con el comando **DROP TABLE** DLL para artículos que participan en la replicación transaccional. Si un DROP TABLE DDL es compatible con las publicaciones, la operación DROP TABLE quitará la tabla de la publicación y la base de datos. El agente de registro del LOG enviará un comando de limpieza de la base de datos de distribución de la tabla quitada y realizará la limpieza de los metadatos del publicador. Si el registro del LOG no ha procesado todas las entradas del registro que hacen referencia a la tabla quitada, omitirá los comandos nuevos que estén asociados a la tabla quitada. Los registros ya procesados se entregarán a la base de datos de distribución. Se pueden aplicar a la base de datos del suscriptor si el agente de distribución los procesa antes de que el registro del LOG limpie los artículos obsoletos (quitados). La configuración **predeterminada** para todas las publicaciones de replicación transaccional es no admitir DROP TABLE DLL. En [KB 3170123](https://support.microsoft.com/en-us/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) se incluyen más detalles sobre esta mejora.
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Publicar datos y objetos de base de datos](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Reinicializar suscripciones](../../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Realizar cambios de esquema en bases de datos de publicaciones](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)  

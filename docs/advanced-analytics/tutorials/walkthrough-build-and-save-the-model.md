@@ -16,13 +16,13 @@ ms.assetid: 69b374c1-2042-4861-8f8b-204a6297c0db
 caps.latest.revision: "21"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e187d5d503448a48f4fd36e5d99ea8ff98df72bc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e2fc182a273a9b6adee4a59729b023d3113507a8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>Generar un modelo de R y guardar en SQL Server
 
@@ -46,7 +46,7 @@ El modelo que se genera es un clasificador binario que predice si el controlador
     summary(logitObj);
     ```
 
-     *Resultados*
+     *Resultado*
 
      *Resultados de regresión logística para:-superpuesto ~ passenger_count + trip_distance + trip_time_in_secs +*
      <br/>*direct_distance*
@@ -58,11 +58,11 @@ El modelo que se genera es un clasificador binario que predice si el controlador
      <br/>*-2\*LogLikelihood: 23540.0602 (desviación Residual en grados de 17063 libertad)*
      <br/>*Coeficientes:*
      <br/>*Estimate Std. Valor de error z Pr (> | z |)*
-     <br/>*(Interceptar) - 2.509e-03 3.223e-02-0.078 0.93793*
+     <br/>*(Intercept)       -2.509e-03  3.223e-02  -0.078  0.93793*
      <br/>*passenger_count-5.753e-02 1.088e-02-5.289 1. 23E-07\*\*\**
      <br/>*trip_distance-3.896e-02 1.466e-02-2.658 0.00786\*\**
-     <br/>*trip_time_in_secs 2.115e-04 4.336e-05 4.878 1.07e-06\*\*\**
-     <br/>*direct_distance 6.156e-02 2.076e-02 2.966 0.00302\*\**
+     <br/>*trip_time_in_secs  2.115e-04  4.336e-05   4.878 1.07e-06 \*\*\**
+     <br/>*direct_distance    6.156e-02  2.076e-02   2.966  0.00302 \*\**
      <br/>*---*
      <br/>*Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1*
      <br/>*Número de la matriz de covarianza de varianza final de la condición: 48.3933*

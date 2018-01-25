@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: snapshots [SQL Server replication], security
 ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7bfea98b84a87b9bd35a06f4ce2ae49a69a0105
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4816ea4f6e42fdcabb4fbbbdd8a58650a14b1448
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secure-the-snapshot-folder"></a>Proteger la carpeta de instantáneas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La carpeta de instantáneas es un directorio que almacena archivos de instantáneas. Se recomienda que sea un directorio dedicado para el almacenamiento de instantáneas. Conceda al Agente de instantáneas permiso de escritura en la carpeta y asegúrese de que el permiso de lectura se concede solamente a la cuenta de Windows que utiliza el Agente de mezcla o el Agente de distribución cuando tiene acceso a la carpeta. Para tener acceso a una carpeta de instantáneas que se encuentra en un equipo remoto, la cuenta de Windows asociada con el agente debe ser una cuenta de dominio.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
  Para obtener información acerca de cómo establecer y cambiar la contraseña para tener acceso a instantáneas mediante FTP, vea la sección "Entrega de instantáneas a través de FTP" en el tema [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Ubicaciones alternativas para las carpetas de instantáneas](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
  [Inicializar una suscripción con una instantánea](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   

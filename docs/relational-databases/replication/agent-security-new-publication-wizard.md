@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.agentsecurity.articles.f1
 ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6286d56ca93a397684550b40884f28a799d2df4c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 29e770bf4a90282f2ba0d5a1cd6ad7662a83c897
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="agent-security-new-publication-wizard"></a>Seguridad del agente (Asistente para nueva publicación)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La página **Seguridad del agente** permite especificar las cuentas en las que los agentes siguientes se ejecutarán y establecerán conexiones con los equipos que conforman una topología de replicación:  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  Para obtener información sobre los permisos requeridos por los agentes y las prácticas recomendadas que se aplican a la seguridad de replicación, vea [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md) y [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md).  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Agente de instantáneas**  
  Se muestra en todas las publicaciones. Haga clic en **Configuración de seguridad** para especificar la configuración de seguridad en el cuadro de diálogo **Seguridad del Agente de instantáneas** .  
   
@@ -57,13 +57,13 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Hay un Agente de lectura de cola para cada base de datos de distribución (y para todos los publicadores que sirve). Si ya existe una publicación transaccional que permite suscripciones de actualización en cola en cualquiera de los publicadores que usa una determinada base de datos de distribución, la configuración de seguridad será de solo lectura. Se pueden realizar cambios en la cuenta en la que el Agente de lectura de cola se ejecuta y establece conexiones en el cuadro de diálogo **Propiedades del distribuidor** , aunque los cambios afectarán a todos los publicadores que usen la base de datos de distribución.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Crear una suscripción actualizable en una publicación transaccional](publish/create-updatable-subscription-to-transactional-publication.md)   
  [Ver y modificar las propiedades del distribuidor y del publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [Ver y modificar propiedades de publicación](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Administrar inicios de sesión y contraseñas en la replicación](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
  [Publicar datos y objetos de base de datos](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Información general sobre los agentes de replicación](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

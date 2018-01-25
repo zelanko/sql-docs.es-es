@@ -23,13 +23,13 @@ ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 caps.latest.revision: "59"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 69059bd6bc4a095b8f046d58c63762b5af4deba9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 16801b4bcf5cfbaf01090d716d4e77f0fbdd1e41
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Posibles errores durante la creación de reflejo de la base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los problemas físicos, del sistema operativo o de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden provocar un error en una sesión de creación de reflejo de la base de datos. La creación de reflejo de la base de datos no comprueba regularmente los componentes de los que depende Sqlservr.exe para comprobar si están funcionando de forma correcta o si se ha producido un error. Sin embargo, en algunos tipos de errores, el componente afectado informa a Sqlservr.exe. Cuando otro componente informa del error, éste se denomina *error de hardware*. Para detectar otros errores que pudieran pasar desapercibidos, la creación de reflejo de la base de datos implementa su propio mecanismo de tiempo de espera. Si se agota el tiempo de espera de la creación de reflejo, la creación de reflejo de la base de datos supone que se ha producido un error y declara un *error de software*. Sin embargo, algunos errores que se producen en el nivel de instancia de SQL Server no ocasionan que se agote el tiempo de espera de la creación de reflejo y pueden no ser detectados.  
@@ -113,7 +113,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="responding-to-an-error"></a>Responder a un error  
  Independientemente del tipo de error, una instancia de servidor que detecta un error responde apropiadamente según el rol de la instancia, el modo de funcionamiento de la sesión y el estado de las demás conexiones de la sesión. Para obtener información acerca de lo que ocurre en caso de pérdida de un asociado, vea [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Calcular la interrupción del servicio durante la conmutación de roles &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
  [Modos de funcionamiento de la creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   

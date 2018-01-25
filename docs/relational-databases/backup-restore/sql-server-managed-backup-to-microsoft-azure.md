@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 caps.latest.revision: "44"
-author: MightyPen
-ms.author: genemi
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 826f59f9b61e95091edf8a0c47c528f8cc83b488
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bfca544879559953ed3c70d5137edd17ae9d89e1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Copia de seguridad administrada de SQL Server en Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="Prereqs"></a> Requisitos previos  
  Almacenamiento de Microsoft Azure se usa [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para almacenar los archivos de copia de seguridad. Se deben cumplir los siguientes requisitos previos:  
   
-|Requisito previo|Descripción|  
+|Requisito previo|Description|  
 |------------------|-----------------|  
 |**Cuenta de Microsoft Azure**|Puede comenzar a trabajar con Azure con un [prueba gratuita](http://azure.microsoft.com/pricing/free-trial/) antes de explorar [opciones de compra](http://azure.microsoft.com/pricing/purchase-options/).|  
 |**Cuenta de Almacenamiento de Azure**|Las copias de seguridad se almacenan en el servicio Almacenamiento de blobs de Microsoft Azure asociado con una cuenta de Almacenamiento de Azure. Para obtener instrucciones paso a paso sobre cómo crear una cuenta de almacenamiento, vea [Acerca de las cuentas de almacenamiento de Azure](http://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/).|  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 |||  
 |-|-|  
-|Objeto del sistema|Descripción|  
+|Objeto del sistema|Description|  
 |**MSDB**|Almacena los metadatos y el historial de copias de seguridad de todas las copias de seguridad creadas por [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|Habilita [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)|Configura las opciones de configuración avanzada de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], como el cifrado.|  
@@ -133,7 +133,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] puede tener algunas limitaciones cuando se configura con otras tecnologías que admiten la copia de seguridad, la alta disponibilidad o la recuperación de desastres.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 - [Habilitar la copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   
 - [Configurar las opciones avanzadas de copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)   
 - [Deshabilitar la copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md)

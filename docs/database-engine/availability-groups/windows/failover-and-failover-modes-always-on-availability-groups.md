@@ -20,13 +20,13 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 caps.latest.revision: "75"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d521b60320fc490d2ba7e824e85bb2eabe1e9bb3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5e688f4c428df93491b2f6e449022a447504b5e3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Conmutación por error y modos de conmutación por error (grupos de disponibilidad AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/20/2017
 -   [Contenido relacionado](#RelatedContent)  
   
 ##  <a name="TermsAndDefinitions"></a> Términos y definiciones  
- Conmutación automática por error  
+ conmutación automática por error  
  Conmutación por error que se produce automáticamente en la pérdida de la réplica principal. La conmutación por error automática solo se admite cuando la réplica principal actual y una réplica secundaria están configuradas con el modo de conmutación por error establecido en AUTOMATIC y la réplica secundaria está sincronizada actualmente.  Si el modo de conmutación por error de la réplica principal o la réplica secundaria es MANUAL, no puede producirse la conmutación por error automática.  
   
  Conmutación por error manual planeada (sin pérdida de datos)  
@@ -87,8 +87,8 @@ ms.lasthandoff: 11/20/2017
   
 ||Modo de confirmación asincrónica|Modo de confirmación sincrónica con modo de conmutación por error manual|Modo de confirmación sincrónica con modo de conmutación por error automática|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|Conmutación automática por error|No|No|Sí|  
-|Conmutación por error manual planeada|No|Sí|Sí|  
+|conmutación automática por error|no|no|Sí|  
+|Conmutación por error manual planeada|no|Sí|Sí|  
 |conmutación por error forzada|Sí|Sí|Sí**\***|  
   
  **\***Si emite un comando de conmutación por error forzada en una réplica secundaria sincronizada, la réplica secundaria se comportará igual que en el caso de una conmutación por error manual.  
@@ -264,9 +264,9 @@ ms.lasthandoff: 11/20/2017
   
 |Modo de disponibilidad de una réplica secundaria|¿Está sincronizada la base de datos?|¿Es posible que se pierdan datos?|  
 |--------------------------------------------|-------------------------------|----------------------------|  
-|Confirmación sincrónica|Sí|No|  
-|Confirmación sincrónica|No|Sí|  
-|Confirmación asincrónica|No|Sí|  
+|Confirmación sincrónica|Sí|no|  
+|Confirmación sincrónica|no|Sí|  
+|Confirmación asincrónica|no|Sí|  
   
  Las bases de datos secundarias realizan el seguimiento solo en dos bifurcaciones de recuperación, por lo que, si se realizan varias conmutaciones por error forzadas, no podrá reanudarse ninguna de las bases de datos secundarias que comenzaron la sincronización de datos con la conmutación por error forzada anterior. Si esto se produce, las bases de datos secundarias que no puedan reanudarse tendrán que quitarse del grupo de disponibilidad, restaurarse en el punto de tiempo preciso y unirse de nuevo al grupo de disponibilidad. Una restauración no funcionará entre varias bifurcaciones de recuperación; por tanto, asegúrese de realizar una copia de seguridad de registros después de realizar varias conmutaciones por error forzadas.  
   
@@ -346,7 +346,7 @@ ms.lasthandoff: 11/20/2017
   
  **Para establecer la configuración de quórum de WSFC**  
   
--   [Configurar los valores de NodeWeight de quórum de clúster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
+-   [Configurar los valores de NodeWeight de cuórum de clúster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
 -   [Ver la configuración de NodeWeight de quórum de clúster](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
   
@@ -358,7 +358,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Modos de disponibilidad &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   

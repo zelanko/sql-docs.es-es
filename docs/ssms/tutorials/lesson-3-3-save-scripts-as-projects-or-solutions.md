@@ -14,15 +14,15 @@ ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: 72dfd37f-dbe7-4d1d-bda6-7eb54c7922d3
 caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 69ac1bec3efbefa7933e0a34bdfbfc8dd81c3ce3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6921ad197e0cd07eb2e0df3b3b0b4864f2b903e0
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-3-3---save-scripts-as-projects-or-solutions"></a>Lección 3.3: Guardar scripts como proyectos o soluciones
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Los desarrolladores que estén familiarizados con [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio acogerán con entusiasmo el Explorador de soluciones de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Los scripts empleados en su empresa pueden agruparse en proyectos de script; estos proyectos pueden administrarse conjuntamente en forma de solución. Cuando los scripts se colocan en soluciones y proyectos de script, pueden abrirse como un grupo o guardarse juntos en un producto de control de código fuente como Visual SourceSafe. Los proyectos de script incluyen información de conexión para que los scripts se ejecuten correctamente y pueden incluir archivos que no sean de script, por ejemplo, un archivo auxiliar de texto.  

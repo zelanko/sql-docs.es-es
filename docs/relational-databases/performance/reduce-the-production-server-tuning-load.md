@@ -21,15 +21,15 @@ helpviewer_keywords:
 - offload tuning overhead [SQL Server]
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
 caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0da94113a0d79705e95790584302e6c17e6f9970
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 17d4f6a412677dbdfa580baeec777ed069cdc7d1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Reducir la carga de optimización del servidor de producción
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] El Asistente para la optimización se basa en el optimizador de consultas para analizar una carga de trabajo y realizar recomendaciones de optimización. La realización de este análisis en el servidor de producción le agrega carga y puede perjudicar su rendimiento durante la sesión de optimización. Puede reducir el efecto en la carga del servidor durante una sesión de optimización utilizando un servidor de pruebas además del servidor de producción.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
 </DTAXML>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Consideraciones acerca del uso de servidores de prueba](../../relational-databases/performance/considerations-for-using-test-servers.md)   
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   

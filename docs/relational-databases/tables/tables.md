@@ -16,15 +16,15 @@ helpviewer_keywords:
 - table components [SQL Server]
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30ba1f01b556fcbb58007b771bb648847ecae8a6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 058ea2dfad2c308bf5cd9b197babebb208c34d3c
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tables"></a>Tablas
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
 |Describe cómo crear una columna calculada en una tabla.|[Especificar columnas calculadas en una tabla](../../relational-databases/tables/specify-computed-columns-in-a-table.md)|  
 |Describe cómo especificar un valor predeterminado de una columna. Este valor se usa si no se proporciona otro.|[Especificar valores predeterminados para las columnas](../../relational-databases/tables/specify-default-values-for-columns.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Restricciones entre claves principales y claves externas](../../relational-databases/tables/primary-and-foreign-key-constraints.md)   
  [Restricciones UNIQUE y restricciones CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
   

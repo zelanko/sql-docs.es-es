@@ -18,15 +18,15 @@ helpviewer_keywords:
 - msdb database [SQL Server]
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d4f6256d3c0b3be70f32b246ef24b996d7545fc5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d749784b0a89d8307e0f2be23f25a836ba9a9c14
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="msdb-database"></a>Base de datos msdb
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
 |Opción de base de datos|Valor predeterminado|Se puede modificar|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|No|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|no|  
 |ANSI_NULL_DEFAULT|OFF|Sí|  
 |ANSI_NULLS|OFF|Sí|  
 |ANSI_PADDING|OFF|Sí|  
@@ -66,20 +66,20 @@ ms.lasthandoff: 11/17/2017
 |AUTO_SHRINK|OFF|Sí|  
 |AUTO_UPDATE_STATISTICS|ON|Sí|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sí|  
-|CHANGE_TRACKING|OFF|No|  
+|CHANGE_TRACKING|OFF|no|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sí|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Sí|  
 |CURSOR_DEFAULT|GLOBAL|Sí|  
-|Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> Sí<br /><br /> Sí|  
+|Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|no<br /><br /> Sí<br /><br /> Sí|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sí|  
 |DB_CHAINING|ON|Sí|  
-|ENCRYPTION|OFF|No|  
-|MIXED_PAGE_ALLOCATION|ON|No|  
+|ENCRYPTION|OFF|no|  
+|MIXED_PAGE_ALLOCATION|ON|no|  
 |NUMERIC_ROUNDABORT|OFF|Sí|  
 |PAGE_VERIFY|CHECKSUM|Sí|  
 |PARAMETERIZATION|SIMPLE|Sí|  
 |QUOTED_IDENTIFIER|OFF|Sí|  
-|READ_COMMITTED_SNAPSHOT|OFF|No|  
+|READ_COMMITTED_SNAPSHOT|OFF|no|  
 |RECOVERY|SIMPLE|Sí|  
 |RECURSIVE_TRIGGERS|OFF|Sí|  
 |Opciones de Service Broker|ENABLE_BROKER|Sí|  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
   
  Para obtener una descripción de estas opciones de la base de datos, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## <a name="restrictions"></a>Restricciones  
+## <a name="restrictions"></a>Restrictions  
  Las siguientes operaciones no se pueden realizar en la base de datos **msdb** :  
   
 -   Cambiar intercalaciones. La intercalación predeterminada es la intercalación de servidor.  

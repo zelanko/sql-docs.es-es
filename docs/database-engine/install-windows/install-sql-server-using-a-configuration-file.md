@@ -15,12 +15,12 @@ ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 caps.latest.revision: "34"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: a9120e19773602e9d7bd462318a702ac5c6507a0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 6247ebb00c0ad2306e18bc4333d283c235cc58e0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Instalar SQL Server mediante un archivo de configuración
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite generar un archivo de configuración basado en las entradas de tiempo de ejecución y en la configuración predeterminada del sistema. Puede usar el archivo de configuración para implementar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en toda la empresa con la misma configuración. También puede normalizar las instalaciones manuales en toda la empresa mediante la creación de un archivo por lotes que inicie Setup.exe. 

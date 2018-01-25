@@ -15,20 +15,20 @@ f1_keywords: sql13.rep.monitor.addpublisher.f1
 helpviewer_keywords: Add Publisher dialog box
 ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e03e3af1548fa02ab81a310130b326a6f5aa21d5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5c506f5e41f4a4bb88712d1e6dcb1d1b0ee62253
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-publisher"></a>Agregar publicador
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El cuadro de diálogo **Agregar publicador** permite agregar uno o varios publicadores en el panel izquierdo de Monitor de replicación. Después de agregar un publicador, selecciónelo en el panel izquierdo para mostrar información del publicador en el panel derecho.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Agregar**  
  Haga clic en para seleccionar el tipo de publicador que se agregará a fin de abrir el cuadro de diálogo **Conectar al servidor** . Las opciones son:  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/17/2017
  **Nuevo grupo**  
  Haga clic aquí para crear un nuevo grupo de publicadores. Un grupo de publicadores proporciona una forma cómoda de organizar publicadores en el Monitor de replicación. Los grupos no afectan a la replicación de datos ni a la relación entre los servidores de una topología de replicación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Supervisar la replicación](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   

@@ -18,12 +18,12 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 caps.latest.revision: "65"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: feadacaccd6f2ba025de359de6f581a7e3685550
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 07ad726c7ba7c4c51bc98881aafbb2dd15228f78
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Actualizar SQL Server con el Asistente para instalación (programa de instalación)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Asistente para instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un único árbol de características para la actualización local de componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/20/2017
 > * [Actualizar Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)
 > * [Actualización de PowerPivot para SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
 Debe ejecutar el programa de instalación como administrador. Si instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un recurso compartido remoto, debe usar una cuenta de dominio que tenga permisos de lectura y ejecución para el recurso compartido remoto y que sea de un administrador local.  
   
 > [!WARNING]  
@@ -133,7 +133,7 @@ Debe ejecutar el programa de instalación como administrador. Si instala [!INCLU
   
 20. Si el programa indica que se reinicie el equipo, hágalo ahora. Es importante leer el mensaje del Asistente para la instalación tras finalizar el programa de instalación. Para obtener más información sobre los archivos de registro de instalación, vea [Ver y leer los archivos de registro de instalación de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Next Steps  
  Después de actualizar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], complete las tareas siguientes:  
   
 -   **Registrar los servidores** : la actualización quita la configuración del Registro de la instancia anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tras la actualización, debe volver a registrar los servidores.  
@@ -142,7 +142,7 @@ Debe ejecutar el programa de instalación como administrador. Si instala [!INCLU
   
 -   **Configurar la nueva instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: para reducir el área expuesta del sistema susceptible de recibir ataques, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala y habilita los servicios y características clave de forma selectiva. Para obtener más información sobre la configuración del área expuesta, vea el archivo Léame correspondiente a esta versión.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Actualizar SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Compatibilidad con versiones anteriores](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   

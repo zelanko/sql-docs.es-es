@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d16491ef-4a25-4e02-88a7-ab7c0812904a
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa3228e1ec6af0f7ef019c9f339169abbbdd68e8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dcf41a8d7223bbebc313f22fa5c08cffffcb3733
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-xtp-transaction-log"></a>Registro de transacciones XTP de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,12 +30,12 @@ ms.lasthandoff: 11/17/2017
   
  En esta tabla se describen los contadores de **Registro de transacciones XTP de SQL Server** .  
   
-|Contador|Descripción|  
+|Contador|Description|  
 |-------------|-----------------|  
 |**Bytes de registro escritos/s**|Número de bytes escritos en el registro de transacciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por el motor de OLTP en memoria (en promedio) por segundo.|  
 |**Entradas de registro escritas/s**|Número de registros escritos en el registro de transacciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por el motor de OLTP en memoria (en promedio) por segundo.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Contadores de rendimiento de XTP &#40;OLTP en memoria&#41;](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
   
   

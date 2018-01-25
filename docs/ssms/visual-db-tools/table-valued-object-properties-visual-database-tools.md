@@ -16,13 +16,13 @@ ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 090fd11012ac76b5651170fa05b73ff08cf17dce
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 59393ef73eb121fced9a2c7d0232c49d707d1efd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>Propiedades de objeto con valores de tabla (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Estas propiedades aparecen en la ventana Propiedades cuando selecciona un objeto con valores de tabla en el **Diseñador de consultas y vistas**. El objeto con valores de tabla puede ser una vista, un sinónimo, una tabla derivada o una función con valores de tabla. A menos que se indique lo contrario, estas propiedades son de solo lectura en la ventana **Propiedades** .  

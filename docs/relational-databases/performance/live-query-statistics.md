@@ -18,15 +18,15 @@ helpviewer_keywords:
 - statistics [SQL Server], live query statistics
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e81e49b14a91f809c4c3452369069ff4d856a99f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bff144ba100fe72dcc036299138e656362977b96
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="live-query-statistics"></a>Estadísticas de consulta activa
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ofrece la posibilidad de ver el plan de ejecución de una consulta activa. Este plan de consulta activa ofrece conocimientos en tiempo real sobre el proceso de ejecución de consulta a medida que los controles fluyen desde un operador de plan de consulta a otro. El plan de consulta activa muestra el progreso general de las consultas, así como estadísticas de tiempo de ejecución de nivel de operador como el número de filas, las filas generadas, el tiempo transcurrido, el progreso del operador, etc. Estos datos están disponibles en tiempo real sin necesidad de esperar a que la consulta se complete, de modo que estas estadísticas de ejecución son extremadamente útiles para depurar problemas de rendimiento de consultas. Esta característica está disponible a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], pero puede funcionar con [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
@@ -54,14 +54,14 @@ ms.lasthandoff: 11/17/2017
   
  ![Botón Estadísticas de consulta activa en el Monitor de actividad](../../relational-databases/performance/media/livequerystatsactmon.png "Botón Estadísticas de consulta activa en el Monitor de actividad")  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La infraestructura de perfil de estadísticas debe estar habilitada para que las estadísticas de consulta activa puedan capturar información sobre el progreso de las consultas. Si selecciona **Incluir estadísticas de consulta activa** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , se habilita la infraestructura de estadísticas de la sesión de consulta actual. 
  
 Hasta [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], existen otras dos formas de habilitar la infraestructura de estadísticas que permiten ver las estadísticas de consultas dinámicas de otras sesiones (como las del Monitor de actividad):  
   
 -   Ejecute `SET STATISTICS XML ON;` o `SET STATISTICS PROFILE ON;` en la sesión de destino.  
   
- o  
+ o Administrador de configuración de  
   
 -   Habilite el evento extendido **query_post_execution_showplan** . que es una configuración de todo el servidor que habilita las estadísticas de consulta activa en todas las sesiones. Para habilitar eventos extendidos, consulte [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
 
@@ -69,7 +69,7 @@ A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, [!INCLUDE[ssN
 
 -   Use la marca de seguimiento global 7412.  
   
- o bien  
+ o Administrador de configuración de  
   
 -   Habilitar el evento extendido **query_thread_profile** . que es una configuración de todo el servidor que habilita las estadísticas de consulta activa en todas las sesiones. Para habilitar eventos extendidos, consulte [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).
   
@@ -79,12 +79,12 @@ A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, [!INCLUDE[ssN
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso de nivel de base de datos **SHOWPLAN** para rellenar la página de resultados de **Estadísticas de consulta activa** , el permiso de nivel de servidor **VIEW SERVER STATE** para ver las estadísticas de consulta activa y, asimismo, los permisos necesarios habituales para ejecutar consultas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Supervisar y optimizar el rendimiento](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [Herramientas de supervisión y optimización del rendimiento](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)   
  [Abrir el Monitor de actividad &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)   
  [Monitor de actividad](../../relational-databases/performance-monitor/activity-monitor.md)   
- [Supervisar el rendimiento mediante el almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)   
  [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)   
  [Marcas de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)

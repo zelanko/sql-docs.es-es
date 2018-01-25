@@ -15,12 +15,12 @@ ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
 caps.latest.revision: "9"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 2704a726c3d9c6caffd1c26bac0cfb3926d1c0b1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 15696e7bf14fb5a240f1ef14070f28bb5d87a1f2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>Grupos de disponibilidad básica (grupos de disponibilidad AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Las limitaciones de los grupos de disponibilidad básica se aplican al comando **CREATE AVAILABILITY GROUP** cuando **WITH BASIC** está especificado. Por ejemplo, obtendrá un error si intenta crear un grupo de disponibilidad básica que permita el acceso de lectura. Otras limitaciones se aplican de la misma manera. Consulte la sección Limitaciones de este tema para obtener más información.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

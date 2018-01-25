@@ -18,13 +18,13 @@ ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 caps.latest.revision: "30"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 074a97f74e322b75030d5a921ba4e2b453a59a49
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a80220d2c963dcf5879422ae9e754963a1bb287d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Trasvase de registros y replicación (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El trasvase de registros incluye dos copias de una sola base de datos que suelen residir en diferentes equipos. En cada momento, solo una copia de la base de datos está disponible para los clientes. Esta copia se conoce como la base de datos principal. Las actualizaciones realizadas por los clientes en la base de datos principal se propagan mediante el trasvase de registros a la otra copia de la base de datos, conocida como la base de datos secundaria. El trasvase de registros incluye la aplicación a la base de datos secundaria del registro de transacciones con todas las inserciones, actualizaciones o eliminaciones efectuadas en la base de datos principal.  
@@ -119,7 +119,7 @@ ms.lasthandoff: 11/20/2017
   
      Si se sincroniza con un suscriptor que ejecute una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], la suscripción no puede ser anónima, sino que debe ser una suscripción de cliente o de servidor (llamadas suscripciones locales y suscripciones globales en versiones anteriores). Para obtener más información, vea [Sincronizar datos](../../relational-databases/replication/synchronize-data.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Características y tareas de replicación](../../relational-databases/replication/replication-features-and-tasks.md)   
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Replicación y creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  

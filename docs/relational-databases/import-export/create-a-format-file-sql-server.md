@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: format files [SQL Server], creating
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 caps.latest.revision: "57"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c3aa7d6569f8a4390f249c032641978fb5382313
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e4eb0b49bbf52926536293cf26cd47046329abaf
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-format-file-sql-server"></a>Crear un archivo de formato (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cuando se realiza una importación masiva de datos en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o una exportación masiva de datos desde una tabla, se puede utilizar un archivo de formato para un sistema flexible de escribir archivos de datos que requiera poca o ninguna modificación para adaptarlos a otros formatos de datos o para leer archivos de datos de otros programas de software.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
  El comando **bcp** contiene los calificadores siguientes.  
   
-|Calificadores|Descripción|  
+|Calificadores|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file*|Especifica el archivo de formato no XML.|  
 |**-n**|Especifica tipos de datos nativos.|  
@@ -96,7 +96,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  El comando **bcp** contiene los calificadores siguientes.  
   
-|Calificadores|Descripción|  
+|Calificadores|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file*|Especifica un archivo de formato no XML.|  
 |**-c**|Especifica los datos de caracteres.|  
@@ -195,7 +195,7 @@ El siguiente es un ejemplo del archivo de formato sin la información de interca
   
  El comando **bcp** contiene los calificadores siguientes.  
   
-|Calificadores|Descripción|  
+|Calificadores|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file* **-x**|Especifica el archivo de formato XML.|  
 |**-c**|Especifica los datos de caracteres.|  
@@ -235,7 +235,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  El comando **bcp** contiene los calificadores siguientes.  
   
-|Calificadores|Descripción|  
+|Calificadores|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file* **-x**|Especifica el archivo de formato XML.|  
 |**-n**|Especifica tipos de datos nativos.|  
@@ -278,8 +278,8 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
   
 -   [Usar un archivo de formato para asignar columnas de tabla a campos de un archivo de datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
- [bcp Utility](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>Ver también  
+ [bcp (utilidad)](../../tools/bcp-utility.md)   
  [Usar un archivo de formato para asignar columnas de tabla a campos de un archivo de datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)   
  [Usar un archivo de formato para omitir una columna de tabla &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [Usar un archivo de formato para omitir un campo de datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)   

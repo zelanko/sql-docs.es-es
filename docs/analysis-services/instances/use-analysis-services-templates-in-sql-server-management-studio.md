@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2ad2bc8a5d6d440f9f8c06f17d2857e5343adfce
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2b13acc5ac8947e4e97509764f648f8c31da1fa6
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Usar las plantillas de Analysis Services en SQL Server Management Studio
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona un conjunto de plantillas para ayudarle a crear rápidamente scripts XMLA, consultas MDX o DMX, crear KPI en un cubo o modelo tabular, copia de seguridad de secuencia de comandos y las operaciones de restauración y realizar muchas otras tareas. Las plantillas se encuentran en el **Explorador de plantillas** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona un conjunto de plantillas para ayudarle a crear scripts XMLA, DMX o consultas MDX; para crear KPI en un cubo o un modelo tabular; incluir en scripts las operaciones de copia de seguridad y restauración; y otras muchas tareas. Las plantillas se encuentran en el **Explorador de plantillas** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  Este tema incluye una lista de las plantillas para los modelos multidimensionales y los modelos tabulares, y proporciona ejemplos del modo de crear una consulta MDX y una instrucción XMLA mediante el Explorador de metadatos y el Explorador de plantillas.  
   
@@ -214,25 +216,25 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 |XMLA\Administración|Copia de seguridad|Muestra cómo usar el comando XMLA **Copia de seguridad** para hacer una copia de seguridad de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en un archivo.|  
 ||Cancelar|Muestra cómo usar el comando XMLA **Cancel** para cancelar todas las operaciones que se están ejecutando en la sesión actual (para los usuarios que no sean administradores o administradores de servidor), en las bases de datos (para los administradores) o en la instancia (para los administradores de servidor).|  
 ||Create Remote Partition Database|Muestra cómo usar el comando XMLA **Crear** con el elemento de base de datos ASSL (Lenguaje de scripting de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) para crear una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y un origen de datos para el almacenamiento de particiones remotas.|  
-||DELETE|Muestra cómo usar el comando XMLA **Delete** para eliminar una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existente.|  
+||Delete|Muestra cómo usar el comando XMLA **Delete** para eliminar una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existente.|  
 ||Process Dimension|Muestra cómo usar el comando XMLA **Batch** , combinado con el elemento **Parallel** y el comando **Process** , para actualizar los atributos de una dimensión utilizando una operación por lotes paralela.|  
 ||Process Partition|Muestra cómo usar el comando XMLA **Batch** , combinado con el elemento **Parallel** y el comando **Process** , para procesar completamente una partición utilizando una operación por lotes paralela.|  
-||Restaurar|Muestra cómo usar el comando XMLA **Restore** para restaurar una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] desde un archivo de copia de seguridad existente.|  
+||Restore|Muestra cómo usar el comando XMLA **Restore** para restaurar una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] desde un archivo de copia de seguridad existente.|  
 ||Sincronizar|Muestra cómo usar el comando XMLA **Sincronizar** para sincronizar otra base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con la base de datos actual de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database using the SkipMembership option for the SincronizarSecurity tag.|  
 |XMLA\Conjuntos de filas de esquema|Detectar conjuntos de filas de esquema|Muestra cómo usar el método XMLA **Discover** para recuperar el contenido del conjunto de filas de esquema DISCOVER_SCHEMA_ROWSETS.|  
 |XMLA\Estado del servidor|Conexiones|Muestra cómo usar el método XMLA **Discover** para recuperar el contenido del conjunto de filas de esquema DISCOVER_CONNECTIONS.|  
-||trabajos|Muestra cómo usar el método XMLA **Discover** para recuperar el contenido del conjunto de filas de esquema DISCOVER_JOBS.|  
+||Jobs|Muestra cómo usar el método XMLA **Discover** para recuperar el contenido del conjunto de filas de esquema DISCOVER_JOBS.|  
 ||Ubicaciones|Muestra cómo usar el método XMLA **Discover** para recuperar el contenido del conjunto de filas de esquema DISCOVER_LOCATIONS al especificar la ruta de los archivos de copia de seguridad de la ubicación.|  
 ||Bloqueos|Muestra cómo usar el método XMLA **Discover** para recuperar el contenido del conjunto de filas de esquema DISCOVER_LOCKS.|  
 ||Memory Grant|Muestra cómo usar el método XMLA **Discover** para recuperar el contenido del conjunto de filas de esquema DISCOVER_MEMORYGRANT.|  
-||Performance Counters|Muestra cómo usar el método XMLA **Discover** para recuperar el contenido del conjunto de filas de esquema DISCOVER_PERFORMANCE_COUNTERS.|  
+||Contadores de rendimiento|Muestra cómo usar el método XMLA **Discover** para recuperar el contenido del conjunto de filas de esquema DISCOVER_PERFORMANCE_COUNTERS.|  
 ||Sesiones|Muestra cómo usar el método XMLA **Discover** para recuperar el contenido del conjunto de filas de esquema DISCOVER_SESSIONS.|  
 ||Traces|Muestra cómo usar el método XMLA **Discover** para recuperar el contenido del conjunto de filas de esquema DISCOVER_TRACES.|  
 ||Transactions|Muestra cómo usar el método XMLA **Discover** para recuperar el contenido del conjunto de filas de esquema DISCOVER_TRANSACTIONS.|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de expresiones multidimensionales &#40;MDX&#41;](../../mdx/multidimensional-expressions-mdx-reference.md)   
- [Referencia de Extensiones de minería de datos &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [Extensiones de minería de datos &#40; DMX &#41; Referencia](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Referencia de Analysis Services Scripting Language &#40;ASSL para XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [Analysis Services Scripting Language &#40; ASSL para XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   

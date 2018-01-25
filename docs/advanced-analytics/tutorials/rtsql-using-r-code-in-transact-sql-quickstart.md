@@ -18,11 +18,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3e1562fc0cf2cd1c3f037dab1ee275beeaeffeea
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9c0896ca67df3d8000fae8f3cd3d336b047ee481
+ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>Mediante código de R en Transact-SQL (R en Inicio rápido de SQL)
 
@@ -39,7 +39,7 @@ Este tutorial le guía por los aspectos prácticos de llamar a un script de R de
 
 30 minutos (instalación no incluida)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 Debe tener acceso a una instancia de SQL Server con uno de los siguientes ya instalados:
 
@@ -50,7 +50,7 @@ La instancia de SQL Server puede estar en una máquina virtual de Azure o local.
 
 Para ejecutar consultas SQL que incluyen el script de R, puede usar cualquier otra aplicación que pueda conectarse a una base de datos y ejecutar código de T-SQL. Los profesionales de SQL pueden usar SQL Server Management Studio (SSMS) o Visual Studio.
 
-Para este tutorial, para mostrar lo fácil que es ejecutar R en SQL Server, hemos utilizado el nuevo **mssql extensión para Visual Studio Code**. Código de VS es un entorno de desarrollo gratuito que se puede ejecutar en Windows, Mac OS o Linux. El **mssql*** extensión es una ligera para ejecutar consultas de SQL. Para instalarlo, vea el artículo: [Use the mssql extension for Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode) (Usar la extensión mssql para Visual Studio Code).
+Para este tutorial, para mostrar lo fácil que es ejecutar R en SQL Server, hemos utilizado el nuevo **mssql extensión para Visual Studio Code**. Código de VS es un entorno de desarrollo gratuito que se puede ejecutar en Windows, Mac OS o Linux. El **mssql** extensión es una ligera para ejecutar consultas de T-SQL. Para instalarlo, vea el artículo: [Use the mssql extension for Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode) (Usar la extensión mssql para Visual Studio Code).
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>Conectarse a una base de datos y ejecutar un script de prueba Hola a todos
 

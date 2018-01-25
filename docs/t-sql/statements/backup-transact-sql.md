@@ -1,7 +1,7 @@
 ---
-title: Copia de seguridad (Transact-SQL) | Documentos de Microsoft
+title: BACKUP (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 09/13/2017
+ms.date: 01/22/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -51,11 +51,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7e7c733332d7d7b38c8067daf45ce39b2023d311
-ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
-ms.translationtype: MT
+ms.openlocfilehash: 0d02c6efa9dc45f344ca240f6533bf6499fa83fa
+ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -170,49 +170,48 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  Al restaurar una copia de seguridad creado por la copia de seguridad de la base de datos (un *copia de seguridad de datos*), se restaura la copia de seguridad completa. Solo una copia de seguridad del registro se puede restaurar hasta un momento o transacción concretos dentro de la copia de seguridad.  
   
 > [!NOTE]  
->  Solo una copia de seguridad completa de la base de datos se pueden realizar en el **maestro** base de datos.  
+> Solo una copia de seguridad completa de la base de datos se pueden realizar en el **maestro** base de datos.  
   
  LOG  
  Especifica que solo se realizará la copia de seguridad del registro de transacciones. Se realiza la copia de seguridad del registro desde la última copia de seguridad del registro ejecutada correctamente hasta el final actual del registro. Para poder crear la primera copia de seguridad de registros, debe crear una copia de seguridad completa.  
   
- Puede restaurar una copia de seguridad de registro a un momento o transacción concretos dentro de la copia de seguridad especificando WITH STOPAT, STOPATMARK o STOPBEFOREMARK en su [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md) instrucción.  
+ Puede restaurar una copia de seguridad de registro a un momento o transacción concretos dentro de la copia de seguridad mediante la especificación de `WITH STOPAT`, `STOPATMARK`, o `STOPBEFOREMARK` en su [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md) instrucción.  
   
 > [!NOTE]  
->  Después de una copia de seguridad del registro típica, algunas entradas del registro de transacciones se quedan inactivas, a menos que se especifique WITH NO_TRUNCATE o COPY_ONLY. El registro se trunca después de que todos los registros de uno o varios archivos del registro virtual se queden inactivos. Si el registro no se trunca después de las copias de seguridad del registro rutinarias, algo podría estar retrasando el truncamiento de los registros. Para obtener más información, vea:  
+>  Después de una copia de seguridad de registros típica, algunas entradas del registro de transacciones se convierta en inactivos, a menos que especifique `WITH NO_TRUNCATE` o `COPY_ONLY`. El registro se trunca después de que todos los registros de uno o varios archivos del registro virtual se queden inactivos. Si el registro no se trunca después de las copias de seguridad del registro rutinarias, algo podría estar retrasando el truncamiento de los registros. Para obtener más información, consulte [factores que pueden retrasar el truncamiento del registro](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation).  
   
- { *database_name* | **@**database_name_var *}   
- Es la base de datos para la que se realiza la copia de seguridad del registro de transacciones, de una parte de la base de datos o de la base de datos completa. Si se proporciona como una variable (**@***database_name_var*), este nombre se puede especificar como una constante de cadena (**@***database_name_var*** =** *nombre de base de datos*) o como una variable de tipo de datos de cadena de caracteres, excepto para la **ntext** o **texto** tipos de datos.  
+ { *database_name* | **@*** database_name_var* } es la base de datos desde el que se copia el registro de transacciones, la base de datos parcial o la base de datos completa. Si se proporciona como una variable (**@***database_name_var*), este nombre se puede especificar como una constante de cadena (**@***database_name_var***= *** nombre de base de datos*) o como un variable de caracteres de cadena tipo de datos, excepto para la **ntext** o **texto** tipos de datos.  
   
 > [!NOTE]  
->  No se puede hacer una copia de seguridad de la base de datos reflejada en una asociación de creación de reflejo de la base de datos.  
+> No se puede hacer una copia de seguridad de la base de datos reflejada en una asociación de creación de reflejo de la base de datos.  
   
-\<file_or_filegroup > [ **,**... *n* ]  
+\<file_or_filegroup> [ **,**...*n* ]  
  Se utiliza solo con BACKUP DATABASE, especifica un grupo de archivos o un archivo de copia de seguridad que se va a incluir en una copia de seguridad de archivos, o especifica un grupo de archivos o un archivo de solo lectura que se va a incluir en una copia de seguridad parcial.  
   
- ARCHIVO  **=**  { *nombre_de_archivo_lógico*| **@*** varDeNombreLógicoDeArchivo* }  
+ FILE **=** { *logical_file_name* | **@***logical_file_name_var* }  
  Es el nombre lógico de un archivo o una variable cuyo valor equivale al nombre lógico de un archivo que se va a incluir en la copia de seguridad.  
   
- Grupo de archivos  **=**  { *nombreLógicoDeGrupoDeArchivos*| **@*** varDeNombreLógicoDeGrupoDeArchivos* }  
+ FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
  Es el nombre lógico de un grupo de archivos o una variable cuyo valor equivale al nombre lógico de un grupo de archivos que se va a incluir en la copia de seguridad. En el modelo de recuperación simple, se permite la copia de seguridad de un grupo de archivos solo si se trata de un grupo de archivos de solo lectura.  
   
 > [!NOTE]  
->  Considere la posibilidad de utilizar copias de seguridad de archivos cuando el tamaño y los requisitos de rendimiento de la base de datos no permitan realizar una copia de seguridad completa de la base de datos. El dispositivo NUL puede utilizarse para probar el rendimiento de las copias de seguridad, pero no debe usarse en entornos de producción.
+> Considere la posibilidad de utilizar copias de seguridad de archivos cuando el tamaño y los requisitos de rendimiento de la base de datos no permitan realizar una copia de seguridad completa de la base de datos. El dispositivo NUL puede utilizarse para probar el rendimiento de las copias de seguridad, pero no debe usarse en entornos de producción.
   
  *n*  
  Es un marcador de posición que indica que se pueden especificar varios archivos y grupos de archivos en una lista separada por comas. El número es ilimitado. 
   
- Para obtener más información, consulte: [copias de seguridad de archivos completas &#40; SQL Server &#41; ](../../relational-databases/backup-restore/full-file-backups-sql-server.md) y [copia de seguridad de archivos y grupos de archivos &#40; SQL Server &#41; ](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).  
+ Para obtener más información, vea [copias de seguridad de archivos completas &#40; SQL Server &#41; ](../../relational-databases/backup-restore/full-file-backups-sql-server.md) y [copia de seguridad de archivos y grupos de archivos &#40; SQL Server &#41; ](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).  
   
- READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { *nombreLógicoDeGrupoDeArchivos*| **@*** varDeNombreLógicoDeGrupoDeArchivos* } [ **,**...* n *]]  
+ READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* } [ **,**...*n* ] ]  
  Especifica una copia de seguridad parcial. Una copia de seguridad parcial incluye todos los archivos de lectura/escritura en una base de datos: el grupo de archivos principal y los grupos de archivos secundarios de lectura/escritura, así como los grupos de archivos o archivos de solo lectura especificados.  
   
  READ_WRITE_FILEGROUPS  
  Especifica que en la copia de seguridad parcial se copiarán todos los grupos de archivos de lectura/escritura. Si la base de datos es de solo lectura, READ_WRITE_FILEGROUPS incluye tan solo el grupo de archivos principal.  
   
 > [!IMPORTANT]  
->  Si se enumeran de forma explícita los grupos de archivos de lectura/escritura con FILEGROUP en vez de READ_WRITE_FILEGROUPS, se crea una copia de seguridad de archivos.  
+> Si se enumeran de forma explícita los grupos de archivos de lectura/escritura con FILEGROUP en vez de READ_WRITE_FILEGROUPS, se crea una copia de seguridad de archivos.  
   
- FILEGROUP = { *nombreLógicoDeGrupoDeArchivos*| **@*** varDeNombreLógicoDeGrupoDeArchivos* }  
+ FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
 Es el nombre lógico de un grupo de archivos de solo lectura o una variable cuyo valor equivale al nombre lógico de un grupo de archivos de solo lectura que se va a incluir en la copia de seguridad parcial. Para obtener más información, vea "\<file_or_filegroup >," anteriormente en este tema.
   
  *n*  
@@ -229,22 +228,23 @@ PARA \<dispositivodecopiadeseguridad > [ **,**...  *n*  ] Indica que el conjunto
  {DISCO | CINTA | Dirección URL}  **=**  { **'***physical_device_name***'** | **@*** physical_device_name_var* | 'NULL'}  
  Especifica un archivo de disco o un dispositivo de cinta, o un servicio de almacenamiento Blob de Windows Azure. El formato de dirección URL se usa para crear copias de seguridad para el servicio de almacenamiento de Windows Azure. Para obtener más información y ejemplos, vea [SQL Server Backup and Restore con el servicio de almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Para obtener un tutorial, vea [Tutorial: SQL Server Backup and Restore a Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
 
-[!NOTE] 
- El dispositivo de disco NUL descartará toda la información que se le envíen y solo debe usarse para realizar pruebas. Esto no es para su uso en producción.
+> [!NOTE] 
+> El dispositivo de disco NUL descartará toda la información que se le envíen y solo debe usarse para realizar pruebas. Esto no es para su uso en producción.
   
 > [!IMPORTANT]  
->  Con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 hasta [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], solo una copia de seguridad en un único dispositivo cuando copias de seguridad en dirección URL. Para varios dispositivos de copia de seguridad cuando copias de seguridad en dirección URL, debe utilizar [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y deben utilizar tokens de firma de acceso compartido (SAS). Para obtener ejemplos de creación de una firma de acceso compartido, consulte [copias de seguridad de SQL Server a URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) y [simplificar la creación de credenciales de SQL con tokens de firma de acceso compartido (SAS) en el almacenamiento de Azure con Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
+> A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], solo una copia de seguridad en un único dispositivo cuando copias de seguridad en dirección URL. Para varios dispositivos de copia de seguridad cuando copias de seguridad en dirección URL, debe utilizar [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y deben utilizar tokens de firma de acceso compartido (SAS). Para obtener ejemplos de creación de una firma de acceso compartido, consulte [copias de seguridad de SQL Server a URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) y [simplificar la creación de credenciales de SQL con tokens de firma de acceso compartido (SAS) en el almacenamiento de Azure con Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
   
 **Dirección URL que se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  No es necesario que exista un dispositivo de disco antes de que se especifique en una instrucción BACKUP. Si el dispositivo físico existe y no se especifica la opción INIT en la instrucción BACKUP, la copia de seguridad se anexa al dispositivo.  
  
- El dispositivo NUL descartará todas las entradas que se envíen a este archivo, sin embargo, la copia de seguridad todavía marcará todas las páginas como copia de seguridad.
+> [!NOTE] 
+> El dispositivo NUL descartará todas las entradas que se envíen a este archivo, sin embargo, la copia de seguridad todavía marcará todas las páginas como copia de seguridad.
   
  Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
 > [!NOTE]  
->  La opción TAPE se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.  
+> La opción TAPE se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.  
   
  *n*  
  Es un marcador de posición que indica que se pueden especificar hasta 64 dispositivos de copia de seguridad en una lista separada por comas.  
@@ -254,16 +254,16 @@ MIRROR TO \<dispositivodecopiadeseguridad > [ **,**...  *n*  ] Especifica un con
  Esta opción solo está disponible en la edición Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Para MIRROR TO = DISK, BACKUP determina automáticamente el tamaño de bloque apropiado de los dispositivos de disco. Para obtener más información acerca del tamaño de bloque, vea "BLOCKSIZE" más adelante en esta tabla.  
+> Para MIRROR TO = DISK, BACKUP determina automáticamente el tamaño de bloque apropiado de los dispositivos de disco. Para obtener más información acerca del tamaño de bloque, vea "BLOCKSIZE" más adelante en esta tabla.  
   
 \<backup_device > vea "\<backup_device >," anteriormente en esta sección.
   
  *n*  
  Es un marcador de posición que indica que se pueden especificar hasta 64 dispositivos de copia de seguridad en una lista separada por comas. El número de dispositivos de la cláusula MIRROR TO debe ser igual al número de dispositivos de la cláusula TO.  
   
- Para obtener más información, vea "Familias de medios en conjuntos de medios reflejados" en la sección "Comentarios", posteriormente en este tema.  
+ Para obtener más información, vea "Media familias en conjuntos de medios reflejados" en la [comentarios](#general-remarks) sección, más adelante en este tema.  
   
- [ *siguiente mirror to* ]  
+ [ *next-mirror-to* ]  
  Es un marcador de posición que indica que una sola instrucción BACKUP puede contener hasta tres cláusulas MIRROR TO, además de una sola cláusula TO.  
   
 ### <a name="with-options"></a>Opciones de WITH  
@@ -275,7 +275,7 @@ MIRROR TO \<dispositivodecopiadeseguridad > [ **,**...  *n*  ] Especifica un con
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  FILE_SNAPSHOT  
- Se utiliza para crear una instantánea de los archivos de base de datos de Azure cuando todos los archivos de base de datos de SQL Server se almacenan con el servicio de almacenamiento de blobs de Azure. Para obtener más información, consulte [archivos de datos de SQL Server en Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Copia de seguridad de instantánea tiene instantáneas de Azure de los archivos de base de datos (archivos de datos y de registro) en un estado coherente. Un conjunto coherente de las instantáneas de Azure forman una copia de seguridad y se registran en el archivo de copia de seguridad. La única diferencia entre **copia de seguridad de base de datos a direcciones URL con FILE_SNAPSHOT** y **copia de seguridad de registro a dirección URL con FILE_SNAPSHOT** es que este último también trunca el registro de transacciones mientras que el primero no. Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instantánea de copia de seguridad, después de la copia de seguridad completa inicial que requiere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para establecer la cadena de copia de seguridad, solo una copia de seguridad de registro de transacciones solo se requiere para restaurar una base de datos hasta el momento en el tiempo de la copia de seguridad del registro de transacciones. Además, solo dos copias de seguridad de registro de transacciones son necesarias para restaurar una base de datos a un punto en el tiempo entre el momento de las copias de seguridad del registro de transacciones de dos.  
+ Se utiliza para crear una instantánea de los archivos de base de datos de Azure cuando todos los archivos de base de datos de SQL Server se almacenan con el servicio de almacenamiento de blobs de Azure. Para obtener más información, consulte [archivos de datos de SQL Server en Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Copia de seguridad de instantánea tiene instantáneas de Azure de los archivos de base de datos (archivos de datos y de registro) en un estado coherente. Un conjunto coherente de las instantáneas de Azure forman una copia de seguridad y se registran en el archivo de copia de seguridad. La única diferencia entre `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` y `BACKUP LOG TO URL WITH FILE_SNAPSHOT` es que este último también trunca el registro de transacciones mientras que el primero no. Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instantánea de copia de seguridad, después de la copia de seguridad completa inicial que requiere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para establecer la cadena de copia de seguridad, solo una copia de seguridad de registro de transacciones solo se requiere para restaurar una base de datos hasta el momento en el tiempo de la copia de seguridad del registro de transacciones. Además, solo dos copias de seguridad de registro de transacciones son necesarias para restaurar una base de datos a un punto en el tiempo entre el momento de las copias de seguridad del registro de transacciones de dos.  
   
 **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
@@ -283,50 +283,45 @@ MIRROR TO \<dispositivodecopiadeseguridad > [ **,**...  *n*  ] Especifica un con
  Se utiliza solo con BACKUP DATABASE. Especifica que la copia de seguridad de la base de datos o el archivo solo debe estar compuesta por las partes de la base de datos o el archivo que hayan cambiado desde la última copia de seguridad completa. Una copia de seguridad diferencial suele ocupar menos espacio que una copia de seguridad completa. Utilice esta opción para que no tenga que aplicar todas las copias de seguridad del registro individuales efectuadas desde que se realizó la última copia de seguridad completa.  
   
 > [!NOTE]  
->  De forma predeterminada, BACKUP DATABASE crea una copia de seguridad completa.  
+> De forma predeterminada, `BACKUP DATABASE` crea una copia de seguridad completa.  
   
  Para obtener más información, vea [Copias de seguridad diferenciales &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
   
  ENCRYPTION  
- Se utiliza para especificar el cifrado para una copia de seguridad. Puede especificar un algoritmo de cifrado para cifrar la copia de seguridad o especificar “NO_ENCRYPTION” para no hacer que la copia de seguridad se cifre. El cifrado es una práctica recomendada para ayudar a proteger los archivos de copia de seguridad. La lista de algoritmos que puede especificar son:  
+ Se utiliza para especificar el cifrado para una copia de seguridad. Puede especificar un algoritmo de cifrado para cifrar la copia de seguridad o especificar `NO_ENCRYPTION` que no la copia de seguridad cifrada. El cifrado es una práctica recomendada para ayudar a proteger los archivos de copia de seguridad. La lista de algoritmos que puede especificar son:  
   
--   AES_128  
-  
--   AES_192  
-  
--   AES_256  
-  
--   TRIPLE_DES_3KEY  
-  
--   NO_ENCRYPTION  
-  
- Si elige cifrar, tendrá que especificar el sistema cifrado mediante las opciones de cifrado:  
+-   `AES_128`  
+-   `AES_192`  
+-   `AES_256`  
+-   `TRIPLE_DES_3KEY`  
+-   `NO_ENCRYPTION`    
+
+Si elige cifrar, tendrá que especificar el sistema cifrado mediante las opciones de cifrado:  
   
 -   SERVER CERTIFICATE = Encryptor_Name  
-  
 -   SERVER ASYMMETRIC KEY = Encryptor_Name  
   
-    > [!WARNING]  
-    >  Cuando se utiliza el cifrado junto con el argumento FILE_SNAPSHOT, el propio archivo de metadatos se cifra mediante el algoritmo de cifrado especificado y el sistema comprueba que TDE se ha completado para la base de datos. Se produce sin cifrado adicional para los datos en Sí. Se produce un error en la copia de seguridad si no se cifró la base de datos o si el cifrado no se completó antes de emitir la instrucción de copia de seguridad.  
+> [!WARNING]  
+> Cuando se usa el cifrado junto con el `FILE_SNAPSHOT` argumento, el propio archivo de metadatos se cifra mediante el algoritmo de cifrado especificado y el sistema comprueba que [cifrado de datos transparente (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) se completó para la base de datos. Se produce sin cifrado adicional para los datos en Sí. Se produce un error en la copia de seguridad si no se cifró la base de datos o si el cifrado no se completó antes de emitir la instrucción de copia de seguridad.  
   
 **Opciones de copia de seguridad**  
   
 Estas opciones funcionan en el conjunto de copia de seguridad que se crea con esta operación de copia de seguridad.  
   
 > [!NOTE]  
->  Para especificar una copia de seguridad para una operación de restauración, utilice el archivo **=***\<backup_set_file_number >* opción. Para obtener más información sobre cómo especificar un conjunto de copia de seguridad, vea "Especificar de un conjunto copia de seguridad" en [argumentos RESTORE &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
+> Para especificar una copia de seguridad para una operación de restauración, utilice el `FILE = <backup_set_file_number>` opción. Para obtener más información sobre cómo especificar un conjunto de copia de seguridad, vea "Especificar de un conjunto copia de seguridad" en [argumentos RESTORE &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
   
  COPY_ONLY  
  Especifica que la copia de seguridad es un *copia de seguridad solo*, que no afecta a la secuencia normal de las copias de seguridad. Se crea una copia de seguridad de solo copia independientemente de las copias de seguridad convencionales programadas regularmente. Una copia de seguridad de solo copia no afecta a los procedimientos de copias de seguridad y restauración generales de la base de datos.  
   
  Las copias de seguridad de solo copia deben utilizarse en situaciones en las que se realiza una copia de seguridad con un fin específico, por ejemplo al hacer la copia de seguridad del registro antes de una restauración de archivos en línea. Normalmente, una copia de seguridad de solo copia se usa una vez y se elimina.  
   
--   Cuando se usa con BACKUP DATABASE, la opción COPY_ONLY crea una copia de seguridad completa que no se puede utilizar como una base diferencial. El mapa de bits diferencial no se actualiza y las copias de seguridad diferenciales se comportan como si no existiera la copia de seguridad de solo copia. Las copias de seguridad diferenciales posteriores usarán la copia de seguridad completa convencional más reciente como base.  
+-   Cuando se usa con `BACKUP DATABASE`, el `COPY_ONLY` opción crea una copia de seguridad completa que no puede actuar como una base diferencial. El mapa de bits diferencial no se actualiza y las copias de seguridad diferenciales se comportan como si no existiera la copia de seguridad de solo copia. Las copias de seguridad diferenciales posteriores usarán la copia de seguridad completa convencional más reciente como base.  
   
     > [!IMPORTANT]  
-    >  Si DIFFERENTIAL y COPY_ONLY se usan juntas, COPY_ONLY se omite y se crea una copia de seguridad diferencial.  
+    > Si `DIFFERENTIAL` y `COPY_ONLY` se usan juntos, `COPY_ONLY` se omite, y se crea una copia de seguridad diferencial.  
   
--   Cuando se usa con BACKUP LOG, la opción COPY_ONLY crea una *copia de seguridad de registros de solo copia*, que no trunca el registro de transacciones. La copia de seguridad del registro de solo copia no afecta a la cadena de registros y otras copias de seguridad del registro se comportan como si no existiera la copia de seguridad de solo copia.  
+-   Cuando se usa con `BACKUP LOG`, `COPY_ONLY` opción crea un *copia de seguridad de registros de solo copia*, que no trunca el registro de transacciones. La copia de seguridad del registro de solo copia no afecta a la cadena de registros y otras copias de seguridad del registro se comportan como si no existiera la copia de seguridad de solo copia.  
   
 Para obtener más información, vea [Copias de seguridad de solo copia &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
   
@@ -334,6 +329,8 @@ Para obtener más información, vea [Copias de seguridad de solo copia &#40;SQL 
 En [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] y versiones posteriores únicamente, especifica si [compresión de copia de seguridad](../../relational-databases/backup-restore/backup-compression-sql-server.md) se lleva a cabo en esta copia de seguridad, invalida la configuración predeterminada de nivel de servidor.  
   
 Durante la instalación, el comportamiento predeterminado es que no se realice la compresión de copia de seguridad. Pero se puede cambiar este comportamiento predeterminado estableciendo la [copia de seguridad predeterminada de compresión](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) opción de configuración del servidor. Para obtener información acerca de cómo ver el valor actual de esta opción, vea [ver o cambiar propiedades del servidor &#40; SQL Server &#41; ](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).  
+
+Para obtener información sobre el uso de compresión de copia de seguridad con [cifrado de datos transparente (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) bases de datos habilitados, consulte la [comentarios](#general-remarks) sección.
   
 COMPRESSION  
 Habilita de forma explícita la compresión de copia de seguridad.  
@@ -344,22 +341,22 @@ Deshabilita de forma explícita la compresión de copia de seguridad.
 DESCRIPCIÓN  **=**  { **'***texto***'** | **@*** text_variable* }  
 Especifica el texto de forma libre que describe el conjunto de copia de seguridad. La cadena puede tener un máximo de 255 caracteres.  
   
-NOMBRE  **=**  { *nombreDeConjuntoDeCopia*| **@*** backup_set_var* }  
+NAME **=** { *backup_set_name* | **@***backup_set_var* }  
 Especifica el nombre del conjunto de copia de seguridad. Los nombres pueden tener un máximo de 128 caracteres. Si no se especifica NAME, está en blanco.  
   
-{EXPIREDATE **='***fecha***'**| RETAINDAYS  **=**  *días* }  
+{EXPIREDATE **='***fecha***'** | RETAINDAYS  **=**  *días* }  
 Especifica cuándo se puede sobrescribir el conjunto de copia de seguridad para esta copia de seguridad. Si se usan las dos opciones, RETAINDAYS tiene precedencia sobre EXPIREDATE.  
   
-Si se especifica ninguna opción, la fecha de expiración está determinada por la **mediaretention** de configuración. Para obtener más información, vea [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+Si se especifica ninguna opción, la fecha de expiración está determinada por la **mediaretention** de configuración. Para obtener más información, vea [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).   
   
 > [!IMPORTANT]  
->  Estas opciones solo impiden que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sobrescriba un archivo. Las cintas se pueden borrar utilizando otros métodos, y los archivos de disco se pueden eliminar usando el sistema operativo. Para obtener más información acerca de la comprobación de la expiración, vea SKIP y FORMAT en este tema.  
+> Estas opciones solo impiden que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sobrescriba un archivo. Las cintas se pueden borrar utilizando otros métodos, y los archivos de disco se pueden eliminar usando el sistema operativo. Para obtener más información acerca de la comprobación de la expiración, vea SKIP y FORMAT en este tema.  
   
-EXPIREDATE  **=**  { **'***fecha***'**| **@*** date_var* } especifica cuándo la copia de seguridad conjunto expira y se puede sobrescribir. Si se proporciona como una variable (@*date_var *), esta fecha debe seguir el sistema configurado **datetime** dar formato y se pueden especificar uno de los siguientes:  
+EXPIREDATE  **=**  { **'***fecha***'** | **@*** date_var* } especifica cuándo la copia de seguridad conjunto expira y se puede sobrescribir. Si se proporciona como una variable (@*date_var *), esta fecha debe seguir el sistema configurado **datetime** dar formato y se pueden especificar uno de los siguientes:  
   
 -   Una constante de cadena (@*date_var*  **=**  fecha)  
 -   Una variable de tipo de datos de cadena de caracteres (excepto el **ntext** o **texto** tipos de datos)  
--   Un **smalldatetime**  
+-   A **smalldatetime**  
 -   A **datetime** variable  
   
 Por ejemplo:  
@@ -370,9 +367,9 @@ Por ejemplo:
 Para obtener información sobre cómo especificar **datetime** valores, consulte [tipos de fecha y hora](../../t-sql/data-types/date-and-time-types.md).  
   
 > [!NOTE]  
->  Para omitir la fecha de caducidad, use la opción SKIP.  
+> Para omitir la fecha de expiración, se utiliza el `SKIP` opción.  
   
-RETAINDAYS  **=**  { *días*| **@*** days_var* } especifica el número de días que deben transcurrir antes de este medio de copia de seguridad se puede sobrescribir el conjunto. Si se proporciona como una variable (**@***days_var*), debe especificarse como un entero.  
+RETAINDAYS  **=**  { *días* | **@*** days_var* } especifica el número de días que deben transcurrir antes de este medio de copia de seguridad se puede sobrescribir el conjunto. Si se proporciona como una variable (**@***days_var*), debe especificarse como un entero.  
   
 **Opciones del conjunto de medios**  
   
@@ -382,7 +379,7 @@ Estas opciones funcionan para todo el conjunto de medios.
  Controla si la operación de copia de seguridad anexa o sobrescribe los conjuntos de copias de seguridad existentes en el medio. El valor predeterminado es anexar al conjunto de copias de seguridad más reciente en el medio (NOINIT).  
   
 > [!NOTE]  
->  Para obtener información acerca de las interacciones entre { **NOINIT** | INIT} y { **NOSKIP** | SKIP}, vea "Comentarios", más adelante en este tema.  
+> Para obtener información acerca de las interacciones entre { **NOINIT** | INIT} y { **NOSKIP** | SKIP}, vea [comentarios](#general-remarks) más adelante en este tema.  
   
 NOINIT  
  Indica que el conjunto de copia de seguridad se anexa al conjunto de medios especificado, conservando así los conjuntos de copia de seguridad existentes. Si se ha definido una contraseña para el conjunto de medios, debe proporcionarla. NOINIT es el valor predeterminado.  
@@ -392,18 +389,18 @@ Para obtener más información, vea [Conjuntos de medios, familias de medios y c
 INIT  
  Especifica que se deben sobrescribir todos los conjuntos de copia de seguridad, pero conserva el encabezado de medios. Si se especifica INIT, se sobrescriben todos los conjuntos de copia de seguridad existentes en el dispositivo, si las condiciones lo permiten. De forma predeterminada, BACKUP comprueba las siguientes condiciones y no sobrescribe los medios de copia de seguridad en caso de existir alguna de las condiciones siguientes:  
   
--   Aún no ha expirado ningún conjunto de copia de seguridad. Para obtener más información, vea las opciones EXPIREDATE y RETAINDAYS.  
+-   Aún no ha expirado ningún conjunto de copia de seguridad. Para obtener más información, consulte el `EXPIREDATE` y `RETAINDAYS` opciones.  
 -   El nombre del conjunto de copia de seguridad proporcionado en la instrucción BACKUP, si se especificó, no coincide con el nombre de los medios de copia de seguridad. Para obtener más información, vea la opción NAME, descrita anteriormente de esta sección.  
   
-Para invalidar estas comprobaciones, utilice la opción SKIP.  
+Para invalidar estas comprobaciones, utilice el `SKIP` opción.  
   
 Para obtener más información, vea [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
-{ **NOSKIP** | SKIP}  
+{ **NOSKIP** | SKIP }  
 Controla si una operación de copia de seguridad comprueba la fecha y la hora de expiración de los conjuntos de copia de seguridad en el medio antes de sobrescribirlos.  
   
 > [!NOTE]  
->  Para obtener información acerca de las interacciones entre { **NOINIT** | INIT} y { **NOSKIP** | SKIP}, vea "Comentarios", más adelante en este tema.  
+> Para obtener información acerca de las interacciones entre { **NOINIT** | INIT} y { **NOSKIP** | SKIP}, vea "Comentarios", más adelante en este tema.  
   
 NOSKIP  
 Indica a la instrucción BACKUP que compruebe la fecha de expiración de todos los conjuntos de copia de seguridad de los medios antes de permitir que se sobrescriban. Éste es el comportamiento predeterminado.  
@@ -422,15 +419,15 @@ FORMAT
 Especifica que se debe crear un conjunto de medios nuevo. FORMAT hace que la operación de copia de seguridad escriba un nuevo encabezado de medios en todos los volúmenes de medios usados en la operación de copia de seguridad. El contenido existente del volumen no será válido porque se sobrescribirán los conjuntos de copias de seguridad y el encabezado de medios existentes.  
   
 > [!IMPORTANT]  
->  Utilice FORMAT con precaución. Al dar formato a cualquier volumen de un conjunto de medios, todo el conjunto de medios se convierte en inutilizable. Por ejemplo, si inicializa una cinta que pertenece a un conjunto de medios distribuido, queda inutilizable todo el conjunto de medios.  
+> Use `FORMAT` con cuidado. Al dar formato a cualquier volumen de un conjunto de medios, todo el conjunto de medios se convierte en inutilizable. Por ejemplo, si inicializa una cinta que pertenece a un conjunto de medios distribuido, queda inutilizable todo el conjunto de medios.  
   
-La especificación de FORMAT implica SKIP y no es necesario especificar SKIP de forma explícita.  
+Especificar el formato implica `SKIP`; `SKIP` no es necesario incluir explícitamente.  
   
 MEDIADESCRIPTION  **=**  { *texto* | **@*** text_variable* }  
 Especifica la descripción de texto de forma libre, con un máximo de 255 caracteres, del conjunto de medios.  
   
-MEDIANAME  **=**  { *nombreDeMedio* | **@*** media_name_variable* }  
-Especifica el nombre del medio para el conjunto completo de medios de copia de seguridad. El nombre del medio no puede tener más de 128 caracteres y, si se especifica MEDIANAME, debe coincidir con el nombre de medio especificado que ya existe en los volúmenes de copia de seguridad. Si no se especifica o se especifica la opción SKIP, no se realiza la comprobación del nombre del medio.  
+MEDIANAME **=** { *media_name* | **@***media_name_variable* }  
+Especifica el nombre del medio para el conjunto completo de medios de copia de seguridad. El nombre del medio debe ser no supere los 128 caracteres, si `MEDIANAME` se especifica, debe coincidir con el nombre de medio especificado ya existe en los volúmenes de copia de seguridad. Si no se especifica o se especifica la opción SKIP, no se realiza la comprobación del nombre del medio.  
   
 BLOCKSIZE  **=**  { *blocksize* | **@*** blocksize_variable* }  
 Especifica el tamaño de bloque físico, en bytes. Los tamaños admitidos son 512, 1024, 2048, 4096, 8192, 16384, 32768 y 65536 (64 KB) bytes. El valor predeterminado es 65536 para dispositivos de cinta y 512 para otros dispositivos. Normalmente, esta opción no es necesaria, ya que BACKUP selecciona automáticamente un tamaño de bloque apropiado para el dispositivo. La especificación explícita de un tamaño de bloque invalida la selección automática del tamaño de bloque.  
@@ -438,22 +435,26 @@ Especifica el tamaño de bloque físico, en bytes. Los tamaños admitidos son 51
 Si va a realizar una copia de seguridad en CD-ROM que pretende utilizar para copiar y restaurar, especifique BLOCKSIZE=2048.  
   
 > [!NOTE]  
->  Normalmente, esta opción solo afecta al rendimiento al escribir en dispositivos de cinta.  
+> Normalmente, esta opción solo afecta al rendimiento al escribir en dispositivos de cinta.  
   
 **Opciones de transferencia de datos**  
   
 BUFFERCOUNT  **=**  { *buffercount* | **@*** buffercount_variable* }  
 Especifica el número total de búferes de E/S que se van a utilizar para la operación de copia de seguridad. Puede especificar cualquier entero positivo; no obstante, un número de búferes demasiado grande podría provocar errores de "memoria insuficiente" a causa de un espacio de direcciones virtuales inadecuado en el proceso Sqlservr.exe.  
   
-El espacio total utilizado por los búferes está determinado por: *buffercount***\****maxtransfersize*.  
+El espacio total utilizado por los búferes está determinado por: *buffercount/maxtransfersize*.  
   
 > [!NOTE]  
->  Para obtener información importante sobre el uso de la opción BUFFERCOUNT, vea el [opción de transferencia de datos BufferCount incorrecta puede dar lugar a una condición OOM](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.  
+> Para obtener información importante sobre el uso de la `BUFFERCOUNT` opción, vea el [opción de transferencia de datos BufferCount incorrecta puede dar lugar a una condición OOM](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.  
   
-MAXTRANSFERSIZE  **=**  { *maxtransfersize* | **@*** maxtransfersize_variable* }  
- Especifica la unidad de transferencia mayor (en bytes) que se debe usar entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el medio de copia de seguridad. Los valores posibles son múltiplos de 65536 bytes (64 KB), hasta un máximo de 4194304 bytes (4 MB).  
+MAXTRANSFERSIZE  **=**  { *maxtransfersize*  |   ***@**  maxtransfersize_variable*} Especifica la unidad de transferencia más grande en bytes que se debe usar entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los medios de copia de seguridad. Los valores posibles son múltiplos de 65536 bytes (64 KB), hasta un máximo de 4194304 bytes (4 MB).  
+
 > [!NOTE]  
->  Al crear copias de seguridad mediante el servicio SQL Writer, si la base de datos configurada FILESTREAM o incluye grupos de archivos de OLTP en memoria, la `MAXTRANSFERSIZE` en el momento de restauración debe ser mayor o igual que el `MAXTRANSFERSIZE` que estaba se usa cuando el se creó la copia de seguridad. 
+> Al crear copias de seguridad mediante el servicio SQL Writer, si ha configurado la base de datos [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md), o que incluya [grupos de archivos con optimización para memoria](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md), la `MAXTRANSFERSIZE` debe estar en el momento de una restauración mayor o igual que el `MAXTRANSFERSIZE` que se usó cuando se creó la copia de seguridad. 
+
+> [!NOTE]  
+> Para [cifrado de datos transparente (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) habilitar bases de datos con un único archivo de datos, el valor predeterminado `MAXTRANSFERSIZE` es 65536 (64 KB). Para el valor predeterminado de bases de datos no TDE cifrado `MAXTRANSFERSIZE` es 1048576 (1 MB) cuando se utiliza copia de seguridad en disco y 65536 (64 KB) cuando se usa de VDI o de cinta.
+> Para obtener más información sobre el uso de compresión de copia de seguridad con TDE cifra las bases de datos, vea el [comentarios](#general-remarks) sección.
   
 **Opciones de administración de errores**  
   
@@ -492,7 +493,7 @@ A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], no tiene ningú
   
 **Opciones de supervisión**  
   
-ESTADÍSTICAS [**= *** porcentaje* ]  
+ESTADÍSTICAS [  **=**  *porcentaje* ]  
  Muestra un mensaje cada vez que otro *porcentaje* completa y se usa para medir el progreso. Si *porcentaje* se omite, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra un mensaje después de completar cada 10 por ciento.  
   
 La opción STATS informa del porcentaje completado desde el umbral para informar del próximo intervalo. Éste es aproximadamente el porcentaje especificado; por ejemplo, con STATS=10, si la cantidad completada equivale al 40 por ciento, la opción puede mostrar el 43 por ciento. En el caso de los conjuntos de copia de seguridad de gran tamaño, esto no representa ningún problema porque el porcentaje completado se mueve muy lentamente entre las llamadas de E/S.  
@@ -511,11 +512,12 @@ Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantend
 NOREWIND implica NOUNLOAD, y estas opciones son incompatibles en una sola instrucción BACKUP.  
   
 > [!NOTE]  
->  Si utiliza NOREWIND, la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserva la propiedad de la unidad de cinta hasta que una instrucción BACKUP o RESTORE que se ejecuta en el mismo proceso utiliza la opción REWIND o UNLOAD, o bien se cierra la instancia del servidor. Mantener abierta la cinta evita que otros procesos obtengan acceso a la misma. Para obtener información acerca de cómo mostrar una lista de cintas abiertas y cómo cerrar una cinta abierta, vea [dispositivos de copia de seguridad &#40; SQL Server &#41; ](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+> Si usa `NOREWIND`, la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserva la propiedad de la unidad de cinta hasta que una instrucción de copia de seguridad o restauración que se ejecuta en el mismo proceso utiliza la `REWIND` o `UNLOAD` opción o la instancia del servidor se cierra. Mantener abierta la cinta evita que otros procesos obtengan acceso a la misma. Para obtener información acerca de cómo mostrar una lista de cintas abiertas y cómo cerrar una cinta abierta, vea [dispositivos de copia de seguridad &#40; SQL Server &#41; ](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
-{ **UNLOAD** | NOUNLOAD}  
+{ **UNLOAD** | NOUNLOAD}    
+
 > [!NOTE]  
->  UNLOAD/NOUNLOAD es una configuración de sesión que persiste mientras dure la sesión o hasta que se restablezca especificando la alternativa.  
+> `UNLOAD`y `NOUNLOAD` son configuraciones de sesión que se conservan durante la vida de la sesión o hasta que se restablezca especificando la alternativa.  
   
 UNLOAD  
  Especifica que la cinta se rebobina y descarga automáticamente al terminar la copia de seguridad. UNLOAD es el valor predeterminado cuando se inicia una sesión. 
@@ -524,22 +526,22 @@ NOUNLOAD
  Especifica que tras la operación de copia de seguridad de la cinta permanecerá cargada en la unidad de cinta.  
   
 > [!NOTE]  
->  Para una copia de seguridad de un dispositivo de cinta, la opción BLOCKSIZE afecta al rendimiento de la operación de copia de seguridad. Normalmente, esta opción solo afecta al rendimiento al escribir en dispositivos de cinta.  
+> Para una copia de seguridad en un dispositivo de copia de seguridad de cinta, el `BLOCKSIZE` puede afectar al rendimiento de la operación de copia de seguridad. Normalmente, esta opción solo afecta al rendimiento al escribir en dispositivos de cinta.  
   
 **Opciones específicas del registro**  
   
-Estas opciones solo se usan con BACKUP LOG.  
+Estas opciones solo se usan con `BACKUP LOG`.  
   
 > [!NOTE]  
->  Si no desea hacer copias de seguridad del registro, use el modelo de recuperación simple. Para obtener más información, vea [Modelos de recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
+> Si no desea hacer copias de seguridad del registro, use el modelo de recuperación simple. Para obtener más información, vea [Modelos de recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
-{NORECOVERY | En espera **= *** nombreArchivoParaDeshacer* }  
+{NORECOVERY | STANDBY  **=**  *nombreArchivoParaDeshacer* }  
   NORECOVERY  
   Realiza una copia de seguridad del registro después del error y deja la base de datos en el estado RESTORING. NORECOVERY resulta útil cuando, en caso de error, se conmuta a una base de datos secundaria y al guardar los registros después del error antes de una operación RESTORE.  
   
-  Para hacer una copia de seguridad del registro óptima que omita el truncamiento de los registros y, a continuación, establecer la base de datos en el estado RESTORING de forma atómica, utilice las opciones NO_TRUNCATE y NORECOVERY conjuntamente.  
+  Para realizar una copia de seguridad del registro de mejor esfuerzo que omite el truncamiento del registro y tomar la base de datos en estado de restauración de forma atómica, utilice la `NO_TRUNCATE` y `NORECOVERY` opciones juntas.  
   
-  En espera **= *** standby_file_name*  
+  STANDBY  **=**  *standby_file_name*  
   Realiza una copia de seguridad del final del registro y deja la base de datos en modo de solo lectura y en el estado STANDBY. La cláusula STANDBY escribe datos en espera (realiza la reversión, pero con la posibilidad de recuperaciones posteriores). El uso de la opción STANDBY es equivalente a BACKUP LOG WITH NORECOVERY seguido de RESTORE WITH STANDBY.  
   
   Uso de modo de espera requiere un archivo en espera, especificado por *standby_file_name*, cuya ubicación se almacena en el registro de la base de datos. Si el archivo especificado ya existe, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] lo sobrescribe; si no existe, [!INCLUDE[ssDE](../../includes/ssde-md.md)] lo crea. El archivo en espera pasa a formar parte de la base de datos.  
@@ -547,13 +549,13 @@ Estas opciones solo se usan con BACKUP LOG.
   Este archivo contiene los cambios revertidos, que se deben invertir si las operaciones RESTORE LOG se van a aplicar posteriormente. Debe haber suficiente espacio en disco para permitir el crecimiento del archivo en espera de manera que pueda contener todas las páginas distintas de la base de datos que se modificaron al revertir las transacciones sin confirmar.  
   
 NO_TRUNCATE  
-Especifica que el no es truncado el registro y provoca la [!INCLUDE[ssDE](../../includes/ssde-md.md)] a intentar la copia de seguridad con independencia del estado de la base de datos. Por consiguiente, una copia de seguridad realizada con NO_TRUNCATE puede tener metadatos incompletos. Esta opción permite realizar copias de seguridad del registro cuando la base de datos está dañada.  
+Especifica que el no es truncado el registro y provoca la [!INCLUDE[ssDE](../../includes/ssde-md.md)] a intentar la copia de seguridad con independencia del estado de la base de datos. Por lo tanto, una copia de seguridad realizada con `NO_TRUNCATE` puede tener metadatos incompletos. Esta opción permite realizar copias de seguridad del registro cuando la base de datos está dañada.  
   
 La opción NO_TRUNCATE de BACKUP LOG es equivalente a la especificación de COPY_ONLY y CONTINUE_AFTER_ERROR.  
   
-Sin la opción NO_TRUNCATE, la base de datos debe estar en el estado ONLINE. Si la base de datos está en el estado SUSPENDED, podría poder crear una copia de seguridad especificando NO_TRUNCATE. Pero si la base de datos se encuentra en el estado OFFLINE o EMERGENCY, no se admite BACKUP, ni siquiera con NO_TRUNCATE. Para obtener información acerca de los Estados de base de datos, vea [Estados de base de datos](../../relational-databases/databases/database-states.md).  
+Sin el `NO_TRUNCATE` opción, la base de datos debe estar en el estado en línea. Si la base de datos está en estado suspendido, es posible que pueda crear una copia de seguridad mediante la especificación de `NO_TRUNCATE`. Pero si la base de datos está en el estado OFFLINE o EMERGENCY, no se permite la copia de seguridad incluso con `NO_TRUNCATE`. Para obtener información acerca de los Estados de base de datos, vea [Estados de base de datos](../../relational-databases/databases/database-states.md).  
   
-## <a name="about-working-with-sql-server-backups"></a>Cómo trabajar con copias de seguridad de SQL Server  
+## <a name="about-working-with-sql-server-backups"></a>Acerca de cómo trabajar con copias de seguridad de SQL Server  
  En esta sección se presentan los siguiente conceptos esenciales de la copia de seguridad:  
   
  [Tipos de copia de seguridad](#Backup_Types)  
@@ -563,7 +565,7 @@ Sin la opción NO_TRUNCATE, la base de datos debe estar en el estado ONLINE. Si 
  [Restaurar copias de seguridad SQL Server](#Restoring_Backups)  
   
 > [!NOTE]  
->  Para obtener una introducción a la copia de seguridad en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [información general de copia de seguridad &#40; SQL Server &#41; ](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
+> Para obtener una introducción a la copia de seguridad en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [información general de copia de seguridad &#40; SQL Server &#41; ](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
 ###  <a name="Backup_Types"></a>Tipos de copia de seguridad  
  Los tipos de copia de seguridad admitidos dependen del modelo de recuperación de la base de datos y son los siguientes:  
@@ -583,7 +585,7 @@ Sin la opción NO_TRUNCATE, la base de datos debe estar en el estado ONLINE. Si 
      Recomendamos que coloque las copias de seguridad del registro en un volumen que no sea el de las copias de seguridad de la base de datos.  
   
     > [!NOTE]  
-    >  Para poder crear la primera copia de seguridad de registros, debe crear una copia de seguridad completa.  
+    > Para poder crear la primera copia de seguridad de registros, debe crear una copia de seguridad completa.  
   
 -   A *copia de seguridad solo* es una copia de seguridad completa de propósito especial o una copia de seguridad del registro que es independiente de la secuencia normal de copias de seguridad convencionales. Para crear una copia de seguridad de solo copia, especifique la opción COPY_ONLY en la instrucción BACKUP. Para obtener más información, vea [Copias de seguridad de solo copia &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
   
@@ -591,19 +593,19 @@ Sin la opción NO_TRUNCATE, la base de datos debe estar en el estado ONLINE. Si 
  Para evitar llenar el registro de transacciones de una base de datos, las copias de seguridad rutinarias son esenciales. Normalmente, el truncamiento se produce automáticamente bajo el modelo de recuperación simple cuando se realiza una copia de seguridad de la base de datos y bajo el modelo de recuperación completa cuando se realiza una copia de seguridad del registro de transacciones. Sin embargo, en ocasiones se puede retrasar el proceso de truncamiento. Para obtener información sobre los factores que pueden retrasar el truncamiento del registro, vea [Registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 > [!NOTE]  
->  Las opciones BACKUP LOG WITH NO_LOG y WITH TRUNCATE_ONLY ya no se incluyen. Si usa el modelo de recuperación completa o el optimizado para cargas masivas de registros y debe quitar la cadena de copia de seguridad de registros de una base de datos, cambie al modelo de recuperación simple. Para obtener más información, vea [Ver o cambiar el modelo de recuperación de una base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
+> El `BACKUP LOG WITH NO_LOG` y `WITH TRUNCATE_ONLY` opciones se han suspendido. Si usa el modelo de recuperación completa o el optimizado para cargas masivas de registros y debe quitar la cadena de copia de seguridad de registros de una base de datos, cambie al modelo de recuperación simple. Para obtener más información, vea [Ver o cambiar el modelo de recuperación de una base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
   
 ###  <a name="Formatting_Media"></a>Aplicar formato a los medios de copia de seguridad  
  Con una instrucción BACKUP se dan formato a los medios de copia de seguridad si y solo si se cumple alguna de las siguientes condiciones:  
   
--   Se especifica la opción FORMAT.  
+-   El `FORMAT` se especifica la opción.  
 -   El medio está vacío.  
 -   En la operación se está escribiendo una cinta de continuación.  
   
-###  <a name="Backup_Devices_and_Media_Sets"></a>Trabajar con dispositivos de copia de seguridad y conjuntos de medios  
+###  <a name="Backup_Devices_and_Media_Sets"></a>Trabajar con conjuntos de dispositivos y medios de copia de seguridad  
   
 #### <a name="backup-devices-in-a-striped-media-set-a-stripe-set"></a>Dispositivos de copia de seguridad en un conjunto de medios seccionado (conjunto seccionado)  
- A *un conjunto de bandas* es un conjunto de archivos de disco en el que los datos se dividen en bloques y distribuidas en un orden fijo. El número de dispositivos de copia de seguridad utilizados en un conjunto de franjas debe ser siempre el mismo (a menos que el medio se reinicialice con FORMAT).  
+ A *un conjunto de bandas* es un conjunto de archivos de disco en el que los datos se dividen en bloques y distribuidas en un orden fijo. El número de dispositivos de copia de seguridad utilizados en un conjunto de bandas debe permanecer igual (a menos que el medio se reinicialice con `FORMAT`).  
   
  En el siguiente ejemplo se escribe una copia de seguridad de la base de datos [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] en un nuevo conjunto de medios distribuido que utiliza tres archivos de disco.  
   
@@ -622,34 +624,34 @@ GO
   
  Si se especifica ni MEDIANAME o MEDIADESCRIPTION al escribe un encabezado de medios, el campo de encabezado de medios correspondiente al elemento en blanco está vacío.  
   
-#### <a name="working-with-a-mirrored-media-set"></a>Trabajar con un conjunto de medios reflejado  
+#### <a name="working-with-a-mirrored-media-set"></a>Trabajar con un conjunto de medios reflejados  
  Normalmente, las copias de seguridad no se reflejan, y las instrucciones BACKUP simplemente incluyen una cláusula TO. No obstante, puede haber hasta cuatro reflejos en total por cada conjunto de medios. En un conjunto de medios reflejado, la operación copia de seguridad escribe en varios grupos de dispositivos de copia de seguridad. Cada grupo de dispositivos de copia de seguridad contiene un único reflejo en el conjunto de medios reflejado. Cada reflejo debe usar la misma cantidad y tipo de dispositivos de copia de seguridad físicos, y todos deben tener las mismas propiedades.  
   
- Para hacer una copia de seguridad de un conjunto de medios reflejado, deben estar presentes todos los reflejos. Para realizar una copia de seguridad en un conjunto de medios reflejado, especifique la cláusula TO para indicar el primer reflejo y la cláusula MIRROR TO para cada reflejo adicional.  
+ Para hacer una copia de seguridad de un conjunto de medios reflejado, deben estar presentes todos los reflejos. Para hacer copia de seguridad un conjunto de medios reflejado, especificar el `TO` cláusula para especificar el primer reflejo y especificar un `MIRROR TO` cláusula para cada reflejo adicional.  
   
- En el caso de un conjunto de medios reflejado, cada cláusula MIRROR TO debe incluir el mismo número y tipo de dispositivos que la cláusula TO. En el siguiente ejemplo se escribe en un conjunto de medios reflejado que contiene dos reflejos y usa tres dispositivos por reflejo:  
+ Para un conjunto de medios reflejados, cada `MIRROR TO` cláusula debe incluir el mismo número y tipo de dispositivos como la cláusula TO. En el siguiente ejemplo se escribe en un conjunto de medios reflejado que contiene dos reflejos y usa tres dispositivos por reflejo:  
   
 ```sql  
 BACKUP DATABASE AdventureWorks2012  
 TO DISK='X:\SQLServerBackups\AdventureWorks1a.bak',   
-DISK='Y:\SQLServerBackups\AdventureWorks2a.bak',   
-DISK='Z:\SQLServerBackups\AdventureWorks3a.bak'  
+  DISK='Y:\SQLServerBackups\AdventureWorks2a.bak',   
+  DISK='Z:\SQLServerBackups\AdventureWorks3a.bak'  
 MIRROR TO DISK='X:\SQLServerBackups\AdventureWorks1b.bak',   
-DISK='Y:\SQLServerBackups\AdventureWorks2b.bak',   
-DISK='Z:\SQLServerBackups\AdventureWorks3b.bak';  
+  DISK='Y:\SQLServerBackups\AdventureWorks2b.bak',   
+  DISK='Z:\SQLServerBackups\AdventureWorks3b.bak';  
 GO  
 ```  
   
 > [!IMPORTANT]  
->  Este ejemplo se ha creado de modo que pueda probarlo en su sistema local. En la práctica, realizar una copia de seguridad en varios dispositivos de la misma unidad afectaría el rendimiento y eliminaría la redundancia para la que se diseñaron los conjuntos de medios reflejados.  
+> Este ejemplo se ha creado de modo que pueda probarlo en su sistema local. En la práctica, realizar una copia de seguridad en varios dispositivos de la misma unidad afectaría el rendimiento y eliminaría la redundancia para la que se diseñaron los conjuntos de medios reflejados.  
   
 ##### <a name="media-families-in-mirrored-media-sets"></a>Familias de medios en conjuntos de medios reflejados  
- Cada dispositivo de copia de seguridad especificado en la cláusula TO de una instrucción BACKUP corresponde a una familia de medios. Por ejemplo, si la cláusula TO incluye tres dispositivos, BACKUP escribe los datos en tres familias de medios. En un conjunto de medios reflejado, cada reflejo debe contener una copia de cada familia de medios. Esto se debe a que el número de dispositivos debe ser idéntico en cada reflejo.  
+ Cada dispositivo de copia de seguridad especificado en el `TO` cláusula de una instrucción de copia de seguridad corresponde a una familia de medios. Por ejemplo, si la `TO` cláusulas incluye tres dispositivos, BACKUP escribe datos en tres familias de medios. En un conjunto de medios reflejado, cada reflejo debe contener una copia de cada familia de medios. Esto se debe a que el número de dispositivos debe ser idéntico en cada reflejo.  
   
  Si se incluyen varios dispositivos para cada reflejo, el orden determina qué familia de medios se escribe en cada dispositivo. Por ejemplo, en cada lista de dispositivos, el segundo dispositivo corresponde a la segunda familia de medios. En la tabla siguiente se muestra la correspondencia entre los dispositivos y las familias de medios para los dispositivos del ejemplo anterior.  
   
 |Reflejo|Familia de medios 1|Familia de medios 2|Familia de medios 3|  
-|------------|--------------------|--------------------|--------------------|  
+|---------|---------|---------|---------|  
 |0|`Z:\AdventureWorks1a.bak`|`Z:\AdventureWorks2a.bak`|`Z:\AdventureWorks3a.bak`|  
 |1|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|  
   
@@ -657,49 +659,56 @@ GO
   
  Para obtener más información sobre los conjuntos de medios reflejados, vea [Conjuntos de medios de copia de seguridad reflejados &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md). Para obtener más información sobre los conjuntos de medios y familias de medios en general, vea [conjuntos de medios, familias de medios y conjuntos de copia de seguridad &#40; SQL Server &#41; ](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
-###  <a name="Restoring_Backups"></a>Restaurar copias de seguridad SQL Server  
+###  <a name="Restoring_Backups"></a>Restaurar copias de seguridad de SQL Server  
  Para restaurar una base de datos y, opcionalmente, recuperarla para ponerla en línea, o para restaurar un archivo o grupo de archivos, use la [!INCLUDE[tsql](../../includes/tsql-md.md)] [restaurar](../../t-sql/statements/restore-statements-transact-sql.md) instrucción o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **restaurar** tareas. Para obtener más información consulte [restauración y recuperación de información general sobre &#40; SQL Server &#41; ](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
   
-##  <a name="Additional_Considerations"></a>Consideraciones adicionales sobre las opciones de copia de seguridad  
+##  <a name="Additional_Considerations"></a>Consideraciones adicionales acerca de las opciones de copia de seguridad  
   
 ###  <a name="Interactions_SKIP_etc"></a>Interacción de SKIP, NOSKIP, INIT y NOINIT  
  Esta tabla describen las interacciones entre el { **NOINIT** | INIT} y { **NOSKIP** | Opciones de omitir}.  
   
 > [!NOTE]  
->  Si el medio de cinta está vacío o el archivo de copia de seguridad en disco no existe, todas estas interacciones escriben un encabezado de medios y continúan. Si el medio no está vacío y no contiene ningún encabezado de medios válido, estas operaciones proporcionan un comentario que indica que no se trata de un medio MTF válido y terminan la operación de copia de seguridad.  
+> Si el medio de cinta está vacío o el archivo de copia de seguridad en disco no existe, todas estas interacciones escriben un encabezado de medios y continúan. Si el medio no está vacío y no contiene ningún encabezado de medios válido, estas operaciones proporcionan un comentario que indica que no se trata de un medio MTF válido y terminan la operación de copia de seguridad.  
   
 ||NOINIT|INIT|  
 |------|------------|----------|  
-|NOSKIP|Si el volumen contiene un encabezado de medios válido, se comprueba que el nombre del medio coincida con la opción MEDIANAME, si se proporcionó. Si coincide, se anexa el conjunto de copia de seguridad y se mantienen todos los conjuntos de copia de seguridad existentes.<br /> Si el volumen no contiene un encabezado de medios válido, se produce un error.|Si el volumen contiene un encabezado de medios válido, se realizan las siguientes comprobaciones:<br /> -Si se especificó MEDIANAME, comprueba que el nombre del medio proporcionado coincide con multimedia name.* * el encabezado de medios<br /> -Comprueba que no hay ningún conjunto de copia de seguridad vigente en el medio. Si los hay, se finaliza la copia de seguridad.<br /> Si las comprobaciones son correctas, se sobrescriben los conjuntos de copia de seguridad de los medios y solo se mantiene el encabezado de medios.<br /> Si el volumen no contiene ningún encabezado de medios válido, se genera uno utilizando las opciones MEDIANAME y MEDIADESCRIPTION especificadas, si se especificó alguna.|  
-|SKIP|Si el volumen contiene un encabezado de medios válido, se anexa el conjunto de copia de seguridad, conservándose todos los conjuntos de copia de seguridad existentes.|Si el volumen contiene válido * encabezado de medios, sobrescribe los conjuntos de copia de seguridad de los medios, conservando el encabezado de medios.<br /> Si el medio está vacío, se genera un encabezado de medios utilizando las opciones MEDIANAME y MEDIADESCRIPTION, si se especificó alguna.|  
-  
- * La validez incluye el número de versión MTF y otra información del encabezado. Si la versión especificada no se admite o se trata de un valor no esperado, se produce un error.  
-  
- ** El usuario debe pertenecer a los roles de servidor o base de datos correspondientes fijos para realizar una operación de copia de seguridad.  
+|NOSKIP|Si el volumen contiene un encabezado de medios válido, comprueba que el medio de nombre coincide con el determinado `MEDIANAME`, si existe. Si coincide, se anexa el conjunto de copia de seguridad y se mantienen todos los conjuntos de copia de seguridad existentes.<br /> Si el volumen no contiene un encabezado de medios válido, se produce un error.|Si el volumen contiene un encabezado de medios válido, se realizan las siguientes comprobaciones:<br /><ul><li>Si `MEDIANAME` se especificó, comprueba que el nombre del medio proporcionado coincide con el nombre del medio del encabezado de medios.<sup> 1</sup></li><li>Se comprueba que no haya conjuntos de copia de seguridad sin expirar en el medio. Si los hay, se finaliza la copia de seguridad.</li></ul><br />Si las comprobaciones son correctas, se sobrescriben los conjuntos de copia de seguridad de los medios y solo se mantiene el encabezado de medios.<br /> Si el volumen no contiene un encabezado de medios válido, se genera uno utilizando especificados `MEDIANAME` y `MEDIADESCRIPTION`, si existe.|  
+|SKIP|Si el volumen contiene un encabezado de medios válido, se anexa el conjunto de copia de seguridad, conservándose todos los conjuntos de copia de seguridad existentes.|Si el volumen contiene válido<sup>2</sup> encabezado de medios, sobrescribe los conjuntos de copia de seguridad de los medios, conservando el encabezado de medios.<br /> Si el medio está vacío, se genera un encabezado de medios mediante especificado `MEDIANAME` y `MEDIADESCRIPTION`, si existe.|  
+
+<sup>1</sup> el usuario debe pertenecer a los roles de servidor o base de datos correspondientes fijos para realizar una operación de copia de seguridad.    
+
+<sup>2</sup> validez incluye el número de versión MTF y otra información del encabezado. Si la versión especificada no se admite o se trata de un valor no esperado, se produce un error.  
   
 ## <a name="compatibility"></a>Compatibilidad  
   
 > [!CAUTION]  
->  Las copias de seguridad que se crean en una versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se pueden restaurar en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+> Las copias de seguridad que se crean en una versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se pueden restaurar en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- BACKUP admite la opción RESTART para proporcionar compatibilidad con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pero RESTART no tiene ningún efecto.  
+Copia de seguridad es compatible con la `RESTART` opción para proporcionar compatibilidad con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pero RESTART no tiene ningún efecto.  
   
-## <a name="general-remarks"></a>Notas generales  
- Se pueden anexar copias de seguridad de la base de datos o de registros a cualquier dispositivo de disco o cinta, lo que permite mantener la base de datos y sus registros de transacciones en la misma ubicación física.  
+## <a name="general-remarks"></a>Observaciones generales  
+Se pueden anexar copias de seguridad de la base de datos o de registros a cualquier dispositivo de disco o cinta, lo que permite mantener la base de datos y sus registros de transacciones en la misma ubicación física.  
   
- La instrucción BACKUP no se permite en una transacción explícita o implícita.  
+La instrucción BACKUP no se permite en una transacción explícita o implícita.  
   
- Se pueden realizar operaciones de copia de seguridad entre plataformas, incluso entre diferentes tipos de procesador, siempre que el sistema operativo admita la intercalación de la base de datos.  
-  
+Se pueden realizar operaciones de copia de seguridad entre plataformas, incluso entre diferentes tipos de procesador, siempre que el sistema operativo admita la intercalación de la base de datos.  
+ 
+Cuando se utiliza la compresión de copia de seguridad con [cifrado de datos transparente (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) habilitado las bases de datos con un único archivo de datos, se recomienda usar un `MAXTRANSFERSIZE` configuración **mayor que 65536 (64 KB)**.   
+A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], este habilita un algoritmo de compresión optimizada para TDE cifra las bases de datos que se descifra primero una página, lo comprime y cifra de nuevo. Si usa `MAXTRANSFERSIZE = 65536` (64 KB), compresión de copia de seguridad con bases de datos TDE cifrado directamente comprime las páginas cifradas y no se puede obtener buenas razones de compresión. Para obtener más información, consulte [compresión de copia de seguridad de bases de datos habilitada para TDE](http://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
+
 > [!NOTE]  
->  De forma predeterminada, cada operación de copia de seguridad correcta agrega una entrada en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en el registro de eventos del sistema. Si hace una copia de seguridad del registro de transacciones con frecuencia, estos mensajes que indican la corrección de la operación pueden acumularse rápidamente, con lo que se crean registros de errores muy grandes que pueden dificultar la búsqueda de otros mensajes. En esos casos, puede suprimir estas entradas de registro utilizando la marca de seguimiento 3226 si ninguno de los scripts depende de esas entradas. Para obtener más información, vea [Marcas de seguimiento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
+> El algoritmo de compresión optimizada para las bases de datos TDE cifrado se utiliza automáticamente cuando:
+> * Se utiliza la copia de seguridad en dirección URL, en cuyo caso el valor predeterminado `MAXTRANSFERSIZE` se cambia a 1048576 (1 MB) y no está obligado a un valor inferior.
+> * La base de datos tiene varios archivos de datos, en cuyo caso el valor predeterminado `MAXTRANSFERSIZE` se cambia a un múltiplo de 65536 (64 KB) no se cambia a un valor inferior (como `MAXTRANSFERSIZE = 65536`). 
+  
+De forma predeterminada, cada operación de copia de seguridad correcta agrega una entrada en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en el registro de eventos del sistema. Si hace una copia de seguridad del registro de transacciones con frecuencia, estos mensajes que indican la corrección de la operación pueden acumularse rápidamente, con lo que se crean registros de errores muy grandes que pueden dificultar la búsqueda de otros mensajes. En esos casos, puede suprimir estas entradas de registro utilizando la marca de seguimiento 3226 si ninguno de los scripts depende de esas entradas. Para obtener más información, vea [Marcas de seguimiento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
 ## <a name="interoperability"></a>Interoperabilidad  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza un proceso de copia de seguridad en línea para permitir que se realice la copia de seguridad de una base de datos mientras se está utilizando. Durante la copia de seguridad, se pueden realizar la mayoría de las operaciones (por ejemplo, las instrucciones INSERT, UPDATE o DELETE están permitidas durante la operación de copia de seguridad).  
   
  Las operaciones que no se pueden ejecutar durante la copia de seguridad de la base de datos o los registros de transacciones son:  
   
--   Operaciones de administración de archivos como la instrucción ALTER DATABASE con las opciones ADD FILE o REMOVE FILE.  
+-   Las operaciones de administración de archivos como el `ALTER DATABASE` instrucción la `ADD FILE` o `REMOVE FILE` opciones.  
   
 -   Operaciones de reducción de la base de datos o de reducción de un archivo. Esto incluye las operaciones de reducción automática.  
   
@@ -708,16 +717,16 @@ Si una operación de copia de seguridad se solapa con una operación de administ
 ## <a name="metadata"></a>Metadatos  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye las siguientes tablas del historial de copias de seguridad que realizan un seguimiento de la actividad de copia de seguridad:  
   
--   [backupfile &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)  
--   [backupfilegroup &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)  
+-   [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)  
+-   [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)  
 -   [backupmediafamily &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)  
--   [backupmediaset &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)  
+-   [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)  
 -   [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)  
   
 Cuando se realiza una restauración, si el conjunto de copia de seguridad no se ha registrado en el **msdb** la base de datos, el historial de copia de seguridad puede modificar las tablas.  
   
 ## <a name="security"></a>Seguridad  
- A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], **contraseña** y **MEDIAPASSWORD** opciones se suspenden para crear copias de seguridad. Todavía es posible restaurar copias de seguridad creadas con contraseñas.  
+ A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], las opciones `PASSWORD` y `MEDIAPASSWORD` se suspenden para crear copias de seguridad. Todavía es posible restaurar copias de seguridad creadas con contraseñas.  
   
 ### <a name="permissions"></a>Permissions  
  De forma predeterminada, los permisos BACKUP DATABASE y BACKUP LOG corresponden a los miembros del rol fijo de servidor **sysadmin** y de los roles fijos de base de datos **db_owner** y **db_backupoperator** .  
@@ -735,10 +744,10 @@ Cuando se realiza una restauración, si el conjunto de copia de seguridad no se 
 -   F. [Crear y copias de seguridad en un varias familias de medios reflejado conjunto](#create_multifamily_mirrored_media_set)  
 -   G [conjunto de medios reflejado de copia de seguridad en una existente](#existing_mirrored_media_set)  
 -   H. [Crear una copia de seguridad comprimida en un conjunto de medios](#creating_compressed_backup_new_media_set)  
--   I.  [Copia de seguridad en el servicio de almacenamiento de blobs de Microsoft Azure](#url)  
+-   I. [Copia de seguridad en el servicio de almacenamiento de blobs de Microsoft Azure](#url)  
   
 > [!NOTE]  
->  Los temas de procedimientos de copia de seguridad contienen más ejemplos. Para obtener más información, vea [Información general de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
+> Los temas de procedimientos de copia de seguridad contienen más ejemplos. Para obtener más información, vea [Información general de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
 ###  <a name="backing_up_db"></a> A. Realizar una copia de seguridad completa de la base de datos  
  En el ejemplo siguiente se realiza una copia de la [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] base de datos a un archivo de disco.  
@@ -839,7 +848,7 @@ WITH
    MEDIANAME = 'AdventureWorksSet1';  
 ```  
   
-###  <a name="existing_mirrored_media_set"></a>G. Realizar una copia de seguridad en un conjunto de medios reflejado existente  
+###  <a name="existing_mirrored_media_set"></a> G. Realizar una copia de seguridad en un conjunto de medios reflejado existente  
  En el siguiente ejemplo se anexa un conjunto de copia de seguridad al conjunto de medios creado en el ejemplo anterior.  
   
 ```sql  
@@ -854,7 +863,7 @@ WITH
 > [!NOTE]  
 >  NOINIT, que es el valor predeterminado, se muestra aquí para mayor claridad.  
   
-###  <a name="creating_compressed_backup_new_media_set"></a>H. Crear una copia de seguridad comprimida en un nuevo conjunto de medios  
+###  <a name="creating_compressed_backup_new_media_set"></a> H. Crear una copia de seguridad comprimida en un nuevo conjunto de medios  
  En el ejemplo siguiente se da formato a los medios, creando un nuevo conjunto de medios, y se realiza una copia de seguridad completa comprimida de la base de datos [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)].  
   
 ```sql  
@@ -864,7 +873,7 @@ WITH
    COMPRESSION;  
 ```  
 
-###  <a name="url"></a>I. Realizar una copia de seguridad del servicio de almacenamiento de blobs de Microsoft Azure 
+###  <a name="url"></a> I. Realizar una copia de seguridad del servicio de almacenamiento de blobs de Microsoft Azure 
 En el ejemplo se realiza una copia de seguridad completa de la base de datos de `Sales` en el servicio de almacenamiento de blobs de Microsoft Azure.  El nombre de la cuenta de almacenamiento es `mystorageaccount`.  El contenedor se denomina `myfirstcontainer`.  Se ha creado una directiva de acceso almacenada con derechos de lectura, escritura, eliminación y lista.  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credencial, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, se creó con una firma de acceso compartido que está asociado a la directiva de acceso almacenada.  Para obtener información sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copia de seguridad para el servicio de almacenamiento de blobs de Windows Azure, consulte [copias de seguridad de SQL Server y restauración con el servicio de almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) y [copias de seguridad de SQL Server a URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
 ```sql  
@@ -879,7 +888,7 @@ WITH STATS = 5;
  [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [Copias del final del registro &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [DBCC SQLPERF &#40; Transact-SQL &#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
+ [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
@@ -887,8 +896,8 @@ WITH STATS = 5;
  [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [sp_helpfile &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
- [sp_helpfilegroup &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
+ [sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [sp_helpfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Restauración por etapas de bases de datos con tablas con optimización para memoria](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)  
   

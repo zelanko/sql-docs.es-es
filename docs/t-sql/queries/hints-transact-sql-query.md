@@ -56,15 +56,15 @@ helpviewer_keywords:
 - USE HINT query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 caps.latest.revision: "136"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b394e34eaf3a8389f4aae97e2676e07ece301c2d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 0a3c74aa7b1da86c6d0ac54025d337700019465d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hints-transact-sql---query"></a>Sugerencias (Transact-SQL) - consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -300,7 +300,7 @@ Sugerencia de tabla  **(*** exposed_object_name* [ **,** \<sugerenciatabla > [[*
   
  Cuando *exposed_object_name* se especifica sin también especificar una sugerencia de tabla, los índices especificados en la consulta como parte de una sugerencia de tabla para el objeto se descartan y uso de índice viene determinado por el optimizador de consultas. Puede emplear esta técnica para eliminar el efecto de una sugerencia de tabla INDEX cuando no se puede modificar la consulta original. Vea el ejemplo J.  
   
-**\<sugerenciatabla >:: =** {[NOEXPAND] {INDEX ( *index_value* [,... *n* ] ) | ÍNDICE = ( *index_value* ) | FORCESEEK [**(***index_value***(*** index_column_name* [**,**...] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | INSTANTÁNEA | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK} es la sugerencia de tabla para aplicar a la tabla o vista que corresponde a *exposed_object_name* como una sugerencia de consulta. Para obtener una descripción de estas sugerencias, vea [sugerencias de tabla &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<sugerenciatabla >:: =** {[NOEXPAND] {INDEX ( *index_value* [,...*n* ] ) | ÍNDICE = ( *index_value* ) | FORCESEEK [**(***index_value***(*** index_column_name* [**,**...] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | INSTANTÁNEA | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK} es la sugerencia de tabla para aplicar a la tabla o vista que corresponde a *exposed_object_name* como una sugerencia de consulta. Para obtener una descripción de estas sugerencias, vea [sugerencias de tabla &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Las sugerencias de tabla distintas de INDEX, FORCESCAN y FORCESEEK no están permitidas como sugerencias de consulta, a menos que la consulta ya tenga una cláusula WITH que especifique la sugerencia de tabla. Para obtener más información, vea la sección Comentarios.  
   

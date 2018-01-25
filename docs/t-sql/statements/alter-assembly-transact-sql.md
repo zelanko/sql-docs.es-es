@@ -25,15 +25,15 @@ helpviewer_keywords:
 - ALTER ASSEMBLY statement
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 caps.latest.revision: "76"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b1a0a6da27bc534e22da2995fa592d6b430d418
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8b8918d653d6d9ff5f26588ad1626bfc62e3679d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,10 +73,10 @@ ALTER ASSEMBLY assembly_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *ASSEMBLY_NAME*  
+ *assembly_name*  
  Es el nombre del ensamblado que se desea modificar. *ASSEMBLY_NAME* ya debe existir en la base de datos.  
   
- DESDE \<client_assembly_specifier > | \<assembly_bits >  
+ FROM \<client_assembly_specifier> | \<assembly_bits>  
  Actualiza un ensamblado a la última copia de los módulos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que conservan su implementación. Esta opción solo se puede utilizar si no hay archivos asociados con el ensamblado especificado.  
   
  \<client_assembly_specifier > especifica la red o ubicación local donde se encuentra el ensamblado que se está actualizando. La ubicación de red incluye el nombre del equipo, el nombre del recurso compartido y una ruta dentro de ese recurso compartido. *manifest_file_name* especifica el nombre del archivo que contiene el manifiesto del ensamblado.  
@@ -115,7 +115,7 @@ ALTER ASSEMBLY assembly_name
   
  Para obtener más información, consulte [implementar ensamblados](../../relational-databases/clr-integration/assemblies-implementing.md).  
   
- [DROP FILE { *file_name*[ **,***.. .n*] | ALL}]  
+ [DROP FILE { *file_name*[**, ***.. .n*] | ALL}]  
  Quita de la base de datos el nombre de archivo o todos los archivos asociados con el ensamblado. Si se utiliza con ADD FILE a continuación, primero se ejecuta DROP FILE. Esto le permite reemplazar un archivo con el mismo nombre de archivo.  
   
 > [!NOTE]  
@@ -222,8 +222,8 @@ ALTER ASSEMBLY ComplexNumber WITH PERMISSION_SET = EXTERNAL_ACCESS;
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [CREAR ENSAMBLADOS &#40; Transact-SQL &#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
- [ELIMINAR ENSAMBLADOS &#40; Transact-SQL &#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
+ [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
+ [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

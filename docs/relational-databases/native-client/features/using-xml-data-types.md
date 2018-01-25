@@ -35,13 +35,13 @@ ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 caps.latest.revision: "44"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55415758711cb93b7c0da560a5935df679e36096
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 075cce0d10d02d5566f4a370b28466a4f79ab9c0
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="using-xml-data-types"></a>Usar tipos de datos XML
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,13 +91,13 @@ ms.lasthandoff: 01/08/2018
 |Tipo de datos|A datos XML<br /><br /> **XML**|A datos XML<br /><br /> **No XML**|Desde datos XML<br /><br /> **XML**|Desde datos XML<br /><br /> **No XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_XML|Pasar a través de<sup>6,7</sup>|Error<sup>1</sup>|ACEPTAR<sup>11, 6</sup>|Error<sup>8</sup>|  
-|DBTYPE_BYTES|Pasar a través de<sup>6,7</sup>|N /<sup>2</sup>|ACEPTAR <sup>11, 6</sup>|N / <sup>2</sup>|  
-|DBTYPE_WSTR|Pasar a través de<sup>6,10</sup>|N / <sup>2</sup>|ACEPTAR<sup>4, 6, 12</sup>|N / <sup>2</sup>|  
-|DBTYPE_BSTR|Pasar a través de<sup>6,10</sup>|N / <sup>2</sup>|ACEPTAR <sup>3</sup>|N / <sup>2</sup>|  
-|DBTYPE_STR|ACEPTAR<sup>6, 9, 10</sup>|N / <sup>2</sup>|ACEPTAR<sup>5, 6, 12</sup>|N / <sup>2</sup>|  
-|DBTYPE_IUNKNOWN|Secuencia de bytes a través de **ISequentialStream**<sup>7</sup>|N / <sup>2</sup>|Secuencia de bytes a través de **ISequentialStream**<sup>11</sup>|N / <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pasar a través de<sup>6,7</sup>|N / <sup>2</sup>|N/D|N / <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Pasar a través de<sup>6,10</sup>|N / <sup>2</sup>|ACEPTAR<sup>3</sup>|N / <sup>2</sup>|  
+|DBTYPE_BYTES|Pasar a través de<sup>6,7</sup>|N/A<sup>2</sup>|ACEPTAR <sup>11, 6</sup>|N/A <sup>2</sup>|  
+|DBTYPE_WSTR|Pasar a través de<sup>6,10</sup>|N/A <sup>2</sup>|ACEPTAR<sup>4, 6, 12</sup>|N/A <sup>2</sup>|  
+|DBTYPE_BSTR|Pasar a través de<sup>6,10</sup>|N/A <sup>2</sup>|OK <sup>3</sup>|N/A <sup>2</sup>|  
+|DBTYPE_STR|ACEPTAR<sup>6, 9, 10</sup>|N/A <sup>2</sup>|ACEPTAR<sup>5, 6, 12</sup>|N/A <sup>2</sup>|  
+|DBTYPE_IUNKNOWN|Secuencia de bytes a través de **ISequentialStream**<sup>7</sup>|N/A <sup>2</sup>|Secuencia de bytes a través de **ISequentialStream**<sup>11</sup>|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pasar a través de<sup>6,7</sup>|N/A <sup>2</sup>|N/D|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Pasar a través de<sup>6,10</sup>|N/A <sup>2</sup>|OK<sup>3</sup>|N/A <sup>2</sup>|  
   
  <sup>1</sup>si un servidor de tipo distinto de DBTYPE_XML se especifica con **ICommandWithParameters:: SetParameterInfo** y el tipo de descriptor de acceso es DBTYPE_XML, se produce un error cuando se ejecuta la instrucción (DB_E_ERRORSOCCURRED, el estado del parámetro es DBSTATUS_E_BADACCESSOR); en caso contrario, los datos se envían al servidor, pero el servidor devuelve un error que indica que no hay ninguna conversión implícita de XML al tipo de datos del parámetro.  
   
@@ -277,7 +277,7 @@ ms.lasthandoff: 01/08/2018
  El estándar XML exige que el XML con codificación UTF-16 comience con una marca de orden de bytes (BOM), el código de carácter UTF-16 0xFEFF. Cuando se trabaja con un enlace SQL_C_BINARY, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client no requiere ni agrega una marca BOM, como la codificación se infiere del enlace. Se intenta proporcionar simplicidad a la hora de actuar con otros sistemas de almacenamiento y procesadores XML. En este caso, debe haber una marca BOM en el XML con codificación UTF-16 y la aplicación no necesita ocuparse de la codificación real, ya que la mayoría de los procesadores XML (incluido [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) deducen la codificación inspeccionando los primeros bytes del valor. Datos XML recibidos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client usan SQL_C_BINARY enlaces siempre se codifican en UTF-16 con una marca BOM y sin declaración de codificación incrustada.  
   
 ## <a name="see-also"></a>Vea también  
- [Características de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [Características SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [ISSCommandWithParameters &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

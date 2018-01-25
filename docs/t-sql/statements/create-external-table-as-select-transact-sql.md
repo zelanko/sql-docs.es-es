@@ -24,13 +24,13 @@ ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 caps.latest.revision: "16"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5742453b2465aa06c425e81d2e8c45d79e0c5e72
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f2ca379cf30fe2e7d359a294a18804f0b5e6faeb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>Crear externa tabla como SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -78,7 +78,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [[ *database_name* . [ *schema_name* ]. ] | *schema_name* . ] *table_name*  
+ [[ *database_name* . [ *schema_name* ] . ] | *schema_name* . ] *table_name*  
  Uno a tres - parte nombre de la tabla para crear la base de datos. Para una tabla externa, solo los metadatos de la tabla se almacenan en la base de datos relacional.  
   
  UBICACIÓN = '*hdfs_folder*'  
@@ -131,7 +131,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   La carga sufre un error con 50% no se pudo filas después de intentar cargar 200 filas, que es mayor que el límite de 30% especificado.  
   
- CON *common_table_expression*  
+ WITH *common_table_expression*  
  Especifica un conjunto de resultados temporal con nombre, conocido como expresión de tabla común (CTE). Para obtener más información, consulte [con common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  Seleccione \<select_criteria > rellena la nueva tabla con los resultados de una instrucción SELECT. *select_criteria* es el cuerpo de la instrucción SELECT que determina qué datos se deben copiar en la nueva tabla. Para obtener información acerca de las instrucciones SELECT, vea [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  

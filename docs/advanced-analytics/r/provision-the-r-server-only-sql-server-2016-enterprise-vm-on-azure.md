@@ -14,12 +14,12 @@ ms.assetid: c8826df7-aa67-4768-baa9-bdc875c4a766
 caps.latest.revision: "12"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 6777a47d9f2078b662990c2597f84cc41222de63
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: a5277d975380f135003bb7f8a11eec8641374f07
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>Aprovisionar una máquina virtual para el aprendizaje automático de Azure
 
@@ -144,7 +144,7 @@ Actualmente, las siguientes máquinas virtuales están disponibles para el apren
 | Data Science Virtual Machine - 2012 de Windows|Contiene herramientas populares de ciencia de datos, incluidos Microsoft R Server Developer Edition, SQL Server 2016 Developer edition, la distribución de Anaconda Python, edición para programadores de Julia Pro y Jupyter blocs de notas para R.| 
 | Data Science Virtual Machine - 2016 de Windows|Incluye SQL Server 2016 Developer Edition, con compatibilidad para el análisis de R en bases de datos.|
 |**SQL Server 2017**| ***   |
-|SQL Server de 2017 Enterprise Windows Server 2016| Servicios de aprendizaje de máquina con el soporte de lenguaje Python y R.|
+|SQL Server 2017 Enterprise Windows Server 2016| Servicios de aprendizaje de máquina con el soporte de lenguaje Python y R.|
 |BYOL SQL Server 2017 Enterprise Windows Server 2016|Servicios de aprendizaje de máquina con el soporte de lenguaje Python y R.|
 | Licencia de gratuito de SQL Server: Programador SQL Server 2017 en Windows Server|Servicios de aprendizaje de máquina con el soporte de lenguaje Python y R.|
 | **Otro**| *** |

@@ -18,12 +18,12 @@ ms.assetid:
 caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: e8b5ef877bb57ddab397da0bf15750a7e89c8f51
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: a6899cdec3051908094b2c4a5e87678113204580
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="step-4-create-data-features-using-t-sql"></a>Paso 4: Crear características de datos mediante T-SQL
 
@@ -69,7 +69,7 @@ Usará una función personalizada de T-SQL, _fnCalculateDistance_, para calcular
     END
     GO
     ```
-**Notas:**
+**Comentarios:**
 
 - La función es una función escalar y devuelve un único valor de datos de un tipo predefinido.
 - Toma los valores de latitud y longitud como entradas, obtenidos de las ubicaciones de origen y destino de los viajes. La fórmula Haversine convierte ubicaciones en radianes y usa esos valores para calcular la distancia directa en millas entre las dos ubicaciones.

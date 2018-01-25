@@ -1,5 +1,5 @@
 ---
-title: xml_schema_namespace (Transact-SQL) | Documentos de Microsoft
+title: xml_schema_namespace (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -25,13 +25,13 @@ ms.assetid: ee9873d8-dd3a-4bff-a10c-68bbadbdf1a6
 caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67c61e787c773d14c3ab543df1457531d59d8227
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 19f4701bc26e115c7f6b78d01feef876665763df
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xmlschemanamespace"></a>xml_schema_namespace
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespa
   
 ## <a name="arguments"></a>Argumentos  
  *Relational_schema*  
- Es el nombre del esquema relacional. *Relational_schema* es **sysname**.  
+ Es el nombre del esquema relacional. *Relational_schema* is **sysname**.  
   
  *XML_schema_collection_name*  
- Es el nombre de la colección de esquemas XML que se va a reconstruir. *XML_schema_collection_name* es **sysname**.  
+ Es el nombre de la colección de esquemas XML que se va a reconstruir. *XML_schema_collection_name* is **sysname**.  
   
  *Espacio de nombres*  
  Es el URI de espacio de nombres del esquema XML que desea reconstruir. Tiene un límite de 1.000 caracteres. Si no se proporciona ningún URI de espacio de nombres, se reconstruye toda la colección de esquemas XML. *Namespace* es **nvarchar (4000)**.  

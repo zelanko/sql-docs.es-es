@@ -1,5 +1,5 @@
 ---
-title: OPENXML (Transact-SQL) | Documentos de Microsoft
+title: OPENXML (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -23,13 +23,13 @@ ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7b1fb1d28c4bddb679bd4aab8ce6cb11f21caca5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f5b32c99393bb5b7f31423df840f7f0069dd3518
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +47,13 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *IDOC*  
+ *idoc*  
  Es el identificador del documento de la representación interna de un documento XML. Se crea la representación interna de un documento XML mediante una llamada a **sp_xml_preparedocument**.  
   
  *rowpattern*  
  Es el patrón XPath utilizado para identificar los nodos (en el documento XML cuyo identificador se pasa en el *idoc* parámetro) a procesar como filas.  
   
- *marcas*  
+ *flags*  
  Indica la asignación que debe utilizarse entre los datos XML y el conjunto de filas relacional, y cómo debe llenarse la columna de desbordamiento; *marcas de* es un parámetro de entrada opcional y puede tener uno de los siguientes valores.  
   
 |Valor del byte|Description|  
@@ -64,7 +64,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|Puede combinarse (OR lógico) con XML_ATTRIBUTES o XML_ELEMENTS. En el contexto de la recuperación, esta marca indica que los datos consumidos no deben copiarse a la propiedad de desbordamiento  **@mp:xmltext** .|  
   
  *SchemaDeclaration*  
- Es la definición de esquema de la forma: *ColName**ColType* [*ColPattern* | *metapropiedad*] [**,***ColNameColType* [*ColPattern* | *metapropiedad*]...]  
+ Es la definición de esquema de la forma: *ColName ** ColType* [*ColPattern* | *metapropiedad*] [**, *** ColNameColType* [*ColPattern * | *Metapropiedad*]...]  
   
  *ColName*  
  Es el nombre de columna en el conjunto de filas.  
@@ -79,10 +79,10 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  El patrón XPath general especificado como *ColPattern* también admite las metapropiedades.  
   
- *Metapropiedades*  
+ *MetaProperty*  
  Es una de las metapropiedades que proporciona OPENXML. Si *metapropiedad* se especifica, la columna contiene la información proporcionada por la metapropiedad. Las metapropiedades permiten extraer información (como información sobre el espacio de nombres y la posición relativa) acerca de nodos XML. Esto proporciona más información que la que se puede ver en la representación de texto.  
   
- *Nombre de tabla*  
+ *TableName*  
  Es el nombre de tabla que puede proporcionarse (en lugar de *SchemaDeclaration*) si ya existe una tabla con el esquema deseado y ningún patrón de columna es necesarios.  
   
 ## <a name="remarks"></a>Comentarios  
@@ -90,11 +90,11 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  En la tabla siguiente describe la estructura de la **borde** tabla.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|Es el id. único del nodo del documento.<br /><br /> El elemento raíz tiene un valor de identificador 0. Los valores de identificador negativos están reservados.|  
 |**parentid**|**bigint**|Identifica el elemento primario del nodo. El elemento primario especificado por este identificador no es necesariamente el elemento primario, pero depende del NodeType del nodo cuyo elemento primario indica este identificador. Por ejemplo, si se trata de un nodo de texto, su elemento primario puede ser un nodo de atributo.<br /><br /> Si el nodo está en el nivel superior del documento XML, su **ParentID** es NULL.|  
-|**NodeType**|**int**|Identifica el tipo de nodo. Es un entero que se corresponde con la numeración del tipo de nodo XML DOM.<br /><br /> Los tipos de nodo son:<br /><br /> 1 = Nodo de elemento<br /><br /> 2 = Nodo de atributo<br /><br /> 3 = Nodo de texto|  
+|**nodetype**|**int**|Identifica el tipo de nodo. Es un entero que se corresponde con la numeración del tipo de nodo XML DOM.<br /><br /> Los tipos de nodo son:<br /><br /> 1 = Nodo de elemento<br /><br /> 2 = Nodo de atributo<br /><br /> 3 = Nodo de texto|  
 |**localname**|**nvarchar**|Proporciona el nombre local del elemento o atributo. Es NULL si el objeto DOM no tiene nombre.|  
 |**prefijo**|**nvarchar**|Es el prefijo del espacio del nombre del nodo.|  
 |**namespaceuri**|**nvarchar**|Es el URI del espacio de nombres del nodo. Si el valor es NULL, no hay ningún espacio de nombres.|  

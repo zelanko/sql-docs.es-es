@@ -22,15 +22,15 @@ helpviewer_keywords:
 - backup media [SQL Server], content information
 ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
 caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 972a51eca37afca09042608b3bfcc767ec6ece27
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c5cbf694abdf86a5e5e13f2799f5b1f4b808a498
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>Instrucciones - de RESTORE LABELONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ FROM <backup_device>
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**MediaName**|**nvarchar (128)**|Nombre del medio.|  
+|**MediaName**|**nvarchar(128)**|Nombre del medio.|  
 |**MediaSetId**|**uniqueidentifier**|Número de identificación único del conjunto de medios.|  
 |**FamilyCount**|**int**|Número de familias de medios en el conjunto de medios.|  
 |**FamilySequenceNumber**|**int**|Número de secuencia de esta familia.|  
@@ -91,7 +91,7 @@ FROM <backup_device>
 |**MediaSequenceNumber**|**int**|Número de secuencia de este medio en la familia de medios.|  
 |**MediaLabelPresent**|**tinyint**|Indica si la descripción del medio contiene:<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] etiqueta de medio en formato de cinta<br /><br /> **0** = descripción del medio|  
 |**MediaDescription**|**nvarchar(255)**|Descripción del medio, en texto sin formato o etiqueta de medio en formato de cinta.|  
-|**SoftwareName**|**nvarchar (128)**|Nombre del software para realizar copias de seguridad con que se escribió la etiqueta.|  
+|**SoftwareName**|**nvarchar(128)**|Nombre del software para realizar copias de seguridad con que se escribió la etiqueta.|  
 |**SoftwareVendorId**|**int**|Número de identificación único del fabricante del software con que se escribió la copia de seguridad.|  
 |**MediaDate**|**datetime**|Fecha y hora que se escribió la etiqueta.|  
 |**Mirror_Count**|**int**|Número de reflejos en el conjunto (1-4).<br /><br /> Nota: Las etiquetas escritas para los distintos reflejos de un conjunto son idénticas.|  

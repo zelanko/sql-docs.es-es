@@ -26,15 +26,15 @@ helpviewer_keywords:
 - displaying trace flag status
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c0241e43f4d9516eefb73e65889df8944ccd018
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4f373d7cf31a4dbc53318245b8ba2800ab9e90b8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ DBCC TRACESTATUS ( [ [ trace# [ ,...n ] ] [ , ] [ -1 ] ] )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-*Trace #*  
+*trace#*  
 Es el número de la marca de seguimiento cuyo estado se muestra. Si *trace #*y no se especifica -1, se muestran todas las marcas de seguimiento están habilitadas para la sesión.
   
 *n*  
@@ -68,7 +68,7 @@ En la tabla siguiente se describe la información del conjunto de resultados.
   
 |Nombre de columna|Description|  
 |---|---|
-|**Marca de seguimiento**|Nombre de la marca de seguimiento.|  
+|**TraceFlag**|Nombre de la marca de seguimiento.|  
 |**Estado**|Indica si la marca de seguimiento está establecida en ON o en OFF, ya sea globalmente o para la sesión.<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
 |**Global**|Indica si la marca de seguimiento está establecida globalmente.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**Sesión**|Indica si la marca de seguimiento está establecida para la sesión.<br /><br /> 1 = True<br /><br /> 0 = False|  

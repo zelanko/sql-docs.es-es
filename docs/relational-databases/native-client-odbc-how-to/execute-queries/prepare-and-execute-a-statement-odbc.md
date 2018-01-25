@@ -16,15 +16,15 @@ helpviewer_keywords:
 - statement preparation
 ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3894f47ecd4a368a36e1b03dae89e2ce32993d9f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ea42cfdc65bec4580a08856b349e4f11437f60c2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Preparar y ejecutar una instrucción (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  Para cada uno de los parámetros de la instrucción preparada, puede hacer lo siguiente:  
   
-    -   Llame a [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) para obtener información sobre los parámetros.  
+    -   Llamar a [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) para obtener información sobre los parámetros.  
   
     -   Enlazar cada parámetro a una variable de programa utilizando [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md). Configurar cualquier parámetro de datos en ejecución.  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
     -   Llame a [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) para ejecutar la instrucción preparada.  
   
-    -   Si se usan parámetros de entrada de datos en ejecución, [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) devuelve SQL_NEED_DATA. Envíe los datos en fragmentos utilizyo [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) y [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
+    -   Si se usan parámetros de entrada de datos en ejecución, [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) devuelve SQL_NEED_DATA. Envíe los datos en fragmentos utilizando [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) y [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>Para preparar una instrucción con enlace de parámetros de modo de columna  
   

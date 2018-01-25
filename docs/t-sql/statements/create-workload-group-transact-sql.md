@@ -20,15 +20,15 @@ dev_langs: TSQL
 helpviewer_keywords: CREATE WORKLOAD GROUP statement
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3554f6c282ba3ef551fd8592ede4c97f6d29b358
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: cec1360259d78679fab31a45a074d5fbbf3779b5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ CREATE WORKLOAD GROUP group_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *nombre_grupo*  
+ *group_name*  
  Es el nombre definido por el usuario para identificar el grupo de cargas de trabajo. *nombre_grupo* es alfanumérico, puede tener hasta 128 caracteres, deben ser únicos dentro de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y debe cumplir las reglas de [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
  IMPORTANCIA = {BAJO | **MEDIO** | ALTA}  
@@ -72,7 +72,7 @@ CREATE WORKLOAD GROUP group_name
   
  IMPORTANCE es local para el grupo de recursos de servidor; los grupos de cargas de trabajo de importancia distinta dentro del mismo grupo de recursos de servidor se influyen entre sí, pero no influyen en los grupos de cargas de trabajo de otro grupo de recursos de servidor.  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT =*valor*  
+ REQUEST_MAX_MEMORY_GRANT_PERCENT =*value*  
  Especifica la cantidad máxima de memoria que una única solicitud puede tomar del grupo. Este porcentaje es relativo al tamaño del grupo de recursos de servidor especificado por MAX_MEMORY_PERCENT.  
   
 > [!NOTE]  
@@ -95,7 +95,7 @@ CREATE WORKLOAD GROUP group_name
 >   
 >  Tenga en cuenta que ambos casos están sujetos a un error de tiempo de espera 8645 si el servidor no tiene suficiente memoria física.  
   
- REQUEST_MAX_CPU_TIME_SEC =*valor*  
+ REQUEST_MAX_CPU_TIME_SEC =*value*  
  Especifica la cantidad máxima de tiempo de CPU, en segundos, que puede usar una solicitud. *valor* debe ser 0 o un entero positivo. El valor predeterminado de *valor* es 0, lo que significa ilimitado.  
   
 > [!NOTE]  
@@ -104,7 +104,7 @@ CREATE WORKLOAD GROUP group_name
 > [!IMPORTANT]
 > A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 y el uso de [2422 marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), el regulador de recursos se anulará una solicitud cuando se supera el tiempo máximo. 
   
- REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*valor*  
+ REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Especifica el tiempo máximo, en segundos, que una consulta puede esperar a que una concesión de memoria (memoria de búfer de trabajo) esté disponible.  
   
 > [!NOTE]  
@@ -112,7 +112,7 @@ CREATE WORKLOAD GROUP group_name
   
  *valor* debe ser 0 o un entero positivo. El valor predeterminado de *valor*, 0, utiliza un cálculo interno basado en el costo de consulta para determinar el tiempo máximo.  
   
- MAX_DOP =*valor*  
+ MAX_DOP =*value*  
  Especifica el grado máximo de paralelismo (DOP) para las solicitudes paralelas. *valor* debe ser 0 o un entero positivo. El intervalo permitido para *valor* está comprendido entre 0 y 64. El valor predeterminado de *valor*, 0, utiliza la configuración global. MAX_DOP se trata de la siguiente manera:  
   
 -   MAX_DOP como sugerencia de consulta resulta eficaz siempre y cuando no supere el MAX_DOP del grupo de cargas de trabajo. Si el valor de la sugerencia de consulta MAXDOP supera el valor configurado mediante el Regulador de recursos, el Motor de base de datos emplea el valor MAXDOP del Regulador de recursos.  
@@ -125,10 +125,10 @@ CREATE WORKLOAD GROUP group_name
   
 -   Una vez configurado DOP, solo se puede reducir ante la concesión de presión de memoria. La reconfiguración del grupo de cargas de trabajo no es visible mientras se espera en la cola de concesión de memoria.  
   
- GROUP_MAX_REQUESTS =*valor*  
+ GROUP_MAX_REQUESTS =*value*  
  Especifica el número máximo de solicitudes simultáneas que pueden ejecutarse en el grupo de cargas de trabajo. *valor* debe ser 0 o un entero positivo. El valor predeterminado de *valor*(0) permite un número ilimitadas solicitudes. Cuando se alcanza el máximo de solicitudes simultáneas, un usuario de ese grupo puede iniciar sesión, pero se coloca en estado de espera hasta que las solicitudes simultáneas caigan por debajo del valor especificado.  
   
- CON { *pool_name* | **"default"** }  
+ USING { *pool_name* | **"default"** }  
  Asocia el grupo de cargas de trabajo con el grupo de recursos definidos por el usuario identificado por *pool_name*. De esta forma, el grupo de cargas de trabajo se coloca en el grupo de recursos de servidor. Si *pool_name* no se proporciona, o si no se usa el argumento USING, el grupo de cargas de trabajo se coloca en el grupo predeterminado de regulador de recursos predefinidos.  
   
  "default" es una palabra reservada y cuando se utiliza con USING, debe incluirse entre comillas ("") o corchetes ([]).  
@@ -136,7 +136,7 @@ CREATE WORKLOAD GROUP group_name
 > [!NOTE]  
 >  Todos los grupos de cargas de trabajo y de recursos de servidor predefinidos usan nombres en minúsculas, como "predeterminado". Debe tenerse esto en cuenta en los servidores que usan una intercalación que distingue entre mayúsculas y minúsculas. En los servidores que usan una intercalación que no distingue entre mayúsculas y minúsculas, como SQL_Latin1_General_CP1_CI_AS, los nombres "predeterminado" y "Predeterminado" son equivalentes.  
   
- External_pool_name externo | "default"  
+ EXTERNAL external_pool_name | “default“  
  **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  Grupo de cargas de trabajo puede especificar un grupo de recursos externos. Puede definir un grupo de cargas de trabajo y asociar con 2 grupos:  

@@ -26,15 +26,15 @@ helpviewer_keywords:
 - index defragmenting [SQL Server]
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 caps.latest.revision: "78"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 85822d9351e0f0ce5a8c5a7542fbd7df57d13d74
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fb7faf36132e131c0fd771480e89318492c71372
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 Muestra información sobre la fragmentación de los datos y los índices de la tabla o vista especificada.
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Use [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) instead.  
   
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
@@ -122,7 +122,7 @@ Si se especifica TABLERESULTS, DBCC SHOWCONTIG devuelve las siguientes columnas 
 |**ObjectId**|Id. del nombre del objeto.|  
 |**IndexName**|Nombre del índice procesado. Es NULL para un montón.|  
 |**IndexId**|Id. del índice. Es 0 para un montón.|  
-|**Level**|Nivel del índice. El nivel 0 es el nivel hoja o datos del índice.<br /><br /> Para un montón, Level es 0.|  
+|**Nivel**|Nivel del índice. El nivel 0 es el nivel hoja o datos del índice.<br /><br /> Para un montón, Level es 0.|  
 |**Páginas**|Número de páginas que componen el nivel del índice o de todo el montón.|  
 |**Filas**|Número de registros de datos o índices en este nivel del índice. Para un montón, este valor es el número de registros de datos en todo el montón.<br /><br /> En el caso de un montón, es posible que el número de registros devueltos por esta función no coincida con el número de filas devueltas al ejecutar SELECT COUNT(*) en el montón. Esto es debido a que una fila puede contener varios registros. Por ejemplo, en algunas situaciones de una actualización, una única fila del montón puede tener un registro de reenvío y un registro reenviado como resultado de la actualización. Asimismo, la mayoría de las filas LOB de gran tamaño se dividen en varios registros en almacenamiento de LOB_DATA.|  
 |**MinimumRecordSize**|Tamaño mínimo del registro en el nivel de índice o en todo el montón.|  

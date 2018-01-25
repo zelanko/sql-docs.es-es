@@ -23,13 +23,13 @@ ms.assetid: 75d8a220-0f4d-4d91-8ba4-9d852b945509
 caps.latest.revision: "58"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 283971bbd1bfe04b26860f56601c315ac5244717
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8e5f0a03ef6efa09218cc6740df4439a25eb7265
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-data-source-transact-sql"></a>Crear origen de datos externo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -256,7 +256,7 @@ Para obtener una lista completa de las distribuciones de Hadoop y versiones admi
     RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:8032'  
     ```  
   
- CREDENCIAL = *credential_name*  
+ CREDENTIAL = *credential_name*  
  Especifica una credencial de ámbito de base de datos para la autenticación en el origen de datos externo. Para obtener un ejemplo, vea [C. crear un origen de datos externos de almacenamiento de blobs de Azure](../../t-sql/statements/create-external-data-source-transact-sql.md#credential). Para crear una credencial, vea [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md). Tenga en cuenta que no se requiere para los conjuntos de datos públicos que permite el acceso anónimo CREDENCIAL. 
   
  Database_name = *'QueryDatabaseName'*  
@@ -485,7 +485,7 @@ Para ver este ejemplo en uso, consulte [BULK INSERT](../../t-sql/statements/bulk
 [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
 [CREAR AS de tabla externa SELECT &#40; Transact-SQL &#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
 [Crear tabla como SELECT &#40; Almacenamiento de datos SQL de Azure &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
-[Sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
+[sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
   
   
 

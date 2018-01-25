@@ -37,13 +37,13 @@ ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ff321a1ceec820049fc8c757d97336d0c25f1ce3
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: a96601a65e413d4990e9acb77f49c4724bf7b85c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -108,7 +108,7 @@ Utilice @@SPID para mostrar el valor de identificador de sesión para la sesión
   
  Cuando una conexión específica tiene un bloqueo aplicado a un recurso de base de datos y bloquea el progreso de otra conexión, el identificador de sesión de la conexión que bloquea se muestra en la columna `blocking_session_id` de `sys.dm_exec_requests` o en la columna `blk` devuelta por `sp_who`.  
   
- El comando KILL puede utilizarse para resolver transacciones distribuidas dudosas. Estas transacciones son transacciones distribuidas sin resolver que se producen a causa de reinicios no planeados del servidor de la base de datos o del coordinador de MS DTC. Para obtener más información acerca de las transacciones dudosas, vea la sección "Confirmación en dos fases" en [usar transacciones marcadas para recuperar las bases de datos relacionadas sistemáticamente &#40; Modelo de recuperación completa &#41; ](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
+ El comando KILL puede utilizarse para resolver transacciones distribuidas dudosas. Estas transacciones son transacciones distribuidas sin resolver que se producen a causa de reinicios no planeados del servidor de la base de datos o del coordinador de MS DTC. Para obtener más información acerca de las transacciones dudosas, vea la sección "Confirmación en dos fases" en [usar transacciones marcadas para recuperar las bases de datos relacionadas sistemáticamente & #40; Modelo de recuperación completa & #41; ](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
 ## <a name="using-with-statusonly"></a>Usar WITH STATUSONLY  
  KILL WITH STATUSONLY genera un informe solo si el Id. de sesión o UOW está revirtiendo actualmente debido a una instrucción KILL *Id. de sesión*|*UOW* instrucción. El informe de progreso indica la cantidad de operaciones de reversión completadas, expresada en porcentaje, y la estimación de tiempo restante, expresada en segundos, de esta forma:  
@@ -161,7 +161,7 @@ KILL 'D5499C66-E398-45CA-BF7E-DC9C194B48CF';
   
 ## <a name="see-also"></a>Vea también  
  [KILL STATS JOB &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)   
- [Eliminar suscripción de notificación de consulta &#40; Transact-SQL &#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
+ [Eliminar suscripción de notificación de consulta & #40; Transact-SQL & #41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SHUTDOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/shutdown-transact-sql.md)   
  [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md)   

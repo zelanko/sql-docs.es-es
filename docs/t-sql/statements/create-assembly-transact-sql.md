@@ -24,15 +24,15 @@ helpviewer_keywords:
 - assemblies [CLR integration], creating
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 caps.latest.revision: "94"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4e7587bfb20c110dd28e6b59bba0fde1e937cb6e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3f937dc219eb317347cceeafcdcd8753244bcb07
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,18 +61,18 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *ASSEMBLY_NAME*  
+ *assembly_name*  
  Es el nombre del ensamblado. El nombre debe ser único dentro de la base de datos y válido [identificador](../../relational-databases/databases/database-identifiers.md).  
   
  AUTORIZACIÓN *owner_name*  
  Especifica el nombre de un usuario o rol como propietario del ensamblado. *owner_name* debe ser el nombre de un rol de los cuales el usuario actual es un miembro o el usuario actual debe tener el permiso IMPERSONATE *owner_name*. Si no se especifica, la propiedad se otorga al usuario actual.  
   
- \<client_assembly_specifier >  
+ \<client_assembly_specifier>  
 Especifica la ruta de acceso local o ubicación de red en la que se encuentra el ensamblado que se carga y, además, el nombre de archivo de manifiesto que se corresponde con el ensamblado.  \<client_assembly_specifier > puede expresarse como una cadena fija o una expresión que se evalúe como una cadena fija, con variables. CREATE ASSEMBLY no admite la carga de ensamblados de varios módulos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también busca cualquier ensamblado dependiente de este ensamblado en la misma ubicación y lo carga con el mismo propietario que el ensamblado de nivel raíz. Si estos ensamblados dependientes no se encuentran o aún no están cargados en la base de datos actual, CREATE ASSEMBLY produce un error. Si los ensamblados dependientes ya están cargados en la base de datos actual, el propietario de los mismos deberá ser el mismo que el del ensamblado nuevo que se crea.
   
  \<client_assembly_specifier > no se puede especificar si se está suplantando al usuario ha iniciado sesión.  
   
- \<assembly_bits >  
+ \<assembly_bits>  
  Es la lista de valores binarios que forman el ensamblado y sus ensamblados dependientes. El primer valor de esta lista se considera el ensamblado raíz. Los valores correspondientes a los ensamblados dependientes pueden suministrarse en cualquier orden. Se ignora cualquier valor que no se corresponda con los ensamblados dependientes del ensamblado raíz.  
   
 > [!NOTE]  
@@ -193,13 +193,13 @@ WITH PERMISSION_SET = SAFE;
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [ALTER ASSEMBLY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
- [ELIMINAR ENSAMBLADOS &#40; Transact-SQL &#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
+ [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
+ [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
- [CREAR AGREGADO &#40; Transact-SQL &#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
+ [CREATE AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Escenarios de uso y ejemplos de Common Language Runtime &#40; CLR &#41; Integración](http://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
   

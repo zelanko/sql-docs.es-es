@@ -23,15 +23,15 @@ helpviewer_keywords:
 - REVOKE statement, Service Broker
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 077fe296f48de1658a56d0c3e7403904652603bc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 897da4d05bcd9a2cfbb88ce5383ba7a71867edcc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE (permisos de Service Broker de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,22 +64,22 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 > [!IMPORTANT]  
 >  Si la entidad de seguridad dispone del permiso especificado sin la opción GRANT, se revocará el permiso.  
   
- *permiso*  
+ *permission*  
  Especifica un permiso que se puede revocar para un elemento protegible de [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Para obtener una lista de estos permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
- CONTRATO **::***contract_name*  
+ CONTRACT **::***contract_name*  
  Especifica el contrato en el que se va a revocar el permiso. El calificador de ámbito **::** es necesario.  
   
- TIPO de mensaje **::***message_type_name*  
+ TIPO de mensaje **:: *** message_type_name*  
  Especifica el tipo de mensaje en el que se va a revocar el permiso. El calificador de ámbito **::** es necesario.  
   
  REMOTE SERVICE BINDING **::***remote_binding_name*  
  Especifica el enlace de servicio remoto en el que se va a revocar el permiso. El calificador de ámbito **::** es necesario.  
   
- RUTA **::***route_name*  
+ RUTA **:: *** route_name*  
  Especifica la ruta en la que se va a revocar el permiso. El calificador de ámbito **::** es necesario.  
   
- SERVICIO **::***message_type_name*  
+ SERVICE **::***message_type_name*  
  Especifica el servicio en el que se va a revocar el permiso. El calificador de ámbito **::** es necesario.  
   
  *database_principal*  

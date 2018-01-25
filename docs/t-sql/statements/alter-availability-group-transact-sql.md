@@ -26,13 +26,13 @@ ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 caps.latest.revision: "152"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8d08fa5b70558b64357338b95f33b8d482775b61
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d9f18ee709fde7c9f239b08f553eaf43fad6e9d2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -159,7 +159,7 @@ ALTER AVAILABILITY GROUP group_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *nombre_grupo*  
+ *group_name*  
  Especifica el nombre del nuevo grupo de disponibilidad. *nombre_grupo* debe ser válido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificador y deben ser único en todos los grupos de disponibilidad del clúster de WSFC.  
   
  AUTOMATED_BACKUP_PREFERENCE  **=**  {PRINCIPAL | SECONDARY_ONLY | SECUNDARIO | NINGUNO}  
@@ -249,7 +249,7 @@ ALTER AVAILABILITY GROUP group_name
   
  Debe unir cada réplica secundaria nueva al grupo de disponibilidad. Para obtener más información, vea la descripción de la opción JOIN, más adelante en esta sección.  
   
- \<instancia_del_sevidor >  
+ \<server_instance>  
  Especifica la dirección de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que es el host para una réplica. El formato de la dirección depende de si la instancia es la instancia predeterminada o una instancia con nombre y de si es una instancia independiente o una instancia de clúster de conmutación por error (FCI). La sintaxis es la siguiente:  
   
  { '*nombre_sistema*[\\*nombre_instancia*]' | '*nombre_red_FCI*[\\*nombre_instancia*]' }  
@@ -270,12 +270,12 @@ ALTER AVAILABILITY GROUP group_name
   
  Para obtener información acerca de los requisitos previos para los nodos WSFC y las instancias de servidor, consulte [requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
- ENDPOINT_URL ='TCP: / /*dirección-sistema*:*puerto*'  
+ ENDPOINT_URL ='TCP://*system-address*:*port*'  
  Especifica la ruta de acceso de dirección URL para el [extremo de reflejo de la base de datos](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que va a hospedar la réplica de disponibilidad que está agregando o modificando.  
   
  ENDPOINT_URL es obligatorio en la cláusula ADD REPLICA ON y opcional en la cláusula MODIFY REPLICA ON.  Para obtener más información, vea [Especificar la dirección URL del punto de conexión al agregar o modificar una réplica de disponibilidad &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **'**TCP**://***dirección-sistema***:***puerto***'**  
+ **'**TCP**://***system-address***:***port***'**  
  Determina una dirección URL para especificar una dirección URL del extremo o una dirección URL de enrutamiento de solo lectura. Los parámetros de la dirección URL son como sigue:  
   
  *system-address*  
@@ -330,7 +330,7 @@ ALTER AVAILABILITY GROUP group_name
  MANUAL  
  Especifica la propagación manual (valor predeterminado). Este método debe crear una copia de seguridad de la base de datos en la réplica principal y restaurar manualmente la copia de seguridad en la réplica secundaria.  
   
- BACKUP_PRIORITY**=***n*  
+ BACKUP_PRIORITY **=***n*  
  Especifica la prioridad para realizar copias de seguridad en esta réplica en relación con las otras réplicas del mismo grupo de disponibilidad. El valor es un número entero en el intervalo de 0..100. Estos valores tienen los significados siguientes:  
   
 -   1..100 indica que la réplica de disponibilidad se podría elegir para realizar copias de seguridad. 1 indica la prioridad mínima y 100 indica la prioridad máxima. Si BACKUP_PRIORITY = 1, la réplica de disponibilidad se elegiría para realizar copias de seguridad solamente si no hay réplicas más prioritarias disponibles actualmente.  
@@ -358,7 +358,7 @@ ALTER AVAILABILITY GROUP group_name
   
  Para obtener más información, vea [Secundarias activas: réplicas secundarias legibles &#40;Grupos de disponibilidad AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
- READ_ONLY_ROUTING_URL **='**TCP**://***dirección-sistema***:***puerto***'**  
+ READ_ONLY_ROUTING_URL **='**TCP**://***system-address***:***port***'**  
  Especifica la dirección URL que se va a usar para enrutar las solicitudes de conexión de intención de lectura de enrutamiento para esta réplica de disponibilidad. Es la dirección URL en la que escucha el motor de base de datos de SQL Server. Normalmente, la instancia predeterminada del motor de base de datos de SQL Server escucha en el puerto TCP 1433.  
   
  Para una instancia con nombre, se puede obtener el número de puerto consultando la **puerto** y **type_desc** columnas de la [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) vista de administración dinámica. La instancia del servidor utiliza el agente de escucha de Transact-SQL (**type_desc = 'TSQL'**).  
@@ -391,7 +391,7 @@ ALTER AVAILABILITY GROUP group_name
   
  Estos son los valores de READ_ONLY_ROUTING_LIST:  
   
- \<instancia_del_sevidor >  
+ \<server_instance>  
  Especifica la dirección de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que es el host para una réplica de disponibilidad que es una réplica secundaria inteligible cuando se ejecuta en el rol secundario.  
   
  Use una lista separada por comas para especificar todas las instancias del servidor que pueden hospedar una réplica secundaria inteligible. El enrutamiento de solo lectura seguirá el orden en que las instancias de servidor se especifican en la lista. Si incluye la instancia del servidor de host de una réplica en la lista de enrutamiento de solo lectura de la réplica, por lo general, resulta recomendable colocar esta instancia del servidor al final de la lista, ya que las conexiones de intención de lectura van a una réplica secundaria, si hay alguna disponible. .  
@@ -401,7 +401,7 @@ ALTER AVAILABILITY GROUP group_name
  Ninguno  
  Especifica que cuando esta réplica de disponibilidad es la réplica primaria, no se admitirá en el enrutamiento de solo lectura. Éste es el comportamiento predeterminado. Cuando se utiliza con MODIFY REPLICA ON, este valor deshabilita una lista existente, en caso de que la hubiera.  
   
- SESSION_TIMEOUT  **=**  *segundos*  
+ SESSION_TIMEOUT **= *** segundos*  
  Especifica el período de espera de la sesión en segundos. Si no especifica esta opción, el período equivale a 10 segundos de forma predeterminada. El valor mínimo es de 5 segundos.  
   
 > [!IMPORTANT]  
@@ -427,7 +427,7 @@ ALTER AVAILABILITY GROUP group_name
   
  Solo se admite en una réplica secundaria que no se haya combinado aún con un grupo de disponibilidad.  
   
- Para obtener más información, vea [Combinar una réplica secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
+ Para obtener más información, vea [Join a Secondary Replica to an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
  FAILOVER  
  Inicia una conmutación por error manual del grupo de disponibilidad sin pérdida de datos a la réplica secundaria a la que está conectado. La réplica en la que se escribe un comando de conmutación por error de destino de conmutación por error se conoce como el.  El destino de la conmutación por error asumirá el rol principal y recuperará su copia de cada base de datos y las pondrá en línea como las nuevas bases de datos principales. La réplica principal anterior realiza la transición de forma simultánea al rol secundario y sus bases de datos se convierten en bases de datos secundarias, además quedan suspendidas inmediatamente. Potencialmente, estos roles se pueden alternar mediante una serie de errores.  
@@ -452,7 +452,7 @@ ALTER AVAILABILITY GROUP group_name
   
  Para obtener información acerca de las limitaciones, los requisitos previos y las recomendaciones para forzar la conmutación por error y el efecto de una conmutación por error forzada en las bases de datos principales anteriores en el grupo de disponibilidad, vea [realizar un Manual de conmutación por error forzada de una disponibilidad Grupo de &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
- ADD LISTENER **'***dns_name***' (** \<agregar_opción_agente_escucha > **)**  
+ ADD LISTENER **‘***dns_name***’(** \<add_listener_option> **)**  
  Define un nuevo agente de escucha para este grupo de disponibilidad. Solo se admite en la réplica principal.  
   
 > [!IMPORTANT]  
@@ -476,15 +476,15 @@ ALTER AVAILABILITY GROUP group_name
  UNIR EL GRUPO DE DISPONIBILIDAD EN  
  Se combina con un *grupo de disponibilidad distribuido*. Cuando se crea un grupo de disponibilidad distribuidos, el grupo de disponibilidad en el clúster donde se crea es el grupo de disponibilidad principal. El grupo de disponibilidad que se une al grupo de disponibilidad distribuidos es el grupo de disponibilidad secundaria.  
   
- \<ag_name >  
+ \<ag_name>  
  Especifica el nombre del grupo de disponibilidad que constituye una mitad del grupo de disponibilidad distribuidos.  
   
- Agente de escucha **='**TCP**://***dirección-sistema***:***puerto***'**  
+ LISTENER **='**TCP**://***system-address***:***port***'**  
  Especifica la ruta de acceso de dirección URL para el agente de escucha asociado al grupo de disponibilidad.  
   
  La cláusula de agente de escucha es obligatoria.  
   
- **'**TCP**://***dirección-sistema***:***puerto***'**  
+ **'**TCP**://***system-address***:***port***'**  
  Especifica una dirección URL para el agente de escucha asociado al grupo de disponibilidad. Los parámetros de la dirección URL son como sigue:  
   
  *system-address*  
@@ -533,7 +533,7 @@ ALTER AVAILABILITY GROUP group_name
  DENEGAR CREAR CUALQUIER BASE DE DATOS  
  Quita la capacidad del grupo de disponibilidad para crear bases de datos en nombre de la réplica principal.  
   
- \<agregar_opción_agente_escucha >  
+ \<add_listener_option>  
  ADD LISTENER toma una de las siguientes opciones:  
   
  CON DHCP [ON { **('***four_part_ipv4_address***','***four_part_ipv4_mask***')** }]  
@@ -546,7 +546,7 @@ ALTER AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- CON la dirección IP **(** { **('***four_part_ipv4_address***','***four_part_ipv4_mask* **')** | **('***ipv6_address***')** } [ **,** ...  *n*  ] **)** [ **,** Puerto  **=**  *listener_port* ]  
+ WITH IP **(** { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘***ipv6_address***’)** } [ **,** ...*n* ] **)** [ **,** PORT **=***listener_port* ]  
  Especifica que, en lugar de utilizar DHCP, la escucha del grupo de disponibilidad utilizará una o más direcciones IP estáticas. Para crear un grupo de disponibilidad a través de varias subredes, cada subred requiere una dirección IP estática en la configuración de la escucha. Para una subred determinada, la dirección IP estática puede ser una dirección IPv4 o una dirección IPv6. Póngase en contacto con el administrador de red para obtener una dirección IP estática para cada subred que hospeda una réplica de disponibilidad para el nuevo grupo de disponibilidad.  
   
  Por ejemplo:  
@@ -567,15 +567,15 @@ ALTER AVAILABILITY GROUP group_name
   
  Se admite el número de puerto predeterminado, 1433. Sin embargo, si le preocupa la seguridad, le recomendamos que use otro número de puerto.  
   
- Por ejemplo, `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
+ Por ejemplo: `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
- MODIFY LISTENER **'***dns_name***' (** \<modificar_opción_agente_escucha > **)**  
+ MODIFY LISTENER **‘***dns_name***’(** \<modify_listener_option> **)**  
  Modifica el agente de escucha de un grupo de disponibilidad existente para este grupo de disponibilidad. Solo se admite en la réplica principal.  
   
- \<modificar_opción_agente_escucha >  
+ \<modify_listener_option>  
  MODIFY LISTENER toma una de las siguientes opciones:  
   
- Agregar IP { **('***four_part_ipv4_address***','***four_part_ipv4_mask***')**  |  **('**dns_name*ipv6_address***')** }  
+ ADD IP { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘**dns_name*ipv6_address***’)** }  
  Agrega la dirección IP especificada para el agente de escucha del grupo de disponibilidad especificado por *dns_name*.  
   
  PUERTO  **=**  *listener_port*  
@@ -623,13 +623,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [Crear grupo de disponibilidad &#40; Transact-SQL &#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
  [Quitar grupo de disponibilidad &#40; Transact-SQL &#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   
- [Sys.availability_replicas &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
- [Sys.availability_groups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
+ [sys.availability_replicas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
+ [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [Solucionar problemas de configuración de grupos de disponibilidad &#40; AlwaysOn SQL Server &#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
+ [Agentes de escucha del grupo de disponibilidad, conectividad de cliente y conmutación por error de aplicación &#40; SQL Server &#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   

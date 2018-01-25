@@ -20,15 +20,15 @@ dev_langs: TSQL
 helpviewer_keywords: CREATE RESOURCE POOL
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0d6f56e80b0a28dffab2311df3ecce3b2ac76cd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6da47e346606170b29798b0301c10c5adeeed055
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,13 +70,13 @@ CREATE RESOURCE POOL pool_name
  *pool_name*  
  Es el nombre definido por el usuario para identificar el grupo de recursos de servidor. *pool_name* es alfanumérico, puede tener hasta 128 caracteres, deben ser únicos dentro de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y debe cumplir las reglas de [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
- MIN_CPU_PERCENT =*valor*  
+ MIN_CPU_PERCENT =*value*  
  Especifica el ancho banda de la CPU promedio garantizado para todas las solicitudes en el grupo de recursos de servidor cuando hay contención de CPU. *valor* es un entero con un valor predeterminado de 0. El intervalo permitido para *valor* está comprendido entre 0 y 100.  
   
- MAX_CPU_PERCENT =*valor*  
+ MAX_CPU_PERCENT =*value*  
  Especifica el ancho de banda de CPU promedio máximo que recibirán todas las solicitudes del grupo de recursos de servidor cuando hay contención de CPU. *valor* es un entero con un valor predeterminado de 100. El intervalo permitido para *valor* está comprendido entre 1 y 100.  
   
- CAP_CPU_PERCENT =*valor*  
+ CAP_CPU_PERCENT =*value*  
  **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica un límite máximo de ancho de banda de CPU que recibirán todas las solicitudes del grupo de recursos de servidor. Limita el nivel de ancho de banda máximo de CPU para que coincida con el valor especificado. *valor* es un entero con un valor predeterminado de 100. El intervalo permitido para *valor* está comprendido entre 1 y 100.  
@@ -97,10 +97,10 @@ INNER JOIN sys.dm_os_schedulers AS sc
     AND sc.scheduler_id < 1048576;  
 ```  
   
- MIN_MEMORY_PERCENT =*valor*  
+ MIN_MEMORY_PERCENT =*value*  
  Especifica la cantidad mínima de memoria reservada para este grupo de recursos de servidor que no se puede compartir con otros grupos de recursos de servidor. *valor* es un entero con un valor predeterminado de 0 del intervalo permitido para *valor* está comprendido entre 0 y 100.  
   
- MAX_MEMORY_PERCENT =*valor*  
+ MAX_MEMORY_PERCENT =*value*  
  Especifica la memoria total del servidor que puede ser utilizada por las solicitudes en este grupo de recursos de servidor. *valor* es un entero con un valor predeterminado de 100. El intervalo permitido para *valor* está comprendido entre 1 y 100.  
   
  MIN_IOPS_PER_VOLUME =*valor*  

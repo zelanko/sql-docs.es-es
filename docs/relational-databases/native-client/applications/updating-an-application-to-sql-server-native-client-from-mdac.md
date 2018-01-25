@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Native Client, updating applications
 ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
 caps.latest.revision: "81"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2c72e6ab626db31ec329dce777f17e04774b01d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 72bd7a56555da46acacf9431fc82fe006f55cbb6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>Actualizar una aplicación de MDCA a SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -106,7 +106,7 @@ ms.lasthandoff: 01/08/2018
     |**ntext**|**text**|  
     |**nvarchar(max)**|**ntext**|  
     |**varbinary(max)**|**imagen**|  
-    |**UDT**|**varbinary**|  
+    |**udt**|**varbinary**|  
     |**xml**|**ntext**|  
   
      Esta asignación de tipos afecta a los valores devueltos para los metadatos de columna. Por ejemplo, un **texto** columna tiene un tamaño máximo de 2.147.483.647, pero [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC de Native Client informa del tamaño máximo de **varchar (max)** columnas como SQL_SS_LENGTH_UNLIMITED y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB informa del tamaño máximo de **varchar (max)** 2.147.483.647 ó -1, dependiendo de la plataforma.  
@@ -122,6 +122,6 @@ ms.lasthandoff: 01/08/2018
  Tanto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client como MDAC admiten el aislamiento de transacción de lectura confirmada mediante el uso de versiones de fila, pero solo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite el aislamiento de transacción de instantánea. (En términos de programación, el aislamiento de transacción de lectura confirmada con versiones de fila es igual que la transacción de lectura confirmada.)  
   
 ## <a name="see-also"></a>Vea también  
- [Generar aplicaciones con SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [Creación de aplicaciones con SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

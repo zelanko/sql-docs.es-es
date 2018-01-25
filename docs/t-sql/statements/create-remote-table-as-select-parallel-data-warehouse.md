@@ -15,13 +15,13 @@ ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 caps.latest.revision: "9"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b1c445662f29241d8a2a1a547ef498f7491590b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1a44f5f46a60959b38b3e8121847e0c80c1ba82b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREAR remoto tabla como SELECT (almacenamiento de datos en paralelo)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -61,7 +61,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
   
  La tabla remota se crea como un montón. No tiene desencadenadores o restricciones check. La intercalación de las columnas de la tabla remota es la misma que la intercalación de las columnas de tabla de origen. Esto se aplica a las columnas de tipo **char**, **nchar**, **varchar**, y **nvarchar**.  
   
- *conexión*  
+ *connection_string*  
  Una cadena de caracteres que especifica la `Data Source`, `User ID`, y `Password` parámetros para conectar con el servidor remoto y la base de datos.  
   
  La cadena de conexión es una lista delimitada por punto y coma de pares clave / valor. Palabras clave no distinguen entre mayúsculas y minúsculas. Se omiten los espacios entre los pares de clave y valor. Sin embargo, los valores pueden ser entre mayúsculas y minúsculas, según el origen de datos.  
@@ -81,13 +81,13 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
  *user_name*  
  Válido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nombre de inicio de sesión de autenticación. Número máximo de caracteres es 128.  
   
- *contraseña*  
+ *password*  
  La contraseña de inicio de sesión. Número máximo de caracteres es 128.  
   
  *batch_size*  
  El número máximo de filas por lote. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]envía las filas en lotes al servidor de destino. *Batch_size* es un entero positivo > = 0. Valor predeterminado es 0.  
   
- CON *common_table_expression*  
+ WITH *common_table_expression*  
  Especifica un conjunto de resultados temporal con nombre, conocido como expresión de tabla común (CTE). Para obtener más información, consulte [con common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  Seleccione \<select_criteria > el predicado de consulta que especifica qué datos llenará la nueva tabla remota. Para obtener información sobre la instrucción SELECT, vea [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  

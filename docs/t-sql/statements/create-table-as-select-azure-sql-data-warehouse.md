@@ -16,13 +16,13 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 caps.latest.revision: "40"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 68cdce96ae6c8e6f98b3c6d922101c6f830ff208
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 429c2dc727d844c35943fa599e6fbcb911df04ac
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>Crear tabla como SELECT (almacenamiento de datos SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -111,10 +111,10 @@ Para obtener más información, consulte el [opciones de partición de tabla](ht
 ### <a name="select-options"></a>Seleccione las opciones
 La instrucción select es la diferencia fundamental entre CTAS y CREATE TABLE.  
 
- `WITH`*common_table_expression*  
+ `WITH` *common_table_expression*  
  Especifica un conjunto de resultados temporal con nombre, conocido como expresión de tabla común (CTE). Para obtener más información, consulte [con common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- `SELECT`*select_criteria*  
+ `SELECT` *select_criteria*  
  Rellena la nueva tabla con los resultados de una instrucción SELECT. *select_criteria* es el cuerpo de la instrucción SELECT que determina qué datos se deben copiar en la nueva tabla. Para obtener información acerca de las instrucciones SELECT, vea [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
 <a name="permissions-bk"></a>  

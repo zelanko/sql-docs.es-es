@@ -1,5 +1,5 @@
 ---
-title: SET SHOWPLAN_XML (Transact-SQL) | Documentos de Microsoft
+title: SET SHOWPLAN_XML (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -27,13 +27,13 @@ ms.assetid: a467a1b3-10a5-43c4-9085-13d8aed549c9
 caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2b51e19f70b0ff2119cfe3f89404fe61accf4656
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bd4e6309f65bea4a71cc9e2de7d5bb5b806ab005
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="set-showplanxml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ SET SHOWPLAN_XML { ON | OFF }
  También puede encontrarse en el esquema del plan de presentación [este sitio Web](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   
 > [!NOTE]  
->  Si **incluir Plan de ejecución real** está seleccionado en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], esta opción SET no produce resultado del plan de presentación XML. Desactive el **incluir Plan de ejecución real** botón antes de utilizarla opción SET..  
+>  Si **incluir Plan de ejecución real** está seleccionado en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], esta opción SET no produce resultado del plan de presentación XML. Desactive el **incluir Plan de ejecución real** botón antes de utilizarla opción SET.  
   
 ## <a name="permissions"></a>Permissions  
  Para utilizar SET SHOWPLAN_XML, debe disponer de permisos suficientes para ejecutar las instrucciones en las que se ejecuta SET SHOWPLAN_XML, y debe tener el permiso SHOWPLAN para todas las bases de datos que contengan objetos a los que se hace referencia.  

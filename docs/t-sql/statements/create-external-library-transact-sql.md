@@ -20,12 +20,12 @@ dev_langs: TSQL
 helpviewer_keywords: CREATE EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: f52205803e3ab44e7c72808255dbe93fd61de336
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: craigg
+ms.openlocfilehash: fe1cb90bce5717d194defd2c684d7b20fc29a061
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-library-transact-sql"></a>Crear biblioteca externa (Transact-SQL)  
 
@@ -61,7 +61,7 @@ WITH ( LANGUAGE = 'R' )
 
 ### <a name="arguments"></a>Argumentos
 
-**nombre_de_biblioteca**
+**library_name**
 
 Las bibliotecas se agregan a la base de datos como ámbito el usuario. Es decir, los nombres de biblioteca se consideran únicos dentro del contexto de un usuario específico o un propietario y nombres de biblioteca deben ser únicos para cada usuario. Por ejemplo, dos usuarios **RUser1** y **RUser2** pueden ambos individualmente y por separado cargar la biblioteca de R `ggplot2`.
 

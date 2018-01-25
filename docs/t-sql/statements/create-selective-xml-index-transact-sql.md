@@ -16,13 +16,13 @@ ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
 caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 411d0242510752d82e85425634f057cc3ac2cbb3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 77bbad8b312de3bf5657bebbad834e80bcbe842a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREAR ÍNDICE XML SELECTIVO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ identifier
   
 ## <a name="security"></a>Seguridad  
   
-### <a name="permissions"></a>Permisos  
+### <a name="permissions"></a>Permissions  
  Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
   
 ## <a name="examples"></a>Ejemplos  

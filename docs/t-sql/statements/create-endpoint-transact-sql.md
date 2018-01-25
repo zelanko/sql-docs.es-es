@@ -33,15 +33,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 caps.latest.revision: "135"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a8ce3df8a9b6e7ead8e775b6bd0b2d31720b38a9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c1d87ac5214da9a3458cdffd41bdd457a433afab
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -132,7 +132,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  El extremo está deshabilitado. En este estado, el servidor escucha las solicitudes del puerto pero devuelve errores a los clientes.  
   
- **DETENIDO**  
+ **STOPPED**  
  El extremo está detenido. En este estado, el servidor no escucha el puerto del extremo ni responde a ninguna solicitud que se haya intentado para usar el extremo.  
   
  Para cambiar el estado, use [ALTER ENDPOINT &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-endpoint-transact-sql.md).  
@@ -149,10 +149,10 @@ FOR DATABASE_MIRRORING (
   
  Los argumentos que aparecen a continuación solo se aplican a la opción de protocolo TCP.  
   
- LISTENER_PORT  **=**  *listenerPort*  
+ LISTENER_PORT **= *** listenerPort*  
  Especifica el número de puerto que escucha el protocolo TCP/IP de Service Broker para las conexiones. Se usa 4022 por convención, pero cualquier número entre 1024 y 32767 es válido.  
   
- LISTENER_IP  **=**  todos | **(***4-parte-ip* **)** | **(** "*ip_address_v6*"  **)**  
+ LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "*ip_address_v6*" **)**  
  Especifica la dirección IP en la que escuchará el extremo. El valor predeterminado es ALL. Esto significa que la escucha aceptará una conexión en cualquier dirección IP válida.  
   
  Si configura la creación de reflejo de la base de datos con una dirección IP en lugar de con un nombre de dominio completo (`ALTER DATABASE SET PARTNER = partner_IP_address` o `ALTER DATABASE SET WITNESS = witness_IP_address`), tiene que especificar `LISTENER_IP =IP_address` en lugar de `LISTENER_IP=ALL` al crear los extremos de los reflejos.  
@@ -171,7 +171,7 @@ FOR DATABASE_MIRRORING (
 > [!IMPORTANT]  
 >  Todas las conexiones de creación de reflejos de una instancia de servidor utilizan un único extremo de creación de reflejos de base de datos. Los intentos de crear un extremo de creación de reflejos de base de datos adicional generarán un error.  
   
- **\<authentication_options >:: =**  
+ **\<authentication_options> ::=**  
   
  **WINDOWS** [{NTLM | KERBEROS | **NEGOTIATE** }]  
  Especifica que el extremo se conecta mediante el protocolo de autenticación de Windows para autenticar los extremos. Ésta es la opción predeterminada.  
@@ -234,7 +234,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  Descarta los mensajes para los servicios que están ubicados en otro lugar. Ésta es la opción predeterminada.  
   
- MESSAGE_FORWARD_SIZE  **=**  *forward_size*  
+ MESSAGE_FORWARD_SIZE **= *** forward_size*  
  Especifica la cantidad máxima de almacenamiento en megabytes que se va a asignar para que el extremo la utilice cuando almacene mensajes que se van a reenviar.  
   
  **Opciones de DATABASE_MIRRORING**  
@@ -294,7 +294,7 @@ GO
 ## <a name="see-also"></a>Vea también  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [Elegir un algoritmo de cifrado](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
- [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+ [Eliminar punto de conexión &#40; Transact-SQL &#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

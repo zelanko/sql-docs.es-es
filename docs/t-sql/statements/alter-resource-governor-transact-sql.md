@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RECONFIGURE, ALTER RESOURCE GOVERNOR
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1ac429e7876212a7f6f0e4da3c38498b0e1f550
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7650a9eec60108a5dbd228b21a27573cc72ca4fc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ALTER RESOURCE GOVERNOR
 > [!IMPORTANT]  
 >  Debe enviarse ALTER RESOURCE GOVERNOR RECONFIGURE para que surtan efecto los cambios en la configuración.  
   
- CLASSIFIER_FUNCTION = { *schema_name***.** *function_name* | NULL}  
+ CLASSIFIER_FUNCTION = { *schema_name***.*** nombre_función* | NULL}  
  Registra la función de clasificación especificada por *schema_name.function_name*. Esta función clasifica cada sesión nueva y asigna las solicitudes de sesión y las consultas para un grupo de cargas de trabajo. Si se usa NULL, las nuevas sesiones se asignan automáticamente al grupo de cargas de trabajo predeterminado.  
   
  RESET STATISTICS  
@@ -202,7 +202,7 @@ WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);
  [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
  [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)   
- [Sys.dm_resource_governor_workload_groups &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [Sys.dm_resource_governor_resource_pools &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)  
+ [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
+ [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)  
   
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - assemblies [CLR integration], properties
 ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43b626c4d618feb5f7f24ca409d9f832250b616c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a38d9f773e010ab779204d7c92b351d88c0d08f7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="assemblyproperty-transact-sql"></a>ASSEMBLYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +44,16 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-*ASSEMBLY_NAME*  
+*assembly_name*  
 Es el nombre del ensamblado.
   
 *property_name*  
 Es el nombre de una propiedad de la que se va a recuperar información. *property_name* puede ser uno de los siguientes valores.
   
-|Valor|Description|  
+|Value|Description|  
 |---|---|
 |**CultureInfo**|Configuración regional del ensamblado.|  
-|**Clave pública**|Clave pública o símbolo (token) de clave pública del ensamblado.|  
+|**PublicKey**|Clave pública o símbolo (token) de clave pública del ensamblado.|  
 |**MvID**|Número completo de identificación de versión del ensamblado generado por el compilador.|  
 |**VersionMajor**|Componente principal (primera parte) del número de identificación de la versión de cuatro partes del ensamblado.|  
 |**VersionMinor**|Componente secundario (segunda parte) del número de identificación de la versión de cuatro partes del ensamblado.|  

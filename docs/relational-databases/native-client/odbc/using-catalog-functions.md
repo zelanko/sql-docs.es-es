@@ -20,15 +20,15 @@ helpviewer_keywords:
 - functions [ODBC]
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec3ca1363dd571b04b67b987725ad6fa280dd3bd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 77d2f7de5e43df5cfc559b12bb88dcdd4412af6e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-catalog-functions"></a>Utilizar funciones de catálogo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/08/2018
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite consultas distribuidas en las que se tiene acceso a datos de varios orígenes de datos OLE DB heterogéneos en una única consulta. Uno de los métodos para tener acceso a un origen de datos OLE DB remoto consiste en definir el origen de datos como un servidor vinculado. Esto puede hacerse mediante el uso de [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Una vez definido el servidor vinculado, se puede hacer referencia a los objetos de ese servidor en instrucciones Transact-SQL utilizando un nombre con cuatro partes:  
   
- *nombre_servidor_vinculado.catálogo.esquema.nombre_objeto*.  
+ *linked_server_name.catalog.schema.object_name*.  
   
  El controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite dos funciones específicas del controlador que ayudan a obtener información de catálogo de los servidores vinculados:  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/08/2018
   
      Devuelve una lista de los catálogos incluidos en un servidor vinculado.  
   
- Después de tener un nombre de servidor vinculado y un nombre de catálogo, el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC Native Client permite obtener información desde el catálogo mediante un nombre de dos partes de *linked_server_name***.** *catálogo* para *CatalogName* las funciones de catálogo de ODBC siguiente:  
+ Después de tener un nombre de servidor vinculado y un nombre de catálogo, el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC Native Client permite obtener información desde el catálogo mediante un nombre de dos partes de *linked_server_name***.*** catálogo* para *CatalogName* las funciones de catálogo de ODBC siguiente:  
   
 -   **SQLColumnPrivileges**  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/08/2018
   
 -   **SQLTables**  
   
- Las dos partes *linked_server_name***.** *catálogo* también es compatible con *FKCatalogName* y *PKCatalogName* en [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md).  
+ Las dos partes *linked_server_name***.*** catálogo* también es compatible con *FKCatalogName* y *PKCatalogName* en [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md).  
   
  Para utilizar SQLLinkedServers y SQLLinkedCatalogs hacen falta los siguientes archivos:  
   

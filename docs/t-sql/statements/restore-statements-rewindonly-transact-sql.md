@@ -24,15 +24,15 @@ helpviewer_keywords:
 - RESTORE REWINDONLY statement
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 457ce42346ec53d30cc8a47a6bc4f82a3271d8fc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bf67d54e58f08296878c0781158e7b878b0b2a49
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>Instrucciones - de RESTORE REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,15 +61,13 @@ FROM <backup_device> [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **\<backup_device >:: =** 
+ **\<backup_device> ::=** 
   
  Especifica los dispositivos de copia de seguridad físicos o lógicos que se utilizarán para la operación de restauración.  
   
- { *logical_backup_device_name* | **@***logical_* }  
- Es el nombre lógico, que debe seguir las reglas para los identificadores de los dispositivos de copia de seguridad creados por **sp_addumpdevice** desde que se restaura la base de datos. Si se proporciona como una variable (**@***logical_*), el nombre del dispositivo de copia de seguridad se pueden especificar como una constante de cadena ( **@**  *logical_* = *logical_backup_device_name*) o como una variable de tipo de datos de cadena de caracteres, excepto para el **ntext** o **texto** tipos de datos.  
+ { *logical_backup_device_name* | **@*** logical_* } es el nombre lógico, que debe seguir las reglas para los identificadores de los dispositivos de copia de seguridad creado por **sp_addumpdevice** desde que se restaura la base de datos. Si se proporciona como una variable (**@***logical_backup_device_name_var*), el nombre del dispositivo de copia de seguridad se pueden especificar como una constante de cadena (**@*** logical_*  =   *logical_backup_device_name*) o como una variable de tipo de datos de cadena de caracteres, excepto para la **ntext** o **texto** tipos de datos.  
   
- {DISCO | CINTA}  **=**  { **'***physical_backup_device_name***'**  |   **@**  *physical_backup_device_name_var* }  
- Permite restaurar las copias de seguridad guardadas en el dispositivo de disco o cinta con nombre. Los tipos de dispositivo de disco y cinta deben especificarse con el nombre real (por ejemplo, ruta de acceso y nombre completo) del dispositivo: disco = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' o TAPE = '\\\\. \TAPE0'. Si se especifica como una variable (**@***physical_backup_device_name_var*), el nombre de dispositivo se puede especificar como una constante de cadena ( **@**  *physical_backup_device_name_var* = '*physcial_backup_device_name*') o como una variable de tipo de datos de cadena de caracteres, excepto para el **ntext**o **texto** tipos de datos.  
+ {DISCO | CINTA}  **=**  { **'***physical_backup_device_name***'** | **@*** physical_backup_device_name_var*  } Permite copias de seguridad que se restaurarán desde el dispositivo de disco o cinta con nombre. Los tipos de dispositivo de disco y cinta deben especificarse con el nombre real (por ejemplo, ruta de acceso y nombre completo) del dispositivo: disco = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' o TAPE = '\\\\. \TAPE0'. Si se especifica como una variable (**@***physical_backup_device_name_var*), el nombre de dispositivo se puede especificar como una constante de cadena (**@*** physical_backup_device_name_var* = '* physcial_backup_device_name *') o como una variable de tipo de datos de cadena de caracteres, excepto para la **ntext** o **texto** tipos de datos.  
   
  Si utiliza un servidor de red con un nombre UNC (que debe contener el nombre del equipo), especifique un tipo de dispositivo de disco. Para obtener más información sobre el uso de nombres UNC, vea [dispositivos de copia de seguridad &#40; SQL Server &#41; ](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   

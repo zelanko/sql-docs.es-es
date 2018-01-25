@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], features
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
 caps.latest.revision: "59"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 26ca8c53b6b5aae6f0eb75287abcd1076468634b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 42eb24a2536f388e13e04892246e917f277ef408
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-native-client-features"></a>Características de SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/08/2018
  [Usar tipos definidos por el usuario](../../../relational-databases/native-client/features/using-user-defined-types.md)  
  Describe cómo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite definidos por el usuario tipos (UDT), que amplía el sistema de tipos SQL al permitirle almacenar objetos y estructuras de datos personalizadas en un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de datos.  
   
- [Usar tipos de valor grande](../../../relational-databases/native-client/features/using-large-value-types.md)  
+ [Uso de tipos de valores grandes](../../../relational-databases/native-client/features/using-large-value-types.md)  
  Explica la compatibilidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client con tipos de datos de valor grande, que son tipos de datos de objetos grandes (LOB).  
   
  [Cambiar las contraseñas mediante programación](../../../relational-databases/native-client/features/changing-passwords-programmatically.md)  
@@ -71,7 +71,7 @@ ms.lasthandoff: 01/08/2018
  [Utilizar el cifrado sin validación](../../../relational-databases/native-client/features/using-encryption-without-validation.md)  
  Explica cómo utilizar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para cifrar los datos enviados al servidor sin validar el certificado.  
   
- [Parámetros con valores de tabla &#40; Cliente nativo de SQL Server &#41;](../../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
+ [Parámetros con valores de tabla & #40; Cliente nativo de SQL Server & #41;](../../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
  Explica la compatibilidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client con los parámetros con valores de tabla agregados.  
   
  [Tipos definidos por el usuario de CLR grandes](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)  
@@ -80,7 +80,7 @@ ms.lasthandoff: 01/08/2018
  [Compatibilidad con FILESTREAM](../../../relational-databases/native-client/features/filestream-support.md)  
  Describe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] compatibilidad Native Client para la característica mejorada FILESTREAM.  
   
- [Nombre Principal de servicio &#40; SPN &#41; Compatibilidad con conexiones de cliente](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
+ [Nombre Principal de servicio & #40; SPN & #41; Compatibilidad con conexiones de cliente](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
  Explica cómo se ha ampliado la compatibilidad con los nombres principales de servicio (SPN) para habilitar la autenticación mutua en todos los protocolos.  
   
  [Compatibilidad con columnas dispersas en SQL Server Native Client](../../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)  
@@ -95,7 +95,7 @@ ms.lasthandoff: 01/08/2018
  [Compatibilidad con UTF-16 en SQL Server Native Client 11.0](../../../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md)  
  Describe un cambio de comportamiento presentado en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Si se proporciona un búfer de longitud fija al enlazar un parámetro de resultado o salida de la columna y la **wchar** carácter escrito en el búfer antes de que el carácter de terminación es un punto de código suplente alto de un par suplente y si la siguiente **wchar** carácter es un punto de código suplente bajo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client no agregará el punto de código suplente alto en el búfer.  
   
- [Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastres](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
+ [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
  Describe cómo se puede configurar la aplicación para aprovechar las ventajas de la recuperación ante desastres de alta disponibilidad y funciones de agregan en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
  [Obtener acceso a información de diagnóstico en el registro de eventos extendidos](../../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
@@ -104,7 +104,7 @@ ms.lasthandoff: 01/08/2018
  [Compatibilidad de SQL Server Native Client con LocalDB](../../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)  
  Explica la compatibilidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client con la característica mejorada LocalDB.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Programación de SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [Temas de procedimientos de ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [Temas "Cómo..." de OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)   

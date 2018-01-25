@@ -41,15 +41,15 @@ helpviewer_keywords:
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 caps.latest.revision: "248"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b5f6424589d13652095b43ffcefa63e8916ecf39
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: edafff7cc70224c67ef970ca4c13e47cce113f23
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements-transact-sql"></a>RESTAURAR instrucciones (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -341,7 +341,7 @@ Note: URL is the format used to specify the location and the file name for the W
  Sin embargo, la opción WITH RESTRICTED_USER invalida este comportamiento para configurar la opción de acceso del usuario. Esta configuración siempre se establece tras una instrucción RESTORE que contiene la opción WITH RESTRICTED_USER.  
   
 ### <a name="restoring-an-encrypted-database"></a>Restaurar una base de datos cifrada  
- Para restaurar una base de datos cifrada, debe tener acceso al certificado o la clave asimétrica que se usó para cifrarla. La base de datos no se puede restaurar sin el certificado o la clave asimétrica. Como resultado, se debe conservar el certificado que se usa para cifrar la clave de cifrado de base de datos mientras se necesite la copia de seguridad. Para obtener más información, consulte [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
+ Para restaurar una base de datos cifrada, debe tener acceso al certificado o la clave asimétrica que se usó para cifrarla. La base de datos no se puede restaurar sin el certificado o la clave asimétrica. Como resultado, se debe conservar el certificado que se usa para cifrar la clave de cifrado de base de datos mientras se necesite la copia de seguridad. Para obtener más información, vea [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
 ### <a name="restoring-a-database-enabled-for-vardecimal-storage"></a>Restaurar una base de datos habilitada para el formato de almacenamiento vardecimal  
  Copia de seguridad y restauración se realizan correctamente con el **vardecimal** el formato de almacenamiento. Para obtener más información acerca de **vardecimal** el formato de almacenamiento, consulte [sp_db_vardecimal_storage_format &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md).  
@@ -538,7 +538,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
   
  [&#91; Parte superior de ejemplos &#93;](#examples)  
   
-###  <a name="restoring_transaction_log_to_mark"></a>G. Restaurar el registro de transacciones hasta una marca  
+###  <a name="restoring_transaction_log_to_mark"></a> G. Restaurar el registro de transacciones hasta una marca  
  En el ejemplo siguiente se restaura el registro de transacciones hasta la marca de la transacción marcada denominada `ListPriceUpdate`.  
   
 ```  
@@ -576,7 +576,7 @@ RESTORE LOG AdventureWorks2012
   
  [&#91; Parte superior de ejemplos &#93;](#examples)  
   
-###  <a name="restoring_using_TAPE"></a>H. Restaurar con la sintaxis de TAPE  
+###  <a name="restoring_using_TAPE"></a> H. Restaurar con la sintaxis de TAPE  
  En el siguiente ejemplo se restaura una copia de seguridad completa de la base de datos desde un dispositivo de copia de seguridad `TAPE`.  
   
 ```  
@@ -586,7 +586,7 @@ RESTORE DATABASE AdventureWorks2012
   
  [&#91; Parte superior de ejemplos &#93;](#examples)  
   
-###  <a name="restoring_using_FILE_n_FG"></a>I. Restaurar con la sintaxis de FILE y FILEGROUP  
+###  <a name="restoring_using_FILE_n_FG"></a> I. Restaurar con la sintaxis de FILE y FILEGROUP  
  En el siguiente ejemplo se restaura una base de datos denominada `MyDatabase` que tiene dos archivos, un grupo de archivos secundario y un registro de transacciones. La base de datos usa el modelo de recuperación completa.  
   
  La copia de seguridad de la base de datos es el noveno conjunto de copia de seguridad del conjunto de medios en un dispositivo lógico de copia de seguridad denominado `MyDatabaseBackups`. A continuación se restauran mediante `10` tres copias de seguridad de registros que están en los tres conjuntos de copia de seguridad siguientes (`11`, `12` y `MyDatabaseBackups`) en el dispositivo `WITH NORECOVERY`. Tras restaurar la última copia de seguridad de registros se restaura la base de datos.  
@@ -628,7 +628,7 @@ GO
   
  [&#91; Parte superior de ejemplos &#93;](#examples)  
   
-###  <a name="reverting_from_db_snapshot"></a>J. Revertir desde una instantánea de base de datos  
+###  <a name="reverting_from_db_snapshot"></a> J. Revertir desde una instantánea de base de datos  
  En este ejemplo se revierte una base de datos a una instantánea de base datos. En el ejemplo se supone que solo existe una instantánea en la base de datos. Para obtener un ejemplo de cómo crear esta instantánea de base de datos, vea [crear una instantánea de base de datos &#40; Transact-SQL &#41; ](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 > **Nota:** al revertir a una instantánea quita todos los catálogos de texto completo.  
@@ -642,7 +642,7 @@ GO
 
  [&#91; Parte superior de ejemplos &#93;](#examples)  
   
-###  <a name="Azure_Blob"></a>K. Restaurar desde el servicio de almacenamiento de blobs de Microsoft Azure  
+###  <a name="Azure_Blob"></a> K. Restaurar desde el servicio de almacenamiento de blobs de Microsoft Azure  
 Los tres ejemplos siguientes implican el uso del servicio de almacenamiento de Microsoft Azure.  El nombre de la cuenta de almacenamiento es `mystorageaccount`.  El contenedor para los archivos de datos se denomina `myfirstcontainer`.  El contenedor para los archivos de copia de seguridad se denomina `mysecondcontainer`.  Se ha creado una directiva de acceso almacenada con derechos de lectura, escritura, eliminación y lista, para cada contenedor.  Credenciales de SQL Server se crearon con firmas de acceso compartido que están asociados con las directivas de acceso almacenada.  Para obtener información específica de SQL Server backup y restore con el almacenamiento de blobs de Microsoft Azure, consulte [copias de seguridad de SQL Server y restauración con el servicio de almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
 
 **K1.  Restaurar una copia de seguridad completa de la base de datos desde el servicio de almacenamiento de Microsoft Azure**  
@@ -682,7 +682,7 @@ RESTORE DATABASE Sales
  - [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) 
 - [Copia de seguridad y restauración de bases de datos del sistema (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md) 
  - [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
- - [Realizar copias de seguridad de los catálogos e índices de texto completo y restaurarlos](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
+ - [Realizar copias de seguridad de los catálogos de texto completo y restaurarlos](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  - [Hacer copias de seguridad y restaurar bases de datos replicadas](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  - [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  - [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   

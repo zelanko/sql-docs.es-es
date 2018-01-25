@@ -22,15 +22,15 @@ helpviewer_keywords:
 - statistical information [ODBC]
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ab8ca0cedf17f38b55750f06e401232ff495b0f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 92048dd38dc58683f3726fc23dcc106731eda739
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="profiling-odbc-driver-performance"></a>Generar perfiles del rendimiento del controlador ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,7 +75,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   Conexión  
   
--   red  
+-   Red  
   
 -   Time  
   
@@ -126,7 +126,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |msExecutionTime|Cantidad acumulada de tiempo que ha dedicado el controlador al procesamiento después de SQL_PERF_START, incluido el tiempo que ha pasado esperando respuestas del servidor.|  
 |msNetworkServerTime|Cantidad acumulada de tiempo que el controlador ha pasado esperando respuestas del servidor.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Cliente nativo de SQL Server &#40; ODBC &#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [Generación de perfiles de rendimiento de controlador ODBC temas "Cómo..." &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   

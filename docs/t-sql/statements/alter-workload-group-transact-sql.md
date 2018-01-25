@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: ALTER WORKLOAD GROUP statement
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 caps.latest.revision: "56"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0103b63c883e1d3f9a263cf5fdb4e4ef4ca9521f
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: d48a892ef00610cc0d69ff8d2a36e0fce4be7704
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *nombre_grupo* | "**predeterminado**"  
+ *group_name* | "**default**"  
  Es el nombre de un grupo de cargas de trabajo definido por un usuario ya existente o el grupo de cargas de trabajo predeterminado del regulador de recursos.  
   
 > [!NOTE]  
@@ -75,7 +75,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  IMPORTANCE es local para el grupo de recursos de servidor; los grupos de cargas de trabajo de importancia distinta dentro del mismo grupo de recursos de servidor se influyen entre sí, pero no influyen en los grupos de cargas de trabajo de otro grupo de recursos de servidor.  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT =*valor*  
+ REQUEST_MAX_MEMORY_GRANT_PERCENT =*value*  
  Especifica la cantidad máxima de memoria que una única solicitud puede tomar del grupo. Este porcentaje es relativo al tamaño del grupo de recursos de servidor especificado por MAX_MEMORY_PERCENT.  
   
 > [!NOTE]  
@@ -98,7 +98,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 >   
 >  Tenga en cuenta que ambos casos están sujetos a un error de tiempo de espera 8645 si el servidor no tiene suficiente memoria física.  
   
- REQUEST_MAX_CPU_TIME_SEC =*valor*  
+ REQUEST_MAX_CPU_TIME_SEC =*value*  
  Especifica la cantidad máxima de tiempo de CPU, en segundos, que puede usar una solicitud. *valor* debe ser 0 o un entero positivo. El valor predeterminado de *valor* es 0, lo que significa ilimitado.  
   
 > [!NOTE]  
@@ -107,7 +107,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!IMPORTANT]
 > A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 y el uso de [2422 marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), el regulador de recursos se anulará una solicitud cuando se supera el tiempo máximo.
   
- REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*valor*  
+ REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Especifica el tiempo máximo, en segundos, que una consulta puede esperar hasta que esté disponible la concesión de memoria (memoria de búfer de trabajo).  
   
 > [!NOTE]  
@@ -115,7 +115,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  *valor* debe ser un entero positivo. El valor predeterminado de *valor*, 0, utiliza un cálculo interno basado en el costo de consulta para determinar el tiempo máximo.  
   
- MAX_DOP =*valor*  
+ MAX_DOP =*value*  
  Especifica el grado máximo de paralelismo (DOP) para las solicitudes paralelas. *valor* debe ser 0 o un entero positivo entre 1 a 255. Cuando *valor* es 0, el servidor elige el grado máximo de paralelismo. Esta es la configuración predeterminada y recomendada.  
   
 > [!NOTE]  
@@ -136,7 +136,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  Una vez configurado DOP, solo se puede reducir ante la concesión de presión de memoria. La reconfiguración del grupo de cargas de trabajo no es visible mientras se espera en la cola de concesión de memoria.  
   
- GROUP_MAX_REQUESTS =*valor*  
+ GROUP_MAX_REQUESTS =*value*  
  Especifica el número máximo de solicitudes simultáneas que pueden ejecutarse en el grupo de cargas de trabajo. *valor* debe ser 0 o un entero positivo. El valor predeterminado de *valor*(0) permite un número ilimitadas solicitudes. Cuando se alcanza el máximo de solicitudes simultáneas, un usuario de ese grupo puede iniciar sesión, pero se coloca en estado de espera hasta que las solicitudes simultáneas caigan por debajo del valor especificado.  
   
  CON { *pool_name* | "**predeterminado**"}  

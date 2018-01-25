@@ -14,13 +14,13 @@ ms.assetid: 8d73fd98-0c61-4a62-94bb-75658195f2a6
 caps.latest.revision: "21"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 27ecbb2ca677523d6bcb97af8ee9c0c961ae718f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f8a886e48067c80f112e86c9d7ba07da79502691
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="advanced-configuration-options-for-machine-learning-services"></a>Opciones de configuración avanzada de servicios de aprendizaje de máquina
 
@@ -97,13 +97,13 @@ Para realizar cambios en este archivo, debe ser administrador en el equipo que e
 
 La tabla siguiente muestra la configuración avanzada de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], con los valores permitidos. 
 
-|**Nombre de opción**|**Tipo**|**Descripción**|
+|**Nombre de opción**|**Tipo**|**Description**|
 |----|----|----|
 |TRABAJO\_LIMPIEZA\_ON\_SALIR|Integer |Se trata únicamente una opción interna: no cambie este valor. </br></br>Especifica si se debe limpiar la carpeta de trabajo temporal creada para cada sesión externo en tiempo de ejecución una vez completada la sesión. Esta opción resulta útil para la depuración. </br></br>Los valores admitidos son **0** (deshabilitado) o **1** (habilitado). </br></br>El valor predeterminado es 1, los archivos de registro de significado se eliminan al salir.|
 |SEGUIMIENTO\_NIVEL|Integer |Configura el nivel de detalle del seguimiento de MSSQLLAUNCHPAD para fines de depuración. Esto afecta a los archivos de seguimiento en la ruta de acceso especificada por la opción LOG_DIRECTORY. </br></br>Los valores admitidos son: **1** (Error), **2** (rendimiento), **3** (advertencia), **4** (información). </br></br>El valor predeterminado es 1, lo que significa que solo advertencias de salida.|
 
 Todas las opciones se presentan como un par clave-valor y cada una de ellas se encuentra en una línea aparte. Por ejemplo, para cambiar el nivel de seguimiento, se agregará la línea `Default: TRACE_LEVEL=4`.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Vea también
 
 [Consideraciones de seguridad](security-considerations-for-the-r-runtime-in-sql-server.md)

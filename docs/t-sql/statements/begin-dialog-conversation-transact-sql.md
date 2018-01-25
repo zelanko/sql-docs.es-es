@@ -32,15 +32,15 @@ helpviewer_keywords:
 - starting conversations
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d4ca1959c247aedd2e49c38a870621d440a089f7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a2ece31010207b6044504f099c11443a2fec0fa2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,13 +67,13 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **@***dialog_handle*  
+ **@** *dialog_handle*  
  Se trata de una variable utilizada para almacenar el identificador de diálogo generado por el sistema para el nuevo diálogo devuelto por la instrucción BEGIN DIALOG CONVERSATION. La variable debe ser de tipo **uniqueidentifier**.  
   
  SERVICIO de *initiator_service_name*  
  Especifica el servicio que inicia el diálogo. El nombre especificado debe ser el nombre de un servicio de la base de datos actual. La cola especificada para el servicio iniciador recibe los mensajes devueltos por el servicio de destino y los mensajes creados por Service Broker para esta conversación.  
   
- SERVICIO **'***target_service_name***'**  
+ TO SERVICE **'***target_service_name***'**  
  Especifica el servicio de destino con el se inicia el diálogo. El *target_service_name* es de tipo **nvarchar (256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)]utiliza una comparación byte a byte para que coincida con el *target_service_name* cadena. Es decir, la comparación distingue mayúsculas de minúsculas y no tiene en cuenta la intercalación actual.  
   
  *service_broker_guid*  
@@ -96,13 +96,13 @@ WHERE database_id = DB_ID() ;
  ON CONTRACT *contract_name*  
  Especifica el contrato que sigue la conversación. El contrato debe existir en la base de datos actual. Si el servicio de destino no acepta conversaciones nuevas en el contrato especificado, [!INCLUDE[ssSB](../../includes/sssb-md.md)] devuelve un mensaje de error en la conversación. Si se omite esta cláusula, la conversación sigue el contrato denominado **predeterminado**.  
   
- RELATED_CONVERSATION  **=**  *related_conversation_handle*  
+ RELATED_CONVERSATION **=***related_conversation_handle*  
  Especifica el grupo de conversación existente al que se agrega el diálogo nuevo. Si está presente esta cláusula, el cuadro de diálogo nuevo pertenece al mismo grupo de conversación como el cuadro de diálogo especificado por *related_conversation_handle*. El *related_conversation_handle*debe ser de un tipo que se pueden convertir implícitamente al tipo **uniqueidentifier**. La instrucción produce un error si la *related_conversation_handle* no hace referencia a un cuadro de diálogo existente.  
   
- RELATED_CONVERSATION_GROUP  **=**  *related_conversation_group_id*  
+ RELATED_CONVERSATION_GROUP **=***related_conversation_group_id*  
  Especifica el grupo de conversación existente al que se agrega el diálogo nuevo. Cuando está presente esta cláusula, el cuadro de diálogo nueva se agregará al grupo de conversación especificado por *related_conversation_group_id*. El *related_conversation_group_id*debe ser de un tipo que se pueden convertir implícitamente al tipo **uniqueidentifier**. Si *related_conversation_group_id*no referencia de un grupo de conversación existente, service broker crea un nuevo grupo de conversación con los valores especificados *related_conversation_group_id* y está relacionado con el cuadro de diálogo nueva para ese grupo de conversación.  
   
- DURACIÓN  **=**  *dialog_lifetime*  
+ DURACIÓN **= *** dialog_lifetime*  
  Especifica la cantidad máxima de tiempo durante el que el diálogo permanece abierto. Para que el diálogo finalice correctamente, ambos extremos deben finalizar explícitamente el diálogo antes del final de la vigencia. El *dialog_lifetime* valor se debe expresar en segundos. Duración es de tipo **int**. Cuando no se especifica ninguna cláusula de duración, la duración del diálogo es el valor máximo de la **int** tipo de datos.  
   
  ENCRYPTION  
@@ -219,6 +219,6 @@ BEGIN DIALOG CONVERSATION @dialog_handle
  [BEGIN CONVERSATION TIMER &#40; Transact-SQL &#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [Finalizar conversación &#40; Transact-SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
  [Mover conversación &#40; Transact-SQL &#41;](../../t-sql/statements/move-conversation-transact-sql.md)   
- [Sys.conversation_endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   

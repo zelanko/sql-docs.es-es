@@ -1,5 +1,5 @@
 ---
-title: DBCC INDEXDEFRAG (Transact-SQL) | Documentos de Microsoft
+title: DBCC INDEXDEFRAG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - index defragmenting [SQL Server]
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f2444d6510e680d2ca3ab9938df92b839a7d04ac
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7e601ebb9a795445e4b49e0f60e134923edba104
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ DBCC INDEXDEFRAG
  *index_name* | *index_id*  
  Es el nombre o Id. del índice que se va a desfragmentar. Si no se especifica, la instrucción desfragmenta todos los índices de la tabla o la vista especificada. Los nombres de los índices deben ajustarse a las reglas de los identificadores.  
   
- *número_de_partición* | 0  
+ *partition_number* | 0  
  Es el número de partición del índice que se va a desfragmentar. Si no se especifica o se especifica 0, la instrucción desfragmenta todas las particiones del índice especificado.  
   
  WITH NO_INFOMSGS  

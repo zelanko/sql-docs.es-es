@@ -22,13 +22,13 @@ ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
 caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b805c79267125e3e888bccd618313678a96cf47
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 70af6c1c5b5f23e857a989d37fb4cf99701dc1fb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="deny-full-text-permissions-transact-sql"></a>DENY (permisos de texto completo de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,13 +53,13 @@ DENY permission [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permiso*  
+ *permission*  
  Es el nombre de un permiso. Las asignaciones válidas de permisos a elementos protegibles se describen en la sección "Comentarios", más adelante en este tema.  
   
- EN el catálogo de texto completo **::***text_catalog_name completo*  
+ ON FULLTEXT CATALOG **::***full-text_catalog_name*  
  Especifica el catálogo de texto completo en el que se deniega el permiso. El calificador de ámbito **::** es necesario.  
   
- EN FULLTEXT STOPLIST **::***text_stoplist_name completo*  
+ ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
  Especifica la lista de palabras irrelevantes de texto completo en la que se deniega el permiso. El calificador de ámbito **::** es necesario.  
   
  *database_principal*  
@@ -137,13 +137,13 @@ DENY permission [ ,...n ] ON
  [Crear lista de palabras IRRELEVANTES de texto completo &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [Sys.fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [Permisos de texto completo de GRANT &#40; Transact-SQL &#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
  [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [Sys.fulltext_catalogs &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)  
   
   

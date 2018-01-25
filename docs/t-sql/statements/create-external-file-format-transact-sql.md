@@ -23,13 +23,13 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 caps.latest.revision: "25"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1d7b64d907e0474361a342dbdbc6e581f2c898ed
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: ab389a5c811f915ff497057a5daf12374f1cedb7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREAR formato de archivo externo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -134,7 +134,7 @@ WITH (
   
 -   FIELD_TERMINATOR = ꞌ\tꞌ  
   
--   FIELD_TERMINATOR = ' ~ | ~'  
+-   FIELD_TERMINATOR = '~|~'  
   
  STRING_DELIMITER = *string_delimiter*  
  Especifica el terminador de campo de datos de tipo cadena en el archivo de texto delimitado. El delimitador de cadenas es uno o más caracteres de longitud y se incluye con comillas simples. El valor predeterminado es una cadena vacía "". Para obtener soporte garantizada, se recomienda usar uno o varios caracteres ascii.
@@ -186,7 +186,7 @@ PolyBase solo utiliza el formato de fecha personalizado para importar los datos.
 |DateTime|DATE_FORMAT = 'aaaa-MM-dd hh:mm:ss.ffftt'|Además de año, mes y día, este formato de fecha incluye 00-12 horas, de 00 a 59 minutos, de 00 a 59 segundos, 3 dígitos para milisegundos y AM, am, PM o pm. |  
 |SmallDateTime|DATE_FORMAT = "aaaa-MM-dd hh: mm"|Además de año, mes y día, este formato de fecha incluye 00-23 horas, de 00 a 59 minutos.|  
 |SmallDateTime|DATE_FORMAT = 'aaaa-MM-dd hh:mmtt'|Además de año, mes y día, este formato de fecha incluye 11: 00 horas, minutos 00-59, ningún segundos y a. M., am, PM o pm.|  
-|Date|DATE_FORMAT = 'aaaa-MM-dd'|Año, mes y día. No se incluye ningún elemento de tiempo.|  
+|Date|DATE_FORMAT =  'yyyy-MM-dd'|Año, mes y día. No se incluye ningún elemento de tiempo.|  
 |Date|DATE_FORMAT = "AAAA-MMM-dd"|Año, mes y día. Cuando se especifica el mes con 3 M, el valor de entrada es una o las cadenas de enero, febrero, marzo, abril, mayo, Jun, Jul, Aug, Sep, Oct, Nov o Dec.|  
 |datetime2|DATE_FORMAT = 'se ss aaaa-MM-dd. ' fffffff|Además de año, mes y día, este formato de fecha incluye 00-23 horas, de 00 a 59 minutos, de 00 a 59 segundos y 7 dígitos de milisegundos.|  
 |datetime2|DATE_FORMAT = 'aaaa-MM-dd hh:mm:ss.ffffffftt'|Además de año, mes y día, este formato de fecha incluye 11: 00 horas, de 00 a 59 minutos, de 00 a 59 segundos, 7 dígitos para milisegundos y AM, am, PM o pm.|  
@@ -198,18 +198,18 @@ PolyBase solo utiliza el formato de fecha personalizado para importar los datos.
   
 |datetime|smalldatetime|date|datetime2|datetimeoffset|  
 |--------------|-------------------|----------|---------------|--------------------|  
-|[M [M]] M-[d] d-[aa] aa hh [.fff]|[M [M]] M-[d] d-[aa] aa hh: mm [: 00]|[M [M]] M-[d] d-[aa] AA|[M [M]] M-[d] d-[aa] aa hh [.fffffff]|[M [M]] M-[d] d-[aa] aa hh [.fffffff] zzz|  
-|[M [M]] M-[d] d-[aa] aa hh [.fff] [tt]|[M [M]] M-[d] d-[aa] aa hh: mm [: 00] [tt]||[M [M]] M-[d] d-[aa] aa hh [.fffffff] [tt]|[M [M]] M-[d] d-[aa] aa hh [.fffffff] [tt] zzz|  
-|[M [M]] M-[aa] AA-[d] d hh [.fff]|[M [M]] M-[aa] AA-[d] d hh: mm [: 00]|[M [M]] M-[aa] AA-[d] d|[M [M]] M-[aa] AA-[d] d hh [.fffffff]|[M [M]] M-[aa] AA-[d] d zzz hh [.fffffff]|  
-|[M [M]] M-[aa] AA-[d] hh d [.fff] [tt]|[M [M]] M-[aa] AA-[d] d hh: mm [: 00] [tt]||[M [M]] M-[aa] AA-[d] hh d [.fffffff] [tt]|[M [M]] M-[aa] AA-[d] hh d [.fffffff] [tt] zzz|  
-|[aa] AA-[M [M]] [d] de M-d hh [.fff]|[aa] AA-[M [M]] [d] de M-d hh: mm [: 00]|[aa] AA-[M [M]] [d] de M-d|[aa] AA-[M [M]] [d] de M-d hh [.fffffff]|[aa] AA-[M [M]] [d] M-d hh [.fffffff] zzz|  
-|[aa] AA-[M [M]] [d] M-d hh [.fff] [tt]|[aa] AA-[M [M]] [d] M-d hh: mm [: 00] [tt]||[aa] AA-[M [M]] [d] M-d hh [.fffffff] [tt]|[aa] AA-[M [M]] [d] M-d hh [.fffffff] [tt] zzz|  
-|[aa] AA-[d] [M [M]] d-M hh [.fff]|[aa] AA-[d] [M [M]] d-M hh: mm [: 00]|[aa] AA - d [d] - M [M [M]]|[aa] AA-[d] [M [M]] d-M hh [.fffffff]|[aa] AA-[d] [M [M]] d-M hh [.fffffff] zzz|  
-|[aa] AA-[d] [M [M]] d-M hh [.fff] [tt]|[aa] AA-[d] [M [M]] d-M hh: mm [: 00] [tt]||[aa] AA-[d] [M [M]] d-M hh [.fffffff] [tt]|[aa] AA-[d] [M [M]] d-M hh [.fffffff] [tt] zzz|  
-|[d] [M [M]] de d-M-[aa] aa hh [.fff]|[d] [M [M]] de d-M-[aa] aa hh: mm [: 00]|[d] [M [M]] de d-M-[aa] AA|[d] [M [M]] de d-M-[aa] aa hh [.fffffff]|[d] [M [M]] d-M-[aa] aa hh [.fffffff] zzz|  
-|[d] [M [M]] d-M-[aa] aa hh [.fff] [tt]|[d] [M [M]] d-M-[aa] aa hh: mm [: 00] [tt]||[d] [M [M]] d-M-[aa] aa hh [.fffffff] [tt]|[d] [M [M]] d-M-[aa] aa hh [.fffffff] [tt] zzz|  
-|d [d]-[aa] AA-[M [M]] M hh [.fff]|d [d]-[aa] AA-[M [M]] M hh: mm [: 00]|d [d]-[aa] AA-[M [M]] M|d [d]-[aa] AA-[M [M]] M hh [.fffffff]|[d] d-[aa] AA-[M [M]] hh M [.fffffff] zzz|  
-|[d] d-[aa] AA-[M [M]] M hh [.fff] [tt]|[d] d-[aa] AA-[M [M]] M hh: mm [: 00] [tt]||[d] d-[aa] AA-[M [M]] M hh [.fffffff] [tt]|[d] d-[aa] AA-[M [M]] M hh [.fffffff] [tt] zzz|  
+|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fff]|[M[M]]M-[d]d-[yy]yy HH:mm[:00]|[M[M]]M-[d]d-[yy]yy|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff]|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff] zzz|  
+|[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm[:00][tt]||[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt]|[M [M]] M-[d] d-[aa] aa hh [.fffffff] [tt] zzz|  
+|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fff]|[M[M]]M-[yy]yy-[d]d HH:mm[:00]|[M[M]]M-[yy]yy-[d]d|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fffffff]|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fffffff] zzz|  
+|[M[M]]M-[yy]yy-[d]d hh:mm:ss[.fff][tt]|[M[M]]M-[yy]yy-[d]d hh:mm[:00][tt]||[M[M]]M-[yy]yy-[d]d hh:mm:ss[.fffffff][tt]|[M[M]]M-[yy]yy-[d]d hh:mm:ss[.fffffff][tt] zzz|  
+|[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fff]|[yy]yy-[M[M]]M-[d]d HH:mm[:00]|[yy]yy-[M[M]]M-[d]d|[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fffffff]|[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fffffff]  zzz|  
+|[yy]yy-[M[M]]M-[d]d hh:mm:ss[.fff][tt]|[yy]yy-[M[M]]M-[d]d hh:mm[:00][tt]||[yy]yy-[M[M]]M-[d]d hh:mm:ss[.fffffff][tt]|[yy]yy-[M[M]]M-[d]d hh:mm:ss[.fffffff][tt] zzz|  
+|[yy]yy-[d]d-[M[M]]M HH:mm:ss[.fff]|[yy]yy-[d]d-[M[M]]M HH:mm[:00]|[yy]yy-[d]d-[M[M]]M|[yy]yy-[d]d-[M[M]]M HH:mm:ss[.fffffff]|[yy]yy-[d]d-[M[M]]M HH:mm:ss[.fffffff]  zzz|  
+|[yy]yy-[d]d-[M[M]]M hh:mm:ss[.fff][tt]|[yy]yy-[d]d-[M[M]]M hh:mm[:00][tt]||[yy]yy-[d]d-[M[M]]M hh:mm:ss[.fffffff][tt]|[yy]yy-[d]d-[M[M]]M hh:mm:ss[.fffffff][tt] zzz|  
+|[d]d-[M[M]]M-[yy]yy HH:mm:ss[.fff]|[d]d-[M[M]]M-[yy]yy HH:mm[:00]|[d]d-[M[M]]M-[yy]yy|[d]d-[M[M]]M-[yy]yy HH:mm:ss[.fffffff]|[d]d-[M[M]]M-[yy]yy HH:mm:ss[.fffffff] zzz|  
+|[d]d-[M[M]]M-[yy]yy hh:mm:ss[.fff][tt]|[d]d-[M[M]]M-[yy]yy hh:mm[:00][tt]||[d]d-[M[M]]M-[yy]yy hh:mm:ss[.fffffff][tt]|[d] [M [M]] d-M-[aa] aa hh [.fffffff] [tt] zzz|  
+|[d]d-[yy]yy-[M[M]]M HH:mm:ss[.fff]|[d]d-[yy]yy-[M[M]]M HH:mm[:00]|[d]d-[yy]yy-[M[M]]M|[d]d-[yy]yy-[M[M]]M HH:mm:ss[.fffffff]|[d]d-[yy]yy-[M[M]]M HH:mm:ss[.fffffff]  zzz|  
+|[d]d-[yy]yy-[M[M]]M hh:mm:ss[.fff][tt]|[d]d-[yy]yy-[M[M]]M hh:mm[:00][tt]||[d]d-[yy]yy-[M[M]]M hh:mm:ss[.fffffff][tt]|[d]d-[yy]yy-[M[M]]M hh:mm:ss[.fffffff][tt] zzz|  
   
  Detalles:  
   
@@ -246,7 +246,7 @@ PolyBase solo utiliza el formato de fecha personalizado para importar los datos.
   
 -   COMPRESIÓN de datos = 'org.apache.hadoop.io.compress.DefaultCodec'
   
--   COMPRESIÓN de datos = 'org.apache.hadoop.io.compress.GzipCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
 
  El tipo de formato RCFILE es compatible con este método de compresión:
   
@@ -256,13 +256,13 @@ PolyBase solo utiliza el formato de fecha personalizado para importar los datos.
   
 -   COMPRESIÓN de datos = 'org.apache.hadoop.io.compress.DefaultCodec'
   
--   COMPRESIÓN de datos = 'org.apache.hadoop.io.compress.SnappyCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
   
  El tipo de formato de archivo PARQUET admite los métodos de compresión de folliwing:
   
--   COMPRESIÓN de datos = 'org.apache.hadoop.io.compress.GzipCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
   
--   COMPRESIÓN de datos = 'org.apache.hadoop.io.compress.SnappyCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
   
 ## <a name="permissions"></a>Permissions  
  Requiere el permiso ALTER ANY EXTERNAL FILE FORMAT.

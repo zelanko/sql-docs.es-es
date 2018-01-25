@@ -19,15 +19,15 @@ helpviewer_keywords:
 - large data, OLE objects
 ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e4f42a1288119c4557e2e045943b71da700b483
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 03eb28507a7fa0fdc2bf8df55dbb39356f24109c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB y objetos OLE
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,14 +65,14 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Obtener datos grandes](../../relational-databases/native-client-ole-db-blobs/getting-large-data.md)  
+-   [Obtener datos de gran tamaño](../../relational-databases/native-client-ole-db-blobs/getting-large-data.md)  
   
--   [Definir datos grandes](../../relational-databases/native-client-ole-db-blobs/setting-large-data.md)  
+-   [Establecer datos de gran tamaño](../../relational-databases/native-client-ole-db-blobs/setting-large-data.md)  
   
--   [Compatibilidad con la transmisión por secuencias de parámetros de salida BLOB](../../relational-databases/native-client-ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
+-   [Compatibilidad con transmisión por secuencias de parámetros de salida BLOB](../../relational-databases/native-client-ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Cliente nativo de SQL Server &#40; OLE DB &#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
- [Usar tipos de valor grande](../../relational-databases/native-client/features/using-large-value-types.md)  
+ [Uso de tipos de valores grandes](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

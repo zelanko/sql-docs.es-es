@@ -35,13 +35,13 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 caps.latest.revision: "80"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 49b572a8ce91287faa4c162efa8de8e7f0113235
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5e99efe49620003de40659dd4bfd959dacef986c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---group-by--transact-sql"></a>Seleccione - GROUP BY de Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -100,7 +100,7 @@ GROUP BY {
   
 ## <a name="arguments"></a>Argumentos 
  
-### <a name="column-expression"></a>*expresión de columna*  
+### <a name="column-expression"></a>*column-expression*  
 Especifica una columna o un cálculo de agregado no en una columna. Esta columna puede pertenecer a una tabla, una tabla derivada o una vista. La columna debe aparecer en la cláusula FROM de la instrucción SELECT, pero no es necesaria que aparezcan en la lista de selección. 
 
 Para las expresiones válidas, vea [expresión](~/t-sql/language-elements/expressions-transact-sql.md).    
@@ -347,16 +347,16 @@ La cláusula GROUP BY es compatible con todas las características GROUP BY que 
 |Característica|SQL Server Integration Services|Nivel de compatibilidad 100 o superior con SQL Server|SQL Server 2008 o posterior con el nivel de compatibilidad 90.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |Agregados DISTINCT|No se admite en WITH CUBE ni en WITH ROLLUP.|Se admite en WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE o ROLLUP.|Igual que el nivel de compatibilidad 100.|  
-|Función definida por el usuario con un nombre CUBE o ROLLUP en la cláusula GROUP BY|Función definida por el usuario **dbo.cube (***arg1***,***.. .argN***)** o  **dbo.Rollup (***arg1***,**... *argN***)** en GROUP BY se permite la cláusula.<br /><br /> Por ejemplo, `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Función definida por el usuario **dbo.cube (***arg1***,**.. .argN**)** o **dbo.rollup (**arg1**,***.. .argN***)** en GROUP BY no se permite la cláusula.<br /><br /> Por ejemplo, `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Se devuelve el siguiente mensaje de error: "sintaxis incorrecta cerca de la palabra clave"cubo"' &#124;' paquete acumulativo de actualizaciones '. "<br /><br /> Para evitar este problema, reemplace `dbo.cube` por `[dbo].[cube]` o `dbo.rollup` por `[dbo].[rollup]`.<br /><br /> Se permite en el ejemplo siguiente:`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|Función definida por el usuario **dbo.cube (***arg1***,***.. .argN*) o **dbo.rollup (** *arg1***,***.. .argN***)** en GROUP BY se permite la cláusula<br /><br /> Por ejemplo, `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
-|GROUPING SETS|No compatible|Admitida|Admitida|  
-|CUBE|No compatible|Admitida|No compatible|  
-|ROLLUP|No compatible|Admitida|No compatible|  
-|Total general, como GROUP BY ()|No compatible|Admitida|Admitida|  
-|GROUPING_ID, función|No compatible|Admitida|Admitida|  
-|GROUPING, función|Admitida|Admitida|Admitida|  
-|WITH CUBE|Admitida|Admitida|Admitida|  
-|WITH ROLLUP|Admitida|Admitida|Admitida|  
-|Eliminación de grupos duplicados de WITH CUBE o WITH ROLLUP|Admitida|Admitida|Admitida| 
+|Función definida por el usuario con un nombre CUBE o ROLLUP en la cláusula GROUP BY|Función definida por el usuario **dbo.cube (***arg1***,***.. .argN***)** o **dbo.rollup (***arg1***,**... *argN ***)* * en GROUP BY se permite la cláusula.<br /><br /> Por ejemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Función definida por el usuario **dbo.cube (***arg1***,**.. .argN**)** o **dbo.rollup (**arg1**,***.. .argN*** )** en GROUP BY no se permite la cláusula.<br /><br /> Por ejemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Se devuelve el siguiente mensaje de error: "sintaxis incorrecta cerca de la palabra clave"cubo"' &#124;' paquete acumulativo de actualizaciones '. "<br /><br /> Para evitar este problema, reemplace `dbo.cube` por `[dbo].[cube]` o `dbo.rollup` por `[dbo].[rollup]`.<br /><br /> Se permite en el ejemplo siguiente:`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|Función definida por el usuario **dbo.cube (***arg1***, ***.. .argN*) o **dbo.rollup (***arg1***,***.. .argN***)**en GROUP BY se permite la cláusula<br /><br /> Por ejemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUPING SETS|No compatible|Compatible|Compatible|  
+|CUBE|No compatible|Compatible|No compatible|  
+|ROLLUP|No compatible|Compatible|No compatible|  
+|Total general, como GROUP BY ()|No compatible|Compatible|Compatible|  
+|GROUPING_ID, función|No compatible|Compatible|Compatible|  
+|GROUPING, función|Compatible|Compatible|Compatible|  
+|WITH CUBE|Compatible|Compatible|Compatible|  
+|WITH ROLLUP|Compatible|Compatible|Compatible|  
+|Eliminación de grupos duplicados de WITH CUBE o WITH ROLLUP|Compatible|Compatible|Compatible| 
  
   
 ## <a name="examples"></a>Ejemplos  
@@ -468,10 +468,10 @@ ORDER BY OrderDateKey;
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [GROUPING_ID &#40; Transact-SQL &#41;](~/t-sql/functions/grouping-id-transact-sql.md)   
- [AGRUPACIÓN &#40; Transact-SQL &#41;](~/t-sql/functions/grouping-transact-sql.md)   
+ [GROUPING_ID &#40;Transact-SQL&#41;](~/t-sql/functions/grouping-id-transact-sql.md)   
+ [GROUPING &#40;Transact-SQL&#41;](~/t-sql/functions/grouping-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
- [Cláusula SELECT &#40; Transact-SQL &#41;](~/t-sql/queries/select-clause-transact-sql.md)  
+ [SELECT Clause &#40;Transact-SQL&#41;](~/t-sql/queries/select-clause-transact-sql.md)  
   
   
 

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: 918574b3-c62e-4937-9e5f-37310dedc8f9
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ccfb47c8663f482b7c6c7ab95b7957381f43d010
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 83781fb2194f5ef94ea7a73a8c32017ceb25424a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sparse-columns-support-ole-db"></a>Compatibilidad con columnas dispersas (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,10 +58,10 @@ ms.lasthandoff: 01/08/2018
   
 |Tipo o función de miembro|Description|  
 |-----------------------------|-----------------|  
-|IColumnsInfo:: GetColumnsInfo|DBCOLUMNFLAGS_SS_ISCOLUMNSET está establecido para el valor de marca de una nueva DBCOLUMNFLAGS **column_set** columnas en *dwFlags*.<br /><br /> DBCOLUMNFLAGS_WRITE está establecido para **column_set** columnas.|  
+|IColumnsInfo::GetColumnsInfo|DBCOLUMNFLAGS_SS_ISCOLUMNSET está establecido para el valor de marca de una nueva DBCOLUMNFLAGS **column_set** columnas en *dwFlags*.<br /><br /> DBCOLUMNFLAGS_WRITE está establecido para **column_set** columnas.|  
 |IColumsRowset::GetColumnsRowset|Un nuevo valor de marca DBCOLUMNFLAGS, DBCOLUMNFLAGS_SS_ISCOLUMNSET, está establecido para **column_set** columnas en DBCOLUMN_FLAGS.<br /><br /> DBCOLUMN_COMPUTEMODE está establecido en dbcomputemode_dynamic para las **column_set** columnas.|  
 |IDBSchemaRowset::GetSchemaRowset|DBSCHEMA_COLUMNS devuelve dos nuevas columnas: SS_IS_COLUMN_SET y SS_IS_SPARSE.<br /><br /> DBSCHEMA_COLUMNS únicamente devuelve columnas que no son miembros de un **column_set**.<br /><br /> Se han agregado dos nuevos conjuntos de filas de esquema: DBSCHEMA_COLUMNS_EXTENDED devolverá todas las columnas independientemente de la dispersión de **column_set** pertenencia. DBSCHEMA_SPARSE_COLUMN_SET únicamente devuelve columnas que son miembros de un **column_set**. Estos nuevos conjuntos de filas tienen las mismas columnas y restricciones que DBSCHEMA_COLUMNS.|  
-|IDBSchemaRowset:: GetSchemas|IDBSchemaRowset:: GetSchemas incluye los GUID de los nuevos conjuntos de filas DBSCHEMA_COLUMNS_EXTENDED y DBSCHEMA_SPARSE_COLUMN_SET en la lista de conjuntos de filas de esquema disponibles.|  
+|IDBSchemaRowset::GetSchemas|IDBSchemaRowset:: GetSchemas incluye los GUID de los nuevos conjuntos de filas DBSCHEMA_COLUMNS_EXTENDED y DBSCHEMA_SPARSE_COLUMN_SET en la lista de conjuntos de filas de esquema disponibles.|  
 |ICommand::Execute|Si **seleccione \* de** *tabla* es utilizada, devuelve todas las columnas que no son miembros de disperso **column_set**, más una columna XML que contiene los valores de todos los las columnas no nulas que son miembros de disperso **column_set**, si está presente.|  
 |IOpenRowset::OpenRowset|IOpenRowset:: OpenRowset devuelve un conjunto de filas con las mismas columnas que ICommand:: Execute, con un **seleccione \***  consulta en la misma tabla.|  
 |ITableDefinition|No hay ningún cambio en esta interfaz para las columnas dispersas o para **column_set** columnas. Las aplicaciones que tienen que realizar modificaciones de esquema deben ejecutar directamente el [!INCLUDE[tsql](../../../includes/tsql-md.md)] adecuado.|  

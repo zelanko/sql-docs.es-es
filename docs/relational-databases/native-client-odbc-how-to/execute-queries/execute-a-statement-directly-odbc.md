@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: statement execution
 ms.assetid: b690f9de-66e1-4ee5-ab6a-121346fb5f85
 caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 59846868f34d756ad1575ade730e08ec5ed882e2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4471b9f4d85240a51d456ea90973c852f5e5db76
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-a-statement-directly-odbc"></a>Ejecutar directamente una instrucción (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/08/2018
   
 2.  Llame a [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) para ejecutar la instrucción.  
   
-3.  Si se usan parámetros de entrada de datos en ejecución, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) devuelve SQL_NEED_DATA. Envíe los datos en fragmentos utilizyo [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) y [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
+3.  Si se usan parámetros de entrada de datos en ejecución, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) devuelve SQL_NEED_DATA. Envíe los datos en fragmentos utilizando [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) y [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
 ### <a name="to-execute-a-statement-multiple-times-by-using-column-wise-parameter-binding"></a>Para ejecutar varias veces una instrucción utilizando el enlace de parámetro de modo de columna  
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 01/08/2018
   
 5.  Llame a [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) para ejecutar la instrucción. El controlador ejecuta eficazmente la instrucción S veces, una vez para cada conjunto de parámetros.  
   
-6.  Si se usan parámetros de entrada de datos en ejecución, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) devuelve SQL_NEED_DATA. Envíe los datos en fragmentos utilizyo [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) y [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
+6.  Si se usan parámetros de entrada de datos en ejecución, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) devuelve SQL_NEED_DATA. Envíe los datos en fragmentos utilizando [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) y [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
  **Nota** Los enlaces de modo de columna y de modo de fila se usan con mayor frecuencia con [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360) y [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) que con [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399).  
   

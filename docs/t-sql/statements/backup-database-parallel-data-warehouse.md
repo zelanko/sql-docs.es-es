@@ -15,13 +15,13 @@ ms.assetid: 73c8d465-b36b-4727-b9f3-368e98677c64
 caps.latest.revision: "11"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ced03c90d0f30a1e8749d09f00d293bdee53b06e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cc87423b3444daf6d44f590c283b52ce948da193
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="backup-database-parallel-data-warehouse"></a>Base de datos de copia de seguridad (almacenamiento de datos en paralelo)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -160,11 +160,11 @@ BACKUP DATABASE database_name
 ## <a name="metadata"></a>Metadatos  
  Estas vistas de administración dinámica contienen información acerca de todas las copias de seguridad, restauración y operaciones de carga. La información se conserva entre reinicios del sistema.  
   
--   [Sys.pdw_loader_backup_runs &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
+-   [sys.pdw_loader_backup_runs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
--   [Sys.pdw_loader_backup_run_details &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
+-   [sys.pdw_loader_backup_run_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
   
--   [Sys.pdw_loader_run_stages &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
+-   [sys.pdw_loader_run_stages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
   
 ## <a name="performance"></a>Rendimiento  
  Para realizar una copia de seguridad, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] primera copia de los metadatos y, a continuación, realiza una copia de seguridad paralela de los datos de la base de datos almacenados en los nodos de proceso. Datos se copian directamente desde los nodos de cada proceso en el directorio de copia de seguridad. Para obtener el mejor rendimiento para mover los datos de los nodos de proceso en el directorio de copia de seguridad, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] controla el número de nodos de proceso que se va a copiar datos al mismo tiempo.  

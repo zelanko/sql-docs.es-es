@@ -25,11 +25,11 @@
 
 # [Levantar y mover paquetes SSIS en Azure](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
 ## [Tutorial: implementar, ejecutar y supervisar un paquete en Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
-## [Conectar con el Catálogo de SSIS en Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
-## [Programar la ejecución de paquetes en Azure](lift-shift/ssis-azure-schedule-packages.md)
-## [Validación de paquetes implementados en Azure](lift-shift/ssis-azure-validate-packages.md)
 ## [Conectarse a orígenes de datos con la autenticación de Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [Conectarse a archivos y recursos compartidos de archivos](lift-shift/ssis-azure-files-file-shares.md)
+## [Validación de paquetes implementados en Azure](lift-shift/ssis-azure-validate-packages.md)
+## [Conectar con el Catálogo de SSIS en Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [Programar la ejecución de paquetes en Azure](lift-shift/ssis-azure-schedule-packages.md)
 
 # [Instalar o actualizar](../integration-services/install-windows/install-integration-services.md)
 
@@ -175,11 +175,8 @@
 #### [Lección 3-3: Probar los paquetes implementados](lesson-3-3-testing-the-deployed-packages.md)
 
 # Recursos
-## Seguir el blog
-### [Blog del equipo de SSIS](https://blogs.msdn.microsoft.com/ssis/)
-## Obtener ayuda
-### [Foro de SSIS en MSDN](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
-### [Etiqueta SSIS en Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
-## Enviar comentarios
-### [SQL Server Foro de comentarios](https://feedback.azure.com/forums/908035-sql-server)  
+## [Obtener ayuda en el foro de SSIS](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
+## [Obtener ayuda en Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
+## [Seguir el blog del equipo de SSIS](https://blogs.msdn.microsoft.com/ssis/)
+## [Informar de problemas y solicitar características](https://feedback.azure.com/forums/908035-sql-server)
 ## [Obtención de documentos en el equipo](../sql-server/sql-server-help-installation.md)

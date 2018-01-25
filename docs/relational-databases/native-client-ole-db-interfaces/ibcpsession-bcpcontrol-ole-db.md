@@ -16,15 +16,15 @@ apitype: COM
 helpviewer_keywords: BCPControl method
 ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72969fb998915015b59e47c602df075921f46a0e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 123232c2815dcb2e7086a58e363a0003d747f80d
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ HRESULT BCPControl(
 |------------|-----------------|  
 |BCP_OPTION_ABORT|Detiene una operación de copia masiva que ya está en curso. Puede llamar a la **BCPControl** método con un *eOption* argumento de BCP_OPTION_ABORT desde otro subproceso para detener una operación de copia masiva en ejecución. El *iValue* argumento se omite.|  
 |BCP_OPTION_BATCH|El número de filas por lote. El valor predeterminado es 0, que indica todas las filas de una tabla cuando se extraen datos, o cuando se van a copiar los datos de los archivos de todas las filas de los datos de usuario [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un valor menor que 1 restablece BCP_OPTION_BATCH al valor predeterminado.|  
-|BCP_OPTION_DELAYREADFMT|Un valor booleano, si establece en true, hará que [ibcpsession:: Bcpreadfmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) para leer en la ejecución. Si false (valor predeterminado), ibcpsession:: Bcpreadfmt le inmediatamente leer el archivo de formato. Se producirá un error de secuencia si **BCP_OPTION_DELAYREADFMT** es true y se llama a ibcpsession:: BCPColumns o ibcpsession:: BCPColFmt.<br /><br /> También se producirá un error de secuencia si se llama a `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))` después de llamar a `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` e ibcpsession:: Bcpwritefmt.<br /><br /> Para obtener más información, consulte [de detección de metadatos](../../relational-databases/native-client/features/metadata-discovery.md).|  
+|BCP_OPTION_DELAYREADFMT|Un valor booleano, si establece en true, hará que [ibcpsession:: Bcpreadfmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) para leer en la ejecución. Si false (valor predeterminado), ibcpsession:: Bcpreadfmt le inmediatamente leer el archivo de formato. Se producirá un error de secuencia si **BCP_OPTION_DELAYREADFMT** es true y se llama a ibcpsession:: BCPColumns o ibcpsession:: BCPColFmt.<br /><br /> También se producirá un error de secuencia si se llama a `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))` después de llamar a `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` e ibcpsession:: Bcpwritefmt.<br /><br /> Para obtener más información, vea [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).|  
 |BCP_OPTION_FILECP|El *iValue* argumento contiene el número de la página de códigos del archivo de datos. Puede especificar el número de la página de códigos, como 1252 u 850, o uno de los valores siguientes:<br /><br /> BCP_FILECP_ACP: los datos del archivo están en la página de códigos de Microsoft Windows® del cliente.<br /><br /> BCP_FILECP_OEMCP: los datos del archivo están en la página de códigos OEM del cliente (valor predeterminado).<br /><br /> BCP_FILECP_RAW: los datos del archivo están en la página de códigos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |BCP_OPTION_FILEFMT|Número de versión del formato de archivo de datos. Puede ser 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) o 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 es el valor predeterminado. Esto resulta útil para exportar e importar datos en formatos admitidos en versiones anteriores del servidor.  Por ejemplo importar datos obtenidos de una columna de texto en un [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server en un **varchar (max)** columna en un [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] servidor o posterior, debe especificar 80. De forma similar, si especifica 80 al exportar datos desde una **varchar (max)** columna, éstos se guardarán al igual que las columnas de texto se guardan en el [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] de formato y se pueden importar en una columna de texto de un [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] server.|  
 |BCP_OPTION_FIRST|La primera fila de datos del archivo o la tabla que se copia. El valor predeterminado es 1; un valor menor que 1 reinicializa esta opción a su valor predeterminado.|  

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1940375cc3d822d994c673d965e1fb7e23385596
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fd805562b60d37b9988b9afeb84d81e2cb2f5125
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastres
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,7 +99,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="odbc"></a>ODBC  
  Se han agregado dos palabras clave de cadena de conexión ODBC para ser compatible con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  
   
--   **Intención de aplicaciones**  
+-   **ApplicationIntent**  
   
 -   **MultiSubnetFailover**  
   
@@ -117,7 +117,7 @@ ms.lasthandoff: 01/08/2018
   
  Una aplicación ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client puede utilizar una de estas tres funciones para realizar la conexión:  
   
-|Función|Description|  
+|Función|Descripción|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|La lista de servidores devuelta por **SQLBrowseConnect** no incluirá los VNN. Solo verá una lista de servidores que no indica si el servidor es un servidor independiente, o un servidor principal o secundario de un clúster de clústeres de conmutación por error de Windows Server (WSFC) que contiene dos o más instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] habilitadas para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Si se conecta a un servidor y obtiene un error, puede deberse a que se ha conectado a un servidor y el valor de **ApplicationIntent** no es compatible con la configuración del servidor.<br /><br /> Dado que **SQLBrowseConnect** no reconoce los servidores de un clúster de clústeres de conmutación por error de Windows Server (WSFC) que contiene dos o más instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] habilitadas para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], **SQLBrowseConnect** omite la palabra clave de cadena de conexión **MultiSubnetFailover**.|  
 |[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect** admite **ApplicationIntent** y **MultiSubnetFailover** mediante un nombre de origen de datos (DSN) o propiedades de conexión.|  
@@ -151,7 +151,7 @@ ms.lasthandoff: 01/08/2018
  **IDBProperties::GetProperties**  
  **IDBProperties::GetProperties** recupera el valor de la propiedad que está establecida actualmente en el origen de datos.  Puede recuperar el valor de **Application Intent** a través de la propiedad DBPROP_INIT_PROVIDERSTRING y la propiedad SSPROP_INIT_APPLICATIONINTENT.  
   
- **IDBProperties:: SetProperties**  
+ **IDBProperties::SetProperties**  
  Para establecer el valor de la propiedad **ApplicationIntent**, llame a **IDBProperties::SetProperties** pasando la propiedad **SSPROP_INIT_APPLICATIONINTENT** con valor "**ReadWrite**" o "**ReadOnly**" o la propiedad **DBPROP_INIT_PROVIDERSTRING** con el valor que contiene "**ApplicationIntent=ReadOnly**" o "**ApplicationIntent=ReadWrite**".  
   
  Puede especificar la intención de aplicaciones en el campo Propiedades de intención de aplicaciones de la pestaña Todo del cuadro de diálogo **Propiedades de vínculo de datos**.  
@@ -159,7 +159,7 @@ ms.lasthandoff: 01/08/2018
  Cuando se establezcan conexiones implícitas, estas usarán la configuración de la intención de aplicaciones de la conexión primaria. De forma similar, cuando se creen varias sesiones con el mismo origen de datos estas heredarán la configuración de la intención de aplicaciones del origen de datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Características de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [Características SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Usar palabras clave de cadena de conexión con SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
   

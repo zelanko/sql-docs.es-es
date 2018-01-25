@@ -22,15 +22,15 @@ ms.assetid:
 caps.latest.revision: "1"
 author: shkale-msft
 ms.author: shkale
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8944c6b5ca481e61a1ca18e7c453d2c2035e1acb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cbfa524cb9957ba557cfd239dae16a93aed919bf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="match-transact-sql"></a>COINCIDENCIA (Transact-SQL)
+# <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
   Especifica una condición de búsqueda para un gráfico. COINCIDENCIA puede usarse sólo con las tablas de nodo y borde gráfico, en la instrucción SELECT como parte de la cláusula WHERE. 

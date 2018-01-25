@@ -27,15 +27,15 @@ helpviewer_keywords:
 - queues [Service Broker], creating
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 caps.latest.revision: "67"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 168ba93fdfbf999cb325d985c3c29601cc21b4ed
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7bd20267a78f9a0fcaf2d854b6e94553b7c80167
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,10 +81,10 @@ CREATE QUEUE <object>
  *database_name* (objeto)  
  Es el nombre de la base de datos en que se crea la nueva cola. *database_name* debe especificar el nombre de una base de datos existente. Cuando *database_name* no es siempre, se crea la cola en la base de datos actual.  
   
- *schema_name* (objeto)  
+ *schema_name* (object)  
  Nombre del esquema al que pertenece la nueva cola. El valor predeterminado del esquema es el esquema predeterminado del usuario que ejecuta la instrucción. Si se ejecuta la instrucción CREATE QUEUE por un miembro del rol fijo de servidor sysadmin o un miembro de la db_dbowner o db_ddladmin fija roles de base de datos en la base de datos especificada por *database_name*, *schema_name* puede especificar un esquema distinto del asociado con el inicio de sesión de la conexión actual. En caso contrario, *schema_name* debe ser el esquema predeterminado para el usuario que ejecuta la instrucción.  
   
- *nombre_de_cola*  
+ *queue_name*  
  Nombre de la cola que se va a crear. Este nombre debe cumplir las directrices de los identificadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  STATUS (cola)  
@@ -105,10 +105,10 @@ CREATE QUEUE <object>
  Procedure_name = \<procedimiento >  
  Especifica el nombre del procedimiento almacenado que es necesario iniciar para procesar mensajes en esta cola. Este valor debe ser un identificador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- *database_name*(procedimiento)  
+ *database_name*(procedure)  
  Nombre de la base de datos que contiene el procedimiento almacenado.  
   
- *schema_name*(procedimiento)  
+ *schema_name*(procedure)  
  Es el nombre del esquema que contiene el procedimiento almacenado.  
   
  *procedure_name*  
@@ -123,7 +123,7 @@ CREATE QUEUE <object>
  SELF  
  Especifica que el procedimiento almacenado se ejecuta como el usuario actual. Es la entidad de seguridad de base de datos que ejecuta esta instrucción CREATE QUEUE.  
   
- '*nombre_usuario*'  
+ '*user_name*'  
  Es el nombre del usuario con el que se ejecuta el procedimiento almacenado. El *nombre_usuario* parámetro debe ser válido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usuario especificado como un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificador. El usuario actual debe tener el permiso IMPERSONATE para el *nombre_usuario* especificado.  
   
  OWNER  
@@ -232,8 +232,8 @@ CREATE QUEUE ExpenseQueue
 ## <a name="see-also"></a>Vea también  
  [ALTER QUEUE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [Eliminar cola &#40; Transact-SQL &#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
- [RECIBIR &#40; Transact-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)   
+ [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
+ [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

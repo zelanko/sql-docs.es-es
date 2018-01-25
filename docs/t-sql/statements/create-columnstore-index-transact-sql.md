@@ -32,13 +32,13 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 caps.latest.revision: "76"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fd51d2a902337b232f5bf9497f5ebd0bbcac9199
-ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.openlocfilehash: ccf03c6b2d3d7798f3bad65b340657bf2b21b751
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -123,7 +123,7 @@ Especifica el nombre para el nuevo índice.
   
 Si la tabla ya tiene un índice de almacén de columnas agrupado, puede especificar el mismo nombre que el índice existente, o puede usar la opción DROP EXISTING para especificar un nuevo nombre.  
   
-ON [*database_name*. [*schema_name* ]. | *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    Especifica el nombre de una, dos o tres partes de la tabla que se almacenará como un índice clúster de almacén de columnas. Si la tabla es un montón o índice agrupado en la tabla se convierte de almacén de filas en un almacén de columnas. Si la tabla ya es un almacén de columnas, esta instrucción vuelve a generar el índice de almacén de columnas agrupado.  
   
 por  
@@ -171,7 +171,7 @@ ON
    *filegroup_name*  
    Especifica el grupo de archivos para almacenar el índice clúster de almacén de columnas. Si no se especifica ninguna ubicación y la tabla no tiene particiones, el índice usa el mismo grupo de archivos que la tabla o la vista subyacente. El grupo de archivos debe existir previamente.  
 
-   **"**predeterminado**"**  
+   **"**default**"**  
    Para crear el índice en el grupo de archivos predeterminado, use "default" o [default].  
   
    Si se especifica "default", la opción QUOTED_IDENTIFIER debe tener el valor ON para la sesión actual. QUOTED_IDENTIFIER es ON de forma predeterminada. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
@@ -186,7 +186,7 @@ Crear un índice no clúster de almacén de columnas en memoria en una tabla de 
     Especifica las columnas que se van a almacenar. Un índice de almacén de columnas no clúster está limitado a 1024 columnas.  
    Cada columna debe ser de un tipo de datos compatible con los índices de almacén de columnas. Vea [limitaciones y restricciones](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) para obtener una lista de los tipos de datos admitidos.  
 
-ON [*database_name*. [*schema_name* ]. | *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    Especifica el uno, dos o tres partes de nombre de la tabla que contiene el índice.  
 
 CON DROP_EXISTING = [DESACTIVADO] | ON  
@@ -255,12 +255,12 @@ ON
 *filegroup_name*  
    Especifica el nombre de un grupo de archivos en el que se va a crear el índice. Si *filegroup_name* no se ha especificado y la tabla no tiene particiones, el índice usa el mismo grupo de archivos que la tabla subyacente. El grupo de archivos debe existir previamente.  
  
-**"**predeterminado**"**  
+**"**default**"**  
 Crea el índice especificado en el grupo de archivos predeterminado.  
   
 El término predeterminado (default), en este contexto, no es una palabra clave. Es un identificador para el grupo de archivos predeterminado y debe delimitarse, como en ON **"**predeterminado**"** u ON **[**predeterminado**]**. Si se especifica "default", la opción QUOTED_IDENTIFIER debe tener el valor ON para la sesión actual. Esta es la configuración predeterminada. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla.  
   
 ##  <a name="GenRemarks"></a>Notas generales  
@@ -275,7 +275,7 @@ Las opciones SET de la columna de valor requerido son necesarias siempre que se 
 - La operación INSERT, UPDATE, DELETE o MERGE modifica los datos de un índice filtrado.  
 - Se utiliza el índice filtrado por el optimizador de consultas para generar el plan de consulta.  
   
-    |Opciones de Set|Valor requerido|Valor de servidor predeterminado|Valor predeterminado<br /><br /> Valor de OLE DB y ODBC|Valor predeterminado<br /><br /> predeterminado|  
+    |Opciones SET|Valor requerido|Valor de servidor predeterminado|Valor predeterminado<br /><br /> Valor de OLE DB y ODBC|Valor predeterminado<br /><br /> predeterminado|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -302,20 +302,20 @@ Las opciones SET de la columna de valor requerido son necesarias siempre que se 
 **Cada columna de un índice de almacén de columnas debe ser de uno de los tipos de datos empresariales comunes siguientes:** 
 -   DateTimeOffset [(  *n*  )]  
 -   datetime2 [(  *n*  )]  
--   DATETIME  
+-   datetime  
 -   smalldatetime  
--   Date  
+-   date  
 -   tiempo [(  *n*  )]  
 -   float [(  *n*  )]  
 -   real [(  *n*  )]  
 -   decimal [( *precisión* [ *, escala* ] **)** ]
 -   numérico [( *precisión* [ *, escala* ] **)** ]    
 -   money  
--   SMALLMONEY  
--   BIGINT  
--   INT  
+-   smallmoney  
+-   bigint  
+-   int  
 -   smallint  
--   TINYINT  
+-   tinyint  
 -   bit  
 -   nvarchar [(  *n*  )] 
 -   nvarchar (max) (se aplica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y base de datos de SQL de Azure en premium tarifa, en los índices de almacén de columnas agrupado solo)   
@@ -353,7 +353,7 @@ Si la tabla subyacente tiene una columna de un tipo de datos que no se admite pa
  **Índices de almacén de columnas no se puede combinar con las siguientes características:**  
 -   Columnas calculadas A partir de SQL Server 2017, un índice de almacén de columnas agrupado puede contener una columna calculada no persistente. Sin embargo, en SQL Server 2017, índices de almacén de columnas agrupado no pueden contener columnas calculadas persistentes y no se puede crear índices no agrupados en columnas calculadas. 
 -   Compresión de página y fila, y **vardecimal** el formato de almacenamiento (un índice de almacén de columnas ya está comprimido en un formato diferente).  
--   REPLICATION  
+-   Replicación  
 -   Secuencia de archivos
 
 No puede utilizar los cursores o desencadenadores en una tabla con un índice de almacén de columnas agrupado. Esta restricción no se aplica a los índices no agrupados; Puede utilizar los cursores y desencadenadores en una tabla con un índice no clúster de almacén de columnas.

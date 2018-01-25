@@ -24,15 +24,15 @@ helpviewer_keywords:
 - backup header information [SQL Server]
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 caps.latest.revision: "95"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5ea17d9f848a47639b748e6f243f604e0e3e2bb2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 840793c4bbfee8282676cf90d42d6e7a6c4d6b42
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Instrucciones - de RESTORE HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -95,16 +95,16 @@ FROM <backup_device>
   
 |Nombre de columna|Tipo de datos|Descripción de los conjuntos de copia de seguridad de SQL Server|  
 |-----------------|---------------|--------------------------------------------|  
-|**Nombrecopiadeseguridad**|**nvarchar (128)**|Nombre del conjunto de copia de seguridad.|  
+|**BackupName**|**nvarchar(128)**|Nombre del conjunto de copia de seguridad.|  
 |**BackupDescription**|**nvarchar(255)**|Descripción del conjunto de copia de seguridad.|  
-|**BackupType**|**smallint**|Tipo de copia de seguridad:<br /><br /> **1** = base de datos<br /><br /> **2** = registro de transacciones<br /><br /> **4** = archivo<br /><br /> **5** = base de datos diferencial<br /><br /> **6** = archivo diferencial<br /><br /> **7** = parcial<br /><br /> **8** = parcial diferencial|  
+|**BackupType**|**smallint**|Tipo de copia de seguridad:<br /><br /> **1** = base de datos<br /><br /> **2** = registro de transacciones<br /><br /> **4** = archivo<br /><br /> **5** = base de datos diferencial<br /><br /> **6** = archivo diferencial<br /><br /> **7** = Partial<br /><br /> **8** = parcial diferencial|  
 |**ExpirationDate**|**datetime**|Fecha de expiración del conjunto de copia de seguridad.|  
-|**Comprimido**|**BYTE(1)**|Si el conjunto de copia de seguridad se comprime con el sistema de compresión por software:<br /><br /> **0** = No<br /><br /> **1** = yes|  
+|**Compressed**|**BYTE(1)**|Si el conjunto de copia de seguridad se comprime con el sistema de compresión por software:<br /><br /> **0** = No<br /><br /> **1** = yes|  
 |**Posición**|**smallint**|Posición del conjunto de copia de seguridad en el volumen (para utilizarlo con la opción FILE =).|  
-|**Tipo de dispositivo**|**tinyint**|Número correspondiente al dispositivo utilizado para la operación de copia de seguridad.<br /><br /> Disco:<br /><br /> **2** = lógico<br /><br /> **102** = físico<br /><br /> Cinta:<br /><br /> **5** = lógico<br /><br /> **105** = físico<br /><br /> Dispositivo virtual:<br /><br /> **7** = lógico<br /><br /> **107** = físico<br /><br /> Nombres de dispositivos lógicos y números de dispositivo se encuentran en **sys.backup_devices**; para obtener más información, consulte [sys.backup_devices &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
-|**UserName**|**nvarchar (128)**|Nombre del usuario que ha ejecutado la operación de copia de seguridad.|  
-|**ServerName**|**nvarchar (128)**|Nombre del servidor que escribió el conjunto de copia de seguridad.|  
-|**DatabaseName**|**nvarchar (128)**|Nombre de la base de datos de la que se realizó la copia de seguridad.|  
+|**Tipo de dispositivo**|**tinyint**|Número correspondiente al dispositivo utilizado para la operación de copia de seguridad.<br /><br /> Disco:<br /><br /> **2** = Logical<br /><br /> **102** = físico<br /><br /> Cinta:<br /><br /> **5** = Logical<br /><br /> **105** = físico<br /><br /> Dispositivo virtual:<br /><br /> **7** = Logical<br /><br /> **107** = físico<br /><br /> Nombres de dispositivos lógicos y números de dispositivo se encuentran en **sys.backup_devices**; para obtener más información, consulte [sys.backup_devices &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
+|**UserName**|**nvarchar(128)**|Nombre del usuario que ha ejecutado la operación de copia de seguridad.|  
+|**ServerName**|**nvarchar(128)**|Nombre del servidor que escribió el conjunto de copia de seguridad.|  
+|**DatabaseName**|**nvarchar(128)**|Nombre de la base de datos de la que se realizó la copia de seguridad.|  
 |**DatabaseVersion**|**int**|Versión de la base de datos de la que se creó la copia de seguridad.|  
 |**DatabaseCreationDate**|**datetime**|Fecha y hora en que se creó la base de datos.|  
 |**BackupSize**|**numeric(20,0)**|Tamaño de la copia de seguridad, en bytes.|  
@@ -123,11 +123,11 @@ FROM <backup_device>
 |**SoftwareVersionMajor**|**int**|Número de versión principal del servidor donde se creó el conjunto de copia de seguridad.|  
 |**SoftwareVersionMinor**|**int**|Número de versión secundario del servidor donde se creó el conjunto de copia de seguridad.|  
 |**SoftwareVersionBuild**|**int**|Número de compilación del servidor donde se creó el conjunto de copia de seguridad.|  
-|**MachineName**|**nvarchar (128)**|Nombre del equipo donde se realizó la operación de copia de seguridad.|  
-|**Marcas**|**int**|Significados de los bits de marcas individuales si establece en **1**:<br /><br /> **1** = registro de copia de seguridad contiene operaciones masivas.<br /><br /> **2** = copia de seguridad de instantánea.<br /><br /> **4** = base de datos era de solo lectura al copia de seguridad.<br /><br /> **8** = base de datos estaba en modo de usuario único al copia de seguridad.<br /><br /> **16** = copia de seguridad contiene sumas de comprobación de copia de seguridad.<br /><br /> **32** = base de datos se dañó durante la copia de seguridad, pero se solicitó la operación de copia de seguridad que continúe a pesar de errores.<br /><br /> **64** = copia del final del registro.<br /><br /> **128** = copia del final del registro con metadatos incompletos.<br /><br /> **256** = copia del final del registro con NORECOVERY.<br /><br /> **Importante:** se recomienda que, en lugar de **marcas** usar las columnas booleanas individuales (enumerados a continuación a partir de **HasBulkLoggedData** y terminando con  **IsCopyOnly**).|  
+|**MachineName**|**nvarchar(128)**|Nombre del equipo donde se realizó la operación de copia de seguridad.|  
+|**Flags**|**int**|Significados de los bits de marcas individuales si establece en **1**:<br /><br /> **1** = registro de copia de seguridad contiene operaciones masivas.<br /><br /> **2** = copia de seguridad de instantánea.<br /><br /> **4** = base de datos era de solo lectura al copia de seguridad.<br /><br /> **8** = base de datos estaba en modo de usuario único al copia de seguridad.<br /><br /> **16** = copia de seguridad contiene sumas de comprobación de copia de seguridad.<br /><br /> **32** = base de datos se dañó durante la copia de seguridad, pero se solicitó la operación de copia de seguridad que continúe a pesar de errores.<br /><br /> **64** = copia del final del registro.<br /><br /> **128** = copia del final del registro con metadatos incompletos.<br /><br /> **256** = copia del final del registro con NORECOVERY.<br /><br /> **Importante:** se recomienda que, en lugar de **marcas** usar las columnas booleanas individuales (enumerados a continuación a partir de **HasBulkLoggedData** y terminando con  **IsCopyOnly**).|  
 |**BindingID**|**uniqueidentifier**|Id. de enlace de la base de datos. Esto corresponde a **sys.database_recovery_status***database_guid**. Cuando se restaura una base de datos, se asigna un valor nuevo. Consulte también **FamilyGUID** (abajo).|  
 |**RecoveryForkID**|**uniqueidentifier**|Id. de la bifurcación de recuperación final. Esta columna corresponde a **last_recovery_fork_guid** en el [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) tabla.<br /><br /> Para las copias de seguridad de datos, **RecoveryForkID** es igual a **FirstRecoveryForkID**.|  
-|**Intercalación**|**nvarchar (128)**|Intercalación que utiliza la base de datos.|  
+|**Intercalación**|**nvarchar(128)**|Intercalación que utiliza la base de datos.|  
 |**FamilyGUID**|**uniqueidentifier**|Id. de la base de datos original cuando se creó. Este valor permanece invariable cuando se restaura la base de datos.|  
 |**HasBulkLoggedData**|**bit**|**1** = copia de seguridad de registro que contiene operaciones masivas.|  
 |**IsSnapshot**|**bit**|**1** = copia de seguridad de instantánea.|  
@@ -141,16 +141,16 @@ FROM <backup_device>
 |**IsCopyOnly**|**bit**|**1** = una copia de seguridad de solo copia.<br /><br /> Una copia de seguridad de solo copia no afecta a los procedimientos de copias de seguridad y restauración generales de la base de datos. Para obtener más información, vea [Copias de seguridad de solo copia &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).|  
 |**FirstRecoveryForkID**|**uniqueidentifier**|Id. de la bifurcación de recuperación inicial. Esta columna corresponde a **first_recovery_fork_guid** en el [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) tabla.<br /><br /> Para las copias de seguridad de datos, **FirstRecoveryForkID** es igual a **RecoveryForkID**.|  
 |**ForkPointLSN**|**numeric(25,0)** NULL|Si **FirstRecoveryForkID** no es igual a **RecoveryForkID**, es el número de secuencia de registro del punto de bifurcación. De lo contrario, este valor es NULL.|  
-|**RecoveryModel**|**nvarchar (60)**|Modelo de recuperación de la base de datos; uno de los siguientes valores:<br /><br /> FULL<br /><br /> BULK-LOGGED<br /><br /> SIMPLE|  
+|**RecoveryModel**|**nvarchar(60)**|Modelo de recuperación de la base de datos; uno de los siguientes valores:<br /><br /> FULL<br /><br /> BULK-LOGGED<br /><br /> SIMPLE|  
 |**DifferentialBaseLSN**|**numeric(25,0)** NULL|Para una única copia de seguridad diferencial, el valor es igual a la **FirstLSN** de la base diferencial; los cambios con LSN mayores o iguales que **DifferentialBaseLSN** se incluyen en la copia diferencial.<br /><br /> Para una copia de seguridad diferencial con varias copias de seguridad base, el valor es NULL y el LSN de la copia de seguridad base debe determinarse en el nivel de archivo. Para obtener más información, vea [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).<br /><br /> Para los tipos de copia de seguridad no diferenciales, el valor es siempre NULL.<br /><br /> Para obtener más información, vea [Copias de seguridad diferenciales &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).|  
 |**DifferentialBaseGUID**|**uniqueidentifier**|Para una copia de seguridad diferencial con una única copia de seguridad base, el valor es el identificador único de la base diferencial.<br /><br /> Para las copias de seguridad diferenciales con varias copias de seguridad base, el valor es NULL y la base diferencial debe determinarse por archivo.<br /><br /> Para los tipos de copia de seguridad no diferenciales, el valor es NULL.|  
-|**BackupTypeDescription**|**nvarchar (60)**|Tipo de copia de seguridad como cadena, uno de los siguientes valores:<br /><br /> DATABASE<br /><br /> TRANSACTION LOG<br /><br /> FILE OR FILEGROUP<br /><br /> DATABASE DIFFERENTIAL<br /><br /> FILE DIFFERENTIAL PARTIAL<br /><br /> PARTIAL DIFFERENTIAL|  
+|**BackupTypeDescription**|**nvarchar(60)**|Tipo de copia de seguridad como cadena, uno de los siguientes valores:<br /><br /> DATABASE<br /><br /> TRANSACTION LOG<br /><br /> FILE OR FILEGROUP<br /><br /> DATABASE DIFFERENTIAL<br /><br /> FILE DIFFERENTIAL PARTIAL<br /><br /> PARTIAL DIFFERENTIAL|  
 |**BackupSetGUID**|**uniqueidentifier** NULL|Número de identificación único del conjunto de copia de seguridad mediante el cual se identifica en los medios.|  
 |**CompressedBackupSize**|**bigint**|Recuento de bytes del conjunto de copia de seguridad. Copias de seguridad sin comprimir, este valor es igual a **BackupSize**.<br /><br /> Para calcular la razón de compresión, utilice **CompressedBackupSize** y **BackupSize**.<br /><br /> Durante una **msdb** actualización, este valor se establece para que coincida con el valor de la **BackupSize** columna.|  
-|**contención**|**tinyint** not NULL|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica el estado de contención de la base de datos.<br /><br /> 0 = el estado de contención de la base de datos es OFF<br /><br /> 1 = la base de datos está en estado de contención parcial|  
-|**KeyAlgorithm**|**nvarchar (32)**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) a través de la versión actual.<br /><br /> Algoritmo de cifrado usado para cifrar la copia de seguridad. NO_Encryption indica que no se cifró la copia de seguridad. Cuando no se puede determinar el valor correcto, el valor debe ser NULL.|  
+|**containment**|**tinyint** not NULL|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica el estado de contención de la base de datos.<br /><br /> 0 = el estado de contención de la base de datos es OFF<br /><br /> 1 = la base de datos está en estado de contención parcial|  
+|**KeyAlgorithm**|**nvarchar(32)**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) a través de la versión actual.<br /><br /> Algoritmo de cifrado usado para cifrar la copia de seguridad. NO_Encryption indica que no se cifró la copia de seguridad. Cuando no se puede determinar el valor correcto, el valor debe ser NULL.|  
 |**EncryptorThumbprint**|**varbinary(20)**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) a través de la versión actual.<br /><br /> La huella digital del sistema de cifrado que se puede utilizar para encontrar el certificado o la clave asimétrica en la base de datos. Si la copia de seguridad no se cifró, este valor es NULL.|  
-|**EncryptorType**|**nvarchar (32)**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) a través de la versión actual.<br /><br /> Tipo de sistema de cifrado usado: certificado o clave asimétrica. Si la copia de seguridad no se cifró, este valor es NULL.|  
+|**EncryptorType**|**nvarchar(32)**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) a través de la versión actual.<br /><br /> Tipo de sistema de cifrado usado: certificado o clave asimétrica. Si la copia de seguridad no se cifró, este valor es NULL.|  
   
 > [!NOTE]  
 >  Si se definen contraseñas para los conjuntos de copia de seguridad, RESTORE HEADERONLY solo muestra información completa para el conjunto de copia de seguridad cuya contraseña coincida con la opción PASSWORD especificada en el comando. RESTORE HEADERONLY también muestra información completa para los conjuntos de copia de seguridad no protegidos. El **Nombrecopiadeseguridad** columna para la copia protegido con contraseña, se establece en el medio se establece en ' *** con protección por contraseña\*\*\*', y todas las demás columnas son NULL.  

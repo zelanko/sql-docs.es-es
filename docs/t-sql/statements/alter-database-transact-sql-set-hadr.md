@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a06e868a26e0da160e70e7f2923496e73f136ff7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a601a5f93f7a922228232c8ef4a91b5775eded91
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>SET HADR de ALTER DATABASE (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,10 +62,10 @@ ALTER DATABASE database_name
  SET HADR  
  Ejecuta el comando de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] especificado en la base de datos indicada.  
   
- {El grupo de disponibilidad  **=**  *nombre_grupo* | {OFF}  
+ {El grupo de disponibilidad **= *** nombre_grupo* | {OFF}  
  Une o quita la base de datos de disponibilidad del grupo de disponibilidad especificado, de la manera siguiente:  
   
- *nombre_grupo*  
+ *group_name*  
  Une la base de datos especificada de la réplica secundaria hospedada por la instancia del servidor en la que se ejecuta el comando al grupo de disponibilidad especificado por group_name.  
   
  Los requisitos previos para esta operación son los siguientes:  
@@ -133,7 +133,7 @@ ALTER DATABASE database_name
   
 ## <a name="security"></a>Seguridad  
   
-### <a name="permissions"></a>Permisos  
+### <a name="permissions"></a>Permissions  
  Requiere el permiso ALTER en la base de datos. Combinar una base de datos a un grupo de disponibilidad requiere ser miembro de la **db_owner** rol fijo de base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -149,7 +149,7 @@ ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;
 ## <a name="see-also"></a>Vea también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [Crear grupo de disponibilidad &#40; Transact-SQL &#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [Información general de grupos de disponibilidad AlwaysOn &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) [Solucionar problemas de configuración de grupos de disponibilidad AlwaysOn &#40; SQL Server &#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
   
   

@@ -16,13 +16,13 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 caps.latest.revision: "14"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 69f4f470cf049deb3ce3b38a2bcb75f37265b31b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4957b8d665f9aa887a5ad4ab18a2e8441ea4cc2d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-function-sql-data-warehouse"></a>CREATE (función) (almacenamiento de datos SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -72,7 +72,7 @@ RETURNS return_data_type
  *schema_name*  
  Nombre del esquema al que pertenece la función definida por el usuario.  
   
- *nombre_función*  
+ *function_name*  
  Nombre de la función definida por el usuario. Nombres de función deben cumplir las reglas para identificadores y deben ser únicos dentro de la base de datos y a su esquema.  
   
 > [!NOTE]  
@@ -91,7 +91,7 @@ RETURNS return_data_type
  *parameter_data_type*  
  Es el tipo de datos de parámetro. Para [!INCLUDE[tsql](../../includes/tsql-md.md)] funciones, todos los tipos de datos escalares admitidos en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] se permiten. El tipo de datos de marca de tiempo (rowversion) no es un tipo admitido.  
   
- [=*predeterminado* ]  
+ [ =*default* ]  
  Es un valor predeterminado para el parámetro. Si un *predeterminado* se define un valor, la función se puede ejecutar sin especificar un valor para ese parámetro.  
   
  Cuando un parámetro de la función tiene un valor predeterminado, se debe especificar la palabra clave DEFAULT al llamar a la función para recuperar el valor predeterminado. Este comportamiento es distinto del uso de parámetros con valores predeterminados en los procedimientos almacenados, donde la omisión del parámetro implica especificar el valor predeterminado.  
@@ -107,7 +107,7 @@ RETURNS return_data_type
  *scalar_expression*  
  Especifica el valor escalar que devuelve la función escalar.  
   
- **\<function_option >:: =** 
+ **\<function_option>::=** 
   
  Especifica que la función tendrá una o más de las siguientes opciones.  
   

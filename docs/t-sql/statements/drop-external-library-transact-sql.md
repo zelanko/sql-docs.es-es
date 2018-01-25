@@ -18,12 +18,12 @@ dev_langs: TSQL
 helpviewer_keywords: DROP EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: 23ea7a2d914dd1dd0eabcb411b3636f19a8cd70d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: craigg
+ms.openlocfilehash: 8c45da28bf795fca50454fde21eb7d2c3c798296
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="drop-external-library-transact-sql"></a>QUITAR biblioteca externa (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ DROP EXTERNAL LIBRARY library_name
 
 ### <a name="arguments"></a>Argumentos
 
-**nombre_de_biblioteca**
+**library_name**
 
 Especifica el nombre de una biblioteca de paquete existente.
 

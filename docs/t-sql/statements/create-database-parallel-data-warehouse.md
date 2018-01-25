@@ -15,13 +15,13 @@ ms.assetid: 40cacde4-ac72-45f7-9564-d76e2b4a741a
 caps.latest.revision: "13"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 622dd3433ad5cb900dbbcb23777add948ea5474b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4e9ff76a4d260604a93f59baa3b61f5c37b4952f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-database-parallel-data-warehouse"></a>Crear base de datos (almacenamiento de datos en paralelo)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -55,21 +55,21 @@ WITH (
   
  Crecimiento automático es ON para todos los tamaños o OFF para todos los tamaños. Por ejemplo, no es posible establecer ON de crecimiento automático para *log_size*, pero no la estableció *replicated_size*.  
   
- *replicated_size* [GB]  
+ *replicated_size* [ GB ]  
  Un número positivo. Establece el tamaño (en gigabytes de entero o decimal) para el espacio total asignado a las tablas replicadas y los datos correspondientes *en cada nodo de ejecución*. Para los valores mínimo y máximo *replicated_size* requisitos, vea "Mínimo y máximo valores" en el [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
  Si el crecimiento automático está activado, se permitirá que las tablas replicadas crezca más allá de este límite.  
   
  Si el crecimiento automático está desactivado, se devolverá un error si un usuario intenta crear una nueva tabla replicada, insertar datos en una existente que se replican de tabla, o actualización una existente tabla replicada de una manera que podría aumentar el tamaño más allá de *replicated_size*.  
   
- *distributed_size* [GB]  
+ *distributed_size* [ GB ]  
  Un número positivo. El tamaño, en gigabytes de entero o decimal, para el espacio total asignado a tablas distribuidas (y los datos correspondientes) *en el dispositivo*. Para los valores mínimo y máximo *distributed_size* requisitos, vea "Mínimo y máximo valores" en el [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
  Si el crecimiento automático está activado, se permitirá tablas distribuidas crezca más allá de este límite.  
   
  Si el crecimiento automático está desactivado, se devolverá un error si un usuario intenta crear una nueva tabla distribuida, insertar datos en una existente que se distribuyen de la tabla, o actualizar una tabla existente distribuida de manera que podría aumentar el tamaño más allá de *distributed_size* .  
   
- *log_size* [GB]  
+ *log_size* [ GB ]  
  Un número positivo. El tamaño (en gigabytes de entero o decimal) del registro de transacciones *en el dispositivo*.  
   
  Para los valores mínimo y máximo *log_size* requisitos, vea "Mínimo y máximo valores" en el [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  

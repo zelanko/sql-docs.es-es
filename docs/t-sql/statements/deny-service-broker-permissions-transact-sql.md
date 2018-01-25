@@ -25,15 +25,15 @@ helpviewer_keywords:
 - services [Service Broker], permissions
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c63c3d62d0104642953545da75b0f7fa1b988eb0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 100c447d3a258ecf8a590173a7c0ef161f0fad3e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY (permisos de Service Broker de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,22 +59,22 @@ DENY permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permiso*  
+ *permission*  
  Especifica un permiso que se puede denegar para un elemento protegible de [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
- CONTRATO **::***contract_name*  
+ CONTRACT **::***contract_name*  
  Especifica el contrato en el que se va a denegar el permiso. El calificador de ámbito **::** es necesario.  
   
- TIPO de mensaje **::***message_type_name*  
+ TIPO de mensaje **:: *** message_type_name*  
  Especifica el tipo de mensaje en el que se va a denegar el permiso. El calificador de ámbito **::** es necesario.  
   
  REMOTE SERVICE BINDING **::***remote_binding_name*  
  Especifica el enlace de servicio remoto en el que se va a denegar el permiso. El calificador de ámbito **::** es necesario.  
   
- RUTA **::***route_name*  
+ RUTA **:: *** route_name*  
  Especifica la ruta en la que se va a denegar el permiso. El calificador de ámbito **::** es necesario.  
   
- SERVICIO **::***message_type_name*  
+ SERVICE **::***message_type_name*  
  Especifica el servicio en el que se va a denegar el permiso. El calificador de ámbito **::** es necesario.  
   
  *database_principal*  

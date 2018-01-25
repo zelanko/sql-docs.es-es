@@ -23,15 +23,15 @@ helpviewer_keywords:
 - routes [Service Broker], modifying
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 221fcf4d801d062d491935c8380abd4f75b83285
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e9ae2ef58b234919dab8057b00afd64efa0cc89b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,13 +81,13 @@ WHERE database_id = DB_ID();
 > [!NOTE]  
 >  Esta opción no está disponible en las bases de datos independientes.  
   
- DURACIÓN  **=**  *route_lifetime*  
+ DURACIÓN **= *** route_lifetime*  
  Especifica el tiempo, en segundos, durante el que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retiene la ruta en la tabla de enrutamiento. Transcurrido este tiempo, la ruta expira y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ya no la tiene en cuenta al elegir una ruta para una conversación nueva. Si se omite esta cláusula, la vigencia de la ruta no varía.  
   
- DIRECCIÓN **='***next_hop_address'*  
+ ADDRESS **='***next_hop_address'*  
  Especifica la dirección de red para esta ruta. El *next_hop_address* especifica una dirección TCP/IP en el formato siguiente:  
   
- **TCP: / /** { *dns_name* | *nombreNetBIOS* |*dirección_IP* } **:**  *número_puerto*  
+ **TCP://** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  
   
  Especificado *port_number* debe coincidir con el número de puerto para el [!INCLUDE[ssSB](../../includes/sssb-md.md)] punto de conexión de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo especificado. Se puede obtener ejecutando la consulta siguiente en la base de datos seleccionada:  
   
@@ -111,7 +111,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
  MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
  Especifica la dirección de red para el servidor reflejado de un par reflejado cuyo servidor principal está en el *next_hop_address*. El *next_hop_mirror_address* especifica una dirección TCP/IP en el formato siguiente:  
   
- **TCP: / /**{ *dns_name* | *nombreNetBIOS* | *dirección_IP* } **:**  *número_puerto*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
  Especificado *port_number* debe coincidir con el número de puerto para el [!INCLUDE[ssSB](../../includes/sssb-md.md)] punto de conexión de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo especificado. Se puede obtener ejecutando la consulta siguiente en la base de datos seleccionada:  
   
@@ -183,7 +183,7 @@ ALTER ROUTE ExpenseRoute
   
 ## <a name="see-also"></a>Vea también  
  [CREATE ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/create-route-transact-sql.md)   
- [DROP ROUTE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-route-transact-sql.md)   
+ [DROP ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-route-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

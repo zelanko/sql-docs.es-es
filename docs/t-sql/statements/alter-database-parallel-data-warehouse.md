@@ -15,13 +15,13 @@ ms.assetid: 5751656b-7aae-4152-a314-4c631bea4fc4
 caps.latest.revision: "10"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 522f8c8404e80943e093ebeb0a56698fa790b6c9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7db44d9c9f02618e4d95a9d3eb9dfc581438dea5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-parallel-data-warehouse"></a>Modificar base de datos (almacenamiento de datos en paralelo)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -63,7 +63,7 @@ ALTER DATABASE database_name
  DISTRIBUTED_SIZE = *tamaño* [GB]  
  Especifica el nuevo gigabytes máximos por base de datos para almacenar todas las tablas distribuidas en la base de datos que se va a modificar. El tamaño se distribuye entre todos los nodos de proceso en el dispositivo.  
   
- LOG_SIZE = *tamaño* [GB]  
+ LOG_SIZE = *size* [GB]  
  Especifica el nuevo gigabytes máximos por base de datos para almacenar todos los registros de transacciones en la base de datos que se va a modificar. El tamaño se distribuye entre todos los nodos de proceso en el dispositivo.  
   
  CIFRADO {ON | {OFF}  

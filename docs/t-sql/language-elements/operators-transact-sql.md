@@ -19,13 +19,13 @@ ms.assetid: 1fc2de8b-e7e0-4c61-9a02-4776a7d93ab7
 caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: aca3c208ec385b850de00c09f4fc2cdaea4226ad
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 535dcd920d25c347dc507c8f869706a49a1163a8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="operators-transact-sql"></a>Operadores (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,6 +41,6 @@ ms.lasthandoff: 01/19/2018
 |[Operadores compuestos](../../t-sql/language-elements/compound-operators-transact-sql.md)|[Operadores unarios](http://msdn.microsoft.com/library/c4748146-4049-4040-8826-56c464410878)|  
   
 ## <a name="see-also"></a>Vea también  
- [Prioridad de operador &#40; Transact-SQL &#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
+ [Prioridad de operador & #40; Transact-SQL & #41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DBCC DBREINDEX (Transact-SQL) | Documentos de Microsoft
+title: DBCC DBREINDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - DBCC DBREINDEX statement
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 caps.latest.revision: "52"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ec9cbe9b5b8d7757c63b5dcca3b9011245ec0fd3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 991c16eea9a651270ca299e72cafbc822465a9b3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Vuelve a generar uno o varios índices para una tabla en la base de datos especificada.
@@ -62,7 +62,7 @@ DBCC DBREINDEX
  *index_name*  
  Es el nombre del índice que se va a volver a generar. Los nombres de los índices deben ajustarse a las reglas de los identificadores. Si *index_name* se especifica, *table_name* debe especificarse. Si *index_name* no se especifica o es "", se vuelven a generar todos los índices de la tabla.  
   
- *factor de relleno*  
+ *fillfactor*  
  Es el porcentaje de espacio de cada página de índice que se utiliza para almacenar los datos cuando el índice se crea o se vuelve a generar. *valor de FILLFACTOR* reemplaza el factor de relleno cuando se creó el índice, se convierta en el nuevo valor predeterminado para el índice y para cualquier otro índice no clúster vuelve a generar porque se vuelve a generar un índice agrupado.  
  Cuando *fillfactor* es 0, DBCC DBREINDEX utiliza el valor de factor de relleno para el índice de la última vez. Este valor se almacena en la **sys.indexes** vista de catálogo.   
  Si *fillfactor* se especifica, *table_name* y *index_name* debe especificarse. Si *fillfactor* no se especifica, se utiliza el factor de relleno predeterminado, 100,. Para obtener más información, vea [Especificar el factor de relleno para un índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  

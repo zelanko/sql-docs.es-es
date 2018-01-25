@@ -24,13 +24,13 @@ ms.assetid: 159969a7-8313-41bc-bb19-c55af76597e6
 caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e5740ac99d06b23851652a8d4faccd7d1ffa9c1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a2851147a37d9a99ab2f1fee8c1e3083e7a5f4fd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="deny-xml-schema-collection-permissions-transact-sql"></a>DENY (permisos de colección de esquemas XML de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,19 +62,19 @@ DENY permission  [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permiso*  
+ *permission*  
  Especifica un permiso que se puede denegar en una colección de esquemas XML. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
- COLECCIÓN de esquemas XML ON:: [ *schema_name***.** ] *XML_schema_collection_name*  
+ ON XML SCHEMA COLLECTION :: [ *schema_name***.** ] *XML_schema_collection_name*  
  Especifica la colección de esquemas XML en la que se va a denegar el permiso. Se requiere el calificador de ámbito (::). Si *schema_name* no se especifica, se utiliza el esquema predeterminado. Si *schema_name* se especifica, se requiere el calificador de ámbito de esquema (.).  
   
- PARA \<database_principal >  
+ TO \<database_principal>  
  Especifica la entidad de seguridad a la que se deniega el permiso.  
   
  CASCADE  
  Indica que el permiso que se va a denegar también se denegará a otras entidades de seguridad a las que esta entidad de seguridad ha concedido permisos.  
   
- AS \<database_principal >  
+ AS \<database_principal>  
  Especifica una entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de denegar el permiso.  
   
  *Database_user*  
@@ -130,7 +130,7 @@ GO
 ## <a name="see-also"></a>Vea también  
  [CONCEDER permisos de colección de esquemas XML &#40; Transact-SQL &#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)   
  [REVOCAR permisos de colección de esquemas XML &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)   
- [Sys.xml_schema_collections &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
+ [sys.xml_schema_collections &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
  [Crear colección de esquemas XML &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

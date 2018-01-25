@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: sql_variant data type
 ms.assetid: 12ff1ea6-e2cc-40e6-910c-3126974a90b3
 caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2636d11a4d25a1c53c22a172020f67b90fa0df15
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7e7df17e376cad6f84580bc2593413a578db0608
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sqlvariant-support-for-date-and-time-types"></a>compatibilidad con tipos de fecha y hora de sql_variant
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,26 +42,26 @@ ms.lasthandoff: 01/08/2018
 |------------|-----------------|--------------|  
 |SQL_C_CHAR|varchar|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
 |SQL_C_WCHAR|nvarcar|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
-|SQL_C_TINYINT|SMALLINT|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
-|SQL_C_STINYINT|SMALLINT|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
-|SQL_C_SHORT|SMALLINT|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
-|SQL_C_SSHORT|SMALLINT|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
-|SQL_C_USHORT|INT|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
-|SQL_C_LONG|INT|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
-|SQL_C_SLONG|INT|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
-|SQL_C_ULONG|BIGINT|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
-|SQL_C_SBIGINT|BIGINT|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
-|SQL_C_FLOAT|REAL|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
-|SQL_C_DOUBLE|FLOAT|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
+|SQL_C_TINYINT|smallint|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
+|SQL_C_STINYINT|smallint|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
+|SQL_C_SHORT|smallint|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
+|SQL_C_SSHORT|smallint|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
+|SQL_C_USHORT|int|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
+|SQL_C_LONG|int|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
+|SQL_C_SLONG|int|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
+|SQL_C_ULONG|bigint|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
+|SQL_C_SBIGINT|bigint|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
+|SQL_C_FLOAT|real|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
+|SQL_C_DOUBLE|float|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
 |SQL_C_BIT|bit|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
-|SQL_C_UTINYINT|TINYINT|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
+|SQL_C_UTINYINT|tinyint|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
 |SQL_C_BINARY|varbinary|No se establece SQL_CA_SS_VARIANT_SQL_TYPE.|  
 |SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> Escala se establece en SQL_DESC_PRECISION (el *ColumnSize* parámetro de **SQLBindParameter**).|  
 |SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIMESTAMPOFFSET<br /><br /> Escala se establece en SQL_DESC_PRECISION (el *ColumnSize* parámetro de **SQLBindParameter**).|  
-|SQL_C_TYPE_DATE|Date|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
+|SQL_C_TYPE_DATE|date|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
 |SQL_C_TYPE_TIME|time(0)|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
 |SQL_C_TYPE_TIMESTAMP|datetime2|Escala se establece en SQL_DESC_PRECISION (el *ColumnSize* parámetro de **SQLBindParameter**).|  
-|SQL_C_NUMERIC|Decimal|Precisión se establece en SQL_DESC_PRECISION (el *ColumnSize* parámetro de **SQLBindParameter**).<br /><br /> Escala se establece en SQL_DESC_SCALE (el *ColumnSize* parámetro de SQLBindParameter).|  
+|SQL_C_NUMERIC|decimal|Precisión se establece en SQL_DESC_PRECISION (el *ColumnSize* parámetro de **SQLBindParameter**).<br /><br /> Escala se establece en SQL_DESC_SCALE (el *ColumnSize* parámetro de SQLBindParameter).|  
 |SQL_C_SS_TIME2|time|Se ignora SQL_CA_SS_VARIANT_SQL_TYPE.|  
 |SQL_C_SS_TIMESTAMPOFFSET|datetimeoffset|Se ignora SQL_CA_SS_VARIANT_SQL_TYPE.|  
   

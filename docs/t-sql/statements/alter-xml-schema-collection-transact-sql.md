@@ -32,13 +32,13 @@ ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
 caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 004d015a6a9dbaf3af565b6c0f02192180c1a001
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b33ecc2a5ca9838e5f9dd80dabd9bbddf90250ee
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
  *sql_identifier*  
  Es el identificador de SQL para la colección de esquemas XML.  
   
- **'** *Componente de esquema* **'**  
+ **'** *Schema Component* **'**  
  Es el componente de esquema que se va a insertar.  
   
 ## <a name="remarks"></a>Comentarios  

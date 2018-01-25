@@ -16,13 +16,13 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 caps.latest.revision: "9"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a21ee8a4a525e2b8c522de140a3f482915cdb361
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c46d4df3d19b2c548b203f62a14ea4ebc0226296
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Permisos: GRANT, DENY y REVOKE (almacenamiento de datos SQL Azure, almacenamiento de datos en paralelo)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -86,9 +86,9 @@ REVOKE
   
  ON [ \<class_type >::] *protegible* el **ON** cláusula describe el parámetro que se puede proteger en el que se va a conceder, denegar o revocar permisos.  
   
- \<class_type > el tipo de clase del elemento protegible. Esto puede ser **inicio de sesión**, **base de datos**, **objeto**, **esquema**, **rol**, o **usuario** . También se pueden conceder permisos a la **SERVER***class_type*, pero **SERVER** no se especifica para esos permisos. **Base de datos** no se especifica si el permiso incluye la palabra **base de datos** (por ejemplo **ALTER ANY DATABASE**). Si no *class_type* se especifica y el tipo de permiso no está restringido en el servidor o la clase de base de datos, se supone que la clase **objeto**.  
+ \<class_type > el tipo de clase del elemento protegible. Esto puede ser **inicio de sesión**, **base de datos**, **objeto**, **esquema**, **rol**, o **usuario** . También se pueden conceder permisos a la **SERVER *** class_type*, pero **SERVER** no se especifica para esos permisos. **Base de datos** no se especifica si el permiso incluye la palabra **base de datos** (por ejemplo **ALTER ANY DATABASE**). Si no *class_type* se especifica y el tipo de permiso no está restringido en el servidor o la clase de base de datos, se supone que la clase **objeto**.  
   
- *elemento protegible*  
+ *securable*  
  El nombre del inicio de sesión, base de datos, tabla, vista, esquema, procedimiento, rol o usuario en el que se va a conceder, denegar o revocar permisos. Se puede especificar el nombre del objeto con las reglas de nomenclatura de tres partes que se describen en [convenciones de sintaxis de Transact-SQL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
  PARA *principal* [ **,**... *n* ]  
@@ -230,7 +230,7 @@ REVOKE
   
 -   DELETE  
   
--   EXECUTE  
+-   Ejecute  
   
 -   INSERT  
   

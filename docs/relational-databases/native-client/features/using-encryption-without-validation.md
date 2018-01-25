@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Native Client, encryption
 ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d19f47d30ddb7c4849f31611e0bc59170404a52c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 943a6aa49feee1d9bbd7a8fdc59392479e104735
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-encryption-without-validation"></a>Utilizar el cifrado sin validación
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,11 +37,11 @@ ms.lasthandoff: 01/08/2018
 
 Los certificados autofirmados no garantizan la seguridad. El protocolo de enlace cifrado se basa en NT LAN Manager (NTLM). Se recomienda encarecidamente que aprovisionar un certificado comprobable en SQL Server para una conexión segura. Capa de seguridad de transporte (TLS) puede estar seguro únicamente con la validación de certificados.
 
-Las aplicaciones pueden solicitar también el cifrado de todo el tráfico de red mediante palabras clave de cadenas de conexión o propiedades de conexión. Las palabras clave son "Encrypt" para ODBC y OLE DB cuando se usa una cadena de proveedor con **IDBInitialize:: Initialize**, o "Use Encryption for Data" para ADO y OLE DB cuando se usa una cadena de inicialización con **IDataInitialize** . Esto también se puede configurar por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager mediante la **Forzar cifrado de protocolo** opción y la configuración en el cliente para que solicite conexiones cifradas. De forma predeterminada, el cifrado de todo el tráfico de red de una conexión requiere que se proporcione un certificado en el servidor. Estableciendo el cliente para confiar en el certificado en el servidor, pueden ser vulnerables a ataques de man-in-the-middle. Si implementa un certificado comprobable en el servidor, asegúrese de que cambia la configuración del cliente sobre el certificado de confianza en FALSE.
+Las aplicaciones pueden solicitar también el cifrado de todo el tráfico de red mediante palabras clave de cadenas de conexión o propiedades de conexión. Las palabras clave son "Encrypt" para ODBC y OLE DB cuando se usa una cadena de proveedor con **IDBInitialize:: Initialize**, o "Use Encryption for Data" para ADO y OLE DB cuando se usa una cadena de inicialización con **IDataInitialize **. Esto también se puede configurar por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager mediante la **Forzar cifrado de protocolo** opción y la configuración en el cliente para que solicite conexiones cifradas. De forma predeterminada, el cifrado de todo el tráfico de red de una conexión requiere que se proporcione un certificado en el servidor. Estableciendo el cliente para confiar en el certificado en el servidor, pueden ser vulnerables a ataques de man-in-the-middle. Si implementa un certificado comprobable en el servidor, asegúrese de que cambia la configuración del cliente sobre el certificado de confianza en FALSE.
 
 Para obtener información sobre las palabras clave de cadena de conexión, vea [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Para habilitar el cifrado que se usará cuando no se ha proporcionado un certificado en el servidor, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager puede utilizarse para establecer el **Forzar cifrado de protocolo** y **confiar en certificado de servidor**  opciones. En ese caso, el cifrado utilizará un certificado de servidor autofirmado sin validación si no se ha proporcionado ningún certificado comprobable en el servidor.  
+ Para habilitar el cifrado que se usará cuando no se ha proporcionado un certificado en el servidor, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager puede utilizarse para establecer el **Forzar cifrado de protocolo** y **confiar en certificado de servidor ** opciones. En ese caso, el cifrado utilizará un certificado de servidor autofirmado sin validación si no se ha proporcionado ningún certificado comprobable en el servidor.  
   
  Las aplicaciones también pueden utilizar la palabra clave "TrustServerCertificate" o su atributo de conexión asociado para garantizar que se realiza el cifrado. La configuración de las aplicaciones nunca reduce el nivel de seguridad establecido por el Administrador de configuración cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], pero sí puede reforzarlo. Por ejemplo, si **Forzar cifrado de protocolo** no se ha establecido para el cliente, una aplicación puede solicitar cifrado en Sí. Para garantizar el cifrado incluso cuando no se ha proporcionado un certificado de servidor, una aplicación puede solicitar el cifrado y "TrustServerCertificate". Sin embargo, si "TrustServerCertificate" no está habilitado en la configuración del cliente, se requiere igualmente un certificado de servidor. En la tabla siguiente se describen todos los casos:  
   

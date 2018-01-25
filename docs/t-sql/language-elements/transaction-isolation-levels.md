@@ -20,12 +20,12 @@ ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
 caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 220cbbb856bc96aa4e44ea5a3d665fc9ce09da77
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+manager: craigg
+ms.openlocfilehash: 7afedcca33139a18a54c35e37250d7f893516280
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transaction-isolation-levels"></a>Niveles de aislamiento de transacción
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/19/2018
   
 -   Funciones y vistas de administración dinámica  
   
- Para obtener más información acerca de los niveles de aislamiento, consulte [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41; ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ Para obtener más información acerca de los niveles de aislamiento, consulte [SET TRANSACTION ISOLATION LEVEL & #40; Transact-SQL & #41; ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
  En la siguiente tabla se proporciona un resumen de acceso a metadatos en distintos niveles de aislamiento.  
   

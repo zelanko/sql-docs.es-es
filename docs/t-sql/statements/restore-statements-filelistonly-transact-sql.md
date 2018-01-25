@@ -23,15 +23,15 @@ helpviewer_keywords:
 - listing backed up files
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
 caps.latest.revision: "83"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 54e5a186bc7beaa13cfb1fef8d69cc1fbf34cbf0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e6776115033e6e7222abc610673dd8b0aaff81dc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>Instrucciones - de RESTORE FILELISTONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,10 +88,10 @@ FROM <backup_device>
   
 |Nombre de columna|Tipo de datos|Description|  
 |-|-|-|  
-|LogicalName|**nvarchar (128)**|Nombre lógico del archivo.|  
-|PhysicalName|**nvarchar (260)**|Nombre físico o del sistema operativo del archivo.|  
-|Tipo|**Char (1)**|Uno de los tipos de archivo:<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivo de registro<br /><br /> **D.**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivo de datos<br /><br /> **F** = catálogo de texto completo<br /><br /> **S** = FileStream, FileTable o [!INCLUDE[hek_2](../../includes/hek-2-md.md)] contenedor|  
-|FileGroupName|**nvarchar (128)**|Nombre del grupo de archivos que contiene el archivo.|  
+|LogicalName|**nvarchar(128)**|Nombre lógico del archivo.|  
+|PhysicalName|**nvarchar(260)**|Nombre físico o del sistema operativo del archivo.|  
+|Tipo|**char(1)**|Uno de los tipos de archivo:<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivo de registro<br /><br /> **D.**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivo de datos<br /><br /> **F** = catálogo de texto completo<br /><br /> **S** = FileStream, FileTable o [!INCLUDE[hek_2](../../includes/hek-2-md.md)] contenedor|  
+|FileGroupName|**nvarchar(128)**|Nombre del grupo de archivos que contiene el archivo.|  
 |Tamaño|**numeric(20,0)**|Tamaño actual, en bytes.|  
 |MaxSize|**numeric(20,0)**|Tamaño máximo permitido, en bytes.|  
 |FileID|**bigint**|Identificador de archivo, único en la base de datos.|  

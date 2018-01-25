@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: ALTER RESOURCE POOL
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 357dab163aca094928f5c417c605dcb699c922b1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4edf3d8f20cc3705a6303d55f471dfa74c250f74
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,13 +71,13 @@ ALTER RESOURCE POOL { pool_name | "default" }
 > [!NOTE]  
 >  Grupos de recursos y grupos de cargas de trabajo predefinido utilizan nombres en minúsculas, por ejemplo, "default". Debe tenerse esto en cuenta en los servidores que usan una intercalación que distingue entre mayúsculas y minúsculas. En los servidores que usan una intercalación que no distingue entre mayúsculas y minúsculas, como SQL_Latin1_General_CP1_CI_AS, los nombres "predeterminado" y "Predeterminado" son equivalentes.  
   
- MIN_CPU_PERCENT =*valor*  
+ MIN_CPU_PERCENT =*value*  
  Especifica el ancho banda de la CPU promedio garantizado para todas las solicitudes en el grupo de recursos de servidor cuando hay contención de CPU. *valor* es un entero con un valor predeterminado de 0. El intervalo permitido para *valor* está comprendido entre 0 y 100.  
   
- MAX_CPU_PERCENT =*valor*  
+ MAX_CPU_PERCENT =*value*  
  Especifica el promedio máximo de ancho banda de CPU que recibirán todas las solicitudes en el grupo de recursos de servidor cuando hay contención de CPU. *valor* es un entero con un valor predeterminado de 100. El intervalo permitido para *valor* está comprendido entre 1 y 100.  
   
- CAP_CPU_PERCENT =*valor*  
+ CAP_CPU_PERCENT =*value*  
  **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica la capacidad máxima de CPU de destino para las solicitudes del grupo de recursos. *valor* es un entero con un valor predeterminado de 100. El intervalo permitido para *valor* está comprendido entre 1 y 100.  
@@ -102,10 +102,10 @@ INNER JOIN sys.dm_os_schedulers AS sc
       AND sc.scheduler_id < 1048576;  
 ```  
   
- MIN_MEMORY_PERCENT =*valor*  
+ MIN_MEMORY_PERCENT =*value*  
  Especifica la cantidad mínima de memoria reservada para este grupo de recursos de servidor que no se puede compartir con otros grupos de recursos de servidor. *valor* es un entero con un valor predeterminado de 0. El intervalo permitido para *valor* está comprendido entre 0 y 100.  
   
- MAX_MEMORY_PERCENT =*valor*  
+ MAX_MEMORY_PERCENT =*value*  
  Especifica la memoria total del servidor que puede ser utilizada por las solicitudes en este grupo de recursos de servidor. *valor* es un entero con un valor predeterminado de 100. El intervalo permitido para *valor* está comprendido entre 1 y 100.  
   
  MIN_IOPS_PER_VOLUME =*valor*  

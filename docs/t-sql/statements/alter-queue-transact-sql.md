@@ -25,15 +25,15 @@ helpviewer_keywords:
 - activation stored procedures [Service Broker]
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2774da9a0a75c4645a4bd64237ec99a7cf92d771
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7f97bd0a341ecc5e960c94c4c8bdabe30b572fd9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,10 +93,10 @@ WITH
  *database_name* (objeto)  
  Es el nombre de la base de datos que contiene la cola que se va a cambiar. Si no *database_name* es siempre el valor predeterminado es la base de datos actual.  
   
- *schema_name* (objeto)  
+ *schema_name* (object)  
  Nombre del esquema al que pertenece la nueva cola. Si no *schema_name* es siempre el valor predeterminado es el esquema predeterminado para el usuario actual.  
   
- *nombre_de_cola*  
+ *queue_name*  
  Es el nombre de la cola que se va a cambiar.  
   
  STATUS (cola)  
@@ -114,7 +114,7 @@ WITH
  STATUS (activación)   
  Especifica si una cola activa o no el procedimiento almacenado. Si STATUS = ON, la cola inicia el procedimiento almacenado especificado con PROCEDURE_NAME cuando el número de procedimientos que se ejecutan actualmente es menor que MAX_QUEUE_READERS y cuando los mensajes llegan a la cola antes de que los procedimientos almacenados reciban mensajes. Si STATUS = OFF, la cola no activa el procedimiento almacenado.  
   
- Volver a generar [WITH \<queue_rebuild_options >]  
+ REBUILD [ WITH \<queue_rebuild_options> ]  
  **Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Vuelve a generar todos los índices de la tabla interna de la cola. Use esta función cuando están experimentando problemas de fragmentación debido a una carga elevada. MAXDOP es la cola compatible sola opción rebuild. Volver a generar siempre es una operación sin conexión.  
@@ -136,10 +136,10 @@ A diferencia de REORGANIZACIÓN en tablas de usuario, REORGANIZE en una cola sie
  Procedure_name = \<procedimiento >  
  Especifica el nombre del procedimiento almacenado que se va a activar cuando la cola contiene mensajes para procesar. Este valor debe ser un identificador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- *database_name* (procedimiento)  
+ *database_name* (procedure)  
  Nombre de la base de datos que contiene el procedimiento almacenado.  
   
- *schema_name* (procedimiento)  
+ *schema_name* (procedure)  
  Nombre del esquema que tiene la propiedad del procedimiento almacenado.  
   
  *stored_procedure_name*  
@@ -154,7 +154,7 @@ A diferencia de REORGANIZACIÓN en tablas de usuario, REORGANIZE en una cola sie
  SELF  
  Especifica que el procedimiento almacenado se ejecuta como el usuario actual. Es la entidad de seguridad de base de datos que ejecuta esta instrucción ALTER QUEUE.  
   
- '*nombre_usuario*'  
+ '*user_name*'  
  Es el nombre de usuario con el que se ejecuta el procedimiento almacenado. *user_name* debe ser válido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usuario especificado como un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificador. El usuario actual debe tener el permiso IMPERSONATE para el *nombre_usuario* especificado.  
   
  OWNER  
@@ -262,7 +262,7 @@ ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]
   
 ## <a name="see-also"></a>Vea también  
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
- [Eliminar cola &#40; Transact-SQL &#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
+ [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
   

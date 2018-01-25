@@ -1,5 +1,5 @@
 ---
-title: EXPLICAR (Transact-SQL) | Documentos de Microsoft
+title: EXPLAIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 caps.latest.revision: "13"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3aa20ea08fe34eab316a41d46ea955a78e4be512
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 515c21cbf7874c0268eeedad0b67e0ce7cf3726d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="explain-transact-sql"></a>EXPLICAR (Transact-SQL)
+# <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Devuelve el plan de consulta para un [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] instrucción sin ejecutar la instrucción. Use **EXPLICATIVO** para vista previa de las operaciones que requerirá el movimiento de datos y ver los costos estimados de las operaciones de consulta.  
@@ -68,11 +68,11 @@ EXPLAIN SQL_statement
   
 |(Etiqueta XML)|Resumen, atributos y contenido|  
 |-------------|--------------------------------------|  
-|\<dsql_query >|Elemento de documento o de nivel superior.|
-|\<SQL >|Devuelve como eco *SQL_statement*.|  
-|\<params >|Esta etiqueta no se utiliza en este momento.|  
-|\<dsql_operations >|Se resumen y contiene los pasos de consulta e incluye información de costo de la consulta. También contiene todos los `<dsql_operation>` bloques. Esta etiqueta contiene información de recuento para toda la consulta:<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* es el tiempo total estimado para la consulta se ejecute, en milisegundos.<br /><br /> *total_number_operations* es el número total de operaciones para la consulta. Una operación que se pueden ejecutar en paralelo y ejecutar en varios nodos se cuenta como una única operación.|  
-|\<dsql_operation >|Describe una operación única dentro del plan de consulta. El \<dsql_operation > etiqueta contiene el tipo de operación como un atributo:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* es uno de los valores encontrados en [consulta de datos (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c).<br /><br /> El contenido de la `\<dsql_operation>` bloque es depende del tipo de operación.<br /><br /> Vea la siguiente tabla.|  
+|\<dsql_query>|Elemento de documento o de nivel superior.|
+|\<sql>|Devuelve como eco *SQL_statement*.|  
+|\<params>|Esta etiqueta no se utiliza en este momento.|  
+|\<dsql_operations>|Se resumen y contiene los pasos de consulta e incluye información de costo de la consulta. También contiene todos los `<dsql_operation>` bloques. Esta etiqueta contiene información de recuento para toda la consulta:<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* es el tiempo total estimado para la consulta se ejecute, en milisegundos.<br /><br /> *total_number_operations* es el número total de operaciones para la consulta. Una operación que se pueden ejecutar en paralelo y ejecutar en varios nodos se cuenta como una única operación.|  
+|\<dsql_operation>|Describe una operación única dentro del plan de consulta. El \<dsql_operation > etiqueta contiene el tipo de operación como un atributo:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* es uno de los valores encontrados en [consulta de datos (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c).<br /><br /> El contenido de la `\<dsql_operation>` bloque es depende del tipo de operación.<br /><br /> Vea la siguiente tabla.|  
   
 |Tipo de operación|Contenido|Ejemplo|  
 |--------------------|-------------|-------------|  

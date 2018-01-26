@@ -24,16 +24,16 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - ODBC data types, autotranslating character data
 ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 566e248ce15929f8ff599602e920544df395a453
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 26dc8b3db6dae8f93f7e029a47b28d438d418cbf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="autotranslation-of-character-data"></a>Traducción automática de datos de caracteres
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,6 +69,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Vea también  
  [Procesar resultados &#40; ODBC &#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)   
- [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   

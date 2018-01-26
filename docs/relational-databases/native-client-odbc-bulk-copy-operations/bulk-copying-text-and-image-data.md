@@ -17,16 +17,16 @@ helpviewer_keywords:
 - bulk copy [ODBC], image data
 - ODBC, bulk copy operations
 ms.assetid: 87155bfa-3a73-4158-9d4d-cb7435dac201
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9fd2eaafe7911cddd81cb7417d4e63ed641fdb1a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 67b2cf5a000fc96468536bffcb07a9955be5592e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bulk-copying-text-and-image-data"></a>Copia masiva de datos de texto e imagen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

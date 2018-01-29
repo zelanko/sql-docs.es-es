@@ -8,29 +8,31 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE_EXTERNAL_TABLE
 - CREATE EXTERNAL TABLE
 - PolyBase, T-SQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - External
 - External, table create
 - PolyBase, external table
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eab36ee612c3e559bf13db948c128ea6428063ae
-ms.sourcegitcommit: 3cc7ffde800b451923c523fd549e8f4b4994f052
+ms.openlocfilehash: 97381b5381491b98c81a6863b3cfcdc6a340c79e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-table-transact-sql"></a>Crear tabla externa (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -148,7 +150,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 >  SQL Server no admite el subárbol _infinito_ valor de datos en cualquier conversión. PolyBase se producirá un error de conversión de tipo de datos.
 
 
-|Tipo de datos de SQL|Tipo de datos de .NET|Tipo de datos de Hive|Tipo de datos de Hadoop/Java|Comentarios|  
+|Tipo de datos de SQL|Tipo de datos de .NET|Tipo de datos de Hive|Hadoop/Java Data Type|Comentarios|  
 |-------------------|--------------------|--------------------|----------------------------|--------------|  
 |tinyint|Byte|tinyint|ByteWritable|Sólo números sin signo.|  
 |smallint|Int16|smallint|ShortWritable||  
@@ -159,17 +161,17 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 |real|Único|float|FloatWritable||  
 |money|Decimal|double|DoubleWritable||  
 |smallmoney|Decimal|double|DoubleWritable||  
-|nchar|String<br /><br /> Char]|string|texto||  
-|nvarchar|String<br /><br /> Char]|string|Texto||  
-|char|String<br /><br /> Char]|string|Texto||  
-|varchar|String<br /><br /> Char]|string|Texto||  
+|NCHAR|String<br /><br /> Char[]|string|texto||  
+|nvarchar|String<br /><br /> Char[]|string|Texto||  
+|char|String<br /><br /> Char[]|string|Texto||  
+|varchar|String<br /><br /> Char[]|string|Texto||  
 |binary|Byte[]|binary|BytesWritable|Se aplica al subárbol 0,8 y versiones posterior.|  
 |varbinary|Byte[]|binary|BytesWritable|Se aplica al subárbol 0,8 y versiones posterior.|  
-|date|DateTime|timestamp|TimestampWritable||  
-|smalldatetime|DateTime|timestamp|TimestampWritable||  
-|datetime2|DateTime|timestamp|TimestampWritable||  
-|datetime|DateTime|timestamp|TimestampWritable||  
-|time|Timespan|timestamp|TimestampWritable||  
+|date|DateTime|TIMESTAMP|TimestampWritable||  
+|smalldatetime|DateTime|TIMESTAMP|TimestampWritable||  
+|datetime2|DateTime|TIMESTAMP|TimestampWritable||  
+|datetime|DateTime|TIMESTAMP|TimestampWritable||  
+|time|Timespan|TIMESTAMP|TimestampWritable||  
 |decimal|Decimal|decimal|BigDecimalWritable|Se aplica a Hive0.11 y versiones posteriores.|  
   
  UBICACIÓN = '*folder_or_filepath*'  

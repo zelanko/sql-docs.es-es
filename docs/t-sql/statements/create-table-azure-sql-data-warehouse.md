@@ -8,21 +8,23 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 42b3f397fa93b2134594e10476138d5d30e0015f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f6e639bf97ed132b6ace7128b4cbe9b6f3ce474e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>Crear tabla (almacenamiento de datos SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -109,19 +111,19 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
    
 ### <a name="ColumnOptions"></a>Opciones de columna
 
- `COLLATE`*Windows_collation_name*  
+ `COLLATE` *Windows_collation_name*  
  Especifica la intercalación de la expresión. La intercalación debe ser una de las intercalaciones de Windows compatibles con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de intercalaciones de Windows admitidas por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [nombre de intercalación de Windows (Transact-SQL)](http://msdn.microsoft.com/library/ms188046\(v=sql11\)/).  
   
  `NULL` | `NOT NULL`  
  Especifica si `NULL` se permiten valores en la columna. El valor predeterminado es `NULL`.  
   
- [ `CONSTRAINT` *constraint_name* ] `DEFAULT` *expresiónConstante*  
+ [ `CONSTRAINT` *constraint_name* ] `DEFAULT` *constant_expression*  
  Especifica el valor de columna predeterminado.  
   
  | Argumento | Explicación |
  | -------- | ----------- |
  | *constraint_name* | El nombre opcional para la restricción. El nombre de la restricción es único dentro de la base de datos. El nombre puede ser volver a usar en otras bases de datos. |
- | *expresiónConstante* | El valor predeterminado para la columna. La expresión debe ser un valor literal o una constante. Por ejemplo, se permiten estas expresiones constantes: `'CA'`, `4`. No se permiten estas: `2+3`, `CURRENT_TIMESTAMP`. |
+ | *constant_expression* | El valor predeterminado para la columna. La expresión debe ser un valor literal o una constante. Por ejemplo, se permiten estas expresiones constantes: `'CA'`, `4`. No se permiten estas: `2+3`, `CURRENT_TIMESTAMP`. |
   
 
 ### <a name="TableOptions"></a>Opciones de la estructura de tabla
@@ -447,7 +449,7 @@ WITH
   );  
 ```  
   
-### <a name="Replicated"></a>G. Crear una tabla replicada  
+### <a name="Replicated"></a> G. Crear una tabla replicada  
  En el ejemplo siguiente se crea una tabla replicada similar a los ejemplos anteriores. Las tablas replicadas se copian por completo en cada nodo de ejecución. Con esta copia en cada nodo de proceso, se reduce el movimiento de datos para las consultas. En este ejemplo se crea con un índice agrupado, que proporciona una mejor compresión de datos de un montón y no puede contener filas suficientes para lograr buena compresión CLUSTERED COLUMNSTORE INDEX.  
   
 ```  
@@ -467,7 +469,7 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>Ejemplos de las particiones de tabla
 
-###  <a name="PartitionedTable"></a>H. Crear una tabla con particiones  
+###  <a name="PartitionedTable"></a> H. Crear una tabla con particiones  
  En el ejemplo siguiente se crea la misma tabla, tal como se muestra en el ejemplo A, con la adición de partición RANGE LEFT en la `id` columna. Especifica valores de límite de cuatro particiones, que da como resultado cinco particiones.  
   
 ```  
@@ -501,7 +503,7 @@ WITH
 -   Partición 4:30 < = col < 40   
 -   Partición 5:40 < = col  
   
-### <a name="OnePartition"></a>I. Crear una tabla con particiones con una partición  
+### <a name="OnePartition"></a> I. Crear una tabla con particiones con una partición  
  En el ejemplo siguiente se crea una tabla con particiones con una partición. No especifique los valores de límite, que da como resultado una partición.  
   
 ```  
@@ -517,7 +519,7 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a>J. Crear una tabla con particiones de fecha  
+### <a name="DatePartition"></a> J. Crear una tabla con particiones de fecha  
  En el ejemplo siguiente se crea una nueva tabla denominada `myTable`, con la partición en un `date` columna. Al usar RANGE RIGHT y fechas para los valores de límite, coloca un mes de datos de cada partición.  
   
 ```  

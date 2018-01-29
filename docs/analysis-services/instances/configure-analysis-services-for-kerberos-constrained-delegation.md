@@ -12,7 +12,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
@@ -90,7 +90,7 @@ ms.lasthandoff: 01/08/2018
   
 4.  En la página Seleccionar usuarios o equipos, escriba la cuenta usada para ejecutar la instancia de SQL Server que proporciona datos a bases de datos de modelos tabulares de Analysis Services. Haga clic en **Aceptar** para aceptar la cuenta de servicio.  
   
-     Si no puede seleccionar la cuenta que desea, compruebe que SQL Server está en ejecución y tiene un SPN registrado para esta cuenta. Para obtener más información acerca de los SPN para el motor de base de datos, vea [Register a Service Principal Name for Kerberos Connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
+     Si no puede seleccionar la cuenta que desea, compruebe que SQL Server está en ejecución y tiene un SPN registrado para esta cuenta. Para obtener más información acerca de los SPN para el motor de base de datos, vea [Registrar un nombre principal de servicio para las conexiones con Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
      ![SSAS_Kerberos_3_SelectUsers](../../analysis-services/instances/media/ssas-kerberos-3-selectusers.gif "SSAS_Kerberos_3_SelectUsers")  
   

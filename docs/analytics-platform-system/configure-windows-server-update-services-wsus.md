@@ -15,12 +15,12 @@ ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
-caps.latest.revision: "41"
-ms.openlocfilehash: 234c1ee3b13f3440e3f8a0377f3423ccf937acbc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 
+ms.openlocfilehash: cc95a4f26970b91f2346e3edfcfa937190694b43
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="configure-windows-server-update-services-wsus"></a>Configurar Windows Server Update Services (WSUS)
 Estas instrucciones le guiará por los pasos para utilizar al Asistente para que configuración de Windows Server Update Services (WSUS) para configurar WSUS para Analytics Platform System. Debe configurar WSUS para poder aplicar las actualizaciones de software para el dispositivo. WSUS se ha instalado en la máquina virtual VMM del dispositivo.  
@@ -61,7 +61,7 @@ Para configurar WSUS, debe:
   
     1.  En el **panel Administrador del servidor**, en la **herramientas** menú, haga clic en **Windows Server Update Services**.  
   
-    2.  En el panel izquierdo de la **Update Services** ventana, haga clic para expandir el servidor de nodo de administración de máquinas virtuales (***appliance_domain*- VMM**) y, a continuación, haga clic en **Opciones**.  
+    2.  En el panel izquierdo de la **Update Services** ventana, haga clic para expandir el servidor de nodo de administración de máquinas virtuales (***appliance_domain *-VMM**) y, a continuación, haga clic en **opciones**.  
   
     3.  En el **opciones** panel, haga clic en **Asistente para configuración de servidor de WSUS** para iniciar el Asistente de configuración.  
   
@@ -148,7 +148,7 @@ Para configurar WSUS, debe:
   
     Anule la selección de todas las actualizaciones seleccionadas.  
   
-    Seleccione **SQL Server 2014**, **Windows Server 2012 R2**, y **System Center 2012 R2 - Virtual Machine Manager**y, a continuación, haga clic en **siguiente**.  
+    Seleccione **SQL Server 2014**, **SQL Server 2016**, **Windows Server 2012 R2**, y **System Center 2012 R2 - Virtual Machine Manager**, y a continuación, haga clic en **siguiente**.  
   
 9. Elegir clasificaciones.  
   

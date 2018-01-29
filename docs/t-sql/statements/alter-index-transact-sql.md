@@ -8,13 +8,15 @@ ms.service:
 ms.component: tsql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
 - ALTER_INDEX_TSQL
-dev_langs: t-sql
+dev_langs:
+- t-sql
 helpviewer_keywords:
 - indexes [SQL Server], reorganizing
 - ALTER INDEX statement
@@ -46,16 +48,16 @@ helpviewer_keywords:
 - index rebuild [SQL Server]
 - index reorganize [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: "222"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 24c7f8121439958cd9d0d4f17254b0520cbaa857
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: a5bf734d607c6954c1652df9b9814a31b2224740
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -206,7 +208,7 @@ ALTER INDEX { index_name | ALL }
  *schema_name*  
  Es el nombre del esquema al que pertenece la tabla o la vista.  
   
- *nombre_tabla_o_vista*  
+ *table_or_view_name*  
  Es el nombre de la tabla o vista asociada al índice. Para mostrar un informe de los índices en un objeto, utilice la [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) vista de catálogo.  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]admite nombre_basedeDatos de formato de nombre de tres partes. [nombre_esquema]. nombre_tabla_o_vista cuando nombre_basedeDatos es la base de datos actual o nombre_basedeDatos es tempdb y nombre_tabla_o_vista comienza con #.  
@@ -244,13 +246,13 @@ PARTITION
 > [!WARNING]
 >  La creación y regeneración de índices no alineados en una tabla con más de 1.000 particiones es posible, pero no se admite. Si se hace, se puede degradar el rendimiento o consumir excesiva memoria durante estas operaciones. Se recomienda usar solo índices alineados cuando el número de particiones sea superior a 1.000.  
   
- *número_de_partición*  
+ *partition_number*  
    
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Es el número de partición de un índice con particiones que se va a volver a generar o a reorganizar. *número_de_partición* es una expresión constante que puede hacer referencia a variables. Estas incluyen variables o funciones de tipo definido por el usuario y funciones definidas por el usuario, pero no pueden hacer referencia a una instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)]. *número_de_partición* debe existir o se produce un error en la instrucción.  
   
- CON **(**\<single_partition_rebuild_index_option >**)**  
+ WITH **(**\<single_partition_rebuild_index_option>**)**  
    
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -307,7 +309,10 @@ Para los índices de almacén de columnas de [!INCLUDE[ssNoVersion](../../includ
 -   Grupos de filas en el que el 10% o más de las filas se han eliminado lógicamente, SQL Server intentará combinar este grupo de filas con uno o varios grupos de filas.    Por ejemplo, 1 del grupo de filas se comprimió con 500.000 filas y 21 de grupo de filas se comprimió con el máximo de 1.048.576 filas.  21 de grupo de filas tiene 60% de las filas eliminadas que deja 409,830 filas. SQL Server, se favorece combinar estos dos grupos de filas para comprimir un nuevo grupo de filas que tiene 909,830 filas.  
   
 REORGANIZAR CON (COMPRESS_ALL_ROW_GROUPS = {ON | **OFF** })  
- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)], el COMPRESS_ALL_ROW_GROUPS proporciona una manera de obligar a los grupos de filas delta abierto o cerrado en el almacén de columnas. Con esta opción, no es necesario volver a generar el índice de almacén de columnas para vaciar los grupos de filas delta.  Esto, combinado con lo otro remove y mezcla desfragmentación características hace que ya no es necesario volver a generar el índice en la mayoría de los casos.    
+
+ **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) y[!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+
+COMPRESS_ALL_ROW_GROUPS proporciona una manera para obligar a los grupos de filas delta abierto o cerrado en el almacén de columnas. Con esta opción, no es necesario volver a generar el índice de almacén de columnas para vaciar los grupos de filas delta.  Esto, combinado con lo otro remove y mezcla desfragmentación características hace que ya no es necesario volver a generar el índice en la mayoría de los casos.    
 
 -   ON obliga a todos los grupos de filas en el almacén de columnas, independientemente del tamaño y el estado (cerrados o abiertos).  
   
@@ -472,7 +477,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** | {OFF}
 > [!NOTE]
 >  No es posible reorganizar un índice cuando ALLOW_PAGE_LOCKS está establecido en OFF.  
   
- MAXDOP  **=**  max_degree_of_parallelism  
+ MAXDOP **=** max_degree_of_parallelism  
  
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -533,7 +538,7 @@ El valor predeterminado es 0 minutos.
   
  Para obtener más información acerca de la compresión, vea [compresión de datos](../../relational-databases/data-compression/data-compression.md).  
   
- EN las particiones **(** { \<partition_number_expression > | \<intervalo >} [**,**... n] **)**  
+ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [**,**...n] **)**  
     
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. 
   
@@ -880,9 +885,9 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. Comprimir todos abierto y cerrado grupos de filas delta al almacén de columnas  
- No se aplica a: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+ **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) y[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
- A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede ejecutar REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) para comprimir cada grupo de filas delta abierto y cerrado en el almacén de columnas como un grupo de filas comprimido. Esto vacía lo almacenes delta y obliga a todas las filas a comprimirse en el almacén de columnas. Esto es útil sobre todo después de realizar muchas operaciones de inserción porque estas operaciones almacenan las filas de uno o varios almacenes delta.  
+ El comando REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) compreses cada abiertos y cerrados grupo de filas delta al almacén de columnas como un grupo de filas comprimido. Esto vacía lo almacenes delta y obliga a todas las filas a comprimirse en el almacén de columnas. Esto es útil sobre todo después de realizar muchas operaciones de inserción porque estas operaciones almacenan las filas de uno o varios almacenes delta.  
   
  REORGANIZE combina grupos de filas para rellenar los grupos de filas hasta un número máximo de filas \<= 1,024,576. Por lo tanto, al comprimir todos los grupos de filas abierto y cerrado no terminará con una gran cantidad de grupos de filas comprimidos que solo tienen algunas filas en ellos. Desea que grupos de filas sea tan completa como sea posible reducir el tamaño comprimido y mejorar el rendimiento de las consultas.  
   
@@ -1166,8 +1171,8 @@ Para obtener ejemplos de compresión de datos adicionales, consulte [compresión
 ## <a name="see-also"></a>Vea también  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [Crear índice espacial &#40; Transact-SQL &#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
- [Crear índice XML &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
- [DROP INDEX &#40; Transact-SQL &#41;](../../t-sql/statements/drop-index-transact-sql.md)   
+ [CREATE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
+ [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)   
  [Deshabilitar índices y restricciones](../../relational-databases/indexes/disable-indexes-and-constraints.md)   
  [Índices XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)   
  [Realizar operaciones de índice en línea](../../relational-databases/indexes/perform-index-operations-online.md)   

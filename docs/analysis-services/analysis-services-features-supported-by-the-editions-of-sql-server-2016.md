@@ -12,18 +12,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f09d7be1-bd63-43f8-b91c-bf19166b4457
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0b69db6baee27296bf9544801b627c884d68795b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 14c64237e32d433592f44fcbd0d56bd661cc4940
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="analysis-services-features-supported-by-the-editions-of-sql-server-2016"></a>Características de Analysis Services compatibles con las ediciones de SQL Server 2016
+# <a name="analysis-services-features-supported-by-sql-server-editions"></a>Características de Analysis Services compatibles con las ediciones de SQL Server
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
 
 Este tema proporciona detalles de las características admitidas por las diversas ediciones de SQL Server 2016 Analysis Services. Encontrará características compatibles con las ediciones Evaluation y Developer, Enterprise edition.
@@ -44,8 +44,8 @@ Este tema proporciona detalles de las características admitidas por las diversa
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Jerarquías|Sí|Sí|||||Sí|  
 |KPI|Sí|Sí|||||Sí|  
-|perspectivas|Sí||||||Sí|  
-|Translations|Sí|Sí|||||Sí|  
+|Perspectivas|Sí||||||Sí|  
+|Traducciones|Sí|Sí|||||Sí|  
 |Cálculos de DAX, consultas de DAX, consultas MDX|Sí|Sí|||||Sí|  
 |Seguridad de nivel de fila|Sí|Sí|||||Sí|  
 |Varias particiones|Sí||||||Sí|  
@@ -59,7 +59,7 @@ Este tema proporciona detalles de las características admitidas por las diversa
 |Medidas de suma parcial|Sí|No <sup>1</sup>|||||Sí|  
 |Jerarquías|Sí|Sí|||||Sí|  
 |KPI|Sí|Sí|||||Sí|  
-|perspectivas|Sí||||||Sí|  
+|Perspectivas|Sí||||||Sí|  
 |Acciones|Sí|Sí|||||Sí|  
 |Inteligencia de cuentas|Sí|Sí|||||Sí|  
 |Inteligencia de tiempo|Sí|Sí|||||Sí|  
@@ -71,7 +71,7 @@ Este tema proporciona detalles de las características admitidas por las diversa
 |Tipos de jerarquías avanzadas (jerarquías primarios-secundarios y jerarquías desiguales)|Sí|Sí|||||Sí|  
 |Dimensiones avanzadas (dimensiones de referencia, dimensiones de varios a varios)|Sí|Sí|||||Sí|  
 |Medidas y dimensiones vinculadas|Sí|Sí  <sup>2</sup> |||||Sí|  
-|Translations|Sí|Sí|||||Sí|  
+|Traducciones|Sí|Sí|||||Sí|  
 |Agregaciones|Sí|Sí|||||Sí|  
 |Varias particiones|Sí|Sí, hasta 3|||||Sí|  
 |Almacenamiento en caché automático|Sí||||||Sí|  
@@ -122,6 +122,6 @@ Este tema proporciona detalles de las características admitidas por las diversa
   
  ## <a name="see-also"></a>Vea también  
  [Especificaciones de producto para SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
- [Instalación de SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)  
+ [Instalación de SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
 
 

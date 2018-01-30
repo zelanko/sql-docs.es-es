@@ -15,12 +15,12 @@ ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
-caps.latest.revision: "43"
-ms.openlocfilehash: 65a10ada824b291e37e61a421882cf012c7b8ddc
-ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+caps.latest.revision: 
+ms.openlocfilehash: d9777fb2bbfd9af2598a422fc072877ff0b78959
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>Configurar la conectividad de PolyBase para datos externos
 Explica cómo configurar PolyBase en PDW de SQL Server para conectarse a Microsoft Azure o Hadoop almacenamiento blob orígenes de datos externos. Use PolyBase para ejecutar consultas que integran datos procedentes de varios orígenes, como Hadoop y almacenamiento de blobs de Azure, SQL Server PDW.  
@@ -53,7 +53,7 @@ Explica cómo configurar PolyBase en PDW de SQL Server para conectarse a Microso
     RECONFIGURE;  
     ```  
   
-    Ejecución de sp_configure con RECONFIGURE establece el valor de configuración. Reiniciar la región es necesario para establecer el valor de ejecución. Puesto que se requiere un reinicio después de la detención siguiente también, no es necesario realizar el reinicio hasta que después del siguiente paso que cambia core-site.xml.  
+    Ejecución de sp_configure con RECONFIGURE establece el valor de configuración. Reiniciar la región es necesario para establecer el valor de ejecución. Puesto que se requiere un reinicio después de la detención siguiente también, no es necesario realizar el reinicio hasta que después del siguiente paso, que cambia core-site.xml.  
   
 4.  Para habilitar el almacenamiento de blobs de Microsoft Azure como origen de datos externo, agregue uno o varios Microsoft Azure almacenamiento cuenta teclas de acceso al archivo de core-site.xml PDW. Para agregar una clave:  
   
@@ -61,7 +61,7 @@ Explica cómo configurar PolyBase en PDW de SQL Server para conectarse a Microso
   
         ![Nombre de cuenta de almacenamiento de Windows Azure](./media/configure-polybase-connectivity-to-external-data/APS_PDW_AzureStorageAccountName.png "APS_PDW_AzureStorageAccountName")  
   
-    2.  Buscar la clave de acceso de la cuenta de almacenamiento de Azure. Para ello, haga clic en el nombre de cuenta de almacenamiento y, en la hoja de configuración, haga clic en **claves**. Esto le mostrará las claves de almacenamiento y el nombre de cuenta.  
+    2.  Buscar la clave de acceso de la cuenta de almacenamiento de Azure. Para ello, haga clic en el nombre de cuenta de almacenamiento y, en la hoja de configuración, haga clic en **claves**. Esto muestra las claves de almacenamiento y el nombre de cuenta.  
   
         ![Claves de acceso de cuenta de almacenamiento de Windows Azure](./media/configure-polybase-connectivity-to-external-data/APS_PDW_AzureStorageAccountAccessKey.png "APS_PDW_AzureStorageAccountAccessKey")  
   
@@ -88,7 +88,7 @@ Explica cómo configurar PolyBase en PDW de SQL Server para conectarse a Microso
         ```  
   
         > [!CAUTION]  
-        > Tome medidas de seguridad antes de almacenar la clave de acceso en core-site.xml. Cualquier usuario que tenga el permiso CONTROL SERVER o ALTER ANY EXTERNAL DATA SOURCE puede crear un origen de datos externo que tiene acceso a esta cuenta. Una vez creado el origen de datos externo, todos los usuarios de PDW de SQL Server que tienen permiso para crear tablas pueden crear una tabla externa que tiene acceso a esta cuenta de almacenamiento. Los usuarios, a continuación, podrá tener acceso a datos de la cuenta y consume recursos de la cuenta.  
+        > Tome medidas de seguridad antes de almacenar la clave de acceso en core-site.xml. Cualquier usuario que tenga el permiso CONTROL SERVER o ALTER ANY EXTERNAL DATA SOURCE puede crear un origen de datos externo que tiene acceso a esta cuenta. Una vez creado el origen de datos externo, todos los usuarios de SQL Server PDW con permisos CREATE TABLE pueden crear una tabla externa que tiene acceso a esta cuenta de almacenamiento. Los usuarios pueden tener acceso a datos de la cuenta y consume recursos de la cuenta.  
   
     6.  Guarde los cambios en core-site.xml.  
   
@@ -117,13 +117,13 @@ Explica cómo configurar PolyBase en PDW de SQL Server para conectarse a Microso
       </property>  
     ```  
   
-    Una vez que una propiedad se define en yarn-site.xml, PolyBase utilizarán esos valores de propiedad cuando ejecuta consultas en la HDInsight región. Si planea ejecutar consultas de PolyBase en la HDInsight región y un clúster de 2.0 externo de Hadoop en Windows, debe haber coherencia entre todos los archivos de yarn-site.xml, o bien se producirá un error en las consultas de PolyBase.  
+    Una vez que una propiedad se define en yarn-site.xml, PolyBase usa los valores de las propiedades cuando ejecuta consultas en la HDInsight región. Si planea ejecutar consultas de PolyBase en la HDInsight región y un clúster de 2.0 externo de Hadoop en Windows, debe haber coherencia entre todos los archivos de yarn-site.xml, o bien se producirá un error en las consultas de PolyBase.  
   
     Para ejecutar PolyBase en la HDInsight región y un clúster de 2.0 Hadoop externo, use la configuración predeterminada de yarn-site.xml en su Hadoop clúster externo.  
   
 6.  Reinicie la región PDW. Para ello, use la herramienta Administrador de configuración. Vea [iniciar el Administrador de configuración &#40; Sistema de la plataforma de análisis &#41; ](launch-the-configuration-manager.md).  
   
-7.  Compruebe la configuración de seguridad para las conexiones de Hadoop. Si el **autenticación débil** en Hadoop lado se habilita mediante `dfs.permission = true`, debe crear un usuario de Hadoop **pdw_user** y conceda acceso completo de lectura y permisos de escritura para este usuario. PDW de SQL Server y las llamadas correspondientes de SQL Server PDW siempre se emiten como **pdw_user** que es un nombre de usuario fijo y no se puede cambiar en esta versión de conectividad de Hadoop y la versión de SQL Server PDW. Si se deshabilita la seguridad de Hadoop mediante el uso de `dfs.permission = false`, a continuación, es necesario realizar ninguna acción adicional.  
+7.  Compruebe la configuración de seguridad para las conexiones de Hadoop. Si el **autenticación débil** en Hadoop lado se habilita mediante `dfs.permission = true`, debe crear un usuario de Hadoop **pdw_user** y conceda acceso completo de lectura y permisos de escritura para este usuario. PDW de SQL Server y las llamadas correspondientes de SQL Server PDW siempre se emiten como **pdw_user**.  Esto es un nombre de usuario fijo y no se puede cambiar en esta versión de conectividad de Hadoop y la versión de SQL Server PDW. Si se deshabilita la seguridad de Hadoop mediante el uso de `dfs.permission = false`, a continuación, es necesario realizar ninguna acción adicional.  
   
 8.  Decidir qué usuarios pueden crear orígenes de datos externos para el almacenamiento de blobs de Microsoft Azure. Proporcionar a cada uno de estos usuarios, el nombre de cuenta de almacenamiento y también **ALTER ANY EXTERNAL DATA SOURCE** o **CONTROL SERVER** permiso.  
   
@@ -134,9 +134,9 @@ Explica cómo configurar PolyBase en PDW de SQL Server para conectarse a Microso
 Los usuarios autorizados ahora pueden crear orígenes de datos externos, formatos de archivo externos y tablas externas. Pueden utilizar para integrar datos procedentes de varios orígenes como Hadoop, almacenamiento de blobs de Microsoft Azure y SQL Server PDW.  
 
 ## <a name="kerberos-configuration"></a>Configuración de Kerberos  
-Tenga en cuenta que cuando PolyBase se autentica en un clúster protegido de Kerberos, se requiere establecer la configuración de hadoop.rpc.protection para la autenticación. Esta acción dejará la comunicación de datos entre los nodos Hadoop sin cifrar. 
+Tenga en cuenta que cuando PolyBase se autentica en un clúster seguro de Kerberos, la configuración de hadoop.rpc.protection debe establecerse para la autenticación. Esto hace que la comunicación de datos entre nodos de Hadoop sin cifrar. 
 
- Para conectarse a un clúster de Hadoop protegido con Kerberos [con MIT KDC]:
+ Para conectarse a un clúster de Hadoop protegido con Kerberos [mediante MIT KDC]:
    
   
 1.  Busque el directorio de configuración de Hadoop en la ruta de instalación en el nodo de Control:  
@@ -147,7 +147,7 @@ Tenga en cuenta que cuando PolyBase se autentica en un clúster protegido de Ker
   
 2.  Busque el valor de configuración del lado de Hadoop de las claves de configuración que se muestran en la tabla. (En el equipo de Hadoop, busque los archivos en el directorio de configuración de Hadoop).  
   
-3.  Copie los valores de configuración en la propiedad Value en los archivos correspondientes en el equipo de SQL Server.  
+3.  Copie los valores de configuración en la propiedad value en los archivos correspondientes en el nodo de Control.  
   
     |**#**|**Archivo de configuración**|**Clave de configuración**|**Acción**|  
     |------------|----------------|---------------------|----------|   
@@ -159,7 +159,9 @@ Tenga en cuenta que cuando PolyBase se autentica en un clúster protegido de Ker
     |6|mapred-site.xml|mapreduce.jobhistory.address|Busque la configuración del lado de Hadoop y cópiela en el equipo de SQL Server. Por ejemplo: 10.193.26.174:10020|  
     |7|yarn-site.xml yarn.|yarn.resourcemanager.principal|Busque la configuración del lado de Hadoop y cópiela en el equipo de SQL Server. Por ejemplo, yarn/_HOST@YOUR-REALM.COM|  
   
-4.  Cree un objeto de credencial con ámbito de base de datos para especificar la información de autenticación para cada usuario de Hadoop. Vea [PolyBase T-SQL objects (Objetos T-SQL de PolyBase)](../relational-databases/polybase/polybase-t-sql-objects.md).  
+4. Cree un objeto de credencial con ámbito de base de datos para especificar la información de autenticación para cada usuario de Hadoop. Vea [PolyBase T-SQL objects (Objetos T-SQL de PolyBase)](../relational-databases/polybase/polybase-t-sql-objects.md).  
+
+5. Reinicie la región PDW. Para ello, use la herramienta Administrador de configuración. Vea [iniciar el Administrador de configuración &#40; Sistema de la plataforma de análisis &#41; ](launch-the-configuration-manager.md).
  
 ## <a name="see-also"></a>Vea también  
 [Configuración de dispositivo &#40; Sistema de la plataforma de análisis &#41;](appliance-configuration.md)  

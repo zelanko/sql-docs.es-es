@@ -14,41 +14,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7528721b65101ee32285d57f18f93f98eeec9dae
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: f3b10fdee9956b28273553755365b9251d073964
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Instalación de Analysis Services en el modo PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Los procedimientos descritos en este tema le guiará a través de una instalación de servidor único de un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server en [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modo para una implementación de SharePoint. Los pasos incluyen la ejecución del Asistente para la instalación de SQL Server, así como tareas de configuración que usan Administración central de SharePoint.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2016 &#124; SharePoint 2013|  
-  
- **En este tema:**  
-  
- [Información previa](#bkmk_background)  
-  
- [Requisitos previos](#bkmk_prereq)  
-  
- [Paso 1: desinstalación de PowerPivot para SharePoint](#InstallSQL)  
-  
- [Paso 2: configurar la integración de SharePoint básica de Analysis Services](#bkmk_config)  
-  
- [Paso 3: comprobar la integración](#bkmk_verify)  
-  
- [Configurar Firewall de Windows para permitir el acceso a Analysis Services](#bkmk_firewall)  
-  
- [Actualizar libros y actualización de datos programada](#bkmk_upgrade_workbook)  
-  
- [Más allá de la instalación en un solo servidor: PowerPivot para Microsoft SharePoint](#bkmk_multiple_servers)  
   
 ##  <a name="bkmk_background"></a> Información previa  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint es una colección de servicios de nivel intermedio y back-end que proporcionan acceso a datos de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] en una granja de SharePoint 2016 o 2013.  

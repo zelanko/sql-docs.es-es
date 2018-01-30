@@ -16,7 +16,7 @@ f1_keywords:
 - sql13.asvs.sqlserverstudio.partitionproperties.errorconfiguration.f1
 - sql13.asvs.sqlserverstudio.dimensionproperties.errorconfiguration.f1
 ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
@@ -184,7 +184,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_next"></a> Paso siguiente  
  Decida si los errores detendrán el procesamiento o se omitirán. Recuerde que solo se omite el error. El registro que produjo el error no se pasa por alto; se descarta o se convierte al miembro desconocido. Los registros que infringen las reglas de integridad de datos nunca se agregan a la base de datos. De forma predeterminada, el procesamiento se detiene cuando se produce el primer error, pero puede cambiar este comportamiento si aumenta el límite de errores. En el desarrollo de un cubo, puede ser útil relajar las reglas de configuración de errores, permitiendo que el procesamiento continúe, de modo que haya datos para probar.  
   
- Decida si desea cambiar los comportamientos predeterminados de procesamiento de valores NULL. De forma predeterminada, los valores NULL de una columna de cadenas se procesan como valores vacíos, mientras que los valores NULL de una columna numérica se procesan como ceros. Vea [Defining the Unknown Member and Null Processing Properties](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) para obtener instrucciones sobre cómo establecer el procesamiento de valores NULL en un atributo.  
+ Decida si desea cambiar los comportamientos predeterminados de procesamiento de valores NULL. De forma predeterminada, los valores NULL de una columna de cadenas se procesan como valores vacíos, mientras que los valores NULL de una columna numérica se procesan como ceros. Vea [Definir las propiedades de miembro desconocido y de procesamiento de valores NULL](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) para obtener instrucciones sobre cómo establecer el procesamiento de valores NULL en un atributo.  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades de registro](../../analysis-services/server-properties/log-properties.md)   

@@ -1,4 +1,4 @@
-# [Información general](power-pivot-for-sharepoint-ssas.md)  
+# [Power Pivot para SharePoint](power-pivot-for-sharepoint-ssas.md)  
 # [Administración y configuración del servidor de Power Pivot en Administración central](power-pivot-server-administration-and-configuration-in-central-administration.md)  
 ## [Implementación de las soluciones de Power Pivot en SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)  
 ## [Creación y configuración de una aplicación de servicio PowerPivot](create-and-configure-power-pivot-service-application-in-ca.md)  

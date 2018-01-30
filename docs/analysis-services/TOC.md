@@ -1,12 +1,13 @@
-# [¿Qué es Analysis Services?](analysis-services.md)
+# [Acerca de SQL Server Analysis Services?](analysis-services.md)
 
 # Información general
 ## [Novedades de SQL Server Analysis Services 2016](what-s-new-in-analysis-services.md)  
 ## [Novedades de SQL Server Analysis Services 2017](what-s-new-in-sql-server-analysis-services-2017.md) 
 ## [Artículos nuevos y actualizados](new-updated-analysis-services.md)
 ## [Herramientas y aplicaciones](tools-and-applications-used-in-analysis-services.md)   
+## [Bibliotecas de cliente (proveedores de datos)](../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)
 ## [Comparación de soluciones tabulares y multidimensionales](comparing-tabular-and-multidimensional-solutions-ssas.md)  
-## [Características de Analysis Services compatibles con las ediciones de SQL Server 2016](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
+## [Características de Analysis Services compatibles con las ediciones de SQL Server](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
 ## [Compatibilidad con versiones anteriores (SQL Server 2016 Analysis Services)](analysis-services-backward-compatibility.md)  
 ## [Compatibilidad con versiones anteriores (SQL Server 2017 Analysis Services)](analysis-services-backward-compatibility-sql2017.md)  
 ## [Globalización y traducción](globalization-scenarios-for-analysis-services.md)  
@@ -14,9 +15,6 @@
 ### [Traducciones](translation-support-in-analysis-services.md)  
 ### [Conversiones de moneda](currency-conversions-analysis-services.md)  
 ### [Sugerencias y prácticas recomendadas](globalization-tips-and-best-practices-analysis-services.md) 
-
-# Ejemplos
-## [Ejemplos de Analysis Services](analysis-services-samples.md)
 
 # Tutoriales
 ## [Modelado tabular (nivel de compatibilidad 1200)](tabular-modeling-adventure-works-tutorial.md)  
@@ -112,6 +110,8 @@
 ## [Conjuntos de filas de esquema](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)
 ## [Analysis Services Scripting Language (ASSL para XMLA)](scripting/analysis-services-scripting-language-assl-for-xmla.md)
 
+# Ejemplos
+## [Ejemplos de Analysis Services](analysis-services-samples.md)
 
 # Referencia
 ## [Expresiones de análisis de datos (DAX) en MSDN](https://msdn.microsoft.com/library/gg413422.aspx)

@@ -8,11 +8,12 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -35,7 +36,7 @@ En este tema se enumera las opciones que se permiten en la matriz asociativa (al
 |AttachDBFileName|String|Especifica qué archivo de base de datos debe asociar el servidor.|No hay ningún valor establecido.|  
 |Autenticación|Una de las siguientes cadenas:<br /><br />'SqlPassword'<br /><br />'ActiveDirectoryPassword'|Especifica el modo de autenticación.|No se ha establecido.|  
 |CEKeystoreProvider<br />CEKeystoreName<br />CEKeystoreEncryptKey|String|Especifique la ruta de acceso, el nombre y la clave de cifrado a un proveedor de almacén de claves personalizado para la característica Always Encrypted. Los tres valores deben establecerse con el fin de configurar correctamente el proveedor de almacén de claves personalizado al establecer una conexión. |No hay ningún valor establecido.|
-|CharacterSet<br /><br />(no compatible con el controlador PDO_SQLSRV)|String|Especifica el juego de caracteres que se utiliza para enviar datos al servidor.<br /><br />Los valores posibles son SQLSRV_ENC_CHAR y UTF-8. Para obtener más información, consulte [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|SQLSRV_ENC_CHAR|  
+|CharacterSet<br /><br />(no compatible con el controlador PDO_SQLSRV)|String|Especifica el juego de caracteres que se utiliza para enviar datos al servidor.<br /><br />Los valores posibles son SQLSRV_ENC_CHAR y UTF-8. Para obtener más información, consulte [Cómo enviar y recuperar datos UTF-8 gracias a la compatibilidad integrada con UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|SQLSRV_ENC_CHAR|  
 |ColumnEncryption|**Habilitado** o **deshabilitado**|Especifica si la característica Always Encrypted está habilitada o no. |Deshabilitado|  
 |ConnectionPooling|1 o **True** para activar la agrupación de conexiones.<br /><br />0 o **False** para desactivar la agrupación de conexiones.|Especifica si la conexión se asigna desde una agrupación de conexiones (1 o **true**) o no (0 o **false**).<sup> 1</sup>|**true** (1)|  
 |Base de datos|String|Especifica el nombre de la base de datos en uso para la conexión que se va a establecer<sup>2</sup>.|La base de datos predeterminada del inicio de sesión que se va a utilizar.|  

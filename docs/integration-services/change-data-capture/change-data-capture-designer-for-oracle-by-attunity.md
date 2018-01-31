@@ -8,21 +8,23 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: desCons
+f1_keywords:
+- desCons
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64cc7301033e061d85f5c39d2b3e498f6c218d8f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6eec0f35ddccef3653c9ad4cb06e5c8e1b887257
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Diseñador de captura de datos modificados para Oracle de Attunity
   La consola del diseñador CDC se emplea para desarrollar y mantener instancias CDC de Oracle. La Consola del diseñador CDC es un complemento de Microsoft Management Console que contiene los elementos siguientes:  

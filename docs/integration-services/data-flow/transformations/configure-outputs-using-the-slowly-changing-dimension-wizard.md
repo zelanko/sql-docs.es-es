@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - slowly changing dimensions
 - Slowly Changing Dimension Wizard
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 478b3340eda942efc1cbef8a19a2cb811daf0685
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0aa62acd9470c1d1d5e2764046ab3302f8edc46a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Configurar salidas mediante el Asistente para dimensión de variación lenta
   El Asistente para dimensiones variables funciona como editor para la transformación Dimensión de variación lenta. Generar y configurar el flujo de datos para datos de dimensiones de variación lenta puede ser una tarea compleja. El Asistente para dimensiones variables ofrece el método más simple para generar el flujo de datos para las salidas de la transformación Dimensión de variación lenta, ya que ofrece una guía paso a paso de la asignación de columnas, la selección de columnas de clave empresarial, el establecimiento de atributos de cambio de las columnas y la configuración de la admisión de miembros de dimensión deducidos.  
@@ -85,7 +86,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="updating-slowly-changing-dimension-outputs"></a>Actualizar salidas de dimensión de variación lenta  
  La manera más simple de actualizar la configuración de la transformación Dimensión de variación lenta es volver a ejecutar el Asistente para dimensiones variablesy modificar las propiedades en las páginas del asistente. También puede actualizar la transformación Dimensión de variación lenta mediante el cuadro de diálogo **Editor avanzado** o mediante programación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   

@@ -8,23 +8,24 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Access [Integration Services]
 - Access databases [Integration Services]
 ms.assetid: 229fbd46-ef6a-4609-a4cc-d80d52c33cf1
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cbd98ef05bc8c6de066f72a9aded9243c1636f70
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 44c04e7978ca425eb6fb625374f9404e3f286fde
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-access-database"></a>Conectarse a una base de datos de Access
   La conexión de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a un origen de datos de Microsoft Office Access requiere un administrador de conexiones y un proveedor de datos OLE DB. El proveedor de datos que se use dependerá de la versión de Access que creó el origen de datos:  
@@ -46,7 +47,7 @@ La versión más reciente de los componentes puede abrir los archivos creados co
 
 Si el equipo tiene una versión de Office de 32 bits, tendrá que instalar la versión de 32 bits de los componentes, y también debe asegurarse de que ejecuta el paquete en el modo de 32 bits.
 
-Si tiene una suscripción de Office 365, asegúrese de descargar Access Database Engine 2016 Redistributable y no Microsoft Access 2016 Runtime. Al ejecutar el instalador, es posible que vea un mensaje de error que indica que no se puede instalar la descarga en paralelo con componentes para hacer clic y ejecutar de Office. Para omitir este mensaje de error, ejecute la instalación en modo silencioso abriendo una ventana del símbolo del sistema y ejecutando el archivo .EXE que descargó con el modificador `/quiet`. Por ejemplo:
+Si tiene una suscripción de Office 365, asegúrese de descargar Access Database Engine 2016 Redistributable y no Microsoft Access 2016 Runtime. Al ejecutar el instalador, es posible que vea un mensaje de error que indica que no se puede instalar la descarga en paralelo con componentes para hacer clic y ejecutar de Office. Para omitir este mensaje de error, ejecute la instalación en modo silencioso abriendo una ventana del símbolo del sistema y ejecutando el archivo .EXE que descargó con el modificador `/quiet`. Por ejemplo:
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
   
@@ -60,7 +61,7 @@ Si tiene una suscripción de Office 365, asegúrese de descargar Access Database
   
 3.  En el cuadro de diálogo **Configurar el administrador de conexiones OLE DB** , haga clic en **Nuevo**.  
   
-     Para más información, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+     Para más información, vea [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 4.  En el cuadro de diálogo **Administrador de conexiones** , en **Proveedor**, seleccione **Microsoft Jet 4.0 OLE DB Provider**y, a continuación, configure el administrador de conexiones que corresponda.  
   
@@ -70,7 +71,7 @@ Si tiene una suscripción de Office 365, asegúrese de descargar Access Database
   
 2.  En la página **Elegir un origen de datos** , seleccione **Microsoft Access**en **Origen de datos**y, a continuación, configure la conexión con Access.  
   
-     Al seleccionar **Microsoft Access** como **Origen de datos**, el asistente creará automáticamente el administrador de conexiones OLE DB necesario con el proveedor de datos correcto. Para más información, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+     Al seleccionar **Microsoft Access** como **Origen de datos**, el asistente creará automáticamente el administrador de conexiones OLE DB necesario con el proveedor de datos correcto. Para más información, vea [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 ## <a name="connecting-to-a-data-source-in-access-2007-format"></a>Conectar a un origen de datos con el formato de Access 2007  
  Para obtener acceso a un origen de datos de Access 2007, el administrador de conexiones OLE DB necesita el proveedor OLE DB para el motor de base de datos de Microsoft Office Access 12.0. Este proveedor se instala automáticamente con 2007 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office system. Si 2007 Office system no está instalado en el equipo en el que se está ejecutando [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , deberá instalar el proveedor por separado. Para instalar el proveedor OLE DB para el motor de base de datos de Microsoft Office Access 12.0, descargue e instale los componentes que encontrará en esta página web, [2007 Office System Driver: Data Connectivity Components](http://go.microsoft.com/fwlink/?LinkId=98155).  
@@ -83,7 +84,7 @@ Si tiene una suscripción de Office 365, asegúrese de descargar Access Database
   
 3.  En el cuadro de diálogo **Configurar el administrador de conexiones OLE DB** , haga clic en **Nuevo**.  
   
-     Para más información, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+     Para más información, vea [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 4.  En el cuadro de diálogo **Administrador de conexiones** , en **Proveedor**, seleccione **Microsoft Office 12.0 Access Database Engine OLE DB**y, a continuación, configure el administrador de conexiones que corresponda.  
   
@@ -99,9 +100,9 @@ Si tiene una suscripción de Office 365, asegúrese de descargar Access Database
     > [!NOTE]  
     >  Para conectarse a un origen de datos que use Access 2007, no puede seleccionar **Proveedor OLE DB de Microsoft Jet 4.0** como **Origen de datos**.  
   
-     Al seleccionar **Microsoft Office 12.0 Access Database Engine OLE DB Provider** como **Origen de datos**, el asistente crea automáticamente el administrador de conexiones OLE DB necesario con el proveedor de datos correcto. Para más información, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+     Al seleccionar **Microsoft Office 12.0 Access Database Engine OLE DB Provider** como **Origen de datos**, el asistente crea automáticamente el administrador de conexiones OLE DB necesario con el proveedor de datos correcto. Para más información, vea [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Conectarse a un libro de Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  
   
   

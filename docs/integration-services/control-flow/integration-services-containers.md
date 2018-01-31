@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - control flow [Integration Services], containers
 - SQL Server Integration Services containers
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 32617273341026d55a6ac63baa99c2a2d02c4a6e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 79759c7f5ec38bb2c729f092248866b87bf9e611
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-containers"></a>Contenedores de Integration Services
   Los contenedores son objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que proporcionan estructura a los paquetes y servicios a las tareas. Permiten repetir flujos de control en paquetes y agrupan tareas y contenedores en unidades de trabajo significativas. Los contenedores pueden incluir otros contenedores, además de tareas.  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/20/2017
 |Propiedad|Description|  
 |--------------|-----------------|  
 |**DelayValidation**|Valor booleano que indica si la validación del contenedor se retrasa hasta el tiempo de ejecución. El valor predeterminado de esta propiedad es **False**.<br /><br /> Para obtener más información, vea <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>.|  
-|**Description**|Descripción del contenedor. La propiedad contiene una cadena, pero puede estar en blanco.<br /><br /> Para obtener más información, vea <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>.|  
+|**Descripción**|Descripción del contenedor. La propiedad contiene una cadena, pero puede estar en blanco.<br /><br /> Para obtener más información, vea <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>.|  
 |**Deshabilitar**|Valor booleano que indica si el contenedor se ejecuta. El valor predeterminado de esta propiedad es **False**.<br /><br /> Para obtener más información, vea <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Disable%2A>.|  
 |**DisableEventHandlers**|Valor booleano que indica si los controladores de eventos asociados al contenedor se ejecutan. El valor predeterminado de esta propiedad es **False**.|  
 |**FailPackageOnFailure**|Valor booleano que especifica si el paquete genera un error cuando se produce un error en el contenedor. El valor predeterminado de esta propiedad es **False**.<br /><br /> Para obtener más información, vea <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>.|  
@@ -92,7 +93,7 @@ ms.lasthandoff: 11/20/2017
  Los ejecutables hacen referencia a las tareas de nivel de contenedor y a cualquier contenedor contenido en el contenedor. Un ejecutable puede ser una de las tareas y los contenedores proporcionados por [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , o una tarea personalizada. Para más información, consulte [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md).  
   
 ### <a name="precedence-constraints"></a>Restricciones de precedencia  
- Las restricciones de precedencia vinculan los contenedores y las tareas del mismo contenedor principal en un flujo de control ordenado. Para más información, consulte [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
+ Las restricciones de precedencia vinculan los contenedores y las tareas del mismo contenedor principal en un flujo de control ordenado. Para obtener más información, vea [Restricciones de precedencia](../../integration-services/control-flow/precedence-constraints.md).  
   
 ### <a name="event-handlers"></a>Controladores de eventos  
  Los controladores de eventos de nivel de contenedor responden a eventos provocados por el contenedor o por los objetos que incluye. Para obtener más información, vea [Controladores de eventos de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-event-handlers.md).  
@@ -103,7 +104,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="break-points"></a>Puntos de interrupción  
  Al establecer un punto de interrupción en un contenedor y si la condición de interrupción es **Salto cuando el contenedor recibe el evento OnVariableValueChanged**, defina la variable en el ámbito del contenedor.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Flujo de control](../../integration-services/control-flow/control-flow.md)  
   
   

@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aea4b25c91b2282085070152da6f7c34d2373848
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0796a4b0f07f249e2f7e882ec11b9a843a2e29ca
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="request-log"></a>Registro de solicitudes
   Use el cuadro de diálogo **Registro de solicitudes** para ver los eventos que se registran durante la solicitud que se efectúa al sistema SAP Netweaver BW sobre datos de ejemplo. Esta información puede ser útil si tiene que solucionar problemas en la configuración del origen de SAP BW.  
@@ -47,25 +48,25 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  Al hacer clic en **Vista previa** , también se abre el cuadro de diálogo **Vista previa** . Para obtener más información sobre este cuadro de diálogo, vea [Preview](../../integration-services/data-flow/preview.md).  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Time**  
  Muestra la hora en la que se ha registrado el evento.  
   
  **Tipo**  
  Muestra el tipo de evento que se ha registrado. En la tabla siguiente se enumeran los tipos de evento posibles.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |S|Mensaje de correcto.|  
 |E|Mensaje de error|  
 |W|Mensaje de advertencia.|  
 |I|Mensaje informativo.|  
-|A|Se anuló la operación.|  
+|Un|Se anuló la operación.|  
   
  **de mensaje**  
  Muestra el texto del mensaje asociado al evento registrado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Editor de origen de SAP BW &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
  [Ayuda F1 de Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

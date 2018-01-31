@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQUARE
 - square values
 ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28c05c3bf5e16d2d53348575a09f2cd275d79ffe
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2b7181bce75dfe667a643b5ef149c7b9d61f16a6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="square-ssis-expression"></a>SQUARE (expresión de SSIS)
   Devuelve el cuadrado de una expresión numérica.  
@@ -43,7 +44,7 @@ SQUARE(numeric_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_R8  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  SQUARE devuelve un resultado NULL si el valor del argumento es NULL.  
   
  Antes de realizar la operación de raíz cuadrada, se convierte el argumento al tipo de datos DT_R8.  
@@ -70,7 +71,7 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 > [!NOTE]  
 >  En las expresiones, los nombres de variables siempre incluyen el prefijo @.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Funciones &#40;expresión de SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

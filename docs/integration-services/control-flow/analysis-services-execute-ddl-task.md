@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - Analysis Services Execute DDL task
 - DDL
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 908b95b4020cb20e02bb2d196d95860ddca27049
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: aba320cac8593357039ed9ab4977dbb5fda091cc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Tarea Ejecutar DDL de Analysis Services
   La tarea Ejecutar DDL de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ejecuta instrucciones del lenguaje de definición de datos (DDL) que pueden crear, quitar o modificar modelos de minería de datos y objetos multidimensionales, como cubos y dimensiones. Por ejemplo, una instrucción DDL puede crear una partición en el cubo de **Adventure Works** o eliminar una dimensión de [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)], la base de datos de ejemplo de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluida en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/20/2017
   
  Para obtener más información sobre tareas de Business Intelligence relacionadas, haga clic en uno de los temas siguientes:  
   
--   [Tarea Procesamiento de Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
+-   [Tarea de procesamiento de Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
   
 -   [Tarea Consulta de minería de datos](../../integration-services/control-flow/data-mining-query-task.md)  
   
@@ -240,14 +241,14 @@ ms.lasthandoff: 11/20/2017
 ## <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Editor de la tarea Ejecutar DDL de Analysis Services (página General)
   Use la página **General** del cuadro de diálogo **Editor de la tarea Ejecutar DDL de Analysis Services** para nombrar y describir la tarea Ejecutar DDL de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Nombre**  
  Proporcione un nombre único para la tarea Ejecutar DDL de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Este nombre se utiliza como etiqueta en el icono de tarea.  
   
 > [!NOTE]  
 >  Los nombres de tarea deben ser únicos en un paquete.  
   
- **Description**  
+ **Descripción**  
  Escriba una descripción de la tarea Ejecutar DDL de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Editor de la tarea Ejecutar DDL de Analysis Services (página DDL)
@@ -262,7 +263,7 @@ ms.lasthandoff: 11/20/2017
  **Tipo de origen**  
  Especifique el tipo de origen de las instrucciones de DDL. Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada directa**|Establezca en el cuadro de texto **SourceDirect** el origen de la instrucción DDL almacenada. Al seleccionar este valor se muestran las opciones dinámicas de la siguiente sección.|  
 |**Conexión de archivos**|Establezca el origen de un archivo que contenga la instrucción DDL. Al seleccionar este valor se muestran las opciones dinámicas de la siguiente sección.|  

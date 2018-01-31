@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - Analysis Services Processing task
 - processing objects [Integration Services]
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 15614fbc56266471ea3e6ee79d07cc965b79eb94
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cad0ce4adcf182892b62473aacb9e1c8d310f6c4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="analysis-services-processing-task"></a>Procesamiento de Analysis Services, tarea
   La tarea Procesamiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] procesa objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como modelos tabulares, cubos, dimensiones y modelos de minería de datos.  
@@ -88,14 +89,14 @@ ms.lasthandoff: 11/20/2017
 ## <a name="analysis-services-processing-task-editor-general-page"></a>Editor de la tarea de procesamiento de Analysis Services (página General)
   Use la página **General** del cuadro de diálogo **Editor de la tarea de procesamiento de Analysis Services** para describir y asignar un nombre a la tarea de procesamiento de Analysis Services.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Nombre**  
  Escriba un nombre único para la tarea de procesamiento de Analysis Services. Este nombre se utiliza como etiqueta en el icono de tarea.  
   
 > [!NOTE]  
 >  Los nombres de tarea deben ser únicos en un paquete.  
   
- **Description**  
+ **Descripción**  
  Escriba una descripción de la tarea de procesamiento de Analysis Services.  
   
 ## <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Editor de la tarea de procesamiento de Analysis Services (página Analysis Services)
@@ -111,11 +112,11 @@ ms.lasthandoff: 11/20/2017
   
 4.  Los valores de las operaciones por lotes se omiten para los modelos tabulares.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **administrador de conexiones de Analysis Services**  
  Seleccione un administrador de conexiones de Analysis Services de la lista o haga clic en **Nuevo** para crear uno.  
   
- **Nuevo**  
+ **Nueva**  
  Cree un administrador de conexiones de Analysis Services nuevo.  
   
  **Temas relacionados:** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones con Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  

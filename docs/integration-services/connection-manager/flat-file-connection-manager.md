@@ -8,7 +8,8 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - flat files
 - flat file connections [Integration Services]
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 29a1b62455247f2ba3cbcb17fafb6f0f78865230
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 73ab1f41223d78f627bd13523bf76eb4ab4d19e8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="flat-file-connection-manager"></a>Administrador de conexiones de archivos planos
   Un administrador de conexiones de archivos planos permite a un paquete obtener acceso a datos en un archivo plano. Por ejemplo, el origen y el destino de archivos planos pueden hacer que los administradores de conexión de archivos planos extraigan y carguen datos.  
@@ -80,18 +81,18 @@ ms.lasthandoff: 11/20/2017
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
- Para más información sobre la configuración de un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [Agregar conexiones mediante programación](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
+ Para obtener información sobre la configuración de un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [Agregar conexiones mediante programación](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="flat-file-connection-manager-editor-general-page"></a>Editor del administrador de conexiones de archivos planos (página General)
   Utilice la página **General** del cuadro de diálogo **Editor del administrador de conexiones de archivos planos** para seleccionar un archivo y un formato de datos. Las conexiones de archivos planos permiten que un paquete se conecte con un archivo de texto.  
   
  Para obtener más información acerca del administrador de conexiones de archivos planos, vea [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Nombre del administrador de conexiones**  
  Especifique un nombre único para la conexión de archivo plano en el flujo de trabajo. El nombre que indique se mostrará en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Descripción**  
  Describe la conexión. Como método recomendado, describa la conexión desde el punto de vista de su propósito, para que los paquetes estén autodocumentados y sean más fáciles de mantener.  
   
  **Nombre de archivo**  
@@ -112,7 +113,7 @@ ms.lasthandoff: 11/20/2017
  **Formato**  
  Indique si el archivo utiliza formato delimitado, de ancho fijo o derecho irregular.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |Delimitado|Las columnas se separan mediante delimitadores, que se especifican en la página **Columnas** .|  
 |Ancho fijo|Las columnas tienen un ancho fijo.|  
@@ -127,7 +128,7 @@ ms.lasthandoff: 11/20/2017
  **Delimitador de filas de encabezados**  
  Seleccione uno de los delimitadores de filas de encabezados de la lista o escriba el texto delimitador.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|La fila de encabezado está delimitada por una combinación de retorno de carro y avance de línea.|  
 |**{CR}**|La fila de encabezado está delimitada por un retorno de carro.|  
@@ -152,7 +153,7 @@ ms.lasthandoff: 11/20/2017
  **Nombre del administrador de conexiones**  
  Especifique un nombre único para la conexión de archivo plano en el flujo de trabajo. El nombre que indique se mostrará en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Descripción**  
  Describe la conexión. Como método recomendado, describa la conexión desde el punto de vista de su propósito, para que los paquetes estén autodocumentados y sean más fáciles de mantener.  
   
 ### <a name="flat-file-format-dynamic-options"></a>Opciones dinámicas de formato para archivos planos  
@@ -161,7 +162,7 @@ ms.lasthandoff: 11/20/2017
  **Delimitador de filas**  
  Selecciónelo de la lista de delimitadores de filas disponibles o escriba el texto delimitador.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Las filas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
 |**{CR}**|Las filas se delimitan mediante un retorno de carro.|  
@@ -175,7 +176,7 @@ ms.lasthandoff: 11/20/2017
  **Delimitador de columna**  
  Selecciónelo de la lista de delimitadores de columna disponibles o escriba el texto delimitador.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Las columnas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
 |**{CR}**|Las columnas se delimitan mediante un retorno de carro.|  
@@ -222,7 +223,7 @@ ms.lasthandoff: 11/20/2017
  **Delimitador de filas**  
  Selecciónelo de la lista de delimitadores de filas disponibles o escriba el texto delimitador.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Las filas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
 |**{CR}**|Las filas se delimitan mediante un retorno de carro.|  
@@ -242,11 +243,11 @@ ms.lasthandoff: 11/20/2017
   
  Para obtener más información acerca del administrador de conexiones de archivos planos, vea [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Nombre del administrador de conexiones**  
  Especifique un nombre único para el administrador de conexiones de archivos planos en el flujo de trabajo. El nombre que indique se mostrará en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Descripción**  
  Describa el administrador de conexiones. Como método recomendado, describa el administrador de conexiones desde el punto de vista de su propósito, para que los paquetes estén autodocumentados y sean más fáciles de mantener.  
   
  **Configure las propiedades de cada columna**  
@@ -264,16 +265,16 @@ ms.lasthandoff: 11/20/2017
 |**DataPrecision**|Especifique la precisión de los datos numéricos. La precisión hace referencia al número de dígitos. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**InputColumnWidth**|Especifique un valor que se almacenará como recuento de bytes; en los archivos Unicode, aparecerá como recuento de caracteres. Este valor se omite para las columnas delimitadas.<br /><br /> **Nota** En el modelo de objetos, el nombre de esta propiedad es ColumnWidth.|  
   
- **Nuevo**  
+ **Nueva**  
  Para agregar una columna, haga clic en **Nuevo**. De manera predeterminada, el botón **Nueva** agrega una columna nueva al final de la lista. El botón siempre tiene las siguientes opciones, disponibles en la lista desplegable.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Agregar columna**|Agrega una nueva columna al final de la lista.|  
 |**Insertar delante**|Inserta una nueva columna antes de la columna seleccionada.|  
 |**Insertar detrás**|Inserta una nueva columna detrás de la columna seleccionada.|  
   
- **Delete**  
+ **Eliminar**  
  Seleccione una columna y, después, haga clic en **Eliminar**para quitarla.  
   
  **Sugerir tipos**  
@@ -283,11 +284,11 @@ ms.lasthandoff: 11/20/2017
   
  Para obtener más información acerca del administrador de conexiones de archivos planos, vea [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Nombre del administrador de conexiones**  
  Especifique un nombre único para la conexión de archivo plano en el flujo de trabajo. El nombre que indique se mostrará en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Descripción**  
  Describe la conexión. Como método recomendado, describa la conexión desde el punto de vista de su propósito, para que los paquetes estén autodocumentados y sean más fáciles de mantener.  
   
  **Filas de datos que se omitirán**  

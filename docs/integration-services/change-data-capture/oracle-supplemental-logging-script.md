@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4e4c40eac6c055684cb3fb302861febbd512934
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a4f97617decf23356dc663805494d5a2d9e2d72c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="oracle-supplemental-logging-script"></a>Script de registro complementario de Oracle
   Este cuadro de diálogo muestra el script de registro complementario de Oracle.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 11/20/2017
   
  Dependiendo de las directivas DBA de Oracle de la organización, la ejecución del script de registro complementario puede necesitar su revisión y aprobación por parte de un administrador de bases de datos de Oracle.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  A continuación se indican las opciones disponibles sobre cómo ejecutar el script.  
   
  **Ejecutar script**  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/20/2017
  **Copiar**  
  Copia el script en el Portapapeles. Cuando esté listo, puede pegar el script en cualquier ubicación que desee por si un administrador de bases de datos (DBA) de Oracle necesita examinar y ejecutar el script de registro complementario.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Cómo administrar una instancia CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [Administrar una instancia CDC](../../integration-services/change-data-capture/manage-a-cdc-instance.md)  
   

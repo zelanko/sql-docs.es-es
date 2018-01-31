@@ -8,25 +8,26 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 486766b19c2343d32ac52305e4562038726c9b05
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4e893ddd6b0461a3f6b3e20146a79e63c7fcc1c4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-infopackage"></a>Crear InfoPackage
   Use el cuadro de diálogo **Crear nuevo InfoPackage** para crear un nuevo InfoPackage en el sistema SAP Netweaver BW.  
   
- Puede abrir el cuadro de diálogo **Crear InfoPackage** desde la página **Administrador de conexiones** del **Editor de destino de SAP BW**. Para obtener más información acerca del destino de SAP BW, vea [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
+ Puede abrir el cuadro de diálogo **Crear InfoPackage** desde la página **Administrador de conexiones** del **Editor de destino de SAP BW**. Para más información acerca del destino de SAP BW, consulte [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
   
 > [!IMPORTANT]  
 >  La documentación de Microsoft Connector 1.1 for SAP BW da por supuesto que se está familiarizado con el entorno SAP Netweaver BW. Para obtener más información acerca de SAP Netweaver BW, o sobre cómo configurar los objetos y los procesos de SAP Netweaver BW, vea la documentación de SAP.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  En la página **Administrador de conexiones** , en el cuadro del grupo **Crear objetos de SAP BW** , seleccione **InfoPackage**y, a continuación, haga clic en **Crear**.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **InfoSource**  
  Permite escribir el nombre del InfoSource en el que se va a basar el nuevo InfoPackage.  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/20/2017
  **Guardar y activar**  
  Permite guardar y activar el nuevo InfoPackage.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Ayuda F1 de Microsoft Connector 1.1 for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

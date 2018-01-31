@@ -8,26 +8,28 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.oledbconnection.f1
+f1_keywords:
+- sql13.dts.designer.oledbconnection.f1
 helpviewer_keywords:
 - OLE DB connection manager
 - data sources [Integration Services], connections
 - connection managers [Integration Services], OLE DB
 - connections [Integration Services], OLE DB
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a3dc2aa8c75ff17e556a3b42358186ee81f42eff
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0f30deb4f4bdea9d5a787c31135acbd968133479
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB, administrador de conexiones
   Un administrador de conexiones OLE DB permite a un paquete conectarse a un origen de datos mediante un proveedor OLE DB. Por ejemplo, un administrador de conexiones OLE DB que se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede usar el proveedor [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
@@ -57,7 +59,7 @@ ms.lasthandoff: 11/20/2017
 -   Indicar si la conexión creada desde el administrador de conexiones se conserva en el tiempo de ejecución.    
     
 ## <a name="logging"></a>Registro    
- Puede registrar las llamadas realizadas por el administrador de conexiones OLE DB a proveedores de datos externos. Puede utilizar esta capacidad de registro para solucionar problemas relacionados con las conexiones que el administrador de conexiones OLE DB establece con orígenes de datos externos. Para registrar las llamadas que el administrador de conexiones OLE DB realiza a proveedores de datos externos, habilite el registro de paquetes y seleccione el evento **Diagnostic** en el nivel de paquete. Para obtener más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).    
+ Puede registrar las llamadas realizadas por el administrador de conexiones OLE DB a proveedores de datos externos. Puede utilizar esta capacidad de registro para solucionar problemas relacionados con las conexiones que el administrador de conexiones OLE DB establece con orígenes de datos externos. Para registrar las llamadas que el administrador de conexiones OLE DB realiza a proveedores de datos externos, habilite el registro de paquetes y seleccione el evento **Diagnostic** en el nivel de paquete. Para más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).    
     
 ## <a name="configuration-of-the-oledb-connection-manager"></a>Configuración del administrador de conexiones OLE DB    
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación. Para obtener más información sobre las propiedades que puede configurar en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea [Configurar el administrador de conexiones OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md). Para obtener información acerca de cómo configurar un administrador de conexiones mediante programación, vea la documentación de la clase **T:Microsoft.SqlServer.Dts.Runtime.ConnectionManager** en la Guía del desarrollador.    
@@ -78,20 +80,20 @@ ms.lasthandoff: 11/20/2017
   
  Para obtener más información acerca del administrador de conexiones OLE DB, vea [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Conexiones de datos**  
  Seleccione en la lista una conexión de datos OLE DB existente.  
   
  **Propiedades de conexión de datos**  
  Vea las propiedades y los valores de la conexión de datos OLE DB seleccionada.  
   
- **Nuevo**  
+ **Nueva**  
  Permite crear una conexión de datos OLE DB con el cuadro de diálogo **Administrador de conexiones** .  
   
- **Delete**  
+ **Eliminar**  
  Permite seleccionar una conexión de datos y, después, eliminarla con el botón **Eliminar** .  
   
-## <a name="see-also"></a>Vea también    
+## <a name="see-also"></a>Ver también    
  [Origen de OLE DB](../../integration-services/data-flow/ole-db-source.md)     
  [Destino de OLE DB](../../integration-services/data-flow/ole-db-destination.md)     
  [Tarea Ejecutar SQL](../../integration-services/control-flow/execute-sql-task.md)     

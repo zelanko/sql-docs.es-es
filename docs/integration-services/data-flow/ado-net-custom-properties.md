@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5b2d65941deb00e3c227bea39b14f72c86d08ed
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2823f22fa0396451fbf5de1b5dd3840559ca1e02
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ado-net-custom-properties"></a>Propiedades personalizadas de ADO NET
   **Propiedades personalizadas de origen**  
@@ -30,9 +31,9 @@ ms.lasthandoff: 11/20/2017
   
  En la tabla siguiente se describen las propiedades personalizadas del origen de ADO NET. Todas las propiedades son de lectura y escritura.  
   
-|Nombre de la propiedad|Tipo de datos|Description|  
+|Nombre de propiedad|Tipo de datos|Description|  
 |-------------------|---------------|-----------------|  
-|CommandTimeOut|String|Valor que especifica el número de segundos que transcurren antes de agotarse el tiempo de espera del comando SQL. El valor 0 indica que el comando no agota nunca el tiempo de espera.|  
+|CommandTimeout|String|Valor que especifica el número de segundos que transcurren antes de agotarse el tiempo de espera del comando SQL. El valor 0 indica que el comando no agota nunca el tiempo de espera.|  
 |SqlCommand|String|Instrucción SQL que el origen de ADO NET usa para extraer datos.<br /><br /> Cuando el paquete se carga, puede actualizar dinámicamente esta propiedad con la instrucción SQL que el origen de ADO NET utilizará. Para más información, vea [Expresiones de Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md) y [Usar expresiones de propiedad en paquetes](../../integration-services/expressions/use-property-expressions-in-packages.md).|  
 |AllowImplicitStringConversion|Boolean|Valor que indica si ocurre lo siguiente:<br /><br /> -No se genera un error de validación si hay una desigualdad entre los tipos de los metadatos externos y los tipos de las columnas de salida que son cadenas (DT_WSTR o DT_NTEXT).<br /><br /> -La conversión implícita de los tipos de los metadatos externos al tipo de datos de cadena que la columna de resultados utiliza.<br /><br /> <br /><br /> El valor predeterminado es TRUE.<br /><br /> Para más información, consulte [ADO NET Source](../../integration-services/data-flow/ado-net-source.md).|  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/20/2017
   
  Para más información, consulte [ADO NET Destination](../../integration-services/data-flow/ado-net-destination.md).  
   
-## <a name="see-also"></a>Vea también  
- [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+## <a name="see-also"></a>Ver también  
+ [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

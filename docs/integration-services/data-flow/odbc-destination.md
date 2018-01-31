@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,16 +18,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c3df5b8f8ef946021fcc72bb12cb164e99fdb5b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 34e524470a56b62657f231a22639fc3e2c20e2d1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-destination"></a>Destino ODBC
   El destino ODBC carga de forma masiva los datos en tablas de base de datos que admiten ODBC. El destino ODBC usa un administrador de conexiones ODBC para conectarse al origen de datos.  
@@ -101,7 +102,7 @@ ms.lasthandoff: 11/20/2017
   
 -   En el **Editor de destino de ODBC**, haga clic en **Administrador de conexiones**.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
   
 #### <a name="connection-manager"></a>Administrador de conexiones  
  Seleccione un administrador de conexiones de ODBC existente en la lista o haga clic en Nueva para crear una nueva conexión. La conexión puede ser a cualquier base de datos compatible con ODBC.  
@@ -125,7 +126,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="odbc-destination-editor-mappings-page"></a>Editor de destino de ODBC (página Asignaciones)
   Use la página **Asignaciones** del cuadro de diálogo **Editor de destino de ODBC** para asignar columnas de entrada a columnas de destino.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
   
 #### <a name="available-input-columns"></a>Columnas de entrada disponibles  
  Lista de columnas de entrada disponibles. Arrastre y coloque una columna de entrada en una columna de destino disponible para asignar las columnas.  
@@ -152,12 +153,12 @@ ms.lasthandoff: 11/20/2017
   
 -   En el **Editor de destinos de ODBC**, haga clic en **Salida de error**.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
   
 #### <a name="inputoutput"></a>Entrada/salida  
  Muestra el nombre del origen de datos.  
   
-#### <a name="column"></a>Columna  
+#### <a name="column"></a>columna  
  No se usa.  
   
 #### <a name="error"></a>Error  

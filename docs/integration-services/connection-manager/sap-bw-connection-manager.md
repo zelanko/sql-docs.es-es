@@ -8,21 +8,23 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 06b166a1-a9df-48ea-a0e8-9b8d6979c0a1
-caps.latest.revision: "10"
-f1_keywords: sql13.dts.designer.sapbwconnectionmanager.f1
+caps.latest.revision: 
+f1_keywords:
+- sql13.dts.designer.sapbwconnectionmanager.f1
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e59af9f732448cad7b45650e8c01f383fbc9b46
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 23e7412671010511897e2937301e63942b44b5f7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-connection-manager"></a>Administrador de conexiones de SAP BW
   El administrador de conexiones de SAP BW es el componente del administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Por tanto, el administrador de conexiones de SAP BW proporciona conectividad a un sistema SAP Netweaver BW versión 7 que necesitan los componentes de destino y de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. (El origen y el destino de SAP BW que forman parte del paquete de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW son los únicos componentes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que usan el administrador de conexiones de SAP BW).  
@@ -77,7 +79,7 @@ ms.lasthandoff: 11/20/2017
   
     -   Haga clic con el botón derecho en el administrador de conexiones de SAP BW y, después, seleccione **Editar**.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
   
 > [!NOTE]  
 >  Si no conoce todos los valores necesarios para configurar el administrador de conexiones, puede que tenga que ponerse en contacto con el administrador de SAP.  
@@ -88,7 +90,7 @@ ms.lasthandoff: 11/20/2017
  **Lenguaje**  
  Permite especificar el idioma que usa el sistema. Por ejemplo, especifique **EN** para inglés.  
   
- **Nombre de usuario.**  
+ **User name**  
  Permite especificar el nombre de usuario que se va a utilizar para establecer la conexión al sistema.  
   
  **Contraseña**  
@@ -152,7 +154,7 @@ ms.lasthandoff: 11/20/2017
  **Probar conexión**  
  Permite probar la conexión con los valores que ha especificado. Después de hacer clic en **Probar conexión**, aparecerá un cuadro de mensaje que indica si la conexión se realizó correctamente o no.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Componentes de Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

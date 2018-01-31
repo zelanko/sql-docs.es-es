@@ -8,25 +8,26 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5805f3fa68e7b37b48edc294bf487a61aeb19ac4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5e6e92aa871347938f49c0a5e1d345e4a8d98377
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="use-the-new-instance-wizard"></a>Usar el Asistente para nueva instancia
   El Asistente para nueva instancia sirve para crear una instancia nueva de un servicio CDC. Abra el asistente Crear una instancia CDC de Oracle desde la Consola del diseñador CDC. Puede hacer lo siguiente en el Asistente para nueva instancia.  
   
--   [Crear la base de datos de cambios de SQL Server](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)  
+-   [Crear la base de datos de cambio SQL Server ](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)  
   
 -   [Conectarse a una base de datos de origen de Oracle ](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Finalizar](../../integration-services/change-data-capture/finish.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Cómo crear la instancia de base de datos de cambios de SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)  
   
   

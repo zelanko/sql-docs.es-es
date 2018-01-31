@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Import and Export Wizard
 - starting Import and Export Wizard
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
-caps.latest.revision: "130"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1c54f2e961abc3ec9bbbc3b19214e78d58208104
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 48cd6b4f32630b48b0e2ccd92400020d6bfa6e91
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>Iniciar el Asistente para importación y exportación de SQL Server
 
@@ -114,8 +115,8 @@ Si desea ejecutar el asistente, pero no tiene [!INCLUDE[msCoName](../../includes
 > [!TIP]
 > Pulse la tecla F1 en cualquier página o cuadro de diálogo del Asistente para ver la documentación de la página actual.   
 
- ## <a name="whats-next"></a>¿Qué debe hacer a continuación?  
- Al iniciar el Asistente, la primera página es **Asistente para importación y exportación de SQL Server**. No hace falta que realice ninguna acción en esta página. Para obtener más información, vea [Asistente para importación y exportación de SQL Server](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md).  
+ ## <a name="whats-next"></a>¿Qué sigue?  
+ Al iniciar el Asistente, la primera página es **Asistente para importación y exportación de SQL Server**. No es necesario que realice ninguna acción en esta página. Para obtener más información, vea [Asistente para importación y exportación de SQL Server](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md).  
   
 ## <a name="related"></a> Temas y tareas relacionados  
  A continuación, se presentan algunas tareas básicas adicionales.

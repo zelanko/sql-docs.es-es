@@ -8,21 +8,23 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Data Profiling Task Editor
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 65a3a26b41981e6dc4c67219a52b76f822e78610
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 180c0ca64cf4619a8ada7a90d45fa0498e2ea87a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de inclusión de valores (tarea de generación de perfiles de datos)
   Utilice el panel **Propiedades de la solicitud** de la página **Solicitudes de perfil** para establecer las opciones de **Solicitud de perfil de inclusión de valores** seleccionadas en el panel de solicitudes. Un perfil de inclusión de valores calcula la superposición en los valores entre dos columnas o conjuntos de columnas. Por lo tanto, también puede determinar si una columna o un conjunto de columnas es adecuado para actuar como una clave externa entre las tablas seleccionadas. Este perfil también puede ayudarle a identificar problemas de los datos, por ejemplo valores que no sean válidos. Por ejemplo, suponga que utiliza un perfil de inclusión de valores para generar el perfil de la columna de identificadores de producto de una tabla de ventas. El perfil detecta que la columna contiene valores que no están en la columna IdProducto de la tabla Productos.  
@@ -30,7 +32,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Las opciones que se describen en este tema aparecen en la página **Solicitudes de perfil** del **Editor de tareas de generación de perfiles de datos**. Para obtener más información sobre esta página del editor, vea [Editor de tareas de generación de perfiles de datos &#40;página Solicitudes de perfil&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md).  
   
- Para obtener más información sobre cómo usar la tarea de generación de perfiles de datos, vea [Configuración de la Tarea de generación de perfiles de datos](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Para obtener más información sobre cómo usar el Visor de perfil de datos para analizar la salida de la tarea de generación de perfiles de datos, vea [Visor de perfil de datos](../../integration-services/control-flow/data-profile-viewer.md).  
+ Para más información sobre cómo usar la tarea de generación de perfiles de datos, vea [Configuración de la Tarea de generación de perfiles de datos](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Para obtener más información sobre cómo usar el Visor de perfil de datos para analizar la salida de la tarea de generación de perfiles de datos, vea [Visor de perfil de datos](../../integration-services/control-flow/data-profile-viewer.md).  
   
 ## <a name="understanding-the-selection-of-columns-for-the-inclusioncolumns-property"></a>Selección de columnas para la propiedad InclusionColumns  
  Una **Solicitud de perfil de inclusión de valores** calcula si todos los valores de un subconjunto se encuentran en el superconjunto. El superconjunto suele ser una tabla de referencia o búsqueda. Por ejemplo, la columna de estado de una tabla de direcciones es la tabla de subconjunto. Cada código de estado de dos caracteres de esta columna también se debería encontrar en la tabla de códigos de estado del servicio postal de Estados Unidos, que es la tabla de superconjunto.  
@@ -107,7 +109,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Cuando use el carácter comodín **(\*)** para **ColumnName**, **CompareOptions** es de solo lectura y se establece en el valor **Default**.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Default**|Ordena y compara datos basados en la intercalación de la columna en la tabla de origen.|  
 |**BinarySort**|Ordena y compara los datos según los patrones de bits definidos para cada carácter. El orden binario utiliza la distinción de mayúsculas y minúsculas, y de acentos. El orden binario es también el más rápido.|  
@@ -115,24 +117,24 @@ ms.lasthandoff: 11/20/2017
   
  Si selecciona **DictionarySort**, también puede seleccionar cualquier combinación de las opciones enumeradas en la tabla siguiente. De forma predeterminada, no se selecciona ninguna de estas opciones adicionales.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|Especifica si la comparación distingue entre mayúsculas y minúsculas. Si se establece esta opción, la comparación de las cadenas omite la distinción entre mayúsculas y minúsculas. Por ejemplo, "ABC" se interpreta igual que "abc".|  
 |**IgnoreNonSpace**|Especifica si la comparación distingue entre caracteres con espacio y signos diacríticos. Si se establece esta opción, la comparación omite los signos diacríticos. Por ejemplo, "å" se considera igual que "a".|  
 |**IgnoreKanaType**|Especifica si la comparación distingue entre los dos tipos de caracteres kana japoneses: hiragana y katakana. Si se establece esta opción, la comparación de las cadenas omite los tipos de caracteres kana.|  
 |**IgnoreWidth**|Especifica si la comparación distingue entre un carácter de un solo byte y el mismo carácter cuando se representa con un carácter de doble byte. Si se establece esta opción, la comparación de las cadenas trata las representaciones de un solo byte y de doble byte del mismo carácter como idénticas.|  
   
-### <a name="general-options"></a>Opciones de General  
+### <a name="general-options"></a>Opciones generales  
  **IdSolicitud**  
  Escriba un nombre descriptivo para identificar esta solicitud de perfil. Generalmente, no tiene que cambiar el valor generado automáticamente.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **InclusionThresholdSetting**  
  Seleccione el valor de umbral para precisar la salida del perfil. El valor predeterminado de esta propiedad es **Specified**. Para obtener más información, vea la sección "Descripción de los valores del umbral" anteriormente en este tema.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
-|**None**|No especifica un umbral. El nivel de la clave se notifica independientemente de su valor.|  
+|**Ninguno**|No especifica un umbral. El nivel de la clave se notifica independientemente de su valor.|  
 |**Specified**|Utilice el umbral que se especifica en **InclusionStrengthThreshold**. Solo se notifica el nivel de inclusión si es mayor que el umbral.|  
 |**Exact**|No especifica un umbral. Solo se notifica el nivel de inclusión si los valores del subconjunto están completamente incluidos en los valores del superconjunto.|  
   
@@ -144,9 +146,9 @@ ms.lasthandoff: 11/20/2017
  **SupersetColumnsKeyThresholdSetting**  
  Especifique el umbral del superconjunto. El valor predeterminado de esta propiedad es **Specified**. Para obtener más información, vea la sección "Descripción de los valores del umbral" anteriormente en este tema.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
-|**None**|No especifica un umbral. El nivel de inclusión se notifica sin tener en cuenta el nivel de clave de la columna de superconjunto.|  
+|**Ninguno**|No especifica un umbral. El nivel de inclusión se notifica sin tener en cuenta el nivel de clave de la columna de superconjunto.|  
 |**Specified**|Utilice el umbral que se especifica en **SupersetColumnsKeyThreshold**. Solo se notifica el nivel de inclusión si el nivel de clave de la columna de superconjunto es mayor que el umbral.|  
 |**Exact**|No especifica un umbral. Solo se notifica el nivel de inclusión si las columnas de superconjunto son una clave exacta en la tabla de superconjunto.|  
   
@@ -158,7 +160,7 @@ ms.lasthandoff: 11/20/2017
  **MaxNumberOfViolations**  
  Especifique el número máximo de infracciones de la inclusión que va a notificarse en la salida. El valor predeterminado de esta propiedad es 100. Esta opción se deshabilita cuando la opción **Exact** se selecciona como **InclusionThresholdSetting**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Editor de tareas de generación de perfiles de datos &#40;página General&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Formulario de perfil rápido de tabla única &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

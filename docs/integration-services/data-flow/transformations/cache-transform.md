@@ -8,25 +8,27 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.cachetrans.f1
 - sql13.dts.designer.cachetranscon.f1
 - sql13.dts.designer.cachetransmap.f1
-helpviewer_keywords: Cache transform
+helpviewer_keywords:
+- Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b1120ee2702b4951c91717a108997253de023d9c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 83d157914c7090273a213a7f2ed4b6e5ea7f2fa5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cache-transform"></a>Transformación de caché
   La transformación de caché genera un conjunto de datos de referencia para la transformación de búsqueda escribiendo datos de un origen de datos conectado del flujo de datos en un Administrador de conexiones de caché. La transformación Búsqueda realiza búsquedas mediante la combinación de datos de las columnas de entrada procedentes de un origen de datos conectado con columnas de la base de datos de referencia.  
@@ -67,7 +69,7 @@ ms.lasthandoff: 11/20/2017
   
  Para obtener más información acerca del administrador de conexiones de caché, vea [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Cache connection manager**  
  Seleccione un administrador de conexiones de caché existente usando la lista o cree una conexión mediante el botón **Nueva** .  
   
@@ -77,7 +79,7 @@ ms.lasthandoff: 11/20/2017
  **Editar**  
  Modifique una conexión existente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Flujo de datos](../../../integration-services/data-flow/data-flow.md)  
   

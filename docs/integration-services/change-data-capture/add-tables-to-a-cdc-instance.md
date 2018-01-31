@@ -8,21 +8,23 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: addTabs
+f1_keywords:
+- addTabs
 ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7181d4abc4a8a395ad0b34c3d015f4c2ee4810cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 056098406b1d7e49612ef5c75f2afd3d7dd1cfdc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>Agregar tablas a una instancia CDC
   Use el cuadro de diálogo Selección de tablas para agregar tablas adicionales del origen de Oracle a la instancia CDC. Las tablas seleccionadas se agregarán a la lista de la pestaña **Tablas** del editor de propiedades.  
@@ -52,7 +54,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Puede ver la lista de tablas en el visor. Cuando se usa el visor, la información es de solo lectura. El visor también incluye una lista de las columnas capturadas de la tabla. Para obtener información acerca de cómo obtener acceso al visor, vea [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Cómo editar las propiedades de la instancia CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [Cómo administrar una instancia CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [Seleccionar tablas de Oracle para capturar cambios ](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-caps.latest.revision: "56"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 11b53327292545add9678714c4901dbdad01007e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1d4c2104bf9a24def61fe2c2c77020ef6a0a4c24
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="term-lookup-transformation"></a>Búsqueda de términos, transformación
   La transformación Búsqueda de términos compara los términos extraídos del texto en una columna de entrada de transformación con los términos de una tabla de referencia. A continuación, cuenta la cantidad de veces que un término aparece en la tabla de búsqueda en el conjunto de datos de entrada y escribe el recuento junto con el término de la tabla de referencia en columnas en la salida de transformación. Esta transformación resulta útil para crear una lista personalizada de palabras basada en el texto de entrada, que incluye estadísticas de frecuencia de aparición de palabras.  
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/20/2017
   
  Cuando un elemento de la búsqueda contiene términos que se superponen en el conjunto de referencia (es decir, un subtérmino se encuentra en más de un registro de referencia) la transformación Búsqueda de términos solo devuelve un resultado de búsqueda. En el siguiente ejemplo se muestra el resultado cuando un elemento de la búsqueda contiene un subtérmino que se superpone. El subtérmino que se superpone en este caso es *Windows*, que se encuentra en dos términos de referencia. Sin embargo, la transformación no devuelve dos resultados, sino únicamente un solo término de referencia, *Windows*. No se devuelve el segundo término de referencia, *Windows 7 Professional*.  
   
-|Elemento|Value|  
+|Elemento|Valor|  
 |----------|-----------|  
 |Término de entrada|Windows 7 Professional|  
 |Términos de referencia|Windows, Windows 7 Professional|  
@@ -112,7 +113,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="term-lookup-transformation-editor-term-lookup-tab"></a>Editor de transformación Búsqueda de términos (pestaña Búsqueda de términos)
   Use la pestaña **Búsqueda de términos** del cuadro de diálogo **Editor de transformación Búsqueda de términos** para asignar una columna de entrada a una columna de búsqueda en una tabla de referencia y para proporcionar un alias a cada columna de salida.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Columnas de entrada disponibles**  
  Con las casillas, seleccione las columnas de entrada que se van a pasar directamente a la salida sin cambios. Arrastre una columna de entrada a la lista **Columnas de referencia disponibles** para asignarla a una columna de búsqueda en la tabla de referencia. Las columnas de entrada y búsqueda deben coincidir en los tipos de datos admitidos, DT_NTEXT o DT_WSTR. Seleccione una línea de asignación y haga clic con el botón derecho para editar las asignaciones en el cuadro de diálogo [Crear relaciones](../../../integration-services/data-flow/transformations/create-relationships.md) .  
   
@@ -131,12 +132,12 @@ ms.lasthandoff: 11/20/2017
 ## <a name="term-lookup-transformation-editor-reference-table-tab"></a>Editor de transformación Búsqueda de términos (pestaña Tabla de referencia)
   Use la pestaña **Tabla de referencia** del cuadro de diálogo **Editor de transformación Búsqueda de términos** para especificar la conexión con la tabla de referencia (búsqueda).  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **OLE DB, administrador de conexiones**  
- Seleccione un administrador de conexiones de la lista o haga clic en **Nuevo**para crear una conexión.  
+ Seleccione un administrador de conexiones de la lista o cree una conexión haciendo clic en **Nuevo**.  
   
- **Nuevo**  
- Cree una conexión con el cuadro de diálogo **Configurar el administrador de conexiones OLE DB** .  
+ **Nueva**  
+ Cree una conexión mediante el cuadro de diálogo **Configurar el administrador de conexiones OLE DB** .  
   
  **Nombre de la tabla de referencia**  
  Seleccione una tabla de búsqueda o una vista de la base de datos; para ello, seleccione un elemento de la lista. La tabla o vista debe contener una columna con una lista de términos con los que se pueda comparar el texto de la columna de origen.  
@@ -147,14 +148,14 @@ ms.lasthandoff: 11/20/2017
 ## <a name="term-lookup-transformation-editor-advanced-tab"></a>Editor de transformación Búsqueda de términos (pestaña Avanzadas)
   Use la pestaña **Avanzadas** del cuadro de diálogo **Editor de transformación Búsqueda de términos** para especificar si en la búsqueda es necesario distinguir mayúsculas de minúsculas.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Utilizar búsqueda de términos con distinción de mayúsculas y minúsculas**  
  Indique si desea que en la búsqueda se distingan las mayúsculas de las minúsculas. El valor predeterminado es **False**.  
   
  **Configurar la salida de errores**  
  Use el cuadro de diálogo [Configurar la salida de errores](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar las opciones de control de errores de las filas que provocan errores.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Referencia de errores y mensajes de Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Transformación Extracción de términos](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   

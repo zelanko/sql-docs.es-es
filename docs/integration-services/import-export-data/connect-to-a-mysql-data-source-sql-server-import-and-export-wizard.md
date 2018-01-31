@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4fb97dd247146cd2535e4eee72c448fdd94c10de
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d011a5b39f6aded3bc305c922b5d2788026559e2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>Conectarse a un origen de datos MySQL (Asistente para importación y exportación de SQL Server)
 En este tema se muestra cómo conectarse a un origen de datos **MySQL** desde la página **Elegir un origen de datos** o **Elegir un destino** del asistente para importación y exportación de SQL Server. Hay varios proveedores de datos que puede usar para conectarse a MySQL.
@@ -36,7 +37,7 @@ Descargue los proveedores y los controladores que se describen en este tema desd
 Después de seleccionar el **proveedor de datos de .NET Framework para MySQL** en la página **Elegir un origen de datos** o **Elegir un destino** del asistente, la página muestra una lista agrupada de opciones del proveedor. Muchas de ellas aparecen con nombres y valores de configuración extraños. Afortunadamente, solo tendrá que proporcionar cierta información. Así que puede ignorar los valores predeterminados de las demás opciones.
 
 > [!NOTE]
-> Las opciones de conexión de este proveedor de datos son las mismas independientemente de si MySQL es el origen o el destino. Es decir, las opciones que ve son las mismas en ambas páginas **Elegir un origen de datos** y **Elegir un destino** del asistente.
+> Las opciones de conexión de este proveedor de datos son las mismas independientemente de si MySQL es el origen o el destino. Es decir, las opciones que ve son las mismas en las páginas **Elegir un origen de datos** y **Elegir un destino** del asistente.
 
 |Información requerida|Proveedor de datos de .NET Framework para la propiedad MySQL|
 |---|---|
@@ -60,7 +61,7 @@ Esta es la pantalla genérica que se ve inmediatamente después de seleccionar e
 ### <a name="options-to-specify-mysql-odbc-driver"></a>Opciones que hay que especificar (controlador ODBC de MySQL)
 
 > [!NOTE]
-> Las opciones de conexión de este proveedor de datos y el controlador ODBC son las mismas independientemente de si MySQL es el origen o el destino. Es decir, las opciones que ve son las mismas en ambas páginas **Elegir un origen de datos** y **Elegir un destino** del asistente.
+> Las opciones de conexión de este proveedor de datos y el controlador ODBC son las mismas independientemente de si MySQL es el origen o el destino. Es decir, las opciones que ve son las mismas en las páginas **Elegir un origen de datos** y **Elegir un destino** del asistente.
 
 Para conectarse a MySQL con el controlador ODBC de MySQL, ensamble una cadena de conexión que incluya las siguientes opciones y sus valores. El formato de una cadena de conexión completa aparece inmediatamente después de la lista de opciones.
 
@@ -103,6 +104,6 @@ Esta es la pantalla que verá después de escribir la cadena de conexión.
 Para obtener más información sobre cómo conectarse a MySQL con un proveedor de datos que no aparezca en esta lista, consulte [MySQL connection strings (Cadenas de conexión de MySQL)](https://www.connectionstrings.com/mysql/). En este sitio de terceros también encontrará más información sobre los proveedores de datos y los parámetros de conexión que se describen en esta página.
 
 ## <a name="see-also"></a>Vea también
-[Elegir un origen de datos](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
-[Elegir un destino](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
+[Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) (Selección de un origen de datos)  
+[Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md) (Selección de un destino)
 

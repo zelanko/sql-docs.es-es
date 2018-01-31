@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.previewdata.f1
+f1_keywords:
+- sql13.dts.impexpwizard.previewdata.f1
 ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3800757837068ba6a1608d1138399c79b84cae98
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4d0f0772336614e81e1b29c8a4e54fb73d2ed5c2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>Cuadro de diálogo Vista previa de los datos (Asistente para importación y exportación de SQL Server)
   Después de especificar los datos que quiere copiar, puede hacer clic en **Vista previa** para abrir el cuadro de diálogo **Vista previa de los datos** . En esta página, puede obtener una vista previa de hasta 200 filas de datos de ejemplo del origen de datos. Esto confirma que el asistente va a copiar los datos que quiere copiar.
@@ -33,7 +35,7 @@ ms.lasthandoff: 11/20/2017
 ![Página Vista previa de datos del Asistente para importación y exportación](../../integration-services/import-export-data/media/preview-data.png "Preview data page of the Import and Export Wizard")  
   
 ## <a name="preview-sample-data"></a>Obtener una vista previa de los datos de ejemplo  
- **Origen**  
+ **Source**  
 Muestra la consulta que usa el asistente para cargar datos del origen de datos.
 
 Si ha seleccionado una tabla para copiar, el campo **Origen** muestra una consulta `SELECT * FROM <table>` en lugar del nombre de la tabla. 
@@ -45,7 +47,7 @@ Si ha seleccionado una tabla para copiar, el campo **Origen** muestra una consul
 ## <a name="thats-not-right-i-want-to-change-something"></a>No es correcto, deseo cambiar algo
 Después de obtener una vista previa de los datos, es posible que quiera cambiar las opciones que seleccionó en páginas anteriores del asistente. Para realizar estas modificaciones, haga clic en **Aceptar** para volver a la página **Seleccionar tablas y vistas de origen** y después haga clic en **Atrás** para volver a las páginas anteriores en las que puede cambiar sus selecciones.
 
-## <a name="whats-next"></a>¿Qué debe hacer a continuación?  
+## <a name="whats-next"></a>¿Qué sigue?  
  Después de obtener una vista previa de los datos que se van a copiar y de hacer clic en **Aceptar**, el cuadro de diálogo **Vista previa de los datos** devuelve a la página **Seleccionar tablas y vistas de origen** o **Configurar el destino del archivo plano** . Para más información, vea [Seleccionar tablas y vistas de origen](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) o [Configurar el destino del archivo plano](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md).  
  
  ## <a name="see-also"></a>Vea también

@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: components [Integration Services], properties
+helpviewer_keywords:
+- components [Integration Services], properties
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e1e43cd578cd37385b643890a07588ff0d3fdc43
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e3dc5886a1328d8262a35d01cd5a1301ee3ffd56
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Establecer las propiedades de un componente de flujo de datos
   Para establecer las propiedades de los componentes de flujo de datos, que incluyen orígenes, destinos y transformaciones, utilice una de las características siguientes:  
@@ -133,7 +135,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |ComponentClassID|String|CLSID del componente.|  
 |ContactInfo|String|Información de contacto para el programador de un componente.|  
 |Description|String|Descripción del componente de flujo de datos. El valor predeterminado de esta propiedad es el nombre del componente de flujo de datos.|  
-|ID|Integer|Valor que identifica de forma única esta instancia del componente.|  
+|Id.|Integer|Valor que identifica de forma única esta instancia del componente.|  
 |IdentificationString|String|Identifica el componente.|  
 |IsDefaultLocale|Boolean|Indica si el componente utiliza la configuración regional de la tarea Flujo de Datos a la que pertenece.|  
 |LocaleID|Integer|Configuración regional que el componente de flujo de datos utiliza cuando el paquete se ejecuta. Todas las configuraciones regionales de Windows están disponibles para su uso en componentes de flujo de datos.|  
@@ -154,7 +156,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |ErrorOrTruncationOperation|String|Cadena opcional que especifica los tipos de errores o truncamientos que pueden producirse al procesar una fila.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica el control de errores. Los valores son **Fail component**, **Ignore failure**y **Redirect row**.|  
 |HasSideEffects|Boolean|Indica si un componente se puede quitar del plan de ejecución del flujo de datos cuando no está adjunto a un componente de nivel inferior y cuando **RunInOptimizedMode** es **true**.|  
-|ID|Integer|Valor que identifica la entrada de forma inequívoca.|  
+|Id.|Integer|Valor que identifica la entrada de forma inequívoca.|  
 |IdentificationString|String|Cadena que identifica la entrada.|  
 |IsSorted|Boolean|Indica si los datos de la entrada están ordenados.|  
 |Nombre|String|Nombre de la entrada.|  
@@ -175,12 +177,12 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |ErrorOrTruncationOperation|String|Cadena opcional que especifica los tipos de errores o truncamientos que pueden producirse al procesar una fila.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica el control de errores. Los valores son **Fail component**, **Ignore failure**y **Redirect row**.|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|El Id. de la columna de metadatos externa asignado a una columna de entrada.|  
-|ID|Integer|Valor que identifica la columna de entrada de forma inequívoca.|  
+|Id.|Integer|Valor que identifica la columna de entrada de forma inequívoca.|  
 |IdentificationString|String|Cadena que identifica la columna de entrada.|  
 |LineageID|Integer|El Id. de columna para la columna de nivel superior.|  
 |LineageIdentificationString|String|La cadena de identificación que incluye el nombre de la columna de nivel superior.|  
 |Nombre|String|Nombre de la columna de entrada.|  
-|SortKeyPosition|Integer|Valor que indica si una columna está ordenada, su criterio de ordenación y la secuencia en la que se ordenan varias columnas. El valor **0** indica que la columna no está ordenada.  Para más información, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
+|SortKeyPosition|Integer|Valor que indica si una columna está ordenada, su criterio de ordenación y la secuencia en la que se ordenan varias columnas. El valor **0** indica que la columna no está ordenada.  Para obtener más información, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina la forma en que el componente administra los truncamientos producidos al procesar las filas. Los valores son **Fail component**, **Ignore failure**y **Redirect row**.|  
 |UpstreamComponentName|String|Nombre del componente de nivel superior.|  
 |UsageType|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType>|Valor que determina la forma en que el componente utiliza una columna de entrada.|  
@@ -200,10 +202,10 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica el control de errores. Los valores son **Fail component**, **Ignore failure**y **Redirect row**.|  
 |ExclusionGroup|Integer|Valor que identifica un grupo de salidas mutuamente excluyentes.|  
 |HasSideEffects|Boolean|Valor que indica si un componente puede quitarse del plan de ejecución del flujo de datos cuando no está adjunto con un componente de nivel superior y cuando **RunInOptimizedMode** es **true**.|  
-|ID|Integer|Valor que identifica la salida de forma inequívoca.|  
+|Id.|Integer|Valor que identifica la salida de forma inequívoca.|  
 |IdentificationString|String|Cadena que identifica la salida.|  
 |IsErrorOut|Boolean|Indica si la salida es una salida de errores.|  
-|IsSorted|Boolean|Indica si la salida está ordenada. El valor predeterminado es **False**.<br /><br /> **\*\* Importante \*\*** Aunque se establezca el valor de la propiedad **IsSorted** en **True**, los datos no se ordenan. Esta propiedad únicamente proporciona una sugerencia a los componentes de nivel inferior acerca de que los datos se han ordenado previamente. Para más información, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
+|IsSorted|Boolean|Indica si la salida está ordenada. El valor predeterminado es **False**.<br /><br /> **\*\* Importante \*\*** Aunque se establezca el valor de la propiedad **IsSorted** en **True**, los datos no se ordenan. Esta propiedad únicamente proporciona una sugerencia a los componentes de nivel inferior acerca de que los datos se han ordenado previamente. Para obtener más información, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |Nombre|String|Nombre de la salida.|  
 |SynchronousInputID|Integer|El Id. de una entrada que es sincrónica con la salida.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina la forma en que el componente administra los truncamientos producidos al procesar las filas. Los valores son **Fail component**, **Ignore failure**y **Redirect row**.|  
@@ -220,7 +222,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |ErrorOrTruncationOperation|String|Cadena opcional que especifica los tipos de errores o truncamientos que pueden producirse al procesar una fila.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica el control de errores. Los valores son **Fail component**, **Ignore failure**y **Redirect row**. El valor predeterminado es **Error de componente**.|  
 |ExternalMetadataColumnID|Integer|El Id. de la columna de metadatos externa asignado a una columna de entrada.|  
-|ID|Integer|Valor que identifica la columna de resultados de forma inequívoca.|  
+|Id.|Integer|Valor que identifica la columna de resultados de forma inequívoca.|  
 |IdentificationString|String|Cadena que identifica la columna de resultados.|  
 |LineageID|Integer|El Id. de columna para la columna de resultados. Los componentes de nivel inferior hacen referencia a la columna utilizando este valor.|  
 |LineageIdentificationString|String|La cadena de identificación que incluye el nombre de la columna.|  
@@ -239,7 +241,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |Propiedad|Tipo de datos|Description|  
 |--------------|---------------|-----------------|  
 |Description|String|Describe la columna externa.|  
-|ID|Integer|Valor que identifica la columna de forma inequívoca.|  
+|Id.|Integer|Valor que identifica la columna de forma inequívoca.|  
 |IdentificationString|String|Cadena que identifica la columna.|  
 |Nombre|String|Nombre de la columna de externa.|  
   

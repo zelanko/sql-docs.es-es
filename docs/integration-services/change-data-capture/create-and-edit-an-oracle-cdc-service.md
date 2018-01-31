@@ -8,28 +8,30 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: createSrv
+f1_keywords:
+- createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de6ad94c01126dbdf32fefe75761f3aa2774446c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: df020f2a63ece4d45fdd1b4eb944ca3c87dae530
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Crear y editar un servicio CDC de Oracle
   Para crear y editar un nuevo servicio de Windows CDC de Oracle se emplea la Consola de configuración del servicio CDC.  
   
  Para crear un nuevo servicio de Windows CDC de Oracle, seleccione **Servicios CDC locales** en el panel izquierdo y, a continuación, haga clic en **Nuevo servicio** en el panel **Acciones** . También puede hacer clic con el botón derecho en **Local CDC Services** (Servicios CDC locales) y seleccionar **Nuevo servicio**. Se abrirá el cuadro de diálogo Nuevo servicio de Windows CDC de Oracle.  
   
- **O BIEN**  
+ **OR**  
   
  Para editar las propiedades del servicio CDC, seleccione el servicio cuyas propiedades desea editar y haga clic en **Propiedades** en el panel **Acciones** . También puede hacer clic con el botón derecho en el servicio con el que está trabajando y seleccionar **Propiedades**. Se abrirá el cuadro de diálogo Propiedades del servicio CDC.  
   
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 > Esta opción no está disponible al editar el servicio. No puede cambiar el nombre de un servicio de Windows que ya existe.  
   
- **Description**  
+ **Descripción**  
  Escriba una descripción del servicio para identificarlo.  
   
  **Cuenta de servicio**  
@@ -92,7 +94,7 @@ ms.lasthandoff: 11/20/2017
   
  También se debe usar la misma contraseña maestra cuando otras instancias del mismo servicio estén configuradas en otros nodos de un clúster en una configuración de alta disponibilidad. Si pierde o modifica la contraseña maestra, será necesario volver a especificar todas las contraseñas de minería de registros almacenadas en bases de datos de la instancia CDC de Oracle desde la Consola del diseñador CDC.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Cómo crear y editar un servicio CDC](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   

@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cdce8273a2a1ed7cfa725f1933ab99de40cfe3f6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 54eb41670979c83b200060128da8564b765bcd5d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="the-oracle-cdc-databases"></a>Las bases de datos CDC de Oracle
   Una instancia CDC de Oracle está asociada a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el mismo nombre en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino. Esta base de datos se denomina la base de datos CDC de Oracle (o la base de datos CDC).  
@@ -113,7 +114,7 @@ ms.lasthandoff: 11/20/2017
   
  En la tabla siguiente se describen las opciones disponibles.  
   
-|Nombre|Valor de DB-Library|Min|Max|Estático|Description|  
+|Nombre|Valor predeterminado|Min|Max|Estático|Description|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |seguimiento|False|-|-|False|Los valores disponibles son:<br /><br /> True<br /><br /> False<br /><br /> on<br /><br /> off|  
 |cdc_update_state_interval|10|1|120|False|Tamaño (en kilobytes) de los fragmentos de memoria asignados para una transacción (una transacción puede asignar más de un fragmento). Vea la columna memory_limit en la tabla [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) .|  
@@ -150,7 +151,7 @@ ms.lasthandoff: 11/20/2017
 |active|Valor booleano que puede ser:<br /><br /> **0**: el proceso de la instancia CDC de Oracle no está activo.<br /><br /> **1**: el proceso de la instancia CDC de Oracle está activo.|  
 |error|Valor booleano que puede ser:<br /><br /> **0**: el proceso de la instancia CDC de Oracle no está en un estado de error.<br /><br /> **1**: la instancia CDC de Oracle está en un estado de error.|  
 |status_message|Cadena que proporciona una descripción del error o el estado.|  
-|timestamp|Marca de tiempo con la hora (UTC) en que el estado de captura se actualizó por última vez.|  
+|TIMESTAMP|Marca de tiempo con la hora (UTC) en que el estado de captura se actualizó por última vez.|  
 |active_capture_node|Nombre del host (el host puede ser un nodo de un clúster) que está ejecutando actualmente el servicio y la instancia CDC de Oracle (que está procesando los registros de transacciones de Oracle).|  
 |last_transaction_timestamp|Marca de tiempo con la hora (UTC) en que se escribió la última transacción en las tablas de cambios.|  
 |last_change_timestamp|Marca de tiempo con la hora (UTC) en que se leyó el registro de cambios más reciente del registro de transacciones de Oracle de origen. Esta marca de tiempo ayuda a identificar la latencia actual del proceso CDC.|  
@@ -170,7 +171,7 @@ ms.lasthandoff: 11/20/2017
   
 |Elemento|Description|  
 |----------|-----------------|  
-|timestamp|Marca de tiempo UTC exacta en que se escribió el registro de seguimiento.|  
+|TIMESTAMP|Marca de tiempo UTC exacta en que se escribió el registro de seguimiento.|  
 |tipo|Contiene uno de los valores siguientes.<br /><br /> error<br /><br /> INFO<br /><br /> seguimiento|  
 |Nodo|Nombre del nodo en el que se escribió el registro.|  
 |status|Código de estado usado por la tabla de estado.|  
@@ -191,7 +192,7 @@ ms.lasthandoff: 11/20/2017
 |data_end_cn|Número de cambio (CN) del último cambio en los datos de esta fila.|  
 |datos|Cambios almacenados provisionalmente para la transacción en forma de blob.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Diseñador de captura de datos modificados para Oracle de Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
   
   

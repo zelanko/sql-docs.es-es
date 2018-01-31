@@ -8,24 +8,26 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.welcome.f1
+f1_keywords:
+- sql13.dts.impexpwizard.welcome.f1
 ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
-caps.latest.revision: "74"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 36872efe2081ae755f796d4ed19e96dbcbcfe341
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2edc03674b5456f68e484f29c1bbd71c4064ca8b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>Asistente para importación y exportación de SQL Server
-  Al iniciar el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la primera página es **Asistente para importación y exportación de SQL Server**. No hace falta que realice ninguna acción en esta página.
+  Al iniciar el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la primera página es **Asistente para importación y exportación de SQL Server**. No es necesario que realice ninguna acción en esta página.
 
 > [!IMPORTANT]
 > En este tema se describe solo la **primera página** del asistente. Si busca algo más, consulte [Temas y tareas relacionados](#related).
@@ -42,7 +44,7 @@ En la siguiente captura de pantalla se muestra la página **Asistente para impor
 **No volver a mostrar esta página.**  
  Omite la página principal la próxima vez que se abre el asistente.  
   
-## <a name="whats-next"></a>¿Qué debe hacer a continuación?  
+## <a name="whats-next"></a>¿Qué sigue?  
  Después de la página principal aparece la página **Seleccionar un origen de datos**. En esta página, debe proporcionar información sobre el origen de datos y la manera de conectarse a él. Para obtener más información, vea [Elegir un origen de datos](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).
 
 ## <a name="related"></a> Temas y tareas relacionados  
@@ -59,7 +61,7 @@ En la siguiente captura de pantalla se muestra la página **Asistente para impor
 
     -   **Obtenga más información sobre los pasos del asistente.** Si está buscando información sobre los pasos del asistente, consulte [Steps in the SQL Server Import and Export Wizard (Pasos del asistente para importación y exportación de SQL Server)](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). También hay una página independiente de documentación para cada página del asistente.
 
-    -   **Obtenga información sobre cómo conectarse a orígenes y destinos de datos.** Si está buscando información sobre cómo conectarse a sus datos, seleccione la página que quiera de la lista que encontrará aquí: [Connect to data sources with the SQL Server Import and Export Wizard (Conectarse a orígenes de datos con el Asistente para importación y exportación de SQL Server)](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md). Hay una página independiente de documentación para cada uno de los varios orígenes de datos de uso frecuente.
+    -   **Obtenga información sobre cómo conectarse a orígenes y destinos de datos.** Si está buscando información sobre cómo conectarse a sus datos, seleccione la página que quiera de esta lista: [Connect to data sources with the SQL Server Import and Export Wizard](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md) (Conexión a orígenes de datos con el Asistente para importación y exportación de SQL Server). Hay una página independiente de documentación para cada uno de los varios orígenes de datos de uso frecuente.
 
 -   **Inicie el asistente.** Si está listo para ejecutar el asistente y simplemente quiere saber cómo iniciarlo, consulte [Iniciar el Asistente para importación y exportación de SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 

@@ -8,25 +8,26 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d48d78bd1e2e6d86a8416564d5ef7ee22a785d0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 40805d8c0f2e070df89344babfbc607a7cd6c66f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cdc-control-task-custom-properties"></a>Propiedades personalizadas de la tarea de control CDC
   En la tabla siguiente se describen las propiedades personalizadas de la tarea de control CDC. Todas las propiedades son de lectura y escritura.  
   
-|Nombre de la propiedad|Tipo de datos|Description|  
+|Nombre de propiedad|Tipo de datos|Description|  
 |-------------------|---------------|-----------------|  
 |Conexión|Conexión ADO.NET|Una conexión ADO.NET en la base de datos CDC de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para acceder a las tablas de cambios y al estado CDC si se almacenan en la misma base de datos.<br /><br /> Es preciso realizar la conexión a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] habilitada para CDC y donde se encuentre la tabla de cambios seleccionada.|  
 |TaskOperation|Integer (enumeración)|Operación seleccionada para la tarea de control CDC. Los valores posibles son **Mark Initial Load Start**, **Mark Initial Load End**, **Mark CDC Start**, **Get Processing Range**, **Mark Processed Range**y **Reset CDC State**.<br /><br /> Si selecciona **MarkCdcStart**, **MarkInitialLoadStart**o **MarkInitialLoadEnd** al trabajar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC (es decir, no en Oracle), el usuario especificado en el administrador de conexiones tiene que ser  **db_owner** o **sysadmin**.<br /><br /> Para obtener más información acerca de estas operaciones, vea [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md) y [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/20/2017
 |StateTable|String|Especifica el nombre de la tabla donde se almacena el estado del contexto CDC. Esta tabla debe estar accesible mediante la conexión configurada para este componente. Esta tabla debe incluir las columnas varchar denominadas **name** y **state**. (La columna **state** necesita tener como mínimo 256 caracteres).<br /><br /> Esta propiedad solo se aplica cuando **AutomaticStatePersistence** se establece en **true**.|  
 |CommandTimeout|integer|Este valor indica el tiempo de espera (en segundos) que se usará al comunicarse con la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se utiliza este valor siempre que el tiempo de respuesta de la base de datos sea muy lento y el valor predeterminado (30 segundos) no sea suficiente.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
  [Editor de la tarea Control CDC](../../integration-services/control-flow/cdc-control-task-editor.md)  
   

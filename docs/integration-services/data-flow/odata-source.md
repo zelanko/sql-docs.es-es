@@ -8,7 +8,8 @@ ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,16 +18,16 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 653b48d9148d840290911baed697138d07a92a91
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 035483d63bdd8e28a5d0089f5a7dc783917aeacf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odata-source"></a>Origen OData
 Use el componente de origen OData en un paquete SSIS para consumir datos de un servicio de Open Data Protocol (OData). El componente admite los protocolos OData v3 y v4.  
@@ -64,7 +65,7 @@ El origen OData incluye compatibilidad con los orígenes de datos siguientes:
   
  Después de seleccionar o crear un administrador de conexiones, el cuadro de diálogo muestra la versión del Protocolo OData que está utilizando el Administrador de conexiones.  
   
- **Nuevo**  
+ **Nueva**  
  Cree un administrador de conexiones mediante el cuadro de diálogo **Editor del administrador de conexiones OData** .  
   
  **Usar ruta de acceso de colección o a recursos**  
@@ -97,7 +98,7 @@ El origen OData incluye compatibilidad con los orígenes de datos siguientes:
 ## <a name="odata-source-editor-columns-page"></a>Editor de origen OData (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de origen OData** para seleccionar las columnas externas (origen) que se van a incluir en la salida y asignarlas a columnas de salida.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Columnas externas disponibles**  
  Muestra la lista de columnas de origen disponibles en el origen de datos. Use las casillas de la lista para agregar o quitar columnas a la tabla en la parte inferior de la página. Las columnas seleccionadas se agregan a la salida.  
   
@@ -110,7 +111,7 @@ El origen OData incluye compatibilidad con los orígenes de datos siguientes:
 ## <a name="odata-source-editor-error-output-page"></a>Editor de origen OData (página Salida de error)
   Use la página **Salida de error** del cuadro de diálogo **Editor de origen OData** para seleccionar opciones de control de errores y establecer las propiedades en las columnas de salida de errores.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Entrada/salida**  
  Muestra el nombre del origen de datos.  
   
@@ -125,7 +126,7 @@ El origen OData incluye compatibilidad con los orígenes de datos siguientes:
  **Truncamiento**  
  Permite especificar qué debe ocurrir cuando se produce un truncamiento: omitir el error, redirigir la fila o hacer que el componente no funcione.  
   
- **Description**  
+ **Descripción**  
  Muestra la descripción del error.  
   
  **Establecer este valor en las celdas seleccionadas**  
@@ -134,7 +135,7 @@ El origen OData incluye compatibilidad con los orígenes de datos siguientes:
  **Aplicar**  
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administrador de conexiones OData](../../integration-services/connection-manager/odata-connection-manager.md)  
   
   

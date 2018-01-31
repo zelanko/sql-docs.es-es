@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 388a88d1f9a7ad6b18b2f04a702d2198c644e4fe
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 86d567d804c64c769823b33cc50ff231d310a760
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-paths"></a>Rutas de Integration Services
   Una ruta conecta dos componentes en un flujo de datos conectando la salida de un componente de flujo de datos con la entrada de otro componente. Una ruta tiene un origen y un destino. Por ejemplo, si una ruta conecta un origen de OLE DB y una transformación Ordenar, el origen de OLE DB es el origen de la ruta y la transformación Ordenar es el destino de la ruta. El origen es el componente donde se inicia la ruta y el destino es el componente donde finaliza la ruta.  
@@ -67,7 +68,7 @@ Utilice el cuadro de diálogo **Editor de rutas de flujo de datos** para estable
   
  Utilice el nodo **General** del cuadro de diálogo **Editor de rutas de flujo de datos** para nombrar y describir la ruta, y para especificar las opciones de anotación de ruta.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Nombre**  
  Proporcione un nombre único para la ruta.  
   
@@ -77,7 +78,7 @@ Utilice el cuadro de diálogo **Editor de rutas de flujo de datos** para estable
  **IdentificationString**  
  La cadena que identifica la ruta. Se automáticamente a partir del nombre especificado con anterioridad.  
   
- **Description**  
+ **Descripción**  
  Describe la ruta.  
   
  **PathAnnotation**  
@@ -92,7 +93,7 @@ Utilice el cuadro de diálogo **Editor de rutas de flujo de datos** para estable
 ## <a name="metadata-page---data-flow-path-editor"></a>Página Metadatos: Editor de rutas de flujo de datos
 Utilice la página **Metadatos** del cuadro de diálogo **Editor de rutas de flujo de datos** para ver los metadatos de las columnas de rutas.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Metadatos de ruta**  
  Muestra los metadatos de columna. Haga clic en los encabezados de columna para ordenar los datos de columna.  
   
@@ -132,7 +133,7 @@ Utilice la página **Metadatos** del cuadro de diálogo **Editor de rutas de flu
 ## <a name="data-viewers-page---data-flow-path-editor"></a>Página Visores de datos: Editor de rutas de flujo de datos
 Utilice la página **Visores de datos** del cuadro de diálogo **Editor de rutas de flujo de datos** para administrar los visores de datos que se adjuntan a la ruta.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Nombre**  
  Muestra los visores de datos.  
   
@@ -158,7 +159,7 @@ Los objetos de flujo de datos del modelo de objetos de [!INCLUDE[msCoName](../..
   
  La tabla siguiente describe las propiedades configurables de las rutas de acceso en un flujo de datos. El motor de flujo de datos también asigna valores a propiedades de solo lectura adicionales no enumeradas aquí.  
   
-|Nombre de la propiedad|Tipo de datos|Description|  
+|Nombre de propiedad|Tipo de datos|Description|  
 |-------------------|---------------|-----------------|  
 |PathAnnotation|Integer (enumeración)|Un valor que indica si una anotación se debería mostrar con la ruta de acceso en el área del diseñador. Los valores posibles son **AsNeeded**, **SourceName**, **PathName**y **Never**. El valor predeterminado es **AsNeeded**.|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|La entrada asociada a la ruta de acceso.|  

@@ -8,23 +8,24 @@ ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
-caps.latest.revision: "9"
+caps.latest.revision: 
 f1_keywords:
 - sql13.dts.designer.odatasource.connectionmanager.f1
 - sql13.dts.designer.odataconnectionmanager.f1
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38e19fec56bb0392435adb1b6c6313fed59770b1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 331cf4ff00eeda4b1c1d22c021138ae67d6d23b9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odata-connection-manager"></a>Administrador de conexiones OData
  Conéctese a un origen de datos OData con un administrador de conexiones OData. Un componente de origen OData usa un administrador de conexiones OData para conectarse a un origen de datos OData y consumir datos del servicio. Para obtener más información, vea [OData Source](../../integration-services/data-flow/odata-source.md).  
@@ -74,7 +75,7 @@ Para conectarse a Microsoft Dynamics AX Online o Microsoft Dynamics CRM Online, 
 ## <a name="odata-connection-manager-editor"></a>Editor del administrador de conexiones OData
   Use el cuadro de diálogo **Editor del administrador de conexiones OData** para agregar una conexión o editar una conexión existente con un origen de datos OData.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Nombre del administrador de conexiones**  
  Nombre del administrador de conexiones.  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - importing data, SSIS packages
 - sources [Integration Services], copying data
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
-caps.latest.revision: "160"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2bb672edb72392a8ae215160719aa3476c2452f1
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: b2a3d6c1968c0e8d2a2463dedf6a9050590c2bbd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importar y exportar datos con el Asistente para importación y exportación de SQL Server
 
@@ -75,7 +76,7 @@ Para obtener información sobre cómo conectarse a un destino de uso frecuente, 
 -   [Conectarse a MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
 
 
-Para obtener más información sobre cómo conectarse a un origen de datos que no aparezca en esta lista, consulte [The Connection Strings Reference (Referencia de cadenas de conexión)](https://www.connectionstrings.com/). Este sitio de terceros contiene cadenas de conexión de ejemplo y más información acerca de los proveedores de datos y la información de conexión que necesitan.
+Para obtener más información sobre cómo conectarse a un origen de datos que no aparezca en esta lista, consulte [The Connection Strings Reference (Referencia de cadenas de conexión)](https://www.connectionstrings.com/). Este sitio de terceros contiene cadenas de conexión de ejemplo y más información acerca de los proveedores de datos y la conexión que estos necesitan.
 
 ## <a name="what-permissions-do-i-need"></a>¿Qué permisos necesito?  
  Para ejecutar correctamente el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe disponer como mínimo de los siguientes permisos. Si ya trabaja con el origen y el destino de datos, probablemente cuente con los permisos necesarios.
@@ -101,7 +102,7 @@ Al final del asistente, si tiene instalado [!INCLUDE[ssNoVersion](../../includes
 
 Para obtener más información sobre SSIS, vea [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md).
 
-## <a name="whats-next"></a>Siguientes pasos  
+## <a name="whats-next"></a>¿Qué sigue?  
  Inicie el asistente. Para obtener más información, vea [Start the SQL Server Import and Export Wizard](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)(Iniciar el Asistente para importación y exportación de SQL Server).  
 
 ## <a name="see-also"></a>Vea también

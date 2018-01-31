@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - environment data in packages [Integration Services]
 - Audit transformation
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa1ed88a75603d7a943dfb05089c0a79092507ef
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6a3e8e346a8b71c3bd11fad1847dc33fa4b47145
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="audit-transformation"></a>Auditar, transformación
   La transformación Auditar habilita el flujo de datos en un paquete para incluir datos sobre el entorno en el que se ejecuta el paquete. Por ejemplo, el nombre del paquete, el equipo y el operador se pueden agregar al flujo de datos. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye variables del sistema que proporcionan esta información.  
@@ -65,14 +66,14 @@ ms.lasthandoff: 11/20/2017
 ## <a name="audit-transformation-editor"></a>Editor de transformación Auditar
   La transformación Auditar habilita el flujo de datos en un paquete para incluir datos sobre el entorno en el que se ejecuta el paquete. Por ejemplo, el nombre del paquete, el equipo y el operador se pueden agregar al flujo de datos. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye variables del sistema que proporcionan esta información.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Nombre de la columna de salida**  
  Proporciona el nombre de una nueva columna de salida que contendrá la información de auditoría.  
   
  **Tipo de auditoría**  
  Seleccione una variable del sistema disponible para suministrar la información de auditoría.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**GUID de instancia de ejecución**|Inserte el GUID que identifica exclusivamente la instancia de ejecución del paquete.|  
 |**Id. de paquete**|Inserte el GUID que identifica exclusivamente el paquete.|  
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/20/2017
 |**Id. de versión**|Inserte el GUID que identifica exclusivamente la versión del paquete.|  
 |**Hora de inicio de ejecución**|Inserte la hora en la que se iniciará la ejecución del paquete.|  
 |**Nombre de equipo**|Inserte el nombre del equipo en el que se inició el paquete.|  
-|**Nombre de usuario.**|Inserte el nombre de inicio de sesión del usuario que inició el paquete.|  
+|**User name**|Inserte el nombre de inicio de sesión del usuario que inició el paquete.|  
 |**Nombre de tarea**|Inserte el nombre de la tarea Flujo de datos con la que está asociada la transformación Auditar.|  
 |**Id. de tarea**|Inserte el GUID que identifica exclusivamente la tarea Flujo de datos con la que está asociada la transformación Auditar.|  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,18 +21,18 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72ed17f506e2da78c972c54e19e98c8deacc287c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c8ffadcd36d1df013d8e5a9a9aeb3f85d4056c27
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="data-mining-query-task"></a>Tarea Consulta de minería de datos
+# <a name="data-mining-query-task"></a>Data Mining Query Task
   La tarea Consulta de minería de datos ejecuta consultas de predicción basadas en modelos de minería de datos integrados en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La consulta de predicción crea una predicción para datos nuevos a partir de modelos de minería de datos. Por ejemplo, una consulta de predicción puede predecir cuántos barcos de vela es probable vender durante los meses de verano, así como generar una lista de clientes que podrían estar interesados en comprar uno.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona tareas que realizan otras operaciones de Business Intelligence, como ejecutar instrucciones del lenguaje de definición de datos (DDL) y procesar objetos de análisis.  
@@ -75,14 +76,14 @@ ms.lasthandoff: 11/20/2017
   
  Para obtener información sobre cómo implementar la minería de datos en paquetes, vea [Tarea Consulta de minería de datos](../../integration-services/control-flow/data-mining-query-task.md) y [Soluciones de minería de datos](../../analysis-services/data-mining/data-mining-solutions.md).  
   
-### <a name="general-options"></a>Opciones de General  
+### <a name="general-options"></a>Opciones generales  
  **Nombre**  
  Escriba un nombre único para la tarea Consulta de minería de datos. Este nombre se utiliza como etiqueta en el icono de tarea.  
   
 > [!NOTE]  
 >  Los nombres de tarea deben ser únicos en un paquete.  
   
- **Description**  
+ **Descripción**  
  Escriba una descripción de la tarea Consulta de minería de datos.  
   
 ### <a name="mining-model-tab-options"></a>Opciones de la pestaña Modelo de minería de datos  
@@ -91,7 +92,7 @@ ms.lasthandoff: 11/20/2017
   
  **Temas relacionados:**  [Administrador de conexiones de Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
- **Nuevo**  
+ **Nueva**  
  Permite crear un administrador de conexiones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  **Temas relacionados:** [Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones con Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
@@ -107,14 +108,14 @@ ms.lasthandoff: 11/20/2017
   
  Para obtener información sobre cómo implementar la minería de datos en paquetes, vea [Tarea Consulta de minería de datos](../../integration-services/control-flow/data-mining-query-task.md) y [Soluciones de minería de datos](../../analysis-services/data-mining/data-mining-solutions.md).  
   
-### <a name="general-options"></a>Opciones de General  
+### <a name="general-options"></a>Opciones generales  
  **Nombre**  
  Escriba un nombre único para la tarea Consulta de minería de datos. Este nombre se utiliza como etiqueta en el icono de tarea.  
   
 > [!NOTE]  
 >  Los nombres de tarea deben ser únicos en un paquete.  
   
- **Description**  
+ **Descripción**  
  Escriba una descripción de la tarea Consulta de minería de datos.  
   
 ### <a name="build-query-tab-options"></a>Opciones de la pestaña Generar consulta  
@@ -163,21 +164,21 @@ ms.lasthandoff: 11/20/2017
   
  Para obtener información sobre cómo implementar minería de datos en paquetes, vea [Tarea Consulta de minería de datos](../../integration-services/control-flow/data-mining-query-task.md) y [Soluciones de minería de datos](../../analysis-services/data-mining/data-mining-solutions.md).  
   
-### <a name="general-options"></a>Opciones de General  
+### <a name="general-options"></a>Opciones generales  
  **Nombre**  
  Escriba un nombre único para la tarea Consulta de minería de datos. Este nombre se utiliza como etiqueta en el icono de tarea.  
   
 > [!NOTE]  
 >  Los nombres de tarea deben ser únicos en un paquete.  
   
- **Description**  
+ **Descripción**  
  Escriba una descripción de la tarea Consulta de minería de datos.  
   
 ### <a name="output-tab-options"></a>Opciones de la pestaña Salida  
  **Conexión**  
  Seleccione un administrador de conexiones de la lista o haga clic en **Nuevo** para crear uno.  
   
- **Nuevo**  
+ **Nueva**  
  Cree un administrador de conexiones nuevo. Solo se pueden usar los tipos de administrador de conexiones ADO.NET y OLE DB.  
   
  **Tabla de salida**  

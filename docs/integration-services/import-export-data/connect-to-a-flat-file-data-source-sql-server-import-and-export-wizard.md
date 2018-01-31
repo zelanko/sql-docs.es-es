@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9fa0b3192455d022288100f2997309598dae774b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c8ab77d362f9758e21a1bce78c31bc066d39f51c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Conexión a un origen de datos de archivo plano (Asistente para importación y exportación de SQL Server)
 En este tema se muestra cómo conectarse a un origen de datos de **archivo plano** (archivo de texto) desde la página **Seleccionar un origen de datos** o **Seleccionar un destino** del Asistente para importación y exportación de SQL Server. Para los archivos planos, estas dos páginas del Asistente presentan diferentes conjuntos de opciones, por lo que en este tema se describen el origen y el destino del archivo plano por separado.
@@ -82,7 +83,7 @@ Página|Recomendación  |Tipo
  **Delimitador de filas de encabezados**  
  Seleccione uno de los delimitadores de filas de encabezados de la lista o escriba el texto delimitador.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|La fila de encabezado está delimitada por una combinación de retorno de carro y avance de línea.|  
 |**{CR}**|La fila de encabezado está delimitada por un retorno de carro.|  
@@ -109,7 +110,7 @@ Página|Recomendación  |Tipo
  **Delimitador de filas**  
  Selecciónelo de la lista de delimitadores de filas disponibles o escriba el texto delimitador.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Las filas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
 |**{CR}**|Las filas se delimitan mediante un retorno de carro.|  
@@ -123,7 +124,7 @@ Página|Recomendación  |Tipo
  **Delimitador de columna**  
  Selecciónelo de la lista de delimitadores de columna disponibles o escriba el texto delimitador.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Las columnas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
 |**{CR}**|Las columnas se delimitan mediante un retorno de carro.|  
@@ -181,7 +182,7 @@ En la página **Columnas**, compruebe la lista de columnas y los delimitadores q
  **Delimitador de filas**  
  Selecciónelo de la lista de delimitadores de filas disponibles o escriba el texto delimitador.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Las filas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
 |**{CR}**|Las filas se delimitan mediante un retorno de carro.|  
@@ -219,16 +220,16 @@ En la captura de pantalla, tenga en cuenta que la columna **id**, que contiene n
 |**OutputColumnWidth**|Especifique un valor que se almacenará como recuento de bytes; en los archivos Unicode, el valor corresponde a un recuento de caracteres. En la tarea Flujo de datos este valor se utiliza para establecer el ancho de la columna de salida para el origen del archivo plano. En el modelo de objetos, el nombre de esta propiedad es MaximumWidth.|  
 |**TextQualified**|Indica si los datos de texto están entre caracteres calificadores de texto como caracteres de comillas.<br /><br /> True: se califican los datos de texto del archivo plano. False: no se califican los datos de texto del archivo plano.|  
   
-**Nuevo**  
+**Nueva**  
  Para agregar una columna, haga clic en **Nuevo**. De manera predeterminada, el botón **Nueva** agrega una columna nueva al final de la lista. El botón siempre tiene las siguientes opciones, disponibles en la lista desplegable.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Agregar columna**|Agrega una nueva columna al final de la lista.|  
 |**Insertar delante**|Inserta una nueva columna antes de la columna seleccionada.|  
 |**Insertar detrás**|Inserta una nueva columna detrás de la columna seleccionada.|  
   
- **Delete**  
+ **Eliminar**  
  Seleccione una columna y, después, haga clic en **Eliminar**para quitarla.  
   
  **Sugerir tipos**  

@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.specifytablecopyorquery.f1
+f1_keywords:
+- sql13.dts.impexpwizard.specifytablecopyorquery.f1
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4ba4c750ecf556cdaae6fdbdfb08b6991316e544
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 56babe19727ca9ac7e0f364f64c91716508f4dfc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Especificar copia de tabla o consulta (Asistente para importación y exportación de SQL Server)
   Después de proporcionar información sobre el destino de los datos y sobre cómo se conectará a estos, en el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se mostrará **Especificar copia de tabla o consulta**. En esta página, elija una de las opciones siguientes.
@@ -30,7 +32,7 @@ ms.lasthandoff: 11/20/2017
 -   **Escribir una consulta para especificar los datos que se van a transferir**. Puede escribir o pegar el texto de una consulta SQL.
     
 > [!TIP]
-> Si tiene que copiar más de una base de datos u objetos de base de datos que no sean tablas y vistas, use al Asistente para copiar bases de datos en lugar del Asistente para importación y exportación. Para más información, vea [Usar el Asistente para copiar bases de datos](../../relational-databases/databases/use-the-copy-database-wizard.md).     
+> Si tiene que copiar más de una base de datos, o bien objetos de base de datos que no sean tablas y vistas, use el Asistente para copiar bases de datos en lugar del Asistente para importación y exportación. Para más información, vea [Usar el Asistente para copiar bases de datos](../../relational-databases/databases/use-the-copy-database-wizard.md).     
  
 ## <a name="screen-shot-of-the-specify-table-copy-or-query-page"></a>Captura de pantalla de la página Especificar copia de tabla o consulta    
  En la captura de pantalla siguiente se muestra la página **Especificar copia de tabla o consulta** del asistente.    
@@ -74,7 +76,7 @@ Puede seguir usando la opción **Write a query (Escribir una consulta)**, aunque
     
  Los desarrolladores independientes pueden permitir que esté disponible la opción **Copiar los datos de una o varias tablas o vistas** para su proveedor si agregan la sección ProviderDescriptor al archivo ProviderDescriptors.xml. Para revisar los requisitos de la sección ProviderDescriptor, vea el archivo de esquema ProviderDescriptors.xsd que, de forma predeterminada, está en la misma carpeta que el archivo ProviderDescriptors.xml.    
     
-## <a name="whats-next"></a>Siguientes pasos    
+## <a name="whats-next"></a>¿Qué sigue?    
  Después de especificar si quiere copiar toda una tabla o proporcionar una consulta, la página siguiente depende de la opción que haya elegido en esta página, así como del destino de los datos.    
     
 -   Si ha seleccionado **Copiar los datos de una o varias tablas o vistas**, para la mayoría de los destinos, la página siguiente será **Seleccionar tablas y vistas de origen**. En esta página, seleccione las tablas y vistas existentes que quiere copiar del origen de datos al destino. Para más información, vea [Seleccionar tablas y vistas de origen](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md).    

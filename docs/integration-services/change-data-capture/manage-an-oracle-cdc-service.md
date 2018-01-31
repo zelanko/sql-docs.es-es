@@ -8,23 +8,25 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: createSrv
+f1_keywords:
+- createSrv
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 821c94ac97bb4d709af194541488d8dceca7ca3c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f54659eeb98bd72edf2addbb0d68df8519d2eb0b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="manage-an-oracle-cdc-service"></a>Administrar un servicio CDC de Oracle
+# <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
   Puede usar la Consola de configuración del servicio CDC para administrar un servicio CDC específico.  
   
  **Para seleccionar el servicio CDC con el que desea trabajar**  
@@ -35,7 +37,7 @@ ms.lasthandoff: 11/20/2017
   
      También puede hacer clic con el botón secundario en el servicio CDC con el que desea trabajar y seleccionar la acción deseada. Consulte [What can you do with a CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
   
- **O BIEN**  
+ **OR**  
   
 1.  Seleccione **Servicios CDC locales** en el panel izquierdo de la Consola de configuración del servicio CDC.  
   
@@ -62,7 +64,7 @@ ms.lasthandoff: 11/20/2017
   
  También puede hacer clic con el botón derecho en el servicio CDC cuyas propiedades quiera editar y seleccionar **Propiedades**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Cómo administrar un servicio CDC local](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)  
   
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6de3f50f2a0630e2488b33c6fe98c1fe20c1b0d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1ba138c4315bf31efc281aff9a42b0e8a513b756
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes enumeradas en expresiones de propiedad
   Si las expresiones de propiedad incluyen valores de una lista de miembros enumeradores, la expresión debe utilizar el valor numérico del miembro enumerador en lugar del nombre descriptivo del miembro. Por ejemplo, si una expresión establece la propiedad **LoggingMode** , debe utilizar el valor 2 en lugar del nombre descriptivo Deshabilitado.  
@@ -161,7 +162,7 @@ ms.lasthandoff: 11/20/2017
 |FileConnection|1|  
 |Variable|2|  
   
-### <a name="bulk-insert-task"></a>Tarea Inserción masiva  
+### <a name="bulk-insert-task"></a>Inserción masiva, tarea  
  Propiedad**DataFileType** : se establece mediante el uso de valores provenientes de la enumeración **DTSBulkInsert_DataFileType** .  
   
 |Nombre descriptivo en DTSBulkInsert_DataFileType|Valor numérico|  
@@ -211,7 +212,7 @@ ms.lasthandoff: 11/20/2017
 |----------------------------------------------|-------------------|  
 |Normal|0|  
 |Archive|1|  
-|Oculto|2|  
+|Hidden|2|  
 |Solo lectura|4|  
 |Sistema|8|  
   
@@ -229,7 +230,7 @@ ms.lasthandoff: 11/20/2017
 |RemoveDirLocal|6|  
 |RemoveDirRemote|7|  
   
-### <a name="message-queue-task"></a>Tarea Cola de mensajes  
+### <a name="message-queue-task"></a>Message Queue Task  
  Propiedad**MessageType** : se establece mediante el uso de valores provenientes de la enumeración **MQMessageType** .  
   
 |Nombre descriptivo en MQMessageType|Valor numérico|  
@@ -255,7 +256,7 @@ ms.lasthandoff: 11/20/2017
 |DTSMQType_Sender|0|  
 |DTSMQType_Receiver|1|  
   
-### <a name="send-mail-task"></a>Tarea Enviar correo  
+### <a name="send-mail-task"></a>Enviar correo, tarea  
  Propiedad**MessageSourceType** : se establece mediante el uso de valores provenientes de la enumeración **SendMailMessageSourceType** .  
   
 |Nombre descriptivo en SendMailMessageSourceType|Valor numérico|  
@@ -477,7 +478,7 @@ ms.lasthandoff: 11/20/2017
   
 |Nombre descriptivo en DTSXMLDiffAlgorithm|Valor numérico|  
 |------------------------------------------|-------------------|  
-|Automático|0|  
+|Auto|0|  
 |Rápido|1|  
 |Preciso|2|  
   
@@ -494,7 +495,7 @@ ms.lasthandoff: 11/20/2017
 |Nombre descriptivo en DatabaseSelection|Valor numérico|  
 |----------------------------------------|-------------------|  
 |None|0|  
-|Todos|1|  
+|All|1|  
 |Sistema|2|  
 |Usuario|3|  
 |Specific|4|  
@@ -504,7 +505,7 @@ ms.lasthandoff: 11/20/2017
 |Nombre descriptivo en TableSelection|Valor numérico|  
 |-------------------------------------|-------------------|  
 |None|0|  
-|Todos|1|  
+|All|1|  
 |Specific|2|  
   
  Propiedad**ObjectTypeSelection** : se establece mediante el uso de valores provenientes de la enumeración **ObjectType** .  
@@ -520,7 +521,7 @@ ms.lasthandoff: 11/20/2017
   
 |Nombre descriptivo en DestinationType|Valor numérico|  
 |--------------------------------------|-------------------|  
-|Automático|0|  
+|Auto|0|  
 |Manual|1|  
   
  Propiedad**ExistingBackupsAction** : se establece mediante el uso de valores provenientes de la enumeración **ActionForExistingBackups** .  
@@ -548,7 +549,7 @@ ms.lasthandoff: 11/20/2017
 |Pipe|3|  
 |VirtualDevice|4|  
   
-### <a name="maintenance-cleanup-task"></a>Tarea Limpieza de mantenimiento  
+### <a name="maintenance-cleanup-task"></a>tarea, Limpieza de mantenimiento  
  Propiedad**FileTypeSelected** : se establece mediante el uso de valores provenientes de la enumeración **FileType** .  
   
 |Nombre descriptivo en FileType|Valor numérico|  
@@ -570,9 +571,9 @@ ms.lasthandoff: 11/20/2017
   
 |Nombre descriptivo en StatisticsTarget|Valor numérico|  
 |---------------------------------------|-------------------|  
-|Columna|1|  
+|columna|1|  
 |Índice|2|  
-|Todos|3|  
+|All|3|  
   
 ##  <a name="CommonProperties"></a> Propiedades comunes  
  Los paquetes, tareas, y los contenedores de secuencias, de bucles Foreach y de bucles For pueden utilizar las siguientes enumeraciones para establecer las propiedades especificadas.  
@@ -602,12 +603,12 @@ ms.lasthandoff: 11/20/2017
 |-------------------------------------------|-------------------|  
 |NotSupported|0|  
 |Admitida|1|  
-|Necesario|2|  
+|Obligatorio|2|  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Agregar o cambiar una expresión de propiedad](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Usar expresiones de propiedad en paquetes](../../integration-services/expressions/use-property-expressions-in-packages.md)   
  [Paquetes de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
  [Contenedores de Integration Services](../../integration-services/control-flow/integration-services-containers.md)   

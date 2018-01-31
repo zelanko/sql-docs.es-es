@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.createtablesql.f1
+f1_keywords:
+- sql13.dts.impexpwizard.createtablesql.f1
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
-caps.latest.revision: "67"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 094f418f8304742c462ff119c2e55d3d9cace1ad
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 750f5f411660a80f81522e591b28dc3956fa1eee
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>Instrucción Create Table de SQL (Asistente para importación y exportación de SQL Server)
 Si selecciona **Crear tabla de destino** y luego **Editar SQL** en el cuadro de diálogo **Asignaciones de columnas** , en el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se mostrará el cuadro de diálogo **Instrucción Create Table SQL** . En esta página, revise y (de manera opcional) personalice el comando **CREATE TABLE** que ejecutará el asistente para crear la tabla de destino.
@@ -57,7 +59,7 @@ Para más información sobre la instrucción CREATE TABLE y la sintaxis, vea [CR
 
 Para obtener más información sobre la sintaxis, vea [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md). Para más información sobre FILESTREAM, vea [Datos de objeto binario grande &#40;Blob&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
-## <a name="whats-next"></a>Siguientes pasos  
+## <a name="whats-next"></a>¿Qué sigue?  
  Después de revisar y personalizar el comando CREATE TABLE y de hacer clic en **Aceptar**, el cuadro de diálogo **Instrucción Create Table de SQL** le volverá a dirigir al cuadro de diálogo **Asignaciones de columnas** . Para más información, vea [Asignaciones de columnas](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).
  
  ## <a name="see-also"></a>Vea también

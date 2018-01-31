@@ -8,25 +8,26 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 142607d2ea3486749c0233c2d35692c682fd50e1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 50f319341ba89890f67b77f698ff3411c9ab820e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-new-infoobject"></a>Crear nuevo InfoObject
   Use el cuadro de diálogo **Crear nuevo InfoObject** para crear un nuevo InfoObject en el sistema SAP Netweaver BW.  
   
- Puede abrir el cuadro de diálogo **Crear InfoObject** desde la página **Administrador de conexiones** del **Editor de destino de SAP BW**. Para obtener más información acerca del destino de SAP BW, vea [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
+ Puede abrir el cuadro de diálogo **Crear InfoObject** desde la página **Administrador de conexiones** del **Editor de destino de SAP BW**. Para más información acerca del destino de SAP BW, consulte [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
   
 > [!IMPORTANT]  
 >  La documentación de Microsoft Connector 1.1 for SAP BW da por supuesto que se está familiarizado con el entorno SAP Netweaver BW. Para obtener más información acerca de SAP Netweaver BW, o sobre cómo configurar los objetos y los procesos de SAP Netweaver BW, vea la documentación de SAP.  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
  También puede abrir el cuadro de diálogo **Crear nuevo InfoObject** si hace clic en **Nuevo** en la sección **Atributos** del cuadro de diálogo **Crear nuevo InfoObject** .  
   
-## <a name="general-options"></a>Opciones de General  
+## <a name="general-options"></a>Opciones generales  
  **Característica**  
  Cree un InfoObject que represente datos de dimensión.  
   
@@ -129,13 +130,13 @@ ms.lasthandoff: 11/20/2017
  **InfoObject**  
  Permite ver el nombre del InfoObject.  
   
- **Description**  
+ **Descripción**  
  Permite ver la descripción del InfoObject.  
   
  **Tipo de InfoObject**  
  Permite ver el tipo de InfoObject. En la siguiente tabla se muestran los posibles valores para el tipo.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |CHA|Características|  
 |KYF|Cifras clave|  
@@ -150,7 +151,7 @@ ms.lasthandoff: 11/20/2017
   
  Para agregar un InfoObject existente, haga clic en Agregar y, a continuación, use el cuadro de diálogo **Buscar InfoObject** para buscar el InfoObject. Para obtener más información sobre este cuadro de diálogo, vea [Look Up InfoObject](../../integration-services/data-flow/look-up-infoobject.md).  
   
- **Nuevo**  
+ **Nueva**  
  Permite agregar un InfoObject nuevo como atributo.  
   
  Para crear y agregar un InfoObject nuevo, haga clic en Nuevo y, a continuación, use una nueva instancia del cuadro de diálogo crear **Crear nuevo InfoObject** para crear el InfoObject nuevo.  
@@ -158,7 +159,7 @@ ms.lasthandoff: 11/20/2017
  **Quitar**  
  Quita el InfoObject seleccionado de la lista **Atributos** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Crear InfoCube para datos de transacción](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [Crear InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [Crear InfoSource para datos de transacción](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   

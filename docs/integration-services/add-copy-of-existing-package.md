@@ -8,22 +8,25 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.addcopyexistingpackage.f1
-helpviewer_keywords: Add Copy of Existing Package dialog box
+f1_keywords:
+- sql13.dts.designer.addcopyexistingpackage.f1
+helpviewer_keywords:
+- Add Copy of Existing Package dialog box
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 21e437e550b8522d85319a5207b2a26365b4e0d0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c81b378a82156493fd88119f83ef814350cf091f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="add-copy-of-existing-package"></a>Agregar copia de paquete existente
   Utilice el cuadro de diálogo **Agregar copia de paquete existente** para agregar una copia de un paquete almacenado en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el sistema de archivos o el Almacén de paquetes SSIS en un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

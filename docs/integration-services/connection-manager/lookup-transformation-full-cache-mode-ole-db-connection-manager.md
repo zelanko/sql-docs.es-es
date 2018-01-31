@@ -8,21 +8,23 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Lookup transformation [Integration Services]
+helpviewer_keywords:
+- Lookup transformation [Integration Services]
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 25e4840c5fa2b9ae98c172549467811150ec0217
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6d69961ae90e09cc218fc24cfe6ffe364c63ee2f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Transformación Búsqueda en el modo de caché completa - Administrador de conexiones OLE DB
   Puede configurar la transformación Búsqueda para que use el modo de caché completa y un administrador de conexiones OLE DB. En el modo de caché completa, el conjunto de datos de referencia se carga en la memoria caché antes de que se ejecute la transformación Búsqueda.  
@@ -50,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
 7.  En la lista **Especificar cómo tratar las filas sin entradas coincidentes** , seleccione una opción de control de errores para las filas sin entradas coincidentes.  
   
-8.  En la página Conexión, seleccione un administrador de conexiones en la lista **Administrador de conexiones OLE DB** o haga clic en **Nuevo** para crear un nuevo administrador de conexiones. Para más información, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+8.  En la página Conexión, seleccione un administrador de conexiones en la lista **Administrador de conexiones OLE DB** o haga clic en **Nuevo** para crear un nuevo administrador de conexiones. Para más información, vea [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 9. Realice una de las tareas siguientes:  
   
@@ -82,11 +84,11 @@ ms.lasthandoff: 11/20/2017
   
     2.  En la lista **Operación de búsqueda** , especifique si los valores de las columnas de búsqueda reemplazan los valores de la columna de entrada o se escriben en una nueva columna.  
   
-12. Para configurar la salida de errores, haga clic en la página **Salida de error** y establezca las opciones de control de errores. Para más información, vea [Editor de transformación Búsqueda &#40;página Salida de error&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+12. Para configurar la salida de errores, haga clic en la página **Salida de error** y establezca las opciones de control de errores. Para obtener más información, vea [Editor de transformación Búsqueda &#40;página Salida de error&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
   
 13. Haga clic en **Aceptar** para guardar los cambios en la transformación Búsqueda y, a continuación, ejecute el paquete.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Implementación de una transformación Búsqueda en el modo de caché completa con el Administrador de conexiones de caché](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
  [Implementación de una búsqueda en los modos No hay caché o Caché parcial](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Transformaciones de Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  

@@ -8,23 +8,24 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - interoperability and coexistence [Integration Services]
 - Integration Services, interoperability and coexistence
 ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cbd0a16ec79df06780e4156a23c7b8767a6db5e7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b14e919cc180e8934b0cf9435d8d286c6468ccc2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>Installing Integration Services Versions Side by Side (Instalación de versiones de Integration Services en paralelo)
   Puede instalar   
@@ -38,8 +39,8 @@ ms.lasthandoff: 11/20/2017
 |Versión de destino de SQL Server|Entorno de desarrollo para paquetes de SSIS|  
 |----------------------------------|-----------------------------------------------|  
 |2016|SQL Server Data Tools para Visual Studio 2015|  
-|2014|SQL Server Data Tools para Visual Studio 2015<br /><br /> o bien<br /><br /> SQL Server Data Tools - Business Intelligence para Visual Studio 2013|  
-|2012|SQL Server Data Tools para Visual Studio 2015<br /><br /> o bien<br /><br /> SQL Server Data Tools: inteligencia empresarial para Visual Studio 2012|  
+|2014|SQL Server Data Tools para Visual Studio 2015<br /><br /> o Administrador de configuración de<br /><br /> SQL Server Data Tools - Business Intelligence para Visual Studio 2013|  
+|2012|SQL Server Data Tools para Visual Studio 2015<br /><br /> o Administrador de configuración de<br /><br /> SQL Server Data Tools: inteligencia empresarial para Visual Studio 2012|  
 |2008|Business Intelligence Development Studio desde SQL Server 2008|  
   
  Cuando se agrega un paquete existente a un proyecto existente, el paquete se convierte al formato al que se orienta el proyecto.  

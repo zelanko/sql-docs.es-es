@@ -8,22 +8,25 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.cacheconnection.f1
-helpviewer_keywords: Cache connection manager
+f1_keywords:
+- sql13.dts.designer.cacheconnection.f1
+helpviewer_keywords:
+- Cache connection manager
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df50fb19024245379a92dbb5486d2c2ab035f851
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f645f1e81965c0b39a63f7317fc660639df5d0e5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cache-connection-manager"></a>Administrador de conexiones de caché
   El administrador de conexiones de caché lee datos a partir de la transformación de caché o de un archivo caché (.caw) y puede guardar los datos en un archivo caché. Si configura el administrador de conexiones de caché para que utilice un archivo caché, los datos siempre se almacenan en memoria.  
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/20/2017
 >  El administrador de conexiones de caché no admite los tipos de datos de objetos binarios grandes (BLOB) DT_TEXT, DT_NTEXT y DT_IMAGE. Si el conjunto de datos de referencia contiene un tipo de datos BLOB, se producirá un error en el componente al ejecutar el paquete. Puede utilizar el **Editor del administrador de conexiones de caché** para modificar los tipos de datos de columna. Para obtener más información, vea [Cache Connection Manager Editor](cache-connection-manager-editor.md).  
   
 > [!NOTE]  
->  El nivel de protección del paquete no se aplica al archivo caché. Si el archivo caché contiene información confidencial, utilice una lista de control de acceso (ACL) para restringir el acceso a la ubicación o carpeta en la que almacena el archivo. Solo debería permitir el acceso a ciertas cuentas. Para más información, vea [Acceso a los archivos usados por los paquetes](../../integration-services/security/security-overview-integration-services.md#files).  
+>  El nivel de protección del paquete no se aplica al archivo caché. Si el archivo caché contiene información confidencial, utilice una lista de control de acceso (ACL) para restringir el acceso a la ubicación o carpeta en la que almacena el archivo. Solo debería permitir el acceso a ciertas cuentas. Para obtener más información, vea [Acceso a los archivos usados por los paquetes](../../integration-services/security/security-overview-integration-services.md#files).  
   
 ## <a name="configuration-of-the-cache-connection-manager"></a>Configuración del administrador de conexiones de caché  
  Puede configurar el administrador de conexiones de caché de las siguientes maneras:  
@@ -70,18 +73,18 @@ ms.lasthandoff: 11/20/2017
 ###  <a name="generaltab"></a> Pestaña General  
  Use la pestaña **General** del cuadro de diálogo **Editor del administrador de conexiones de caché** para indicar si la memoria caché se leerá desde un archivo o se guardará en un archivo.  
   
-#### <a name="options"></a>Opciones  
+#### <a name="options"></a>.  
  **Nombre del administrador de conexiones**  
  Especifique un nombre único para la conexión de caché en el flujo de trabajo. El nombre que indique se mostrará en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Descripción**  
  Describe la conexión. Como método recomendado, describa la conexión en función de su propósito, para que los paquetes estén autodocumentados y sean más fáciles de mantener.  
   
  **Utilizar la caché del archivo.**  
  Indicar si se ha de utilizar un archivo caché.  
   
 > [!NOTE]  
->  El nivel de protección del paquete no se aplica al archivo caché. Si el archivo caché contiene información confidencial, utilice una lista de control de acceso (ACL) para restringir el acceso a la ubicación o carpeta en la que almacena el archivo. Solo debería permitir el acceso a ciertas cuentas. Para más información, vea [Acceso a los archivos usados por los paquetes](../../integration-services/security/security-overview-integration-services.md#files).  
+>  El nivel de protección del paquete no se aplica al archivo caché. Si el archivo caché contiene información confidencial, utilice una lista de control de acceso (ACL) para restringir el acceso a la ubicación o carpeta en la que almacena el archivo. Solo debería permitir el acceso a ciertas cuentas. Para obtener más información, vea [Acceso a los archivos usados por los paquetes](../../integration-services/security/security-overview-integration-services.md#files).  
   
  Si configura el administrador de conexiones de caché para utilizar un archivo caché, el administrador de conexiones realizará una de las siguientes acciones:  
   
@@ -101,7 +104,7 @@ ms.lasthandoff: 11/20/2017
 ###  <a name="columnstab"></a> Pestaña Columnas  
  Utilice la pestaña **Columnas** del cuadro de diálogo **Editor del administrador de conexiones de caché** para configurar las propiedades de cada columna en la caché.  
   
-#### <a name="options"></a>Opciones  
+#### <a name="options"></a>.  
  **Columna**  
  Especifique el nombre de la columna.  
   
@@ -130,7 +133,7 @@ ms.lasthandoff: 11/20/2017
  **Página de códigos**  
  Especifica la página de códigos para el tipo de columna. Si procede en el caso del tipo de datos, puede actualizar la **Code Page**.  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Implementación de una transformación Búsqueda en el modo Caché completa con el Administrador de conexiones de caché](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
   

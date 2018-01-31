@@ -8,22 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.dataprofilingtask.general.f1
-helpviewer_keywords: Data Profiling Task Editor
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.general.f1
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fe778df2be9b176d95ef78d52daf1bd4ef8bd7e8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e05a90b25672e835963384ab19ec218a7b2d3480
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Editor de tareas de generación de perfiles de datos (página General)
   Utilice la página **General** del **Editor de tareas de generación de perfiles de datos** para configurar las opciones siguientes:  
@@ -54,7 +57,7 @@ ms.lasthandoff: 11/20/2017
  **DestinationType**  
  Especifique si guardar el perfil de los datos generado en un archivo o una variable:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**FileConnection**|Guarde el perfil generado en un archivo de la ubicación que se especifica en un administrador de conexiones de archivos.<br /><br /> Nota: Para especificar qué administrador de conexiones de archivos utilizar, use la opción **Destino** .|  
 |**Variable**|Guarde el perfil generado en una variable de paquete.<br /><br /> Para especificar qué variable de paquete utilizar, use la opción **Destino** .|  
@@ -82,7 +85,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  También puede abrir el Visor de perfil de datos si ejecuta el archivo DataProfileViewer.exe en la carpeta *\<unidad>*:\Archivos de programa (x86) | Archivos de programa\Microsoft SQL Server\110\DTS\Binn.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Formulario de perfil rápido de tabla única &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)   
  [Editor de tareas de generación de perfiles de datos &#40;página Solicitudes de perfil&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
   

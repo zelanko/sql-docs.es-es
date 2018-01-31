@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - inserting data
 - truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36acf4ee08879bec3ac12600ea7369b1db3803ba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: feb8ed42fe6e9f53db23b3be1586a163bfbad43b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="export-column-transformation"></a>Transformación Exportar columna
   La transformación Exportar columna lee datos de un flujo de datos e inserta dichos datos en un archivo. Por ejemplo, si el flujo de datos contiene información de productos, como una foto de cada producto, puede usar la transformación Exportar columna para guardar las imágenes en archivos.  
@@ -42,10 +43,10 @@ ms.lasthandoff: 11/20/2017
   
 |Anexar|Truncamiento|El archivo existe|Resultado|  
 |------------|--------------|-----------------|-------------|  
-|False|False|No|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
-|True|False|No|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
-|False|True|No|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
-|True|True|No|Se produce un error al validar la transformación en tiempo de diseño. No se permite establecer ambas propiedades en **true**.|  
+|False|False|no|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
+|True|False|no|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
+|False|True|no|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
+|True|True|no|Se produce un error al validar la transformación en tiempo de diseño. No se permite establecer ambas propiedades en **true**.|  
 |False|False|Sí|Se produce un error en tiempo de ejecución. El archivo existe, pero la transformación no puede escribir en él.|  
 |False|True|Sí|La transformación elimina y vuelve a crear el archivo, y escribe los datos en el archivo.|  
 |True|False|Sí|La transformación abre el archivo y escribe los datos al final del archivo.|  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  Solo se escribe una BOM cuando no se anexan los datos a un archivo existente y cuando los datos tienen el tipo de datos DT_NTEXT.  
   
- La transformación utiliza pares de columnas de entrada: una columna contiene un nombre de archivo y la otra contiene datos. Cada fila del conjunto de datos puede especificar un archivo diferente. Cuando la transformación procesa una fila, los datos de dicha fila se insertan en el archivo especificado. En tiempo de ejecución, la transformación crea los archivos (si no existen) y después escribe los datos en dichos archivos. Los datos deben tener un tipo de datos DT_TEXT, DT_NTEXT o DT_IMAGE. Para más información, consulte [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+ La transformación utiliza pares de columnas de entrada: una columna contiene un nombre de archivo y la otra contiene datos. Cada fila del conjunto de datos puede especificar un archivo diferente. Cuando la transformación procesa una fila, los datos de dicha fila se insertan en el archivo especificado. En tiempo de ejecución, la transformación crea los archivos (si no existen) y después escribe los datos en dichos archivos. Los datos deben tener un tipo de datos DT_TEXT, DT_NTEXT o DT_IMAGE. Para obtener más información, vea [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
   
  Esta transformación tiene una entrada, una salida y una salida de error.  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="export-column-transformation-editor-columns-page"></a>Editor de transformación Exportar columna (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de transformación Exportar columna** para especificar las columnas del flujo de datos que desea extraer a los archivos. Podrá especificar si desea que la transformación Exportar columna anexe los datos a un archivo o sobrescriba un archivo existente.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Columna Extraer**  
  Seleccione de la lista las columnas de entrada que contengan datos de texto o imagen. Todas las filas deben poseer definiciones para la **Columna Extraer** y la **Columna Ruta de archivo**.  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="export-column-transformation-editor-error-output-page"></a>Editor de transformación Exportar columna (página Salida de error)
   Use la página **Salida de error** del cuadro de diálogo **Editor de transformación Exportar columna** para especificar cómo se controlan los errores.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Entrada/salida**  
  Muestra el nombre de la salida. Haga clic en el nombre para expandir la vista e incluir columnas.  
   
@@ -112,7 +113,7 @@ ms.lasthandoff: 11/20/2017
  **Truncamiento**  
  Permite especificar qué debe ocurrir si se produce un truncamiento: omitir el error, redirigir la fila o hacer que el componente no funcione.  
   
- **Description**  
+ **Descripción**  
  Muestra la descripción de la operación.  
   
  **Establecer este valor en las celdas seleccionadas**  

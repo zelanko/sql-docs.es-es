@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 58d8e69ae49c56716d8d0f5393fad329bd924b21
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5f57bd2510c80e676a979c691b1e3d43707c6885
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>Conectarse a un origen de datos PostgreSQL (Asistente para importación y exportación de SQL Server)
 En este tema se muestra cómo conectarse a un origen de datos **PostgreSQL** desde la página **Elegir un origen de datos** o **Elegir un destino** del asistente para importación y exportación de SQL Server. 
@@ -49,7 +50,7 @@ Esta es la pantalla genérica que se ve inmediatamente después de seleccionar e
 ### <a name="options-to-specify-postgresql-odbc-driver"></a>Opciones que hay que especificar (controlador ODBC de PostgreSQL)
 
 > [!NOTE]
-> Las opciones de conexión de este proveedor de datos y el controlador ODBC son las mismas independientemente de si PostgreSQL es el origen o el destino. Es decir, las opciones que ve son las mismas en ambas páginas **Elegir un origen de datos** y **Elegir un destino** del asistente.
+> Las opciones de conexión de este proveedor de datos y el controlador ODBC son las mismas independientemente de si PostgreSQL es el origen o el destino. Es decir, las opciones que ve son las mismas en las páginas **Elegir un origen de datos** y **Elegir un destino** del asistente.
 
 Para conectarse a PostgreSQL con el controlador ODBC de PostgreSQL, ensamble una cadena de conexión que incluya las siguientes opciones y sus valores. El formato de una cadena de conexión completa aparece inmediatamente después de la lista de opciones.
 
@@ -95,6 +96,6 @@ Esta es la pantalla que verá después de escribir la cadena de conexión.
 Para obtener más información sobre cómo conectarse a PostgreSQL con un proveedor de datos que no aparezca aquí, consulte [PostgreSQL connection strings (Cadenas de conexión de PostgreSQL)](https://www.connectionstrings.com/postgresql/). En este sitio de terceros también encontrará más información sobre los proveedores de datos y los parámetros de conexión que se describen en esta página.
 
 ## <a name="see-also"></a>Vea también
-[Elegir un origen de datos](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
-[Elegir un destino](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
+[Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) (Selección de un origen de datos)  
+[Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md) (Selección de un destino)
 

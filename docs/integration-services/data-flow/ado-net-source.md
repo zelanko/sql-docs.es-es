@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - DataReader source
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-caps.latest.revision: "101"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ff6aab3608b1bebd61e9750ea8769dda0fbf2f2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 05753f3cea7979f78499dc68cb4baa784367b383
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ado-net-source"></a>Origen de ADO NET
   El origen de ADO NET consume datos de un proveedor .NET y hace que los datos estén disponibles para el flujo de datos.  
@@ -111,8 +112,8 @@ ms.lasthandoff: 11/20/2017
  **Administrador de conexiones de ADO.NET**  
  Seleccione un administrador de conexiones de la lista o cree una conexión haciendo clic en **Nuevo**.  
   
- **Nuevo**  
- Cree un nuevo administrador de conexiones mediante el cuadro de diálogo **Configurar el administrador de conexiones de ADO.NET** .  
+ **Nueva**  
+ Cree un administrador de conexiones mediante el cuadro de diálogo **Configurar el administrador de conexiones ADO.NET** .  
   
  **Modo de acceso a datos**  
  Especifique el método para seleccionar datos del origen.  
@@ -138,11 +139,11 @@ ms.lasthandoff: 11/20/2017
  **Texto de comando SQL**  
  Escriba el texto de una consulta SQL, genere la consulta haciendo clic en **Generar consulta**, o bien busque el archivo que contiene el texto de la consulta haciendo clic en **Examinar**.  
   
- **Build query**  
+ **Generar consulta**  
  Use el cuadro de diálogo **Generador de consultas** para crear visualmente la consulta SQL.  
   
  **Examinar**  
- Use el cuadro de diálogo **Abrir** para encontrar el archivo que contiene el texto de la consulta SQL.  
+ Use el cuadro de diálogo **Abrir** para buscar el archivo que contiene el texto de la consulta SQL.  
   
 ## <a name="ado-net-source-editor-columns-page"></a>Editor de orígenes de ADO NET (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de orígenes de ADO NET** para asignar una columna de salida a cada columna externa (origen).  
@@ -157,7 +158,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  En el **Editor de orígenes de ADO NET**, haga clic en **Columnas**.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Columnas externas disponibles**  
  Muestra la lista de columnas externas disponibles en el origen de datos. Esta tabla no se puede usar para agregar o quitar columnas.  
   
@@ -180,7 +181,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  En el **Editor de orígenes de ADO NET**, haga clic en **Salida de error**.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Entrada/salida**  
  Muestra el nombre del origen de datos.  
   
@@ -195,7 +196,7 @@ ms.lasthandoff: 11/20/2017
  **Truncamiento**  
  Permite especificar qué debe ocurrir cuando se produce un truncamiento: omitir el error, redirigir la fila o hacer que el componente no funcione.  
   
- **Description**  
+ **Descripción**  
  Muestra la descripción del error.  
   
  **Establecer este valor en las celdas seleccionadas**  
@@ -204,7 +205,7 @@ ms.lasthandoff: 11/20/2017
  **Aplicar**  
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Destino de DataReader](../../integration-services/data-flow/datareader-destination.md)   
  [Destino de ADO NET](../../integration-services/data-flow/ado-net-destination.md)   
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)  

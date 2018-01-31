@@ -8,27 +8,30 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.propertyexpressionseditor.f1
-helpviewer_keywords: Property Expressions Editor dialog box
+f1_keywords:
+- sql13.dts.designer.propertyexpressionseditor.f1
+helpviewer_keywords:
+- Property Expressions Editor dialog box
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 47edc5634e3471028914114662cb0cf06265c84f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35043f343fe16ac5c848d0c7dd2f9b21b95b18a5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="property-expressions-editor"></a>Editor de expresiones de propiedad
   Utilice el cuadro de diálogo **Editor de expresiones de propiedad** para crear, editar o eliminar las expresiones de propiedad que actualizan valores de propiedad.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Propiedad**  
  Seleccione un objeto de propiedad de la lista.  
   
@@ -41,10 +44,10 @@ ms.lasthandoff: 11/20/2017
  **Expresión (…)**  
  Haga clic en los puntos suspensivos para abrir el cuadro de diálogo **Generador de expresiones** . Para más información, consulte [Expression Builder](../../integration-services/expressions/expression-builder.md).  
   
- **Delete**  
+ **Eliminar**  
  Seleccione una propiedad y, después, haga clic en **Eliminar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Página Expresiones](../../integration-services/expressions/expressions-page.md)   
  [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Variables del sistema](../../integration-services/system-variables.md)   

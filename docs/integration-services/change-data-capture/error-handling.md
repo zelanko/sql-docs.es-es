@@ -8,19 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3821b2849ef266437fb65c45004415727746d80f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 93a8df11a73ebb9abc21e94147c5ba2fbc0abd87
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="error-handling"></a>Tratamiento de errores
   Una instancia CDC de Oracle realiza minería de datos en los cambios de una sola base de datos de origen de Oracle (un clúster de Oracle RAC se considera una sola base de datos) y escribe los cambios confirmados en las tablas de cambios en una base de datos CDC en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino.  
@@ -117,7 +118,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="handling-unexpected-oracle-cdc-instance-failures"></a>Controlar errores inesperados de la instancia CDC de Oracle  
  El servicio CDC de Oracle supervisa los subprocesos de la instancia CDC. Cuando se anula un subproceso de instancia CDC, el servicio CDC lo deshabilita en la tabla MSXDBCDC.dbo.xdbcdc_databases y actualiza su estado de cdc.xdbcdc_state a ABORTED. En este caso, se emplea el cuadro de diálogo estándar de informe de errores de Windows para informar del error para su análisis.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Diseñador de captura de datos modificados para Oracle de Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
  [La instancia CDC de Oracle](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
   

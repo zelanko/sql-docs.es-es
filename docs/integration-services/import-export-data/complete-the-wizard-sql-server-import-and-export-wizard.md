@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.completewizard.f1
+f1_keywords:
+- sql13.dts.impexpwizard.completewizard.f1
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b06adc095408d010acc2008352447a2ee48d8f67
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 738281bcaef0bce47cfc4c54890b48fd840eb91c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>Finalización del asistente (Asistente para importación y exportación de SQL Server)
 Después de especificar si quiere ejecutar la operación de copia inmediatamente (y, de manera opcional, después de guardar el paquete que creó el asistente), el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostrará **Finalización del asistente**. En esta página, revise las opciones que ha realizado en el asistente y, después, haga clic en **Finalizar** para iniciar la operación de copia.
@@ -40,7 +42,7 @@ Revise el resumen y compruebe la información siguiente:
 -   Si se va a guardar el paquete.
 -   Si el paquete se ejecutará inmediatamente.  
   
-## <a name="whats-next"></a>¿Qué debe hacer a continuación?  
+## <a name="whats-next"></a>¿Qué sigue?  
  Después de revisar las opciones que ha realizado en el asistente y de hacer clic en **Finalizar**, la página siguiente es **Realizando operación**. En esta página, verá el progreso y el resultado de la operación que ha configurado en las páginas anteriores. Para más información, vea [Realizando operación](../../integration-services/import-export-data/performing-operation-sql-server-import-and-export-wizard.md).
  
 ## <a name="see-also"></a>Vea también

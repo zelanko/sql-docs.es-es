@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82e50a6cb72d5b26810493f656eff82f3b7cdccc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 96311a68d7d003889f88ed91987f1d9a2775c72f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cdc-flow-components"></a>Componentes del flujo de CDC
   Los componentes de la captura de datos modificados de Attunity para Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] ayudan a los desarrolladores de SSIS en su trabajo con CDC y reducen la complejidad de los paquetes CDC.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/20/2017
   
  **Componentes de flujo de datos CDC**:  
   
- [origen de CDC](../../integration-services/data-flow/cdc-source.md)  
+ [Origen de CDC](../../integration-services/data-flow/cdc-source.md)  
   
  [Divisor CDC](../../integration-services/data-flow/cdc-splitter.md)  
   
@@ -139,7 +140,7 @@ Aparecerá un mensaje después de instalar los componentes. Haga clic en **Sí**
   
  El valor de la variable de estado de CDC debe mantenerse en un almacenamiento persistente. Se debe leer antes de iniciar el procesamiento de CDC y debe guardarse con el estado actual después de completar el procesamiento. La tarea de carga y almacenamiento del estado CDC la puede controlar el desarrollador de SSIS, pero el componente Control CDC puede automatizar esta tarea conservando el valor de estado CDC en una tabla de base de datos.  
   
-## <a name="security-considerations"></a>Consideraciones relativas a la seguridad  
+## <a name="security-considerations"></a>Consideraciones de seguridad  
  En esta sección se enumeran algunas consideraciones de seguridad relacionadas con el uso de los componentes CDC en SSIS.  
   
 ### <a name="access-authorization-to-change-data"></a>Autorización de acceso a datos modificados  
@@ -196,11 +197,11 @@ Aparecerá un mensaje después de instalar los componentes. Haga clic en **Sí**
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [origen de CDC](../../integration-services/data-flow/cdc-source.md)  
+-   [Origen de CDC](../../integration-services/data-flow/cdc-source.md)  
   
 -   [Divisor CDC](../../integration-services/data-flow/cdc-splitter.md)  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Dirigir el flujo CDC según el tipo de cambio](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
   
@@ -220,7 +221,7 @@ Aparecerá un mensaje después de instalar los componentes. Haga clic en **Sí**
   
 -   Vídeo sobre [CDC para bases de datos de Oracle con SQL Server Integration Services 2012 (vídeo de SQL Server)](http://technet.microsoft.com/sqlserver/jj218898)en technet.microsoft.com.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Tarea Control CDC](../../integration-services/control-flow/cdc-control-task.md)  
   
   

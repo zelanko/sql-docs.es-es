@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Recordset destination
+helpviewer_keywords:
+- Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f7cf8f2ed8875856da5756288c8e3fb707f1a397
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d18d5e683bfc30270fcf83a2002350a75da9a24c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="use-a-recordset-destination"></a>Usar un destino de conjunto de registros
   El destino de conjunto de registros no guarda los datos en un origen de datos externo. En su lugar, el destino de conjunto de registros guarda los datos en memoria, en un conjunto de registros que se almacena en una variable de paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] del tipo de datos **Objeto** . Una vez que el destino de conjunto de registros guarda los datos, normalmente se utiliza un contenedor de bucles Foreach con el enumerador de ADO para Foreach para procesar una fila del conjunto de registros cada vez. El enumerador de ADO para Foreach guarda el valor de cada columna de la fila actual en una variable de paquete independiente. A continuación, las tareas que se configuran en el contenedor de bucles Foreach leen esos valores de las variables y realizan alguna acción con ellos.  
@@ -103,7 +105,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  En la pestaña **Flujo de control** del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , agregue una tarea Flujo de datos a la superficie de diseño.  
   
-2.  En la pestaña **Flujo de datos** pestaña, añadir un origen de OLE DB a la tarea de flujo de datos, y luego abrir el **Editor de origen de OLE DB.**  
+2.  En la pestaña **Flujo de datos** tab, add an OLE DB source to the Flujo de datos task, and then open the **Editor de origen de OLE DB**.  
   
 3.  En la página **Administrador de conexiones** del editor, configure el origen con los valores siguientes:  
   

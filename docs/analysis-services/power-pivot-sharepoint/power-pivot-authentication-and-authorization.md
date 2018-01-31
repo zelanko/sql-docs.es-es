@@ -12,7 +12,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
@@ -104,7 +104,7 @@ ms.lasthandoff: 01/08/2018
  En Excel Services, la configuración relativa a la seguridad se especifica en las ubicaciones confiables, proveedores de datos confiables y bibliotecas de conexiones de datos confiables. En la siguiente tabla se describen los valores que habilitan o mejoran el acceso a datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si no aparece aquí un valor, no tiene ningún efecto en las conexiones con el servidor de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Para obtener instrucciones sobre cómo especificar estos valores paso a paso, consulte la sección "Paso 4: Habilitar Excel Services" en [Configuración inicial (PowerPivot para SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).  
   
 > [!NOTE]  
->  La mayoría de la configuración relacionada con la seguridad se aplica a las ubicaciones confiables. Si desea conservar los valores predeterminados o usar valores diferentes para sitios distintos, puede crear una ubicación confiable adicional para sitios que contienen datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y, después, configurar los siguientes valores solo para ese sitio. Para más información, vea [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+>  La mayoría de la configuración relacionada con la seguridad se aplica a las ubicaciones confiables. Si desea conservar los valores predeterminados o usar valores diferentes para sitios distintos, puede crear una ubicación confiable adicional para sitios que contienen datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y, después, configurar los siguientes valores solo para ese sitio. Para más información, vea [Crear una ubicación de confianza para los sitios PowerPivot en Administración central](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 |Área|Configuración|Description|  
 |----------|-------------|-----------------|  
@@ -119,7 +119,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>Vea también  
  [Configurar las cuentas de servicio Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
  [Configuración de Power Pivot (Power Pivot para SharePoint) de la cuenta de actualización de datos desatendida](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)   
- [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [Crear una ubicación de confianza para los sitios PowerPivot en Administración central](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Arquitectura de seguridad de Power Pivot](http://go.microsoft.com/fwlink/?linkID=220970)  
   
   

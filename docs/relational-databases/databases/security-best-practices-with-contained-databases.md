@@ -8,21 +8,23 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: contained database, threats
+helpviewer_keywords:
+- contained database, threats
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 612ee0b5301554b2a078493ed2df419d992b4391
-ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
+ms.openlocfilehash: c18410a29b500b3fd4fadfac987b1e94503ec7bb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Prácticas recomendadas de seguridad con bases de datos independientes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +63,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ### <a name="creating-a-user-that-duplicates-a-login"></a>Crear un usuario que duplica un inicio de sesión  
  Si se crea un usuario de base de datos independiente con contraseña, con el mismo nombre que un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y si el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conecta especificando la base de datos independiente como el catálogo inicial, el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no podrá conectarse. La conexión se evaluará como el usuario de base de datos independiente con entidad de seguridad con contraseña en la base de datos independiente en vez de como usuario basado en el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esto podría ocasionar una denegación de servicio intencional o accidental para el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Como práctica recomendada, los miembros del rol fijo de servidor **sysadmin** siempre deben considerar realizar la conexión sin usar la opción de catálogo inicial. De esta forma, se conecta el inicio de sesión a la base de datos maestra y se evita que un propietario de base de datos use incorrectamente el intento de inicio de sesión. Después, el administrador puede cambiar a la base de datos independiente con la instrucción **USE***\<baseDeDatos>*. Además, puede establecer la base de datos predeterminada del inicio de sesión en la base de datos independiente, que completa el inicio de sesión en la base de datos **maestra**y, a continuación, transfiere el inicio de sesión a la base de datos independiente.  
+-   Como práctica recomendada, los miembros del rol fijo de servidor **sysadmin** siempre deben considerar realizar la conexión sin usar la opción de catálogo inicial. De esta forma, se conecta el inicio de sesión a la base de datos maestra y se evita que un propietario de base de datos use incorrectamente el intento de inicio de sesión. Después, el administrador puede cambiar a la base de datos independiente con la instrucción **USE***\<basededatos>*. Además, puede establecer la base de datos predeterminada del inicio de sesión en la base de datos independiente, que completa el inicio de sesión en la base de datos **maestra**y, a continuación, transfiere el inicio de sesión a la base de datos independiente.  
   
 -   Como práctica recomendada, no cree usuarios de bases de datos independientes con contraseñas que tengan el mismo nombre que los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

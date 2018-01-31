@@ -8,7 +8,8 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1588c3806523f28a30b0d8eb6a190acba148d773
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5c47c0b46d9b171c2bf75e11e9e854ed91c68836
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Herramientas para solucionar problemas con el desarrollo de paquetes
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye características y herramientas que se pueden usar para solucionar problemas de los paquetes mientras estos se desarrollan en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -73,7 +74,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **Usar los visores de datos para supervisar los datos a medida que éstos se mueven por el flujo de datos**. Los visores de datos muestran los valores de los datos a medida que estos se mueven entre orígenes, transformaciones y destinos. Un visor de datos puede mostrar los datos en una cuadrícula. Puede copiar los datos de un visor de datos al Portapapeles y, después, pegarlos en un archivo o en una hoja de cálculo de Excel. Para obtener más información, consulte [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md) .  
   
--   **Configurar salidas de error para los componentes de flujo de datos que las admitan**. Muchos orígenes, transformaciones y destinos del flujo de datos también admiten salidas de error. La configuración de la salida de error de un componente de flujo de datos permite dirigir los datos que contienen errores a otro destino. Por ejemplo, puede capturar los datos que generaron errores o se truncaron en un archivo de texto independiente. También se pueden adjuntar visores de datos a las salidas de error y examinar solo los datos erróneos. En tiempo de diseño, las salidas de error capturan valores de datos con problemas para ayudarle a desarrollar paquetes que controlen de forma eficaz los datos del mundo real. Sin embargo, mientras que otras herramientas y características de solución de problemas solamente son útiles en tiempo de diseño, las salidas de error siguen siendo útiles en el entorno de producción. Para obtener más información, vea [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md).  
+-   **Configurar salidas de error para los componentes de flujo de datos que las admitan**. Muchos orígenes, transformaciones y destinos del flujo de datos también admiten salidas de error. La configuración de la salida de error de un componente de flujo de datos permite dirigir los datos que contienen errores a otro destino. Por ejemplo, puede capturar los datos que generaron errores o se truncaron en un archivo de texto independiente. También se pueden adjuntar visores de datos a las salidas de error y examinar solo los datos erróneos. En tiempo de diseño, las salidas de error capturan valores de datos con problemas para ayudarle a desarrollar paquetes que controlen de forma eficaz los datos del mundo real. Sin embargo, mientras que otras herramientas y características de solución de problemas solamente son útiles en tiempo de diseño, las salidas de error siguen siendo útiles en el entorno de producción. Para más información, vea [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md).  
   
 -   **Capturar el recuento de filas procesadas**. Al ejecutar un paquete en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , el número de filas que ha pasado a través de una ruta se muestra en el diseñador de flujo de datos. Este número se actualiza periódicamente mientras los datos pasan por la ruta. También puede agregar una transformación Recuento de filas al flujo de datos para capturar el recuento de filas final en una variable. Para más información, consulte [Row Count Transformation](../../integration-services/data-flow/transformations/row-count-transformation.md).  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="troubleshooting-errors-without-a-description"></a>Solucionar problemas de errores sin descripción  
  Si se encuentra con un número de error de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sin una descripción asociada durante el desarrollo de un paquete, puede ver la descripción en [Referencia de errores y mensajes de Integration Services](../../integration-services/integration-services-error-and-message-reference.md). En este momento, la lista no incluye información sobre cómo solucionar problemas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Herramientas para solucionar problemas con la ejecución de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)   
  [Características de rendimiento del flujo de datos](../../integration-services/data-flow/data-flow-performance-features.md)  
   

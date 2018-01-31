@@ -8,23 +8,24 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a23adf907e01dd8c95c5c44a5a57db0aeb807625
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c2254c139d1e93755cd9b3c503ad0bc42f08cb4e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Monitor de ejecución de paquetes y otras operaciones
   Puede supervisar las ejecuciones de paquetes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , validaciones de proyectos y otras operaciones mediante una o varias de las herramientas siguientes. Algunas herramientas como las derivaciones de datos solo están disponibles para los proyectos que se implementan en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -166,7 +167,7 @@ ms.lasthandoff: 11/20/2017
   
 |Sección|Description|  
 |-------------|-----------------|  
-|Filtro|Muestra el filtro actual que se aplica al informe, como conexiones con una cadena especificada y el intervalo de **Hora del último error** .<br /><br /> Establezca el intervalo de **Hora del último error** para que se muestren solo los errores de conexión que se produjeron durante un intervalo de fechas. El intervalo puede abarcar varios días, meses o años.|  
+|Filter|Muestra el filtro actual que se aplica al informe, como conexiones con una cadena especificada y el intervalo de **Hora del último error** .<br /><br /> Establezca el intervalo de **Hora del último error** para que se muestren solo los errores de conexión que se produjeron durante un intervalo de fechas. El intervalo puede abarcar varios días, meses o años.|  
 |Detalles|Muestra la cadena de conexión, el número de ejecuciones en las que se produjo un error de conexión y la fecha en la que hubo un error de conexión por última vez.|  
   
 ### <a name="all-operations-report"></a>Informe Todas las operaciones  
@@ -204,6 +205,6 @@ ms.lasthandoff: 11/20/2017
   
     -   **Todas las conexiones**  
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Execution of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)  (Ejecución de proyectos y paquetes)  
  [Solucionar problemas de informes para la ejecución de paquetes](../troubleshooting/troubleshooting-reports-for-package-execution.md)  

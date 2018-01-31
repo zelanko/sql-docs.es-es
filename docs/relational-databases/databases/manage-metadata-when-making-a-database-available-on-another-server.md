@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -36,16 +37,16 @@ helpviewer_keywords:
 - credentials [SQL Server], metadata
 - copying databases
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
-caps.latest.revision: "84"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e1385db80093f2304ac998d6c6f1834aedf3ff31
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9d46ba6ce2dfe1af2454b95d05bd82f3d8b1ce2f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Administración de los metadatos cuando una base de datos pasa a estar disponible en otro servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tema se aplica a las siguientes situaciones:  
@@ -279,7 +280,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>Permisos GRANT, REVOKE o DENY sobre los objetos del sistema  
  Los permisos de los objetos del sistema como procedimientos almacenados, procedimientos almacenados extendidos, funciones y vistas, se almacenan en la base de datos **maestra** y se deben configurar en la instancia de servidor de destino.  
   
- Para generar un script de algunos o todos los objetos de la copia original de la base de datos, se puede usar el asistente Generar scripts y, en el cuadro de diálogo **Elegir opciones de script** , configurar la opción **Incluir permisos de objeto en el script** en **True**.  
+ Para generar un script de algunos o todos los objetos de la copia original de la base de datos, se puede usar el asistente Generar scripts y, en el cuadro de diálogo **Elegir opciones de script**, configurar la opción **Incluir permisos de objeto en el script** en **True**.  
   
 > **IMPORTANTE:** Si incluye inicios de sesión en el script, no se incluirán las contraseñas. Si tiene inicios de sesión que usan la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , deberá modificar el script en el destino.  
   
@@ -334,7 +335,7 @@ ms.lasthandoff: 11/17/2017
  Para obtener más información acerca de esta característica, vea [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Bases de datos independientes](../../relational-databases/databases/contained-databases.md)   
  [Copiar bases de datos en otros servidores](../../relational-databases/databases/copy-databases-to-other-servers.md)   
  [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   

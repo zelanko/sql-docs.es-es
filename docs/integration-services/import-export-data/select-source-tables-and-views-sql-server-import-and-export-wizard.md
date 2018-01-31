@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.selectsourcetablesandviews.f1
+f1_keywords:
+- sql13.dts.impexpwizard.selectsourcetablesandviews.f1
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
-caps.latest.revision: "96"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 407e1b75ca60bb8a36040883c472dce8e059188e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 600e734c11a597cdcbae0279e1604bd96ccfb06f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Seleccionar tablas y vistas de origen (Asistente para importación y exportación de SQL Server)
   Después de especificar que quiere copiar una tabla completa o después de proporcionar una consulta, el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra **Seleccionar tablas y vistas de origen**. En esta página, seleccione las tablas y vistas que quiera copiar. A continuación, asigne las tablas de origen a las tablas de destino nuevas o existentes. Opcionalmente, revise la asignación de columnas individuales y obtenga una vista previa de los datos de ejemplo.
@@ -45,7 +47,7 @@ En este ejemplo, el usuario quiere copiar los resultados de la consulta del orig
  ![Página Seleccionar tablas del Asistente para importación y exportación](../../integration-services/import-export-data/media/select-tables2.png "Página Seleccionar tablas del Asistente para importación y exportación")  
 
 ## <a name="select-source-and-destination-tables"></a>Seleccionar tablas de destino y origen 
-**Origen**  
+**Source**  
 Utilice las casillas para seleccionar en la lista las tablas y vistas disponibles que deben copiarse en el destino. De forma predeterminada, los datos del origen de datos se copian sin cambios. Si crea una tabla de destino nueva, el esquema para la nueva tabla (es decir, la lista de columnas y sus propiedades) también se copia sin cambios desde el origen de datos.
 
 Si proporcionó una consulta, la lista contiene un solo elemento con el nombre `[Query]`. 
@@ -58,14 +60,14 @@ Si proporcionó una consulta, la lista contiene un solo elemento con el nombre `
 
 ## <a name="optionally-review-column-mappings-and-preview-data"></a>Revisión de las asignaciones de columnas y obtención de una vista previa de los datos (opcional)
 **Editar asignaciones**   
-Opcionalmente, puede hacer clic en **Editar asignaciones** para ver el cuadro de diálogo **Asignaciones de columnas** de la tabla seleccionada. Use el cuadro de diálogo **Asignaciones de columnas** para hacer lo siguiente:
+Si quiere, puede hacer clic en **Editar asignaciones** para ver el cuadro de diálogo **Asignaciones de columnas** de la tabla seleccionada. Use el cuadro de diálogo **Asignaciones de columnas** para hacer lo siguiente:
 -   Revise la asignación de columnas individuales entre el origen y el destino.
 -   Copie solo un subconjunto de columnas si selecciona **Omitir** para las columnas que no desea copiar.
 
 Para más información, vea [Asignaciones de columnas](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).  
 
 **Vista previa**  
-Opcionalmente, puede hacer clic en **Vista previa** para obtener una vista previa de hasta 200 filas de datos de ejemplo en el cuadro de diálogo **Vista previa de los datos**. Esto confirma que el asistente va a copiar los datos que quiere copiar. Para más información, vea [Vista previa de los datos](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md).  
+Si quiere, puede hacer clic en **Vista previa** para obtener una vista previa de hasta 200 filas de datos de ejemplo en el cuadro de diálogo **Vista previa de los datos**. Esto confirma que el asistente va a copiar los datos que quiere copiar. Para más información, vea [Vista previa de los datos](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md).  
   
 Después de obtener una vista previa de los datos, es posible que quiera cambiar las opciones que seleccionó en páginas anteriores del asistente. Para realizar estas modificaciones, vuelva a la página **Seleccionar tablas y vistas de origen** y después haga clic en **Atrás** para volver a las páginas anteriores en las que puede cambiar sus selecciones.  
 
@@ -78,7 +80,7 @@ En la lista de vistas y tablas de origen para un origen de datos de Excel se inc
 
 Si quiere cargar datos desde un intervalo de celdas específico y sin nombre (por ejemplo, **[Hoja1$A1:B4]**) o con destino a ese intervalo, tendrá que escribir una consulta. Vuelva a la página **Especificar copia de tabla o consulta** y seleccione **Escribir una consulta para especificar los datos que se van a transferir**.
 
-#### <a name="prepare-the-excel-source-data"></a>Preparación de los datos de origen de Excel
+#### <a name="prepare-the-excel-source-data"></a>Preparar los datos de origen de Excel
 Tanto si especifica una hoja de cálculo o un rango como la tabla de origen, el controlador lee los bloques *contiguos* de celdas, comenzando con la primera celda no vacía en la esquina superior izquierda de la hoja de cálculo o rango. Como resultado, no puede haber filas vacías en los datos de origen. Por ejemplo, no puede haber una fila vacía entre los encabezados de columna y las filas de datos. Si hay un título seguido de filas vacías en la parte superior de la hoja de cálculo por encima de los datos, no se puede consultar la hoja de cálculo. En Excel, tiene que asignar un nombre al rango de datos y consultar el rango con nombre en lugar de la hoja de cálculo.
 
 ### <a name="excel-destination-tables"></a>Tablas de destino de Excel
@@ -109,7 +111,7 @@ Cuando el asistente tiene que realizar conversiones de tipo de datos explícitas
 -   Si la tabla de destino ya contiene filas de datos, las ocho primeras filas que muestree el asistente deberán contener por lo menos una fila con un valor de más de 255 caracteres en la columna de memorando.
 -   Si el asistente crea la tabla de destino, la instrucción **CREATE TABLE** deberá usar **LONGTEXT** (o uno de sus sinónimos) como tipo de datos de la columna de memorando. Compruebe la instrucción **CREATE TABLE** y revísela si es necesario. Para ello, haga clic en **Editar SQL** junto a la opción **Crear tabla de destino** de la página **Asignaciones de columnas**.
 
-## <a name="whats-next"></a>¿Qué debe hacer a continuación?  
+## <a name="whats-next"></a>¿Qué sigue?  
  Después de seleccionar las tablas y vistas existentes que quiere copiar y de asignarlas a sus destinos, la página siguiente es **Guardar y ejecutar el paquete**. En esta página, especifique si quiere ejecutar la operación de copia inmediatamente. Según la configuración, también puede guardar el paquete de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creado por el asistente para personalizarlo y volver a usarlo más adelante. Para más información, vea [Guardar y ejecutar paquete](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
  
  ## <a name="see-also"></a>Vea también

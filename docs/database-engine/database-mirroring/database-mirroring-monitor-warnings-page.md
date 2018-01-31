@@ -8,21 +8,23 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.warningsandalerts.f1
+f1_keywords:
+- sql13.swb.dbmmonitor.warningsandalerts.f1
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c99baee0acea3b6a05f15b5c2ae33cdb347ee1bb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f150d44a28915741ffd45b4e8c4506deb41a5a51
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>Monitor de creación de reflejo de la base de datos (página Advertencias)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Muestra una lista de solo lectura de las advertencias que se admiten en los eventos de creación de reflejo de la base de datos, así como los valores de umbral de advertencia especificados (si los hay).  
@@ -37,10 +39,10 @@ ms.lasthandoff: 11/20/2017
   
 |Advertencia|Umbral|  
 |-------------|---------------|  
-|**Advertir si el registro sin enviar sobrepasa el umbral**|Especifica la cantidad de kilobytes (KB) de registro no enviado que generará una advertencia en la instancia del servidor principal. Esta advertencia ayuda a calcular el potencial de pérdida de datos en KB y resulta especialmente relevante para el modo de rendimiento alto. Sin embargo, la advertencia también es relevante para el modo de alta seguridad cuando la creación de reflejos se detiene temporalmente o se suspende por desconexión de los asociados.|  
-|**Advertir si el registro sin restaurar sobrepasa el umbral**|Especifica la cantidad de KB de registro sin restaurar que generará una advertencia en la instancia del servidor reflejado. Esta advertencia es útil para calcular el tiempo de conmutación por error en KB. El*tiempo de la conmutación por error* se compone principalmente del tiempo que el servidor reflejado anterior necesita para poner al día los registros pendientes en su cola rehecha, más un breve tiempo adicional.<br /><br /> Nota: En una conmutación automática por error, el tiempo para que el sistema detecte el error es independiente del tiempo de conmutación por error.<br /><br /> Para más información, consulte [Calcular la interrupción del servicio durante la conmutación de roles &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|  
-|**Advertir si la transacción sin enviar más antigua sobrepasa el umbral**|Especifica el número de minutos de transacciones que se pueden acumular en la cola de envío antes de que se genere una advertencia en la instancia del servidor principal. Esta advertencia ayuda a calcular el potencial de pérdida de datos en concepto de tiempo y resulta especialmente relevante para el modo de rendimiento alto. Sin embargo, la advertencia también es relevante para el modo de alta seguridad cuando la creación de reflejos se detiene temporalmente o se suspende por desconexión de los asociados.|  
-|**Advertir si la sobrecarga de confirmación del servidor reflejado sobrepasa el umbral**|Especifica el número de milisengundos de retraso medio por transacción tolerado antes de que se genere una advertencia en el servidor principal. Este retardo es la cantidad de sobrecarga que se produce mientras la instancia del servidor principal espera a que la instancia del servidor reflejado escriba los datos del registro de la transacción en la cola de puesta al día. Este valor solo es relevante en el modo de alta seguridad.|  
+|**Advertir si el registro sin enviar sobrepasa el umbral**|Especifica la cantidad de kilobytes (KB) de registro no enviado que generará una advertencia en la instancia del servidor principal. Esta advertencia ayuda a calcular el potencial de pérdida de datos en KB y resulta especialmente relevante para el modo de rendimiento alto. No obstante, la advertencia también es relevante para el modo de alta seguridad cuando la creación de reflejo se detiene o suspende debido a que los asociados se han desconectado.|  
+|**Advertir si el registro sin restaurar sobrepasa el umbral**|Especifica la cantidad de KB de registro sin restaurar que generará una advertencia en la instancia del servidor reflejado. Esta advertencia es útil para calcular el tiempo de conmutación por error en KB. El*tiempo de la conmutación por error* se compone principalmente del tiempo que el servidor reflejado anterior necesita para poner al día los registros pendientes en su cola rehecha, más un breve tiempo adicional.<br /><br /> Nota: En una conmutación automática por error, el tiempo para que el sistema detecte el error es independiente del tiempo de conmutación por error.<br /><br /> Para obtener más información, vea [Calcular la interrupción del servicio durante la conmutación de roles &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|  
+|**Advertir si la transacción sin enviar más antigua sobrepasa el umbral**|Especifica el número de minutos de transacciones que se pueden acumular en la cola de envío antes de que se genere una advertencia en la instancia del servidor principal. Esta advertencia ayuda a calcular el potencial de pérdida de datos en concepto de tiempo y resulta especialmente relevante para el modo de rendimiento alto. No obstante, la advertencia también es relevante para el modo de alta seguridad cuando la creación de reflejo se detiene o suspende debido a que los asociados se han desconectado.|  
+|**Advertir si la sobrecarga de confirmación del servidor reflejado sobrepasa el umbral**|Especifica el número de milisengundos de retraso medio por transacción tolerado antes de que se genere una advertencia en el servidor principal. Este retardo es la cantidad de sobrecarga en la que se incurre mientras la instancia del servidor principal espera a la instancia del servidor reflejado para escribir la entrada de registro de la transacción en la cola de puesta al día. Este valor solo es relevante en el modo de alta seguridad.|  
   
  **Umbral en '** *< instancia_del_servidor* **'**  
  En cada una de las advertencias, muestra el umbral actual especificado por el usuario (si existe) para una de las instancias del servidor. El nombre completo de la instancia del servidor se indica en el encabezado de la columna correspondiente.  
@@ -52,7 +54,7 @@ ms.lasthandoff: 11/20/2017
   
  Para obtener más información, vea la sección "Comentarios" más adelante en este tema.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si la información no está disponible actualmente para una instancia del servidor, la columna **Umbral en** muestra un fondo gris y un texto de marca de agua. Si el monitor no está conectado a la instancia del servidor, la cuadrícula de cada celda muestra **No conectado a** *<NOMBRE_DE_SISTEMA>*, o bien **No conectado a** *<NOMBRE_DE_SISTEMA>***\\***<nombre_de_instancia>*, en función de si la instancia es la predeterminada o es una instancia con nombre. Si el monitor espera que se devuelva una consulta, la cuadrícula muestra **Esperando datos…** en cada celda.  
   
  Si hay información disponible, la celda de cada advertencia muestra un valor de umbral especificado (y una unidad de medida), o bien **No habilitado**.  
@@ -66,11 +68,11 @@ ms.lasthandoff: 11/20/2017
   
  En la siguiente tabla se muestra el Id. de evento asociado a cada advertencia.  
   
-|Advertencia del Monitor de creación de reflejo de la base de datos|Nombre del evento|Id. de evento|  
+|Advertencia del Monitor de creación de reflejo de la base de datos|Nombre del evento|Identificador del evento|  
 |----------------------------------------|----------------|--------------|  
-|**Advertir si el registro sin enviar sobrepasa el umbral**|Registro sin enviar|32042|  
+|**Advierte si el registro sin enviar supera el valor de umbral**|Registro sin enviar|32042|  
 |**Advertir si el registro sin restaurar sobrepasa el umbral**|Registro sin restaurar|32043|  
-|**Advierte si la antigüedad de la transacción sin enviar más antigua supera el valor de umbral**|Transacción no enviada más antigua|32044|  
+|**Advertir si la transacción sin enviar más antigua sobrepasa el umbral**|Transacción no enviada más antigua|32044|  
 |**Advertir si la sobrecarga de confirmación del servidor reflejado sobrepasa el umbral**|Sobrecarga de confirmación del servidor reflejado|32045|  
   
 ## <a name="permissions"></a>Permisos  
@@ -78,7 +80,7 @@ ms.lasthandoff: 11/20/2017
   
  La pertenencia al rol **dbm_monitor** le permite ver solo la fila de estado más reciente de la página **Advertencias** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  

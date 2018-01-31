@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: d44b765f-9523-4e6a-bb17-37846d5e5334
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f14db9dcbab0938dbfab73f5602a766d595268d1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fe5ad7c0666abcbdcf73590ad3488a85c87dd011
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogdeleteenvironment-ssisdb-database"></a>catalog.delete_environment (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,22 +46,22 @@ delete_environment [ @folder_name = ] folder_name , [ @environment_name = ] envi
  0 (correcto)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Ninguno  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
 -   Permisos READ y MODIFY en el entorno  
   
--   Pertenencia al rol de base de datos **ssis_admin**  
+-   Pertenencia al rol de base de datos de **ssis_admin**  
   
--   Pertenencia al rol de servidor **sysadmin**  
+-   Pertenencia al rol de servidor de **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
  En la siguiente lista se describen algunas condiciones que pueden producir un error o una advertencia:  
   
 -   El entorno especificado no existe  
   
--   El usuario no tiene los permisos adecuados  
+-   El usuario no tiene los permisos adecuados.  
   
   

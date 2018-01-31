@@ -8,29 +8,57 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stored-Procs
+ms.technology:
+- dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - stored procedures [SQL Server], returning data
 - returning data from stored procedure
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 785491c26c65252756c49e7b405d10cdbece831c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a897bca7cfcda1d5b4d5186958f96521ec4c9bf9
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Devolver datos de un procedimiento almacenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
  > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Devolver datos de un procedimiento almacenado](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx).
 
-  Existen dos formas de devolver conjuntos de resultados o datos de un procedimiento a un programa de llamada: parámetros de salida y códigos de retorno. En este tema se proporciona información sobre ambos enfoques.  
+  Existen tres formas de devolver datos de un procedimiento a un programa de llamada: conjuntos de resultados, parámetros de salida y códigos de retorno. En este tema se proporciona información sobre los tres enfoques.  
+  
+  ## <a name="returning-data-using-result-sets"></a>Devolución de datos con conjuntos de resultados
+ Si incluye una instrucción SELECT en el cuerpo de un procedimiento almacenado (pero que no sea SELECT ... INTO ni INSERT ... SELECT), las filas especificadas en la instrucción SELECT se enviarán directamente al cliente.  En el caso de conjuntos de resultados grandes, la ejecución del procedimiento almacenado no continuará a la siguiente instrucción hasta que el conjunto de resultados se haya enviado completamente al cliente.  En cuanto a los conjuntos de resultados pequeños, los resultados se pondrán en cola para su devolución al cliente y la ejecución continuará.  Si se ejecutan varias instrucciones SELECT durante la ejecución del procedimiento almacenado, se enviarán varios conjuntos de resultados al cliente.  Este comportamiento también se aplica a los lotes de TSQL anidados, los procedimientos almacenados anidados y los lotes de TSQL de nivel superior.
+ 
+ 
+ ### <a name="examples-of-returning-data-using-a-result-set"></a>Ejemplos de devolución de datos con un conjunto de resultados 
+  En el ejemplo siguiente se muestra un procedimiento almacenado que devuelve los valores LastName y SalesYTD para todas las filas SalesPerson que también aparecen en la vista vEmployee.
+  
+ ```  
+USE AdventureWorks2012;  
+GO  
+IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
+    DROP PROCEDURE Sales.uspGetEmployeeSalesYTD;  
+GO  
+CREATE PROCEDURE Sales.uspGetEmployeeSalesYTD  
+AS    
+  
+    SET NOCOUNT ON;  
+    SELECT LastName, SalesYTD  
+    FROM Sales.SalesPerson AS sp  
+    JOIN HumanResources.vEmployee AS e ON e.BusinessEntityID = sp.BusinessEntityID  
+    
+RETURN  
+GO  
+  
+```  
+
   
 ## <a name="returning-data-using-an-output-parameter"></a>Devolver datos mediante un parámetro de salida  
  Si especifica la palabra clave OUTPUT para un parámetro en la definición del procedimiento, este, al salir, podrá devolver el valor actual del parámetro al programa de llamada. Para guardar el valor del parámetro en una variable que pueda usarse en el programa de llamada, este último debe usar la palabra clave OUTPUT para ejecutar el procedimiento. Para obtener más información sobre los tipos de datos se pueden usar como parámetros de salida, vea [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
@@ -114,7 +142,7 @@ GO
   
 ### <a name="examples-of-cursor-output-parameters"></a>Ejemplos de parámetros de salida de cursor  
  En el siguiente ejemplo, se crea un procedimiento que especifica un parámetro de salida (`@currency_cursor`) con el tipo de datos **cursor**. A continuación, se llama al procedimiento desde un lote.  
-  
+ 
  Primero, crea el procedimiento de declaración y, luego, abre un cursor en la tabla Currency.  
   
 ```  
@@ -161,7 +189,7 @@ DECLARE @result int;
 EXECUTE @result = my_proc;  
 ```  
   
- Los códigos de retorno suelen usarse en los bloques de control de flujo dentro de los procedimientos con el fin de establecer el valor del código de retorno para cada posible situación de error. Puede usar la función @@ERROR después de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] para detectar si se produjo un error durante la ejecución de la instrucción.  
+ Los códigos de retorno suelen usarse en los bloques de control de flujo dentro de los procedimientos con el fin de establecer el valor del código de retorno para cada posible situación de error. Puede usar la función @@ERROR después de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] para detectar si se produjo un error durante la ejecución de la instrucción.  Antes de la introducción del control de errores TRY/CATCH/THROW en TSQL, a veces los códigos de devolución eran necesarios para determinar la correcta ejecución o los errores de los procedimientos almacenados.  Los procedimientos almacenados deben indicar siempre cualquier problema con un error (generado con THROW/RAISERROR en caso de ser necesario) y no depender de un código de devolución para indicarlo.  También conviene evitar el uso del código de devolución para devolver datos de la aplicación.
   
 ### <a name="examples-of-return-codes"></a>Ejemplos de códigos de retorno  
  El ejemplo siguiente muestra el procedimiento `usp_GetSalesYTD` con control de errores que establece valores del código de retorno especiales para varios errores. La tabla siguiente muestra el valor entero que asigna el procedimiento a cada error posible y el significado correspondiente de cada valor.  
@@ -262,7 +290,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
  [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)   

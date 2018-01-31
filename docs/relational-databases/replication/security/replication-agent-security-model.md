@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - Merge Agent, security
 - replication [SQL Server], agents and profiles
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
-caps.latest.revision: "72"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b677b08f0643a4e37ca217338187302bae4f1b8e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8cebfe2bb8751a2aebff7b71d5b1e661a751014f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-agent-security-model"></a>Modelo de seguridad del Agente de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El modelo de seguridad del agente de replicación permite un control concreto sobre las cuentas con las que los agentes de replicación se ejecutan y realizan conexiones: se puede especificar una cuenta diferente para cada agente. Para obtener más información sobre cómo especificar cuentas, vea [Administrar inicios de sesión y contraseñas en la replicación](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md).  
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/17/2017
 |Agente de mezcla para suscripciones de extracción|**\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<suscriptor>-\<baseDeDatosDeSuscripciones>-\<entero>**|  
 |Agente de mezcla para suscripciones de inserción|**\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<suscriptor>-\<entero>**|  
 |Agente de distribución para suscripciones de inserción|**\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<suscriptor>-\<entero>***|  
-|Agente de distribución para suscripciones de extracción|**\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<suscriptor>-\<baseDeDatosDePublicación>-\<GUID>***\*|  
+|Agente de distribución para suscripciones de extracción|**\<Publicador>-\<BaseDeDatosDePublicación>-\<Publicación>-\<Suscriptor>-\<BaseDeDatosDeSuscripción>-\<GUID>***\*|  
 |Agente de distribución para suscripciones de inserción en suscriptores que no sean de SQL Server|**\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<suscriptor>-\<entero>**|  
 |Agente de lectura de cola|**[\<distribuidor>].\<entero>**|  
   
@@ -96,7 +97,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Esta información se facilita para ayudarle a entender las implicaciones de ejecutar agentes con el contexto de seguridad adecuado. No debería ser necesario interactuar directamente con las credenciales o los proxy que se hayan creado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Seguridad y protección &#40;replicación&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
  [Proteger la carpeta de instantáneas](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)  

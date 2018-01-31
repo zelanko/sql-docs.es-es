@@ -8,23 +8,24 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.ssis.ssms.isprojectprop.general.f1
 - sql13.ssis.ssms.isprojectprop.permissions.f1
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54942f340731079a2eb1f4b98b6b868524567577
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: 663312637cef120825522b4dad36f0623a8f872a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="project-properties-dialog-box"></a>Propiedades del proyecto (cuadro de diálogo)
   Un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] es una unidad de implementación. Cada proyecto puede contener paquetes, parámetros y referencias de entorno. Un proyecto es un objeto protegible y puede definir permisos en las entidades de seguridad de base de datos. Cuando se vuelve a implementar un proyecto, la versión anterior del mismo puede almacenarse en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -62,7 +63,7 @@ ms.lasthandoff: 12/12/2017
  **Identificador**  
  Muestra el identificador del proyecto.  
   
- **Description**  
+ **Descripción**  
  Muestra la descripción opcional del proyecto.  
   
  **Versión del proyecto**  

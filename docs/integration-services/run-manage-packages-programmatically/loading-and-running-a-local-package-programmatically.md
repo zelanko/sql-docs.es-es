@@ -11,8 +11,10 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-dev_langs: VB
+applies_to:
+- SQL Server 2016 Preview
+dev_langs:
+- VB
 helpviewer_keywords:
 - Integration Services packages, running
 - events [Integration Services], capturing
@@ -22,16 +24,16 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - programmatically load and run packages [SSIS]
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d55e5842ec6a9e62ec75095c68e59d4df86eec36
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 604c25de1d6ca478612bd3a83f79e35b969e5d8c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Cargar y ejecutar un paquete local mediante programación
   Puede ejecutar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] según sea necesario o en momentos predeterminados mediante los métodos descritos en [Ejecución de paquetes](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx). Sin embargo, con solo unas líneas de código, también puede ejecutar un paquete desde una aplicación personalizada como una aplicación Windows Forms, una aplicación de consola, un formulario Web Forms o servicio web ASP.NET o un servicio de Windows.  

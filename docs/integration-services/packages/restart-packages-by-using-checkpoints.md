@@ -8,7 +8,8 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c12ab9b92aa37b0e60f699fbec07e13c97cdbddc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5630458cf4f925ad1cce7cfab27cedbcf66bf3eb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Reiniciar paquetes de usando puntos de comprobación
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] puede reiniciar los paquetes con errores desde el punto del error, en lugar de volver a ejecutar todo el paquete. Si se configura un paquete para que utilice puntos de comprobación, la información relacionada con la ejecución del paquete se escribirá en un archivo de punto de comprobación. Cuando se vuelve a ejecutar el paquete con error, se utiliza el archivo de punto de comprobación para reiniciar el paquete desde el punto del error. Si el paquete se ejecuta correctamente, el archivo de punto de comprobación se elimina y se vuelve a crear la siguiente vez que se ejecuta el paquete.  
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="checkpoint-usage"></a>Usar puntos de comprobación  
  La propiedad CheckpointUsage se puede establecer en los siguientes valores:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Never**|Especifica que no se utilizará el archivo de punto de comprobación y que el paquete se ejecutará desde el inicio del flujo de trabajo del paquete.|  
 |**Always**|Especifica que el archivo de punto de comprobación se utilizará siempre y que el paquete se reinicia desde el punto del error de ejecución anterior. Si no se encuentra el archivo de punto de comprobación, el paquete generará un error.|  

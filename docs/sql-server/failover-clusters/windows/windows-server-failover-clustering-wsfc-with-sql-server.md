@@ -8,7 +8,8 @@ ms.service:
 ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - quorum [SQL Server]
 - failover clustering [SQL Server], Always On Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5fdd2a6aed90983a38c4a34cd48588d157c036df
-ms.sourcegitcommit: 719bcc010dd1ca6f2acfcdf6f9bd9f73451ca8ca
+ms.openlocfilehash: 520b6480f584fcd26563c675548b0a60fd204e1f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Clústeres de conmutación por error de Windows Server con SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Un *clúster de conmutación por error de Windows Server* (WSFC) es un grupo de servidores independientes que funcionan conjuntamente para aumentar la disponibilidad de aplicaciones y servicios. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aprovecha los servicios y las capacidades de WSFC para admitir instancias de clúster de conmutación por error de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -42,7 +43,8 @@ ms.lasthandoff: 12/20/2017
  Recurso de clúster  
  Una entidad física o lógica que puede ser propiedad de un nodo, ser puesta en línea y sin conexión, ser movida entre nodos y ser administrada como un objeto de clúster. Un recurso de clúster puede ser propiedad de un único nodo en cualquier momento.  
   
- Rol: una colección de recursos de clúster administrados como un único objeto de clúster para proporcionar una funcionalidad específica. Para SQL Server, un rol debe ser un grupo de disponibilidad Always On (AG) o una instancia de clúster de conmutación por error Always On (FCI). Un rol contiene todos los recursos de clúster necesarios para un AG o una FCI. La conmutación por error y la conmutación por recuperación siempre actúan en contexto de roles. Para una FCI, un rol contendrá un recurso de dirección IP, un recurso de nombre de red y los recursos de SQL Server. Un rol de AG contendrá el recurso de AG y, si hay un agente de escucha configurado, un nombre de gusano de red y un recurso de IP. 
+ Rol  
+ Una colección de recursos de clúster administrados como un único objeto de clúster para proporcionar una funcionalidad específica. Para SQL Server, un rol debe ser un grupo de disponibilidad Always On (AG) o una instancia de clúster de conmutación por error Always On (FCI). Un rol contiene todos los recursos de clúster necesarios para un AG o una FCI. La conmutación por error y la conmutación por recuperación siempre actúan en contexto de roles. Para una FCI, un rol contendrá un recurso de dirección IP, un recurso de nombre de red y los recursos de SQL Server. Un rol de AG contendrá el recurso de AG y, si hay un agente de escucha configurado, un nombre de gusano de red y un recurso de IP. 
 
  Recurso de nombre de red  
  Un nombre de servidor lógico que se administra como un recurso de clúster. Un recurso de nombre de red debe utilizarse con un recurso de dirección IP. Estas entradas pueden requerir objetos en Active Directory Domain Services y DNS. 
@@ -57,11 +59,11 @@ ms.lasthandoff: 12/20/2017
  Posible propietario  
  Un nodo secundario en el que se puede ejecutar un recurso. Cada grupo de recursos está asociado a una lista de posibles propietarios. Los roles pueden ser objeto de conmutación por error solo en los nodos enumerados como posibles propietarios.   
   
- Modo de cuórum  
- La configuración de cuórum en un clúster de conmutación por error que determina el número de errores de nodo que el clúster puede admitir.  
+ Modo de quórum  
+ La configuración de quórum en un clúster de conmutación por error que determina el número de errores de nodo que el clúster puede admitir.  
   
  Forzar el cuórum  
- El proceso para iniciar el clúster aunque solo una minoría de los elementos necesarios para el cuórum esté en comunicación.  
+ El proceso para iniciar el clúster aunque solo una minoría de los elementos necesarios para el quórum esté en comunicación.  
   
 
 ##  <a name="Overview"></a> Información general de clústeres de conmutación por error de Windows Server  
@@ -127,14 +129,14 @@ ms.lasthandoff: 12/20/2017
   
  Los recursos de WSFC como redes, almacenamiento o servicios se pueden hacer dependientes unos de otros. El estado acumulativo de un recurso está determinado por la acumulación sucesiva de su condición con el estado de cada una de sus dependencias de recursos.  
   
-### <a name="wsfc-inter-node-health-detection-and-quorum-voting"></a>Detección del estado entre nodos de WSFC y votos de cuórum  
+### <a name="wsfc-inter-node-health-detection-and-quorum-voting"></a>Detección del estado entre nodos de WSFC y votos de quórum  
  Cada nodo de un WSFC participa en la comunicación periódica de latido para compartir el estado de mantenimiento del nodo con los demás nodos. Los nodos que no responden se consideran que se encuentran en estado de error.  
   
  *Cuórum* es un mecanismo que ayuda a garantizar que el WSFC está en funcionamiento y en ejecución para asegurar que hay recursos suficientes conectados en el WSFC. Si el WSFC tiene suficientes votos, es correcto y puede proporcionar tolerancia a errores de nivel de nodo.  
   
  En el WSFC se configura un *modo de cuórum* que dicta la metodología empleada para los votos de cuórum y cuándo se ha de realizar una conmutación por error automática o poner el clúster sin conexión. 
   
-> **SUGERENCIA** Se recomienda tener siempre un número impar de votos de cuórum en un WSFC.  A efectos de los votos de cuórum, no es necesario que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esté instalado en todos los nodos del clúster. Un servidor adicional puede actuar como miembro de cuórum, o el modelo de cuórum de WSFC se puede configurar para que se use un recurso compartido de archivos remoto como factor de desempate.  
+> **SUGERENCIA** Se recomienda tener siempre un número impar de votos de cuórum en un WSFC.  A efectos de los votos de quórum, no es necesario que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esté instalado en todos los nodos del clúster. Un servidor adicional puede actuar como miembro de quórum, o el modelo de quórum de WSFC se puede configurar para que se use un recurso compartido de archivos remoto como factor de desempate.  
 >   
 >  Para más información, consulte [Configuración de los votos y modos de cuórum WSFC (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   

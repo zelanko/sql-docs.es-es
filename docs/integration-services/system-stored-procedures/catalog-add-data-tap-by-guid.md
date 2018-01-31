@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efb6c297b776cd6246f0c6226160afba9302bcdb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 088d7eeda34d83a0bd54b0626216663725a94d5d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogadddatatapbyguid"></a>catalog.add_data_tap_by_guid
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ catalog add_data_tap_by_guid [ @execution_id = ] execution_id
  [ @dataflow_path_id_string = ] *dataflow_path_id_string*  
  Cadena de identificación de la ruta de flujo de datos. Una ruta de acceso conecta dos componentes de flujo de datos. La propiedad **IdentificationString** de la ruta de acceso especifica la cadena.  
   
- Para buscar la cadena de identificación, en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] haga clic con el botón derecho en la ruta de acceso entre dos componentes de flujo de datos y, a continuación, haga clic en **Propiedades**. La propiedad **IdentificationString** aparece en la ventana **Propiedades**.  
+ Para buscar la cadena de identificación, en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], haga clic con el botón derecho en la ruta de acceso entre dos componentes de flujo de datos y, a continuación, haga clic en **Propiedades**. La propiedad **IdentificationString** aparece en la ventana **Propiedades**.  
   
  El parámetro *dataflow_path_id_string* es de tipo **nvarchar(4000)**.  
   
@@ -72,8 +73,8 @@ exec catalog.add_data_tap_by_guid   @execution_id,
 'D:\demos\datafiles\DCVendorOutput.csv'  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- Para agregar derivaciones de datos, la instancia de la ejecución debe estar en el estado creado (un valor 1 en la columna **status** de la vista [catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)). El valor de estado cambia cuando se ejecuta la ejecución. Puede crear una ejecución mediante una llamada a [catalog.create_execution &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
+## <a name="remarks"></a>Notas  
+ Para agregar derivaciones de datos, la instancia de la ejecución debe estar en el estado creado (un valor 1 en la columna **status** de la vista [catalog.operations &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)). El valor de estado cambia cuando se ejecuta la ejecución. Puede crear una ejecución mediante una llamada a [catalog.create_execution &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
   
  A continuación se indican algunas consideraciones sobre el procedimiento almacenado add_data_tap_by_guid.  
   
@@ -91,16 +92,16 @@ exec catalog.add_data_tap_by_guid   @execution_id,
  Cuando se produce un error en el procedimiento almacenado, se genera un error.  
   
 ## <a name="result-set"></a>Conjunto de resultados  
- Ninguno  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
 -   Permisos MODIFY en la instancia de ejecución  
   
--   Pertenencia al rol de base de datos **ssis_admin**.  
+-   Pertenencia al rol de base de datos de **ssis_admin**  
   
--   Pertenencia al rol de servidor **sysadmin**.  
+-   Pertenencia al rol de servidor de **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
  En la lista siguiente se describen las condiciones que hacen que el procedimiento almacenado genere un error.  
@@ -113,7 +114,7 @@ exec catalog.add_data_tap_by_guid   @execution_id,
   
 ## <a name="requirements"></a>Requisitos  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [catalog.add_data_tap](../../integration-services/system-stored-procedures/catalog-add-data-tap.md)  
   
   

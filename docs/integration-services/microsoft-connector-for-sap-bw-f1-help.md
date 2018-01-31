@@ -8,21 +8,23 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords: sql13.dts.designer.sapbw.f1
+f1_keywords:
+- sql13.dts.designer.sapbw.f1
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4f1911bef4050d55b388bfa08e359af4e1862a8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4d60639c30dd871de100b83908f3b3c3fb341a5c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>Ayuda F1 de Microsoft Connector 1.1 for SAP BW
   Esta sección contiene los temas de la Ayuda F1 para los tres componentes de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW. También puede obtener acceso a estos temas desde la interfaz de usuario al presionar la tecla F1 o hacer clic en Ayuda en las páginas y los cuadros de diálogo del asistente.  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - data flow [Integration Services]
 - errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-caps.latest.revision: "70"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 53f945d9efbcc714bbcf3e6498a3d0a984ef95dc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0ddc6281b1f0332c4a62af8b6fb787c508d49ba3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-flow"></a>Flujo de datos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona tres tipos de componentes de flujo de datos: orígenes, transformaciones y destinos. Los orígenes extraen datos de almacenes de datos tales como tablas y vistas en bases de datos relacionales, archivos y bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Las transformaciones modifican, resumen y limpian datos. Los destinos cargan datos en almacenes de datos o crean conjuntos de datos almacenados en la memoria.  
@@ -186,7 +187,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="inputs"></a>Entradas  
  Los destinos y las transformaciones tienen entradas. Una entrada contiene una o más columnas de entrada, que pueden hacer referencia a las columnas externas si el componente de flujo de datos se ha configurado para usarlas. Las entradas se pueden configurar para supervisar y controlar el flujo de datos: por ejemplo, puede especificar si el componente debe generar un error en respuesta a un error, omitir los errores o redirigir las filas de errores a la salida de error. También puede asignar una descripción a la salida o actualizar el nombre de entrada. En el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , las entradas se configuran mediante el cuadro de diálogo **Editor avanzado** . Para obtener más información acerca del **Editor avanzado** , vea [Integration Services User Interface](../../integration-services/integration-services-user-interface.md).  
   
-### <a name="outputs"></a>Salidas  
+### <a name="outputs"></a>Resultados  
  Los orígenes y las transformaciones siempre tienen salidas. Una salida contiene una o más columnas de salida, que pueden hacer referencia a las columnas externas si el componente de flujo de datos se ha configurado para usarlas. Las salidas se pueden configurar para proporcionar información útil para el procesamiento en dirección descendente de los datos. Por ejemplo, puede indicar si se ordena la salida. También puede proporcionar una descripción para la salida o actualizar el nombre de la salida. En el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , las salidas se configuran mediante el cuadro de diálogo **Editor avanzado** .  
   
 ### <a name="error-outputs"></a>Salidas de error  
@@ -215,7 +216,7 @@ ms.lasthandoff: 11/20/2017
   
  Para más información sobre cómo establecer propiedades mediante el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea [Establecer las propiedades de un componente de flujo de datos](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Agregar o eliminar un componente en un flujo de datos](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)  
   
  [Conectar componentes de un flujo de datos](../../integration-services/data-flow/connect-components-in-a-data-flow.md)  

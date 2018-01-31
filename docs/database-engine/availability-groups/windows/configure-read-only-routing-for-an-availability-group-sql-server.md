@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +20,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: c0dc198b7f7e40bb99c0e019b9172b647f8bda79
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+manager: craigg
+ms.openlocfilehash: 9df48b3e6fb769543e7b5e4248b00c5a4ec2a88c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>Configurar el enrutamiento de solo lectura para un grupo de disponibilidad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para configurar un grupo de disponibilidad AlwaysOn para admitir el enrutamiento de solo lectura en [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)], puede usar [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell. El*enrutamiento de solo lectura* hace referencia a la capacidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de enrutar las solicitudes de conexión de solo lectura a una [réplica secundaria legible](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) de AlwaysOn disponible (es decir, una réplica configurada para permitir cargas de trabajo de solo lectura al ejecutarse en un rol secundario). Para admitir el enrutamiento de solo lectura, el grupo de disponibilidad debe poseer un [agente de escucha de grupo de disponibilidad](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md). Los clientes de solo lectura deben dirigir sus solicitudes de conexión a este agente de escucha y las cadenas de conexión del cliente deben especificar el intento de aplicación como de “solo lectura”. Es decir, deben ser *solicitudes de conexión de intento de lectura*.  
@@ -104,7 +105,7 @@ El enrutamiento de solo lectura está disponible en [!INCLUDE[sssql15](../../../
   
     -   Para configurar el acceso de solo lectura para el rol secundario, en la cláusula ADD REPLICA o MODIFY REPLICA WITH, especifique la opción SECONDARY_ROLE, del siguiente modo:  
   
-         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='**TCP**://***system-address***:***port***')**  
+         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='**TCP**://***dirección-del-sistema***:***puerto***')**  
   
          Los parámetros de la dirección URL de enrutamiento de solo lectura son los siguientes:  
   
@@ -122,7 +123,7 @@ El enrutamiento de solo lectura está disponible en [!INCLUDE[sssql15](../../../
   
     -   Para configurar el enrutamiento de solo lectura para el rol principal, en la cláusula ADD REPLICA o MODIFY REPLICA WITH, especifique la opción PRIMARY_ROLE, del siguiente modo:  
   
-         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=(‘***server***’** [ **,**...*n* ] **))**  
+         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=(‘***servidor***’** [ **,**...*n* ] **))**  
   
          donde *server* identifica una instancia del servidor que hospeda una réplica secundaria de solo lectura en el grupo de disponibilidad.  
   
@@ -192,13 +193,13 @@ GO
   
 2.  Para agregar una réplica de disponibilidad a un grupo de disponibilidad, use el cmdlet **New-SqlAvailabilityReplica** . Para modificar una réplica de disponibilidad existente, use el cmdlet **Set-SqlAvailabilityReplica** . Los parámetros pertinentes son los siguientes:  
   
-    -   Para configurar el enrutamiento de solo lectura para el rol secundario, especifique el parámetro **ReadonlyRoutingConnectionUrl"***url***"** .  
+    -   Para configurar el enrutamiento de solo lectura para el rol secundario, especifique el parámetro **ReadonlyRoutingConnectionUrl"***url***"**.  
   
          donde, *url* es el nombre de dominio completo (FQDN) y puerto que se usa para el enrutamiento de la réplica para las conexiones de solo lectura. Por ejemplo:  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
          Para obtener más información, vea [Calcular read_only_routing_url para AlwaysOn](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx).  
   
-    -   Para configurar el acceso de conexión para el rol principal, especifique **ReadonlyRoutingList"***server***"** [ **,**...*n* ], donde *server* identifica una instancia del servidor que hospeda una réplica secundaria de solo lectura en el grupo de disponibilidad. Por ejemplo:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
+    -   Para configurar el acceso de conexión para el rol principal, especifique **ReadonlyRoutingList"***servidor***"** [ **,**...*n* ], donde *servidor* identifica una instancia del servidor que hospeda una réplica secundaria de solo lectura en el grupo de disponibilidad. Por ejemplo:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
         > [!NOTE]  
         >  Debe establecer la dirección URL de enrutamiento de solo lectura de la réplica antes de configurar su lista de enrutamiento de solo lectura.  

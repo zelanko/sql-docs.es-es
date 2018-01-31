@@ -8,24 +8,26 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: agents [SQL Server replication], command prompt parameters
+helpviewer_keywords:
+- agents [SQL Server replication], command prompt parameters
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
-caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c380a4d550eaa2cb509073b4715dfbbde14bbdaa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3edb80c4a90ede1059481d918506b97cb1669901
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>Ver y modificar parámetros del símbolo del sistema de los agentes de replicación
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los agentes de replicación son ejecutables que aceptan parámetros en la línea de comandos. De forma predeterminada, los agentes se ejecutan en los pasos de trabajo del Agente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], de modo que estos parámetros se pueden ver y modificar mediante el cuadro de diálogo **Propiedades del trabajo: \<trabajo>**. Este cuadro de diálogo está disponible en la carpeta **Trabajos** en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] y en la pestaña **Agentes** en el Monitor de replicación. Para obtener información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los agentes de replicación son ejecutables que aceptan parámetros en la línea de comandos. De forma predeterminada, los agentes se ejecutan en los pasos de trabajo del Agente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], de modo que estos parámetros se pueden ver y modificar mediante el cuadro de diálogo **Propiedades del trabajo: \<trabajo>**. Este cuadro de diálogo está disponible en la carpeta **Trabajos** en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] y en la pestaña **Agentes** en el Monitor de replicación. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 > [!NOTE]  
 >  Los cambios en los parámetros del agente tendrán efecto la próxima vez que se inicie el agente. Si el agente se ejecuta sin interrupción, debe detenerlo y reiniciarlo.  
@@ -36,14 +38,14 @@ ms.lasthandoff: 11/17/2017
   
 |Agente|Nombre del trabajo|Para obtener una lista de parámetros, vea…|  
 |-----------|--------------|------------------------------------|  
-|Agente de instantáneas|**\<Publicador>-\<baseDeDatosDePublicación>-\<Publicación>-\<entero>**|[Agente de instantáneas de replicación](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
-|Agente de replicación para una partición de publicación de combinación|**Dyn_\<Publicador>-\<baseDeDatosDePublicación>-\<Publicación>-\<GUID>**|[Agente de instantáneas de replicación](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
+|Agente de instantáneas|**\<Publicador>-\<baseDeDatosDePublicación>-\<Publicación>-\<entero>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
+|Agente de replicación para una partición de publicación de combinación|**Dyn_\<Publicador>-\<baseDeDatosDePublicación>-\<Publicación>-\<GUID>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
 |Agente de registro del LOG|**\<Publicador>-\<baseDeDatosDePublicación>-\<entero>**|[Agente de registro del LOG de replicación](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|  
-|Agente de mezcla para suscripciones de extracción|**\<Publicador>-\<baseDeDatosDePublicación>-\<Publicación>-\<Suscriptor>-\<baseDeDatosDeSuscripción>-\<entero>**|[Agente de mezcla de replicación](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
-|Agente de mezcla para suscripciones de inserción|**\<Publicador>-\<baseDeDatosDePublicación>-\<Publicación>-\<Suscriptor>-\<entero>**|[Agente de mezcla de replicación](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
-|Agente de distribución para suscripciones de inserción|**\<Publicador>-\<baseDeDatosDePublicación>-\<Publicación>-\<Suscriptor>-\<entero>***|[Agente de distribución de replicación](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
-|Agente de distribución para suscripciones de extracción|**\<Publicador>-\<baseDeDatosDePublicación>-\<Publicación>-\<Suscriptor>-\<baseDeDatosDeSuscripción>-\<GUID>***\*|[Agente de distribución de replicación](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
-|Agente de distribución para suscripciones de inserción en suscriptores que no sean de SQL Server|**\<Publicador>-\<baseDeDatosDePublicación>-\<Publicación>-\<Suscriptor>-\<entero>**|[Agente de distribución de replicación](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|Agente de mezcla para suscripciones de extracción|**\<Publicador>-\<baseDeDatosDePublicación>-\<Publicación>-\<Suscriptor>-\<baseDeDatosDeSuscripción>-\<entero>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
+|Agente de mezcla para suscripciones de inserción|**\<Publicador>-\<baseDeDatosDePublicación>-\<Publicación>-\<Suscriptor>-\<entero>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
+|Agente de distribución para suscripciones de inserción|**\<Publicador>-\<baseDeDatosDePublicación>-\<Publicación>-\<Suscriptor>-\<entero>***|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|Agente de distribución para suscripciones de extracción|**\<Publicador>-\<BaseDeDatosDePublicación>-\<Publicación>-\<Suscriptor>-\<BaseDeDatosDeSuscripción>-\<GUID>***\*|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|Agente de distribución para suscripciones de inserción en suscriptores que no sean de SQL Server|**\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<suscriptor>-\<entero>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
 |Agente de lectura de cola|**[\<Distribuidor>].\<entero>**|[Agente de lectura de cola de replicación](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|  
   
  \*Para suscripciones de inserción a publicaciones de Oracle, es **\<Publicador>-\<Publicador**> en lugar de **\<Publicador>-\<baseDeDatosDePublicación>**  
@@ -98,7 +100,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  Haga clic en **Aceptar** en los dos cuadros de diálogo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administración del Agente de replicación](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Conceptos de los ejecutables del Agente de replicación](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
  [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  

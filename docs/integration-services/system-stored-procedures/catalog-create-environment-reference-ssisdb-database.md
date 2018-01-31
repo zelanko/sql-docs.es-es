@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 48069bea-31cb-4a0e-9849-a07edc94088f
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 22f4ff117ea95ffa394afcd230348c4ab0f525d1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 46224cbe85784c146ee9f4b6122ac70c51dcfc5a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcreateenvironmentreference-ssisdb-database"></a>catalog.create_environment_reference (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +42,13 @@ catalog.create_environment_reference [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argumentos  
  [ @folder_name = ] *folder_name*  
- El nombre de la carpeta del proyecto al que se hace referencia en el entorno. El parámetro *folder_name* es **nvarchar(128)**.  
+ El nombre de la carpeta del proyecto al que se hace referencia en el entorno. *folder_name* es **nvarchar(128)**.  
   
  [ @project_name = ] *project_name*  
- El nombre del proyecto al que se hace referencia en el entorno. El parámetro *project_name* es **nvarchar(128)**.  
+ El nombre del proyecto al que se hace referencia en el entorno. *project_name* es **nvarchar(128)**.  
   
  [ @environment_name = ] *environment_name*  
- El nombre del entorno al que se hace referencia. El parámetro *environment_name* es **nvarchar(128)**.  
+ El nombre del entorno al que se hace referencia. *environment_name* es **nvarchar(128)**.  
   
  [ @reference_location = ] *reference_location*  
  Indica si el entorno se puede encontrar en la misma carpeta que el proyecto (referencia relativa) o en una carpeta diferente (referencia absoluta). Utilice el valor `R` para indicar una referencia relativa. Utilice el valor `A` para indicar una referencia absoluta. El parámetro *reference_location* es **char(1)**.  
@@ -56,15 +57,15 @@ catalog.create_environment_reference [ @folder_name = ] folder_name
  El nombre de la carpeta en la que se encuentra el entorno al que se hace referencia. Este valor se requiere para las referencias absolutas. El parámetro *environment_folder_name* es **nvarchar(128)**.  
   
  [ @reference_id = ] *reference_id*  
- Devuelve el identificador único para la nueva referencia. Este parámetro es opcional. El parámetro *reference_id* es **bigint**.  
+ Devuelve el identificador único para la nueva referencia. Este parámetro es opcional. *reference_id* es **bigint**.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
- 0 (Correcto)  
+ 0 (correcto)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Ninguno  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
 -   Los permisos de lectura y modificación en el proyecto, y el permiso de lectura en el entorno  
@@ -84,7 +85,7 @@ catalog.create_environment_reference [ @folder_name = ] folder_name
   
 -   Una referencia absoluta se especifica mediante el carácter `A` en el parámetro *reference_location*, pero el nombre de la carpeta no se especificó con el parámetro *environment_folder_name*.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Un proyecto puede tener referencias de entorno absolutas o relativas. Las referencias relativas se refieren al entorno por nombre y requieren que resida en la misma carpeta que el proyecto. Las referencias absolutas hacen referencia al entorno por nombre y carpeta, y pueden hacer referencia a los entornos que residen en una carpeta diferente que el proyecto. Un proyecto puede hacer referencia a varios entornos.  
   
   

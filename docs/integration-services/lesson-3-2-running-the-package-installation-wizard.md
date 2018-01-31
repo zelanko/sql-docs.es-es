@@ -8,21 +8,23 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e432e01995835f870b40ff1a0e5df07c06ef56a6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 953c78b59eeaf059a828964f26681cbbf28b89a7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lección 3-2: Ejecutar el Asistente para instalar paquetes
 En esta tarea, ejecutará el Asistente para la instalación de paquetes para implementar los paquetes del proyecto Deployment Tutorial en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Solamente los paquetes se pueden instalar en la tabla sysssispackages de la base de datos msdb de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , los archivos compatibles que incluya el paquete de implementación se implementarán en el sistema de archivos.  

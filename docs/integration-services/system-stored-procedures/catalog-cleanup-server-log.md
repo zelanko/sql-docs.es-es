@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6cf0f550930ac73199276dc403763f49ce45b5e7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 31e8aba7f3ac9913189278c6c6ccc482ec3e3020
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcleanupserverlog"></a>catalog.cleanup_server_log
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +44,14 @@ catalog.cleanup_server_log
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Ninguno.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
 -   Permisos de lectura y ejecución en el proyecto y, si es aplicable, permisos de lectura en el entorno al que se hace referencia.  
   
 -   Pertenencia al rol de base de datos **ssis_admin**.  
   
--   Pertenencia al rol del servidor de **sysadmin**.  
+-   Pertenencia al rol del servidor de **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
  Este procedimiento almacenado genera errores en los escenarios siguientes:  
@@ -59,7 +60,7 @@ catalog.cleanup_server_log
   
 -   La base de datos SSISDB no está en modo de usuario único.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  SQL Server 2012 Service Pack 2 agregó la propiedad SERVER_OPERATION_ENCRYPTION_LEVEL a la tabla **internal.catalog_properties**. Esta propiedad tiene dos valores posibles:  
   
 -   **PER_EXECUTION (1)** – El certificado y la clave simétrica que se usan para proteger los parámetros de ejecución confidenciales y los registros de ejecución se crean en cada ejecución. Es posible que se encuentre con problemas de rendimiento (interbloqueos, trabajos de mantenimiento con errores, etc.) en un entorno de producción, porque los certificados o las claves se generan en cada ejecución. Sin embargo, esta configuración proporciona un mayor nivel de seguridad que el otro valor (2).  
@@ -68,7 +69,7 @@ catalog.cleanup_server_log
   
  Tendrá que ejecutar el procedimiento almacenado [catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md) antes de poder cambiar SERVER_OPERATION_ENCRYPTION_LEVEL de 2 a 1 o de 1 a 2. Debe hacer lo siguiente antes de ejecutar este procedimiento almacenado:  
   
-1.  Asegúrese de que el valor de la propiedad OPERATION_CLEANUP_ENABLED se establece en TRUE en la tabla [catalog.catalog_properties &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
+1.  Asegúrese de que el valor de la propiedad OPERATION_CLEANUP_ENABLED esté establecido en TRUE en la tabla [catalog.catalog_properties &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
   
 2.  Establezca la base de datos de Integration Services (SSISDB) en modo de usuario único. En SQL Server Management Studio, inicie el cuadro de diálogo Propiedades de la base de datos para SSISDB, vaya a la pestaña Opciones y establezca la propiedad Restringir acceso en modo de usuario único (SINGLE_USER). Después de ejecutar el procedimiento almacenado cleanup_server_log, vuelva a establecer el valor de propiedad original.  
   
@@ -78,7 +79,7 @@ catalog.cleanup_server_log
   
 5.  Ejecute el procedimiento almacenado [catalog.cleanup_server_execution_keys](../../integration-services/system-stored-procedures/catalog-cleanup-server-execution-keys.md) para borrar las claves de certificados de la base de datos SSISDB. Quitar certificados y claves de la base de datos SSISDB puede llevar bastante tiempo, por lo que debe realizar este proceso periódicamente durante horas de poca actividad.  
   
-     Puede especificar el ámbito o el nivel (ejecución contra proyecto) y el número de claves que va a eliminar. El tamaño predeterminado del lote que se va a eliminar es de 1000. Cuando el nivel se establece en 2, solo se eliminan las claves y certificados si se han eliminado los proyectos asociados.  
+     Puede especificar el ámbito o el nivel (ejecución o proyecto) y el número de claves que va a eliminar. El tamaño predeterminado del lote para la eliminación es 1000. Cuando el nivel se establece en 2, solo se eliminan las claves y certificados si se han eliminado los proyectos asociados.  
   
  Para obtener más información, consulte el artículo de Knowledge Base siguiente: [FIX: Performance issues when you use SSISDB as your deployment store in SQL Server 2012 (Corrección: problemas de rendimiento al usar SSISDB como almacén de implementación en SQL Server 2012)](http://support.microsoft.com/kb/2972285).  
   

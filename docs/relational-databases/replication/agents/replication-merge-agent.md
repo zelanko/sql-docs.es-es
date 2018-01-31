@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,18 +18,18 @@ helpviewer_keywords:
 - agents [SQL Server replication], Merge Agent
 - command prompt [SQL Server replication]
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
-caps.latest.revision: "64"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 476c518e454bbd02f5f17678a74fb32c987d3cd9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d28310275dd8df9e8e0ee205322291098ea4a626
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="replication-merge-agent"></a>Agente de mezcla de replicación
+# <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Agente de mezcla de replicación es una utilidad ejecutable que aplica la instantánea inicial contenida en las tablas de base de datos a los suscriptores. También mezcla los cambios incrementales de los datos que tienen lugar en el publicador después de la creación de la instantánea inicial y reconcilia los conflictos según las reglas configuradas por el usuario o mediante un solucionador personalizado creado por el usuario.  
   
 > [!NOTE]  
@@ -117,8 +118,8 @@ replmerg [-?]
  **-?**  
  Imprime todos los parámetros disponibles.  
   
- **-Publisher** *server_name*[**\\***instance_name*]  
- Es el nombre del publicador. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
+ **-Publisher** *nombre_de_servidor*[**\\***nombre_de_instancia*]  
+ Es el nombre del publicador. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
   
  **-PublisherDB** *publisher_database*  
  Es el nombre de la base de datos del publicador.  
@@ -126,8 +127,8 @@ replmerg [-?]
  **-Publication** *publication*  
  Es el nombre de la publicación. Este parámetro solamente es válido si la publicación se define para tener siempre una instantánea disponible para las suscripciones nuevas o reinicializadas.  
   
- **-Subscriber** *server_name*[**\\***instance_name*]  
- Es el nombre del suscriptor. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
+ **-Subscriber** *nombre_de_servidor*[**\\***nombre_de_instancia*]  
+ Es el nombre del suscriptor. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
   
  **-SubscriberDB** *subscriber_database*  
  Es el nombre de la base de datos del suscriptor.  
@@ -144,8 +145,8 @@ replmerg [-?]
  **-DefinitionFile** *def_path_and_file_name*  
  Es la ruta de acceso del archivo de definición de agente. Un archivo de definición de agente contiene los argumentos de símbolo del sistema para el agente. El contenido del archivo se analiza como un archivo ejecutable. Utilice las comillas tipográficas (") para especificar valores de argumento que contienen caracteres arbitrarios.  
   
- **-Distributor** *server_name*[**\\***instance_name*]  
- Es el nombre del distribuidor. Especifique *server_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Para la distribución del distribuidor (inserción), el nombre tiene como valor predeterminado el nombre de la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el equipo local.  
+ **-Distributor** *nombre_de_servidor*[**\\***nombre_de_instancia*]  
+ Es el nombre del distribuidor. Especifique *server_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Para la distribución del distribuidor (inserción), el nombre tiene como valor predeterminado el nombre de la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el equipo local.  
   
  **-DistributorLogin** *distributor_login*  
  Es el nombre de inicio de sesión del distribuidor.  
@@ -171,7 +172,7 @@ replmerg [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Es el nivel de cifrado de Capa de sockets seguros (SSL) utilizado por el agente de mezcla cuando realiza conexiones.  
   
-|Valor de EncryptionLevel|Descripción|  
+|Valor de EncryptionLevel|Description|  
 |---------------------------|-----------------|  
 |**0**|Especifica que no se utiliza SSL.|  
 |**1**|Especifica que se utiliza SSL, pero el agente no comprueba que un emisor confiable haya firmado el certificado del servidor SSL.|  
@@ -185,13 +186,13 @@ replmerg [-?]
   
  Especifica el tipo de intercambio de datos durante la sincronización, que puede ser uno de los siguientes:  
   
-|Valor ExchangeType|Descripción|  
+|Valor ExchangeType|Description|  
 |------------------------|-----------------|  
 |**1**|El agente debe cargar los cambios de datos del Suscriptor al Publicador.|  
 |**2**|El agente debe descargar los cambios de datos del Publicador al Suscriptor.|  
 |**3** (valor predeterminado)|El Agente carga los cambios de datos del suscriptor al publicador y, a continuación, los descarga del publicador al suscriptor. Debe utilizar esta opción con sincronización web.|  
   
- Los artículos exclusivos para descarga le permiten controlar el comportamiento de sincronización de artículos individuales en una publicación y pueden proporcionar una mejora del rendimiento. Para obtener más información, vea [Optimize Merge Replication Performance with Download-Only Articles](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md) (Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga).  
+ Los artículos exclusivos para descarga le permiten controlar el comportamiento de sincronización de artículos individuales en una publicación y pueden proporcionar una mejora del rendimiento. Para más información, vea [Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
  Si usa **ExchangeType** para separar la fase de carga y descarga de la replicación de mezcla en sesiones diferentes, debe ejecutar el agente de mezcla con **ExchangeType** establecido en 1 primero y después ejecutar de nuevo el agente de mezcla con el valor 2. Si no se ejecuta el agente de mezcla con ambos parámetros, se eliminarán los metadatos y tendrá que reinicializar la suscripción (sin carga).  
   
@@ -204,7 +205,7 @@ replmerg [-?]
  **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publicador**| **Suscriptor**| **Ambos**)]  
  Especifica el nivel de convergencia que debe utilizar el Agente de mezcla. Puede ser uno de los siguientes:  
   
-|Valor ForceConvergenceLevel|Descripción|  
+|Valor ForceConvergenceLevel|Description|  
 |---------------------------------|-----------------|  
 |**0** (valor predeterminado)|Predeterminado: Realiza una mezcla estándar sin convergencia adicional.|  
 |**1**|Fuerza la convergencia para todas las generaciones.|  
@@ -225,7 +226,7 @@ replmerg [-?]
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
  Especifica la cantidad de historial registrado durante una operación de mezcla. Puede minimizar el efecto sobre el rendimiento del registro del historial seleccionando **1**.  
   
-|Valor HistoryVerboseLevel|Descripción|  
+|Valor HistoryVerboseLevel|Description|  
 |-------------------------------|-----------------|  
 |**0**|Registre el mensaje final de estado de agente, los detalles finales de la sesión y cualquier error.|  
 |**1**|Registre la sesión incremental detalla en cada estado de la sesión, incluso el porcentaje completado, además del mensaje de estado final de agente, los detalles finales de la sesión y cualquier error.|  
@@ -303,8 +304,8 @@ replmerg [-?]
  **-ProfileName** *profile_name*  
  Especifica un perfil de agente para utilizar para los parámetros del agente. Si **ProfileName** es NULL, el perfil de agente se deshabilita. Si no se especifica **ProfileName** , se utiliza el perfil predeterminado para el tipo de agente. Para obtener información, vea [Perfiles del Agente de replicación](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
- **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
- Especifica la instancia del asociado de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que participa en una sesión de creación de reflejo de la base de datos con la base de datos de publicación. Para obtener más información, vea [Database Mirroring and Replication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
+ **-PublisherFailoverPartner** *nombre_de_servidor*[**\\***nombre_de_instancia*]  
+ Especifica la instancia del asociado de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que participa en una sesión de creación de reflejo de la base de datos con la base de datos de publicación. Para obtener más información, vea [Replicación y creación de reflejo de la base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherLogin** *publisher_login*  
  Es el nombre de inicio de sesión del publicador. Si **PublisherSecurityMode** es **0** (para autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), se debe especificar este parámetro.  
@@ -330,7 +331,7 @@ replmerg [-?]
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
  Especifica si ya existe una base de datos de suscriptor.  
   
-|Valor SubscriberDBAddOption|Descripción|  
+|Valor SubscriberDBAddOption|Description|  
 |---------------------------------|-----------------|  
 |**0**|Utiliza la base de datos existente (valor predeterminado).|  
 |**1**|Crea una base de datos de suscriptor nueva y vacía.|  
@@ -376,7 +377,7 @@ replmerg [-?]
  **-Validate** [**0**|**1**|**2**|**3**]  
  Especifica si la validación se debería hacer al final de la sesión de mezcla, y, en ese caso, qué tipo de validación. **3** es el valor recomendado.  
   
-|Valor de validación|Descripción|  
+|Valor de validación|Description|  
 |--------------------|-----------------|  
 |**0** (valor predeterminado)|Sin validación.|  
 |**1**|Validación solo del recuento de filas|  
@@ -389,7 +390,7 @@ replmerg [-?]
  **-ValidateInterval** *validate_interval*  
  Frecuencia, en minutos, con la que se valida la suscripción en modo continuo. El valor predeterminado es **60** minutos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 > [!IMPORTANT]  
 >  Si ha instalado el agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para que se ejecute en una cuenta de sistema local en lugar de bajo una cuenta de usuario de dominio (valor predeterminado), el servicio puede acceder solamente al equipo local. Si el Agente de mezcla que se ejecuta en el agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se configura para utilizar el modo de autenticación de Windows cuando inicia sesión en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el Agente de mezcla devuelve un error. La configuración predeterminada es la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -398,7 +399,7 @@ replmerg [-?]
   
  El historial del agente de mezcla de la sesión actual no se quita mientras se está ejecutando de forma continua. Una ejecución prolongada del agente puede tener como resultado un gran número de entradas en las tablas del historial de mezcla, lo que puede afectar al rendimiento. Para resolver este problema cambie al modo programado o siga usando el modo continuado, pero cree un trabajo dedicado para reiniciar periódicamente el agente de mezcla, o reduzca el nivel de detalle para reducir el número de filas y, en consecuencia, reducir el impacto en el rendimiento.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administración del Agente de replicación](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

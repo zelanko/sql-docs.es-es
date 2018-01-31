@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-bulk-import-export
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
-caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 463309bd69a31ab54458095ef98f591b7474eee2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8c3ee049fdaaee08c9e1e3cf698a52ac8950afef
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-format-files-sql-server"></a>XML, archivos de formato (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] proporciona un esquema XML que define la sintaxis para escribir *archivos de formato XML* que se usarán para la importación masiva de datos en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los archivos de formato XML deben adherirse a este esquema, que se define en el lenguaje de definición de esquemas XML (XSDL). Los archivos con formato XML solamente se admiten cuando se instalan herramientas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -203,9 +204,9 @@ ms.lasthandoff: 11/17/2017
   
  Cada elemento \<FIELD> es independiente de los demás. Un campo se describe según los atributos siguientes:  
   
-|Atributo de FIELD|Descripción|Opcional /<br /><br /> Necesario|  
+|Atributo de FIELD|Descripción|Opcional /<br /><br /> Obligatorio|  
 |---------------------|-----------------|------------------------------|  
-|ID **="***fieldID***"**|Especifica el nombre lógico del campo incluido en el archivo de datos. El valor de ID de un campo es la clave utilizada para referirse al campo.<br /><br /> \<FIELD ID**="***fieldID***"**/> se asigna a \<COLUMN SOURCE**="***fieldID***"**/>|Necesario|  
+|ID **="***fieldID***"**|Especifica el nombre lógico del campo incluido en el archivo de datos. El valor de ID de un campo es la clave utilizada para referirse al campo.<br /><br /> \<FIELD ID**="***fieldID***"**/> se asigna a \<COLUMN SOURCE**="***fieldID***"**/>|Obligatorio|  
 |xsi:type **="***fieldType***"**|Es una construcción XML (utilizada como atributo) que identifica el tipo de la instancia del elemento. El valor de *fieldType* determina qué atributos opcionales (a continuación) necesita el usuario en una instancia determinada.|Obligatorio (en función del tipo de datos)|  
 |LENGTH **="***n***"**|Este atributo define la longitud de una instancia de un tipo de datos de longitud fija.<br /><br /> El valor de *n* debe ser un entero positivo.|Opcional a no ser que el valor de xsi:type lo requiera|  
 |PREFIX_LENGTH **="***p***"**|Este atributo define la longitud del prefijo para una representación de datos binarios. El valor de PREFIX_LENGTH, *p*, debe ser uno de los siguientes: 1, 2, 4 o 8.|Opcional a no ser que el valor de xsi:type lo requiera|  
@@ -256,10 +257,10 @@ ms.lasthandoff: 11/17/2017
   
  Un campo se asigna a una columna de la tabla de destino mediante los atributos siguientes:  
   
-|Atributo de COLUMN|Descripción|Opcional /<br /><br /> Necesario|  
+|Atributo de COLUMN|Description|Opcional /<br /><br /> Obligatorio|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **="***fieldID***"**|Especifica el Id. del campo que se asigna a la columna.<br /><br /> \<COLUMN SOURCE**="***fieldID***"**/> se asigna a \<FIELD ID**="***fieldID***"**/>|Necesario|  
-|NAME = "*columnName*"|Especifica el nombre de la columna en el conjunto de filas representado por el archivo de formato. Este nombre de columna se utiliza para identificar la columna en el conjunto de resultados y no es necesario que corresponda al nombre de columna usado en la tabla de destino.|Necesario|  
+|SOURCE **="***fieldID***"**|Especifica el Id. del campo que se asigna a la columna.<br /><br /> \<COLUMN SOURCE**="***fieldID***"**/> se asigna a \<FIELD ID**="***fieldID***"**/>|Obligatorio|  
+|NAME = "*columnName*"|Especifica el nombre de la columna en el conjunto de filas representado por el archivo de formato. Este nombre de columna se utiliza para identificar la columna en el conjunto de resultados y no es necesario que corresponda al nombre de columna usado en la tabla de destino.|Obligatorio|  
 |xsi**:**type **="***ColumnType***"**|Es una construcción XML (utilizada como atributo) que identifica el tipo de datos de la instancia del elemento. El valor de *ColumnType* determina qué atributos opcionales (a continuación) necesita el usuario en una instancia determinada.<br /><br /> Nota: Los valores posibles de *ColumnType* y sus atributos asociados se enumeran en la tabla de elementos \<COLUMN> de la sección [Valores xsi:type del elemento &lt;COLUMN&gt;](#XsiTypeValuesOfCOLUMN).|Opcional|  
 |LENGTH **="***n***"**|Define la longitud de una instancia de un tipo de datos de longitud fija. LENGTH se utiliza solo cuando xsi:type es un tipo de datos de cadena.<br /><br /> El valor de *n* debe ser un entero positivo.|Opcional (solo disponible si xsi:type es un tipo de datos de cadena)|  
 |PRECISION **="***n***"**|Indica el número de dígitos de un número. Por ejemplo, el número 123,45 tiene una precisión de 5.<br /><br /> El valor debe ser un entero positivo.|Opcional (solo disponible si xsi:type es un tipo de datos de número variable)|  
@@ -569,7 +570,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ##  <a name="RelatedContent"></a> Contenido relacionado  
  Ninguno.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Importar y exportar datos en bloque &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Archivos de formato no XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   

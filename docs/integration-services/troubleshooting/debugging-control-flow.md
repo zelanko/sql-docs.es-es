@@ -8,10 +8,12 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.setbreakpoints.f1
+f1_keywords:
+- sql13.dts.designer.setbreakpoints.f1
 helpviewer_keywords:
 - progress reporting [Integration Services]
 - breakpoints [Integration Services]
@@ -20,16 +22,16 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3fbeb43740b012eb4af3b9bb38252a4e18006ba2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9aba628aa426093485d820ea4383dd04076481cd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="debugging-control-flow"></a>Depurar el flujo de control
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include features y tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -145,8 +147,8 @@ ms.lasthandoff: 11/20/2017
 ## <a name="set-breakpoints"></a>Establecer puntos de interrupción
   Utilice el cuadro de diálogo **Establecer puntos de interrupción** para especificar los eventos en los que se deben habilitar puntos de interrupción y para controlar el comportamiento del punto de interrupción.  
   
-### <a name="options"></a>Opciones  
- **Habilitado**  
+### <a name="options"></a>.  
+ **Enabled**  
  Seleccione esta opción para habilitar un punto de interrupción en un evento.  
   
  **Condición de interrupción**  
@@ -155,7 +157,7 @@ ms.lasthandoff: 11/20/2017
  **Tipo de número de llamadas**  
  Especifique el momento en el que el punto de interrupción surte efecto.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Always**|La ejecución se suspende siempre cuando se alcanza el punto de interrupción.|  
 |**Número de llamadas igual a**|La ejecución se suspende cuando el número de veces que ha ocurrido el punto de interrupción es igual al número de llamadas.|  
@@ -165,6 +167,6 @@ ms.lasthandoff: 11/20/2017
  **Número de llamadas**  
  Especifique el número de visitas en el que se desencadena una interrupción. Esta opción no está disponible si la interrupción está siempre activa.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Herramientas para solucionar problemas del desarrollo de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
  [Depurar un script mediante el establecimiento de puntos de interrupción en una tarea Script y un componente de script](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)   

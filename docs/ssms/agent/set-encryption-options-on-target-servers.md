@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,21 +17,21 @@ helpviewer_keywords:
 - target servers [SQL Server], encryption
 - multiserver environments [SQL Server], setting encryption options on target servers
 ms.assetid: 1a9fd539-e166-4ea8-9f21-ac400ca74dee
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3ffc48c2e8d5257eb485bbbe7c5f0fe581e3fcdc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a7a7204e78c23ef6a4c5309f0c8f45d756f740fb
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="set-encryption-options-on-target-servers"></a>Establecer opciones de cifrado en servidores de destino
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Si no puede usar un certificado para comunicaciones cifradas con Capa de sockets seguros (SSL) entre servidores maestros y alguno o todos los servidores de destino, pero quiere cifrar el canal entre ellos, configure el servidor de destino para usar el nivel de seguridad necesario.  
   
-Para configurar el nivel de seguridad necesario para el canal de comunicación específico entre un servidor maestro y un servidor de destino, establezca la subclave del Registro del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\**\<*nombre_instancia*>**\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)** del servidor de destino en uno de los siguientes valores. El valor de \<*instance_name*&gt; es **MSSQL***n*. Por ejemplo, **MSSQL.1** o **MSSQL.3**.  
+Para configurar el nivel de seguridad necesario para el canal de comunicación específico entre un servidor maestro y un servidor de destino, establezca la subclave del Registro del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\**\<*nombre_instancia*>**\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)** del servidor de destino en uno de los siguientes valores. El valor de \<*nombre_de_instancia*> es *MSSQL.***n*. Por ejemplo, **MSSQL.1** o **MSSQL.3**.  
   
 |Valor|Description|  
 |---------|---------------|  

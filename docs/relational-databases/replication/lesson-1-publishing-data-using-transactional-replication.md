@@ -8,22 +8,25 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b6d053d9a0e80785e375fdb1f796ddf01894d993
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 49a9b7290e5f3253995f7bef0efd1390f74de5bf
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>Lección 1: Publicar datos con la replicación transaccional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En esta lección, creará una publicación transaccional con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar un subconjunto filtrado de la tabla **Product** en la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. También agregará un inicio de sesión de SQL Server que utiliza el Agente de distribución para la lista de acceso a la publicación (PAL). Antes de iniciar este tutorial, deberá haber finalizado el tutorial anterior, [Preparar el servidor para replicación](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 10. En la página Seguridad del agente, desactive la casilla **Usar la configuración de seguridad del Agente de instantáneas** .  
   
-11. Haga clic en **Configuración de seguridad** para el Agente de instantáneas, escriba \<*nombreDeEquipo>***\repl_snapshot** en el cuadro **Cuenta de proceso**, escriba la contraseña de la cuenta y luego haga clic en **Aceptar**.  
+11. Haga clic en **Configuración de seguridad** para el Agente de instantáneas, escriba \<*Nombre_De_Equipo>***\repl_snapshot** en el cuadro **Cuenta de proceso**, escriba la contraseña de la cuenta y, luego, haga clic en **Aceptar**.  
   
 12. Repita el paso anterior para establecer repl_logreader como la cuenta de proceso para el Agente de registro del LOG y, después, haga clic en **Finalizar**.  
   
@@ -82,12 +85,12 @@ ms.lasthandoff: 11/17/2017
   
 3.  Seleccione la página **Lista de acceso a la publicación** y haga clic en **Agregar**.  
   
-4.  \En el cuadro de diálogo **Agregar acceso de publicación**, seleccione *<nombre_equipo>***\repl_distribution** y haga clic en **Aceptar**. Haga clic en **Aceptar**.  
+4.  \En el cuadro de diálogo **Agregar acceso de publicación**, seleccione *<Nombre_De_Equipo>***\repl_distribution** y haga clic en **Aceptar**. Haga clic en **Aceptar**.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Next Steps  
 Ha creado correctamente la publicación transaccional. A continuación se suscribirá a esta publicación. Consulte [Lección 2: Crear una suscripción a la publicación transaccional](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Filtrar datos publicados](../../relational-databases/replication/publish/filter-published-data.md)  
 [Definir un artículo](../../relational-databases/replication/publish/define-an-article.md)  
 [Crear y aplicar una instantánea](../../relational-databases/replication/create-and-apply-the-snapshot.md)  

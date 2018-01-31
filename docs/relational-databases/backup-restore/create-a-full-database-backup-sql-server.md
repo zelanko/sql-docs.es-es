@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-caps.latest.revision: "63"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 42964f190b4eacba2e1861c7af0f86d48dcbd4b0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 99efc19a0379e6e4e79a9913c3fd193c219c2666
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Crear una copia de seguridad completa de base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -268,7 +269,7 @@ Se ha creado una directiva de acceso almacenada con derechos de lectura, escritu
     |Opción|Description|  
     |------------|-----------------|  
     |*database*|Es la base de datos cuya copia de seguridad se desea hacer.|  
-    |*backup_device* [ **,**...*n* ]|Especifica una lista de 1 a 64 dispositivos de copia de seguridad que se pueden utilizar en la operación de copia de seguridad. Puede especificar un dispositivo físico de copia de seguridad o puede especificar un dispositivo de copia de seguridad lógico correspondiente, si ya se definió. Para especificar un dispositivo de copia de seguridad físico, use la opción DISK o TAPE:<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
+    |*backup_device* [ **,**...*n* ]|Especifica una lista de 1 a 64 dispositivos de copia de seguridad que se pueden utilizar en la operación de copia de seguridad. Puede especificar un dispositivo físico de copia de seguridad o puede especificar un dispositivo de copia de seguridad lógico correspondiente, si ya se definió. Para especificar un dispositivo de copia de seguridad físico, use la opción DISK o TAPE:<br /><br /> { DISK &#124; TAPE } **=***nombre_de_dispositivo_de_copia_de_seguridad_física*<br /><br /> Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
     |WITH *with_options* [ **,**...*o* ]|De forma opcional, puede especificar una o varias opciones, *o*. Para obtener información sobre algunas de las opciones de WITH básicas, vea el paso 2.|  
   
 2.  Opcionalmente, especifique una o varias opciones de WITH. A continuación se describen algunas de las opciones de WITH básicas. Para obtener información sobre todas las opciones de WITH, vea [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
@@ -281,10 +282,10 @@ Se ha creado una directiva de acceso almacenada con derechos de lectura, escritu
          ENCRYPTION (ALGORITHM, SERVER CERTIFICATE |ASYMMETRIC KEY)  
          En SQL Server 2014 o versiones posteriores únicamente, especifica el algoritmo de cifrado que se va a utilizar y el certificado o la clave asimétrica que se va a usar para proteger el cifrado.  
   
-         DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
+         DESCRIPTION **=** { **'***texto***'** | **@***variable_de_texto* }  
          Especifica el texto sin formato que describe el conjunto de copia de seguridad. La cadena puede tener un máximo de 255 caracteres.  
   
-         NAME **=** { *backup_set_name* | **@***backup_set_name_var* }  
+         NAME **=** { *nombre_de_conjunto_de_copia_de_seguridad* | **@***variable_de_nombre_de_conjunto_de_copia_de_seguridad* }  
          Especifica el nombre del conjunto de copia de seguridad. Los nombres pueden tener un máximo de 128 caracteres. Si no se especifica NAME, está en blanco.  
   
     -   Opciones de WITH básicas del conjunto de copia de seguridad:  
@@ -293,7 +294,7 @@ Se ha creado una directiva de acceso almacenada con derechos de lectura, escritu
   
          Opcionalmente, para dar formato a los medios de copia de seguridad, utilice la opción FORMAT:  
   
-         FORMAT [ **,** MEDIANAME**=** { *media_name* | **@***media_name_variable* } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@***text_variable* } ]  
+         FORMAT [ **,** MEDIANAME**=** { *nombre_de_soporte* | **@***variable_de_nombre_de_soporte* } ] [ **,** MEDIADESCRIPTION **=** { *texto* | **@***variable_de_texto* } ]  
          Utilice la cláusula FORMAT cuando emplee los medios por primera vez o cuando desee sobrescribir todos los datos existentes. De manera opcional, puede asignar a los nuevos medios un nombre y una descripción.  
   
         > [!IMPORTANT]  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], operators
 - notifications [SQL Server], job status
 ms.assetid: aa818155-6fa2-4565-a09f-5c7e31c89754
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43ad20c06091668ed6604d9ec7137d3b21644747
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c50f4229737a4f4b8732c9448186a6c751fb1900
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="assign-alerts-to-an-operator"></a>Assign Alerts to an Operator
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo asignar alertas del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] a los operadores para que puedan recibir notificaciones sobre trabajos en [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] o [!INCLUDE[tsql](../../includes/tsql_md.md)].  
@@ -72,9 +73,9 @@ Solo los miembros del rol fijo de servidor **sysadmin** pueden asignar alertas a
   
 3.  Haga clic en el signo más para expandir la carpeta **Operadores** .  
   
-4.  Haga clic con el botón derecho en el operador al que desea asignar una alerta y seleccione **Propiedades** y, luego, la página **Notificaciones**.  
+4.  Haga clic con el botón derecho en el operador al que desea asignar una alerta y seleccione **Propiedades**y, luego, la página **Notificaciones** .  
   
-5.  En el cuadro de diálogo**Propiedades** de *nombre_operador*, en **Seleccionar una página**,seleccione **Notificaciones**.  
+5.  En el cuadro de diálogo*Propiedades de***nombre_de_operador*, en **Seleccionar una página**,seleccione **Notificaciones**.  
   
 6.  En **Ver las notificaciones enviadas a este usuario por**, seleccione **Alertas** para ver una lista de las alertas enviadas a este operador o seleccione **Trabajos** para ver una lista de los trabajos que envían notificaciones a este operador. Active una o varias de las siguientes casillas para definir el método de notificación de cada notificación según corresponda: **Correo electrónico**, **Buscapersonas**o **Net send**.  
   

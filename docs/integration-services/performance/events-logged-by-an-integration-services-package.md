@@ -8,23 +8,24 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - package [Integration Services], events
 - events [Integration Services], package
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec69b469565f121853755c6441c0e36e2ef78abe
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 30cec734f1bf60180475e1bebc6b8c66c7686bf5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Eventos registrados por un paquete de Integration Services
   Los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] registran mensajes de eventos en el registro de eventos de aplicación Windows. Los paquetes registran estos mensajes cuando se inician, cuando se detienen y cuando se producen ciertos problemas.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/20/2017
  De forma predeterminada, en una instalación nueva, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se configura para no incluir en el registro de eventos de aplicación ciertos eventos relacionados con la ejecución de paquetes. Esta configuración evita que se generen demasiadas entradas en el registro de eventos al utilizar la característica de recopilador de datos de la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Los eventos que no se registran son EventID 12288, "Se ha iniciado el paquete" y EventID 12289, "El paquete finalizó correctamente". Para registrar estos eventos en el registro de eventos de aplicación, abra el Registro para editarlo. A continuación, en el Registro, busque el nodo HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\SSIS y cambie el valor DWORD de la opción LogPackageExecutionToEventLog de 0 a 1. Sin embargo, en una instalación de actualización, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se configura para registrar estos dos eventos. Para deshabilitar el registro, cambie el valor de la opción LogPackageExecutionToEventLog de 1 a 0.  
   
 ## <a name="messages-associated-with-package-logging"></a>Mensajes asociados al registro de paquetes  
- Si ha habilitado el registro en el paquete, el registro de eventos de aplicación es uno de los destinos admitidos por las características de registro opcionales en los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para más información, vea [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
+ Si ha habilitado el registro en el paquete, el registro de eventos de aplicación es uno de los destinos admitidos por las características de registro opcionales en los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
  Si ha habilitado el registro en el paquete y la ubicación es el registro de eventos de aplicación, el paquete registrará las entradas relacionadas con la información siguiente:  
   

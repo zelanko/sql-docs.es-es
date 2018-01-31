@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -43,16 +44,16 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-caps.latest.revision: "72"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 964997cb8223139d44c696a80b4c659769f717a9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a69a7252045efacefccfa0847741e76309999ce9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transformation-custom-properties"></a>Propiedades personalizadas de transformación
   Además de las propiedades que son comunes a la mayoría de los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , muchos objetos de flujo de datos tienen propiedades personalizadas que son específicas del objeto. Estas propiedades personalizadas solo están disponibles en tiempo de ejecución y no se incluyen en la documentación de referencia de la programación administrada de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -118,7 +119,7 @@ ms.lasthandoff: 11/20/2017
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de salida de transformación Auditar. Todas las propiedades son de lectura y escritura.  
   
-|Nombre de la propiedad|Tipo de datos|Description|  
+|Nombre de propiedad|Tipo de datos|Description|  
 |-------------------|---------------|-----------------|  
 |LineageItemSelected|Integer (enumeración)|Elemento de auditoría seleccionado para la salida. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **GUID de instancia de ejecución** (0)<br /><br /> **Hora de inicio de ejecución** (4)<br /><br /> **Nombre de la máquina** (5)<br /><br /> **Identificador del paquete** (1)<br /><br /> **Nombre del paquete** (2)<br /><br /> **Identificador de tarea** (8)<br /><br /> **Nombre de tarea** (7)<br /><br /> **Nombre de usuario** (6)<br /><br /> **Identificador de versión** (3)|  
   
@@ -174,7 +175,7 @@ ms.lasthandoff: 11/20/2017
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de salida de transformación Copiar columna. Todas las propiedades son de lectura y escritura.  
   
-|Nombre de la propiedad|Tipo de datos|Description|  
+|Nombre de propiedad|Tipo de datos|Description|  
 |-------------------|---------------|-----------------|  
 |copyColumnId|Integer|**LineageID** de la columna de entrada de la que se copia la columna de salida.|  
   
@@ -283,7 +284,7 @@ ms.lasthandoff: 11/20/2017
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de salida de transformación Agrupación aproximada. Todas las propiedades son de lectura y escritura.  
   
-|Nombre de la propiedad|Tipo de datos|Description|  
+|Nombre de propiedad|Tipo de datos|Description|  
 |-------------------|---------------|-----------------|  
 |ColumnType|Integer (enumeración)|Valor que identifica el tipo de columna de resultados. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Undefined** (0)<br /><br /> **KeyIn** (1)<br /><br /> **KeyOut** (2)<br /><br /> **Similarity** (3)<br /><br /> **ColumnSimilarity** (4)<br /><br /> **PassThru** (5)<br /><br /> **Canonical**(6)|  
 |InputID|Integer|**LineageID** de la columna de entrada correspondiente.|  
@@ -363,7 +364,7 @@ ms.lasthandoff: 11/20/2017
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de salida de transformación Búsqueda. Todas las propiedades son de lectura y escritura.  
   
-|Nombre de la propiedad|Tipo de datos|Description|  
+|Nombre de propiedad|Tipo de datos|Description|  
 |-------------------|---------------|-----------------|  
 |CopyFromReferenceColumn|String|Nombre de la columna en la tabla de referencia desde la que se copia una columna.|  
   
@@ -385,7 +386,7 @@ ms.lasthandoff: 11/20/2017
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de salida de transformación Combinación de mezcla. Todas las propiedades son de lectura y escritura.  
   
-|Nombre de la propiedad|Tipo de datos|Description|  
+|Nombre de propiedad|Tipo de datos|Description|  
 |-------------------|---------------|-----------------|  
 |InputColumnID|Integer|**LineageID** de la columna de entrada desde la que los datos se copian en esta columna de salida.|  
   
@@ -398,15 +399,15 @@ ms.lasthandoff: 11/20/2017
   
  En la tabla siguiente se describen las propiedades personalizadas de la transformación Comando de OLE DB.  
   
-|Nombre de la propiedad|Tipo de datos|Description|  
+|Nombre de propiedad|Tipo de datos|Description|  
 |-------------------|---------------|-----------------|  
-|CommandTimeOut|Integer|Número máximo de segundos que el comando SQL se puede ejecutar antes de superar el tiempo de espera. Si el valor es **0** , indica un tiempo infinito. El valor predeterminado de esta propiedad es **0**.|  
+|CommandTimeout|Integer|Número máximo de segundos que el comando SQL se puede ejecutar antes de superar el tiempo de espera. Si el valor es **0** , indica un tiempo infinito. El valor predeterminado de esta propiedad es **0**.|  
 |DefaultCodePage|Integer|Página de códigos que se usa cuando no hay información disponible de la misma en el origen de datos.|  
 |SqlCommand|String|La instrucción de Transact-SQL que la transformación ejecuta para cada fila en el flujo de datos.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.|  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas externas de la transformación Comando de OLE DB. Todas las propiedades son de lectura y escritura.  
   
-|Nombre de la propiedad|Tipo de datos|Description|  
+|Nombre de propiedad|Tipo de datos|Description|  
 |-------------------|---------------|-----------------|  
 |DBParamInfoFlag|Integer (máscara de bits)|Conjunto de marcas que describen las características de los parámetros. Para obtener más información, vea DBPARAMFLAGSENUM en la documentación de OLE DB de MSDN Library.|  
   
@@ -426,7 +427,7 @@ ms.lasthandoff: 11/20/2017
   
  En la tabla siguiente se describen las propiedades personalizadas de las salidas de la transformación Muestreo de porcentaje. Todas las propiedades son de lectura y escritura.  
   
-|Nombre de la propiedad|Tipo de datos|Description|  
+|Nombre de propiedad|Tipo de datos|Description|  
 |-------------------|---------------|-----------------|  
 |Seleccionado|Boolean|Designa la salida a la que se dirigen las filas del muestreo. En la salida seleccionada, Selected se establece en **True**y, en la salida sin seleccionar, Selected se establece en **False**.|  
   
@@ -461,7 +462,7 @@ ms.lasthandoff: 11/20/2017
   
  En la tabla siguiente se describen las propiedades personalizadas de la transformación Recuento de filas. Todas las propiedades son de lectura y escritura.  
   
-|Nombre de la propiedad|Tipo de datos|Description|  
+|Nombre de propiedad|Tipo de datos|Description|  
 |-------------------|---------------|-----------------|  
 |VariableName|String|Nombre de la variable que contiene el recuento de filas.|  
   
@@ -481,7 +482,7 @@ ms.lasthandoff: 11/20/2017
   
  En la tabla siguiente se describen las propiedades personalizadas de las salidas de la transformación Muestreo de fila. Todas las propiedades son de lectura y escritura.  
   
-|Nombre de la propiedad|Tipo de datos|Description|  
+|Nombre de propiedad|Tipo de datos|Description|  
 |-------------------|---------------|-----------------|  
 |Seleccionado|Boolean|Designa la salida a la que se dirigen las filas del muestreo. En la salida seleccionada, Selected se establece en **True**y, en la salida sin seleccionar, Selected se establece en **False**.|  
   
@@ -500,7 +501,7 @@ ms.lasthandoff: 11/20/2017
   
  En la tabla siguiente se describen las propiedades personalizadas del componente de script. Todas las propiedades son de lectura y escritura.  
   
-|Nombre de la propiedad|Tipo de datos|Description|  
+|Nombre de propiedad|Tipo de datos|Description|  
 |-------------------|---------------|-----------------|  
 |Variables de solo lectura|String|Lista de variables separadas por comas disponible para el componente de script con acceso de solo lectura.|  
 |Variables de lectura/escritura|String|Lista de variables separadas por comas disponible para el componente de script con acceso de lectura y escritura.|  
@@ -601,7 +602,7 @@ ms.lasthandoff: 11/20/2017
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de salida de transformación Búsqueda de términos. Todas las propiedades son de lectura y escritura.  
   
-|Nombre de la propiedad|Tipo de datos|Description|  
+|Nombre de propiedad|Tipo de datos|Description|  
 |-------------------|---------------|-----------------|  
 |CustomLineageID|Integer|**LineageID** de la columna de entrada correspondiente si **InputColumnType** de esa columna es 0 o 2.|  
   
@@ -624,7 +625,7 @@ ms.lasthandoff: 11/20/2017
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de salida de transformación Anulación de dinamización. Todas las propiedades son de lectura y escritura.  
   
-|Nombre de la propiedad|Tipo de datos|Description|  
+|Nombre de propiedad|Tipo de datos|Description|  
 |-------------------|---------------|-----------------|  
 |PivotKey|Boolean|Indica si los valores de la propiedad **PivotKeyValue** de las columnas de entrada se escriben en esta columna de salida.<br /><br /> En el escenario Anulación de dinamización descrito en [Transformación Anulación de dinamización](../../../integration-services/data-flow/transformations/unpivot-transformation.md), el nombre de la columna de valor dinámico es **Product** y designa la nueva columna **Product** en la que se anula la dinamización de las columnas Ham, Coke, Milk, Beer y Chips.|  
   
@@ -632,7 +633,7 @@ ms.lasthandoff: 11/20/2017
   
  Para obtener más información, vea [Transformación Anulación de dinamización](../../../integration-services/data-flow/transformations/unpivot-transformation.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
  [Propiedades de la ruta de acceso](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   

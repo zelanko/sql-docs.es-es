@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,16 +31,16 @@ helpviewer_keywords:
 - data cleaning [Integration Services]
 - duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
-caps.latest.revision: "58"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 817cb1690c8b166a0e1760c3e3bb298dfd130278
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 03ffaa3d6dda388fc660feafc68a57fd8ce6346c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="fuzzy-grouping-transformation"></a>Agrupación aproximada, transformación
   La transformación Agrupación aproximada realiza tareas de limpieza de datos, identificando filas de datos que probablemente se van a duplicar y seleccionando una fila de datos canónica para utilizarla en la normalización de los datos.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/20/2017
   
  La transformación de Búsqueda aproximada requiere una conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para crear las tablas temporales de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que necesita el algoritmo de la transformación para realizar su trabajo. La conexión debe establecerla un usuario que tenga permiso para crear tablas en la base de datos.  
   
- Para configurar la transformación, debe seleccionar las columnas de entrada que desee utilizar para identificar duplicados y el tipo de coincidencia, aproximada o exacta, para cada columna. Una coincidencia exacta garantiza que solo se agruparán las filas de la columna que tengan valores idénticos. La coincidencia exacta se puede aplicar a columnas con cualquier tipo de datos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , excepto DT_TEXT, DT_NTEXT y DT_IMAGE. Una coincidencia aproximada agrupa filas que tienen aproximadamente el mismo valor. El método para la coincidencia aproximada de los datos se basa en la puntuación de similitud especificada por el usuario. Para la coincidencia aproximada, solo se pueden utilizar columnas con tipos de datos DT_WSTR y DT_STR. Para más información, consulte [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+ Para configurar la transformación, debe seleccionar las columnas de entrada que desee utilizar para identificar duplicados y el tipo de coincidencia, aproximada o exacta, para cada columna. Una coincidencia exacta garantiza que solo se agruparán las filas de la columna que tengan valores idénticos. La coincidencia exacta se puede aplicar a columnas con cualquier tipo de datos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , excepto DT_TEXT, DT_NTEXT y DT_IMAGE. Una coincidencia aproximada agrupa filas que tienen aproximadamente el mismo valor. El método para la coincidencia aproximada de los datos se basa en la puntuación de similitud especificada por el usuario. Para la coincidencia aproximada, solo se pueden utilizar columnas con tipos de datos DT_WSTR y DT_STR. Para obtener más información, vea [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
   
  La salida de transformación incluye todas las columnas de entrada, una o más columnas con datos normalizados, y una columna que contiene la puntuación de similitud. La puntuación es un valor decimal entre 0 y 1. La fila canónica tiene una puntuación de 1. Las otras filas de la agrupación aproximada tienen puntuaciones que indican su nivel de coincidencia con la fila canónica. Cuanto más se acerque el resultado a 1, mayor será la coincidencia entre la fila y la fila canónica. Si la agrupación aproximada contiene filas que son duplicados exactos de la fila canónica, dichas filas también tienen una puntuación de 1. La transformación no quita las filas duplicadas. Se agrupan creando una clave que relaciona la fila canónica con las filas similares.  
   
@@ -96,7 +97,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Para obtener información detallada sobre cómo establecer propiedades de esta tarea, haga clic en uno de los temas siguientes:  
   
 -   [Identificar filas de datos similares mediante la transformación Agrupación aproximada](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
@@ -109,17 +110,17 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  El servidor especificado por la conexión debe ejecutar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La transformación Agrupación aproximada crea objetos de datos temporales en tempdb que pueden ser tan grandes como toda la entrada de la transformación. Mientras se ejecuta la transformación, se emiten consultas de servidor a esos objetos temporales. Esto puede afectar al rendimiento general del servidor.  
   
-### <a name="options"></a>Opciones  
- **OLE DB, administrador de conexiones**  
+### <a name="options"></a>.  
+ **Administrador de conexiones OLE DB**  
  Seleccione un administrador de conexiones OLE DB existente con el cuadro de lista, o bien cree una conexión con el botón **Nuevo** .  
   
- **Nuevo**  
+ **Nueva**  
  Cree una conexión mediante el cuadro de diálogo **Configurar el administrador de conexiones OLE DB** .  
   
 ## <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Editor de transformación Agrupación aproximada (pestaña Columnas)
   Use la pestaña **Columnas** del cuadro de diálogo **Editor de transformación Agrupación aproximada** para especificar las columnas utilizadas para agrupar filas con valores duplicados.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Columnas de entrada disponibles**  
  Seleccione en esta lista las columnas de entrada utilizadas para agrupar filas con valores duplicados.  
   
@@ -150,7 +151,7 @@ ms.lasthandoff: 11/20/2017
  **Números**  
  Especifique la importancia de los números iniciales y finales en la comparación de los datos de la columna. Por ejemplo, si los números iniciales son significativos, "123 Main Street" no se agrupará con "456 Main Street."  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Neither**|Los números iniciales y finales no son significativos.|  
 |**Leading**|Solo son significativos los números iniciales.|  
@@ -166,7 +167,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Las propiedades **Exhaustive** y **MaxMemoryUsage** de la transformación Agrupación aproximada no están disponibles en el **Editor de transformación Agrupación aproximada**, pero se pueden establecer con el **Editor avanzado**. Para obtener más información acerca de estas propiedades, vea la sección sobre la transformación Agrupación aproximada en [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Nombre de la columna de clave de entrada**  
  Especifique el nombre de una columna de salida que contenga el identificador único para cada fila de entrada. La columna **_key_in** tiene un valor que identifica de forma exclusiva cada fila.  
   
@@ -182,7 +183,7 @@ ms.lasthandoff: 11/20/2017
  **Delimitadores de token**  
  La transformación proporciona un conjunto predeterminado de delimitadores para dividir los datos en tokens, pero se pueden agregar o quitar los delimitadores que sea necesario editando la lista.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Transformación Búsqueda aproximada](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

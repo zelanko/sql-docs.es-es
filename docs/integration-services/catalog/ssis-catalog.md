@@ -8,7 +8,8 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,16 +17,16 @@ f1_keywords:
 - sql13.ssis.ssms.iscatalogprop.general.f1
 - sql13.ssis.dbupgradewizard.f1
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0a05b62e5c2ffb8c5a268ac8030e703d3a192742
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: b8812ba8a3a96fc17ab9c9ec5083699ef5a7d03b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ssis-catalog"></a>Catálogo de SSIS
   El catálogo de **SSISDB** es el eje central cuando se trabaja con proyectos de [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) que ha implementado en el servidor [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Por ejemplo, establece los parámetros del proyecto y del paquete, configura entornos para especificar los valores en tiempo de ejecución para los paquetes, ejecuta paquetes y soluciona los problemas de los mismos, y administra las operaciones del servidor de [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
@@ -178,7 +179,7 @@ Para ejecutar el **trabajo de mantenimiento del servidor SSIS**, SSIS crea el in
 |Número máximo de versiones por proyecto|MAX_PROJECT_VERSIONS|  
 |Nivel de registro predeterminado de todo el servidor|SERVER_LOGGING_LEVEL|  
   
-##  <a name="Permissions"></a> Permisos  
+##  <a name="Permissions"></a> Permissions  
  Los proyectos, los entornos y los paquetes se encuentran en carpetas que son objetos protegibles. Puede conceder permisos a una carpeta, incluido el permiso de MANAGE_OBJECT_PERMISSIONS. MANAGE_OBJECT_PERMISSIONS le permite delegar la administración del contenido de la carpeta a un usuario sin tener que conceder la pertenencia del usuario al rol ssis_admin. También puede conceder permisos a los proyectos, entornos y operaciones. Las operaciones incluyen inicializar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], implementar proyectos, crear e iniciar ejecuciones, validar proyectos y paquetes, y configurar el catálogo de **SSISDB** .  
   
  Para obtener más información sobre los roles de base de datos, vea [Roles de nivel de base de datos](../../relational-databases/security/authentication-access/database-level-roles.md).  
@@ -379,7 +380,7 @@ Para ejecutar el **trabajo de mantenimiento del servidor SSIS**, SSIS crea el in
   
 ###  <a name="options"></a> Configurar las opciones  
   
-#### <a name="options"></a>Opciones  
+#### <a name="options"></a>.  
  En la tabla siguiente se describen algunas propiedades del cuadro de diálogo y las propiedades correspondientes de la vista catalog.catalog_property.  
   
 |Nombre de la propiedad (cuadro de diálogo Propiedades del catálogo)|Nombre de la propiedad (vista catalog.catalog_property).|Description|  

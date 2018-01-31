@@ -8,20 +8,21 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e7f2945bcceefdd7613a44a292fa5794554607ce
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ba3bc1642b2b266c030f8ec326d001a8fb56b4ab
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="temporal-tables"></a>Tablas temporales
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -123,7 +124,7 @@ CREATE TABLE dbo.Employee
 >  Las horas registradas en las columnas datetime2 del sistema se basan en la hora de inicio de la propia transacción. Por ejemplo, todas las filas insertadas en una única transacción tendrán la misma hora UTC registrada en la columna correspondiente al inicio del período **SYSTEM_TIME** .  
   
 ## <a name="how-do-i-query-temporal-data"></a>¿Cómo se consultan los datos temporales?  
- La cláusula **FROM***\<table>* de la instrucción **SELECT** tiene una nueva cláusula **FOR SYSTEM_TIME** con cinco subcláusulas específicas para temporal con las que se pueden consultar datos de las tablas actual y de historial. Esta nueva sintaxis de la instrucción **SELECT** se puede usar directamente en una sola tabla, propagarse por varias combinaciones y por las vistas de varias tablas temporales.  
+ La cláusula **FROM***\<tabla>* de la instrucción **SELECT** tiene una nueva cláusula **FOR SYSTEM_TIME** con cinco subcláusulas específicas para temporal con las que se pueden consultar datos de las tablas actual y de historial. Esta nueva sintaxis de la instrucción **SELECT** se puede usar directamente en una sola tabla, propagarse por varias combinaciones y por las vistas de varias tablas temporales.  
   
  ![Temporal: consultar](../../relational-databases/tables/media/temporal-querying.PNG "Temporal: consultar")  
   
@@ -158,7 +159,7 @@ SELECT * FROM Employee
 ## <a name="did-this-article-help-you-were-listening"></a>¿Le ayudó este artículo? Le escuchamos  
  ¿Qué información está buscando? ¿La encontró? Escuchamos sus comentarios para mejorar el contenido. Envíe sus comentarios a [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Tables%20page)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Introducción a las tablas temporales con versión del sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Tablas temporales con control de versiones del sistema con tablas con optimización para memoria](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
  [Escenarios de uso de tablas temporales](../../relational-databases/tables/temporal-table-usage-scenarios.md)   

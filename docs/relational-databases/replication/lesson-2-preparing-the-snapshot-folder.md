@@ -8,22 +8,25 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: f286cde9-c0d0-43ef-b7ba-53c3cbb8906c
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b01d8536a45614b8bd17ba93e8a3695229824691
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 969aca3b97e12f5a179c9f2fb4c748d93d89c760
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>Lección 2: Preparar la carpeta de instantáneas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En esta lección aprenderá a configurar la carpeta de instantáneas que se utiliza para crear y almacenar la instantánea de publicación.  
@@ -42,9 +45,9 @@ ms.lasthandoff: 11/17/2017
   
 6.  En la pestaña **Seguridad** , haga clic en **Editar**.  
   
-7.  En el cuadro de diálogo **Permisos** , haga clic en **Agregar**. En el cuadro de texto **Select User, Computers, Service Account, or Groups** (Seleccionar usuario, equipos, cuenta de servicio o grupos), escriba el nombre de la cuenta del agente de instantáneas creado en la lección 1, como \<*nombreDeEquipo***\repl_snapshot**, donde \<*nombreDeEquipo* es el nombre del publicador. Haga clic en **Comprobar nombres**y luego en **Aceptar**.  
+7.  En el cuadro de diálogo **Permisos** , haga clic en **Agregar**. En el cuadro de texto **Select User, Computers, Service Account, or Groups** (Seleccionar usuario, equipos, cuenta de servicio o grupos), escriba el nombre de la cuenta del agente de instantáneas creado en la lección 1, como \<*Nombre_De_Equipo>***\repl_snapshot**, donde \<*nombre_de_equipo>* es el nombre del publicador. Haga clic en **Comprobar nombres**y luego en **Aceptar**.  
   
-8.  Repita el paso anterior para agregar permisos para el Agente de distribución, por ejemplo \<*nombreDeEquipo>***\repl_distribution**, y para el Agente de mezcla, por ejemplo \<*nombreDeEquipo***\repl_merge**.  
+8.  Repita el paso anterior para agregar permisos para el Agente de distribución, por ejemplo \<*Nombre_De_Equipo>***\repl_distribution**, y para el Agente de mezcla, por ejemplo \<*Nombre_De_Equipo>***\repl_merge**.  
   
 9. Compruebe que se admiten los siguientes permisos:  
   
@@ -56,10 +59,10 @@ ms.lasthandoff: 11/17/2017
   
 10. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Propiedades de repldata** y crear el recurso compartido repldata.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Next Steps  
 Ha configurado correctamente el recurso compartido para la carpeta de instantáneas. A continuación configurará la distribución. Consulte [Lección 3: Configurar la distribución](../../relational-databases/replication/lesson-3-configuring-distribution.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Proteger la carpeta de instantáneas](../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
   
   

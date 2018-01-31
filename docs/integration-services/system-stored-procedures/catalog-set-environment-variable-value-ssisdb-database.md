@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 1d493dad-9d9c-4f0a-87e2-20a2d4a35f99
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05d356be0d0f3c5327c77653aeed1fde7f6f3ef8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ce6e82da825deeb078b0cb29c7e0e8655fc5c0fa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetenvironmentvariablevalue-ssisdb-database"></a>catalog.set_environment_variable_value (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,24 +40,24 @@ catalog.set_environment_variable_value [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argumentos  
  [ @folder_name = ] *folder_name*  
- Nombre de la carpeta que contiene el entorno. El parámetro *folder_name* es **nvarchar(128)**.  
+ Nombre de la carpeta que contiene el entorno. *folder_name* es **nvarchar(128)**.  
   
  [ @environment_name = ] *environment_name*  
- El nombre del entorno. El parámetro *environment_name* es **nvarchar(128)**.  
+ El nombre del entorno. *environment_name* es **nvarchar(128)**.  
   
  [ @variable _name = ] *variable _name*  
  Nombre de la variable de entorno. El parámetro *variable _name* es **nvarchar(128)**.  
   
  [ @value = ] *value*  
- Valor de la variable de entorno. El parámetro *value* es **sql_variant**.  
+ Valor de la variable de entorno. El parámetro *value* es de tipo **sql_variant**.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
- 0 (Correcto)  
+ 0 (correcto)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Ninguno  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
 -   Permisos READ y MODIFY en el entorno  

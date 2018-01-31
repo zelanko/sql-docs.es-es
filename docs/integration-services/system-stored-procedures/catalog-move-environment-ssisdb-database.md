@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c143403ba0ebfb429c8d7f646214704c4e692d4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fd8598e526761f51e361fcc7c3330bbe3c9a470f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogmoveenvironment-ssisdb-database"></a>catalog.move_environment (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +51,16 @@ catalog.move_environment [ @source_folder = ] source_folder
  0 (correcto)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Ninguno  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
 -   Permisos READ y MODIFY en el entorno  
   
--   Pertenencia al rol de base de datos **ssis_admin**  
+-   Pertenencia al rol de base de datos de **ssis_admin**  
   
--   Pertenencia al rol de servidor **sysadmin**  
+-   Pertenencia al rol de servidor de **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
  En la siguiente lista se describen algunas condiciones que pueden producir un error o una advertencia:  
@@ -68,9 +69,9 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 -   La carpeta de destino tiene un entorno con el mismo nombre  
   
--   El usuario no tiene los permisos adecuados  
+-   El usuario no tiene los permisos adecuados.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Las referencias de entorno de los proyectos no siguen el entorno durante el desplazamiento. Las referencias del entorno deben actualizadas como corresponda. Este procedimiento almacenado funcionará correctamente aunque las referencias del entorno se interrumpan al mover el entorno. Las referencias del entorno se deben actualizar después de que se completa este procedimiento almacenado.  
   
 > [!NOTE]  

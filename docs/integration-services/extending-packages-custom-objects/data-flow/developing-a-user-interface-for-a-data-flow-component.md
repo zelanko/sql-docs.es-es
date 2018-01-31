@@ -11,7 +11,8 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - custom user interface [Integration Services], custom data flow component
 - editors [Integration Services]
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d087ffe2ecbf3cc136950fb7069f32c926582554
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 038dd21da57df8a2002d1b66766d57c39ddf4188
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Desarrollar una interfaz de usuario para un componente de flujo de datos
   Los desarrolladores de componentes pueden proporcionar una interfaz de usuario personalizada para un componente, que se muestre en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] cuando se edite el componente. La implementación de una interfaz de usuario personalizada proporciona notificaciones cuando el componente se agrega o se elimina en una tarea de flujo de datos, así como cuando se solicita ayuda para el componente.  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-bulk-import-export
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - row terminators [SQL Server]
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b6239b8e7ad2f4383eac1764a211880325eedf3c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e2f902b7afaadf936102b90c542d97d5450c7995
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Especificar terminadores de campo y de fila (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En los campos de datos de caracteres, los caracteres de terminación opcionales permiten marcar el final de cada campo de un archivo de datos con un *terminador de campo* y el final de cada fila con un *terminador de fila*. Los caracteres de terminación son una forma de indicar a los programas que leen el archivo de datos dónde termina un campo o una fila y dónde comienza otro.  
@@ -103,7 +104,7 @@ ms.lasthandoff: 11/17/2017
   
  El comando **bcp** contiene los siguientes modificadores.  
   
-|Switch|Descripción|  
+|Switch|Description|  
 |------------|-----------------|  
 |**-c**|Especifica que los campos de datos se cargarán como datos de caracteres.|  
 |**-t** `,`|Especifica una coma (,) como terminador de campo.|  
@@ -131,7 +132,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      Los terminadores se pueden especificar para campos individuales en un archivo de formato o para todo el archivo de datos mediante los calificadores que figuran en la siguiente tabla:  
   
-    |Qualifier|Descripción|  
+    |Qualifier|Description|  
     |---------------|-----------------|  
     |FIELDTERMINATOR **='***field_terminator***'**|Especifica el terminador de campo que se utilizará para los archivos de caracteres y de caracteres Unicode.<br /><br /> El valor predeterminado es \t (carácter de tabulación).|  
     |ROWTERMINATOR **='***row_terminator***'**|Especifica el terminador de fila que se utilizará para los archivos de caracteres y de caracteres Unicode.<br /><br /> El valor predeterminado es \n (carácter de nueva línea).|  
@@ -192,7 +193,7 @@ BULK INSERT myDepartment FROM 'C:\myDepartment-c-t.txt'
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

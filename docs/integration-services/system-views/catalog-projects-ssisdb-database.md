@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a6b595e1-5227-47ce-8ee2-a28c1e1d5645
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 488a95178554c7caee4d44a55b03c972065bdfb0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 05b3941ccc90394999a8af6b9f8d10aaf25f0921
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/20/2017
 |-----------------|---------------|-----------------|  
 |identificador de proyecto|**bigint**|El identificador único (Id.) del proyecto.|  
 |folder_id|**bigint**|El identificador único de la carpeta donde reside el proyecto.|  
-|name|**sysname**|Nombre del proyecto.|  
+|NAME|**sysname**|Nombre del proyecto.|  
 |description|**nvarchar(1024)**|Descripción opcional del proyecto.|  
 |project_format_version|**int**|Versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizada para desarrollar el proyecto.|  
 |deployed_by_sid|**varbinary(85)**|Identificador de seguridad (SID) del usuario que instaló el proyecto.|  
@@ -43,17 +44,17 @@ ms.lasthandoff: 11/20/2017
 |validation_status|**char(1)**|El estado de la validación|  
 |last_validation_time|**datetimeoffset(7)**|Hora de la última validación.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta vista muestra una fila para cada proyecto del catálogo.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Esta vista exige uno de los siguientes permisos:  
   
 -   Permiso READ en el proyecto  
   
 -   Pertenencia al rol de base de datos de **ssis_admin**  
   
--   Pertenencia al rol de servidor de **sysadmin**  
+-   Pertenencia al rol del servidor de **sysadmin**  
   
 > [!NOTE]  
 >  Si tiene permiso READ en un proyecto, también tendrá permiso READ en todos los paquetes y referencias de entorno asociados a ese proyecto. Se aplica la seguridad en el nivel de fila; solo se muestran las filas para las que disponga de permiso para ver.  

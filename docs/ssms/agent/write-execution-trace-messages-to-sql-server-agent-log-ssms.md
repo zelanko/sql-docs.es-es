@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - SQL Server Agent, errors
 - errors [SQL Server Agent]
 ms.assetid: 90e3731e-6fae-43db-833e-9accecdd1c03
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cbc4482ae5b9c9b020a160cc76814236a8e80b02
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 19c834e42cd6b2a9526b6ab894a33e4ef9aafc95
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo configurar el Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] para que incluya mensajes de seguimiento de ejecución en su registro de errores en [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
@@ -70,9 +71,9 @@ Para obtener más información sobre los permisos de Windows necesarios para la 
   
 1.  En el **Explorador de objetos**, haga clic en el signo más para expandir el servidor que contiene el registro de errores del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] en el que desea escribir mensajes de seguimiento de ejecución.  
   
-2.  Haga clic con el botón secundario en **Agente SQL Server** y seleccione **Propiedades**.  
+2.  Haga clic con el botón derecho en **Agente SQL Server** y seleccione **Propiedades**.  
   
-3.  En el cuadro de diálogo **Propiedades de Agente SQL Server -***server_name* , en **Registro de errores** de la página **General** , active la casilla **Incluir mensajes de seguimiento de ejecución** .  
+3.  En el cuadro de diálogo *Propiedades de Agente SQL Server –***nombre_de_servidor*, en **Registro de errores** de la página **General**, active la casilla **Incluir mensajes de seguimiento de ejecución**.  
   
 4.  Haga clic en **Aceptar**.  
   

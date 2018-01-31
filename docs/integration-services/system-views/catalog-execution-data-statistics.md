@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd542c253583fe1513947475dfca65db686fab5c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dca56725e70ab1d73d13592faeb40f7c37674099
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogexecutiondatastatistics"></a>catalog.execution_data_statistics
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/20/2017
 |created_time|**datatimeoffset(7)**|Hora en que se obtuvieron los valores.|  
 |execution_path|**nvarchar(max)**|Ruta de acceso de ejecución del componente.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 -   Cuando hay varios resultados del componente, se agrega una fila para cada uno de ellos.  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Para ver los datos de una ejecución de paquetes determinada, establezca el nivel de registro en modo **Detallado**. Para más información, vea [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Esta vista exige uno de los siguientes permisos:  
   
 -   Permiso READ en la instancia de ejecución  

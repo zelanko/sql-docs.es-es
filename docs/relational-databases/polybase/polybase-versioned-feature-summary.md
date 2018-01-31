@@ -8,23 +8,24 @@ ms.service:
 ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 70725ec64b79f538b4129993de83dfd97772a667
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: c2733d10d4dde01c2067a0d75da629c83c45c355
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="polybase-versioned-feature-summary"></a>Resumen de características de PolyBase con versiones
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Resumen de las características de PolyBase disponibles para los servicios y productos de SQL Server.  
+[!INCLUDE[appliesto-ss2016-asdb-asdw-pdw-md](../../includes/appliesto-ss2016-asdb-asdw-pdw-md.md)] Resumen de las características de PolyBase disponibles para los servicios y productos de SQL Server.  
   
 ## <a name="feature-summary-for-product-releases"></a>Resumen de las características para cada versión del producto  
  En esta tabla se resumen las características fundamentales de PolyBase y los productos en los que están disponibles.  
@@ -58,7 +59,7 @@ En SQL Server y APS, no todos los operadores T-SQL se pueden aplicar al clúster
 |Ordenaciones|no|no|
 
 Por "agregación parcial" se entiende que se debe producir una agregación final cuando los datos lleguen a SQL Server, pero una parte de la agregación tiene lugar en Hadoop. Se trata de un método común para calcular agregaciones en los sistemas de procesamiento paralelo masivo.  
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Guía de PolyBase](../../relational-databases/polybase/polybase-guide.md)  
   
   

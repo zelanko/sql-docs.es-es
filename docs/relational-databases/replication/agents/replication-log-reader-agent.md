@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - agents [SQL Server replication], Log Reader Agent
 - command prompt [SQL Server replication]
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
-caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e94c508c47e4783c289c00480dbd492a10070361
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bf4fda73309e49d009d156fa8c18063e495bac92
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-log-reader-agent"></a>Agente de registro del LOG de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Agente de registro del LOG de replicación es un archivo ejecutable que supervisa el registro de transacciones de cada base de datos configurada para la replicación transaccional y copia las transacciones marcadas para ser replicadas desde el registro de transacciones a la base de datos de distribución.  
@@ -74,8 +75,8 @@ logread [-?]
  **-?**  
  Muestra información de uso.  
   
- **-Publisher** *server_name*[**\\***instance_name*]  
- Es el nombre del publicador. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
+ **-Publisher** *nombre_de_servidor*[**\\***nombre_de_instancia*]  
+ Es el nombre del publicador. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
   
  **-PublisherDB** *publisher_database*  
  Es el nombre de la base de datos del publicador.  
@@ -86,8 +87,8 @@ logread [-?]
  **-DefinitionFile** *def_path_and_file_name*  
  Es la ruta de acceso del archivo de definición de agente. Un archivo de definición de agente contiene los argumentos de línea de comandos para el agente. El contenido del archivo se analiza como un archivo ejecutable. Utilice las comillas tipográficas (") para especificar valores de argumento que contienen caracteres arbitrarios.  
   
- **-Distributor** *server_name*[**\\***instance_name*]  
- Es el nombre del distribuidor. Especifique *server_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
+ **-Distributor** *nombre_de_servidor*[**\\***nombre_de_instancia*]  
+ Es el nombre del distribuidor. Especifique *server_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
   
  **-DistributorLogin** *distributor_login*  
  Es el nombre de inicio de sesión del distribuidor.  
@@ -101,7 +102,7 @@ logread [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Es el nivel de cifrado de Capa de sockets seguros (SSL) utilizado por el Agente de lectura del LOG cuando realiza conexiones.  
   
-|Valor de EncryptionLevel|Descripción|  
+|Valor de EncryptionLevel|Description|  
 |---------------------------|-----------------|  
 |**0**|Especifica que no se utiliza SSL.|  
 |**1**|Especifica que se utiliza SSL, pero el agente no comprueba que un emisor confiable haya firmado el certificado del servidor SSL.|  
@@ -115,7 +116,7 @@ logread [-?]
  **-HistoryVerboseLevel** [ **0**| **1**| **2**]  
  Especifica la cantidad de historial registrado durante una operación del lector de registro. Puede minimizar el efecto sobre el rendimiento del registro del historial seleccionando **1**.  
   
-|Valor HistoryVerboseLevel|Descripción|  
+|Valor HistoryVerboseLevel|Description|  
 |-------------------------------|-----------------|  
 |**0**||  
 |**1**|Predeterminado: Siempre actualiza un mensaje del historial anterior del mismo estado (inicio, progreso, éxito, etc.). Si no existe ningún registro anterior con el mismo estado, inserta un nuevo registro.|  
@@ -136,7 +137,7 @@ logread [-?]
 > [!NOTE]  
 >  Este parámetro se omite para las publicaciones que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información, vea la sección "Configurar el trabajo del conjunto de transacciones" en [Performance Tuning for Oracle Publishers](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).  
   
- **-MessageInterval** *message_interval*  
+ **-MessageInterval** *intervalo_de_mensajes*  
  Es el intervalo de tiempo utilizado para el registro del historial. Un evento del historial se registra cuando se alcanza el valor de **MessageInterval** una vez registrado el último evento de historial.  
   
  Si no hay ninguna transacción replicada disponible en el origen, el agente envía un mensaje de no transacción al distribuidor. Esta opción especifica cuánto tiempo espera el agente para enviar otro mensaje que indica que no hay ninguna transacción. Los agentes siempre envían un mensaje que indica que no hay ninguna transacción cuando detectan que no hay ninguna transacción disponible en el origen después de procesar previamente las transacciones replicadas. El valor predeterminado es 60 segundos.  
@@ -147,7 +148,7 @@ logread [-?]
  **-OutputVerboseLevel** [ **0**| **1**| **2** | **3** | **4** ]  
  Especifica si el resultado debería ser detallado.  
   
-|Valor|Descripción|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**0**|Solo se imprimen los mensajes de error.|  
 |**1**|Se imprimen todos los mensajes de informe de progreso de agente.|  
@@ -166,8 +167,8 @@ logread [-?]
  **-ProfileName** *profile_name*  
  Especifica un perfil de agente para utilizar para los parámetros del agente. Si **ProfileName** es NULL, el perfil de agente se deshabilita. Si no se especifica **ProfileName** , se utiliza el perfil predeterminado para el tipo de agente. Para obtener información, vea [Perfiles del Agente de replicación](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
- **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
- Especifica la instancia del asociado de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que participa en una sesión de creación de reflejo de la base de datos con la base de datos de publicación. Para obtener más información, vea [Database Mirroring and Replication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
+ **-PublisherFailoverPartner** *nombre_de_servidor*[**\\***nombre_de_instancia*]  
+ Especifica la instancia del asociado de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que participa en una sesión de creación de reflejo de la base de datos con la base de datos de publicación. Para obtener más información, vea [Replicación y creación de reflejo de la base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
  Especifica el modo de seguridad del publicador. Un valor de **0** hace referencia a la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (predeterminado) y un valor de **1** hace referencia al modo de autenticación de Windows.  
@@ -190,7 +191,7 @@ logread [-?]
  **-RecoverFromDataErrors**  
  Especifica que el Agente de registro del LOC continúe ejecutándose cuando encuentra errores en datos de columna publicados en un Publicador que no es de SQL Server. De forma predeterminada, tales errores hacen el Agente de registro del LOG devuelva un error. Al utilizar **-RecoverFromDataErrors**, los datos de columna erróneos se replican como NULL o un valor nonnull adecuado y los mensajes de advertencia se registran en la tabla [MSlogreader_history](../../../relational-databases/system-tables/mslogreader-history-transact-sql.md) . Este parámetro solamente se admite en publicadores de Oracle.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 > [!IMPORTANT]  
 >  Si ha instalado el agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para que se ejecute en una cuenta de sistema local en lugar de debajo de una cuenta de usuario de dominio (el valor predeterminado), el servicio puede tener acceso solamente al equipo local. Si el Agente de registro del LOG que se ejecuta en el agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se configura para utilizar el modo de autenticación de Windows cuando inicia sesión en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el Agente de registro del LOC devuelve un error. La configuración predeterminada es la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información acerca de cómo cambiar cuentas de seguridad, vea [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
@@ -203,7 +204,7 @@ logread [-?]
 |---------------------|  
 |Se ha agregado el parámetro **-ExtendedEventConfigFile** .|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administración del Agente de replicación](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

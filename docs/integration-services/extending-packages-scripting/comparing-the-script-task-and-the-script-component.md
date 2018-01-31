@@ -8,25 +8,28 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-dev_langs: VB
+applies_to:
+- SQL Server 2016 Preview
+dev_langs:
+- VB
 helpviewer_keywords:
 - Script task [Integration Services], comparing to Script component
 - Script component [Integration Services], comparing to Script task
 ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b361124960eb0ed7ef7482277ccf35df44443cb6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dc3f94a24a0fec6c1672d810e6a5438a5344d385
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>Comparar la tarea Script y el componente de script
   La tarea Script, que está disponible en la ventana Flujo de control del diseñador de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], y el componente de script, que está disponible en la ventana Flujo de datos, tienen fines muy diferentes en un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La tarea es una herramienta de flujo de control de uso general, en tanto que el componente actúa como un origen, transformación o destino en el flujo de datos. A pesar de sus fines diferentes, sin embargo, la tarea Script y el componente de script tienen algunas similitudes en las herramientas de codificación que utilizan y los objetos del paquete que ponen a disposición del desarrollador de software. Comprender sus similitudes y diferencias puede ayudarle a utilizar la tarea y el componente de manera más eficaz.  
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/20/2017
 |Registro|La tarea Script usa el método <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> del objeto**DTS** para registrar información en los proveedores de registro habilitados. Por ejemplo:<br /><br /> [Visual Basic]<br /><br /> `Dim bt(0) As Byte Dts.Log("Test Log Event", _     0, _     bt)`<br /><br /> [C#]<br /><br /> `byte[] bt = new byte[0];` <br /> `Dts.Log("Test Log Event", 0, bt);`|El componente de script utiliza el método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> de la clase base generada automáticamente para registrar información en los proveedores de registro habilitados. Por ejemplo:<br /><br /> [Visual Basic]<br /><br /> `Dim bt(0) As Byte`<br /><br /> `Me.Log("Test Log Event", _`<br /><br /> `0, _`<br /><br /> `bt)`<br /><br /> [C#]<br /><br /> `byte[] bt = new byte[0]; this.Log("Test Log Event", 0, bt);`|  
 |Devolver resultados|La tarea Script usa la propiedad <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A> y la propiedad opcional <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A> del objeto **DTS** para notificar sus resultados al entorno de ejecución.|El componente de script se ejecuta como parte de la tarea Flujo de datos y no notifica resultados mediante estas propiedades.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Extender el paquete con la tarea Script](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)   
  [Ampliar el flujo de datos con el componente de script](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)   
   

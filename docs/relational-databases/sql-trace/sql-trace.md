@@ -8,20 +8,21 @@ ms.service:
 ms.component: sql-trace
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e664c24d37f41986789998bdd20db49232b05609
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b035b11167895581588de96db1c1db3f65931307
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-trace"></a>Seguimiento de SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En Seguimiento de SQL, los eventos se recopilan si se enumeran instancias de clases de eventos en la definición del seguimiento. Estos eventos pueden filtrarse para quitarlos del seguimiento o ponerse en cola para su destino. El destino puede ser un archivo u Objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO), que pueden usar la información del seguimiento en aplicaciones que administran [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -119,7 +120,7 @@ ms.lasthandoff: 11/17/2017
 |**OwnerID**|58|Solo para eventos de bloqueo. Tipo de objeto que posee un bloqueo.|  
 |**OwnerName**|37|Nombre de usuario de la base de datos del propietario del objeto.|  
 |**ParentName**|59|Nombre del esquema en el que reside el objeto.|  
-|**Permissions**|19|Valor entero que representa el tipo de permisos comprobado. Los valores son:<br /><br /> **1** = SELECT ALL<br /><br /> **2** = UPDATE ALL<br /><br /> **4** = REFERENCES ALL<br /><br /> **8** = INSERT<br /><br /> **16** = DELETE<br /><br /> **32** = EXECUTE (solo procedimientos)<br /><br /> **4096** = SELECT ANY (al menos una columna)<br /><br /> **8192** = UPDATE ANY<br /><br /> **16384** = REFERENCES ANY|  
+|**Permisos**|19|Valor entero que representa el tipo de permisos comprobado. Los valores son:<br /><br /> **1** = SELECT ALL<br /><br /> **2** = UPDATE ALL<br /><br /> **4** = REFERENCES ALL<br /><br /> **8** = INSERT<br /><br /> **16** = DELETE<br /><br /> **32** = EXECUTE (solo procedimientos)<br /><br /> **4096** = SELECT ANY (al menos una columna)<br /><br /> **8192** = UPDATE ANY<br /><br /> **16384** = REFERENCES ANY|  
 |**ProviderName**|46|Nombre del proveedor OLEDB.|  
 |**Reads**|16|Número de operaciones de lectura en el disco lógico que realiza el servidor en nombre del evento. Estas operaciones de lectura incluyen todas las lecturas realizadas desde tablas y búferes durante la ejecución de la instrucción.|  
 |**IdSolicitud**|49|Id. de la solicitud que contiene la instrucción.|  
@@ -166,7 +167,7 @@ ms.lasthandoff: 11/17/2017
 |Describe cómo minimizar la cantidad de datos que el seguimiento recopile.|[Limitar el tamaño de la tabla y el archivo de seguimiento](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)|  
 |Describe las dos maneras de programar la traza en Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Programar seguimientos](../../relational-databases/sql-trace/schedule-traces.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Plantillas y permisos de SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Guía de programación para objetos de administración de SQL Server &#40;SMO&#41;](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   

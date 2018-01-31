@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 - Availability Groups [SQL Server], configuring
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a44aa4fc4389da7e319d272736d0ec67334dc309
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f8d7a9a047bb1f60ea5e9c1d91d823af30ca35ff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Usar el Asistente para grupo de disponibilidad de conmutación por error (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo realizar una conmutación por error manual planeada o conmutación por error manual forzada (conmutación por error forzada) en un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un grupo de disponibilidad realiza la conmutación por error en el nivel de réplica de disponibilidad. Si se realiza una conmutación por error a una réplica secundaria en el estado SYNCHRONIZED, el asistente realiza una conmutación por error manual planeada (sin pérdida de datos). Si se realiza una conmutación por error a una réplica secundaria en el estado UNSYNCHRONIZED o NOT SYNCHRONIZING, el asistente realiza una conmutación por error manual forzada, también denominada *conmutación por error forzada* (con posible pérdida de datos). En ambas formas de conmutación por error manual tiene lugar la transición a la réplica secundaria a la que se está conectado al rol principal. Una conmutación por error manual planeada actualmente realiza transacciones de la réplica principal anterior al rol secundario. Después de una conmutación por error forzada, cuando la réplica principal pasa a estar en línea, realiza la transición al rol secundario.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -111,7 +112,7 @@ ms.lasthandoff: 11/20/2017
  **Estado de quórum**  
  Para el tipo de clúster WSFC, muestra uno de los siguientes estados de cuórum de la réplica de disponibilidad:  
   
-   |Valor|Descripción|  
+   |Valor|Description|  
    |-----------|-----------------|  
    |**Quórum normal**|El clúster se ha iniciado con quórum normal.|  
    |**Quórum forzado**|El clúster se ha iniciado con quórum forzado.|  
@@ -133,7 +134,7 @@ ms.lasthandoff: 11/20/2017
  **Modo de disponibilidad**  
  Muestra el modo de disponibilidad de la instancia del servidor, que será uno de los siguientes:  
   
-|Valor|Descripción|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Confirmación sincrónica**|En modo de confirmación sincrónica, antes de la confirmación de transacciones, una réplica principal de confirmación sincrónica espera a que una réplica secundaria de confirmación sincrónica notifique que ha terminado de proteger el registro. El modo de confirmación sincrónica asegura que, una vez que una base de datos secundaria se sincroniza con la base de datos principal, las transacciones confirmadas queden totalmente protegidas.|  
 |**Confirmación asincrónica**|En modo de confirmación asincrónica, la réplica principal confirma las transacciones sin esperar la notificación de que una réplica secundaria de confirmación asincrónica ha protegido el registro. El modo de confirmación asincrónica minimiza la latencia de las transacciones en las bases de datos secundarias pero permite que se retrasen detrás de las bases de datos principales, haciendo posible alguna pérdida de datos.|  
@@ -143,7 +144,7 @@ ms.lasthandoff: 11/20/2017
  **Modo de conmutación por error**  
  Muestra el modo de conmutación por error de la instancia del servidor, que será uno de los siguientes:  
   
-|Valor|Descripción|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Automática**|Una réplica secundaria que está configurada para la conmutación automática por error también admite la conmutación por error manual planeada, siempre que la réplica secundaria esté sincronizada con la réplica principal.|  
 |**Manual**|Existen dos tipos de conmutación por error manual: planeada (sin pérdida de datos) y forzada (con posible pérdida de datos). Para una réplica secundaria determinada, solo se admite una de ellas, dependiendo del modo de disponibilidad y, para el modo de confirmación sincrónica, el estado de sincronización de la réplica secundaria. Para determinar qué forma de conmutación por error manual admite actualmente una réplica secundaria determinada, vea la columna **Preparación para la conmutación por error** de esta cuadrícula.|  
@@ -153,7 +154,7 @@ ms.lasthandoff: 11/20/2017
  **Preparación para la conmutación por error**  
  Muestra la preparación para la conmutación por error de la réplica secundaria, una de las siguientes:  
   
-|Valor|Descripción|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**No se produce pérdida de datos**|Esta réplica secundaria actualmente admite la conmutación por error planeada. Este valor solo aparece cuando una réplica secundaria en modo de confirmación sincrónica está sincronizada con la réplica principal.|  
 |**Pérdida de datos, Advertencias(** *#* **)**|Esta réplica secundaria admite actualmente conmutación por error forzada (con posible pérdida de datos). Este valor tiene lugar siempre que la réplica secundaria no esté sincronizada con la réplica principal. Haga clic en el vínculo de advertencias de la pérdida de datos para obtener información sobre la posible pérdida de datos.|  
@@ -193,7 +194,7 @@ ms.lasthandoff: 11/20/2017
  **Cancelar**  
  Haga clic en esta opción para finalizar el asistente. Al cancelar el asistente se sale de la página **Conectar a la réplica** sin realizar ninguna acción.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Modos de disponibilidad &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [Conmutación por error y modos de conmutación por error &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - adding annotations
 - annotations [Integration Services]
 ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d8e14bc3f81769d437e3d916f74128f96fe0bec
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 55c87d73f66244d00a7ea8599b20565e5bac8eed
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="use-annotations-in-packages"></a>Usar anotaciones en paquetes
   El Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] proporciona anotaciones, que puede usar para que los paquetes se autodocumenten y sean más fáciles de entender y mantener. Puede agregar anotaciones a las superficies de diseño de flujo de control, flujo de datos y controlador de eventos del Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] . Las anotaciones pueden contener cualquier tipo de texto y resultan útiles para agregar etiquetas, comentarios y demás información descriptiva a un paquete. Las anotaciones únicamente son una característica de tiempo de diseño. Por ejemplo, no se escriben en los registros.  

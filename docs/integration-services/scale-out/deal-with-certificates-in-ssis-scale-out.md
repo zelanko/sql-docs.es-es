@@ -8,19 +8,20 @@ ms.service:
 ms.component: scale-out
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: haoqian
 ms.author: haoqian
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1ee367d089347d8004a6223f32af476c338a68e
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: cda61336badec20e15cf0d0142e592ef63431254
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>Usar certificados en la escalabilidad horizontal de SQL Server Integration Services
 
@@ -144,5 +145,5 @@ Actualice el archivo de configuración del servicio del trabajador de escalabili
 
 ## <a name="next-steps"></a>Pasos siguientes
 Para obtener más información, vea los artículos siguientes:
--   [Patrón de escalabilidad horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
--   [Trabajador de escalabilidad horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)
+-   [Servicio principal de escalabilidad horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
+-   [Trabajo de escalabilidad horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)

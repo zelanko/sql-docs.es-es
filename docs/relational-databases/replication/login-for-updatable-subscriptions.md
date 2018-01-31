@@ -8,28 +8,30 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.newsubwizard.updatablesubscriptionslogin.f1
+f1_keywords:
+- sql13.rep.newsubwizard.updatablesubscriptionslogin.f1
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
-caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ae8beff6dc6f55ea6db9ce23c9f582e1fa108be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bd0c4bab5c8a4474a3864df385af997febf656d9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="login-for-updatable-subscriptions"></a>Inicio de sesión para suscripciones actualizables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para una actualización inmediata, si seleccionó **Replicar** en la página **Suscripciones actualizables** de este asistente, debe especificar una cuenta con el suscriptor con el que se realizan las conexiones al publicador. 
   
  Las conexiones las usan los desencadenadores que se activan en el suscriptor y propagan los cambios al publicador. Se necesita esta cuenta incluso si se selecciona **Poner en cola cambios y confirmar cuando sea posible** en la página **Suscripciones actualizables**. De forma predeterminada, el Asistente para nueva suscripción configura la actualización en cola con la capacidad de cambiar a actualización inmediata si fuera necesario.  
   
-> **IMPORTANTE:** La cuenta especificada para la conexión solo debería tener permiso para insertar, actualizar y eliminar datos en las vistas que crea la replicación en la base de datos de publicación. No debería tener ningún permiso adicional. Conceda permisos para las vistas de la base de datos de publicación designadas con el formato **syncobj_***\<númeroHexadecimal>* a la cuenta de configuró en cada suscriptor.  
+> **IMPORTANTE:** La cuenta especificada para la conexión solo debería tener permiso para insertar, actualizar y eliminar datos en las vistas que crea la replicación en la base de datos de publicación. No debería tener ningún permiso adicional. Conceda permisos para las vistas de la base de datos de publicación designadas con el formato **syncobj_***\<NúmeroHexadecimal>* a la cuenta de configuró en cada suscriptor.  
   
  Hay tres opciones disponibles para el tipo de conexión:  
   
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
  Las dos primeras opciones se pueden especificar en este asistente. La última opción solo se puede especificar con [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md); especifique un valor de **1** para el parámetro **@security_mode**.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Crear un servidor vinculado que se conecte mediante el siguiente inicio de sesión para la Autenticación de SQL Server:**  
  La replicación crea un servidor vinculado utilizando las credenciales especificadas en los campos **Inicio de sesión** y **Contraseña** .  
   
@@ -56,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>Vea también  
  [Crear una suscripción actualizable en una publicación transaccional](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
- [Ver y modificar la configuración de seguridad de la replicación](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
+ [View and Modify Replication Security Settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  (Ver y modificar la configuración de seguridad de la replicación)  
  [Suscripciones actualizables para replicación transaccional](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md)  
   

@@ -8,21 +8,23 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Data Profiling task [Integration Services], using output in workflow
+helpviewer_keywords:
+- Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3712f432207551dac0d14666b01ad8d8e2f8fc0e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8f7e2cbac0c5a86c4792991dc1634721ac1cb635
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporar una tarea de generación de perfiles de datos en un flujo de trabajo de paquetes
   La generación de perfiles de datos y la limpieza no son aptos para la aplicación de un proceso automatizado en sus primeras etapas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], el resultado de la tarea de generación de perfiles de datos normalmente requiere un análisis visual y un criterio humano para determinar si las infracciones detectadas son significativas o excesivas. Incluso después de reconocer la existencia de problemas relacionados con la calidad de los datos, sigue siendo necesario disponer de un plan minuciosamente diseñado que indique el mejor método para la limpieza.  
@@ -332,7 +334,7 @@ ms.lasthandoff: 11/20/2017
   
 7.  En las restricciones de precedencia que conectan la tarea Script a las bifurcaciones de nivel inferior del flujo de trabajo, escriba expresiones que usen los valores de las variables para dirigir el flujo de trabajo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Configuración de la Tarea de generación de perfiles de datos](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)   
  [Visor de perfil de datos](../../integration-services/control-flow/data-profile-viewer.md)  
   

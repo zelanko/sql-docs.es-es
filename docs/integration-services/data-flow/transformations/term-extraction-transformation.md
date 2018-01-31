@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,16 +31,16 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4282ad429a54af716010bc8b0463551477a771fb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cb9671f2cc2e595b12d1ddef1f962faa25d7563e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="term-extraction-transformation"></a>Extracción de términos, transformación
   La transformación Extracción de términos extrae términos del texto en una columna de entrada de transformación y luego escribe los términos en una columna de salida de transformación. La transformación funciona solo con texto en inglés y utiliza únicamente su propio diccionario en inglés e información lingüística sobre el idioma inglés.  
@@ -191,7 +192,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="term-extraction-transformation-editor-term-extraction-tab"></a>Editor de transformación Extracción de términos (pestaña Extracción de términos)
   Use la pestaña **Extracción de términos** del cuadro de diálogo **Editor de transformación Extracción de términos** para especificar la columna de texto que contiene el texto que se extraerá.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Columnas de entrada disponibles**  
  Con las casillas, seleccione la única columna de texto que se utilizará para la extracción de términos.  
   
@@ -207,11 +208,11 @@ ms.lasthandoff: 11/20/2017
 ## <a name="term-extraction-transformation-editor-exclusion-tab"></a>Editor de transformación Extracción de términos (pestaña Exclusión)
   Use la pestaña **Exclusión** del cuadro de diálogo **Editor de transformación Extracción de términos** para establecer una conexión con una tabla de exclusión y especificar las columnas que contienen términos de exclusión.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Utilizar términos de exclusión**  
  Esta opción indica si se excluirán términos específicos durante la extracción de términos mediante la especificación de una columna que contiene los términos de exclusión. Si desea excluir términos, debe especificar las siguientes propiedades del origen:  
   
- **OLE DB, administrador de conexiones**  
+ **Administrador de conexiones OLE DB**  
  Permite seleccionar un administrador de conexiones OLE DB o crear una conexión haciendo clic en **Nueva**.  
   
  **Nueva**  
@@ -229,7 +230,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="term-extraction-transformation-editor-advanced-tab"></a>Editor de transformación Extracción de términos (pestaña Avanzadas)
   Use la pestaña **Avanzadas** del cuadro de diálogo **Editor de transformación Extracción de términos** para especificar las propiedades de la extracción, tales como la frecuencia, la longitud y si deben extraerse palabras o frases.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Nombre**  
  Especifica que la transformación extrae únicamente nombres individuales.  
   
@@ -257,7 +258,7 @@ ms.lasthandoff: 11/20/2017
  **Configurar la salida de errores**  
  Use el cuadro de diálogo [Configurar la salida de errores](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar las opciones de control de errores para las filas que provocan errores.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Referencia de errores y mensajes de Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Transformación Búsqueda de términos](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
 

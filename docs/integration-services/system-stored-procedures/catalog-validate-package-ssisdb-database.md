@@ -8,23 +8,24 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - validate_package stored procedure [Integration Services]
 - catalog.validate_package stored procedure [Integration Services]
 ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e4bfde2a35b234e5a48f96d1d5632316a3b2af9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 597b0642825c7009ad79fbf2722944857ea66c38
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogvalidatepackage-ssisdb-database"></a>catalog.validate_package (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +46,13 @@ catalog.validate_package [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argumentos  
  [ @folder_name = ] *folder_name*  
- El nombre de la carpeta que contiene el paquete. El parámetro *folder_name* es **nvarchar(128)**.  
+ El nombre de la carpeta que contiene el paquete. *folder_name* es **nvarchar(128)**.  
   
  [ @project_name = ] *project_name*  
- El nombre del proyecto que contiene el paquete. El parámetro *project_name* es **nvarchar(128)**.  
+ El nombre del proyecto que contiene el paquete. *project_name* es **nvarchar(128)**.  
   
  [ @package_name = ] *package_name*  
- Nombre del paquete. El parámetro*package_name* es **nvarchar(260)**.  
+ Nombre del paquete. El parámetro *package_name* es de tipo **nvarchar(260)**.  
   
  [ @validation_id = ] *validation_id*  
  Devuelve el identificador único (ID) de la validación. El parámetro *validation_id* es **bigint**.  
@@ -63,15 +64,15 @@ catalog.validate_package [ @folder_name = ] folder_name
  Indica las referencias de entorno que la validación tiene en cuenta. Cuando el valor es `A`, todas las referencias de entorno asociadas con el proyecto se incluyen en la validación. Cuando el valor es `S`, solo se incluye una sola referencia de entorno. Cuando el valor es `D`, no se incluyen referencias de entorno y todos los parámetros deben tener un valor literal predeterminado para pasar la validación. Este parámetro es opcional. El carácter `D` se usa de forma predeterminada. El parámetro *environment_scope* es **Char(1)**.  
   
  [ @reference_id = ] *reference_id*  
- El identificador único de la referencia de entorno. Este parámetro es obligatorio solo cuando se incluye una sola referencia de entorno en la validación, cuando el parámetro *environment_scope* es `S`. El parámetro *reference_id* es **bigint**.  
+ El identificador único de la referencia de entorno. Este parámetro es obligatorio solo cuando se incluye una sola referencia de entorno en la validación, cuando el parámetro *environment_scope* es `S`. *reference_id* es **bigint**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- 0 (Correcto)  
+ 0 (correcto)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Ninguno  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
 -   Permisos de lectura en el objeto y, si es aplicable, permisos de lectura en los entornos a los que se hace referencia  
@@ -85,7 +86,7 @@ catalog.validate_package [ @folder_name = ] folder_name
   
 -   El nombre del proyecto o el nombre del paquete no son válidos  
   
--   El usuario no tiene los permisos adecuados  
+-   El usuario no tiene los permisos adecuados.  
   
 -   Uno o varios de los entornos a los que se hace referencia incluidos en la validación no contienen variables a las que se haga referencia  
   
@@ -97,7 +98,7 @@ catalog.validate_package [ @folder_name = ] folder_name
   
 -   Se hace referencia a las variables de los parámetros del paquete, pero no se han incluido entornos a los que se haga referencia en la validación  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La validación ayuda a identificar problemas que pueden impedir que el paquete se ejecute correctamente. Use las vistas [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) o [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) para supervisar el estado de validación.  
   
   

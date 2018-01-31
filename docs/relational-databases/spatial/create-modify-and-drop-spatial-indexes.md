@@ -8,7 +8,8 @@ ms.service:
 ms.component: spatial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-spatial
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 17c60845cbb26234bc6c52e7fe0e192973689e86
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 11d8454a5862b02e162e22ead3ca46e68b4f1354
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Crear, modificar y quitar índices espaciales
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Un índice espacial puede realizar determinadas operaciones de manera más eficaz en una columna del tipo de datos **geometry** o **geography** (una *columna espacial*). Se puede especificar más de un índice espacial en una columna espacial. Por ejemplo, esto es útil para indizar diferentes parámetros de teselación en una columna única.  
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
 11. En la página **Espacial** , especifique los valores que desee usar para las propiedades espaciales del índice.  
   
-     Al crear un índice en una columna de tipo **geometry** , debe especificar las coordenadas **(***X mínima***,***Y mínima***)** y **(***X máxima***,***Y máxima***)** del cuadro de límite. Para un índice de una columna de tipo **geography** , los campos de cuadro de límite se vuelven de solo lectura después de especificar el esquema de teselación **Cuadrícula geográfica** , porque la teselación de cuadrícula de geografía no usa un cuadro de límite.  
+     Al crear un índice en una columna de tipo **geometry** , debe especificar las coordenadas **(***X-min***,***Y-min***)** y **(***X-max***,***Y-max***)** del cuadro de límite. Para un índice de una columna de tipo **geography** , los campos de cuadro de límite se vuelven de solo lectura después de especificar el esquema de teselación **Cuadrícula geográfica** , porque la teselación de cuadrícula de geografía no usa un cuadro de límite.  
   
      Opcionalmente, puede especificar valores no predeterminados para el campo **Celdas por objeto** y para la densidad de cuadrícula en cualquier nivel del esquema de teselación. El número predeterminado de celdas por objeto es 16 para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] u 8 para [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o posterior y la densidad de cuadrícula predeterminada es **Media** para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
@@ -159,7 +160,7 @@ ms.lasthandoff: 11/17/2017
  Las teselaciones espaciales incluidas en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] no se pueden replicar en [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ni en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Debe usar las teselaciones espaciales de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para los índices espaciales cuando la compatibilidad con versiones anteriores con las bases de datos de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sea un requisito.  
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md)  
   
   

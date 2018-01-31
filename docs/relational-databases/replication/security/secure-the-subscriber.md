@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - Subscribers [SQL Server replication], security
 - security [SQL Server replication], Subscribers
 ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eab9cb8f16911076421ac1c230de2a7d3f176f84
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1c12d1c2ed7f777d147c6cb94c93bb5c7e8b4e1e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secure-the-subscriber"></a>Proteger el suscriptor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los agentes de mezcla y de distribución se conectan al suscriptor. Estas conexiones pueden realizarse en el contexto de un inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o de Windows. Es importante proporcionar un inicio de sesión apropiado para estos agentes, al mismo tiempo que se sigue el principio de conceder los derechos mínimos necesarios y proteger el almacenamiento de todas las contraseñas. Para obtener información acerca de los permisos necesarios para cada agente, vea [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/17/2017
  Para más información, vea [Create an Updatable Subscription to a Transactional Publication](../../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md) (Create an Updatable Subscription to a Transactional Publication) y [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md) (Ver y modificar la configuración de seguridad de la replicación).  
   
 > [!IMPORTANT]  
->  La cuenta especificada para la conexión solo debe tener permiso para insertar, actualizar y eliminar datos en las vistas que crea la replicación en la base de datos de publicaciones; no debe tener ningún permiso adicional. Conceda permisos para las vistas de la base de datos de publicación designadas con el formato **syncobj_***\<númeroHexadecimal>* a la cuenta de configuró en cada suscriptor.  
+>  La cuenta especificada para la conexión solo debe tener permiso para insertar, actualizar y eliminar datos en las vistas que crea la replicación en la base de datos de publicaciones; no debe tener ningún permiso adicional. Conceda permisos para las vistas de la base de datos de publicación designadas con el formato **syncobj_***\<NúmeroHexadecimal>* a la cuenta de configuró en cada suscriptor.  
   
 ## <a name="queued-updating-subscriptions"></a>Suscriptores de actualización en cola  
  Al configurar suscripciones de actualización en cola, hay dos áreas relacionadas con la seguridad que debe tener en cuenta:  
@@ -79,9 +80,9 @@ ms.lasthandoff: 11/17/2017
   
      Para más información, vea cómo crear una suscripción de actualización en una publicación transaccional (SQL Server Management Studio) y [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md) (Ver y modificar la configuración de seguridad de la replicación).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Seguridad y protección &#40;replicación&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+ [Seguridad y protección &#40;Replicación&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
   
   

@@ -8,22 +8,25 @@ ms.service:
 ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.debug.breakpt.condition
-helpviewer_keywords: Transact-SQL debugger, breakpoint conditions
+f1_keywords:
+- vs.debug.breakpt.condition
+helpviewer_keywords:
+- Transact-SQL debugger, breakpoint conditions
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
-caps.latest.revision: "6"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a068205f505a8604724a9952e7f107820f05da51
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 258075ed4da79b1c53eb73836d62e873025ea0be
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="specify-a-breakpoint-condition"></a>Especificar una condición de punto de interrupción
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Una condición de punto de interrupción es una expresión de [!INCLUDE[tsql](../../includes/tsql-md.md)] evaluada por el depurador cuando se alcanza el punto de interrupción. Si se satisface la condición y se alcanza el número de llamadas especificado, el depurador interrumpe, o bien, realiza la acción definida para el punto de interrupción.  

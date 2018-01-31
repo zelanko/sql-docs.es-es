@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - XML source [Integration Services]
 - XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cc10de2bb6f4d9cebf341242321e692ec9a4614e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: abc73a10f3538df038d9b4488199666288a3ca57
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xml-source"></a>Origen XML
   El origen XML lee un archivo de datos XML y rellena las columnas de la salida de origen con los datos.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  El origen XML no valida los datos del archivo XML con el XSD.  
   
-## <a name="xml-source-editor"></a>Editor de origen de XML  
+## <a name="xml-source-editor"></a>origen de XML, editor de  
  Los datos de los archivos XML suelen incluir relaciones jerárquicas. El cuadro de diálogo **Editor de origen de XML** utiliza el esquema especificado para generar las salidas del origen XML. Puede especificar un archivo XSD, usar un esquema insertado o generar un XSD del archivo de datos XML especificado. El esquema debe estar disponible en tiempo de diseño.  
   
  El origen XML genera estructuras tabulares a partir de los datos XML creando una salida para cada elemento que contenga otros elementos de los archivos XML. Por ejemplo, si los datos XML representan catálogos y elementos en catálogos, el origen XML crea una salida para catálogos y una salida para cada tipo de elemento de un catálogo. La salida de cada elemento contendrá columnas de salida para los atributos de ese elemento.  
@@ -84,7 +85,7 @@ ms.lasthandoff: 11/20/2017
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas del origen XML](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 11/20/2017
  **Modo de acceso a datos**  
  Especifique el método para seleccionar datos del origen.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |Ubicación del archivo XML|Recupera datos de un archivo XML.|  
 |Archivo XML de variable|Especifica el nombre de archivo XML en una variable.<br /><br /> **Información relacionada**: [Usar variables en paquetes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -137,7 +138,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="xml-source-editor-columns-page"></a>Editor de origen de XML (página Columnas)
   Use el nodo **Columnas** del cuadro de diálogo **Editor de origen de XML** para asignar una columna de salida a una columna externa (origen).  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Columnas externas disponibles**  
  Muestra la lista de columnas externas disponibles en el origen de datos. Esta tabla no se puede usar para agregar o quitar columnas.  
   
@@ -150,7 +151,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="xml-source-editor-error-output-page"></a>Editor de origen de XML (página Salida de error)
   Utilice la página **Salida de error** del cuadro de diálogo **Editor de origen de XML** para seleccionar las opciones de control de errores y para establecer las propiedades en las columnas de salida de errores.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Entrada/salida**  
  Muestra el nombre del origen de datos.  
   
@@ -165,7 +166,7 @@ ms.lasthandoff: 11/20/2017
  **Truncamiento**  
  Permite especificar qué debe ocurrir cuando se produce un truncamiento: omitir el error, redirigir la fila o hacer que el componente no funcione.  
   
- **Description**  
+ **Descripción**  
  Muestra la descripción del error.  
   
  **Establecer este valor en las celdas seleccionadas**  
@@ -174,5 +175,5 @@ ms.lasthandoff: 11/20/2017
  **Aplicar**  
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Extraer datos mediante el origen de XML](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  

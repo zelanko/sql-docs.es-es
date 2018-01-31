@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 - Snapshot Agent, parameter reference
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
-caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 368401643f14af5c3f59621ce5ef6180305318cb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cf23217acf677478ae0dc46b161f1731e4d88494
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-snapshot-agent"></a>Agente de instantáneas de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Agente de instantáneas de replicación es un archivo ejecutable que prepara archivos de instantáneas que contienen el esquema y los datos de las tablas y objetos de base de datos publicados, almacena los archivos en la carpeta de instantáneas y registra los trabajos de sincronización en la base de datos de distribución.  
@@ -83,7 +84,7 @@ snapshot [ -?]
  **-?**  
  Imprime todos los parámetros disponibles.  
   
- **-Publisher**  *nombre_servidor*[**\\***nombre_instancia*]  
+ **-Publisher**  *nombre_de_servidor*[**\\***nombre_de_instancia*]  
  Es el nombre del publicador. Especifique nombreDeServidor para conectarse a la instancia predeterminada de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
   
  **-Publication** *publication*  
@@ -98,13 +99,13 @@ snapshot [ -?]
  **-DefinitionFile** *def_path_and_file_name*  
  Es la ruta de acceso del archivo de definición de agente. Un archivo de definición de agente contiene los argumentos de línea de comandos para el agente. El contenido del archivo se analiza como un archivo ejecutable. Utilice las comillas tipográficas (") para especificar valores de argumento que contienen caracteres arbitrarios.  
   
- **-Distributor** *server_name*[**\\***instance_name*]  
+ **-Distributor** *nombre_de_servidor*[**\\***nombre_de_instancia*]  
  Es el nombre del distribuidor. Especifique *server_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
   
  **-DistributorDeadlockPriority** [**-1**|**0**|**1**]  
  Es la prioridad de la conexión del Agente de instantáneas al distribuidor cuando se produce un interbloqueo. Este parámetro se especifica para resolver interbloqueos que se pueden producir entre las aplicaciones de usuario y el Agente de instantáneas durante la generación de instantáneas.  
   
-|Valor DistributorDeadlockPriority|Descripción|  
+|Valor DistributorDeadlockPriority|Description|  
 |---------------------------------------|-----------------|  
 |**-1**|Cuando se produce un interbloqueo en el distribuidor, tienen prioridad las aplicaciones distintas del Agente de instantáneas.|  
 |**0** (predeterminado)|No se asigna prioridad.|  
@@ -131,13 +132,13 @@ snapshot [ -?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Es el nivel de cifrado de Capa de sockets seguros (SSL) que usa el Agente de instantáneas cuando realiza conexiones.  
   
-|Valor de EncryptionLevel|Descripción|  
+|Valor de EncryptionLevel|Description|  
 |---------------------------|-----------------|  
 |**0**|Especifica que no se utiliza SSL.|  
 |**1**|Especifica que se utiliza SSL, pero el agente no comprueba que un emisor confiable haya firmado el certificado del servidor SSL.|  
 |**2**|Especifica que se usa SSL y que se ha comprobado el certificado.|  
   
- Para obtener más información, vea [Security Overview &#40;Replication&#41;](../../../relational-databases/replication/security/security-overview-replication.md) (Información general de seguridad &#40;replicación&#41;).  
+ Para obtener más información, vea [Información general sobre seguridad &#40;replicación&#41;](../../../relational-databases/replication/security/security-overview-replication.md).  
   
  **-FieldDelimiter** *field_delimiter*  
  Es el carácter o secuencia de caracteres que marca el fin de un campo en el archivo de datos de copia masiva de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El valor predeterminado es \n\<x$3>\n.  
@@ -145,7 +146,7 @@ snapshot [ -?]
  **-HistoryVerboseLevel** [ **1**| **2**| **3**]  
  Especifica la cantidad de historial registrado durante una operación de instantánea. Puede minimizar el efecto sobre el rendimiento del registro del historial seleccionando **1**.  
   
-|Valor HistoryVerboseLevel|Descripción|  
+|Valor HistoryVerboseLevel|Description|  
 |-------------------------------|-----------------|  
 |**0**|Los mensajes de progreso se escriben en la consola o bien en un archivo de resultados. Los registros del historial no se registran en la base de datos de distribución.|  
 |**1**|Siempre actualiza un mensaje del historial anterior del mismo estado (inicio, progreso, éxito, etc.). Si no existe ningún registro anterior con el mismo estado, inserta un nuevo registro.|  
@@ -158,7 +159,7 @@ snapshot [ -?]
 > [!NOTE]  
 >  Este parámetro se usa para el ajuste del rendimiento de **bcp** en un publicador de Oracle.  
   
- -**HRBcpBlockSize***block_size*  
+ -**HRBcpBlockSize***tamaño_de_bloque*  
  Es el tamaño, en kilobytes (KB), de cada bloque de datos de **bcp** . El valor predeterminado es 64 KB. **HRBcpBlocks** solamente se usa con publicaciones de Oracle.  
   
 > [!NOTE]  
@@ -191,7 +192,7 @@ snapshot [ -?]
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
  Especifica si el resultado debería ser detallado.  
   
-|Valor OutputVerboseLevel|Descripción|  
+|Valor OutputVerboseLevel|Description|  
 |------------------------------|-----------------|  
 |**0**|Solo se imprimen los mensajes de error.|  
 |**1** (predeterminado)|Se imprimen todos los mensajes de informe de progreso (predeterminado).|  
@@ -204,7 +205,7 @@ snapshot [ -?]
 >  No cambie el tamaño de los paquetes a menos que esté seguro de que mejorará el rendimiento. En la mayoría de las aplicaciones, el tamaño más conveniente de los paquetes es el tamaño predeterminado.  
   
  **-ProfileName** *profile_name*  
- Especifica un perfil de agente para utilizar para los parámetros del agente. Si **ProfileName** es NULL, el perfil de agente se deshabilita. Si no se especifica **ProfileName** , se utiliza el perfil predeterminado para el tipo de agente. Para obtener información, vea [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md) (Perfiles del Agente de replicación).  
+ Especifica un perfil de agente para utilizar para los parámetros del agente. Si **ProfileName** es NULL, el perfil de agente se deshabilita. Si no se especifica **ProfileName** , se utiliza el perfil predeterminado para el tipo de agente. Para obtener información, vea [Perfiles del Agente de replicación](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
  **-PublisherDB** *publisher_database*  
  Es el nombre de la base de datos de publicación. *Este parámetro no se admite en publicadores de Oracle*.  
@@ -212,19 +213,19 @@ snapshot [ -?]
  **-PublisherDeadlockPriority** [**-1**|**0**|**1**]  
  Es la prioridad de la conexión del Agente de instantáneas al publicador cuando se produce un interbloqueo. Este parámetro se especifica para resolver interbloqueos que se pueden producir entre las aplicaciones de usuario y el Agente de instantáneas durante la generación de instantáneas.  
   
-|Valor PublisherDeadlockPriority|Descripción|  
+|Valor PublisherDeadlockPriority|Description|  
 |-------------------------------------|-----------------|  
 |**-1**|Cuando se produce un interbloqueo en el publicador, tienen prioridad las aplicaciones distintas del Agente de instantáneas.|  
 |**0** (predeterminado)|No se asigna prioridad.|  
 |**1**|El Agente de instantáneas tiene la prioridad cuando se produce un interbloqueo en el publicador.|  
   
- **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
- Especifica la instancia del asociado de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que participa en una sesión de creación de reflejo de la base de datos con la base de datos de publicación. Para obtener más información, vea [Database Mirroring and Replication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
+ **-PublisherFailoverPartner** *nombre_de_servidor*[**\\***nombre_de_instancia*]  
+ Especifica la instancia del asociado de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que participa en una sesión de creación de reflejo de la base de datos con la base de datos de publicación. Para obtener más información, vea [Replicación y creación de reflejo de la base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherLogin** *publisher_login*  
  Es el inicio de sesión que se usa al conectar con el publicador mediante autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- **-PublisherPassword**  *publisher_password*  
+ **-PublisherPassword**  *contraseña_de_publicador*  
  Es la contraseña que se usa al conectar con el publicador mediante autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . .  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
@@ -245,14 +246,14 @@ snapshot [ -?]
  \- **UsePerArticleContentsView** *vistaDeContenidoDeUsoPorArtículo*  
  Este parámetro ha quedado desusado y solamente se admite por compatibilidad con versiones anteriores.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 > [!IMPORTANT]  
 >  Si ha instalado el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para que se ejecute en una cuenta de sistema local en lugar de hacerlo en una cuenta de usuario de dominio (el valor predeterminado), el servicio solamente puede tener acceso al equipo local. Si el Agente de instantáneas que se ejecuta en el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se configura para usar el modo de autenticación de Windows cuando inicia sesión en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el Agente de instantáneas devuelve un error. La configuración predeterminada es la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Para iniciar el Agente de instantáneas, ejecute **snapshot.exe** desde el símbolo del sistema. Para obtener información, vea [Aplicaciones ejecutables del Agente de replicación](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administración del Agente de replicación](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

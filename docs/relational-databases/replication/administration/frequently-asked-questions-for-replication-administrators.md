@@ -8,23 +8,24 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - administering replication, frequently asked questions
 - replication [SQL Server], administering
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
-caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 89d5ee0f084b48c48a116bf983770e6dbb55bf94
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c4514baae490912c82b2c8b8b34e7f5f780570a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Preguntas más frecuentes para administradores de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Las siguientes preguntas y respuestas proporcionan instrucciones sobre las diversas tareas que deben ejecutar los administradores de bases de datos replicadas.  
@@ -48,9 +49,9 @@ ms.lasthandoff: 11/17/2017
 ### <a name="when-is-a-subscription-available-when-can-the-subscription-database-be-used"></a>¿Cuándo está disponible una suscripción? ¿Cuándo se puede utilizar la base de datos de suscripciones?  
  Una suscripción está disponible después de haber aplicado la instantánea a la base de datos de suscripciones. Aunque se puede obtener acceso a la base de datos de suscripciones con anterioridad, la base de datos no se debe utilizar hasta que se haya aplicado la instantánea. Utilice el Monitor de replicación para comprobar el estado de la aplicación y generación de instantáneas:  
   
--   El Agente de instantáneas genera la instantánea. Vea el estado de la generación de instantáneas en la pestaña **Agentes** de una publicación en el Monitor de replicación. Para más información, vea [Ver información y realizar tareas para los agentes asociados a una publicación &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+-   El Agente de instantáneas genera la instantánea. Vea el estado de la generación de instantáneas en la pestaña **Agentes** de una publicación en el Monitor de replicación. Para obtener más información, vea [Ver información y realizar tareas para los agentes asociados a una publicación &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
   
--   La instantánea la aplica el Agente de distribución o el Agente de mezcla. Vea el estado de la aplicación de instantáneas en la página **Agente de distribución** o **Agente de mezcla** del Monitor de replicación. Para más información, vea [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+-   La instantánea la aplica el Agente de distribución o el Agente de mezcla. Vea el estado de la aplicación de instantáneas en la página **Agente de distribución** o **Agente de mezcla** del Monitor de replicación. Para obtener más información, vea [Ver información y realizar tareas para los agentes asociados a una suscripción &#40;Monitor de replicación&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ### <a name="what-happens-if-the-snapshot-agent-has-not-completed-when-the-distribution-or-merge-agent-starts"></a>¿Qué ocurre si el Agente de instantáneas no se ha completado cuando se inician el Agente de distribución o el Agente de mezcla?  
  Esto no causa ningún error si el Agente de distribución o el Agente de mezcla se ejecutan al mismo tiempo que el Agente de instantáneas. No obstante, debe tener en cuenta lo siguiente:  
@@ -139,14 +140,14 @@ ms.lasthandoff: 11/17/2017
   
 -   Para artículos de publicaciones que utilizan instantáneas en modo de carácter (que se utilizan para los que no son suscriptores de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y para los suscriptores de [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ): de manera predeterminada, el propietario se deja en blanco. Como valor predeterminado del propietario se utiliza el propietario asociado con la cuenta utilizada por el Agente de distribución o el Agente de mezcla para conectarse con el suscriptor.  
   
- El propietario del objeto se puede cambiar mediante el cuadro de diálogo **Propiedades del artículo: \<***artículo***>** y mediante los siguientes procedimientos almacenados: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** y **sp_changemergearticle**. Para más información, vea [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definir un artículo](../../../relational-databases/replication/publish/define-an-article.md) y [Ver y modificar las propiedades de un artículo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ El propietario del objeto se puede cambiar mediante el cuadro de diálogo **Propiedades del artículo - \<***Artículo***>** y mediante los siguientes procedimientos almacenados: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** y **sp_changemergearticle**. Para más información, vea [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definir un artículo](../../../relational-databases/replication/publish/define-an-article.md) y [Ver y modificar las propiedades de un artículo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>¿Cómo pueden configurarse las concesiones en la base de datos de suscripciones para que coincidan con las de la base de datos de publicaciones?  
  De manera predeterminada, la replicación no ejecuta instrucciones GRANT en la base de datos de suscripciones. Si desea que los permisos de la base de datos de suscripciones coincidan con los de la base de datos de publicaciones, utilice uno de los siguientes métodos:  
   
 -   Ejecute instrucciones GRANT directamente en la base de datos de suscripciones.  
   
--   Utilice un script posterior a una instantánea para ejecutar las instrucciones. Para más información, vea [Ejecutar scripts antes y después de aplicar la instantánea](../../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).  
+-   Utilice un script posterior a una instantánea para ejecutar las instrucciones. Para obtener más información, consulte [Ejecutar scripts antes y después de aplicar la instantánea](../../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).  
   
 -   Utilice el procedimiento almacenado [sp_addscriptexec](../../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md) para ejecutar las instrucciones.  
   
@@ -195,7 +196,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="replication-maintenance"></a>Mantenimiento de la replicación  
   
 ### <a name="how-do-i-determine-if-the-data-at-subscribers-is-synchronized-with-data-at-the-publisher"></a>¿Cómo se determina si los datos de los suscriptores están sincronizados con los del publicador?  
- Utilice la validación. La validación informa de si un suscriptor determinado está sincronizado con el publicador. Para más información, vea [Validar datos replicados](../../../relational-databases/replication/validate-replicated-data.md). La validación no proporciona información acerca de qué filas no están sincronizadas correctamente, pero la utilidad [tablediff](../../../tools/tablediff-utility.md) sí.  
+ Utilice la validación. La validación informa de si un suscriptor determinado está sincronizado con el publicador. Para obtener más información, vea [Validar datos replicados](../../../relational-databases/replication/validate-replicated-data.md). La validación no proporciona información acerca de qué filas no están sincronizadas correctamente, pero la utilidad [tablediff](../../../tools/tablediff-utility.md) sí.  
   
 ### <a name="how-do-i-add-a-table-to-an-existing-publication"></a>¿Cómo se agrega una tabla a una publicación existente?  
  Para agregar una tabla (u otro objeto), no es necesario detener la actividad en las bases de datos de publicaciones o suscripciones. Agregue una tabla a una publicación a través del cuadro de diálogo **Propiedades de la publicación: \<Publicación>** o los procedimientos almacenados [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) y [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Para más información, vea [Agregar y quitar artículos de publicaciones existentes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
@@ -204,10 +205,10 @@ ms.lasthandoff: 11/17/2017
  Quite una tabla de la publicación mediante [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) o el cuadro de diálogo **Propiedades de la publicación: \<Publicación>**. No se pueden quitar artículos de publicaciones transaccionales o de instantáneas después de que se hayan agregado suscripciones; es preciso quitar primero las suscripciones. Para más información, vea [Agregar y quitar artículos de publicaciones existentes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="what-actions-require-subscriptions-to-be-reinitialized"></a>¿Qué acciones exigen que las suscripciones se reinicialicen?  
- Existen una serie de cambios de publicaciones y artículos que requieren que las suscripciones se reinicialicen. Para más información, vea [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
+ Existen una serie de cambios de publicaciones y artículos que requieren que las suscripciones se reinicialicen. Para obtener más información, vea [Cambiar las propiedades de la publicación y de los artículos](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 ### <a name="what-actions-cause-snapshots-to-be-invalidated"></a>¿Qué acciones provocan que las instantáneas se invaliden?  
- Existen una serie de cambios de publicaciones y artículos que invalidan las instantáneas y exigen que se generen otras nuevas. Para más información, vea [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
+ Existen una serie de cambios de publicaciones y artículos que invalidan las instantáneas y exigen que se generen otras nuevas. Para obtener más información, vea [Cambiar las propiedades de la publicación y de los artículos](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 ### <a name="how-do-i-remove-replication"></a>¿Cómo se quita la replicación?  
  Las acciones necesarias para quitar la replicación de una base de datos dependen de si la base de datos tenía la función de base de datos de publicaciones, base de datos de suscripciones o ambas.  
@@ -234,7 +235,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="does-replication-work-in-conjunction-with-clustering"></a>¿Funciona la replicación junto con la agrupación en clústeres?  
  Sí. No tienen que tenerse en cuenta consideraciones especiales porque todos los datos se almacenan en un conjunto de discos en el clúster.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administración &#40;replicación&#41;](../../../relational-databases/replication/administration/administration-replication.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   

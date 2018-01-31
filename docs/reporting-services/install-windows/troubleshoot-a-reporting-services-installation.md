@@ -1,7 +1,7 @@
 ---
 title: "Solución de problemas en una instalación de Reporting Services | Microsoft Docs"
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.service: 
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b7829577ad1b8b1a1eedd883373c0805a267a4ad
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d71e0f0bfd70ec17552a6114c4378bd79bdfff25
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Solución de problemas en una instalación de Reporting Services
 
@@ -274,12 +274,12 @@ ms.lasthandoff: 01/09/2018
 >  Una modificación incorrecta del Registro puede provocar daños graves en el sistema. Antes de efectuar cambios en el Registro, debe realizar una copia de seguridad de los datos importantes del equipo.  
   
 ##  <a name="bkmk_additional"></a> Recursos adicionales  
- A continuación se indican recursos adicionales que puede revisar como ayuda para la solución de problemas:  
+ A continuación se indican recursos adicionales que puede consultar a modo de ayuda para solucionar problemas:  
   
--   Wiki de TechNet: temas de solución de problemas [Solución de problemas de SQL Server Reporting Services (SSRS) en el modo integrado de SharePoint](http://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
+-   Wiki de TechNet: [Solución de problemas de SQL Server Reporting Services (SSRS) en el modo integrado de SharePoint 2010](http://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
   
 -   [Foro de SQL Server Reporting Services](http://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
   
- ![Configuración de SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "Configuración de SharePoint") [Enviar comentarios e información de contacto a través de Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+-   ¿Tiene algún comentario o más preguntas? Visite [UserVoice de Microsoft SQL Server](https://feedback.azure.com/forums/908035-sql-server).  
   
   

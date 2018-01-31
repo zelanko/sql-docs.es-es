@@ -8,7 +8,8 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -31,16 +32,16 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 772217a434d69d8849fdaefd66108365c25e46e7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f1082fb2dc121b3751a14b4cf1e291c8da9425ab
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-logging"></a>Registro de Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye proveedores de registro que se pueden usar para implementar registros en paquetes, contenedores y tareas. Con los registros, se puede capturar información de tiempo de ejecución sobre un paquete, lo que le ayuda a auditar y solucionar los problemas de un paquete cada vez que se ejecuta. Por ejemplo, un registro puede capturar el nombre del operador que ejecutó el paquete y la hora en que el paquete empezó y terminó.  
@@ -238,7 +239,7 @@ ms.lasthandoff: 11/20/2017
   
     -   Para el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], utilice un administrador de conexiones de archivos.  
   
-    -   Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilice un administrador de conexiones OLE DB. Para más información, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+    -   Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilice un administrador de conexiones OLE DB. Para más información, vea [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
     -   Para el registro de eventos de Windows no haga nada. [!INCLUDE[ssIS](../../includes/ssis-md.md)] crea automáticamente el registro.  
   
@@ -285,7 +286,7 @@ ms.lasthandoff: 11/20/2017
 ###  <a name="container"></a> Configurar las opciones en el panel Contenedores  
  Utilice el panel **Contenedores** del cuadro de diálogo **Configurar registros de SSIS** para habilitar el paquete y sus contenedores para registro.  
   
-#### <a name="options"></a>Opciones  
+#### <a name="options"></a>.  
  **Contenedores**  
  Active las casillas en la vista jerárquica para habilitar el paquete y sus contenedores para registro:  
   
@@ -300,7 +301,7 @@ ms.lasthandoff: 11/20/2017
 ###  <a name="provider"></a> Configurar las opciones en la pestaña Proveedores y registros  
  Use la pestaña **Proveedores y registros** del cuadro de diálogo **Configurar registros de SSIS** con el fin de crear y configurar registros para la captura de eventos en tiempo de ejecución.  
   
-#### <a name="options"></a>Opciones  
+#### <a name="options"></a>.  
  **Tipo de proveedor**  
  Seleccione un tipo de proveedor de registro de la lista.  
   
@@ -310,7 +311,7 @@ ms.lasthandoff: 11/20/2017
  **Nombre**  
  Use las casillas para habilitar o deshabilitar registros para contenedores o tareas que se han seleccionado en el panel **Contenedores** del cuadro de diálogo **Configurar registros de SSIS** . El campo del nombre se puede modificar. Utilice el nombre predeterminado para el proveedor o escriba un nombre descriptivo único.  
   
- **Description**  
+ **Descripción**  
  El campo de la descripción se puede modificar. Haga clic en la descripción predeterminada del registro y, a continuación, modifíquela.  
   
  **Configuración**  
@@ -318,23 +319,23 @@ ms.lasthandoff: 11/20/2017
   
  Temas relacionados: [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) , [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
- **Delete**  
+ **Eliminar**  
  Seleccione un proveedor de registro y haga clic en **Eliminar**.  
   
 ###  <a name="detail"></a> Configurar las opciones en la pestaña Detalles  
  Utilice la pestaña **Detalles** del cuadro de diálogo **Configurar registros de SSIS** para especificar los eventos que se van a habilitar para el registro y los detalles de información que se van a registrar. La información que selecciona se aplica a todos los proveedores de registro del paquete. Por ejemplo, no puede escribir cierta información en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e información diferente en un archivo de texto.  
   
-#### <a name="options"></a>Opciones  
+#### <a name="options"></a>.  
  **Eventos**  
  Habilite o deshabilite eventos para el registro.  
   
- **Description**  
+ **Descripción**  
  Vea una descripción del evento.  
   
  **Avanzadas**  
  Seleccione o borre eventos para el registro, y seleccione o borre información que se va a registrar para cada evento. Haga clic en **Básicas** para ocultar todos los detalles de registro a excepción de la lista de eventos. La información siguiente está disponible para el registro:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Computer**|Nombre del equipo en el que ha tenido lugar el evento registrado.|  
 |**Operador**|El nombre de usuario de la persona que ha iniciado el paquete.|  
@@ -415,7 +416,7 @@ ms.lasthandoff: 11/20/2017
 |Nivel de registro|Description|  
 |-------------------|-----------------|  
 |None|El registro está desactivado. Solo se registra el estado de ejecución del paquete.|  
-|Básico|Se registran todos los eventos, excepto los eventos personalizados y de diagnóstico. Es el valor predeterminado.|  
+|Básico|Se registran todos los eventos, excepto los eventos personalizados y de diagnóstico. Este es el valor predeterminado.|  
 |RuntimeLineage|Recopila los datos necesarios para realizar un seguimiento de la información de linaje en el flujo de datos. Puede analizar esta información de linaje para asignar la relación de linaje entre las tareas. Los ISV y los desarrolladores pueden generar herramientas de asignación de linaje personalizadas con esta información.|  
 |Rendimiento|Solo se registran las estadísticas de rendimiento, y los eventos OnError y OnWarning.<br /><br /> El informe **Rendimiento de la ejecución** muestra el Tiempo activo y el TIempo total para los componentes de flujo de datos del paquete. Esta información está disponible cuando el nivel de registro de la última ejecución del paquete se estableció en **Performance** (Rendimiento) o **Verbose**(Detallado). Para obtener más información, consulte [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).<br /><br /> La vista [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) muestra las horas de inicio y de finalización de los componentes de flujo de datos, para cada fase de una ejecución. Esta vista muestra esta información para estos componentes solo cuando el nivel de registro de la ejecución del paquete se estableció en **Rendimiento** o en **Detallado**.|  
 |Verbose|Se registran todos los eventos, incluidos los eventos personalizados y de diagnóstico.<br /><br /> Los eventos personalizados incluyen los eventos registrados por las tareas de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obtener más información sobre los eventos personalizados, vea [Custom Messages for Logging](#custom_messages).<br /><br /> Un ejemplo de un evento de diagnóstico es el evento **DiagnosticEx** . Cada vez que una tarea Ejecutar paquete ejecuta un paquete secundario, este evento captura los valores de parámetro que se pasan a los paquetes secundarios.<br /><br /> El evento **DiagnosticEx** también le ayuda a obtener los nombres de las columnas en las que se producen errores de nivel de fila. Este evento escribe un mapa de linaje de flujo de datos en el registro. Luego, puede buscar el nombre de columna en este mapa de linaje mediante el identificador de columna que captura una salida de error.  Para obtener más información, vea [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md) (Control de errores en los datos).<br /><br /> El valor de la columna de mensaje para **DiagnosticEx** es texto XML. Para ver el texto del mensaje de una ejecución de paquete, ejecute una consulta en la vista [catalog.operation_messages &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md). Tenga en cuenta que el evento **DiagnosticEx** no conserva el espacio en blanco en la salida XML para reducir el tamaño del registro. Para mejorar la legibilidad, copie el registro en un editor XML (en Visual Studio, por ejemplo) que admita el formato XML y el resaltado de sintaxis.<br /><br /> La vista [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) muestra una fila cada vez que un componente de flujo de datos envía datos a un componente de nivel inferior para una ejecución del paquete. El nivel de registro se debe establecer en **Detallado** para capturar esta información en la vista.|  
@@ -678,7 +679,7 @@ SQL Server Integration Services proporciona un amplio conjunto de eventos person
 |---------------|-----------------|  
 |**XMLOperation**|Proporciona información sobre la operación que la tarea realiza.|  
 
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  La lista siguiente contiene vínculos a temas que muestran cómo realizar tareas relacionadas con la característica de registro.  
   
 -   [Eventos registrados por un paquete de Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  

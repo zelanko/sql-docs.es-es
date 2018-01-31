@@ -1,35 +1,13 @@
----
-title: Clase de eventos Auto Stats | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
-ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: Auto Stats event class
-ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c0da505b6535f2c1f8c89ed719b5b0f41f42168a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+title: "Clase de eventos Auto Stats | Microsoft Docs" ms.custom: "" ms.date: "03/14/2017" ms.prod: "sql-non-specified" ms.prod_service: "database-engine, sql-database" ms.service: "" ms.component: "event-classes" ms.reviewer: "" ms.suite: "sql" ms.technology: 
+  - "database-engine" ms.tgt_pltfrm: "" ms.topic: "article" helpviewer_keywords: 
+  - "Clase de evento Auto Stats" ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e caps.latest.revision: 34 author: "JennieHubbard" ms.author: "jhubbard" manager: "jhubbard" ms.workload: "Inactive"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats [clase de eventos]
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de evento **Auto Stats** indica que se ha producido una actualización automática del índice y de las estadísticas de las columnas.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de evento **Auto Stats** indica que se ha producido una actualización automática del índice y de las estadísticas de las columnas.  **Auto Stats** también se desencadena cuando se cargan las estadísticas para que las use el optimizador.
   
 ## <a name="auto-stats-event-class-data-columns"></a>Columnas de datos de la clase de evento Auto Stats  
   
-|Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
+|Nombre de columna de datos|Tipo de datos|Description|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
 |**ClientProcessID**|**int**|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  
@@ -38,8 +16,8 @@ ms.lasthandoff: 11/17/2017
 |**Duración**|**bigint**|Tiempo (en microsegundos) que tarda el evento.|13|Sí|  
 |**EndTime**|**datetime**|Hora a la que finalizó el evento.|15|Sí|  
 |**Error**|**int**|Número de error de un evento dado. Con frecuencia, es el número de error almacenado en la vista de catálogo **sys.messages** .|31|Sí|  
-|**EventClass**|**int**|Tipo de evento = 58.|27|No|  
-|**EventSequence**|**int**|Secuencia de un evento determinado de la solicitud.|51|No|  
+|**EventClass**|**int**|Tipo de evento = 58.|27|no|  
+|**EventSequence**|**int**|Secuencia de un evento determinado de la solicitud.|51|no|  
 |**EventSubClass**|**int**|Tipo de subclase de evento:<br /><br /> 1: Estadísticas creadas o actualizadas de forma sincrónica; la columna **TextData** indica qué estadísticas y si se han creado o actualizado.<br /><br /> 2: Actualización de estadísticas asincrónica; trabajo en cola.<br /><br /> 3: Actualización de estadísticas asincrónica; trabajo en inicio.<br /><br /> 4: Actualización de estadísticas asincrónica; trabajo finalizado.|21|Sí|  
 |**GroupID**|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
@@ -53,7 +31,7 @@ ms.lasthandoff: 11/17/2017
 |**NTUserName**|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |**ObjectID**|**int**|Identificador del objeto asignado por el sistema.|22|Sí|  
 |**IdSolicitud**|**int**|Id. de la solicitud que contiene la instrucción.|49|Sí|  
-|**ServerName**|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
+|**ServerName**|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|no|  
 |**SessionLoginName**|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, **SessionLoginName** muestra inicioDeSesión1 y **LoginName** muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |**SPID**|**int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
@@ -62,7 +40,7 @@ ms.lasthandoff: 11/17/2017
 |**TransactionID**|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |**Tipo**|**int**|Tipo de trabajo.|57|Sí|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

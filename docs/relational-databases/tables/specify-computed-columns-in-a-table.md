@@ -8,21 +8,23 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: computed columns, define
+helpviewer_keywords:
+- computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
-caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 99d055062a15f35f31a44176ece3af03e3dc5771
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 95980febab6a2801ca2f751a0cadd22f14991c59
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Especificar columnas calculadas en una tabla
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Limitations"></a> Limitaciones y restricciones  
   
@@ -53,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Requiere el permiso ALTER en la tabla.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -71,9 +73,9 @@ ms.lasthandoff: 11/17/2017
     > [!IMPORTANT]  
     >  Cuando una fórmula combina dos expresiones de tipos de datos distintos, las reglas de prioridad de tipo de datos especifican que el tipo de datos con la prioridad menor se convierta al tipo de datos con la prioridad mayor. Si la conversión no es una conversión implícita admitida, se devuelve el error "`Error validating the formula for column column_name.`". Use la función CAST o CONVERT para resolver el conflicto de tipos de datos. Por ejemplo, si una columna de tipo **nvarchar** se combina con una de tipo **int**, el tipo entero debe convertirse a **nvarchar** como se muestra en esta fórmula: `('Prod'+CONVERT(nvarchar(23),ProductID))`. Para obtener más información, vea [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-5.  Indique si los datos se van a conservar; para ello, elija **Sí** o **No** en el menú desplegable de la propiedad secundaria **Es persistente**.  
+5.  Indique si los datos se van a conservar; para ello, elija **Sí** o **No** en el menú desplegable de la propiedad secundaria **Es persistente** .  
   
-6.  En el menú **Archivo** , haga clic en **Guardar***table name*.  
+6.  En el menú **Archivo**, haga clic en **Guardar***nombre de tabla*.  
   
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>Para agregar una definición de columna calculada a una columna existente  
   

@@ -1,14 +1,15 @@
 ---
 title: "Creación de vistas indexadas | Microsoft Docs"
 ms.custom: 
-ms.date: 05/27/2016
+ms.date: 01/22/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-views
+ms.technology:
+- dbe-views
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - indexed views [SQL Server]
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8c82b7d40310c22d9c064367ba5437106ff32422
-ms.sourcegitcommit: 9b8c7883a6c5ba38b6393a9e05367fd66355d9a9
+ms.openlocfilehash: 16d6097ac129874ac5fb7f27118e499d86606ba7
+ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="create-indexed-views"></a>Crear vistas indizadas
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] En este tema se describe cómo crear índices en una vista. El primer índice creado en una vista debe ser un índice clúster único. Después de haber creado el índice clúster único, puede crear más índices no clúster. La creación de un índice clúster único en una vista mejora el rendimiento de la consulta porque la vista se almacena en la base de datos de la misma manera que se almacena una tabla con un índice clúster. El optimizador de consultas puede utilizar vistas indizadas para acelerar la ejecución de las consultas. No es necesario hacer referencia a la vista en la consulta para que el optimizador tenga en cuenta esa vista al hacer una sustitución.  
@@ -36,18 +37,20 @@ ms.lasthandoff: 01/04/2018
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
  Para crear una vista indizada, es necesario seguir los pasos descritos a continuación, que son fundamentales para la correcta implementación de la vista indizada:  
   
-1.  Compruebe que las opciones SET sean correctas para todas las tablas existentes a las que se hará referencia en la vista.  
-  
+1.  Compruebe que las opciones SET sean correctas para todas las tablas existentes a las que se hará referencia en la vista.   
 2.  Compruebe que las opciones SET de la sesión estén establecidas correctamente antes de crear cualquier tabla y la vista.  
-  
 3.  Compruebe que la definición de vista sea determinista.  
-  
-4.  Cree la vista mediante la opción WITH SCHEMABINDING.  
-  
+4.  Cree la vista con la opción `WITH SCHEMABINDING`.  
 5.  Cree el índice clúster único en la vista.  
+
+> [!IMPORTANT]
+> Al ejecutar DML<sup>1</sup> en una tabla a la que hace referencia un gran número de vistas indexadas, o bien menos vistas indexadas pero muy complejas, dichas vistas indexadas a las que se hace referencia deberán actualizarse igualmente. Como resultado, el rendimiento de la consulta DML se puede degradar notablemente o, en algunos casos, puede que tampoco se genere un plan de consulta.
+> En estos casos, pruebe las consultas DML antes de usarlas en entornos de producción, analice el plan de consulta y ajuste o simplifique la instrucción DML.
+>
+> <sup>1</sup> Como las operaciones UPDATE, DELETE o INSERT.
   
 ###  <a name="Restrictions"></a> Opciones SET requeridas para vistas indizadas  
- La evaluación de la misma expresión puede producir resultados diferentes en el [!INCLUDE[ssDE](../../includes/ssde-md.md)] cuando hay diferentes opciones SET activas cuando se ejecuta la consulta. Por ejemplo, después de establecer la opción SET CONCAT_NULL_YIELDS_NULL en ON, la expresión **'**abc**'** + NULL devuelve el valor NULL, aunque al establecer CONCAT_NULL_YIEDS_NULL en OFF, la misma expresión genera **'**abc**'**.  
+ La evaluación de la misma expresión puede producir resultados diferentes en el [!INCLUDE[ssDE](../../includes/ssde-md.md)] cuando hay diferentes opciones SET activas cuando se ejecuta la consulta. Por ejemplo, después de establecer la opción SET `CONCAT_NULL_YIELDS_NULL` en ON, la expresión **"**abc**"** + NULL devuelve el valor NULL, aunque al establecer `CONCAT_NULL_YIEDS_NULL` en OFF, la misma expresión genera **"**abc**"**.  
   
  Para asegurar el correcto mantenimiento de las vistas y la generación de resultados coherentes, las vistas indizadas requieren valores fijos para varias opciones SET. Las opciones SET de la tabla siguiente se deben establecer en los valores que se muestran en la columna **Valor requerido** siempre que se den las siguientes condiciones:  
   
@@ -63,43 +66,40 @@ ms.lasthandoff: 01/04/2018
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
-    |ANSI_WARNINGS*|ON|ON|ON|OFF|  
+    |ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|  
     |ARITHABORT|ON|ON|OFF|OFF|  
     |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
     |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
     |QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
   
-     *Setting ANSI_WARNINGS to ON implicitly sets ARITHABORT to ON.  
+     <sup>1</sup> Si se establece `ANSI_WARNINGS` en ON, `ARITHABORT` se establece implícitamente en ON.  
   
- Si utiliza una conexión de servidor OLE DB u ODBC, el único valor que se debe modificar es la configuración de ARITHABORT. Todos los valores de DB-Library se deben establecer correctamente en el nivel de servidor mediante **sp_configure** o desde la aplicación a través del comando SET.  
+ Si usa una conexión de servidor OLE DB u ODBC, el único valor que se debe modificar es la configuración de `ARITHABORT`. Todos los valores de DB-Library se deben establecer correctamente en el nivel de servidor mediante **sp_configure** o desde la aplicación a través del comando SET.  
   
 > [!IMPORTANT]  
->  Se recomienda encarecidamente que establezca la opción de usuario ARITHABORT en ON en todo el servidor en cuanto se cree la primera vista indizada o el primer índice en una columna calculada en cualquier base de datos del servidor.  
+> Se recomienda encarecidamente que establezca la opción de usuario `ARITHABORT` en ON en todo el servidor en cuanto se cree la primera vista indizada o el primer índice en una columna calculada en cualquier base de datos del servidor.  
   
 ### <a name="deterministic-views"></a>Vistas deterministas  
- La definición de una vista indizada debe ser determinista. Una vista es determinista si todas las expresiones de la lista de selección y las cláusulas WHERE y GROUP BY son deterministas. Las expresiones deterministas siempre devuelven el mismo resultado cada vez que son evaluadas con un conjunto específico de valores de entrada. Solo las funciones deterministas pueden participar en expresiones deterministas. Por ejemplo, la función DATEADD es determinista porque siempre devuelve el mismo resultado para cualquier conjunto dado de valores de argumento para sus tres parámetros. GETDATE no es determinista porque siempre se invoca con el mismo argumento, pero el valor que devuelve varía cada vez que se ejecuta.  
+ La definición de una vista indizada debe ser determinista. Una vista es determinista si todas las expresiones de la lista de selección y las cláusulas `WHERE` y `GROUP BY` son deterministas. Las expresiones deterministas siempre devuelven el mismo resultado cada vez que son evaluadas con un conjunto específico de valores de entrada. Solo las funciones deterministas pueden participar en expresiones deterministas. Por ejemplo, la función `DATEADD` es determinista porque siempre devuelve el mismo resultado para cualquier conjunto dado de valores de argumento para sus tres parámetros. `GETDATE` no es determinista porque siempre se invoca con el mismo argumento, pero el valor que devuelve varía cada vez que se ejecuta.  
   
  Para determinar si una columna de la vista es determinista, use la propiedad **IsDeterministic** de la función [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) . Para determinar si una columna determinista de una vista con enlaces de esquema es precisa, use la propiedad **IsPrecise** de la función COLUMNPROPERTY. COLUMNPROPERTY devuelve 1 si el valor es TRUE, 0 si es FALSE y NULL en entradas no válidas. Esto significa que la columna no es determinista ni precisa.  
   
  Aun cuando una expresión sea determinista, si contiene expresiones de tipo float, es posible que un resultado exacto dependa de la arquitectura de procesador o de la versión de microcódigo. Para asegurar la integridad de los datos, estas expresiones solo pueden participar como columnas que no son de clave de vistas indizadas. Las expresiones deterministas que no contienen expresiones flotantes se denominan expresiones precisas. Solo las expresiones deterministas precisas pueden participar en columnas de clave y en cláusulas WHERE o GROUP BY de vistas indizadas.  
-  
-> [!NOTE]  
->  No se admiten vistas indexadas con consultas temporales (las consultas que usan la cláusula **FOR SYSTEM_TIME** ).  
-  
+
 ### <a name="additional-requirements"></a>Requisitos adicionales  
  Además de las opciones SET y los requisitos de funciones deterministas, se deben cumplir los requisitos siguientes:  
   
--   El usuario que ejecuta CREATE INDEX debe ser el propietario de la vista.  
+-   El usuario que ejecuta `CREATE INDEX` debe ser el propietario de la vista.  
   
--   Cuando crea el índice, la opción IGNORE_DUP_KEY debe establecerse en OFF (configuración predeterminada).  
+-   Cuando crea el índice, la opción `IGNORE_DUP_KEY` debe establecerse en OFF (configuración predeterminada).  
   
--   En la definición de vista, se debe hacer referencia a las tablas mediante nombres de dos partes, *esquema***.***nombretabla* .  
+-   En la definición de vista, se debe hacer referencia a las tablas mediante nombres de dos partes, *esquema***.***nombredetabla*.  
   
--   Las funciones definidas por el usuario a las que se hace referencia en la vista se deben crear con la opción WITH SCHEMABINDING.  
+-   Las funciones definidas por el usuario a las que se hace referencia en la vista se deben crear con la opción `WITH SCHEMABINDING`.  
   
 -   Para hacer referencia a las funciones definidas por el usuario a las que se hace referencia en la vista, se deben usar nombres de dos partes, *esquema***.***función*.  
   
--   La propiedad de acceso a datos de una función definida por el usuario debe ser NO SQL y la propiedad de acceso externo debe ser NO.  
+-   La propiedad de acceso a datos de una función definida por el usuario debe ser `NO SQL` y la propiedad de acceso externo debe ser `NO`.  
   
 -   Las funciones de Common Language Runtime (CLR) pueden aparecer en la lista de selección de la vista, pero no pueden formar parte de la definición de la clave de índice clúster. Las funciones CLR no pueden aparecer en la cláusula WHERE de la vista ni en la cláusula ON de una operación JOIN en la vista.  
   
@@ -112,7 +112,7 @@ ms.lasthandoff: 01/04/2018
     |DATA ACCESS = NO SQL|Se determina mediante la definición del atributo DataAccess como DataAccessKind.None y del atributo SystemDataAccess como SystemDataAccessKind.None.|  
     |EXTERNAL ACCESS = NO|Esta propiedad tiene el valor predeterminado NO en rutinas CLR.|  
   
--   Esta vista se debe crear utilizando la opción WITH SCHEMABINDING.  
+-   La vista se debe crear mediante la opción `WITH SCHEMABINDING`.  
   
 -   La vista solo debe hacer referencia a tablas base que estén en la misma base de datos que la vista. La vista no puede hacer referencia a otras vistas.  
   
@@ -120,38 +120,43 @@ ms.lasthandoff: 01/04/2018
   
     ||||  
     |-|-|-|  
-    |COUNT|Funciones ROWSET (OPENDATASOURCE, OPENQUERY, OPENROWSET y OPENXML)|Combinaciones externas (LEFT, RIGHT o FULL)|  
-    |Tabla derivada (definida mediante una instrucción SELECT en la cláusula FROM)|Autocombinaciones|Especificar columnas mediante SELECT \* o SELECT *nombre_tabla*.*|  
-    |DISTINCT|STDEV, STDEVP, VAR, VARP o AVG|Expresión de tabla común (CTE)|  
-    |**float**\*, **text**, **ntext**, **image**, **XML**o **filestream** |Subconsulta|Cláusula OVER, que incluye funciones de categoría o de agregado|  
-    |Predicados de texto completo (CONTAIN, FREETEXT)|Función SUM que hace referencia a una expresión que acepta valores NULL|ORDER BY|  
-    |Función de agregado definida por el usuario CLR|ARRIBA|Operadores CUBE, ROLLUP o GROUPING SETS|  
-    |MIN, MAX|Operadores UNION, EXCEPT o INTERSECT|TABLESAMPLE|  
-    |Variables de tabla|OUTER APPLY o CROSS APPLY|PIVOT, UNPIVOT|  
-    |Conjuntos de columnas dispersas|Funciones insertadas o con valores de tabla de múltiples instrucciones|OFFSET|  
-    |CHECKSUM_AGG|||  
+    |`COUNT`|Funciones de ROWSET (`OPENDATASOURCE`, `OPENQUERY`, `OPENROWSET` y `OPENXML`)|Combinaciones `OUTER` (`LEFT`, `RIGHT` o `FULL`)|  
+    |Tabla derivada (definida mediante una instrucción `SELECT` en la cláusula `FROM`)|Autocombinaciones|Especificación de columnas mediante `SELECT *` o `SELECT <table_name>.*`|  
+    |`DISTINCT`|`STDEV`, `STDEVP`, `VAR`, `VARP` o `AVG`|Expresión de tabla común (CTE)|  
+    |Columnas **float**<sup>1</sup>, **text**, **ntext**, **image**, **XML** o **filestream**|Subconsulta|Cláusula `OVER`, que incluye funciones de categoría o de agregado|  
+    |Predicados de texto completo (`CONTAINS`, `FREETEXT`)|Función `SUM` que hace referencia a una expresión que acepta valores NULL|`ORDER BY`|  
+    |Función de agregado definida por el usuario CLR|`TOP`|Operadores `CUBE`, `ROLLUP` o `GROUPING SETS`|  
+    |`MIN`, `MAX`|Operadores `UNION`, `EXCEPT` o `INTERSECT`|`TABLESAMPLE`|  
+    |Variables de tabla|`OUTER APPLY` o `CROSS APPLY`|`PIVOT`, `UNPIVOT`|  
+    |Conjuntos de columnas dispersas|Funciones insertadas (TVF) o con valores de tabla de múltiples instrucciones (MSTVF)|`OFFSET`|  
+    |`CHECKSUM_AGG`|||  
   
-     \*La vista indexada puede contener columnas **float** , aunque no se pueden incluir en la clave de índice agrupado.  
+     <sup>1</sup> La vista indexada puede contener columnas **float**, aunque no se pueden incluir en la clave de índice agrupado.  
   
--   Si GROUP BY está presente, la definición de VIEW debe contener COUNT_BIG(*) y no debe contener HAVING. Estas restricciones GROUP BY solo se pueden aplicar a la definición de vista indizada. Una consulta puede utilizar una vista indizada en su plan de ejecución aun cuando no satisfaga estas restricciones GROUP BY.  
+-   Si `GROUP BY` está presente, la definición de VIEW debe contener `COUNT_BIG(*)`, pero no `HAVING`. Estas restricciones `GROUP BY` solo se pueden aplicar a la definición de vista indizada. Una consulta puede usar una vista indizada en su plan de ejecución aun cuando no satisfaga estas restricciones `GROUP BY`.  
   
--   Si la definición de vista contiene una cláusula GROUP BY, la clave del índice clúster único solo puede hacer referencia a las columnas especificadas en esta cláusula.  
+-   Si la definición de vista contiene una cláusula `GROUP BY`, la clave del índice clúster único solo puede hacer referencia a las columnas especificadas en la cláusula `GROUP BY`.  
   
+> [!IMPORTANT]  
+> No se admiten vistas indexadas con consultas temporales (las consultas que usan la cláusula `FOR SYSTEM_TIME`).  
+
 ###  <a name="Recommendations"></a> Recomendaciones  
- Cuando haga referencia a los literales de cadena **datetime** y **smalldatetime** de las vistas indizadas, se recomienda convertir explícitamente el literal al tipo de datos deseado mediante un estilo de formato de fecha determinista. Para obtener una lista de los estilos de formato de fecha deterministas, vea [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Las expresiones que implican la conversión implícita de cadenas de caracteres a **datetime** o **smalldatetime** se consideran no deterministas. Esto se debe a que los resultados dependen de los valores LANGUAGE y DATEFORMAT de la sesión de servidor. Por ejemplo, los resultados de la expresión `CONVERT (datetime, '30 listopad 1996', 113)` dependen del valor de LANGUAGE porque la cadena '`listopad`' significa distintos meses en distintos idiomas. De forma similar, en la expresión `DATEADD(mm,3,'2000-12-01')`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpretará la cadena `'2000-12-01'` en función del valor de DATEFORMAT.  
-  
- La conversión implícita de los datos de caracteres no Unicode entre intercalaciones también se considera no determinista.  
+ Cuando haga referencia a los literales de cadena **datetime** y **smalldatetime** de las vistas indizadas, se recomienda convertir explícitamente el literal al tipo de datos deseado mediante un estilo de formato de fecha determinista. Para obtener una lista de los estilos de formato de fecha deterministas, vea [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Para obtener más información sobre las expresiones deterministas y no deterministas, consulte la sección [Consideraciones](#nondeterministic) de esta página.
+
+Al ejecutar DML (como UPDATE, DELETE o INSERT) en una tabla a la que hace referencia un gran número de vistas indexadas, o menos vistas indexadas pero muy complejas, dichas vistas indexadas deberán actualizarse igualmente durante la ejecución de DML. Como resultado, el rendimiento de la consulta DML se puede degradar notablemente o, en algunos casos, puede que tampoco se genere un plan de consulta. En estos casos, pruebe las consultas DML antes de usarlas en entornos de producción, analice el plan de consulta y ajuste o simplifique la instrucción DML.
   
 ###  <a name="Considerations"></a> Consideraciones  
  La configuración de la opción **large_value_types_out_of_row** de las columnas de una vista indexada se hereda de la configuración de la columna correspondiente de la tabla base. Este valor se establece mediante [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). La configuración predeterminada de las columnas formadas a partir de expresiones es 0. Esto significa que los tipos de valores grandes se almacenan de forma consecutiva.  
   
  En una tabla con particiones se pueden crear vistas indizadas, en las que a su vez se pueden crear particiones.  
   
- Para evitar que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] use vistas indizadas, incluya la sugerencia OPTION (EXPAND VIEWS) en la consulta. Además, si alguna de las opciones enumeradas no está establecida correctamente, el optimizador no utilizará los índices en las vistas. Para obtener más información sobre la sugerencia OPTION (EXPAND VIEWS), vea [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+ Para evitar que [!INCLUDE[ssDE](../../includes/ssde-md.md)] use vistas indexadas, incluya la sugerencia `OPTION (EXPAND VIEWS)` en la consulta. Además, si alguna de las opciones enumeradas no está establecida correctamente, el optimizador no utilizará los índices en las vistas. Para obtener más información sobre la sugerencia `OPTION (EXPAND VIEWS)`, vea [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
  Si se quita la vista, todos sus índices se quitan. Todos los índices no clúster y las estadísticas creadas automáticamente de una vista se quitan si se quita el índice clúster. Las estadísticas creadas por el usuario de la vista se conservan. Los índices no clúster se pueden quitar individualmente. Quitar el índice clúster de la vista quita el conjunto de resultados almacenado; el optimizador vuelve a procesar la vista como una vista estándar.  
   
  Los índices de las tablas y las vistas se pueden deshabilitar. Cuando se deshabilita un índice clúster de una tabla, también se deshabilitan los índices de las vistas asociadas a la tabla.  
+ 
+<a name="nondeterministic"></a> Las expresiones que implican la conversión implícita de cadenas de caracteres a **datetime** o **smalldatetime** se consideran no deterministas. Esto se debe a que los resultados dependen de los valores LANGUAGE y DATEFORMAT de la sesión de servidor. Por ejemplo, los resultados de la expresión `CONVERT (datetime, '30 listopad 1996', 113)` dependen del valor de LANGUAGE porque la cadena '`listopad`' significa distintos meses en distintos idiomas. De forma similar, en la expresión `DATEADD(mm,3,'2000-12-01')`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpretará la cadena `'2000-12-01'` en función del valor de DATEFORMAT. La conversión implícita de los datos de caracteres no Unicode entre intercalaciones también se considera no determinista.  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -168,7 +173,7 @@ ms.lasthandoff: 01/04/2018
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. El ejemplo crea una vista y un índice en esa vista. Se incluyen dos consultas que utilizan la vista indizada.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     --Set the options to support indexed views.  

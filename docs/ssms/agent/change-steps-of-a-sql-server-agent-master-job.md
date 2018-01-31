@@ -8,20 +8,21 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5de8e702c1ba529814ad3ac974e05a25bf6e7771
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5d6a1d661300b777f799bbe43396bcfd5d29b3e6
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo cambiar los pasos de un trabajo maestro del Agente SQL Server en [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] o [!INCLUDE[tsql](../../includes/tsql_md.md)].  
@@ -60,15 +61,15 @@ A menos que sea miembro del rol fijo de servidor **sysadmin** , solo podrá modi
   
 3.  Haga clic en el signo más para expandir la carpeta **Trabajos** .  
   
-4.  Haga clic con el botón secundario en el trabajo en el que desea modificar los pasos y seleccione **Propiedades**.  
+4.  Haga clic con el botón derecho en el trabajo del que quiera modificar los pasos y seleccione **Propiedades**.  
   
-5.  En el cuadro de diálogo **Propiedades del trabajo -***job_name* , en **Seleccionar una página**, seleccione **Pasos**.  
+5.  En el cuadro de diálogo **Propiedades del trabajo –***nombre_de_trabajo*, en **Seleccionar una página**, seleccione **Pasos**.  
   
-6.  Para abrir el cuadro de diálogo **Propiedades de paso de trabajo -** *nombre de paso de trabajo*, haga clic en **Editar**. Para obtener más información sobre las opciones disponibles en este cuadro de diálogo, consulte [Propiedades de paso de trabajo - nuevo paso de trabajo (página General)](../../ssms/agent/job-step-properties-new-job-step-general-page.md) y [Propiedades de paso de trabajo - nuevo paso de trabajo (página Opciones avanzadas)](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
+6.  Para abrir el cuadro de diálogo **Propiedades de paso de trabajo –***nombre_de_paso_de_trabajo*, haga clic en **Editar**. Para obtener más información sobre las opciones disponibles en este cuadro de diálogo, consulte [Propiedades de paso de trabajo - nuevo paso de trabajo (página General)](../../ssms/agent/job-step-properties-new-job-step-general-page.md) y [Propiedades de paso de trabajo - nuevo paso de trabajo (página Opciones avanzadas)](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
   
 7.  Cuando termine, haga clic en **Aceptar**.  
   
-8.  En el cuadro de diálogo **Propiedades del trabajo -***job_name* , haga clic en **Aceptar**.  
+8.  En el cuadro de diálogo *Propiedades del trabajo –***nombre_de_trabajo*, haga clic en **Aceptar**.  
   
 ## <a name="TsqlProcedure"></a>Usar Transact-SQL  
   

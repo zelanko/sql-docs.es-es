@@ -8,21 +8,23 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.registermirroreddb.f1
+f1_keywords:
+- sql13.swb.dbmmonitor.registermirroreddb.f1
 ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e967a036c5dd230c2ea5c84d0a69b98b368a0ec7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d670b9efc8bcbe67bb12758318fb72cf99c2218f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="register-mirrored-database"></a>Registrar base de datos reflejada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice este cuadro de diálogo para registrar una o varias bases de datos reflejadas en una instancia del servidor determinada, mediante la adición de las bases de datos al Monitor de creación de reflejo de la base de datos. Cuando se agrega una base de datos, el Monitor de creación de reflejo de la base de datos almacena localmente en caché información acerca de la base de datos, sus asociados y el método de conexión a éstos.  
@@ -34,7 +36,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Instancia del servidor**  
  Seleccione una instancia del servidor en la lista, que contiene instancias del servidor con las que el Monitor de creación de reflejo de la base de datos ya tiene una conexión almacenada, o bien haga clic en **Conectar**. Para especificar nuevas credenciales para una instancia del servidor de la lista, haga clic en **Conectar** y conéctese mediante las nuevas credenciales.  
   
@@ -49,7 +51,7 @@ ms.lasthandoff: 11/20/2017
   
  La cuadrícula contiene las columnas siguientes:  
   
-|Nombre de columna|Descripción|  
+|Nombre de columna|Description|  
 |-----------------|-----------------|  
 |**Registrar**|Comprueba cada una de las bases de datos que desee registrar. Si se supervisa actualmente una base de datos, su casilla estará activada y permanecerá deshabilitada.<br /><br /> Nota: Para eliminar del Registro una base de datos, cierre el cuadro de diálogo **Registrar base de datos reflejada** , seleccione la base de datos en el árbol de navegación y seleccione **Eliminar del Registro** en el menú **Acción** .|  
 |**Base de datos**|Nombre de una base de datos reflejada en la instancia del servidor seleccionada.|  
@@ -66,7 +68,7 @@ ms.lasthandoff: 11/20/2017
  **Aplicar**  
  Haga clic en este botón para registrar las bases de datos seleccionadas (y guardar las credenciales para las instancias del servidor asociado) a la vez que se mantiene abierto el cuadro de diálogo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  

@@ -8,20 +8,21 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b83e544cb070ab07d943965a5a11f305e7c70a2d
-ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.openlocfilehash: 053744fd9493aae1c4d0cb4c2235a3da5a465397
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dtexec-utility"></a>dtexec (utilidad)
   La utilidad del símbolo del sistema **dtexec** se usa para configurar y ejecutar paquetes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La utilidad **dtexec** otorga acceso a todas las características de configuración y ejecución de paquetes, como parámetros, conexiones, propiedades, variables, registro e indicadores de progreso. La utilidad **dtexec** permite cargar paquetes desde estos orígenes: el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un archivo de proyecto .ispac, una base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el almacén de paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)] y el sistema de archivos.  
@@ -107,7 +108,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  Cuando se ejecuta un paquete, **dtexec** puede devolver un código de salida. El código de salida se utiliza para rellenar la variable ERRORLEVEL, cuyo valor se puede probar en instrucciones condicionales o lógica de bifurcaciones en un archivo por lotes. En la siguiente tabla se enumeran los valores que la utilidad **dtexec** puede establecer al salir.  
   
-|Value|Descripción|  
+|Valor|Description|  
 |-----------|-----------------|  
 |0|El paquete se ejecutó correctamente.|  
 |1|Se produjo un error en el paquete.|  
@@ -153,9 +154,9 @@ dtexec /option [value] [/option [value]]...
   
 ##  <a name="parameter"></a> Parámetros  
   
--   **/?** [*option_name*]: (opcional). Muestra las opciones del símbolo del sistema u ofrece ayuda para el argumento *option_name* especificado y, después, cierra la utilidad.  
+-   **/?** *option_name*: (opcional). Muestra las opciones del símbolo del sistema u ofrece ayuda para el argumento *option_name* especificado y, después, cierra la utilidad.  
   
-     Si especifica un argumento de *option_name* , **dtexec** abre los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y muestra el tema sobre la utilidad dtexec.  
+     Si especifica un argumento de *option_name*, **dtexec** abre los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y muestra el tema sobre la utilidad dtexec.  
   
 -   **/Ca[llerInfo]**: (opcional). Especifica información adicional para una ejecución del paquete. Al ejecutar un paquete mediante el Agente SQL Server, el agente establece este argumento para indicar que la ejecución del paquete se invoca con el Agente SQL Server. Este parámetro se omite cuando se ejecuta la utilidad **dtexec** desde la línea de comandos.  
   
@@ -219,7 +220,7 @@ dtexec /option [value] [/option [value]]...
   
      Para consultar varios ejemplos de la opción **/ConsoleLog** , vea la sección **Comentarios** .  
   
---   **/D[ts]** *package_path*: (opcional). Carga un paquete desde el Almacén de paquetes SSIS. Los paquetes almacenados en el Almacén de paquetes SSIS se implementan utilizando el modelo de implementación de paquetes heredado. Para ejecutar paquetes que se implementan en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con el modelo de implementación de proyectos, use la opción **/ISServer** . Para obtener más información acerca de los modelos de implementación de paquetes y de proyectos, vea [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+--   **/D[ts]** *package_path*: (opcional). Carga un paquete desde el Almacén de paquetes SSIS. Los paquetes almacenados en el Almacén de paquetes SSIS se implementan utilizando el modelo de implementación de paquetes heredado. Para ejecutar paquetes que se implementan en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con el modelo de implementación de proyectos, use la opción **/ISServer**. Para obtener más información acerca de los modelos de implementación de paquetes y de proyectos, vea [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
   
      The *package_path* argument specifies the relative path of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package, starting at the root of the SSIS Package Store, and includes the name of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   

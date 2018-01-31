@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - restoring databases [SQL Server], renaming
 - database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
-caps.latest.revision: "71"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: aa80d1e050c08e66b1576835045f4faf2ef497a5
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: fab639dbd4bccffd5e4739d80a7e6830835c790c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Restaurar una base de datos a una nueva ubicación (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se explica cómo restaurar una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una nueva ubicación y, opcionalmente, cómo cambiar el nombre de la base de datos, en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante SQL Server Management Studio (SSMS) o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Puede mover una base de datos a una nueva ruta de acceso de directorio o crear una copia de una base de datos en la misma instancia de servidor o en una instancia de servidor diferente.  
@@ -144,7 +145,7 @@ ms.lasthandoff: 01/02/2018
      *backup_device* [ **,**...*n* ]  
      Especifica una lista que contiene entre 1 y 64 dispositivos de copia de seguridad (separados por comas) desde los que se restaurará la copia de seguridad de la base de datos. Puede especificar un dispositivo físico de copia de seguridad o puede especificar el dispositivo de copia de seguridad lógico correspondiente, si se definió. Para especificar un dispositivo de copia de seguridad físico, use la opción DISK o TAPE:  
   
-     { DISK | TAPE } **=***physical_backup_device_name*  
+     { DISK | TAPE } **=***nombre_de_dispositivo_de_copia_de_seguridad_física*  
   
      Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -160,7 +161,7 @@ ms.lasthandoff: 01/02/2018
   
      Para obtener más información, vea "Especificar un conjunto de copia de seguridad" en [RESTORE &#40;argumentos, Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
-     MOVE **'***logical_file_name_in_backup***'** TO **'***operating_system_file_name***'** [ **,**...*n* ]  
+     MOVE **'***nombre_de_archivo_lógico_en_copia_de_seguridad***'** TO **'***nombre_de_archivo_de_sistema_operativo***'** [ **,**...*n* ]  
      Especifica que el archivo de datos o de registro especificado por *logical_file_name_in_backup* debe restaurarse en la ubicación especificada por *operating_system_file_name*. Especifique una instrucción MOVE para cada archivo lógico del conjunto de copia de seguridad que desee restaurar en otra ubicación.  
   
     |Opción|Description|  

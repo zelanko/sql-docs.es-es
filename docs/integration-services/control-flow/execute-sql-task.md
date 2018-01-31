@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-caps.latest.revision: "115"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ae247a65d28b039210dcf8d3243ae19ffde504cc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 82f72b4696d1169055c5726d9095eff70715b523
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-sql-task"></a>Tarea Ejecutar SQL
   La tarea Ejecutar SQL ejecuta instrucciones SQL o procedimientos almacenados de un paquete. La tarea puede contener una sola instrucción SQL o múltiples instrucciones SQL que se ejecutarán de forma secuencial. Puede usar la tarea Ejecutar SQL para los siguientes fines:  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/20/2017
   
 |Tipo de conexión|Administrador de conexiones|  
 |---------------------|------------------------|  
-|EXCEL|[Administrador de conexiones con Excel](../../integration-services/connection-manager/excel-connection-manager.md)|  
+|EXCEL|[Administrador de conexiones de Excel](../../integration-services/connection-manager/excel-connection-manager.md)|  
 |OLE DB|[Administrador de conexiones OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|  
 |ODBC|[Administrador de conexiones ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|  
 |ADO|[Administrador de conexiones ADO](../../integration-services/connection-manager/ado-connection-manager.md)|  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="create-sql-statements"></a>Crear instrucciones SQL  
  El origen de las instrucciones SQL usadas por esta tarea puede ser una propiedad de tarea que contiene una instrucción, una conexión con un archivo que contiene una o varias instrucciones, o el nombre de una variable que contiene una instrucción. Debe escribirlas en el dialecto del sistema de administración de bases de datos (DBMS) de origen. Para más información, vea [Consultas de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-queries.md).  
   
- Si las instrucciones SQL se almacenan en un archivo, la tarea utiliza un administrador de conexiones de archivos para conectar con el archivo. Para más información, consulte [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md).  
+ Si las instrucciones SQL se almacenan en un archivo, la tarea utiliza un administrador de conexiones de archivos para conectar con el archivo. Para obtener más información, consulte [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md).  
   
  En el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , puede utilizar el cuadro de diálogo **Editor de la tarea Ejecutar SQL** para escribir instrucciones SQL, o utilizar el **Generador de consultas**, una interfaz gráfica de usuario para crear consultas SQL. 
   
@@ -123,7 +124,7 @@ Para más información sobre el lenguaje de consultas Transact-SQL y su sintaxis
  **Nombre**  
  Escriba un nombre único para la tarea Ejecutar SQL en el flujo de trabajo. El nombre que indique se mostrará en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Descripción**  
  Describa la tarea Ejecutar SQL. Como práctica recomendada, describa la tarea en función de su objetivo para que los paquetes se autodocumenten y su mantenimiento resulte sencillo.  
   
  **TimeOut**  
@@ -159,7 +160,7 @@ Para más información sobre el lenguaje de consultas Transact-SQL y su sintaxis
   
  Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada directa**|Establezca el origen para una instrucción Transact-SQL. Si selecciona este valor, se mostrará la opción dinámica **SQLStatement**.|  
 |**Conexión de archivos**|Seleccione un archivo que contenga una instrucción Transact-SQL. Si selecciona esta opción, se mostrará la opción dinámica **FileConnection**.|  
@@ -205,7 +206,7 @@ Para más información sobre el lenguaje de consultas Transact-SQL y su sintaxis
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>Página Asignación de parámetros: Editor de la tarea Ejecutar SQL
 Use la página **Asignación de parámetros** del cuadro de diálogo **Editor de la tarea Ejecutar SQL** para asignar variables a los parámetros de la instrucción SQL.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Nombre de variable**  
  Tras agregar una asignación de parámetros haciendo clic en **Agregar**, seleccione en la lista una variable del sistema o definida por el usuario, o haga clic en \<**Nueva variable…**> para agregar una nueva variable mediante el cuadro de diálogo **Agregar variable**.  
   
@@ -236,7 +237,7 @@ Use la página **Asignación de parámetros** del cuadro de diálogo **Editor de
 ## <a name="result-set-page---execute-sql-task-editor"></a>Página Conjunto de resultados: Editor de la tarea Ejecutar SQL
 Utilice la página **Conjunto de resultados** del cuadro de diálogo **Editor de la tarea Ejecutar SQL** para asignar el resultado de la instrucción SQL a variables nuevas o existentes. Las opciones de este cuadro de diálogo están deshabilitadas si se define **Conjunto de resultados** de la página General como **Ninguno**.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Nombre del resultado**  
  Después de hacer clic en **Agregar**y de agregar un conjunto de asignaciones de conjuntos de resultados, asigne un nombre al resultado. Deberá utilizar nombres de resultados específicos dependiendo del tipo de conjunto de resultados.  
   
@@ -353,7 +354,7 @@ Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros d
     |-------------------------------|--------------------|  
     |SQL_DATE|**date**|  
     |SQL_SS_TIME2|**time**|  
-    |SQL_TYPE_TIMESTAMP<br /><br /> - O bien -<br /><br /> SQL_TIMESTAMP|**datetime**, **datetime2**|  
+    |SQL_TYPE_TIMESTAMP<br /><br /> -O bien-<br /><br /> SQL_TIMESTAMP|**datetime**, **datetime2**|  
     |SQL_SS_TIMESTAMPOFFSET|**datetimeoffset**|  
   
  Si los datos no están almacenados en el parámetro de entrada o de salida adecuado, se produce un error en el paquete.  
@@ -528,9 +529,9 @@ En esta sección se describe cómo utilizar una instrucción SQL con parámetros
 |Tipo de conjunto de resultados|Tipo de datos de variable|Tipo de objeto|  
 |---------------------|---------------------------|--------------------|  
 |Fila única|Cualquier tipo que sea compatible con la columna de tipo del conjunto de resultados.|No aplicable|  
-|Conjunto de resultados completo|**Object**|Si la tarea usa un administrador de conexiones nativo, incluidos los administradores de conexiones ADO, OLE DB, Excel y ODBC, el objeto devuelto es un **Recordset**de ADO.<br /><br /> Si la tarea usa un administrador de conexiones administrado, como el administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)], el objeto devuelto es un objeto **System.Data.DataSet**.<br /><br /> Puede utilizar una tarea Script para tener acceso al objeto **System.Data.DataSet** , tal como se muestra en el ejemplo siguiente.<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
+|Conjunto de resultados completo|**Objeto**|Si la tarea usa un administrador de conexiones nativo, incluidos los administradores de conexiones ADO, OLE DB, Excel y ODBC, el objeto devuelto es un **Recordset**de ADO.<br /><br /> Si la tarea usa un administrador de conexiones administrado, como el administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)], el objeto devuelto es un objeto **System.Data.DataSet**.<br /><br /> Puede utilizar una tarea Script para tener acceso al objeto **System.Data.DataSet** , tal como se muestra en el ejemplo siguiente.<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
 |XML|**String**|**String**|  
-|XML|**Object**|Si la tarea usa un administrador de conexiones nativo, incluidos los administradores de conexiones ADO, OLE DB, Excel y ODBC, el objeto devuelto es un objeto **MSXML6.IXMLDOMDocument**.<br /><br /> Si la tarea usa un administrador de conexiones administrado, como el administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)], el objeto devuelto es un objeto **System.Xml.XmlDocument**.|  
+|XML|**Objeto**|Si la tarea usa un administrador de conexiones nativo, incluidos los administradores de conexiones ADO, OLE DB, Excel y ODBC, el objeto devuelto es un objeto **MSXML6.IXMLDOMDocument**.<br /><br /> Si la tarea usa un administrador de conexiones administrado, como el administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)], el objeto devuelto es un objeto **System.Xml.XmlDocument**.|  
   
  La variable puede definirse en el ámbito de la tarea Ejecutar SQL o en el ámbito del paquete. Si la variable tiene ámbito de paquete, el conjunto de resultados estará disponible para otras tareas y otros contenedores del paquete, así como para cualquier paquete ejecutado por la tarea Ejecutar paquete o Ejecutar paquete DTS 2000.  
   

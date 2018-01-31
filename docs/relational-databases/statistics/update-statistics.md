@@ -8,23 +8,24 @@ ms.service:
 ms.component: statistics
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-statistics
+ms.technology:
+- dbe-statistics
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - updating statistics
 - statistics [SQL Server], updating
 ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a029e607ad80933f8d7d76778a01ffcd8c3581b4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7ded952390ac489e8ac82cc4e2e8da4d825c5867
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="update-statistics"></a>Actualizar estadísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede actualizar las estadísticas de optimización de consultas en una tabla o en una vista indexada de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. De forma predeterminada, el optimizador de consultas ya actualiza las estadísticas como requisito para mejorar el plan de consulta; en algunos casos puede mejorar el rendimiento de las consultas utilizando UPDATE STATISTICS o el procedimiento almacenado `sp_updatestats` para actualizar las estadísticas con más frecuencia que la de las actualizaciones predeterminadas.  
@@ -43,11 +44,11 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Si usa UPDATE STATISTICS o realiza cambios con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], es necesario el permiso ALTER en la tabla o vista. Si usa `sp_updatestats`, necesita pertenecer al rol fijo de servidor **sysadmin** o ser propietario de la base de datos (**dbo**).  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  Haga clic con el botón derecho en el objeto de estadísticas que quiere actualizar y seleccione **Propiedades**.  
   
-6.  En el cuadro de diálogo **Propiedades de estadísticas -***statistics_name* , active la casilla **Actualizar estadísticas de estas columnas** y haga clic en **Aceptar**.  
+6.  En el cuadro de diálogo **Propiedades de estadísticas –**nombre_de_estadísticas*, active la casilla **Actualizar estadísticas de estas columnas** y haga clic en **Aceptar**.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

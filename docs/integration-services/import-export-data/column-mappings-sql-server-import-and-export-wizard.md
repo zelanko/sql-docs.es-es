@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.columnmapandtransform.f1
+f1_keywords:
+- sql13.dts.impexpwizard.columnmapandtransform.f1
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 350b2694806d617fa81eba1020828816101aceba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d4658903e7454c5a001f27b3bda781be34e6a55b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Asignaciones de columnas (Asistente para importación y exportación de SQL Server)
   Después de seleccionar las tablas y vistas existentes para copiar o revisar la consulta que ha proporcionado, si hace clic en **Editar asignaciones**, el Asistente para importar y exportar de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra el cuadro de diálogo **Asignaciones de columnas** . En esta página puede especificar y configurar columnas de destino para recibir los datos copiados de las columnas de origen. A menudo no tiene que cambiar nada en esta página.
@@ -113,7 +115,7 @@ La lista **Asignaciones** tiene las columnas siguientes:
  -   **Escala**  
     Especifique la escala de datos numéricos en la columna de destino, que hace referencia al número de posiciones decimales, si corresponde.  
   
-## <a name="whats-next"></a>¿Qué debe hacer a continuación?  
+## <a name="whats-next"></a>¿Qué sigue?  
  Después de revisar y configurar las columnas de destino para recibir los datos copiados de las columnas de origen y hacer clic en **Aceptar**, el cuadro de diálogo **Asignaciones de columnas** le devolverá a la página **Seleccionar tablas y vistas de origen** o a la página **Configurar el destino del archivo plano**. Para más información, vea [Seleccionar tablas y vistas de origen](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) o [Configurar el destino del archivo plano](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md).  
   
  Si especifica una asignación que puede que no se realice correctamente en la lista **Asignaciones** , el cuadro de diálogo **Asignaciones de columnas** le lleva a la página **Revisar asignación de tipos de datos** . En esta página, revise las advertencias, especifique las opciones de conversión y también especifique cómo controlar los errores. Para más información, vea [Revisar asignación de tipos de datos](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md).  

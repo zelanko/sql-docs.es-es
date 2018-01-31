@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - IFI [SQL Server]
 - database instant file initialization [SQL Server]
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cf0f0006186bde39228ac9b0039e5a45b42431b7
-ms.sourcegitcommit: b4b7cd787079fa3244e77c1e9e3c68723ad30ad4
+ms.openlocfilehash: 43b4084e91c08bfe870807196261e4be9b934872
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="database-file-initialization"></a>Inicialización de archivos de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los archivos de datos y registro se inicializan para sobrescribir los datos existentes que los archivos eliminados anteriormente hayan dejado en el disco. Los archivos de datos y registro se inicializan por primera vez llenando los archivos con ceros al realizar una de estas operaciones:  
@@ -89,6 +90,10 @@ Database Instant File Initialization: disabled. For security and performance con
 
 ## <a name="security-considerations"></a>Consideraciones de seguridad  
 Al usar la inicialización instantánea de archivos (IFI), como el contenido del disco eliminado solo se sobrescribe cuando se escriben nuevos datos en los archivos, una entidad de seguridad no autorizada puede acceder al contenido eliminado hasta que algún otro dato se escriba en una área específica del archivo de datos. Mientras el archivo de la base de datos se adjunte a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], este riesgo de divulgación de la información se reduce mediante la lista de control de acceso discrecional (DACL) del archivo. Esta DACL permite acceder al archivo solo a la cuenta de servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y al administrador local. Sin embargo, cuando el archivo está separado, un usuario o servicio que no tenga *SE_MANAGE_VOLUME_NAME* puede acceder a él. Existe una consideración similar al crear una copia de seguridad de la base de datos: si el archivo de copia de seguridad no está protegido con una DACL adecuada, el contenido eliminado puede estar disponible para un usuario o servicio no autorizado.  
+
+Otra cosa que hay que tener en cuenta es que, cuando un archivo crece usando IFI, un administrador de SQL Server podría acceder a los contenidos de la página sin procesar y ver el contenido que se ha eliminado anteriormente.
+
+Si los archivos de base de datos están hospedados en una red de área de almacenamiento, también es posible que esta presente siempre nuevas páginas inicializadas previamente y puede ser que configurar el sistema operativo para que vuelva a inicializar las páginas cree una sobrecarga innecesaria.
  
 > [!NOTE]
 > Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se instala en un entorno físico seguro, las ventajas de rendimiento que se consiguen al habilitar la inicialización instantánea de archivos pueden superar el riesgo de seguridad que supone, y por eso se recomienda.

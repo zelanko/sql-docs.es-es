@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a09c765e61b71586802d31b31917644a0f336f0c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 33f50d558073a82985ef225288471489d220e2c8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,12 +37,12 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
   
 ## <a name="arguments"></a>Argumentos  
  [@execution_id =] *execution_id*  
- Identificador único de la instancia de ejecución. El parámetro *execution_id* es **bigint**.
+ Identificador único de la instancia de ejecución. El parámetro *execution_id* es de tipo **bigint**.
  
  [@retry_count =] *retry_count*  
  Es el número de reintentos si se produce un error en la ejecución. Solo tendrá efecto si la ejecución está en modo de escalabilidad horizontal. Este parámetro es opcional. Si no se especifica, su valor se establece en 0. El parámetro *retry_count* es **int**.
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Una ejecución se usa para especificar los valores de parámetro que va a usar un paquete durante una instancia única de ejecución del paquete. Puede ocurrir que, después de crear una instancia de ejecución y antes de que se inicie, el proyecto correspondiente se implemente de nuevo. En este caso, la instancia de ejecución hará referencia a un proyecto obsoleto. Esta referencia no válida hace que el procedimiento almacenado genere un error.  
   
 > [!NOTE]  
@@ -65,12 +66,12 @@ GO
 ```  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
- 0 (Correcto)  
+ 0 (correcto)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Ninguno  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
 -   Los permisos READ y MODIFY de la instancia de ejecución, los permisos READ y EXECUTE del proyecto y, si procede, los permisos READ del entorno al que se hace referencia  
@@ -82,7 +83,7 @@ GO
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
  En la siguiente lista se describen algunas condiciones que pueden producir un error o una advertencia:  
   
--   El usuario no tiene los permisos adecuados  
+-   El usuario no tiene los permisos adecuados.  
   
 -   El identificador de ejecución no es válido  
   

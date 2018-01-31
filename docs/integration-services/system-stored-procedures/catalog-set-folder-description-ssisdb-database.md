@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 802416f6-5177-4db5-bca5-976dec5faf53
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1bc21904d1a223a82ca3903221ac95e6e2938e5f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1e0da072a1023d46740f9dd49e314c5b13cb6d6d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetfolderdescription-ssisdb-database"></a>catalog.set_folder_description (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,18 +38,18 @@ catalog.set_folder_description [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argumentos  
  [ @folder_name = ] *folder_name*  
- Nombre de la carpeta. El parámetro *folder_name* es **nvarchar(128)**.  
+ Nombre de la carpeta. *folder_name* es **nvarchar(128)**.  
   
  [ @folder_description = ] *folder_description*  
  Descripción de la carpeta. El parámetro *folder_description* es **nvarchar(MAX)**.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
- Ninguno  
+ None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Ninguno  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
 -   Pertenencia al rol de base de datos de **ssis_admin**  

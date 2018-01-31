@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - primary files [SQL Server]
 - file types [SQL Server]
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e469edf82ac5c370a77d3870cd180867baf6a401
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 8306f3c4fb55d441eef744ff1ef9a84256b9eb76
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="database-files-and-filegroups"></a>Archivos y grupos de archivos de base de datos
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Como mínimo, todas las bases de datos de [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] tienen dos archivos del sistema operativo: un archivo de datos y un archivo de registro. Los archivos de datos contienen datos y otros objetos, como tablas, índices, procedimientos almacenados y vistas. Los archivos de registro contienen la información necesaria para recuperar todas las transacciones de la base de datos. Los archivos de datos se pueden agrupar en grupos de archivos para su asignación y administración.  
@@ -102,19 +103,29 @@ La forma de archivo que utiliza una instantánea de base de datos para almacenar
 ## <a name="filegroups"></a>Grupos de archivos  
  Cada base de datos tiene un grupo de archivos principal. Este grupo de archivos contiene el archivo de datos principal y cualquier otro archivo secundario que no se encuentre en otro grupo de archivos. Se pueden crear grupos de archivos definidos por el usuario para agrupar archivos con fines administrativos y de asignación y ubicación de datos.  
   
- Por ejemplo, pueden crearse tres archivos, Datos1.ndf, Datos2.ndf y Datos3.ndf, en tres unidades de disco respectivamente para asignarlos posteriormente al grupo de archivos **grArchivos1**. A continuación, se puede crear una tabla específicamente para el grupo de archivos **grArchivos1**. Las consultas de datos de la tabla se distribuirán por los tres discos, con lo que mejorará el rendimiento. Puede obtenerse la misma mejora del rendimiento con un solo archivo creado en un conjunto de bandas RAID (matriz redundante de discos independientes). No obstante, los archivos y grupos de archivos permiten agregar fácilmente nuevos archivos a discos nuevos.  
+ Por ejemplo, pueden crearse tres archivos (`Data1.ndf`, `Data2.ndf` y `Data3.ndf`) en tres unidades de disco, respectivamente, y asignarse al grupo de archivos `fgroup1`. Se puede crear una tabla específicamente para el grupo de archivos `fgroup1`. Las consultas de datos de la tabla se distribuirán por los tres discos, con lo que mejorará el rendimiento. Puede obtenerse la misma mejora del rendimiento con un solo archivo creado en un conjunto de bandas RAID (matriz redundante de discos independientes). No obstante, los archivos y grupos de archivos permiten agregar fácilmente nuevos archivos a discos nuevos.  
   
  Todos los archivos de datos se almacenan en los grupos de archivos que se indican en la tabla siguiente.  
   
 |Grupo de archivos|Description|  
 |---------------|-----------------|  
 |Principal|Grupo de archivos que contiene el archivo principal. Todas las tablas del sistema se asignan al grupo de archivos principal.|  
+|Tabla optimizada para memoria|Un grupo de archivos optimizados para memoria está basado en un grupo de archivos de FILESTREAM.|  
+|Secuencia de archivos||    
 |Definidos por el usuario|Cualquier grupo de archivos creado específicamente por el usuario al crear la base de datos o al modificarla.|  
   
-### <a name="default-filegroup"></a>Grupo de archivos predeterminado  
+### <a name="default-primary-filegroup"></a>Grupo de archivos predeterminado (principal)  
  Cuando se crean objetos en la base de datos sin especificar a qué grupo de archivos pertenecen, se asignan al grupo de archivos predeterminado. Siempre existe un grupo de archivos designado como predeterminado. Los archivos del grupo de archivos predeterminado deben ser lo suficientemente grandes como para dar cabida a todos los objetos nuevos no asignados a otros grupos de archivos.  
   
  El grupo de archivos PRINCIPAL es el predeterminado, a menos que se cambie mediante la instrucción ALTER DATABASE. Los objetos y las tablas del sistema no se asignan al nuevo grupo de archivos predeterminado, sino que siguen asignados al grupo de archivos PRIMARY.  
+ 
+### <a name="memory-optimized-data-filegroup"></a>Grupo de archivos de datos optimizados para memoria
+
+Para obtener más información sobre los grupos de archivos optimizados para memoria, vea [Grupo de archivos optimizados para memoria](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md).
+
+### <a name="filestream-filegroup"></a>Grupo de archivos FILESTREAM
+
+Para obtener más información sobre los grupos de archivos FILESTREAM, consulte [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md#filestream-storage) y [Crear una base de datos habilitada para FILESTREAM](../../relational-databases/blob/create-a-filestream-enabled-database.md).
 
 ### <a name="file-and-filegroup-example"></a>Ejemplo de archivos y grupos de archivos
  En el siguiente ejemplo se crea una base de datos en una instancia de SQL Server. La base de datos tiene un archivo de datos principal, un grupo de archivos definido por el usuario y el archivo de registro. El archivo de datos principal está en el grupo de archivos principal y el grupo de archivos definido por el usuario tiene dos archivos de datos secundarios. Una instrucción ALTER DATABASE hace que el grupo de archivos definido por el usuario sea el grupo predeterminado. A continuación, se crea una tabla que especifica el grupo de archivos definido por el usuario. (En este ejemplo se usa una ruta de acceso genérica `c:\Program Files\Microsoft SQL Server\MSSQL.1` para evitar que se especifique una versión de SQL Server).
@@ -123,7 +134,7 @@ La forma de archivo que utiliza una instantánea de base de datos para almacenar
 USE master;
 GO
 -- Create the database with the default data
--- filegroup and a log file. Specify the
+-- filegroup, filstream filegroup and a log file. Specify the
 -- growth increment and the max size for the
 -- primary data file.
 CREATE DATABASE MyDB
@@ -146,7 +157,10 @@ FILEGROUP MyDB_FG1
        'c:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\data\MyDB_FG1_2.ndf',
     SIZE = 1MB,
     MAXSIZE=10MB,
-    FILEGROWTH=1MB)
+    FILEGROWTH=1MB),
+FILEGROUP FileStreamGroup1 CONTAINS FILESTREAM
+  ( NAME = 'MyDB_FG_FS',
+    FILENAME = 'c:\Data\filestream1')
 LOG ON
   ( NAME='MyDB_log',
     FILENAME =
@@ -166,9 +180,17 @@ CREATE TABLE MyTable
     colb char(8) )
 ON MyDB_FG1;
 GO
+
+-- Create a table in the filestream filegroup
+CREATE TABLE MyFSTable
+(
+    cola int PRIMARY KEY,
+  colb VARBINARY(MAX) FILESTREAM NULL
+)
+GO
 ```
 
-La siguiente ilustración resume los resultados del ejemplo anterior.
+La siguiente ilustración resume los resultados del ejemplo anterior, excepto para datos FILESTREAM.
 
 ![filegroup_example](../../relational-databases/databases/media/filegroup-example.gif)
 

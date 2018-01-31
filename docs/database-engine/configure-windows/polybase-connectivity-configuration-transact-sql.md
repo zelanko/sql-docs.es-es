@@ -8,21 +8,23 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: PolyBase
+helpviewer_keywords:
+- PolyBase
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ff43bd1953f7f175bc8726cc617081c6173b1d6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4a75f97300af0ddf7023fd95efa5e3a973ec332a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Configuración de conectividad de PolyBase (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -49,7 +51,7 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@configname=** ] **'***nombre_opción***'**  
+ [ **@configname=** ] **'***nombre_de_opción***'**  
  Es el nombre de una opción de configuración. *option_name* es **varchar(35)**y su valor predeterminado es NULL. Si no se especifica, se devuelve la lista completa de opciones.  
   
  [ **@configvalue=** ] **'***valor***'**  
@@ -110,7 +112,7 @@ En [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], después de volver a ejecutar 
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
  RECONFIGURE no se permite en una transacción implícita o explícita.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Todos los usuarios pueden ejecutar **sp_configure** sin parámetros o con el parámetro @configname .  
   
  Requiere permiso a nivel de servidor de **ALTER SETTINGS** o la pertenencia al rol fijo de servidor **sysadmin** para cambiar un valor de configuración o para ejecutar RECONFIGURE.  
@@ -145,7 +147,7 @@ RECONFIGURE
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   

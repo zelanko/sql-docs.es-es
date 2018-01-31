@@ -1,6 +1,6 @@
 ---
 title: "Programar la ejecución de paquetes SSIS en Azure | Microsoft Docs"
-ms.date: 09/25/2017
+ms.date: 01/16/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,16 +8,17 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26160f982982b1a8163662f57cb317e7252ab0e4
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: 4724d7a306e59e05d17f466643146d868f372a7f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Programar la ejecución de un paquete SSIS en Azure
 Puede programar la ejecución de paquetes almacenados en la base de datos del catálogo de SSISDB en un servidor de Azure SQL Database. Para ello, elija una de las opciones de programación siguientes:
@@ -27,9 +28,42 @@ Puede programar la ejecución de paquetes almacenados en la base de datos del ca
 
 ## <a name="agent"></a> Programar un paquete mediante el Agente SQL Server
 
-### <a name="prerequisite"></a>Requisito previo
+### <a name="prerequisite---create-a-linked-server"></a>Requisitos previos: creación de un servidor vinculado
 
-Para poder usar el Agente SQL Server de forma local para programar la ejecución de paquetes almacenados en un servidor de Azure SQL Database, tiene que agregar el servidor de SQL Database como un servidor vinculado. Para obtener más información, consulte [Crear servidores vinculados](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) y [Servidores vinculados](../../relational-databases/linked-servers/linked-servers-database-engine.md).
+Para poder usar el Agente SQL Server de forma local para programar la ejecución de paquetes almacenados en un servidor de Azure SQL Database, tiene que agregar el servidor de SQL Database a su SQL Server local como un servidor vinculado.
+
+1.  **Configuración del servidor vinculado**
+
+    ```sql
+    -- Add the SSISDB database on your Azure SQL Database as a linked server to your SQL Server on premises
+    EXEC sp_addlinkedserver
+        @server='myLinkedServer', -- Name your linked server
+        @srvproduct='',     
+        @provider='sqlncli', -- Use SQL Server native client
+        @datasrc='<server_name>.database.windows.net', -- Add your Azure SQL Database server endpoint
+        @location=‘’,
+        @provstr=‘’,
+        @catalog='SSISDB'  -- Add SSISDB as the initial catalog
+    ```
+
+2.  **Configuración de las credenciales del servidor vinculado**
+
+    ```sql
+    -- Add your Azure SQL DB server admin credentials
+    EXEC sp_addlinkedsrvlogin
+        @rmtsrvname = 'myLinkedServer’,
+        @useself = 'false’,
+        @rmtuser = 'myUsername', -- Add your server admin username
+        @rmtpassword = 'myPassword' -- Add your server admin password
+    ```
+
+3.  **Configuración de las opciones del servidor vinculado**
+
+    ```sql
+    EXEC sp_serveroption 'myLinkedServer', 'rpc out', true;
+    ```
+
+Para obtener más información, consulte [Crear servidores vinculados](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) y [Servidores vinculados](../../relational-databases/linked-servers/linked-servers-database-engine.md).
 
 ### <a name="create-a-sql-server-agent-job"></a>Crear un trabajo del Agente SQL Server
 
@@ -43,19 +77,21 @@ Para programar un paquete con el Agente SQL Server de forma local, cree un traba
 
 4.  En el cuadro de diálogo **Nuevo paso de trabajo**, seleccione `SSISDB` en **Base de datos.**
 
-5.  En el campo de comandos, escriba un script Transact-SQL similar al que se muestra en el ejemplo siguiente:
+5.  En el campo **Comando**, escriba un script Transact-SQL similar al que se muestra en el ejemplo siguiente:
 
     ```sql
+    -- T-SQL script to create and start SSIS package execution using SSISDB stored procedures
     DECLARE @return_value int, @exe_id bigint 
 
     EXEC @return_value = [YourLinkedServer].[SSISDB].[catalog].[create_execution] 
-    @folder_name=N'folderName', @project_name=N'projectName', 
-    @package_name=N'packageName', @use32bitruntime=0, 
-    @runinscaleout=1, @useanyworker=1, @execution_id=@exe_id OUTPUT 
- 
-    EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution] @execution_id=@exe_id
+        @folder_name=N'folderName', @project_name=N'projectName', 
+        @package_name=N'packageName', @use32bitruntime=0, @runincluster=1, @useanyworker=1,
+        @execution_id=@exe_id OUTPUT 
 
-    GO
+    EXEC [YourLinkedServer].[SSISDB].[catalog].[set_execution_parameter_value] @exe_id,
+        @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1
+
+    EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution] @execution_id=@exe_id
     ```
 
 6.  Termine de configurar y programar el trabajo.

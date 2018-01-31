@@ -8,26 +8,28 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.slowlychangingdimtrans.f1
+f1_keywords:
+- sql13.dts.designer.slowlychangingdimtrans.f1
 helpviewer_keywords:
 - Slowly Changing Dimension transformation
 - slowly changing dimensions
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8061b07985e3d8d85656ddb85996384b5b6ee257
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d0b0582426598b30ed955bc1a2e2aae47c963097
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Dimensión de variación lenta, transformación
   La transformación Dimensión de variación lenta coordina la actualización e inserción de registros en las tablas de dimensiones de almacenamiento de datos. Por ejemplo, puede usar esta transformación para configurar las salidas de transformación que insertan y actualizan registros en la tabla DimProduct de la base de datos [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] con datos de la tabla Production.Products de la base de datos OLTP AdventureWorks.  
@@ -98,7 +100,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
- Para más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+ Para obtener más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="configuring-the-slowly-changing-dimension-transformation-outputs"></a>Configurar las salidas de la transformación Dimensión de variación lenta  
  Coordinar la actualización e inserción de registros en las tablas de dimensiones puede ser una tarea compleja, especialmente si se usan datos de tipo 1 y 2. [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ofrece dos maneras de configurar las dimensiones de variación lenta:  
@@ -107,7 +109,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Cargar el Asistente para dimensiones, que lo guía por los pasos necesarios para configurar la transformación Dimensión de variación lenta y generar el flujo de datos para las salidas de la transformación. Para cambiar la configuración de las dimensiones de variación lenta, vuelva a ejecutar el Asistente para cargar dimensión. Para más información, vea [Configurar salidas mediante el Asistente para dimensión de variación lenta](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md).  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  

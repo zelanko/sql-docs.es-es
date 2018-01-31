@@ -8,22 +8,25 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
-caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e7941463e0d36954a0a137be9f003845d9eff1dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2888c3f576159def2fb141802aafc1853ce9b50f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-3-configuring-distribution"></a>Lección 3: Configurar la distribución
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En esta lección configurará la distribución en el publicador y establecerá los permisos requeridos en las bases de datos de publicación y distribución. Si ya ha configurado el distribuidor, debe deshabilitar la publicación y distribución antes de iniciar esta lección. No lo haga si debe mantener una topología de replicación existente.  
@@ -45,7 +48,7 @@ En este tutorial no se contempla la configuración de un publicador con un distr
   
 4.  Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se está ejecutando, en la página [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Inicio del Agente** , seleccione **Sí**, configurar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del Agente para que se inicie automáticamente. Haga clic en **Siguiente**.  
   
-5.  Introduzca **\\\\**\<*nombreDeEquipo>***\repldata** en el cuadro de texto **Carpeta de instantáneas**, donde\<*nombreDeEquipo>* es el nombre del publicador y luego haga clic en **Siguiente**.  
+5.  Introduzca **\\\\**\<*Nombre_De_Equipo>***\repldata** en el cuadro de texto **Carpeta de instantáneas**, donde \<*Nombre_De_Equipo>* es el nombre del publicador y luego haga clic en **Siguiente**.  
   
 6.  Acepte los valores predeterminados en las páginas restantes del asistente.  
   
@@ -55,7 +58,7 @@ En este tutorial no se contempla la configuración de un publicador con un distr
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **Seguridad**, haga clic con el botón derecho en **Inicios de sesión**y, después, seleccione **Nuevo inicio de sesión**.  
   
-2.  En la página **General**, haga clic en **Buscar**, escriba \<*nombreDeEquipo>***\repl_snapshot** en el cuadro **Escriba el nombre del objeto que desea seleccionar**, donde \<*nombreDeEquipo>* es el nombre del servidor local del publicador, haga clic en **Comprobar nombres** y, después, haga clic en **Aceptar**.  
+2.  En la página **General**, haga clic en **Buscar**, escriba \<*Nombre_De_Equipo>***\repl_snapshot* en el cuadro **Escriba el nombre del objeto que desea seleccionar**, donde \<*Nombre_De_Equipo>* es el nombre del servidor local del publicador, haga clic en **Comprobar nombres** y, después, haga clic en **Aceptar**.  
   
 3.  En la página **Asignación de usuarios** , en la lista **Usuarios asignados a este inicio de sesión** , seleccione las bases de datos de **distribución** y de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
@@ -69,7 +72,7 @@ En este tutorial no se contempla la configuración de un publicador con un distr
   
 7.  Repita los pasos 1 a 4 para crear un inicio de sesión para la cuenta local de repl_merge. Este inicio de sesión debe contar con asignaciones de usuario en las bases de datos **distribution** y **AdventureWorks** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Configurar distribución](../../relational-databases/replication/configure-distribution.md)  
 [Modelo de seguridad del Agente de replicación](../../relational-databases/replication/security/replication-agent-security-model.md)  
   

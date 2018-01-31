@@ -8,23 +8,24 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - monitoring [SQL Server], database mirroring
 - database mirroring [SQL Server], monitoring
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
-caps.latest.revision: "78"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7fd9182030c2be57d0d059a0807b06d24637cbba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c0133d9255da8fd0dfe9d373b717bf813bb17767
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Supervisar la creación de reflejo de la base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En esta sección se presentan el Monitor de creación de reflejo de la base de datos y los procedimientos almacenados del sistema **sp_dbmmonitor**, se explica el funcionamiento de la supervisión de la creación de reflejo de la base de datos (incluido el **Trabajo del Monitor de creación de reflejo de la base de datos)** y se resume la información que se puede supervisar sobre las sesiones de creación de reflejo de la base de datos. Además, en esta sección se describe cómo definir umbrales de advertencia para un conjunto de eventos de creación de reflejo de la base de datos predefinidos y cómo configurar alertas sobre cualquier evento de creación de reflejo de la base de datos.  
@@ -88,7 +89,7 @@ ms.lasthandoff: 11/20/2017
   
      En la siguiente tabla se presentan los procedimientos almacenados que se utilizan para administrar y usar la supervisión de la creación de reflejo de la base de datos de manera independiente del Monitor.  
   
-    |Procedimiento|Descripción|  
+    |Procedimiento|Description|  
     |---------------|-----------------|  
     |[sp_dbmmonitoraddmonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)|Crea un trabajo que actualiza periódicamente la información de estado para todas las bases de datos reflejadas en la instancia de servidor.|  
     |[sp_dbmmonitorchangemonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)|Cambia el valor de un parámetro de supervisión de la creación de reflejo de la base de datos.|  
@@ -197,7 +198,7 @@ ms.lasthandoff: 11/20/2017
   
      La cantidad de registro que espera en la cola de envío en kilobytes (KB).  
   
--   Transacción sin enviar más antigua  
+-   Transacción no enviada más antigua  
   
      Antigüedad de la transacción sin enviar más antigua de la cola de envío. La antigüedad de esta transacción indica la cantidad de minutos de transacciones que no se han enviado aún a la instancia del servidor reflejado. Este valor ayuda a medir la posibilidad de pérdida de datos con respecto a la hora.  
   
@@ -335,7 +336,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Conceptos del proveedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   

@@ -8,20 +8,21 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 176e73b6-08aa-48ec-b349-e84b431e65cc
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bd792a20eb2b0a641e675a4ca0d8a47d04337c2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4b34863f4a5f1a20d17cc0e87181a5f7d850b64d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>Modify the Target Server(s) Associated with a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo modificar los servidores de destino asociados a un trabajo maestro del Agente SQL Server en [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] o [!INCLUDE[tsql](../../includes/tsql_md.md)].  
@@ -62,7 +63,7 @@ A menos que sea miembro del rol fijo de servidor **sysadmin** , solo podrá modi
   
 4.  Haga clic con el botón derecho en el trabajo en el que desea modificar el servidor de destino y seleccione **Propiedades**.  
   
-5.  En el cuadro de diálogo **Propiedades de trabajo –***nombre_trabajo*, en **Seleccionar una página**, seleccione **Destinos**. Para más información sobre las opciones disponibles en esta página, consulte [Propiedades de trabajo - Nuevo trabajo &#40;Página Destinos&#41;](../../ssms/agent/job-properties-new-job-targets-page.md).  
+5.  En el cuadro de diálogo **Propiedades de trabajo –***nombre_de_trabajo*, en **Seleccionar una página**, seleccione **Destinos**. Para más información sobre las opciones disponibles en esta página, consulte [Propiedades de trabajo - Nuevo trabajo &#40;Página Destinos&#41;](../../ssms/agent/job-properties-new-job-targets-page.md).  
   
 6.  Cuando termine, haga clic en **Aceptar**.  
   

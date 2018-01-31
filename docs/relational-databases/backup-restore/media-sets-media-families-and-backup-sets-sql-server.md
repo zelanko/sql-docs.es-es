@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - backups [SQL Server], backup sets
 - backup sets [SQL Server]
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
-caps.latest.revision: "59"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9ef5b39e2192d0e5814c3b3ab5525eb69330cf51
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 13405de028f7392c9ef384743a44db9fb49c627c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Conjuntos de medios, familias de medios y conjuntos de copias de seguridad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **En este tema se presenta la terminología básica de medios de copias de seguridad y restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y está dirigido a lectores noveles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].** 
@@ -144,7 +145,7 @@ WITH
   
  ![El segundo conjunto de copia de seguridad se distribuye entre 3 cintas del conjunto de medios](../../relational-databases/backup-restore/media/bnr-mediaset-appendedto.gif "El segundo conjunto de copia de seguridad se distribuye entre 3 cintas del conjunto de medios")  
   
- Al restaurar las copias de seguridad, puede usar la opción FILE para especificar las copias de seguridad que desea usar. En el siguiente ejemplo se muestra el uso de la cláusula FILE **=***backup_set_file_number* al restaurar una copia de seguridad completa de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] seguida de una copia de seguridad diferencial de la base de datos en el mismo conjunto de medios. El conjunto de medios utiliza tres cintas de copia de seguridad, que se encuentran en las unidades de cinta `\\.\tape0`, `tape1`y `tape2`.  
+ Al restaurar las copias de seguridad, puede usar la opción FILE para especificar las copias de seguridad que desea usar. En el siguiente ejemplo se muestra el uso de la cláusula FILE **=***número_de_archivo_de_conjunto_de_copias_de_seguridad* al restaurar una copia de seguridad completa de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] seguida de una copia de seguridad diferencial de la base de datos en el mismo conjunto de medios. El conjunto de medios utiliza tres cintas de copia de seguridad, que se encuentran en las unidades de cinta `\\.\tape0`, `tape1`y `tape2`.  
   
 ```  
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  

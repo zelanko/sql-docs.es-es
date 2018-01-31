@@ -8,7 +8,8 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - foreign keys [SQL Server], modifying
 - modifying foreign keys
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 51ee95780b228a723be7c5f86b4a64c171bf5df2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b667598024f6df19d7543cf9e59f4c646706c776
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="modify-foreign-key-relationships"></a>Modificar relaciones de claves externas.
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  La nueva columna de clave externa debe tener el mismo tipo de datos y el mismo tamaño que la columna de clave principal con la que está relacionada, con las siguientes excepciones:  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Requiere el permiso ALTER en la tabla.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -147,7 +148,7 @@ ms.lasthandoff: 11/17/2017
   
     -   **Establecer predeterminado** Establece el valor predeterminado definido para la columna si todas las columnas de clave externa de la tabla tienen valores predeterminados definidos.  
   
-4.  En el menú **Archivo** , haga clic en **Guardar***table name*.  
+4.  En el menú **Archivo**, haga clic en **Guardar***nombre de tabla*.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para modificar una clave externa**  

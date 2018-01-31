@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - filegroups [SQL Server], backing up
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
-caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6383f0bdcbd230c5bd4868084ae2fd06f4003269
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 65b1141e3d47a947f9b1c90b25c6ba875373c266
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Realizar copias de seguridad de archivos y grupos de archivos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo realizar copias de seguridad de archivos y grupos de archivos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] o PowerShell. Cuando el tamaño y los requisitos de rendimiento de la base de datos hagan que no sea práctico realizar una copia de seguridad completa de la base de datos, puede crear una copia de seguridad de archivo en su lugar. Una *copia de seguridad de archivos* contiene todos los datos de uno o varios archivos (o grupos de archivos). Para obtener más información sobre las copias de seguridad de archivos, vea [Copias de seguridad de archivos completas &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) y [Copias de seguridad diferenciales &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
@@ -135,7 +136,7 @@ ms.lasthandoff: 01/02/2018
   
      BACKUP DATABASE *database*  
   
-     { FILE **=***logical_file_name* | FILEGROUP **=***logical_filegroup_name* } [ **,**...*f* ]  
+     { FILE **=***nombre_de_archivo_lógico* | FILEGROUP **=***nombre_de_grupo_de_archivos_lógico* } [ **,**...*f* ]  
   
      TO *backup_device* [ **,**...*n* ]  
   
@@ -144,10 +145,10 @@ ms.lasthandoff: 01/02/2018
     |Opción|Description|  
     |------------|-----------------|  
     |*database*|Es la base de datos para la que se realiza la copia de seguridad del registro de transacciones, de una parte de la base de datos o de la base de datos completa.|  
-    |FILE **=***logical_file_name*|Especifica el nombre lógico de un archivo que se debe incluir en la copia de seguridad de archivos.|  
-    |FILEGROUP **=***logical_filegroup_name*|Especifica el nombre lógico de un grupo de archivos que se debe incluir en la copia de seguridad de archivos. En el modelo de recuperación simple, se permite la copia de seguridad de un grupo de archivos solo si se trata de un grupo de archivos de solo lectura.|  
+    |FILE **=***nombre_de_archivo_lógico*|Especifica el nombre lógico de un archivo que se debe incluir en la copia de seguridad de archivos.|  
+    |FILEGROUP **=***nombre_de_grupo_de_archivos_lógico*|Especifica el nombre lógico de un grupo de archivos que se debe incluir en la copia de seguridad de archivos. En el modelo de recuperación simple, se permite la copia de seguridad de un grupo de archivos solo si se trata de un grupo de archivos de solo lectura.|  
     |[ **,**...*f* ]|Se trata de un marcador de posición que indica que se pueden especificar varios archivos y grupos de archivos. El número de archivos o grupos de archivos es ilimitado.|  
-    |*backup_device* [ **,**...*n* ]|Especifica una lista de 1 a 64 dispositivos de copia de seguridad que se pueden utilizar en la operación de copia de seguridad. Puede especificar un dispositivo físico de copia de seguridad o puede especificar un dispositivo de copia de seguridad lógico correspondiente, si ya se definió. Para especificar un dispositivo de copia de seguridad físico, use la opción DISK o TAPE:<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
+    |*backup_device* [ **,**...*n* ]|Especifica una lista de 1 a 64 dispositivos de copia de seguridad que se pueden utilizar en la operación de copia de seguridad. Puede especificar un dispositivo físico de copia de seguridad o puede especificar un dispositivo de copia de seguridad lógico correspondiente, si ya se definió. Para especificar un dispositivo de copia de seguridad físico, use la opción DISK o TAPE:<br /><br /> { DISK &#124; TAPE } **=***nombre_de_dispositivo_de_copia_de_seguridad_física*<br /><br /> Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
     |WITH *with_options* [ **,**...*o* ]|Opcionalmente, especifica una o más opciones, como DIFFERENTIAL.<br /><br /> Nota: Una copia de seguridad diferencial de archivos necesita una copia de seguridad completa de archivos como base. Para obtener más información, vea [Crear una copia de seguridad diferencial de base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md).|  
   
 2.  Con el modelo de recuperación completa, también debe realizar copias de seguridad del registro de transacciones. Para utilizar un conjunto completo de copias de seguridad de completas archivos para restaurar una base de datos, también debe tener suficientes copias de seguridad de registros que abarquen todas las copias de seguridad de archivos, desde el principio de la primera copia de seguridad de archivos. Para más información, consulte [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
@@ -201,9 +202,9 @@ GO
   
 1.  Use el cmdlet **Backup-SqlDatabase** y especifique **Files** como valor del parámetro **-BackupAction** . Especifique también uno de los parámetros siguientes:  
   
-    -   Para hacer una copia de seguridad de un archivo determinado, especifique el parámetro **-DatabaseFile***String* , donde *String* es uno o varios archivos de base de datos de los que se va a hacer una copia de seguridad.  
+    -   Para hacer una copia de seguridad de un archivo determinado, especifique el parámetro **-DatabaseFile***Cadena*, donde *Cadena* es uno o varios archivos de base de datos de los que se va a hacer una copia de seguridad.  
   
-    -   Para hacer una copia de seguridad de todos los archivos de un grupo de archivos determinado, especifique el parámetro **-DatabaseFileGroup***String* , donde *String* es uno o varios grupos de archivos de base de datos de los que se va a hacer una copia de seguridad.  
+    -   Para hacer una copia de seguridad de todos los archivos de un grupo de archivos determinado, especifique el parámetro **-DatabaseFileGroup***Cadena*, donde *Cadena* es uno o varios grupos de archivos de base de datos de los que se va a hacer una copia de seguridad.  
   
      En el ejemplo siguiente se crea una copia de seguridad de archivos completa de cada uno de los archivos de los dos grupos de archivos secundarios 'FileGroup1' y 'FileGroup2' de la base de datos `MyDB` . Las copias de seguridad se crean en la ubicación de copia de seguridad predeterminada de la instancia del servidor `Computer\Instance`.  
   

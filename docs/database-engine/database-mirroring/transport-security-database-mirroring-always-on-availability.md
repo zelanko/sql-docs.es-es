@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - transport security
 - database mirroring [SQL Server], security
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0488b8646d4b8c92d5f34f6b3148846f62b3f47f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ff841106e99cd34bedd1d93e106fb04d452b411f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>Seguridad de transporte - Creación de reflejo de la base de datos - Grupos de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Si las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecutan como servicios con diferentes cuentas de dominio (en el mismo dominio o en dominios de confianza), el inicio de sesión de cada cuenta debe crearse en **master** en cada una de las otras instancias de servidor, y a ese inicio de sesión se le deben conceder permisos CONNECT en el punto de conexión.  
   
--   Si las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecutan como cuenta de servicio de red, el inicio de sesión de cada cuenta de equipo host (*DomainName***\\***ComputerName$*) se debe crear en **master** en cada uno de los demás servidores, y a ese inicio de sesión se le deben conceder permisos CONNECT en el punto de conexión. Esto se debe a que una instancia de servidor que se ejecuta en la cuenta Servicio de red se autentica mediante la cuenta de dominio del equipo host.  
+-   Si las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecutan como cuenta de servicio de red, el inicio de sesión de cada cuenta de equipo host (*NombreDeDominio***\\***NombreDeEquipo$*) se debe crear en **master** en cada uno de los demás servidores, y a ese inicio de sesión se le deben conceder permisos CONNECT en el punto de conexión. Esto se debe a que una instancia de servidor que se ejecuta en la cuenta Servicio de red se autentica mediante la cuenta de dominio del equipo host.  
   
 > [!NOTE]  
 >  Para ver un ejemplo de configuración de una sesión de creación de reflejo de base de datos por medio de la autenticación de Windows, vea [Ejemplo: Configurar la creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/20/2017
   
  De manera opcional, puede controlar los algoritmos de cifrado que utiliza un extremo si especifica uno de los siguientes valores para la opción ALGORITHM en un instrucción CREATE ENDPOINT o ALTER ENDPOINT:  
   
-|Valor ALGORITHM|Descripción|  
+|Valor ALGORITHM|Description|  
 |---------------------|-----------------|  
 |RC4|Especifica que el extremo debe usar el algoritmo RC4. Ésta es la opción predeterminada.<br /><br /> **\*\* Advertencia \*\*** El algoritmo RC4 está en desuso. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Se recomienda utilizar AES.|  
 |AES|Especifica que el extremo debe usar el algoritmo AES.|  
@@ -104,7 +105,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones salientes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Elegir un algoritmo de cifrado](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   

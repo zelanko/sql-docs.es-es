@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - Script component [Integration Services], about Script component
 - Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-caps.latest.revision: "70"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1bbe58e6c0503a7def766dc59d5911ecb4ef61f8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 82aad5cf36717e374cdb3e45d231504efac16549
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="script-component"></a>Componente de script
   El componente de script hospeda el script y permite a un paquete incluir y ejecutar código personalizado de script. Puede usar el componente de script en paquetes para los siguientes fines:  
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="configuring-the-script-component-programmatically"></a>Configurar el componente de script mediante programación  
  Para obtener más información sobre las propiedades que se pueden establecer en la ventana **Propiedades** o mediante programación, haga clic en uno de los siguientes temas:  
   
--   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -119,7 +120,7 @@ ms.lasthandoff: 11/20/2017
   
  Para obtener más información acerca del componente de script, consulte [Configurar el componente de script en el editor de componentes de script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obtener información acerca de cómo programar el componente de script, vea [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  La selección de **Origen**, **Destino**o **Transformación** afecta a la configuración de la transformación Script y a las páginas del Editor de transformación Script.  
   
 ## <a name="script-transformation-editor-connection-managers-page"></a>Editor de transformación Script (página Administradores de conexión)
@@ -127,7 +128,7 @@ ms.lasthandoff: 11/20/2017
   
  Para obtener más información acerca del componente de script, consulte [Configurar el componente de script en el editor de componentes de script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obtener información acerca de cómo programar el componente de script, vea [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Connection managers**  
  Vea la lista de conexiones disponibles para el uso del script.  
   
@@ -137,7 +138,7 @@ ms.lasthandoff: 11/20/2017
  **Connection Manager**  
  Seleccione un administrador de conexiones disponible de la lista o seleccione **\<Nueva conexión>** para abrir el cuadro de diálogo **Agregar administrador de conexiones SSIS**.  
   
- **Description**  
+ **Descripción**  
  Escriba la descripción de la conexión.  
   
  **Agregar**  
@@ -154,7 +155,7 @@ ms.lasthandoff: 11/20/2017
   
  Para obtener más información acerca del componente de script, consulte [Configurar el componente de script en el editor de componentes de script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obtener información acerca de cómo programar el componente de script, vea [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Nombre de entrada**  
  Seleccione las entradas disponibles de la lista.  
   
@@ -178,11 +179,11 @@ ms.lasthandoff: 11/20/2017
   
  Para obtener más información acerca del componente de script, consulte [Configurar el componente de script en el editor de componentes de script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obtener información acerca de cómo programar el componente de script, vea [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Inputs and outputs**  
  Seleccione una entrada o salida de la izquierda para ver sus propiedades en la tabla de la derecha. Las propiedades disponibles para edición varían según la selección. Muchas de las propiedades mostradas son de solo lectura. Para obtener más información sobre las propiedades individuales, vea los temas siguientes.  
   
- [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
  [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -203,13 +204,13 @@ ms.lasthandoff: 11/20/2017
   
  Para obtener más información acerca del componente de script, consulte [Configurar el componente de script en el editor de componentes de script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obtener información acerca de cómo programar el componente de script, vea [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Propiedades**  
  Vea y modifique las propiedades de la transformación de script. Muchas de las propiedades mostradas son de solo lectura. Puede modificar las siguientes propiedades:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
-|**Description**|Describe la transformación del script según su propósito.|  
+|**Descripción**|Describe la transformación del script según su propósito.|  
 |**LocaleID**|Especifica la configuración regional para proporcionar información específica de la región para ordenar y para la conversión de fecha y hora.|  
 |**Nombre**|Escriba un nombre descriptivo para el componente.|  
 |**ValidateExternalMetadata**|Indica si la transformación del script valida metadatos de columna con orígenes de datos externos en tiempo de diseño. El valor **false** retrasa la validación hasta el momento de la ejecución.|  

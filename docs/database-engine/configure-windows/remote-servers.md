@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - servers [SQL Server], remote
 - remote access option
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
-caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4c4d0ac2fa7d02ed8b0e75a1f0ab6347b1e5506a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c3d9efd513db58e6c0e28060be339ee71ed1e2bd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="remote-servers"></a>Servidores remotos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los servidores remotos solo se admiten en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para compatibilidad con versiones anteriores. No obstante, las aplicaciones nuevas deben utilizar servidores vinculados. Para obtener más información, vea [Servidores vinculados &#40;motor de base de datos&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
@@ -101,7 +102,7 @@ GO
 ## <a name="viewing-local-or-remote-server-properties"></a>Ver propiedades de servidores locales o remotos  
  Use el procedimiento almacenado extendido **xp_msver** para revisar los atributos de servidor de servidores locales o remotos. Estos atributos incluyen el número de versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el tipo y número de procesadores del equipo y la versión del sistema operativo. Desde el servidor local, puede ver bases de datos, archivos, inicios de sesión y herramientas de servidores remotos. Para obtener más información, vea [xp_msver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md).  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Servidores vinculados &#40;motor de base de datos&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  

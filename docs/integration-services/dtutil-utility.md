@@ -8,7 +8,8 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,16 +28,16 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-caps.latest.revision: "114"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 318e2d1481f9398780dafe56b3db3f24545242a0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5fcb9ddbd493f259341026d07a1867add85169e1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dtutil-utility"></a>dtutil, utilidad
   La utilidad del símbolo del sistema **dtutil** se usa para administrar paquetes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . La utilidad puede copiar, mover, eliminar o comprobar la existencia de un paquete. Estas acciones se pueden realizar en cualquier paquete [!INCLUDE[ssIS](../includes/ssis-md.md)] almacenado en una de estas tres ubicaciones: una base de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , el almacén de paquetes [!INCLUDE[ssIS](../includes/ssis-md.md)] y el sistema de archivos. Si la utilidad tiene acceso a un paquete almacenado en **msdb**, el símbolo del sistema puede requerir un nombre de usuario y una contraseña. Si la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza Autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , el símbolo del sistema requiere un nombre de usuario y una contraseña. Si falta el nombre de usuario, **dtutil** intenta iniciar una sesión en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la Autenticación de Windows. El tipo de almacenamiento del paquete se identifica mediante las opciones **/SQL**, **/FILE**y **/DTS** .  

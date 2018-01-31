@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-caps.latest.revision: "106"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 316fa73c7acd3e66a21ae285217c8ec917c7afbc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5530fc22bd6657e3cf0888d2cca8bc8d92b01895
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lookup-transformation"></a>Transformación de búsqueda
   La transformación Búsqueda realiza búsquedas mediante la combinación de datos de columnas de entrada con columnas de un conjunto de datos de referencia. La búsqueda se utiliza para tener acceso a información adicional en una tabla relacionada que está basada en valores de columnas comunes.  
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Si hay varias coincidencias en la tabla de referencia, la transformación Búsqueda devuelve solo la primera coincidencia devuelta por la consulta de búsqueda. Si se encuentran varias coincidencias, la transformación Búsqueda genera un error o advertencia solo cuando la transformación se ha configurado para cargar todo el conjunto de datos de referencia en la memoria caché. En este caso, la transformación Búsqueda genera una advertencia cuando detecta varias coincidencias mientras la transformación llena la memoria caché.  
   
- La combinación puede ser compuesta, lo que indica que pueden combinarse varias columnas de la entrada de transformación con columnas del conjunto de datos de referencia. La transformación admite la combinación de columnas con cualquier tipo de datos, a excepción de DT_R4, DT_R8, DT_TEXT, DT_NTEXT o DT_IMAGE. Para más información, consulte [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+ La combinación puede ser compuesta, lo que indica que pueden combinarse varias columnas de la entrada de transformación con columnas del conjunto de datos de referencia. La transformación admite la combinación de columnas con cualquier tipo de datos, a excepción de DT_R4, DT_R8, DT_TEXT, DT_NTEXT o DT_IMAGE. Para obtener más información, vea [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
   
  Normalmente, los valores del conjunto de datos de referencia se agregan a la salida de transformación. Por ejemplo, la transformación Búsqueda puede extraer un nombre de producto de una tabla mediante un valor de una columna de entrada y, después, agregar el nombre del producto a la salida de transformación. Los valores de la tabla de referencia pueden reemplazar valores de columnas o agregarse a nuevas columnas.  
   
@@ -123,7 +124,7 @@ ms.lasthandoff: 11/20/2017
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] difieren en el modo en que comparan cadenas. Si la transformación Búsqueda se configura para cargar el conjunto de datos de referencia en la memoria caché antes de que se ejecute la transformación Búsqueda, [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] lleva a cabo la comparación de búsqueda en la memoria caché. En caso contrario, la operación de búsqueda utiliza una instrucción SQL con parámetros y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] realiza la comparación de búsqueda. Por lo tanto, es posible que la transformación Búsqueda devuelva un número de coincidencias diferentes a partir de la misma tabla de búsqueda, en función del tipo de caché.  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación. Para obtener información detallada, vea los siguientes temas.  
   
 -   [Implementar una búsqueda en modo No hay caché o Caché parcial](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
@@ -149,7 +150,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="lookup-transformation-editor-general-page"></a>Editor de transformación Búsqueda (página General)
   Utilice la página **General** del cuadro de diálogo Editor de transformación Búsqueda para seleccionar el modo de caché y el tipo de conexión, y especificar cómo administrar las filas sin entradas coincidentes.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Caché completa**  
  Generey cargue el conjunto de datos de referencia en la caché antes de que se ejecute la transformación Búsqueda.  
   
@@ -162,7 +163,7 @@ ms.lasthandoff: 11/20/2017
  **Administrador de conexiones de caché**  
  Configure la transformación Búsqueda para utilizar un administrador de conexiones de caché. Esta opción solo está disponible si también está seleccionada la opción Caché completa.  
   
- **OLE DB, administrador de conexiones**  
+ **Administrador de conexiones OLE DB**  
  Configure la transformación Búsqueda para utilizar un administrador de conexiones OLE DB.  
   
  **Especificar cómo administrar las filas sin entradas coincidentes**  
@@ -178,10 +179,10 @@ ms.lasthandoff: 11/20/2017
 ## <a name="lookup-transformation-editor-connection-page"></a>Editor de transformación Búsqueda (página Conexión)
   Utilice la página **Conexión** del cuadro de diálogo **Editor de transformación Búsqueda** para seleccionar un administrador de conexiones. Si selecciona un administrador de conexiones OLE DB, también selecciona una consulta, tabla o vista para generar el conjunto de datos de referencia.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  Las opciones siguientes están disponibles al seleccionar **Caché completa** y **Administrador de conexiones de caché** en la página General del cuadro de diálogo **Editor de transformación Búsqueda** .  
   
- **Administrador de conexiones de caché**  
+ **Cache connection manager**  
  Seleccione un administrador de conexiones de caché de la lista o cree una conexión haciendo clic en **Nueva**.  
   
  **Nueva**  
@@ -202,7 +203,7 @@ ms.lasthandoff: 11/20/2017
 >  Si especifica una instrucción SQL en la página **Avanzadas** del **Editor de transformación Búsqueda**, esa instrucción SQL invalida y reemplaza el nombre de tabla seleccionado aquí. Para obtener más información, vea [Editor de transformación Búsqueda &#40;página Avanzadas&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md).  
   
  **Nueva**  
- Cree una tabla mediante el cuadro de diálogo **Crear tabla** .  
+ Permite crear una tabla con el cuadro de diálogo **Crear tabla** .  
   
  **Usar los resultados de una consulta SQL**  
  Elija esta opción para buscar una consulta preexistente, generar una consulta nueva, comprobar la sintaxis de consulta y obtener una vista previa de los resultados de la consulta.  
@@ -225,7 +226,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="lookup-transformation-editor-columns-page"></a>Editor de transformación Búsqueda (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de transformación Búsqueda** para especificar la combinación entre la tabla de origen y la tabla de referencia, y para seleccionar columnas de búsqueda de la tabla de referencia.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Columnas de entrada disponibles**  
  Muestra la lista de columnas de entrada disponibles. Las columnas de entrada son las columnas del flujo de datos de un origen conectado. Las columnas de entrada y la columna de búsqueda deben tener tipos de datos coincidentes.  
   
@@ -254,7 +255,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="lookup-transformation-editor-advanced-page"></a>Editor de transformación Búsqueda (página Avanzadas)
   Utilice la página **Avanzadas** del cuadro de diálogo **Editor de transformación Búsqueda** para configurar el almacenamiento parcial en caché y modificar la instrucción SQL para la transformación Búsqueda.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Tamaño de caché (32 bits)**  
  Ajuste el tamaño de caché (en megabytes) para los equipos de 32 bits. El valor predeterminado es 5 megabytes.  
   
@@ -279,7 +280,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="external-resources"></a>Recursos externos  
  Entrada del blog, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) en blogs.msdn.com  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Transformación Búsqueda aproximada](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Transformación Búsqueda de términos](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [Flujo de datos](../../../integration-services/data-flow/data-flow.md)   

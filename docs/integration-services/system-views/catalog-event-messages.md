@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1569b4bb562d9342792e4ff9cda58ffe3714eb2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1e67ff8d521b46f0f22462b244b6b4aff41c1a6f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogeventmessages"></a>catalog.event_messages
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -30,13 +31,13 @@ ms.lasthandoff: 11/20/2017
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|Event_message_ID|bigint|Identificador único del mensaje de evento.|  
-|Operation_id|bigint|Tipo de operación.<br /><br /> Para obtener una lista de los tipos de operaciones, consulte [catalog.operations &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
+|Event_message_ID|BIGINT|Identificador único del mensaje de evento.|  
+|Operation_id|BIGINT|Tipo de operación.<br /><br /> Para obtener una lista de los tipos de operaciones, consulte [catalog.operations &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
 |Message_time|datetimeoffset(7)|Hora de creación del mensaje.|  
-|Message_type|smallint|Tipo del mensaje mostrado. Para obtener más información acerca de los tipos de mensaje, consulte [catalog.operation_messages &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md).|  
-|Message_source_type|smallint|Origen del mensaje.|  
+|Message_type|SMALLINT|Tipo del mensaje mostrado. Para obtener más información acerca de los tipos de mensaje, consulte [catalog.operation_messages &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md).|  
+|Message_source_type|SMALLINT|Origen del mensaje.|  
 |message|nvarchar(max)|Texto del mensaje.|  
-|Extended_info_id|bigint|Es el id. de la información adicional relacionada con el mensaje de la operación, que se encuentra en la vista [catalog.extended_operation_info &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md).|  
+|Extended_info_id|BIGINT|Es el id. de la información adicional relacionada con el mensaje de la operación, que se encuentra en la vista [catalog.extended_operation_info &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md).|  
 |Package_name|nvarchar(260)|Nombre del archivo de paquete.|  
 |Event_name|nvarchar(1024)|Evento de tiempo de ejecución asociado al mensaje.|  
 |Message_source_name|nvarchar(4000)|Componente del paquete que constituye el origen del mensaje.|  
@@ -44,10 +45,10 @@ ms.lasthandoff: 11/20/2017
 |Subcomponent_name|nvarchar(4000)|Componente de flujo de datos que es el origen del mensaje.<br /><br /> Cuando el motor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] devuelve mensajes, aparece SSIS.Pipeline en esta columna.|  
 |Package_path|nvarchar(max)|Ruta de acceso del componente dentro del paquete.|  
 |Execution_path|nvarchar(max)|Ruta de acceso completa del paquete primario al punto en el que se ejecuta el componente.<br /><br /> Esta ruta de acceso también captura iteraciones de un componente.|  
-|threadID|int|Identificador del subproceso que se ejecuta cuando se registra el mensaje.|  
-|Message_code|int|Código asociado al mensaje.|  
+|threadID|INT|Identificador del subproceso que se ejecuta cuando se registra el mensaje.|  
+|Message_code|INT|Código asociado al mensaje.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta vista muestra los siguientes tipos de origen de mensaje:  
   
 |**message_source_type**|Description|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/20/2017
 |50|Contenedores de flujo de control|  
 |60|Tarea Flujo de datos|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Esta vista exige uno de los siguientes permisos:  
   
 -   Permiso de lectura en la operación  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Pertenencia al rol del servidor de **sysadmin**  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [catalog.event_message_context](../../integration-services/system-views/catalog-event-message-context.md)  
   
   

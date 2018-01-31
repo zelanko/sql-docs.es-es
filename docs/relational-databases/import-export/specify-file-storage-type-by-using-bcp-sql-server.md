@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-bulk-import-export
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,18 +19,18 @@ helpviewer_keywords:
 - file storage types [SQL Server]
 - data formats [SQL Server], file storage types
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e2fe1deffa8a1521a24035d2fc69ef6566f93294
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f5c79f8e898fd3ec5a70e98c7e34daef5180fb0a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Especificar el tipo de almacenamiento en archivo mediante bcp (SQL Server)
+# <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Especificar el tipo de almacenamiento de archivos mediante bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] El *tipo de almacenamiento en archivo* describe cómo se almacenan los datos en el archivo de datos. La información se puede exportar a un archivo de datos como el tipo de tabla de base de datos correspondiente (formato nativo), como su representación en caracteres (formato de caracteres) o como cualquier tipo de datos que admita la conversión implícita (por ejemplo, si copia un elemento **smallint** como **int**). Los tipos de datos definidos por el usuario se exportan como sus tipos base correspondientes.  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>Comando bcp para el tipo de almacenamiento en archivo  
@@ -51,11 +52,11 @@ ms.lasthandoff: 11/17/2017
     |**varchar**|**c[har]**|  
     |**nchar**|**w**|  
     |**nvarchar**|**w**|  
-    |**texto***\*|**T**[**ext**]|  
+    |**text***\*|**T**[**ext**]|  
     |**ntext2**|**W**|  
     |**binario**|**x**|  
     |**varbinary**|**x**|  
-    |**imagen***\*|**I**[**mage**]|  
+    |**image***\*|**I**[**mage**]|  
     |**datetime**|**d[ate]**|  
     |**smalldatetime**|**D**|  
     |**time**|**te**|  
@@ -92,11 +93,11 @@ ms.lasthandoff: 11/17/2017
 |**varchar**|SQLCHAR|  
 |**nchar**|SQLNCHAR|  
 |**nvarchar**|SQLNCHAR|  
-|**texto***\*|SQLCHAR|  
+|**text***\*|SQLCHAR|  
 |**ntext***\*|SQLNCHAR|  
 |**binario**|SQLBINARY|  
 |**varbinary**|SQLBINARY|  
-|**imagen***\*|SQLBINARY|  
+|**image***\*|SQLBINARY|  
 |**datetime**|SQLDATETIME|  
 |**smalldatetime**|SQLDATETIM4|  
 |**decimal**|SQLDECIMAL|  
@@ -119,7 +120,7 @@ ms.lasthandoff: 11/17/2017
   
  \*\*No puede importar datos en bloque en columnas **text**, **ntext**e **image** que tengan valores DEFAULT.  
   
-## <a name="additional-considerations-for-file-storage-types"></a>Consideraciones adicionales para los tipos de almacenamiento en archivo  
+## <a name="additional-considerations-for-file-storage-types"></a>Consideraciones adicionales para los tipos de almacenamiento de archivos  
  Cuando exporta datos de forma masiva desde una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un archivo de datos:  
   
 -   Siempre puede especificar **char** como tipo de almacenamiento en archivo.  
@@ -131,7 +132,7 @@ ms.lasthandoff: 11/17/2017
     > [!NOTE]  
     >  Después de que se especifiquen de forma interactiva todos los campos de un comando **bcp**, el comando solicita que guarde sus respuestas para cada campo en un archivo que no tenga el formato XML. Para obtener más información sobre los archivos con formato distinto de XML, vea [Archivos de formato no XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [bcp (utilidad)](../../tools/bcp-utility.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Especificar la longitud de campo mediante bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   

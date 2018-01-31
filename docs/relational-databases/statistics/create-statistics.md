@@ -8,7 +8,8 @@ ms.service:
 ms.component: statistics
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-statistics
+ms.technology:
+- dbe-statistics
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - creating statistics
 - statistics [SQL Server], creating
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
-caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f069aa174a9ee4c8e5f7a52fcad09fa709b14496
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9cf772ad4cffd6d992233d4324ce270c884cb06d
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-statistics"></a>Crear estadísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Puede crear estadísticas de optimización de consultas en una o más columnas de una tabla o vista indizada en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para la mayoría de las consultas, el optimizador de consultas ya genera las estadísticas necesarias para un plan de consulta de alta calidad; en algunos casos, para obtener los mejores resultados es necesario crear estadísticas adicionales.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Requiere que el usuario sea el propietario de la tabla o vista indexada o un miembro de uno de los roles siguientes: rol fijo de servidor **sysadmin** , rol fijo de base de datos **db_owner** o rol fijo de base de datos **db_ddladmin** .  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Haga clic con el botón derecho en la carpeta **Estadísticas** y, después, seleccione **Nueva estadística…**.  
   
-     Las siguientes propiedades se muestran en la página **General** del cuadro de diálogo **Nuevas estadísticas de la tabla***nombre_tabla* .  
+     Las siguientes propiedades se muestran en la página **General** del cuadro de diálogo **Nuevas estadísticas de tabla***nombre_tabla*.  
   
      **Nombre de tabla**  
      Muestra el nombre de la tabla descrita por las estadísticas.  
@@ -119,12 +120,12 @@ ms.lasthandoff: 11/17/2017
      **Actualizar estadísticas de estas columnas**  
      Comprueba la actualización de las estadísticas cuando se cierra el cuadro de diálogo.  
   
-     La siguiente propiedad se muestra en la página **Filtro** del cuadro de diálogo **Nuevas estadísticas de la tabla***nombre_tabla* .  
+     La siguiente propiedad se muestra en la página **Filtro** del cuadro de diálogo **Nuevas estadísticas de tabla***nombre_tabla*.  
   
      **Expresión de filtro**  
      Define qué filas de datos se incluyen en las estadísticas filtradas. Por ejemplo, `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  En el cuadro de diálogo **Nuevas estadísticas de la tabla***nombre_tabla* , en la página **General** , haga clic en **Agregar**.  
+5.  En el cuadro de diálogo **Nuevas estadísticas de tabla***nombre_tabla*, en la página **General**, haga clic en **Agregar**.  
   
      Las propiedades siguientes se muestran en el cuadro de diálogo **Seleccionar columnas** . Esta información es de solo lectura.  
   
@@ -145,7 +146,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  En el cuadro de diálogo **Seleccionar columnas** , active la casilla o casillas de cada columna para la que desee crear una estadística y haga clic en **Aceptar**.  
   
-7.  En el cuadro de diálogo **Nuevas estadísticas de la tabla***nombre_tabla* , haga clic en **Aceptar**.  
+7.  En el cuadro de diálogo *Nuevas estadísticas de tabla***nombre_tabla*, haga clic en **Aceptar**.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

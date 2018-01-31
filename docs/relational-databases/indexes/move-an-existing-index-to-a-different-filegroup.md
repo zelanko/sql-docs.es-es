@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - indexes [SQL Server], moving
 - filegroups [SQL Server], switching
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
-caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cb9a94e422fffebc132f7ab71c15f44b1f03b804
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6acddc36534c6f2277282e6c8aed3eeafd37d88b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Mover un índice existente a un grupo de archivos diferente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/17/2017
   
 8.  Haga clic en **Cerrar**.  
   
-9. En el menú **Archivo** , seleccione **Guardar***nombre_tabla*.  
+9. En el menú **Archivo** , seleccione **Guardar***nombre_de_tabla*.  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>Para mover un índice existente a un grupo de archivos distinto en el Explorador de objetos  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,16 +28,16 @@ helpviewer_keywords:
 - backing up databases [SQL Server], backup devices
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
-caps.latest.revision: "93"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8efae7715dcb9d5b182360e074f87cc5c7b2f067
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1dbf5d00855a498782a65a3ff04e2477a2cb871d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-devices-sql-server"></a>Dispositivos de copia de seguridad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En una operación de copia de seguridad en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los datos copiados (la *copia de seguridad*) se escriben en un dispositivo físico de copia de seguridad. Este dispositivo físico de copia de seguridad se inicializa cuando se escribe en él la primera copia de seguridad de un conjunto de medios. Las copias de seguridad de uno o varios dispositivos de copia de seguridad constituyen un solo conjunto de medios.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/17/2017
  dispositivo físico de copia de seguridad  
  Unidad de cinta o un archivo de disco proporcionado por el sistema operativo. Una copia de seguridad puede utilizar entre 1 y 64 dispositivos de copia de seguridad. Si una copia de seguridad requiere varios dispositivos de copia de seguridad, estos deben ser de un mismo tipo (disco o cinta).  
   
- Las copias de seguridad de SQL Server también se pueden escribir en un servicio de almacenamiento Blob de Windows Azure además de en disco o cinta.  
+ Las copias de seguridad de SQL Server también se pueden escribir en un servicio de almacenamiento Blob de Microsoft Azure además de en disco o cinta.  
  
   
 ##  <a name="DiskBackups"></a> Uso de dispositivos de copia de seguridad en disco  
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/17/2017
   
  BACKUP DATABASE *database_name*  
   
- TO DISK **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ TO DISK **=** { **'***nombre_de_dispositivo_de_copia_de_seguridad_física***'** | **@***variable_de_nombre_de_dispositivo_de_copia_de_seguridad_física* }  
   
  Por ejemplo:  
   
@@ -85,7 +86,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM DISK **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ FROM DISK **=** { **'***nombre_de_dispositivo_de_copia_de_seguridad_física***'** | **@***variable_de_nombre_de_dispositivo_de_copia_de_seguridad_física* }  
   
  Por ejemplo,  
   
@@ -121,7 +122,7 @@ GO
     > **IMPORTANTE:** Debido a que la realización de copias de seguridad de datos a través de una red está expuesta a errores, se recomienda que, cuando se utiliza un disco remoto, compruebe la operación de copia de seguridad una vez finalizada. Para obtener más información, vea [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
 ## <a name="specify-a-universal-naming-convention-unc-name"></a>Especificar un nombre UNC (Convención de nomenclatura universal)  
- Para especificar un recurso compartido de red en un comando de copia de seguridad o restauración, use el nombre UNC (convención de nomenclatura universal) completo del archivo para el dispositivo de copia de seguridad. Un nombre UNC tiene el formato **\\\\***Systemname***\\***ShareName***\\***Path***\\***FileName*.  
+ Para especificar un recurso compartido de red en un comando de copia de seguridad o restauración, use el nombre UNC (convención de nomenclatura universal) completo del archivo para el dispositivo de copia de seguridad. Un nombre UNC tiene el formato **\\\\***NombreDeSistema***\\***NombDereRecursoCompartido***\\***RutaDeAcceso***\\***NombreDeArchivo*.  
   
  Por ejemplo:  
   
@@ -151,7 +152,7 @@ GO
   
  BACKUP { DATABASE | LOG } *database_name*  
   
- TO TAPE **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ TO TAPE **=** { **'***nombre_de_dispositivo_de_copia_seguridad_física***'** | **@***variable_de_nombre_de_dispositivo_de_copia_seguridad_física* }  
   
  Por ejemplo:  
   
@@ -165,7 +166,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM TAPE **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ FROM TAPE **=** { **'***nombre_de_dispositivo_de_copia_de_seguridad_física***'** | **@***nombre_de_dispositivo_de_copia_de_seguridad_física* }  
   
 ###  <a name="TapeOptions"></a> Opciones BACKUP y RESTORE específicas de cinta (Transact-SQL)  
  Para facilitar la administración de cintas, la instrucción BACKUP proporciona las siguientes opciones específicas:  
@@ -183,7 +184,7 @@ GO
 ###  <a name="OpenTapes"></a> Administración de cintas abiertas  
  Para ver una lista de los dispositivos de cinta abiertos y el estado de las solicitudes de montaje, vea la vista de administración dinámica [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) . En esta vista se muestran todas las cintas abiertas. Se incluyen las cintas en uso que se encuentran temporalmente inactivas mientras esperan a la siguiente operación BACKUP o RESTORE.  
   
- Si deja abierta la cinta accidentalmente, la manera más rápida de liberarla es usar el siguiente comando: RESTORE REWINDONLY FROM TAPE **=***backup_device_name*. Para obtener más información, vea [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
+ Si deja abierta la cinta accidentalmente, la manera más rápida de liberarla es usar el siguiente comando: RESTORE REWINDONLY FROM TAPE**=***nombre_de_dispositivo_de_copia_de_seguridad*. Para obtener más información, vea [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
   
   
 ## <a name="using-the-windows-azure-blob-storage-service"></a>Uso del servicio Blob Storage de Microsoft Azure  

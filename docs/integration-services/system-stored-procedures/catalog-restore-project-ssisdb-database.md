@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 8adee525-579b-4d2f-b807-e2ecc07fb2e9
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55b42783b60fbdb748a9102c2a703a9a6fa35d2d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6933aa64b1a2c660e7328238ad52442d500bd496
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogrestoreproject-ssisdb-database"></a>catalog.restore_project (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,23 +40,23 @@ catalog.restore_project [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argumentos  
  [ @folder_name = ] *folder_name*  
- Nombre de la carpeta que contiene el proyecto. El parámetro *folder_name* es **nvarchar(128)**.  
+ Nombre de la carpeta que contiene el proyecto. *folder_name* es **nvarchar(128)**.  
   
  [ @project _name = ] *project_name*  
- Nombre del proyecto. El parámetro *project_name* es **nvarchar(128)**.  
+ Nombre del proyecto. *project_name* es **nvarchar(128)**.  
   
  [ @object_version_lsn = ] *object_version_lsn*  
  Versión del proyecto. El parámetro *object_version_lsn* es **bigint**.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
- 0 (Correcto)  
+ 0 (correcto)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Los detalles del proyecto se devuelven como valores **varbinary(MAX)** como parte del conjunto de resultados si se encuentra el parámetro *project_name*.  
   
  Se devuelve **NO RESULT SET** si el proyecto no se puede restaurar en la carpeta especificada.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
 -   Permisos READ y MODIFY en el proyecto  
@@ -71,9 +72,9 @@ catalog.restore_project [ @folder_name = ] folder_name
   
 -   El proyecto no existe  
   
--   El usuario no tiene los permisos adecuados  
+-   El usuario no tiene los permisos adecuados.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando se restaura un proyecto, se asignan los valores predeterminados a todos los parámetros y todas las referencias de entorno quedan sin modificar. El número máximo de versiones de proyecto que se conservan en el catálogo está determinado por la propiedad de catálogo **MAX_VERSIONS_PER_PROJECT**, tal como se muestra en la vista [catalog_property](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
   
 > [!WARNING]  

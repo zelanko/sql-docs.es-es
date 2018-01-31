@@ -1,5 +1,5 @@
 ---
-title: Servicio principal de escalabilidad horizontal de SQL Server Integration Services (SSIS) | Microsoft Docs
+title: "Patrón de escalabilidad horizontal de SQL Server Integration Services (SSIS) | Microsoft Docs"
 ms.description: This article describes the Scale Out Master component of SSIS Scale Out
 ms.custom: 
 ms.date: 12/19/2017
@@ -9,24 +9,25 @@ ms.service:
 ms.component: scale-out
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: haoqian
 ms.author: haoqian
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2a2405606b0ce974c4067e8f7aa53fe9e9c841bf
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 5b04134faf050c47ec11deb4699ed927f6f86027
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="integration-services-ssis-scale-out-master"></a>Servicio principal de escalabilidad horizontal de Integration Services (SSIS)
+# <a name="integration-services-ssis-scale-out-master"></a>Patrón de escalado horizontal de Integration Services (SSIS)
 El Servicio principal de escalabilidad horizontal administra el sistema de escalabilidad horizontal mediante el catálogo SSISDB y el propio servicio. 
 
-El catálogo SSISDB almacena toda la información de los trabajos de escalabilidad horizontal, los paquetes y las ejecuciones. Proporciona la interfaz para habilitar un trabajo de escalabilidad horizontal y ejecutar paquetes en el trabajo de escalabilidad. Para obtener más información, vea [Tutorial: configuración de escalabilidad horizontal de Integration Services](walkthrough-set-up-integration-services-scale-out.md) y [Ejecutar paquetes en Integration Services](run-packages-in-integration-services-ssis-scale-out.md).
+El catálogo SSISDB almacena toda la información de los trabajos de escalabilidad horizontal, los paquetes y las ejecuciones. Proporciona la interfaz para habilitar un trabajador de escalado horizontal y ejecutar paquetes en el escalado horizontal. Para obtener más información, vea [Tutorial: configuración de escalabilidad horizontal de Integration Services](walkthrough-set-up-integration-services-scale-out.md) y [Ejecutar paquetes en Integration Services](run-packages-in-integration-services-ssis-scale-out.md).
 
 El Servicio principal de escalabilidad horizontal es un servicio de Windows que se encarga de la comunicación con los trabajos de escalabilidad horizontal. Devuelve el estado de las ejecuciones de paquetes con los trabajos de escalabilidad horizontal a través de HTTPS y opera en los datos en SSISDB. 
 
@@ -53,12 +54,12 @@ Configure el Servicio principal de escalabilidad horizontal con el archivo `\<dr
 
 Configuración  |Description  |Valor predeterminado  
 ---------|---------|---------
-PortNumber|Número de puerto de red usado para comunicarse con un trabajo de escalabilidad horizontal.|8391         
-SSLCertThumbprint|Huella digital del certificado SSL usado para proteger la comunicación con un trabajo de escalabilidad horizontal.|Huella digital del certificado SSL especificado durante la instalación del Servicio principal de escalabilidad horizontal         
-SQLServerName|Es el nombre de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] que contiene el catálogo SSISDB. Por ejemplo, NombreServidor\\\\NombreInstancia.|Es el nombre del servidor de SQL Server que se instala con el Servicio principal de escalabilidad horizontal.         
+PortNumber|Número de puerto de red usado para comunicarse con un trabajador de escalado horizontal.|8391         
+SSLCertThumbprint|Huella digital del certificado SSL usado para proteger la comunicación con un trabajador de escalado horizontal.|Huella digital del certificado SSL especificado durante la instalación del patrón de escalado horizontal         
+SQLServerName|Es el nombre de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] que contiene el catálogo SSISDB. Por ejemplo, NombreServidor\\\\NombreInstancia.|Es el nombre del servidor de SQL Server que se instala con el patrón de escalabilidad horizontal.         
 CleanupCompletedJobsIntervalInMs|Intervalo de limpieza de los trabajos de ejecución terminados en milisegundos.|43200000         
 DealWithExpiredTasksIntervalInMs|Intervalo para tratar con los trabajos de ejecución terminados en milisegundos.|300000
-MasterHeartbeatIntervalInMs|Intervalo de latido del Servicio principal de escalabilidad horizontal en milisegundos. Esta propiedad especifica el intervalo según el que el Servicio principal de escalabilidad horizontal actualiza su estado de conexión en el catálogo SSISDB.|30000
+MasterHeartbeatIntervalInMs|Intervalo de latido del patrón de escalado horizontal en milisegundos. Esta propiedad especifica el intervalo según el que el Servicio principal de escalabilidad horizontal actualiza su estado de conexión en el catálogo SSISDB.|30000
 SqlConnectionTimeoutInSecs|Es el tiempo de espera de la conexión de SQL (en segundos) al conectarse a SSISDB.|15    
 ||||    
 

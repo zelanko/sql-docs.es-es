@@ -1,7 +1,7 @@
 ---
 title: 'Solucionar problemas de los informes: informes de mapa (Generador de informes y SSRS) | Microsoft Docs'
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.service: 
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b75a964c2f4e62d477c9e195c77e81a14109bd61
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6c59854aa8fc9f976e52f9c9f678563be0174b44
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solucionar problemas de los informes: informes de mapa (Generador de informes y SSRS)
   Podrían producirse problemas con los mapas de un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] al agregar un mapa o una capa de mapa a un informe, personalizar un mapa o una capa de mapa existentes en un informe, obtener una vista previa de un mapa en un informe o publicar un informe con un mapa. Utilice este tema como ayuda para solucionar estos problemas.  
@@ -29,9 +29,9 @@ ms.lasthandoff: 01/09/2018
    ## <a name="need-more-help"></a>¿Necesita ayuda?  
    
   Pruebe:  
- *  Foro de MSDN para [SQL Server 2016](https://social.msdn.microsoft.com/forums/sqlserver/en-us/home?forum=sqlserver2016)  
- * [SQL Server 2016](http://stackoverflow.com/questions/tagged/sql-server-2016) en Stack Overflow  
- * Cree una incidencia o envíe una sugerencia en [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
+ * [SQL Server Reporting Services](https://stackoverflow.com/questions/tagged/reporting-services) en Stack Overflow  
+ * Registre un problema o sugerencia en [UserVoice de Microsoft SQL Server](https://feedback.azure.com/forums/908035-sql-server).  
+
   
 ##  <a name="Embedded"></a> Problemas con el tamaño de la definición de informe  
  Utilice esta sección para ayudar a resolver problemas relacionados con el tamaño de la definición de informe.  

@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 79a1f98f64096d11faf25a75e681518546bbd21e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0e22f388277d9ad96e4c38497789d20f3e98cfad
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>Conectarse a un origen de datos de SQL Server (Asistente para importación y exportación de SQL Server)
 En este tema se muestra cómo conectarse a un origen de datos de **Microsoft SQL Server** desde la página **Elegir un origen de datos** o **Elegir un destino** del Asistente para importación y exportación de SQL Server. Hay varios proveedores de datos que puede usar para conectarse a SQL Server.
@@ -107,7 +108,7 @@ Este es el formato de una cadena de conexión que usa la autenticación de SQL S
      `Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;uid=<user id>;pwd=<password>;`
 
 ### <a name="enter-the-connection-string"></a>Escribir la cadena de conexión
-Escriba la cadena de conexión en el campo **ConnectionString** o escriba el nombre DSN en el campo **Dsn**, que se encuentra en la página **Elegir un origen de datos** o **Elegir un destino**. Después de escribir la cadena de conexión, el asistente la analiza y muestra las propiedades individuales y sus valores en la lista.
+Escriba la cadena de conexión en el campo **ConnectionString** o escriba el nombre DSN en el campo **DSN**, que se encuentra en la página **Elegir un origen de datos** o **Elegir un destino**. Después de escribir la cadena de conexión, el asistente la analiza y muestra las propiedades individuales y sus valores en la lista.
 
 En el siguiente ejemplo se emplea esta cadena de conexión.
 
@@ -128,6 +129,6 @@ Esta es la pantalla que verá después de escribir la cadena de conexión.
 Para obtener más información sobre cómo conectarse a SQL Server con un proveedor de datos que no aparezca en esta lista, consulte [SQL Server connection strings (Cadenas de conexión de SQL Server)](https://www.connectionstrings.com/sql-server/). En este sitio de terceros también encontrará más información sobre los proveedores de datos y los parámetros de conexión que se describen en esta página.
 
 ## <a name="see-also"></a>Vea también
-[Elegir un origen de datos](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
-[Elegir un destino](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
+[Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) (Selección de un origen de datos)  
+[Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md) (Selección de un destino)
 

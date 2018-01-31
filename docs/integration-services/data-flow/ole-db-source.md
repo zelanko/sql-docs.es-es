@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 669c3d72bd6287d0e534dd34f874978a8157da21
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e659322d66c01081c664850366a6cc4abf190d16
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-source"></a>Origen de OLE DB
   El origen de OLE DB extrae datos de varias bases de datos relacionales compatibles con OLE DB mediante una tabla de base de datos, una vista o un comando SQL. Por ejemplo, el origen de OLE DB puede extraer datos de tablas de bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
  Si utiliza una consulta con parámetros, puede asignar variables a parámetros para especificar los valores para parámetros individuales en las instrucciones SQL.  
   
- Este origen utiliza un administrador de conexiones OLE DB para conectar con el origen de datos, y el administrador de conexiones especifica el proveedor OLE DB que se debe usar. Para más información, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+ Este origen utiliza un administrador de conexiones OLE DB para conectar con el origen de datos, y el administrador de conexiones especifica el proveedor OLE DB que se debe usar. Para más información, vea [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
  Un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] también proporciona el objeto de origen de datos a partir del que se puede crear un administrador de conexiones OLE DB, haciendo que los orígenes de datos y las vistas de orígenes de datos estén disponibles para el origen de OLE DB.  
   
@@ -102,11 +103,11 @@ ms.lasthandoff: 11/20/2017
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Extraer datos mediante el origen de OLE DB](../../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md)  
   
@@ -114,7 +115,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Establecer las propiedades de un componente de flujo de datos](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordenación de datos para las transformaciones Mezclar y Combinación de mezcla](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
  Artículo wiki, sobre [SSIS con conectores Oracle](http://go.microsoft.com/fwlink/?LinkId=220670), en social.technet.microsoft.com.  
@@ -139,10 +140,10 @@ ms.lasthandoff: 11/20/2017
 3.  Haga clic en **Administrador de conexiones**.  
   
 ### <a name="static-options"></a>Opciones estáticas  
- **OLE DB, administrador de conexiones**  
- Seleccione un administrador de conexiones de la lista o haga clic en **Nuevo**para crear una conexión.  
+ **Administrador de conexiones OLE DB**  
+ Seleccione un administrador de conexiones de la lista o cree una conexión haciendo clic en **Nuevo**.  
   
- **Nuevo**  
+ **Nueva**  
  Cree un administrador de conexiones con el cuadro de diálogo **Configurar el administrador de conexiones OLE DB** .  
   
  **Modo de acceso a datos**  
@@ -173,7 +174,7 @@ ms.lasthandoff: 11/20/2017
   
 #### <a name="data-access-mode--sql-command"></a>Modo de acceso a datos = Comando SQL  
  **Texto de comando SQL**  
- Escriba el texto de una consulta SQL, haga clic en **Generar consulta**para generar la consulta, o bien haga clic en **Examinar**para buscar el archivo que contiene el texto de la consulta.  
+ Escriba el texto de una consulta SQL, genere la consulta haciendo clic en **Generar consulta**, o bien busque el archivo que contiene el texto de la consulta haciendo clic en **Examinar**.  
   
  **Parámetros**  
  Si ha escrito una consulta con parámetros mediante ? como marcador de posición de parámetro en el texto de la consulta, utilice el cuadro de diálogo **Establecer parámetros de consulta** para asignar los parámetros de entrada de las consultas a las variables del paquete.  
@@ -194,7 +195,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="ole-db-source-editor-columns-page"></a>Editor de origen de OLE DB (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de origen de OLE DB** para asignar una columna de salida a cada columna externa (origen).  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Columnas externas disponibles**  
  Muestra la lista de columnas externas disponibles en el origen de datos. Esta tabla no se puede usar para agregar o quitar columnas.  
   
@@ -207,7 +208,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="ole-db-source-editor-error-output-page"></a>Editor de origen de OLE DB (página Salida de error)
   Utilice la página **Salida de error** del cuadro de diálogo **Editor de origen de OLE DB** para seleccionar opciones de control de errores y establecer propiedades en columnas de salida de errores.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Entrada/salida**  
  Muestra el nombre del origen de datos.  
   
@@ -222,7 +223,7 @@ ms.lasthandoff: 11/20/2017
  **Truncamiento**  
  Permite especificar qué debe ocurrir cuando se produce un truncamiento: omitir el error, redirigir la fila o hacer que el componente no funcione.  
   
- **Description**  
+ **Descripción**  
  Muestra la descripción del error.  
   
  **Establecer este valor en las celdas seleccionadas**  
@@ -231,7 +232,7 @@ ms.lasthandoff: 11/20/2017
  **Aplicar**  
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Destino de OLE DB](../../integration-services/data-flow/ole-db-destination.md)   
  [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], endpoint
 - Endpoint URLs (HADR)
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 338525d93093788e60c208f2f8351836aaab9c04
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 81d0af19646a19135d6d52b2e6384b84cf23a5e2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>Especificar la dirección URL del punto de conexión - Agregar o modificar una réplica de disponibilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para hospedar una réplica de disponibilidad de un grupo de disponibilidad, una instancia de servidor debe poseer un extremo de creación de reflejo de la base de datos. La instancia de servidor utiliza este extremo para escuchar los mensajes de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] procedentes de las réplicas de disponibilidad hospedadas por otras instancias del servidor. Para definir una réplica de disponibilidad para un grupo de disponibilidad, debe especificar la dirección URL del extremo de la instancia del servidor que hospedará la réplica. La *dirección URL del extremo* identifica el protocolo de transporte del extremo de creación de reflejo de la base de datos—TCP, la dirección del sistema de la instancia del servidor y el número de puerto asociado con el extremo.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="SyntaxOfURL"></a> Sintaxis de una dirección URL del extremo  
  La sintaxis de una dirección URL del extremo tiene el siguiente formato:  
   
- TCP**://***\<dirección del sistema>***:***\<puerto>*  
+ TCP**://***\<dirección-del-sistema>***:***\<puerto>*  
   
  donde  
   
@@ -59,9 +60,9 @@ ms.lasthandoff: 11/20/2017
   
     -   El nombre de dominio completo siempre funciona. Esta es una cadena de dirección definida localmente que adopta diferentes formatos en distintos lugares. Con frecuencia, aunque no siempre, el nombre de dominio completo es un nombre compuesto que incluye el nombre del equipo y una serie de segmentos de dominio separados por puntos con el siguiente formato:  
   
-         *nombre_equipo* **.** *segmento_dominio*[...**.***segmento_dominio*]  
+         *nombre_equipo* **.** *segmento_de_dominio*[...**.***segmento_de_dominio*]  
   
-         donde *nombre_equipo*es el nombre de red del equipo que ejecuta la instancia de servidor y *segmento_dominio*[...**.***segmento_dominio*] es la información restante de dominio del servidor; por ejemplo: `localinfo.corp.Adventure-Works.com`.  
+         donde *nombre_de_equipo*es el nombre de red del equipo que ejecuta la instancia de servidor y *segmento_de_dominio*[...**.***segmento_de_dominio*] es la información restante de dominio del servidor; por ejemplo: `localinfo.corp.Adventure-Works.com`.  
   
          El contenido y el número de segmentos de dominio se determinan en la empresa u organización. Para obtener más información, vea [Buscar el nombre de dominio completo](#Finding_FQDN), más adelante en este tema.  
   
@@ -158,7 +159,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Creación y configuración de grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)  

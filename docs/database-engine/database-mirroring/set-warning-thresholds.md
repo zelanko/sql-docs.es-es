@@ -8,21 +8,23 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.dbmmonitor.setwarningthreshold.f1
+f1_keywords:
+- sql13.swb.dbmmonitor.setwarningthreshold.f1
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f731b903bf0c8006fb9a36177f8951ac214537b3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b625927cc888ef09f83ada2cae55197d9533ab18
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="set-warning-thresholds"></a>Establecer umbrales de advertencia
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice este cuadro de diálogo para habilitar y configurar uno o varios umbrales de advertencia para la base de datos seleccionada en el árbol de navegación del cuadro de diálogo **Monitor de creación de reflejo de la base de datos**.  
@@ -33,9 +35,9 @@ ms.lasthandoff: 11/20/2017
   
 -   [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  *Instancia del servidor y su estado de conexión*  
- Nombre de una instancia del servidor asociado con el formato *SYSTEM***\\***INSTANCE_NAME*. En el caso de una instancia de servidor predeterminada, solo se muestra el nombre del sistema.  
+ Nombre de una instancia del servidor asociado con el formato *SISTEMA***\\***NOMBRE_DE_INSTANCIA*. En el caso de una instancia de servidor predeterminada, solo se muestra el nombre del sistema.  
   
  Este campo también indica si el monitor está conectado actualmente a esta instancia del servidor. Los estados de conexión posibles son:  
   
@@ -70,7 +72,7 @@ ms.lasthandoff: 11/20/2017
  **Advertencias**  
  Muestra las advertencias admitidas:  
   
-|Advertencia|Descripción|  
+|Advertencia|Description|  
 |-------------|-----------------|  
 |**Advertir si el registro sin enviar sobrepasa el umbral**|El umbral indica el número de kilobytes (KB) del registro sin enviar en la cola de envío del servidor principal.|  
 |**Advertir si el registro sin restaurar sobrepasa el umbral**|El umbral indica el número de KB de la cola rehecha en la instancia del servidor reflejado.|  
@@ -88,12 +90,12 @@ ms.lasthandoff: 11/20/2017
  **Aceptar**  
  Al hacer clic en **Aceptar** , se cierra este cuadro de diálogo y se muestran los valores especificados actualmente de los umbrales de advertencia de la cuadrícula **Umbrales** en la página con pestañas **Advertencias**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Un umbral solo se puede aplicar a un asociado a la vez, aunque es recomendable que establezca un umbral para un evento específico en los dos asociados, con lo que podrá asegurarse de que la advertencia persiste si se produce una conmutación por error en la base de datos. El umbral adecuado para cada asociado depende de la capacidad de rendimiento del sistema de dicho asociado.  
   
  Un evento solo se escribe en el registro de eventos para un rendimiento si su valor se encuentra en el umbral, o por encima de éste, cuando se actualiza la tabla de estado. Si un valor máximo alcanza el umbral momentáneamente entre las actualizaciones de estado, se pierde dicho máximo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  

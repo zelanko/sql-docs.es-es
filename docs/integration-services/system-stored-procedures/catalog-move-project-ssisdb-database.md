@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a7cc5e2b529f503c0a4182f43e1436fc355ab4c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1c59650d75d9abc212bedbb8a147592760049674
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogmoveproject---ssisdb-database"></a>catalog.move_project - base de datos de SSISDB
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,21 +39,21 @@ catalog.move_project [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>Argumentos  
  [ @source_folder = ] *source_folder*  
- Nombre de la carpeta de origen en la que está ubicado el proyecto antes de moverlo. El parámetro *source_folder* es **nvarchar(128)**.  
+ Nombre de la carpeta de origen en la que está ubicado el proyecto antes de moverlo. *source_folder* es **nvarchar(128)**.  
   
  [ @project_name = ] *project_name*  
- Nombre del proyecto que se va a mover. El parámetro *project_name* es **nvarchar(128)**.  
+ Nombre del proyecto que se va a mover. *project_name* es **nvarchar(128)**.  
   
  [ @destination_folder = ] *destination_folder*  
- Nombre de la carpeta de destino en la que está ubicado el proyecto después de moverlo. El parámetro *destination_folder* es **nvarchar(128)**.  
+ Nombre de la carpeta de destino en la que está ubicado el proyecto después de moverlo. *destination_folder* es **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
- 0 (Correcto)  
+ 0 (correcto)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Ninguno  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
 -   Los permisos READ y MODIFY del proyecto que se desea mover y el permiso CREATE_OBJECTS de la carpeta de destino  
@@ -70,9 +71,9 @@ catalog.move_project [ @source_folder = ] source_folder
   
 -   La carpeta de destino no existe o ya contiene un proyecto con el mismo nombre  
   
--   El usuario no tiene los permisos adecuados  
+-   El usuario no tiene los permisos adecuados.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando un proyecto se mueve de una carpeta de origen a una carpeta de destino, el proyecto de la carpeta de origen y las referencias de entorno correspondientes se eliminan. En la carpeta de destino, se crea un proyecto idéntico y unas referencias de entorno. Las referencias de entorno relativas se resolverán en otra carpeta después de la operación de traslado. Las referencias absolutas se resolverán en la misma carpeta después de la operación de traslado.  
   
 > [!NOTE]  

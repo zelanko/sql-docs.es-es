@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,16 +30,16 @@ helpviewer_keywords:
 - Resource database [SQL Server]
 - databases [SQL Server], moving
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
-caps.latest.revision: "62"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 25802e683974f339f7081d774e531ba8bd0ea5bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3444bc386251013e6dc7e4d81ad408b9a07b971a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="move-system-databases"></a>Mover bases de datos del sistema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Mueva el archivo o los archivos a la nueva ubicación.  
 
-4.  Reinicie la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el servidor. Para obtener más información, vea [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+4.  Reinicie la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el servidor. Para más información, consulte [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 5.  Compruebe el cambio de los archivos ejecutando la consulta siguiente.  
   
@@ -121,7 +122,7 @@ ms.lasthandoff: 11/17/2017
         NET START MSSQL$instancename /f /T3608
         ```  
   
-     Para obtener más información, vea [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+     Para más información, consulte [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  En cada uno de los archivos que se van a mover, use los comandos **sqlcmd** o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para ejecutar la siguiente instrucción.  
   
@@ -154,7 +155,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  En el nodo **Servicios de SQL Server** , haga clic con el botón derecho en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, **SQL Server (MSSQLSERVER)**) y elija **Propiedades**.  
   
-3.  En el cuadro de diálogo **Propiedades de (***nombre_de_instancia***) de SQL Server** , haga clic en la pestaña **Parámetros de inicio** .  
+3.  En el cuadro de diálogo **Propiedades de (***nombre_de_instancia***) de SQL Server**, haga clic en la pestaña **Parámetros de inicio**.  
   
 4.  En el cuadro **Parámetros existentes** , seleccione el parámetro –d para mover el archivo de datos maestros. Haga clic en **Actualizar** para guardar el cambio.  
   
@@ -264,7 +265,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  Elimine los archivos `tempdb.mdf` y `templog.ldf` de la ubicación original.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Base de datos Resource](../../relational-databases/databases/resource-database.md)   
  [Base de datos tempdb](../../relational-databases/databases/tempdb-database.md)   
  [Base de datos maestra](../../relational-databases/databases/master-database.md)   

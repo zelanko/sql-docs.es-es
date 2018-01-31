@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.reviewissues.f1
+f1_keywords:
+- sql13.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f73734f20bcda435f099066852d84101192fb212
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8f9c2ddd8834d5ff3dbef2d0aff725343fae4f41
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Revisar asignación de tipos de datos (Asistente para importación y exportación de SQL Server)
 Si ha especificado una asignación de tipo de datos que puede que no se complete correctamente en la lista **Asignaciones** del cuadro de diálogo **Asignaciones de columnas** , en el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se mostrará la página **Revisar asignación de tipos de datos** . En esta página, revise información detallada sobre las conversiones de tipos de datos que el asistente necesita realizar para que los datos de origen sean compatibles con el destino. En esta información se incluyen indicaciones visuales para distinguir las conversiones de tipos de datos que se espera que sean correctas de las que podrían producir errores o truncamientos. En cada conversión puede decidir si quiere aceptar la conversión que sugiere el asistente, así como especificar cómo administrar los errores que se produzcan.   
@@ -49,7 +51,7 @@ En este ejemplo, los resultados de la consulta que el usuario proporcionó se co
   
  En la tabla siguiente se describen las columnas de la lista **Tabla** .  
   
-|Columna|Description|  
+|columna|Description|  
 |------------|-----------------|  
 |(Icono de origen)|Indica la probabilidad de que las conversiones de tipos de datos sean correctas:<br /> - Un icono de marca de verificación **verde** indica que el asistente espera que todas las conversiones de tipos de datos para esta tabla sean correctas.<br />- Un icono de advertencia **amarillo** indica que necesita revisar las conversiones individuales que realizará el asistente. Para revisar estas conversiones, seleccione la tabla y, a continuación, revise las conversiones para las columnas individuales en la lista **Asignación de tipo de datos** .<br />- Un icono de error **rojo** indica que el asistente no puede realizar algunas de las conversiones para esta tabla de forma confiable.|  
 |**Origen**|El nombre de la tabla de origen.|  
@@ -65,7 +67,7 @@ En este ejemplo, cada una de las columnas del origen se copiará en una columna 
 
 En la tabla siguiente se describen las columnas de la lista **Asignación de tipo de datos** . 
 
-|Columna|Description|  
+|columna|Description|  
 |------------|-----------------|  
 |(Icono de conversión)|Indica la probabilidad de que las conversiones de tipos de datos sean correctas:<br /> - Un icono de marca de verificación **verde** indica que el asistente espera que la conversión de tipos de datos de esta columna sea correcta.<br />- Un icono de advertencia **amarillo** indica que necesita revisar la conversión que va a realizar el asistente. Para revisar la conversión, haga doble clic en la columna para ver el cuadro de diálogo **Detalles de conversión de columna** . Para más información, vea [Cuadro de diálogo Detalles de conversión de columna](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md).<br />- Un icono de error **rojo** indica que el asistente no puede realizar la conversión de forma confiable.|  
 |**Columna de origen**|El nombre de la columna de origen.|  
@@ -88,15 +90,15 @@ En este ejemplo se muestran los valores predeterminados para las dos opciones de
 
  **Al producirse un error (global)**  
  Especifique cómo controla el asistente los errores:  
- -   Termine con un error y detenga el proceso de importación o exportación. Es el valor predeterminado.
+ -   Termine con un error y detenga el proceso de importación o exportación. Este es el valor predeterminado.
  -   Omita el error y continúe el proceso de importación o exportación.  
   
  **Al producirse truncamiento (global)**  
  Especifique cómo controla el asistente el truncamiento de datos:  
- -   Termine con un error y detenga el proceso de importación o exportación. Es el valor predeterminado.
+ -   Termine con un error y detenga el proceso de importación o exportación. Este es el valor predeterminado.
  -   Omita el trocamiento y continúe el proceso de importación o exportación.  
    
-## <a name="whats-next"></a>Siguientes pasos  
+## <a name="whats-next"></a>¿Qué sigue?  
  Después de revisar las advertencias, de especificar las opciones de conversión y de especificar cómo prefiere administrar los errores, en la página **Revisar asignación de tipos de datos** se volverá a mostrar el cuadro de diálogo **Asignaciones de columnas** . Para más información, vea [Asignaciones de columnas](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).  
  
  ## <a name="see-also"></a>Vea también

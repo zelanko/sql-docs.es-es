@@ -8,22 +8,25 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66ea2fcf5a1c2c220e90d3b6d0c1c7879c9c10fd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b30cc7798d28ce9b13f9448f583891170f7309fd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>Lección 1: Publicar datos con la replicación de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En esta lección, creará una publicación de combinación con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar un subconjunto de las tablas **Employee**, **SalesOrderHeader** y **SalesOrderDetail** en la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Estas tablas están filtradas con filtros de fila con parámetros para que cada suscripción contenga una partición única de los datos. También agregará el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa el Agente de mezcla a la lista de acceso a la publicación (PAL). Para realizar este tutorial, es preciso que haya finalizado el anterior, [Preparar el servidor para replicación](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
@@ -89,7 +92,7 @@ ms.lasthandoff: 11/17/2017
   
 21. Seleccione **Crear una instantánea inmediatamente**, desactive **Programar el Agente de instantáneas para ejecutarse**y, a continuación, haga clic en **Siguiente**.  
   
-22. En la página Seguridad del agente, haga clic en **Configuración de seguridad**, escriba \<*nombreDeEquipo>***\repl_snapshot** en el cuadro **Cuenta de proceso**, escriba la contraseña de la cuenta y haga clic en **Aceptar**. Haga clic en **Finalizar**.  
+22. En la página Seguridad del agente, haga clic en **Configuración de seguridad**, escriba \<*Nombre_De_Equipo>***\repl_snapshot** en el cuadro **Cuenta de proceso**, escriba la contraseña de la cuenta y haga clic en **Aceptar**. Haga clic en **Finalizar**.  
   
 23. En la página Finalización del asistente, escriba **AdvWorksSalesOrdersMerge** en el cuadro **Nombre de publicación** y, a continuación, haga clic en **Finalizar**.  
   
@@ -113,12 +116,12 @@ ms.lasthandoff: 11/17/2017
   
 3.  Seleccione la página **Lista de acceso a la publicación** y haga clic en **Agregar**.  
   
-4.  En el cuadro de diálogo Agregar acceso de publicación, seleccione *<nombre_equipo>***\repl_merge** y haga clic en **Aceptar**. Haga clic en **Aceptar**.  
+4.  En el cuadro de diálogo Agregar acceso de publicación, seleccione *<Nombre_De_Equipo>***\repl_merge** y haga clic en **Aceptar**. Haga clic en **Aceptar**.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Next Steps  
 Ha creado correctamente la publicación de combinación. A continuación se suscribirá a esta publicación. Consulte la [Lección 2: Crear una suscripción a la publicación de combinación](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-merge-publication.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Filtrar datos publicados](../../relational-databases/replication/publish/filter-published-data.md)  
 [Filtros de fila con parámetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
 [Definir un artículo](../../relational-databases/replication/publish/define-an-article.md)  

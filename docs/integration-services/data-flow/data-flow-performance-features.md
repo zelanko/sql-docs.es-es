@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1598f40bb947a98b8fccc8ae47ba1dd7b9447b0a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 508d0f2774033dee83ba600036ab09efd39eaa58
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-flow-performance-features"></a>Características de rendimiento del flujo de datos
   En este tema se proporcionan sugerencias sobre cómo diseñar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para evitar problemas de rendimiento comunes. También proporciona información sobre las características y las herramientas que puede utilizar para solucionar problemas relacionados con el rendimiento de los paquetes.  
@@ -142,13 +143,13 @@ ms.lasthandoff: 11/20/2017
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>Transformaciones Búsqueda aproximada y Agrupación aproximada  
  Para obtener información sobre cómo optimizar el rendimiento de las transformaciones Agrupación aproximada y Búsqueda aproximada, vea las notas del producto [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604).  
   
-#### <a name="lookup-transformation"></a>Transformación Búsqueda  
+#### <a name="lookup-transformation"></a>Transformación de búsqueda  
  Puede minimizar el tamaño de los datos de referencia en memoria si escribe una instrucción SELECT que busque solo las columnas necesarias. Esta opción presenta un rendimiento mejor que seleccionar una tabla o una vista completa, lo que devuelve una gran cantidad de datos innecesarios.  
   
 #### <a name="merge-join-transformation"></a>Merge Join Transformation  
  Ya no tiene que configurar el valor de la propiedad **MaxBuffersPerInput** porque Microsoft ha realizado modificaciones que reducen el riesgo de que la transformación Combinación de mezcla utilice demasiada memoria. Este problema se producía a veces cuando varias entradas de la Combinación de mezcla generaban datos a velocidades desiguales.  
   
-#### <a name="slowly-changing-dimension-transformation"></a>Transformación Dimensión de variación lenta  
+#### <a name="slowly-changing-dimension-transformation"></a>Dimensión de variación lenta, transformación  
  El Asistente para dimensiones variables y la transformación Dimensión de variación lenta son herramientas de uso general que satisfacen las necesidades de la mayoría de los usuarios. Sin embargo, el flujo de datos que genera el asistente no está optimizado en cuanto a rendimiento.  
   
  Normalmente, los componentes más lentos de la transformación Dimensión de variación lenta son las transformaciones Comando de OLE DB que ejecutan cláusulas UPDATE sobre las filas de una en una. Por consiguiente, la manera más efectiva de mejorar el rendimiento de la transformación Dimensión de variación lenta consiste en reemplazar las transformaciones Comando de OLE DB. Puede reemplazar estas transformaciones por componentes de destino que guarden todas las filas que hay que actualizar en una tabla de ensayo. A continuación, puede agregar una tarea Ejecutar SQL que ejecute una cláusula Transact-SQL UPDATE basada en un solo conjunto sobre todas las filas al mismo tiempo.  
@@ -158,7 +159,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="destinations"></a>Destinos  
  Para lograr un mejor rendimiento con los destinos, considere la posibilidad de utilizar un destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de probar el rendimiento del destino.  
   
-#### <a name="sql-server-destination"></a>Destino de SQL Server  
+#### <a name="sql-server-destination"></a>SQL Server, destino  
  Cuando un paquete cargue datos en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el mismo equipo, utilice un destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este destino está optimizado para cargas masivas de alta velocidad.  
   
 #### <a name="testing-the-performance-of-destinations"></a>Probar el rendimiento de los destinos  
@@ -169,9 +170,9 @@ ms.lasthandoff: 11/20/2017
   
  Para habilitar o deshabilitar la presentación de mensajes en la pestaña **Progreso** , active o desactive la opción **Informe de progreso de depuración** del menú **SSIS** . La deshabilitación de los informes de progreso puede ayudar a mejorar el rendimiento al ejecutar un paquete complejo en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
--   [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordenación de datos para las transformaciones Mezclar y Combinación de mezcla](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
  **Artículos y publicaciones de blogs**  
@@ -206,7 +207,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Vídeo, [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), en technet.microsoft.com.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Herramientas para solucionar problemas con el desarrollo de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Herramientas para solucionar problemas de la ejecución de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   

@@ -8,20 +8,21 @@ ms.service:
 ms.component: ssms
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
-caps.latest.revision: "72"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f6a8a753f3bb272ebd1a98429a5f224dce717f33
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 051c080de8a5b670a7fe3dbe70ccebf73bfb57a3
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio: Registro de cambios (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En este artículo se proporcionan detalles sobre las actualizaciones, mejoras y correcciones de errores de las versiones actuales y anteriores de SSMS. Descargue las [versiones anteriores de SSMS a continuación](#previous-ssms-releases).
@@ -126,6 +127,9 @@ Para descargar las versiones anteriores de SSMS, haga clic en los vínculos de t
 ## <a name="downloadssdtmediadownloadpng-ssms-173httpsgomicrosoftcomfwlinklinkid858904"></a>![descargar](../ssdt/media/download.png) [SSMS 17.3](https://go.microsoft.com/fwlink/?linkid=858904)
 Disponible con carácter general | Número de compilación: 14.0.17199.0
 
+[Chino (República Popular China)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x804) | [Chino (Taiwán)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40a)
+
+
 ### <a name="enhancements"></a>Mejoras
 
 - Se ha agregado el nuevo asistente "Importar archivo plano" para simplificar la experiencia de importación de archivos CSV con un marco de trabajo inteligente, que ahora no exige prácticamente intervención por parte del usuario ni poseer conocimientos especializados sobre dominios. Para obtener detalles, vea [Importación de archivos planos mediante el asistente de SQL](../relational-databases/import-export/import-flat-file-wizard.md).
@@ -216,6 +220,8 @@ Disponible con carácter general | Número de compilación: 14.0.17199.0
 
 ## <a name="downloadssdtmediadownloadpng-ssms-172httpsgomicrosoftcomfwlinklinkid854085"></a>![descargar](../ssdt/media/download.png) [SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085)
 Disponible con carácter general | Número de compilación: 14.0.17177.0
+
+[Chino (República Popular China)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x804) | [Chino (Taiwán)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40a)
 
 ### <a name="enhancements"></a>Mejoras
 
@@ -342,8 +348,10 @@ The connection is broken and recovery is not possible. The client driver attempt
 - Se ha corregido un problema que hacía que no se pudieran mostrar informes de datos de ejecución del catálogo de SSISDB
 - Se han solucionado problemas en SSMS relacionados con el rendimiento deficiente con un gran número de proyectos o paquetes
 
-## <a name="downloadssdtmediadownloadpng-ssms-171httpsgomicrosoftcomfwlinklinkid849819"></a>![descargar](../ssdt/media/download.png) [SSMS 17.1](https://go.microsoft.com/fwlink/?linkid=849819)
+## <a name="downloadssdtmediadownloadpng-ssms-171httpsgomicrosoftcomfwlinklinkid799832"></a>![descargar](../ssdt/media/download.png) [SSMS 17.1](https://go.microsoft.com/fwlink/?linkid=799832)
 Disponible con carácter general | Número de compilación: 14.0.17119.0
+
+[Chino (República Popular China)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Chino (Taiwán)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 ### <a name="enhancements"></a>Mejoras
 
@@ -367,8 +375,10 @@ Disponible con carácter general | Número de compilación: 14.0.17119.0
 - Scripting: se evita temporalmente que SSMS elimine de forma accidental objetos de base de datos de Azure al intentar incluir en script la eliminación al deshabilitar esa opción.  La corrección correcta estará en una próxima versión de SSMS.
 - Explorador de objetos: se ha corregido un problema que hacía que no se expandiera el nodo "Bases de datos" al conectarse a una base de datos de Azure creada mediante "AS COPY".
 
-## <a name="downloadssdtmediadownloadpng-ssms-170httpgomicrosoftcomfwlinklinkid847722"></a>![descargar](../ssdt/media/download.png) [SSMS 17.0](http://go.microsoft.com/fwlink/?LinkID=847722)
+## <a name="downloadssdtmediadownloadpng-ssms-170httpgomicrosoftcomfwlinklinkid799832"></a>![descargar](../ssdt/media/download.png) [SSMS 17.0](http://go.microsoft.com/fwlink/?LinkID=799832)
 Disponible con carácter general | Número de compilación: 14.0.17099.0
+
+[Chino (República Popular China)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Chino (Taiwán)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 ### <a name="enhancements"></a>Mejoras 
 
@@ -532,8 +542,10 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - Ctrl-R ahora alterna el panel de resultados en el editor de consultas DAX de SSMS.
 
 
-## <a name="downloadssdtmediadownloadpng-ssms-1653httpgomicrosoftcomfwlinklinkid840946"></a>![descargar](../ssdt/media/download.png) [SSMS 16.5.3](http://go.microsoft.com/fwlink/?LinkID=840946)
+## <a name="downloadssdtmediadownloadpng-ssms-1653httpgomicrosoftcomfwlinklinkid799832"></a>![descargar](../ssdt/media/download.png) [SSMS 16.5.3](http://go.microsoft.com/fwlink/?LinkID=799832)
 Disponible con carácter general | Número de compilación: 13.0.16106.4
+
+[Chino (República Popular China)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Chino (Taiwán)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 Se han corregido los problemas siguientes en esta versión:
 
@@ -572,8 +584,11 @@ Disponible con carácter general | Número de compilación: 13.0.16100.1
 * Se ha corregido un problema por el que al hacer clic en el plan de consulta XML no se abría la IU de SSMS adecuada.
 
 
-## <a name="downloadssdtmediadownloadpng-ssms-165httpgomicrosoftcomfwlinklinkid832812"></a>![descargar](../ssdt/media/download.png) [SSMS 16.5](http://go.microsoft.com/fwlink/?LinkID=832812)
+## <a name="downloadssdtmediadownloadpng-ssms-165httpgomicrosoftcomfwlinklinkid799832"></a>![descargar](../ssdt/media/download.png) [SSMS 16.5](http://go.microsoft.com/fwlink/?LinkID=799832)
 Disponible con carácter general | Número de compilación: 13.0.16000.28
+
+
+[Chino (República Popular China)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Chino (Taiwán)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 * Se ha corregido un problema de bloqueo que se producía al hacer clic en una base de datos con un nombre de tabla que contenía ";:".
 * Se ha corregido un problema que ocasionaba que los cambios realizados en la página Modelo en la ventana de propiedades de base de datos tabular de AS creasen scripts fuera de la definición original. 
@@ -596,8 +611,10 @@ Disponible con carácter general | Número de compilación: 13.0.16000.28
 * Se ha corregido el problema de bloqueos de SSMS que se producían al cerrar la aplicación o al intentar mostrar el cuadro de diálogo de error.
 
 
-## <a name="downloadssdtmediadownloadpng-ssms-1641-september-2016httpgomicrosoftcomfwlinklinkid828615"></a>![descargar](../ssdt/media/download.png) [SSMS 16.4.1 (septiembre de 2016)](http://go.microsoft.com/fwlink/?LinkID=828615)
+## <a name="downloadssdtmediadownloadpng-ssms-1641-september-2016httpgomicrosoftcomfwlinklinkid799832"></a>![descargar](../ssdt/media/download.png) [SSMS 16.4.1 (septiembre de 2016)](http://go.microsoft.com/fwlink/?LinkID=799832)
 Disponible con carácter general | Número de compilación: 13.0.15900.1
+
+[Chino (República Popular China)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Chino (Taiwán)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 *  Se ha corregido un problema que producía un error al alterar o modificar un procedimiento almacenado:  
 [Microsoft Connect, n.º 3103831](https://connect.microsoft.com/SQLServer/feedback/details/3103831)
@@ -658,8 +675,11 @@ Disponible con carácter general | Número de compilación: 13.0.15900.1
 
 
 
-## <a name="downloadssdtmediadownloadpng-ssms-163-august-2016httpgomicrosoftcomfwlinklinkid824938"></a>![descargar](../ssdt/media/download.png) [SSMS 16.3 (agosto de 2016)](http://go.microsoft.com/fwlink/?LinkID=824938)
+## <a name="downloadssdtmediadownloadpng-ssms-163-august-2016httpgomicrosoftcomfwlinklinkid799832"></a>![descargar](../ssdt/media/download.png) [SSMS 16.3 (agosto de 2016)](http://go.microsoft.com/fwlink/?LinkID=799832)
 Disponible con carácter general | Número de versión: 13.0.15700.28
+
+
+[Chino (República Popular China)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Chino (Taiwán)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 * Las versiones mensuales de SSMS ahora se marcan numéricamente.
 
@@ -713,8 +733,10 @@ Disponible con carácter general | Número de versión: 13.0.15700.28
 
 
 ---
-## <a name="downloadssdtmediadownloadpng-ssms-july-2016-hotfix-updatehttpgomicrosoftcomfwlinklinkid822301"></a>![descargar](../ssdt/media/download.png) [Actualización de revisión de SSMS de julio de 2016](http://go.microsoft.com/fwlink/?LinkID=822301)
+## <a name="downloadssdtmediadownloadpng-ssms-july-2016-hotfix-updatehttpgomicrosoftcomfwlinklinkid799832"></a>![descargar](../ssdt/media/download.png) [Actualización de revisión de SSMS de julio de 2016](http://go.microsoft.com/fwlink/?LinkID=799832)
 Disponible con carácter general | Número de versión: 13.0.15600.2
+
+[Chino (República Popular China)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Chino (Taiwán)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 * **Corrija los errores en SSMS para habilitar elementos de menú de clic con el botón derecho que faltan**.  
 *Solicitudes de error de clientes vinculadas:*  
@@ -783,6 +805,8 @@ Disponible con carácter general | Número de versión: 13.0.15500.91
 ----
 ## <a name="downloadssdtmediadownloadpng-ssms-june-2016httpgomicrosoftcomfwlinklinkid799832"></a>![descargar](../ssdt/media/download.png) [SSMS de junio de 2016](http://go.microsoft.com/fwlink/?LinkID=799832)
 Disponible con carácter general | Número de versión: 13.0.15000.23
+
+[Chino (República Popular China)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Chino (Taiwán)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 * SSMS está generalmente disponible a partir de la versión de junio de 2016.
 

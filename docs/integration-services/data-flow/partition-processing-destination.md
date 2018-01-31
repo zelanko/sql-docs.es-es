@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - Partition Processing destination [Integration Services]
 - destinations [Integration Services], Partition Processing
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc582d705e699d4c91c6bf89a51df444db00a04d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 20277b2aee209f1632100615d94a1fc3caec27d9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="partition-processing-destination"></a>Destino de procesamiento de particiones
   El destino de procesamiento de particiones carga y procesa una partición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para más información sobre particiones, vea [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md).  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas del destino de procesamiento de particiones](../../integration-services/data-flow/partition-processing-destination-custom-properties.md)  
   
@@ -69,12 +70,12 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Las tareas aquí descritas no se aplican a los modelos tabulares de Analysis Services.  No se pueden asignar las columnas de entrada a las de partición para los modelos tabulares. En su lugar puede usar la tarea Ejecutar DDL de Analysis Services [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) para procesar la partición.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Connection manager**  
  Seleccione un administrador de conexiones de la lista o cree una conexión haciendo clic en **Nuevo**.  
   
- **Nuevo**  
- Crea una nueva conexión mediante el cuadro de diálogo **Agregar administrador de conexiones de Analysis Services** .  
+ **Nueva**  
+ Permite crear una conexión con el cuadro de diálogo **Agregar administrador de conexiones de Analysis Services** .  
   
  **Lista de particiones disponibles**  
  Seleccione la partición para procesar.  
@@ -82,10 +83,10 @@ ms.lasthandoff: 11/20/2017
  **Método de procesamiento**  
  Seleccione el método de procesamiento. El valor predeterminado de esta opción es **Completa**.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |Agregar (incremental)|Realiza un procesamiento incremental de la partición.|  
-|Completa|Realiza un procesamiento completo de la partición.|  
+|Completo|Realiza un procesamiento completo de la partición.|  
 |Solo datos|Realiza un procesamiento de actualización de la partición.|  
   
 ## <a name="partition-processing-destination-editor-mappings-page"></a>Editor de destino de procesamiento de particiones (página Asignaciones)
@@ -94,7 +95,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Las tareas aquí descritas no se aplican a los modelos tabulares de Analysis Services.  No se pueden asignar las columnas de entrada a las de partición para los modelos tabulares. En su lugar puede usar la tarea Ejecutar DDL de Analysis Services [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) para procesar la partición.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Columnas de entrada disponibles**  
  Muestra la lista de columnas de entrada disponibles. Utilice una operación de arrastrar y colocar para asignar columnas de entrada disponibles de la tabla a columnas de destino.  
   
@@ -113,14 +114,14 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Las tareas aquí descritas no se aplican a los modelos tabulares de Analysis Services.  No se pueden asignar las columnas de entrada a las de partición para los modelos tabulares. En su lugar puede usar la tarea Ejecutar DDL de Analysis Services [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) para procesar la partición.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Utilizar la configuración de error predeterminada**  
  Especifica si debe utilizarse el control de errores predeterminado de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Este valor es **True**de forma predeterminada.  
   
  **Acción del error de clave**  
  Permite especificar la forma de controlar registros que tienen valores de clave no aceptables.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|Convierte el valor de clave no aceptable en el valor Unknown.|  
 |**DiscardRecord**|Descarta el registro.|  
@@ -137,7 +138,7 @@ ms.lasthandoff: 11/20/2017
  **Acción ante el error**  
  Especifica la acción que debe llevarse a cabo cuando se alcanza el umbral de error, en caso de que se haya seleccionado **Detenerse ante errores**.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**StopProcessing**|Detiene el procesamiento.|  
 |**StopLogging**|Detiene el registro de errores.|  
@@ -145,7 +146,7 @@ ms.lasthandoff: 11/20/2017
  **Clave no encontrada**  
  Especifica la acción que debe llevarse a cabo en caso de que se produzca un error de clave no encontrada. Este valor es **ReportAndContinue**de forma predeterminada.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Omite el error y reanuda el procesamiento.|  
 |**ReportAndContinue**|Informa del error y reanuda el procesamiento.|  
@@ -154,7 +155,7 @@ ms.lasthandoff: 11/20/2017
  **Clave duplicada**  
  Especifica la acción que debe llevarse a cabo en caso de que se produzca un error de clave duplicada. Este valor es **IgnoreError**de forma predeterminada.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Omite el error y reanuda el procesamiento.|  
 |**ReportAndContinue**|Informa del error y reanuda el procesamiento.|  
@@ -163,7 +164,7 @@ ms.lasthandoff: 11/20/2017
  **Clave NULL convertida en desconocida**  
  Especifica la acción que debe llevarse a cabo cuando una clave NULL se ha convertido al valor Unknown. Este valor es **IgnoreError**de forma predeterminada.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Omite el error y reanuda el procesamiento.|  
 |**ReportAndContinue**|Informa del error y reanuda el procesamiento.|  
@@ -172,7 +173,7 @@ ms.lasthandoff: 11/20/2017
  **Clave NULL no permitida**  
  Especifica la acción que debe llevarse a cabo cuando no se permiten claves NULL y se encuentra una clave NULL. Este valor es **ReportAndContinue**de forma predeterminada.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Omite el error y reanuda el procesamiento.|  
 |**ReportAndContinue**|Informa del error y reanuda el procesamiento.|  
@@ -184,5 +185,5 @@ ms.lasthandoff: 11/20/2017
  **Examinar (...)**  
  Seleccione una ruta de acceso para el registro de errores.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Referencia de errores y mensajes de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   

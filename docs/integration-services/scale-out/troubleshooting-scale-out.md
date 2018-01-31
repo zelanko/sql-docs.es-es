@@ -9,19 +9,20 @@ ms.service:
 ms.component: scale-out
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: haoqian
 ms.author: haoqian
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eccf8f05badd870a610df81e9fdf67a6fa8e332b
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: bc22e1bac1e2a409061f73131cdfd203c8948fa3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="troubleshoot-scale-out"></a>Solución de problemas de escalabilidad horizontal
 
@@ -32,7 +33,7 @@ Para investigar los síntomas que experimente, realice los pasos siguientes uno 
 ## <a name="scale-out-master-fails"></a>Error del Servicio principal de escalabilidad horizontal
 
 ### <a name="symptoms"></a>Síntomas 
--   El Servicio principal de escalabilidad horizontal no se puede conectar a SSISDB. 
+-   El patrón de escalabilidad horizontal no se puede conectar a SSISDB. 
 
 -   Las propiedades del patrón no se pueden mostrar en el Administrador de escalabilidad horizontal.
 

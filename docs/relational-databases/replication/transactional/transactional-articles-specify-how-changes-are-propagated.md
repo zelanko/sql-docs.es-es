@@ -8,21 +8,23 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: transactional replication, propagation methods
+helpviewer_keywords:
+- transactional replication, propagation methods
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
-caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9cee636f1b2188ddf72d63feeaedc7b955446ea3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d7b807d914d84a818e9ce9cccadde597a163955c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Artículos transaccionales: especificar cómo se propagan los cambios
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La replicación transaccional permite especificar cómo se propagan los cambios de datos del publicador a los suscriptores. Para cada tabla publicada, puede especificar uno de los cuatro métodos siguientes para propagar cada operación (INSERT, UPDATE o DELETE) al suscriptor:  
@@ -48,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **sp_MSdel_\<** *nombreDeTabla* **>**, que controla las eliminaciones.  
   
- El **\<***nombreDeTabla***>** utilizado en el procedimiento depende de cómo se haya agregado el artículo a la publicación y de si la base de datos de suscripciones contiene una tabla del mismo nombre con un propietario distinto.  
+ El valor **\<***tablename***>** usado en el procedimiento depende de cómo se haya agregado el artículo a la publicación y de si la base de datos de suscripciones contiene una tabla del mismo nombre con un propietario distinto.  
   
  Cualquiera de estos procedimientos se puede sustituir por un procedimiento personalizado que se especifica al agregar un artículo a una publicación. Los procedimientos personalizados se utilizan si una aplicación requiere lógica personalizada, por ejemplo al insertar datos en una tabla de auditoría cuando se actualiza una fila en el suscriptor. Para obtener más información acerca de cómo especificar procedimientos almacenados personalizados, vea los temas de procedimientos indicados anteriormente.  
   
@@ -218,7 +220,7 @@ end
 go  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   

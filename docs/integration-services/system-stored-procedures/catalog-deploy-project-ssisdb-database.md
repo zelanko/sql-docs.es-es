@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b056ec4e0d4f762190154988fe3fa225e447c315
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 55fafb278e55a6044cd92f4c1dede3b574bd4c0a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogdeployproject-ssisdb-database"></a>catalog.deploy_project (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,10 +40,10 @@ catalog.deploy_project [@folder_name =] folder_name
   
 ## <a name="arguments"></a>Argumentos  
  [@folder_name =] *folder_name*  
- Es el nombre de la carpeta donde se implementará el proyecto. El parámetro *folder_name* es **nvarchar(128)**.  
+ Es el nombre de la carpeta donde se implementará el proyecto. *folder_name* es **nvarchar(128)**.  
   
  [@project_name =] *project_name*  
- Nombre del proyecto nuevo o actualizado en la carpeta. El parámetro *project_name* es **nvarchar(128)**.  
+ Nombre del proyecto nuevo o actualizado en la carpeta. *project_name* es **nvarchar(128)**.  
   
  [@projectstream =] *projectstream*  
  Contenido binario de un archivo de implementación de proyecto (extensión .ispac) de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -52,15 +53,15 @@ catalog.deploy_project [@folder_name =] folder_name
  El parámetro *projectstream* es **varbinary(MAX)**  
   
  [@operation_id =] *operation_id*  
- Devuelve el identificador único para la operación de implementación. El parámetro *operation_id* es **bigint**.  
+ Devuelve el identificador único para la operación de implementación. *operation_id* es **bigint**.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
- 0 (Correcto)  
+ 0 (correcto)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Ninguno  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
 -   Permisos CREATE_OBJECTS en la carpeta para implementar un nuevo proyecto o permisos MODIFY en el proyecto para actualizar un proyecto  
@@ -78,7 +79,7 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   El usuario no tiene permisos suficientes  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Durante la implementación o la actualización de un proyecto, el procedimiento almacenado no comprueba el nivel de protección de paquetes individuales en el proyecto.  
   
   

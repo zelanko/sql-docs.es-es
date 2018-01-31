@@ -8,7 +8,8 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - vlf size
 - transaction log internals
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: dcc274dcde55b2910b96404c2c3a06c647518dc5
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+ms.openlocfilehash: 69637be0ea958bf908210df298b210959e3afc17
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guía de arquitectura y administración de registros de transacciones de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,14 +86,16 @@ El registro de transacciones de una base de datos está asignado a uno o varios 
 >    -  Si el crecimiento oscila entre 64 MB y 1 GB, cree 8 VLF que cubran el tamaño del crecimiento (p. ej., en el caso de un crecimiento de 512 MB, cree 8 VLF de 64 MB).
 >    -  Si el crecimiento es superior a 1 GB, cree 16 VLF que cubran el tamaño del crecimiento (p. ej., en el caso de un crecimiento de 8 GB, cree 16 VLF de 512 MB).
 
-Si los archivos de registro crecen hasta un tamaño grande debido a muchos incrementos pequeños, tendrán numerosos archivos de registro virtuales. **Esto puede retrasar el inicio de la base de datos, así como las operaciones de copias de seguridad y restauración del registro.** Se recomienda que los archivos de registro se definan con un valor *size* cercano al tamaño final necesario y que tengan también un valor de *growth_increment* relativamente alto. Vea la siguiente sugerencia para determinar la distribución de VLF óptima para el tamaño del registro de transacciones actual.
+Si los archivos de registro crecen hasta un tamaño grande en muchos incrementos pequeños, tendrán numerosos archivos de registro virtuales. **Esto puede retrasar el inicio de la base de datos, así como las operaciones de copias de seguridad y restauración del registro.** Por el contrario, si los archivos de registro están establecidos en un tamaño grande con pocos o solo un incremento, tendrán muy pocos archivos de registro virtuales muy grandes. Para obtener más información sobre la estimación correcta de la configuración de **tamaño requerido** y **crecimiento automático** de un registro de transacción, consulte la sección *Recomendaciones* de [Administrar el tamaño del archivo de registro de transacciones](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).
+
+Se recomienda que los archivos de registro se definan con un valor *size* cercano al tamaño final necesario, con los incrementos requeridos para conseguir la distribución de VLF óptima, y que tengan también un valor de *growth_increment* relativamente alto. Vea la siguiente sugerencia para determinar la distribución de VLF óptima para el tamaño del registro de transacciones actual. 
  - El valor *size*, establecido por el argumento `SIZE` de `ALTER DATABASE`, es el tamaño inicial del archivo de registro.
- - El valor *growth_increment*, establecido por el argumento `FILEGROWTH` de `ALTER DATABASE`, es la cantidad de espacio que se agrega al archivo cada vez que se necesita más espacio. 
+ - El valor *growth_increment* (también conocido como el valor de crecimiento automático), establecido por el argumento `FILEGROWTH` de `ALTER DATABASE`, es la cantidad de espacio que se agrega al archivo cada vez que se necesita más espacio. 
  
 Para obtener más información sobre los argumentos `FILEGROWTH` y `SIZE` de `ALTER DATABASE`, vea [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 > [!TIP]
-> Para determinar la distribución de VLF óptima para el tamaño actual del registro de transacciones de todas las bases de datos en una instancia determinada, vea este [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+> Para determinar la distribución óptima de VLF para el tamaño de registro de transacciones actual de todas las bases de datos en una instancia determinada, así como los incrementos de tamaño necesarios para conseguir el tamaño requerido, consulte este [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
   
  El registro de transacciones es un archivo de registro circular. Considere, por ejemplo, una base de datos con un archivo de registro físico dividido en cuatro VLF. Cuando se crea la base de datos, el archivo de registro lógico empieza en el principio del archivo de registro físico. Las nuevas entradas del registro se agregan al final del registro lógico y se expanden hacia el final del archivo físico. El truncamiento del registro libera los registros virtuales cuyas entradas son anteriores al número de flujo de registro de recuperación mínimo (MinLSN). *MinLSN* es el número de flujo de registro de la entrada del registro más antigua necesaria para una reversión correcta de toda la base de datos. El registro de transacciones de ejemplo sería similar al de la siguiente ilustración.  
   

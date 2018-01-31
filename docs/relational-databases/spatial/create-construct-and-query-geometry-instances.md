@@ -8,23 +8,24 @@ ms.service:
 ms.component: spatial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-spatial
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - planar spatial data [SQL Server], getting started
 - geometry data type [SQL Server], getting started
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
-caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e5c41d33b04553a63265313d0f380a98e15b9c79
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ebfebc7ff04a526bd0a6aa7854b1d005dcad5f94
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Crear, construir y consultar instancias de Geometry
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] El tipo de datos espaciales planar **geometry** representa los datos en un sistema de coordenadas euclidiano (plano). Implementan este tipo como un tipo de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de Common Language Runtime (CLR).  
@@ -223,7 +224,7 @@ ms.lasthandoff: 11/17/2017
   
   
 ###  <a name="empty"></a> Vacía  
- Una instancia *empty***geometry** no tiene puntos. La longitud de instancias de **LineString, CircularString**, **CompoundCurve**y **MultiLineString** es cero. El área de las instancias de **Polygon**, **CurvePolygon**y **MultiPolygon** vacías es 0.  
+ Una instancia de *empty***geometry** no tiene puntos. La longitud de instancias de **LineString, CircularString**, **CompoundCurve**y **MultiLineString** es cero. El área de las instancias de **Polygon**, **CurvePolygon**y **MultiPolygon** vacías es 0.  
   
  **Para determinar si una instancia está vacía**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md).  
@@ -278,7 +279,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="closure"></a> Clausura  
- Una instancia de **geometry** *cerrada* es una figura cuyos puntos de inicio y de finalización son los mismos. Las instancias**Polygon** se consideran cerradas. Las instancias**Point** no son cerradas.  
+ Una instancia de *closed***geometry** es una figura cuyos puntos de inicio y de finalización son los mismos. Las instancias**Polygon** se consideran cerradas. Las instancias**Point** no son cerradas.  
   
  Un anillo es una instancia de **LineString** simple y cerrada.  
   
@@ -385,7 +386,7 @@ SELECT @g.STBoundary().ToString();
     ```  
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Datos espaciales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

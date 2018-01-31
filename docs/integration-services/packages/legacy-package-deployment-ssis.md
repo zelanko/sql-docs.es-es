@@ -8,7 +8,8 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,16 +34,16 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 486fa573b955848828bff349f364543e6a1e23f7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f0a4d37996a1add0c028f9481b1dc232190a19a3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="legacy-package-deployment-ssis"></a>Implementación de paquetes heredada (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye herramientas y asistentes para facilitar la implementación de paquetes del equipo de desarrollo en el servidor de producción o en otros equipos.  
@@ -221,7 +222,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  En la tabla siguiente se describen las columnas de la lista de configuraciones del cuadro de diálogo **Organizador de configuraciones de paquetes** .  
   
-|Columna|Description|  
+|columna|Description|  
 |------------|-----------------|  
 |**Nombre de la configuración**|Nombre de la configuración.|  
 |**Tipo de configuración**|Tipo de configuración.|  
@@ -266,7 +267,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  Las configuraciones de paquetes actualizan los valores de las propiedades de los objetos de paquete en tiempo de ejecución. Cuando se carga un paquete, los valores de las configuraciones reemplazan los valores establecidos cuando se desarrolló el paquete. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] admite distintos tipos de configuración. Por ejemplo, se puede utilizar un archivo XML que contenga múltiples configuraciones o una variable de entorno que contenga una única configuración. Para más información, consulte [Package Configurations](../../integration-services/packages/package-configurations.md).  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Habilitar configuraciones de paquetes**  
  Seleccione esta opción para utilizar las configuraciones incluidas con el paquete.  
   
@@ -307,7 +308,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="welcome-to-the-package-configuration-wizard-page"></a>Asistente para la configuración de paquetes (página principal)  
  Use el **Asistente para la configuración de SSIS** para crear configuraciones que actualizan las propiedades de un paquete y sus objetos en tiempo de ejecución.  
   
-#### <a name="options"></a>Opciones  
+#### <a name="options"></a>.  
  **No volver a mostrar esta página**  
  Omite la página de bienvenida la próxima vez que abre el asistente.  
   
@@ -323,7 +324,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Tipo de configuración**  
  Seleccione el tipo de origen en el que se almacenará la configuración, utilizando las siguientes opciones:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Archivo de configuración XML**|Almacenar la configuración como un archivo XML. Al seleccionar este valor se muestran las opciones dinámicas de la sección **Tipo de configuración**.|  
 |**Variable de entorno**|Almacenar la configuración en una de las variables de entorno. Al seleccionar este valor se muestran las opciones dinámicas de la sección **Tipo de configuración**.|  
@@ -340,7 +341,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Especificar valores de configuración directamente**  
  Se utiliza para especificar la configuración directamente.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Nombre del archivo de configuración**|Escriba la ruta de acceso del archivo de configuración que genera el asistente.|  
 |**Examinar**|Use el cuadro de diálogo **Seleccionar ubicación del archivo de configuración** para especificar la ruta de acceso del archivo de configuración que genera el asistente. Si el archivo no existe, el asistente lo crea.|  
@@ -348,7 +349,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **La ubicación de configuración se almacena en una variable de entorno**  
  Se usa para especificar la variable de entorno donde se almacena la configuración.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Variable de entorno**|Seleccione una variable de entorno de la lista.|  
   
@@ -360,14 +361,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Especificar valores de configuración directamente**  
  Se utiliza para especificar la configuración directamente.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Entrada del Registro**|Escriba la clave del Registro que contiene la información de configuración. El formato es \<clave del Registro>.<br /><br /> La clave del Registro ya debe existir en HKEY_CURRENT_USER y tener un valor con el nombre Value. El valor puede ser un valor de tipo DWORD o una cadena.<br /><br /> Si quiere usar una clave del Registro que no esté en la raíz de HKEY_CURRENT_USER, use el formato \<clave del Registro\clave del Registro\\…> para identificarla.|  
   
  **La ubicación de configuración se almacena en una variable de entorno**  
  Se utiliza para especificar la variable de entorno donde debe almacenarse la configuración.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Variable de entorno**|Seleccione una variable de entorno de la lista.|  
   
@@ -375,14 +376,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Especificar valores de configuración directamente**  
  Se utiliza para especificar la configuración directamente.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Variable primaria**|Especifique la variable del paquete primario que contiene la información de configuración.|  
   
  **La ubicación de configuración se almacena en una variable de entorno**  
  Se usa para especificar la variable de entorno donde se almacena la configuración.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Variable de entorno**|Seleccione una variable de entorno de la lista.|  
   
@@ -390,7 +391,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Especificar valores de configuración directamente**  
  Se utiliza para especificar la configuración directamente.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Conexión**|Seleccione una conexión de la lista o haga clic en **Nueva** para crear una nueva conexión.|  
 |**Tabla de configuración**|Seleccione una tabla existente o haga clic en **Nueva** para escribir una instrucción SQL que cree la nueva tabla.|  
@@ -399,14 +400,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **La ubicación de configuración se almacena en una variable de entorno**  
  Se utiliza para especificar la variable de entorno donde se almacena la configuración.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Variable de entorno**|Seleccione una variable de entorno de la lista.|  
   
 ### <a name="select-objects-to-export-page"></a>Página Seleccionar objetos para la exportación  
  Use la página **Seleccionar propiedad de destino o Seleccionar propiedades para la exportación** para especificar las propiedades de objetos contenidas en la configuración. La posibilidad de seleccionar varias propiedades solo está disponible si se selecciona el tipo de configuración XML.  
   
-#### <a name="options"></a>Opciones  
+#### <a name="options"></a>.  
  **Objetos**  
  Expanda la jerarquía de paquetes y seleccione las propiedades que desea exportar.  
   
@@ -419,7 +420,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="completing-the-wizard-page"></a>Página Finalización del asistente  
  Utilice la página **Finalización del asistente** para asignar un nombre a la configuración y ver los valores utilizados por el asistente para crear la configuración. Una vez que finaliza el asistente, se muestra el **Organizador de configuraciones de paquetes** , que enumera todas las configuraciones para el paquete.  
   
-#### <a name="options"></a>Opciones  
+#### <a name="options"></a>.  
  **Nombre de la configuración**  
  Escriba el nombre de la configuración.  
   
@@ -475,7 +476,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 5.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
 
-## <a name="create-a-deployment-utility"></a>Crear una utilidad de implementación
+## <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   El primer paso para implementar paquetes es crear una utilidad de implementación para un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La utilidad de implementación es una carpeta que contiene los archivos necesarios para implementar los paquetes de un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en un servidor distinto. La utilidad de implementación se crea en el equipo en el que se almacena el proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Puede crear una utilidad de implementación de paquetes para un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] configurando primero el proceso de generación de una utilidad de implementación y después, generando el proyecto. Al generar el proyecto, todos los paquetes y configuraciones de paquetes del proyecto se incluyen automáticamente. Para implementar archivos adicionales con el proyecto, como un archivo Léame, coloque los archivos en la carpeta **Miscellaneous** del proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Al generar el proyecto, estos archivos también se incluirán automáticamente.  
@@ -588,7 +589,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="configure-packages-page"></a>Página Configurar paquetes  
  Utilice la página **Configurar paquetes** para modificar la configuración de los paquetes.  
   
-#### <a name="options"></a>Opciones  
+#### <a name="options"></a>.  
  **Archivo de configuración**  
  Para modificar el contenido de un archivo de configuración, seleccione el archivo en la lista.  
   
@@ -624,7 +625,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="deploy-ssis-packages-page"></a>Página Implementar paquetes SSIS  
  Use la página **Implementar paquetes SSIS** para especificar dónde instalar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y sus dependencias.  
   
-#### <a name="options"></a>Opciones  
+#### <a name="options"></a>.  
  **Implementación en el sistema de archivos**  
  Implementa paquetes y dependencias en una carpeta determinada del sistema de archivos.  
   
@@ -649,7 +650,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="select-installation-folder-page"></a>Página Seleccionar la carpeta de instalación  
  Use la página **Seleccionar la carpeta de instalación** para especificar la carpeta del sistema de archivos en la que desea instalar los paquetes y sus dependencias.  
   
-#### <a name="options"></a>Opciones  
+#### <a name="options"></a>.  
  **Carpeta**  
  Permite especificar la ruta y la carpeta en la que se desea copiar el paquete y sus dependencias.  
   
@@ -665,7 +666,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="specify-target-sql-server-page"></a>Página Especificar el SQL Server de destino  
  Use la página **Especificar el SQL Server de destino** para especificar las opciones de implementación del paquete en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-#### <a name="options"></a>Opciones  
+#### <a name="options"></a>.  
  **Nombre del servidor**  
  Especifique el nombre del servidor en el que se implementarán los paquetes.  
   
@@ -675,7 +676,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Utilizar autenticación de SQL Server**  
  Permite especificar si el paquete debe usar la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al iniciar una sesión en el servidor. Si usa la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe proporcionar un nombre de usuario y una contraseña.  
   
- **Nombre de usuario.**  
+ **User name**  
  Especifique un nombre de usuario.  
   
  **Contraseña**  

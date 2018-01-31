@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - fast load data access mode [Integration Services]
 - inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ead74161f0527901680d4495e0feb4056c17011
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 32e0ce09ff9c804a3d7beac5e1ba251a5bc8105e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-destination"></a>Destino de OLE DB
   El destino de OLE DB carga datos en una serie de bases de datos compatibles con OLE DB que usan una tabla o vista de base de datos o un comando SQL. Por ejemplo, un origen de OLE DB puede cargar datos en tablas en bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  La instrucción CREATE TABLE que genera el cuadro de diálogo **Editor de destino de OLE DB** puede requerir una modificación, en función del tipo de destino. Por ejemplo, algunos destinos no admiten tipos de datos que utiliza la instrucción CREATE TABLE.  
   
- Este destino usa un administrador de conexiones OLE DB para conectarse a un origen de datos, y el administrador de conexiones especifica el proveedor OLE DB que se debe usar. Para más información, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+ Este destino usa un administrador de conexiones OLE DB para conectarse a un origen de datos, y el administrador de conexiones especifica el proveedor OLE DB que se debe usar. Para más información, vea [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
  Un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] también proporciona el objeto de origen de datos desde el que puede crear un administrador de conexiones OLE DB para poner los orígenes de datos y las vistas del origen de datos a disposición del destino de OLE DB.  
   
@@ -113,7 +114,7 @@ ms.lasthandoff: 11/20/2017
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -133,10 +134,10 @@ ms.lasthandoff: 11/20/2017
 >  La propiedad **CommandTimeout** del destino de OLE DB no está disponible en el **Editor de destino de OLE DB**, pero se puede establecer mediante el **Editor avanzado**. Además, ciertas opciones de carga rápida solo están disponibles en el **Editor avanzado**. Para obtener más información acerca de estas propiedades, vea la sección sobre el destino de OLE DB en [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md).  
   
 ### <a name="static-options"></a>Opciones estáticas  
- **OLE DB, administrador de conexiones**  
- Seleccione un administrador de conexiones de la lista o haga clic en **Nuevo**para crear una conexión.  
+ **Administrador de conexiones OLE DB**  
+ Seleccione un administrador de conexiones de la lista o cree una conexión haciendo clic en **Nuevo**.  
   
- **Nuevo**  
+ **Nueva**  
  Cree un administrador de conexiones con el cuadro de diálogo **Configurar el administrador de conexiones OLE DB** .  
   
  **Modo de acceso a datos**  
@@ -170,7 +171,7 @@ ms.lasthandoff: 11/20/2017
  **Nombre de la tabla o la vista**  
  Seleccione una tabla o una vista de la base de datos con esta lista, o bien haga clic en **Nuevo**para crear una tabla.  
   
- **Nuevo**  
+ **Nueva**  
  Permite crear una tabla con el cuadro de diálogo **Crear tabla** .  
   
 > [!NOTE]  
@@ -213,7 +214,7 @@ ms.lasthandoff: 11/20/2017
  **Nombre de variable**  
  Seleccione la variable que contiene el nombre de la tabla o vista.  
   
- **Nuevo**  
+ **Nueva**  
  Permite crear una tabla con el cuadro de diálogo **Crear tabla** .  
   
 > [!NOTE]  
@@ -245,12 +246,12 @@ ms.lasthandoff: 11/20/2017
   
 #### <a name="data-access-mode--sql-command"></a>Modo de acceso a datos = Comando SQL  
  **Texto de comando SQL**  
- Escriba el texto de una consulta SQL, haga clic en **Generar consulta**para generar la consulta, o bien haga clic en **Examinar**para buscar el archivo que contiene el texto de la consulta.  
+ Escriba el texto de una consulta SQL, genere la consulta haciendo clic en **Generar consulta**, o bien busque el archivo que contiene el texto de la consulta haciendo clic en **Examinar**.  
   
 > [!NOTE]  
 >  El destino de OLE DB no admite parámetros. Si tiene que ejecutar una instrucción INSERT con parámetros, puede usar la transformación Comando de OLE DB. Para más información, consulte [OLE DB Command Transformation](../../integration-services/data-flow/transformations/ole-db-command-transformation.md).  
   
- **Build query**  
+ **Generar consulta**  
  Use el cuadro de diálogo **Generador de consultas** para crear visualmente la consulta SQL.  
   
  **Examinar**  
@@ -262,7 +263,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="ole-db-destination-editor-mappings-page"></a>Editor de destino de OLE DB (página Asignaciones)
   Utilice la página **Asignaciones** del cuadro de diálogo **Editor de destino de OLE DB** para asignar columnas de entrada a columnas de destino.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Columnas de entrada disponibles**  
  Muestra la lista de columnas de entrada disponibles. Utilice una operación de arrastrar y colocar para asignar columnas de entrada disponibles de la tabla a columnas de destino.  
   
@@ -278,7 +279,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="ole-db-destination-editor-error-output-page"></a>Editor de destino de OLE DB (página Salida de error)
   Utilice la página **Salida de error** del cuadro de diálogo **Editor de destino de OLE DB** para especificar las opciones de control de errores.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Entrada/salida**  
  Muestra el nombre de la entrada.  
   
@@ -293,7 +294,7 @@ ms.lasthandoff: 11/20/2017
  **Truncamiento**  
  No se usa.  
   
- **Description**  
+ **Descripción**  
  Muestra la descripción de la operación.  
   
  **Establecer este valor en las celdas seleccionadas**  

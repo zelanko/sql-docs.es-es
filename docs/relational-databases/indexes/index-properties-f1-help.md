@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,16 +21,16 @@ f1_keywords:
 - sql13.swb.indexproperties.options.f1
 - sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7bf66d7aa47b9f15428b08943638dac0cd905fde
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 78879ee28a48495c87d63eec7953ece9d4326ed5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="index-properties-f1-help"></a>Propiedades del índice (Ayuda F1)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -149,7 +150,7 @@ ms.lasthandoff: 11/17/2017
  Especifica el grupo de archivos para los datos FILESTREAM. En esta lista solo se muestran los grupos de archivos FILESTREAM. La selección de lista predeterminada es el grupo de archivos PRIMARY FILESTREAM. Para obtener más información, vea [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
  **Esquema de partición**  
- Almacena el índice en un esquema de partición. Al hacer clic en **Esquema de partición** , se habilita la cuadrícula que se muestra a continuación. La selección de lista predeterminada es el esquema de partición utilizado para almacenar los datos de la tabla. Si se selecciona un esquema de partición distinto de la lista, se actualizará la información en la cuadrícula. Para obtener más información, consulte [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ Almacena el índice en un esquema de partición. Al hacer clic en **Esquema de partición** , se habilita la cuadrícula que se muestra a continuación. La selección de lista predeterminada es el esquema de partición utilizado para almacenar los datos de la tabla. Si se selecciona un esquema de partición distinto de la lista, se actualizará la información en la cuadrícula. Para obtener más información, vea [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  La opción de esquema de partición no estará disponible si no hay ningún esquema de partición en la base de datos.  
   
@@ -246,7 +247,7 @@ ms.lasthandoff: 11/17/2017
  **Expresión de filtro**  
  Define qué filas de datos para incluir en el índice filtrado. Por ejemplo, `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Establecer opciones de índice](../../relational-databases/indexes/set-index-options.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  

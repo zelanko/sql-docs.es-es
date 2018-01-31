@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Queue Reader Agent, parameter reference
 - Queue Reader Agent, executables
 ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
-caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16e9a3a11396c67d2afa1fa8368812a700c48590
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6ce0b2cc9add2bd3b7ee329c019a094998bc910f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-queue-reader-agent"></a>Agente de lectura de cola de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Agente de lectura de cola de replicación es una aplicación ejecutable que lee los mensajes almacenados en una cola de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Message Queue y, a continuación, aplica esos mensajes al publicador. El Agente de lectura de cola se utiliza con la instantánea y las publicaciones transaccionales que permiten la actualización en cola.  
@@ -68,7 +69,7 @@ qrdrsvc [-?]
  **-DefinitionFile** *def_path_and_file_name*  
  Es la ruta de acceso del archivo de definición de agente. Un archivo de definición de agente contiene los argumentos de línea de comandos para el agente. El contenido del archivo se analiza como un archivo ejecutable. Utilice las comillas tipográficas (") para especificar valores de argumento que contienen caracteres arbitrarios.  
   
- **-Distributor** *server_name*[**\\***instance_name*]  
+ **-Distributor** *nombre_de_servidor*[**\\***nombre_de_instancia*]  
  Es el nombre del distribuidor. Especifique *server_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique *server_name*\\*instance_name* para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Si no se especifica, el nombre tiene como valor predeterminado el nombre de la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el equipo local.  
   
  **-DistributionDB** *distribution_database*  
@@ -86,18 +87,18 @@ qrdrsvc [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Es el nivel de cifrado de Capa de sockets seguros (SSL) utilizado por el Agente de lectura de cola cuando realiza conexiones.  
   
-|Valor de EncryptionLevel|Descripción|  
+|Valor de EncryptionLevel|Description|  
 |---------------------------|-----------------|  
 |**0**|Especifica que no se utiliza SSL.|  
 |**1**|Especifica que se utiliza SSL, pero el agente no comprueba que un emisor confiable haya firmado el certificado del servidor SSL.|  
 |**2**|Especifica que se usa SSL y que se ha comprobado el certificado.|  
   
- Para obtener más información, vea [Security Overview &#40;Replication&#41;](../../../relational-databases/replication/security/security-overview-replication.md) (Información general de seguridad &#40;replicación&#41;).  
+ Para obtener más información, vea [Información general sobre seguridad &#40;replicación&#41;](../../../relational-databases/replication/security/security-overview-replication.md).  
   
  **-HistoryVerboseLevel** [ **0**| **1**| **2**| **3**]  
  Especifica la cantidad de historial registrado durante una operación del lector de cola. Puede minimizar el efecto sobre el rendimiento del registro del historial seleccionando **1**.  
   
-|Valor HistoryVerboseLevel|Descripción|  
+|Valor HistoryVerboseLevel|Description|  
 |-------------------------------|-----------------|  
 |**0**|Ningún registro del historial (no se recomienda).|  
 |**1**|Predeterminado: Siempre actualiza un mensaje del historial anterior del mismo estado (inicio, progreso, éxito, etc.). Si no existe ningún registro anterior con el mismo estado, inserta un nuevo registro.|  
@@ -116,7 +117,7 @@ qrdrsvc [-?]
  **-PollingInterval** *polling_interval*  
  Solo es pertinente para actualizar las suscripciones que utilizan colas basadas en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Especifica la frecuencia, en segundos, con la que se sondea la cola [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] las transacciones en cola pendientes. El valor puede estar comprendido entre 0 y 240 segundos. El valor predeterminado es 5 segundos.  
   
- **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
+ **-PublisherFailoverPartner** *nombre_de_servidor*[**\\***nombre_de_instancia*]  
  Especifica la instancia del asociado de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que participa en una sesión de creación de reflejo de la base de datos con la base de datos de publicación. Para obtener más información, vea [Database Mirroring and Replication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-ProfileName** *agent_profile_name*  
@@ -128,10 +129,10 @@ qrdrsvc [-?]
  **-ResolverState** [ **1**| **2**| **3**]  
  Especifica cómo se resuelven los conflictos de actualización en cola. Un valor de **1** indica que el Publicador gana el conflicto, y la transacción en cola actual que está en conflicto se revertirá en el Publicador y el Suscriptor que originó la actualización; el procesamiento de las transacciones en cola posteriores continuará. Un valor de **2** indica que el Suscriptor gana el conflicto, y la transacción en cola invalidará los valores en el Publicador. Un valor de **3** indica que cualquier conflicto provocará la reinicialización del Suscriptor; el Publicador gana el conflicto, se finalizará el proceso de las transacciones en cola subsiguientes y se reinicializará la suscripción. La configuración predeterminada es **1** para las publicaciones transaccionales y **3** para las publicaciones de instantáneas.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Para iniciar el Agente de lectura de cola, ejecute **qrdrsvc.exe** en el símbolo del sistema. Para obtener información, vea [Aplicaciones ejecutables del Agente de replicación](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administración del Agente de replicación](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

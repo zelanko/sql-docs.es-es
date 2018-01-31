@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1540c3396879dc12a5af6e321ec009700d7c658
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35ad9901e974ffa4283aed56b03e2cb75a66f178
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcleanupserverexecutionkeys"></a>catalog.cleanup_server_execution_keys
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +53,14 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Ninguno.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
 -   Permisos de lectura y ejecución en el proyecto y, si es aplicable, permisos de lectura en el entorno al que se hace referencia.  
   
 -   Pertenencia al rol de base de datos **ssis_admin**.  
   
--   Pertenencia al rol de servidor **sysadmin**.  
+-   Pertenencia al rol del servidor de **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Errores y advertencias  
  Este procedimiento almacenado genera errores en los escenarios siguientes:  
@@ -68,10 +69,10 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
   
 -   La base de datos SSISDB no está en modo de usuario único.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  SQL Server 2012 Service Pack 2 agregó la propiedad SERVER_OPERATION_ENCRYPTION_LEVEL a la tabla **internal.catalog_properties**. Esta propiedad tiene dos valores posibles:  
   
--   **PER_EXECUTION (1)**: el certificado y la clave simétrica que se usan para proteger los parámetros de ejecución confidenciales y los registros de ejecución se crean en cada ejecución. Es el valor predeterminado. Es posible que se encuentre con problemas de rendimiento (interbloqueos, trabajos de mantenimiento con errores, etc.) en un entorno de producción, porque los certificados o las claves se generan en cada ejecución. Sin embargo, esta configuración proporciona un mayor nivel de seguridad que el otro valor (2).  
+-   **PER_EXECUTION (1)**: el certificado y la clave simétrica que se usan para proteger los parámetros de ejecución confidenciales y los registros de ejecución se crean en cada ejecución. Este es el valor predeterminado. Es posible que se encuentre con problemas de rendimiento (interbloqueos, trabajos de mantenimiento con errores, etc.) en un entorno de producción, porque los certificados o las claves se generan en cada ejecución. Sin embargo, esta configuración proporciona un mayor nivel de seguridad que el otro valor (2).  
   
 -   **PER_PROJECT (2)**: el certificado y la clave simétrica que se usan para proteger parámetros confidenciales se crean en cada proyecto. Ello le proporciona un rendimiento mayor que el que ofrece el nivel PER_EXECUTION, debido a que la clave y el certificado se generan una vez por proyecto, en lugar de crearse para cada ejecución.  
   

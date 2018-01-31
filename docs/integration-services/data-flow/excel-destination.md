@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - destinations [Integration Services], Excel
 - Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ee5bd643443aca136883e94a768fca60960c869
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: be3ad15259560b7b69a9a375affab2940376a22e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="excel-destination"></a>Destino de Excel
   El destino de Excel carga datos en hojas de cálculo o rangos en libros de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -90,13 +91,13 @@ ms.lasthandoff: 11/20/2017
   
  El cuadro de diálogo **Editor avanzado** indica todas las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de Excel](../../integration-services/data-flow/excel-custom-properties.md)  
   
  Para más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Conectarse a un libro de Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  
   
@@ -164,7 +165,7 @@ ms.lasthandoff: 11/20/2017
  Use el cuadro de diálogo **Generador de consultas** para crear visualmente la consulta SQL.  
   
  **Examinar**  
- Use el cuadro de diálogo **Abrir** para encontrar el archivo que contiene el texto de la consulta SQL.  
+ Use el cuadro de diálogo **Abrir** para buscar el archivo que contiene el texto de la consulta SQL.  
   
  **Analizar consulta**  
  Comprueba la sintaxis del texto de la consulta.  
@@ -172,7 +173,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="excel-destination-editor-mappings-page"></a>Editor de destino de Excel (página Asignaciones)
   Utilice la página **Asignaciones** del cuadro de diálogo **Editor de destino de Excel** para asignar columnas de entrada a columnas de destino.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Columnas de entrada disponibles**  
  Muestra la lista de columnas de entrada disponibles. Utilice una operación de arrastrar y colocar para asignar columnas de entrada disponibles de la tabla a columnas de destino.  
   
@@ -188,7 +189,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="excel-destination-editor-error-output-page"></a>Editor de destino de Excel (página Salida de error)
   Utilice la página **Avanzadas** del cuadro de diálogo **Editor de destino de Excel** para especificar opciones para el control de errores.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Entrada o salida**  
  Muestra el nombre del origen de datos.  
   
@@ -203,7 +204,7 @@ ms.lasthandoff: 11/20/2017
  **Truncamiento**  
  Permite especificar qué debe ocurrir cuando se produce un truncamiento: omitir el error, redirigir la fila o hacer que el componente no funcione.  
   
- **Description**  
+ **Descripción**  
  Muestra la descripción del error.  
   
  **Establecer este valor en las celdas seleccionadas**  
@@ -212,7 +213,7 @@ ms.lasthandoff: 11/20/2017
  **Aplicar**  
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Origen de Excel](../../integration-services/data-flow/excel-source.md)   
  [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)   

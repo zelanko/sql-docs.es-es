@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - detaching databases [SQL Server]
 - attaching databases [SQL Server]
 ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
-caps.latest.revision: "73"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3cb578629db2c757cb52d8db1610a81558de6b82
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7ebdb4123e449cd024a6dd828364090890138f2c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Actualizar una base de datos mediante Separar y Adjuntar (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo usar las operaciones de desasociar y adjuntar para actualizar una base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Después de asociarla a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de datos está disponible de inmediato y se actualiza automáticamente.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **Seguimiento:**  [Después de actualizar una base de datos de SQL Server](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 11/17/2017
     > [!IMPORTANT]  
     >  En el caso de una base de datos de producción, coloque la base de datos y el registro de transacciones en discos independientes.  
   
-     Para copiar archivos a través de la red en un disco de un equipo remoto, use el nombre UNC (Convención de nomenclatura universal) de la ubicación remota. Un nombre UNC toma la forma **\\\\***nombreDeServidor***\\***nombreDelRecursoCompartido***\\***rutaDeAcceso***\\***nombreDeArchivo*. De la misma forma que al escribir archivos en el disco duro local, se debe conceder a la cuenta de usuario que usa la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]los permisos necesarios para leer o escribir en archivos del disco remoto.  
+     Para copiar archivos a través de la red en un disco de un equipo remoto, use el nombre UNC (Convención de nomenclatura universal) de la ubicación remota. Un nombre UNC toma la forma **\\\\***NombreDeServidor***\\***NombreDeRecursoCompartido***\\***RutaDeAcceso***\\***NombreDeArchivo*. De la misma forma que al escribir archivos en el disco duro local, se debe conceder a la cuenta de usuario que usa la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]los permisos necesarios para leer o escribir en archivos del disco remoto.  
   
 3.  Adjunte la base de datos movida y, opcionalmente, su registro ejecutando la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   

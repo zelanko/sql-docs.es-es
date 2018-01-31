@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - alerts [SQL Server], responding to
 - responding to alerts
 ms.assetid: c86ca6eb-c59f-46e9-bc32-d474e7c3b170
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50739a7be9e57ebcc0353ab0aba05d8a51f0301d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7188c78647298e2eb382fded68e9c5bfd1a44bc6
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>Define the Response to an Alert (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo definir el modo en que [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] responde a las alertas del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] o [!INCLUDE[tsql](../../includes/tsql_md.md)].  
@@ -69,11 +70,11 @@ Solo los miembros del rol fijo de servidor **sysadmin** pueden definir la respue
   
 3.  Haga clic en el signo más para expandir la carpeta **Alertas** .  
   
-4.  Haga clic con el botón secundario en la alerta en la que desea definir una respuesta y seleccione **Propiedades**.  
+4.  Haga clic con el botón derecho en la alerta en la que desea definir una respuesta y seleccione **Propiedades**.  
   
-5.  En el cuadro de diálogo *alert_name***Propiedades de la alerta** , en **Seleccionar una página**, seleccione **Respuesta**.  
+5.  En el cuadro de diálogo *Propiedades de la alerta***nombre_de_alerta*, en **Seleccionar una página**, seleccione **Respuesta**.  
   
-6.  Active la casilla **Ejecutar trabajo** y, en la lista situada debajo de la casilla **Ejecutar trabajo** , seleccione el trabajo que se ejecutará cuando se produzca la alerta. Puede crear un nuevo trabajo haciendo clic en **Nuevo trabajo**. Puede ver más información acerca del trabajo haciendo clic en **View Job**. Para más información sobre las opciones disponibles en los cuadros de diálogo **Nuevo trabajo** y **Propiedades de trabajo***nombre_trabajo* , consulte [Crear un trabajo](../../ssms/agent/create-a-job.md) y [Ver un trabajo](../../ssms/agent/view-a-job.md).  
+6.  Active la casilla **Ejecutar trabajo** y, en la lista situada debajo de la casilla **Ejecutar trabajo** , seleccione el trabajo que se ejecutará cuando se produzca la alerta. Puede crear un nuevo trabajo haciendo clic en **Nuevo trabajo**. Puede ver más información acerca del trabajo haciendo clic en **View Job**. Para obtener más información sobre las opciones disponibles en los cuadros de diálogo **Nuevo trabajo** y **Propiedades del trabajo***nombre_de_trabajo*, consulte [Crear un trabajo](../../ssms/agent/create-a-job.md) y [Ver un trabajo](../../ssms/agent/view-a-job.md).  
   
 7.  Active la casilla **Notificar a los operadores** si desea notificar a los operadores cuándo se activará la alerta. En **Lista de operadores**, seleccione uno o más de los métodos siguientes para notificar al operador o a los operadores: **Correo electrónico**, **Buscapersonas**o **Net Send**. Puede crear un nuevo operador haciendo clic en **Nuevo operador**. Puede ver más información acerca de un operador haciendo clic en **Ver operador**. Para obtener más información acerca de las opciones disponibles en los cuadros de diálogo **Nuevo operador** y **Ver las propiedades del operador** , vea [Create an Operator](../../ssms/agent/create-an-operator.md) y [View Information About an Operator](../../ssms/agent/view-information-about-an-operator.md).  
   

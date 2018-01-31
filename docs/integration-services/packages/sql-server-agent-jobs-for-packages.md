@@ -8,7 +8,8 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - scheduling packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d4b24dfbb66204f7506cac9612f46e04836f70e5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6b43c3a8b3d438bb211570921e06bb2085c0d022
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Trabajos del Agente SQL Server para paquetes
   Puede automatizar y programar la ejecución de paquetes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede programar paquetes que se implementan en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y se almacena en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] y el sistema de archivos.  
@@ -143,7 +144,7 @@ ms.lasthandoff: 11/20/2017
   
      **Origen del paquete**: Catálogo de SSIS  
   
-    |Pestaña|Opciones|  
+    |Pestaña|.|  
     |---------|-------------|  
     |**Paquete**|**Server**<br /><br /> Escriba o seleccione el nombre de la instancia del servidor de bases de datos que hospeda el catálogo de SSISDB.<br /><br /> Cuando **Catálogo de SSIS** es el origen del paquete, puede iniciar sesión en el servidor usando solo una cuenta de usuario de Microsoft Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no está disponible.|  
     ||**Paquete**<br /><br /> Haga clic en el botón de puntos suspensivos y seleccione un paquete.<br /><br /> Está seleccionando un paquete de una carpeta bajo el nodo **Catálogos de Integration Services** del **Explorador de objetos**.|  
@@ -159,7 +160,7 @@ ms.lasthandoff: 11/20/2017
   
      Muchas de las opciones que se pueden establecer para los paquetes almacenados en SQL Server, el Almacén de paquetes SSIS o el sistema de archivos corresponden a las opciones de la línea de comandos para la utilidad **dtexec** de símbolo del sistema. Para más información sobre la utilidad y las opciones de la línea de comandos, vea [Utilidad dtexec](../../integration-services/packages/dtexec-utility.md).  
   
-    |Pestaña|Opciones|  
+    |Pestaña|.|  
     |---------|-------------|  
     |**Paquete**<br /><br /> Estas son las opciones de la pestaña para los paquetes almacenados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o en el Almacén de paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|**Server**<br /><br /> Escriba o seleccione el nombre de la instancia de servidor de bases de datos para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
     ||**Utilizar autenticación de Windows**<br /><br /> Seleccione esta opción para iniciar sesión en el servidor con una cuenta de usuario de Microsoft Windows.|  
@@ -190,7 +191,7 @@ ms.lasthandoff: 11/20/2017
     > [!TIP]  
     >  Cuando asigne nombre a la programación, considere la posibilidad de usar un nombre que sea único y descriptivo para que pueda distinguir más fácilmente la programación de otras programación del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Execution of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md) (Ejecución de proyectos y paquetes)  
 
 ## <a name="external-resources"></a>Recursos externos  

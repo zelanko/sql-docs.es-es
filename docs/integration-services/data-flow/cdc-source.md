@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,16 +18,16 @@ f1_keywords:
 - sql13.ssis.designer.cdcsource.columns.f1
 - sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d53ac25527e482ae043adeef1c56e5024cb78eb1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 632174b48536a4111125b24cfc85503ed6868a20
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cdc-source"></a>origen de CDC
   El origen CDC lee un intervalo de datos modificados de las tablas de cambios de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y entrega los cambios de nivel inferior a otros componentes de SSIS.  
@@ -140,7 +141,7 @@ use <cdc-enabled-database-name>
   
 3.  En el **Editor de origen de CDC**, haga clic en **Administrador de conexiones**.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Administrador de conexiones de ADO.NET**  
  Seleccione un administrador de conexiones existente de la lista o haga clic en **Nueva** para crear una nueva conexión. Es preciso realizar la conexión a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] habilitada para CDC y donde se encuentre la tabla de cambios seleccionada.  
   
@@ -193,7 +194,7 @@ use <cdc-enabled-database-name>
   
 3.  En el **Editor de origen de CDC**, haga clic en **Columnas**.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Columnas externas disponibles**  
  Lista de las columnas externas disponibles en el origen de datos. Esta tabla no se puede usar para agregar o quitar columnas. Seleccione las columnas que se van a usar en el origen. Las columnas seleccionadas se agregan a la lista **Columna externa** en el orden en que se seleccionan.  
   
@@ -215,7 +216,7 @@ use <cdc-enabled-database-name>
   
 3.  En el **Editor de origen de CDC**, haga clic en **Salida de error**.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Entrada/salida**  
  Muestra el nombre del origen de datos.  
   
@@ -228,7 +229,7 @@ use <cdc-enabled-database-name>
  **Truncamiento**  
  Seleccione la forma en la que el origen de CDC debe controlar el truncamiento en un flujo: omitir el error, redirigir la fila o hacer que el componente no funcione.  
   
- **Description**  
+ **Descripción**  
  No se usa.  
   
  **Establecer este valor en las celdas seleccionadas**  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - startup accounts [SQL Server]
 - service startup accounts [SQL Server Agent]
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 94f718475a3b37b71864d883479848ec4058f252
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bcd26feceb6ecd2fc0b776a5ceec80756cd2e110
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La cuenta de inicio del servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] define la cuenta de Windows en la que se ejecuta el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], así como sus permisos de red. En este tema se describe cómo establecer la cuenta del servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] con el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
@@ -77,9 +78,9 @@ Para más información sobre los permisos de Windows necesarios para la cuenta d
   
 5.  En el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , en el panel de la consola, seleccione **Servicios de SQL Server**.  
   
-6.  En el panel de detalles, haga clic con el botón derecho en **Agente SQL Server***(server_name)*, donde *server_name* es el nombre de la instancia del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] cuya cuenta de inicio de servicio desea cambiar y, luego, seleccione **Propiedades**.  
+6.  En el panel de detalles, haga clic con el botón derecho en *Agente SQL Server***(nombre_de_servidor)*, donde *nombre_de_servidor* es el nombre de la instancia del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] cuya cuenta de inicio de servicio desea cambiar y, luego, seleccione **Propiedades**.  
   
-7.  En el cuadro de diálogo **Propiedades***del* **Propiedades** , en la pestaña **Iniciar sesión** , seleccione una de las opciones siguientes en **Iniciar sesión como**:  
+7.  En el cuadro de diálogo **Agente SQL Server***(nombre_de_servidor)* **Propiedades**, en la pestaña **Iniciar sesión**, seleccione una de las opciones siguientes en **Iniciar sesión como**:  
   
     -   **Cuenta integrada**: seleccione esta opción si los trabajos solo necesitan recursos del servidor local. Para información sobre cómo elegir un tipo de cuenta integrada de Windows, consulte [Seleccionar una cuenta para el servicio del Agente SQL Server](http://msdn.microsoft.com/library/ms191543.aspx).  
   

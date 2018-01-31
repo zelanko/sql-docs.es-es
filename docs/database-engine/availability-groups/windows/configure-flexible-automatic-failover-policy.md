@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c1ec4e43ebc62a5c64477cb372ad82f9d1bf26a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7e82b63c2bbc3d3788272f065d1cdb795decc8b1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-flexible-automatic-failover-policy"></a>Configurar la directiva de conmutación por error automática flexible
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  La directiva flexible de conmutación por error de un grupo de disponibilidad no se puede configurar utilizando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Limitations"></a> Limitaciones de la conmutación automática por error  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
   
 |Tarea|Permisos|  
 |----------|-----------------|  
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/20/2017
   
          La relación de estos valores enteros con los niveles de condición de error es la siguiente:  
   
-        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] Valor|Level|La conmutación por error iniciada es automática cuando se produce…|  
+        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] Valor|Nivel|La conmutación por error iniciada es automática cuando se produce…|  
         |------------------------------|-----------|-------------------------------------------|  
         |1|Uno|Por inactividad de servidor. El servicio SQL Server se detiene debido a una conmutación por error o reinicio.|  
         |2|Dos|Al dejar de responder el servidor. Se cumple cualquier condición de un valor inferior, el servicio SQL Server se conecta al clúster y se supera el umbral del tiempo de espera de comprobación de estado, o la réplica principal actual está en un estado de error.|  
@@ -116,7 +117,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Para agregar una réplica de disponibilidad a un grupo de disponibilidad, use el cmdlet **New-SqlAvailabilityGroup** . Para modificar una réplica de disponibilidad existente, use el cmdlet **Set-SqlAvailabilityGroup** .  
   
-    -   Para establecer el nivel de condición de conmutación por error, utilice el parámetro **FailureConditionLevel***level* , donde *level* es uno de los siguientes valores:  
+    -   Para establecer el nivel de condición de conmutación por error, use el parámetro **FailureConditionLevel***nivel*, donde *nivel* es uno de los siguientes valores:  
   
         |Valor|Level|La conmutación por error iniciada es automática cuando se produce…|  
         |-----------|-----------|-------------------------------------------|  
@@ -136,7 +137,7 @@ ms.lasthandoff: 11/20/2017
         -FailureConditionLevel OnServerDown  
         ```  
   
-    -   Para establecer el umbral de tiempo de espera de comprobación de estado, use el parámetro **HealthCheckTimeout***n* , donde *n* es un entero de 15 000 milisegundos (15 segundos) a 4 294 967 295 milisegundos. El valor predeterminado es 30000 milisegundos (30 segundos).  
+    -   Para establecer el umbral de tiempo de espera de comprobación de estado, use el parámetro **HealthCheckTimeout***n*, donde *n* es un entero de 15000 milisegundos (15 segundos) a 4294967295 milisegundos. El valor predeterminado es 30000 milisegundos (30 segundos).  
   
          Por ejemplo, el siguiente comando cambia el umbral de tiempo de espera de comprobación de estado de un grupo de disponibilidad disponible, `AG1`, a 120.000 milisegundos (dos minutos).  
   
@@ -151,11 +152,11 @@ ms.lasthandoff: 11/20/2017
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
--   [Proveedor de PowerShell de SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Proveedor de SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Modos de disponibilidad &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [Conmutación por error y modos de conmutación por error &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   

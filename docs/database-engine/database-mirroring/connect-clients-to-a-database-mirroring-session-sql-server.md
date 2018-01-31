@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - client connections [SQL Server], database mirroring
 - connections [SQL Server], database mirroring
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
-caps.latest.revision: "95"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6ab834afd90bb347641ba8b5584c45e3e073962d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ef24aef79874e7ade0c0ed0dc78f88faa366299c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Conectar clientes a una sesión de creación de reflejo de la base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para conectarse a una sesión de creación de reflejo de la base de datos, un cliente puede usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client o el proveedor de datos .NET Framework para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Estos proveedores de acceso a datos son totalmente compatibles con la creación de reflejo de la base de datos cuando se configuran para una base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Para obtener información acerca de las consideraciones de programación para el uso de una base de datos reflejada, vea [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Además, la instancia del servidor principal actual debe estar disponible y el inicio de sesión del cliente se debe haber creado en la instancia del servidor. Para obtener más información, vea [Solucionar problemas de usuarios huérfanos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Las conexiones de cliente a una sesión de creación de reflejo de la base de datos no tienen relación con la instancia del servidor testigo, si existe alguno.  
@@ -96,7 +97,7 @@ Network=dbnmpntw;
   
  `Server=Partner_A;`  
   
- o bien  
+ o Administrador de configuración de  
   
  `Server=Partner_A\Instance_2;`  
   
@@ -136,7 +137,7 @@ Server=123.34.45.56,4724;
 |Controlador ODBC|**Failover_Partner**|  
 |Objetos de datos ActiveX (ADO)|**Failover Partner**|  
   
- La manera más sencilla de identificar la instancia de servidor es especificando su nombre de sistema, *<nombre_de_servidor>*[**\\***<nombre_de_instancia_de_SQL_Server>*].  
+ La manera más sencilla de identificar la instancia de servidor es especificando su nombre de sistema, *<nombre_de_servidor>*[**\\**<nombre_de_instancia_de_SQL_Server>*].  
   
  O bien, se pueden proporcionar la dirección IP y el número de puerto en el atributo **Failover Partner** . Si el intento de conexión inicial no tiene éxito durante la primera conexión a la base de datos, el intento de conectarse al asociado de conmutación por error no tendrá que retransmitirse en DNS y SQL Server Browser. Una vez que se establezca la conexión, el nombre del asociado de conmutación por error se sobrescribirá con el nombre del asociado de conmutación por error, de modo que, si se produce una conmutación por error, las conexiones redirigidas requerirán DNS y SQL Server Browser.  
   
@@ -173,7 +174,7 @@ Server=123.34.45.56,4724;
   
  El tiempo de reintento se calcula mediante la siguiente fórmula:  
   
- *RetryTime* **=** *PreviousRetryTime* **+(** 0.08 **\****LoginTimeout***)**  
+ *TiempoDeReintento* **=** *TiempoDeReintentoAnterior* **+(** 0,08 **\****TiempoDeEsperaDeInicioDeSesión***)**  
   
  Donde *PreviousRetryTime* es inicialmente 0.  
   
@@ -251,7 +252,7 @@ Server=123.34.45.56,4724;
 |El servicio se conmuta manualmente a Partner_C (se desconectan los clientes).|Partner_C|Partner_B|El cliente trata de conectarse primero a Partner_A y, después, a Partner_B. Los dos nombres producen un error y, finalmente, se agota el tiempo de espera de la solicitud y se produce un error.|  
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Posibles errores durante la creación de reflejo de la base de datos](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)  
   

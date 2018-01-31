@@ -8,21 +8,23 @@ ms.service:
 ms.component: performance-monitor
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Policy-Based Management, evaluate policy
+helpviewer_keywords:
+- Policy-Based Management, evaluate policy
 ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
-caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8e28122f90a841201f221664f1e9d1903c3d4b87
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9bd58766e370d8752dd0b8376c810ac7a5a3e6df
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>Evaluar una directiva de administración basada en directivas según una programación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo evaluar una directiva de administración basada en directivas según una programación en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Requiere la pertenencia al rol PolicyAdministratorRole en la base de datos msdb.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -58,7 +60,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  Haga clic con el botón derecho en la directiva cuya programación quiera evaluar y seleccione **Propiedades**.  
   
-6.  En el cuadro diálogo **Abrir directiva –***nombre_directiva* , en la lista **Modo de evaluación** , seleccione **Al programar**.  
+6.  En el cuadro diálogo *Abrir directiva –***nombre_de_directiva*, en la lista **Modo de evaluación**, seleccione **Al programar**.  
   
 7.  En **Programación**, haga clic en **Elegir** para especificar una programación existente o en **Nuevo** para crear una programación nueva.  
   

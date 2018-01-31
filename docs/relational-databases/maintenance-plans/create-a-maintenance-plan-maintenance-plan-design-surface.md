@@ -8,21 +8,23 @@ ms.service:
 ms.component: maintenance-plans
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Maintenance Plan Design Surface
+helpviewer_keywords:
+- Maintenance Plan Design Surface
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9368c1af9cc0288868523d413d698816c7babc18
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 30a9e1d1a02e44de418a7d6d8de4acfe694e83f2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Crear un plan de mantenimiento (superficie de diseño del plan de mantenimiento)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo crear un plan de mantenimiento de varios servidores o de un único servidor mediante la Superficie de diseño del plan de mantenimiento de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Aunque el **Asistente para plan de mantenimiento** es mejor para crear planes de mantenimiento básicos, crear un plan con la superficie de diseño le permite usar un flujo de trabajo mejorado.  
@@ -37,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Crear un plan de mantenimiento mediante la superficie de diseño del plan de mantenimiento](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Para crear o administrar planes de mantenimiento, debe ser miembro del rol fijo de servidor **sysadmin** . El Explorador de objetos solo muestra el nodo **Planes de mantenimiento** para los usuarios que son miembros del rol fijo de servidor **sysadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Usar la Superficie de diseño del plan de mantenimiento  
@@ -220,7 +222,7 @@ ms.lasthandoff: 11/17/2017
   
         1.  Si selecciona **Generar un informe de archivo de texto**, seleccione **Crear un nuevo archivo** o **Anexar a archivo**.  
   
-        2.  Según la selección anterior, escriba el nombre y la ruta de acceso completa del nuevo archivo o del archivo que se va a anexar especificando la información en los cuadros **Carpeta** o **Nombre de archivo** . Como alternativa, haga clic en los puntos suspensivos **(…)** y seleccione la ruta de acceso a la carpeta o el nombre de archivo en los cuadros de diálogo **Buscar carpeta -***server_name* o **Buscar archivos de base de datos -***server_name* .  
+        2.  Según la selección anterior, escriba el nombre y la ruta de acceso completa del nuevo archivo o del archivo que se va a anexar especificando la información en los cuadros **Carpeta** o **Nombre de archivo** . Como alternativa, haga clic en los puntos suspensivos **(…)** y seleccione la ruta de acceso a la carpeta o el nombre de archivo en los cuadros de diálogo **Buscar carpeta –***nombre_de_servidor* o *Buscar archivos de base de datos –***nombre_de_servidor*.  
   
         3.  Si selecciona **Enviar informe a un destinatario de correo electrónico**, en la lista de **Operador del agente** , seleccione el destinatario del informe enviado por correo electrónico.  
   
@@ -235,7 +237,7 @@ ms.lasthandoff: 11/17/2017
   
 12. Para ver los resultados en el visor del archivo de registro, en el **Explorador de objetos**, haga clic con el botón derecho en la carpeta **Planes de mantenimiento** o en el plan de mantenimiento específico y, luego, selecciones **Ver historial**.  
   
-     Las siguientes opciones están disponibles en el cuadro de diálogo **Visor de archivos de registro -***server_name* .  
+     Las siguientes opciones están disponibles en el cuadro de diálogo *Visor de archivos de registro –***nombre_de_servidor*.  
   
      **Cargar registro**  
      Abre un cuadro de diálogo donde puede especificar un archivo de registro para cargar.  
@@ -261,7 +263,7 @@ ms.lasthandoff: 11/17/2017
      **Date**  
      Muestra la fecha del evento.  
   
-     **Origen**  
+     **Source**  
      Muestra la característica de origen desde la que se crea el evento, como el nombre del servicio (MSSQLSERVER, por ejemplo). No aparece para todos los tipos de registro.  
   
      **de mensaje**  

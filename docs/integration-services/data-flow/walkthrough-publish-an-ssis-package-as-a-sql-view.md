@@ -8,26 +8,28 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.ssis.packagepublishwizard.f1
+f1_keywords:
+- sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f0e5fa598ce47a95aafe11fd3f05c82eca79c064
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9677c3e5b4985006371a89544842383029431335
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Tutorial: Publicar un paquete SSIS como una vista SQL
   En este tutorial se explica detalladamente cómo publicar un paquete SSIS como una vista SQL en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este tutorial, debe tener instalado el siguiente software en el equipo:  
   
 1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o posterior con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -65,7 +67,7 @@ ms.lasthandoff: 11/20/2017
   
     3.  Inserte dos registros con los siguientes datos.  
   
-        |ID|FirstName|LastName|  
+        |Id.|FirstName|LastName|  
         |--------|---------------|--------------|  
         |1|John|Doe|  
         |2|Jane|Doe|  
@@ -270,7 +272,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
  Barra diagonal (\\): cada \ usada en la cláusula de consulta debe ir acompañada de un carácter de escape. Por ejemplo, \\\ se evalúa como \ en la cláusula de consulta.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Destino de streaming de datos](../../integration-services/data-flow/data-streaming-destination.md)   
  [Configuración del destino de streaming de datos](../../integration-services/data-flow/configure-data-streaming-destination.md)  
   

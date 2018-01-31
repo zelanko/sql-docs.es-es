@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - point in time recovery [SQL Server]
 - restoring databases [SQL Server], point in time
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
-caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 08fc61282bda93c3c99d5c2cb28334cfd90876e0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d3a7afa6acf10d26f64198f7064c2ff66cfee17f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Restaurar una base de datos de SQL Server a un momento dado (modelo de recuperación completa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Si la base de datos que se va a restaurar no existe, el usuario debe tener permisos CREATE DATABASE para poder ejecutar RESTORE. Si la base de datos existe, los permisos RESTORE corresponden de forma predeterminada a los miembros de los roles fijos de servidor **sysadmin** y **dbcreator** , y al propietario (**dbo**) de la base de datos (para la opción FROM DATABASE_SNAPSHOT, la base de datos siempre existe).  
   
  Los permisos RESTORE se conceden a los roles en los que la información acerca de la pertenencia está siempre disponible para el servidor. Debido a que la pertenencia a un rol fijo de base de datos solo se puede comprobar cuando la base de datos es accesible y no está dañada, lo que no siempre ocurre cuando se ejecuta RESTORE, los miembros del rol fijo de base de datos **db_owner** no tienen permisos RESTORE.  
@@ -103,7 +104,7 @@ ms.lasthandoff: 11/17/2017
   
 9. Tras especificar un momento específico, el Asesor para recuperación de base de datos se asegura de que solo estén seleccionadas en la columna **Restaurar** de la cuadrícula **Conjuntos de copia de seguridad para restaurar** las copias de seguridad necesarias para restaurar a ese momento dado. Estas copias de seguridad seleccionadas componen el plan de restauraciones recomendado para la restauración a un momento dado. Solo deben utilizarse las copias de seguridad seleccionadas para la operación de restauración a un momento dado.  
   
-     Para obtener información sobre las columnas de la cuadrícula **Conjuntos de copia de seguridad para restaurar**, vea [Restaurar la base de datos &#40;página General&#41;](../../relational-databases/backup-restore/restore-database-general-page.md). Para obtener información sobre el Asistente para recuperación de base de datos, vea [Información general sobre restauración y recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
+     Para obtener información sobre las columnas de la cuadrícula **Conjuntos de copia de seguridad que se van a restaurar** , vea [Restaurar la base de datos &#40;página General&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)). Para obtener información sobre el Asistente para recuperación de base de datos, vea [Información general sobre restauración y recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
   
 10. En la página **Opciones** , en el panel **Opciones de restauración** , puede seleccionar una de las opciones siguientes si son apropiadas para su situación:  
   
@@ -140,7 +141,7 @@ ms.lasthandoff: 11/17/2017
   
  **Sintaxis básica de [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
- RESTORE LOG *database_name* FROM <dispositivo_copia_seguridad> WITH STOPAT **=***time***,** RECOVERY…  
+ RESTORE LOG *nombre_de_base_de_datos* FROM <dispositivo_de_copia_de_seguridad> WITH STOPAT **=***time***,** RECOVERY…  
   
  El punto de recuperación es la última confirmación de transacción que se ha producido durante o antes del valor **datetime** que se especifique en *hora*.  
   
@@ -160,7 +161,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Restaure la última copia de seguridad de base de datos diferencial, si la hubiera, sin recuperar la base de datos (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  Aplique cada copia de seguridad del registro de transacciones en la misma secuencia en que fueron creadas, especificando la hora a la que tiene previsto detener la restauración del registro (RESTORE DATABASE *database_name* FROM <dispositivo_copia_seguridad> WITH STOPAT**=***time***,** RECOVERY).  
+4.  Aplique cada copia de seguridad del registro de transacciones en la misma secuencia en que fueron creadas, especificando la hora a la que tiene previsto detener la restauración del registro (RESTORE DATABASE *nombre_de_base_de_datos* FROM <dispositivo_de_copia_de_seguridad> WITH STOPAT**=***time***,** RECOVERY).  
   
     > [!NOTE]  
     >  Las opciones RECOVERY y STOPAT. Si la copia de seguridad de registros de transacciones no contiene la hora solicitada (por ejemplo, si la hora especificada está fuera de los límites del intervalo cubierto por el registro de transacciones), se genera una advertencia y no se recupera la base de datos.  
@@ -202,7 +203,7 @@ GO
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> (SMO)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  

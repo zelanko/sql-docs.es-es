@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - Publishers [SQL Server replication], security
 - publications [SQL Server replication], security
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
-caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ce5030a78ce010298ee4444990899e20307734ed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 03651a97745cb661fc4eed487e261d88fd8d8c6a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secure-the-publisher"></a>Proteger el publicador
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los siguientes agentes de replicación se conectan al publicador:  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/17/2017
  La PAL es el mecanismo principal para proteger las publicaciones en el publicador. La PAL funciona de forma similar a las listas de control de acceso de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Al crear una publicación, la replicación crea una PAL para dicha publicación. La PAL puede configurarse para que contenga una lista de los inicios de sesión y los grupos a los que se han concedido permiso de acceso a la publicación. Cuando un agente se conecta al publicador o al distribuidor y solicita acceso a una publicación, la información de autenticación de la PAL se compara con el inicio de sesión del publicador que proporciona el agente. Este proceso proporciona seguridad adicional para el publicador al impedir que una herramienta de cliente utilice el inicio de sesión del publicador y del distribuidor para realizar modificaciones directamente en el publicador.  
   
 > [!NOTE]  
->  La replicación crea un rol en el publicador para cada publicación para exigir la pertenencia a la PAL. El rol tiene un nombre con el formato **Msmerge_***\<IdDePublicación>* para la replicación de mezcla y **MSReplPAL_***\<IdDeBaseDeDatosDePublicación>***_***\<IdDePublicación>* para la replicación de instantáneas y transaccional.  
+>  La replicación crea un rol en el publicador para cada publicación para exigir la pertenencia a la PAL. El rol tiene un nombre con el formato **Msmerge_***\<IdentificadorDePublicación>* para la replicación de mezcla y **MSReplPAL_***\<IdentificadorDeBaseDeDatosDePublicación>***_***\<IdentificadorDePublicación>* para la replicación de instantáneas y transaccional.  
   
  Los inicios de sesión incluidos en la PAL de forma predeterminada son: los miembros del rol fijo de servidor **sysadmin** cuando se crea la publicación y el inicio de sesión utilizado para crear la publicación. De forma predeterminada, todos los inicios de sesión miembros del rol fijo de servidor **sysadmin** o el rol fijo de base de datos **db_owner** en la base de datos de publicaciones pueden suscribirse a una publicación sin agregarse explícitamente a la PAL.  
   
@@ -77,9 +78,9 @@ ms.lasthandoff: 11/17/2017
 ## <a name="queue-reader-agent"></a>Agente de lectura de cola  
  Existe un Agente de lectura de cola para todos los publicadores y publicaciones (que permite las suscripciones de actualización en cola) asociados a un distribuidor determinado. Para más información, vea [Enable Updating Subscriptions for Transactional Publications](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md) (Habilitar suscripciones actualizables para publicaciones transaccionales).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Seguridad y protección &#40;replicación&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+ [Seguridad y protección &#40;Replicación&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
   
   

@@ -8,22 +8,25 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: 5995b7d2-7c06-46f5-b96c-2bee879bcda2
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b361f84ecf464ee66936c88ff9f6114d4203bf23
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bc5e6abed8f9d92532e186377b85396b711f290d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Lección 2: Crear una suscripción a la publicación transaccional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En esta lección, creará una suscripción con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para realizar esta lección es necesario haber completado la lección anterior, [Lección 1: Publicar datos con la replicación transaccional](../../relational-databases/replication/lesson-1-publishing-data-using-transactional-replication.md).  
@@ -46,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  En el cuadro de diálogo **Nueva base de datos** , escriba **ProductReplica** en el cuadro **Nombre de la base de datos** , haga clic en **Aceptar**y luego, en **Siguiente**.  
   
-8.  En el cuadro de diálogo **Seguridad del Agente de distribución**, haga clic en el botón de puntos suspensivos (**…**), escriba \<*nombreDeEquipo>***\repl_distribution** en el cuadro **Cuenta de proceso**, escriba la contraseña para esta cuenta, haga clic en **Aceptar** y luego en **Siguiente**.  
+8.  En el cuadro de diálogo **Seguridad del Agente de distribución**, haga clic en el botón de puntos suspensivos (**…**), escriba \<*Nombre_De_Equipo>***\repl_distribution** en el cuadro **Cuenta de proceso**, escriba la contraseña para esta cuenta, haga clic en **Aceptar** y luego en **Siguiente**.  
   
 9. Haga clic en **Finalizar** para aceptar los valores predeterminados en las páginas restantes y finalizar el asistente.  
   
@@ -70,10 +73,10 @@ ms.lasthandoff: 11/17/2017
   
 3.  Si la suscripción no está visible en **AdvWorksProductTrans**, presione F5 para actualizar la lista.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Next Steps  
 Ha creado correctamente una suscripción a la publicación transaccional. Dado que el Agente de distribución para esta suscripción se ejecuta continuamente, la suscripción se inicializa cuando se crea. A continuación, utilizará testigos de seguimiento para comprobar que los cambios se replican en el suscriptor y para determinar la latencia. Vea [Lesson 3: Validating the Subscription and Measuring Latency](../../relational-databases/replication/lesson-3-validating-the-subscription-and-measuring-latency.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Inicializar una suscripción con una instantánea](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
 [Crear una suscripción de inserción](../../relational-databases/replication/create-a-push-subscription.md)  
 [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md)  

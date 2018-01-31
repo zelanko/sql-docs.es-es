@@ -8,21 +8,23 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 593c18478ee73b66d0f8402885324615615d0fcf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1a63c43606d2a27da3469c4cedb83654c79c1bf1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Lección 5-2: Habilitar y configurar las configuraciones de paquetes
 En esta tarea, convertirá el proyecto al modelo de implementación de paquetes y habilitará las configuraciones de paquetes mediante el Asistente para configuración de paquetes. Usará este asistente para generar un archivo de configuración XML que contiene parámetros de configuración para la propiedad **Directory** del contenedor de bucles Foreach. El valor de la propiedad Directory se proporciona a través de una variable nueva de nivel de paquete que puede actualizarse durante la ejecución. Además, rellenará una carpeta nueva de datos de ejemplo que utilizará durante las pruebas.  

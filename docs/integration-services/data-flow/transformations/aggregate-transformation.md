@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c52546eab7dc5c52fb38e03616df648d3d5d67d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7262db9da133a2aa6f82f501e8dab3228de16efb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="aggregate-transformation"></a>Transformación Agregado
   La transformación Agregado aplica funciones de agregado, como Average, a los valores de columnas y copia los resultados en la salida de transformación. Además de las funciones de agregado, la transformación proporciona la cláusula GROUP BY, que se puede usar para especificar los grupos en los que se debe realizar el agregado.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/20/2017
 |Operación|Description|  
 |---------------|-----------------|  
 |GROUP BY|Divide los conjuntos de datos en grupos. Se pueden usar columnas de cualquier tipo de datos para la agrupación. Para más información, vea [GROUP BY &#40;Transact-SQL&#41;](../../../t-sql/queries/select-group-by-transact-sql.md).|  
-|Sum|Suma los valores de una columna. Solo podrán sumarse las columnas con tipos de datos numéricos. Para más información, vea [SUM &#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md).|  
+|SUM|Suma los valores de una columna. Solo podrán sumarse las columnas con tipos de datos numéricos. Para más información, vea [SUM &#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md).|  
 |Promedio|Devuelve la media de los valores de columna de una columna. Solo podrá calcularse la media de las columnas con tipos de datos numéricos. Para más información, vea [AVG &#40;Transact-SQL&#41;](../../../t-sql/functions/avg-transact-sql.md).|  
 |Count|Devuelve el número de elementos de un grupo. Para más información, vea [COUNT &#40;Transact-SQL&#41;](../../../t-sql/functions/count-transact-sql.md).|  
 |COUNT DISTINCT|Devuelve el número de valores únicos distintos de NULL de un grupo.|  
@@ -130,9 +131,9 @@ ms.lasthandoff: 11/20/2017
   
 -   [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordenación de datos para las transformaciones Mezclar y Combinación de mezcla](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Incorporación de valores en un conjunto de datos con la transformación Agregado](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
 ## <a name="aggregate-transformation-editor-aggregations-tab"></a>Editor de transformación Agregado (pestaña Agregaciones)
@@ -143,7 +144,7 @@ ms.lasthandoff: 11/20/2017
 >   
 >  En la transformación Agregado, **Claves** y **Escala de claves** hacen referencia al número de grupos que se esperan como resultado de una operación **Agrupar por** . **Claves Count Distinct** y **Escala Count Distinct** hacen referencia al número de valores distintos que se esperan como resultado de una operación **Recuento distinto** .  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Avanzadas/Básicas**  
  Muestra u oculta opciones para configurar diversas agregaciones para varias salidas. De forma predeterminada, las opciones Avanzadas aparecen ocultas.  
   
@@ -156,7 +157,7 @@ ms.lasthandoff: 11/20/2017
  **Escala de claves**  
  En la pantalla Avanzadas, especifique opcionalmente el número aproximado de claves que podrá escribir la agregación. De forma predeterminada, el valor de esta opción es **No especificado**. Si se seleccionan las propiedades **Escala de claves** y **Claves** , tendrá prioridad el valor de **Claves** .  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |No especificado|No se utiliza la propiedad Escala de claves.|  
 |Baja|La agregación podrá escribir aproximadamente 500 000 claves.|  
@@ -194,7 +195,7 @@ ms.lasthandoff: 11/20/2017
  **Count Distinct Scale**  
  Opcionalmente, puede especificar el número aproximado de valores DISTINCT que podrá escribir la agregación. De forma predeterminada, el valor de esta opción es **No especificado**. Si se especifican **CountDistinctScale** y **CountDistinctKeys** , tendrá prioridad **CountDistinctKeys** .  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |No especificado|No se utiliza la propiedad **CountDistinctScale** .|  
 |Baja|La agregación podrá escribir aproximadamente 500.000 valores DISTINCT.|  
@@ -212,11 +213,11 @@ ms.lasthandoff: 11/20/2017
 >   
 >  En la transformación Agregado, **Claves** y **Escala de claves** hacen referencia al número de grupos que se esperan como resultado de una operación **Agrupar por** . **Claves Count Distinct** y **Escala Count Distinct** hacen referencia al número de valores distintos que se esperan como resultado de una operación **Recuento distinto** .  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Escala de claves**  
  Si lo desea, especifique el número aproximado de claves que espera la agregación. La transformación utiliza esta información para optimizar el tamaño de caché inicial. De forma predeterminada, el valor de esta opción es **No especificado**. Si se especifica tanto **Escala de claves** como **Número de claves** , prevalece la opción **Número de claves** .  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |No especificado|No se utiliza la propiedad **Escala de claves** .|  
 |Baja|La agregación podrá escribir aproximadamente 500 000 claves.|  
@@ -229,7 +230,7 @@ ms.lasthandoff: 11/20/2017
  **Escala Count Distinct**  
  Opcionalmente, puede especificar el número aproximado de valores DISTINCT que podrá escribir la agregación. De forma predeterminada, el valor de esta opción es **No especificado**. Si se especifica tanto **Escala Count Distinct** como **Claves Count Distinct** , prevalece la opción **Claves Count Distinct** .  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |No especificado|No se utiliza la propiedad CountDistinctScale.|  
 |Baja|La agregación podrá escribir aproximadamente 500.000 valores DISTINCT.|  
@@ -242,7 +243,7 @@ ms.lasthandoff: 11/20/2017
  **Factor de ampliación automática**  
  Utilice un valor comprendido entre 1 y 100 para especificar el porcentaje en el que se puede ampliar la memoria durante la agregación. De forma predeterminada, el valor de esta opción es **25%**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Flujo de datos](../../../integration-services/data-flow/data-flow.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

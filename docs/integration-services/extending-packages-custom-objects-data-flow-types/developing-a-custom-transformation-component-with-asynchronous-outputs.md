@@ -11,7 +11,8 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,16 +27,16 @@ helpviewer_keywords:
 - PrimeOutput method
 - data flow components [Integration Services], transformation components
 ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7583fa59dc2696a38fc69a76a0b66c27e6b3b919
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a184989c8a8ca4b8ea24b27f8d1bc3d8323cbc56
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>Desarrollar un componente de transformación personalizado con salidas asincrónicas
   Cuando una transformación no puede generar filas hasta que un componente ha recibido todas sus filas de entrada o no genera exactamente una fila de salida por cada fila recibida como entrada, se utiliza un componente con salidas asincrónicas. Por ejemplo, la transformación Agregado no puede calcular una suma de las filas hasta que las ha leído todas. En cambio, puede utilizar un componente con salidas sincrónicas en cualquier momento al modificar cada fila de datos a medida que las atraviesa. Puede modificar los datos para cada fila en su lugar o bien crear una o más columnas nuevas, cada una de las cuales tiene un valor para cada una de las filas de entrada. Para obtener más información acerca de la diferencia entre los componentes sincrónicos y asincrónicos, vea [Descripción de las transformaciones sincrónicas y asincrónicas](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  

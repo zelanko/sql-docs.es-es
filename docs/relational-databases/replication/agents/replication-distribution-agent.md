@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - Distribution Agent, parameter reference
 - command prompt [SQL Server replication]
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
-caps.latest.revision: "64"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 32e48df7831764259bd9f05d53a2d8b4e3ca29d5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b3a92cdd309e4bc4c60ff922b8444d810a2981cf
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-distribution-agent"></a>Agente de distribución de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Agente de distribución de replicación es un ejecutable que mueve la instantánea (para la replicación de instantáneas y la replicación transaccional) y las transacciones de las tablas de base de datos de la distribución (para la replicación transaccional) a las tablas de destino en los suscriptores.  
@@ -96,14 +97,14 @@ distrib [-?]
  **-?**  
  Imprime todos los parámetros disponibles.  
   
- **-Publisher** *server_name*[**\\***i**nstance_name*]  
- Es el nombre del publicador. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
+ **-Publisher** *nombre_de_servidor*[**\\*****nombre_de_instancia*]  
+ Es el nombre del publicador. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
   
  **-PublisherDB** *publisher_database*  
  Es el nombre de la base de datos del publicador.  
   
- **-Subscriber** *server_name*[**\\***instance_name*]  
- Es el nombre del suscriptor. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
+ **-Subscriber** *nombre_de_servidor*[**\\***nombre_de_instancia*]  
+ Es el nombre del suscriptor. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
   
  **-SubscriberDB** *subscriber_database*  
  Es el nombre de la base de datos del suscriptor.  
@@ -141,7 +142,7 @@ distrib [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Es el nivel de cifrado de Capa de sockets seguros (SSL) utilizado por el agente de distribución cuando realiza conexiones.  
   
-|Valor de EncryptionLevel|Descripción|  
+|Valor de EncryptionLevel|Description|  
 |---------------------------|-----------------|  
 |**0**|Especifica que no se utiliza SSL.|  
 |**1**|Especifica que se utiliza SSL, pero el agente no comprueba que un emisor confiable haya firmado el certificado del servidor SSL.|  
@@ -167,13 +168,13 @@ distrib [-?]
  **-FtpPort** *ftp_port*  
  Es el número de puerto del servicio FTP para el distribuidor. Cuando no se especifica, se utiliza el número de puerto predeterminado para el servicio FTP (21).  
   
- **-FtpUserName**  *ftp_user_name*  
+ **-FtpUserName**  *nombre_de_usuario_de_ftp*  
  Es el nombre de usuario que se utiliza para conectar con el servicio FTP. Cuando no se especifica, se utiliza **anónimo** .  
   
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
  Especifica la cantidad de historial registrado durante una operación de la distribución. Puede minimizar el efecto sobre el rendimiento del registro del historial seleccionando **1**.  
   
-|Valor HistoryVerboseLevel|Descripción|  
+|Valor HistoryVerboseLevel|Description|  
 |-------------------------------|-----------------|  
 |**0**|Los mensajes de progreso se escriben en la consola o bien en un archivo de resultados. Los registros del historial no se registran en la base de datos de distribución.|  
 |**1**|Predeterminado: Siempre actualiza un mensaje del historial anterior del mismo estado (inicio, progreso, éxito, etc.). Si no existe ningún registro anterior con el mismo estado, inserta un nuevo registro.|  
@@ -225,7 +226,7 @@ distrib [-?]
  **-ProfileName** *profile_name*  
  Especifica un perfil de agente para utilizar para los parámetros del agente. Si **ProfileName** es NULL, el perfil de agente se deshabilita. Si no se especifica **ProfileName** , se utiliza el perfil predeterminado para el tipo de agente. Para obtener información, vea [Perfiles del Agente de replicación](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
- **-Publication**  *publication*  
+ **-Publication**  *publicación*  
  Es el nombre de la publicación. Este parámetro solamente es válido si la publicación se define para tener siempre una instantánea disponible para las suscripciones nuevas o reinicializadas.  
   
  **-QueryTimeOut** *query_time_out_seconds*  
@@ -234,7 +235,7 @@ distrib [-?]
  **-QuotedIdentifier** *quoted_identifier*  
  Especifica el carácter del identificador entrecomillado que se utilizará. El primer carácter del valor indica el valor que utiliza el agente de distribución. Si **QuotedIdentifier** se utiliza sin ningún valor, el agente de distribución utiliza un espacio. Si no se utiliza **QuotedIdentifier** , el agente de distribución utiliza cualquier identificador entrecomillado que admita el suscriptor.  
   
- **-SkipErrors** *native_error_id* [**:***...n*]  
+ **-SkipErrors** *identificador_de_error_nativo* [**:***...n*]  
  Es una lista separada por dos puntos que especifica los números de error que este agente omitirá.  
   
  **-SubscriberDatabasePath** *subscriber_database_path*  
@@ -252,7 +253,7 @@ distrib [-?]
  **-SubscriberType** [ **0**| **1**| **3**]  
  Especifica el tipo de conexión de suscriptor utilizada por el agente de distribución.  
   
-|Valor SubscriberType|Descripción|  
+|Valor SubscriberType|Description|  
 |--------------------------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |**1**|Origen de datos ODBC|  
@@ -277,7 +278,7 @@ distrib [-?]
  Especifica el tipo de suscripción para la distribución. Un valor de **0** indica una suscripción de inserción, un valor de **1** indica una suscripción de extracción y un valor de **2** indica una suscripción anónima.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- Especifica el intervalo de la transacción para el registro del historial. Si el número de transacciones confirmadas después de la última instancia de registro del historial es mayor que esta opción, se registra un mensaje de historial. El valor predeterminado es 100. Un valor de **0** indica infinito **TransactionsPerHistory**. Vea el parámetro **–MessageInterval**anterior.  
+ Especifica el intervalo de la transacción para el registro del historial. Si el número de transacciones confirmadas después de la última instancia de registro del historial es mayor que esta opción, se registra un mensaje de historial. El valor predeterminado es 100. Un valor de **0** indica infinito **TransactionsPerHistory**. See the preceding **–MessageInterval**parameter.  
   
  **-UseDTS**  
  Se debe especificar como un parámetro para una publicación que permite la transformación de datos.  
@@ -288,7 +289,7 @@ distrib [-?]
  **-UseOledbStreaming**  
  Cuando se especifica, habilita el enlace de datos del objeto binario como un flujo. Utilice **-OledbStreamThreshold** para especificar el tamaño, en bytes, por encima del cual se utilizará un flujo. **UseOledbStreaming** se habilita de forma predeterminada. **UseOledbStreaming** escribe en la carpeta **C:\Archivos de programa\Microsoft SQL Server\\<versión\>\COM**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 > [!IMPORTANT]  
 >  Si ha instalado el agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para que se ejecute en una cuenta de sistema local en lugar de debajo de una cuenta de usuario de dominio (el valor predeterminado), el servicio puede tener acceso solo al equipo local. Si el agente de distribución que se ejecuta en el agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se configura para utilizar el modo de autenticación de Windows cuando inicia sesión en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el agente de distribución devuelve un error. La configuración predeterminada es la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener información acerca del cambio de cuentas de seguridad, vea [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
@@ -301,7 +302,7 @@ distrib [-?]
 |---------------------|  
 |Se ha agregado el parámetro **-ExtendedEventConfigFile** .|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administración del Agente de replicación](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

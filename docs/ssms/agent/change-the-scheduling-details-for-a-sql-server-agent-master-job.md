@@ -8,20 +8,21 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f5414451-4d8e-464b-bd9e-f2b70c6899b3
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ca4c87fca082bb03d7e5890239dbf5aead56d77a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b3b08fe5a5a2e076dab9ef2f6c00b9dac86f1a56
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Change the Scheduling Details for a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo cambiar los detalles de la programación de una definición de trabajo en [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] o [!INCLUDE[tsql](../../includes/tsql_md.md)].  
@@ -62,7 +63,7 @@ A menos que sea miembro del rol fijo de servidor **sysadmin** , solo podrá modi
   
 4.  Haga clic con el botón derecho en la programación que desea modificar y seleccione **Propiedades**.  
   
-5.  En el cuadro de diálogo **Propiedades de trabajo –***nombre_trabajo*, en **Seleccionar una página**, seleccione **Programaciones**. Para más información sobre las opciones disponibles en esta página, consulte [Propiedades de trabajo - Nuevo trabajo &#40;Página Programaciones&#41;](../../ssms/agent/job-properties-new-job-schedules-page.md).  
+5.  En el cuadro de diálogo *Propiedades de trabajo –***nombre_de_trabajo* , en **Seleccionar una página**, seleccione **Programaciones**. Para más información sobre las opciones disponibles en esta página, consulte [Propiedades de trabajo - Nuevo trabajo &#40;Página Programaciones&#41;](../../ssms/agent/job-properties-new-job-schedules-page.md).  
   
 6.  Cuando termine, haga clic en **Aceptar**.  
   

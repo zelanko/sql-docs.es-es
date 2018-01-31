@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -43,16 +44,16 @@ helpviewer_keywords:
 - publications [SQL Server replication], modifying
 - user-defined functions [SQL Server replication]
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
-caps.latest.revision: "83"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7df7cad2ce05a9f18f9950b769e4f3b62aa7c984
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 21e6296382acf84d5ca1aa6a7ec84cd1e171c321
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publish-data-and-database-objects"></a>Publicar datos y objetos de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Al crear una publicación, elegirá las tablas y otros objetos de base de datos que quiera publicar. Puede publicar los siguientes objetos de base de datos utilizando la replicación.  
@@ -101,7 +102,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
   
--   [Ver y modificar las propiedades de un artículo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  
+-   [er y modificar las propiedades de un artículo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  
   
 -   [Eliminar una publicación](../../../relational-databases/replication/publish/delete-a-publication.md)  
   
@@ -125,7 +126,7 @@ ms.lasthandoff: 11/17/2017
   
  Para especificar opciones de esquema, vea [Especificar las opciones del esquema](../../../relational-databases/replication/publish/specify-schema-options.md) o <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.  
   
-### <a name="partitioned-tables-and-indexes"></a>Tablas e índices con particiones  
+### <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes  
  La replicación admite la publicación de tablas con particiones e índices. El nivel de compatibilidad depende del tipo de replicación que se utiliza y las opciones que especifica para la publicación y los artículos asociados a las tablas con particiones. Para obtener más información, vea [Replicar tablas e índices con particiones](../../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).  
   
 ## <a name="publishing-stored-procedures"></a>Publicar procedimientos almacenados  
@@ -162,7 +163,7 @@ ms.lasthandoff: 11/17/2017
   
 -   ALTER TRIGGER  
   
- Para obtener más información, vea [Realizar cambios de esquema en bases de datos de publicaciones](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+ Para más información, vea [Realizar cambios de esquema en bases de datos de publicaciones](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="considerations-for-publishing"></a>Consideraciones sobre las publicaciones  
  Tenga en cuenta los siguientes aspectos a la hora de publicar objetos de base de datos:  
@@ -203,7 +204,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Para artículos de publicaciones que utilizan instantáneas en modo de carácter (que se utilizan para los que no son suscriptores de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y para los suscriptores de [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ): de manera predeterminada, el propietario se deja en blanco. Como valor predeterminado del propietario se utiliza el propietario asociado con la cuenta utilizada por el Agente de distribución o el Agente de mezcla para conectarse con el suscriptor.  
   
- El propietario del objeto se puede cambiar mediante el cuadro de diálogo **Propiedades del artículo: \<***artículo***>** y mediante los siguientes procedimientos almacenados: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** y **sp_changemergearticle**. Para obtener más información, vea [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definir un artículo](../../../relational-databases/replication/publish/define-an-article.md) (Definir un artículo) y [Ver y modificar las propiedades de un artículo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ El propietario del objeto se puede cambiar mediante el cuadro de diálogo **Propiedades del artículo - \<***Artículo***>** y mediante los siguientes procedimientos almacenados: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** y **sp_changemergearticle**. Para más información, vea [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definir un artículo](../../../relational-databases/replication/publish/define-an-article.md) y [Ver y modificar las propiedades de un artículo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>Publicar datos en suscriptores que se ejecutan en versiones anteriores de SQL Server  
   
@@ -253,12 +254,12 @@ ms.lasthandoff: 11/17/2017
   
      Para obtener más información sobre estos parámetros, vea [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) y [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md).  
   
--   La replicación transaccional y la replicación de mezcla sin filtrar admiten la publicación de una tabla en varias publicaciones y la posterior suscripción en una única tabla en la base de datos de suscripciones (es lo que normalmente se denomina un escenario de acumulación). Este tipo de escenario se suele utilizar para agregar subconjuntos de datos de varias ubicaciones en una tabla en un suscriptor central. Las publicaciones de combinación filtradas no admiten el escenario de suscriptor central. En la replicación de mezcla, la acumulación se suele implementar a través de una única publicación con filtros de fila con parámetros. Para más información, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+-   La replicación transaccional y la replicación de mezcla sin filtrar admiten la publicación de una tabla en varias publicaciones y la posterior suscripción en una única tabla en la base de datos de suscripciones (es lo que normalmente se denomina un escenario de acumulación). Este tipo de escenario se suele utilizar para agregar subconjuntos de datos de varias ubicaciones en una tabla en un suscriptor central. Las publicaciones de combinación filtradas no admiten el escenario de suscriptor central. En la replicación de mezcla, la acumulación se suele implementar a través de una única publicación con filtros de fila con parámetros. Para obtener más información, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Agregar y quitar artículos de publicaciones existentes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
  [Configurar la distribución](../../../relational-databases/replication/configure-distribution.md)   
- [Inicializar una suscripción](../../../relational-databases/replication/initialize-a-subscription.md)   
+ [Initialize a Subscription](../../../relational-databases/replication/initialize-a-subscription.md)  (Inicializar una suscripción)  
  [Crear script para la replicación](../../../relational-databases/replication/scripting-replication.md)   
  [Proteger el publicador](../../../relational-databases/replication/security/secure-the-publisher.md)   
  [Suscribirse a publicaciones](../../../relational-databases/replication/subscribe-to-publications.md)  

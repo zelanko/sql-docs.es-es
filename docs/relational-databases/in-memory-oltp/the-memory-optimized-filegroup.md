@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7bc7ae557efd1d26b25f07fd645a1d9d6c32e7a5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ff868be847d703d4ce4b8b291a725abc255a5788
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="the-memory-optimized-filegroup"></a>El grupo de archivos con optimización para memoria
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para crear tablas optimizadas para memoria, primero debe crear un grupo de archivos optimizados para memoria. El grupo de archivos optimizados para memoria contiene uno o varios contenedores. Cada contenedor contiene archivos de datos, archivos delta o ambos tipos de archivos.  
@@ -32,13 +33,13 @@ ms.lasthandoff: 11/17/2017
   
 -   Solo puede crear un grupo de archivos optimizados para memoria por cada base de datos. Debe marcarse explícitamente el grupo de archivos como que contiene memory_optimized_data. Puede crear el grupo de archivos al crear la base de datos o puede agregarlo posteriormente:  
   
-    ```  
+    ```sql  
     ALTER DATABASE imoltp ADD FILEGROUP imoltp_mod CONTAINS MEMORY_OPTIMIZED_DATA  
     ```  
   
--   Es necesario agregar uno o varios contenedores al grupo de archivos MEMORY_OPTIMIZED_DATA. Por ejemplo:  
+-   Debe agregar uno o varios contenedores al grupo de archivos `MEMORY_OPTIMIZED_DATA`. Por ejemplo:  
   
-    ```  
+    ```sql  
     ALTER DATABASE imoltp ADD FILE (name='imoltp_mod1', filename='c:\data\imoltp_mod1') TO FILEGROUP imoltp_mod  
     ```  
   
@@ -48,20 +49,20 @@ ms.lasthandoff: 11/17/2017
   
 -   El movimiento de datos con un grupo de archivos optimizados para memoria se optimiza en una configuración de grupo de disponibilidad AlwaysOn. A diferencia de los archivos de FILESTREAM que se envían a las réplicas secundarias, los archivos de punto de comprobación (de datos y delta) del grupo de archivos optimizados para memoria no se envían a las réplicas secundarias. Los archivos de datos y delta se crean mediante el registro de transacciones la réplica secundaria.  
   
- A continuación se indican las limitaciones del grupo de archivos optimizados para memoria:  
+Las limitaciones siguientes se aplican al grupo de archivos optimizados para memoria:  
   
 -   Una vez que crea un grupo de archivos optimizados para memoria, solo puede quitarlo si quita la base de datos. En un entorno de producción, no es probable que necesite quitar el grupo de archivos optimizados para memoria.  
   
 -   No puede quitar un contenedor que no esté vacío ni mover pares de archivos de datos y delta a otro contenedor en el grupo de archivos optimizados para memoria.  
   
--   No puede especificar MAXSIZE para el contenedor.  
+-   No puede especificar `MAXSIZE` para el contenedor.  
   
 ## <a name="configuring-a-memory-optimized-filegroup"></a>Configurar un grupo de archivos con optimización para memoria  
  Debe considerar la posibilidad de crear varios contenedores en el mismo grupo de archivos optimizados para memoria y distribuirlos en distintas unidades para lograr más ancho de banda para transmitir los datos en memoria.  
   
- Al configurar el almacenamiento, debe proporcionar una cantidad de espacio en disco disponible que sea cuatro veces el tamaño de tablas durables optimizadas para memoria. También debe asegurarse de que el subsistema de E/S admite los IOPS necesarios para la carga de trabajo. Si los pares de archivos de datos y delta se rellenan en las IOPS especificadas, necesita 3 veces esas IOPS para dar cabida a las operaciones de almacenamiento y mezcla. Puede agregar capacidad de almacenamiento e IOPS si agrega uno o varios contenedores al grupo de archivos optimizados para memoria.  
+ Al configurar el almacenamiento, debe proporcionar una cantidad de espacio en disco disponible que sea cuatro veces el tamaño de tablas durables optimizadas para memoria. También debe asegurarse de que el subsistema de E/S admita los IOPS necesarios para la carga de trabajo. Si los pares de archivos de datos y delta se rellenan en las IOPS especificadas, necesita 3 veces esas IOPS para dar cabida a las operaciones de almacenamiento y mezcla. Puede agregar capacidad de almacenamiento e IOPS si agrega uno o varios contenedores al grupo de archivos optimizados para memoria.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Crear y administrar el almacenamiento de objetos con optimización para memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
-  
+ [Archivos y grupos de archivos de base de datos](../../relational-databases/databases/database-files-and-filegroups.md) 
   

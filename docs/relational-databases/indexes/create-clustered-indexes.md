@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - clustered indexes, UNIQUE constraint
 - indexes [SQL Server], clustered
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ec406af911a0ea95910eba4a7bf35b68544418cd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9aca99e368fa95b55877b7c654be2fec55dbab2e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-clustered-indexes"></a>Crear índices clúster
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Implementations"></a> Implementaciones típicas  
  Los clúster se implementan de las formas siguientes:  
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -94,7 +95,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar**.  
   
-5.  En el cuadro de diálogo **Seleccionar columnas de***table_name* , active la casilla de la columna de tabla que se va a agregar al índice agrupado.  
+5.  En el cuadro de diálogo **Seleccionar columnas de***nombre_de_tabla*, active la casilla de la columna de tabla que se va a agregar al índice agrupado.  
   
 6.  Haga clic en **Aceptar**.  
   
@@ -120,7 +121,7 @@ ms.lasthandoff: 11/17/2017
   
 9. Haga clic en **Cerrar**.  
   
-10. En el menú **Archivo** , haga clic en **Guardar***table_name*.  
+10. En el menú **Archivo**, haga clic en **Guardar***nombre_de_tabla*.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
@@ -150,7 +151,7 @@ ms.lasthandoff: 11/17/2017
   
  Para obtener más información, vea [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Crear claves principales](../../relational-databases/tables/create-primary-keys.md)   
  [Crear restricciones UNIQUE](../../relational-databases/tables/create-unique-constraints.md)  
   

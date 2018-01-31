@@ -8,7 +8,8 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-transaction-log
+ms.technology:
+- dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - manage log size
 - log size, manage
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 23aaaed04bfb552865cf9eb95b3150d520499dd9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 58cbe590d16bba9d74f41dc7499b563a2e0b2499
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Administrar el tamaño del archivo de registro de transacciones
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se incluye información sobre cómo supervisar el tamaño de un registro de transacciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], reducir el registro de transacciones, agregar o ampliar un archivo de registro de transacciones, optimizar la tasa de crecimiento del registro de transacciones **tempdb** y controlar el crecimiento de un archivo de registro de transacciones.  
@@ -105,9 +106,9 @@ Estas son algunas recomendaciones generales referentes a los archivos de registr
       |A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Datos: 1 MB. Archivos de registro: 10 %.|  
       |Antes de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Datos: 10 %. Archivos de registro: 10 %.|  
 
--   Un aumento de crecimiento pequeño puede generar demasiados [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) pequeños y puede reducir el rendimiento. 
+-   Un aumento de crecimiento pequeño puede generar demasiados [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) pequeños y puede reducir el rendimiento. Para determinar la distribución óptima de VLF para el tamaño de registro de transacciones actual de todas las bases de datos en una instancia determinada, así como los incrementos de tamaño necesarios para conseguir el tamaño requerido, consulte este [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
 
--   Un aumento de crecimiento grande puede generar demasiados [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) pequeños y grandes, y también puede afectar al rendimiento. 
+-   Un aumento de crecimiento grande puede generar demasiados [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) pequeños y grandes, y también puede afectar al rendimiento. Para determinar la distribución óptima de VLF para el tamaño de registro de transacciones actual de todas las bases de datos en una instancia determinada, así como los incrementos de tamaño necesarios para conseguir el tamaño requerido, consulte este [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs). 
 
 -   Incluso con el crecimiento automático habilitado, puede recibir un mensaje de que el registro de transacciones está lleno, si no puede crecer lo suficientemente rápido para satisfacer las necesidades de la consulta. Para obtener más información sobre cómo cambiar el aumento del crecimiento, vea [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 

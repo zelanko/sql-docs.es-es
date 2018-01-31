@@ -9,19 +9,20 @@ ms.service:
 ms.component: scale-out
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: haoqian
 ms.author: haoqian
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e73695e21e8055d3c27079f106390e8d44894db
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 0cd80620f668e87eba8a77f1ac6a9e5faa2378da
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Trabajador de escalado horizontal de Integration Services (SSIS)
 
@@ -66,4 +67,4 @@ La ubicación del registro de cada tarea individual está configurada en el arch
 El parámetro *[account]* es la cuenta que ejecuta el servicio de trabajador de escalabilidad horizontal. De forma predeterminada, la cuenta es `SSISScaleOutWorker140`.
 
 ## <a name="next-steps"></a>Pasos siguientes
-[Patrón de escalabilidad horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
+[Servicio principal de escalabilidad horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)

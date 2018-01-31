@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 005b6b2f-a5d9-4ea4-8d4e-beed6ab33c0d
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba92aca58744a652314630f786ea6783e51b1cbb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 33c7ec0dee60cb772ad2683dcec763a19fd57051
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetenvironmentvariableprotection-ssisdb-database"></a>catalog.set_environment_variable_protection (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,24 +40,24 @@ catalog.set_environment_variable_protection [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argumentos  
  [ @folder_name = ] *folder_name*  
- Nombre de la carpeta que contiene el entorno. El parámetro *folder_name* es **nvarchar(128)**.  
+ Nombre de la carpeta que contiene el entorno. *folder_name* es **nvarchar(128)**.  
   
  [ @environment_name = ] *environment_name*  
- El nombre del entorno. El parámetro *environment_name* es **nvarchar(128)**.  
+ El nombre del entorno. *environment_name* es **nvarchar(128)**.  
   
  [ @variable_name = ] *variable_name*  
- Nombre de la variable de entorno. El parámetro *variable_name* es **nvarchar(128)**.  
+ Nombre de la variable de entorno. El parámetro *variable_name* es de tipo **nvarchar(128)**.  
   
  [ @sensitive = ] *sensitive*  
  Indica si la variable contiene un valor confidencial o no. Use un valor de `1` para indicar que el valor de la variable de entorno es confidencial o un valor de `0` para indicar que no lo es. Un valor confidencial se cifra cuando se almacena. Un valor que no es confidencial se almacena como texto simple. El parámetro *sensitive* es **bit**.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
- 0 (Correcto)  
+ 0 (correcto)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Ninguno  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
 -   Permisos READ y MODIFY en el entorno  
@@ -74,6 +75,6 @@ catalog.set_environment_variable_protection [ @folder_name = ] folder_name
   
 -   El nombre de la variable de entorno no es válido  
   
--   El usuario no tiene los permisos adecuados  
+-   El usuario no tiene los permisos adecuados.  
   
   

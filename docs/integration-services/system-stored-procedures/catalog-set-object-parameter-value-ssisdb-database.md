@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8fe142dd0fdf6e896c6930528b563514c3aa2fb8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 216f5e4e3a68ead9a8353b2b35fef0b3d1717cba
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,19 +43,19 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 ## <a name="arguments"></a>Argumentos  
  [@object_type =] *object_type*  
- Es el tipo de parámetro. Use el valor `20` para indicar un parámetro de proyecto o el valor `30` para indicar un parámetro de paquete. El parámetro *object_type* es **smallInt**.  
+ Tipo de parámetro. Use el valor `20` para indicar un parámetro de proyecto o el valor `30` para indicar un parámetro de paquete. *object_type* es **smallInt**.  
   
  [@folder_name =] *folder_name*  
- Nombre de la carpeta que contiene el parámetro. El parámetro *folder_name* es **nvarchar(128)**.  
+ Nombre de la carpeta que contiene el parámetro. *folder_name* es **nvarchar(128)**.  
   
  [@project_name =] *project_name*  
- Nombre del proyecto que contiene el parámetro. El parámetro *project_name* es **nvarchar(128)**.  
+ Nombre del proyecto que contiene el parámetro. *project_name* es **nvarchar(128)**.  
   
  [@parameter_name =] *parameter_name*  
- Nombre del parámetro. El parámetro *parameter_name* es **nvarchar(128)**.  
+ Nombre del parámetro. El parámetro *parameter_name* es de tipo **nvarchar(128)**.  
   
  [@parameter_value =] *parameter_value*  
- El valor del parámetro. El parámetro *parameter_value* es **sql_variant**.  
+ El valor del parámetro. El parámetro *parameter_value* es de tipo **sql_variant**.  
   
  [@object_name =] *object_name*  
  Nombre del paquete. Este argumento es necesario cuando el parámetro es un parámetro de paquete. El parámetro *object_name* es **nvarchar(260)**.  
@@ -63,12 +64,12 @@ catalog.set_object_parameter_value [@object_type =] object_type
  Tipo de valor del parámetro. Use el carácter `V` para indicar que *parameter_value* es un valor literal que se usa de forma predeterminada cuando no hay otros valores asignados antes de la ejecución. Use el carácter `R` para indicar que *parameter_value* es un valor al que se hace referencia y que se ha establecido en el nombre de una variable de entorno. Este argumento es opcional; de forma predeterminada, se usa el carácter `V`. El parámetro *value_type* es **char(1)**.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
- 0 (Correcto)  
+ 0 (correcto)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Ninguno  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
 -   Permisos READ y MODIFY en el proyecto  
@@ -88,9 +89,9 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 -   El tipo de valor no es válido.  
   
--   El usuario no tiene los permisos adecuados  
+-   El usuario no tiene los permisos adecuados.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 -   Si no se especifica ningún parámetro *value_type*, se usa un valor literal de *parameter_value* de forma predeterminada. Cuando se usa un valor literal, el parámetro*value_set* de la vista [object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) se establece en `1`. No se permiten valores de parámetro NULL.  
   

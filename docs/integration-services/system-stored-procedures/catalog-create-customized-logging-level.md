@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 20b3ba0a-126f-49bf-b70f-61b2a0fcb750
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94b0b41b2f6d7e87bccbd53a58a50c44c0ee29e7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 027e2790bc59e3e9839de83c98984c19df1a982e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcreatecustomizedlogginglevel"></a>catalog.create_customized_logging_level
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +79,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
   
  El parámetro *level_id* es de tipo **bigint**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Para combinar varios valores en Transact-SQL para el argumento *profile_value* o *event_value*, siga este ejemplo. Para capturar los eventos OnError (8) y DiagnosticEx (15), la fórmula para calcular *event_value* es `2^8 + 2^15 = 33024`.  
   
 ## <a name="return-codes"></a>Códigos de retorno  
@@ -87,9 +88,9 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  Cuando se produce un error en el procedimiento almacenado, se genera un error.  
   
 ## <a name="result-set"></a>Conjunto de resultados  
- Ninguno  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
 -   Pertenencia al rol de base de datos **ssis_admin**  

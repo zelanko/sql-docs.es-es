@@ -8,23 +8,24 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - catalog.operation_messages view [Integration Services]
 - operation_messages view [Integration Services]
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 666d7014adb8feaa77e72f5856838051d992c8df
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a095bff8fd8feec5a278ed8dc7de648babaa7c2c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/20/2017
 |message|**nvarchar(max)**|Texto del mensaje.|  
 |extended_info_id|**bigint**|Es el id. de la información adicional relacionada con el mensaje de la operación, que se encuentra en la vista [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md).|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta vista muestra una fila para cada mensaje registrado durante una operación en el catálogo. El mensaje lo puede genera el servidor, el proceso de ejecución del paquete o el motor de ejecución.  
   
  Esta vista muestra los siguientes tipos de mensaje:  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/20/2017
 |50|Contenedores de flujo de control|  
 |60|Tarea Flujo de datos|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Esta vista exige uno de los siguientes permisos:  
   
 -   Permiso de lectura en la operación  

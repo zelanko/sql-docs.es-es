@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - backups [SQL Server], files or filegroups
 - file backups [SQL Server], related features
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
-caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2e6025d1b69bb5c9f2492c45967eb05c6469a389
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d1045fc2174cc299e5122306289c92df0ded602d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Copias de seguridad y restauración: interoperabilidad y coexistencia (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
  Si se detecta algún problema durante el inicio de la base de datos, no se puede llevar a cabo la restauración y la base de datos se marca como SUSPECT. Si es posible aislar el problema en un archivo o una serie de archivos, el administrador de la base de datos puede dejar sin conexión los archivos en cuestión e intentar reiniciar la base de datos. Para dejar sin conexión un archivo se puede utilizar la siguiente instrucción [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) :  
   
- ALTER DATABASE *database_name* MODIFY FILE (NAME **='***filename***'**, OFFLINE)  
+ ALTER DATABASE *nombre_base_de_datos* MODIFY FILE (NAME **='***nombredearchivo***'**, OFFLINE)  
   
  En caso de iniciarse correctamente, los grupos de archivos que contengan algún archivo sin conexión seguirán sin conexión.  
   
@@ -122,7 +123,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="FileBnRandCompression"></a> Copias de seguridad y restauración, y compresión de archivos  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la compresión de datos del sistema de archivos NTFS de grupos de archivos y bases de datos de solo lectura.  
   
- Los archivos NTFS comprimidos admiten la restauración de archivos en un grupo de archivos de solo lectura. Las copias de seguridad y restauración de estos grupos de archivos funciona esencialmente de la misma manera que con cualquier grupo de archivos de solo lectura, con las siguientes excepciones:  
+ Los archivos NTFS comprimidos admiten la restauración de archivos en un grupo de archivos de solo lectura. Las copias de seguridad y restauración de estos grupos de archivos funciona esencialmente de la misma manera que con cualquier grupo de archivos de solo lectura, con las siguientes excepciones:   
   
 -   La restauración de un archivo de lectura y escritura (incluido el principal o los archivos de registro de una base de datos de lectura/escritura) en un volumen comprimido genera y muestra un error.  
   
@@ -135,9 +136,9 @@ ms.lasthandoff: 11/17/2017
   
 -   [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
--   [Realizar copias de seguridad de los catálogos de texto completo y restaurarlos](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
+-   [Realizar copias de seguridad de los catálogos e índices de texto completo y restaurarlos](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Hacer copias de seguridad y restaurar bases de datos replicadas](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
 [Secundarias activas: copia de seguridad en las réplicas secundarias \(Grupos de disponibilidad AlwaysOn\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  

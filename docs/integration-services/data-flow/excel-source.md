@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 61e28171171a822f25da6979340785bc5c114e1c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 872ac8117bb87cb9f1709afedbacc32b2d1f1413
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="excel-source"></a>Origen de Excel
   El origen de Excel extrae datos de hojas de cálculo o de rangos de libros de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -91,13 +92,13 @@ ms.lasthandoff: 11/20/2017
   
  El cuadro de diálogo **Editor avanzado** indica todas las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de Excel](../../integration-services/data-flow/excel-custom-properties.md)  
   
  Para más información sobre cómo crear bucles entre un grupo de archivos de Excel, vea [Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md).  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Asignar parámetros de consulta a variables en un componente de flujo de datos](../../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
   
@@ -114,8 +115,8 @@ ms.lasthandoff: 11/20/2017
 >  La propiedad **CommandTimeout** del origen de Excel no está disponible en el **Editor de origen de Excel**, pero se puede establecer mediante el **Editor avanzado**. Para obtener más información acerca de esta propiedad, vea la sección Origen de Excel de [Excel Custom Properties](../../integration-services/data-flow/excel-custom-properties.md).  
   
 ### <a name="static-options"></a>Opciones estáticas  
- **OLE DB, administrador de conexiones**  
- Seleccione un administrador de conexiones de Excel en la lista o cree una nueva conexión haciendo clic en **Nuevo**.  
+ **Administrador de conexiones OLE DB**  
+ Seleccione un Administrador de conexiones con Excel en la lista o cree una conexión haciendo clic en **Nueva**.  
   
  **Nueva**  
  Cree un administrador de conexiones mediante el cuadro de diálogo **Administrador de conexiones con Excel** .  
@@ -123,7 +124,7 @@ ms.lasthandoff: 11/20/2017
  **Modo de acceso a datos**  
  Especifique el método para seleccionar datos del origen.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |Tabla o vista|Recupera los datos de una hoja de cálculo o un rango con nombre del archivo Excel.|  
 |Variable de nombre de tabla o nombre de vista|Especifique la hoja de calculo o el rango con nombre de una variable.<br /><br /> **Información relacionada** [Usar variables en paquetes](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -166,7 +167,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="excel-source-editor-columns-page"></a>Editor de origen de Excel (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de origen de Excel** para asignar una columna de salida a cada columna externa (origen).  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Columnas externas disponibles**  
  Muestra la lista de columnas externas disponibles en el origen de datos. Esta tabla no se puede usar para agregar o quitar columnas.  
   
@@ -179,7 +180,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="excel-source-editor-error-output-page"></a>Editor de origen de Excel (página Salida de error)
   Utilice la página **Salida de error** del cuadro de diálogo **Editor de origen de Excel** para seleccionar opciones de control de errores y establecer las propiedades en las columnas de salida de errores.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Entrada o salida**  
  Muestra el nombre del origen de datos.  
   
@@ -194,7 +195,7 @@ ms.lasthandoff: 11/20/2017
  **Truncamiento**  
  Permite especificar qué debe ocurrir cuando se produce un truncamiento: omitir el error, redirigir la fila o hacer que el componente no funcione.  
   
- **Description**  
+ **Descripción**  
  Muestra la descripción del error.  
   
  **Establecer este valor en las celdas seleccionadas**  

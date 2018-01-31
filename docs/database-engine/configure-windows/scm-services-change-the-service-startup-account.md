@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - startup accounts [SQL Server]
 - changing startup accounts for services
 ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0976d8deb0d6d3f6ddc4aa24a67cd48102f50116
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1db335f23e1e4b67cce264753021d052fcb956d5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="scm-services---change-the-service-startup-account"></a>Servicios SCM: cambiar la cuenta de inicio de servicio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo usar el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para cambiar las opciones de inicio de los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y las cuentas de servicio que usa [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell. Para obtener más información sobre cómo seleccionar la cuenta de servicio adecuada, vea [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/20/2017
 > [!IMPORTANT]  
 >  Cuando cambie la cuenta de inicio del servicio para [!INCLUDE[ssDE](../../includes/ssde-md.md)] y el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssDE](../../includes/ssde-md.md)]) debe reiniciarse para que se aplique el cambio. Cuando se reinicia el servicio, todas las bases de datos asociadas a dicha instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no estarán disponibles hasta que se reinicie el servicio correctamente. Si tiene que cambiar la cuenta de inicio del servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , asegúrese de que lo hace durante el mantenimiento programado o cuando se pueden poner las bases de datos sin conexión sin interrumpir las operaciones diarias.  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  En el panel de detalles, haga clic con el botón derecho en el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la que quiera cambiar la cuenta de inicio del servicio y, después, haga clic en **Propiedades**.  
   
-4.  En el cuadro de diálogo **Propiedades de \<***nombreDeInstancia***> de SQL Server**, haga clic en la pestaña **Iniciar sesión** y seleccione un tipo de cuenta **Iniciar sesión como**.  
+4.  En el cuadro de diálogo **Propiedades de \<***nombredeinstancia***> de SQL Server**, haga clic en la pestaña **Iniciar sesión** y seleccione un tipo de cuenta **Iniciar sesión como**.  
   
 5.  Tras seleccionar la nueva cuenta de inicio de servicio, haga clic en **Aceptar**.  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 11/20/2017
   
 6.  Haga clic en **Sí**y, a continuación, cierre el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [Configurar WMI para mostrar el estado del servidor en Herramientas de SQL Server](http://msdn.microsoft.com/library/7e97197b-ed4d-40d1-9a52-9ab1d92401d7)  
   

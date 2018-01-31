@@ -8,7 +8,8 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -29,16 +30,16 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f3438dedb23fe7a168599e06b4847654853aa57b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 454bdfb2ce829153943ebef0c32f7ef80c2a2b2c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="package-management-ssis-service"></a>Administración de paquetes (servicio SSIS)
   La administración de paquetes incluye la supervisión, administración, importación y exportación de paquetes.  
@@ -190,14 +191,14 @@ Para detener la ejecución de un paquete de la carpeta **Paquetes en ejecución*
   
          Haga clic en el botón Examinar **(…)**, expanda la carpeta **Paquetes SSIS** y seleccione la carpeta en la que quiere guardar el paquete. Opcionalmente, escriba un nuevo nombre para el paquete en el cuadro de texto **Nombre del paquete** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.  Para actualizar el nivel de protección del paquete, haga clic en el botón Examinar **(…)** y elija un nivel de protección diferente usando el cuadro de diálogo **Nivel de protección de paquetes** . Si se selecciona la opción **Cifrar la información confidencial con una contraseña** o la opción **Cifrar todos los datos con una contraseña** , escriba y confirme una contraseña.  
+7.  Para actualizar el nivel de protección del paquete, haga clic en el botón Examinar **(…)** y elija un nivel de protección diferente usando el cuadro de diálogo **Nivel de protección de paquetes**. Si se selecciona la opción **Cifrar la información confidencial con una contraseña** o la opción **Cifrar todos los datos con una contraseña** , escriba y confirme una contraseña.  
   
 8.  Haga clic en **Aceptar** para completar la exportación.  
 
 ## <a name="import-package-dialog-box-ui-reference"></a>Referencia de la interfaz de usuario del cuadro de diálogo Importar paquete
   Utilice el cuadro de diálogo **Importar paquete** , disponible en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], para importar un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y para establecer o modificar el nivel de protección del paquete.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Ubicación del paquete**  
  Seleccione el tipo de ubicación de almacenamiento a la que se importará el paquete. Las siguientes opciones están disponibles:  
   
@@ -219,7 +220,7 @@ Para detener la ejecución de un paquete de la carpeta **Paquetes en ejecución*
  **Tipo de autenticación**  
  Seleccione un tipo de autenticación.  
   
- **Nombre de usuario.**  
+ **User name**  
  Si usa la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , proporcione un nombre de usuario.  
   
  **Contraseña**  
@@ -237,7 +238,7 @@ Para detener la ejecución de un paquete de la carpeta **Paquetes en ejecución*
 ## <a name="export-package-dialog-box-ui-reference"></a>Referencia de la interfaz de usuario del cuadro de diálogo Exportar paquete
   Utilice el cuadro de diálogo **Exportar paquete** , disponible en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], para exportar un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a una ubicación diferente y, opcionalmente, modificar el nivel de protección del paquete.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Ubicación del paquete**  
  Seleccione el tipo de almacenamiento al que desea exportar el paquete. Las siguientes opciones están disponibles:  
   
@@ -259,7 +260,7 @@ Para detener la ejecución de un paquete de la carpeta **Paquetes en ejecución*
  **Tipo de autenticación**  
  Seleccione un tipo de autenticación.  
   
- **Nombre de usuario.**  
+ **User name**  
  Si usa la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , proporcione un nombre de usuario.  
   
  **Contraseña**  
@@ -289,7 +290,7 @@ Para detener la ejecución de un paquete de la carpeta **Paquetes en ejecución*
 ### <a name="packages-stored-in-the-file-system"></a>Paquetes almacenados en el sistema de archivos  
  La copia de seguridad de los paquetes guardados en el sistema de archivos debe incluirse en el plan de copia de seguridad del sistema de archivos del servidor. El archivo de configuración del servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , que tiene el nombre predeterminado MsDtsSrvr.ini.xml, contiene una lista de las carpetas del servidor que supervisa el servicio. Debe asegurarse de que se cree la copia de seguridad de estas carpetas. Además, los paquetes se pueden almacenar en otras carpetas del servidor y debe asegurarse de incluir estas carpetas en la copia de seguridad.  
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Servicio Integration Services &#40;servicio SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md)  
   
   

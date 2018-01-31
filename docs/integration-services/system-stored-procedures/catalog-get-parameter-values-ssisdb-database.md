@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 644103554b39fde12a2abb150af18799700f7b79
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7fcb3ffcdd35f2b526f1e84ce36c206919e8eb74
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cataloggetparametervalues-ssisdb-database"></a>catalog.get_parameter_values (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,26 +41,26 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argumentos  
  [ @folder_name = ] *folder_name*  
- Nombre de la carpeta que contiene el proyecto. El parámetro *folder_name* es **nvarchar(128)**.  
+ Nombre de la carpeta que contiene el proyecto. *folder_name* es **nvarchar(128)**.  
   
  [ @project_name = ] *project_name*  
- Nombre del proyecto donde los parámetros residen. El parámetro *project_name* es **nvarchar(128)**.  
+ Nombre del proyecto donde los parámetros residen. *project_name* es **nvarchar(128)**.  
   
  [ @package_name = ] *package_name*  
- Nombre del paquete. Especifique el nombre del paquete para recuperar todos los parámetros de proyecto y los parámetros de un paquete concreto. Utilice NULL para recuperar todos los parámetros de proyecto y los parámetros de todos los paquetes. El parámetro*package_name* es **nvarchar(260)**.  
+ Nombre del paquete. Especifique el nombre del paquete para recuperar todos los parámetros de proyecto y los parámetros de un paquete concreto. Utilice NULL para recuperar todos los parámetros de proyecto y los parámetros de todos los paquetes. El parámetro *package_name* es de tipo **nvarchar(260)**.  
   
  [ @reference_id = ] *reference_id*  
- Identificador único de una referencia de entorno. Este parámetro es opcional. El parámetro *reference_id* es **bigint**.  
+ Identificador único de una referencia de entorno. Este parámetro es opcional. *reference_id* es **bigint**.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
- 0 (Correcto)  
+ 0 (correcto)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Devuelve una tabla que tiene el siguiente formato:  
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|object_type|**smallint**|Es el tipo de parámetro. El valor es `20` para un parámetro de proyecto y `30` para un parámetro de paquete.|  
+|object_type|**smallint**|Tipo de parámetro. El valor es `20` para un parámetro de proyecto y `30` para un parámetro de paquete.|  
 |parameter_data_type|**nvarchar(128)**|El tipo de datos del parámetro.|  
 |parameter_name|**sysname**|Nombre del parámetro.|  
 |parameter_value|**sql_variant**|El valor del parámetro.|  
@@ -70,7 +71,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 > [!NOTE]  
 >  Los valores literales se muestran en texto simple. **NULL** se muestra en lugar de los valores confidenciales.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
 -   Permisos de lectura en el objeto y, si es aplicable, el permiso de lectura en el entorno al que se hace referencia  
@@ -84,7 +85,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
   
 -   El paquete no se puede encontrar en la carpeta o proyecto especificados  
   
--   El usuario no tiene los permisos adecuados  
+-   El usuario no tiene los permisos adecuados.  
   
 -   La referencia del entorno especificado no existe  
   

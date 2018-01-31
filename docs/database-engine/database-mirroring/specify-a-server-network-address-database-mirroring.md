@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - endpoints [SQL Server], database mirroring
 - server network addresses [SQL Server]
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f2563b8b93e4f3f9d4d0387a6cda8804b2f0453e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 33ae2be4dae083d5b404bdcb4cd1b91d5b85feea
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Especificar una dirección de red de servidor (creación de reflejo de la base de datos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La configuración de una sesión de creación de reflejo de la base de datos necesita una dirección de red de servidor para cada una de las instancias de servidor. La dirección de red de servidor de una instancia de servidor debe identificar sin ambigüedades la instancia proporcionando una dirección del sistema y el número del puerto en el que la instancia escucha.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="Syntax"></a> Sintaxis para una dirección de red de servidor  
  La sintaxis para una dirección de red de servidor tiene el siguiente formato:  
   
- TCP**://***\<dirección del sistema>***:***\<puerto>*  
+ TCP**://***\<dirección-del-sistema>***:***\<puerto>*  
   
  donde  
   
@@ -51,9 +52,9 @@ ms.lasthandoff: 11/20/2017
   
     -   El nombre de dominio completo siempre funciona. Éste es una cadena de dirección definida localmente que tiene diferentes formatos en los distintos lugares. Con frecuencia, aunque no siempre, el nombre de dominio completo es un nombre compuesto que incluye el nombre del equipo y una serie de segmentos de dominio separados por puntos con el siguiente formato:  
   
-         *nombre_equipo* **.** *segmento_dominio*[...**.***segmento_dominio*]  
+         *nombre_equipo* **.** *segmento_de_dominio*[...**.***segmento_de_dominio*]  
   
-         donde *nombre_equipo*es el nombre de red del equipo que ejecuta la instancia de servidor y *segmento_dominio*[...**.***segmento_dominio*] es la información restante de dominio del servidor; por ejemplo: `localinfo.corp.Adventure-Works.com`.  
+         donde *nombre_de_equipo*es el nombre de red del equipo que ejecuta la instancia de servidor y *segmento_de_dominio*[...**.***segmento_de_dominio*] es la información restante de dominio del servidor; por ejemplo: `localinfo.corp.Adventure-Works.com`.  
   
          El contenido y el número de segmentos de dominio se determinan en la empresa u organización. Si no conoce el nombre de dominio completo del servidor, consulte con el administrador del sistema.  
   
@@ -138,7 +139,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
 -   [Crear un punto de conexión de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - xml data type [SQL Server], serialization
 - typed XML
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 17f11bc07868dd8f22cdf75f369de6e6ca952dc8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f58d6cbfa3c67e48890f4437a3c6ad08ee3d2797
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Definir la serialización de datos XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Cuando el tipo de datos xml se convierte de manera explícita o implícita a un tipo SQL binario o de cadena, el contenido del tipo de datos XML se serializa de acuerdo con las reglas que se describen en este tema.  
@@ -155,7 +156,7 @@ select CAST(@x.query('1.34e1') as nvarchar(50))
   
  Se obtiene el valor de cadena 13.4.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Reglas de conversión de tipos en XQuery](../../xquery/type-casting-rules-in-xquery.md)   
  [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   

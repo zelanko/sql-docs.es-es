@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], configuring
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 51429ad63e04893c26a6bf9213809060780aebba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fe26c36dc6b8b5c5cdcde7013764246275f5ae6f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>Solucionar problemas de configuración de grupos de disponibilidad AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/20/2017
   
  **En este tema:**  
   
-|Sección|Descripción|  
+|Sección|Description|  
 |-------------|-----------------|  
 |[Los grupos de disponibilidad AlwaysOn no están habilitados](#IsHadrEnabled)|Si una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no está habilitada para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], la instancia no admite la creación de grupos de disponibilidad y no puede hospedar réplicas de disponibilidad.|  
 |[Cuentas](#Accounts)|Analiza los requisitos para configurar correctamente las cuentas en que se ejecuta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
@@ -144,7 +145,7 @@ ms.lasthandoff: 11/20/2017
 |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Réplica principal actual|Asegúrese de que READ_ONLY_ROUTING_LIST contiene solo instancias de servidor que hospedan una réplica secundaria legible.|**Para identificar réplicas secundarias legibles:** sys.availability_replicas (columna**secondary_role_allow_connections_desc** )<br /><br /> **Para ver una lista de enrutamiento de solo lectura:** sys.availability_read_only_routing_lists<br /><br /> **Para cambiar una lista de enrutamiento de solo lectura:** ALTER AVAILABILITY GROUP|[sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Todas las réplicas de read_only_routing_list|Asegúrese de que el firewall de Windows no está bloqueando el puerto de READ_ONLY_ROUTING_URL.|—|[Configurar Firewall de Windows para el acceso al motor de base de datos](../../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Todas las réplicas de read_only_routing_list|En el Administrador de configuración [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , compruebe lo siguiente:<br /><br /> La conectividad remota de SQL Server está habilitada.<br /><br /> TCP/IP está habilitado.<br /><br /> Las direcciones IP están configuradas correctamente.|—|[Ver o cambiar las propiedades del servidor &#40;SQL Server&#41;](../../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [Configurar un servidor para que escuche en un puerto TCP específico &#40;Administrador de configuración de SQL Server&#41;](../../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
-|![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Todas las réplicas de read_only_routing_list|Asegúrese de que READ_ONLY_ROUTING_URL (TCP**://***system-address***:***port*) contiene el nombre de dominio completo (FQDN) y el número de puerto correctos.|—|[Calcular read_only_routing_url para AlwaysOn](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
+|![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Todas las réplicas de read_only_routing_list|Asegúrese de que READ_ONLY_ROUTING_URL (TCP**://***dirección-sistema***:***puerto*) contiene el nombre de dominio completo (FQDN) y el número de puerto correctos.|—|[Calcular read_only_routing_url para AlwaysOn](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Sistema cliente|Compruebe que el controlador cliente admite el enrutamiento de solo lectura.|—|[Conectividad de cliente de AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)|  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
@@ -165,13 +166,13 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   [Ver eventos y registros para un clúster de conmutación por error](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [View Events and Logs for a Failover Cluster](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
 -   [Cmdlet de clúster de conmutación por error Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx)  
   
 -   [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Configuración de red de cliente](../../../database-engine/configure-windows/client-network-configuration.md)   
  [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  

@@ -11,7 +11,8 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - data flow [Integration Services], loading results
 - loading data flow results
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
-caps.latest.revision: "66"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 55cab9d27200b6a81979a357f89e3b5f55838978
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d7fe4ecd4b618f508dccc123b31611658fe5000c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Cargar la salida de un paquete local
   Las aplicaciones cliente pueden leer la salida de los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cuando se guarda la salida en destinos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o cuando se guarda en un destino de archivo plano usando las clases del espacio de nombres **System.IO**. Sin embargo, una aplicación cliente también puede leer la salida de un paquete directamente de la memoria, sin tener que efectuar un paso intermedio para conservar los datos. La clave para esta solución es el espacio de nombres **Microsoft.SqlServer.Dts.DtsClient**, que contiene implementaciones especializadas de las interfaces **IDbConnection**, **IDbCommand** e **IDbDataParameter** del espacio de nombres **System.Data**. El ensamblado Microsoft.SqlServer.Dts.DtsClient.dll se instala de forma predeterminada en la carpeta **%Archivos de programa%\Microsoft SQL Server\100\DTS\Binn**.  

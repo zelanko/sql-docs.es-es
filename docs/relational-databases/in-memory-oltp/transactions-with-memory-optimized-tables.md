@@ -1,27 +1,28 @@
 ---
 title: "Transacciones con tablas con optimización para memoria | Microsoft Docs"
 ms.custom: 
-ms.date: 12/20/2017
+ms.date: 01/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.reviewer: 
 ms.service: 
 ms.component: in-memory-oltp
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4d3cbfc5f72207d546649621190ac7ad61e6d9be
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: be3196d22df849eb8509b921a251ee0f5f0a8270
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -170,6 +171,7 @@ A continuación, se indican las condiciones de error que pueden provocar errores
 | **41305**| Error de validación de lectura repetible La lectura de una fila de una tabla optimizada para memoria por parte de esta transacción se ha actualizado por otra transacción que se ha confirmado antes que esta transacción. | Este error puede producirse al usar los aislamientos REPEATABLE READ o SERIALIZABLE y, también, si las acciones de una transacción simultánea suponen una infracción de una restricción FOREIGN KEY. <br/><br/>Esa infracción simultánea de restricciones de clave externa es muy poco habitual y normalmente es indicativa de un problema con la lógica de aplicación o con la entrada de datos. Pero el error también puede producirse si no hay ningún índice en las columnas relacionadas con la restricción FOREIGN KEY. Por lo tanto, lo más conveniente es crear siempre un índice de las columnas de clave externa en una tabla optimizada para memoria. <br/><br/> Para ver consideraciones más exhaustivas sobre los errores de validación provocados por las infracciones de clave externas, vea [este blog](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) elaborado por el equipo de asesoramiento al cliente de SQL Server. |  
 | **41325** | Error de validación serializable. Se ha insertado una fila nueva en un rango que la transacción actual ha examinado anteriormente. Esto se llama una fila fantasma. | Este error puede producirse al usar el aislamiento SERIALIZABLE y, también, si las acciones de una transacción simultánea suponen una infracción de una restricción PRIMARY KEY, UNIQUE o FOREIGN KEY. <br/><br/> Esa infracción de restricción simultánea es muy poco habitual y normalmente es indicativa de un problema con la lógica de aplicación o con la entrada de datos. Pero, de forma similar a los errores de validación de lectura repetible, este error también se puede producir si existe una restricción FOREIGN KEY sin ningún índice en las columnas implicadas. |  
 | **41301** | Error de dependencia: existe una dependencia con otra transacción que no se ha podido confirmar posteriormente. | Esta transacción (Tx1) ha creado una dependencia con otra transacción (Tx2) leyendo los datos escritos por dicha transacción Tx2 mientras esta se encontraba en su fase de procesamiento de confirmación o de validación. En consecuencia, Tx2 no se pudo confirmar posteriormente. Las causas más comunes para que Tx2 no se pueda confirmar son errores de validación de lectura repetible (41305) y serializables (41325). Una menos habitual son los errores de E/S de registro. |
+| **41823** y **41840** | Se alcanzó la cuota para los datos de usuario en las tablas optimizadas para memoria y las variables de tablas. | El error 41823 se aplica a las ediciones Express, Web y Standard de SQL Server, así como a las bases de datos independientes de [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. El error 41840 se aplica a los grupos elásticos de [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/> En la mayoría casos, estos errores indican que se ha alcanzado el tamaño máximo de datos de usuario, y la forma para resolver el error es eliminar datos de las tablas optimizadas para memoria. Sin embargo, hay casos poco frecuentes en los que este error es transitorio. Por lo tanto, le recomendamos que vuelva a intentarlo cuando se encuentre por primera vez con estos errores.<br/><br/> Al igual que con otros errores de esta lista, los errores 41823 y 41840 provocan que la transacción activa se anule. |
 | **41839** | La transacción supera el número máximo de dependencias de confirmación. |**Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Las versiones posteriores de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] y [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] no tienen ningún límite en el número de dependencias de confirmación.<br/><br/> Existe un límite en cuanto al número de transacciones de las que una transacción determinada (Tx1) puede depender. Se trata de las dependencias salientes. De igual modo, existe un límite en cuanto al número de transacciones que pueden depender de una transacción determinada (Tx1). Se trata de las dependencias entrantes. El límite en ambos casos es 8. <br/><br/> El caso más común de este error tiene lugar cuando existe un gran número de transacciones de lectura que están teniendo acceso a los datos escritos por una sola transacción de escritura. La probabilidad de que se produzca esta situación aumenta si las transacciones de lectura examinan los mismos datos de forma extensiva y, por tanto, el procesamiento de validación o de confirmación de la transacción de escritura tarda mucho tiempo en completarse. Así, por ejemplo, cuando la transacción de escritura realiza exploraciones grandes en el aislamiento SERIALIZABLE (se prolonga la fase de validación) o cuando el registro de transacciones se coloca en un dispositivo de E/S de registro lento (se prolonga el procesamiento de confirmación). Si las transacciones de lectura están examinando grandes cantidades de datos cuando se espera que solo tengan acceso a unas pocas filas, podría ser un indicio de que falta un índice. De forma similar, si la transacción de escritura usa el aislamiento SERIALIZABLE y examina grandes cantidades de datos cuando se espera que solo tenga acceso a unas pocas filas, esto también podría denotar una falta de índice. <br/><br/> El límite del número de dependencias de confirmación se puede incrementar con la marca de seguimiento **9926**. Use esta marca de seguimiento única y exclusivamente si esta condición de error se sigue produciendo después de confirmar que no falta ningún índice, ya que podrían enmascarar estos problemas en las situaciones anteriores. Otro aspecto con el que hay que tener cuidado es que los gráficos de dependencias complejos (donde cada transacción tiene un gran número de dependencias tanto entrantes como salientes y las transacciones individuales poseen muchos niveles de dependencias) pueden reducir la eficacia del sistema.  |
  
   
@@ -219,7 +221,7 @@ BEGIN
             SET @retry -= 1;
 
             IF (@retry > 0 AND
-                ERROR_NUMBER() in (41302, 41305, 41325, 41301, 41839, 1205)
+                ERROR_NUMBER() in (41302, 41305, 41325, 41301, 41823, 41840, 41839, 1205)
                 )
             BEGIN
                 IF XACT_STATE() = -1

@@ -8,23 +8,24 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - proxies [SQL Server Agent], modifying
 - modifying SQL Server Agent proxy
 ms.assetid: 6e1dfbaa-8089-4813-940c-d5a2e13d8552
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 395b3f2648155ba65c352d0568cd2900272e1039
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1f790e80504bcd6bac16b76a3d1ad0e751044979
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="modify-a-sql-server-agent-proxy"></a>Modify a SQL Server Agent Proxy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo modificar un proxy del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] o [!INCLUDE[tsql](../../includes/tsql_md.md)].  
@@ -72,7 +73,7 @@ Solo los miembros del rol fijo de servidor **sysadmin** pueden crear, modificar 
   
 5.  Haga clic con el botón derecho en la cuenta de proxy que desee modificar y seleccione **Propiedades**.  
   
-6.  En el cuadro de diálogo *nombre_proxy***Propiedades de cuenta de proxy** , realice los cambios que considere necesarios en la cuenta de proxy. Para más información acerca de las opciones de este cuadro de diálogo, consulte [Crear un proxy del Agente SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
+6.  En el cuadro de diálogo *Propiedades de cuenta de proxy***nombre_de_proxy*, realice los cambios que considere necesarios en la cuenta de proxy. Para más información acerca de las opciones de este cuadro de diálogo, consulte [Crear un proxy del Agente SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 7.  Cuando termine, haga clic en **Aceptar**.  
   

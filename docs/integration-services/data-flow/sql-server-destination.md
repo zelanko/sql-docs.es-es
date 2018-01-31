@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,21 +24,21 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff9e0b26ec409940e08fd1e3161add395d00b524
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0b47f04704002aa14fb957dc05a593695d2f689b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="sql-server-destination"></a>Destino de SQL Server
+# <a name="sql-server-destination"></a>SQL Server, destino
   El destino de SQL Server se conecta a una base de datos local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y realiza una carga masiva de datos en tablas y vistas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No se puede usar el destino de SQL Server en paquetes con acceso a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un servidor remoto. En su lugar, los paquetes deben utilizar el destino de OLE DB. Para más información, consulte [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Los usuarios que ejecutan paquetes que incluyen el destino de SQL Server deben tener el permiso Crear objetos globales. Para otorgar este permiso a los usuarios, utilice la herramienta Directiva de seguridad local que se abre desde el menú **Herramientas administrativas** . Si recibe un mensaje de error al ejecutar un paquete que utiliza el destino de SQL Server, asegúrese de que la cuenta que ejecuta el paquete tiene el permiso Crear objetos globales.  
   
 ## <a name="bulk-inserts"></a>Inserciones masivas  
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Especificar un tiempo de espera para la operación de carga masiva.  
   
- Este destino usa un administrador de conexiones de OLE DB para conectarse a un origen de datos y el administrador de conexiones especifica el proveedor OLE DB que se debe usar. Para más información, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+ Este destino usa un administrador de conexiones de OLE DB para conectarse a un origen de datos y el administrador de conexiones especifica el proveedor OLE DB que se debe usar. Para más información, vea [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
  Un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] también proporciona el objeto de origen de datos desde el que se puede crear un administrador de conexiones de OLE DB. Esto hace que los orígenes de datos y vistas del origen de datos queden a disposición del destino de SQL Server.  
   
@@ -100,7 +101,7 @@ ms.lasthandoff: 11/20/2017
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas del destino SQL Server](../../integration-services/data-flow/sql-server-destination-custom-properties.md)  
   
@@ -110,7 +111,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Establecer las propiedades de un componente de flujo de datos](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Realizar una carga masiva de datos mediante el destino de SQL Server](../../integration-services/data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
@@ -127,8 +128,8 @@ ms.lasthandoff: 11/20/2017
 ## <a name="sql-destination-editor-connection-manager-page"></a>Editor de destino de SQL (página Administrador de conexiones)
   Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de destino de SQL** para especificar la información de orígenes de datos y para obtener una vista previa de los resultados. El destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carga los datos en tablas o vistas en una base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### <a name="options"></a>Opciones  
- **OLE DB, administrador de conexiones**  
+### <a name="options"></a>.  
+ **Administrador de conexiones OLE DB**  
  Seleccione una conexión existente de la lista o cree una nueva conexión haciendo clic en **Nueva**.  
   
  **Nueva**  
@@ -149,7 +150,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="sql-destination-editor-mappings-page"></a>Editor de destino de SQL (página Asignaciones)
   Utilice la página **Asignaciones** del cuadro de diálogo **Editor de destino de SQL** para asignar columnas de entrada a columnas de destino.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Columnas de entrada disponibles**  
  Muestra la lista de columnas de entrada disponibles. Utilice una operación de arrastrar y colocar para asignar columnas de entrada disponibles de la tabla a columnas de destino.  
   
@@ -165,7 +166,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="sql-destination-editor-advanced-page"></a>Editor de destino de SQL (página Avanzadas)
   Utilice la página **Avanzadas** del cuadro de diálogo **Editor de destino de SQL** para especificar opciones avanzadas de inserción masiva.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **Mantener valores de identidad**  
  Especifique si la tarea debe insertar valores en columnas de identidad. El valor predeterminado de esta propiedad es **False**.  
   
@@ -205,7 +206,7 @@ ms.lasthandoff: 11/20/2017
  **Columnas de orden**  
  Escriba los nombres de las columnas de orden. Las columnas se pueden ordenar en sentido ascendente o descendente. Si utiliza varias columnas de orden, delimite la lista con comas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)  
   
   

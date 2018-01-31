@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.saveschedule.f1
+f1_keywords:
+- sql13.dts.impexpwizard.saveschedule.f1
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 84d128eafce53fb4de337d0a835155850a09c2e5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e4b19aeecea3977b08339989e07e3b553e361372
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>Guardar y ejecutar el paquete (Asistente para importación y exportación de SQL Server)
   Después de especificar y configurar el origen y el destino de los datos, el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra **Guardar y ejecutar el paquete**. En esta página, especifique si quiere ejecutar la operación de copia inmediatamente. Según la configuración, es posible que también pueda guardar su configuración como un paquete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) para personalizarlo y volver a usarlo más adelante.
@@ -91,14 +93,14 @@ Si inició el asistente desde un proyecto de Integration Services en Visual Stud
   
  Estas opciones solo están disponibles si selecciona la opción **Guardar el paquete SSIS** en esta página.  
   
-## <a name="whats-next"></a>¿Qué debe hacer a continuación?  
+## <a name="whats-next"></a>¿Qué sigue?  
  Después de especificar si quiere ejecutar la operación de copia inmediatamente y si quiere guardar el paquete, la siguiente página depende de las opciones que elija.  
   
 -   Si ha seleccionado la opción para ejecutar el paquete inmediatamente, pero no para guardarlo, la página siguiente es **Finalización del asistente**. En esta página, revise las opciones seleccionadas en el asistente y luego inicie la operación de copia. Para obtener más información, vea [Finalización del asistente](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md).  
   
 -   Si ha seleccionado la opción para guardar el paquete, la página siguiente es **Guardar el paquete SSIS**. En esta página, especifique opciones adicionales para guardar el paquete. (Una vez guardado el paquete, la página siguiente es **Finalización del asistente**). Para obtener más información, vea [Guardar el paquete SSIS](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Guardar paquetes](../../integration-services/save-packages.md)  
 [Ejecutar paquetes de Integration Services (SSIS)](../../integration-services/packages/run-integration-services-ssis-packages.md)  
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  

@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b1a964e2d026f93ec26a34b2cb7ba5e114886ec
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 87034c1db40e5762441871cc347eaf37d2c56ea3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sppdwaddnetworkcredentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (almacenamiento de datos de SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -47,12 +49,12 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
   
  *target_server_name* se define como nvarchar(337).  
   
- '*nombre_usuario*'  
+ '*user_name*'  
  Especifica el nombre_usuario que tenga permisos para tener acceso al servidor de destino. Si las credenciales ya existen para el servidor de destino, se actualizará a las nuevas credenciales.  
   
  *user_name* se define como nvarchar (513).  
   
- '*contraseña*ꞌ  
+ '*password*ꞌ  
  Especifica la contraseña de *nombre_usuario*.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -82,7 +84,7 @@ EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********'
 >  Para realizar la copia de seguridad de base de datos a través de InfiniBand, asegúrese de usar la dirección IP de InfiniBand del servidor de copia de seguridad.  
   
 ## <a name="see-also"></a>Vea también  
- [sp_pdw_remove_network_credentials &#40; Almacenamiento de datos SQL &#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
+ [sp_pdw_remove_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: sp_filestream_force_garbage_collection (Transact-SQL) | Documentos de Microsoft
+title: sp_filestream_force_garbage_collection (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/22/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_filestream_force_garbage_collection
 - sp_filestream_force_garbage_collection_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba1b60621e23160ce9e951e17cf4777b016fe90f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d424bb470ac9da5edc6b314e62ffaa2e1e72b923
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="filestream-and-filetable---spfilestreamforcegarbagecollection"></a>FileStream y FileTable - sp_filestream_force_garbage_collection
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,20 +55,20 @@ sp_filestream_force_garbage_collection
 > [!NOTE]  
 >  *dbname* es **sysname**. Si no se especifica, se supone que es la base de datos actual.  
   
- **@filename** = *nombre_de_archivo_lógico*  
+ **@filename** = *logical_file_name*  
  Especifica el nombre lógico del contenedor de FILESTREAM en el que se va a ejecutar el recolector de elementos no utilizados. **@filename**es opcional. Si no se especifica ningún nombre de archivo lógico, el recolector de elementos no utilizados limpia todos los contenedores FILESTREAM en la base de datos especificada.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
   
 |||  
 |-|-|  
-|Valor|Descripción|  
+|Value|Descripción|  
 |0|Operación correcta|  
 |1|Error de operación|  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*file_name*|Indica el nombre del contenedor de FILESTREAM|  
 |*num_collected_items*|Indica el número de elementos de FILESTREAM (archivos o directorios) que el recolector de elementos eliminados ha eliminado en este contenedor.|  

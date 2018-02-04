@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_connections (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_exec_connections (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/16/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_connections_TSQL
 - sys.dm_exec_connections
 - dm_exec_connections
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_connections dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_connections dynamic management view
 ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
-caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c8bee848550fb2120fd02c31b505fc0b8da90b5
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: ef46c3c9ffdf534b2ef76154498a4da8b11fa197
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,12 +46,12 @@ ms.lasthandoff: 01/02/2018
 |session_id|**int**|Identifica la sesión asociada a esta conexión. Acepta valores NULL.|  
 |most_recent_session_id|**int**|Representa el Id. de sesión de la solicitud más reciente asociada a esta conexión. (Las conexiones SOAP pueden ser reutilizadas por otra sesión.) Acepta valores NULL.|  
 |connect_time|**datetime**|Marca de tiempo en que se estableció la conexión. No admite valores NULL.|  
-|net_transport|**nvarchar (40)**|Siempre devuelve **sesión** cuando una conexión tiene varios conjuntos de resultados activos (MARS) habilitados.<br /><br /> **Nota:** describe el protocolo de transporte físico utilizado por esta conexión. No admite valores NULL.|  
-|protocol_type|**nvarchar (40)**|Especifica el tipo de protocolo de la carga. Actualmente, distingue entre TDS (TSQL) y SOAP. Acepta valores NULL.|  
+|net_transport|**nvarchar(40)**|Siempre devuelve **sesión** cuando una conexión tiene varios conjuntos de resultados activos (MARS) habilitados.<br /><br /> **Nota:** describe el protocolo de transporte físico utilizado por esta conexión. No admite valores NULL.|  
+|protocol_type|**nvarchar(40)**|Especifica el tipo de protocolo de la carga. Actualmente, distingue entre TDS (TSQL) y SOAP. Acepta valores NULL.|  
 |protocol_version|**int**|Versión del protocolo de acceso a datos asociado a esta conexión. Acepta valores NULL.|  
 |endpoint_id|**int**|Identificador que describe el tipo de conexión. Este endpoint_id se puede utilizar para realizar consultas en la vista sys.endpoints. Acepta valores NULL.|  
-|encrypt_option|**nvarchar (40)**|Valor booleano que describe si se ha habilitado el cifrado para esta conexión. No admite valores NULL.|  
-|auth_scheme|**nvarchar (40)**|Especifica el esquema de autenticación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows usado en esta conexión. No admite valores NULL.|  
+|encrypt_option|**nvarchar(40)**|Valor booleano que describe si se ha habilitado el cifrado para esta conexión. No admite valores NULL.|  
+|auth_scheme|**nvarchar(40)**|Especifica el esquema de autenticación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows usado en esta conexión. No admite valores NULL.|  
 |node_affinity|**smallint**|Identifica el nodo de memoria con el que esta conexión tiene afinidad. No admite valores NULL.|  
 |num_reads|**int**|Número de lecturas de bytes que se han producido en esta conexión. Acepta valores NULL.|  
 |num_writes|**int**|Número de escrituras de bytes que se han producido en esta conexión. Acepta valores NULL.|  
@@ -62,7 +65,7 @@ ms.lasthandoff: 01/02/2018
 |connection_id|**uniqueidentifier**|Identifica cada conexión de manera única. No admite valores NULL.|  
 |parent_connection_id|**uniqueidentifier**|Identifica la conexión principal utilizada por la sesión MARS. Acepta valores NULL.|  
 |most_recent_sql_handle|**varbinary(64)**|Identificador SQL de la última solicitud ejecutada en esta conexión. La columna most_recent_sql_handle siempre está sincronizada con la columna most_recent_session_id. Acepta valores NULL.|  
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
   
 ## <a name="permissions"></a>Permissions  
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   

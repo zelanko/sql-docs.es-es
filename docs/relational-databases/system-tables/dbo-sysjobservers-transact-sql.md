@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sysjobservers_TSQL
 - dbo.sysjobservers
 - dbo.sysjobservers_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysjobservers system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysjobservers system table
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e9d004a79ec106f06e4b15b9c3e54e46c7dcef3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 60a5062226e97be3e7c3a38086f0e88dbf9fb023
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/27/2017
 |job_id|**uniqueidentifier**|Número de identificación del trabajo.|  
 |server_id|**int**|Número de identificación del servidor.|  
 |last_run_outcome|**tinyint**|Resultado de la última ejecución del trabajo:<br /><br /> **0** = error<br /><br /> **1** = correctamente<br /><br /> **3** = cancelado|  
-|mensaje de last_outcome_|**nvarchar (1024)**|Mensaje asociado, si existe, a la columna last_run_outcome.|  
+|mensaje de last_outcome_|**nvarchar(1024)**|Mensaje asociado, si existe, a la columna last_run_outcome.|  
 |last_run_date|**int**|Fecha en que se ejecutó el trabajo por última vez.|  
 |last_run_time|**int**|Hora a la que se ejecutó el trabajo por última vez.|  
 |last_run_duration|**int**|Duración de la ejecución del trabajo, en horas, minutos y segundos. Calculado mediante la fórmula: (*horas*\*10000) + (*minutos*\*100) + *segundos*.|  

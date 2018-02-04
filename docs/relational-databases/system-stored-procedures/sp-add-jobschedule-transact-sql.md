@@ -1,5 +1,5 @@
 ---
-title: sp_add_jobschedule (Transact-SQL) | Documentos de Microsoft
+title: sp_add_jobschedule (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/28/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_jobschedule
 - sp_add_jobschedule_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_add_jobschedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_jobschedule
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3b2680a591628811fb9617077700d05981ece2a2
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: b2da9a4bf2bc1fb7e2768922b6b5dd4d93452571
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +58,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  Número de identificación del trabajo al que se va a agregar la programación. *job_id* es **uniqueidentifier**, no tiene ningún valor predeterminado.  
   
  [  **@job_name=** ] **'***job_name***'**  
@@ -70,10 +73,10 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@enabled=** ] *enabled_flag*  
  Indica el estado actual de la programación. *enabled_flag* es **tinyint**, su valor predeterminado es **1** (habilitado). Si **0**, la programación no está habilitada. Si la programación está deshabilitada, el trabajo no se ejecutará.  
   
- [  **@freq_type=** ] *frequency_type*  
+ [ **@freq_type=** ] *frequency_type*  
  Valor que indica cuándo se va a ejecutar el trabajo. *frequency_type* es **int**, su valor predeterminado es **0**, y puede tener uno de los siguientes valores:  
   
-|Valor|Description|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**4**|Cada día|  
@@ -86,7 +89,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@freq_interval=** ] *frequency_interval*  
  Día en que se ejecuta el trabajo. *frequency_interval* es **int**, con un valor predeterminado es 0 y depende del valor de *frequency_type* como se indica en la tabla siguiente:  
   
-|Valor|Efecto|  
+|Value|Efecto|  
 |-----------|------------|  
 |**1** (una vez)|*frequency_interval* no se utiliza.|  
 |**4** (diariamente)|Cada *frequency_interval* días.|  
@@ -96,24 +99,24 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**64** (cuando la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicie el servicio de agente)|*frequency_interval* no se utiliza.|  
 |**128**|*frequency_interval* no se utiliza.|  
   
- [  **@freq_subday_type=** ] *frequency_subday_type*  
+ [ **@freq_subday_type=** ] *frequency_subday_type*  
  Especifica las unidades de *frequency_subday_interval*. *frequency_subday_type* es **int**, no tiene ningún valor predeterminado y puede ser uno de los siguientes valores:  
   
-|Valor|Descripción (unidad)|  
+|Value|Descripción (unidad)|  
 |-----------|--------------------------|  
-|**0 x 1**|A la hora especificada|  
-|**0 x 4**|Minutos|  
-|**0 x 8**|Horas|  
+|**0x1**|A la hora especificada|  
+|**0x4**|Minutos|  
+|**0x8**|Horas|  
   
- [  **@freq_subday_interval=** ] *frequency_subday_interval*  
+ [ **@freq_subday_interval=** ] *frequency_subday_interval*  
  Número de *frequency_subday_type* períodos que transcurren entre cada ejecución del trabajo. *frequency_subday_interval* es **int**, con un valor predeterminado es 0.  
   
- [  **@freq_relative_interval=** ] *frequency_relative_interval*  
+ [ **@freq_relative_interval=** ] *frequency_relative_interval*  
  Define más detalladamente el *frequency_interval* cuando *frequency_type* está establecido en **32** (relativo mensual).  
   
  *frequency_relative_interval* es **int**, no tiene ningún valor predeterminado y puede ser uno de los siguientes valores:  
   
-|Valor|Descripción (unidad)|  
+|Value|Descripción (unidad)|  
 |-----------|--------------------------|  
 |**1**|Primero|  
 |**2**|Second|  
@@ -123,27 +126,27 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *frequency_relative_interval* indica la repetición del intervalo. Por ejemplo, si *frequency_relative_interval* está establecido en **2**, *frequency_type* está establecido en **32**, y *frequency_ intervalo de* está establecido en **3**, el trabajo programado se produciría el segundo martes de cada mes.  
   
- [  **@freq_recurrence_factor=** ] *frequency_recurrence_factor*  
+ [ **@freq_recurrence_factor=** ] *frequency_recurrence_factor*  
  Número de semanas o meses entre las ejecuciones programadas del trabajo. *frequency_recurrence_factor* solo se utiliza si *frequency_type* está establecido en **8**, **16**, o **32**. *frequency_recurrence_factor* es **int**, con un valor predeterminado es 0.  
   
- [  **@active_start_date=** ] *active_start_date*  
+ [ **@active_start_date=** ] *active_start_date*  
  Fecha en la que puede comenzar la ejecución del trabajo. *active_start_date* es **int**, no tiene ningún valor predeterminado. La fecha tiene el formato AAAAMMDD. Si *active_start_date* está establecido, la fecha debe ser mayor o igual a 19900101.  
   
  Una vez creada la programación, revise la fecha de inicio y confirme que es correcta. Para obtener más información, vea la sección "Programar fechas de inicio" en [crear y adjuntar programaciones a trabajos](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5).  
   
- [  **@active_end_date=** ] *active_end_date*  
+ [ **@active_end_date=** ] *active_end_date*  
  Fecha en la que puede detenerse la ejecución del trabajo. *active_end_date* es **int**, no tiene ningún valor predeterminado. La fecha tiene el formato AAAAMMDD.  
   
- [  **@active_start_time=** ] *active_start_time*  
+ [ **@active_start_time=** ] *active_start_time*  
  Hora de un día entre *active_start_date* y *active_end_date* para iniciar la ejecución del trabajo. *active_start_time* es **int**, no tiene ningún valor predeterminado. La hora tiene el formato HHMMSS en un reloj de 24 horas.  
   
- [  **@active_end_time=***active_end_time*  
+ [ **@active_end_time=***active_end_time*  
  Hora de un día entre *active_start_date* y *active_end_date* para finalizar la ejecución de trabajo. *active_end_time* es **int**, no tiene ningún valor predeterminado. La hora tiene el formato HHMMSS en un reloj de 24 horas.  
   
  [  **@schedule_id=***schedule_id***salida**  
  Número de identificación asignado a la programación si se ha creado correctamente. *schedule_id* es una variable de salida de tipo **int**, no tiene ningún valor predeterminado.  
   
- [  **@schedule_uid** =] *valor schedule_uid***salida**  
+ [ **@schedule_uid**= ] *schedule_uid***OUTPUT**  
  Es un identificador único para la programación. *valor schedule_uid* es una variable de tipo **uniqueidentifier**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -183,10 +186,10 @@ EXEC msdb.dbo.sp_add_jobschedule
  [Programar un trabajo](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)   
  [Crear una programación](http://msdn.microsoft.com/library/8c7ef3b3-c06d-4a27-802d-ed329dc86ef3)   
  [Agente SQL Server almacena procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_update_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
- [sp_delete_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_help_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_help_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

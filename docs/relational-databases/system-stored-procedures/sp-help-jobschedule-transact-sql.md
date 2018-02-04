@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobschedule
 - sp_help_jobschedule_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobschedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobschedule
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f111a04bfe27fad284157082ec1bbbeadfb92c8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 87131f3a5347f24593798bbb81e9f81494897593
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +50,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  El número de identificación del trabajo. *job_id*es **uniqueidentifier**, su valor predeterminado es null.  
   
  [  **@job_name=** ] **'***job_name***'**  
@@ -61,7 +64,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [  **@schedule_id=** ] *schedule_id*  
  Número de identificación del elemento de programación del trabajo. *schedule_id*es **int**, su valor predeterminado es null.  
   
- [  **@include_description=** ] *include_description*  
+ [ **@include_description=** ] *include_description*  
  Especifica si se va a incluir la descripción de la programación en el conjunto de resultados. *include_description* es **bits**, su valor predeterminado es **0**. Cuando *include_description* es **0**, la descripción de la programación no se incluye en el conjunto de resultados. Cuando *include_description* es **1**, la descripción de la programación se incluye en el conjunto de resultados.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -73,7 +76,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|Número de identificador de la programación.|  
 |**schedule_name**|**sysname**|Nombre de la programación.|  
-|**habilitado**|**int**|Si la programación está habilitada (**1**) o no habilitada (**0**).|  
+|**enabled**|**int**|Si la programación está habilitada (**1**) o no habilitada (**0**).|  
 |**freq_type**|**int**|Valor que indica cuándo el trabajo se va a ejecutar.<br /><br /> **1** = una vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensualmente<br /><br /> **32** = mensualmente, relativo a la **freq_interval**<br /><br /> **64** = ejecutar cuando **SQLServerAgent** inicia el servicio.|  
 |**freq_interval**|**int**|Días cuando se ejecuta el trabajo. El valor depende del valor de **freq_type**. Para obtener más información, consulte [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_type**|**int**|Unidades de **freq_subday_interval**. Para obtener más información, consulte [sp_add_schedule &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
@@ -84,14 +87,14 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**active_end_date**|**int**|Fecha final de la programación.|  
 |**active_start_time**|**int**|Hora del día en que se inicia la programación.|  
 |**active_end_time**|**int**|Hora del día en que termina la programación.|  
-|**Date_Created**|**datetime**|Fecha en que se creó la programación.|  
+|**date_created**|**datetime**|Fecha en que se creó la programación.|  
 |**schedule_description**|**nvarchar(4000)**|Descripción en inglés de la programación que se deriva de los valores de **msdb.dbo.sysschedules**. Cuando *include_description* es **0**, esta columna contiene texto que indica que no se ha solicitado la descripción.|  
 |**next_run_date**|**int**|Fecha en que la programación hará que se vuelva a ejecutar el trabajo.|  
 |**next_run_time**|**int**|Hora a la que la programación hará que se vuelva a ejecutar el trabajo.|  
-|**valor schedule_uid**|**uniqueidentifier**|Identificador de la programación.|  
+|**schedule_uid**|**uniqueidentifier**|Identificador de la programación.|  
 |**job_count**|**int**|Recuento de trabajos devueltos.|  
   
-> **Nota:****sp_help_jobschedule** devuelve valores de la **dbo.sysjobschedules** y **dbo.sysschedules** tablas del sistema en **msdb** .   **sysjobschedules** actualiza cada 20 minutos. Esto puede afectar a los valores devueltos por este procedimiento almacenado.  
+> **Nota:****sp_help_jobschedule** devuelve valores de la **dbo.sysjobschedules** y **dbo.sysschedules** tablas del sistema en **msdb** . **sysjobschedules** actualiza cada 20 minutos. Esto puede afectar a los valores devueltos por este procedimiento almacenado.  
   
 ## <a name="remarks"></a>Comentarios  
  Los parámetros de **sp_help_jobschedule** puede utilizarse únicamente en ciertas combinaciones. Si *schedule_id* se especifica, ninguno *job_id* ni *job_name* puede especificarse. En caso contrario, el *job_id* o *job_name* parámetros se pueden usar con *schedule_name*.  
@@ -151,9 +154,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_delete_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_update_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

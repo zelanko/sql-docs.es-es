@@ -1,5 +1,5 @@
 ---
-title: sp_update_schedule (Transact-SQL) | Documentos de Microsoft
+title: sp_update_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_schedule
 - sp_update_schedule_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_update_schedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_update_schedule
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
-caps.latest.revision: "42"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: caeb6cf9ecf16a77b25bbb9b6a42ae865b077792
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 23d1d4b4cfdc7fb19cffff63de8cae84b2606d6e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spupdateschedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +68,7 @@ sp_update_schedule
  [  **@name =** ] **'***schedule_name***'**  
  Nombre de la programación que se va a modificar. *schedule_name*es **sysname**, no tiene ningún valor predeterminado. Cualquier *schedule_id* o *schedule_name* debe especificarse.  
   
- [  **@new_name** =] *new_name*  
+ [ **@new_name**= ] *new_name*  
  El nuevo nombre para la programación. *new_name* es **sysname**, su valor predeterminado es null. Cuando *new_name* es NULL, el nombre de la programación no se modifica.  
   
  [  **@enabled =** ] *habilitado*  
@@ -74,7 +77,7 @@ sp_update_schedule
  [  **@freq_type =** ] *freq_type*  
  Valor que indica cuándo se va a ejecutar un trabajo. *freq_type*es **int**, su valor predeterminado es **0**, y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**4**|Cada día|  
@@ -97,23 +100,23 @@ sp_update_schedule
 |**64** (cuando inicia el servicio SQLServerAgent)|*freq_interval* no se utiliza.|  
 |**128**|*freq_interval* no se utiliza.|  
   
- [  **@freq_subday_type =** ] *freq_subday_type*  
- Especifica las unidades de *freq_subday_interval**.* *freq_subday_type*es **int**, su valor predeterminado es **0**, y puede tener uno de estos valores.  
+ [ **@freq_subday_type =** ] *freq_subday_type*  
+ Especifica las unidades de *freq_subday_interval **.* *freq_subday_type*es **int**, su valor predeterminado es **0**, y puede tener uno de estos valores.  
   
-|Valor|Descripción (unidad)|  
+|Value|Descripción (unidad)|  
 |-----------|--------------------------|  
-|**0 x 1**|A la hora especificada|  
-|**0 x 2**|Segundos|  
-|**0 x 4**|Minutos|  
-|**0 x 8**|Horas|  
+|**0x1**|A la hora especificada|  
+|**0x2**|Segundos|  
+|**0x4**|Minutos|  
+|**0x8**|Horas|  
   
- [  **@freq_subday_interval =** ] *freq_subday_interval*  
+ [ **@freq_subday_interval =** ] *freq_subday_interval*  
  El número de *freq_subday_type* períodos que transcurren entre cada ejecución de un trabajo. *freq_subday_interval*es **int**, su valor predeterminado es **0**.  
   
- [  **@freq_relative_interval =** ] *freq_relative_interval*  
+ [ **@freq_relative_interval =** ] *freq_relative_interval*  
  Aparición de un trabajo de *freq_interval* cada mes, si *freq_interval* es **32** (relativo mensual). *freq_relative_interval*es **int**, su valor predeterminado es **0**, y puede tener uno de estos valores.  
   
-|Valor|Descripción (unidad)|  
+|Value|Descripción (unidad)|  
 |-----------|--------------------------|  
 |**1**|Primero|  
 |**2**|Second|  
@@ -121,27 +124,27 @@ sp_update_schedule
 |**8**|Cuarto|  
 |**16**|Último|  
   
- [  **@freq_recurrence_factor =** ] *freq_recurrence_factor*  
+ [ **@freq_recurrence_factor =** ] *freq_recurrence_factor*  
  Número de semanas o meses entre las ejecuciones programadas de un trabajo. *freq_recurrence_factor* solo se utiliza si *freq_type* es **8**, **16**, o **32**. *freq_recurrence_factor*es **int**, su valor predeterminado es **0**.  
   
- [  **@active_start_date =** ] *active_start_date*  
+ [ **@active_start_date =** ]  *active_start_date*  
  La fecha en la que puede comenzar la ejecución de un trabajo. *active_start_date*es **int**, su valor predeterminado es null, lo que indica la fecha de hoy. La fecha tiene el formato AAAAMMDD. Si *active_start_date* no es NULL, la fecha debe ser mayor o igual a 19900101.  
   
  Una vez creada la programación, revise la fecha de inicio y confirme que es correcta. Para obtener más información, vea la sección "Programar fechas de inicio" en [crear y adjuntar programaciones a trabajos](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5).  
   
- [  **@active_end_date =** ] *active_end_date*  
+ [ **@active_end_date =** ] *active_end_date*  
  Fecha en la que puede detenerse la ejecución de un trabajo. *active_end_date*es **int**, su valor predeterminado es **99991231**, lo que indica el 31 de diciembre de 9999. Tiene el formato AAAAMMDD.  
   
- [  **@active_start_time =** ] *active_start_time*  
+ [ **@active_start_time =** ] *active_start_time*  
  La hora de un día entre *active_start_date* y *active_end_date* para comenzar la ejecución de un trabajo. *active_start_time*es **int**, su valor predeterminado es 000000, lo que indica las 12:00:00 A.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
- [  **@active_end_time =** ] *active_end_time*  
+ [ **@active_end_time =** ] *active_end_time*  
  La hora de un día entre *active_start_date* y *active_end_date* para finalizar la ejecución de un trabajo. *active_end_time*es **int**, su valor predeterminado es **235959**, lo que indica 11:59:59 p. M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
- [  **@owner_login_name** =] **'***owner_login_name***'**]  
+ [ **@owner_login_name**= ] **'***owner_login_name***'**]  
  Nombre de la entidad de seguridad del servidor a la que pertenece la programación. *owner_login_name* es **sysname**, su valor predeterminado es null, lo que indica que la programación pertenece al creador.  
   
- [  **@automatic_post =**] *automatic_post*  
+ [ **@automatic_post =**] *automatic_post*  
  Reservado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -182,10 +185,10 @@ GO
  [Programar un trabajo](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)   
  [Crear una programación](http://msdn.microsoft.com/library/8c7ef3b3-c06d-4a27-802d-ed329dc86ef3)   
  [Agente SQL Server almacena procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_add_jobschedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)   
- [sp_delete_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_help_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_add_jobschedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_help_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

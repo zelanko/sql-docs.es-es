@@ -1,5 +1,5 @@
 ---
-title: sp_add_alert (Transact-SQL) | Documentos de Microsoft
+title: sp_add_alert (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_alert
 - sp_add_alert_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_add_alert
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_alert
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb817f23a97ff491c213cde35ba5e1d8eef4387b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e66b0fd7fffb92a9646e99f84576651e4dd8b70e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +75,7 @@ sp_add_alert [ @name = ] 'name'
  [  **@enabled =** ] *habilitado*  
  Indica el estado actual de la alerta. *habilitado* es **tinyint**, su valor predeterminado es 1 (habilitado). Si **0**, la alerta no está habilitada y no se activa.  
   
- [  **@delay_between_responses =** ] *delay_between_responses*  
+ [ **@delay_between_responses =** ] *delay_between_responses*  
  El intervalo de espera, en segundos, entre respuestas a la alerta. *delay_between_responses*es **int**, su valor predeterminado es **0**, lo que significa que no hay ninguna espera entre respuestas (cada aparición de la alerta genera una respuesta). La respuesta puede tener lugar de cualquiera de estas formas, o de ambas:  
   
 -   Una o más notificaciones enviadas por correo electrónico o el buscapersonas  
@@ -84,15 +87,15 @@ sp_add_alert [ @name = ] 'name'
  [  **@notification_message =** ] **'***notification_message***'**  
  Es un mensaje adicional opcional enviado al operador como parte del correo electrónico, **mediante net send**, o una notificación por buscapersonas. *notification_message* es **nvarchar (512)**, su valor predeterminado es null. Especificar *notification_message* es útil para agregar notas especiales como los procedimientos para solucionarlo.  
   
- [  **@include_event_description_in =** ] *include_event_description_in*  
+ [ **@include_event_description_in =** ] *include_event_description_in*  
  Indica si la descripción del error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se debe incluir como parte del mensaje de notificación. *include_event_description_in*es **tinyint**, su valor predeterminado es **5** (correo electrónico y **mediante net send**) y puede tener uno o varios de estos valores combinados con un **o** operador lógico.  
   
 > [!IMPORTANT]  
 >  Las opciones Buscapersonas y **net send** se quitarán del Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar estas características en los nuevos trabajos de programación y planee modificar las aplicaciones que actualmente las utilizan.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**0**|Ninguno|  
+|**0**|None|  
 |**1**|Correo electrónico|  
 |**2**|Buscapersonas|  
 |**4**|**net send**|  
@@ -100,10 +103,10 @@ sp_add_alert [ @name = ] 'name'
  [  **@database_name =** ] **'***base de datos***'**  
  Base de datos en la que debe ocurrir el error para que se active la alerta. Si *base de datos*no se proporciona, la alerta se activa independientemente de donde se produjo el error. *base de datos* es **sysname**. No se permiten nombres incluidos entre corchetes ([ ]). El valor predeterminado es NULL.  
   
- [  **@event_description_keyword =** ] **'***vent_description_pattern***'**  
+ [ **@event_description_keyword =** ] **'***event_description_keyword_pattern***'**  
  Secuencia de caracteres a la que debe parecerse la descripción del error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se pueden usar caracteres de coincidencia de patrón de la expresión LIKE de [!INCLUDE[tsql](../../includes/tsql-md.md)]. *vent_description_pattern* es **nvarchar (100)**, su valor predeterminado es null. Este parámetro resulta útil para filtrar nombres de objeto (por ejemplo, **% customer_table %**).  
   
- [  **@job_id =** ] *job_id*  
+ [ **@job_id =** ] *job_id*  
  El número de identificación del trabajo que se ejecutará en respuesta a esta alerta. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
   
  [  **@job_name =** ] **'***job_name***'**  
@@ -112,7 +115,7 @@ sp_add_alert [ @name = ] 'name'
 > [!NOTE]  
 >  Cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
   
- [  **@raise_snmp_trap =** ] *raise_snmp_trap*  
+ [ **@raise_snmp_trap =** ] *raise_snmp_trap*  
  No se implementa en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 7.0. *raise_snmp_trap* es **tinyint**, con un valor predeterminado es 0.  
   
  [  **@performance_condition =** ] **'***performance_condition***'**  
@@ -121,23 +124,23 @@ sp_add_alert [ @name = ] 'name'
 |Elemento de formato|Description|  
 |--------------------|-----------------|  
 |*Elemento*|Objeto de rendimiento, contador de rendimiento o instancia con nombre del contador|  
-|*Comparador*|Uno de estos operadores: >, < o =.|  
+|*Comparator*|Uno de estos operadores: >, < o =.|  
 |*Valor*|Valor numérico del contador|  
   
  [  **@category_name =** ] **'***categoría***'**  
  El nombre de la categoría de alerta. *categoría* es **sysname**, su valor predeterminado es null.  
   
- [  **@wmi_namespace** =] **'***wmi_namespace***'**  
+ [ **@wmi_namespace**= ] **'***wmi_namespace***'**  
  Es el espacio de nombres WMI para consultar eventos. *wmi_namespace* es **sysname**, su valor predeterminado es null. Solo se admiten espacios de nombres del servidor local.  
   
- [  **@wmi_query** =] **'***wmi_query***'**  
+ [ **@wmi_query**= ] **'***wmi_query***'**  
  La consulta que especifica el evento WMI para la alerta. *wmi_query* es **nvarchar (512)**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Ninguno  
+ None  
   
 ## <a name="remarks"></a>Comentarios  
  **sp_add_alert** se debe ejecutar desde la **msdb** base de datos.  
@@ -187,12 +190,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [sp_add_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_altermessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
- [sp_delete_alert &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
- [sp_help_alert &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
- [sp_update_alert &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
- [Sys.sysperfinfo &#40; Transact-SQL &#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
+ [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [sp_delete_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
+ [sp_help_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
+ [sp_update_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
+ [sys.sysperfinfo &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

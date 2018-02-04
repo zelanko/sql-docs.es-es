@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobstep (Transact-SQL) | Documentos de Microsoft
+title: sp_help_jobstep (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobstep_TSQL
 - sp_help_jobstep
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobstep
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobstep
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 316436c8c2607ef6c759efaa444d7f78e2de6834
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: bb316ee70ad1cf1f98898fd08edbb7cfb9622f56
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +49,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_id =**] **'***job_id***'**  
+ [ **@job_id =**] **'***job_id***'**  
  Número de identificación del trabajo para el que se va a devolver información del trabajo. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
   
  [  **@job_name =**] **'***job_name***'**  
@@ -55,13 +58,13 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 > [!NOTE]  
 >  Cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
   
- [  **@step_id =**] *step_id*  
+ [ **@step_id =**] *step_id*  
  Número de identificación del paso en el trabajo. Si no se especifica, se incluirán todos los pasos del trabajo. *step_id* es **int**, su valor predeterminado es null.  
   
  [  **@step_name =**] **'***step_name***'**  
  Nombre del paso en el trabajo. *Step_name* es **sysname**, su valor predeterminado es null.  
   
- [  **@suffix =**] *sufijo*  
+ [ **@suffix =**] *suffix*  
  Una marca que indica si una descripción de texto se anexa a la **marcas** columna en la salida. *sufijo*es **bits**, con el valor predeterminado de **0**. Si *sufijo* es **1**, se agrega una descripción.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -72,22 +75,22 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|Identificador único del paso.|  
-|**Step_name**|**sysname**|Nombre del paso del trabajo.|  
-|**subsistema**|**nvarchar (40)**|Subsistema en el que se ejecuta el comando del paso.|  
+|**step_name**|**sysname**|Nombre del paso del trabajo.|  
+|**subsystem**|**nvarchar(40)**|Subsistema en el que se ejecuta el comando del paso.|  
 |**command**|**nvarchar(max)**|Comando que se ejecuta en el paso.|  
-|**marcas**|**int**|Máscara de bits que controla el comportamiento del paso.|  
+|**flags**|**int**|Máscara de bits que controla el comportamiento del paso.|  
 |**cmdexec_success_code**|**int**|Para una **CmdExec** paso, éste es el código de salida de proceso de un comando correcto.|  
 |**on_success_action**|**tinyint**|Acción que se realiza si el paso termina correctamente:<br /><br /> **1** = salir del trabajo que se ha ejecutado correctamente.<br /><br /> **2** = salir del trabajo informa de un error.<br /><br /> **3** = ir al paso siguiente.<br /><br /> **4** = ir al paso.|  
 |**on_success_step_id**|**int**|Si **on_success_action** es 4, indica el paso siguiente para ejecutar.|  
 |**on_fail_action**|**tinyint**|Qué hacer si el paso da error. Los valores son los mismos que **on_success_action**.|  
 |**on_fail_step_id**|**int**|Si **on_fail_action** es 4, indica el paso siguiente para ejecutar.|  
-|**servidores**|**sysname**|Reservado.|  
+|**servidor**|**sysname**|Reservado.|  
 |**database_name**|**sysname**|Para pasos [!INCLUDE[tsql](../../includes/tsql-md.md)], la base de datos en que se ejecuta el comando.|  
 |**database_user_name**|**sysname**|Para pasos [!INCLUDE[tsql](../../includes/tsql-md.md)], el contexto de usuario de la base de datos en que se ejecuta el comando.|  
 |**retry_attempts**|**int**|Número máximo de veces que se vuelve a intentar el comando (si no termina correctamente).|  
 |**retry_interval**|**int**|Intervalo (en minutos) entre cada nuevo intento.|  
 |**os_run_priority**|**int**|Reservado.|  
-|**nombre_archivo_de_salida**|**nvarchar (200)**|En el comando que se debe escribir la salida de archivo ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, y **PowerShell** solo para los pasos).|  
+|**output_file_name**|**nvarchar(200)**|En el comando que se debe escribir la salida de archivo ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, y **PowerShell** solo para los pasos).|  
 |**last_run_outcome**|**int**|Resultado del paso la última vez que se ejecutó:<br /><br /> **0** = error<br /><br /> **1** = se ha realizado correctamente<br /><br /> **2** = reintento<br /><br /> **3** = cancelado<br /><br /> **5** = desconocido|  
 |**last_run_duration**|**int**|Duración (en segundos) del paso la última vez que se ejecutó.|  
 |**last_run_retries**|**int**|Número de veces que se ha intentado el comando desde que se ejecutó el paso por última vez.|  
@@ -139,10 +142,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [sp_add_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
- [sp_delete_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_help_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_update_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
+ [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_update_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

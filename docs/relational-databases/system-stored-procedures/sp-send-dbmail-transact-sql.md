@@ -1,5 +1,5 @@
 ---
-title: sp_send_dbmail (Transact-SQL) | Documentos de Microsoft
+title: sp_send_dbmail (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2016
 ms.prod: sql-non-specified
@@ -8,26 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sendmail_sp_TSQL
 - sendmail_sp
 - SP_SEND_DBMAIL_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_send_dbmail
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_send_dbmail
 ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
-caps.latest.revision: "72"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4001c0260cdd6f9f2f0b43db07445dcb77fb6c5d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7293e16e45c465fa2cfeda2d11888b4dc450d380
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsenddbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +79,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  [  **@copy_recipients=** ] **'***copy_recipients***'**  
  Lista de direcciones de correo electrónico, separadas por punto y coma, que van a recibir copia del mensaje. La lista de destinatarios de copia es de tipo **varchar (max)**. Aunque este parámetro es opcional, al menos uno de  **@recipients** ,  **@copy_recipients** , o  **@blind_copy_recipients**  , debe especificarse o **sp_ send_dbmail** devuelve un error.  
   
- [  **@blind_copy_recipients=** ] **'***blind_copy_recipients***'**  
+ [ **@blind_copy_recipients=** ] **'***blind_copy_recipients***'**  
  Lista de direcciones de correo electrónico, separadas por punto y coma, que van a recibir copia oculta del mensaje. La lista de destinatarios con copia oculta es de tipo **varchar (max)**. Aunque este parámetro es opcional, al menos uno de  **@recipients** ,  **@copy_recipients** , o  **@blind_copy_recipients**  , debe especificarse o **sp_ send_dbmail** devuelve un error.  
   
  [  **@from_address=** ] **'***from_address***'**  
@@ -130,33 +133,33 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
  [  **@query=** ] **'***consulta***'**  
  Consulta que se va a ejecutar. Los resultados de la consulta pueden adjuntarse como archivo o incluirse en el cuerpo del mensaje de correo electrónico. La consulta es de tipo **nvarchar (max)**y puede contener cualquier [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones. Tenga en cuenta que la consulta se ejecuta en una sesión independiente, las variables locales por lo que en el script que llama a **sp_send_dbmail** no están disponibles para la consulta.  
   
- [  **@execute_query_database=** ] **'***execute_query_database***'**  
+ [ **@execute_query_database=** ] **'***execute_query_database***'**  
  Contexto de base de datos dentro del cual el procedimiento almacenado ejecuta la consulta. El parámetro es de tipo **sysname**, con un valor predeterminado de la base de datos actual. Este parámetro solo es aplicable si  **@query**  se especifica.  
   
- [  **@attach_query_result_as_file=** ] *attach_query_result_as_file*  
+ [ **@attach_query_result_as_file=** ] *attach_query_result_as_file*  
  Especifica si el conjunto de resultados de la consulta se devuelve como un dato adjunto. *attach_query_result_as_file* es de tipo **bits**, con un valor predeterminado es 0.  
   
  Cuando el valor es 0, los resultados de la consulta se incluyen en el cuerpo del mensaje de correo electrónico, después del contenido de la  **@body**  parámetro. Si el valor es 1, los resultados se devuelven como dato adjunto. Este parámetro solo es aplicable si  **@query**  se especifica.  
   
- [  **@query_attachment_filename=** ] *query_attachment_filename*  
+ [ **@query_attachment_filename=** ] *query_attachment_filename*  
  Especifica el nombre del archivo que se va a utilizar para el conjunto de resultados de los datos adjuntos de la consulta. *query_attachment_filename* es de tipo **nvarchar (255)**, su valor predeterminado es null. Este parámetro se ignora cuando *attach_query_result* es 0. Cuando *attach_query_result* es 1 y este parámetro es NULL, correo electrónico de base de datos crea un nombre de archivo arbitrario.  
   
- [  **@query_result_header=** ] *query_result_header*  
+ [ **@query_result_header=** ] *query_result_header*  
  Especifica si los resultados de la consulta van a incluir encabezados de columna. El valor de query_result_header es de tipo **bits**. Si el valor es 1, los resultados de la consulta contienen encabezados de columna. Si el valor es 0, los resultados de la consulta no contienen encabezados de columna. Este parámetro tiene como valor predeterminado **1**. Este parámetro solo es aplicable si  **@query**  se especifica.  
   
- [  **@query_result_width**  =] *query_result_width*  
+ [ **@query_result_width** = ] *query_result_width*  
  Ancho de línea, en caracteres, que se utiliza para dar formato a los resultados de la consulta. El *query_result_width* es de tipo **int**, con un valor predeterminado es 256. El valor proporcionado debe estar entre 10 y 32767. Este parámetro solo es aplicable si  **@query**  se especifica.  
   
- [  **@query_result_separator=** ] **'***query_result_separator***'**  
+ [ **@query_result_separator=** ] **'***query_result_separator***'**  
  Es el carácter que se usa para separar las columnas en el resultado de la consulta. El separador es de tipo **char (1)**. El valor predeterminado es ' ' (espacio).  
   
- [  **@exclude_query_output=** ] *exclude_query_output*  
+ [ **@exclude_query_output=** ] *exclude_query_output*  
  Especifica si se debe devolver la salida de la ejecución de la consulta en el mensaje de correo electrónico. **exclude_query_output** es de tipo bit, con un valor predeterminado es 0. Si este parámetro es 0, la ejecución de la **sp_send_dbmail** procedimiento almacenado imprime el mensaje devuelto como resultado de la ejecución de consultas en la consola. Si este parámetro es 1, la ejecución de la **sp_send_dbmail** procedimiento almacenado imprimir cualquiera de los mensajes de ejecución de consulta en la consola.  
   
- [  **@append_query_error=** ] *append_query_error*  
+ [ **@append_query_error=** ] *append_query_error*  
  Especifica si se debe enviar el correo electrónico cuando se devuelve un error de la consulta especificada en el  **@query**  argumento. **append_query_error** es **bits**, con un valor predeterminado es 0. Cuando este parámetro es 1, el Correo electrónico de base de datos envía el mensaje de correo electrónico e incluye en el cuerpo del mismo el mensaje de error de la consulta. Si este parámetro es 0, correo electrónico de base de datos no envía el mensaje de correo electrónico, y **sp_send_dbmail** termina con el código de retorno 1, que indica un error.  
   
- [  **@query_no_truncate=** ] *@query_no_truncate*  
+ [ **@query_no_truncate=** ] *query_no_truncate*  
  Especifica si se debe ejecutar la consulta con la opción que evita el truncamiento de tipos de datos de longitud variable grande (**varchar (max)**, **nvarchar (max)**, **varbinary (max)** **xml**, **texto**, **ntext**, **imagen**y los tipos de datos definidos por el usuario). Si el establece, los resultados de la consulta no contienen encabezados de columna. El *@query_no_truncate* valor es del tipo **bits**. Si el valor es 0 o no se especifica, las columnas de la consulta se truncan a 256 caracteres. Si el valor es 1, las columnas de la consulta no se truncan. El valor predeterminado de este parámetro es 0.  
   
 > [!NOTE]  

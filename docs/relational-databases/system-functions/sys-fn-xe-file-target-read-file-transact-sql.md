@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_xe_file_target_read_file (Transact-SQL) | Documentos de Microsoft
+title: sys.fn_xe_file_target_read_file (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/22/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - fn_xe_file_target_read_file
 - sys.fn_xe_file_target_read_file_TSQL
 - sys.fn_xe_file_target_read_file
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - extended events [SQL Server], functions
 - fn_xe_file_target_read_file function
 - sys.fn_xe_file_target_read_file function
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 603253fffd3d3ea6d5a42b37f9d7f4fc8a3edccd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b21b45c9d4932ca82de404fcb3b984ef2149034a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   Lee los archivos creados en el destino de archivo asincrónico de Eventos extendidos. Se devuelve un evento, en formato XML, por cada fila.  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]y [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] aceptan resultados de seguimiento generados en formato XEL y XEM. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Extendidos solo son compatibles con los eventos en los resultados de seguimiento en formato XEL. Es recomendable que use SQL Server Management Studio para leer los resultados de seguimiento en formato XEL.    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] aceptan resultados de seguimiento generados en formato XEL y XEM. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Extendidos solo son compatibles con los eventos en los resultados de seguimiento en formato XEL. Es recomendable que use SQL Server Management Studio para leer los resultados de seguimiento en formato XEL.    
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,17 +53,17 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *ruta de acceso*  
+ *path*  
  Ruta de acceso a los archivos que se van a leer. *ruta de acceso* puede contener caracteres comodín e incluir el nombre de un archivo. *ruta de acceso* es **nvarchar (260)**. No tiene ningún valor predeterminado. En el contexto de base de datos de SQL Azure, este valor es una dirección URL HTTP en un archivo en el almacenamiento de Azure.
   
  *mdpath*  
  La ruta de acceso al archivo de metadatos que corresponde al archivo o archivos especificados por el *ruta de acceso* argumento. *mdpath* es **nvarchar (260)**. No tiene ningún valor predeterminado. A partir de SQL Server 2016, este parámetro puede indicarse como null.
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]no requiere la *mdpath* parámetro. Sin embargo, se mantiene para la compatibilidad con versiones anteriores para los archivos de registro generados en versiones anteriores de SQL Server.  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] no requiere la *mdpath* parámetro. Sin embargo, se mantiene para la compatibilidad con versiones anteriores para los archivos de registro generados en versiones anteriores de SQL Server.  
   
  *initial_file_name*  
- El primer archivo para leer de *ruta de acceso*. *initial_file_name* es **nvarchar (260)**. No tiene ningún valor predeterminado. Si **null** se especifica como el argumento de todos los archivos que se encuentran en *ruta de acceso* se leen.  
+ El primer archivo para leer de *ruta de acceso*. *initial_file_name* is **nvarchar(260)**. No tiene ningún valor predeterminado. Si **null** se especifica como el argumento de todos los archivos que se encuentran en *ruta de acceso* se leen.  
   
 > [!NOTE]  
 >  *initial_file_name* y *initial_offset* son argumentos emparejados. Si especifica un valor para cualquiera de ellos, debe especificar un valor para el otro.  
@@ -77,7 +79,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |package_guid|**uniqueidentifier**|GUID del paquete de eventos. No admite valores NULL.|  
 |object_name|**nvarchar(256)**|Nombre del evento. No admite valores NULL.|  
 |event_data|**nvarchar(max)**|Contenido del evento, en formato XML. No admite valores NULL.|  
-|file_name|**nvarchar (260)**|Nombre del archivo que contiene el evento. No admite valores NULL.|  
+|file_name|**nvarchar(260)**|Nombre del archivo que contiene el evento. No admite valores NULL.|  
 |file_offset|**bigint**|Desplazamiento del bloque en el archivo que contiene el evento. No admite valores NULL.|  
 |timestamp_utc|**datetime2**|**Se aplica a**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />La fecha y hora (zona horaria UTC) del evento. No admite valores NULL.|  
 

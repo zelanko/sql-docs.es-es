@@ -1,5 +1,5 @@
 ---
-title: sp_notify_operator (Transact-SQL) | Documentos de Microsoft
+title: sp_notify_operator (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_notify_operator_TSQL
 - sp_notify_operator
-dev_langs: TSQL
-helpviewer_keywords: sp_notify_operator
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_notify_operator
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ff7b50b5eef5d5ff753039bf4dd7ab501160eda
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7683e0150c41810c14981e0c6b6364c59ae19ae3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +57,7 @@ sp_notify_operator
  [  **@profile_name=** ] **'***profilename***'**  
  Nombre del perfil de Correo electrónico de base de datos que se va a utilizar para enviar el mensaje. *ProfileName* es **nvarchar (128)**. Si *profilename* no se especifica, se usa el perfil de correo electrónico de base de datos predeterminado.  
   
- [  **@id=** ] *Id.*  
+ [ **@id=** ] *id*  
  Identificador del operador al que se va a enviar el mensaje. *Id. de* es **int**, su valor predeterminado es null. Uno de *identificador* o *nombre* debe especificarse.  
   
  [  **@name=** ] **'***nombre***'**  
@@ -71,8 +74,8 @@ sp_notify_operator
  [  **@file_attachments=** ] **'***datos adjuntos***'**  
  Nombre de un archivo que se va a adjuntar al mensaje de correo electrónico. *datos adjuntos* es **nvarchar (512)**, no tiene ningún valor predeterminado.  
   
- [  **@mail_database=** ] **'***mail_host_database***'**  
- Especifica el nombre de la base de datos host de correo. *mail_host_database* es **nvarchar (128)**. Si no hay ningún *mail_host_database* se especifica, el **msdb** base de datos se utiliza de forma predeterminada.  
+ [ **@mail_database=** ] **'***mail_host_database***'**  
+ Especifica el nombre de la base de datos host de correo. *mail_host_database* is **nvarchar(128)**. Si no hay ningún *mail_host_database* se especifica, el **msdb** base de datos se utiliza de forma predeterminada.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -110,8 +113,8 @@ GO
   
 ## <a name="see-also"></a>Vea también  
  [Agente SQL Server almacena procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_help_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_delete_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  
+ [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  
   
   

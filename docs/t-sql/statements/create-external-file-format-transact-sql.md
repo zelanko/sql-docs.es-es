@@ -8,28 +8,30 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL FILE FORMAT
 - CREATE_EXTERNAL_FILE_FORMAT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - External
 - External, file format
 - PolyBase, external file format
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ab389a5c811f915ff497057a5daf12374f1cedb7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8fd2fa33a8a9107c86cfda7e0a628ab282efa534
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREAR formato de archivo externo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -106,22 +108,22 @@ WITH (
  *file_format_name*  
  Especifica un nombre para el formato de archivo externo.
   
- FORMAT_TYPE especifica el formato de los datos externos.
+ FORMAT_TYPE = [PARQUET | ORC | RCFILE | PARQUET] Especifica el formato de los datos externos.
   
- PARQUET especifica un formato de Parquet.
+   -   PARQUET especifica un formato de Parquet.
   
- ORC  
- Especifica un formato optimizado fila columnas (ORC). Esta opción requiere Hive versión 0.11 o superior en el clúster de Hadoop externo. En Hadoop, el formato de archivo ORC ofrece un mejor rendimiento que el formato de archivo RCFILE y la compresión.
-  
- RCFILE (en combinación con SERDE_METHOD = *SERDE_method*) especifica un formato de archivo de registro en columnas (RcFile). Esta opción requiere especificar un serializador de Hive y el método deserializador (SerDe). Este requisito es el mismo si usas Hive/HiveQL en Hadoop para consultar RC (archivos). Tenga en cuenta que el método SerDe distingue mayúsculas de minúsculas.
-  
- Ejemplos de especificación RCFile con los dos métodos de SerDe PolyBase es compatible con.
-  
--   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
-  
--   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
-  
- DELIMITEDTEXT especifica un formato de texto con delimitadores de columna, también se denomina terminadores de campo.
+   -   ORC  
+   Especifica un formato optimizado fila columnas (ORC). Esta opción requiere Hive versión 0.11 o superior en el clúster de Hadoop externo. En Hadoop, el formato de archivo ORC ofrece un mejor rendimiento que el formato de archivo RCFILE y la compresión.
+
+   -   RCFILE (en combinación con SERDE_METHOD = *SERDE_method*) especifica un formato de archivo de registro en columnas (RcFile). Esta opción requiere especificar un serializador de Hive y el método deserializador (SerDe). Este requisito es el mismo si usas Hive/HiveQL en Hadoop para consultar RC (archivos). Tenga en cuenta que el método SerDe distingue mayúsculas de minúsculas.
+
+   Ejemplos de especificación RCFile con los dos métodos de SerDe PolyBase es compatible con.
+
+    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
+
+    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
+
+   -   DELIMITEDTEXT especifica un formato de texto con delimitadores de columna, también se denomina terminadores de campo.
   
  FIELD_TERMINATOR = *field_terminator* se aplica solo a los archivos de texto delimitado. El terminador de campo especifica uno o varios caracteres que marcan el final de cada campo (columna) en el archivo de texto delimitado. El valor predeterminado es el ꞌ de carácter de canalización | ꞌ. Para obtener soporte garantizada, se recomienda usar uno o varios caracteres ascii.
   
@@ -152,7 +154,7 @@ WITH (
   
 -   STRING_DELIMITER = '0x7E0x7E'--dos tildes (por ejemplo, ~ ~)
   
- FECHA\_formato = *datetime_format* especifica un formato personalizado para todos los datos de fecha y hora en que pueden aparecer en un archivo de texto delimitado. Si el archivo de origen usa formatos de fecha y hora de forma predeterminada, esta opción no es necesaria. Un solo formato de fecha y hora personalizado se permite por archivo. No se puede especificar varios formatos de fecha y hora personalizado por cada archivo. Sin embargo, puede usar varios formatos de fecha y hora, si cada uno de ellos es el formato predeterminado para su tipo de datos correspondiente en la definición de tabla externa.
+FECHA\_formato = *datetime_format* especifica un formato personalizado para todos los datos de fecha y hora en que pueden aparecer en un archivo de texto delimitado. Si el archivo de origen usa formatos de fecha y hora de forma predeterminada, esta opción no es necesaria. Un solo formato de fecha y hora personalizado se permite por archivo. No se puede especificar varios formatos de fecha y hora personalizado por cada archivo. Sin embargo, puede usar varios formatos de fecha y hora, si cada uno de ellos es el formato predeterminado para su tipo de datos correspondiente en la definición de tabla externa.
 
 PolyBase solo utiliza el formato de fecha personalizado para importar los datos. No utiliza el formato personalizado para escribir datos en un archivo externo.
 

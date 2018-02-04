@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_queue_sp (Transact-SQL) | Documentos de Microsoft
+title: sysmail_help_queue_sp (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_queue_sp
 - sysmail_help_queue_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_help_queue_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_help_queue_sp
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 233187d223f7d22c5a950fcb2d29063f37be7c7d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5e83aba8601f4329a496229eca329035a95b283c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@queue_type**  =] **'***queue_type***'**  
+ [ **@queue_type** = ] **'***queue_type***'**  
  Argumento opcional elimina los mensajes de correo electrónico del tipo especificado como el *queue_type*. *queue_type* es **nvarchar(6)** no tiene ningún valor predeterminado. Las entradas válidas son **correo** y **estado**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -54,8 +57,8 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**queue_type**|**nvarchar(6)**|Tipo de cola. Los valores posibles son **correo** y **estado**.|  
-|**longitud**|**int**|Número de elementos de correo de la cola especificada.|  
-|**estado**|**nvarchar(64)**|Estado del monitor. Los valores posibles son **inactivo** (cola está inactiva), **NOTIFIED** (cola ha sido una notificación de confirmación de que se produzca), y **RECEIVES_OCCURRING** (cola está recibiendo).|  
+|**length**|**int**|Número de elementos de correo de la cola especificada.|  
+|**state**|**nvarchar(64)**|Estado del monitor. Los valores posibles son **inactivo** (cola está inactiva), **NOTIFIED** (cola ha sido una notificación de confirmación de que se produzca), y **RECEIVES_OCCURRING** (cola está recibiendo).|  
 |**last_empty_rowset_time**|**FECHA Y HORA**|Fecha y hora en que la cola estuvo vacía por última vez. En formato de hora militar y zona horaria GMT.|  
 |**last_activated_time**|**FECHA Y HORA**|Fecha y hora en que la cola se activó por última vez. En formato de hora militar y zona horaria GMT.|  
   

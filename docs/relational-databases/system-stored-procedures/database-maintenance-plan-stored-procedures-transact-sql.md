@@ -8,30 +8,32 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - database maintenance plans [SQL Server]
 - system stored procedures [SQL Server], database maintenance plans
 - maintenance plans [SQL Server], stored procedures
 ms.assetid: f5f658e3-417e-4286-9213-5738266f3b28
-caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c57f357319a708e14dde7e6587ee618a731c400b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 20dd5f97e3d1026f9d707d75cabef1b883f4ed26
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="database-maintenance-plan-stored-procedures-transact-sql"></a>Procedimientos almacenados de planes de mantenimiento de bases de datos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el siguiente sistema procedimientos almacenados que se utilizan para configurar las tareas de mantenimiento. Estos procedimientos almacenados se utilizan con planes de mantenimiento de bases de datos. Esta característica se ha reemplazado por planes de mantenimiento que no utilizan estos procedimientos almacenados. Use estos procedimientos para mantener planes de mantenimiento de bases de datos en instalaciones actualizadas desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]admite el sistema siguiente procedimientos almacenados que se utilizan para configurar las tareas de mantenimiento. Estos procedimientos almacenados se utilizan con planes de mantenimiento de bases de datos. Esta característica se ha reemplazado por planes de mantenimiento que no utilizan estos procedimientos almacenados. Use estos procedimientos para mantener planes de mantenimiento de bases de datos en instalaciones actualizadas desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   

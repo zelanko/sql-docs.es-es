@@ -1,5 +1,5 @@
 ---
-title: sp_start_job (Transact-SQL) | Documentos de Microsoft
+title: sp_start_job (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_start_job
 - sp_start_job_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_start_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_start_job
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
-caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 115e4738a6cca1b0578bf2edb86859f2e7b2a7d5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 5939e906cee691c2b6f13ff10677eb4f4129622f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spstartjob-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +55,10 @@ sp_start_job
  [  **@job_name=** ] **'***job_name***'**  
  Nombre del trabajo que se va a iniciar. Cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos. *job_name* es **sysname**, su valor predeterminado es null.  
   
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  Número de identificación del trabajo que se va a iniciar. Cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
   
- [  **@error_flag=** ] *error_flag*  
+ [ **@error_flag=** ] *error_flag*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@server_name=** ] **'***nombre_servidor***'**  
@@ -64,14 +67,14 @@ sp_start_job
  [  **@step_name=** ] **'***step_name***'**  
  Nombre del paso en el que se iniciará la ejecución del trabajo. Solo se aplica a trabajos locales. *Step_name* es **sysname**, su valor predeterminado es null  
   
- [  **@output_flag=** ] *output_flag*  
+ [ **@output_flag=** ] *output_flag*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Ninguno  
+ None  
   
 ## <a name="remarks"></a>Comentarios  
  Este procedimiento almacenado se encuentra en la **msdb** base de datos.  
@@ -101,10 +104,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [sp_delete_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_help_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_stop_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
- [sp_update_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_stop_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

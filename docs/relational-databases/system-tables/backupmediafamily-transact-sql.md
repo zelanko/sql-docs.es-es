@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - backupmediafamily
 - backupmediafamily_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - backupmediafamily system table
 - backup media [SQL Server], backupmediafamily system table
 ms.assetid: ee16de24-3d95-4b2e-a094-78df2514d18a
-caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e814887bb97d14d165c39ad4a8d634bf84947b1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2b2435ce3fe98104aaf3bbb857e89779adb221e4
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="backupmediafamily-transact-sql"></a>backupmediafamily (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,15 +39,15 @@ ms.lasthandoff: 11/17/2017
     
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**media_set_id**|**int**|Número de identificación exclusivo que identifica el conjunto de medios al que pertenece esta familia. Referencias **backupmediaset(media_set_id)**|  
+|**media_set_id**|**int**|Número de identificación exclusivo que identifica el conjunto de medios al que pertenece esta familia. References **backupmediaset(media_set_id)**|  
 |**family_sequence_number**|**tinyint**|Posición de esta familia de medios en el conjunto de medios.|  
 |**media_family_id**|**uniqueidentifier**|Número de identificación exclusivo que identifica a la familia de medios. Puede ser NULL.|  
 |**media_count**|**int**|Número de medios en la familia. Puede ser NULL.|  
-|**logical_device_name**|**nvarchar (128)**|Nombre de este dispositivo de copia de seguridad en **sys.backup_devices.name**. Si se trata de un dispositivo de copia de seguridad temporal (en lugar de un dispositivo de copia de seguridad permanente que existe en **sys.backup_devices**), el valor de **logical_device_name** es NULL.|  
-|**physical_device_name**|**nvarchar (260)**|Nombre físico del dispositivo de copia de seguridad. Puede ser NULL.|  
+|**logical_device_name**|**nvarchar(128)**|Nombre de este dispositivo de copia de seguridad en **sys.backup_devices.name**. Si se trata de un dispositivo de copia de seguridad temporal (en lugar de un dispositivo de copia de seguridad permanente que existe en **sys.backup_devices**), el valor de **logical_device_name** es NULL.|  
+|**physical_device_name**|**nvarchar(260)**|Nombre físico del dispositivo de copia de seguridad. Puede ser NULL.|  
 |**device_type**|**tinyint**|Tipo de dispositivo de copia de seguridad:<br /><br /> 2 = Disco<br /><br /> 5 = Cinta<br /><br /> 7 = Dispositivo virtual<br /><br /> 105 = Dispositivo de copia de seguridad permanente<br /><br /> Puede ser NULL.<br /><br /> Todos los nombres de dispositivos permanentes y los números de dispositivo pueden encontrarse en **sys.backup_devices**.|  
 |**physical_block_size**|**int**|Tamaño de bloque físico utilizado para escribir en la familia de medios. Puede ser NULL.|  
-|**reflejado**|**tinyint**|Número de reflejo (0-3)|  
+|**mirror**|**tinyint**|Número de reflejo (0-3)|  
   
 ## <a name="remarks"></a>Comentarios  
  RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY rellena las columnas de la **backupmediaset** tabla con los valores apropiados del encabezado del conjunto de medios.  

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_index_physical_stats (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_db_index_physical_stats_TSQL
 - sys.dm_db_index_physical_stats
 - dm_db_index_physical_stats_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_db_index_physical_stats dynamic management function
 - fragmentation [SQL Server]
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
-caps.latest.revision: "95"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f04fd96c367fc01225b57db6d04831748a618ed2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1bdad59aebb96a2afd2f11172c6068d54213c095
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +61,7 @@ sys.dm_db_index_physical_stats (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *database_id* | NULL | 0 | VALOR PREDETERMINADO  
+ *database_id* | NULL | 0 | DEFAULT  
  Es el identificador de la base de datos. *database_id* es **smallint**. Las entradas válidas son el número de identificador de una base de datos, NULL, 0 y DEFAULT. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto.  
   
  Especifique NULL para devolver información de todas las bases de datos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si especifica NULL para *database_id*, también debe especificar NULL para *object_id*, *index_id*, y *número_de_partición*.  
@@ -96,9 +98,9 @@ sys.dm_db_index_physical_stats (
 |object_id|**int**|Identificador de objeto de la tabla o vista en la que se encuentra el índice.|  
 |index_id|**int**|Identificador de índice.<br /><br /> 0 = Montón.|  
 |partition_number|**int**|Número de partición de base 1 en el objeto propietario, una tabla, vista o índice.<br /><br /> 1 = Montón o índice sin particiones.|  
-|index_type_desc|**nvarchar (60)**|Descripción del tipo de índice:<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> SPATIAL INDEX<br /><br /> XML INDEX<br /><br /> ÍNDICE de asignación del almacén de columnas (interno)<br /><br /> ÍNDICE de almacén de columnas DELETEBUFFER (interno)<br /><br /> ÍNDICE de almacén de columnas DELETEBITMAP (interno)|  
+|index_type_desc|**nvarchar(60)**|Descripción del tipo de índice:<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> SPATIAL INDEX<br /><br /> XML INDEX<br /><br /> ÍNDICE de asignación del almacén de columnas (interno)<br /><br /> ÍNDICE de almacén de columnas DELETEBUFFER (interno)<br /><br /> ÍNDICE de almacén de columnas DELETEBITMAP (interno)|  
 |hobt_id|**bigint**|Montón o Id. de árbol B del índice o partición.<br /><br /> Además de devolver el hobt_id de índices definidos por el usuario, también se devuelve el hobt_id de los índices de almacén de columnas interno.|  
-|alloc_unit_type_desc|**nvarchar (60)**|Descripción del tipo de unidad de asignación:<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> La unidad de asignación LOB_DATA contiene los datos que se almacenan en columnas de tipo **texto**, **ntext**, **imagen**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, y **xml**. Para obtener más información, vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).<br /><br /> La unidad de asignación ROW_OVERFLOW_DATA contiene los datos que se almacenan en columnas de tipo **varchar**, **nvarchar (n)**, **varbinary**, y **sql_ variante** que se han insertado de manera no consecutiva.|  
+|alloc_unit_type_desc|**nvarchar(60)**|Descripción del tipo de unidad de asignación:<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> La unidad de asignación LOB_DATA contiene los datos que se almacenan en columnas de tipo **texto**, **ntext**, **imagen**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, y **xml**. Para obtener más información, vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).<br /><br /> La unidad de asignación ROW_OVERFLOW_DATA contiene los datos que se almacenan en columnas de tipo **varchar**, **nvarchar (n)**, **varbinary**, y **sql_ variante** que se han insertado de manera no consecutiva.|  
 |index_depth|**tinyint**|Número de niveles del índice.<br /><br /> 1 = Montón, o unidad de asignación LOB_DATA o ROW_OVERFLOW_DATA.|  
 |index_level|**tinyint**|Nivel actual del índice.<br /><br /> 0 para niveles hoja del índice, montones y unidades de asignación LOB_DATA o ROW_OVERFLOW_DATA.<br /><br /> Mayor que 0 para niveles de índice no hoja. *index_level* será el nivel más alto en el nivel raíz de un índice.<br /><br /> Los niveles no hoja de índices solo están procesan cuando *modo* = DETAILED.|  
 |avg_fragmentation_in_percent|**float**|Fragmentación lógica para índices o fragmentación de extensión para montones en la unidad de asignación IN_ROW_DATA.<br /><br /> El valor se mide como porcentaje y tiene en cuenta varios archivos. Para obtener definiciones de fragmentación lógica y de extensión, vea la sección Comentarios.<br /><br /> 0 para unidades de asignación LOB_DATA y ROW_OVERFLOW_DATA.<br /><br /> NULL para montones cuando *modo* = SAMPLED.|  
@@ -114,9 +116,9 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|Promedio de tamaño del registro en bytes.<br /><br /> En el caso de un índice, el promedio de tamaño del registro se aplica al nivel actual del árbol b en la unidad de asignación IN_ROW_DATA.<br /><br /> En el caso de un montón, el promedio de tamaño del registro en la unidad de asignación IN_ROW_DATA.<br /><br /> En el caso de unidades de asignación LOB_DATA o ROW_OVERFLOW_DATA, el promedio de tamaño del registro en toda la unidad de asignación.<br /><br /> NULL cuando *modo* = LIMITED.|  
 |forwarded_record_count|**bigint**|Número de registros en un montón que han reenviado punteros a otra ubicación de datos. Este estado se produce durante una actualización, cuando no existe suficiente espacio para almacenar la nueva fila en la ubicación original.<br /><br /> NULL para todas las unidades de asignación salvo IN_ROW_DATA para un montón.<br /><br /> NULL para montones cuando *modo* = LIMITED.|  
 |compressed_page_count|**bigint**|Número de páginas comprimidas.<br /><br /> En el caso de los montones, las nuevas páginas asignadas no usan la compresión de página. Un montón usa la compresión de página bajo dos condiciones especiales: cuando los datos se importan de forma masiva o cuando vuelve a generarse un montón. Las operaciones DML que producen las asignaciones de página no usarán la compresión de página. Vuelva a generar un montón cuando el valor compressed_page_count sea mayor que el umbral que desea.<br /><br /> En las tablas que tienen un índice clúster, el valor compressed_page_count indica la eficacia de la compresión de página.|  
-|hobt_id|bigint|**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Para los índices de almacén de columnas solo, este es el identificador para un conjunto de filas que realiza un seguimiento de los datos de almacén de columnas interno de una partición. Los conjuntos de filas están almacenadas como datos montones o binario árboles. Tienen el mismo identificador de índice que el índice de almacén de columnas primario. Para obtener más información, consulte [sys.internal_partitions &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL si|  
-|column_store_delete_buffer_state|tinyint|**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = PURGANDO<br /><br /> 3 = BAJA<br /><br /> 4 = RETIRAR<br /><br /> 5 = LISTO|  
-|column_store_delete_buff_state_desc||**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NOT_APPLICABLE: el índice del elemento primario no es un índice de almacén de columnas.<br /><br /> Abrir elementos Deleter y escáneres Utilícelo.<br /><br /> DESCARGANDO: se está purgando elementos Deleter pero escáneres seguir usándolo.<br /><br /> El VACIADO: búfer se cierra y filas en el búfer se escriben en el mapa de bits de eliminación.<br /><br /> RETIRING – filas en el búfer de eliminación cerrado se han escrito en el mapa de bits de eliminación, pero el búfer no se ha truncado porque escáneres lo están usando. Escáneres nueva no es necesario utilizar el búfer retirar porque el búfer abierto es suficiente.<br /><br /> Listo: este búfer de delete está listo para su uso.|  
+|hobt_id|bigint|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Para los índices de almacén de columnas solo, este es el identificador para un conjunto de filas que realiza un seguimiento de los datos de almacén de columnas interno de una partición. Los conjuntos de filas están almacenadas como datos montones o binario árboles. Tienen el mismo identificador de índice que el índice de almacén de columnas primario. Para obtener más información, consulte [sys.internal_partitions &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL si|  
+|column_store_delete_buffer_state|tinyint|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = PURGANDO<br /><br /> 3 = BAJA<br /><br /> 4 = RETIRAR<br /><br /> 5 = LISTO|  
+|column_store_delete_buff_state_desc||**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NOT_APPLICABLE: el índice del elemento primario no es un índice de almacén de columnas.<br /><br /> Abrir elementos Deleter y escáneres Utilícelo.<br /><br /> DESCARGANDO: se está purgando elementos Deleter pero escáneres seguir usándolo.<br /><br /> El VACIADO: búfer se cierra y filas en el búfer se escriben en el mapa de bits de eliminación.<br /><br /> RETIRING – filas en el búfer de eliminación cerrado se han escrito en el mapa de bits de eliminación, pero el búfer no se ha truncado porque escáneres lo están usando. Escáneres nueva no es necesario utilizar el búfer retirar porque el búfer abierto es suficiente.<br /><br /> Listo: este búfer de delete está listo para su uso.|  
   
 ## <a name="remarks"></a>Comentarios  
  La función de administración dinámica sys.dm_db_index_physical_stats sustituye a la instrucción DBCC SHOWCONTIG.  
@@ -429,11 +431,11 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
   
 ## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Índice relacionadas con funciones y vistas de administración dinámica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Sys.dm_db_index_operational_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [Sys.dm_db_index_usage_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
- [Sys.dm_db_partition_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [Sys.allocation_units &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [Funciones y vistas de administración dinámica relacionadas con índices &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
+ [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [Vistas del sistema &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

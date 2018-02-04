@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_catalog (Transact-SQL) | Documentos de Microsoft
+title: sp_fulltext_catalog (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_catalog_TSQL
 - sp_fulltext_catalog
-dev_langs: TSQL
-helpviewer_keywords: sp_fulltext_catalog
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_fulltext_catalog
 ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7fe79eb04fba828a21d32328cd32fc5db7645202
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b3dc2f734fd22d937c403dd63071e17430742ab3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   Crea y quita un catálogo de texto completo, e inicia y detiene la acción de indización de un catálogo. Se pueden crear varios catálogos de texto completo en cada base de datos.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Use [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md), [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md), y [DROP FULLTEXT CATALOG](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md) en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md), [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md), y [DROP FULLTEXT CATALOG](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md) en su lugar.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,8 +51,8 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@ftcat=**] **'***fulltext_catalog_name***'**  
- Es el nombre del catálogo de texto completo. Los nombres de catálogo deben ser únicos en cada base de datos. *fulltext_catalog_name* es **sysname**.  
+ [ **@ftcat=**] **'***fulltext_catalog_name***'**  
+ Es el nombre del catálogo de texto completo. Los nombres de catálogo deben ser únicos en cada base de datos. *fulltext_catalog_name* is **sysname**.  
   
  [  **@action=**] **'***acción***'**  
  Se trata de la acción que se va a realizar. *acción* es **varchar (20)**, y puede tener uno de estos valores.  
@@ -57,16 +60,16 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 > [!NOTE]  
 >  Los catálogos de texto completo se pueden crear, quitar o modificar como precise. No obstante, evite realizar cambios de esquema en varios catálogos al mismo tiempo. Estas acciones pueden realizarse usando el **sp_fulltext_table** procedimiento almacenado, que es el método recomendado.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Crear**|Crea un catálogo de texto completo vacío, nueva en el sistema de archivos y agrega una fila asociada en **sysfulltextcatalogs** con el *fulltext_catalog_name* y *root_directory*, Si está presente, los valores. *fulltext_catalog_name* debe ser único dentro de la base de datos.|  
 |**Drop**|Quita *fulltext_catalog_name* quitando del sistema de archivos y eliminar la fila asociada en **sysfulltextcatalogs**. Esta acción genera un error si el catálogo contiene índices de una o más tablas. **sp_fulltext_table** '*table_name*', 'drop' debe ejecutarse para quitar las tablas del catálogo.<br /><br /> Se muestra un error si el catálogo no existe.|  
 |**start_incremental**|Inicia un llenado incremental de *fulltext_catalog_name*. Se muestra un error si el catálogo no existe. Si ya hay un rellenado de índices de texto completo activo, se muestra una advertencia y no se produce el rellenado. Rellenado incremental sólo las filas modificadas se recuperan para la indización de texto completo, suponiendo que haya una **marca de tiempo** las columnas presentes en la tabla de texto completo indizadas.|  
 |**start_full**|Inicia un rellenado completo para *fulltext_catalog_name*. Se recupera cada una de las filas de todas las tablas asociadas con este catálogo de texto para realizar la indización de texto, aunque ya se hayan indizado.|  
 |**Detener**|Detiene un llenado de índice de *fulltext_catalog_name*. Se muestra un error si el catálogo no existe. No se muestra ninguna advertencia si el rellenado ya se ha detenido.|  
-|**Volver a generar**|Vuelve a generar *fulltext_catalog_name*. Cuando vuelve a generarse un catálogo, el catálogo existente se elimina y se crea uno nuevo en su lugar. Todas las tablas que tienen referencias de índices de texto completo se asocian al catálogo nuevo. La regeneración restablece los metadatos de texto completo de las tablas del sistema de la base de datos.<br /><br /> Si el seguimiento de cambios está establecido en OFF, la regeneración no hace que se vuelva a rellenar el catálogo de texto completo recién creado. En este caso, para volver a llenar, ejecute **sp_fulltext_catalog** con el **start_full** o **start_incremental** acción.|  
+|**Volver a generar**|Rebuilds *fulltext_catalog_name*. Cuando vuelve a generarse un catálogo, el catálogo existente se elimina y se crea uno nuevo en su lugar. Todas las tablas que tienen referencias de índices de texto completo se asocian al catálogo nuevo. La regeneración restablece los metadatos de texto completo de las tablas del sistema de la base de datos.<br /><br /> Si el seguimiento de cambios está establecido en OFF, la regeneración no hace que se vuelva a rellenar el catálogo de texto completo recién creado. En este caso, para volver a llenar, ejecute **sp_fulltext_catalog** con el **start_full** o **start_incremental** acción.|  
   
- [  **@path=**] **'***root_directory***'**  
+ [ **@path=**] **'***root_directory***'**  
  Es el directorio raíz (no la ruta física completa) de un **crear** acción. *root_directory* es **nvarchar (100)** y tiene un valor predeterminado es null, lo que indica el uso de la ubicación predeterminada especificada al realizar la instalación. Esto es el subdirectorio Ftdata del directorio Mssql; Por ejemplo, C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData. El directorio raíz especificado debe existir, residir en una unidad en el mismo equipo y constar de más datos que solo la letra de unidad, y no puede ser una ruta de acceso relativa. No se admiten las unidades de red, discos extraíbles, disquetes y rutas de acceso UNC. Los catálogos de texto completo deben crearse en una unidad de disco duro local asociada con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **@path**solo es válido cuando *acción* es **crear**. Para acciones distintas a **crear** (**detener**, **volver a generar**, etc.),  **@path**  debe ser NULL o se omite.  
@@ -77,7 +80,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Ninguno  
+ None  
   
 ## <a name="remarks"></a>Comentarios  
  El **start_full** acción se usa para crear una instantánea completa de los datos de texto completo en *fulltext_catalog_name*. El **start_incremental** acción se usa para volver a indizar sólo las filas modificadas en la base de datos. Rellenado incremental se puede aplicar sólo si la tabla tiene una columna de tipo **marca de tiempo**. Si una tabla en el catálogo de texto completo no contiene una columna de tipo **marca de tiempo**, la tabla se somete a un llenado completo.  
@@ -141,9 +144,9 @@ GO
   
 ## <a name="see-also"></a>Vea también  
  [FULLTEXTCATALOGPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
- [sp_fulltext_database &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
- [sp_help_fulltext_catalogs &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
- [sp_help_fulltext_catalogs_cursor &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
+ [sp_fulltext_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
+ [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
+ [sp_help_fulltext_catalogs_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Búsqueda de texto completo](../../relational-databases/search/full-text-search.md)  
   

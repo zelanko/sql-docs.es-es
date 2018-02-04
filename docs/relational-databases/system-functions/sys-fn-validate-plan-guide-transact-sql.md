@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_validate_plan_guide (Transact-SQL) | Documentos de Microsoft
+title: sys.fn_validate_plan_guide (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.fn_validate_plan_guide_TSQL
 - fn_validate_plan_guide
 - fn_validate_plan_guide_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_validate_plan_guide function
 - sys.fn_validate_plan_guide function
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ddde4fe4ff510058ff1a70a329a8939de0808a3
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 712d9b5a5bea199823d83f24ad6f0f68e63223ef
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfnvalidateplanguide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +60,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 |msgnum|**int**|Id. del mensaje de error.|  
 |severity|**tinyint**|Nivel de gravedad del mensaje, entre 1 y 25.|  
 |state|**smallint**|Número de estado del error que indica el punto dentro del código donde se produjo el error.|  
-|message|**nvarchar (2048)**|Texto del mensaje del error.|  
+|message|**nvarchar(2048)**|Texto del mensaje del error.|  
   
 ## <a name="permissions"></a>Permissions  
  Las guías de plan de ámbito OBJECT requieren el permiso VIEW DEFINITION o ALTER en el objeto al que se hace referencia y permisos para compilar la consulta o lote proporcionado en la guía de plan. Por ejemplo, si un lote contiene las instrucciones SELECT, se requieren los permisos SELECT en los objetos a los que se hace referencia.  

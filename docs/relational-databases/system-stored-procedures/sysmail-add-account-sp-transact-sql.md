@@ -1,5 +1,5 @@
 ---
-title: sysmail_add_account_sp (Transact-SQL) | Documentos de Microsoft
+title: sysmail_add_account_sp (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_account_sp
 - sysmail_add_account_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_add_account_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_add_account_sp
 ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
-caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e24d90b20c91ab6dfb510faad46ceb2b5f8cc19b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 837e8e5035e69b3e8a35d14acce71d02d549d6a7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailaddaccountsp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,16 +58,16 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@account_name**  =] **'***account_name***'**  
+ [ **@account_name** = ] **'***account_name***'**  
  El nombre de la cuenta que se va a agregar. *account_name* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@email_address**  =] **'***email_address***'**  
+ [ **@email_address** = ] **'***email_address***'**  
  Dirección de correo electrónico desde la que se envía el mensaje. Esta dirección debe ser una dirección de correo electrónico de Internet. *Email_Address* es **nvarchar (128)**, no tiene ningún valor predeterminado. Por ejemplo, una cuenta para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente puede enviar correo electrónico desde la dirección  **SqlAgent@Adventure-Works.com** .  
   
- [  **@display_name**  =] **'***display_name***'**  
+ [ **@display_name** = ] **'***display_name***'**  
  Nombre para mostrar que se utilizará en los mensajes de correo electrónico de esta cuenta. *display_name* es **nvarchar (128)**, su valor predeterminado es null. Por ejemplo, una cuenta para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente puede mostrar el nombre **SQL Server Agent Automated Mailer** en mensajes de correo electrónico.  
   
- [  **@replyto_address**  =] **'***replyto_address***'**  
+ [ **@replyto_address** = ] **'***replyto_address***'**  
  Dirección a la que se envían las respuestas a los mensajes desde esta cuenta. *replyto_address* es **nvarchar (128)**, su valor predeterminado es null. Por ejemplo, las respuestas a una cuenta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente pueden dirigirse al administrador de base de datos,  **danw@Adventure-Works.com** .  
   
  [  **@description**  =] **'***descripción***'**  
@@ -73,25 +76,25 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
  [  **@mailserver_name**  =] **'***nombre_servidor***'**  
  Nombre o dirección IP del servidor de correo SMTP que se utilizará para esta cuenta. El equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser capaz de resolver el *nombre_servidor* en una dirección IP. *nombre_servidor* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@mailserver_type**  =] '*server_type*'  
+ [ **@mailserver_type** = ] '*server_type*'  
  El tipo de servidor de correo electrónico. *server_type* es **sysname**, su valor predeterminado es **'SMTP'**...  
   
- [  **@port**  =] *número_puerto*  
+ [ **@port** = ] *port_number*  
  El número de puerto para el servidor de correo electrónico. *número_puerto* es **int**, su valor predeterminado es 25.  
   
  [  **@username**  =] **'***nombre de usuario***'**  
  Nombre de usuario que se utilizará para iniciar sesión en el servidor de correo electrónico. *nombre de usuario* es **nvarchar (128)**, su valor predeterminado es null. Cuando este parámetro es NULL, el Correo electrónico de base de datos no utiliza la autenticación para esta cuenta. Si el servidor de correo no requiere autenticación, utilice NULL para el nombre de usuario.  
   
- [  **@password**  =] **'***contraseña***'**  
+ [ **@password** = ] **'***password***'**  
  Contraseña que se utilizará para iniciar sesión en el servidor de correo electrónico. *contraseña* es **nvarchar (128)**, su valor predeterminado es null. No es necesario proporcionar una contraseña, a menos que se especifique un nombre de usuario.  
   
- [  **@use_default_credentials**  =] use_default_credentials  
+ [ **@use_default_credentials** = ] use_default_credentials  
  Especifica si se debe enviar el correo al servidor SMTP con las credenciales de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** es de tipo bit, con un valor predeterminado es 0. Si el valor de este parámetro es 1, el Correo electrónico de base de datos usa las credenciales de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Si este parámetro es 0, correo electrónico de base de datos envía el  **@username**  y  **@password**  parámetros si está presente, de lo contrario envía correo sin  **@username** y  **@password**  parámetros.  
   
  [  **@enable_ssl**  =] enable_ssl  
  Especifica si el Correo electrónico de base de datos debe cifrar las comunicaciones con la Capa de sockets seguros. **Enable_ssl** es de tipo bit, con un valor predeterminado es 0.  
   
- [  **@account_id**  =] *account_id* salida  
+ [ **@account_id** = ] *account_id* OUTPUT  
  Devuelve el id. de la nueva cuenta. *account_id* es **int**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

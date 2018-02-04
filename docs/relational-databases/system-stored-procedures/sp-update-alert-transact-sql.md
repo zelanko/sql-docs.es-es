@@ -1,5 +1,5 @@
 ---
-title: sp_update_alert (Transact-SQL) | Documentos de Microsoft
+title: sp_update_alert (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_alert_TSQL
 - sp_update_alert
-dev_langs: TSQL
-helpviewer_keywords: sp_update_alert
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_update_alert
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b22b08140bc5f0e4d10fc048b40c13b4756a195
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7d39736eed19992c5fa20bb1231aed3bcb20e3b0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +72,7 @@ sp_update_alert
  [  **@name =**] **'***nombre***'**  
  Nombre de la alerta que se va a actualizar. *nombre* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@new_name =**] **'***new_name***'**  
+ [ **@new_name =**] **'***new_name***'**  
  Nuevo nombre para la alerta. El nombre debe ser único. *new_name* es **sysname**, su valor predeterminado es null.  
   
  [  **@enabled =**] *habilitado*  
@@ -81,18 +84,18 @@ sp_update_alert
  [  **@severity =**] *gravedad*  
  Un nuevo nivel de gravedad (de **1** a través de **25**) para la definición de alerta. Cualquier [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mensaje enviado en el registro de aplicación de Windows con la gravedad especificada activará la alerta. *gravedad* es **int**, su valor predeterminado es null. Un nivel de gravedad se puede utilizar únicamente si el valor de Id. de mensaje de la alerta es **0**.  
   
- [  **@delay_between_responses =**] *delay_between_responses*  
+ [ **@delay_between_responses =**] *delay_between_responses*  
  El nuevo intervalo de espera, en segundos, entre respuestas a la alerta. *delay_between_responses* es **int**, su valor predeterminado es null.  
   
- [  **@notification_message =**] **'***notification_message***'**  
+ [ **@notification_message =**] **'***notification_message***'**  
  Texto revisado de un mensaje adicional que se envía al operador como parte del correo electrónico, **mediante net send**, o una notificación por buscapersonas. *notification_message* es **nvarchar (512)**, su valor predeterminado es null.  
   
- [  **@include_event_description_in =**] *include_event_description_in*  
+ [ **@include_event_description_in =**] *include_event_description_in*  
  Especifica si la descripción del error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del registro de aplicación Windows se tiene que incluir en el mensaje de notificación. *include_event_description_in* es **tinyint**, su valor predeterminado es null y puede tener uno o varios de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**0**|Ninguno|  
+|**0**|None|  
 |**1**|Correo electrónico|  
 |**2**|Buscapersonas|  
 |**4**|**net send**|  
@@ -101,10 +104,10 @@ sp_update_alert
  [  **@database_name =**] **'***base de datos***'**  
  Nombre de la base de datos en la que debe ocurrir el error para que se active la alerta. *base de datos* es **sysname.** No se permiten nombres incluidos entre corchetes ([ ]). El valor predeterminado es NULL.  
   
- [  **@event_description_keyword =**] **'***event_description_keyword***'**  
+ [ **@event_description_keyword =**] **'***event_description_keyword***'**  
  Secuencia de caracteres que debe encontrarse en la descripción del error en el registro de mensajes de error. Se pueden usar caracteres de coincidencia de patrón de la expresión LIKE de [!INCLUDE[tsql](../../includes/tsql-md.md)]. *event_description_keyword* es **nvarchar (100)**, su valor predeterminado es null. Este parámetro resulta útil para filtrar nombres de objeto (por ejemplo, **% customer_table %**).  
   
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  El número de identificación del trabajo. *job_id* es **uniqueidentifier**, su valor predeterminado es null. Si *job_id* se especifica, *job_name* se debe omitir.  
   
  [  **@job_name =**] **'***job_name***'**  
@@ -113,43 +116,43 @@ sp_update_alert
  [  **@occurrence_count =** ] *occurrence_count*  
  Restablece el número de veces que se ha producido la alerta. *occurrence_count* es **int**, su valor predeterminado es null y se puede establecer solo en **0**.  
   
- [  **@count_reset_date =**] *count_reset_date*  
+ [ **@count_reset_date =**] *count_reset_date*  
  Restablece la fecha en que el recuento de repeticiones se restableció por última vez. *count_reset_date* es **int**, su valor predeterminado es null.  
   
- [  **@count_reset_time =**] *count_reset_time*  
+ [ **@count_reset_time =**] *count_reset_time*  
  Restablece la hora en que el recuento de repeticiones se restableció por última vez. *count_reset_time* es **int**, su valor predeterminado es null.  
   
- [  **@last_occurrence_date =**] *last_occurrence_date*  
+ [ **@last_occurrence_date =**] *last_occurrence_date*  
  Restablece la fecha en que la alerta se produjo por última vez. *last_occurrence_date* es **int**, su valor predeterminado es null y se puede establecer solo en **0**.  
   
- [  **@last_occurrence_time =**] *last_occurrence_time*  
+ [ **@last_occurrence_time =**] *last_occurrence_time*  
  Restablece la hora en que la alerta se produjo por última vez. *last_occurrence_time* es **int**, su valor predeterminado es null y se puede establecer solo en **0**.  
   
- [  **@last_response_date =**] *last_response_date*  
+ [ **@last_response_date =**] *last_response_date*  
  Restablece la fecha de la última respuesta a la alerta por parte del servicio SQLServerAgent. *last_response_date* es **int**, su valor predeterminado es null y se puede establecer solo en **0**.  
   
- [  **@last_response_time =**] *last_response_time*  
+ [ **@last_response_time =**] *last_response_time*  
  Restablece la hora de la última respuesta a la alerta por parte del servicio SQLServerAgent. *last_response_time* es **int**, su valor predeterminado es null y se puede establecer solo en **0**.  
   
- [  **@raise_snmp_trap =**] *raise_snmp_trap*  
+ [ **@raise_snmp_trap =**] *raise_snmp_trap*  
  Reservado.  
   
- [  **@performance_condition =**] **'***performance_condition***'**  
+ [ **@performance_condition =**] **'***performance_condition***'**  
  Un valor expresado en formato **'***itemcomparatorvalue***'**. *performance_condition* es **nvarchar (512)**, su valor predeterminado es null y consta de estos elementos.  
   
 |Elemento de formato|Description|  
 |--------------------|-----------------|  
 |*Elemento*|Objeto de rendimiento, contador de rendimiento o instancia con nombre del contador|  
-|*Comparador*|Uno de estos operadores:  **>** ,  **<** ,**=**|  
+|*Comparator*|Uno de estos operadores:  **>** ,  **<** ,**=**|  
 |*Valor*|Valor numérico del contador|  
   
  [  **@category_name =**] **'***categoría***'**  
  El nombre de la categoría de alerta. *categoría* es **sysname** con un valor predeterminado es NULL.  
   
- [  **@wmi_namespace** =] **'***wmi_namespace***'**  
+ [ **@wmi_namespace**= ] **'***wmi_namespace***'**  
  Es el espacio de nombres WMI para consultar eventos. *wmi_namespace* es **sysname**, su valor predeterminado es null.  
   
- [  **@wmi_query** =] **'***wmi_query***'**  
+ [ **@wmi_query**= ] **'***wmi_query***'**  
  La consulta que especifica el evento WMI para la alerta. *wmi_query* es **nvarchar (512)**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -178,7 +181,7 @@ GO
   
 ## <a name="see-also"></a>Vea también  
  [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
- [sp_help_alert &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
+ [sp_help_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

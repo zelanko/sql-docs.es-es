@@ -1,5 +1,5 @@
 ---
-title: sp_update_jobstep (Transact-SQL) | Documentos de Microsoft
+title: sp_update_jobstep (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_jobstep
 - sp_update_jobstep_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_update_jobstep
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_update_jobstep
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b2d420dd6ce746f758593b24783e1c00f4e6f8df
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c81c22e3fb6de374b378df4ef52b316efe65fdb6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,13 +68,13 @@ sp_update_jobstep
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  Número de identificación del trabajo al que perteneces el paso. *job_id*es **uniqueidentifier**, su valor predeterminado es null. Cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
   
  [  **@job_name =**] **'***job_name***'**  
  El nombre del trabajo al que pertenece el paso. *job_name*es **sysname**, su valor predeterminado es null. Cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
   
- [  **@step_id =**] *step_id*  
+ [ **@step_id =**] *step_id*  
  Número de identificación del paso de trabajo que va a modificarse. Este número no puede modificarse. *step_id*es **int**, no tiene ningún valor predeterminado.  
   
  [  **@step_name =**] **'***step_name***'**  
@@ -86,37 +89,37 @@ sp_update_jobstep
  [  **@additional_parameters =**] **'***parámetros***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@cmdexec_success_code =**] *success_code*  
+ [ **@cmdexec_success_code =**] *success_code*  
  El valor devuelto por un **CmdExec** comando del subsistema para indicar que *comando* ejecutado correctamente. *success_code* es **int**, su valor predeterminado es null.  
   
- [  **@on_success_action =**] *success_action*  
+ [ **@on_success_action =**] *success_action*  
  La acción que se realizará si el paso termina correctamente. *success_action* es **tinyint**, su valor predeterminado es null y puede tener uno de estos valores.  
   
-|Valor|Descripción (acción)|  
+|Value|Descripción (acción)|  
 |-----------|----------------------------|  
 |**1**|Salir correctamente.|  
 |**2**|Salir con error.|  
 |**3**|Ir al paso siguiente.|  
 |**4**|Vaya al paso *success_step_id.*|  
   
- [  **@on_success_step_id =**] *success_step_id*  
+ [ **@on_success_step_id =**] *success_step_id*  
  El número de identificación del paso de este trabajo que se ejecutará si el paso termina correctamente y *success_action* es **4**. *success_step_id* es **int**, su valor predeterminado es null.  
   
- [  **@on_fail_action =**] *fail_action*  
+ [ **@on_fail_action =**] *fail_action*  
  La acción que se realizará si se produce un error en el paso. *fail_action* es **tinyint**, su valor predeterminado es null y puede tener uno de estos valores.  
   
-|Valor|Descripción (acción)|  
+|Value|Descripción (acción)|  
 |-----------|----------------------------|  
 |**1**|Salir correctamente.|  
 |**2**|Salir con error.|  
 |**3**|Ir al paso siguiente.|  
-|**4**|Vaya al paso *fail_step_id**.*|  
+|**4**|Vaya al paso *fail_step_id **.*|  
   
- [  **@on_fail_step_id =**] *fail_step_id.*  
+ [ **@on_fail_step_id =**] *fail_step_id*  
  El número de identificación del paso de este trabajo que se ejecutará si se produce un error en el paso y *fail_action* es **4**. *fail_step_id* es **int**, su valor predeterminado es null.  
   
- [  **@server =**] **'***server***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*server* es **nvarchar (128)**, su valor predeterminado es null.  
+ [ **@server =**] **'***server***'**  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *servidor* es **nvarchar (128)**, su valor predeterminado es null.  
   
  [  **@database_name =**] **'***base de datos***'**  
  Nombre de la base de datos en la que se va a ejecutar un paso de [!INCLUDE[tsql](../../includes/tsql-md.md)]. *base de datos*es **sysname**. No se permiten nombres incluidos entre corchetes ([ ]). El valor predeterminado es NULL.  
@@ -124,10 +127,10 @@ sp_update_jobstep
  [  **@database_user_name =**] **'***usuario***'**  
  El nombre de la cuenta de usuario que se va a utilizar al ejecutar un paso de [!INCLUDE[tsql](../../includes/tsql-md.md)]. *usuario*es **sysname**, su valor predeterminado es null.  
   
- [  **@retry_attempts =**] *retry_attempts*  
+ [ **@retry_attempts =**] *retry_attempts*  
  Número de reintentos en caso de que el paso dé error. *retry_attempts*es **int**, su valor predeterminado es null.  
   
- [  **@retry_interval =**] *retry_interval*  
+ [ **@retry_interval =**] *retry_interval*  
  Tiempo en minutos entre reintentos. *retry_interval* es **int**, su valor predeterminado es null.  
   
  [  **@os_run_priority =**] *run_priority*  
@@ -143,7 +146,7 @@ sp_update_jobstep
  [  **@flags =**] *marcas*  
  Una opción que controla el comportamiento. *marcas de* es **int**, y puede tener uno de estos valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0** (valor predeterminado)|Sobrescribir el archivo de salida.|  
 |**2**|Anexar al archivo de salida|  
@@ -151,7 +154,7 @@ sp_update_jobstep
 |**8**|Escribir el registro en la tabla (sobrescribir el historial existente)|  
 |**16**|Escribir el registro en la tabla (anexar al historial existente)|  
   
- [  **@proxy_id** =] *proxy_id*  
+ [ **@proxy_id**= ] *proxy_id*  
  Número de identificación del proxy con el que se ejecuta el paso de trabajo. *proxy_id* es de tipo **int**, su valor predeterminado es null. Si no hay ningún *proxy_id* se especifica, no *proxy_name* se especifica y no *nombre_usuario* se especifica, el paso de trabajo se ejecuta como la cuenta de servicio para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
  [  **@proxy_name** =] **'***proxy_name***'**  
@@ -196,8 +199,8 @@ GO
   
 ## <a name="see-also"></a>Vea también  
  [Ver o modificar trabajos](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
- [sp_delete_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_help_jobstep &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

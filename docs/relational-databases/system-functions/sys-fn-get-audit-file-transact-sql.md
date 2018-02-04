@@ -26,13 +26,13 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4ac4372d753bdc9fde231d2ec08daa957771dc46
-ms.sourcegitcommit: e851f3cab09f8f09a9a4cc0673b513a1c4303d2d
+ms.openlocfilehash: efaffab66cba6d95d76d7c5371e43db1aca9f744
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ fn_get_audit_file ( file_pattern,
  Especifica una ubicación conocida con el archivo especificado para initial_file_name. Cuando se usa este argumento, la función inicia la lectura en el primer registro del búfer que está a continuación del desplazamiento especificado.  
   
 > [!NOTE]  
->  El *audit_record_offset* argumento debe contener las entradas válidas o deben contener el predeterminado | Valor NULL. El tipo es **bitint**.  
+>  El *audit_record_offset* argumento debe contener las entradas válidas o deben contener el predeterminado | Valor NULL. El tipo es **bigint**.  
   
 ## <a name="tables-returned"></a>Tablas devueltas  
  En la tabla siguiente se describe el contenido del archivo de auditoría que puede devolver esta función.  

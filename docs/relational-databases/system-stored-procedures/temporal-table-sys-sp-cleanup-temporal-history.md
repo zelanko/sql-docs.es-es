@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cleanup_temporal_history | Documentos de Microsoft
+title: sys.sp_cleanup_temporal_history | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: 
@@ -8,20 +8,21 @@ ms.service: sql-database
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed631f41e1ce49bfa431645b5f439925190198c7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1539ae456b1159cf4fdd458948a905171e3d33aa
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="temporal-table---sysspcleanuptemporalhistory"></a>Tabla temporal - sys.sp_cleanup_temporal_history
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ El nombre de la tabla temporal para la retención se invoca el Liberador de espa
 
 El nombre del esquema que la tabla temporal actual pertenece a
 
-*row_count_var* [salida]
+*row_count_var* [OUTPUT]
 
 El parámetro de salida que devuelve el número de filas eliminadas. Si la tabla de historial agrupado índice de almacén de columnas, se devolverá este parámetro siempre es 0.
   

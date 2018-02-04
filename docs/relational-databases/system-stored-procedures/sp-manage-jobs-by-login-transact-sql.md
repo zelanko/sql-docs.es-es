@@ -1,5 +1,5 @@
 ---
-title: sp_manage_jobs_by_login (Transact-SQL) | Documentos de Microsoft
+title: sp_manage_jobs_by_login (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_manage_jobs_by_login
 - sp_manage_jobs_by_login_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_manage_jobs_by_login
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_manage_jobs_by_login
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6957acef65b68ca955e14fb6c01d83bde01bc5d3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2575a298f71475452dffe05b75adeaf41ac8f2fa
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,17 +52,17 @@ sp_manage_jobs_by_login
  [  **@action=** ] **'***acción***'**  
  Acción que se va a realizar para el inicio de sesión especificado. *acción* es **varchar (10)**, no tiene ningún valor predeterminado. Cuando *acción*es **eliminar**, **sp_manage_jobs_by_login** elimina todos los trabajos que pertenecen a *current_owner_login_name*. Cuando *acción* es **REASIGNAR**, todos los trabajos se asignan a *new_owner_login_name*.  
   
- [  **@current_owner_login_name=** ] **'***current_owner_login_name***'**  
+ [ **@current_owner_login_name=** ] **'***current_owner_login_name***'**  
  Nombre de inicio de sesión del propietario del trabajo actual. *current_owner_login_name* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@new_owner_login_name=** ] **'***new_owner_login_name***'**  
+ [ **@new_owner_login_name=** ] **'***new_owner_login_name***'**  
  Es el nombre de inicio de sesión del nuevo propietario del trabajo. Use este parámetro solo si *acción* es **REASIGNAR**. *new_owner_login_name* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Ninguno  
+ None  
   
 ## <a name="permissions"></a>Permissions  
  Para ejecutar este procedimiento almacenado, deben concederse a los usuarios la **sysadmin** rol fijo de servidor.  
@@ -79,7 +82,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [sp_delete_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

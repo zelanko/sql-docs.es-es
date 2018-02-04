@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_sql_referencing_entities (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_sql_referencing_entities (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_sql_referencing_entities_TSQL
 - sys.dm_sql_referencing_entities_TSQL
 - dm_sql_referencing_entities
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_sql_referencing_entities dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_sql_referencing_entities dynamic management function
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 26d13446ff128a00b31677c78d7e205ba40b0e94
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 35e2f1be36365c2b1f5c8801a9e0d7749c70de7d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,12 +66,12 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *schema_name.referenced*_*nombre_de_entidad*  
+ *schema_name.referenced*_*entity_name*  
  Es el nombre de la entidad a la que se hace referencia.  
   
  *schema_name* es necesaria excepto cuando la clase que se hace referencia es PARTITION_FUNCTION.  
   
- *schema_name.referenced_entity_name* es **nvarchar (517)**.  
+ *schema_name.referenced_entity_name* is **nvarchar(517)**.  
   
  *< Referenced_class >* :: = {objeto | TIPO | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
  Es la clase de la entidad a la que se hace referencia. Solo se puede especificar una clase por instrucción.  
@@ -83,7 +86,7 @@ sys.dm_sql_referencing_entities (
 |referencing_entity_name|**sysname**|Nombre de la entidad que hace la referencia. No admite valores NULL.|  
 |referencing_id|**int**|Identificador de la entidad que hace la referencia. No admite valores NULL.|  
 |referencing_class|**tinyint**|Clase de la entidad que hace la referencia. No admite valores NULL.<br /><br /> 1 = Objeto<br /><br /> 12 = Desencadenador DLL de nivel de base de datos <br /><br /> 13 = Desencadenador DDL de nivel de servidor |  
-|referencing_class_desc|**nvarchar (60)**|Descripción de la clase de entidad de referencia.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
+|referencing_class_desc|**nvarchar(60)**|Descripción de la clase de entidad de referencia.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
 |is_caller_dependent|**bit**|Indica que la resolución del identificador de la entidad a la que se hace referencia se realiza en tiempo de ejecución porque depende del esquema del autor de la llamada.<br /><br /> 1 = La entidad que hace la referencia tiene el potencial para hacer referencia a la entidad; sin embargo, la resolución del identificador de la entidad depende del autor de la llamada y no se puede determinar. Esto solo se produce para las referencias no enlazadas a un esquema a un procedimiento almacenado, un procedimiento almacenado extendido o una función definida por el usuario llamada en una instrucción EXECUTE.<br /><br /> 0 = La entidad a la que se hace referencia no depende del autor de la llamada.|  
   
 ## <a name="exceptions"></a>Excepciones  
@@ -106,14 +109,14 @@ sys.dm_sql_referencing_entities (
 |-----------------|------------------------|-----------------------|  
 |Table|Sí*|Sí|  
 |Ver|Sí|Sí|  
-|Procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sí|Sí|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] procedimiento almacenado **|Sí|Sí|  
 |procedimiento almacenado CLR|no|Sí|  
-|Función definida por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sí|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] función definida por el usuario|Sí|Sí|  
 |Función CLR definida por el usuario|no|Sí|  
 |Desencadenador CLR (DML y DDL)|no|no|  
-|Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|no|  
-|Desencadenador DDL de nivel de base de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|no|  
-|Desencadenador DDL de nivel de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|no|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] desencadenador DML|Sí|no|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] desencadenador DDL de nivel de base de datos|Sí|no|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] desencadenador DDL de nivel de servidor|Sí|no|  
 |Procedimientos almacenados extendidos|no|Sí|  
 |Cola|no|Sí|  
 |Synonym (Sinónimo)|no|Sí|  

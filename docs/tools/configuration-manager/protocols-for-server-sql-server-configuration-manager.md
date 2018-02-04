@@ -8,22 +8,24 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ee30d5f5-7f6a-4101-849e-73dfcc1b2528
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 943f45642ecefd9f00627bc6f5ca95daa7adc177
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: abee0ff1a1889a3f6b77650b51ab25eff0037f4a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="protocols-for-ltservergt-sql-server-configuration-manager"></a>Protocolos de &lt;server&gt; (Administrador de configuración de SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Para configurar los protocolos utilizados por la [!INCLUDE[ssDE](../../includes/ssde-md.md)], seleccione **protocolos** para la instancia de servidor que desee en el panel de consola, haga clic en el protocolo adecuado en el panel de detalles y, a continuación, haga clic en **propiedades**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Para configurar los protocolos empleados por el [!INCLUDE[ssDE](../../includes/ssde-md.md)], seleccione **Protocolos** para la instancia de servidor que quiera en el panel de la consola, haga clic con el botón derecho en el protocolo adecuado en el panel de detalles y, luego, haga clic en **Propiedades**.  
   
   

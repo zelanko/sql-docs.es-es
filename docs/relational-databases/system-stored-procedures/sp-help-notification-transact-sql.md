@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_notification
 - sp_help_notification_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_notification
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_notification
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e54750ac4174f054d87c5a1994f40bd3b5cfeec0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 542ffbb8b2bf6c51b31da93dc654a3a71b3fa401
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +51,7 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@object_type =**] **'***object_type***'**  
+ [ **@object_type =**] **'***object_type***'**  
  Tipo de información que se va a devolver. *object_type*es **char (9)**, no tiene ningún valor predeterminado. *object_type* puede ser ALERTS, que presenta las alertas asignadas al nombre del operador especificado*,* u OPERATORS, que presenta los operadores responsables del nombre de alerta especificado*.*  
   
  [  **@name =**] **'***nombre***'**  
@@ -57,7 +60,7 @@ sp_help_notification
  [  **@enum_type =**] **'***enum_type***'**  
  El *object_type*información que se devuelve. *enum_type* es ACTUAL en la mayoría de los casos. *enum_type*es **char (10)**, no tiene ningún valor predeterminado y puede ser uno de estos valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |ACTUAL|Muestra sólo el *tipos de objetos* asociada *nombre*.|  
 |ALL|Enumera todos los*tipos de objetos* incluidos aquellos que no están asociados con *nombre*.|  
@@ -66,14 +69,14 @@ sp_help_notification
  [  **@notification_method =**] *notification_method*  
  Valor numérico que determina las columnas del método de notificación que se van a devolver. *notification_method* es **tinyint**, y puede tener uno de los siguientes valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Correo electrónico: devuelve solamente el **use_email** columna.|  
 |**2**|Buscapersonas: devuelve solamente el **use_pager** columna.|  
 |**4**|NetSend: devuelve solamente el **use_netsend** columna.|  
 |**7**|Todas: devuelve todas las columnas.|  
   
- [  **@target_name =**] **'***target_name***'**  
+ [ **@target_name =**] **'***target_name***'**  
  Para buscar un nombre de la alerta (si *object_type* es ALERTS) o un nombre de operador que se busca (si *object_type* es OPERATORS). *target_name* solo es necesario si *enum_type* es el destino. *target_name* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="return-code-valves"></a>Código de retorno  
@@ -145,9 +148,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [sp_add_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_delete_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [sp_update_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
+ [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [sp_update_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

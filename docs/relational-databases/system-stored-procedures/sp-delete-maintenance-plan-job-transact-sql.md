@@ -1,5 +1,5 @@
 ---
-title: sp_delete_maintenance_plan_job (Transact-SQL) | Documentos de Microsoft
+title: sp_delete_maintenance_plan_job (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_maintenance_plan_job
 - sp_delete_maintenance_plan_job_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_maintenance_plan_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_maintenance_plan_job
 ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b1949353fb929f8112059346033c035b1d1d275
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: cd3e8c20bb7d093bd57a924ab2914b6ff12b8051
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeletemaintenanceplanjob-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +52,10 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@plan_id =**] **'***plan_id***'**  
+ [ **@plan_id =**] **'***plan_id***'**  
  Especifica el Id. del plan de mantenimiento. *plan_id* es **uniqueidentifier**, y debe ser un identificador válido.  
   
- [  **@job_id =**] **'***job_id***'**  
+ [ **@job_id =**] **'***job_id***'**  
  Especifica el Id. del trabajo con el que está asociado el plan de mantenimiento. *job_id* es **uniqueidentifier**, y debe ser un identificador válido.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_cdc_log_scan_sessions (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_cdc_log_scan_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +17,24 @@ f1_keywords:
 - dm_cdc_log_scan_sessions_TSQL
 - sys.dm_cdc_log_scan_sessions_TSQL
 - sys.dm_cdc_log_scan_sessions
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - change data capture [SQL Server], log scan reporting
 - sys.dm_cdc_log_scan_sessions dynamic management view
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
-caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6db4f34391cf36757ed086b24ddfe3618ebbe529
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f7d81782bac9590aac7fb1905304aec53f531db1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="change-data-capture---sysdmcdclogscansessions"></a>Captura de datos modificados - sys.dm_cdc_log_scan_sessions
+# <a name="change-data-capture---sysdmcdclogscansessions"></a>Change Data Capture - sys.dm_cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila para cada sesión de recorrido de registro de la base de datos actual. La última fila devuelta representa la sesión actual. Puede usar esta vista para devolver información de estado sobre la sesión del recorrido del registro actual, o bien información agregada sobre todas las sesiones desde que la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inició por última vez.  
@@ -43,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |**start_time**|**datetime**|Hora que la sesión comenzó.<br /><br /> Cuando **session_id** = 0, la hora en que comenzó la recopilación de datos agregados.|  
 |**end_time**|**datetime**|Hora a la que finalizó la sesión<br /><br /> NULL = la sesión está activa.<br /><br /> Cuando **session_id** = 0, la hora en que finalizó la última sesión.|  
 |**duration**|**bigint**|Duración, en segundos, de la sesión<br /><br /> 0 = la sesión no contiene transacciones de captura de datos de cambio.<br /><br /> Cuando **session_id** = 0, la suma de la duración (en segundos) de todas las sesiones con transacciones de captura de datos de cambio.|  
-|**scan_phase**|**nvarchar (200)**|La fase actual de la sesión. Éstos son los valores posibles y sus descripciones:<br /><br /> 1: configuración de lectura<br />2: primer examen, generar la tabla hash<br />3: análisis en segundo lugar<br />4: análisis en segundo lugar<br />5: análisis en segundo lugar<br />6: versión del esquema<br />7: última exploración<br />8: hecho<br /><br /> Cuando **session_id** = 0, este valor siempre es "Aggregate".|  
+|**scan_phase**|**nvarchar(200)**|La fase actual de la sesión. Éstos son los valores posibles y sus descripciones:<br /><br /> 1: configuración de lectura<br />2: primer examen, generar la tabla hash<br />3: análisis en segundo lugar<br />4: análisis en segundo lugar<br />5: análisis en segundo lugar<br />6: versión del esquema<br />7: última exploración<br />8: hecho<br /><br /> Cuando **session_id** = 0, este valor siempre es "Aggregate".|  
 |**error_count**|**int**|Número máximo de errores detectados<br /><br /> Cuando **session_id** = 0, el número total de errores en todas las sesiones.|  
 |**start_lsn**|**nvarchar(23)**|Iniciar LSN para la sesión.<br /><br /> Cuando **session_id** = 0, LSN inicial de la última sesión.|  
 |**current_lsn**|**nvarchar(23)**|LSN actual del que se realiza un recorrido.<br /><br /> Cuando **session_id** = 0, el LSN actual es 0.|  
@@ -84,7 +86,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Sys.dm_cdc_errors &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)  
+ [sys.dm_cdc_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)  
   
   
 

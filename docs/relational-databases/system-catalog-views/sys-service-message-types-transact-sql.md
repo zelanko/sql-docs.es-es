@@ -1,5 +1,5 @@
 ---
-title: Sys.service_message_types (Transact-SQL) | Documentos de Microsoft
+title: sys.service_message_types (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - service_message_types
 - sys.service_message_types_TSQL
 - service_message_types_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.service_message_types catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.service_message_types catalog view
 ms.assetid: 6a38709a-60fe-46f6-89da-718f74f15600
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 866424b72b284479e2f9e1771ff62c5099cb7f71
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6e2814cf0eaf1844131086491d1184c4f95bb52d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysservicemessagetypes-transact-sql"></a>sys.service_message_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +43,8 @@ ms.lasthandoff: 11/17/2017
 |**Nombre**|**sysname**|Nombre del tipo de mensaje, único en la base de datos. No acepta valores NULL.|  
 |**message_type_id**|**int**|Identificador del tipo de mensaje, único en la base de datos. No acepta valores NULL.|  
 |**principal_id**|**int**|Identificador de la entidad de seguridad de base de datos propietaria de este tipo de mensaje. ACEPTA VALORES NULL.|  
-|**validación**|**Char(2)**|Validación realizada por Broker antes de enviar mensajes de este tipo. No acepta valores NULL. Una de las siguientes opciones:<br /><br /> N = Ninguno<br /><br /> X = XML<br /><br /> E = Vacío|  
-|**validation_desc**|**nvarchar (60)**|Descripción de la validación realizada por Broker antes de enviar mensajes de este tipo. ACEPTA VALORES NULL. Una de las siguientes opciones:<br /><br /> Ninguno<br /><br /> XML<br /><br /> EMPTY|  
+|**validation**|**char(2)**|Validación realizada por Broker antes de enviar mensajes de este tipo. No acepta valores NULL. Una de las siguientes opciones:<br /><br /> N = Ninguno<br /><br /> X = XML<br /><br /> E = Vacío|  
+|**validation_desc**|**nvarchar(60)**|Descripción de la validación realizada por Broker antes de enviar mensajes de este tipo. ACEPTA VALORES NULL. Una de las siguientes opciones:<br /><br /> Ninguno<br /><br /> XML<br /><br /> EMPTY|  
 |**xml_collection_id**|**int**|En una validación que usa un esquema XML, es el identificador de la colección de esquemas utilizado.<br /><br /> En caso contrario, NULL.|  
   
 ## <a name="permissions"></a>Permissions  

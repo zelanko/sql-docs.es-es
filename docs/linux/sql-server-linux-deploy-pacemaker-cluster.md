@@ -3,7 +3,7 @@ title: "Implementar un clúster marcapasos para SQL Server en Linux | Documentos
 description: "Este tutorial muestra cómo implementar un clúster marcapasos para SQL Server en Linux."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 4a014c0b7eedb96375f027674d9eb2374f38c85e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dd9d35a7fa6e8a8a0e826d584a4f78ca2581d9bc
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Implementar un clúster marcapasos para SQL Server en Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este tutorial documentan las tareas necesarias para implementar un clúster de Linux marcapasos para un [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] grupo de disponibilidad AlwaysOn (AG) o instancia de clúster de conmutación por error (FCI). A diferencia del servidor de Windows estrechamente acoplado /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] pila, la creación del clúster marcapasos, así como configuración de grupo (AG) de disponibilidad en Linux puede hacerse antes o después de la instalación de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. La integración y la configuración de los recursos de la parte marcapasos de una implementación de AG o FCI se realiza después de que el clúster está configurado.
 > [!IMPORTANT]
@@ -151,7 +151,7 @@ Configuración Ubuntu es similar a RHEL. Sin embargo, hay una diferencia importa
    
 2. Siga los pasos descritos en la sección RHEL para crear el clúster marcapasos.
 
-**SLES GRANDE**
+**SLES**
 
 El proceso para crear un clúster marcapasos es completamente diferente en SLES en RHEL y Ubuntu. Cómo crear un clúster con SLES de documentos de los pasos siguientes.
 1. Inicie el proceso de configuración de clúster mediante la ejecución 
@@ -219,7 +219,7 @@ sudo apt-get install mssql-server-ha mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-**SLES GRANDE**
+**SLES**
 
 ```bash
 sudo zypper install mssql-server-ha mssql-server-agent

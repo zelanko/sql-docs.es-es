@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_pdw_exec_sessions (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_pdw_exec_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: 
@@ -8,34 +8,36 @@ ms.service: sql-data-warehouse
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bbec94d3778bf9b898f9b0f789a644d39829ae5a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 57fa5867f9fa62dd4a81426673339afcd615f140
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmpdwexecsessions-transact-sql"></a>Sys.dm_pdw_exec_sessions (Transact-SQL)
+# <a name="sysdmpdwexecsessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contiene información sobre todas las sesiones abiertas actualmente o que recientemente en el dispositivo. Muestra una fila por cada sesión.  
   
 |Nombre de la columna|Tipo de datos|Description|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|session_id|**nvarchar (32)**|El identificador de la consulta actual o la última consulta ejecutar (si se finaliza la sesión y se ejecuta la consulta en tiempo de finalización). Clave para esta vista.|Es único en todas las sesiones en el sistema.|  
-|status|**nvarchar (10)**|Para las sesiones actuales, indica si la sesión está actualmente activa o inactiva. En las últimas sesiones, la sesión puede mostrar el estado cerrado o eliminado (si se forzó el cierre de la sesión).|'ACTIVE', 'CERRADO', 'INACTIVO', 'TERMINADA'|  
-|request_id|**nvarchar (32)**|El identificador de la consulta actual o último ejecutar.|Único en todas las solicitudes en el sistema. Es null si no se ha ejecutado.|  
-|security_id|**varbinary (85)**|Id. de seguridad de la entidad de seguridad que se ejecuta la sesión.||  
-|login_name|**nvarchar (128)**|El nombre de inicio de sesión de la entidad de seguridad que se ejecuta la sesión.|Cualquier cadena que se ajuste a las convenciones de nomenclatura de usuario.|  
+|session_id|**nvarchar(32)**|El identificador de la consulta actual o la última consulta ejecutar (si se finaliza la sesión y se ejecuta la consulta en tiempo de finalización). Clave para esta vista.|Es único en todas las sesiones en el sistema.|  
+|status|**nvarchar(10)**|Para las sesiones actuales, indica si la sesión está actualmente activa o inactiva. En las últimas sesiones, la sesión puede mostrar el estado cerrado o eliminado (si se forzó el cierre de la sesión).|'ACTIVE', 'CERRADO', 'INACTIVO', 'TERMINADA'|  
+|request_id|**nvarchar(32)**|El identificador de la consulta actual o último ejecutar.|Único en todas las solicitudes en el sistema. Es null si no se ha ejecutado.|  
+|security_id|**varbinary(85)**|Id. de seguridad de la entidad de seguridad que se ejecuta la sesión.||  
+|login_name|**nvarchar(128)**|El nombre de inicio de sesión de la entidad de seguridad que se ejecuta la sesión.|Cualquier cadena que se ajuste a las convenciones de nomenclatura de usuario.|  
 |login_time|**datetime**|Fecha y hora en que el usuario inició sesión y se creó esta sesión.|Válido **datetime** anterior a la hora actual.|  
 |query_count|**int**|Captura el número de consultas/requeststhis sesión se ha ejecutado desde que se creó.|Mayor o igual que 0.|  
 |is_transactional|**bit**|Captura de una sesión actualmente se encuentra dentro de una transacción o no.|0 para la confirmación automática, 1 para transaccional.|  

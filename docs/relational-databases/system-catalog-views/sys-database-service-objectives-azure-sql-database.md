@@ -8,24 +8,26 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords:
 - "Grupo elástico"
 - "grupo elástico, administración"
-f1_keywords: DATABASE_SERVICE_OBJECTIVES_TSQL
+f1_keywords:
+- DATABASE_SERVICE_OBJECTIVES_TSQL
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72cc970e8e6b37988399707b5cef77cbda3afd36
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 08c801fe0f7d917de2c520e788320ec3677d8a6e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>Sys.database_service_objectives (base de datos de SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -41,7 +43,7 @@ Devuelve la edición (nivel de servicio), el objetivo de servicio (nivel de prec
   
 |Nombre de la columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|INT|El identificador de la base de datos, único en una instancia del servidor de base de datos de SQL Azure. Puede unir con [sys.databases &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|database_id|int|El identificador de la base de datos, único en una instancia del servidor de base de datos de SQL Azure. Puede unir con [sys.databases &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |edición|sysname|El nivel de servicio para el almacenamiento de datos o base de datos: **básica**, **estándar**, **Premium** o **almacenamiento de datos**.|  
 |service_objective|sysname|El nivel de precios de la base de datos. Devuelve si la base de datos está en un grupo elástico, **ElasticPool**.<br /><br /> En el **básica** capa, devuelve **básica**.<br /><br /> **Base de datos único en un nivel de servicio estándar** devuelve uno de los siguientes: S0, S1, S2 o S3.<br /><br /> **Base de datos único en un nivel premium** devuelve de las siguientes acciones: P1, P2, P4, P3/P6 o P11.<br /><br /> **Almacenamiento de datos SQL** devuelve DW100 a través de DW2000.|  
 |elastic_pool_name|sysname|El nombre de la [grupo elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) que pertenece la base de datos. Devuelve **NULL** si la base de datos es una base de datos o un warehoue de datos.|  

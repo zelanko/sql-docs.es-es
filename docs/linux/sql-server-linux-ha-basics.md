@@ -3,7 +3,7 @@ title: "Conceptos básicos de la disponibilidad de SQL Server para las implement
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: b137d8badf44bf1c7d181b490bcf6d06e2bd087f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d53e54c6e8e74970316de557ddf3bd60a09e9ffe
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Conceptos básicos de la disponibilidad de SQL Server para las implementaciones de Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 A partir de [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] es compatible con Linux y Windows. Basado en Windows, como [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] las implementaciones, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] las bases de datos e instancias deben estar altamente disponible en Linux. Este artículo tratan los aspectos técnicos de planificación e implementación de alta disponibilidad basadas en Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] bases de datos e instancias, así como algunas de las diferencias de las instalaciones basadas en Windows. Dado que [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] puede ser nuevo para profesionales de TI de Linux y Linux pueden ser nuevo para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] profesionales de TI, el artículo a veces presenta conceptos que pueden ser poco familiar para otros usuarios y familiar a algunas.
 
@@ -76,7 +76,7 @@ copia el archivo MyAGCert.cer en la carpeta especificada en el otro servidor. Te
 
 Samba, que es la variante de Linux de bloque de mensajes del servidor (SMB), también puede utilizarse para crear recursos compartidos de acceso a las rutas de acceso UNC, como `\\SERVERNAME\SHARE`. Para obtener más información acerca de cómo configurar Samba, consulte la información en los siguientes vínculos para cada distribución:
 -   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Managing_Confined_Services/chap-Managing_Confined_Services-Samba.html)
--   [SLES GRANDE](https://www.suse.com/documentation/sles11/book_sle_admin/data/cha_samba.html)
+-   [SLES](https://www.suse.com/documentation/sles11/book_sle_admin/data/cha_samba.html)
 -   [Ubuntu](https://help.ubuntu.com/community/Samba)
 
 También se pueden utilizar recursos compartidos SMB basado en Windows; Recursos compartidos de SMB no necesitan estar basada en Linux, siempre y cuando la parte de cliente de Samba está configurada correctamente en el servidor que hospeda Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] y el recurso compartido no tiene derechos de acceso. Para los miembros de un entorno mixto, esto sería una forma de aprovechar la infraestructura existente para Linux-based [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] las implementaciones.
@@ -96,12 +96,12 @@ Las distribuciones de Linux similar a Windows, tienen un firewall integrado. Si 
 | 138         | UDP      | Samba (si se usan): datagrama NetBIOS                                                                                          |
 | 139         | TCP      | Samba (si se usan): sesión de NetBIOS                                                                                           |
 | 445         | TCP      | Samba (si se usan): SMB a través de TCP                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]–; el puerto predeterminado Si lo desea, puede cambiar con`mssql-conf set network.tcpport <portnumber>`                       |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] –; el puerto predeterminado Si lo desea, puede cambiar con`mssql-conf set network.tcpport <portnumber>`                       |
 | 2049        | TCP, UDP | NFS (si se usa)                                                                                                               |
 | 2224        | TCP      | Marcapasos – utilizados por`pcsd`                                                                                                |
 | 3121        | TCP      | Marcapasos: necesario si hay nodos marcapasos remotos                                                                    |
 | 3260        | TCP      | iSCSI del iniciador (si se usan): se puede modificar en `/etc/iscsi/iscsid.config` (RHEL), pero debe coincidir con el puerto de destino iSCSI |
-| 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-usa para un extremo AG; el puerto predeterminado se puede cambiar al crear el punto de conexión                                |
+| 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -usa para un extremo AG; el puerto predeterminado se puede cambiar al crear el punto de conexión                                |
 | 5403        | TCP      | Marcapasos                                                                                                                   |
 | 5404        | UDP      | Marcapasos – requerido Corosync si usa multidifusión UDP                                                                     |
 | 5405        | UDP      | Marcapasos: requeridos por Corosync                                                                                            |
@@ -122,7 +122,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 
 **Documentación del firewall:**
 -   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
--   [SLES GRANDE](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
+-   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Instalar [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] paquetes de disponibilidad
 En basado en Windows [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] instalación, algunos componentes se instalan incluso en una instalación de motor básico, mientras que otros no lo están. En Linux, solo el [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] motor se instala como parte del proceso de instalación. Todo lo demás es opcional. Para alta disponibilidad [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] instancias en Linux, se deben instalar dos paquetes con [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]: [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente (*agente de server mssql*) y el paquete de alta disponibilidad (HA) ( *MSSQL-server-ha*). Mientras [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente es técnicamente opcional, se [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]del programador de trabajos y es obligatorio para el trasvase de registros, por lo que se recomienda la instalación. En las instalaciones basadas en Windows, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente no es opcional.
@@ -156,7 +156,7 @@ En Linux, mientras que cada distribución admitido tiene marcapasos disponibles,
 
 Para obtener documentación completa sobre marcapasos, incluida una explicación más detallada de todo el contenido es con información de referencia completa, para RHEL y SLES:
 -   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-overview-HAAR.html)
--   [SLES GRANDE](https://www.suse.com/documentation/sle_ha/book_sleha/data/book_sleha.html)
+-   [SLES](https://www.suse.com/documentation/sle_ha/book_sleha/data/book_sleha.html)
 
 Ubuntu no tiene una guía para la disponibilidad.
 

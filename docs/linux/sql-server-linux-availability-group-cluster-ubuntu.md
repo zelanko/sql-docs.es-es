@@ -3,8 +3,8 @@ title: "Configurar grupo de disponibilidad de SQL Server del clúster Ubuntu | D
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.date: 03/17/2017
+manager: craigg
+ms.date: 01/30/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: 797cc24d46fc5a51f514508dd35226d07cda74f4
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ac48c6a17ea16ab99774cdeb80cecf726185f68f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurar clúster Ubuntu y grupo de disponibilidad de recursos
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este documento explica cómo crear un clúster de tres nodos en Ubuntu y agregar un grupo de disponibilidad creado anteriormente como un recurso en el clúster. Para lograr alta disponibilidad, un grupo de disponibilidad en Linux requiere tres nodos: vea [alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad](sql-server-linux-availability-group-ha.md).
 
@@ -34,7 +34,7 @@ En las siguientes secciones abordan los pasos necesarios para configurar una sol
 
 ## <a name="roadmap"></a>Roadmap
 
-Los pasos para crear un grupo de disponibilidad en servidores Linux para lograr alta disponibilidad son diferentes de los pasos en un clúster de conmutación por error de Windows Server. En la lista siguiente se describe los pasos de alto niveles: 
+Los pasos para crear un grupo de disponibilidad en servidores Linux para lograr alta disponibilidad son diferentes de los pasos en un clúster de conmutación por error de Windows Server. En la lista siguiente describe los pasos generales: 
 
 1. [Configurar SQL Server en los nodos del clúster](sql-server-linux-setup.md).
 
@@ -139,7 +139,7 @@ El comando siguiente crea un clúster de tres nodos. Antes de ejecutar el script
 
 Los proveedores de clúster marcapasos requieren STONITH esté habilitado y un dispositivo de barrera configurado para una instalación de clúster compatibles. Cuando el Administrador de recursos de clúster no puede determinar el estado de un nodo o de un recurso en un nodo, barrera se utiliza para poner el clúster en un estado conocido de nuevo. Barrera de nivel de recurso principalmente garantiza que no hay ningún daños en los datos en el caso de una interrupción del sistema mediante la configuración de un recurso. Puede usar la barrera de nivel de recurso, por ejemplo, con DRBD (Distributed replican bloque dispositivo) para marcar el disco en un nodo como obsoleto cuando el vínculo de comunicación deja de funcionar. Barrera de nivel de nodo se asegura de que un nodo no ejecuta todos los recursos. Para ello, restablecer el nodo y la implementación de marcapasos del mismo se denomina STONITH (que es el acrónimo "grabar el otro nodo en el encabezado"). Marcapasos admite una gran variedad de dispositivos de la barrera, por ejemplo, una fuente de alimentación ininterrumpida o administración de tarjetas de interfaz de para los servidores. Para obtener más información, consulte [marcapasos clústeres desde el principio](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) y [barrera y Stonith](http://clusterlabs.org/doc/crm_fencing.html) 
 
-Dado que el nivel del nodo Configuración de barrera depende en gran medida en su entorno, se deshabilitará para este tutorial (se puede configurar en un momento posterior). Ejecute el siguiente script en el nodo principal: 
+Dado que el nivel del nodo Configuración de barrera depende en gran medida en su entorno, se deshabilita para este tutorial (se puede configurar en un momento posterior). Ejecute el siguiente script en el nodo principal: 
 
 ```bash
 sudo pcs property set stonith-enabled=false
@@ -160,7 +160,7 @@ sudo pcs property set start-failure-is-fatal=false
 
 
 >[!WARNING]
->Después de una conmutación por error automática, cuando `start-failure-is-fatal = true` el Administrador de recursos intentará iniciar el recurso. Si se produce un error en el primer intento tendrá que ejecutar manualmente `pcs resource cleanup <resourceName>` Liberador de espacio en el recuento de errores de recursos y restablecer la configuración.
+>Después de una conmutación por error automática, cuando `start-failure-is-fatal = true` el Administrador de recursos intenta iniciar el recurso. Si se produce un error en el primer intento tendrá que ejecutar manualmente `pcs resource cleanup <resourceName>` para limpiar el recuento de errores de recursos y restablecer la configuración.
 
 ## <a name="install-sql-server-resource-agent-for-integration-with-pacemaker"></a>Instalar a agente de recursos de SQL Server para la integración con marcapasos
 

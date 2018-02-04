@@ -1,5 +1,5 @@
 ---
-title: sp_add_maintenance_plan_db (Transact-SQL) | Documentos de Microsoft
+title: sp_add_maintenance_plan_db (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_maintenance_plan_db_TSQL
 - sp_add_maintenance_plan_db
-dev_langs: TSQL
-helpviewer_keywords: sp_add_maintenance_plan_db
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_maintenance_plan_db
 ms.assetid: 76f4fefa-5b99-4deb-beed-e198987a45a9
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac70fd615a087acc885d4c561deda2dbc96493f9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e401da48e84b24f2e8fd1f59b4beb9af9f56cc1b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddmaintenanceplandb-transact-sql"></a>sp_add_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +52,10 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@plan_id =**] **'***plan_id***'**  
+ [ **@plan_id =**] **'***plan_id***'**  
  Especifica el identificador del plan del plan de mantenimiento. *plan_id* es **uniqueidentifier**, y debe ser un identificador válido.  
   
- [  **@db_name =**] **'***database_name***'**  
+ [ **@db_name =**] **'***database_name***'**  
  Especifica el nombre de la base de datos que va a agregarse al plan de mantenimiento. La base de datos deberá crearse o bien existir antes de su adición al plan. *database_name* es **sysname**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

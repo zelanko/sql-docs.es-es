@@ -1,5 +1,5 @@
 ---
-title: Sys.DM_OS_SCHEDULERS (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_os_schedulers (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_schedulers_TSQL
 - sys.dm_os_schedulers
 - dm_os_schedulers_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_schedulers dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_schedulers dynamic management view
 ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
-caps.latest.revision: "55"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 738494bb7320248fa8616d381b4424fe0b055414
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: aa32726893d196cc4c2830e79703f5583d661793
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,11 +43,11 @@ ms.lasthandoff: 11/17/2017
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|scheduler_address|**varbinary (8)**|Dirección de memoria del programador. No admite valores NULL.|  
+|scheduler_address|**varbinary(8)**|Dirección de memoria del programador. No admite valores NULL.|  
 |parent_node_id|**int**|Identificador del nodo al que pertenece el programador, también denominado nodo primario. Representa un nodo de acceso de memoria no uniforme (NUMA). No admite valores NULL.|  
 |scheduler_id|**int**|Identificador del programador. Todos los programadores que se utilizan para ejecutar las consultas normales tienen números de identificación inferiores a 1048576. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza internamente todos los programadores con identificadores mayores o iguales que 1048576, como el programador de conexión de administrador dedicada. No admite valores NULL.|  
 |cpu_id|**smallint**|Identificador de CPU asignado al programador.<br /><br /> No admite valores NULL.<br /><br /> **Nota:** 255 no indica ninguna afinidad tal y como se hacía en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Vea [sys.dm_os_threads &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) para información adicional sobre afinidad.|  
-|status|**nvarchar (60)**|Indica el estado del programador. Puede ser uno de los siguientes valores:<br /><br /> -OCULTO EN LÍNEA<br />-OCULTO SIN CONEXIÓN<br />-VISIBLE EN LÍNEA<br />-VISIBLE SIN CONEXIÓN<br />-VISIBLE EN LÍNEA (DAC)<br />-HOT_ADDED<br /><br /> No admite valores NULL.<br /><br /> Los programadores HIDDEN se utilizan para procesar solicitudes internas de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Los programadores VISIBLE se utilizan para procesar solicitudes de usuario.<br /><br /> Los programadores OFFLINE se asignan a procesadores sin conexión en la máscara de afinidad y, por tanto, no se utilizan para procesar solicitudes. Los programadores ONLINE se asignan a procesadores con conexión en la máscara de afinidad y están disponibles para procesar subprocesos.<br /><br /> DAC indica que el programador se está ejecutando con una conexión de administrador dedicada.<br /><br /> HOT ADDED indica los programadores que se agregaron en respuesta a un evento de CPU instalada en cliente.|  
+|status|**nvarchar(60)**|Indica el estado del programador. Puede ser uno de los siguientes valores:<br /><br /> -OCULTO EN LÍNEA<br />-OCULTO SIN CONEXIÓN<br />-VISIBLE EN LÍNEA<br />-VISIBLE SIN CONEXIÓN<br />-VISIBLE EN LÍNEA (DAC)<br />-   HOT_ADDED<br /><br /> No admite valores NULL.<br /><br /> Los programadores HIDDEN se utilizan para procesar solicitudes internas de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Los programadores VISIBLE se utilizan para procesar solicitudes de usuario.<br /><br /> Los programadores OFFLINE se asignan a procesadores sin conexión en la máscara de afinidad y, por tanto, no se utilizan para procesar solicitudes. Los programadores ONLINE se asignan a procesadores con conexión en la máscara de afinidad y están disponibles para procesar subprocesos.<br /><br /> DAC indica que el programador se está ejecutando con una conexión de administrador dedicada.<br /><br /> HOT ADDED indica los programadores que se agregaron en respuesta a un evento de CPU instalada en cliente.|  
 |is_online|**bit**|Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado para utilizar solo algunos de los procesadores disponibles en el servidor, esta configuración puede significar que algunos programadores están asignados a procesadores que no están en la máscara de afinidad. Si así fuera, esta columna devuelve 0. Este valor indica que el programador no se utiliza para procesar consultas o lotes.<br /><br /> No admite valores NULL.|  
 |is_idle|**bit**|1 = El programador está inactivo. No se está ejecutando ningún trabajador. No admite valores NULL.|  
 |preemptive_switches_count|**int**|Número de veces que los trabajadores de este programador han cambiado al modo preferente.<br /><br /> Para ejecutar código situado fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, en procedimientos almacenados extendidos y consultas distribuidas), se tiene que ejecutar un subproceso fuera del control del programador no preferente. Para hacerlo, un trabajador se cambia al modo preferente.|  
@@ -60,11 +63,11 @@ ms.lasthandoff: 11/17/2017
 |yield_count|**int**|Valor interno que se utiliza para indicar el progreso en este programador. El monitor de programadores utiliza este valor para determinar si un trabajador del programador no está generando otros trabajadores a tiempo. Este valor no indica que el trabajador o la tarea se transfirieron a un nuevo trabajador. No admite valores NULL.|  
 |last_timer_activity|**bigint**|En tics de CPU, la última vez que el programador comprobó la cola del temporizador del programador. No admite valores NULL.|  
 |failed_to_create_worker|**bit**|Se establece en 1 si no se pudo crear un trabajador en este programador. Generalmente se produce debido a restricciones de memoria. Acepta valores NULL.|  
-|active_worker_address|**varbinary (8)**|Dirección de memoria del trabajador que está activo actualmente. Acepta valores NULL. Para obtener más información, consulte [sys.dm_os_workers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
-|memory_object_address|**varbinary (8)**|Dirección de memoria del objeto de memoria del programador. No acepta valores NULL.|  
-|task_memory_object_address|**varbinary (8)**|Dirección de memoria del objeto de memoria de la tarea. No admite valores NULL. Para obtener más información, consulte [sys.dm_os_memory_objects &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
+|active_worker_address|**varbinary(8)**|Dirección de memoria del trabajador que está activo actualmente. Acepta valores NULL. Para obtener más información, consulte [sys.dm_os_workers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|memory_object_address|**varbinary(8)**|Dirección de memoria del objeto de memoria del programador. No acepta valores NULL.|  
+|task_memory_object_address|**varbinary(8)**|Dirección de memoria del objeto de memoria de la tarea. No admite valores NULL. Para obtener más información, consulte [sys.dm_os_memory_objects &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Expone el cuanto del programador que utiliza SQLOS.|  
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
   
 ## <a name="permissions"></a>Permissions  
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   

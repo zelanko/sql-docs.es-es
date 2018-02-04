@@ -3,7 +3,7 @@ title: "Especificación de copia de seguridad de VDI, SQL Server en Linux | Docu
 description: "Especificación de interfaz de dispositivo Virtual de copia de seguridad de SQL Server."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
-ms.openlocfilehash: 31fc2a5d96f38cbbcd0c4b616bcfc75c552c1340
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: fc2fa01902fee76b85c4b348d701166845a6d95e
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server en el cliente de Linux VDI especificación de SDK
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este documento tratan las interfaces proporcionadas por SQL Server en el SDK del cliente de dispositivo virtual (VDI) de la interfaz de Linux. Proveedores de software independientes (ISV) pueden usar el Virtual copia de seguridad de dispositivo aplicación interfaz de programación (API) para integrar SQL Server en sus productos. En general, VDI en Linux se comporta de forma similar a VDI en Windows con los cambios siguientes:
 
@@ -110,7 +110,7 @@ En este capítulo se incluyen descripciones de cada una de las funciones de clie
 
 | Parámetros | Argumento | Explicación
 | ----- | ----- | ------ |
-| | **tiempo de espera** | Este es el tiempo de espera en milisegundos. Usar infinito o un número entero negativo para evitar el tiempo de espera.
+| | **timeout** | Este es el tiempo de espera en milisegundos. Usar infinito o un número entero negativo para evitar el tiempo de espera.
 | | **cfg** | Tras la ejecución correcta, contiene la configuración seleccionada por el servidor. Para obtener más información, consulte "Configuración" más adelante en este documento.
 
 | Valores devueltos | Argumento | Explicación
@@ -165,7 +165,7 @@ Si esta función no se realiza correctamente, se devuelve un valor null a travé
 
 | Parámetros | Argumento | Explicación
 | ----- | ----- | ------ |
-| |**tiempo de espera** |Se trata de tiempo de espera, en milisegundos. Utilice INFINTE para esperar indefinidamente. Use 0 para sondear en busca de un comando. Si no hay ningún comando está actualmente disponible, se devuelve VD_E_TIMEOUT. Si se produce el tiempo de espera, el cliente decide la siguiente acción.
+| |**timeout** |Se trata de tiempo de espera, en milisegundos. Utilice INFINTE para esperar indefinidamente. Use 0 para sondear en busca de un comando. Si no hay ningún comando está actualmente disponible, se devuelve VD_E_TIMEOUT. Si se produce el tiempo de espera, el cliente decide la siguiente acción.
 | |**Timeout** |Se trata de tiempo de espera, en milisegundos. Utilice INFINTE o un valor negativo para esperar indefinidamente. Use 0 para sondear en busca de un comando. Si no hay ningún comando está disponible antes de que expire el tiempo de espera, se devuelve VD_E_TIMEOUT. Si se produce el tiempo de espera, el cliente decide la siguiente acción.
 | |**ppCmd** |Cuando un comando se devuelve correctamente, el parámetro devuelve la dirección de un comando para ejecutar. La memoria devuelta es de solo lectura. Cuando se completa el comando, este puntero se pasa a la rutina CompleteCommand. Para obtener más información acerca de cada comando, vea "Comandos" más adelante en este documento.
         
@@ -199,7 +199,7 @@ Cuando esta rutina se debe bloquear para esperar un comando, el subproceso se de
 | |**pCmd** |Se trata de la dirección de un comando devuelto anteriormente desde ClientVirtualDevice::GetCommand.
 | |**completionCode** |Se trata de un código de estado que indica el estado de finalización. Este parámetro se debe devolver para todos los comandos. El código devuelto debe ser adecuado para el comando que se está realizando. ERROR_SUCCESS se utiliza en todos los casos para denotar un comando ejecutado correctamente. Para obtener la lista completa de los posibles códigos, vea el archivo vdierror.h. Aparece una lista de códigos de estado típico para cada comando en "Comandos" más adelante en este documento.
 | |**bytesTransferred** |Este es el número de bytes transferidos correctamente. Esto solo se devuelve para transferencia de datos de comandos de lectura y escritura.
-| |**posición** |Se trata de una respuesta al comando GetPosition solo.
+| |**position** |Se trata de una respuesta al comando GetPosition solo.
         
 | Valores devueltos | Argumento | Explicación
 | ----- | ----- | ------ |
@@ -222,7 +222,7 @@ Cuando esta rutina se debe bloquear para esperar un comando, el subproceso se de
 
 | Parámetros | Argumento | Explicación
 | ----- | ----- | ------ |
-| |Ninguno | No aplicable
+| |None | No aplicable
         
 | Valores devueltos | Argumento | Explicación
 | ----- | ----- | ------ |
@@ -242,7 +242,7 @@ Cuando esta rutina se debe bloquear para esperar un comando, el subproceso se de
 
 | Parámetros | Argumento | Explicación
 | ----- | ----- | ------ |
-| |Ninguno |No aplicable
+| |None |No aplicable
         
 | Valores devueltos | Argumento | Explicación
 | ----- | ----- | ------ |

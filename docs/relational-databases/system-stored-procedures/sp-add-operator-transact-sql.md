@@ -1,5 +1,5 @@
 ---
-title: sp_add_operator (Transact-SQL) | Documentos de Microsoft
+title: sp_add_operator (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_operator
 - sp_add_operator_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_add_operator
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_operator
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc0807d00d85fcdb9f41d4cf13b696bff7566d7a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 534a5b973d0d35d660a07fc85bb8c7934f13a5c5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddoperator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +65,7 @@ sp_add_operator [ @name = ] 'name'
  [  **@enabled=** ] *habilitado*  
  Indica el estado actual del operador. *habilitado* es **tinyint**, su valor predeterminado es **1** (habilitado). Si **0**, el operador no está habilitado y no recibe notificaciones.  
   
- [  **@email_address=** ] **'***email_address***'**  
+ [ **@email_address=** ] **'***email_address***'**  
  La dirección de correo electrónico del operador. Esta cadena se pasa directamente al sistema de correo electrónico. *Email_Address* es **nvarchar (100)**, su valor predeterminado es null.  
   
  Puede especificar una dirección de correo electrónico física o un alias para *email_address*. Por ejemplo:  
@@ -72,31 +75,31 @@ sp_add_operator [ @name = ] 'name'
 > [!NOTE]  
 >  Debe utilizar la dirección de correo electrónico para Correo electrónico de base de datos.  
   
- [  **@pager_address=** ] **'***pager_address***'**  
+ [ **@pager_address=** ] **'***pager_address***'**  
  La dirección del buscapersonas del operador. Esta cadena se pasa directamente al sistema de correo electrónico. *pager_address* es **narchar(100)**, su valor predeterminado es null.  
   
- [  **@weekday_pager_start_time=** ] *weekday_pager_start_time*  
+ [ **@weekday_pager_start_time=** ] *weekday_pager_start_time*  
  Hora a partir de la cual el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envía una notificación mediante buscapersonas al operador especificado los días laborables, de lunes a viernes. *weekday_pager_start_time*es **int**, su valor predeterminado es **090000**, lo que indica 9:00 A.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
- [  **@weekday_pager_end_time=** ] *weekday_pager_end_time*  
+ [ **@weekday_pager_end_time=** ] *weekday_pager_end_time*  
  El tiempo después del cual **SQLServerAgent** servicio deja de enviar una notificación por buscapersonas al operador especificado los días laborables, del lunes al viernes. *weekday_pager_end_time*es **int**, su valor predeterminado es 180000, lo que indica las 6:00 p. M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
- [  **@saturday_pager_start_time =**] *saturday_pager_start_time*  
+ [ **@saturday_pager_start_time =**] *saturday_pager_start_time*  
  El tiempo después del cual **SQLServerAgent** servicio envía una notificación por buscapersonas al operador especificado los sábados. *saturday_pager_start_time* es **int**, su valor predeterminado es 090000, lo que indica 9:00 A.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
- [  **@saturday_pager_end_time=** ] *saturday_pager_end_time*  
+ [ **@saturday_pager_end_time=** ] *saturday_pager_end_time*  
  El tiempo después del cual **SQLServerAgent** servicio ya no envía una notificación por buscapersonas al operador especificado los sábados. *saturday_pager_end_time*es **int**, su valor predeterminado es **180000**, que indica las 6:00 P.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
- [  **@sunday_pager_start_time=** ] *sunday_pager_start_time*  
+ [ **@sunday_pager_start_time=** ] *sunday_pager_start_time*  
  El tiempo después del cual **SQLServerAgent** servicio envía una notificación por buscapersonas al operador especificado los domingos. *sunday_pager_start_time*es **int**, su valor predeterminado es **090000**, lo que indica 9:00 A.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
- [  **@sunday_pager_end_time =**] *sunday_pager_end_time*  
+ [ **@sunday_pager_end_time =**] *sunday_pager_end_time*  
  El tiempo después del cual **SQLServerAgent** servicio ya no envía una notificación por buscapersonas al operador especificado los domingos. *sunday_pager_end_time*es **int**, su valor predeterminado es **180000**, que indica las 6:00 P.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
  [  **@pager_days=** ] *pager_days*  
  Es un número que indica los días que el operador está disponible para recibir avisos de localización (de acuerdo con las horas de inicio y fin especificadas). *pager_days*es **tinyint**, su valor predeterminado es **0** que indica el operador no está nunca disponible para recibir un aviso. Los valores válidos son de **0** a través de **127**. *pager_days*se calcula sumando los valores individuales de los días necesarios. Por ejemplo, del lunes al viernes es **2**+**4**+**8**+**16** + **32** = **62**. En la siguiente tabla se incluye el valor para cada día de la semana.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Domingo|  
 |**2**|Lunes|  
@@ -116,7 +119,7 @@ sp_add_operator [ @name = ] 'name'
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Ninguno  
+ None  
   
 ## <a name="remarks"></a>Comentarios  
  **sp_add_operator** se debe ejecutar desde la **msdb** base de datos.  
@@ -147,9 +150,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [sp_delete_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_help_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_update_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+ [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
+ [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

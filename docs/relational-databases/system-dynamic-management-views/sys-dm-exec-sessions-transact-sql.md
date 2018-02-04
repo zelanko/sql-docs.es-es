@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_sessions
 - dm_exec_sessions
 - sys.dm_exec_sessions_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_sessions dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_sessions dynamic management view
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
-caps.latest.revision: "60"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5e0cd35b044d4a5016442ddae4384aea094cc655
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: aa248e9733c17b734eb60095f65b462e42e8b0c7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +52,7 @@ ms.lasthandoff: 01/18/2018
 |client_version|**int**|Versión del protocolo TDS de la interfaz utilizada por el cliente para conectarse al servidor. El valor es NULL para las sesiones internas. Acepta valores NULL.|  
 |client_interface_name|**nvarchar(32)**|Nombre de biblioteca/controlador utilizada por el cliente para comunicarse con el servidor. El valor es NULL para las sesiones internas. Acepta valores NULL.|  
 |security_id|**varbinary(85)**|Identificador de seguridad de Microsoft Windows asociado al inicio de sesión. No admite valores NULL.|  
-|login_name|**nvarchar(128)**|Nombre de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se está ejecutando la sesión. Para saber qué nombre de inicio de sesión original ha creado la sesión, vea original_login_name. Puede ser un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autentica el nombre de inicio de sesión o un nombre de usuario de dominio autenticado de Windows. No admite valores NULL.|  
+|login_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nombre de inicio de sesión en la que se está ejecutando la sesión. Para saber qué nombre de inicio de sesión original ha creado la sesión, vea original_login_name. Puede ser un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autentica el nombre de inicio de sesión o un nombre de usuario de dominio autenticado de Windows. No admite valores NULL.|  
 |nt_domain|**nvarchar(128)**|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Dominio de Windows para el cliente si la sesión utiliza la autenticación de Windows o una conexión de confianza. Este valor es NULL para las sesiones internas y los usuarios que no son del dominio. Acepta valores NULL.|  
 |nt_user_name|**nvarchar(128)**|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nombre de usuario de Windows para el cliente si la sesión utiliza la autenticación de Windows o una conexión de confianza. Este valor es NULL para las sesiones internas y los usuarios que no son del dominio. Acepta valores NULL.|  
 |status|**nvarchar(30)**|Estado de la sesión. Valores posibles:<br /><br /> **Ejecuta** -ejecutando una o varias solicitudes actualmente<br /><br /> **En modo de suspensión** -no hay solicitudes en ejecución actualmente<br /><br /> **Inactivo** : sesión se ha restablecido debido a la agrupación de conexiones y ahora está en estado de inicio de sesión previo.<br /><br /> **Preconnect** -sesión está en el clasificador del regulador de recursos.<br /><br /> No admite valores NULL.|  
@@ -82,8 +85,8 @@ ms.lasthandoff: 01/18/2018
 |deadlock_priority|**int**|Valor de DEADLOCK_PRIORITY para la sesión. No admite valores NULL.|  
 |row_count|**bigint**|Número de filas devueltas en la sesión hasta este momento. No admite valores NULL.|  
 |prev_error|**int**|Identificador del último error devuelto en la sesión. No admite valores NULL.|  
-|original_security_id|**varbinary(85)**|Identificador de seguridad de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows asociado al original_login_name. No admite valores NULL.|  
-|original_login_name|**nvarchar(128)**|Nombre de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que el cliente usó para crear esta sesión. Puede ser un nombre de inicio de sesión autenticado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un nombre de usuario de dominio autenticado en Windows o un usuario de base de datos independiente. Tenga en cuenta que, después de la conexión inicial, la sesión puede haber pasado por muchos cambios de contexto implícitos o explícitos. Por ejemplo, si [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) se utiliza. No admite valores NULL.|  
+|original_security_id|**varbinary(85)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Identificador de seguridad de Windows que está asociado al original_login_name. No admite valores NULL.|  
+|original_login_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nombre de inicio de sesión que usa el cliente para crear esta sesión. Puede ser un nombre de inicio de sesión autenticado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un nombre de usuario de dominio autenticado en Windows o un usuario de base de datos independiente. Tenga en cuenta que, después de la conexión inicial, la sesión puede haber pasado por muchos cambios de contexto implícitos o explícitos. Por ejemplo, si [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) se utiliza. No admite valores NULL.|  
 |last_successful_logon|**datetime**|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Hora del último inicio de sesión correcto para original_login_name con anterioridad al inicio de sesión actual.|  
 |last_unsuccessful_logon|**datetime**|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Hora del último intento de inicio de sesión incorrecto para original_login_name con anterioridad al inicio de sesión actual.|  
 |unsuccessful_logons|**bigint**|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número de intentos de inicio de sesión incorrectos para original_login_name entre last_successful_logon y login_time.|  
@@ -91,7 +94,7 @@ ms.lasthandoff: 01/18/2018
 |database_id|**smallint**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Identificador de la base de datos actual para cada sesión.|  
 |authenticating_database_id|**int**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Identificador de la base de datos que autentica la entidad de seguridad. Para los inicios de sesión, el valor será 0. Para los usuarios de base de datos independiente, el valor será el identificador de base de datos de la base de datos independiente.|  
 |open_transaction_count|**int**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número de transacciones abiertas por sesión.|  
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
   
 ## <a name="permissions"></a>Permissions  
 Todos pueden ver su propia información de sesión.  

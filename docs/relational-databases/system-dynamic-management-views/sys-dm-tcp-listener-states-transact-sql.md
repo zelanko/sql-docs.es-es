@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_tcp_listener_states (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_tcp_listener_states (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - dm_tcp_listener_states
 - sys.dm_tcp_listener_states_TSQL
 - dm_tcp_listener_states_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - Availability Groups [SQL Server], listeners
 - sys.dm_tcp_listener_states dynamic management view
 ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d111ae8b610ca54516181fa6cfd6492b45d23211
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7ec759f668da3ce03d084469efad795eb55140d5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmtcplistenerstates-transact-sql"></a>sys.dm_tcp_listener_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +46,12 @@ ms.lasthandoff: 11/17/2017
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**listener_id**|**int**|Identificador interno del agente de escucha. No admite valores NULL.<br /><br /> Clave principal.|  
-|**dirección_IP**|**nvarchar48**|La dirección IP del agente de escucha que está en línea y que está siendo objeto de escucha actualmente. Se permite IPv4 e IPv6. Si un agente de escucha posee ambos tipos de direcciones, se enumeran por separado. Un carácter comodín IPv4, se muestra como “0.0.0.0”. Un carácter comodín IPv6, se muestra como “::”.<br /><br /> No admite valores NULL.|  
+|**ip_address**|**nvarchar48**|La dirección IP del agente de escucha que está en línea y que está siendo objeto de escucha actualmente. Se permite IPv4 e IPv6. Si un agente de escucha posee ambos tipos de direcciones, se enumeran por separado. Un carácter comodín IPv4, se muestra como “0.0.0.0”. Un carácter comodín IPv6, se muestra como “::”.<br /><br /> No admite valores NULL.|  
 |**is_ipv4**|**bit**|Tipo de dirección IP<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
 |**port**|**int**|Número de puerto en el que escucha el agente de escucha. No admite valores NULL.|  
-|**tipo**|**tinyint**|Tipo de agente de escucha, uno de los siguientes:<br /><br /> 0 = [!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = Service Broker<br /><br /> 2 = Creación de reflejo de base de datos<br /><br /> No admite valores NULL.|  
-|**type_desc**|**nvarchar (20)**|Descripción de la **tipo**, uno de:<br /><br /> TSQL<br /><br /> SERVICE_BROKER<br /><br /> DATABASE_MIRRORING<br /><br /> No admite valores NULL.|  
-|**estado**|**tinyint**|Estado del agente de escucha del grupo de disponibilidad, uno de los siguientes:<br /><br /> 1 = En línea. El agente de escucha está escuchando y procesando solicitudes.<br /><br /> 2 = Pendiente de reiniciarse. El agente de escucha está sin conexión, pendiente de un reinicio.<br /><br /> Si el agente de escucha del grupo de disponibilidad está escuchando en el mismo puerto que la instancia de servidor, estos dos agentes de escucha tienen siempre el mismo estado.<br /><br /> No admite valores NULL.<br /><br /> Nota: Los valores de esta columna proceden del objeto TSD_listener. La columna no es compatible con un estado sin conexión porque cuando el TDS_listener está sin conexión, no se puede consultar para estado.|  
+|**Tipo**|**tinyint**|Tipo de agente de escucha, uno de los siguientes:<br /><br /> 0 = [!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = Service Broker<br /><br /> 2 = Creación de reflejo de base de datos<br /><br /> No admite valores NULL.|  
+|**type_desc**|**nvarchar(20)**|Descripción de la **tipo**, uno de:<br /><br /> TSQL<br /><br /> SERVICE_BROKER<br /><br /> DATABASE_MIRRORING<br /><br /> No admite valores NULL.|  
+|**state**|**tinyint**|Estado del agente de escucha del grupo de disponibilidad, uno de los siguientes:<br /><br /> 1 = En línea. El agente de escucha está escuchando y procesando solicitudes.<br /><br /> 2 = Pendiente de reiniciarse. El agente de escucha está sin conexión, pendiente de un reinicio.<br /><br /> Si el agente de escucha del grupo de disponibilidad está escuchando en el mismo puerto que la instancia de servidor, estos dos agentes de escucha tienen siempre el mismo estado.<br /><br /> No admite valores NULL.<br /><br /> Nota: Los valores de esta columna proceden del objeto TSD_listener. La columna no es compatible con un estado sin conexión porque cuando el TDS_listener está sin conexión, no se puede consultar para estado.|  
 |**state_desc**|**nvarchar(16)**|Descripción de **estado**, uno de:<br /><br /> ONLINE<br /><br /> PENDING_RESTART<br /><br /> No admite valores NULL.|  
 |**start_time**|**datetime**|Marca de tiempo que indica cuándo se inició el agente de escucha. No admite valores NULL.|  
   

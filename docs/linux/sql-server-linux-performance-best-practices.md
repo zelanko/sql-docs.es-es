@@ -3,7 +3,7 @@ title: "Prácticas recomendadas de rendimiento para SQL Server en Linux | Docume
 description: En este tema se proporcionan instrucciones y procedimientos recomendados para ejecutar SQL Server 2017 en Linux.
 author: rgward
 ms.author: bobward
-manager: jhubbard
+manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: c4de3f861a994ebe2476008146be810e7a2e2500
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+ms.openlocfilehash: 565ede5c15f6e4e34a7a5cbbdcd6fa7d145c8ff5
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>Prácticas recomendadas de rendimiento y directrices de configuración para SQL Server 2017 en Linux
 
@@ -64,7 +64,7 @@ Estos son los recomendados rendimiento relacionados con el máximo de configurac
 
 En la tabla siguiente proporciona recomendaciones para la configuración de la CPU:
 
-| Configuración | Valor | Más información |
+| Configuración | Value | Más información |
 |---|---|---|
 | Regulador de frecuencia de CPU | rendimiento | Consulte la **cpupower** comando |
 | ENERGY_PERF_BIAS | rendimiento | Consulte la **x86_energy_perf_policy** comando |
@@ -73,10 +73,10 @@ En la tabla siguiente proporciona recomendaciones para la configuración de la C
 
 En la tabla siguiente proporciona recomendaciones para la configuración de disco:
 
-| Configuración | Valor | Más información |
+| Configuración | Value | Más información |
 |---|---|---|
 | lectura anticipada de disco | 4096 | Consulte la **blockdev** comando |
-| configuración de sysctl | kernel.sched_min_granularity_ns = 10000000.<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>VM.dirty_ratio = 40<br/>VM.dirty_background_ratio = 10<br/>VM.swappiness=10 | Consulte la **sysctl** comando |
+| configuración de sysctl | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | Consulte la **sysctl** comando |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>Kernel configuración automática numa equilibrio para sistemas de varios nodos NUMA
 

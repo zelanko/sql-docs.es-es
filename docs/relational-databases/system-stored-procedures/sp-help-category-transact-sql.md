@@ -1,5 +1,5 @@
 ---
-title: sp_help_category (Transact-SQL) | Documentos de Microsoft
+title: sp_help_category (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_category
 - sp_help_category_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efec4c1ef04ef95e74ef13479b5f51cfe2d84bdb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: debc3b8cef2aeb0a9f4893ff5e9287a2a5fdd016
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +49,19 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@class=**] **'***clase***'**  
+ [ **@class=**] **'***class***'**  
  La clase sobre la que se solicita información. *clase* es **varchar (8)**, con un valor predeterminado de **trabajo**. *clase* puede ser uno de estos valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**TRABAJO**|Proporciona información acerca de una categoría de trabajo.|  
-|**ALERTA**|Proporciona información acerca de una categoría de alerta.|  
+|**JOB**|Proporciona información acerca de una categoría de trabajo.|  
+|**ALERT**|Proporciona información acerca de una categoría de alerta.|  
 |**OPERADOR**|Proporciona información acerca de una categoría de operador.|  
   
  [  **@type=** ] **'***tipo***'**  
  Tipo de categoría cuya información se solicita. *tipo de* es **varchar (12)**, su valor predeterminado es null y puede tener uno de estos valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**LOCAL**|Categoría de trabajo local.|  
 |**MULTI-SERVIDOR**|Categoría de trabajo multiservidor.|  
@@ -67,7 +70,7 @@ sp_help_category [ [ @class = ] 'class' ]
  [  **@name=** ] **'***nombre***'**  
  Nombre de la categoría cuya información se solicita. *nombre* es **sysname**, su valor predeterminado es null.  
   
- [  **@suffix=** ] *sufijo*  
+ [ **@suffix=** ] *suffix*  
  Especifica si el **category_type** columna del conjunto de resultados es un identificador o un nombre. *sufijo* es **bits**, su valor predeterminado es **0**. **1** muestra la **category_type** como un nombre, y **0** muestra como un identificador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -79,7 +82,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Id. de categoría|  
-|**category_type**|**tinyint**|Tipo de categoría:<br /><br /> **1** = local<br /><br /> **2** = multiservidor<br /><br /> **3** = ninguno|  
+|**category_type**|**tinyint**|Tipo de categoría:<br /><br /> **1** = Local<br /><br /> **2** = Multiserver<br /><br /> **3** = ninguno|  
 |**Nombre**|**sysname**|Nombre de la categoría|  
   
  Cuando  **@suffix**  es **1**, **sp_help_category** devuelve el siguiente conjunto de resultados:  
@@ -134,9 +137,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [sp_add_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_update_category &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

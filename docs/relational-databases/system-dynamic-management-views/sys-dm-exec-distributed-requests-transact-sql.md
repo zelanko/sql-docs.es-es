@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_distributed_requests (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_exec_distributed_requests (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,32 +8,34 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DM_EXEC_DISTRIBUTED_REQUESTS
 - DM_EXEC_DISTRIBUTED_REQUESTS_TSQL
 - SYS.DM_EXEC_DISTRIBUTED_REQUESTS_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PolyBase,views
 - sys.dm_exec_distributed_sql_requests management view
 - PolyBase
 - dm_exec_distributed_sql_requests management view
 ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
-caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 39b16d051c3300599a220f4f2ce21904db208571
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 539bf6f6e4df5860977fdd0703a9bc11a5923d31
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmexecdistributedrequests-transact-sql"></a>Sys.dm_exec_distributed_requests (Transact-SQL)
+# <a name="sysdmexecdistributedrequests-transact-sql"></a>sys.dm_exec_distributed_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Contiene información sobre todas las solicitudes actualmente o que recientemente activas en las consultas de PolyBase. Muestra una fila por cada solicitud o consulta.  
@@ -43,8 +45,8 @@ ms.lasthandoff: 11/17/2017
 |Nombre de la columna|Tipo de datos|Description|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |sql_handle|**varbinary(64)**|Clave para esta vista. Identificador numérico único asociado a la solicitud.|Único en todas las solicitudes en el sistema.|  
-|execution_id|**nvarchar (32**|Identificador numérico único asociado a la sesión en el que se ejecute esta consulta.||  
-|status|**nvarchar (32**|Estado actual de la solicitud.|'Pendiente', 'Autorizar', 'AcquireSystemResources', 'Initializing', 'Plan', 'Análisis', 'AquireResources', 'Ejecutando', 'Cancelar', 'Complete', 'Error', 'Cancelar'.|  
+|execution_id|**nvarchar(32**|Identificador numérico único asociado a la sesión en el que se ejecute esta consulta.||  
+|status|**nvarchar(32**|Estado actual de la solicitud.|'Pending', 'Authorizing', 'AcquireSystemResources', 'Initializing', 'Plan', 'Parsing', 'AquireResources', 'Running', 'Cancelling', 'Complete', 'Failed', 'Cancelled'.|  
 |error_id|**nvarchar(36)**|Identificador único del error asociado a la solicitud, si lo hay.|Se establece en NULL si se ha producido ningún error.|  
 |start_time|**datetime**|Hora en que se inició la ejecución de la solicitud.|0 para las solicitudes en cola; de lo contrario, válido datetime menor o igual a la hora actual.|  
 |end_time|**datetime**|Hora en que completó el motor de compilación de la solicitud.|NULL para las solicitudes en cola o activas; en caso contrario, un valor datetime válido menor o igual a la hora actual.|  

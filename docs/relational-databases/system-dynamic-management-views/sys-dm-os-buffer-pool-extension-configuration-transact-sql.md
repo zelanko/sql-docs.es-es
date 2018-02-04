@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_buffer_pool_extension_configuration (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_os_buffer_pool_extension_configuration (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/08/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_buffer_pool_extension_configuration_TSQL
 - dm_os_buffer_pool_extension_configuration_TSQL
 - sys.dm_os_buffer_pool_extension_configuration
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_buffer_pool_extension_configuration dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_buffer_pool_extension_configuration dynamic management view
 ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d0f473b0e871f0df6ce84830e42caaf29bd21c3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d9762b7b907c024807f93334f8dd9dd9b3521b66
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosbufferpoolextensionconfiguration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|ruta de acceso|**nvarchar**(256)|Ruta y nombre de archivo de la memoria caché de la extensión del grupo de búferes. Acepta valores NULL.|  
+|path|**nvarchar**(256)|Ruta y nombre de archivo de la memoria caché de la extensión del grupo de búferes. Acepta valores NULL.|  
 |file_id|**int**|Identificador del archivo de la extensión del grupo de búferes. No admite valores NULL.|  
 |state|**int**|Estado de la característica de extensión del grupo de búferes. No admite valores NULL.<br /><br /> 0: extensión del grupo de búferes deshabilitada<br /><br /> 1: deshabilitando extensión del grupo de búferes<br /><br /> 2: reservado para uso futuro<br /><br /> 3: habilitando extensión del grupo de búferes<br /><br /> 4: reservado para uso futuro<br /><br /> 5: extensión del grupo de búferes habilitada|  
 |state_description|**nvarchar**(60)|Describe el estado de la característica de extensión del grupo de búferes. Acepta valores NULL.<br /><br /> 0 = EXTENSIÓN DEL GRUPO DE BÚFERES DESHABILITADA<br /><br /> 1 = EXTENSIÓN DEL GRUPO DE BÚFERES HABILITADA|  
@@ -70,6 +73,6 @@ WHERE is_in_bpool_extension <> 0
   
 ## <a name="see-also"></a>Vea también  
  [Extensión del grupo de búferes](../../database-engine/configure-windows/buffer-pool-extension.md)   
- [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
+ [Sys.dm_os_buffer_descriptors &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
   
   

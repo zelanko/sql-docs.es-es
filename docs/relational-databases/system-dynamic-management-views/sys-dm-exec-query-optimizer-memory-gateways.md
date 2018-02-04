@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL) | Microsoft Docs
 description: "Devuelve el estado actual de semáforos de recursos que se utiliza para acelerar la optimización de consultas simultáneas"
 ms.custom: 
 ms.date: 04/06/2017
@@ -9,7 +9,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,19 +18,21 @@ f1_keywords:
 - dm_exec_query_optimizer_memory_gateways
 - sys.dm_exec_query_optimizer_memory_gateways_TSQL
 - sys.dm_exec_query_optimizer_memory_gateways
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_optimizer_memory_gateways dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_optimizer_memory_gateways dynamic management view
 author: josack
 ms.author: josack
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf31a066798e1c88d0d6d475edda87f2df08ba05
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b65e22d1cd2f403e2ed3aa1bd1dc14faa90079b9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>Sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
+# <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Devuelve el estado actual de semáforos de recursos que se utiliza para acelerar la optimización de consultas simultáneas.
@@ -38,11 +41,11 @@ Devuelve el estado actual de semáforos de recursos que se utiliza para acelerar
 |----------|---------------|-----------------|  
 |**pool_id**|**int**|Id. de grupo de recursos en el regulador de recursos|  
 |**Nombre**|**sysname**|Compile el nombre de la puerta (pequeña puerta de enlace, mediano, grande puerta de enlace)|
-|**número máximo**|**int**|El recuento máximo configurado de compilaciones simultáneas|
+|**max_count**|**int**|El recuento máximo configurado de compilaciones simultáneas|
 |**active_count**|**int**|El número activo actualmente de compilaciones en esta puerta|
 |**waiter_count**|**int**|El número de esperas en esta puerta|
 |**threshold_factor**|**bigint**|Factor de umbral que define la parte de memoria máxima utilizada por la optimización de consultas.  La puerta de enlace pequeño, threshold_factor indica el uso de memoria del optimizador máximo en bytes para una consulta antes de que sea necesario para obtener un acceso en la puerta de enlace pequeño.  La puerta de enlace de mediano y grande, threshold_factor muestra la parte de la memoria total del servidor disponible para esta puerta. Se utiliza como un divisor al calcular el umbral de uso de memoria para la puerta.|
-|**umbral**|**bigint**|Memoria de umbral siguiente en bytes.  La consulta debe tener un acceso a esta puerta de enlace si su consumo de memoria alcanza este límite.  "-1" si la consulta no es necesaria para obtener un acceso a esta puerta de enlace.|
+|**threshold**|**bigint**|Memoria de umbral siguiente en bytes.  La consulta debe tener un acceso a esta puerta de enlace si su consumo de memoria alcanza este límite.  "-1" si la consulta no es necesaria para obtener un acceso a esta puerta de enlace.|
 |**is_active**|**bit**|Si la consulta tiene que pasar la puerta actual o no.|
 
 

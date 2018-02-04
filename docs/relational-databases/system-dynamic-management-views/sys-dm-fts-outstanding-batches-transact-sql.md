@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_fts_outstanding_batches (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_fts_outstanding_batches (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/29/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_fts_outstanding_batches_TSQL
 - sys.dm_fts_outstanding_batches_TSQL
 - sys.dm_fts_outstanding_batches
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - troubleshooting [SQL Server], full-text search
 - sys.dm_fts_outstanding_batches dynamic management view
 ms.assetid: c4d697ed-c906-4c28-b137-036a25e13c84
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab9d21dfa1c3aefb34f59dde7d4af5141e483682
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 06490fd099957c3636f05dcfe4e8f0ba9deab8d3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsoutstandingbatches-transact-sql"></a>sys.dm_fts_outstanding_batches (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,9 +45,9 @@ ms.lasthandoff: 11/17/2017
 |catalog_id|**int**|Id. del catálogo de texto completo|  
 |table_id|**int**|Id. del identificador de tabla que contiene el índice de texto completo.|  
 |batch_id|**int**|Identificador de lote|  
-|memory_address|**varbinary (8)**|Dirección de memoria del objeto de lote.|  
-|crawl_memory_address|**varbinary (8)**|Dirección de memoria del objeto de rastreo (objeto primario)|  
-|memregion_memory_address|**varbinary (8)**|Dirección del área de memoria de la memoria compartida saliente del host de demonio del filtro (fdhost.exe)|  
+|memory_address|**varbinary(8)**|Dirección de memoria del objeto de lote.|  
+|crawl_memory_address|**varbinary(8)**|Dirección de memoria del objeto de rastreo (objeto primario)|  
+|memregion_memory_address|**varbinary(8)**|Dirección del área de memoria de la memoria compartida saliente del host de demonio del filtro (fdhost.exe)|  
 |hr_batch|**int**|Código de error más reciente del lote|  
 |is_retry_batch|**bit**|Indica si el lote es un lote de reintento:<br /><br /> 0 = No<br /><br /> 1 = Sí|  
 |retry_hints|**int**|Tipo de reintento requerido para el lote:<br /><br /> 0 = Sin reintento<br /><br /> 1 = Reintento de varios subprocesos<br /><br /> 2 = Reintento de subproceso único<br /><br /> 3 = Reintento de subproceso único y de varios subprocesos<br /><br /> 5 = Reintento final de varios subprocesos<br /><br /> 6 = Reintento final de subproceso único<br /><br /> 7 = Reintento final de subproceso único y de varios subprocesos|  

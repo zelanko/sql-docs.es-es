@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_principalprofile_sp (Transact-SQL) | Documentos de Microsoft
+title: sysmail_help_principalprofile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/02/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_principalprofile_sp_TSQL
 - sysmail_help_principalprofile_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_help_principalprofile_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_help_principalprofile_sp
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 322984b88e879adb952a1168b17178b8ffe20ae2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 54763594122216c14ef8b74f17fbc83919ea44fc
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailhelpprincipalprofilesp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +48,13 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@principal_id=** ] *principal_id*  
+ [ **@principal_id=** ] *principal_id*  
  Es el identificador de usuario de base de datos o del rol en el **msdb** base de datos para la asociación a la lista. *principal_id* es **int**, su valor predeterminado es null. Cualquier *principal_id* o *principal_name* se puede especificar.  
   
  [  **@principal_name=** ] **'***principal_name***'**  
  Es el nombre del usuario de base de datos o del rol en el **msdb** base de datos para la asociación a la lista. *principal_name* es **sysname**, su valor predeterminado es null. Cualquier *principal_id* o *principal_name* se puede especificar.  
   
- [  **@profile_id=** ] *profile_id*  
+ [ **@profile_id=** ] *profile_id*  
  Es el identificador del perfil para la asociación que se va a mostrar. *profile_id* es **int**, su valor predeterminado es null. Cualquier *profile_id* o *profile_name* se puede especificar.  
   
  [  **@profile_name=** ] **'***profile_name***'**  

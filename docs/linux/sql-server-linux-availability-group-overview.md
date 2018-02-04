@@ -3,7 +3,7 @@ title: Grupos de disponibilidad AlwaysOn para SQL Server en Linux | Documentos d
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
-ms.openlocfilehash: 3c708d4e06f32515b96b22099990007d58db20f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d7f9dec114fd17025081c4a139537b11dd4fde45
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Grupos de disponibilidad AlwaysOn en Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este artículo describen las características de grupos de disponibilidad AlwaysOn (AG) en Linux-based [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] las instalaciones. También se tratan las diferencias entre Linux - y clúster de conmutación por error de Windows Server (WSFC)-según grupos de disponibilidad. Consulte la [documentación basada en Windows](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) para los aspectos básicos de grupos de disponibilidad, como funcionan igual en Windows y Linux excepto el WSFC.
 

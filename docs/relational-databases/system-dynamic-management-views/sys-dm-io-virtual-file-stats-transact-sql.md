@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_io_virtual_file_stats (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_io_virtual_file_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_io_virtual_file_stats_TSQL
 - sys.dm_io_virtual_file_stats
 - dm_io_virtual_file_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_io_virtual_file_stats dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_io_virtual_file_stats dynamic management function
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6890eda5969d783a6d40b27493b07e8831146aa8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2ab0b534ceea8712c9c197ea52f2da66065d3167
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,7 +61,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 ## <a name="arguments"></a>Argumentos  
 
 
- *database_id* | ES NULL
+ *database_id* | NULL
 
  **Se aplica a:** (a partir de 2008) de SQL Server, base de datos de SQL Azure
 
@@ -66,7 +69,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
  La función integrada [DB_ID](../../t-sql/functions/db-id-transact-sql.md) puede especificarse.  
   
-*file_ID* | ES NULL
+*file_id* | NULL
 
 **Se aplica a:** (a partir de 2008) de SQL Server, base de datos de SQL Azure
  
@@ -80,8 +83,8 @@ Id. del archivo. *file_ID* es de tipo int, no tiene ningún valor predeterminado
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Nombre de base de datos.</br></br>Para almacenamiento de datos de SQL, este es el nombre de la base de datos que se almacenan en el nodo identificado por pdw_node_id. Cada nodo tiene una base de datos de tempdb con 13 archivos. Cada nodo tiene también una base de datos por la distribución, y cada base de datos de distribución tiene 5 archivos. Por ejemplo, si cada nodo contiene 4 distribuciones, los resultados muestran 20 archivos de base de datos de distribución por pdw_node_id. 
 |**database_id**|**smallint**|Id. de base de datos.|  
-|**file_ID**|**smallint**|Id. de archivo.|  
-|**sample_ms**|**bigint**|Número de milisegundos transcurridos desde que se inició el equipo. Esta columna se puede utilizar para comparar diferentes resultados de esta función.</br></br>El tipo de datos es **int** para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|**file_id**|**smallint**|Id. de archivo.|  
+|**sample_ms**|**bigint**|Número de milisegundos transcurridos desde que se inició el equipo. Esta columna se puede utilizar para comparar diferentes resultados de esta función.</br></br>El tipo de datos es **int** para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |**num_of_reads**|**bigint**|Número de operaciones de lectura realizadas en el archivo.|  
 |**num_of_bytes_read**|**bigint**|Número total de bytes leídos en el archivo.|  
 |**io_stall_read_ms**|**bigint**|Tiempo total, en milisegundos, que los usuarios han esperado para que se realicen las lecturas en el archivo.|  
@@ -93,7 +96,7 @@ Id. del archivo. *file_ID* es de tipo int, no tiene ningún valor predeterminado
 |**file_handle**|**varbinary**|Identificador de archivo de Windows para este archivo.|  
 |**io_stall_queued_read_ms**|**bigint**|**No se aplica a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Latencia total de E/S introducida por el regulador de recursos de E/S para las lecturas. No admite valores NULL. Para obtener más información, consulte [sys.dm_resource_governor_resource_pools &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
 |**io_stall_queued_write_ms**|**bigint**|**No se aplica a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Latencia total de E/S introducida por el regulador de recursos de E/S para las escrituras. No admite valores NULL.|
-|**pdw_node_id**|**int**|**Se aplica a:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificador del nodo para la distribución.
+|**pdw_node_id**|**int**|**Se aplica a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificador del nodo para la distribución.
  
   
 ## <a name="permissions"></a>Permissions  

@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,18 +19,18 @@ helpviewer_keywords:
 - remote execution
 - queries, remote execution
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1fabc150e92d9ca23196fbc838e5691267e9f38
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: a63fcd61563499894205c3cc55323480e8a805d7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (base de datos de SQL Azure)
+# <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Ejecuta un [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción en una sola remoto base de datos de SQL Azure o un conjunto de bases de datos que actúa como particiones en un esquema de partición horizontal.  
@@ -50,7 +51,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @data_source_name =] *datasourcename*  
+ [ @data_source_name = ] *datasourcename*  
  Identifica el origen de datos externo que se ejecuta la instrucción. Vea [crear origen de datos externo &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md). El origen de datos externo puede ser de tipo "RDBMS" o "SHARD_MAP_MANAGER".  
   
  [ @stmt=] *instrucción*  
@@ -61,7 +62,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
   
  Cada parámetro incluido en @stmt debe tener una entrada correspondiente tanto en la lista de definición de parámetros @params como en la lista de valores de parámetros.  
   
- [ @params=] N'@*parameter_name**data_type* [,...*n* ] '  
+ [ @params= ] N'@*parameter_name**data_type* [ ,... *n* ] '  
  Es una cadena que contiene las definiciones de todos los parámetros que se han incrustado en @stmt. La cadena debe ser una constante Unicode o una variable Unicode. Cada definición de parámetro se compone de un nombre de parámetro y un tipo de datos. *n*es un marcador de posición que indica definiciones de parámetros adicionales. Todos los parámetros especificados en @stmtmust definirse en @params. Si la instrucción o el lote de [!INCLUDE[tsql](../../includes/tsql-md.md)] en @stmt no contiene parámetros, @params no es necesario. El valor predeterminado de este parámetro es NULL.  
   
  [ @param1=] '*value1*'  

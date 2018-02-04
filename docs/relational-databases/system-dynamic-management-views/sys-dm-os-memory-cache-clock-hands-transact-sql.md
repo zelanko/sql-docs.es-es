@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_memory_cache_clock_hands (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_os_memory_cache_clock_hands (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/21/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_memory_cache_clock_hands
 - dm_os_memory_cache_clock_hands_TSQL
 - sys.dm_os_memory_cache_clock_hands
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_memory_cache_clock_hands dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_memory_cache_clock_hands dynamic management view
 ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a42184a7a71f7623c7197405b7e718f40ef8979
-ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
+ms.openlocfilehash: 08e181d6f4735a8977d8af4fb226d7f532a4e88d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosmemorycacheclockhands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +43,11 @@ ms.lasthandoff: 12/22/2017
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**cache_address**|**varbinary (8)**|Dirección de la caché asociada al reloj. No admite valores NULL.|  
+|**cache_address**|**varbinary(8)**|Dirección de la caché asociada al reloj. No admite valores NULL.|  
 |**Nombre**|**nvarchar(256)**|Nombre de la caché. No admite valores NULL.|  
-|**Tipo**|**nvarchar (60)**|Tipo de almacén de la caché. Pueden existir varias cachés del mismo tipo. No admite valores NULL.|  
-|**clock_hand**|**nvarchar (60)**|Tipo de manecilla. Es uno de los siguientes:<br /><br /> External<br /><br /> Interno<br /><br /> No admite valores NULL.|  
-|**clock_status**|**nvarchar (60)**|Estado del reloj. Es uno de los siguientes:<br /><br /> Suspendida<br /><br /> En ejecución<br /><br /> No admite valores NULL.|  
+|**Tipo**|**nvarchar(60)**|Tipo de almacén de la caché. Pueden existir varias cachés del mismo tipo. No admite valores NULL.|  
+|**clock_hand**|**nvarchar(60)**|Tipo de manecilla. Es uno de los siguientes:<br /><br /> External<br /><br /> Interno<br /><br /> No admite valores NULL.|  
+|**clock_status**|**nvarchar(60)**|Estado del reloj. Es uno de los siguientes:<br /><br /> Suspendida<br /><br /> En ejecución<br /><br /> No admite valores NULL.|  
 |**rounds_count**|**bigint**|Número de rastreos realizados en toda la caché para eliminar entradas. No admite valores NULL.|  
 |**removed_all_rounds_count**|**bigint**|Número de entradas quitadas por todos los rastreos. No admite valores NULL.|  
 |**updated_last_round_count**|**bigint**|Número de entradas actualizadas durante el último rastreo. No admite valores NULL.|  
@@ -52,7 +55,7 @@ ms.lasthandoff: 12/22/2017
 |**last_tick_time**|**bigint**|Última vez, en milisegundos, que se movió la manecilla del reloj. No admite valores NULL.|  
 |**round_start_time**|**bigint**|Tiempo, en milisegundos, del rastreo anterior. No admite valores NULL.|  
 |**last_round_start_time**|**bigint**|Tiempo total, en milisegundos, que ha tardado el reloj en completar el ciclo anterior. No admite valores NULL.|  
-|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
+|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
   
 ## <a name="permissions"></a>Permissions  
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
@@ -63,6 +66,6 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles de Premium, requiere
 
 ## <a name="see-also"></a>Vea también  
  [Sistema operativo SQL Server relacionadas con vistas de administración dinámica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)    
- [Sys.dm_os_memory_cache_counters &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md)
+ [sys.dm_os_memory_cache_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md)
   
 

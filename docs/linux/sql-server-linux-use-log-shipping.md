@@ -3,7 +3,7 @@ title: Configurar el trasvase de registros para SQL Server en Linux | Documentos
 description: "Este tutorial muestra un ejemplo básico de cómo replicar una instancia de SQL Server en Linux a una instancia secundaria mediante el trasvase de registros."
 author: meet-bhagdev
 ms.author: meetb
-manager: jhubbard
+manager: craigg
 ms.date: 04/19/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 4317dd2b7dc32f552988eb3c33c33b8bbe8a3dfb
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 48f1782ca1da3e730181402ed947453b6eeefc35
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Empezar a trabajar con el trasvase de registros en Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Trasvase de registros de SQL Server es una configuración de alta disponibilidad en una base de datos desde un servidor principal se replica en uno o más servidores secundarios. En pocas palabras, se restaura una copia de seguridad de la base de datos de origen en el servidor secundario. A continuación, el servidor principal crea copias de seguridad de registro de transacciones periódicamente, y los servidores secundarios restauración al completo, actualizar la copia secundaria de la base de datos. 
 

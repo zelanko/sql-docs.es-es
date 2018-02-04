@@ -1,10 +1,10 @@
 ---
 title: Automatice las migraciones de base de datos a SQL Server en Linux | Documentos de Microsoft
 description: 
-author: sanagama
-ms.author: sanagama
-manager: jhubbard
-ms.date: 08/23/2017
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.date: 01/30/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,17 +15,17 @@ ms.technology: database-engine
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
 ms.custom: 
 ms.workload: Inactive
-ms.openlocfilehash: 99215749aa9b827018e822b759c24cbf9bb1e4e2
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7c2e20d2c7742a40916c010f1fca17f06398caa8
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant"></a>Automatizar la migración de base de datos para Linux con SQL Server Migration Assistant
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este tema se presentan [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) que le permite migrar fácilmente las bases de datos a SQL Server 2017 en Linux de Microsoft Access, DB2, MySQL, Oracle y Sybase. SSMA es una aplicación de Windows, así que usa SSMA cuando tiene una máquina de Windows que se puede conectar a una instancia remota de SQL Server en Linux. 
+Este artículo se detallan [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) que le permite migrar fácilmente las bases de datos a SQL Server 2017 en Linux de Microsoft Access, DB2, MySQL, Oracle y Sybase. SSMA es una aplicación de Windows, así que usa SSMA cuando tiene una máquina de Windows que se puede conectar a una instancia remota de SQL Server en Linux. 
 
 SSMA admite una variedad de bases de datos de origen como Oracle, MySQL, Sybase, DB2 y Microsoft Access a SQL Server 2017 en Linux y le ayuda a automatizar las tareas de migración, como:
 

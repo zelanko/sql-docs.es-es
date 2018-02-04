@@ -1,5 +1,5 @@
 ---
-title: sp_help_job (Transact-SQL) | Documentos de Microsoft
+title: sp_help_job (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/02/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_job_TSQL
 - sp_help_job
-dev_langs: TSQL
-helpviewer_keywords: sp_help_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_job
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae0dc39a2fe09d6dd4441f378d225a0f4e6ddf67
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9d91594f032409dbe2597dd859a549c17b795e04
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +59,7 @@ sp_help_job { [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  El número de identificación del trabajo. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
   
  [  **@job_name =**] **'***job_name***'**  
@@ -65,18 +68,18 @@ sp_help_job { [ @job_id = ] job_id
 > [!NOTE]  
 >  Cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
   
- [  **@job_aspect =**] **'***job_aspect***'**  
+ [ **@job_aspect =**] **'***job_aspect***'**  
  Atributo de trabajo que se va a mostrar. *job_aspect* es **varchar (9)**, su valor predeterminado es null y puede tener uno de estos valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**ALL**|Información del aspecto del trabajo|  
-|**TRABAJO**|Información del trabajo|  
+|**JOB**|Información del trabajo|  
 |**PROGRAMACIONES**|Información de la programación|  
-|**PASOS**|Información de los pasos del trabajo|  
-|**DESTINOS**|Información de los destinos|  
+|**STEPS**|Información de los pasos del trabajo|  
+|**TARGETS**|Información de los destinos|  
   
- [  **@job_type =**] **'***job_type***'**  
+ [ **@job_type =**] **'***job_type***'**  
  Tipo de trabajos que se incluirán en el informe. *job_type* es **varchar (12)**, su valor predeterminado es null. *job_type* puede ser **LOCAL** o **MULTISERVIDOR**.  
   
  [  **@owner_login_name =**] **'***login_name***'**  
@@ -94,7 +97,7 @@ sp_help_job { [ @job_id = ] job_id
  [  **@execution_status =**] *estado*  
  Estado de ejecución de los trabajos. *estado* es **int**, su valor predeterminado es null y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Devuelve solo los trabajos que no están inactivos o suspendidos.|  
 |**1**|En ejecución.|  
@@ -104,16 +107,16 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Suspendido.|  
 |**7**|Realizando acciones de finalización.|  
   
- [  **@date_comparator =**] **'***date_comparison***'**  
+ [ **@date_comparator =**] **'***date_comparison***'**  
  El operador de comparación que utiliza en las comparaciones de *date_created* y *date_modified*. *date_comparison* es **char (1)**y puede ser =, \<, o >.  
   
- [  **@date_created =**] *date_created*  
+ [ **@date_created =**] *date_created*  
  Fecha de creación del trabajo. *Date_Created*es **datetime**, su valor predeterminado es null.  
   
- [  **@date_last_modified =**] *date_modified*  
+ [ **@date_last_modified =**] *date_modified*  
  La fecha en que se modificó por última vez el trabajo. *DATE_MODIFIED* es **datetime**, su valor predeterminado es null.  
   
- [  **@description =**] **'***description_pattern***'**  
+ [ **@description =**] **'***description_pattern***'**  
  Descripción del trabajo. *description_pattern* es **nvarchar (512)**, su valor predeterminado es null. *description_pattern* puede incluir los caracteres comodín de SQL Server para la coincidencia.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -125,12 +128,12 @@ sp_help_job { [ @job_id = ] job_id
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|Id. único del trabajo.|  
-|**originating_server**|**nvarchar (30)**|Nombre del servidor del que proviene el trabajo.|  
+|**originating_server**|**nvarchar(30)**|Nombre del servidor del que proviene el trabajo.|  
 |**Nombre**|**sysname**|Nombre del trabajo.|  
-|**habilitado**|**tinyint**|Indica si el trabajo está habilitado para su ejecución.|  
-|**Descripción**|**nvarchar(512)**|Descripción del trabajo.|  
+|**enabled**|**tinyint**|Indica si el trabajo está habilitado para su ejecución.|  
+|**description**|**nvarchar(512)**|Descripción del trabajo.|  
 |**start_step_id**|**int**|Id. del paso del trabajo en el que debe comenzar la ejecución.|  
-|**categoría**|**sysname**|Categoría del trabajo|  
+|**category**|**sysname**|Categoría del trabajo|  
 |**propietario**|**sysname**|Propietario del trabajo.|  
 |**notify_level_eventlog**|**int**|**Máscara de bits** que indica en qué circunstancias se debe registrar un evento de notificación en el registro de aplicación de Microsoft Windows. Puede ser uno de estos valores:<br /><br /> **0** no = nunca<br /><br /> **1** = cuando se realiza correctamente un trabajo<br /><br /> **2** = cuando se produce un error en el trabajo<br /><br /> **3** = cuando el trabajo se completa (independientemente del resultado del trabajo)|  
 |**notify_level_email**|**int**|**Máscara de bits** que indica en qué circunstancias se debe enviar una notificación por correo electrónico cuando se completa un trabajo. Los valores posibles son los mismos que para **notify_level_eventlog**.|  
@@ -140,8 +143,8 @@ sp_help_job { [ @job_id = ] job_id
 |**notify_netsend_operator**|**sysname**|Nombre del equipo o del usuario que se utiliza al enviar mensajes de red.|  
 |**notify_page_operator**|**sysname**|Nombre del equipo o del usuario que se utiliza al enviar un mensaje a un localizador.|  
 |**delete_level**|**int**|**Máscara de bits** que indica en qué circunstancias se debe eliminar el trabajo cuando se completa un trabajo. Los valores posibles son los mismos que para **notify_level_eventlog**.|  
-|**Date_Created**|**datetime**|Fecha en que se creó el trabajo.|  
-|**DATE_MODIFIED**|**datetime**|Fecha en que se modificó el trabajo por última vez.|  
+|**date_created**|**datetime**|Fecha en que se creó el trabajo.|  
+|**date_modified**|**datetime**|Fecha en que se modificó el trabajo por última vez.|  
 |**version_number**|**int**|Versión del trabajo (se actualiza automáticamente cada vez que el trabajo se modifica).|  
 |**last_run_date**|**int**|Fecha de inicio de la última ejecución del trabajo.|  
 |**last_run_time**|**int**|Hora de inicio de la última ejecución del trabajo.|  
@@ -155,7 +158,7 @@ sp_help_job { [ @job_id = ] job_id
 |**has_step**|**int**|Número de pasos que tiene el trabajo.|  
 |**has_schedule**|**int**|Número de programaciones que tiene el trabajo.|  
 |**has_target**|**int**|Número de servidores de destino que tiene el trabajo.|  
-|**tipo**|**int**|Tipo del trabajo.<br /><br /> 1 = Trabajo local.<br /><br /> **2** = trabajo multiservidor.<br /><br /> **0** = trabajo no tiene ningún servidor de destino.|  
+|**Tipo**|**int**|Tipo del trabajo.<br /><br /> 1 = Trabajo local.<br /><br /> **2** = trabajo multiservidor.<br /><br /> **0** = trabajo no tiene ningún servidor de destino.|  
   
  Si *job_id* o *job_name* se especifica, **sp_help_job** devuelve estos conjuntos de resultados adicionales para los pasos de trabajo, las programaciones de trabajo y servidores de destino del trabajo.  
   
@@ -164,22 +167,22 @@ sp_help_job { [ @job_id = ] job_id
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|Identificador único del paso (en este trabajo).|  
-|**Step_name**|**sysname**|Nombre del paso.|  
-|**subsistema**|**nvarchar (40)**|Subsistema en el que se ejecuta el comando del paso.|  
+|**step_name**|**sysname**|Nombre del paso.|  
+|**subsystem**|**nvarchar(40)**|Subsistema en el que se ejecuta el comando del paso.|  
 |**command**|**nvarchar(3200)**|Comando que se ejecuta.|  
-|**marcas**|**nvarchar(4000)**|**Máscara de bits** de valores que controlan el comportamiento del paso.|  
+|**flags**|**nvarchar(4000)**|**Máscara de bits** de valores que controlan el comportamiento del paso.|  
 |**cmdexec_success_code**|**int**|Para una **CmdExec** paso, éste es el código de salida de proceso de un comando correcto.|  
 |**on_success_action**|**nvarchar(4000)**|Qué hacer si el paso termina correctamente:<br /><br /> **1** = salir con éxito.<br /><br /> **2** = salir con error.<br /><br /> **3** = ir al paso siguiente.<br /><br /> **4** = ir al paso.|  
 |**on_success_step_id**|**int**|Si **on_success_action** es **4**, esto indica que el paso siguiente para ejecutar.|  
 |**on_fail_action**|**nvarchar(4000)**|Acción que se realiza si el paso da error. Los valores son los mismos que para **on_success_action**.|  
 |**on_fail_step_id**|**int**|Si **on_fail_action** es **4**, esto indica que el paso siguiente para ejecutar.|  
-|**servidores**|**sysname**|Reservado.|  
+|**servidor**|**sysname**|Reservado.|  
 |**database_name**|**sysname**|Para pasos [!INCLUDE[tsql](../../includes/tsql-md.md)], la base de datos en que se ejecutará el comando.|  
 |**database_user_name**|**sysname**|Para pasos [!INCLUDE[tsql](../../includes/tsql-md.md)], el contexto de usuario de la base de datos en que se ejecuta el comando.|  
 |**retry_attempts**|**int**|Número máximo de veces que se vuelve a intentar el comando (si no termina correctamente) antes de determinar que el paso ha dado error.|  
 |**retry_interval**|**int**|Intervalo (en minutos) entre los reintentos.|  
-|**os_run_priority**|**varchar (4000)**|Reservado.|  
-|**nombre_archivo_de_salida**|**varchar(200)**|En el comando que se debe escribir la salida de archivo ([!INCLUDE[tsql](../../includes/tsql-md.md)] y **CmdExec** solo para los pasos).|  
+|**os_run_priority**|**varchar(4000)**|Reservado.|  
+|**output_file_name**|**varchar(200)**|En el comando que se debe escribir la salida de archivo ([!INCLUDE[tsql](../../includes/tsql-md.md)] y **CmdExec** solo para los pasos).|  
 |**last_run_outcome**|**int**|Resultado del paso la última vez que se ejecutó:<br /><br /> **0** = error<br /><br /> **1** = se ha realizado correctamente<br /><br /> **3** = cancelado<br /><br /> **5** = desconocido|  
 |**last_run_duration**|**int**|Duración (en segundos) del paso la última vez que se ejecutó.|  
 |**last_run_retries**|**int**|Número de veces que se ha intentado el comando desde que se ejecutó el paso por última vez.|  
@@ -193,7 +196,7 @@ sp_help_job { [ @job_id = ] job_id
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|Identificador de la programación (único para todos los trabajos).|  
 |**schedule_name**|**sysname**|Nombre de la programación (único solo para este trabajo).|  
-|**habilitado**|**int**|Si la programación está activa (**1**) o no (**0**).|  
+|**enabled**|**int**|Si la programación está activa (**1**) o no (**0**).|  
 |**freq_type**|**int**|Valor que indica cuándo se va a ejecutar el trabajo:<br /><br /> **1** = una vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensualmente<br /><br /> **32** = mensualmente, relativo a la **freq_interval**<br /><br /> **64** = ejecutar cuando **SQLServerAgent** inicia el servicio.|  
 |**freq_interval**|**int**|Días cuando se ejecuta el trabajo. El valor depende del valor de **freq_type**. Para obtener más información, consulte [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_subday_type**|**Int**|Unidades de **freq_subday_interval**. Para obtener más información, consulte [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
@@ -204,11 +207,11 @@ sp_help_job { [ @job_id = ] job_id
 |**active_end_date**|**int**|Fecha en que termina la ejecución del trabajo.|  
 |**active_start_time**|**int**|Hora en que comienza la ejecución del trabajo en **active_start_date.**|  
 |**active_end_time**|**int**|Tiempo para finalizar la ejecución del trabajo en **active_end_date**.|  
-|**Date_Created**|**datetime**|Fecha en que se creó la programación.|  
+|**date_created**|**datetime**|Fecha en que se creó la programación.|  
 |**schedule_description**|**nvarchar(4000)**|Descripción de la programación en inglés (si se solicita).|  
 |**next_run_date**|**int**|Fecha en que la programación hará que se vuelva a ejecutar el trabajo.|  
 |**next_run_time**|**int**|Hora a la que la programación hará que se vuelva a ejecutar el trabajo.|  
-|**valor schedule_uid**|**uniqueidentifier**|Identificador de la programación.|  
+|**schedule_uid**|**uniqueidentifier**|Identificador de la programación.|  
 |**job_count**|**int**|Devuelve el número de trabajos que hacen referencia a esta programación.|  
   
  Éste es el conjunto de resultados de los servidores de destino del trabajo.  
@@ -216,14 +219,14 @@ sp_help_job { [ @job_id = ] job_id
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Identificador del servidor de destino.|  
-|**nombre_servidor**|**nvarchar (30)**|Nombre de equipo del servidor de destino.|  
+|**server_name**|**nvarchar(30)**|Nombre de equipo del servidor de destino.|  
 |**enlist_date**|**datetime**|Fecha de alta del servidor de destino en el servidor maestro.|  
 |**last_poll_date**|**datetime**|Fecha en que el servidor de destino sondeó por última vez el servidor maestro.|  
 |**last_run_date**|**int**|Fecha del inicio de la última ejecución del trabajo en este servidor de destino.|  
 |**last_run_time**|**int**|Hora del inicio de la última ejecución del trabajo en este servidor de destino.|  
 |**last_run_duration**|**int**|Duración de la última ejecución del trabajo en este servidor de destino.|  
 |**last_run_outcome**|**tinyint**|Resultado del trabajo la última vez que se ejecutó en este servidor:<br /><br /> **0** = error<br /><br /> **1** = se ha realizado correctamente<br /><br /> **3** = cancelado<br /><br /> **5** = desconocido|  
-|**last_outcome_message**|**nvarchar (1024)**|Mensaje de resultado de la última ejecución del trabajo en este servidor de destino.|  
+|**last_outcome_message**|**nvarchar(1024)**|Mensaje de resultado de la última ejecución del trabajo en este servidor de destino.|  
   
 ## <a name="permissions"></a>Permissions  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
@@ -281,8 +284,8 @@ GO
   
 ## <a name="see-also"></a>Vea también  
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_delete_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_update_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

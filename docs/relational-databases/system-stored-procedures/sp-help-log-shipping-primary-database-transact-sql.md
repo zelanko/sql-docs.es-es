@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_primary_database (Transact-SQL) | Documentos de Microsoft
+title: sp_help_log_shipping_primary_database (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_primary_database_TSQL
 - sp_help_log_shipping_primary_database
-dev_langs: TSQL
-helpviewer_keywords: sp_help_log_shipping_primary_database
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_log_shipping_primary_database
 ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05d791104a470dd73502dfae21e0bedac82482c1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 56de87e340bc9bd6006208754451c54c145fbdba
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelplogshippingprimarydatabase-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +73,7 @@ sp_help_log_shipping_primary_database
 |**backup_threshold**|Número de minutos permitido entre las operaciones de copia de seguridad antes de que se genere una alerta.|  
 |**threshold_alert**|Alerta que se generará cuando se sobrepase el umbral de copia de seguridad.|  
 |**threshold_alert_enabled**|Determina si las alertas de umbral de copia de seguridad están habilitadas.<br /><br /> **1** = habilitado.<br /><br /> **0** = deshabilitado.|  
-|**columnas last_backup_file**|Ruta de acceso absoluta de la copia de seguridad más reciente del registro de transacciones.|  
+|**last_backup_file**|Ruta de acceso absoluta de la copia de seguridad más reciente del registro de transacciones.|  
 |**last_backup_date**|Fecha y hora de la última operación de copia de seguridad del registro.|  
 |**last_backup_date_utc**|Fecha y hora de la última operación de copia de seguridad del registro de transacciones en la base de datos principal, expresadas en UTC (hora universal coordinada).|  
 |**history_retention_period**|Cantidad de tiempo, en minutos, durante la que los registros de historial del trasvase de registros se mantienen en una base de datos principal determinada antes de ser eliminados.|  
@@ -90,7 +93,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Acerca del trasvase de registros &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

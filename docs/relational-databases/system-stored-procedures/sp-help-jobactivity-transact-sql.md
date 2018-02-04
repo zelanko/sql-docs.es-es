@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobactivity_TSQL
 - sp_help_jobactivity
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobactivity
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobactivity
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4cb0d3d344b97f0ce14e3bd156b5915a1721c8f4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a4b1b81a94f272ffed56c26f4ede9080f80527c7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +47,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  El número de identificación del trabajo. *job_id*es **uniqueidentifier**, su valor predeterminado es null.  
   
  [  **@job_name =**] **'***job_name***'**  
@@ -76,7 +79,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**stop_execution_date**|**datetime**|Momento en el que el trabajo dejó de ejecutarse.|  
 |**next_scheduled_run_date**|**datetime**|Cuando el trabajo se ha programado la próxima a ejecutar.|  
 |**job_history_id**|**int**|Identificador del historial de trabajos en la tabla del historial de trabajos.|  
-|**Mensaje**|**nvarchar (1024)**|Mensaje generado durante la última ejecución del trabajo.|  
+|**message**|**nvarchar(1024)**|Mensaje generado durante la última ejecución del trabajo.|  
 |**run_status**|**int**|Estado devuelto en la última ejecución del trabajo:<br /><br /> **0** = error de error<br /><br /> **1** = se ha realizado correctamente<br /><br /> **3** = cancelado<br /><br /> **5** = estado desconocido|  
 |**operator_id_emailed**|**int**|Número de Id. del operador notificado a través de correo electrónico al término del trabajo.|  
 |**operator_id_netsent**|**int**|Número de identificación del operador notificado a través de **mediante net send** al término del trabajo.|  
@@ -85,7 +88,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>Comentarios  
  Este procedimiento proporciona una instantánea del estado actual de los trabajos. Los resultados devueltos representan la información disponible en el momento de procesar la solicitud.  
   
- El Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un Id. de sesión cada vez que se inicia el servicio del Agente. El identificador de sesión se almacena en la tabla **msdb.dbo.syssessions**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agente crea un identificador de sesión cada vez que inicia el servicio del agente. El identificador de sesión se almacena en la tabla **msdb.dbo.syssessions**.  
   
  Si no *session_id* se proporciona, se muestra información acerca de la sesión más reciente.  
   

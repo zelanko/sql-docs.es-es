@@ -1,5 +1,5 @@
 ---
-title: Sys.database_query_store_options (Transact-SQL) | Documentos de Microsoft
+title: sys.database_query_store_options (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/25/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,28 +17,29 @@ f1_keywords:
 - DATABASE_QUERY_STORE_OPTIONS
 - SYS.DATABASE_QUERY_STORE_OPTIONS_TSQL
 - SYS.DATABASE_QUERY_STORE_OPTIONS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - database_query_store_options catalog view
 - sys.database_query_store_options catalog view
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a48af2e0a4bef456091385b047685c074097200
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 46710eb543ae038d22052cd55b356df9458201e3
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="sysdatabasequerystoreoptions-transact-sql"></a>Sys.database_query_store_options (Transact-SQL)
+# <a name="sysdatabasequerystoreoptions-transact-sql"></a>sys.database_query_store_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Devuelve las opciones de almacén de consultas para esta base de datos.  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
@@ -53,26 +55,26 @@ ms.lasthandoff: 11/21/2017
 |**stale_query_threshold_days**|**bigint**|Número de días que las consultas con ninguna configuración de directiva se conservan en el almacén de consultas. Valor predeterminado es 30. Establézcalo en 0 para deshabilitar la directiva de retención.<br />En la edición básica de [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] , el valor predeterminado es 7 días.<br /><br /> Cambio mediante el uso de la `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` instrucción.|  
 |**max_plans_per_query**|**bigint**|Limita el número máximo de planes almacenados. Valor predeterminado es 200. Si se alcanza el valor máximo, el almacén de consultas deja de capturar nuevos planes para esa consulta. Valor en 0 elimina la limitación en relación con el número de planes capturados.<br /><br /> Cambio mediante el uso de la `ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)` instrucción.|  
 |**query_capture_mode**|**smallint**|El modo de captura de consulta activa:<br /><br /> 1 = ALL - se capturan todas las consultas. Este es el valor de configuración predeterminado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).<br /><br /> 2 = AUTO - captura las consultas pertinentes en función del consumo de recursos y el número de ejecución. Este es el valor de configuración predeterminado para [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].<br /><br /> 3 = NONE - dejar de capturar nuevas consultas. Almacén de consultas continuará recopilar las estadísticas de compilación y en tiempo de ejecución para las consultas que se capturaron ya. Utilice esta configuración con precaución, ya que se pueden perder para capturar consultas importantes.|  
-|**query_capture_mode_desc**|**nvarchar (60)**|Descripción textual del modo de captura reales de almacén de consultas:<br /><br /> TODOS (valor predeterminado para [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])<br /><br /> AUTO (valor predeterminado para [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)])<br /><br /> Ninguno|  
+|**query_capture_mode_desc**|**nvarchar(60)**|Descripción textual del modo de captura reales de almacén de consultas:<br /><br /> TODOS (valor predeterminado para [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])<br /><br /> AUTO (valor predeterminado para [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)])<br /><br /> Ninguno|  
 |**size_based_cleanup_mode**|**smallint**|Controla si la limpieza se activará automáticamente cuando la cantidad total de datos se acerque al tamaño máximo:<br /><br /> 1 = OFF: tamaño en función de limpieza no se active automáticamente.<br /><br /> 2 = AUTO - tamaño en función de limpieza se activará automáticamente cuando el tamaño en disco alcanza el 90% de **max_storage_size_mb**. Este es el valor de configuración predeterminado.<br /><br />Limpieza de tamaño según quita las consultas menos costosas y más antiguas en primer lugar. Se detiene en aproximadamente el 80% de max_storage_size_mb.|  
 |**size_based_cleanup_mode_desc**|**smallint**|Descripción textual del modo de limpieza basada en el tamaño real del almacén de consultas:<br /><br /> OFF <br /><br /> AUTOMÁTICO (predeterminado)|  
-|**wait_stats_capture_mode**|**smallint**|Controla si se realiza la captura de las estadísticas de esperas de almacén de consultas: <br /><br /> 0 = OFF <br /><br /> 1 = ON |
-|**wait_stats_mode_capture_desc**|**nvarchar (60)**|Descripción textual del modo de captura de las estadísticas de espera real: <br /><br /> OFF <br /><br /> ON (valor predeterminado)| 
+|**wait_stats_capture_mode**|**smallint**|Controla si se realiza la captura de las estadísticas de esperas de almacén de consultas: <br /><br /> 0 = OFF <br /><br /> 1 = ON <br /> **Se aplica a**: desde [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|
+|**wait_stats_mode_capture_desc**|**nvarchar(60)**|Descripción textual del modo de captura de las estadísticas de espera real: <br /><br /> OFF <br /><br /> ON (valor predeterminado)<br /> **Se aplica a**: desde [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
   
 ## <a name="permissions"></a>Permissions  
  Requiere la **VIEW DATABASE STATE** permiso.  
   
 ## <a name="see-also"></a>Vea también  
- [Sys.query_context_settings &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [Sys.query_store_plan &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [Sys.query_store_query &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [Sys.query_store_query_text &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [Sys.query_store_runtime_stats &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+ [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [Sys.query_store_runtime_stats_interval &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [Supervisar el rendimiento mediante el almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Sys.fn_stmt_sql_handle_from_sql_stmt &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
+ [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
  [Almacén de consultas almacenados procedimientos &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

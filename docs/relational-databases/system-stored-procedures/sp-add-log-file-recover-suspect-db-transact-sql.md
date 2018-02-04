@@ -1,5 +1,5 @@
 ---
-title: sp_add_log_file_recover_suspect_db (Transact-SQL) | Documentos de Microsoft
+title: sp_add_log_file_recover_suspect_db (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_file_recover_suspect_db_TSQL
 - sp_add_log_file_recover_suspect_db
-dev_langs: TSQL
-helpviewer_keywords: sp_add_log_file_recover_suspect_db
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_log_file_recover_suspect_db
 ms.assetid: b41ca3a5-7222-4c22-a012-e66a577a82f6
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44d4e79680160bc294e002bd663578e955f54f41
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1623d485132881e7d4df61926dc425257e3113b3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddlogfilerecoversuspectdb-transact-sql"></a>sp_add_log_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,21 +54,21 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
  [  **@dbName =** ] **'***base de datos***'**  
  Es el nombre de la base de datos. *base de datos* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@name=** ] **'***nombre_de_archivo_lógico***'**  
+ [ **@name=** ] **'***logical_file_name***'**  
  Es el nombre usado en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se hace referencia al archivo. El nombre debe ser único en el servidor. *nombre_de_archivo_lógico* es **nvarchar (260)**, no tiene ningún valor predeterminado.  
   
- [  **@filename =** ] **'***nombre_de_archivo_de_sistema_operativo***'**  
+ [ **@filename =** ] **'***os_file_name***'**  
  Es la ruta de acceso y el nombre de archivo que el sistema operativo utiliza para el archivo. El archivo debe residir en el servidor donde esté instalado el [!INCLUDE[ssDE](../../includes/ssde-md.md)]. *nombre_de_archivo_de_sistema_operativo* es **nvarchar (260)**, no tiene ningún valor predeterminado.  
   
- [  **@size=** ] **'***tamaño* **'**  
+ [  **@size=** ] **' *** tamaño* **'**  
  Es el tamaño inicial del archivo. *tamaño* es **nvarchar (20)**, su valor predeterminado es null. Especifique un número entero; no incluya decimales. Se pueden utilizar los sufijos MB y KB para especificar megabytes o kilobytes, respectivamente. El valor predeterminado es MB. El valor mínimo es 512 KB. Si *tamaño* no se especifica, el valor predeterminado es 1 MB.  
   
- [  **@maxsize=** ] **'***max_size* **'**  
+ [ **@maxsize=** ] **'***max_size* **'**  
  Es el tamaño máximo que puede alcanzar el archivo. *max_size* es **nvarchar (20)**, su valor predeterminado es null. Especifique un número entero; no incluya decimales. Se pueden utilizar los sufijos MB y KB para especificar megabytes o kilobytes, respectivamente. El valor predeterminado es MB.  
   
  Si *max_size* no se especifica, el archivo crecerá hasta que el disco está lleno. El registro de aplicación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows avisa a un administrador cuando un disco está a punto de llenarse.  
   
- [  **@filegrowth=** ] **'***growth_increment* **'**  
+ [  **@filegrowth=** ] **' *** growth_increment* **'**  
  Es la cantidad de espacio que se agrega al archivo cada vez que se necesita más espacio. *growth_increment* es **nvarchar (20)**, su valor predeterminado es null. Un valor 0 indica que no hay crecimiento. Especifique un número entero; no incluya decimales. El valor se puede especificar en MB, KB o como un porcentaje (%). Cuando se especifica %, el incremento de crecimiento es el porcentaje especificado del tamaño del archivo en el momento en que tiene lugar el incremento. Si se especifica un número sin los sufijos MB, KB o %, el valor predeterminado es MB.  
   
  Si *growth_increment* es NULL, el valor predeterminado es 10% y el valor de tamaño mínimo es 64 KB. El tamaño especificado se redondea al múltiplo de 64 KB más cercano.  
@@ -74,7 +77,7 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Ninguno  
+ None  
   
 ## <a name="permissions"></a>Permissions  
  Permisos de ejecución predeterminados a los miembros de la **sysadmin** rol fijo de servidor. Estos permisos no se pueden transferir.  
@@ -93,7 +96,7 @@ EXEC sp_add_log_file_recover_suspect_db db1, logfile2,
   
 ## <a name="see-also"></a>Vea también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_add_data_file_recover_suspect_db &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-data-file-recover-suspect-db-transact-sql.md)   
+ [sp_add_data_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-data-file-recover-suspect-db-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

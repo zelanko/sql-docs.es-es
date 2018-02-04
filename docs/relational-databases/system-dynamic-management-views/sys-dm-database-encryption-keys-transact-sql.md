@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_database_encryption_keys (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_database_encryption_keys (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_database_encryption_keys_TSQL
 - dm_database_encryption_keys
 - dm_database_encryption_keys_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_database_encryption_keys dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_database_encryption_keys dynamic management view
 ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
-caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bb177f781bee54b908624e1f940c12d5bdaf5a13
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 17a04ced274e92e3b787ba677ae3b2dbbb07593e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdatabaseencryptionkeys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,10 +47,10 @@ ms.lasthandoff: 11/17/2017
 |modify_date|**datetime**|Muestra la fecha de modificación de la clave de cifrado.|  
 |set_date|**datetime**|Muestra la fecha de aplicación de la clave de cifrado a la base de datos.|  
 |opened_date|**datetime**|Muestra la última vez que se abrió la clave de la base de datos.|  
-|key_algorithm|**nvarchar (32)**|Muestra el algoritmo utilizado por la clave.|  
+|key_algorithm|**nvarchar(32)**|Muestra el algoritmo utilizado por la clave.|  
 |key_length|**int**|Muestra la longitud de la clave.|  
 |encryptor_thumbprint|**varbinary(20)**|Muestra la huella digital del sistema de cifrado.|  
-|encryptor_type|**nvarchar (32)**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Describe el sistema de cifrado.|  
+|encryptor_type|**nvarchar(32)**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Describe el sistema de cifrado.|  
 |percent_complete|**real**|Porcentaje completado del cambio de estado del cifrado de la base de datos. Será 0 si no hay ningún cambio de estado.|  
   
 ## <a name="permissions"></a>Permissions  

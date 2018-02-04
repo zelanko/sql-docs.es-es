@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_wait_stats (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/04/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_wait_stats
 - sys.dm_os_wait_stats
 - sys.dm_os_wait_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_wait_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_wait_stats dynamic management view
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
-caps.latest.revision: "111"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 355aefa1b0cb4d8acbc215a3afc72709d8b811e9
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
-ms.translationtype: MT
+ms.openlocfilehash: c7e4859e69328535a89d0c2abc3122340176eaec
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,12 +43,12 @@ Devuelve información acerca de todas las esperas encontradas por los subproceso
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar (60)**|Nombre del tipo de espera. Para obtener más información, consulte [tipos de esperas](#WaitTypes), más adelante en este tema.|  
+|wait_type|**nvarchar(60)**|Nombre del tipo de espera. Para obtener más información, consulte [tipos de esperas](#WaitTypes), más adelante en este tema.|  
 |waiting_tasks_count|**bigint**|Número de esperas de este tipo de espera. Este recuento se incrementa al inicio de cada espera.|  
 |wait_time_ms|**bigint**|Tiempo total de espera de este tipo en milisegundos. Este tiempo incluye el tiempo de signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Tiempo de espera máximo de este tipo de espera.|  
 |signal_wait_time_ms|**bigint**|Diferencia entre el momento en que se indicó el subproceso en espera y el momento en que empezó a ejecutarse.|  
-|pdw_node_id|**int**|El identificador para el nodo que se encuentra en esta distribución. <br/> **Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|pdw_node_id|**int**|El identificador para el nodo que se encuentra en esta distribución. <br/> **Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
 ## <a name="permissions"></a>Permissions  
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
@@ -127,7 +130,7 @@ Este comando restablece todos los contadores en 0.
 |BROKER_FORWARDER |TBD <br /> **Se aplica a**: desde [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |BROKER_INIT |Se produce al inicializar a Service Broker en cada base de datos activa. No debería ocurrir con frecuencia.| 
 |BROKER_MASTERSTART |Se produce cuando una tarea está esperando que el controlador de eventos principal de Service Broker para iniciar. Debería ocurrir brevemente.| 
-|BROKER_RECEIVE_WAITFOR |Tiene lugar cuando RECEIVE WAITFOR está en espera. Es normal si no hay mensajes preparados para recibirse.| 
+|BROKER_RECEIVE_WAITFOR |Tiene lugar cuando RECEIVE WAITFOR está en espera. Esto puede significar que ningún mensaje esté preparado para recibirse en la cola o una contención de bloqueo impide recibir los mensajes de la cola.| 
 |BROKER_REGISTERALLENDPOINTS |Se produce durante la inicialización de un extremo de conexión de Service Broker. Debería ocurrir brevemente.| 
 |BROKER_SERVICE |Se produce cuando la lista de destino de Service Broker que está asociada a un servicio de destino se actualiza o vuelve a un nivel de prioridad.| 
 |BROKER_SHUTDOWN |Se produce cuando hay un apagado planeado de Service Broker. Debería ocurrir brevemente, si ocurre.| 
@@ -169,7 +172,7 @@ Este comando restablece todos los contadores en 0.
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **Se aplica a**: desde [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |COUNTRECOVERYMGR |TBD <br /> **Se aplica a**: desde [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |CREATE_DATINISERVICE |TBD <br /> **Se aplica a**: desde [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|CXCONSUMER |Tiene lugar con planes de consulta paralelos cuando un subproceso consumidor espera un subproceso productor enviar filas. Esto es una parte normal de ejecución en paralelo. <br /> **Se aplica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 y[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXCONSUMER |Tiene lugar con planes de consulta paralelos cuando un subproceso consumidor espera un subproceso productor enviar filas. Esto es una parte normal de ejecución en paralelo. <br /> **Se aplica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
 |CXPACKET |Se produce con planes de consulta paralelos al sincronizar el iterador de intercambios del procesador de consultas y cuando generar y consumir filas. Si la espera es excesiva y no se puede reducir ajustando la consulta (por ejemplo, agregando índices), considere la posibilidad de ajustar el umbral de costo para paralelismo o de reducir el grado de paralelismo.<br /> **Nota:** en [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 y [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET solo hace referencia que se va a sincronizar el iterador de intercambios del procesador de consultas, así como generar filas para los subprocesos de consumidor. Subprocesos de consumidor se realiza un seguimiento por separado en el tipo de espera CXCONSUMER.| 
 |CXROWSET_SYNC |Tiene lugar durante un examen de intervalo en paralelo.| 
 |DAC_INIT |Tiene lugar mientras se inicializa la conexión de administrador dedicada.| 
@@ -1024,8 +1027,8 @@ Este comando restablece todos los contadores en 0.
 ## <a name="see-also"></a>Vea también  
     
  [Sistema operativo SQL Server relacionadas con vistas de administración dinámica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [Sys.dm_exec_session_wait_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
- [Sys.dm_db_wait_stats &#40; Base de datos SQL Azure &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
+ [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
+ [sys.dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
   
   
 

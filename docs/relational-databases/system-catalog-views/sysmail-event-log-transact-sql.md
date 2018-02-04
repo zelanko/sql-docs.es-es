@@ -1,5 +1,5 @@
 ---
-title: sysmail_event_log (Transact-SQL) | Documentos de Microsoft
+title: sysmail_event_log (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_event_log
 - sysmail_event_log_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_event_log database mail view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_event_log database mail view
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aadbf36412f02f9a785d078d6fa949fcbeabc5f7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9dca8c14d7ea9fefbe566d7f0770b395df48bf25
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmaileventlog-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +39,10 @@ ms.lasthandoff: 11/17/2017
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**Log_id**|**int**|Identificador de elementos del registro.|  
-|**event_type**|**varchar (11)**|Tipo de aviso insertado en el registro. Los valores posibles son errores, advertencias, mensajes informativos, mensajes de operación correcta y otros mensajes internos.|  
+|**event_type**|**varchar(11)**|Tipo de aviso insertado en el registro. Los valores posibles son errores, advertencias, mensajes informativos, mensajes de operación correcta y otros mensajes internos.|  
 |**log_date**|**datetime**|Fecha y hora en que se realiza la entrada de registro.|  
-|**Descripción**|**nvarchar(max)**|Texto del mensaje que se registra.|  
-|**Id**|**int**|Id. de proceso del programa externo del Correo electrónico de base de datos. Suele cambiar cada vez que se inicia el programa externo del Correo electrónico de base de datos.|  
+|**description**|**nvarchar(max)**|Texto del mensaje que se registra.|  
+|**process_id**|**int**|Id. de proceso del programa externo del Correo electrónico de base de datos. Suele cambiar cada vez que se inicia el programa externo del Correo electrónico de base de datos.|  
 |**mailitem_id**|**int**|Identificador del elemento de correo en la cola de correo electrónico. Su valor será NULL si el mensaje no está relacionado con un elemento de correo electrónico determinado.|  
 |**account_id**|**int**|El **account_id** de la cuenta relacionada con el evento. Su valor será NULL si el mensaje no está relacionado con una cuenta de correo electrónico determinada.|  
 |**last_mod_date**|**datetime**|Fecha y hora de la modificación más reciente de la fila.|  
@@ -54,7 +57,7 @@ ms.lasthandoff: 11/17/2017
  Debe ser un miembro de la **sysadmin** rol fijo de servidor o el **DatabaseMailUserRole** rol de base de datos para tener acceso a esta vista. Los miembros de **DatabaseMailUserRole** que no son miembros de la **sysadmin** rol, solo puede ver los eventos para los correos electrónicos que envíen ellos mismos.  
   
 ## <a name="see-also"></a>Vea también  
- [sysmail_faileditems &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
+ [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
  [Programa externo Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail-external-program.md)  
   
   

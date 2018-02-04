@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_cryptographic_provider_algorithms (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_cryptographic_provider_algorithms (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_cryptographic_provider_algorithms
 - sys.dm_cryptographic_provider_algorithms_TSQL
 - dm_cryptographic_provider_algorithms
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_cryptographic_provider_algorithms dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_cryptographic_provider_algorithms dynamic management function
 ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
-caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 265fba19bee60b37f5c79b113d620c1df0031202
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6e728edc7b3e246917343bdcae834a104875ed00
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmcryptographicprovideralgorithms-transact-sql"></a>sys.dm_cryptographic_provider_algorithms (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +56,8 @@ sys.dm_cryptographic_provider_algorithms ( provider_id )
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |algorithm_id|**int**|Es el número de identificación del algoritmo.|  
-|algorithm_tag|**nvarchar (60)**|Es la etiqueta de identificación del algoritmo.|  
-|key_type|**nvarchar (128)**|Muestra el tipo de clave. Devuelve ASYMMETRIC KEY o SYMMETRIC KEY.|  
+|algorithm_tag|**nvarchar(60)**|Es la etiqueta de identificación del algoritmo.|  
+|key_type|**nvarchar(128)**|Muestra el tipo de clave. Devuelve ASYMMETRIC KEY o SYMMETRIC KEY.|  
 |key_length|**int**|Indica la longitud de la clave, en bits.|  
   
 ## <a name="permissions"></a>Permissions  

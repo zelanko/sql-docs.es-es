@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_cdc_errors (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_cdc_errors (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,23 +17,24 @@ f1_keywords:
 - dm_cdc_errors
 - sys.dm_cdc_errors
 - sys.dm_cdc_errors_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_cdc_errors dynamic management view
 - change data capture [SQL Server], error reporting
 ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 327a860b8558ec6dd1e3726abc7b0cfd2587e3ca
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 03e39dee1e8a04aa1222be9d5e477c7dd76895ad
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="change-data-capture---sysdmcdcerrors"></a>Captura de datos modificados - sys.dm_cdc_errors
+# <a name="change-data-capture---sysdmcdcerrors"></a>Change Data Capture - sys.dm_cdc_errors
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila para cada error encontrado durante la sesión de recorrido de registro de captura de datos del cambio.  
@@ -46,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 |**error_number**|**int**|Id. del mensaje de error.|  
 |**error_severity**|**int**|Nivel de gravedad del mensaje, entre 1 y 25.|  
 |**error_state**|**int**|Número de estado del error.|  
-|**error_message**|**nvarchar (1024)**|Texto del mensaje del error.|  
+|**error_message**|**nvarchar(1024)**|Texto del mensaje del error.|  
 |**start_lsn**|**nvarchar(23)**|Valor LSN inicial de las filas que se estaban procesando en el momento de producirse el error.<br /><br /> 0 = el error no se produjo durante una sesión de recorrido del registro.|  
 |**begin_lsn**|**nvarchar(23)**|Valor LSN inicial de la transacción que se estaba procesando en el momento de producirse el error.<br /><br /> 0 = el error no se produjo durante una sesión de recorrido del registro.|  
 |**sequence_value**|**nvarchar(23)**|Valor LSN de las filas que se estaban procesando en el momento de producirse el error.<br /><br /> 0 = el error no se produjo durante una sesión de recorrido del registro.|  
@@ -58,8 +60,8 @@ ms.lasthandoff: 11/17/2017
  Requiere el permiso VIEW DATABASE STATE para consultar el **sys.dm_cdc_errors** vista de administración dinámica. Para obtener más información acerca de los permisos en las vistas de administración dinámica, consulte [funciones y vistas de administración dinámica &#40; Transact-SQL &#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Sys.dm_cdc_log_scan_sessions &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)   
- [Sys.dm_repl_traninfo &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-repl-traninfo-transact-sql.md)  
+ [sys.dm_cdc_log_scan_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)   
+ [sys.dm_repl_traninfo &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-repl-traninfo-transact-sql.md)  
   
   
 

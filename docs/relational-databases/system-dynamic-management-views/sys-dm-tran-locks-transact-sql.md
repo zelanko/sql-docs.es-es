@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_tran_locks (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_tran_locks (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_tran_locks
 - sys.dm_tran_locks_TSQL
 - dm_tran_locks_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_locks dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_locks dynamic management view
 ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
-caps.latest.revision: "61"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9ef513e5c0442b465f7a7bc65739bb811058eca3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 77f18549714e52e2d5681084b0b2246c838b5467
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,26 +45,26 @@ ms.lasthandoff: 11/17/2017
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**resource_type**|**nvarchar (60)**|Representa el tipo de recurso. El valor puede ser uno de los siguientes: DATABASE, FILE, OBJECT, PAGE, KEY, EXTENT, RID, APPLICATION, METADATA, HOBT o ALLOCATION_UNIT.|  
-|**resource_subtype**|**nvarchar (60)**|Representa un subtipo de **resource_type**. Adquirir un bloqueo de subtipo sin mantener un bloqueo sin subtipos del tipo primario es técnicamente válido. Los diferentes subtipos no entran en conflicto, ni entre sí, ni con el tipo primario sin subtipos. No todos los tipos de recurso tienen subtipos.|  
+|**resource_type**|**nvarchar(60)**|Representa el tipo de recurso. El valor puede ser uno de los siguientes: DATABASE, FILE, OBJECT, PAGE, KEY, EXTENT, RID, APPLICATION, METADATA, HOBT o ALLOCATION_UNIT.|  
+|**resource_subtype**|**nvarchar(60)**|Representa un subtipo de **resource_type**. Adquirir un bloqueo de subtipo sin mantener un bloqueo sin subtipos del tipo primario es técnicamente válido. Los diferentes subtipos no entran en conflicto, ni entre sí, ni con el tipo primario sin subtipos. No todos los tipos de recurso tienen subtipos.|  
 |**resource_database_id**|**int**|Id. de la base de datos en la que se centra este recurso. Todos los recursos manejados por el administrador de bloqueos tienen como ámbito el Id. de la base de datos.|  
 |**resource_description**|**nvarchar(256)**|Descripción del recurso que solo contiene información que no está disponible en otras columnas de recurso.|  
 |**resource_associated_entity_id**|**bigint**|Id. de la entidad en una base de datos a la que se asocia un recurso. Puede ser un Id. de objeto, de Hobt o de unidad de asignación, dependiendo del tipo de recurso.|  
 |**resource_lock_partition**|**Int**|Id. de la partición de bloqueo para un recurso de bloqueo dividido. El valor para recursos de bloqueo sin particiones es 0.|  
-|**request_mode**|**nvarchar (60)**|Modo de la solicitud. En el caso de solicitudes concedidas, se trata del modo concedido; en el caso de solicitudes en espera, se trata del modo que se está solicitando.|  
-|**request_type**|**nvarchar (60)**|Tipo de solicitud. El valor es LOCK.|  
-|**request_status**|**nvarchar (60)**|Estado actual de esta solicitud. Los valores posibles son GRANTED, CONVERT, WAIT, LOW_PRIORITY_CONVERT, LOW_PRIORITY_WAIT o ABORT_BLOCKERS. Para obtener más información acerca de los bloqueos de anulación y esperas de prioridad baja, consulte el *low_priority_lock_wait* sección de [ALTER INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-index-transact-sql.md).|  
+|**request_mode**|**nvarchar(60)**|Modo de la solicitud. En el caso de solicitudes concedidas, se trata del modo concedido; en el caso de solicitudes en espera, se trata del modo que se está solicitando.|  
+|**request_type**|**nvarchar(60)**|Tipo de solicitud. El valor es LOCK.|  
+|**request_status**|**nvarchar(60)**|Estado actual de esta solicitud. Los valores posibles son GRANTED, CONVERT, WAIT, LOW_PRIORITY_CONVERT, LOW_PRIORITY_WAIT o ABORT_BLOCKERS. Para obtener más información acerca de los bloqueos de anulación y esperas de prioridad baja, consulte el *low_priority_lock_wait* sección de [ALTER INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-index-transact-sql.md).|  
 |**request_reference_count**|**smallint**|Devuelve un número aproximado de veces que el mismo solicitante ha requerido este recurso.|  
 |**request_lifetime**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**request_session_id**|**int**|Id. de la sesión que actualmente posee esta solicitud. El Id. de esta sesión puede cambiar en el caso de transacciones distribuidas y enlazadas. Un valor -2 indica que la solicitud pertenece a una transacción distribuida huérfana. El valor -3 indica que la solicitud pertenece a una transacción de recuperación diferida; por ejemplo, una transacción para la que se ha diferido la reversión en la recuperación porque esta reversión no se ha podido terminar correctamente.|  
 |**request_exec_context_id**|**int**|Id. del contexto de ejecución del proceso que posee actualmente esta solicitud.|  
 |**request_request_id**|**int**|Id. de solicitud (Id. de lote) del proceso que posee actualmente esta solicitud. Este valor cambiará cada vez que cambie la conexión activa del conjunto de resultados activos múltiples (MARS) para una transacción.|  
-|**request_owner_type**|**nvarchar (60)**|Tipo de entidad que posee la solicitud. Las solicitudes del administrador de bloqueos pueden ser propiedad de varios tipos de entidades. Los valores posibles son:<br /><br /> TRANSACTION = La solicitud es propiedad de una transacción.<br /><br /> CURSOR = La solicitud es propiedad de un cursor.<br /><br /> SESSION = La solicitud es propiedad de una sesión de usuario.<br /><br /> SHARED_TRANSACTION_WORKSPACE = La solicitud es propiedad de la parte compartida del área de trabajo de la transacción.<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = La solicitud es propiedad de la parte exclusiva del área de trabajo de la transacción.<br /><br /> NOTIFICATION_OBJECT = La solicitud es propiedad de un componente interno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este componente ha solicitado al administrador de bloqueos que le notifique cuándo otro componente está a la espera del bloqueo. La característica FileTable es un componente que utiliza este valor.<br /><br /> **Nota:** las áreas de trabajo se usan internamente para mantener bloqueos para sesiones dadas de alta.|  
+|**request_owner_type**|**nvarchar(60)**|Tipo de entidad que posee la solicitud. Las solicitudes del administrador de bloqueos pueden ser propiedad de varios tipos de entidades. Los valores posibles son:<br /><br /> TRANSACTION = La solicitud es propiedad de una transacción.<br /><br /> CURSOR = La solicitud es propiedad de un cursor.<br /><br /> SESSION = La solicitud es propiedad de una sesión de usuario.<br /><br /> SHARED_TRANSACTION_WORKSPACE = La solicitud es propiedad de la parte compartida del área de trabajo de la transacción.<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = La solicitud es propiedad de la parte exclusiva del área de trabajo de la transacción.<br /><br /> NOTIFICATION_OBJECT = La solicitud es propiedad de un componente interno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este componente ha solicitado al administrador de bloqueos que le notifique cuándo otro componente está a la espera del bloqueo. La característica FileTable es un componente que utiliza este valor.<br /><br /> **Nota:** las áreas de trabajo se usan internamente para mantener bloqueos para sesiones dadas de alta.|  
 |**request_owner_id**|**bigint**|Identificador del propietario específico de esta solicitud.<br /><br /> Si una transacción es la propietaria de la solicitud, este valor contiene el identificador de transacción<br /><br /> Cuando un objeto FileTable es el propietario de la solicitud, **request_owner_id** puede tener uno de los siguientes valores.<br /><br /> <br /><br /> -4: una objeto FileTable ha tomado un bloqueo de base de datos.<br /><br /> -3: una objeto FileTable ha tomado un bloqueo de tabla.<br /><br /> Otro valor: el valor representa un identificador de archivo. Este valor también aparece como **fcb_id** en la vista de administración dinámica [sys.dm_filestream_non_transacted_handles &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).|  
 |**request_owner_guid**|**uniqueidentifier**|GUID del propietario específico de esta solicitud. Este valor solo se utiliza en una transacción distribuida cuando el valor corresponde al GUID del servicio MS DTC para esa transacción.|  
-|**request_owner_lockspace_id**|**nvarchar (32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Este valor representa el Id. del espacio de bloqueo del solicitante. El Id. del espacio de bloqueo determina si dos solicitantes son compatibles entre sí y si pueden tener bloqueos en modos que, de otra forma, entrarían en conflicto entre sí.|  
-|**lock_owner_address**|**varbinary (8)**|Dirección de memoria de la estructura de datos interna utilizada para realizar el seguimiento de esta solicitud. Esta columna se puede combinar la con **resource_address** columna en **sys.dm_os_waiting_tasks**.|  
-|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
+|**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Este valor representa el Id. del espacio del solicitante. El Id. del espacio de bloqueo determina si dos solicitantes son compatibles entre sí y si pueden tener bloqueos en modos que, de otra forma, entrarían en conflicto entre sí.|  
+|**lock_owner_address**|**varbinary(8)**|Dirección de memoria de la estructura de datos interna utilizada para realizar el seguimiento de esta solicitud. Esta columna se puede combinar la con **resource_address** columna en **sys.dm_os_waiting_tasks**.|  
+|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
   
 ## <a name="permissions"></a>Permissions  
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
@@ -202,19 +205,19 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles de Premium, requiere
 |Recurso|Formato|Description|  
 |--------------|------------|-----------------|  
 |DATABASE|No aplicable|Id. de base de datos ya está disponible en la **resource_database_id** columna.|  
-|FILE|< file_id >|Id. del archivo representado por este recurso.|  
-|OBJECT|< object_id >|Id. del objeto representado por este recurso. Este objeto puede ser cualquier objeto mostrado en **sys.objects**, no solo una tabla.|  
+|FILE|<file_id>|Id. del archivo representado por este recurso.|  
+|OBJECT|<object_id>|Id. del objeto representado por este recurso. Este objeto puede ser cualquier objeto mostrado en **sys.objects**, no solo una tabla.|  
 |PAGE|<file_id>:<page_in_file>|Representa el Id. de página y de archivo de la página representada por este recurso.|  
-|KEY|< hash_value >|Representa un hash de las columnas de clave de la fila representada por este recurso.|  
+|KEY|<hash_value>|Representa un hash de las columnas de clave de la fila representada por este recurso.|  
 |EXTENT|<file_id>:<page_in_files>|Representa el Id. de página y de archivo de la extensión representada por este recurso. El Id. de extensión es el mismo que el Id. de página correspondiente a la primera página de la extensión.|  
 |RID|<file_id>:<page_in_file>:<row_on_page>|Representa el Id. de página y de fila de la fila representada por este recurso. Tenga en cuenta que si el Id. del objeto asociado es 99, este recurso representa una de las ocho zonas de página mixta en la primera página IAM de una cadena IAM.|  
-|APPLICATION|\<DbPrincipalId >:\<hasta 32 caracteres > :(< hash_value >)|Representa el Id. de la entidad de seguridad de base de datos utilizada para asignar el ámbito de este recurso de bloqueo de aplicación. También se incluyen hasta 32 caracteres de la cadena del recurso correspondiente a este recurso de bloqueo de la aplicación. En determinados casos solo pueden mostrarse 2 caracteres porque la cadena completa ya no está disponible. Este comportamiento solo se produce en tiempo de recuperación de la base de datos para bloqueos de aplicaciones que se vuelven a adquirir como parte del proceso de recuperación. El valor hash representa un hash de la cadena de recurso completa correspondiente a este recurso de bloqueo de la aplicación.|  
+|APPLICATION|\<DbPrincipalId>:\<upto 32 characters>:(<hash_value>)|Representa el Id. de la entidad de seguridad de base de datos utilizada para asignar el ámbito de este recurso de bloqueo de aplicación. También se incluyen hasta 32 caracteres de la cadena del recurso correspondiente a este recurso de bloqueo de la aplicación. En determinados casos solo pueden mostrarse 2 caracteres porque la cadena completa ya no está disponible. Este comportamiento solo se produce en tiempo de recuperación de la base de datos para bloqueos de aplicaciones que se vuelven a adquirir como parte del proceso de recuperación. El valor hash representa un hash de la cadena de recurso completa correspondiente a este recurso de bloqueo de la aplicación.|  
 |HOBT|No aplicable|Identificador de HoBt se incluye como el **resource_associated_entity_id**.|  
 |ALLOCATION_UNIT|No aplicable|Id. de unidad de asignación se incluye como el **resource_associated_entity_id**.|  
 |METADATA.ASSEMBLY|assembly_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_CLR_NAME|$qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_TOKEN|assembly_id = A, $token_id|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|METADATOS. ASSYMMETRIC_KEY|asymmetric_key_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|METADATA.ASSYMMETRIC_KEY|asymmetric_key_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.AUDIT|audit_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.AUDIT_ACTIONS|device_id = D, major_id = M|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.AUDIT_SPECIFICATION|audit_specification_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -387,7 +390,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Sys.dm_tran_database_transactions &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
+ [sys.dm_tran_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funciones y vistas de administración dinámica relacionadas con transacciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

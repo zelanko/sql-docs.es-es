@@ -3,7 +3,7 @@ title: "Use la extensión de mssql de código de Visual Studio para SQL Server |
 description: "Este tutorial muestra cómo utilizar la extensión mssql para el código de VS. Esta extensión le permite editar y ejecutar scripts de Transact-SQL en el código de VS."
 author: erickangMSFT
 ms.author: erickang
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: 
 ms.workload: Active
-ms.openlocfilehash: f7620db7f18c07544158ba49efbead9025c7a19a
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 14119be0cc95be9f7acb324553b0c0598896c5d9
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Usar código de Visual Studio para crear y ejecutar secuencias de comandos de Transact-SQL para SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este tema muestra cómo utilizar el **mssql** extensión para Visual Studio Code (código de VS) para desarrollar bases de datos de SQL Server.
 
@@ -80,7 +80,7 @@ El **mssql** extensión permite mssql comandos y T-SQL IntelliSense en el editor
 
 Los pasos siguientes muestran cómo conectarse a SQL Server con el código de VS.
 
-1. En el código de VS, presione **CTRL + MAYÚS + P** (o **F1**) para abrir la paleta de comando.
+1. En VSCode, presione **CTRL+MAYÚS+P** (o **F1**) para abrir la paleta de comandos.
 
 2. Tipo de **sql** para mostrar los comandos mssql.
 
@@ -91,7 +91,7 @@ Los pasos siguientes muestran cómo conectarse a SQL Server con el código de VS
 
 4. Seleccione **Crear perfil de conexión**. Esto crea un perfil de conexión para la instancia de SQL Server.
 
-5. Siga las indicaciones para especificar las propiedades de conexión para el nuevo perfil de conexión. Después de especificar cada valor, presione **ENTRAR** para continuar. 
+5. Siga las indicaciones para especificar las propiedades de conexión del nuevo perfil de conexión. Después de especificar cada valor, presione **ENTRAR** para continuar. 
 
    En la tabla siguiente se describe las propiedades de perfil de conexión.
 
@@ -100,14 +100,14 @@ Los pasos siguientes muestran cómo conectarse a SQL Server con el código de VS
    | **Nombre del servidor** | El nombre de instancia de SQL Server. Para este tutorial, utilice **localhost** para conectarse a la instancia de SQL Server local en su equipo. Si se conecta a un servidor SQL remoto, escriba el nombre de la máquina de SQL Server de destino o su dirección IP. |
    | **[Opcional] Nombre de base de datos** | La base de datos que desea usar. Para fines de este tutorial, no se especifica una base de datos y presione **ENTRAR** para continuar. |
    | **Nombre de usuario.** | Escriba el nombre de un usuario con acceso a una base de datos en el servidor. Para este tutorial, utilice el valor predeterminado **SA** cuenta creada durante la instalación de SQL Server. |
-   | **Contraseña (inicio de sesión SQL)** | Escriba la contraseña del usuario especificado. | 
-   | **¿Guardar contraseña?** | Tipo de **Sí** para guardar la contraseña. En caso contrario, escriba **No** que se le pida la contraseña cada vez que se usa el perfil de conexión. |
+   | **Contraseña (inicio de sesión de SQL)** | Escriba la contraseña del usuario especificado. | 
+   | **¿Desea guardar la contraseña?** | Tipo de **Sí** para guardar la contraseña. En caso contrario, escriba **No** que se le pida la contraseña cada vez que se usa el perfil de conexión. |
    | **[Opcional] Escriba un nombre para este perfil** | El nombre del perfil de conexión. Por ejemplo, podría denominar el perfil **localhost perfil**. 
 
    > [!Tip] 
    > Puede crear y editar perfiles de conexión en el archivo de configuración de usuario (settings.json). Abra el archivo de configuración seleccionando **preferencias** y, a continuación, **configuración de usuario** en el menú de VS Code. Para obtener más información, consulte [administrar perfiles de conexión].
 
-6. Presione el **ESC** tecla para cerrar el mensaje de información que le informa de que el perfil se crea y conectado.
+6. Presione la tecla **ESC** para cerrar el mensaje de información que le indica que el perfil está creado y conectado.
 
    > [!TIP]
    > Si se produce un error de conexión, en primer lugar intenta diagnosticar el problema del mensaje de error en la **salida** panel en VS Code (seleccione **salida** en el **vista** menú). Luego revise las [recomendaciones para solucionar problemas de conexión].

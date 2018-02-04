@@ -3,7 +3,7 @@ title: "Configurar iSCSI de almacenamiento de instancia de clúster de conmutaci
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 9d4ab14772f78370563c6117553ea9e45203a8b9
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 9720eb3b4254f2592e3c237bc2af16bc5360d2ad
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configurar la instancia de clúster de conmutación por error - iSCSI: SQL Server en Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 En este artículo se explica cómo configurar el almacenamiento iSCSI para una instancia de clúster de conmutación por error (FCI) en Linux. 
 
@@ -57,7 +57,7 @@ Para obtener información adicional en el iniciador de iSCSI para las distribuci
 
     - iface.net_ifacename es el nombre de la tarjeta de red tal como se muestra en el sistema operativo.
     - iface.hwaddress es la dirección MAC de nombre único que se creará para esta interfaz siguiente.
-    - iface.IPAddress
+    - iface.ipaddress
     - iface.subnet_Mask 
 
     Vea el ejemplo siguiente:
@@ -200,7 +200,7 @@ Para obtener información adicional en el iniciador de iSCSI para las distribuci
     ls /var/opt/mssql/data
     ```
 
-    ![CopyMove 45][8]
+    ![45-CopyMove][8]
  
    *    Tipo `exit` para volver al usuario raíz.
 
@@ -324,7 +324,7 @@ Para obtener información adicional en el iniciador de iSCSI para las distribuci
 
    *    Para probar, cree una base de datos en esa carpeta. El ejemplo que se muestra a continuación utiliza sqlcmd para crear una base de datos, cambiar el contexto a él, compruebe que los archivos existen en el nivel de sistema operativo y, a continuación, elimina la ubicación temporal. Puede usar SSMS.
   
-    ![50 ExampleCreateSSMS][9]
+    ![50-ExampleCreateSSMS][9]
 
    *    Desmonte el recurso compartido 
 
@@ -358,7 +358,7 @@ Para obtener información adicional en el iniciador de iSCSI para las distribuci
 
     \<ListOfVGsNotUsedByPacemaker > es la lista de grupos de volúmenes de la salida de paso 20 que no usará la FCI. Coloque cada uno de ellos entre comillas y separados por punto y coma. A continuación, se muestra un ejemplo.
 
-    ![55 ListOfVGs][11]
+    ![55-ListOfVGs][11]
  
  
 17. Cuando se inicia en Linux, montará el sistema de archivos. Para asegurarse de que solo marcapasos pueden montar el disco iSCSI, vuelva a generar la imagen de sistema de archivos de raíz. 

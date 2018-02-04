@@ -1,5 +1,5 @@
 ---
-title: Sys.database_mirroring_witnesses (Transact-SQL) | Documentos de Microsoft
+title: sys.database_mirroring_witnesses (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - sys.database_mirroring_witnesses_TSQL
 - database_mirroring_witnesses
 - database_mirroring_witnesses_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - database mirroring [SQL Server], catalog views
 - sys.database_mirroring_witnesses catalog view
 - witness [SQL Server], sys.database_mirroring_witnesses catalog view
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
-caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 428c99c8325528c451e751dd7b9278362a5cdfb0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3ce23f7d9f763bf08842a1f121c881fb5fbdcee0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="database-mirroring-witness-catalog-views---sysdatabasemirroringwitnesses"></a>Vistas de catálogo de testigo de creación de reflejo - base de datos sys.database_mirroring_witnesses
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 |**principal_server_name**|**sysname**|Nombre del servidor asociado cuya copia de la base de datos es actualmente la base de datos principal.|  
 |**mirror_server_name**|**sysname**|Nombre del servidor asociado cuya copia de la base de datos es actualmente la base de datos reflejada.|  
 |**safety_level**|**tinyint**|Configuración de la seguridad de las transacciones para realizar actualizaciones en la base de datos reflejada:<br /><br /> 0 = Estado desconocido<br /><br /> 1 = Desactivada (asincrónica)<br /><br /> 2 = Completa (sincrónica)<br /><br /> Cuando se utiliza un testigo para la conmutación automática por error, se requiere la seguridad de transacciones completa, que es el valor predeterminado.|  
-|**safety_level_desc**|**nvarchar (60)**|Descripción de la garantía de seguridad de las actualizaciones de la base de datos reflejada:<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL|  
+|**safety_level_desc**|**nvarchar(60)**|Descripción de la garantía de seguridad de las actualizaciones de la base de datos reflejada:<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL|  
 |**safety_sequence_number**|**int**|Actualizar número de secuencia para cambios **safety_level**.|  
 |**role_sequence_number**|**int**|Número de secuencia de actualización de los cambios en los roles principal/reflejado desempeñados por los asociados de creación de reflejo.|  
 |**mirroring_guid**|**uniqueidentifier**|Identificador de la asociación de creación de reflejo.|  
@@ -54,14 +56,14 @@ ms.lasthandoff: 11/17/2017
 |**is_suspended**|**bit**|La creación de reflejo de la base de datos se ha suspendido.|  
 |**is_suspended_sequence_number**|**int**|Número de secuencia de configuración **is_suspended**.|  
 |**partner_sync_state**|**tinyint**|Estado de sincronización de la sesión de reflejo:<br /><br /> 5 = los socios están sincronizados. La conmutación por error es potencialmente posible. Para obtener información sobre los requisitos para la conmutación por error, vea [conmutación de roles durante una base de datos de creación de reflejo de sesión &#40; SQL Server &#41; ](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> 6 = los asociados no están sincronizados. La conmutación por error no es posible.|  
-|**partner_sync_state_desc**|**nvarchar (60)**|Descripción del estado de sincronización de la sesión de reflejo:<br /><br /> SYNCHRONIZED<br /><br /> UNSYNCHRONIZED|  
+|**partner_sync_state_desc**|**nvarchar(60)**|Descripción del estado de sincronización de la sesión de reflejo:<br /><br /> SYNCHRONIZED<br /><br /> UNSYNCHRONIZED|  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Testigo de creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-witness.md)   
- [Sys.database_mirroring &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
+ [sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
  [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [Preguntas frecuentes sobre consultas del catálogo de sistema de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

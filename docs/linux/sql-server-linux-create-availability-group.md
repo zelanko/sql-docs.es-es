@@ -3,7 +3,7 @@ title: Crear y configurar un grupo de disponibilidad para SQL Server en Linux | 
 description: "Este tutorial muestra cómo crear y configurar grupos de disponibilidad para SQL Server en Linux."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 53256f0cf5e18d8fb250cb5c67ae092771585de1
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8c055558b2a1e8287272835a0a1c0d2e2dc94f02
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Crear y configurar un grupo de disponibilidad para SQL Server en Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este tutorial explica cómo crear y configurar un grupo de disponibilidad (AG) para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] en Linux. A diferencia de [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] y versiones anteriores en Windows, puede habilitar grupos de disponibilidad con o sin crear primero el clúster marcapasos subyacente. Integración con el clúster, si es necesario, no se realiza hasta más adelante.
 
@@ -628,7 +628,7 @@ El recurso de AG que se crea es un tipo especial de recurso denominado un clon. 
     sudo pcs resource create <NameForIPResource> ocf:heartbeat:IPaddr2 ip=<IPAddress> cidr_netmask=<Netmask>
     ```
 
-    **SLES GRANDE**
+    **SLES**
     
     ```bash
     crm configure \
@@ -648,7 +648,7 @@ El recurso de AG que se crea es un tipo especial de recurso denominado un clon. 
     sudo pcs constraint colocation add <NameForIPResource> <NameForAGResource>-master INFINITY with-rsc-role=Master
     ```
 
-    **SLES GRANDE**
+    **SLES**
     
     ```bash
     crm configure <NameForConstraint> inf: \
@@ -666,7 +666,7 @@ El recurso de AG que se crea es un tipo especial de recurso denominado un clon. 
     sudo pcs constraint order promote <NameForAGResource>-master then start <NameForIPResource>
     ```
     
-    **SLES GRANDE**
+    **SLES**
     
     ```bash
     crm configure \

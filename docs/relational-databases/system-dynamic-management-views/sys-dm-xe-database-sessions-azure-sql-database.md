@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_xe_database_sessions (base de datos de SQL Azure) | Documentos de Microsoft
+title: sys.dm_xe_database_sessions (Azure SQL Database) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: 
@@ -8,22 +8,23 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 33ea5179-16bb-4abd-96cc-9bc696e80987
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ef44b8f0b3217aca23aee99419053dc8e2af3c0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 85584709967e1ef7988a12389b5b40e30ee47a7d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmxedatabasesessions-azure-sql-database"></a>Sys.dm_xe_database_sessions (base de datos de SQL Azure)
+# <a name="sysdmxedatabasesessions-azure-sql-database"></a>sys.dm_xe_database_sessions (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Devuelve información sobre los eventos de la sesión. Los eventos son puntos de ejecución discretos. Los predicados se pueden aplicar a los eventos para que no se activen si el evento no contiene la información necesaria.  
@@ -34,10 +35,10 @@ ms.lasthandoff: 11/17/2017
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary (8)**|La dirección de memoria de la sesión de eventos. No admite valores NULL.|  
-|event_name|**nvarchar (60)**|Nombre del evento al que se enlaza una acción. No admite valores NULL.|  
+|event_session_address|**varbinary(8)**|La dirección de memoria de la sesión de eventos. No admite valores NULL.|  
+|event_name|**nvarchar(60)**|Nombre del evento al que se enlaza una acción. No admite valores NULL.|  
 |event_package_guid|**uniqueidentifier**|El GUID del paquete que contiene el evento. No admite valores NULL.|  
-|event_predicate|**nvarchar (2048)**|Representación XML del árbol de predicado que se aplica al evento. Acepta valores NULL.|  
+|event_predicate|**nvarchar(2048)**|Representación XML del árbol de predicado que se aplica al evento. Acepta valores NULL.|  
   
 ## <a name="permissions"></a>Permissions  
  Requiere el permiso VIEW DATABASE STATE.  
@@ -47,8 +48,8 @@ A partir de 2015-07-13, 'sys.dm_xe_objects' es una de estas DMV XEvents que no c
   
 |De|En|Relación|  
 |--------|------|----------------|  
-|Sys.dm_xe_database_session_events.event_session_address|Sys.dm_xe_database_sessions.Address|Varios a uno|  
-|Sys.dm_xe_database_session_events.event_package_guid, sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|Varios a uno|  
+|sys.dm_xe_database_session_events.event_session_address|sys.dm_xe_database_sessions.address|Varios a uno|  
+|sys.dm_xe_database_session_events.event_package_guid, sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|Varios a uno|  
   
 ## <a name="see-also"></a>Vea también  
 [Eventos extendidos en base de datos de SQL Azure](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  

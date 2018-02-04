@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_filestream_non_transacted_handles (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_filestream_non_transacted_handles (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_filestream_non_transacted_handles
 - dm_filestream_non_transacted_handles_TSQL
 - sys.dm_filestream_non_transacted_handles
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_filestream_non_transacted_handles dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_filestream_non_transacted_handles dynamic management view
 ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
-caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f366cde5a82aa7fc7c198f13bb5fb0ff6d2a8309
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bb4ba44df1372fbad89ac21e24d1e27233a99b27
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmfilestreamnontransactedhandles-transact-sql"></a>sys.dm_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,9 +49,9 @@ ms.lasthandoff: 11/17/2017
 |handle_id|int|Id. de contexto del identificador único. Utilizado por el [sp_kill_filestream_non_transacted_handles &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) procedimiento almacenado para eliminar un identificador específico.|  
 |file_object_type|int|Tipo del identificador. Esto indica el nivel de la jerarquía con que se abrió el identificador, es decir, base de datos o elemento.|  
 |file_object_type_desc|nvarchar(120)|“UNDEFINED",<br />“SERVER_ROOT",<br />“DATABASE_ROOT",<br />“TABLE_ROOT",<br />“TABLE_ITEM"|  
-|correlation_process_id|varbinary (8)|Contiene un identificador único para el proceso que originó la solicitud.|  
-|correlation_thread_id|varbinary (8)|Contiene un identificador único para el subproceso que originó la solicitud.|  
-|file_context|varbinary (8)|Puntero al objeto de archivo utilizado por este identificador.|  
+|correlation_process_id|varbinary(8)|Contiene un identificador único para el proceso que originó la solicitud.|  
+|correlation_thread_id|varbinary(8)|Contiene un identificador único para el subproceso que originó la solicitud.|  
+|file_context|varbinary(8)|Puntero al objeto de archivo utilizado por este identificador.|  
 |state|int|Estado actual del identificador. Puede ser activo, cerrado o eliminado.|  
 |state_desc|nvarchar(120)|"ACTIVE",<br />"CLOSED",<br />"KILLED"|  
 |current_workitem_type|int|Indica que este identificador se está procesando actualmente.|  

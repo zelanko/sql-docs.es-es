@@ -1,5 +1,5 @@
 ---
-title: sysmail_add_profile_sp (Transact-SQL) | Documentos de Microsoft
+title: sysmail_add_profile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_profile_sp_TSQL
 - sysmail_add_profile_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_add_profile_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_add_profile_sp
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ab45b6b8af6528614a8c5e306bad2cc58eb130d9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6295b1f239f136c43e00e047186ce408ab9a4a93
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailaddprofilesp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +54,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
  [  **@description**  =] **'***descripción***'**  
  Descripción opcional del nuevo perfil. *descripción* es **nvarchar (256)**, no tiene ningún valor predeterminado.  
   
- [  **@profile_id**  =] *new_profile_id***salida**  
+ [ **@profile_id** = ] *new_profile_id***OUTPUT**  
  Devuelve el identificador del nuevo perfil. *new_profile_id* es **int**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

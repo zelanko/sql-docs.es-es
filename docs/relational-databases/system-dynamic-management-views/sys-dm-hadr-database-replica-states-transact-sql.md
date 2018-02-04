@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_hadr_database_replica_states (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_hadr_database_replica_states (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/08/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_hadr_database_states
 - dm_hadr_database_states
 - dm_hadr_database_states_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_database_replica_states dynamic management view
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-caps.latest.revision: "84"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4b57d7550f007eb4a85f7db698aae84f133726c9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b9c0d53a9d2a339b59f9696aa02dd0e409d8e95a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmhadrdatabasereplicastates-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,15 +51,15 @@ ms.lasthandoff: 11/17/2017
 |**is_local**|**bit**|Si la base de datos de disponibilidad es local, uno de los siguientes:<br /><br /> 0 = La base de datos no es local en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = La base de datos es local en la instancia de servidor.|  
 |**is_primary_replica**|**bit**|Devuelve 1 si la réplica principal o 0 si se trata de una réplica secundaria. Es aplicable a SQL Server 2014 y versiones posteriores.|  
 |**synchronization_state**|**tinyint**|Estado de movimiento de datos, uno de los siguientes valores.<br /><br /> 0 = no se están sincronizando. En una base de datos principal, indica que la base de datos no está lista para sincronizar su registro de transacciones con las bases de datos secundarias correspondientes. En una base de datos secundaria, indica que la base de datos no ha iniciado la sincronización del registro debido a un problema de conexión, se está suspendiendo o está pasando por estados de transición durante el inicio o en una conmutación de roles.<br /><br /> 1 = la sincronización. En una base de datos principal, indica que la base de datos está lista para aceptar una solicitud de examen de una base de datos secundaria. En una base de datos secundaria, indica que se está produciendo un movimiento de datos activo para la base de datos.<br /><br /> 2 = Synchronized. Una base de datos principal muestra SYNCHRONIZED en lugar de SYNCHRONIZING. Una base de datos secundaria de confirmación sincrónica se muestra como sincronizado cuando la memoria caché local indica que la base de datos está lista para la conmutación por error y está en proceso de sincronización.<br /><br /> 3 = revertir. Indica la fase en el proceso de reversión cuando una base de datos secundaria está obteniendo activamente páginas de la base de datos principal. **Precaución:** cuando una base de datos en una réplica secundaria está en estado REVERTING, forzar la conmutación por error a la réplica secundaria deja la base de datos en un estado en el que no se puede iniciar como base de datos principal. O la base de datos tendrá que volverse a conectar como base de datos secundaria, o deberá aplicar las nuevas entradas del registro de una copia de seguridad de registros.<br /><br /> 4 = inicializar. Indica la fase de reversión cuando el registro de transacciones necesario para la puesta al día de una base de datos secundaria respecto al LSN de reversión se envía y se protege en una réplica secundaria. **Precaución:** cuando una base de datos en una réplica secundaria está en estado INITIALIZING, forzar la conmutación por error a la réplica secundaria deja la base de datos en un estado donde se inicia como una base de datos principal. O la base de datos tendrá que volverse a conectar como base de datos secundaria, o deberá aplicar las nuevas entradas del registro de una copia de seguridad de registros.|  
-|**synchronization_state_desc**|**nvarchar (60)**|Descripción del estado de movimiento de datos, uno de los siguientes:<br /><br /> NOT SYNCHRONIZING<br /><br /> SYNCHRONIZING<br /><br /> SYNCHRONIZED<br /><br /> REVERTING<br /><br /> INITIALIZING|  
+|**synchronization_state_desc**|**nvarchar(60)**|Descripción del estado de movimiento de datos, uno de los siguientes:<br /><br /> NOT SYNCHRONIZING<br /><br /> SYNCHRONIZING<br /><br /> SYNCHRONIZED<br /><br /> REVERTING<br /><br /> INITIALIZING|  
 |**is_commit_participant**|**bit**|0 = La confirmación de la transacción no está sincronizada con respecto a esta base de datos.<br /><br /> 1 = La confirmación de la transacción está sincronizada con respecto a esta base de datos.<br /><br /> Para una base de datos de una réplica de disponibilidad de confirmación asincrónica, este valor siempre es 0.<br /><br /> Para una base de datos en una replicación de disponibilidad de confirmación sincrónica, este valor es preciso solo en la base de datos principal.|  
 |**synchronization_health**|**tinyint**|Refleja la intersección entre el estado de sincronización de una base de datos que se ha unido al grupo de disponibilidad en la réplica de disponibilidad y el modo de disponibilidad de la réplica de disponibilidad (modo de confirmación sincrónica o asincrónica), uno de los valores siguientes.<br /><br /> 0 = no correcto. El **synchronization_state** de la base de datos es 0 (no se están SINCRONIZANDO).<br /><br /> 1 = parcialmente correcto. Una base de datos en una réplica de disponibilidad de confirmación sincrónica se considera parcialmente correcta si **synchronization_state** es 1 (SYNCHRONIZING).<br /><br /> 2 = correcto. Una base de datos en una réplica de disponibilidad de confirmación sincrónica se considera correcta si **synchronization_state** es 2 (SYNCHRONIZED) y una base de datos en una réplica de disponibilidad de confirmación asincrónica se considera correcta si **synchronization_state** es 1 (SYNCHRONIZING).|  
-|**synchronization_health_desc**|**nvarchar (60)**|Descripción de la **synchronization_health** de la base de datos de disponibilidad.<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
+|**synchronization_health_desc**|**nvarchar(60)**|Descripción de la **synchronization_health** de la base de datos de disponibilidad.<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
 |**database_state**|**tinyint**|0 = En línea<br /><br /> 1 = Restaurándose<br /><br /> 2 = En recuperación<br /><br /> 3 = Recuperación pendiente<br /><br /> 4 = Sospechosa<br /><br /> 5 = Emergencia<br /><br /> 6 = Sin conexión<br /><br /> **Nota:** igual que **estado** columna en sys.databases.|  
-|**database_state_desc**|**nvarchar (60)**|Descripción de la **database_state** de la réplica de disponibilidad.<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING <br /><br /> SUSPECT<br /><br /> EMERGENCY<br /><br /> OFFLINE<br /><br /> **Nota:** igual que **estado** columna en sys.databases.|  
+|**database_state_desc**|**nvarchar(60)**|Descripción de la **database_state** de la réplica de disponibilidad.<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING <br /><br /> SUSPECT<br /><br /> EMERGENCY<br /><br /> OFFLINE<br /><br /> **Nota:** igual que **estado** columna en sys.databases.|  
 |**is_suspended**|**bit**|Estado de la base de datos, uno de los siguientes:<br /><br /> 0 = Reanudada<br /><br /> 1 = Suspendida|  
 |**suspend_reason**|**tinyint**|Si la base de datos está suspendida, el motivo de este estado; uno de los siguientes:<br /><br /> 0 = Acción del usuario<br /><br /> 1 = Suspender desde el asociado<br /><br /> 2 = Rehacer<br /><br /> 3 = Capturar<br /><br /> 4 = Aplicar<br /><br /> 5 = Reiniciar<br /><br /> 6 = Deshacer<br /><br /> 7 = Revalidación<br /><br /> 8 = Error en el cálculo del punto de sincronización de la réplica secundaria.|  
-|**suspend_reason_desc**|**nvarchar (60)**|Descripción del motivo del estado suspendido de la base de datos, uno de los siguientes:<br /><br /> SUSPEND_FROM_USER = Un usuario suspendió manualmente el movimiento de datos<br /><br /> SUSPEND_FROM_PARTNER = La réplica de base de datos se suspende tras una conmutación por error forzada<br /><br /> SUSPEND_FROM_REDO = Error durante la fase Rehacer<br /><br /> SUSPEND_FROM_APPLY = Error al escribir el registro en el archivo (vea el registro de errores)<br /><br /> SUSPEND_FROM_CAPTURE = Error al capturar el registro en la réplica principal<br /><br /> SUSPEND_FROM_RESTART = La réplica de base de datos se suspendió antes de que la base de datos se reiniciara (vea el registro de errores)<br /><br /> SUSPEND_FROM_UNDO = Error durante la fase Rehacer (vea el registro de errores)<br /><br /> SUSPEND_FROM_REVALIDATION = La coincidencia de cambios de registro se detecta en la reconexión (vea el registro de errores)<br /><br /> SUSPEND_FROM_XRF_UPDATE = No se puede encontrar el punto común de registro (vea el registro de errores)|  
+|**suspend_reason_desc**|**nvarchar(60)**|Descripción del motivo del estado suspendido de la base de datos, uno de los siguientes:<br /><br /> SUSPEND_FROM_USER = Un usuario suspendió manualmente el movimiento de datos<br /><br /> SUSPEND_FROM_PARTNER = La réplica de base de datos se suspende tras una conmutación por error forzada<br /><br /> SUSPEND_FROM_REDO = Error durante la fase Rehacer<br /><br /> SUSPEND_FROM_APPLY = Error al escribir el registro en el archivo (vea el registro de errores)<br /><br /> SUSPEND_FROM_CAPTURE = Error al capturar el registro en la réplica principal<br /><br /> SUSPEND_FROM_RESTART = La réplica de base de datos se suspendió antes de que la base de datos se reiniciara (vea el registro de errores)<br /><br /> SUSPEND_FROM_UNDO = Error durante la fase Rehacer (vea el registro de errores)<br /><br /> SUSPEND_FROM_REVALIDATION = La coincidencia de cambios de registro se detecta en la reconexión (vea el registro de errores)<br /><br /> SUSPEND_FROM_XRF_UPDATE = No se puede encontrar el punto común de registro (vea el registro de errores)|  
 |**recovery_lsn**|**numeric(25,0)**|En la réplica principal, el final del registro de transacciones antes de que la base de datos principal escriba nuevas entradas de registro después de la recuperación o la conmutación por error. Para una base de datos secundaria, si este valor es menor que el LSN reforzado actual (last_hardened_lsn), el recovery_lsn es el valor con el que esta base de datos secundaria necesitaría volver a sincronizar (es decir, revertir y reinicializar). Si este valor es mayor o igual que el LSN reforzado actual, sería innecesaria una resincronización y no se produciría.<br /><br /> **recovery_lsn** refleja un identificador de bloque de registro rellenado con ceros. No es un número de secuencia de registro (LSN) real. Para obtener información acerca de cómo se deriva este valor, consulte [descripción de los valores de columna LSN](#LSNcolumns), más adelante en este tema.|  
 |**truncation_lsn**|**numeric(25,0)**|En la réplica principal, para la base de datos principal, refleja el LSN de truncamiento del registro mínimo a través de todas las bases de datos secundarias correspondientes. Si el truncamiento de registro local está bloqueado (como mediante una operación de copia de seguridad), este LSN podría ser mayor que el LSN de truncamiento local.<br /><br /> En una base de datos secundaria dada, refleja el punto de truncamiento de esa base de datos.<br /><br /> **truncation_lsn** refleja un identificador de bloque de registro rellenado con ceros. No es un número de secuencia de registro real.|  
 |**last_sent_lsn**|**numeric(25,0)**|El identificador de bloque de registro que indica el punto en el que todos los bloques de registro han sido enviados por el elemento principal. Es el identificador del bloque de registro siguiente que se enviará, en lugar del identificador del bloque de registro enviado más recientemente.<br /><br /> **last_sent_lsn** refleja un identificador de bloque de registro rellenado con ceros, no es un número de secuencia de registro real.|  

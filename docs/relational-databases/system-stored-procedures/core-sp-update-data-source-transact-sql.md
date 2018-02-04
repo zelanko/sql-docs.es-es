@@ -1,5 +1,5 @@
 ---
-title: Core.sp_update_data_source (Transact-SQL) | Documentos de Microsoft
+title: core.sp_update_data_source (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_data_source
 - sp_update_data_source_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_update_data_source
 - management data warehouse, data collector stored procedures
 - core.sp_update_data_source stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 959c9cc843480a3f1d5d4b5ca414b67ac27807d4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 913701521f913542356ea11bc916e6af3a971fe8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="corespupdatedatasource-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +53,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_set_uid =] '*collection_set_uid*'  
+ [ @collection_set_uid = ] '*collection_set_uid*'  
  GUID del conjunto de recopilación. *collection_set_uid* es **uniqueidentifier**, sin valor predeterminado. Para obtener el GUID, consulte la vista dbo.syscollector_collection_sets en la base de datos msdb.  
   
  [ @machine_name =] '*nombre_equipo*'  
@@ -63,8 +65,8 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 > [!NOTE]  
 >  *instanciaconnombre* debe ser el nombre de instancia completo, que consta del nombre del equipo y el nombre de instancia en el formulario *computername*\\*nombreDeInstancia*.  
   
- [ @days_until_expiration =] *days_until_expiration*  
- Número de días restantes en el período de retención de datos de la instantánea. *days_until_expiration* es **smallint**.  
+ [ @days_until_expiration = ] *days_until_expiration*  
+ Número de días restantes en el período de retención de datos de la instantánea. *days_until_expiration* is **smallint**.  
   
  [ @source_id =] *source_id*  
  El identificador único del origen de la actualización. *Source_ID* es **int** y se devuelve como OUTPUT.  

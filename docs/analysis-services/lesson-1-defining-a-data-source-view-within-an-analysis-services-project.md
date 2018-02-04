@@ -1,7 +1,7 @@
 ---
 title: "Lección 1: Definir una vista del origen de datos dentro de un análisis Services proyecto | Documentos de Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/02/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0fe40b4deeb6fa929be969a0d84a61bcad85f9a1
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 0bd1ef5ce2bd0c10e025e74e39ffde313b0dfc1f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Lección 1: definir una vista del origen de datos en un proyecto de Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,15 +36,14 @@ Esta lección contiene las siguientes tareas:
 En esta tarea, creará el proyecto Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] basándose en una plantilla de modelo multidimensional de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 [Definir un origen de datos](../analysis-services/lesson-1-2-defining-a-data-source.md)  
-En esta tarea, especificará la base de datos **AdventureWorksDW2012[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] como origen de datos para las dimensiones y los cubos de**  que definirá en lecciones posteriores.  
+En esta tarea, debe especificar el **AdventureWorksDW** base de datos como origen de datos para el [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dimensiones y cubos que definirá en lecciones posteriores.  
   
 [Definir una vista del origen de datos](../analysis-services/lesson-1-3-defining-a-data-source-view.md)  
-En esta tarea, definirá una única vista unificada de los metadatos de tablas seleccionadas en la base de datos **AdventureWorksDW2012** .  
+En esta tarea, definir una única vista unificada de los metadatos de las tablas seleccionadas en el **AdventureWorksDW** base de datos.  
   
 [Modificar los nombres de tabla predeterminados](../analysis-services/lesson-1-4-modifying-default-table-names.md)  
 En esta tarea, modificará los nombres de tabla de la vista del origen de datos, de modo que los nombres de los objetos subsiguientes de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que definirá sean más descriptivos.  
   
-Compare sus resultados en un archivo de proyecto de ejemplo que se creó para esta lección. Para obtener más información sobre cómo descargar los proyectos de ejemplo relacionados con este tutorial, consulte [SSAS Multidimensional Model Projects for SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkID=221866) (Proyectos de modelo multidimensional de SSAS para SQL Server 2012) en la página de ejemplos del producto de codeplex.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
 [Lección 2: Definir e implementar un cubo](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  

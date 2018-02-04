@@ -3,7 +3,7 @@ title: "Opciones de configuración de SQL Server 2017 en Docker | Documentos de 
 description: "Explorar maneras diferentes de utilizar e interactuar con SQL Server 2017 imágenes del contenedor en Docker. Esto incluye los datos de persistencia, copiando los archivos y solución de problemas."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: 
 ms.workload: On Demand
-ms.openlocfilehash: 416a05397580e6b9c609307f8b25c8014099f999
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 30ac0b58a439af47504c94669af581f5e81fd17c
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Configurar SQL Server 2017 imágenes del contenedor en Docker
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 En este tema se explica cómo configurar y usar el [imagen de contenedor mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) con Docker. Esta imagen se compone de SQL Server que se ejecutan en Linux en función de Ubuntu 16.04. Se puede utilizar con el motor de Docker 1.8 + en Linux o en Docker para Mac y Windows.
 
@@ -86,8 +86,8 @@ Puede conectarse y consultar SQL Server en un contenedor desde fuera del contene
 
 Puede conectarse a la instancia de SQL Server en el equipo de Docker desde cualquier herramienta externa de Linux, Windows o Mac OS que admite las conexiones de SQL. Algunas herramientas comunes incluyen:
 
-- [Sqlcmd](sql-server-linux-setup-tools.md)
-- [Código de Visual Studio](sql-server-linux-develop-use-vscode.md)
+- [sqlcmd](sql-server-linux-setup-tools.md)
+- [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) en Windows](sql-server-linux-develop-use-ssms.md)
 
 En el ejemplo siguiente se utiliza **sqlcmd** para conectarse a SQL Server que se ejecuta en un contenedor de Docker. La dirección IP en la cadena de conexión es la dirección IP del equipo host que ejecuta el contenedor.

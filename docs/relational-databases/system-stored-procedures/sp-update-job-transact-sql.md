@@ -1,5 +1,5 @@
 ---
-title: sp_update_job (Transact-SQL) | Documentos de Microsoft
+title: sp_update_job (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_job
 - sp_update_job_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_update_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_update_job
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
-caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 772cfb0f8f4a05c2db42e650601f837d12ffeb81
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 03171bfdee98063c9bf460b9555c1a7c5d02568d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,16 +63,16 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  Número de identificación del trabajo que se va a actualizar. *job_id*es **uniqueidentifier**.  
   
  [  **@job_name =**] **'***job_name***'**  
- Nombre del trabajo. *job_name*es **nvarchar (128)**.  
+ Nombre del trabajo. *job_name*is **nvarchar(128)**.  
   
 > **Nota:** cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
   
- [  **@new_name =**] **'***new_name***'**  
- Nuevo nombre del trabajo. *new_name*es **nvarchar (128)**.  
+ [ **@new_name =**] **'***new_name***'**  
+ Nuevo nombre del trabajo. *new_name*is **nvarchar(128)**.  
   
  [  **@enabled =**] *habilitado*  
  Especifica si el trabajo está habilitado (**1**) o no habilitada (**0**). *habilitado*es **tinyint**.  
@@ -77,7 +80,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  [  **@description =**] **'***descripción***'**  
  Descripción del trabajo. *descripción* es **nvarchar (512)**.  
   
- [  **@start_step_id =**] *step_id*  
+ [ **@start_step_id =**] *step_id*  
  Número de identificación del primer paso que se va a ejecutar para el trabajo. *step_id*es **int**.  
   
  [  **@category_name =**] **'***categoría***'**  
@@ -89,7 +92,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  [  **@notify_level_eventlog =**] *eventlog_level*  
  Especifica cuándo se debe incluir una entrada para este trabajo en el registro de aplicación de Microsoft Windows. *eventlog_level*es **int**, y puede tener uno de estos valores.  
   
-|Valor|Descripción (acción)|  
+|Value|Descripción (acción)|  
 |-----------|----------------------------|  
 |**0**|Never|  
 |**1**|En caso de éxito|  
@@ -105,19 +108,19 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  [  **@notify_level_page =**] *page_level*  
  Especifica cuándo se debe enviar una página tras finalizar este trabajo. *page_level*es **int**. *page_level*utiliza los mismos valores que *eventlog_level*.  
   
- [  **@notify_email_operator_name =**] **'***operator_name***'**  
+ [ **@notify_email_operator_name =**] **'***operator_name***'**  
  El nombre del operador al que se envía el correo electrónico cuando *email_level* se alcanza. *nombre de correo electrónico* es **nvarchar (128)**.  
   
- [  **@notify_netsend_operator_name =**] **'***netsend_operator***'**  
+ [ **@notify_netsend_operator_name =**] **'***netsend_operator***'**  
  El nombre del operador al que se envía el mensaje de red. *netsend_operator* es **nvarchar (128)**.  
   
- [  **@notify_page_operator_name =**] **'***page_operator***'**  
- El nombre del operador al que se envía una página. *page_operator* es **nvarchar (128)**.  
+ [ **@notify_page_operator_name =**] **'***page_operator***'**  
+ El nombre del operador al que se envía una página. *page_operator* is **nvarchar(128)**.  
   
- [  **@delete_level =**] *delete_level*  
+ [ **@delete_level =**] *delete_level*  
  Especifica cuándo debe eliminarse el trabajo. *delete_value*es **int**. *delete_level*utiliza los mismos valores que *eventlog_level*.  
   
- [  **@automatic_post =**] *automatic_post*  
+ [ **@automatic_post =**] *automatic_post*  
  Reservado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -158,8 +161,8 @@ GO
   
 ## <a name="see-also"></a>Vea también  
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_delete_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_help_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

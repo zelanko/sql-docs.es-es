@@ -8,13 +8,15 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - fn_listextendedproperty
 - fn_listextendedproperty_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_listextendedproperty function
 - displaying extended properties
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - extended properties [SQL Server], columns
 - table extended properties [SQL Server]
 ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 24cf6367e6326500a8dc76d91125d4e648956ff0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8402b831a4f74aebd67df3dcf7050663a2d0c3fa
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +66,7 @@ fn_listextendedproperty (
  {predeterminado | '*property_name*' | NULL}  
  Es el nombre de la propiedad. *property_name* es **sysname**. Las entradas válidas son default, NULL o un nombre de propiedad.  
   
- {predeterminado | '*level0_object_type*' | NULL}  
+ { default | '*level0_object_type*' | NULL}  
  Es el usuario o el tipo definido por el usuario. *level0_object_type* es **varchar (128)**, su valor predeterminado es null. Las entradas válidas son ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, TRIGGER, TYPE, USER y NULL.  
   
 > [!IMPORTANT]  
@@ -82,7 +84,7 @@ fn_listextendedproperty (
  {predeterminado | '*level1_object_name*' | NULL}  
  Nombre del tipo de objeto de nivel 1 especificado. *level1_object_name* es **sysname** con un valor predeterminado es NULL. Las entradas válidas son default, NULL o un nombre de objeto.  
   
- {predeterminado | '*level2_object_type*' | NULL}  
+ { default | '*level2_object_type*' |NULL }  
  Es el tipo de objeto de nivel 2. *level2_object_type* es **varchar (128)** con un valor predeterminado es NULL. Las entradas válidas son DEFAULT, default (se asigna a NULL) y NULL. Las entradas válidas para *level2_object_type* son columna, restricción, EVENT NOTIFICATION, índice, parámetro, TRIGGER y NULL.  
   
  {predeterminado | '*level2_object_name*' | NULL}  
@@ -182,9 +184,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [sp_addextendedproperty &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
- [sp_dropextendedproperty &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
- [sp_updateextendedproperty &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
- [Sys.extended_properties &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+ [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
+ [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
+ [sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
+ [sys.extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

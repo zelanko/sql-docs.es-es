@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_geo_replication_link_status (base de datos de SQL Azure) | Documentos de Microsoft
+title: sys.dm_geo_replication_link_status (Azure SQL Database) | Microsoft Docs
 ms.custom: 
 ms.date: 10/13/2016
 ms.prod: 
@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,18 +21,18 @@ helpviewer_keywords:
 - dm_geo_replication_link_status dynamic management view
 - sys.dm_geo_replication_link_status dynamic management view
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 040c326ca5e4f38a1a6c32ce3ae5fe7ba6ddddea
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: 37bb0b6c2252a213824e24c51178711a704d2e85
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>Sys.dm_geo_replication_link_status (base de datos de SQL Azure)
+# <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Contiene una fila para cada vínculo de replicación entre bases de datos principales y secundarias de un perfil de replicación geográfica. Esto incluye las bases de datos principales y secundarias. Si existe más de un vínculo de replicación continua para una base de datos principal, esta tabla contiene una fila para cada una de las relaciones. La vista se crea en todas las bases de datos, incluida a la maestra lógica. Sin embargo, al consultar esta vista en la maestra lógica se devuelve un conjunto vacío.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 12/14/2017
 |rol|**tinyint**|Rol de replicación geográfica, uno de:<br /><br /> 0 = primary. El database_id hace referencia a la base de datos principal de la asociación de replicación geográfica.<br /><br /> 1 = la base de datos secundaria.  El database_id hace referencia a la base de datos principal de la asociación de replicación geográfica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|El tipo secundario, uno de:<br /><br /> 0 no = directo se permiten las conexiones a la base de datos secundaria y la base de datos no está disponible para acceso de lectura.<br /><br /> 2 = all se permiten las conexiones a la base de datos en la replicación secundaria; ication para acceso de solo lectura.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|no<br /><br /> All|  
+|secondary_allow_connections_desc|**nvarchar(256)**|no<br /><br /> Todos|  
 |last_commit|**datetimeoffset**|La hora de la última transacción confirmada en la base de datos. Si se recuperan en la base de datos principal, indica la última hora de confirmación en la base de datos principal. Si se recuperan en la base de datos secundaria, indica la última hora de confirmación en la base de datos secundaria. Si se recuperan en la base de datos secundaria cuando el grupo principal del vínculo de replicación está inactivo, indica hasta qué punto la base de datos secundaria ha detectado el.|
   
 > [!NOTE]  
@@ -71,7 +72,7 @@ FROM sys.dm_geo_replication_link_status;
   
 ## <a name="see-also"></a>Vea también  
  [ALTER DATABASE &#40; Base de datos SQL Azure &#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
- [Sys.geo_replication_links &#40; Base de datos SQL Azure &#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [Sys.dm_operation_status &#40; Base de datos SQL Azure &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  
+ [sys.geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [sys.dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  
   
   

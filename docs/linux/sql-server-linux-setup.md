@@ -3,7 +3,7 @@ title: Instalar SQL Server de 2017 en Linux | Documentos de Microsoft
 description: "Instalar, actualizar y desinstalar SQL Server en Linux. En este tema se trata los escenarios de en línea, sin conexión y desatendidos."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 180c8492531da7c3b9c15ebef28917b52e0869ce
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 114bbd717ad7d0d244b7290bd612547c9226f941
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guía de instalación para SQL Server en Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 En este tema se explica cómo instalar, actualizar y desinstalar SQL Server 2017 en Linux. SQL Server 2017 es compatible con Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) y Ubuntu. También está disponible como una imagen de Docker, que se puede ejecutar en el motor de Docker en Linux o Docker para Windows y Mac.
 
@@ -37,7 +37,7 @@ SQL Server 2017 es compatible con las siguientes plataformas de Linux:
 | Plataforma | Versiones admitidas | Obtener
 |-----|-----|-----
 | **Red Hat Enterprise Linux** | 7.3 o 7.4 | [Obtener RHEL 7.4](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
-| **SUSE Linux Enterprise Server** | SP2 de V12 | [Obtener el Service Pack 2 SLES v12](https://www.suse.com/products/server)
+| **SUSE Linux Enterprise Server** | v12 SP2 | [Obtener el Service Pack 2 SLES v12](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Obtener Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Motor de docker** | 1.8+ | [Obtener Docker](http://www.docker.com/products/overview)
 
@@ -188,7 +188,7 @@ Para configurar los repositorios de CU o GDR, siga estos pasos:
 
 1. Configure el nuevo repositorio.
 
-   | Plataforma | Repositorio | Comando |
+   | Plataforma | Repositorio | Command |
    |-----|-----|-----|
    | RHEL | CU | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
    | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |

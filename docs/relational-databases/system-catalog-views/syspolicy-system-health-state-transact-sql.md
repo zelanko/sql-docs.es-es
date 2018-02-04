@@ -1,5 +1,5 @@
 ---
-title: syspolicy_system_health_state (Transact-SQL) | Documentos de Microsoft
+title: syspolicy_system_health_state (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - syspolicy_system_health_state_TSQL
 - syspolicy_system_health_state
-dev_langs: TSQL
-helpviewer_keywords: syspolicy_system_health_state view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- syspolicy_system_health_state view
 ms.assetid: 00815106-9fe4-481d-a9e1-a256101887f4
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63928630f941e92fbbf7a7e0e3c4a48939d1a8db
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 297f0de3902597578a30510deb4b928f2f68f264
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syspolicysystemhealthstate-transact-sql"></a>syspolicy_system_health_state (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/27/2017
 |health_state_id|**bigint**|Identificador del registro de estado de la directiva de mantenimiento.|  
 |policy_id|**int**|Identificador de la directiva.|  
 |last_run_date|**datetime**|Fecha y hora en que la directiva se ejecutó por última vez.|  
-|target_query_expression_with_id|**nvarchar (400)**|Expresión de destino, con los valores asignados a las variables de identidad, que define el destino con el que se evalúa la directiva.|  
+|target_query_expression_with_id|**nvarchar(400)**|Expresión de destino, con los valores asignados a las variables de identidad, que define el destino con el que se evalúa la directiva.|  
 |target_query_expression|**nvarchar(max)**|Expresión que define el destino con el que se evalúa la directiva.|  
 |result|**bit**|Estado de mantenimiento de este destino con respecto a la directiva:<br /><br /> 0 = Error<br /><br /> 1 = Correcto|  
   

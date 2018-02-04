@@ -3,7 +3,7 @@ title: "Configuración de clúster SLES para grupo de disponibilidad de SQL Serv
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 05/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.workload: Inactive
-ms.openlocfilehash: 7bb98b8da1af1b97b9c06b58e5b8264a653547d3
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c33c1cea948e64c69e52475e8c63ecce0c52bd6d
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configuración de clúster SLES para grupo de disponibilidad de SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Esta guía proporciona instrucciones para crear un clúster de tres nodos para SQL Server en SUSE Linux Enterprise Server (SLES) 12 SP2. Para lograr alta disponibilidad, un grupo de disponibilidad en Linux requiere tres nodos: vea [alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad](sql-server-linux-availability-group-ha.md). El nivel de agrupación en clústeres se basa en SUSE [extensión de alta disponibilidad (HAE)](https://www.suse.com/products/highavailability) construidos sobre [marcapasos](http://clusterlabs.org/). 
 
@@ -33,7 +33,7 @@ Para obtener más detalles sobre la configuración de clúster, opciones de recu
 >En este momento, la integración de SQL Server con marcapasos en Linux no es como acoplamiento como con WSFC en Windows. Servicio de SQL Server en Linux no es compatible con clústeres. Marcapasos controla todas las de la orquestación de los recursos de clúster, incluido el recurso de grupo de disponibilidad. En Linux, no deben depender siempre en disponibilidad grupo vistas de administración dinámica (DMV) que proporcionan información de clúster como sys.dm_hadr_cluster. Además, el nombre de red virtual es específico de WSFC, no hay ningún equivalente de la misma en marcapasos. Puede crear un agente de escucha para usarlo para la reconexión transparente después de la conmutación por error, pero tendrá que registrar manualmente el nombre de agente de escucha en el servidor DNS con la dirección IP utilizada para crear el recurso IP virtual (tal y como se explica más adelante).
 
 
-## <a name="roadmap"></a>Guía básica
+## <a name="roadmap"></a>Roadmap
 
 Los pasos para crear un grupo de disponibilidad en servidores Linux para lograr alta disponibilidad son diferentes de los pasos en un clúster de conmutación por error de Windows Server. En la lista siguiente se describe los pasos de alto niveles: 
 
@@ -122,9 +122,9 @@ En servidores Linux configurar el grupo de disponibilidad y, a continuación, co
 
 3. Para configurar el nivel de comunicación de clúster (Corosync): 
 
-   a. Escriba una dirección de red para enlazar a. De forma predeterminada, la secuencia de comandos propondrá la dirección de red de eth0. O bien, escriba una dirección de red diferente, por ejemplo la dirección de bond0. 
+   A. Escriba una dirección de red para enlazar a. De forma predeterminada, la secuencia de comandos propondrá la dirección de red de eth0. O bien, escriba una dirección de red diferente, por ejemplo la dirección de bond0. 
 
-   b. Escriba una dirección de multidifusión. La secuencia de comandos propone una dirección aleatoria que puede usar como valor predeterminado. 
+   B. Escriba una dirección de multidifusión. La secuencia de comandos propone una dirección aleatoria que puede usar como valor predeterminado. 
 
    c. Escriba un puerto de multidifusión. La secuencia de comandos propone 5405 como valor predeterminado. 
 
@@ -147,7 +147,7 @@ En servidores Linux configurar el grupo de disponibilidad y, a continuación, co
 
 ## <a name="add-nodes-to-the-existing-cluster"></a>Agregar nodos al clúster existente
 
-Si tiene un clúster que ejecute con uno o más nodos, agregar más nodos del clúster con el script de arranque de ha de clúster-combinación. La secuencia de comandos sólo necesita acceso a un nodo del clúster existente y se completará automáticamente la configuración básica de la máquina actual. Siga los pasos siguientes:
+Si tiene un clúster que ejecute con uno o más nodos, agregar más nodos del clúster con el script de arranque de ha de clúster-combinación. La secuencia de comandos sólo necesita acceso a un nodo del clúster existente y se completará automáticamente la configuración básica de la máquina actual. Para hacerlo, siga estos pasos:
 
 Si ha configurado los nodos del clúster existente con el `YaST` módulo de clúster, asegúrese de que se cumplen los siguientes requisitos previos antes de ejecutar `ha-cluster-join`:
 - El usuario raíz en los nodos existentes tiene claves SSH en su lugar para inicio de sesión passwordless. 

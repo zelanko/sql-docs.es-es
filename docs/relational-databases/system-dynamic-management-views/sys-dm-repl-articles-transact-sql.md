@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_repl_articles (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_repl_articles (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_repl_articles
 - dm_repl_articles_TSQL
 - sys.dm_repl_articles
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_repl_articles dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_repl_articles dynamic management function
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a28b7a4e6b49427fff970bbc0a793f2fcc30d6dd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 99ec6ab0d4feb697092002fb0c7354625dd9da83
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +40,10 @@ ms.lasthandoff: 11/17/2017
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**artcache_db_address**|**varbinary (8)**|Dirección de memoria de la estructura de la base de datos en caché de la base de datos de publicaciones.|  
-|**artcache_table_address**|**varbinary (8)**|Dirección de memoria de la estructura de la tabla en caché de un artículo de la tabla publicada.|  
-|**artcache_schema_address**|**varbinary (8)**|Dirección de memoria de la estructura del esquema del artículo en caché de un artículo de la tabla publicada.|  
-|**artcache_article_address**|**varbinary (8)**|Dirección de memoria de la estructura del artículo en caché de un artículo de la tabla publicada.|  
+|**artcache_db_address**|**varbinary(8)**|Dirección de memoria de la estructura de la base de datos en caché de la base de datos de publicaciones.|  
+|**artcache_table_address**|**varbinary(8)**|Dirección de memoria de la estructura de la tabla en caché de un artículo de la tabla publicada.|  
+|**artcache_schema_address**|**varbinary(8)**|Dirección de memoria de la estructura del esquema del artículo en caché de un artículo de la tabla publicada.|  
+|**artcache_article_address**|**varbinary(8)**|Dirección de memoria de la estructura del artículo en caché de un artículo de la tabla publicada.|  
 |**artid**|**bigint**|Identifica de forma única cada entrada en esta tabla.|  
 |**artfilter**|**bigint**|Id. del procedimiento almacenado usado para filtrar horizontalmente el artículo.|  
 |**artobjid**|**bigint**|Id. del objeto publicado.|  
@@ -50,11 +53,11 @@ ms.lasthandoff: 11/17/2017
 |**wszArtdesttable**|**nvarchar(514)**|Nombre del objeto publicado en el destino.|  
 |**wszArtdesttableowner**|**nvarchar(514)**|Propietario del objeto publicado en el destino.|  
 |**wszArtinscmd**|**nvarchar(510)**|Comando o procedimiento almacenado usado para inserciones.|  
-|**cmdTypeIns**|**int**|Sintaxis de la llamada para el procedimiento almacenado para inserciones. Puede ser uno de estos valores.<br /><br /> **1** = LLAMADA<br /><br /> **2** = SQL<br /><br /> **3** = NINGUNO<br /><br /> **7** = DESCONOCIDO|  
+|**cmdTypeIns**|**int**|Sintaxis de la llamada para el procedimiento almacenado para inserciones. Puede ser uno de estos valores.<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NINGUNO<br /><br /> **7** = UNKNOWN|  
 |**wszArtdelcmd**|**nvarchar(510)**|Comando o procedimiento almacenado usado para eliminaciones.|  
-|**cmdTypeDel**|**int**|Sintaxis de la llamada para el procedimiento almacenado para eliminaciones. Puede ser uno de estos valores.<br /><br /> **0** = XCALL<br /><br /> **1** = LLAMADA<br /><br /> **2** = SQL<br /><br /> **3** = NINGUNO<br /><br /> **7** = DESCONOCIDO|  
+|**cmdTypeDel**|**int**|Sintaxis de la llamada para el procedimiento almacenado para eliminaciones. Puede ser uno de estos valores.<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NINGUNO<br /><br /> **7** = UNKNOWN|  
 |**wszArtupdcmd**|**nvarchar(510)**|Comando o procedimiento almacenado usado para actualizaciones.|  
-|**cmdTypeUpd**|**int**|Sintaxis de la llamada para el procedimiento almacenado para actualizaciones. Puede ser uno de estos valores.<br /><br /> **0** = XCALL<br /><br /> **1** = LLAMADA<br /><br /> **2** = SQL<br /><br /> **3** = NINGUNO<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = DESCONOCIDO|  
+|**cmdTypeUpd**|**int**|Sintaxis de la llamada para el procedimiento almacenado para actualizaciones. Puede ser uno de estos valores.<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NINGUNO<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = UNKNOWN|  
 |**wszArtpartialupdcmd**|**nvarchar(510)**|Comando o procedimiento almacenado usado para actualizaciones parciales.|  
 |**cmdTypePartialUpd**|**int**|Sintaxis de la llamada para el procedimiento almacenado para actualizaciones parciales. Puede ser uno de estos valores.<br /><br /> **2** = SQL|  
 |**numcol**|**int**|Número de columnas en la partición para un artículo filtrado verticalmente.|  

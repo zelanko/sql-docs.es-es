@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_fts_index_population (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_fts_index_population (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/29/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_fts_index_population
 - sys.dm_fts_index_population_TSQL
 - dm_fts_index_population_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_fts_index_population dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_fts_index_population dynamic management view
 ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 719da7d41ba34adcf7a3aa7ccc53a14217e657ff
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8f118b1be30119e7328ee20477a0c18808fbdc3e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsindexpopulation-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 |**database_id**|**int**|Identificador de la base de datos que contiene el índice de texto completo que se está rellenando.|  
 |**catalog_id**|**int**|Id. del catálogo de texto completo que contiene este índice de texto completo.|  
 |**table_id**|**int**|Id. de la tabla para la que se está llenando el índice de texto completo.|  
-|**memory_address**|**varbinary (8)**|Dirección de memoria de la estructura de datos interna utilizada para representar un rellenado activo.|  
+|**memory_address**|**varbinary(8)**|Dirección de memoria de la estructura de datos interna utilizada para representar un rellenado activo.|  
 |**population_type**|**int**|Tipo de llenado. Uno de los siguientes:<br /><br /> 1 = Llenado completo<br /><br /> 2 = Llenado basado en la marca de tiempo incremental<br /><br /> 3 = Actualización manual de los cambios de los que se ha realizado seguimiento<br /><br /> 4 = Actualización de fondo de los cambios de los que se ha realizado seguimiento.|  
 |**population_type_description**|**nvarchar(120)**|Descripción del tipo de llenado.|  
 |**is_clustered_index_scan**|**bit**|Indica si el llenado implica un recorrido en el índice clúster.|  

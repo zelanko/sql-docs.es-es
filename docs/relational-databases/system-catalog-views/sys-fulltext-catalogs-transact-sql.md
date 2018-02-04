@@ -1,5 +1,5 @@
 ---
-title: Sys.fulltext_catalogs (Transact-SQL) | Documentos de Microsoft
+title: sys.fulltext_catalogs (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.fulltext_catalogs
 - fulltext_catalogs
 - fulltext_catalogs_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.fulltext_catalogs catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.fulltext_catalogs catalog view
 ms.assetid: cf1489ff-4819-41fa-a62a-4ed797a16207
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bebdf8510393ea10076a405f585c3414d0afcca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d4c3f1c279176dea69b27a2c1416af3d15338924
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfulltextcatalogs-transact-sql"></a>sys.fulltext_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |fulltext_catalog_id|**int**|Id. del catálogo de texto completo. Es único en los catálogos de texto completo de la base de datos.|  
 |name|**sysname**|Nombre del catálogo. Es único en la base de datos.|  
-|ruta de acceso|**nvarchar (260)**|Nombre del directorio de catálogos en el sistema de archivos.|  
+|path|**nvarchar(260)**|Nombre del directorio de catálogos en el sistema de archivos.|  
 |is_default|**bit**|Catálogo de texto completo predeterminado.<br /><br /> True = Es predeterminado.<br /><br /> False = No es predeterminado.|  
 |is_accent_sensitivity_on|**bit**|Opción de distinción de acentos del catálogo.<br /><br /> True = Distinción de acentos.<br /><br /> False = Sin distinción de acentos.|  
 |data_space_id|**int**|Grupo de archivos donde se creó este catálogo.|  

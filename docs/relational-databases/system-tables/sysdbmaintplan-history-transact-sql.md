@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysdbmaintplan_history_TSQL
 - sysdbmaintplan_history
-dev_langs: TSQL
-helpviewer_keywords: sysdbmaintplan_history system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysdbmaintplan_history system table
 ms.assetid: 02d36f08-ac93-4463-bb59-284c5cd6ed04
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5407585f3ff226234a114cdbf14036422b487580
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 382ea93bb97f8746b8adefb54ab1abb73fa00fc4
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdbmaintplanhistory-transact-sql"></a>sysdbmaintplan_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +45,13 @@ ms.lasthandoff: 11/17/2017
 |**plan_id**|**uniqueidentifier**|Id. del plan de mantenimiento de bases de datos.|  
 |**plan_name**|**sysname**|Nombre del plan de mantenimiento de bases de datos.|  
 |**database_name**|**sysname**|Nombre de la base de datos asociada al plan de mantenimiento de bases de datos.|  
-|**nombre_servidor**|**sysname**|Nombre del sistema.|  
-|**actividad**|**nvarchar (128)**|Actividad llevada a cabo por el plan de mantenimiento de bases de datos (por ejemplo, el registro de transacciones de copia de seguridad).|  
+|**server_name**|**sysname**|Nombre del sistema.|  
+|**actividad**|**nvarchar(128)**|Actividad llevada a cabo por el plan de mantenimiento de bases de datos (por ejemplo, el registro de transacciones de copia de seguridad).|  
 |**succeeded**|**bit**|**0** = correcto **1** = error|  
 |**end_time**|**datetime**|Hora en que finalizó la acción.|  
 |**duration**|**int**|Tiempo necesario para finalizar la acción del plan de mantenimiento de bases de datos.|  
 |**start_time**|**datetime**|Hora en que comenzó la acción.|  
 |**error_number**|**int**|Número de error generado.|  
-|**Mensaje**|**nvarchar(512)**|Mensaje generado por **sqlmaint**.|  
+|**message**|**nvarchar(512)**|Mensaje generado por **sqlmaint**.|  
   
   

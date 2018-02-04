@@ -3,7 +3,7 @@ title: "Introducción a SQL Server 2017 en la nube | Documentos de Microsoft"
 description: "Este tutorial de inicio rápido muestra cómo ejecutar el servidor de SQL 2017 en Linux en la nube de su elección."
 author: annashres
 ms.author: annashres
-manager: jhubbard
+manager: craigg
 ms.date: 10/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -11,15 +11,15 @@ ms.prod_service: database-engine
 ms.component: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 9fa5f2751b515b86574165e6f6cda8f0b9e6661a
-ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
+ms.openlocfilehash: 645c3e11621b1c9faecffc7edf76df9a6a1eabab
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="run-the-sql-server-2017-in-the-cloud"></a>Ejecutar el servidor de SQL 2017 en la nube
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 En este tutorial de inicio rápido, se instalará SQL Server 2017 en Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) o Ubuntu en la nube de su elección. Vaya a [aprovisionar una máquina virtual de Linux SQL Server en el portal de Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) para ejecutar SQL Server en Linux en Azure.
 
@@ -28,13 +28,13 @@ En este tutorial de inicio rápido, se instalará SQL Server 2017 en Red Hat Ent
 
 ## <a name="amazon-web-services"></a>Servicios Web de Amazon
 1.  Crear un AMI Linux con al menos 2 GB de memoria de marketplace 
-    * [RHEL 7.3 +](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
+    * [RHEL 7.3+](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  Conectar con el AMI con ssh
 1.  Siga el tutorial rápido para la distrbution Linux que eligió: 
     * [RHEL](quickstart-install-connect-red-hat.md)
-    * [SLES GRANDE](quickstart-install-connect-suse.md)
+    * [SLES](quickstart-install-connect-suse.md)
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
 1.  Configurar para las conexiones remotas: 
     * Abra el [consola EC2 de Amazon]( https://console.aws.amazon.com/ec2/)
@@ -54,13 +54,13 @@ En este tutorial de inicio rápido, se instalará SQL Server 2017 en Red Hat Ent
     
 ## <a name="google-cloud-platform"></a>Plataforma de nube de Google
 1.  Crear una imagen de Linux con al menos 2 GB de memoria desde el iniciador de la nube 
-    * [RHEL 7.3 +](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
+    * [RHEL 7.3+](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  Conectarse a la imagen con ssh
 1.  Siga el tutorial rápido para la distrbution Linux que eligió: 
     * [RHEL](quickstart-install-connect-red-hat.md)
-    * [SLES GRANDE](quickstart-install-connect-suse.md)
+    * [SLES](quickstart-install-connect-suse.md)
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
 1.  Configurar para las conexiones remotas: 
     * Vaya a la [las reglas de Firewall](https://console.cloud.google.com/networking/firewalls)

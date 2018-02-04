@@ -1,6 +1,6 @@
 ---
 title: "Consideraciones de seguridad para el aprendizaje automático en SQL Server | Documentos de Microsoft"
-ms.date: 11/16/2017
+ms.date: 02/01/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -10,16 +10,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d5065197-69e6-4fce-9654-00acaecc148b
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 67beebd9c35ddddbfbc56f606ec1b7df3671ae64
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c7262b804c1712e7ea962feefd88f3b2f64146a9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="security-considerations-for-machine-learning-in-sql-server"></a>Consideraciones de seguridad para el aprendizaje automático en SQL Server
 
@@ -37,7 +37,7 @@ Se recomienda encarecidamente que active Firewall de Windows (u otro firewall de
 
 ## <a name="authentication-methods-supported-for-remote-compute-contexts"></a>Métodos de autenticación admitidos para contextos de proceso remoto
 
-[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]es compatible con los inicios de sesión de autenticación integrada de Windows y SQL al crear conexiones entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y un cliente de ciencia de datos remotos.
+[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] es compatible con los inicios de sesión de autenticación integrada de Windows y SQL al crear conexiones entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y un cliente de ciencia de datos remotos.
 
 Por ejemplo, supongamos que está desarrollando una solución en R en su equipo portátil y realizar cálculos en el equipo de SQL Server. Debe crear un origen de datos de SQL Server en R, utilizando la **rx** funciones y la definición de una cadena de conexión en función de sus credenciales de Windows.
 
@@ -50,9 +50,9 @@ También se admite el uso de inicios de sesión SQL en este escenario. Sin embar
  En general, la [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] inicia el tiempo de ejecución de scripts externos y ejecuta las secuencias de comandos en su propia cuenta. Sin embargo, si el tiempo de ejecución externo realiza una llamada ODBC, el [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] suplanta las credenciales del usuario que envía el comando para asegurarse de que la llamada ODBC no se producen errores. Esto se denomina *autenticación implícita*.
  
  > [!IMPORTANT]
- > Para que la autenticación implícita se realice correctamente, el grupo de usuarios de Windows que contiene las cuentas de trabajo (de forma predeterminada, **SQLRUser**) debe tener una cuenta en la base de datos maestra para la instancia, y deben asignarse permisos a esta cuenta para conectarse a la instancia.
+ > Para la autenticación implícita sea correcta, el grupo de usuarios de Windows que contiene las cuentas de trabajo (de forma predeterminada, **SQLRUserGroup**) debe tener una cuenta en la base de datos maestra para la instancia y esta cuenta se deben conceder permisos a Conéctese a la instancia.
  > 
- > El grupo de **SQLRUser** también se utiliza al ejecutar scripts de Python. 
+ > El grupo de **SQLRUserGroup** también se utiliza al ejecutar scripts de Python. 
 
 En general, se recomienda que se mover conjuntos de datos grandes en SQL Server con antelación, en lugar de intentar leer datos con RODBC u otra biblioteca. Además, utilice una consulta de SQL Server o la vista como el origen de datos principal, para mejorar el rendimiento. 
 

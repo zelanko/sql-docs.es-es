@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_fts_index_keywords (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_fts_index_keywords (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - sys.dm_fts_index_keywords
 - sys.dm_fts_index_keywords_TSQL
 - dm_fts_index_keywords_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_fts_index_keywords dynamic management function
 - full-text search [SQL Server], viewing keywords
 - troubleshooting [SQL Server], full-text search
 ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 903c8f459242fc7f470f71207afd2d5ea3bee23e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 687a81711efdaf98f142a0d314db94a53cc74371
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmftsindexkeywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,17 +53,17 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- db_id ('*database_name*')  
+ db_id('*database_name*')  
  Una llamada a la [DB_ID ()](../../t-sql/functions/db-id-transact-sql.md) (función). Esta función acepta un nombre de base de datos y devuelve el identificador de la base de datos, que **sys.dm_fts_index_keywords** se utiliza para buscar la base de datos especificada. Si *database_name* es se omite, se devuelve el identificador de base de datos actual.  
   
- object_id ('*table_name*')  
+ object_id('*table_name*')  
  Una llamada a la [object_id ()](../../t-sql/functions/object-id-transact-sql.md) (función). Esta función acepta un nombre de tabla y devuelve el identificador de la tabla que contiene el índice de texto completo que se va a inspeccionar.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**palabra clave**|**nvarchar(4000)**|La representación hexadecimal de la palabra clave que se almacenan en el índice de texto completo.<br /><br /> Nota: OxFF representa el carácter especial que indica el final de un archivo o conjunto de datos.|  
+|**keyword**|**nvarchar(4000)**|La representación hexadecimal de la palabra clave que se almacenan en el índice de texto completo.<br /><br /> Nota: OxFF representa el carácter especial que indica el final de un archivo o conjunto de datos.|  
 |**display_term**|**nvarchar(4000)**|Formato legible de la palabra clave. Este formato se deriva del formato hexadecimal.<br /><br /> Nota: La **display_term** valor para OxFF es "Final de archivo".|  
 |**column_id**|**int**|Identificador de la columna en que la palabra clave actual forma parte del índice de texto completo.|  
 |**document_count**|**int**|Número de documentos o filas que contienen el término actual.|  

@@ -1,5 +1,5 @@
 ---
-title: syscollector_collector_types (Transact-SQL) | Documentos de Microsoft
+title: syscollector_collector_types (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - syscollector_collector_types
 - syscollector_collector_types_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data collector view
 - syscollector_collector_types view
 ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e041fba1cfe133ea7c34bb2e8c27945cc89629a7
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b1531b29e8b3b1210abf83dfac1ce6c38da70a96
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syscollectorcollectortypes-transact-sql"></a>syscollector_collector_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,14 +39,14 @@ ms.lasthandoff: 11/27/2017
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**collector_type_uid**|**uniqueidentifier**|GUID de un tipo de recopilador. No admite valores NULL.|  
+|**collector_type_uid**|**uniqueidentifer**|GUID de un tipo de recopilador. No admite valores NULL.|  
 |**Nombre**|**sysname**|Nombre del tipo de recopilador. No admite valores NULL.|  
 |**parameter_schema**|**xml**|Esquema XML que describe la apariencia de la configuración para el tipo de recopilador especificado. Este esquema XML se utiliza para validar la configuración XML real asociada con una instancia determinada del elemento de recopilación. Acepta valores NULL.|  
 |**parameter_formatter**|**xml**|Determina la plantilla que debe usarse para transformar el XML a fin de usarlo en la página de propiedades del conjunto de recopilación. Acepta valores NULL.|  
-|**collection_package_id**|**uniqueidentifier**|GUID de un paquete de recopilación. No admite valores NULL.|  
+|**collection_package_id**|**uniqueidentifer**|GUID de un paquete de recopilación. No admite valores NULL.|  
 |**collection_package_path**|**nvarchar(4000)**|Proporciona la ruta de acceso al paquete de recopilación. Acepta valores NULL.|  
 |**collection_package_name**|**sysname**|Nombre del paquete de recopilación. No admite valores NULL.|  
-|**upload_package_id**|**uniqueidentifier**|GUID del paquete de carga. No admite valores NULL.|  
+|**upload_package_id**|**uniqueidentifer**|GUID del paquete de carga. No admite valores NULL.|  
 |**upload_package_path**|**nvarchar(4000)**|Proporciona la ruta de acceso al paquete de carga. Acepta valores NULL.|  
 |**upload_package_name**|**sysname**|Nombre del paquete de carga. No admite valores NULL.|  
 |**is_system**|**bit**|Activado (1) u off (0) para indicar si el tipo de recopilador se distribuyó con el recopilador de datos o si se agregó más tarde por medio del **dc_admin**. Éste podría ser un tipo personalizado desarrollado internamente o por terceros. No admite valores NULL.|  

@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobserver (Transact-SQL) | Documentos de Microsoft
+title: sp_help_jobserver (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobserver
 - sp_help_jobserver_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobserver
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobserver
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83de0b76e66e08571a53e3ea62c665ba595a6572
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d96dc4e024ab65f47f313247835878aabbce6225
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +49,7 @@ sp_help_jobserver
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  Número de identificación del trabajo para el que se va a devolver información. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
   
  [  **@job_name=** ] **'***job_name***'**  
@@ -55,7 +58,7 @@ sp_help_jobserver
 > [!NOTE]  
 >  Cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
   
- [  **@show_last_run_details=** ] *show_last_run_details*  
+ [ **@show_last_run_details=** ] *show_last_run_details*  
  Indica si la información acerca de la última ejecución forma parte del conjunto de resultados. *show_last_run_details* es **tinyint**, su valor predeterminado es **0**. **0** no incluye información de última ejecución, y **1** does.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -66,7 +69,7 @@ sp_help_jobserver
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Número de identificación del servidor de destino.|  
-|**nombre_servidor**|**nvarchar (30)**|Nombre de equipo del servidor de destino.|  
+|**server_name**|**nvarchar(30)**|Nombre de equipo del servidor de destino.|  
 |**enlist_date**|**datetime**|Fecha de alta del servidor de destino en el servidor maestro.|  
 |**last_poll_date**|**datetime**|Fecha en que el servidor de destino sondeó por última vez el servidor maestro.|  
   
@@ -77,7 +80,7 @@ sp_help_jobserver
 |**last_run_date**|**int**|Fecha del inicio de la última ejecución del trabajo en este servidor de destino.|  
 |**last_run_time**|**int**|Hora del inicio de la última ejecución del trabajo en este servidor de destino|  
 |**last_run_duration**|**int**|Duración del trabajo en su última ejecución en este servidor de destino (en segundos)|  
-|**last_outcome_message**|**nvarchar (1024)**|Describe el último resultado del trabajo.|  
+|**last_outcome_message**|**nvarchar(1024)**|Describe el último resultado del trabajo.|  
 |**last_run_outcome**|**int**|Resultado del trabajo la última vez que se ejecutó en este servidor:<br /><br /> **0** = error<br /><br /> **1** = se ha realizado correctamente<br /><br /> **3** = cancelado<br /><br /> **5** = desconocido|  
   
 ## <a name="permissions"></a>Permissions  
@@ -107,8 +110,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [sp_add_jobserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [sp_delete_jobserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

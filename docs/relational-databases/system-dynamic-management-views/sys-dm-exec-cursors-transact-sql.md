@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_cursors (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_exec_cursors (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_cursors
 - dm_exec_cursors_TSQL
 - sys.dm_exec_cursors
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_cursors dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b2978fe15394ed17d63c5c98b562a332a629866
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7e659c10857c8a5248707e592738375fc5c7c483
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,13 +67,13 @@ dm_exec_cursors (session_id | 0 )
 |**is_open**|**bit**|Especifica si el cursor está abierto.|  
 |**is_async_population**|**bit**|Especifica si el subproceso en segundo plano aún está llenando asincrónicamente un cursor KEYSET o STATIC.|  
 |**is_close_on_commit**|**bit**|Especifica si el cursor se declaró mediante CURSOR_CLOSE_ON_COMMIT.<br /><br /> 1 = El cursor se cerrará cuando finalice la transacción.|  
-|**FETCH_STATUS**|**int**|Devuelve el estado de la última recopilación del cursor. Esta es la última que devuelve@FETCH_STATUS valor.|  
+|**fetch_status**|**int**|Devuelve el estado de la última recopilación del cursor. Esta es la última que devuelve@FETCH_STATUS valor.|  
 |**fetch_buffer_size**|**int**|Devuelve información acerca del tamaño del búfer de lectura.<br /><br /> 1 = Cursores Transact-SQL. Se puede establecer en un valor mayor para los cursores API.|  
 |**fetch_buffer_start**|**int**|Para cursores FAST_FORWARD y DYNAMIC, devuelve 0 si el cursor no está abierto o si se ha colocado antes de la primera fila. De lo contrario, devuelve -1.<br /><br /> Para cursores STATIC y KEYSET, devuelve 0 si el cursor no está abierto y -1 si se ha colocado después de la última fila.<br /><br /> De lo contrario, devuelve el número de fila en la que se ha colocado.|  
 |**ansi_position**|**int**|Posición del cursor en el búfer de lectura.|  
-|**valor de worker_time**|**bigint**|Tiempo empleado, en microsegundos, por los trabajadores que ejecutan este cursor.|  
+|**worker_time**|**bigint**|Tiempo empleado, en microsegundos, por los trabajadores que ejecutan este cursor.|  
 |**lecturas**|**bigint**|Número de lecturas realizadas por el cursor.|  
-|**escribe**|**bigint**|Número de escrituras realizadas por el cursor.|  
+|**writes**|**bigint**|Número de escrituras realizadas por el cursor.|  
 |**dormant_duration**|**bigint**|Milisegundos desde que se inició la última consulta (abierta o capturada) en este cursor.|  
   
 ## <a name="permissions"></a>Permissions  
@@ -89,7 +92,7 @@ dm_exec_cursors (session_id | 0 )
 |Tipo|Description|  
 |----------|-----------------|  
 |Keyset|El cursor se ha declarado como de conjunto de claves.|  
-|Dynamic|El cursor se ha declarado como dinámico.|  
+|Dinámica|El cursor se ha declarado como dinámico.|  
 |Snapshot|El cursor se ha declarado como instantánea o estático.|  
 |Fast_Forward|El cursor se ha declarado como de avance rápido.|  
   

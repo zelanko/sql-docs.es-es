@@ -1,5 +1,5 @@
 ---
-title: sp_help_maintenance_plan (Transact-SQL) | Documentos de Microsoft
+title: sp_help_maintenance_plan (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_maintenance_plan_TSQL
 - sp_help_maintenance_plan
-dev_langs: TSQL
-helpviewer_keywords: sp_help_maintenance_plan
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_maintenance_plan
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a48991c0baec6c8466d0ce33bee730d0948c97e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e5669438c159010e1b5011418df913c3c2743aff
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +51,11 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@plan_id =**] **'***plan_id***'**  
+ [ **@plan_id =**] **'***plan_id***'**  
  Especifica el identificador del plan del plan de mantenimiento. *plan_id* es **UNIQUEIDENTIFIER**. El valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- Ninguno  
+ None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Si *plan_id* se especifica, **sp_help_maintenance_plan** devolverá tres tablas: Plan, Database y Job.  
@@ -63,13 +66,13 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |-----------------|---------------|-----------------|  
 |**plan_id**|**uniqueidentifier**|Id. del plan de mantenimiento.|  
 |**plan_name**|**sysname**|Nombre del plan de mantenimiento.|  
-|**Date_Created**|**datetime**|Fecha de creación del plan de mantenimiento.|  
+|**date_created**|**datetime**|Fecha de creación del plan de mantenimiento.|  
 |**propietario**|**sysname**|Propietario del plan de mantenimiento.|  
 |**max_history_rows**|**int**|Número máximo de filas asignadas para registrar el historial del plan de mantenimiento de la tabla del sistema.|  
 |**remote_history_server**|**int**|El nombre del servidor remoto en el que se puede escribir el informe de historial.|  
 |**max_remote_history_rows**|**int**|Número máximo de filas asignadas en la tabla del sistema en un servidor remoto en el que se puede escribir el informe del historial.|  
 |**user_defined_1**|**int**|Valor predeterminado es NULL.|  
-|**user_defined_2**|**nvarchar (100)**|Valor predeterminado es NULL.|  
+|**user_defined_2**|**nvarchar(100)**|Valor predeterminado es NULL.|  
 |**user_defined_3**|**datetime**|Valor predeterminado es NULL.|  
 |**user_defined_4**|**uniqueidentifier**|Valor predeterminado es NULL.|  
   

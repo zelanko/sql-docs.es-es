@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_broker_queue_monitors (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_broker_queue_monitors (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_broker_queue_monitors_TSQL
 - dm_broker_queue_monitors_TSQL
 - sys.dm_broker_queue_monitors
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_broker_queue_monitors dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_broker_queue_monitors dynamic management view
 ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba34525fb597bd4b65199aa43bcd82c3972ba20b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9bc93ac489094fcf9dfba593acd670bc4babbaa6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmbrokerqueuemonitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Identificador del objeto de la base de datos que contiene la cola que supervisa el monitor. ACEPTA VALORES NULL.|  
 |**queue_id**|**int**|Identificador del objeto de la cola que supervisa el monitor. ACEPTA VALORES NULL.|  
-|**estado**|**nvarchar (32)**|Estado del monitor. ACEPTA VALORES NULL. Es uno de los siguientes:<br /><br /> **INACTIVO**<br /><br /> **UNA NOTIFICACIÓN**<br /><br /> **RECEIVES_OCCURRING**|  
+|**state**|**nvarchar(32)**|Estado del monitor. ACEPTA VALORES NULL. Es uno de los siguientes:<br /><br /> **INACTIVO**<br /><br /> **UNA NOTIFICACIÓN**<br /><br /> **RECEIVES_OCCURRING**|  
 |**last_empty_rowset_time**|**datetime**|Última vez que una instrucción RECEIVE de la cola devolvió un resultado vacío. ACEPTA VALORES NULL.|  
 |**last_activated_time**|**datetime**|Última vez que este monitor de cola activó un procedimiento almacenado. ACEPTA VALORES NULL.|  
 |**tasks_waiting**|**int**|Número de sesiones que esperan actualmente en una instrucción RECEIVE de esta cola. ACEPTA VALORES NULL.<br /><br /> Nota: Este número incluye las sesiones que ejecutan una instrucción receive, independientemente de si el monitor de cola inicia la sesión. Es así si usa WAITFOR junto con RECEIVE. Básicamente, estas tareas esperan que lleguen mensajes a la cola.|  
@@ -81,7 +84,7 @@ INNER JOIN sys.databases t5 ON ( t5.database_id = DB_ID() );
   
 ## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Vistas de administración dinámica relacionadas con Service Broker &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Service Broker relacionadas con vistas de administración dinámica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

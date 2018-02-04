@@ -2,9 +2,9 @@
 title: "Autenticación de Active Directory con SQL Server en Linux | Documentos de Microsoft"
 description: "Este tutorial indican los pasos de configuración para la autenticación de AAD para SQL Server en Linux."
 author: meet-bhagdev
-ms.date: 10/09/2017
+ms.date: 01/30/2018
 ms.author: meetb
-manager: jhubbard
+manager: craigg
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -13,17 +13,18 @@ ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
-helpviewer_keywords: Linux, AAD authentication
+helpviewer_keywords:
+- Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: d412eec0c27fac301f2ac6d319666f40004da409
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7de515aa08ec73ff6c7b90e9a630e59ca6f71252
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>Autenticación de Active Directory con SQL Server en Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este tutorial le explica cómo configurar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en Linux para admitir la autenticación de Active Directory (AD), la autenticación también se denomina integrada. Autenticación de Active Directory permite que los clientes Unidos a un dominio de Windows o Linux para autenticarse en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con sus credenciales de dominio y el protocolo Kerberos.
 
@@ -48,7 +49,7 @@ Este tutorial consta de las siguientes tareas:
 Antes de configurar la autenticación de Active Directory, debe:
 
 * Configurar un controlador de dominio de Active Directory (Windows) en la red  
-* Instale [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+* Install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
   * [Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
   * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -56,7 +57,7 @@ Antes de configurar la autenticación de Active Directory, debe:
 > [!IMPORTANT]
 > Limitaciones:
 > - En este momento, el único método de autenticación admitido para el extremo de reflejo de la base de datos es certificado. Método de autenticación de WINDOWS se habilitarán en futuras versiones.
-> - no se admiten las herramientas de fabricantes AD 3rd como Centrify, Powerbroker y Vintela 
+> - Herramientas de AD de terceros como Centrify, Powerbroker, y no se admiten Vintela 
 
 ## <a name="join-includessnoversionincludesssnoversion-mdmd-host-to-ad-domain"></a>Unir [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host del dominio de Active Directory
 
@@ -96,7 +97,7 @@ Siga estos pasos para unir un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.
       ```
 
       > [!NOTE]
-      > La interfaz de red (eth0) podría ser diferente en las máquinas diferente. Para averiguar cuál está utilizando, ejecute ifconfig y copie la interfaz que tiene una dirección IP y los bytes transmitidos y recibidos.
+      > La interfaz de red (eth0) podría ser diferente en distintos equipos. Para averiguar cuál está utilizando, ejecute ifconfig y copie la interfaz que tiene una dirección IP y los bytes transmitidos y recibidos.
 
       Después de editar este archivo, reinicie el servicio de red:
 
@@ -104,7 +105,7 @@ Siga estos pasos para unir un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.
       sudo ifdown eth0 && sudo ifup eth0
       ```
 
-      Ahora, compruebe que su `/etc/resolv.conf` archivo contiene una línea similar al siguiente:  
+      Ahora, compruebe que su `/etc/resolv.conf` archivo contiene una línea similar al ejemplo siguiente:  
 
       ```Code
       nameserver **<AD domain controller IP address>**
@@ -126,7 +127,7 @@ Siga estos pasos para unir un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.
      sudo systemctl restart network
      ```
 
-     Ahora, compruebe que su `/etc/resolv.conf` archivo contiene una línea similar al siguiente:  
+     Ahora, compruebe que su `/etc/resolv.conf` archivo contiene una línea similar al ejemplo siguiente:  
 
      ```Code
      nameserver **<AD domain controller IP address>**
@@ -134,9 +135,9 @@ Siga estos pasos para unir un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.
 
 1. Unirse al dominio
 
-   Una vez que haya confirmado que el DNS está configurado correctamente, unirse al dominio, ejecute el comando siguiente. Debe autenticarse mediante una cuenta de AD que tiene privilegios suficientes en Active Directory para unirse a un nuevo equipo al dominio.
+   Una vez que haya confirmado que el DNS está configurado correctamente, unirse al dominio ejecutando el comando siguiente. Debe autenticarse mediante una cuenta de AD que tiene privilegios suficientes en Active Directory para unirse a un nuevo equipo al dominio.
 
-   En concreto, este comando se cree una nueva cuenta de equipo en Active Directory, cree la `/etc/krb5.keytab` archivo keytab de host y configurar el dominio en `/etc/sssd/sssd.conf`:
+   En concreto, este comando crea una nueva cuenta de equipo en Active Directory, cree la `/etc/krb5.keytab` archivo keytab de host y configurar el dominio en `/etc/sssd/sssd.conf`:
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
@@ -147,9 +148,9 @@ Siga estos pasos para unir un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.
    > [!NOTE]
    > Si ve un error, "paquetes necesarios no están instalados", debe instalar los paquetes mediante el Administrador de paquetes de la distribución de Linux antes de ejecutar el `realm join` comando nuevo.
    >
-   > Si recibe un error, "Permisos insuficientes para unirse al dominio," necesitará póngase en contacto con un administrador de dominio que tiene los permisos necesarios para unir máquinas virtuales Linux a su dominio.
+   > Si recibe un error, "Permisos insuficientes para unirse al dominio" necesario póngase en contacto con un administrador de dominio que tiene los permisos necesarios para unir máquinas virtuales Linux a su dominio.
    
-   > SQL Server usa SSSD y NSS para asignar cuentas de usuario y grupos a los identificadores de seguridad (SID). SSSD debe estar configurado y ejecutándose en orden para SQL Server crear los inicios de sesión de AD correctamente. Realmd normalmente hacen esto automáticamente como parte de unirse al dominio, pero en algunos casos necesitará hacer esto por separado.
+   > SQL Server usa SSSD y NSS para asignar cuentas de usuario y grupos a los identificadores de seguridad (SID). SSSD debe estar configurado y ejecutándose en orden para SQL Server crear los inicios de sesión de AD correctamente. Realmd normalmente lo hace automáticamente como parte de unirse al dominio, pero en algunos casos debe hacer esto por separado.
    >
    > Consulte los siguientes procedimientos para configurar [SSSD manualmente](https://access.redhat.com/articles/3023951), y [configurar NSS para trabajar con SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
 
@@ -181,7 +182,7 @@ Para obtener más información, consulte la documentación de Red Hat para [Desc
 ## <a name="create-ad-user-for-includessnoversionincludesssnoversion-mdmd-and-set-spn"></a>Crear usuario de AD para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y establecer SPN
 
   > [!NOTE]
-  > En los pasos que se usará el [nombre de dominio completo](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Si se encuentra en **Azure**, tendrá que  **[crearlo](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  antes de continuar.
+  > En los pasos que se usará el [nombre de dominio completo](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Si se encuentra en **Azure**, primero debe  **[crearlo](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  antes de continuar.
 
 1. En el controlador de dominio, ejecute el [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) comando de PowerShell para crear un nuevo usuario de AD con una contraseña que no expira nunca. Este ejemplo asigna nombre a la cuenta "mssql", pero el nombre de cuenta puede ser que desee. Se le pedirá que escriba una contraseña nueva para la cuenta:
 
@@ -203,13 +204,13 @@ Para obtener más información, consulte la documentación de Red Hat para [Desc
    > [!NOTE]
    > Si recibe un error, "derechos de acceso insuficientes", debe póngase en contacto con un administrador de dominio que tiene los permisos necesarios para establecer un SPN en esta cuenta.
    >
-   > Si cambia el puerto TCP en el futuro, a continuación, debe volver a ejecutar el comando setspn con el nuevo número de puerto. También debe agregar el SPN nuevo a la tabla de claves del servicio de SQL Server siguiendo los pasos descritos en la sección siguiente.
+   > Si cambia el puerto TCP en el futuro, debe volver a ejecutar el comando setspn con el nuevo número de puerto. También debe agregar el SPN nuevo a la tabla de claves del servicio de SQL Server siguiendo los pasos descritos en la sección siguiente.
 
 3. Para obtener más información, vea [Registrar un nombre de entidad de seguridad de servicio para las conexiones con Kerberos](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
 
 ## <a name="configure-includessnoversionincludesssnoversion-mdmd-service-keytab"></a>Configurar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] keytab de servicio
 
-1. Compruebe el número de versión de clave (kvno) para la cuenta de AD que creó en el paso anterior. Normalmente será 2, pero podría ser otro entero si cambia la contraseña de cuenta de varias veces. En el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] equipo host, ejecute lo siguiente:
+1. Compruebe el número de versión de clave (kvno) para la cuenta de AD que creó en el paso anterior. Normalmente es 2, pero podría ser otro entero si cambia la contraseña de cuenta de varias veces. En el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] equipo host, ejecute lo siguiente:
 
    ```bash
    kinit user@CONTOSO.COM
@@ -294,7 +295,7 @@ El parámetro de cadena de conexión específica para los clientes que usen la a
   
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este tutorial, se desplazará por el proceso para configurar la autenticación de Active Directory con SQL Server en Linux. También habrá aprendido cómo para:
+En este tutorial, hemos visto cómo configurar la autenticación de Active Directory con SQL Server en Linux. También habrá aprendido cómo para:
 > [!div class="checklist"]
 > * Unir [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host del dominio de Active Directory
 > * Crear usuario de AD para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y establecer SPN

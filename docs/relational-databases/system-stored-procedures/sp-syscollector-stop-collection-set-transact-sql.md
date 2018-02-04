@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_stop_collection_set (Transact-SQL) | Documentos de Microsoft
+title: sp_syscollector_stop_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_stop_collection_set_TSQL
 - sp_syscollector_stop_collection_set
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_syscollector_stop_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f91cbec86a4799a6172525ba2633be9f34dcdd9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 828d097a749fd1c0db89d24d2079fed5a5fd2ce9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorstopcollectionset-transact-sql"></a>sp_syscollector_stop_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +50,13 @@ sp_syscollector_stop_collection_set
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_set_id =] *collection_set_id*  
+ [ @collection_set_id = ] *collection_set_id*  
  Es el identificador único local del conjunto de recopilaciones. *collection_set_id* es **int** con un valor predeterminado es NULL. *collection_set_id* debe tener un valor si *nombre* es NULL.  
   
  [ @name =] '*nombre*'  
  Es el nombre del conjunto de recopilación. *nombre* es **sysname** con un valor predeterminado es NULL. *nombre* debe tener un valor si *collection_set_id* es NULL.  
   
- [ @stop_collection_job =] *stop_collection_job*  
+ [ @stop_collection_job = ] *stop_collection_job*  
  Especifica que el trabajo de recopilación del conjunto de recopilación debe detenerse si está en ejecución. *stop_collection_job* es **bits** con un valor predeterminado es 1.  
   
  *stop_collection_job* se aplica solo a conjuntos de recopilación con almacenamiento en caché de modo de recopilación. Para obtener más información, consulte [sp_syscollector_create_collection_set &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  

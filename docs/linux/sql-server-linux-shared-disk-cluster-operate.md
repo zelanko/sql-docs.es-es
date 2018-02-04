@@ -3,7 +3,7 @@ title: "Funcionan de la instancia de clúster de conmutación por error: SQL Ser
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: aba3ca214a1ea96d18aa17285ed40235bf2f7bdb
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 6f8ba6ed2e56ea4dc97ab68fa85601d94edfe1fc
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Funcionan de la instancia de clúster de conmutación por error: SQL Server en Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este artículo explica cómo utilizar una instancia de clúster de conmutación por error (FCI) de SQL Server en Linux. Si no ha creado una FCI de SQL Server en Linux, consulte [instancia de clúster de conmutación por error de configuración: SQL Server en Linux](sql-server-linux-shared-disk-cluster-configure.md). 
 
@@ -36,7 +36,7 @@ Hay ocasiones puede que desee por error manualmente de la FCI a otro nodo. El pr
 La forma de conmutación por error depende de la distribución de Linux. Siga las instrucciones para su distribución de linux.
 
 - [RHEL o Ubuntu](#rhelFailover)
-- [SLES GRANDE](#slesFailover)
+- [SLES](#slesFailover)
 
 ## <a name = "#rhelFailover"></a>Conmutación por error manual (RHEL o Ubuntu)
 

@@ -1,5 +1,5 @@
 ---
-title: sp_enum_sqlagent_subsystems (Transact-SQL) | Documentos de Microsoft
+title: sp_enum_sqlagent_subsystems (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_enum_sqlagent_subsystems
 - sp_enum_sqlagent_subsystems_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_enum_sqlagent_subsystems
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_enum_sqlagent_subsystems
 ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a088866b645cacad3813ce7c2ae15e9e9831f299
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 946c623004db5efaeb470b26b74daaba9f5271bb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spenumsqlagentsubsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ sp_enum_sqlagent_subsystems
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- Ninguno  
+ None  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -52,13 +55,13 @@ sp_enum_sqlagent_subsystems
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**subsistema**|**nvarchar (40)**|Nombre del subsistema.|  
-|**Descripción**|**nvarchar(512)**|Descripción del subsistema.|  
+|**subsystem**|**nvarchar(40)**|Nombre del subsistema.|  
+|**description**|**nvarchar(512)**|Descripción del subsistema.|  
 |**subsystem_dll**|**nvarchar(510)**|Módulo DLL que contiene el subsistema.|  
 |**agent_exe**|**nvarchar(510)**|Módulo ejecutable utilizado por el subsistema.|  
-|**start_entry_point**|**nvarchar (30)**|Procedimiento al que el Agente SQL Server llama durante la ejecución de pasos de trabajo.|  
-|**event_entry_point**|**nvarchar (30)**|Procedimiento al que el Agente SQL Server llama durante la ejecución de pasos de trabajo.|  
-|**stop_entry_point**|**nvarchar (30)**|Procedimiento al que el Agente SQL Server llama durante la ejecución de pasos de trabajo.|  
+|**start_entry_point**|**nvarchar(30)**|Procedimiento al que el Agente SQL Server llama durante la ejecución de pasos de trabajo.|  
+|**event_entry_point**|**nvarchar(30)**|Procedimiento al que el Agente SQL Server llama durante la ejecución de pasos de trabajo.|  
+|**stop_entry_point**|**nvarchar(30)**|Procedimiento al que el Agente SQL Server llama durante la ejecución de pasos de trabajo.|  
 |**max_worker_threads**|**int**|Número máximo de subprocesos que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] iniciará para este subsistema.|  
 |**subsystem_id**|**int**|Identificador del subsistema.|  
   

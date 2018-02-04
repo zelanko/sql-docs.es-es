@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - trace flags [SQL Server], about trace flags
 - trace flags [SQL Server]
@@ -21,16 +23,16 @@ helpviewer_keywords:
 - performance [SQL Server], trace
 - debugging [SQL Server], trace flags
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
-caps.latest.revision: "171"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6011c66716e96347b295325ab020739e41c04370
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 396216c00fc4c474164d98e47d0185f479e61b48
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - marcas de seguimiento (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -143,6 +145,7 @@ En la siguiente tabla se enumeran y se describen las marcas de seguimiento dispo
 |**9567**|Habilita la compresión del flujo de datos de grupos de disponibilidad AlwaysOn durante la propagación automática. La compresión puede reducir significativamente el tiempo de transferencia durante la propagación automática y aumenta la carga en el procesador. Para obtener más información, consulte [inicializar automáticamente el grupo de disponibilidad AlwaysOn](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md) y [optimizar la compresión para el grupo de disponibilidad](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md).<br /><br />**Ámbito**: global o sesión|
 |**9591**|Deshabilita la compresión de bloque de registro en grupos de disponibilidad AlwaysOn. Compresión de bloque de registro es el comportamiento predeterminado que se utiliza con las réplicas sincrónicas y asincrónicas de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. En [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], compresión sólo se utiliza con réplica asincrónica. <br /><br />**Ámbito**: global o sesión|
 |**9592**|Habilita el registro de compresión de secuencias para grupos de disponibilidad sincrónico. Esta característica está deshabilitada de forma predeterminada en los grupos de disponibilidad sincrónica porque la compresión agrega latencia. Para obtener más información, consulte [Tune compression for availability group (Optimizar la compresión para el grupo de disponibilidad)](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md).<br /><br />**Ámbito**: global o sesión| 
+|**9929**|Los archivos de punto de comprobación en memoria se reduce a 1 MB. Para obtener más información, vea este [artículo de Microsoft Support](http://support.microsoft.com/kb/3147012).<br /><br />**Ámbito**: global solo|  
 |**9939**|Habilita los planes y paralelas examen paralelo de tablas optimizadas en memoria y las variables de tabla en las operaciones de DML que hacen referencia a tablas optimizadas en memoria o variables de tabla, siempre que no son el destino de la operación de DML en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Para obtener más información, vea este [artículo de Microsoft Support](http://support.microsoft.com/kb/4013877).<br /><br />**Nota:** 9939 de marca de seguimiento no es necesario si la marca de seguimiento 4199 explícitamente está habilitada.<br /><br />**Ámbito**: global o sesión o consulta|   
 |**10204**|Deshabilita la mezcla/comprimir durante la reorganización de índices de almacén de columnas. En [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], cuando se reorganiza un índice de almacén, no hay nueva funcionalidad para combinar automáticamente los grupos de filas comprimidos pequeño en más grandes grupos de filas comprimidos, así como volver a comprimir los grupos de filas que tienen un gran número de filas eliminadas.<br /><br />**Nota:** marca de seguimiento 10204 no se aplica a los índices de almacén de columnas que se crean en tablas optimizadas en memoria.<br /><br />**Ámbito**: global o sesión|   
 |**10316**|Permite la creación de índices adicionales en [tabla temporal almacenamiento provisional con optimización para memoria interna](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md), junto a la predeterminada. Si tienes un patrón de consulta específica que incluye columnas que no están cubiertas por el índice de forma predeterminada, sopese la posibilidad de agregar trabajos adicionales.<br /><br />**Nota:** tablas con versión del sistema temporal para tablas con optimización para memoria están diseñadas para proporcionar gran rendimiento transaccional. Ten en cuenta que la creación de índices adicionales puede introducir sobrecarga para las operaciones de DML que actualizan o eliminan filas de la tabla actual. Con los índices adicionales, se debe conseguir para buscar el equilibrio adecuado entre el rendimiento de las consultas temporales y sobrecarga adicional de DML.<br /><br />**Ámbito**: global o sesión|

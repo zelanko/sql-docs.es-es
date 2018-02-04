@@ -3,7 +3,7 @@ title: "Configurar instancias de clúster de conmutación por error y varias sub
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 12/1/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 2af1b8a50d446fee46418302a598de7a37f79bda
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: df5182d374e41b68fe35333c6e4ab59714d8241d
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Configurar instancias de clúster de conmutación por error y varias subredes grupos de disponibilidad AlwaysOn
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Cuando una instancia en clúster siempre en disponibilidad grupo (AG) o conmutación por error (FCI) abarca más de un sitio, cada sitio normalmente tiene su propia red. A menudo, esto significa que cada sitio tiene su propia asignación de direcciones IP. Por ejemplo, direcciones de sitio del empiezan por 192.168.1. *x* e iniciar las direcciones del sitio B con 192.168.2. *x*, donde *x* es la parte de la dirección IP que sea única en el servidor. Sin algún tipo de enrutamiento en el lugar en el nivel de red, estos servidores no podrán comunicarse entre sí. Hay dos formas de controlar este escenario: configurar una red que relaciona las dos subredes diferentes, conocidas como una VLAN, o configure el enrutamiento entre las subredes.
 
@@ -92,7 +92,7 @@ En el mundo de Windows, un clúster de conmutación por error de Windows Server 
     sudo pcs cluster cib-push <filename>
     ```
 
-    **SLES GRANDE**
+    **SLES**
     
     ```bash
     sudo cibadmin -R -x <filename>

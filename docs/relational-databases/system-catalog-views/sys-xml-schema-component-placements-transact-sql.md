@@ -1,5 +1,5 @@
 ---
-title: Sys.xml_schema_component_placements (Transact-SQL) | Documentos de Microsoft
+title: sys.xml_schema_component_placements (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - xml_schema_component_placements_TSQL
 - xml_schema_component_placements
 - sys.xml_schema_component_placements_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.xml_schema_component_placements catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.xml_schema_component_placements catalog view
 ms.assetid: 2d3c8828-e4b3-423d-bf11-990464c1341b
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b2627c338f0fad92f3d11aea6f1db821ce18829
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0f779096e0aea11853ba4de4352087a30bbe978d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysxmlschemacomponentplacements-transact-sql"></a>sys.xml_schema_component_placements (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 |**is_default_fixed**|**bit**|1 = el valor predeterminado es un valor fijo. Este valor no se puede anular en una instancia de XML.<br /><br /> 0 = El valor se puede omitir. (predeterminado)|  
 |**min_occurrences**|**int**|Número mínimo de casos de componentes ubicados.|  
 |**max_occurrences**|**int**|Número máximo de casos de componentes ubicados.|  
-|**valor predeterminado**|**nvarchar (4000)**|Valor predeterminado si se proporciona uno. Si no se ofrece otro valor predeterminado, es NULL.|  
+|**default_value**|**nvarchar (4000)**|Valor predeterminado si se proporciona uno. Si no se ofrece otro valor predeterminado, es NULL.|  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

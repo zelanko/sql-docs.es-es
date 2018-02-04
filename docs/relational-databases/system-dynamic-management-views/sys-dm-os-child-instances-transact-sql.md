@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_child_instances (Transact-SQL) | Documentos de Microsoft
+title: sys.dm_os_child_instances (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/18/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - sys.dm_os_child_instances_TSQL
 - dm_os_child_instances
 - dm_os_child_instances_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - server state information [SQL Server]
 - sys.dm_os_child_instances dynamic management view
 - monitoring server health
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d13a86c17d95f31d2ffe99fa6675a0e0fe877ecd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d33bda7b901600598446cdea45d434df84b6e7f0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmoschildinstances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,12 +53,12 @@ ms.lasthandoff: 11/17/2017
 |**owning_principal_name**|**nvarchar(256)**|Nombre del usuario para el que se creó esta instancia.|  
 |owning_principal_sid|nvarchar(256)|SID (identificador de seguridad) de la entidad de seguridad que posee esta instancia de usuario. Coincide con el identificador SID de Windows.|  
 |owning_principal_sid_binary|varbinary(85)|Versión binaria del SID para el usuario propietario de la instancia de usuario.|  
-|**instance_name**|**nvarchar (128)**|Nombre de esta instancia de usuario.|  
-|**instance_pipe_name**|**nvarchar (260)**|Cuando se crea una instancia de usuario, se crea una canalización con nombre para que las aplicaciones se conecten a ella. Este nombre se puede utilizar en una cadena de conexión para conectarse a esta instancia de usuario.|  
+|**nombre_instancia**|**nvarchar(128)**|Nombre de esta instancia de usuario.|  
+|**instance_pipe_name**|**nvarchar(260)**|Cuando se crea una instancia de usuario, se crea una canalización con nombre para que las aplicaciones se conecten a ella. Este nombre se puede utilizar en una cadena de conexión para conectarse a esta instancia de usuario.|  
 |**os_process_id**|**Int**|Número del proceso de Windows para esta instancia de usuario.|  
 |**os_process_creation_date**|**Fecha y hora**|Fecha y hora de la última vez que se inició el proceso de esta instancia de usuario.|  
-|**heart_beat**|**nvarchar (5)**|Estado actual de esta instancia de usuario; puede ser ALIVE o DEAD.|  
-|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
+|**heart_beat**|**nvarchar(5)**|Estado actual de esta instancia de usuario; puede ser ALIVE o DEAD.|  
+|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
   
 ## <a name="permissions"></a>Permissions  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  

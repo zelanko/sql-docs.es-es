@@ -8,19 +8,20 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fef7f02b15fee27e3e18a5eac23e0ee6ab97959c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 164c24f5cfd3c4120c75776764221560392ebd4d
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Elegir un método de actualización del motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Existen varios métodos que se deben considerar a la hora de planear la actualización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] de una versión previa de SQL Server si se pretende reducir al mínimo el tiempo de inactividad y los riesgos. Puede realizar una actualización local, migrar a una nueva instalación o efectuar una actualización gradual. El siguiente diagrama le ayudará a elegir uno de estos enfoques. Además, más adelante en este artículo se describen todos los enfoques presentes en el diagrama. Si quiere obtener ayuda para tomar las decisiones que se le presentan en el diagrama, consulte también [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/18/2018
 >  También puede plantearse actualizar la base de datos SQL de Azure o virtualizar su entorno de SQL Server como parte de su plan de actualización. Estos temas escapan al propósito de este artículo, pero aquí le proporcionamos algunos vínculos:
 >   - [Información general de SQL Server en máquinas virtuales de Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
 >   - [Azure SQL Database](https://azure.microsoft.com/en-us/services/sql-database/) 
->   - Selección de una opción de SQL Server en Azure (https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/).  
+>   - [Selección de una opción de SQL Server en Azure](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)  
   
 ##  <a name="UpgradeInPlace"></a> Actualización local  
  Con este método, el programa de instalación de SQL Server actualiza la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente reemplazando los bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existentes por los nuevos bits de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] y, después, actualiza cada una de las bases de datos de usuario y del sistema.  El enfoque de actualización local es el más sencillo, conlleva la menor cantidad de tiempo de inactividad, tarda más en tiempo en revertirse (si esto fuera necesario) y no se admite en todos los casos. Para más información sobre los escenarios de actualización local que se admiten y los que no, vea [Actualizaciones de ediciones y versiones admitidas](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  

@@ -8,23 +8,24 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - grant_permission stored procedure [Integration Services]
 - catalog.grant_permission stored procedure [Integration Services]
 ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d9115186c35eaae94e36cc079753bbdbe798638
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c7c079453409e0af538aaeb2c82f6596e05b7d49
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cataloggrantpermission-ssisdb-database"></a>catalog.grant_permission (base de datos de SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ catalog.grant_permission [ @object_type = ] object_type
  Tipo de permiso que se va a conceder. El parámetro *permission_type* es **smallint**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- 0 (Correcto)  
+ 0 (correcto)  
   
  1 (object_class no es válido)  
   
@@ -67,9 +68,9 @@ catalog.grant_permission [ @object_type = ] object_type
  5 (otro error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Ninguno  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Este procedimiento almacenado necesita uno de los permisos siguientes:  
   
 -   Permisos ASSIGN_PERMISSIONS en el objeto  
@@ -80,7 +81,7 @@ catalog.grant_permission [ @object_type = ] object_type
 
 Los inicios de sesión que se autenticaron con SQL Server no pueden llamar a este procedimiento. El inicio de sesión de SA no puede llamarlo.
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este procedimiento almacenado le permite conceder los tipos de permiso descritos en la tabla siguiente:  
   
 |Valor de permission_type|Nombre del permiso|Descripción del permiso|Tipos de objetos aplicables|  

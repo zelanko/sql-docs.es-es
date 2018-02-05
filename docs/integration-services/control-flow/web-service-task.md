@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,18 +17,19 @@ f1_keywords:
 - sql13.dts.designer.webservicestask.general.f1
 - sql13.dts.designer.webservicestask.input.f1
 - sql13.dts.designer.webservicestask.output.f1
-helpviewer_keywords: Web Service task [Integration Services]
+helpviewer_keywords:
+- Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9bdfbf05eafc612d7a6c5531e5c5c1b00fd576a3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4cadb534bd6ddfca7df61e316c6d6cabc669a9c1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="web-service-task"></a>Tarea Servicio web
   La tarea Servicio web ejecuta un método de servicio web. Puede usar la tarea Servicio web para los siguientes objetivos:  
@@ -86,7 +88,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="web-service-task-editor-general-page"></a>Editor de la tarea Servicio web (página General)
   Use la página **General** del cuadro de diálogo **Editor de la tarea Servicio web** para especificar un administrador de conexiones de HTTP, especificar la ubicación del archivo de Lenguaje de descripción de servicios web (WSDL) que usa la tarea Servicio web, describir la tarea Servicios web y descargar el archivo WSDL.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **HTTPConnection**  
  Seleccione un administrador de conexiones de la lista o haga clic en \<**Nueva conexión…**> para crear uno nuevo.  
   
@@ -122,7 +124,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Los nombres de tarea deben ser únicos en un paquete.  
   
- **Description**  
+ **Descripción**  
  Escriba una descripción de la tarea Servicio web.  
   
  **Descargar WSDL**  
@@ -133,7 +135,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="web-service-task-editor-input-page"></a>Editor de la tarea Servicio web (página Entrada)
   Use la página **Entrada** del cuadro de diálogo **Editor de la tarea Servicio web** para especificar el servicio web, el método web y los valores que se deben proporcionar como entrada para el método web. Los valores se pueden proporcionar mediante la especificación directa de cadenas o la selección de variables en la columna Valor.  
   
-### <a name="options"></a>Opciones  
+### <a name="options"></a>.  
  **ssNoVersion**  
  Seleccione en la lista un servicio web para ejecutar el método web.  
   
@@ -165,7 +167,7 @@ ms.lasthandoff: 11/20/2017
  **OutputType**  
  Seleccione el tipo de almacenamiento que desea usar para almacenar los resultados. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Conexión de archivos**|Almacene los resultados en un archivo. Si selecciona este valor, se mostrará la opción dinámica **Archivo**.|  
 |**Variable**|Almacene los resultados en una variable. Si selecciona este valor, se mostrará la opción dinámica **Variable**.|  
@@ -182,7 +184,7 @@ ms.lasthandoff: 11/20/2017
  **Variable**  
  Seleccione una variable de la lista o haga clic en \<**Nueva variable…**> para crear una.  
   
- **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>Contenido relacionado  
  Vídeo [How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=259642)(Cómo llamar a un servicio web usando la tarea Servicio web (vídeo de SQL Server)), en technet.microsoft.com.  

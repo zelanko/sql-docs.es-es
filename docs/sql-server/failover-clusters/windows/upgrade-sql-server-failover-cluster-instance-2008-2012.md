@@ -1,11 +1,12 @@
 ---
 title: "Actualizar instancias de SQL Server que se ejecutan en clústeres de Windows Server 2008/2008 R2/2012 | Microsoft Docs"
-ms.date: 11/10/2017
+ms.date: 1/25/2018
 ms.suite: sql
 ms.prod: sql-non-specified
 ms.prod_service: database engine
 ms.component: failover-clustuers
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bac006539f14341ff07d6af2ba7fd73c1e73a917
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 3337f1c438f303775d923ec12b14891c13b36c03
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Actualizar instancias de SQL Server que se ejecutan en clústeres de Windows Server 2008/2008 R2/2012
 
@@ -29,7 +30,6 @@ ms.lasthandoff: 01/09/2018
 ## <a name="prerequisites"></a>Prerequisites
 
 -   Antes de realizar cualquiera de las estrategias de migración, se debe preparar un clúster de conmutación por error de Windows Server paralelo con Windows Server 2016/2012 R2. Todos los nodos que contengan instancias de clúster de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] deben estar unidas al clúster de Windows con los FCI instalados. Cualquier equipo independiente **no debe** combinarse con el clúster de conmutación por error de Windows Server antes de la migración. Las bases de datos de usuario deberán estar sincronizadas con el nuevo entorno antes de la migración.
-
 -   Todas las instancias de destino deberán estar ejecutando la misma versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] como su instancia paralela en el entorno original, con los mismos nombres de instancia e identificadores. Además, deberán estar instaladas con las mismas características. Las rutas de acceso de instalación y la estructura del directorio deberán ser idénticas en los equipos de destino. Esto no incluye los nombres de red virtual de FCI, que deben ser diferentes antes de la migración. Las funciones habilitadas por la instancia original (como Always On y FILESTREAM) deberán estar habilitadas en la instancia de destino.
 
 -   El clúster paralelo no deberá tener [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)] instalado antes de la migración.
@@ -41,7 +41,6 @@ ms.lasthandoff: 01/09/2018
 -   Todos los recursos compartidos de archivos y las unidades asignadas de la red que se usen en el entorno del clúster de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] original deberán existir y permanecer disponibles para el clúster de destino con los mismos permisos que las instancias originales.
 
 -   Ninguno de los puertos TCP/IP que escucha la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] original deberán estar sin uso y permitir el tráfico de entrada en el equipo de destino.
-
 -   Todos los servicios relacionados con SQL deben instalarse y ejecutarse con el mismo usuario de Windows.
 
 -   Las instancias de destino deben instalarse con la misma configuración regional que las instancias originales.
@@ -57,8 +56,8 @@ La estrategia de migración adecuada dependerá de ciertos parámetros de la top
 | **El clúster usa instancias independientes** | [Escenario 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [Escenario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [Escenario 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Escenario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
 \* Excluir nombres de agentes de escucha del grupo de disponibilidad
 
-## <a name="scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1"></a>Escenario 1: El clúster para la migración usa grupos de disponibilidad de forma estricta (Windows Server 2008 R2 SP1 y versiones posteriores)
-Si tiene una configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] que usa grupos de disponibilidad estrictamente, puede realizar la migración a un nuevo clúster mediante la creación de una configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] paralela en otro clúster de Windows con Windows Server 2016/2012 R2. Después de esto, puede crear un grupo de disponibilidad distribuido en el que el clúster de destino sea la base de datos secundaria para el clúster de producción actual. Esto requiere que el usuario actualice a [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] o versiones posteriores.
+## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>Escenario 1: Windows Cluster con grupos de disponibilidad de SQL Server y sin instancias de clúster de conmutación por error (FCI)
+Si tiene una configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] que usa grupos de disponibilidad sin instancias de clúster de conmutación por error, puede llevar a cabo la migración a un nuevo clúster creando una implementación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] paralela en otra instancia de Windows Cluster con Windows Server 2016/2012 R2. Después de esto, puede crear un grupo de disponibilidad distribuido en el que el clúster de destino sea la base de datos secundaria para el clúster de producción actual. Esto requiere que el usuario actualice a [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] o versiones posteriores.
 
 ###  <a name="to-perform-the-upgrade"></a>Para realizar la actualización
 
@@ -69,7 +68,7 @@ Si tiene una configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 3.  Cree un grupo de disponibilidad distribuido en el que el clúster de destino sea el grupo de disponibilidad secundario.
 
     >[!NOTE]
-    >El parámetro LISTENER\_URL de la consulta para crear grupos de disponibilidad distribuidos tiene un comportamiento ligeramente diferente con los grupos de disponibilidad que con una FCI que actúa como instancia principal. Si este es el escenario para el servidor principal o el grupo de disponibilidad secundario, use el VNN de la FCI de SQL principal como dirección URL del agente de escucha en lugar de su nombre de red. Siga usando el puerto del punto de conexión de creación de reflejo de la base de datos en cualquier escenario.
+    >El parámetro de URL LISTENER\_ de la consulta T-SQL para el grupo de disponibilidad distribuido tiene un comportamiento distinto al de los grupos de disponibilidad que tienen una FCI de SQL como instancia principal. Si este es el caso del servidor principal o el grupo de disponibilidad secundario, use el VNN de la FCI de SQL principal como dirección URL del agente de escucha en lugar de su nombre de red, junto con el puerto de punto de conexión de creación de reflejo de la base de datos.
 
 4.  Combine el grupo de disponibilidad secundario con el grupo de disponibilidad distribuido.
 
@@ -80,7 +79,7 @@ Si tiene una configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 
 6.  Corte todo el tráfico hacia el grupo de disponibilidad principal y permita la sincronización del segundo grupo.
 
-7.  Cambie la directiva de confirmación en ambos grupos de disponibilidad para que muestre el valor SYNCHRONOUS\_COMMIT y realice la conmutación por error al clúster de destino cuando el estado sea SYNCHRONIZED.
+7.  Cambie la directiva de confirmación en ambos grupos de disponibilidad para que se muestre el valor SYNCHRONOUS_COMMIT y realice la conmutación por error del clúster de destino cuando el estado sea SYNCHRONIZED.
 
 8.  Elimine el grupo de disponibilidad distribuido.
 
@@ -93,9 +92,9 @@ Si tiene una configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 
 11. Reanude el tráfico hacia el agente de escucha.
 
-## <a name="scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag"></a>Escenario 2: El clúster que se migrará solo tiene FCI de SQL (no tiene ningún grupo de disponibilidad)
+## <a name="scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis"></a>Escenario 2: Windows Cluster con instancias de clúster de conmutación por error de SQL Server (FCI)
 
-Si tiene una configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] que no usa ninguna instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] independiente (solo FCI de SQL), puede realizar la migración a un nuevo clúster mediante la creación de una configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] paralela en otro clúster de Windows con Windows Server 2016/2012 R2. Realizará la migración del clúster de destino "adquiriendo" los VNN de las FCI de SQL antiguas y incorporándolos a los nuevos clústeres. Esto creará tiempo de inactividad adicional en función de los tiempos de propagación de DNS.
+Si tiene un entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] que solo usa instancias de FCI de SQL, puede realizar la migración a un nuevo clúster creando un entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] paralelo en otra instancia de Windows Cluster con Windows Server 2016/2012 R2. Realizará la migración del clúster de destino "adquiriendo" los VNN de las FCI de SQL antiguas y incorporándolos a los nuevos clústeres. Esto creará tiempo de inactividad adicional en función de los tiempos de propagación de DNS.
 
 ###  <a name="to-perform-the-upgrade"></a>Para realizar la actualización
 
@@ -126,7 +125,7 @@ Si tiene una configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 
 12. Cuando los equipos se reinicien y vuelvan a conectarse, inicie cada uno de los roles de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] en el Administrador de clústeres de conmutación por error.
 
-## <a name="scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups"></a>Escenario 3: El clúster solo tiene FCI de SQL y usa grupos de disponibilidad
+## <a name="scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups"></a>Escenario 3: Windows Cluster tiene tanto FCI de SQL como grupos de disponibilidad de SQL Server
 
 Si tiene una configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] que no usa ninguna instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] independiente, sino que solo usa FCI de SQL contenidas en al menos un grupo de disponibilidad, podrá realizar la migración de esta configuración a un nuevo clúster usando métodos parecidos al escenario en el que no hay ningún grupo de disponibilidad ni ninguna instancia independiente. Antes de copiar las tablas del sistema en los discos compartidos de FCI de destino, deberá quitar todos los grupos de disponibilidad del entorno original. Después de que se haya realizado la migración de todas las bases de datos a los equipos de destino, volverá a crear los grupos de disponibilidad con los mismos nombres de esquema y agente de escucha. Al hacerlo, los recursos de clúster de conmutación por error de Windows Server se formarán y administrarán correctamente en el clúster de destino. **Always On debe estar habilitado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] Configuration Manager en cada equipo del entorno de destino antes de la migración.**
 
@@ -164,7 +163,7 @@ Si tiene una configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 
 16. Cree un agente de escucha en el nuevo grupo de disponibilidad con el nombre del agente de escucha del grupo de disponibilidad original.
 
-## <a name="scenario-4-cluster-has-some-non-fci-and-no-availability-groups"></a>Escenario 4: El clúster tiene instancias que no son FCI y ningún grupo de disponibilidad
+## <a name="scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups"></a>Escenario 4: Windows Cluster con instancias independientes de SQL Server y sin grupos de disponibilidad
 
 Realizar la migración de un clúster con instancias independientes es un proceso similar a realizar la migración de un clúster de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] que solo tiene FCI; en lugar de cambiar el VNN del recurso de clúster de nombre de red de las FCI, deberá cambiar el nombre de equipo del equipo independiente original y "adquirir" el nombre del equipo antiguo en el equipo de destino. Esto presenta un tiempo de inactividad adicional con respecto a los escenarios no independientes, ya que no podrá combinar el equipo independiente de destino con el WSFC hasta que haya adquirido el nombre de red del equipo antiguo.
 
@@ -200,9 +199,9 @@ Realizar la migración de un clúster con instancias independientes es un proces
 
 15. Cuando los equipos se reinicien y vuelvan a conectarse, inicie cada uno de los roles de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] en el Administrador de clústeres de conmutación por error.
 
-## <a name="scenario-5-cluster-has-some-non-fci-and-uses-availability-groups"></a>Escenario 5: El clúster tiene algunas instancias que no son FCI y usa grupos de disponibilidad
+## <a name="scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups"></a>Escenario 5: Windows Cluster con instancias independientes de SQL Server y grupos de disponibilidad
 
-Realizar la migración de un clúster que usa grupos de disponibilidad con réplicas independientes es un proceso similar a la migración de un clúster con FCI estrictas que usan grupos de disponibilidad. También deberá eliminar los grupos de disponibilidad originales y reconstruirlos en el clúster de destino. Pero el tiempo de inactividad adicional se produce debido a la dificultad añadida de la migración de instancias independientes. **Always On debe estar habilitado en cada FCI del entorno de destino antes de la migración.**
+Realizar la migración de un clúster que usa grupos de disponibilidad con réplicas independientes es un proceso similar a la migración de un clúster con FCI que usan grupos de disponibilidad. También deberá eliminar los grupos de disponibilidad originales y reconstruirlos en el clúster de destino. Pero el tiempo de inactividad adicional se produce debido a la dificultad añadida de la migración de instancias independientes. **Always On debe estar habilitado en cada FCI del entorno de destino antes de la migración.**
 
 ###  <a name="to-perform-the-upgrade"></a>Para realizar la actualización
 

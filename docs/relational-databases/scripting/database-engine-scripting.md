@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - scripting [SQL Server Database Engine]
 - scripting [SQL Server Database Engine], PowerShell
 ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: mightypen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52a85f7ed9f26b1414f918f50509999394a66399
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: b9cb056fcd3de201affda48646578d308b0582c1
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="database-engine-scripting"></a>Scripting del motor de base de datos
 [!INCLUDE[ssDE](../../includes/ssde-md.md)] El [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] admite el entorno de scripting de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] PowerShell para administrar las instancias del [!INCLUDE[msCoName](../../includes/msconame-md.md)] y los objetos en las instancias. También puede generar y ejecutar consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que contengan [!INCLUDE[tsql](../../includes/tsql-md.md)] y XQuery en entornos muy similares a los de scripts.  
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Use el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Archivo**/**Abrir** para abrir el archivo en una nueva ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
--   Use el parámetro **-i***archivo_entrada* para ejecutar el archivo con la utilidad **sqlcmd** .  
+-   Use el parámetro **-i***input_file* para ejecutar el archivo con la utilidad **sqlcmd**.  
   
 -   Use el parámetro **-QueryFromFile** para ejecutar el archivo con el cmdlet **Invoke-Sqlcmd** en los scripts de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell.  
   

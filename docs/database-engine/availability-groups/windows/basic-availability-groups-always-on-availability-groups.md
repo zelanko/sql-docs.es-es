@@ -1,26 +1,27 @@
 ---
 title: "Grupos de disponibilidad básica (grupos de disponibilidad AlwaysOn) | Microsoft Docs"
 ms.custom: 
-ms.date: 09/27/2016
+ms.date: 02/01/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 15696e7bf14fb5a240f1ef14070f28bb5d87a1f2
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ba38095f11a5f40ec6b9a9398217a98f390d146d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>Grupos de disponibilidad básica (grupos de disponibilidad AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +43,7 @@ ms.lasthandoff: 01/18/2018
 - Sin comprobaciones de integridad en las réplicas secundarias. 
 
 - No se admiten réplicas hospedadas en servidores que ejecutan una versión de SQL Server anterior a SQL Server 2016 Community Technology Preview 3 (CTP3).  
-  
-- No se admite la opción de agregar o quitar una réplica de un grupo de disponibilidad básica existente.  
-  
+
 - Admite una base de datos de disponibilidad.  
   
 - Los grupos de disponibilidad básica no pueden actualizarse a los grupos de disponibilidad avanzada. El grupo debe quitarse y agregarse de nuevo a un grupo que contenga servidores que solo ejecuten SQL Server 2016 Enterprise Edition.  

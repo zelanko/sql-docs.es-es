@@ -8,7 +8,8 @@ ms.service:
 ms.component: stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-ole
+ms.technology:
+- dbe-ole
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - OLE Automation [SQL Server], return codes
 - OLE Automation [SQL Server], errors
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
-caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f51c1f609a1ab0556e3ba0494e23dc18cb4c9aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d2621860c2090c3c3efe1fa72bbd4c9e4315c68d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="ole-automation-return-codes-and-error-information"></a>Códigos de retorno e información de error de automatización OLE
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Los procedimientos almacenados del sistema de automatización OLE devuelven un código de retorno **int** que es el valor HRESULT devuelto por la operación de automatización OLE subyacente. Un HRESULT con el valor 0 indica que la operación se realizó correctamente. Un valor de HRESULT distinto de cero es un código de error OLE con formato hexadecimal 0x800*nnnnn*, aunque cuando se devuelve como un valor **int** en un código de retorno de un procedimiento almacenado, tiene el formato 214*nnnnnnn*.  
+# <a name="ole-automation-return-codes-and-error-information"></a>Códigos de retorno e información de error de OLE Automation
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Los procedimientos almacenados del sistema de automatización OLE devuelven un código de retorno **int** que es el HRESULT devuelto por la operación de automatización OLE subyacente. Un HRESULT con el valor 0 indica que la operación se realizó correctamente. Un valor de HRESULT distinto de cero es un código de error OLE con formato hexadecimal 0x800*nnnnn*, aunque cuando se devuelve como un valor **int** en un código de retorno de un procedimiento almacenado, tiene el formato 214*nnnnnnn*.  
   
  Por ejemplo, pasar un nombre de objeto no válido (SQLDMO.Xyzzy) a sp_OACreate hace que el procedimiento devuelva un HRESULT **int** de 2147221005, que es 0x800401f3 en formato hexadecimal.  
   

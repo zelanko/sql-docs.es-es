@@ -23,7 +23,7 @@ ms.lasthandoff: 02/01/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de la versión de SQL Server 2017 en Linux
 
-Las siguientes notas se aplican a SQL Server 2017 ejecutando en Linux. El siguiente tema se divide en secciones para cada versión. La versión de GA tiene detallada compatibilidad y listados de problemas conocidos. Cada versión de la actualización acumulativa (CU) tiene un vínculo a un tema de compatibilidad que describe los cambios CU, así como vínculos para el paquete de descarga de Linux.
+Las siguientes notas se aplican a SQL Server 2017 ejecutando en Linux. El siguiente tema se divide en secciones para cada versión. La versión de disponibilidad general (GA) tiene detallada compatibilidad y listados de problemas conocidos. Cada versión de la actualización acumulativa (CU) tiene un vínculo a un tema de compatibilidad que describe los cambios CU, así como vínculos para el paquete de descarga de Linux.
 
 ## <a name="supported-platforms"></a>Plataformas compatibles
 
@@ -109,9 +109,9 @@ Para las instalaciones de paquete manual o sin conexión, puede descargar los pa
 | Paquete de SLES RPM | 14.0.3006.16-3 | [paquete de RPM del motor de servidor MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3006.16-3.x86_64.rpm)</br>[Paquete alta disponibilidad RPM](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3006.16-3.x86_64.rpm)</br>[Paquete de RPM de búsqueda de texto completo](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3006.16-3.x86_64.rpm)</br>[Paquete RPM de agente de SQL Server](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3006.16-3.x86_64.rpm) | 
 | Paquete de Debian Ubuntu 16.04 | 14.0.3006.16-3 | [Motor de paquete Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3006.16-3_amd64.deb)</br>[Paquete de Debian de alta disponibilidad](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3006.16-3_amd64.deb)</br>[Paquete de Debian de búsqueda de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3006.16-3_amd64.deb)</br>[Paquete SQL Server Agent Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3006.16-3_amd64.deb)<br/>[Paquete SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="GA"></a>GA (octubre de 2017)
+## <a id="GA"></a>Disponibilidad General (octubre de 2017)
 
-Se trata de la versión de disponibilidad General (GA) de SQL Server 2017. La versión del motor de SQL Server para esta versión es 14.0.1000.169.
+Se trata de la versión de disponibilidad general (GA) de SQL Server 2017. La versión del motor de SQL Server para esta versión es 14.0.1000.169.
 
 ### <a name="package-details"></a>Detalles del paquete
 

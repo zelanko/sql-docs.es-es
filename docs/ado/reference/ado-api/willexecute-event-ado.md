@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - WillExecute
 - Connection::WillExecute
-helpviewer_keywords: WillExecute event [ADO]
+helpviewer_keywords:
+- WillExecute event [ADO]
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66a04a7bf45771c9c6f16b32bfd9c8bac54db4ad
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dafc71b9f9da6dde5cf9ef7acf7909236441f656
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="willexecute-event-ado"></a>Evento WillExecute (ADO)
 El **WillExecute** eventos se llama justo antes de que se ejecuta un comando pendiente en una conexión.  
@@ -57,7 +59,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *pCommand*  
  El [comando ADO (objetos)](../../../ado/reference/ado-api/command-object-ado.md) el objeto para el que se aplica esta notificación de eventos.  
   
- *Connection*  
+ *pRecordset*  
  El [conjunto de registros ADO (objetos)](../../../ado/reference/ado-api/recordset-object-ado.md) el objeto para el que se aplica esta notificación de eventos.  
   
  *pConnection*  
@@ -69,7 +71,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  **WillExecute** le permite examinar y modificar los parámetros de ejecución pendiente. Este evento puede devolver una solicitud de cancelación del comando pendiente.  
   
 > [!NOTE]
->  Si la versión original de origen para un **comando** es una secuencia especificada por el [propiedad CommandStream (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) propiedad, asignando una cadena nueva a la **WillExecute** *Origen* parámetro cambia el origen de la **comando**. El **CommandStream** propiedad se borrará y [propiedad CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) propiedad se actualizará con el nuevo origen. La secuencia original especificada por **CommandStream** se publican y no son accesibles.  
+>  Si la versión original de origen para un **comando** es una secuencia especificada por el [propiedad CommandStream (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) propiedad, asignando una cadena nueva a la **WillExecute *** origen* parámetro cambia el origen de la **comando**. El **CommandStream** propiedad se borrará y [propiedad CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) propiedad se actualizará con el nuevo origen. La secuencia original especificada por **CommandStream** se publican y no son accesibles.  
   
  Si el dialecto de la nueva cadena de origen difiere de la configuración original de la [propiedad Dialect](../../../ado/reference/ado-api/dialect-property.md) propiedad (que correspondía a la **CommandStream**), debe especificar el dialecto correcto estableciendo el **dialecto** propiedad del objeto de comando al que hace referencia *pCommand*.  
   

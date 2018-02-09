@@ -4,26 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
-helpviewer_keywords: Version property [ADO], Visual Basic example
+dev_langs:
+- VB
+helpviewer_keywords:
+- Version property [ADO], Visual Basic example
 ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f810e8a89ff1284e4b73386ac3f049e89d4c0931
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c6ecf18b7bd750297e481fe29ca391904bf6cc4c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="version-property-example-vb"></a>Ejemplo de la propiedad de versión (VB)
 Este ejemplo se utiliza la [versión](../../../ado/reference/ado-api/version-property-ado.md) propiedad de un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto que se mostrará la versión actual de ADO. También se utilizan varias propiedades dinámicas para mostrar:  

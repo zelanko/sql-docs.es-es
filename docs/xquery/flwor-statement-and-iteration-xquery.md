@@ -8,11 +8,14 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - return clause
 - FLWOR statement
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - XQuery, FLWOR statement
 - EBV
 ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
-caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df09c12de880a00dc537334b78dcc62cd5cd9a9b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dc15902b85eb44c0341fc29389699d2eed43e875
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR (instrucción e iteración de XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -250,7 +253,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Observe lo siguiente en la consulta anterior:  
+ Observe lo siguiente en la consulta anterior:    
   
 -   El `where` palabra clave usa el **count()** función para contar el número de <`step`> ubicación del centro de los elementos secundarios de cada trabajo.  
   
@@ -330,7 +333,7 @@ FROM  Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Observe lo siguiente en la consulta anterior:  
+ Observe lo siguiente en la consulta anterior:    
   
 -   La cláusula `for` define dos variables, `$WC` y `$S`. La expresión asociada con `$WC` genera una secuencia de ubicaciones de centro de trabajo para la fabricación de un modelo de bicicleta. La expresión de ruta de acceso asignada a la variable `$S` genera una secuencia de pasos para cada secuencia de ubicaciones de centro de trabajo de `$WC`.  
   

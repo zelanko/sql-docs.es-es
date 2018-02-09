@@ -1,10 +1,11 @@
 ---
-title: ADCPROP_ASYNCTHREADPRIORITY_ENUM | Documentos de Microsoft
+title: ADCPROP_ASYNCTHREADPRIORITY_ENUM | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,26 +13,28 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: ADCPROP_ASYNCTHREADPRIORITY_ENUM
-helpviewer_keywords: ADCPROP_ASYNCTHREADPRIORITY_ENUM [ADO]
+f1_keywords:
+- ADCPROP_ASYNCTHREADPRIORITY_ENUM
+helpviewer_keywords:
+- ADCPROP_ASYNCTHREADPRIORITY_ENUM [ADO]
 ms.assetid: f0965617-17d8-41e0-98d0-f824274735a6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8a03809de8f86cf4ece91be598a71cd24b3ad9d7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f5bba0650c82873fc38aea57285dfdc63c4c3658
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adcpropasyncthreadpriorityenum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
 Para un RDS [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) de objetos, especifica la prioridad de ejecución del subproceso asincrónico que recupera los datos.  
   
  Utilice estas constantes con la **Recordset** "**prioridad de subproceso en segundo plano**" propiedad dinámica, que se hace referencia en el índice de la propiedad dinámica de base de datos de ADO para OLE y se documentan en el [ Servicio de cursores de Microsoft para OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) documentación.  
   
-|Constante|Valor|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adPriorityAboveNormal**|4|Establece la prioridad entre más altos y más normal.|  
 |**adPriorityBelowNormal**|2|Establece la prioridad entre normal y más baja.|  

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - ADO, methods
 - methods [ADO]
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f3e79fcbef3c9a07ac43de13865632fef2ca6ca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e35be40ea3023338048bf729b9f4cea5b6048449
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-methods"></a>Métodos de ADO
 |||  
@@ -50,7 +51,7 @@ ms.lasthandoff: 12/21/2017
 |[Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|Ejecuta la consulta, la instrucción SQL o el procedimiento almacenado especificado en el **CommandText** propiedad.|  
 |[Ejecutar (conexión de ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|Ejecuta la consulta especificada, la instrucción SQL, el procedimiento almacenado o la texto específico del proveedor.|  
 |[Buscar](../../../ado/reference/ado-api/find-method-ado.md)|Busca un **conjunto de registros** para la fila que cumple los criterios especificados.|  
-|[Vaciar](../../../ado/reference/ado-api/flush-method-ado.md)|Fuerza que el contenido de la **flujo** permanecen en el búfer de ADO en el objeto subyacente con el que el **flujo** está asociado.|  
+|[Flush](../../../ado/reference/ado-api/flush-method-ado.md)|Fuerza que el contenido de la **flujo** permanecen en el búfer de ADO en el objeto subyacente con el que el **flujo** está asociado.|  
 |[get_OLEDBCommand (método)](../../../ado/reference/ado-api/get-oledbcommand-method.md)|Devuelve el comando de OLE DB subyacentes, primero propagar cualquier información de parámetros que se establece en el comando de ADO en el comando de OLE DB.|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|Devuelve un **Recordset** cuyas filas representan los archivos y subdirectorios del directorio representado por este **registro**.|  
 |[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)|Devuelve todo o una parte del contenido de un texto de gran tamaño o datos binarios **campo** objeto.|  

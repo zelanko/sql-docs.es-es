@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: ADORecordConstruction
-helpviewer_keywords: ADORecordConstruction interface [ADO]
+f1_keywords:
+- ADORecordConstruction
+helpviewer_keywords:
+- ADORecordConstruction interface [ADO]
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cedc7639b0b5c1559fe137be96c822287a3ff82
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7bfe02588a73f6c896b8947298483766c6a8a01e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adorecordconstruction-interface"></a>Interfaz ADORecordConstruction
 El **ADORecordConstruction**interfaz se usa para construir un ADO **registro** objeto de OLE DB **fila** objeto en una aplicación de C o C++.  
@@ -36,7 +39,7 @@ El **ADORecordConstruction**interfaz se usa para construir un ADO **registro** o
 |||  
 |-|-|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|De solo escritura.<br />Establece el contenedor de OLE DB **fila** objeto en este ADO **registro** objeto.|  
-|[Fila](../../../ado/reference/ado-api/row-property-ado.md)|Lectura/escritura.<br />Obtiene o establece OLE DB **fila** objeto de/en este ADO **registro** objeto.|  
+|[Row](../../../ado/reference/ado-api/row-property-ado.md)|Lectura/escritura.<br />Obtiene o establece OLE DB **fila** objeto de/en este ADO **registro** objeto.|  
   
 ## <a name="methods"></a>Métodos  
  Ninguno.  
@@ -77,6 +80,6 @@ El **ADORecordConstruction**interfaz se usa para construir un ADO **registro** o
 ## <a name="requirements"></a>Requisitos  
  **Versión:** ADO 2.0 y versiones posteriores  
   
- **Biblioteca:** msado15.dll  
+ **Library:** msado15.dll  
   
  **UUID:** 00000567-0000-0010-8000-00AA006D2EA4

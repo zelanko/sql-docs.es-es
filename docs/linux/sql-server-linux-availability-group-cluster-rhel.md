@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.workload: Inactive
-ms.openlocfilehash: dd997e9d3f235d841cd5706b9c81b9335360540d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 860d3571aa1edf7c467125de1cc2920a968eb704
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configuración de clúster RHEL para grupo de disponibilidad de SQL Server
 
@@ -160,10 +160,10 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 master notify=true
 
 ## <a name="create-virtual-ip-resource"></a>Crear el recurso de IP virtual
 
-Para crear el recurso de dirección IP virtual, ejecute el siguiente comando en un nodo. Use una dirección IP estática disponible desde la red. Reemplace la dirección IP entre `**<10.128.16.240>**` con una dirección IP válida.
+Para crear el recurso de dirección IP virtual, ejecute el siguiente comando en un nodo. Use una dirección IP estática disponible desde la red. Reemplace la dirección IP entre `<10.128.16.240>` con una dirección IP válida.
 
 ```bash
-sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=**<10.128.16.240>**
+sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
 No hay ningún nombre de servidor virtual equivalente en marcapasos. Para usar una cadena de conexión que apunta a un nombre de servidor de cadena en lugar de una dirección IP, registrar la dirección del recurso IP virtual y el nombre del servidor virtual deseado en DNS. Las configuraciones de recuperación ante desastres, registre el nombre del servidor virtual deseado y la dirección IP con los servidores DNS principal y el sitio de recuperación ante desastres.

@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: customization file in RDS [ADO]
+helpviewer_keywords:
+- customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f630817b87a464d3f02e5fdad6c88c161a081b23
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0597c403a9d716c155fe129ab8cb514268b27341
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="understanding-the-customization-file"></a>Descripción de los archivos de personalización
 Cada encabezado de sección en el archivo de personalización consta de corchetes (**[]**) que contiene un tipo y un parámetro. Los cuatro tipos de sección se indican mediante las cadenas literales **conectar**, **sql**, **userlist**, o **registros**. El parámetro es la cadena literal, el valor predeterminado, un identificador especificado por el usuario o nada.  
@@ -48,18 +50,18 @@ identifier
   
 |Parte|Description|  
 |----------|-----------------|  
-|**conectar**|Una cadena literal que modifica una cadena de conexión.|  
-|**SQL**|Una cadena literal que modifica una cadena de comandos.|  
-|**lista de usuarios**|Una cadena literal que modifica los derechos de acceso de un usuario específico.|  
-|**registros**|Una cadena literal que especifica un archivo de registro de errores operacionales de grabación.|  
-|**valor predeterminado**|Una cadena literal que se usa si se especifica o se encuentra ningún identificador.|  
-|*identificador*|Una cadena que coincide con una cadena en el **conectar** o **comando** cadena.<br /><br /> -Utilice esta sección si el encabezado de sección contiene **conectar** y se encuentra la cadena de identificador en la cadena de conexión.<br />-Utilice esta sección si el encabezado de sección contiene **sql** y se encuentra la cadena de identificador en la cadena de comandos.<br />-Utilice esta sección si el encabezado de sección contiene **userlist** y la cadena de identificador coincide con un **conectar** identificador de la sección.|  
+|**connect**|Una cadena literal que modifica una cadena de conexión.|  
+|**sql**|Una cadena literal que modifica una cadena de comandos.|  
+|**userlist**|Una cadena literal que modifica los derechos de acceso de un usuario específico.|  
+|**logs**|Una cadena literal que especifica un archivo de registro de errores operacionales de grabación.|  
+|**default**|Una cadena literal que se usa si se especifica o se encuentra ningún identificador.|  
+|*identifier*|Una cadena que coincide con una cadena en el **conectar** o **comando** cadena.<br /><br /> -Utilice esta sección si el encabezado de sección contiene **conectar** y se encuentra la cadena de identificador en la cadena de conexión.<br />-Utilice esta sección si el encabezado de sección contiene **sql** y se encuentra la cadena de identificador en la cadena de comandos.<br />-Utilice esta sección si el encabezado de sección contiene **userlist** y la cadena de identificador coincide con un **conectar** identificador de la sección.|  
   
  El **DataFactory** llama al controlador, pasando parámetros de cliente. El controlador busca cadenas completas en los parámetros de cliente que coincide con los identificadores en los encabezados de la sección correspondiente. Si se encuentra una coincidencia, el contenido de esa sección se aplica a los parámetros de cliente.  
   
  Una sección concreta se usa en las siguientes circunstancias:  
   
--   A **conectar** sección se usa si la parte del valor del cliente conecta la palabra clave de cadena, "**origen de datos =***valor*", coincide con un **conectar** identificador de la sección*.*  
+-   A **conectar** sección se usa si la parte del valor del cliente conecta la palabra clave de cadena, "**origen de datos = *** valor*", coincide con un **conectar** identificador de la sección*.*  
   
 -   Un **sql** sección se usa si la cadena de comandos de cliente contiene una cadena que coincide con un **sql** identificador de la sección.  
   

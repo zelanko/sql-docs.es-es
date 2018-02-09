@@ -16,19 +16,20 @@ helpviewer_keywords:
 - SqlPipe object
 - tabular results
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
-caps.latest.revision: "54"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e99da62dd46ff34e13cb009ef1dd20141be75ead
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5db45b3c67fcf865214ad422662acfb80bab293e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sqlpipe-object"></a>SqlPipe, objetos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es muy común escribir un procedimiento almacenado (o un procedimiento almacenado extendido) que envía resultados o parámetros de salida al cliente que realiza la llamada.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]es muy común escribir un procedimiento almacenado (o un procedimiento almacenado extendido) que envía resultados o parámetros de salida al cliente que realiza la llamada.  
   
  En un procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)] , cualquier instrucción **SELECT** que devuelve cero o más filas envía los resultados a la "canalización" del autor de la llamada conectado.  
   
@@ -144,7 +145,7 @@ End Class
 EXEC uspGetProductLineVB 'T';  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [SqlDataRecord, objeto](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md)   
  [Procedimientos almacenados de CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
  [Extensiones específicas en proceso de SQL Server a ADO.NET](../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  

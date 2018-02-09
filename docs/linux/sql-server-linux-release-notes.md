@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 661c3797ef0881efd49921231c2899f5391e4e27
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: e8160ec17a856a3c14d1177085c95c329e5d2b3b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de la versión de SQL Server 2017 en Linux
 
@@ -58,7 +58,7 @@ En la tabla siguiente se enumera el historial de versiones de SQL Server 2017.
 
 ## <a id="cuinstall"></a>Cómo instalar actualizaciones acumulativas
 
-Si ha configurado el repositorio de la actualización acumulativa, obtendrá la actualización acumulativa más reciente de los paquetes de SQL Server al realizar nuevas instalaciones. El repositorio de actualización acumulativa es el valor predeterminado para todos los artículos de la instalación de paquetes de SQL Server en Linux. Para obtener más información acerca de la configuración del repositorio, consulte [repositorios de origen](sql-server-linux-setup.md#repositories).
+Si ha configurado el repositorio de la actualización acumulativa, obtendrá la actualización acumulativa más reciente de los paquetes de SQL Server al realizar nuevas instalaciones. El repositorio de actualización acumulativa es el valor predeterminado para todos los artículos de la instalación de paquetes de SQL Server en Linux. Para obtener más información acerca de la configuración del repositorio, consulte [configurar repositorios para SQL Server en Linux](sql-server-linux-change-repo.md).
 
 Si va a actualizar los paquetes existentes de SQL Server, ejecute el comando de actualización apropiada para cada paquete obtener la actualización acumulativa más reciente. Para obtener instrucciones de actualización específica para cada paquete, consulte las guías de instalación siguientes:
 

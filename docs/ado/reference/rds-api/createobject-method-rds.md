@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: CreateObject method [ADO]
+helpviewer_keywords:
+- CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba9c2d9ee2c2cf0a646155e5d184640d1aa0283b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: aeca3cd5d525a3712511a3d7fd59f82210c041e0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="createobject-method-rds"></a>CreateObject (método) (RDS)
 Crea al proxy para el objeto de comercial de destino y devuelve un puntero a ella. El proxy empaqueta y ordena datos para el código auxiliar de servidor para las comunicaciones con el objeto de negocios enviar solicitudes y datos a través de Internet. Para los objetos de componente en proceso, se utiliza ningún proxy, se proporciona solo un puntero al objeto.  
@@ -48,7 +50,7 @@ Crea al proxy para el objeto de comercial de destino y devuelve un puntero a ell
  *Espacio de datos*  
  Una variable de objeto que representa un [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) objeto utilizado para crear una instancia del nuevo objeto.  
   
- *Id. de programa*  
+ *ProgID*  
  A **cadena** valor que contiene el identificador de programación que se especifica un objeto comercial de servidor que implementa las reglas de negocios de su aplicación.  
   
  *awebsrvr* o *NombreDeEquipo*  

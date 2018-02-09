@@ -11,21 +11,23 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: assemblies [CLR integration], implementing
+helpviewer_keywords:
+- assemblies [CLR integration], implementing
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c37fa6946f4b400b666d43040fe805c50053a2f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3739ec98683810b683bf644912268d22efe6e261
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="assemblies---implementing"></a>Ensamblados - implementación
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Este tema proporciona información acerca de las áreas siguientes para ayudarle a implementar y trabajar con ensamblados en la base de datos:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+En este tema se proporciona información acerca de las áreas siguientes para ayudarle a implementar ensamblados y trabajar con ellos en la base de datos:  
   
 -   Crear ensamblados  
   
@@ -98,7 +100,7 @@ ms.lasthandoff: 01/08/2018
   
  Solo los miembros de la **db_owner** y **db_ddlowner** rol fijo de base de datos puede ejecutar ALTER ASSEMBLY de ejecución mediante la cláusula WITH UNCHECKED DATA.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] expone un mensaje al registro de eventos de aplicación Windows en el que indica que se ha modificado el ensamblado con datos no comprobados en las tablas. A continuación, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indica que las tablas que contienen datos que dependen del ensamblado tienen datos no comprobados. El **has_unchecked_assembly_data** columna de la **sys.tables** vista de catálogo contiene el valor 1 para las tablas que contienen datos no comprobados y 0 para las tablas sin datos no comprobados.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envía un mensaje al registro de eventos de aplicación de Windows que se ha modificado el ensamblado con datos no comprobados en las tablas. A continuación, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indica que las tablas que contienen datos que dependen del ensamblado tienen datos no comprobados. El **has_unchecked_assembly_data** columna de la **sys.tables** vista de catálogo contiene el valor 1 para las tablas que contienen datos no comprobados y 0 para las tablas sin datos no comprobados.  
   
  Para resolver la integridad de datos no comprobados, ejecute DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS en cada tabla que tiene datos no comprobados. Si se produce un error de DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS, debe eliminar las filas de tabla que no son válidas o modificar el código de ensamblado para solucionar los problemas y, a continuación, emita las instrucciones ALTER ASSEMBLY adicionales.  
   

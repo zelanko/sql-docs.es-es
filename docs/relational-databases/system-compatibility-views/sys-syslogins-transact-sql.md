@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - syslogins
 - sys.syslogins
 - sys.syslogins_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.syslogins compatibility view
 - syslogins system table
 ms.assetid: 4cb34f17-a4bb-469f-a218-71f074e6308f
-caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ea9ceaa622c6ad7b39bed9c3e3d2439e56a57210
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1b5b0d9ec9b28236816062fefdb0d022a0c9a498
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssyslogins-transact-sql"></a>sys.syslogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,19 +46,19 @@ ms.lasthandoff: 11/17/2017
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|**SID**|**varbinary (85)**|Identificador de seguridad.|  
+|**sid**|**varbinary(85)**|Identificador de seguridad.|  
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**CREATEDATE**|**datetime**|Fecha en que se agregó el inicio de sesión.|  
-|**UpdateDate**|**datetime**|Fecha en que se actualizó el inicio de sesión.|  
+|**createdate**|**datetime**|Fecha en que se agregó el inicio de sesión.|  
+|**updatedate**|**datetime**|Fecha en que se actualizó el inicio de sesión.|  
 |**accdate**|**datetime**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**totcpu**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**totio**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**spacelimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**TimeLimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**timelimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**resultlimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**Nombre**|**sysname**|Nombre de inicio de sesión del usuario.|  
 |**dbname**|**sysname**|Nombre de la base de datos predeterminada del usuario al establecer una conexión.|  
-|**contraseña**|**nvarchar (128)**|Devuelve NULL.|  
+|**password**|**nvarchar(128)**|Devuelve NULL.|  
 |**idioma**|**sysname**|Idioma predeterminado del usuario.|  
 |**denylogin**|**int**|1 = El inicio de sesión corresponde a un usuario o grupo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows al que se le ha denegado el acceso.|  
 |**hasaccess**|**int**|1 = El inicio de sesión tiene acceso al servidor.|  
@@ -71,7 +73,7 @@ ms.lasthandoff: 11/17/2017
 |**diskadmin**|**int**|1 = Inicio de sesión es miembro de la **diskadmin** rol fijo de servidor.|  
 |**dbcreator**|**int**|1 = Inicio de sesión es miembro de la **dbcreator** rol fijo de servidor.|  
 |**bulkadmin**|**int**|1 = Inicio de sesión es miembro de la **bulkadmin** rol fijo de servidor.|  
-|**LoginName**|**nvarchar (128)**|Nombre de inicio de sesión del usuario. Se proporciona para mantener la compatibilidad con versiones anteriores.|  
+|**loginname**|**nvarchar(128)**|Nombre de inicio de sesión del usuario. Se proporciona para mantener la compatibilidad con versiones anteriores.|  
   
 ## <a name="see-also"></a>Vea también  
  [Asignar tablas del sistema a vistas del sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

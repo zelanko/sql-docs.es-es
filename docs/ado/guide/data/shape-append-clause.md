@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - data shaping [ADO], APPEND clause
 - append clause [ADO]
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a6f5a67559ea2137110dc72d77a56bacc8da39a8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8f4c9bf19fd1df07bb4271a8db94311548a4e092
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="shape-append-clause"></a>Cláusula APPEND Shape
 La cláusula APPEND del comando shape anexa una o varias columnas para un **conjunto de registros**. Con frecuencia, estas columnas son columnas de capítulo, que hacen referencia a un elemento secundario **conjunto de registros**.  
@@ -39,7 +40,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
 ## <a name="description"></a>Description  
  Los elementos de esta cláusula son los siguientes:  
   
- *comando primario*  
+ *parent-command*  
  Cero o uno de los siguientes valores (se puede omitir el *comando primario* completamente):  
   
 -   Un comando de proveedor entre llaves ("{}") que devuelve un **Recordset** objeto. El comando se emite al proveedor de datos subyacente, y su sintaxis depende de los requisitos de ese proveedor. Normalmente será el lenguaje SQL, si bien ADO no requiere ningún lenguaje de consulta determinado.  
@@ -48,10 +49,10 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
   
 -   La tabla (palabra clave), seguido del nombre de una tabla en el proveedor de datos.  
   
- *alias del primario*  
+ *parent-alias*  
  Un alias opcional que hace referencia al elemento primario **conjunto de registros**.  
   
- *lista de columnas*  
+ *column-list*  
  Uno o varios de los siguientes valores:  
   
 -   Una columna agregada.  
@@ -71,7 +72,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- *conjunto de registros secundario*  
+ *child-recordset*  
  -   Un comando de proveedor entre llaves ("{}") que devuelve un **Recordset** objeto. El comando se emite al proveedor de datos subyacente, y su sintaxis depende de los requisitos de ese proveedor. Normalmente será el lenguaje SQL, si bien ADO no requiere ningún lenguaje de consulta determinado.  
   
 -   Otro comando shape incrustado entre paréntesis.  
@@ -80,19 +81,19 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 -   La tabla (palabra clave), seguido del nombre de una tabla en el proveedor de datos.  
   
- *alias de elemento secundario*  
+ *child-alias*  
  Un alias que hace referencia al formulario secundario **conjunto de registros**.  
   
- *columna primaria*  
+ *parent-column*  
  Una columna en la **Recordset** devuelto por la *comando primario.*  
   
- *columna secundaria*  
+ *child-column*  
  Una columna en la **Recordset** devuelto por la *comando secundario*.  
   
- *número de parámetros*  
+ *param-number*  
  Vea [el funcionamiento de los comandos parametrizados](../../../ado/guide/data/operation-of-parameterized-commands.md).  
   
- *alias de capítulo*  
+ *chapter-alias*  
  Un alias que hace referencia a la columna de capítulo anexada al elemento primario.  
   
 > [!NOTE]

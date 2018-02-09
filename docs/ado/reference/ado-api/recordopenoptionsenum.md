@@ -1,10 +1,11 @@
 ---
-title: RecordOpenOptionsEnum | Documentos de Microsoft
+title: RecordOpenOptionsEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: RecordOpenOptionsEnum
-helpviewer_keywords: RecordOpenOptionsEnum enumeration [ADO]
+f1_keywords:
+- RecordOpenOptionsEnum
+helpviewer_keywords:
+- RecordOpenOptionsEnum enumeration [ADO]
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d9d47fdb7a2e1ba604ddae22da0fcc823c458160
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 56caae53741a24727763868295ca92216557323c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 Especifica opciones para abrir un [registro](../../../ado/reference/ado-api/record-object-ado.md). Estos valores pueden combinarse mediante o.  
   
-|Constante|Valor|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adDelayFetchFields**|0x8000|Indica al proveedor que los campos asociados a la **registro** no es necesario que se recuperen inicialmente, pero se puede recuperar en el primer intento de obtener acceso al campo. El comportamiento predeterminado, indicado por la ausencia de este indicador, consiste en recuperar todos los **registro** campos de objeto.|  
 |**adDelayFetchStream**|0x4000|Indica al proveedor que la secuencia predeterminada asociada con el **registro** no es necesario que se recuperen inicialmente. El comportamiento predeterminado, indicado por la ausencia de este indicador, consiste en recuperar la secuencia predeterminada asociada con el **registro** objeto.|  

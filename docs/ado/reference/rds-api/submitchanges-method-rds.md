@@ -1,6 +1,7 @@
 ---
 title: "Método SubmitChanges (RDS) | Documentos de Microsoft"
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -11,18 +12,19 @@ ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: SubmitChanges method [ADO]
+helpviewer_keywords:
+- SubmitChanges method [ADO]
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc04a3ac77d6363c86f684b474fb5fa9a06c3c5e
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: c5e6131490f2e1e39b0ab9d038b13af67ec52047
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="submitchanges-method-rds"></a>Método SubmitChanges (RDS)
 Envía los cambios pendientes del localmente en caché y actualizables [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) al origen de datos especificado en el [conectar](../../../ado/reference/rds-api/connect-property-rds.md) propiedad o el [URL](../../../ado/reference/rds-api/url-property-rds.md) propiedad.  
@@ -41,13 +43,13 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *DataControl*  
  Una variable de objeto que representa un [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto.  
   
- *Factory*  
+ *DataFactory*  
  Una variable de objeto que representa un [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto.  
   
  *Conexión*  
  A **cadena** valor que representa la conexión creada con la **RDS. DataControl** del objeto [conectar](../../../ado/reference/rds-api/connect-property-rds.md) propiedad.  
   
- *Conjunto de registros*  
+ *Recordset*  
  Una variable de objeto que representa un **Recordset** objeto.  
   
 ## <a name="remarks"></a>Comentarios  

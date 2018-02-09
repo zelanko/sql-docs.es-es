@@ -1,6 +1,7 @@
 ---
 title: "Reset (método) (RDS) | Documentos de Microsoft"
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -11,18 +12,19 @@ ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Reset method [ADO]
+helpviewer_keywords:
+- Reset method [ADO]
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef5dfc619f39547150d096721da70c0ac715d04d
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: f95d5bf30a0646d3e67ae366e29794018095706a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="reset-method-rds"></a>Reset (método) (RDS)
 Ejecuta la ordenación o filtro en un cliente **Recordset** basándose en las propiedades de ordenación y filtro especificadas.  

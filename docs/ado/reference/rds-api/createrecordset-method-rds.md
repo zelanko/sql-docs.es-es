@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,18 +19,19 @@ f1_keywords:
 - CreateRecordset
 - RDSServer.DataFactory::CreateRecordset
 - DataFactory::CreateRecordset
-helpviewer_keywords: CreateRecordset method [RDS]
+helpviewer_keywords:
+- CreateRecordset method [RDS]
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7046143a53241622c7bcf03610c416715024fcc0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4ce2c6eed7dbb7e68277c054693aec089b802892
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="createrecordset-method-rds"></a>Ejemplo del método CreateRecordset (RDS)
 Crea vacío, desconecta [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -51,7 +53,7 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  A **Variant** matriz de atributos que define cada columna en el **Recordset** creado. Cada definición de columna contiene una matriz de cuatro atributos necesarios y un atributo opcional.  
   
-|Attribute|Description|  
+|Atributo|Description|  
 |---------------|-----------------|  
 |Nombre|Nombre del encabezado de columna.|  
 |Tipo|Entero del tipo de datos.|  
@@ -72,16 +74,16 @@ object.CreateRecordset(ColumnInfos)
   
 |Longitud|Constante|Number|Substitution|  
 |------------|--------------|------------|------------------|  
-|Fixed|**excepto adVarNumeric**|16||  
+|Fixed|**adTinyInt**|16||  
 |Fixed|**adSmallInt**|2||  
-|Fixed|**Tipos**|3||  
+|Fixed|**adInteger**|3||  
 |Fixed|**adBigInt**|20||  
 |Fixed|**adUnsignedTinyInt**|17||  
 |Fixed|**adUnsignedSmallInt**|18||  
 |Fixed|**adUnsignedInt**|19||  
 |Fixed|**adUnsignedBigInt**|21||  
 |Fixed|**adSingle**|4||  
-|Fixed|**longitud fija**|5||  
+|Fixed|**adDouble**|5||  
 |Fixed|**adCurrency**|6||  
 |Fixed|**adDecimal**|14||  
 |Fixed|**adNumeric**|131||  
@@ -89,12 +91,12 @@ object.CreateRecordset(ColumnInfos)
 |Fixed|**adError**|10||  
 |Fixed|**adGuid**|72||  
 |Fixed|**adDate**|7||  
-|Fixed|**adDBData**|133||  
+|Fixed|**adDBDate**|133||  
 |Fixed|**adDBTime**|134||  
 |Fixed|**adDBTimestamp**|135|7|  
 |Variable|**adBSTR**|8|130|  
-|Variable|**Cada**|129|200|  
-|Variable|**Parámetros**|200||  
+|Variable|**adChar**|129|200|  
+|Variable|**adVarChar**|200||  
 |Variable|**adLongVarChar**|201|200|  
 |Variable|**adWChar**|130||  
 |Variable|**adVarWChar**|202|130|  

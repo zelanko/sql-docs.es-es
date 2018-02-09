@@ -11,7 +11,8 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - UDTs [CLR integration], maintaining
 - user-defined types [CLR integration], maintaining
@@ -34,19 +35,20 @@ helpviewer_keywords:
 - UDTs [CLR integration], registering
 - ADD FILE clause
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7402b0f36f4d8b5ea0a554d7c82f1ff2cbaad19
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 49a0a9d7c9bf8d023b748a34b622ba15e6406233
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Registrar tipos definidos por el usuario en SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Para utilizar un tipo definido por el usuario (UDT) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe registrarlo. El registro de un UDT implica el registro del ensamblado y la creación del tipo en la base de datos en la que desea usarlo. El ámbito de los UDT es una sola base de datos, por lo que no pueden usarse en varias bases de datos a menos que se registren un ensamblado y UDT idénticos en cada base de datos. Una vez que haya registrado el ensamblado UDT y que haya creado el tipo, podrá usar el UDT en [!INCLUDE[tsql](../../includes/tsql-md.md)] y en el código del cliente. Para obtener más información, vea [Tipos definidos por el usuario de CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Para utilizar un tipo definido por el usuario (UDT) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe registrarlo. El registro de un UDT implica el registro del ensamblado y la creación del tipo en la base de datos en la que desea usarlo. El ámbito de los UDT es una sola base de datos, por lo que no pueden usarse en varias bases de datos a menos que se registren un ensamblado y UDT idénticos en cada base de datos. Una vez que haya registrado el ensamblado UDT y que haya creado el tipo, podrá usar el UDT en [!INCLUDE[tsql](../../includes/tsql-md.md)] y en el código del cliente. Para obtener más información, vea [Tipos definidos por el usuario de CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 ## <a name="using-visual-studio-to-deploy-udts"></a>Usar Visual Studio para implementar tipos UDT  
  La forma más fácil de implementar un UDT consiste en usar [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio. Sin embargo, en escenarios de implementación más complejos y para obtener la máxima flexibilidad, es preferible que use [!INCLUDE[tsql](../../includes/tsql-md.md)] tal y como se describe más adelante en este tema.  
@@ -179,10 +181,10 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  **Nombre**  
  Nombre del objeto.  
   
- **file_ID**  
+ **file_id**  
  Número que identifica cada objeto, con el primer objeto asociado a una determinada **assembly_id** se le asigna el valor de 1. Si hay varios objetos asociados al mismo **assembly_id**, a continuación, cada **file_id** valor se incrementa en 1.  
   
- **contenido**  
+ **content**  
  Representación hexadecimal del ensamblado o archivo.  
   
  Puede usar la función CAST o CONVERT para convertir el contenido de la **contenido** columna en texto legible. La consulta siguiente convierte el contenido del archivo Point.cs en texto legible, utilizando el nombre de la cláusula WHERE para restringir el conjunto de resultados a una única fila.  
@@ -221,6 +223,6 @@ SELECT CAST(content AS varchar(8000))
  Tenga en cuenta que no es necesario realizar ninguna acción para utilizar los UDT cuando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] crea tablas de trabajo en el **tempdb** base de datos del sistema. Esto incluye la administración de los cursores, variables de tabla, y funciones definidas por el usuario de con valores de tabla que incluyen de forma transparente los UDT y que el uso de **tempdb**. Sin embargo, si crea explícitamente una tabla temporal en **tempdb** que define una columna UDT, a continuación, el UDT debe estar registrado en **tempdb** igual que con una base de datos de usuario.  
   
 ## <a name="see-also"></a>Vea también  
- [Tipos definidos por el usuario de CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [Tipos definidos por el usuario CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

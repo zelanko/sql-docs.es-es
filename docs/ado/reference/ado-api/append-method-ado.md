@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: _DynaCollection::Append
-helpviewer_keywords: Append method [ADO]
+f1_keywords:
+- _DynaCollection::Append
+helpviewer_keywords:
+- Append method [ADO]
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d0c0c887da52e8c91caeab582c2b1973b491e81d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9a192286d39660580968305d16cb159480b6a09a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="append-method-ado"></a>Append (método) (ADO)
 Anexa un objeto a una colección. Si la colección es [campos](../../../ado/reference/ado-api/fields-collection-ado.md), un nuevo [campo](../../../ado/reference/ado-api/field-object.md) se puede crear el objeto antes de que se anexa a la colección.  
@@ -41,7 +44,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *colección*  
  Un objeto de colección.  
   
- *campos*  
+ *fields*  
  A **campos** colección.  
   
  *objeto*  

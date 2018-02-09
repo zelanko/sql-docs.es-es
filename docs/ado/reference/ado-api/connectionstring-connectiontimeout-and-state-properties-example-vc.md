@@ -4,29 +4,31 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ConnectionString property [ADO], VC++ example
 - ConnectionTimeout property [ADO], VC++ example
 - State property [ADO], VC++ example
 ms.assetid: c6bd2609-4c49-462f-a1aa-7bee0f615adb
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d54cc2ce55aa82a87dacfe2e8934d7eea449aa9a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 54105075f853a46ccb00379738c844246451701a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>ConnectionString, ConnectionTimeout y ejemplo de las propiedades de estado (VC ++)
 Este ejemplo muestra maneras diferentes de utilizar la [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propiedad para abrir un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto. También usa el [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) propiedad para establecer un período de tiempo de espera de conexión y el [estado](../../../ado/reference/ado-api/state-property-ado.md) propiedad que se va a comprobar el estado de las conexiones. La función GetState es necesaria ejecutar este procedimiento.  

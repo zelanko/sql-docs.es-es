@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - OLE DB provider for Oracle [ADO]
 - Oracle provider [ADO]
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eb8cf771b758dc81bb80e38bc709c611d8125921
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35bd07e150d1d56a1ea94542b0bd5b3c1b46d3d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Proveedor Microsoft OLE DB para Oracle Introducción
 > [!IMPORTANT]
@@ -73,7 +74,7 @@ MSDAORA
 |**Identificador de ventana**|Indica el identificador de ventana que se usará para solicitar información adicional.|
 |**Identificador de configuración regional**|Indica un único número de 32 bits (por ejemplo, 1033) que especifica las preferencias relacionadas con el idioma del usuario. Estas preferencias indican cómo se da formato a fechas y horas, los elementos se ordenan alfabéticamente, se comparan las cadenas y así sucesivamente.|
 |**Servicios OLE DB**|Indica una máscara de bits que especifica los servicios OLE DB para habilitar o deshabilitar.|
-|**Símbolo del sistema**|Indica si se debe preguntar al usuario mientras se está estableciendo una conexión.|
+|**Prompt**|Indica si se debe preguntar al usuario mientras se está estableciendo una conexión.|
 |**Propiedades extendidas**|Una cadena que contiene información de conexión ampliada específica del proveedor. Utilice esta propiedad solo para obtener información de conexión específica del proveedor que no se puede describir mediante un mecanismo de propiedad.|
 
 ## <a name="see-also"></a>Vea también

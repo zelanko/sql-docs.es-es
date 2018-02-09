@@ -15,19 +15,20 @@ helpviewer_keywords:
 - SqlDataRecord object
 - custom result sets [CLR integration]
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f9336adaca5a3e0aebd1e18dce5c58e97b1d2be
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d9fa7d4465af4de1534e220ffa06d39cf854c3b8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sqldatarecord-object"></a>SqlDataRecord, objeto
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]El **SqlDataRecord** objeto representa una sola fila de datos, junto con sus metadatos relacionados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+El objeto **SqlDataRecord** representa una fila única de datos, junto con sus metadatos relacionados.  
   
  Los procedimientos almacenados administrados se pueden enviar a los conjuntos de resultados del cliente que no son de **SqlDataReader**. La clase **SqlDataRecord** , junto con los métodos **SendResultsStart**, **SendResultsRow**y **SendResultsEnd** del objeto **SqlPipe** , permite a los procedimientos almacenados enviar conjuntos de resultados personalizados al cliente.  
   

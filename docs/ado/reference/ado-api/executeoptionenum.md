@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: ExecuteOptionEnum
-helpviewer_keywords: ExecuteOptionEnum enumeration [ADO]
+f1_keywords:
+- ExecuteOptionEnum
+helpviewer_keywords:
+- ExecuteOptionEnum enumeration [ADO]
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dbb75cabcdaee3aebe300fce219b500f85dd6b86
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8e4d901326e801d9c6724dfd05d7a14bb7acd8b7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 Especifica cómo un proveedor debe ejecutar un comando.  
   
-|Constante|Valor|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adAsyncExecute**|0x10|Indica que el comando debería ejecutarse de forma asincrónica.<br /><br /> Este valor no puede combinarse con la [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) valor **adCmdTableDirect**.|  
 |**adAsyncFetch**|0x20|Indica que las filas restantes después de la cantidad inicial especificado en el [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) propiedad se debe recuperar de forma asincrónica.|  
@@ -37,7 +40,7 @@ Especifica cómo un proveedor debe ejecutar un comando.
 |**adExecuteNoRecords**|0x80|Indica que el texto del comando es un comando o procedimiento almacenado que no devuelve filas (por ejemplo, un comando que sólo inserta datos). Si se recuperan todas las filas, se descartan y no devuelve.<br /><br /> **adExecuteNoRecords** solo se pueden pasar como un parámetro opcional para el **comando** o **conexión ejecute** método.|  
 |**adExecuteStream**|0x400|Indica que se deben devolver los resultados de una ejecución de comandos como una secuencia.<br /><br /> **adExecuteStream** solo se pueden pasar como un parámetro opcional para el **ejecutar comando** método.|  
 |**adExecuteRecord**||Indica que la **CommandText** es un comando o procedimiento almacenado que devuelve una sola fila que se debe devolver como un **registro** objeto.|  
-|**realiza la consulta**|-1|Indica que el comando no está especificado.|  
+|**adOptionUnspecified**|-1|Indica que el comando no está especificado.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  
  Paquete: **com.ms.wfc.data**  

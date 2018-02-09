@@ -1,6 +1,7 @@
 ---
 title: Propiedad SQL | Documentos de Microsoft
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -11,18 +12,19 @@ ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: SQL property [RDS]
+helpviewer_keywords:
+- SQL property [RDS]
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3488758fb803b33be03a0126b0e514279ea8c4bc
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 406d5cd5fcf159d9354ef0af0b7036e3ebd24bab
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-property"></a>Propiedad SQL
 Indica la cadena de consulta utilizada para recuperar la [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -41,7 +43,7 @@ Run time: DataControl.SQL = "QueryString"
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Cadena de consulta*  
+ *QueryString*  
  A **cadena** valor que contiene una solicitud de datos SQL válida.  
   
  *DataControl*  

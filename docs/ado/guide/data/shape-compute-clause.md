@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c20aec7585c33a7165fac4e93b446e4ce3aaf4e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 53ebeab9edfa1d9fc339f080d4a9de995053f77a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="shape-compute-clause"></a>Cláusula COMPUTE de forma
 Una cláusula COMPUTE de forma genera un elemento primario **Recordset**, cuyas columnas se componen de una referencia al formulario secundario **Recordset**; opcional columnas cuyo contenido se capítulo, nuevas o las columnas calculadas, o resultado de ejecutar funciones de agregado en el elemento secundario **Recordset** o una forma anteriormente **Recordset**; y las columnas en el elemento secundario **Recordset** enumerados en la cláusula opcional.  
@@ -41,7 +42,7 @@ SHAPE child-command [AS] child-alias
 ## <a name="description"></a>Description  
  Los elementos de esta cláusula son los siguientes:  
   
- *comando secundario*  
+ *child-command*  
  Consta de uno de los siguientes:  
   
 -   Un comando de consulta entre llaves ("{}") que devuelve un elemento secundario **Recordset** objeto. El comando se emite al proveedor de datos subyacente, y su sintaxis depende de los requisitos de ese proveedor. Normalmente será el lenguaje SQL, si bien ADO no requiere ningún lenguaje de consulta determinado.  
@@ -52,13 +53,13 @@ SHAPE child-command [AS] child-alias
   
 -   La tabla (palabra clave), seguido del nombre de una tabla en el proveedor de datos.  
   
- *alias de elemento secundario*  
+ *child-alias*  
  Un alias utilizado para hacer referencia a la **Recordset** devuelto por la *comando secundario.* El *alias secundario* se requiere en la lista de columnas en la cláusula COMPUTE y define la relación entre el elemento primario y secundario **Recordset** objetos.  
   
- *lista de columnas anexado*  
+ *appended-column-list*  
  Una lista en la que cada elemento define una columna en el objeto primario generado. Cada elemento contiene una columna de capítulo, una columna nueva, una columna calculada o un valor resultante de una función de agregado en el elemento secundario **conjunto de registros**.  
   
- *lista de campos agrupados*  
+ *grp-field-list*  
  Una lista de columnas en el elemento primario y secundario **Recordset** objetos que especifica cómo se deben agrupar filas en el elemento secundario.  
   
  Para cada columna de la *campo lista agrupados,* hay una columna correspondiente en los primarios y secundarios **Recordset** objetos. Para cada fila en el elemento primario **Recordset**, el *lista de campos agrupados* columnas tienen valores únicos y el elemento secundario **Recordset** al que hace referencia el elemento primario fila se compone únicamente de secundarios las filas cuya *lista de campos agrupados* columnas tienen los mismos valores que la fila primaria.  

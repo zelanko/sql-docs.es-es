@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - providers [ADO], cursor service for OLE DB
 - cursor service for OLE DB [ADO]
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 62ee8c5da51de28eff001b2056e738653db5b813
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9ba0513f0a450a57e4d25088f16d96398af9f936
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Servicio de cursores de Microsoft para información general acerca OLE DB
 El servicio de cursores de Microsoft para OLE DB complementa a las funciones de compatibilidad de cursor de proveedores de datos. Como resultado, el usuario percibe una funcionalidad relativamente uniforme en todos los proveedores de datos.
@@ -73,7 +74,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 |[Cambiar la forma de nombre](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Indica el nombre de la **conjunto de registros**. Puede ser que se hace referencia dentro del actual, o posteriores, comandos de la forma de datos.|
 |[Comando Resync](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Indica una cadena de comando personalizado utilizado por la [Resync](../../../ado/reference/ado-api/resync-method.md) método cuando el [tabla única](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) propiedad está en vigor.|
 |[Catálogo único](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indica el nombre de la base de datos que contiene la tabla que se hace referencia en el **tabla única** propiedad.|
-|[Esquema único](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indica el nombre del propietario de la tabla que se hace referencia en el **tabla única** propiedad.|
+|[Unique Schema](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indica el nombre del propietario de la tabla que se hace referencia en el **tabla única** propiedad.|
 |[Tabla única](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indica el nombre de la tabla de una en una **Recordset** creado a partir de varias tablas que pueden modificarse las inserciones, actualizaciones o eliminaciones.|
 |Criterios de actualización (DBPROP_ADC_UPDATECRITERIA)|Indica qué campos de la **donde** cláusula se utilizan para controlar conflictos producidos durante una actualización.|
 |[Actualizar resincronización](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) (DBPROP_ADC_UPDATERESYNC)|Indica si la **Resync** implícitamente se invoca el método después de la [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) método (y su comportamiento), cuando la **tabla única** propiedad está en vigor.|

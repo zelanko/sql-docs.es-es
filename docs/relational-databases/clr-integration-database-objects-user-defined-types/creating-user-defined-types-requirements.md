@@ -22,19 +22,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], Native serialization
 - UDTs [CLR integration], Native serialization
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 04ee34b1a2474e97111d42be84954dc4c0987dd1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a075d6c4c4cc5ccd0477bb33159cf319fb0754b6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-user-defined-types---requirements"></a>Crear requisitos de tipos definidos por el usuario:
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Debe realizar varias decisiones de diseño importantes al crear un tipo definido por el usuario (UDT) que se instalen en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para la mayoría de los UDT, se recomienda la creación del UDT como una estructura, aunque también puede crearse como una clase. La definición del UDT debe cumplir las especificaciones de creación de los UDT a fin de registrarse con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Debe realizar varias decisiones de diseño importantes al crear un tipo definido por el usuario (UDT) que se instalen en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para la mayoría de los UDT, se recomienda la creación del UDT como una estructura, aunque también puede crearse como una clase. La definición del UDT debe cumplir las especificaciones de creación de los UDT a fin de registrarse con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="requirements-for-implementing-udts"></a>Requisitos para implementar un UDT  
  El UDT, para poder ejecutarse en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe implementar los requisitos siguientes en la definición del UDT:  
@@ -75,7 +76,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="native-serialization"></a>Serialización nativa  
  La elección de los atributos de serialización correctos para su UDT depende del tipo de UDT que está intentando crear. El **nativo** formato de serialización utiliza una estructura muy simple que permite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenar una representación nativa eficaz del UDT en el disco. El **nativo** se recomienda usar el formato si el UDT es simple y solamente contiene campos de los siguientes tipos:  
   
- **BOOL**, **bytes**, **sbyte**, **corto**, **ushort**, **int**,  **uint**, **largo**, **ulong**, **float**, **doble**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**,  **SqlDouble**, **SqlMoney**, **SqlBoolean**  
+ **bool**, **byte**, **sbyte**, **short**, **ushort**, **int**, **uint**, **long**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
  Tipos de valores que se compone de campos de los tipos anteriores son buenos candidatos para **nativo** dar formato, como **structs** en Visual C#, (o **estructuras** tal y como se conocen en Visual Basic). Por ejemplo, un UDT especificado con el **nativo** formato de serialización puede contener un campo de otro UDT también especificado con el **nativo** formato. Si la definición UDT es más compleja y contiene tipos de datos no están en la lista anterior, debe especificar el **UserDefined** en su lugar, el formato de serialización.  
   
@@ -171,7 +172,7 @@ ms.lasthandoff: 01/08/2018
   
  Los UDT no se serializan en consultas FOR XML. Para ejecutar una consulta FOR XML que muestre la serialización XML de los UDT, convierta explícitamente cada columna UDT para la **xml** tipo de datos en la instrucción SELECT. Puede convertir explícitamente las columnas que desea **varbinary**, **varchar**, o **nvarchar**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Crear un tipo definido por el usuario](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  
   
   

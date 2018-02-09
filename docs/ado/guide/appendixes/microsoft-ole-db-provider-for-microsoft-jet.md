@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Jet
 - OLE DB provider for Microsoft Jet [ADO]
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7b6afa16b339241460c33beb459fed74946a1238
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5d703eff7e65b590961a4bc78a70032050e1b395
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Proveedor Microsoft OLE DB para Microsoft Jet Introducción
 El proveedor OLE DB para Microsoft Jet permite que ADO tener acceso a las bases de datos de Microsoft Jet.
@@ -152,7 +153,7 @@ Microsoft.Jet.OLEDB.4.0
 |Tamaño máximo de fila|DBPROP_MAXROWSIZE|
 |Tamaño máximo de fila incluye BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |Número máximo de tablas en SELECT|DBPROP_MAXTABLESINSELECT|
-|Mode|DBPROP_INIT_MODE|
+|Modo|DBPROP_INIT_MODE|
 |Varios conjuntos de parámetros|DBPROP_MULTIPLEPARAMSETS|
 |Varios resultados|DBPROP_MULTIPLERESULTS|
 |Varios objetos de almacenamiento|DBPROP_MULTIPLESTORAGEOBJECTS|
@@ -196,7 +197,7 @@ Microsoft.Jet.OLEDB.4.0
 |Conjunto de filas de sólo anexar|DBPROP_APPENDONLY|
 |Bloquear objetos de almacenamiento|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Tipo de marcador|DBPROP_BOOKMARKTYPE|
-|Admite marcadores|DBPROP_IROWSETLOCATE|
+|Bookmarkable|DBPROP_IROWSETLOCATE|
 |Marcadores ordenados|DBPROP_ORDEREDBOOKMARKS|
 |Almacenar en caché las columnas diferidas|DBPROP_CACHEDEFERRED|
 |Cambiar filas insertadas|DBPROP_CHANGEINSERTEDROWS|
@@ -274,7 +275,7 @@ Microsoft.Jet.OLEDB.4.0
 |Conjunto de filas de sólo anexar|DBPROP_APPENDONLY|
 |Bloquear objetos de almacenamiento|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Tipo de marcador|DBPROP_BOOKMARKTYPE|
-|Admite marcadores|DBPROP_IROWSETLOCATE|
+|Bookmarkable|DBPROP_IROWSETLOCATE|
 |Cambiar filas insertadas|DBPROP_CHANGEINSERTEDROWS|
 |Privilegios de columna|DBPROP_COLUMNRESTRICT|
 |Notificación de conjunto de columnas|DBPROP_NOTIFYCOLUMNSET|

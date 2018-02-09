@@ -24,19 +24,20 @@ helpviewer_keywords:
 - user-defined types [CLR integration], ADO.NET
 - bytes [CLR integration]
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 971e75599c1b0d0ac6960a8db45a9ed6cfab9041
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bf8ac790f91779407bb60fa1f3cfe8f675a7e8f0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="accessing-user-defined-types---retrieving-udt-data"></a>Obtener acceso a tipos definidos por el usuario: recuperar datos UDT
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Para crear un tipo definido por el usuario (UDT) en el cliente, el ensamblado que se registró como UDT en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos debe estar disponible para la aplicación cliente. El ensamblado UDT se puede colocar en el mismo directorio que la aplicación o en la caché de ensamblados global (GAC). También puede establecer una referencia al ensamblado en su proyecto.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Para crear un tipo definido por el usuario (UDT) en el cliente, el ensamblado que se registró como UDT en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe estar disponible para la aplicación cliente. El ensamblado UDT se puede colocar en el mismo directorio que la aplicación o en la caché de ensamblados global (GAC). También puede establecer una referencia al ensamblado en su proyecto.  
   
 ## <a name="requirements-for-using-udts-in-adonet"></a>Requisitos para utilizar UDT en ADO.NET  
  El ensamblado cargado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el ensamblado cargado en el cliente deben ser compatibles para que se pueda crear el UDT en el cliente. Para los UDT definidos con el **nativo** formato de serialización, los ensamblados deben ser compatibles estructuralmente. En los ensamblados definidos con el **UserDefined** formato, el ensamblado debe estar disponible en el cliente.  
@@ -459,6 +460,6 @@ static void Main()
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Acceso a tipos definidos por el usuario en ADO.NET](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
+ [Obtener acceso a tipos definidos por el usuario en ADO.NET](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
   
   

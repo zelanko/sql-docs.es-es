@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,19 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: ADORecordsetConstruction
-helpviewer_keywords: ADORecordsetConstruction interface [ADO]
+f1_keywords:
+- ADORecordsetConstruction
+helpviewer_keywords:
+- ADORecordsetConstruction interface [ADO]
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad2a33da2d2e54f45e765bf21b2bca018128d139
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: be4c36c5bd69fe6657b57d74e8808259fe602db0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adorecordsetconstruction-interface"></a>Interfaz ADORecordsetConstruction
 El **ADORecordsetConstruction** interfaz se usa para construir un ADO **Recordset** objeto de OLE DB **conjunto de filas** objeto en una aplicación de C o C++.  
@@ -35,7 +38,7 @@ El **ADORecordsetConstruction** interfaz se usa para construir un ADO **Recordse
   
 |||  
 |-|-|  
-|[Capítulo](../../../ado/reference/ado-api/chapter-property-ado.md)|Lectura/escritura.<br />Obtiene o establece OLE DB **capítulo** objeto de/en este ADO **Recordset** objeto.|  
+|[Chapter](../../../ado/reference/ado-api/chapter-property-ado.md)|Lectura/escritura.<br />Obtiene o establece OLE DB **capítulo** objeto de/en este ADO **Recordset** objeto.|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Lectura/escritura.<br />Obtiene o establece OLE DB **RowPosition** objeto de/en este ADO **Recordset** objeto.|  
 |[Conjunto de filas](../../../ado/reference/ado-api/rowset-property-ado.md)|Lectura/escritura.<br />Obtiene o establece OLE DB **conjunto de filas** objeto de/en este ADO **Recordset** objeto.|  
   
@@ -78,7 +81,7 @@ El **ADORecordsetConstruction** interfaz se usa para construir un ADO **Recordse
 ## <a name="requirements"></a>Requisitos  
  **Versión:** ADO 2.0 y versiones posteriores  
   
- **Biblioteca:** msado15.dll  
+ **Library:** msado15.dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   

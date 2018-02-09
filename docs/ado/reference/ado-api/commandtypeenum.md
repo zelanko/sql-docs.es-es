@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,26 +13,28 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: CommandTypeEnum
-helpviewer_keywords: CommandTypeEnum enumeration [ADO]
+f1_keywords:
+- CommandTypeEnum
+helpviewer_keywords:
+- CommandTypeEnum enumeration [ADO]
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fb7c01971633727f1e7e5769060b256eab13914b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 11150cb69914cf5438d46cc15238b38465ddfa30
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 Especifica cómo se debe interpretar un argumento de comando.  
   
  Es importante validar proporcionados por el usuario *CommandString* valores para evitar proporciona a los usuarios de la aplicación la posibilidad de inyectar comandos potencialmente peligrosos de ADO ejecutar.  
   
-|Constante|Valor|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|No especifica el argumento de tipo de comando.|  
 |**adCmdText**|1|Se evalúa como [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) como una definición textual de un comando o procedimiento almacenado llamar.|  

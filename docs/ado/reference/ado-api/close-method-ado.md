@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,18 +17,19 @@ f1_keywords:
 - Recordset15::Close
 - _Stream::Close
 - _Record::Close
-helpviewer_keywords: Close method [ADO]
+helpviewer_keywords:
+- Close method [ADO]
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79b6267de87409f4b1e7d07a6b42d85e22042def
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 693f6adc51682fec4f9890d7d7618aa53e43593d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="close-method-ado"></a>Close (método) (ADO)
 Cierra un objeto abierto y los objetos dependientes.  
@@ -49,7 +51,7 @@ object.Close
   
  Cerrar un **conexión** objeto mientras hay abierto **Recordset** objetos en la conexión se deshacen los cambios pendientes en todos los **Recordset** objetos. Cerrar explícitamente una **conexión** objeto (una llamada a la **cerrar** método) mientras la transacción está en curso, generará un error. Si un **conexión** objeto queda fuera del ámbito mientras hay una transacción está en curso, ADO deshace automáticamente la transacción.  
   
-## <a name="recordset-record-stream"></a>Conjunto de registros, registro, flujo  
+## <a name="recordset-record-stream"></a>Recordset, Record, Stream  
  Mediante el **cerrar** método para cerrar un **Recordset**, **registro**, o **flujo** objeto libera los datos asociados y cualquier acceso exclusivo Puede que haya tenido a los datos a través de este objeto en concreto. Posteriormente, podrá llamar el [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) atributos de método para volver a abrir el objeto con el mismo o modificada.  
   
  Mientras un **Recordset** objeto está cerrado, llamar a cualquier método que requiera un cursor activo genera un error.  

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - _Stream::raw_Open
 - _Stream::Open
-helpviewer_keywords: Open method [ADO]
+helpviewer_keywords:
+- Open method [ADO]
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e93255bf18f91377f8d62400a236208507cb8c8c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b104e04c81fce3fce5cb25d175602f1b339e9ac1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-stream"></a>Open (método) (Stream de ADO)
 Se abre un [flujo](../../../ado/reference/ado-api/stream-object-ado.md) objeto para manipular secuencias de datos binarios o de texto.  
@@ -70,5 +72,5 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  [Open (método) (conexión de ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open (método) (registro de ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Open (método) (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Método OpenSchema](../../../ado/reference/ado-api/openschema-method.md)   
+ [OpenSchema Method](../../../ado/reference/ado-api/openschema-method.md)   
  [Método SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)

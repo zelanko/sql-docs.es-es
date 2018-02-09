@@ -4,29 +4,31 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: VB
+dev_langs:
+- VB
 helpviewer_keywords:
 - EditMode property [ADO], Visual Basic example
 - CursorType property [ADO], Visual Basic example
 - LockType property [ADO], Visual Basic example
 ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 24f3a3fbba6b55f658ac5dd1f3b0b0e12bd20c9d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 56d778c210b196621d846fce5b06596571c01b8a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType, LockType y ejemplo de las propiedades EditMode (VB)
 En este ejemplo se muestra cómo establecer el [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) y [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) propiedades antes de abrir un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). También muestra el valor de la [EditMode](../../../ado/reference/ado-api/editmode-property.md) propiedad bajo varias condiciones. La función EditModeOutput es necesaria ejecutar este procedimiento.  

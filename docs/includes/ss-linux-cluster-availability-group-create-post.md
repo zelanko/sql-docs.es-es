@@ -3,7 +3,7 @@
 
 Asegúrese de que la base de datos que se agregará al grupo de disponibilidad está en modo de recuperación completa y tiene una copia de seguridad de registro válido. Si se trata de una base de datos de prueba o una base de datos recién creada, realice una copia de seguridad de base de datos. En el servidor principal de SQL, ejecute el siguiente script de Transact-SQL para crear y realizar copias de seguridad de una base de datos denominada `db1`:
 
-```Transact-SQL
+```sql
 CREATE DATABASE [db1];
 ALTER DATABASE [db1] SET RECOVERY FULL;
 BACKUP DATABASE [db1] 
@@ -12,7 +12,7 @@ BACKUP DATABASE [db1]
 
 En la réplica principal de SQL Server, ejecute el siguiente script de Transact-SQL para agregar una base de datos denominada `db1` a un grupo de disponibilidad denominado `ag1`:
 
-```Transact-SQL
+```sql
 ALTER AVAILABILITY GROUP [ag1] ADD DATABASE [db1];
 ```
 
@@ -20,7 +20,7 @@ ALTER AVAILABILITY GROUP [ag1] ADD DATABASE [db1];
 
 En cada réplica secundaria de SQL Server, ejecute la siguiente consulta para ver si el `db1` base de datos se creó y se sincroniza:
 
-```Transact-SQL
+```sql
 SELECT * FROM sys.databases WHERE name = 'db1';
 GO
 SELECT DB_NAME(database_id) AS 'database', synchronization_state_desc FROM sys.dm_hadr_database_replica_states;

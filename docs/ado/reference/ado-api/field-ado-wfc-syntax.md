@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Field collection [ADO], ADO/WFC syntax
+helpviewer_keywords:
+- Field collection [ADO], ADO/WFC syntax
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 42748fb897d2ec6a7ed226f35852b828ddf82f71
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0ca92f0ab46f11fad94d4dacd6399bc2c97dd8b4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="field-ado---wfc-syntax"></a>Campo (ADO - sintaxis WFC)
 ## <a name="package-commswfcdata"></a>paquete com.ms.wfc.data  
@@ -73,7 +75,7 @@ public AdoProperties getProperties()
   
  ADO/WFC implementa la **valor** propiedad con el **getValue** método, que devuelve un objeto VARIANT; y la **setValue** método, que toma una variante como argumento. Los tipos Variant son muy eficaces en algunos lenguajes, como Microsoft Visual Basic.  
   
- Además el **valor** propiedad ADO/WFC proporciona *descriptor de acceso* métodos que usan tipos de datos de Java para obtener y establecer el contenido de **campo** objetos. La mayoría de estos métodos tiene nombres de la forma **obtener***DataType* o **establecer***DataType*.  
+ Además el **valor** propiedad ADO/WFC proporciona *descriptor de acceso* métodos que usan tipos de datos de Java para obtener y establecer el contenido de **campo** objetos. La mayoría de estos métodos tiene nombres de la forma **obtener *** DataType* o **establecer *** DataType*.  
   
  Existen dos excepciones notables: uno de los **getObject** métodos devuelve un objeto convertido en una clase especificada. No hay ningún **getNull** propiedad; en su lugar, hay una **isNull** propiedad que devuelve un valor booleano que indica si el campo es null.  
   

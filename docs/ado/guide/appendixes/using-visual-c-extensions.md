@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Visual C++ [ADO], using VC++ extensions
 - ADO, Visual C++
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7722a67ea07a6a5e0b033d8b0131c494e5e6bd11
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 304b814ee6e190e3b29dfbbd1a4ce2ee48ff1763
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-c-extensions"></a>Extensiones de Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>La interfaz IADORecordBinding
@@ -91,36 +93,36 @@ Update(CADORecordBinding *binding)
  Para obtener más información, consulte [Apéndice A: tipos de datos](http://msdn.microsoft.com/en-us/e3a0533a-2196-4eb0-a31e-92fe9556ada6), de referencia de la base de datos del programador de OLE.
 
 ### <a name="begin-binding-entries"></a>Empezar a entradas de enlace
- **BEGIN ADO Binding**(*clase*)
+ **BEGIN_ADO_BINDING**(*Class*)
 
 ### <a name="fixed-length-data"></a>Datos de longitud fija
- **ADO Fixed Length Entry**(*Ordinal, tipo de datos, búfer, estado, modificar*)
+ **ADO_FIXED_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Status, Modify*)
 
- **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, el tipo de datos de búfer, modificar*)
+ **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Modify*)
 
 ### <a name="numeric-data"></a>Datos numéricos
- **ADO NUMERIC ENTRY**(*Ordinal, tipo de datos, búfer, precisión, escala, estado, modificar*)
+ **ADO_NUMERIC_ENTRY**(*Ordinal, DataType, Buffer, Precision, Scale, Status, Modify*)
 
  **ADO_NUMERIC_ENTRY2**(*Ordinal, tipo de datos, búfer, precisión, escala, modificar*)
 
 ### <a name="variable-length-data"></a>Datos de longitud variable
- **ADO variable Length Entry**(*Ordinal, tipo de datos, búfer, tamaño, estado, longitud, modificar*)
+ **ADO_VARIABLE_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Size, Status, Length, Modify*)
 
- **ADO_VARIABLE_LENGTH_ENTRY2**(*Ordinal, el tipo de datos, búfer, tamaño, estado, modificar*)
+ **ADO_VARIABLE_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Size, Status, Modify*)
 
- **ADO_VARIABLE_LENGTH_ENTRY3**(*Ordinal, tipo de datos, el búfer, tamaño, longitud, modificar*)
+ **ADO_VARIABLE_LENGTH_ENTRY3**(*Ordinal, DataType, Buffer, Size, Length, Modify*)
 
- **ADO_VARIABLE_LENGTH_ENTRY4**(*Ordinal, tipo de datos, búfer, tamaño, modificar*)
+ **ADO_VARIABLE_LENGTH_ENTRY4**(*Ordinal, DataType, Buffer, Size, Modify*)
 
 ### <a name="end-binding-entries"></a>Final de entradas de enlace
- **END ADO BINDING**)
+ **END_ADO_BINDING**()
 
 |Parámetro|Description|
 |---------------|-----------------|
 |*Clase*|Clase en que se definen las entradas de enlace y las variables de C o C++.|
 |*Ordinal*|Número ordinal, a partir de 1, de la **Recordset** campo correspondiente a la variable de C o C++.|
-|*Tipo de datos*|Tipo de datos de ADO equivalente de la variable de C o C++ (vea [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) para obtener una lista de tipos de datos válidos). El valor de la **Recordset** campo se convertirá en este tipo de datos si es necesario.|
-|*Búfer*|Nombre de la variable de C o C++ donde la **Recordset** se almacenará el campo.|
+|*DataType*|Tipo de datos de ADO equivalente de la variable de C o C++ (vea [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) para obtener una lista de tipos de datos válidos). El valor de la **Recordset** campo se convertirá en este tipo de datos si es necesario.|
+|*Buffer*|Nombre de la variable de C o C++ donde la **Recordset** se almacenará el campo.|
 |*Tamaño*|Tamaño máximo en bytes de *búfer*. Si *búfer* contendrá una cadena de longitud variable, deje espacio para un cero de terminación.|
 |*Estado*|Nombre de una variable que indicará si el contenido de *búfer* son válidos y si la conversión del campo a *DataType* fue correcta.<br /><br /> Los dos valores más importantes de esta variable son **adFldOK**, lo que significa que la conversión fue correcta; y **adFldNull**, lo que significa que el valor del campo sería una variante de tipo VT_NULL y no simplemente vacía.<br /><br /> Valores posibles de *estado* se muestran en la tabla siguiente, "Valores de Status".|
 |*Modificar*|Marca booleana; Si es TRUE, indica que ADO puede actualizar el correspondiente **Recordset** campo con el valor contenido en *búfer*.<br /><br /> Establece el valor booleano *modificar* parámetro en TRUE para permitir que ADO actualizar el campo enlazado y FALSE si desea examinar el campo pero no cambiarlo.|
@@ -133,7 +135,7 @@ Update(CADORecordBinding *binding)
 
  Al establecer los datos, *estado* se puede establecer en **adFldNull** para indicar el **Recordset** campo debe establecerse en null.
 
-|Constante|Valor|Description|
+|Constante|Value|Description|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Se devolvió un valor de campo distinto de null.|
 |**adFldBadAccessor**|1|Enlace no era válido.|

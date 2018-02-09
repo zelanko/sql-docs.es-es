@@ -1,34 +1,39 @@
 ---
 title: "Información general del Asistente de migración de datos (SQL Server) | Documentos de Microsoft"
 ms.custom: 
-ms.date: 10/04/2017
+ms.date: 02/07/2018
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-dma
+ms.technology:
+- sql-dma
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: 
-helpviewer_keywords: Data Migration Assistant, overview
+helpviewer_keywords:
+- Data Migration Assistant, overview
 ms.assetid: 
 caps.latest.revision: 
 author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea780da11c39984fa8828119eee621a66768f1fe
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c23ed7d07474cc763da951e782badd42458dacdb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="overview-of-data-migration-assistant"></a>Información general del Asistente de migración de datos
 
-Asistente de migración de datos (DMA) le permite actualizar a una plataforma de datos modernas al detectar problemas de compatibilidad que pueden afectar a la funcionalidad de la base de datos en la nueva versión de SQL Server y base de datos de SQL Azure. DMA recomienda rendimiento y las mejoras de confiabilidad de su entorno de destino y permite mover el esquema, datos y objetos dependientes desde el servidor de origen al servidor de destino.
+El Asistente para la migración de datos (DMA) le permite actualizar a una plataforma de datos modernas al detectar problemas de compatibilidad que pueden afectar a la funcionalidad de la base de datos en la nueva versión de SQL Server y base de datos de SQL Azure. DMA recomienda rendimiento y las mejoras de confiabilidad de su entorno de destino y permite mover el esquema, datos y objetos dependientes desde el servidor de origen al servidor de destino.
 
+> [!NOTE] 
+> Para grandes (en términos de número y tamaño de las bases de datos) de las migraciones, se recomienda utilizar la [servicio de migración de base de datos de Azure](https://docs.microsoft.com/en-us/azure/dms/dms-overview), que puede migrar las bases de datos a escala.
+  
 ## <a name="capabilities"></a>Capabilities
 
 - Evalúe las instancias de SQL Server local migrar a las bases de datos de SQL Azure. El flujo de trabajo de evaluación le ayuda a detectar los siguientes problemas que pueden afectar a la migración de base de datos de SQL Azure y proporcionan instrucciones detalladas sobre cómo resolverlos.
@@ -37,7 +42,7 @@ Asistente de migración de datos (DMA) le permite actualizar a una plataforma de
 
   - Parcialmente compatible o características no admitidas: detecta características no admitidas o admitidas parcialmente que están actualmente en uso en la instancia de SQL Server de origen. DMA proporciona que un amplio conjunto de recomendaciones, alternativas disponibles en Azure y pasos para que se pueden incorporar en los proyectos de migración.
 
-- Detectar problemas que pueden afectar a una actualización a un servidor local de SQL.  Estos se describen como problemas de compatibilidad y se organizan en las siguientes categorías:
+- Detectar problemas que pueden afectar a una actualización a un servidor local de SQL. Estos se describen como problemas de compatibilidad y se organizan en las siguientes categorías:
 
   - Cambios importantes
 
@@ -51,7 +56,7 @@ Asistente de migración de datos (DMA) le permite actualizar a una plataforma de
 
   - Seguridad
 
-  - Storage
+  - Almacenamiento
 
 - Migrar una instancia de SQL Server local a una instancia de SQL Server moderna, hospedada de forma local o en una máquina virtual Azure (VM) que sea accesible desde la red local. La máquina virtual de Azure puede tener acceso mediante VPN u otras tecnologías. El flujo de trabajo de migración le ayuda a migrar los siguientes componentes:
 
@@ -76,12 +81,14 @@ DMA reemplaza todas las versiones anteriores del Asesor de actualizaciones de SQ
 - SQL Server 2012 
 - SQL Server 2014
 - SQL Server 2016
+- SQL Server de 2017 en Windows
 
-**Destinos**
+**Targets**
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
-- Base de datos SQL de Azure
+- SQL Server de 2017 en Windows y Linux
+- Azure SQL Database
 
 ## <a name="installation"></a>Installation
 

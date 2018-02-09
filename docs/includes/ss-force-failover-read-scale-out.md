@@ -1,6 +1,22 @@
-Cada grupo de disponibilidad tiene solo una réplica principal. La réplica principal permite lecturas y escrituras. Para cambiar qué réplica principal, puede conmutar por error. En un grupo de disponibilidad de alta disponibilidad, el administrador de clústeres automatiza el proceso de conmutación por error. En un grupo de disponibilidad de escalado de lectura, el proceso de conmutación por error es manual. 
+---
+title: "Forzar la conmutación por error para el grupo de disponibilidad de SQL Server"
+description: "Forzar la conmutación por error para el grupo de disponibilidad con el tipo de clúster de NONE"
+services: 
+author: MikeRayMSFT
+ms.service: 
+ms.topic: include
+ms.date: 02/05/2018
+ms.author: mikeray
+ms.custom: include file
+ms.openlocfilehash: 10a2af2cb5bc9e98605a3ee988439e3c3be60c1e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 02/09/2018
+---
+Cada AG tiene solo una réplica principal. La réplica principal permite lecturas y escrituras. Para cambiar qué réplica principal, puede conmutar por error. En un AG para lograr alta disponibilidad, el Administrador de clústeres automatiza el proceso de conmutación por error. En un AG con el tipo de clúster NONE, el proceso de conmutación por error es manual. 
 
-Hay dos maneras para conmutar la réplica principal en un grupo de disponibilidad de la escala de lectura:
+Hay dos maneras para conmutar la réplica principal en un AG con el tipo de clúster NONE:
 
 - Forzar la conmutación por error manual con pérdida de datos
 - Conmutación por error manual sin pérdida de datos
@@ -25,7 +41,7 @@ Conmutación por error manual sin pérdida de datos:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
-        MODIFY REPLICA ON N'**<node2>*' 
+        MODIFY REPLICA ON N'<node2>' 
         WITH (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
    ```
 
@@ -46,7 +62,7 @@ Conmutación por error manual sin pérdida de datos:
 
 3. Actualización `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` en 1.
 
-   El siguiente script establece `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` en 1 en un grupo de disponibilidad denominado `ag1`. Antes de ejecutar el script siguiente, reemplace `ag1` con el nombre del grupo de disponibilidad:
+   El siguiente script establece `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` en 1 en un AG denominado `ag1`. Antes de ejecutar el script siguiente, reemplace `ag1` con el nombre de su AG:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -69,4 +85,4 @@ Conmutación por error manual sin pérdida de datos:
    ```  
 
    > [!NOTE] 
-   > Para eliminar un grupo de disponibilidad, utilice [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql). Para un grupo de disponibilidad creado con CLUSTER_TYPE ninguno o externa, el comando debe ejecutarse en todas las réplicas que forman parte del grupo de disponibilidad.
+   > Para eliminar un AG, use [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql). Para un AG creado con clúster, escriba ninguno o externo, el comando debe ejecutarse en todas las réplicas que forman parte de disponibilidad.

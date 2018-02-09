@@ -4,25 +4,27 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: data shaping [ADO], overview
+helpviewer_keywords:
+- data shaping [ADO], overview
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9720e3312332fe0c4a00bac01cbaa82908125dfb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5ebd3d67ffc5c3f3aba0f481182c5812f4523a5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="data-shaping-overview"></a>Información general sobre la forma de datos
 *Dar forma a datos* significa crear relaciones jerárquicas entre dos o más entidades lógicas en una consulta. La jerarquía puede verse en las relaciones de elementos primarios y secundarios entre un registro de una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)y uno o más registros (también conocido como un capítulo) de otro **conjunto de registros**. En una relación de elementos primarios y secundarios, el elemento primario **Recordset** contiene el elemento secundario **conjunto de registros**. Un ejemplo de este tipo de relación jerárquica es customers y orders. Para cada cliente en una base de datos, puede haber cero o más pedidos. La relación jerárquica puede ser recursivas, lo que significa que los registros secundarios se pueden anidar en un registro secundario. En principio, un registro jerárquico se puede anidar hasta cualquier profundidad. En la práctica, ADO limita la recursividad hasta un máximo de 512 **Recordset**s.  

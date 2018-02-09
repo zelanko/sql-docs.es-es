@@ -1,6 +1,7 @@
 ---
 title: Las propiedades de RDS | Documentos de Microsoft
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - RDS properties [ADO]
 - properties [ADO], RDS
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 167812e66df35eda1127cf4d0d1d075871e00ab8
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: ee22ac8887a628d4b1ada9bf7f42b58e3c997274
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-properties"></a>Propiedades de RDS
 > [!IMPORTANT]
@@ -45,7 +46,7 @@ ms.lasthandoff: 12/20/2017
 |[SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)|Indica por qué columna para ordenar los registros.|  
 |[SortDirection (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)|Indica si un criterio de ordenación es ascendente o descendente.|  
 |[SQL (RDS)](../../../ado/reference/rds-api/sql-property.md)|Indica la cadena de consulta utilizada para recuperar la **conjunto de registros**.|  
-|[DIRECCIÓN URL (RDS)](../../../ado/reference/rds-api/url-property-rds.md)|Indica una cadena que contiene una dirección URL relativa o absoluta.|
+|[URL (RDS)](../../../ado/reference/rds-api/url-property-rds.md)|Indica una cadena que contiene una dirección URL relativa o absoluta.|
 
 
 

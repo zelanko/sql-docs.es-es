@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10c9ee41428ab7a43beae2269060618f7d6e296b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 05bd95fc39fe21b5df9edfaa876a69d5935de9b2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-scenario"></a>Escenario RDS
 > [!IMPORTANT]
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  Este escenario se supone que sabe cómo usar etiquetas de diseño básico HTML, técnicas de enlace de datos de uso DHTML y programa con controles ActiveX.  
   
- Si ha instalado el SDK, el código fuente completo para la aplicación de ejemplo de libreta de direcciones puede encontrarse en el directorio del SDK en samples\dataaccess\rds\AddressBook\AddressBook.asp. Para ver el escenario de libreta de direcciones, escriba en Internet Explorer 4.0 o posterior,  **http://*webserver*/RDS/AddressBook/AddressBook.asp** donde *webserver* es el nombre Dado que el equipo de servidor de Windows NT 4.0 o Windows 2000 Web que ejecuta Internet Information Services (IIS) y ASP.  
+ Si ha instalado el SDK, el código fuente completo para la aplicación de ejemplo de libreta de direcciones puede encontrarse en el directorio del SDK en samples\dataaccess\rds\AddressBook\AddressBook.asp. Para ver el escenario de libreta de direcciones, escriba en Internet Explorer 4.0 o posterior, **http://*webserver*/RDS/AddressBook/AddressBook.asp** donde *webserver* es el nombre dado en el equipo de servidor de Windows NT 4.0 o Windows 2000 Web está ejecutando Internet Information Services (IIS) y ASP.  
   
 ## <a name="introduction-to-address-book"></a>Introducción a la libreta de direcciones  
  La aplicación de ejemplo de libreta de direcciones proporciona una libreta de direcciones de en línea simple que puede usar para publicar un directorio de búsqueda a través de una intranet. La libreta de direcciones está diseñada para que un usuario puede escribir una cadena de búsqueda en uno o varios campos para solicitar información acerca de los empleados. Para mostrar las características básicas del servicio de datos remoto, la aplicación de ejemplo se mantiene intencionadamente poco a poco, con un número mínimo de objetos y los campos de búsqueda.  

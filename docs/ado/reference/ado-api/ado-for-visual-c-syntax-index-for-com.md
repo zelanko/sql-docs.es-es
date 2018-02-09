@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,26 +13,27 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ADO for Visual C++ syntax [ADO]
 - syntax indexes [ADO], ADO for Visual C++ syntax
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5367b7c31db36fb2fe3c523371c1b3a7666669d4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 081d81654e6898496e81b809b9c4925020630181
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>ADO para el índice de sintaxis de Visual C++ para COM
 Este índice es una referencia cruzada a la referencia del lenguaje ADO basado en Microsoft Visual C++.  
   
- Si usas el **#import** directivas en la aplicación, se generará un archivo de encabezado que le permitirá utilizar una sintaxis similar a Microsoft Visual Basic. Nombres de las propiedades del formulario **get_***PropertyName* y **put_***PropertyName* puede tratarse como si se hubieran declarado simplemente como  *PropertyName*. Una propiedad, a continuación, se puede tratar como un miembro de datos en lugar de una función.  
+ Si usas el **#import** directivas en la aplicación, se generará un archivo de encabezado que le permitirá utilizar una sintaxis similar a Microsoft Visual Basic. Nombres de las propiedades del formulario **get_ *** PropertyName* y **put_ *** PropertyName* puede tratarse como si se hubieran declarado simplemente como *PropertyName*. Una propiedad, a continuación, se puede tratar como un miembro de datos en lugar de una función.  
   
  Todos los métodos, propiedades y eventos son funciones que devuelven un **HRESULT**, que se puede comprobar para determinar si la función se ejecuta correctamente.  
   

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: PropertyAttributesEnum
-helpviewer_keywords: PropertyAttributesEnum enumeration [ADO]
+f1_keywords:
+- PropertyAttributesEnum
+helpviewer_keywords:
+- PropertyAttributesEnum enumeration [ADO]
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96bbf0a358129254d4cb2997e4659b9f6da8904d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 57c232c27dc538cbbdc8203855a27ee2ff56b7f8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 Especifica los atributos de un [propiedad](../../../ado/reference/ado-api/property-object-ado.md) objeto.  
   
-|Constante|Valor|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adPropNotSupported**|0|Indica que la propiedad no es compatible con el proveedor.|  
 |**adPropRequired**|1|Indica que el usuario debe especificar un valor para esta propiedad antes de que se inicialice el origen de datos.|  

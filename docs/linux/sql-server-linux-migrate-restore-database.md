@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.workload: On Demand
-ms.openlocfilehash: c97bdbafa557f8d3fe9346431926b9f1a490a286
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: f50be15e4d778ffb9c77caa375dc6b963b5821cd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Migrar una base de datos de SQL Server de Windows para Linux con backup y restore
 
@@ -33,6 +33,8 @@ Copia de seguridad de SQL Server y la característica de restauración es la man
 > * Mover el archivo de copia de seguridad para Linux desde el shell de Bash
 > * Restaurar el archivo de copia de seguridad en Linux con Transact-SQL
 > * Ejecutar una consulta para comprobar la migración
+
+También puede crear un SQL Server grupo de disponibilidad AlwaysOn para migrar una base de datos de SQL Server de Windows para Linux. Vea [sql-server-linux-availability-group-cross-platform](sql-server-linux-availability-group-cross-platform.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 

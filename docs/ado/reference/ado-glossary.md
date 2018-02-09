@@ -11,22 +11,23 @@ ms.service:
 ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords: ADO, glossary
+helpviewer_keywords:
+- ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: be9365b3a26b2b8b1db2f4a705a5df1c7b547c54
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: ed92b88736cdc579ddee67dff313f8aad3c69b71
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-glossary"></a>Glosario de ADO
 En este tema define los términos relacionados con ADO.  
   
-## <a name="a"></a>Un  
+## <a name="a"></a>A  
  dirección URL absoluta  
  Una dirección URL completa que especifica la ubicación de un recurso que reside en Internet o una intranet. Vea también *URL* y *dirección URL relativa*.  
   
@@ -52,7 +53,7 @@ En este tema define los términos relacionados con ADO.
  entrada de enlace  
  Una asignación entre un campo en una tabla y una variable. En las extensiones de Visual C++ de ADO, **Recordset** campos se asignan a variables de C o C++.  
   
- Máscara de bits  
+ bitmask  
  Un valor numérico destinado a una comparación de valores de bit a bit con otros valores numéricos, normalmente para marcar opciones en parámetros o valores devueltos. Esta comparación se suele realizar mediante operadores lógicos bit a bit, como **y** y **o** en Visual Basic,  **&**  y **&#124;** en C++.  
   
  Por ejemplo, la propiedad ADO **FieldAttributeEnum** valores pueden utilizarse como máscaras de bits para determinar los atributos de un campo. Suponga que desea determinar si un campo se puede actualizar. Puede comprobar con la siguiente expresión en Visual Basic:`Field.Attributes AND adFldUpdatable`  
@@ -77,7 +78,7 @@ En este tema define los términos relacionados con ADO.
   
  Columnas de capítulo permiten definir una *elementos primarios y secundarios* relación donde la *primario* es el **Recordset** que contiene la columna de capítulo y  *secundario* es el **Recordset** representado por el capítulo.  
   
- alias de capítulo  
+ chapter-alias  
  Un alias que hace referencia a la columna anexada al elemento primario.  
   
  juego de caracteres  
@@ -186,7 +187,7 @@ En este tema define los términos relacionados con ADO.
  jerarquía  
  En general, una jerarquía es una estructura con una nivel superior de nivel y niveles subordinados. En ADO, jerárquica **conjuntos de registros** se usan para representar la relación de elementos primarios y secundarios entre un registro y un capítulo. También en ADO, **registro** y **flujo** objetos se pueden usar para tener acceso a las estructuras de árbol jerárquica, como una carpeta y sus documentos. ADO MD también incluye **jerarquía** objetos para representar una relación entre los niveles de una dimensión en un cubo OLAP. Vea también conjuntos de registros jerárquicos, relación de elementos primarios y secundarios, capítulo y árbol.  
   
-## <a name="i-l"></a>-L  
+## <a name="i-l"></a>I-L  
  ISAPI (interfaz de programación de aplicaciones de servidor de Internet)  
  Un conjunto de funciones para servidores de Internet, como un Windows NT® Server o Windows 2000 Server ejecuta Microsoft® Internet Information Services (IIS).  
   
@@ -253,7 +254,7 @@ En este tema define los términos relacionados con ADO.
  Proxy  
  Un objeto específico de la interfaz que proporciona la serialización de parámetros y la comunicación requerida para que un cliente llamar a un objeto de aplicación que se ejecuta en un entorno de ejecución diferente, como en un subproceso diferente o en otro proceso. El proxy se encuentra en el cliente y se comunica con un código auxiliar correspondiente que se encuentra en el objeto de aplicación que se está llamando. Vea también código auxiliar.  
   
-## <a name="r"></a>R  
+## <a name="r"></a>L  
  dirección URL relativa  
  Dirección URL parcialmente cualificada que especifica un recurso en Internet o en una intranet cuya ubicación es relativa a un punto de partida especificado por una dirección URL absoluta o el objeto de conexión ADO equivalente. De hecho, la constituyen de direcciones URL concatenado de absolutas y relativa una dirección URL completa. Vea también URL y URL absoluta.  
   

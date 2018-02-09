@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset::ExecuteComplete
 - ExecuteComplete
-helpviewer_keywords: FetchComplete event [ADO]
+helpviewer_keywords:
+- FetchComplete event [ADO]
 ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c8575cd7423217702a0e2b98580e8ed2e7a45ac
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a8332a6332f27a8e2022975a80814be9c28cf4da
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fetchcomplete-event-ado"></a>Evento FetchComplete (ADO)
 El **FetchComplete** eventos se llama después de recuperar todos los registros en una operación asincrónica prolongada en el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -47,7 +49,7 @@ FetchComplete pError, adStatus, pRecordset
   
  Antes de que se devuelve este evento, establezca este parámetro en **adStatusUnwantedEvent** para impedir notificaciones posteriores.  
   
- *Connection*  
+ *pRecordset*  
  A **Recordset** objeto. El objeto para el que se recuperaron los registros.  
   
 ## <a name="remarks"></a>Comentarios  

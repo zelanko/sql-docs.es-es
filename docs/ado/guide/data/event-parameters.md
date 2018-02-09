@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - Reason parameter [ADO]
 - event parameters [ADO]
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0d73ed8eda955b5b027b662e3e5c80c50730b7f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e4d3eb6b7ae6cc3902af3cbb4b3c818b91bbb562
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="event-parameters"></a>Parámetros de eventos
 Cada controlador de eventos tiene un parámetro de estado que controla el controlador de eventos. Para los eventos Complete, este parámetro también se utiliza para indicar el éxito o fracaso de la operación que generó el evento. Eventos más completas también tienen un parámetro de error para proporcionar información sobre los errores que pudieran haberse producido y uno o más parámetros de objeto que hacen referencia a los objetos ADO utilizados para realizar la operación. Por ejemplo, el [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) evento incluye parámetros de objeto para el **comando**, **Recordset**, y **conexión** objetos asociado al evento. En el siguiente ejemplo de Microsoft® Visual Basic®, puede ver los pCommand, pRecordset y pConnection objetos que representan el **comando**, **Recordset**, y **conexión** objetos que se usan por el **Execute** método.  
@@ -49,7 +50,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 ## <a name="status-parameter"></a>Parámetro de estado  
  Cuando se llama a la rutina de controlador de eventos, el *estado* parámetro se establece en uno de los siguientes valores.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**adStatusOK**|Se pasa a los eventos Will y Complete. Este valor significa que la operación que provocó el evento se completó correctamente.|  
 |**adStatusErrorsOccurred**|Pasa a solo los eventos Complete. Este valor significa que la operación que provocó el evento se realizó correctamente, o un evento Will canceló la operación. Compruebe el *Error* parámetro para obtener más detalles.|  
@@ -59,7 +60,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  Si ya no desea procesar un evento, puede establecer *estado* a **adStatusUnwantedEvent** y su aplicación ya no recibirá notificación de dicho evento. Sin embargo, recuerde que algunos eventos se pueden generar más de una de las razones. En ese caso, debe especificar **adStatusUnwantedEvent** para todas las posibles razones. Por ejemplo, para dejar de recibir notificaciones de pendiente **RecordChange** eventos, debe establecer el *estado* parámetro **adStatusUnwantedEvent** para  **adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**, y **adRsnFirstChange** cuando se producen.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**adStatusUnwantedEvent**|La solicitud que este controlador de eventos deje de recibir notificaciones.|  
 |**adStatusCancel**|Solicitar la cancelación de la operación que está a punto de producirse.|  

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
@@ -12,18 +13,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords: Parameter collection [ADO], ADO/WFC syntax
+helpviewer_keywords:
+- Parameter collection [ADO], ADO/WFC syntax
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 370528b6a58ab987f95ae551ab5473f3b8e549e7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 05f3e2f6f6b3985c1c68604e6e9829c1b1f3eef1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameter-ado---wfc-syntax"></a>Parámetro (ADO - sintaxis WFC)
 ## <a name="package-commswfcdata"></a>paquete com.ms.wfc.data  
@@ -74,7 +76,7 @@ public AdoProperties getProperties()
   
  ADO/WFC implementa la **valor** propiedad con el **getValue** método, que devuelve un objeto VARIANT; y la **setValue** método, que toma una variante como argumento. Los tipos Variant son muy eficaces en algunos lenguajes, como Microsoft Visual Basic.  
   
- Además el **valor** propiedad ADO/WFC proporciona *descriptor de acceso* métodos que usan tipos de datos de Java para obtener y establecer el contenido de **parámetro** objetos. La mayoría de estos métodos tiene nombres de la forma **obtener***DataType* o **establecer***DataType*.  
+ Además el **valor** propiedad ADO/WFC proporciona *descriptor de acceso* métodos que usan tipos de datos de Java para obtener y establecer el contenido de **parámetro** objetos. La mayoría de estos métodos tiene nombres de la forma **obtener *** DataType* o **establecer *** DataType*.  
   
  Hay una excepción notable: no hay ningún **getNull** propiedad; en su lugar, hay una **isNull** propiedad que devuelve un valor booleano que indica si el campo es null.  
   

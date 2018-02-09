@@ -1,33 +1,40 @@
 ---
 title: "Novedades en el Asistente para migración de datos (SQL Server) | Documentos de Microsoft"
 ms.custom: 
-ms.date: 10/03/2017
+ms.date: 02/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-dma
+ms.technology:
+- sql-dma
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: 
-helpviewer_keywords: Data Migration Assistant, new features
+helpviewer_keywords:
+- Data Migration Assistant, new features
 ms.assetid: 
 caps.latest.revision: 
 author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 07d72eb6c4d40c3e61f4292616f9eda99d6d4742
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9b72ea21423b96a1dbd19eb5fb8f0a3b99c59e0d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novedades en el Asistente de migración de datos
 
 Este tema enumeran las adiciones en cada versión del Ayudante de datos de migración (DMA).
+
+## <a name="dma-v34"></a>DMA v3.4
+La versión de v3.4 de DMA incluye las siguientes adiciones:
+- Compatibilidad con SQL Server 2017 como origen para las migraciones a la base de datos de SQL Azure.
+- Mejoras para la estabilidad, el rendimiento y la evaluación de la exactitud de regla.
 
 ## <a name="dma-v33"></a>DMA v3.3
 La versión v3.3 de DMA permite la migración de una instancia de SQL Server local a la nueva versión de SQL Server 2017, en Windows y Linux. Mientras el flujo de trabajo general de migración de Windows y Linux es la misma, el movimiento a 2017 de SQL Server para Linux requiere un par de consideraciones adicionales.
@@ -86,7 +93,7 @@ La versión 1.0 de DMA es la versión inicial, así como para:
 - Detección de nuevas características de la plataforma de SQL Server de destino que la base de datos puede beneficiarse de una actualización. Todas las observaciones se describen como recomendaciones de la característica y se clasifica por categorías en las siguientes áreas:
     - Rendimiento
     - Seguridad
-    - Storage
+    - Almacenamiento
 
 -   Experiencia de usuario moderna para realizar evaluaciones.
 

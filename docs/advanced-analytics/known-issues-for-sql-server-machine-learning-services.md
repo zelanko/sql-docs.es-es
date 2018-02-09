@@ -1,6 +1,6 @@
 ---
 title: "Problemas conocidos de los servicios de aprendizaje de máquina | Documentos de Microsoft"
-ms.date: 01/31/2018
+ms.date: 02/05/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.service: 
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 5a262bb73d5989ebf3ad961ee7c2e84e75415f26
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2c3bd4ada6d234015ef1ab4d8b474f7ab45c4b85
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Problemas conocidos en servicios de aprendizaje de máquina
 
@@ -71,17 +71,31 @@ Para evitar problemas con los paquetes de R, también puede actualizar la versi�
 
 **Se aplica a:** SQL Server 2016 R Services, con R Server versión 9.0.0 o versiones anteriores
 
+### <a name="r-components-missing-from-cu3-setup"></a>Componentes de R que faltan en el programa de instalación de CU3
+
+Un número limitado de máquinas virtuales de Azure aprovisionado sin los archivos de instalación de R que deben incluirse con SQL Server. El problema se aplica a las máquinas virtuales aprovisionadas en el período de 2018-01-05-2018-01-23. Este problema también puede afectar a las instalaciones locales, si aplica la actualización CU3 para SQL Server 2017 durante el período de 2018-01-05 a 2018-01-23.
+
+Una versión de servicio ha sido proporcionada incluye la versión correcta de los archivos de instalación de R.
+
++ [Paquete de actualización acumulativa 3 para SQL Server de 2017 KB4052987](https://www.microsoft.com/en-us/download/details.aspx?id=56128).
+
+Para instalar los componentes y reparar 2017 CU3 de SQL Server, debe desinstalar CU3 y vuelva a instalar la versión actualizada:
+
+1. Descargue el archivo de instalación CU3 actualizado, que incluye a los instaladores de R.
+2. Desinstala CU3. En el Panel de Control, busque **desinstalar una actualización**y, a continuación, seleccione "Revisión 3015 para SQL Server de 2017 (KB4052987) (64 bits)". Continúe con los pasos de desinstalación.
+3. Vuelva a instalar la actualización CU3, haciendo doble clic en la actualización de KB4052987 que acaba de descargar: `SQLServer2017-KB4052987-x64.exe`. Siga las instrucciones de instalación.
+
 ### <a name="unable-to-install-python-components-in-offline-installations-of-sql-server-2017-ctp-20-or-later"></a>No se puede instalar componentes de Python en instalaciones sin conexión de SQL Server de 2017 CTP 2.0 o posterior
 
 Si instala una versión preliminar de 2017 de SQL Server en un equipo sin acceso a internet, se puede producir un error en el programa de instalación mostrar la página que solicita la ubicación de los componentes de Python descargados. En ese caso, puede instalar la característica Servicios de aprendizaje de máquina, pero no los componentes de Python.
 
-Este problema se corrigió en la versión de lanzamiento. Si se produce este problema, como alternativa, puede habilitar temporalmente acceso a internet para la duración de la instalación. Esta limitación no se aplica a R.
+Este problema se corrigió en la versión de lanzamiento. Además, esta limitación no se aplica a los componentes de R.
 
 **Se aplica a:** SQL Server 2017 con Python
 
 ### <a name="bkmk_sqlbindr"></a>Cuando se conecta a una versión anterior de SQL Server R Services desde un cliente mediante el uso de advertencia de versión no compatible[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
-Al ejecutar código R en un contexto de proceso de SQL Server 2016, puede aparecer un error similar al siguiente:
+Al ejecutar código R en el contexto de proceso de un SQL Server 2016, puede aparecer el siguiente error:
 
 > *Está ejecutando la versión 9.0.0 R del cliente de Microsoft en el equipo, que es incompatible con la versión 8.0.3 de Microsoft R Server. Download and install a compatible version.* (Está ejecutando la versión 9.0.0 del Cliente de Microsoft R en el equipo, que es incompatible con Microsoft R Server versión 8.0.3. Descargue e instale una versión compatible).
 
@@ -170,13 +184,13 @@ Para otros problemas conocidos que podrían afectar a las soluciones de R, consu
 
 Si la instancia de SQL Server se ha instalado en una ubicación no predeterminados, como fuera de la `Program Files` carpeta, la advertencia ACCESS_DENIED se produce al intentar ejecutar scripts que instalan un paquete. Por ejemplo:
 
-> *In normalizePath(path.expand(path), winslash, mustWork) : path[2]="~ExternalLibraries/R/8/1": Access is denied*
+> *En `normalizePath(path.expand(path), winslash, mustWork)` : ruta de acceso [2] = "~ExternalLibraries/R/8/1": se denegó el acceso*
 
 La razón es que una función de R intenta leer la ruta de acceso y se produce un error si el grupo de usuarios integrado **SQLRUserGroup**, no tiene acceso de lectura. La advertencia que se inicia no bloquea la ejecución del script de R actual, pero la advertencia puede repetirse varias veces siempre que el usuario ejecuta cualquier otro script de R.
 
 Si ha instalado SQL Server en la ubicación predeterminada, este error no se produce, porque todos los usuarios de Windows tener permisos de lectura en el `Program Files` carpeta.
 
-Este problema se corregirá en una versión de próximos servicios. Como alternativa, proporcione el grupo, **SQLRUserGroup**, con acceso de lectura para todas las carpetas primarias de `ExternalLibraries`.
+Este problema ia resolver en una versión de próximos servicios. Como alternativa, proporcione el grupo, **SQLRUserGroup**, con acceso de lectura para todas las carpetas primarias de `ExternalLibraries`.
 
 ### <a name="serialization-error-between-old-and-new-versions-of-revoscaler"></a>Error de serialización entre las versiones anteriores y nuevas de RevoScaleR
 
@@ -192,13 +206,13 @@ El error no aparece si la versión de API es el mismo, o si va a mover un modelo
 
 En otras palabras, puede utilizar la misma versión de RevoScaleR para las operaciones de serialización y deserialización.
 
-### <a name="real-time-scoring-does-not-correctly-handle-the-learningrate-parameter-in-tree-and-forest-models"></a>La puntuación en tiempo real no controla correctamente el parámetro learningRate en modelos de árbol y de bosque
+### <a name="real-time-scoring-does-not-correctly-handle-the-learningrate-parameter-in-tree-and-forest-models"></a>La puntuación en tiempo real no controla correctamente los _learningRate_ parámetro en modelos de árbol y de bosque
 
 Si crea un modelo con un árbol de decisión o un método de bosque de decisión y especificar la velocidad de aprendizaje, podría ver resultados incoherentes al usar `sp_rxpredict` o SQL `PREDICT` función, en comparación con la `rxPredict`.
 
 La causa es un error en la API que modela los procesos que se serializa y se limita a la `learningRate` parámetro: por ejemplo, en [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees), o
 
-Este problema se corregirá en una versión de próximos servicios.
+Este problema se resuelve en una versión de próximos servicios.
 
 ### <a name="limitations-on-processor-affinity-for-r-jobs"></a>Limitaciones de la afinidad del procesador para trabajos de R
 
@@ -376,7 +390,7 @@ Hay varias soluciones posibles:
 
 + Al instalar los modelos previamente entrenados, elija una ubicación personalizada.
 + Si es posible, instale la instancia de SQL Server en una ruta de acceso de instalación personalizada con una ruta más corta, por ejemplo, C:\SQL\MSSQL14. MSSQLSERVER.
-+ Utilice la utilidad Windows [Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx) para crear un vínculo físico que el archivo de modelo se asigna a una ruta más corta. 
++ Utilice la utilidad Windows [Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx) para crear un vínculo físico que el archivo de modelo se asigna a una ruta más corta.
 + Actualizar a la versión más reciente del servicio.
 
 ### <a name="error-when-saving-serialized-model-to-sql-server"></a>Error al guardar serializa el modelo a SQL Server

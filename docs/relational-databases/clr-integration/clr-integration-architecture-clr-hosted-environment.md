@@ -29,19 +29,20 @@ helpviewer_keywords:
 - hosted environments [CLR integration]
 - HPAs [CLR integration]
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
-caps.latest.revision: "60"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0bbd3cffc1f5db0b07f0868b2ac1b6b6f78989a5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b3aaf081b264cd74614af93fd58d130b19dfa4d5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Arquitectura de integración de CLR - entorno hospedado CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integración con common language runtime (CLR) de .NET Framework permite a los programadores de la base de datos usar lenguajes como Visual C#, Visual Basic .NET y Visual C++. Las funciones, procedimientos almacenados, desencadenadores, tipos de datos y agregados pertenecen a los tipos de lógica de negocios que los programadores pueden escribir con estos lenguajes.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  La integración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con .NET Framework Common Language Runtime (CLR) permite a los programadores de base de datos usar lenguajes como Visual C#, Visual Basic .NET y Visual C++. Las funciones, procedimientos almacenados, desencadenadores, tipos de datos y agregados pertenecen a los tipos de lógica de negocios que los programadores pueden escribir con estos lenguajes.  
   
   CLR presenta memoria de recopilación de elementos no utilizados, subprocesamiento preferente, servicios de metadatos (reflexión de tipos), capacidad de comprobar el código y seguridad de acceso del código. CLR usa metadatos para localizar y cargar clases, colocar instancias en memoria, resolver invocaciones a métodos, generar código nativo, exigir mecanismos de seguridad y establecer los límites del contexto en tiempo de ejecución.  
   
@@ -133,7 +134,7 @@ ms.lasthandoff: 01/08/2018
 |Seguridad de acceso del código|Solo ejecución|Ejecución + acceso a recursos externos|No restringida|  
 |Restricciones del modelo de programación|Sí|Sí|Sin restricciones|  
 |Requisito de capacidad de comprobación|Sí|Sí|no|  
-|Capacidad de llamar a código nativo|no|no|Sí|  
+|Capacidad de llamar a código nativo|no|No|Sí|  
   
  SAFE es el modo más confiable y seguro, con restricciones asociadas relativas al modelo de programación permitido. Los ensamblados SAFE tienen permisos suficientes para la ejecución, realización de cálculos y obtención de acceso a la base de datos local. Los ensamblados SAFE deben tener capacidad para comprobar la seguridad de los tipos y no pueden llamar a código no administrado.  
   
@@ -141,14 +142,14 @@ ms.lasthandoff: 01/08/2018
   
  EXTERNAL_ACCESS proporciona una opción de seguridad intermedia, que permite al código tener acceso a los recursos externos a la base de datos, pero manteniendo las garantías de confiabilidad de SAFE.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa la capa de directiva CAS de nivel de host para configurar una directiva de host que concede uno de los tres conjuntos de permisos basados en el conjunto de permisos almacenado en los catálogos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El código administrado que se ejecuta dentro de la base de datos siempre obtiene uno de estos conjuntos de permisos de acceso a código.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa la capa de directiva de entidades emisoras de certificados de nivel de host para configurar una directiva de host que concede uno de los tres conjuntos de permisos basados en el conjunto de permisos almacenado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] catálogos. El código administrado que se ejecuta dentro de la base de datos siempre obtiene uno de estos conjuntos de permisos de acceso a código.  
   
 ### <a name="programming-model-restrictions"></a>Restricciones del modelo de programación  
  El modelo de programación para el código administrado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implica la escritura de funciones, procedimientos y tipos que normalmente no necesitan usar el estado mantenido a lo largo de varias invocaciones o compartir el estado entre varias sesiones de usuario. Además, como se explicó antes, la presencia de estado compartido puede producir excepciones críticas que tienen un impacto en la escalabilidad y la confiabilidad de la aplicación.  
   
  A la vista de estas consideraciones, se desaconseja el uso de variables estáticas y miembros de datos estáticos de las clases que se utilizan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En el caso de ensamblados SAFE y EXTERNAL_ACCESS, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] examina los metadatos del ensamblado en el momento de creación del ensamblado (CREATE ASSEMBLY) y no puede crear dichos ensamblados si detecta el uso de variables y miembros de datos estáticos.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]También permite las llamadas a API de .NET Framework que se anoten con el **SharedState**, **sincronización** y **ExternalProcessMgmt** atributos de protección del host. Esto impide que los ensamblados EXTERNAL_ACCESS y SAFE llamen a cualquiera de las API que habilitan el estado compartido, ejecuten la sincronización y puedan afectar a la integridad del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [restricciones del modelo de programación de integración de CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] También permite las llamadas a API de .NET Framework que se anoten con el **SharedState**, **sincronización** y **ExternalProcessMgmt** atributos de protección del host. Esto impide que los ensamblados EXTERNAL_ACCESS y SAFE llamen a cualquiera de las API que habilitan el estado compartido, ejecuten la sincronización y puedan afectar a la integridad del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [restricciones del modelo de programación de integración de CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Seguridad de la integración de CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   

@@ -15,19 +15,20 @@ helpviewer_keywords:
 - designing assemblies [SQL Server]
 - assemblies [CLR integration], designing
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9273db56dfc99f76325ee9938678d2dc24aad8e8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d5e491f922a034a55cb65e432e0c005f6cc18fc0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="assemblies---designing"></a>Ensamblados - diseño
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]En este tema se describe los siguientes factores que debe considerar al diseñar ensamblados:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+En este tema se describen los siguientes aspectos que se deben tener en cuenta al diseñar ensamblados:  
   
 -   Empaquetar ensamblados  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 01/08/2018
  Además, si se especifica UNSAFE, el código incluido en el ensamblado puede realizar operaciones que la comprobación de CLR considera sin seguridad de tipos. Estas operaciones pueden tener acceso a búferes de memoria en el espacio del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de forma incontrolada. Los ensamblados UNSAFE también pueden trastornar potencialmente el sistema de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o de Common Language Runtime. Los permisos UNSAFE solo deben concederlos programadores o administradores experimentados a ensamblados de mucha confianza. Solo los miembros de la **sysadmin** rol fijo de servidor puede crear ensamblados no seguros.  
   
 ## <a name="restrictions-on-assemblies"></a>Restricciones en los ensamblados  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impone ciertas restricciones en el código administrado de los ensamblados para asegurarse de que puedan ejecutarse de manera confiable y escalable. Esto significa que, en los ensamblados con SAFE y EXTERNAL_ACCESS, no se permiten ciertas operaciones que pueden comprometer la estabilidad del servidor.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impone ciertas restricciones en el código administrado en los ensamblados para asegurarse de que puedan ejecutarse de forma confiable y escalable. Esto significa que, en los ensamblados con SAFE y EXTERNAL_ACCESS, no se permiten ciertas operaciones que pueden comprometer la estabilidad del servidor.  
   
 ### <a name="disallowed-custom-attributes"></a>Atributos personalizados no permitidos  
  Los ensamblados no se pueden anotar con los siguientes atributos personalizados:  
@@ -124,6 +125,6 @@ System.Configuration
   
 ## <a name="see-also"></a>Vea también  
  [Ensamblados &#40; motor de base de datos &#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
- [Seguridad de la integración CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
+ [Seguridad de la integración de CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

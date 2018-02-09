@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae662529fc9297fa709d1a185b63d0648b0af903
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 995c833e24f23c7a30ea8c4e5893215222e0867a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-c-ado-programming"></a>Programación ADO en Visual C++
 La referencia de API de ADO describe la funcionalidad de la interfaz de programación de aplicaciones (API) de ADO mediante una sintaxis similar a Microsoft Visual Basic. Aunque dirigida a todos los usuarios, los programadores de ADO emplean diversos lenguajes como Visual Basic, Visual C++ (con y sin el **#import** directiva) y Visual J ++ (con el paquete de clases ADO/WFC).  
@@ -44,7 +46,7 @@ La referencia de API de ADO describe la funcionalidad de la interfaz de programa
   
  Para cada operación dentro de una clase (es decir, una llamada de método o propiedad), hay una declaración para llamar a la operación directamente (es decir, la forma "sin formato" de la operación) y una declaración para llamar a la operación sin procesar y generar un error de COM si la operación no se puede ejecutar succ essfully. Si la operación es una propiedad, normalmente hay una directiva de compilador que crea una sintaxis alternativa para la operación que tiene una sintaxis similar a Visual Basic.  
   
- Las operaciones que se recuperan el valor de una propiedad tienen nombres de la forma, **obtener***propiedad*. Las operaciones que establecen el valor de una propiedad tienen nombres del formulario, **colocar***propiedad*. Las operaciones que establecen el valor de una propiedad con un puntero a un objeto ADO tienen nombres del formulario, **PutRef***propiedad*.  
+ Las operaciones que se recuperan el valor de una propiedad tienen nombres de la forma **obtener *** propiedad*. Las operaciones que establecen el valor de una propiedad tienen nombres de la forma **colocar *** propiedad*. Las operaciones que establecen el valor de una propiedad con un puntero a un objeto ADO tienen nombres de la forma **PutRef *** propiedad*.  
   
  Puede obtener o establecer una propiedad con llamadas de estas formas:  
   
@@ -69,13 +71,13 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```  
   
- El compilador generará la correspondiente **obtener***-*, **colocar**-, o **PutRef***propiedad* llamada según la sintaxis alternativa declarada y si la propiedad se va a leer o escribir.  
+ El compilador generará la correspondiente **Get ***-*, **colocar**-, o **PutRef *** propiedad* llamada según la sintaxis alternativa declarada y si la propiedad es que se va a leer o escribir.  
   
  El **__declspec(property...)**  sólo puede declarar la directiva de compilador **obtener**, **colocar**, o **obtener** y **colocar** sintaxis alternativa para una función. Operaciones de solo lectura únicamente tienen un **obtener** declaración; las operaciones de solo escritura solo tiene un **colocar** declaración; las operaciones que son ambos leen y escriben tener **obtener** y **colocar** declaraciones.  
   
- Solo dos declaraciones son posibles con esta directiva; Sin embargo, cada propiedad tiene tres funciones de propiedad: **obtener***propiedad*, **colocar***propiedad*, y **PutRef**  *Propiedad*. En ese caso, solo dos formas de la propiedad tienen la sintaxis alternativa.  
+ Solo dos declaraciones son posibles con esta directiva; Sin embargo, cada propiedad tiene tres funciones de propiedad: **obtener *** propiedad*, **colocar *** propiedad*, y **PutRef *** propiedad*. En ese caso, solo dos formas de la propiedad tienen la sintaxis alternativa.  
   
- Por ejemplo, el **comando** objeto **ActiveConnection** propiedad se declara con una sintaxis alternativa para **obtener***ActiveConnection*y **PutRef***ActiveConnection*. El **PutRef**-sintaxis es una buena elección porque en la práctica, normalmente deberá colocar abierto **conexión** objeto (es decir, un **conexión** puntero de objeto) en este propiedad. Por otro lado, el **Recordset** objeto tiene **obtener**-, **colocar**-, y **PutRef***ActiveConnection*las operaciones, pero sin sintaxis alternativa.  
+ Por ejemplo, el **comando** objeto **ActiveConnection** propiedad se declara con una sintaxis alternativa para **obtener *** ActiveConnection* y **PutRef * ** ActiveConnection*. El **PutRef**-sintaxis es una buena elección porque en la práctica, normalmente deberá colocar abierto **conexión** objeto (es decir, un **conexión** puntero de objeto) en este propiedad. Por otro lado, el **Recordset** objeto tiene **obtener**-, **colocar**-, y **PutRef *** ActiveConnection* operaciones, pero ninguna alternativa sintaxis.  
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>Colecciones, el método GetItem y la propiedad del elemento  
  ADO define varias colecciones, incluidas **campos**, **parámetros**, **propiedades**, y **errores**. En Visual C++, el **GetItem (***índice***)** método devuelve un miembro de la colección. *Índice* es un **Variant**, el valor de los cuales es un índice numérico del miembro de la colección o una cadena que contiene el nombre del miembro.  
@@ -437,7 +439,7 @@ cn.Close
 End Sub  
 ```  
   
- Este ejemplo de Visual C++ se muestra la **obtener**/**colocar**/**PutRef***propiedad*.  
+ Este ejemplo de Visual C++ se muestra la **obtener**/**colocar**/**PutRef *** propiedad*.  
   
 #### <a name="notes"></a>Notas  
  Las notas siguientes corresponden a secciones comentadas en el ejemplo de código.  

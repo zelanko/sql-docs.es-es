@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bdb4d1847a2a55c57235a88979b19f7370169b9c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2ce82243dda984375bef3a1630650ff27c68dd09
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="provider-errors"></a>Errores del proveedor
 Cuando se produce un error de proveedor, se devuelve un error de tiempo de ejecución de -2147467259. Si recibe este error, revise el **errores** colección de activos **conexión** objeto, que contiene uno o más errores que describen lo que ha sucedido.  
@@ -70,12 +71,12 @@ End Function
 ## <a name="the-error-object"></a>El objeto de Error  
  Examinando un **Error** objeto puede determinar cuál fue el error y, más importante, la aplicación o el objeto que produjo el error. El **Error** objeto tiene las siguientes propiedades:  
   
-|Nombre de propiedad|Description|  
+|Nombre de la propiedad|Description|  
 |-------------------|-----------------|  
-|**Descripción**|Una descripción de texto del error que se ha producido.|  
+|**Description**|Una descripción de texto del error que se ha producido.|  
 |**HelpContext, HelpFile**|Hace referencia al archivo de ayuda y el tema de ayuda que contiene una descripción del error que se ha producido.|  
 |**NativeError**|El número de error específico del proveedor.|  
-|**Número**|Un entero largo que representa el número (aparecen en la **ErrorValueEnum**) del error que se ha producido.|  
+|**Number**|Un entero largo que representa el número (aparecen en la **ErrorValueEnum**) del error que se ha producido.|  
 |**Source**|Indica el nombre del objeto o la aplicación que ha generado un error.|  
 |**SQLState**|Un código de error de cinco caracteres que devuelve el proveedor durante el proceso de una instrucción SQL.|  
   

@@ -8,11 +8,14 @@ ms.service:
 ms.component: xquery
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - attribute axis [SQL Server]
 - axis step [XQuery]
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - descendant-or-self axis
 - parent axis
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
-caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d19dec5b1ea98242c96ca43e3c295290827a8bcf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 44ae49e51ac3fab0ca4b2cd8363601a14a3edf0b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="path-expressions---specifying-axis"></a>Expresiones de ruta de acceso: especificación de eje
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,11 +54,11 @@ ms.lasthandoff: 12/05/2017
   
 |Eje|Description|  
 |----------|-----------------|  
-|**elemento secundario**|Devuelve elementos secundarios del nodo de contexto.|  
-|**descendiente**|Devuelve todos los descendientes del nodo de contexto.|  
-|**elemento primario**|Devuelve el elemento primario del nodo de contexto.|  
-|**atributo**|Devuelve atributos del nodo de contexto.|  
-|**en sí mismo**|Devuelve el propio nodo de contexto.|  
+|**child**|Devuelve elementos secundarios del nodo de contexto.|  
+|**descendant**|Devuelve todos los descendientes del nodo de contexto.|  
+|**parent**|Devuelve el elemento primario del nodo de contexto.|  
+|**attribute**|Devuelve atributos del nodo de contexto.|  
+|**self**|Devuelve el propio nodo de contexto.|  
 |**descendant-or-self**|Devuelve el nodo de contexto y todos los descendientes del mismo.|  
   
  Todos estos ejes, excepto el **primario** eje, son ejes directos. El **primario** eje es un eje inverso, pues realiza búsquedas hacia atrás en la jerarquía del documento. Por ejemplo, la expresión de ruta de acceso relativa `child::ProductDescription/child::Summary` tiene dos pasos, y cada uno especifica un eje `child`. El primer paso recupera los \<ProductDescription > elementos secundarios del nodo de contexto. Para cada \<ProductDescription > nodo de elemento, el segundo paso recupera los \<resumen > elementos secundarios del nodo de elemento.  

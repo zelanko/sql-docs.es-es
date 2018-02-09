@@ -11,22 +11,23 @@ ms.component: ado
 ms.technology: "“drivers”"
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - libraries [ADO]
 - referencing libraries in a Visual C++ application[ADO]
 - ADO, libraries
 ms.assetid: d3ea12ec-bca8-48c3-af57-ce14576108c9
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3bbb3a9345c969d5d5bc038f31f7f7bc0b731c40
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a554ff290c1ea3fa8ef5382e45fafbae5b1110d8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>Hacer referencia a las bibliotecas de ADO en una aplicación de Visual C++
 Para usar la versión más reciente de ADO en una aplicación de Visual C++, utilice la siguiente `#import` directiva:  
@@ -38,15 +39,15 @@ Para usar la versión más reciente de ADO en una aplicación de Visual C++, uti
   
  Para usar ADO MD o ADOX, primero debe importar *msadomd.dll* o *msadox.dll*, utilizando la sintaxis anterior.  
   
-## <a name="backward-compatibility"></a>Backward Compatibility  
+## <a name="backward-compatibility"></a>Compatibilidad con versiones anteriores  
  Para usar versiones anteriores de ADO, reemplace *msado15.dll* anteriormente con una de las siguientes bibliotecas de tipos.  
   
--   *msado27.tlb*, biblioteca de tipos 2.7 ADO  
+-   *msado27.tlb*, ADO 2.7 Type Library  
   
 -   *msado26.tlb*, biblioteca de tipos 2.6 ADO  
   
--   *msado25.tlb*, biblioteca de tipos 2,5 ADO  
+-   *msado25.tlb*, ADO 2.5 Type Library  
   
--   *MSADO21*, biblioteca de tipos 2.1 ADO  
+-   *msado21.tlb*, ADO 2.1 Type Library  
   
--   *msado20.tlb*, biblioteca de tipos 2.0 ADO
+-   *msado20.tlb*, ADO 2.0 Type Library

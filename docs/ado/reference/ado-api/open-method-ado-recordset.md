@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,18 +16,19 @@ apitype: COM
 f1_keywords:
 - Recordset15::raw_Open
 - Recordset15::Open
-helpviewer_keywords: Open method [ADO]
+helpviewer_keywords:
+- Open method [ADO]
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 81a22742808fe2663f5601af91cb554764a8e46c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 74e6fc58d5b32313806301467ca48b9f033b083b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-recordset"></a>Open (método) (conjunto de registros ADO)
 Abre un cursor en una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -117,5 +119,5 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
  [Open (método) (conexión de ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open (método) (registro de ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Open (método) (Stream de ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Método OpenSchema](../../../ado/reference/ado-api/openschema-method.md)   
+ [OpenSchema Method](../../../ado/reference/ado-api/openschema-method.md)   
  [Save (método)](../../../ado/reference/ado-api/save-method.md)

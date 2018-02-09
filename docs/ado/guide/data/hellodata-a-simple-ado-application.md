@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - HelloData sample application [ADO]
 - ADO, samples
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1c2733381221139373764577df07afa22e40e49
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 007f2842279607c722f6216d771751209ff723bc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: Una aplicación ADO Simple
 Esta aplicación simple recorre paso a paso cada una de las cuatro operaciones principales de ADO: obtener, examinar, editar y actualizar datos. Estas operaciones se realizan en la base de datos de ejemplo Northwind incluida con Microsoft® SQL Server. Para centrarse en los aspectos básicos de ADO y evitar la acumulación de elementos de código, control de errores en el ejemplo es mínimo.  
@@ -48,7 +49,7 @@ Esta aplicación simple recorre paso a paso cada una de las cuatro operaciones p
   
  ![Muestra Form1 para la aplicación HelloData de VB](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|Tipo de control|Propiedad|Valor|  
+|Tipo de control|Propiedad|Value|  
 |------------------|--------------|-----------|  
 |Form|Nombre|Form1|  
 ||Alto|6500|  
@@ -57,10 +58,10 @@ Esta aplicación simple recorre paso a paso cada una de las cuatro operaciones p
 |TextBox|Nombre|txtDisplay1|  
 ||Varias líneas|true|  
 |Botón de comando|Nombre|cmdGetData|  
-||Título|Get Data|  
+||Caption|Get Data|  
 |Botón de comando|Nombre|cmdExamineData|  
-||Título|Examinar datos|  
+||Caption|Examinar datos|  
 |Botón de comando|Nombre|cmdEditData|  
-||Título|Editar datos|  
+||Caption|Editar datos|  
 |Botón de comando|Nombre|cmdUpdateData|  
-||Título|Datos actualizados|
+||Caption|Datos actualizados|

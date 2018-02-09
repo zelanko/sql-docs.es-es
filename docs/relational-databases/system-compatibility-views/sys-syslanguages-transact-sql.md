@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.syslanguages_TSQL
 - syslanguages
 - syslanguages_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - syslanguages system table
 - sys.syslanguages compatibility view
 ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
-caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5d0a0b2a001f40b8884faa1c8c22415708ba377f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 47eb77543c650a16650680435e5d0db7d395eade
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,18 +50,18 @@ ms.lasthandoff: 11/17/2017
 |meses|**nvarchar(372)**|Lista separada por comas con los nombres completos de los meses, de enero a diciembre, en la que cada mes puede contener hasta 20 caracteres.|  
 |shortmonths|**nvarchar(132)**|Lista separada por comas con los nombres cortos de los meses, de enero a diciembre, en la que cada mes puede contener hasta 9 caracteres.|  
 |days|**nvarchar(217)**|Lista separada por comas con los nombres de los días, de lunes a domingo, en la que cada nombre puede contener hasta 30 caracteres.|  
-|lcid|**int**|Id. de configuración regional de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows para el idioma.|  
-|msglangid|**smallint**|Identificador del grupo de mensajes del [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
+|lcid|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Id. de configuración regional de Windows para el idioma.|  
+|msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] identificador de grupo de mensajes.|  
   
  El [!INCLUDE[ssDE](../../includes/ssde-md.md)] contiene los siguientes idiomas instalados.  
   
-|Nombre en español|LCID de Windows|Id. de grupo de mensajes del [!INCLUDE[ssDE](../../includes/ssde-md.md)]|  
+|Nombre en español|LCID de Windows|[!INCLUDE[ssDE](../../includes/ssde-md.md)] Id. de grupo de mensajes|  
 |---------------------|------------------|-----------------------------------------|  
 |Inglés|3082|3082|  
 |Alemán|1031|1031|  
 |Francés|1036|1036|  
 |Japonés|1041|1041|  
-|Danés|1030|1030|  
+|Danish|1030|1030|  
 |Español|3082|3082|  
 |Italiano|1040|1040|  
 |Neerlandés|1043|1043|  
@@ -67,14 +69,14 @@ ms.lasthandoff: 11/17/2017
 |Portugués|2070|2070|  
 |Finlandés|1035|1035|  
 |Sueco|1053|1053|  
-|Checo|1029|1029|  
+|Czech|1029|1029|  
 |Húngaro|1038|1038|  
 |Polaco|1045|1045|  
 |Rumano|1048|1048|  
 |Croata|1050|1050|  
 |Eslovaco|1051|1051|  
 |Esloveno|1060|1060|  
-|Griego|1032|1032|  
+|Greek|1032|1032|  
 |Búlgaro|1026|1026|  
 |Ruso|1049|1049|  
 |Turco|1055|1055|  

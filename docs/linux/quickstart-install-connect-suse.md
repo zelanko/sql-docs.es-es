@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.workload: On Demand
-ms.openlocfilehash: fddc7cf6f0badfdb07414c2fc4b51cc2dad5a12a
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 068cf3c1bb3bad2a42f5673f17d0067b0bd019f2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Instalar a SQL Server y crear una base de datos en SUSE Linux Enterprise Server
 
@@ -56,7 +56,7 @@ Para configurar SQL Server en SLES, ejecute los siguientes comandos en un termin
    ```
 
    > [!NOTE]
-   > Esto es el repositorio de actualización acumulativa (CU). Para obtener más información acerca de las opciones de repositorio y sus diferencias, vea [cambiar repositorios de origen](sql-server-linux-setup.md#repositories).
+   > Esto es el repositorio de actualización acumulativa (CU). Para obtener más información acerca de las opciones de repositorio y sus diferencias, vea [configurar repositorios para SQL Server en Linux](sql-server-linux-change-repo.md).
 
 1. Ejecute los comandos siguientes para instalar a SQL Server:
 

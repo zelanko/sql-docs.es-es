@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,24 +13,26 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords: FieldAttributeEnum
-helpviewer_keywords: FieldAttributeEnum enumeration [ADO]
+f1_keywords:
+- FieldAttributeEnum
+helpviewer_keywords:
+- FieldAttributeEnum enumeration [ADO]
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b5a1783b5906b53f1c092418ea22d2cbc0f51e6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e2b737b179a47aa28196bf8ff334dfe3256f91ef
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 Especifica uno o más atributos de un [campo](../../../ado/reference/ado-api/field-object.md) objeto.  
   
-|Constante|Valor|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|Indica que el proveedor almacena en caché los valores de campo y que las lecturas subsiguientes se realizan desde la memoria caché.|  
 |**adFldFixed**|0x10|Indica que el campo contiene datos de longitud fija.|  
@@ -46,7 +49,7 @@ Especifica uno o más atributos de un [campo](../../../ado/reference/ado-api/fie
 |**adFldRowID**|0x100|Indica que el campo contiene un identificador de fila persistente que no se puede escribir y no tiene ningún valor significativo salvo para identificar la fila (por ejemplo, un número de registro, identificador único y así sucesivamente).|  
 |**adFldRowVersion**|0x200|Indica que el campo contiene algún tipo de marca de hora o fecha usada para realizar el seguimiento de las actualizaciones.|  
 |**adFldUnknownUpdatable**|0x8|Indica que el proveedor no puede determinar si puede escribir en el campo.|  
-|**adFldUnspecified**|-0xFFFFFFFF 1|Indica que el proveedor no especifica los atributos del campo.|  
+|**adFldUnspecified**|-1 0xFFFFFFFF|Indica que el proveedor no especifica los atributos del campo.|  
 |**adFldUpdatable**|0x4|Indica que puede escribir en el campo.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  

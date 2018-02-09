@@ -4,28 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: JScript
+dev_langs:
+- JScript
 helpviewer_keywords:
 - RecordCount property [ADO], JScript example
 - Filter property [ADO], JScript example
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28b35e3ff594eaf5ec0ea077cb09939acc508a7d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5347f486c516a131f9dc2103ecd5a037a916f8eb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a>Ejemplo Filter y RecordCount propiedades (JScript)
 En este ejemplo se abre un **Recordset** en la tabla Companies de la base de datos Northwind y, a continuación, utiliza el [filtro](../../../ado/reference/ado-api/filter-property.md) propiedad para limitar los registros visibles a aquellos en los que el campo CompanyName comienza por la letra D. corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como **FilterJS.asp**.  

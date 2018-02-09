@@ -1,5 +1,5 @@
 ---
-title: Sys.syslockinfo (Transact-SQL) | Documentos de Microsoft
+title: sys.syslockinfo (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-compatibility-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.syslockinfo_TSQL
 - sys.syslockinfo
 - syslockinfo
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - syslockinfo system table
 - sys.syslockinfo compatibility view
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 410d07a73d4a5b96c3fa5805208735055bc36174
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4b58420c47d73e1eff9bb895ccab1fab0be82844
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,9 +48,9 @@ ms.lasthandoff: 11/27/2017
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**rsc_text**|**nchar(32)**|Texto descriptivo de un recurso de bloqueo. Contiene una parte del nombre del recurso.|  
-|**rsc_bin**|**binary (16)**|Recurso de bloqueo binario. Contiene el recurso de bloqueo efectivo contenido en el administrador de bloqueos. Esta columna se incluye para herramientas que saber acerca del formato de recurso de bloqueo para generar su propio formato recurso de bloqueo, y para realizar autocombinaciones en **syslockinfo**.|  
-|**rsc_valblk**|**binary (16)**|Bloque de valor de bloqueo. Algunos tipos de recursos pueden incluir datos adicionales en el recurso de bloqueo no distribuido por el administrador de bloqueos para determinar a quién pertenece el recurso. Por ejemplo, los bloqueos de página no son propiedad de un identificador de objeto determinado. Para la extensión de bloqueo y otros fines. Sin embargo, se puede colocar el Id. de objeto de un bloqueo de página en el bloque de valor de bloqueo.|  
-|**trío rsc_dbid**|**smallint**|Id. de la base de datos asociada al recurso.|  
+|**rsc_bin**|**binary(16)**|Recurso de bloqueo binario. Contiene el recurso de bloqueo efectivo contenido en el administrador de bloqueos. Esta columna se incluye para herramientas que saber acerca del formato de recurso de bloqueo para generar su propio formato recurso de bloqueo, y para realizar autocombinaciones en **syslockinfo**.|  
+|**rsc_valblk**|**binary(16)**|Bloque de valor de bloqueo. Algunos tipos de recursos pueden incluir datos adicionales en el recurso de bloqueo no distribuido por el administrador de bloqueos para determinar a quién pertenece el recurso. Por ejemplo, los bloqueos de página no son propiedad de un identificador de objeto determinado. Para la extensión de bloqueo y otros fines. Sin embargo, se puede colocar el Id. de objeto de un bloqueo de página en el bloque de valor de bloqueo.|  
+|**rsc_dbid**|**smallint**|Id. de la base de datos asociada al recurso.|  
 |**rsc_indid**|**smallint**|Id. del índice asociado al recurso, si es el caso.|  
 |**rsc_objid**|**int**|Id. del objeto asociado al recurso, si es el caso.|  
 |**rsc_type**|**tinyint**|Tipo de recurso:<br /><br /> 1 = Recurso NULL (no utilizado)<br /><br /> 2 = base de datos<br /><br /> 3 = Archivo<br /><br /> 4 = Índice<br /><br /> 5 = Tabla<br /><br /> 6 = Página<br /><br /> 7 = Clave<br /><br /> 8 = Extensión<br /><br /> 9 = RID (Id. de fila)<br /><br /> 10 = Aplicación|  

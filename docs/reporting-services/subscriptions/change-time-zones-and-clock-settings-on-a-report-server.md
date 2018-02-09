@@ -17,7 +17,7 @@ helpviewer_keywords:
 - schedules [Reporting Services], clock settings
 - schedules [Reporting Services], time zones
 ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/09/2018
  Los valores de marca de tiempo de propiedades (por ejemplo, la hora a la que se creó una carpeta o un elemento de informe vinculado) no se sincronizan con la nueva configuración horaria. Si crea un elemento el 25 de junio a las 9:00 a.m. y después restablece la zona horaria o el reloj, la marca de tiempo sigue siendo 25 de junio a las 9:00 a.m.  
   
 ## <a name="changing-the-time-zone-sharepoint-mode"></a>Cambiar la zona horaria (modo de SharePoint)  
- La configuración de zona horaria para el modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se administra como parte de la configuración regional de SharePoint. Para obtener más información, vea [Regional settings (SharePoint Server 2010)](http://technet.microsoft.com/library/cc824907.aspx)(Configuración regional [SharePoint Server 2010]) (http://technet.microsoft.com/library/cc824907.aspx).  
+ La configuración de zona horaria para el modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se administra como parte de la configuración regional de SharePoint. Para obtener más información, vea [Regional settings (SharePoint Server 2010) (Configuración regional [SharePoint Server 2010])](http://technet.microsoft.com/library/cc824907.aspx).  
   
 ## <a name="changing-the-clock-settings"></a>Cambiar la configuración del reloj  
  El cambio del reloj del equipo no afecta a los valores de marca de tiempo existentes (por ejemplo, si adelanta el reloj una hora, las marcas de tiempo de las instantáneas de historial del informe no cambian). Es posible que se produzca una demora de 10 segundos antes de que el Procesador de entrega y programación utilice la nueva configuración. La demora real puede variar si ha modificado la configuración de intervalo de sondeo en los archivos de configuración.  

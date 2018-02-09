@@ -19,19 +19,20 @@ helpviewer_keywords:
 - Dispose method
 - System.Transactions namespace
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
-caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e365b0ffd041b8457fff3035fbbe4e19f5bcee6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 28edabefb40a43db17bb69a484c97e2c55f64274
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-systemtransactions"></a>Utilizar System.Transactions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]El **System.Transactions** espacio de nombres proporciona un marco de transacciones totalmente integrado con ADO.NET y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integración common language runtime (CLR). La clase **System.Transactions.TransactionScope** crea un bloque de código transaccional dando de alta implícitamente las conexiones en una transacción distribuida. Se debe llamar al método **Complete** al final del bloque de código marcado por **TransactionScope**. Se llama al método **Dispose** cuando la ejecución de programas deja un bloque de código, lo que hace que se interrumpa la transacción si no se llama al método **Complete** . Si se ha producido una excepción que hace que el código deje el ámbito, se considera que la transacción se ha interrumpido.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+El espacio de nombres **System.Transactions** proporciona un nuevo marco de transacciones totalmente integrado con ADO.NET y la característica de integración con Common Language Runtime (CLR) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La clase **System.Transactions.TransactionScope** crea un bloque de código transaccional dando de alta implícitamente las conexiones en una transacción distribuida. Se debe llamar al método **Complete** al final del bloque de código marcado por **TransactionScope**. Se llama al método **Dispose** cuando la ejecución de programas deja un bloque de código, lo que hace que se interrumpa la transacción si no se llama al método **Complete** . Si se ha producido una excepción que hace que el código deje el ámbito, se considera que la transacción se ha interrumpido.  
   
  Se recomienda emplear un bloque **using** para asegurarse de que se llama al método **Dispose** en el objeto **TransactionScope** cuando se sale del bloque **using** . El hecho de no confirmar o revertir las transacciones pendientes puede reducir significativamente el rendimiento, porque el tiempo de espera predeterminado para **TransactionScope** es un minuto. Si no utiliza una instrucción **using** , debe realizar todo el trabajo de un bloque **Try** y llamar explícitamente al método **Dispose** del bloque **Finally** .  
   
@@ -112,6 +113,6 @@ using (TransactionScope transScope = new TransactionScope())
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Integración CLR y transacciones](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
+ [Las transacciones y la integración CLR](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

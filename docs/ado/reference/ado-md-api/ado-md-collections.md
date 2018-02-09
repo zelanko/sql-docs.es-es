@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,23 +16,23 @@ helpviewer_keywords:
 - ADO MD collections
 - collections [ADO MD]
 ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9f01e6b9e7314df29c083ea0c105206959ab2eef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6737c313c8a05bf0eee119b37c9cde43fa483fda
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-md-collections"></a>Colecciones de ADO MD
 |||  
 |-|-|  
 |[Ejes](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|Contiene el **eje** objetos que definen un conjunto de celdas.|  
 |[CubeDefs](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Contiene el **CubeDef** objetos que representan un cubo de un catálogo multidimensional.|  
-|[Dimensions](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Contiene el **dimensión** objetos que componen un cubo.|  
+|[Dimensiones](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Contiene el **dimensión** objetos que componen un cubo.|  
 |[Jerarquías](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Contiene el conjunto **jerarquía** objetos de una dimensión.|  
 |[Levels](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Contiene el **nivel** objetos que componen una jerarquía.|  
 |[Miembros](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|Contiene el **miembro** objetos de un nivel o una posición a lo largo de un eje.|  

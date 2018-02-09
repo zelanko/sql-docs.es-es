@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -15,21 +16,21 @@ helpviewer_keywords:
 - objects [ADOX]
 - ADOX, objects
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac969f567ce38b48d2c82218b09845e8247fea8e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 742a5bd898e4fcef656ffa66a941c1fab14929b0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-objects"></a>Objetos ADOX
 ## <a name="adox-object-summary"></a>Resumen de objetos ADOX  
   
-|Objeto|Description|  
+|Object|Description|  
 |------------|-----------------|  
 |[Catálogo](../../../ado/reference/adox-api/catalog-object-adox.md)|Contiene colecciones que describen el catálogo de esquema de un origen de datos.|  
 |[Columna](../../../ado/reference/adox-api/column-object-adox.md)|Representa una columna de una tabla, índice o clave.|  

@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0506b950-34b3-4f11-8e2f-d067a58015bd
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e393db396c7d41f7eca7851fa10544d697eac5c8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3dd916a0d91d5f237d7a60963c1b3fab1f90b5e9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-interoperability-in-sql-server"></a>Interoperabilidad de R en SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 En este tema se centra en el mecanismo de ejecución de R en SQL Server y se describe las diferencias entre Microsoft R y código abierto R.
 
@@ -32,7 +33,7 @@ Para obtener información acerca de los componentes adicionales, consulte [nuevo
 
 ### <a name="open-source-r-components"></a>Componentes de R de código abierto
 
-[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] incluye una distribución completa de las herramientas y los paquetes básicos de R. Para más información sobre qué se incluye con la distribución básica, vea la documentación que se instala durante la instalación en la siguiente ubicación predeterminada: `C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`
+[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] incluye una distribución completa de las herramientas y paquetes de R base. Para más información sobre qué se incluye con la distribución básica, vea la documentación que se instala durante la instalación en la siguiente ubicación predeterminada: `C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`
 
 Como parte de la instalación de [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)], debe aceptar las condiciones de la licencia pública de GNU. Cuando lo haga, podrá ejecutar paquetes de R estándar sin tener que realizar ninguna modificación más, tal y como sucede en cualquier otra distribución de código abierto de R.
 

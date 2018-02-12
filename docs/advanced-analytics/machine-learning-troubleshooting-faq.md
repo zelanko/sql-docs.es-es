@@ -15,13 +15,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 640dde0a2faf43c7c5cda39789eaba759959bb99
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d334aefbd43bf17e776a8b75a09a2cef8448542d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="troubleshoot-machine-learning"></a>Solucionar problemas de aprendizaje automático
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artículo proporciona información para solucionar problemas relacionados con el programa de instalación y configuración de características de aprendizaje de máquina de SQL Server. La información incluye vínculos a guías de instalación, problemas conocidos y notas de la versión. Otros artículos vinculados a partir de este artículo le proporcionará consejos sobre la optimización de rendimiento de las soluciones de aprendizaje de máquina de SQL Server.
 

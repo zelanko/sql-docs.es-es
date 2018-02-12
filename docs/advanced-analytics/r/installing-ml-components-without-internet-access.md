@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0a90c438-d78b-47be-ac05-479de64378b2
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: b84c15fba4b363eee589b6ff1d2a19d142100c32
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 1c4a63077cf9801a6c83502f2fdea6f88c063227
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="installing-machine-learning-components-without-internet-access"></a>Instalación de componentes de aprendizaje de máquina sin acceso a internet
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dado que los componentes de R y Python proporcionados con SQL Server 2016 y SQL Server 2017 son código abierto, Microsoft no instala los componentes de R o Python de forma predeterminada. En su lugar, se proporcionan a los instaladores relacionados e incluirse paquetes como una comodidad en Microsoft Download Center y otros sitios de confianza. Debe dar su consentimiento a la licencia apropiada y, a continuación, el programa de instalación de SQL Server instala los componentes de R o Python.
 

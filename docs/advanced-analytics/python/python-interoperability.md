@@ -14,19 +14,20 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 71b578fb47a7bd7881f2681206a0f69f5c37facb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1edd059c283a0f780f6dd1419d70ed2bedb23f03
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="python-interoperability-with-sql-server"></a>Interoperabilidad de Python con SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 En este tema se describe los componentes de Python que se instalan si se habilita la característica **Machine Learning Services (In-Database)** y seleccione Python como lenguaje.
 
 ## <a name="python-components"></a>Componentes de Python
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]no modifica los archivos ejecutables de Python. El tiempo de ejecución de Python se instala independientemente de las herramientas de SQL y se ejecuta fuera de la [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] proceso.
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] no modifica los archivos ejecutables de Python. El tiempo de ejecución de Python se instala independientemente de las herramientas de SQL y se ejecuta fuera de la [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] proceso.
 
 La distribución que está asociada con un valor concreto [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instancia puede encontrarse en la carpeta asociada con la instancia.
 

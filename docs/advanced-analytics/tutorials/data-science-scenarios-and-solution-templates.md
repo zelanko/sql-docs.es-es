@@ -10,20 +10,22 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 49e54fa9-9b28-44ba-b256-06dad4e8dece
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 3c180282735da59d8d3dfa039e70d0eea5ebd7e5
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5317f42d3acd85f7865f79405b2daf12793a7de4
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Escenarios de ciencia de datos y plantillas de solución
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Las plantillas son soluciones de ejemplo que muestran los procedimientos recomendados y proporcionan los bloques de creación para ayudarle a implementar una solución rápida. Cada plantilla está diseñada para resolver un problema específico, para un vertical específico o un sector. Las tareas de cada plantilla permiten desde preparación de datos e ingeniería de características hasta el entrenamiento y la puntuación de modelos. Use estas plantillas para obtener información sobre cómo [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] funciona. A continuación, puede personalizar la plantilla para ajustarse a su propia situación y generar una solución personalizada. 
 

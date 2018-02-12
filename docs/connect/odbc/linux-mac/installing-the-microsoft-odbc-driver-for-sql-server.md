@@ -8,26 +8,144 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: driver, installing
+helpviewer_keywords:
+- driver, installing
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 50d515b5de665866d9e99a63d8b2136adcc82013
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+ms.openlocfilehash: e7f03a55e7be9bba83458b04d11208ed1a65b524
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Instalación de Microsoft ODBC Driver for SQL Server en Linux y Mac OS
+# <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Instalación de Microsoft ODBC Driver for SQL Server en Linux y macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Este tema explica cómo instalar el [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] en Linux y Mac OS, así como las herramientas de línea de comandos opcionales para SQL Server (`bcp` y `sqlcmd`) y el desarrollo de encabezados de unixODBC.
+
+## <a name="microsoft-odbc-driver-17-for-sql-server"></a>Microsoft ODBC Driver 17 para SQL Server 
+
+### <a name="debian-8-and-9"></a>Debian 8 y 9
+```
+sudo su 
+curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+
+#Download appropriate package for the OS version
+#Choose only ONE of the following, corresponding to your OS version
+
+#Debian 8
+curl https://packages.microsoft.com/config/debian/8/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
+#Debian 9
+curl https://packages.microsoft.com/config/debian/9/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
+exit
+sudo apt-get update
+sudo ACCEPT_EULA=Y apt-get install msodbcsql
+# optional: for bcp and sqlcmd
+sudo ACCEPT_EULA=Y apt-get install mssql-tools
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+source ~/.bashrc
+# optional: for unixODBC development headers
+sudo apt-get install unixodbc-dev
+```
+
+### <a name="redhat-enterprise-server-6-and-7"></a>RedHat Enterprise Server 6 y 7
+```
+sudo su
+
+#Download appropriate package for the OS version
+#Choose only ONE of the following, corresponding to your OS version
+
+#RedHat Enterprise Server 6
+curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo
+
+#RedHat Enterprise Server 7
+curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
+
+exit
+sudo yum remove unixODBC-utf16 unixODBC-utf16-devel #to avoid conflicts
+sudo ACCEPT_EULA=Y yum install msodbcsql
+# optional: for bcp and sqlcmd
+sudo ACCEPT_EULA=Y yum install mssql-tools
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+source ~/.bashrc
+# optional: for unixODBC development headers
+sudo yum install unixODBC-devel
+```
+
+### <a name="suse-linux-enterprise-server-11sp4-and-12"></a>SUSE Linux Enterprise Server 11SP4 y 12
+
+```
+sudo su
+
+#Download appropriate package for the OS version
+#Choose only ONE of the following, corresponding to your OS version
+
+#SUSE Linux Enterprise Server 11 SP4
+zypper ar https://packages.microsoft.com/config/sles/11/prod.repo
+
+#SUSE Linux Enterprise Server 12
+zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
+
+exit
+sudo ACCEPT_EULA=Y zypper install msodbcsql
+# optional: for bcp and sqlcmd
+sudo ACCEPT_EULA=Y zypper install mssql-tools
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+source ~/.bashrc
+# optional: for unixODBC development headers
+sudo zypper install unixODBC-devel
+``` 
+
+### <a name="ubuntu-1404-1604-and-1710"></a>Ubuntu 14.04, 16.04 y 17.10
+```
+sudo su 
+curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+
+#Download appropriate package for the OS version
+#Choose only ONE of the following, corresponding to your OS version
+
+#Ubuntu 14.04
+curl https://packages.microsoft.com/config/ubuntu/14.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
+#Ubuntu 16.04
+curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
+#Ubuntu 17.10
+curl https://packages.microsoft.com/config/ubuntu/17.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
+exit
+sudo apt-get update
+sudo ACCEPT_EULA=Y apt-get install msodbcsql
+# optional: for bcp and sqlcmd
+sudo ACCEPT_EULA=Y apt-get install mssql-tools
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+source ~/.bashrc
+# optional: for unixODBC development headers
+sudo apt-get install unixodbc-dev
+```
+
+### <a name="os-x-1011-el-capitan-macos-1012-sierra-and-macos-1013-high-sierra"></a>OS X 10.11 (El capitán), macOS 10.12 (Sierra) y macOS 10.13 (Sierra alta)
+
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
+brew update
+brew install --no-sandbox msodbcsql mssql-tools
+```
 
 ## <a name="microsoft-odbc-driver-131-for-sql-server"></a>Microsoft ODBC Driver 13.1 for SQL Server 
 
@@ -79,6 +197,22 @@ source ~/.bashrc
 # optional: for unixODBC development headers
 sudo yum install unixODBC-devel
 ```
+
+### <a name="suse-linux-enterprise-server-11"></a>SUSE Linux Enterprise Server 11
+
+```
+sudo su
+zypper ar https://packages.microsoft.com/config/sles/11/prod.repo
+exit
+sudo ACCEPT_EULA=Y zypper install msodbcsql
+# optional: for bcp and sqlcmd
+sudo ACCEPT_EULA=Y zypper install mssql-tools
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+source ~/.bashrc
+# optional: for unixODBC development headers
+sudo zypper install unixODBC-devel
+``` 
 
 ### <a name="suse-linux-enterprise-server-12"></a>SUSE Linux Enterprise Server 12
 
@@ -153,7 +287,7 @@ sudo apt-get install unixodbc-dev
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install --no-sandbox msodbcsql mssql-tools
+brew install --no-sandbox msodbcsql@13.1.9.2 mssql-tools@14.0.6.0
 ```
 
 ## <a name="microsoft-odbc-driver-13-for-sql-server"></a>Microsoft ODBC Driver 13 for SQL Server
@@ -230,15 +364,15 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ### <a name="offline-installation"></a>Instalación sin conexión
 Si prefiere o requiere la [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 para instalarse en un equipo sin conexión de internet, debe resolver manualmente las dependencias del paquete. El [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 presenta las siguientes dependencias directas:
 - Ubuntu: libc6 (> = 2.21), libstdc ++ 6 (> = 4.9), libkrb5-3, libcurl3, openssl, debconf (> = 0,5), unixodbc (> = 2.3.1-1)
-- Red Hat: glibc, e2fsprogs, krb5 bibliotecas, openssl, unixODBC
-- SuSE: glibc, libuuid1, krb5, openssl, unixODBC
+- Red Hat:```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
+- SuSE:```glibc, libuuid1, krb5, openssl, unixODBC```
 
 A su vez, cada uno de estos paquetes tiene sus propias dependencias que pueden o no pueden estar presentes en el sistema. Una solución general para este problema, consulte la documentación de administrador de la distribución paquete: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](http://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), y [SUSE](https://en.opensuse.org/Portal:Zypper)
 
 También es común para descargar manualmente todos los paquetes dependientes y colocarlas juntas en el equipo de instalación y, a continuación, instalar manualmente cada paquete a su vez, terminar con la [!INCLUDE[msCoName](../../../includes/msconame_md.md)] paquete ODBC Driver 13.
 
 #### <a name="redhat-linux-enterprise-server-7"></a>RedHat Linux Enterprise Server 7
-  - Descargar la última .rpm msodbcsql desde aquí: http://packages.microsoft.com/rhel/7/prod/
+  - Descargue la última versión `msodbcsql` .rpm desde aquí: http://packages.microsoft.com/rhel/7/prod/
   - Instalar el controlador y dependencias
   
 ```
@@ -247,7 +381,7 @@ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
 #### <a name="ubuntu-1604"></a>Ubuntu 16.04
-- Descargar la última .deb msodbcsql desde aquí: http://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
+- Descargue la última versión `msodbcsql` `.deb` desde aquí: http://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
 - Instalar el controlador y dependencias 
 
 ```
@@ -256,7 +390,7 @@ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 ```
 
 #### <a name="suse-linux-enterprise-server-12"></a>SUSE Linux Enterprise Server 12
-- Descargar la última .rpm msodbcsql desde aquí: http://packages.microsoft.com/sles/12/prod/
+- Descargue la última versión `msodbcsql` .rpm desde aquí: http://packages.microsoft.com/sles/12/prod/
 - Instalar las dependencias y el controlador
 
 ```
@@ -282,23 +416,23 @@ Para instalar el controlador, haga lo siguiente:
 
 1.  Asegúrese de que tiene permisos de raíz.  
 
-2.  Cambie al directorio donde la descarga de coloca el archivo `msodbcsql-11.0.2270.0.tar.gz`. Asegúrese de que dispone del archivo \*.tar.gz que coincida con la versión de Linux. Para extraer los archivos, ejecute el comando siguiente: **tar xvzf msodbcsql-11.0.2270.0.tar.gz**.  
+2.  Cambie al directorio donde la descarga de coloca el archivo `msodbcsql-11.0.2270.0.tar.gz`. Asegúrese de que dispone del archivo \*.tar.gz que coincida con la versión de Linux. Para extraer los archivos, ejecute el siguiente comando, `tar xvzf msodbcsql-11.0.2270.0.tar.gz`.  
   
 3.  Cambie a la `msodbcsql-11.0.2270.0` directorio y allí verá un archivo denominado **"Install.sh"**.  
   
 4.  Para ver una lista de las opciones de instalación disponibles, ejecute el siguiente comando: **./install.sh**.  
   
-5.  Realice una copia de seguridad de **odbcinst.ini**. El programa de instalación del controlador actualiza **odbcinst.ini**. odbcinst.ini contiene la lista de controladores que están registrados en el Administrador de controladores unixODBC. Para detectar la ubicación de odbcinst.ini en el equipo, ejecute el siguiente comando: **odbc_config --odbcinstini**.  
+5.  Realice una copia de seguridad de **odbcinst.ini**. El programa de instalación del controlador actualiza **odbcinst.ini**. odbcinst.ini contiene la lista de controladores que están registrados en el Administrador de controladores unixODBC. Para detectar la ubicación de odbcinst.ini en el equipo, ejecute el siguiente comando: ```odbc_config --odbcinstini```.  
   
 6.  Antes de instalar el controlador, ejecute el siguiente comando: **./install.sh verify**. La salida de **./install.sh verify** notifica si el equipo tiene el software necesario para admitir el controlador ODBC en Linux.  
   
-7.  Cuando esté preparado para instalar el controlador ODBC en Linux, ejecute el comando **./install.sh install**. Si tiene que especificar un comando de instalación (**bin-dir** o **lib-dir**), especifíquelo después de la opción **install** .  
+7.  Cuando esté preparado para instalar el controlador ODBC en Linux, ejecute el comando **./install.sh install**. Si tiene que especificar un comando de instalación (`bin-dir` o `lib-dir`), especifique el comando después de la **instalar** opción.  
   
 8.  Cuando revise el contrato de licencia, escriba **YES** para continuar con la instalación.  
   
 Programa de instalación coloca el controlador `/opt/microsoft/msodbcsql/11.0.2270.0`. El controlador y sus archivos auxiliares deben estar en `/opt/microsoft/msodbcsql/11.0.2270.0`.  
   
-Para comprobar que se haya registrado correctamente Microsoft ODBC Driver en Linux, ejecute el siguiente comando: **odbcinst -q -d -n "ODBC Driver 11 for SQL Server"**.  
+Para comprobar que el controlador ODBC de Microsoft en Linux se registró correctamente, ejecute el siguiente comando: ```odbcinst -q -d -n "ODBC Driver 11 for SQL Server"```.  
   
 En el artículo sobre el[uso de muestras de ODBC con C++ de MSDN existentes para el controlador ODBC en Linux](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) , se muestra un ejemplo de código que se conecta a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] con el controlador ODBC en Linux.  
   

@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 10760026ef04284f6d0838af8ba81b0c7613645b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8accb9b8e050340ff980a1b5d9f1faf9283d8b89
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="resource-governance-for-python"></a>Regulador de recursos para Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Porque Python se habilita a través de la la misma arquitectura de extensibilidad que se implementó para el lenguaje R en SQL Server 2016, puede utilizar las herramientas existentes en SQL Server, como el regulador de recursos y DMV, eventos extendidos, para supervisar la ejecución de Python scripts de SQL Server.
 

@@ -12,18 +12,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 dev_langs: 
 ms.assetid: 8093599c-8307-4237-983b-0908d0f8ab77
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: e8aa8d51c54fb98b3851676ddedd367f476dd1fa
-ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
+ms.openlocfilehash: 256a8a58a61f679cd5b2981134403cc389733e75
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>Utilizando los datos de los cubos OLAP en R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 El **olapR** paquete es un paquete de R, proporcionado por Microsoft para su uso con SQL Server y servidor de aprendizaje de máquina, que permite ejecutar consultas MDX para obtener datos de los cubos OLAP. Con este paquete, no necesita crear servidores vinculados o limpiar de conjuntos de filas planas; puede obtener datos OLAP directamente de R.
 

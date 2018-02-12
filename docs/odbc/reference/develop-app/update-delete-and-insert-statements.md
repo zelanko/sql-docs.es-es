@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - INSERT [ODBC]
 - data updates [ODBC], about data updates
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 592d135ccf66f8a9fde2cc064a51dc25617cf127
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="update-delete-and-insert-statements"></a>Las instrucciones INSERT, DELETE y UPDATE
 Las aplicaciones basadas en SQL realizan cambios en las tablas mediante la ejecución de la **actualización**, **eliminar**, y **insertar** instrucciones. Estas instrucciones son parte del nivel de conformidad de gramática mínima de SQL y deben ser compatibles con todos los controladores y orígenes de datos.  
@@ -36,17 +37,17 @@ Las aplicaciones basadas en SQL realizan cambios en las tablas mediante la ejecu
   
  **ACTUALIZACIÓN***nombre de la tabla*   
   
- **ESTABLECER** *identificador de la columna*  **=**  {*expresión* &#124; **NULL**}  
+ **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
   
  [**,** *identificador de la columna*  **=**  {*expresión* &#124; **NULL**}]...  
   
- [**Donde** *condición de búsqueda*]  
+ [**WHERE** *search-condition*]  
   
  **DELETE FROM** *nombre de la tabla*[**donde** *condición de búsqueda*]  
   
- **INSERT INTO** *nombre de la tabla*[**(***identificador de la columna* [**,** *deidentificadordecolumna*] ... **)**]  
+ **INSERT INTO** *table-name*[**(***column-identifier* [**,** *column-identifier*]...**)**]  
   
- {*especificación de consulta* &#124; **Valores (***valor de inserción* [**,** *valor de inserción*]... **)**}  
+ {*query-specification* &#124; **VALUES (***insert-value* [**,** *insert-value*]...**)**}  
   
  Tenga en cuenta que la *especificación de consulta* elemento solo es válido en las gramáticas extendida de SQL y Core y que la *expresión* y *condición de búsqueda* elementos se convierten en más complejo de las gramáticas principal y extendida de SQL.  
   

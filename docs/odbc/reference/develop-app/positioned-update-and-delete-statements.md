@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 0c39c0081ee0cd671ee31bd7e11c02a72adc7558
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="positioned-update-and-delete-statements"></a>Actualización posicionada y las instrucciones Delete
 Las aplicaciones pueden actualizar o eliminar la fila actual de un conjunto de resultados con una actualización por posición o la instrucción delete. Coloca update y delete instrucciones son compatibles con algunos orígenes de datos, pero no todas ellas. Para determinar si un origen de datos admite coloca instrucciones update y delete, llama a una aplicación **SQLGetInfo** con el SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ ATTRIBUTES1 o SQL_STATIC_CURSOR_ATTRIBUTES1 *tipo de información* (según el tipo del cursor). Tenga en cuenta que la biblioteca de cursores ODBC simula coloca instrucciones update y delete.  
@@ -37,7 +38,7 @@ Las aplicaciones pueden actualizar o eliminar la fila actual de un conjunto de r
   
  **DE** *lista de referencias de tabla*  
   
- [**Donde** *condición de búsqueda*]  
+ [**WHERE** *search-condition*]  
   
  **PARA la actualización de** [*nombre de la columna* [**,** *nombre de la columna*]...]  
   
@@ -45,7 +46,7 @@ Las aplicaciones pueden actualizar o eliminar la fila actual de un conjunto de r
   
  **ACTUALIZACIÓN** *nombre de la tabla*  
   
- **ESTABLECER** *identificador de la columna*  **=**  {*expresión* &#124; **NULL**}  
+ **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
   
  [**,** *identificador de la columna*  **=**  {*expresión* &#124; **NULL**}]...  
   

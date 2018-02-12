@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [XML for Analysis]
 - subordinate objects [XML for Analysis]
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - deleting objects
 - XMLA, objects
 ms.assetid: a2080867-e130-440c-92eb-f768869f34a8
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6906c6dbab99923983cbfa4e75c35c6f3c0f5073
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="creating-and-altering-objects-xmla"></a>Crear y modificar objetos (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Los objetos principales pueden independientemente crear, modificar y eliminar. Entre los objetos principales se incluyen los siguientes:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Los objetos principales se pueden crear, modificar y eliminar de forma independiente. Entre los objetos principales se incluyen los siguientes:  
   
 -   Servidores  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Particiones  
   
--   perspectivas  
+-   Perspectivas  
   
 -   Modelos de minería de datos  
   
@@ -155,6 +157,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>Vea también  
  [Ejecutar método &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)   
  [Desarrollar con Analysis Services Scripting Language &#40; ASSL &#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
- [Desarrollo con XMLA en Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Desarrollar con XMLA en Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

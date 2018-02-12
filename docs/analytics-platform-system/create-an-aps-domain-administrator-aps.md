@@ -15,12 +15,12 @@ ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ed52bf78-2b0a-4252-98a7-8c2805e22d3d
-caps.latest.revision: "7"
+caps.latest.revision: 
 ms.openlocfilehash: 0ebc616d28fe734b9dac52303641390ce9bc0957
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-an-aps-domain-administrator"></a>Crear un administrador de dominio APS
 Algunas operaciones requieren privilegios de administrador de dominio de sistema de la plataforma de análisis. Explica cómo crear administradores de dominio de aplicación adicionales.  
@@ -30,7 +30,7 @@ Tener permisos suficientes para configurar todos los nodos APS, el usuario que e
   
 #### <a name="to-add-a-user-to-the-domain-admins-group"></a>Para agregar un usuario al grupo Admins. del dominio  
   
-1.  Inicie sesión en el nodo activo de AD  **(*appliance_domain*-AD01 ** o  ***appliance_domain*-AD02**) usa un dominio de aplicación existente cuenta de administrador.  
+1.  Inicie sesión en el nodo activo de AD **(*appliance_domain*-AD01** o ***appliance_domain *-AD02**) con una cuenta de administrador de dominio de aplicación existente.  
   
 2.  En el menú Iniciar, haga clic en **Ejecutar**. En el **abiertos** , escriba **dsa.msc**. Haga clic en **Aceptar**.  
   

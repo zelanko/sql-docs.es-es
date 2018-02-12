@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - transitioning states [ODBC], about state transitions
 - state transitions [ODBC], about state transitions
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 2dabd364fb0a7415a4cf05035d06f5a1dd5838e5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Apéndice B: tablas de transición de estado de ODBC
 Las tablas de este apéndice muestran cómo hacen que las transiciones del entorno, conexión, instrucción y Estados de descriptor funciones ODBC. Normalmente, el estado del entorno, conexión, instrucción o descriptor dicta cuando puede llamar a funciones que usan el tipo de identificador (entorno, conexión, instrucción o descriptor) correspondiente. Los Estados de entorno, conexión, instrucción y descriptor se superponen aproximadamente tal como se muestra en la siguiente ilustración. Por ejemplo, la superposición de conexión exacta Estados C5 y C6 y Estados de instrucción que s1 a través de S12 es, depende del origen de datos, ya que las transacciones empiezan en momentos diferentes en distintos orígenes de datos, y depende del estado de descriptor D1i (implícitamente asignado descriptor) en el estado de la instrucción que está asociado el descriptor, mientras que el estado D1e (asignado explícitamente descriptor) es independiente del estado de cualquier instrucción. Para obtener una descripción de cada estado, vea [transiciones de entorno](../../../odbc/reference/appendixes/environment-transitions.md), [conexión transiciones](../../../odbc/reference/appendixes/connection-transitions.md), [transiciones de instrucción](../../../odbc/reference/appendixes/statement-transitions.md), y [Descriptor transiciones ](../../../odbc/reference/appendixes/descriptor-transitions.md), más adelante en este apéndice.  
@@ -51,13 +52,13 @@ Las tablas de este apéndice muestran cómo hacen que las transiciones del entor
 -   **--**No se modifica el estado después de ejecutar la función.  
   
 -   **E**  
-     ***n***,  **C*n***,  **S*n***, o  **D.*n***: el estado del entorno, conexión, instrucción o descriptor pasa al estado especificado.  
+     ***n***, **C*n *** **S*n***, o **d. * n***  : el estado del entorno, conexión, instrucción o descriptor se mueve a el estado especificado.  
   
 -   **(IH)**  : Se pasó un identificador no válido a la función. Si el identificador es un identificador nulo o es un identificador válido de un tipo incorrecto: por ejemplo, se pasó un identificador de conexión cuando se requiere un identificador de instrucción, la función devuelve SQL_INVALID_HANDLE; en caso contrario, el comportamiento es indefinido y probablemente irrecuperable. Este error se muestra solo cuando es el resultado solo es posible llamar a la función en el estado especificado. Este error no cambia el estado y siempre se detecta mediante el Administrador de controladores, como se indica en los paréntesis.  
   
 -   **NS** : estado siguiente. La transición de instrucción es el mismo que si la instrucción no había pasado por los Estados asincrónicos. Por ejemplo, suponga que una instrucción que crea un conjunto de resultados entra en estado S11 de estado S1 porque **SQLExecDirect** devuelve SQL_STILL_EXECUTING. La notación de NS en estado S11 significa que las transiciones para la instrucción son los mismos que los de una instrucción en estado S1 que crea un conjunto de resultados. Si **SQLExecDirect** devuelve un error, la instrucción permanece en estado S1; si se realiza correctamente, la instrucción se mueve al estado S5; si necesita que los datos, la instrucción se mueve al estado S8; y si todavía se está ejecutando, permanece en estado S11.  
   
--   ***XXXXX*** o  **(*XXXXX*) **: un SQLSTATE, que está relacionado con la tabla de transición. SQLSTATE detectado por el Administrador de controladores se encierran entre paréntesis. La función devuelve SQL_ERROR y el valor de SQLSTATE especificado, pero no cambia el estado. Por ejemplo, si **SQLExecute** se llama antes de **SQLPrepare**, devuelve SQLSTATE HY010 (error de secuencia de función).  
+-   ***XXXXX*** o **(*XXXXX*)** : un SQLSTATE, que está relacionado con la tabla de transición. SQLSTATE detectado por el Administrador de controladores se encierran entre paréntesis. La función devuelve SQL_ERROR y el valor de SQLSTATE especificado, pero no cambia el estado. Por ejemplo, si **SQLExecute** se llama antes de **SQLPrepare**, devuelve SQLSTATE HY010 (error de secuencia de función).  
   
 > [!NOTE]  
 >  Las tablas no muestran errores no relacionados con las tablas de transición que no cambian el estado. Por ejemplo, cuando **SQLAllocHandle** se invoca en el estado del entorno E1 y devuelve SQLSTATE HY001 (error de asignación de memoria), el entorno permanece en estado E1; esto no se muestra en la tabla de transiciones de entorno para  **SQLAllocHandle**.  
@@ -71,9 +72,9 @@ Las tablas de este apéndice muestran cómo hacen que las transiciones del entor
 |d|Necesita los datos. La función devuelve SQL_NEED_DATA.|  
 |e|Error. La función devuelve SQL_ERROR.|  
 |i|Fila no válida. El cursor se coloca en una fila en el resultado se eliminó conjunto y la fila o se ha producido un error en una operación en la fila. Si existiera la matriz de Estados de fila, el valor de la matriz de estado de fila de la fila era SQL_ROW_DELETED o SQL_ROW_ERROR. (La matriz de Estados de fila está indicada por el atributo de instrucción de SQL_ATTR_ROW_STATUS_PTR.)|  
-|NF|No se encuentra. La función devuelve SQL_NO_DATA. Esto no aplica cuando **SQLExecDirect**, **SQLExecute**, o **SQLParamData** devuelve SQL_NO_DATA después de ejecutar una búsqueda instrucción update o delete.|  
+|nf|No se encuentra. La función devuelve SQL_NO_DATA. Esto no aplica cuando **SQLExecDirect**, **SQLExecute**, o **SQLParamData** devuelve SQL_NO_DATA después de ejecutar una búsqueda instrucción update o delete.|  
 |np|No se ha preparado. No se ha preparado la instrucción.|  
-|n|No hay resultados. La instrucción no puede o no ha creado un conjunto de resultados.|  
+|nr|No hay resultados. La instrucción no puede o no ha creado un conjunto de resultados.|  
 |o|Otra función. Otra función estaba ejecutando de forma asincrónica.|  
 |p|Preparado. Se ha preparado la instrucción.|  
 |r|Resultados. La instrucción se o ha creado un conjunto de resultados (posiblemente vacía).|  

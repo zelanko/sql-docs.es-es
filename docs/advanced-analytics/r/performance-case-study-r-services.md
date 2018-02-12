@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e902312-ad9c-480d-b82f-b871cd1052d9
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 65e3ca0b62da2a8412b92485316074a5f52fa080
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 83c3590714660201d7411c360958f9ff4263240b
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Rendimiento de los servicios de R: resultados y recursos
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 En este artículo es el cuarto y final de una serie que describe la optimización del rendimiento para R Services. Este artículo resumen los métodos, resultados y conclusiones de dos casos prácticos que probar distintos métodos de optimización.
 
@@ -290,7 +291,7 @@ Los paquetes RevoScaleR y de MicrosoftML se usaron para entrenar un modelo de pr
 
 - Tablas en memoria
 - Soft-NUMA
-- regulador de recursos
+- Regulador de recursos
 
 Para evaluar el efecto de NUMA de software en la ejecución del script de R, el equipo de ciencia de datos probado la solución en una máquina virtual con 20 núcleos físicos. En estos núcleos físicos, cuatro nodos NUMA de software se crearon automáticamente, tal que cada nodo contiene cinco núcleos.
 

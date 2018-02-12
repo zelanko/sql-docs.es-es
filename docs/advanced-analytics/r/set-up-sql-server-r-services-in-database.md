@@ -16,18 +16,19 @@ keywords:
 - Configurar los servicios de R
 - "instalar el aprendizaje automático SQL"
 ms.assetid: 4d773c74-c779-4fc2-b1b6-ec4b4990950d
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 04f2502853e21968f2edaac927247eb45730d000
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4d18a45b40c7f80ae2b46514f6c8245b80f6b142
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>Configurar servicios de aprendizaje de máquina de SQL Server (In-Database)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este tema describe cómo instalar y configurar la siguiente máquina aprendizaje de las características que admiten los análisis de en bases de datos en SQL Server:
 
@@ -41,7 +42,7 @@ Este tema describe cómo instalar y configurar la siguiente máquina aprendizaje
 
 + Un servidor de aprendizaje de máquina con **sin** SQL Server
 
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]el programa de instalación también incluye la opción para instalar una versión "independiente" de los componentes de aprendizaje automático que no requieren el motor de base de datos y no se ejecutan en SQL Server.  Por lo general, le recomendamos que instale esta opción en un equipo diferente que el equipo que hospeda SQL Server.
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el programa de instalación también incluye la opción para instalar una versión "independiente" de los componentes de aprendizaje automático que no requieren el motor de base de datos y no se ejecutan en SQL Server.  Por lo general, le recomendamos que instale esta opción en un equipo diferente que el equipo que hospeda SQL Server.
     
     [Configurar un servidor de aprendizaje automático de independiente](create-a-standalone-r-server.md).
 

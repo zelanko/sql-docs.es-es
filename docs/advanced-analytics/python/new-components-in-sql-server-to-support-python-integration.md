@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 519422bad57d384466b2ff705b331a0731506caf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 495b7757073cea48773dd7c03f32f7ccf4240cd0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="components-in-sql-server-to-support-python-integration"></a>Componentes de SQL Server para admitir la integración de Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 A partir de 2017 de SQL Server, servicios de aprendizaje de máquina admite Python como un lenguaje externo que se puede ejecutar desde el código T-SQL o ejecuta de forma remota con SQL Server como el contexto de proceso.
 
@@ -116,7 +117,7 @@ Al ejecutar Python "en" [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.
 
 Después de la secuencia de comandos se han incrustado en el procedimiento almacenado, cualquier aplicación que puede realizar un procedimiento almacenado llamada puede iniciar la ejecución del código Python.  A partir de ahí [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] administra la ejecución de código como se resume en el diagrama siguiente.
 
-![script de python de base de datos](../../advanced-analytics/python/media/script-in-db-python2.png)
+![script-in-db-python](../../advanced-analytics/python/media/script-in-db-python2.png)
 
 1. Una solicitud para el tiempo de ejecución de Python se indica mediante el parámetro `@language='Python'` pasa al procedimiento almacenado. SQL Server envía esta solicitud para el servicio Launchpad.
 2. El servicio Launchpad inicia el selector adecuado; en este caso, PythonLauncher.
@@ -124,7 +125,7 @@ Después de la secuencia de comandos se han incrustado en el procedimiento almac
 4. BxlServer se coordina con el tiempo de ejecución de Python para administrar el intercambio de datos y el almacenamiento de resultados de trabajo.
 5. SQL satélite administra las comunicaciones acerca de las tareas relacionadas y procesa con [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 6. BxlServer usa SQL Satellite para comunicarle el estado y los resultados a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] obtiene los resultados y cierra las tareas y los procesos relacionados.
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Obtiene los resultados y cierra los procesos y las tareas relacionadas.
 
 ### <a name="python-scripts-executed-from-a-remote-client"></a>Scripts de Python que se ejecuta desde un cliente remoto
 
@@ -145,7 +146,7 @@ En el diagrama siguiente se resume el flujo de trabajo global cuando las secuenc
 6. PythonLauncher realiza una llamada a la instancia de la versión de Python que está instalado en el [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] equipo.
 7. Los resultados se devuelven a BxlServer.
 8. SQL Satellite administra la comunicación con [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] y la limpieza de los objetos de trabajo relacionados.
-9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] pasa los resultados de vuelta al cliente.
+9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] pasa los resultados al cliente.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

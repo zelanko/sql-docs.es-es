@@ -1,5 +1,5 @@
 ---
-title: "Instrucciones de programación | Documentos de Microsoft"
+title: "Instrucciones de programación (controlador ODBC para SQL Server) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 01/11/2018
 ms.prod: sql-non-specified
@@ -8,18 +8,19 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 118099ee43fa1644c8026f968dc041ea148588f1
-ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
+ms.openlocfilehash: fd8952f28f389fa5f1b8f82072998676c5a4196e
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="programming-guidelines"></a>Instrucciones de programación
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 01/12/2018
 
 Las características de programación de la [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] en Mac OS y Linux se basan en el controlador ODBC en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Native Client se basa en el controlador ODBC en Windows Data Access Components ([referencia del programador de ODBC](http://go.microsoft.com/fwlink/?LinkID=45250)).  
 
-Puede usar una aplicación ODBC Multiple Active Result Sets (MARS) y otros [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] características específicas mediante la inclusión de `/usr/local/include/msodbcsql.h` después de incluir los encabezados de unixODBC (`sql.h`, `sqlext.h`, `sqltypes.h`, y `sqlucode.h`). A continuación, utilice los mismos nombres simbólicos para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-elementos específicos que lo haría en las aplicaciones ODBC de Windows.
+Puede usar una aplicación ODBC Multiple Active Result Sets (MARS) y otros [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] características específicas mediante la inclusión de `/usr/local/include/msodbcsql.h` después de incluir los encabezados de unixODBC (`sql.h`, `sqlext.h`, `sqltypes.h`, y `sqlucode.h`). A continuación, utilice los mismos nombres simbólicos para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-elementos específicos que se usan en las aplicaciones ODBC de Windows.
 
 ## <a name="available-features"></a>Características disponibles  
 Las siguientes secciones de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] documentación Native Client para ODBC ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) son válidos cuando se utiliza el controlador ODBC en Mac OS y Linux:  
@@ -54,7 +55,7 @@ Las siguientes secciones de la [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 Las siguientes características no se han comprobado para que funcione correctamente en esta versión del controlador ODBC en Mac OS y Linux:
 
 -   Conexión de clúster de conmutación por error
--   [Resolución IP de red transparente](https://docs.microsoft.com/en-us/sql/connect/odbc/linux/using-transparent-network-ip-resolution)
+-   [Resolución IP de red transparente](https://docs.microsoft.com/en-us/sql/connect/odbc/linux/using-transparent-network-ip-resolution) (antes del controlador ODBC 17)
 -   [Seguimiento de controlador avanzado](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
 
 Las siguientes características no están disponibles en esta versión del controlador ODBC en Mac OS y Linux: 
@@ -106,15 +107,15 @@ Para 17 del controlador ODBC se admiten datos SQLCHAR de uno de las conjuntos/co
 |ISO-8859-13|Latin-7|
 |ISO-8859-15|Latín 9|
 
-Tras la conexión, el controlador detecta la configuración regional actual del proceso que se carga en. Si utiliza una de las codificaciones anteriores, el controlador utilizará esa codificación para los datos SQLCHAR (caracteres estrechos); en caso contrario, el valor predeterminado es UTF-8. Dado que todos los procesos de inicio en la configuración regional "C" de forma predeterminada (y, por tanto, hacer que el controlador predeterminado UTF-8), si una aplicación necesita utilizar una de las codificaciones anteriores, debe utilizar el **setlocale** función para establecer la configuración regional correctamente antes problema de conexión. ya sea especificando la configuración regional deseada explícitamente, o mediante una cadena vacía, por ejemplo, `setlocale(LC_ALL, "")` para usar la configuración regional del entorno.
+Tras la conexión, el controlador detecta la configuración regional actual del proceso que se carga en. Si utiliza una de las codificaciones anteriores, el controlador utiliza esa codificación para los datos SQLCHAR (caracteres estrechos); en caso contrario, el valor predeterminado es UTF-8. Dado que todos los procesos de inicio en la configuración regional "C" de forma predeterminada (y, por tanto, hacer que el controlador predeterminado UTF-8), si una aplicación necesita utilizar una de las codificaciones anteriores, debe utilizar el **setlocale** función para establecer la configuración regional correctamente antes problema de conexión. especificar la configuración regional deseada explícitamente, o mediante una cadena vacía como `setlocale(LC_ALL, "")` para usar la configuración regional del entorno.
 
-Por lo tanto, en un entorno típico de Linux o Mac que la codificación es UTF-8, los usuarios de la actualización de 17 del controlador ODBC de 13 ó 13.1 no advertirán las diferencias. Sin embargo, las aplicaciones que utilizan una codificación no UTF-8 en la lista anterior a través de `setlocale()` debe utilizar esa codificación de datos hacia/desde el controlador en lugar de UTF-8.
+Por lo tanto, en un entorno típico de Linux o Mac que la codificación es UTF-8, los usuarios de la actualización de 17 del controlador ODBC de 13 ó 13.1 no advertirán las diferencias. Sin embargo, las aplicaciones que utilizan una codificación no UTF-8 en la lista anterior a través de `setlocale()` que deba usar esa codificación de datos hacia/desde el controlador en lugar de UTF-8.
 
 Los datos de SQLWCHAR deben tener la codificación UTF-16LE (Little Endian).
 
 Al enlazar parámetros de entrada con SQLBindParameter, si un carácter estrecho SQL tipo como SQL_VARCHAR se especifica, el controlador convierte los datos proporcionados desde el cliente de codificación con el valor predeterminado (normalmente página de códigos 1252) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] codificación. Para los parámetros de salida, el controlador convierte de la codificación especificada en la información de intercalación asociada con los datos para el cliente de codificación. Sin embargo, es posible pérdida de datos---caracteres en la codificación de origen no se puede representar en la codificación de destino, se convertirá en un signo de interrogación ('? ').
 
-Para evitar esta pérdida de datos al enlazar parámetros de entrada, especificar un tipo de carácter Unicode SQL, como SQL_NVARCHAR. En este caso, el controlador convertirá desde el cliente de codificación a UTF-16, que puede representar todos los caracteres Unicode. Además, la columna de destino o el parámetro en el servidor debe ser también un tipo de Unicode (**nchar**, **nvarchar**, **ntext**) o uno con una intercalación/codificación que puede representar todos los caracteres del origen de datos original. Para evitar la pérdida de datos con parámetros de salida, especifique un tipo de Unicode SQL y una Unicode C escriba (SQL_C_WCHAR), haciendo que el controlador devolver los datos como UTF-16; o una estrecha C escriba y asegúrese de que el cliente de codificación puede representar todos los caracteres del origen de datos (Esto siempre es posible con UTF-8.)
+Para evitar esta pérdida de datos al enlazar parámetros de entrada, especificar un tipo de carácter Unicode SQL, como SQL_NVARCHAR. En este caso, el controlador convierte desde el cliente de codificación a UTF-16, que puede representar todos los caracteres Unicode. Además, la columna de destino o el parámetro en el servidor debe ser también un tipo de Unicode (**nchar**, **nvarchar**, **ntext**) o uno con una intercalación/codificación, que puede representar todos los caracteres del origen de datos original. Para evitar la pérdida de datos con parámetros de salida, especifique un tipo de Unicode SQL y una Unicode C escriba (SQL_C_WCHAR), haciendo que el controlador devolver los datos como UTF-16; o una estrecha C escriba y asegúrese de que el cliente de codificación puede representar todos los caracteres del origen de datos (Esto siempre es posible con UTF-8.)
 
 Para obtener más información acerca de intercalaciones y codificaciones, vea [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md).
 

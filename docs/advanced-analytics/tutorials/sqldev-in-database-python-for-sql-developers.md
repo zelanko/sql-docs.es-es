@@ -10,22 +10,24 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
-applies_to: SQL Server 2017
+applies_to:
+- SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 6d7e49a6074e342f51595e9b1cdb10227761f670
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c026e09e1fa34b98d1eda43d59097c966051f6d7
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>Análisis de Python en bases de datos para desarrolladores de SQL
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 El objetivo de este tutorial es proporcionar a los programadores SQL con experiencia práctica para crear una solución con Python que se ejecuta en SQL Server de aprendizaje automático. En este tutorial, aprenderá a agregar código Python a procedimientos almacenados y ejecutar procedimientos almacenados para generar y predicción de modelos.
 
@@ -45,7 +47,7 @@ El proceso de creación de una solución de aprendizaje automático es una compl
 
 Los datos están en el conjunto de datos de Nueva York Taxi conocido. Para realizar este tutorial rápido y sencillo, el muestreo de los datos. Se creará un modelo de clasificación binaria que predice si un viaje determinado es probable que obtenga una sugerencia o no, en función de las columnas como la hora del día, la distancia y la ubicación de recogida.
 
-Todas las tareas pueden realizarse mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimientos almacenados en el entorno conocido de[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
+Todas las tareas pueden realizarse mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimientos almacenados en el entorno conocido de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
 - [Paso 1: Descargar los datos de ejemplo](sqldev-py1-download-the-sample-data.md)
 

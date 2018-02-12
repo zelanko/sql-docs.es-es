@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 801a29c07d55b9388d5be0edab33690399f2dde9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7d41bd73398c016b920fa67244ffea1af865bde2
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="unattended-installation-of-machine-learning-services-in-database"></a>Instalación desatendida de servicios de aprendizaje de máquina (In-Database)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 En este artículo se describe cómo usar argumentos de línea de comandos con el programa de instalación de SQL Server para instalar los componentes de aprendizaje automático.
 
@@ -34,7 +35,7 @@ Instalación desatendida, se entiende que no utilice las características intera
 
 **Se aplica a: servicios de aprendizaje automático de 2017 SQL Server (en bases de datos), SQL Server 2016 R Services**
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 + Debe instalar el motor de base de datos en cada instancia donde va a usar aprendizaje automático.
 

@@ -1,6 +1,7 @@
 ---
 title: R Server (independiente) | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 06/22/2017
 ms.reviewer: 
 ms.suite: sql
@@ -10,19 +11,21 @@ ms.component: r
 vms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: ca9e48f1-67b8-4905-9b78-56752d7a4e81
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: d7136f051317f7ffeb26d779b3cf611edef13592
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3f0c567463c25a54829a988516890bead171f5ec
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-server-standalone"></a>R Server (Standalone)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 En SQL Server 2016, Microsoft publicó **R Server (independiente)**, como parte de la plataforma para admitir el análisis de clase empresarial.  Microsoft R Server proporciona escalabilidad y seguridad para el lenguaje R y resuelve las limitaciones de memoria de código abierto R. Al igual que SQL Server R Services, Microsoft R Server (independiente) proporciona el procesamiento paralelo y fragmentado de datos, permitiendo a los usuarios de R usar datos mucho mayores que pueden caber en memoria.
 

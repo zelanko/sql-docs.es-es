@@ -11,18 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c3c223b8-75c4-412e-a319-d57ecf6533af
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 0f1e597d4b6ddda30938108badc0bf31b0108bc4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5d52dd25059dcc8204fbc2598a595de9e208f308
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="installing-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>Instalación de características en una máquina virtual de Azure de aprendizaje de automático de SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
 Si implementa una máquina virtual de Azure que incluye [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ahora puede seleccionar el aprendizaje automático como una característica que se agregará a la instancia cuando se crea la máquina virtual.
 
@@ -106,7 +107,7 @@ Para obtener más información, consulte [Configurar SQL Server R Services](../.
 
 + Habilitar las canalizaciones con nombre
   
-  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] usa el protocolo Canalizaciones con nombre en las conexiones entre los equipos cliente y servidor, así como en algunas conexiones de naturaleza interna. Si Canalizaciones con nombre no está habilitado, debe instalarlo y habilitarlo tanto en la máquina virtual de Azure como en cualquier cliente de ciencia de datos que se conecte al servidor.
+  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] usa el protocolo de canalizaciones con nombre para las conexiones entre los equipos cliente y servidor y para algunas conexiones internas. Si Canalizaciones con nombre no está habilitado, debe instalarlo y habilitarlo tanto en la máquina virtual de Azure como en cualquier cliente de ciencia de datos que se conecte al servidor.
   
 + Habilitar TCP/IP
 

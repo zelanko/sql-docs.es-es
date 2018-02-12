@@ -11,23 +11,24 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 18c9978a-aa55-42bd-9ab3-8097030888c9
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 9da686f7284de16d93ded4c87ddfe89e17492a57
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d1eb0f1cce23d084516b5446d39274ac3078b0b8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="resource-governance-for-machine-learning-in-sql-server"></a>Regulación de recursos para el aprendizaje automático en SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artículo proporciona información general sobre la regulación de recursos de características de SQL Server que le ayudan a asignar y equilibrar los recursos usados por los scripts de R y Python.
 
-**Se aplica a:** [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] 
- [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] y [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
+**Se aplica a:** [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]
+ [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] y [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
 
 ## <a name="goals-of-resource-governance-for-machine-learning"></a>Objetivos de la regulación de recursos para el aprendizaje automático
 

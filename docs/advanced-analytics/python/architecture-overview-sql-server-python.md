@@ -14,13 +14,14 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4bfecc8ed96b445c0d44c11449114d1d6c087942
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5ca823bc7094c77a31cfd3178294cd49a360d77a
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architecture-overview-for-machine-learning-services-with-python"></a>Introducción a la arquitectura de servicios de aprendizaje de máquina a Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este tema proporciona información general sobre cómo Python se integra con SQL Server, incluido el modelo de seguridad, los componentes en el motor de base de datos que admiten la ejecución de scripts externos y nuevos componentes que permiten la interoperabilidad de Python con SQL Server. Para obtener más información, vea los temas vinculados.
 

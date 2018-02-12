@@ -10,18 +10,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 52ad3f10-6d24-477a-aeb6-110456b2ed1c
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: a39a9061df724175d72e4b38c883fdf2495234ad
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 27a80fa7dddf5066e87a60998a691c07acfb40ab
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="machine-learning-lifecycle-and-personas"></a>Ciclo de vida de aprendizaje de máquina y roles
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Proyectos de aprendizaje de máquina pueden ser complejos, ya que requieren los conocimientos teóricos y colaboración de un conjunto dispares de profesionales de TI. Este artículo describen las tareas principales en el ciclo de vida de aprendizaje de máquina, el tipo de profesionales de datos que actúan en aprendizaje automático y cómo SQL Server es compatible con las necesidades.
 

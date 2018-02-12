@@ -11,20 +11,22 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 1c377717-e281-431e-8171-3924dcce1cdd
-caps.latest.revision: "132"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 7bbf9d5101ea0e613d0a8843f9c3a3cd91b250b1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d6b3c17d4fadf639102c4090fceaabee37276bc2
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-the-microsoftml-package-with-sql-server"></a>Usar el paquete de MicrosoftML con SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 El [ **MicrosoftML** ](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction) paquete que se proporciona con Microsoft R Server y SQL Server 2017 incluye varios algoritmos de aprendizaje de automático. Estas API desarrolladas por Microsoft para las aplicaciones de aprendizaje de automático interno y se han perfeccionado en los años para admitir el alto rendimiento de grandes cantidades de datos, mediante la transmisión por secuencias de datos rápidas y procesamiento de varios núcleos. MicrosoftML también incluye numerosas transformaciones de texto y procesamiento de imágenes.
 

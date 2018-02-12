@@ -1,5 +1,5 @@
 ---
-title: "Palabras clave de cadena de conexión y origen de datos (DSN) de nombres | Documentos de Microsoft"
+title: Conectarse a SQL Server | Documentos de Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,36 +17,28 @@ helpviewer_keywords:
 - connection string keywords
 - DSNs
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2020ce16f722354b49a7e35e4a3f1e1706b6a2d5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b6ad6278da1a3e325356058df51238dc34018bf0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="connection-string-keywords-and-data-source-names-dsns"></a>Palabras clave de cadena de conexión y nombres de orígenes de datos (DSN)
+# <a name="connecting-to-sql-server"></a>Conectarse a SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Este tema describe cómo puede crear una conexión a un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de datos.  
   
 ## <a name="connection-properties"></a>Propiedades de conexión  
-En esta versión de la [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] en Linux o Mac OS, puede usar las palabras clave de conexión siguientes:  
-  
-||||||  
-|-|-|-|-|-|  
-|`Addr`|`Address`|`ApplicationIntent`|`AutoTranslate`|`Database`|
-|`Driver`|`DSN`|`Encrypt`|`FileDSN`|`MARS_Connection`|  
-|`MultiSubnetFailover`|`PWD`|`Server`|`Trusted_Connection`|`TrustServerCertificate`|  
-|`UID`|`WSID`|`ColumnEncryption`|`TransparentNetworkIPResolution`||  
+
+Vea [DSN y palabras clave de cadena de conexión y los atributos](../../../connect/odbc/dsn-connection-string-attribute.md) para todas las palabras clave de cadena de conexión y los atributos admitidos en Linux y Mac
 
 > [!IMPORTANT]  
 > Al conectarse a una base de datos que usa la creación de reflejo de la base de datos (tiene un asociado de conmutación por error), no especifique el nombre de la base de datos en la cadena de conexión. En su lugar, envíe un **usar** *database_name* comando para conectarse a la base de datos antes de ejecutar las consultas.  
-  
-Para obtener más información sobre estas palabras clave, consulte la sección ODBC de [Usar palabras clave de cadena de conexión con SQL Server Native Client](http://go.microsoft.com/fwlink/?LinkID=126696).  
   
 El valor pasado a la **controlador** palabra clave puede tener uno de los siguientes:  
   
@@ -85,10 +78,10 @@ Para obtener más información, consulte [cifrar conexiones a SQL Server](http:/
 
 Con independencia de la configuración de **Encrypt** y **TrustServerCertificate**, siempre se cifran las credenciales de inicio de sesión del servidor (nombre de usuario y contraseña). En la tabla siguiente se muestra el efecto de la configuración de **Encrypt** y **TrustServerCertificate** .  
 
-||**TrustServerCertificate = no**|**TrustServerCertificate = yes**|  
+||**TrustServerCertificate=no**|**TrustServerCertificate=yes**|  
 |-|-------------------------------------|------------------------------------|  
-|**Cifrar = no**|No se comprueba el certificado de servidor.<br /><br />No se cifran los datos enviados entre cliente y servidor.|No se comprueba el certificado de servidor.<br /><br />No se cifran los datos enviados entre cliente y servidor.|  
-|**Cifrar = sí**|Se comprueba el certificado de servidor.<br /><br />Se cifran los datos enviados entre cliente y servidor.<br /><br />El nombre (o dirección IP) en un nombre común del asunto (CN) o nombre alternativo del sujeto (SAN) en un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] certificado SSL debe coincidir exactamente con el nombre de servidor (o dirección IP) especificado en la cadena de conexión.|No se comprueba el certificado de servidor.<br /><br />Se cifran los datos enviados entre cliente y servidor.|  
+|**Encrypt=no**|No se comprueba el certificado de servidor.<br /><br />No se cifran los datos enviados entre cliente y servidor.|No se comprueba el certificado de servidor.<br /><br />No se cifran los datos enviados entre cliente y servidor.|  
+|**Encrypt=yes**|Se comprueba el certificado de servidor.<br /><br />Se cifran los datos enviados entre cliente y servidor.<br /><br />El nombre (o dirección IP) en un nombre común del asunto (CN) o nombre alternativo del sujeto (SAN) en un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] certificado SSL debe coincidir exactamente con el nombre de servidor (o dirección IP) especificado en la cadena de conexión.|No se comprueba el certificado de servidor.<br /><br />Se cifran los datos enviados entre cliente y servidor.|  
 
 De forma predeterminada, las conexiones cifradas siempre comprueban el certificado del servidor. Sin embargo, si se conecta a un servidor que tenga un certificado autofirmado, agregar el `TrustServerCertificate` opción para omitir la comprobación del certificado con la lista de entidades emisoras de certificados de confianza:  
 
@@ -100,15 +93,18 @@ SSL utiliza la biblioteca OpenSSL. En la siguiente tabla se muestran las version
 
 |Plataforma|Versión mínima de OpenSSL|Ubicación del almacén de confianza de certificados predeterminada|  
 |------------|---------------------------|--------------------------------------------|
-|Debian 8.71 |1.0.1T|/etc/ssl/certs|
-|macOS 10.12|1.0.2K|/usr/local/etc/OpenSSL/certs|
-|OS X 10.11|1.0.2J|/usr/local/etc/OpenSSL/certs|
-|Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|  
-|Red Hat Enterprise Linux 7|1.0.1E|/etc/pki/tls/cert.pem|
-|SuSE Linux Enterprise 12 |1.0.1I|/etc/ssl/certs|
-|Ubuntu 15.10 |1.0.2d|/etc/ssl/certs|
-|Ubuntu 16.04 |1.0.2g|/etc/ssl/certs|
-|Ubuntu 16,10 |1.0.2g|/etc/ssl/certs|
+|Debian 9|1.1.0|/etc/ssl/certs|
+|Debian 8.71 |1.0.1|/etc/ssl/certs|
+|macOS 10.13|1.0.2|/usr/local/etc/openssl/certs|
+|macOS 10.12|1.0.2|/usr/local/etc/openssl/certs|
+|OS X 10.11|1.0.2|/usr/local/etc/openssl/certs|
+|Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
+|Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
+|SuSE Linux Enterprise 12 |1.0.1|/etc/ssl/certs|
+|SuSE Linux Enterprise 11 |0.9.8|/etc/ssl/certs|
+|Ubuntu 17.10 |1.0.2|/etc/ssl/certs|
+|Ubuntu 16,10 |1.0.2|/etc/ssl/certs|
+|Ubuntu 16.04 |1.0.2|/etc/ssl/certs|
   
 También puede especificar el cifrado en la cadena de conexión usando la `Encrypt` cuando se utiliza la opción **SQLDriverConnect** para conectarse.
 

@@ -1,6 +1,7 @@
 ---
 title: Crear flujos de trabajo de BI con R | Documentos de Microsoft
-ms.custom: SQL2016_New_Updated
+ms.custom:
+- SQL2016_New_Updated
 ms.date: 04/18/2017
 ms.reviewer: 
 ms.suite: sql
@@ -11,18 +12,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34c3b1c2-97db-4cea-b287-c7f4fe4ecc1b
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 53359b392f1936fa968d22b8ae58c1f3816771d8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: dcfd7571f5dd555e6654eb65c4bbb7852f82feff
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="creating-bi-workflows-with-r"></a>Crear flujos de trabajo de BI con R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Una base de datos relacional es una tecnología altamente optimizada que ofrece soluciones escalables de procesamiento de transacciones, almacenamiento y consulta de datos.
 
@@ -67,7 +69,7 @@ Estos son algunos ideass de cómo automatizar los datos de procesamiento de un d
 
 Esta entrada de blog muestra las técnicas básicas para manipular el código de R con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]: 
 
-+ Llamar a R mediante la tarea Ejecutar SQL, para generar datos y guardar en[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
++ Llamar a R mediante la tarea Ejecutar SQL, para generar datos y guardar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 + Usar un procedimiento almacenado para entrenar un modelo de R y almacenarlo en la base de datos
 

@@ -11,17 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d15ee956-918f-40e0-b986-2bf929ef303a
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 58a86d2268e318470d1d05799e9146e877966263
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 80b4898397cd0cb6460b379d91be81eb28cd9b87
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="set-up-a-data-science-client-for-use-with-sql-server"></a>Configurar un cliente de ciencia de datos para su uso con SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Después de haber configurado una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para admitir el aprendizaje automático, debe configurar un entorno de desarrollo que es capaz de conectarse al servidor para la implementación y ejecución remotas.
 
@@ -59,7 +60,7 @@ Si ya no tiene un entorno de desarrollo de R preferido, se recomienda uno de los
  
     Para configurar RTV para usar las bibliotecas de cliente de Microsoft R, consulte [sobre el cliente de R de Microsoft](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)
 
-+ Visual Studio de 2017
++ Visual Studio 2017
 
     Incluso la edición gratuita Community incluye la carga de trabajo de ciencia de datos, que instala las plantillas de proyecto para R, Python y F #.
 
@@ -80,7 +81,7 @@ Si ya no tiene un entorno de desarrollo de R preferido, se recomienda uno de los
 
     Vea [este sitio](https://docs.microsoft.com/visualstudio/rtvs/getting-started-with-r) algunos ejemplos de cómo compilar y depurar R proyectos con herramientas de R para Visual Studio. 
 
-+ Visual Studio de 2017
++ Visual Studio 2017
 
     Si instala el cliente de Microsoft R o R Server **antes de** instalar Visual Studio, las bibliotecas de R Server automáticamente se detectan y se utiliza para la ruta de biblioteca. Si no ha instalado las bibliotecas de RevoScaleR desde el **herramientas de R** menú, seleccione **instalar el cliente de R**.
 

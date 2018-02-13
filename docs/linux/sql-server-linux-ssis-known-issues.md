@@ -10,18 +10,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: edff09c1c66a1b3c97a80d42d5a1d9702dca3e0c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fc2455ea79931b051c83677fc918c0382afcab3b
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Limitaciones y problemas conocidos de SSIS en Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este artículo describen problemas conocidos y las limitaciones actuales de SQL Server Integration Services (SSIS) en Linux.
 
@@ -40,7 +42,7 @@ Las siguientes características no se admiten en esta versión de SSIS en Linux:
 
 Para conocer otras limitaciones y problemas conocidos de SSIS en Linux, consulte la [notas de la versión](sql-server-linux-release-notes.md#ssis).
 
-## <a name="components"></a>Componentes admitidos y no admitidos
+## <a name="components"></a> Componentes admitidos y no admitidos
 
 Se admiten los siguientes componentes de Integration Services integrados en Linux. Algunos de ellos tienen limitaciones en la plataforma de Linux, tal como se describe en las tablas siguientes.
 
@@ -48,14 +50,14 @@ Componentes integrados que no se muestran aquí no se admiten en Linux.
 
 ### <a name="supported-control-flow-tasks"></a>Admite tareas de flujo de control
 - Inserción masiva, tarea
-- Tarea Flujo de datos
+- tarea Flujo de datos
 - Tarea de generación de perfiles de datos
 - Tarea Ejecutar SQL
 - Tarea Ejecutar instrucción T-SQL
 - Texto Expresión
 - Tarea FTP
 - Tarea Servicio web
-- Tarea XML
+- XML Task
 
 ### <a name="control-flow-tasks-supported-with-limitations"></a>Tareas de flujo de control compatibles con limitaciones
 
@@ -84,7 +86,7 @@ Componentes integrados que no se muestran aquí no se admiten en Linux.
 | ADO.NET, origen y destino | Solo se admite el proveedor de datos SQLClient. |
 | Destino y origen de archivo plano | Solo se admiten rutas de acceso de archivo de estilo de Windows, al que se aplica la regla de asignación de ruta de acceso predeterminada. Por ejemplo `D:\home\ssis\travel.csv` se convierte en `/home/ssis/travel.csv`. |
 | Origen OData | Solo se admite la autenticación básica. |
-| Destino y origen de ODBC | Es compatible con controladores de 64 bits Unicode ODBC en Linux. Depende del Administrador de controladores UnixODBC en Linux. |
+| Origen y destino de ODBC | Es compatible con controladores de 64 bits Unicode ODBC en Linux. Depende del Administrador de controladores UnixODBC en Linux. |
 | Destino y origen de OLE DB | Solo se admiten SQL Server Native Client 11.0 y proveedor Microsoft OLE DB para SQL Server. |
 | | |
 
@@ -108,7 +110,7 @@ Componentes integrados que no se muestran aquí no se admiten en Linux.
 - Dinamización
 - Recuento de filas
 - Dimensión de variación lenta
-- Sort
+- Ordenar
 - Búsqueda de términos
 - Unión de todo
 - Anulación de dinamización

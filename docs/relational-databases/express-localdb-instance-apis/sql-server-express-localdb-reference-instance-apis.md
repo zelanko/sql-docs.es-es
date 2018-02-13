@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d01b87a26674a213c1c0ed0f14a6ff867222fc4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b12274cfd0ee0c7703229cc416793fb23a1a91ae
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-express-localdb-reference---instance-apis"></a>Referencia de LocalDB - API de instancia de SQL Server Express
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]En el mundo de SQL Server tradicional, en función de servicio, las instancias individuales de SQL Server instaladas en un único equipo están separadas físicamente; es decir, cada instancia debe instalarse y quitarse de forma individual, tiene un conjunto independiente de los archivos binarios y se ejecuta bajo un proceso de servicio independiente. El nombre de la instancia de SQL Server se utiliza para especificar a qué instancia de SQL Server se desea conectar el usuario.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+En el mundo tradicional de SQL Server basado en servicios, las instancias de SQL Server individuales que están instaladas en un equipo único se encuentran físicamente separadas; es decir, cada instancia debe instalarse y quitarse de forma individual, tener un conjunto independiente de archivos binarios y ejecutarse en un proceso individual del servicio. El nombre de la instancia de SQL Server se utiliza para especificar a qué instancia de SQL Server se desea conectar el usuario.  
   
  La API de instancia de SQL Server Express LocalDB usa un modelo de instancia simplificado y “ligero”. Aunque las instancias individuales de LocalDB estén separadas en el disco y en el Registro, utilizan el mismo conjunto de archivos binarios compartidos de LocalDB. Además, LocalDB no utiliza servicios; las instancias de LocalDB se inician a petición a través de llamadas a la API de la instancia de LocalDB. En LocalDB, el nombre de instancia se utiliza para especificar la instancia de LocalDB con la que va a trabar el usuario.  
   

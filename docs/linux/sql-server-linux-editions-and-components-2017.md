@@ -1,11 +1,11 @@
 ---
 title: "Ediciones y las características admitidas de SQL Server 2017 ~ Linux | Documentos de Microsoft"
-ms.custom: 
+ms.custom: sql-linux
 ms.date: 09/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology:
@@ -35,13 +35,15 @@ caps.latest.revision:
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e1734b7ec7619a6943e1d79a0933b6189ad3162d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: cd937ab176ef7c33f6ffa99090ac36b69182968c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Ediciones y las características admitidas de SQL Server 2017 en Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este artículo proporciona detalles de las características admitidas por las diferentes ediciones de SQL Server 2017 en Linux. Para las ediciones y las características admitidas de SQL Server en Windows, vea [2017 de SQL Server - Windows](../sql-server/editions-and-components-of-sql-server-2017.md).  
   
@@ -72,7 +74,7 @@ Para obtener una lista de características de SQL Server no está disponibles en
 
 Puede instalar solo los componentes de cliente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en un equipo en el que se ejecuten aplicaciones cliente/servidor conectadas directamente a una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Una instalación de componentes de cliente también es una buena opción si administra una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en un servidor de bases de datos, o si tiene pensado desarrollar aplicaciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-components"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]componentes de  
+## <a name="includessnoversionincludesssnoversion-mdmd-components"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Componentes de  
 
 SQL Server 2017 en Linux es compatible con el motor de base de datos de SQL Server. En la tabla siguiente describe las características en el motor de base de datos.   
   
@@ -81,7 +83,7 @@ SQL Server 2017 en Linux es compatible con el motor de base de datos de SQL Serv
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] incluye el [!INCLUDE[ssDE](../includes/ssde-md.md)], el servicio principal para almacenar, procesar y proteger los datos, replicación, búsqueda de texto completo, herramientas para administrar relacionales y datos XML y, en la integración del análisis de base de datos.|  
 
 **Ediciones Developer, Enterprise Core y evaluación**  
-Para las características admitidas por Developer, Enterprise Core y las ediciones de evaluación, consulte características enumeradas para la edición Enterprise de SQL Server en las tablas siguientes.
+Para características compatibles con Developer, Enterprise Core y las ediciones de evaluación, vea las características enumeradas para la edición Enterprise de SQL Server en las tablas siguientes.
 
 La edición Developer sigue siendo compatible con solo un cliente de [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
   

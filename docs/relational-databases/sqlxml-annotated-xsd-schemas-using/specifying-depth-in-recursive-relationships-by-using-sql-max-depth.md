@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - sql:max-depth
 - recursive joins [SQLXML]
 ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a2915b3a06d86bac97cb2202f914e03b826a823
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 87461f0a421f7a1dd3e225acfdb40667161855cf
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Especificar la profundidad en relaciones recursivas utilizando sql:max-depth
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]En las bases de datos relacionales, cuando está implicada una tabla en una relación consigo misma, se denomina una relación recursiva. Por ejemplo, en una relación supervisor-supervisado, una tabla que almacena los registros de empleados se relaciona consigo misma. En este caso, la tabla de empleados desempeña un rol de supervisor en uno de los lados de la relación y un rol de supervisado en el otro lado.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+En las bases de datos relacionales, cuando una tabla se relaciona consigo misma, este tipo de relación recibe el nombre de relación recursiva. Por ejemplo, en una relación supervisor-supervisado, una tabla que almacena los registros de empleados se relaciona consigo misma. En este caso, la tabla de empleados desempeña un rol de supervisor en uno de los lados de la relación y un rol de supervisado en el otro lado.  
   
  Los esquemas de asignación pueden incluir relaciones recursivas donde un elemento y su antecesor son del mismo tipo.  
   

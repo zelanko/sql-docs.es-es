@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - adExecuteStream flag
 - SQLXMLOLEDB Provider, about SQLXMLOLEDB Provider
 ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87c5d06433a07ac722af92ed64b7c9551d340f96
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b50dce46b9342a4c6271de7abca7bd0205c77761
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>Introducción al proveedor SQLXMLOLEDB (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]El proveedor SQLXMLOLEDB es un proveedor OLE DB que expone [!INCLUDE[msCoName](../../../includes/msconame-md.md)] funcionalidad SQLXML a través de ActiveX Data Objects (ADO). Sin embargo, el proveedor solamente puede ejecutar comandos en el modo "escribir en un flujo de salida" de ADO. El proveedor SQLXMLOLEDB no es un proveedor de conjunto de filas. Cuando se ejecuta un comando, debe especificar la marca adExecuteStream, que indica a ADO que use el flujo de salida que ha especificado.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+El proveedor SQLXMLOLEDB es un proveedor OLE DB que expone la funcionalidad de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML a través de objetos de datos ActiveX (ADO). Sin embargo, el proveedor solamente puede ejecutar comandos en el modo "escribir en un flujo de salida" de ADO. El proveedor SQLXMLOLEDB no es un proveedor de conjunto de filas. Cuando se ejecuta un comando, debe especificar la marca adExecuteStream, que indica a ADO que use el flujo de salida que ha especificado.  
   
  En el ejemplo siguiente se muestra la sintaxis para el comando Execute en el que se especifica adExecuteStream, marca:  
   

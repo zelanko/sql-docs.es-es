@@ -1,6 +1,6 @@
 ---
 title: "Prácticas recomendadas de rendimiento para SQL Server en Linux | Documentos de Microsoft"
-description: En este tema se proporcionan instrucciones y procedimientos recomendados para ejecutar SQL Server 2017 en Linux.
+description: "En este artículo se proporcionan instrucciones y procedimientos recomendados para ejecutar SQL Server 2017 en Linux."
 author: rgward
 ms.author: bobward
 manager: craigg
@@ -9,20 +9,22 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 565ede5c15f6e4e34a7a5cbbdcd6fa7d145c8ff5
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: a5cc1b84780ce8b3ea471ee567a7296ab2b183b9
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>Prácticas recomendadas de rendimiento y directrices de configuración para SQL Server 2017 en Linux
 
-Este tema proporciona prácticas recomendadas y recomendaciones para maximizar el rendimiento para aplicaciones de base de datos que se conectan a SQL Server en Linux. Estas recomendaciones son específicas para ejecutar en la plataforma Linux. Todas las recomendaciones normales de SQL Server, como el diseño de índices, se siguen aplican.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+Este artículo proporciona prácticas recomendadas y recomendaciones para maximizar el rendimiento para aplicaciones de base de datos que se conectan a SQL Server en Linux. Estas recomendaciones son específicas para ejecutar en la plataforma Linux. Todas las recomendaciones normales de SQL Server, como el diseño de índices, se siguen aplican.
 
 Las instrucciones siguientes contienen recomendaciones para configurar SQL Server y el sistema operativo Linux.
 

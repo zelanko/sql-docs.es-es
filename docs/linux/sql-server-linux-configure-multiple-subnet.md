@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: df5182d374e41b68fe35333c6e4ab59714d8241d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 84195d2451664b2bee81ebbb1dc3b7d9d89060d5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Configurar instancias de clúster de conmutación por error y varias subredes grupos de disponibilidad AlwaysOn
 
@@ -58,7 +58,7 @@ En el mundo de Windows, un clúster de conmutación por error de Windows Server 
 
     Donde *filename* es el nombre que desea llamar el CIB.
 
-2.  Edite el archivo que se generó. Busque la `<resources>` sección. Verá los distintos recursos que se crearon para el AG o FCI. Encuentre el asociado con la dirección IP. Agregar un `<instance attributes>` sección con la información de la segunda dirección IP por encima o debajo de la existente, pero antes `<operations>`. Será similar a la siguiente sintaxis:
+2.  Edite el archivo que se generó. Busque la `<resources>` sección. Verá los distintos recursos que se crearon para el AG o FCI. Encuentre el asociado con la dirección IP. Agregar un `<instance attributes>` sección con la información de la segunda dirección IP por encima o debajo de la existente, pero antes `<operations>`. Es similar a la sintaxis siguiente:
 
     ```xml
     <instance attributes id="<NameForAttribute>" score="<Score>">

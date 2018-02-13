@@ -8,23 +8,24 @@ ms.service:
 ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, architecture
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale;barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30748d9c5cf8a53b7e04c9897ba2fe70fa32972e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b8652d59a4a2a6ad980c2d7659940ac0552bfeed
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-graph-architecture"></a>Arquitectura de gráfico SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ Una tabla irregular representa una relación en un gráfico. Bordes siempre se d
 
 |Nombre de columna    |Description  |
 |---   |---  |
-|`$edge_id`   |Identifica de forma única un borde determinado en la base de datos. Es una columna generada y el valor es una combinación de object_id de la tabla irregular y un valor generado internamente bigint. Sin embargo, cuando la `$edge_id` columna está seleccionada, se muestra un valor calculado en forma de una cadena JSON. `$edge_id`es una pseudocolumna, que se asigna a un nombre interno con una cadena hexadecimal en ella. Cuando se selecciona `$edge_id` de la tabla, el nombre de columna aparecerá como `$edge_id_\<hex_string>`. Usar nombres de columna pseudo en consultas es la manera recomendada de la consulta interna `$edge_id` columna y con nombre interno a cadena hexadecimal deben evitarse. |
+|`$edge_id`   |Identifica de forma única un borde determinado en la base de datos. Es una columna generada y el valor es una combinación de object_id de la tabla irregular y un valor generado internamente bigint. Sin embargo, cuando la `$edge_id` columna está seleccionada, se muestra un valor calculado en forma de una cadena JSON. `$edge_id` es una pseudocolumna, que se asigna a un nombre interno con una cadena hexadecimal en ella. Cuando se selecciona `$edge_id` de la tabla, el nombre de columna aparecerá como `$edge_id_\<hex_string>`. Usar nombres de columna pseudo en consultas es la manera recomendada de la consulta interna `$edge_id` columna y con nombre interno a cadena hexadecimal deben evitarse. |
 |`$from_id`   |Almacena el `$node_id` del nodo, desde donde se origina el borde.  |
 |`$to_id`   |Almacena el `$node_id` del nodo, en el que finaliza el borde. |
 
@@ -99,7 +100,7 @@ En la tabla siguiente se enumera los valores válidos para `graph_type` columna
 |8  |GRAPH_TO_ID_COMPUTED  |
 
 
-`sys.columns`también almacena información acerca de las columnas implícitas creados en las tablas de borde o nodo. Después de la información se pueden recuperar desde sys.columns, sin embargo, los usuarios no pueden seleccionar estas columnas de una tabla de nodo o borde. 
+`sys.columns` también almacena información acerca de las columnas implícitas creados en las tablas de borde o nodo. Después de la información se pueden recuperar desde sys.columns, sin embargo, los usuarios no pueden seleccionar estas columnas de una tabla de nodo o borde. 
 
 Columnas implícitas en una tabla de nodo  
 |Nombre de la columna    |Tipo de datos  |is_hidden  |Comentario  |
@@ -139,7 +140,7 @@ Obtenga información acerca de la [!INCLUDE[tsql-md](../../includes/tsql-md.md)]
 ### <a name="data-definition-language-ddl-statements"></a>Instrucciones de lenguaje de definición (DDL) de datos
 |Tarea   |Tema relacionado  |Notas
 |---  |---  |---  |
-|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE `Ahora se ha ampliado para admitir la creación de una tabla en el borde de AS o nodo de AS. Tenga en cuenta que una tabla irregular puede o que no haya ningún usuario definido atributos.  |
+|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` Ahora se ha ampliado para admitir la creación de una tabla en el borde de AS o nodo de AS. Tenga en cuenta que una tabla irregular puede o que no haya ningún usuario definido atributos.  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|Se pueden modificar tablas de borde y el nodo del mismo modo que una tabla relacional, usa el `ALTER TABLE`. Los usuarios pueden agregar o modificar las columnas definidas por el usuario, índices o restricciones. Sin embargo, modificar las columnas de gráfico interno, como `$node_id` o `$edge_id`, se producirá un error.  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Los usuarios pueden crear índices en pseudocolumnas y las columnas definidas por el usuario en tablas de nodo y de borde. Se admiten todos los tipos de índices, incluidos los índices de almacén de columnas agrupados y no agrupados.  |
 |DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Pueden quitar tablas de nodo y el borde del mismo modo que una tabla relacional, usa el `DROP TABLE`. Sin embargo, en esta versión, no hay ninguna restricción para asegurarse de que ningún bordes apuntar a un nodo se eliminó y no se admite la eliminación en cascada de bordes, tras la eliminación de un nodo o una tabla de nodos. Se recomienda que, si se quita una tabla de nodo, los usuarios quitar los bordes que se conecta a los nodos de esa tabla nodo manualmente para mantener la integridad del gráfico.  |
@@ -148,10 +149,10 @@ Obtenga información acerca de la [!INCLUDE[tsql-md](../../includes/tsql-md.md)]
 ### <a name="data-manipulation-language-dml-statements"></a>Instrucciones de lenguaje de manipulación (DML) de datos
 |Tarea   |Tema relacionado  |Notas
 |---  |---  |---  |
-|INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|Insertar en una tabla de nodo es similar a insertar en una tabla relacional. Los valores de `$node_id` columna se genera automáticamente. Ha intentado insertar un valor en `$node_id` o `$edge_id` columna se producirá un error. Los usuarios deben proporcionar valores para `$from_id` y `$to_id` columnas al insertar en una tabla irregular. `$from_id`y `$to_id` son el `$node_id` valores de los nodos que se conecta un borde determinado.  |
+|INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|Insertar en una tabla de nodo es similar a insertar en una tabla relacional. Los valores de `$node_id` columna se genera automáticamente. Ha intentado insertar un valor en `$node_id` o `$edge_id` columna se producirá un error. Los usuarios deben proporcionar valores para `$from_id` y `$to_id` columnas al insertar en una tabla irregular. `$from_id` y `$to_id` son el `$node_id` valores de los nodos que se conecta un borde determinado.  |
 |DELETE | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Datos de tablas de borde o nodo pueden eliminarse igual se eliminan de las tablas relacionales. Sin embargo, en esta versión, no hay ninguna restricción para asegurarse de que ningún bordes apuntar a un nodo se eliminó y no se admite la eliminación en cascada de bordes, tras la eliminación de un nodo. Se recomienda que cada vez que se elimina un nodo, todos los bordes de conexión a dicho nodo también se eliminan, para mantener la integridad del gráfico.  |
 |UPDATE |[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  |Valores en columnas definidas por el usuario pueden actualizarse mediante la instrucción UPDATE. Actualizar las columnas de gráfico interno, `$node_id`, `$edge_id`, `$from_id` y `$to_id` no está permitido.  |
-|MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE`no se admite la instrucción en una tabla de nodo o borde.  |
+|MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE` no se admite la instrucción en una tabla de nodo o borde.  |
 
 
 ### <a name="query-statements"></a>Instrucciones de consulta

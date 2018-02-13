@@ -9,28 +9,29 @@ ms.component: graphs
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, tsql reference
 ms.assetid: 
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale;barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ffc2bcd906e0d975d763d12aaa899cb414ef6b5e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a8cdff2f5407ae25f096ff65c0110e22a28bfb09
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Crear una base de datos del gráfico y ejecutar algunas consultas mediante T-SQL de coincidencia de patrones
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Este ejemplo proporciona un [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script para crear una base de datos de gráfico con nodos y bordes y, a continuación, usar la nueva cláusula de coincidencia que coincida con algunos de los patrones y recorrer el gráfico. Este script de ejemplo funcionará en ambas bases de datos SQL Azure y[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+Este ejemplo proporciona un [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script para crear una base de datos de gráfico con nodos y bordes y, a continuación, usar la nueva cláusula de coincidencia que coincida con algunos de los patrones y recorrer el gráfico. Este script de ejemplo funcionará en ambas bases de datos SQL Azure y [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
  
 ## <a name="sample-schema"></a>Esquema de ejemplo  
 Este ejemplo crea un esquema de gráfico, tal y como se ha explicado en la figura 1, para una red social hipotética con nodos de personas, restaurante y City. Estos nodos estén conectados entre sí mediante tus amigos, me gusta, bordes LivesIn y LocatedIn. 

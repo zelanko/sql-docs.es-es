@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - mapping schema [SQLXML], queries
 - XPath queries [SQLXML], samples
 ms.assetid: 1595c2d4-0e9c-4969-84c8-a793a32df57d
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 56b2782416b3d980fa6e821272f2bf78976fbaf2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f74a4c80ca1536d0a2d326ef7a89ab791ec0ad7f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>Consultas XPath de ejemplo (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Esta sección proporciona ejemplos de consultas XPath para SQLXML 4.0. Con fines meramente ilustrativos, estas consultas XPath de ejemplo se especifican en una plantilla ejecutada con ADO. Por lo tanto, deberá usar un archivo de esquema de asignación, SampleSchema1.xml, que también se proporciona en esta sección. Guarde este archivo en el directorio donde estén almacenadas sus plantillas.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+En esta sección se proporcionan ejemplos de consultas XPath para SQLXML 4.0. Con fines meramente ilustrativos, estas consultas XPath de ejemplo se especifican en una plantilla ejecutada con ADO. Por lo tanto, deberá usar un archivo de esquema de asignación, SampleSchema1.xml, que también se proporciona en esta sección. Guarde este archivo en el directorio donde estén almacenadas sus plantillas.  
   
 > [!NOTE]  
 >  Las consultas de ejemplo de esta sección están agrupadas por el tipo de operación XPath que realiza la consulta.  

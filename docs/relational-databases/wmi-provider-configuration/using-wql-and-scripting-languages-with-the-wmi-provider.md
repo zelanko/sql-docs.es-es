@@ -20,19 +20,20 @@ helpviewer_keywords:
 - WMI Provider for Configuration Management, WQL
 - WMI Provider for Configuration Management, scripts
 ms.assetid: c1e64905-3c2b-4974-88f4-abf17cf7e289
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f86bfa3cb0c8adaf178641bbeadf2c74c48bc65d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fa71b18f7acd0b5964a7ab18b2cf2fbc94015960
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="using-wql-and-scripting-languages-with-the-wmi-provider"></a>Utilizar WQL y Languages de Scripting con el proveedor WMI
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Acceso a las aplicaciones de administración [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicios y la configuración de red mediante el proveedor de Instrumental de administración de Windows (WMI) para objetos de administración de la configuración de dos maneras:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Las aplicaciones de administración obtienen acceso a los servicios y la configuración de red de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el proveedor de Instrumental de administración de Windows (WMI) para los objetos de administración de configuración de dos maneras:  
   
 -   Mediante un editor WQL o herramienta de consulta, como WBEMTest.exe, para consultar el objeto establecido con el lenguaje (WQL) del Instrumental de administración de Windows.  
   

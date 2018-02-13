@@ -26,10 +26,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a89f9c1fde9d4a14776d37bc648341a5b5fa4aad
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="numeric-string-and-boolean-literals"></a>Literales numéricos, de cadena y booleanos
  Las expresiones pueden incluir literales numéricos, de cadena y booleanos. El evaluador de expresiones admite diversos literales numéricos tales como constantes enteras, decimales y de punto flotante. El evaluador de expresiones también admite sufijos que indican valor largo o de tipo flotante, con los que se especifica cómo controla el evaluador de expresiones los valores, y notación científica en literales numéricos.  

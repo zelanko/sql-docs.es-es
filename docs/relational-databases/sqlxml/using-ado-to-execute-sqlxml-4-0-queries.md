@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - queries [SQLXML], ADO
 - SQLXML, ADO
 ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0488f2e0e78fc2f915619a6ef0ee7caf6efe5531
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b20cdf458264460b6d2e8630d8bc211599fc165b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Utilizar ADO para ejecutar consultas SQLXML 4.0
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]En versiones anteriores de SQLXML, se admite la ejecución de consultas basado en HTTP con los directorios virtuales de SQLXML IIS y el filtro SQLXML ISAPI. En SQLXML 4.0, estos componentes se han quitado ya que se ofrece una funcionalidad similar superpuesta a través de servicios web XML nativos a partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+En versiones anteriores de SQLXML, la ejecución de consultas basadas en HTTP se admitía mediante la utilización de directorios virtuales de SQLXML IIS y el filtro SQLXML ISAPI. En SQLXML 4.0, estos componentes se han quitado ya que se ofrece una funcionalidad similar superpuesta a través de servicios web XML nativos a partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
  Como alternativa, puede ejecutar consultas y utilizar SQLXML 4.0 con las aplicaciones basadas en COM si aprovecha las extensiones SQLXML a Objetos de datos ActiveX (ADO) que se introdujeron por primera vez en Microsoft Data Access Components (MDAC) 2.6 y versiones posteriores.  
   

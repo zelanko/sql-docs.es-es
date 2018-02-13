@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: e0e0a2d10db1bddf93b098051e1db70a6a32e248
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 0ff7526517be55100400da6ac84b6f7c927fb50e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Usar Visual Studio para crear bases de datos de SQL Server en Linux
 
@@ -103,7 +103,7 @@ SQL Server 2017 en Linux es compatible con SSDT versión 17,0 RC o posterior.
 
 5. Comprobar el estado de publicación en el **operaciones de Data Tools** ventana.
 
-6. Haga clic en **vista Reulst** o **ver Script** para ver los detalles de la databsae publicar resultados en el servidor SQL Server en Linux.
+6. Haga clic en **vista Reulst** o **ver Script** para ver los detalles de la base de datos publicar resultados en el servidor SQL Server en Linux.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 

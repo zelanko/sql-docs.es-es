@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.workload: Inactive
-ms.openlocfilehash: 52747e7bc7a4ab04e0316669e350affb96fc73bf
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 9ef50e606e89d1e6673806ee0d90df510c6c6a68
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configuración de clúster de disco compartido de SLES para SQL Server
 
@@ -27,11 +27,11 @@ ms.lasthandoff: 02/01/2018
 
 Esta guía proporciona instrucciones para crear un clúster de disco compartido de dos nodos para SQL Server en SUSE Linux Enterprise Server (SLES). El nivel de agrupación en clústeres se basa en SUSE [extensión de alta disponibilidad (HAE)](https://www.suse.com/products/highavailability) construidos sobre [marcapasos](http://clusterlabs.org/). 
 
-Para obtener más detalles sobre la configuración de clúster, opciones de recurso del agente, administración, prácticas recomendadas y recomendaciones, consulte [SUSE Linux Enterprise alta disponibilidad extensión 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
+Para obtener más información sobre la configuración de clúster, opciones de recurso del agente, administración, prácticas recomendadas y recomendaciones, consulte [SUSE Linux Enterprise alta disponibilidad extensión 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Para completar el siguiente escenario de extremo a extremo debe tener dos máquinas para implementar el clúster de dos nodos y otro servidor para configurar el recurso compartido NFS. Pasos siguientes describen cómo se configurarán estos servidores.
+Para completar el siguiente escenario de extremo a extremo, debe tener dos máquinas para implementar el clúster de dos nodos y otro servidor para configurar el recurso compartido NFS. Pasos siguientes describen cómo se configurarán estos servidores.
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Instalar y configurar el sistema operativo en cada nodo del clúster
 
@@ -50,7 +50,7 @@ El primer paso es configurar el sistema operativo en los nodos del clúster. Par
 
     > [!NOTE]
     > Durante la instalación, se genera para la instancia de SQL Server y se coloca en una clave maestra del servidor `/var/opt/mssql/secrets/machine-key`. En Linux, SQL Server siempre se ejecuta como una cuenta local denominada mssql. Dado que es una cuenta local, su identidad no se comparte en todos los nodos. Por lo tanto, debe copiar la clave de cifrado de nodo principal a cada nodo secundario para cada cuenta mssql local pueda acceder a él para descifrar la clave maestra de servidor.
-4. En el nodo principal, cree un inicio de sesión SQL server para marcapasos y conceder el permiso de inicio de sesión para ejecutar `sp_server_diagnostics`. Marcapasos usará esta cuenta para comprobar qué nodo está ejecutando SQL Server.
+4. En el nodo principal, cree un inicio de sesión SQL server para marcapasos y conceder el permiso de inicio de sesión para ejecutar `sp_server_diagnostics`. Marcapasos utiliza esta cuenta para comprobar qué nodo está ejecutando SQL Server.
 
     ```bash
     sudo systemctl start mssql-server
@@ -203,7 +203,7 @@ Los pasos siguientes explican cómo configurar el recurso de clúster de SQL Ser
 - **Nombre del recurso de SQL Server**: un nombre para el recurso de SQL Server en clúster. 
 - **Valor de tiempo de espera**: el valor de tiempo de espera es la cantidad de tiempo que el clúster de espera mientras se conecta un recurso. Para SQL Server, este es el tiempo que espera SQL Server para llevar a cabo para poner el `master` en línea de base de datos. 
 
-Actualice los valores de la secuencia de comandos a continuación para su entorno. Ejecutar en un nodo para configurar e iniciar el servicio en clúster.
+Actualice los valores de la siguiente secuencia de comandos para su entorno. Ejecutar en un nodo para configurar e iniciar el servicio en clúster.
 
 ```bash
 sudo crm configure

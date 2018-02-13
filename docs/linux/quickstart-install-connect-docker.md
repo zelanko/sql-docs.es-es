@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: ecb76bb243edae6423d3605ef83a17040ceba720
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 1f018dd2b60365d89e912e7ef38499f8a4d14d9b
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Ejecutar la imagen de contenedor de SQL Server 2017 con Docker
 
@@ -219,7 +219,7 @@ Ahora ejecute una consulta para devolver datos desde la tabla `Inventory`.
 
 1. Para salir de la línea de comandos interactiva del contenedor, escriba `exit`. El contenedor continúa ejecutándose después de salir del shell de bash interactivo.
 
-## <a id="connectexternal"></a>Conectarse desde fuera del contenedor
+## <a id="connectexternal"></a> Conectarse desde fuera del contenedor
 
 También puede conectarse a la instancia de SQL Server en el equipo de Docker desde cualquier herramienta externa de Linux, Windows o Mac OS que admite las conexiones de SQL.
 

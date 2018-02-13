@@ -21,17 +21,18 @@ ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.author: alazad
 ms.openlocfilehash: cbbc687cf4c3a5edf769ab973879bc81f8db8406
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Solución de problemas de conectividad de Kerberos con PolyBase
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Puede usar una herramienta de diagnóstico interactiva integrada en PolyBase para ayudar a solucionar problemas de autenticación cuando se usa PolyBase en un clúster de Hadoop protegido con Kerberos. 
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Puede usar una herramienta de diagnóstico interactiva que está integrada en PolyBase para ayudar a solucionar autenticación cuando se usa PolyBase en un clúster de Hadoop protegido con Kerberos. 
 
 Este artículo sirve como guía para describir el proceso de depuración de ese tipo de problemas con esta herramienta.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 1. SQL Server 2016 RTM CU6 / SQL Server 2016 SP1 CU3 / SQL Server 2017 o superior con PolyBase instalado
 1. Un clúster de Hadoop (Cloudera o Hortonworks) protegido con Kerberos (Active Directory o MIT)

@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ms.workload: Inactive
-ms.openlocfilehash: 860d3571aa1edf7c467125de1cc2920a968eb704
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c90eb7d5f11456a13dfa3d4354070bc506d030e5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configuración de clúster RHEL para grupo de disponibilidad de SQL Server
 
@@ -30,7 +30,7 @@ Este documento explica cómo crear un clúster de grupo de disponibilidad de tre
 > [!NOTE] 
 > Acceso a la documentación completa de Red Hat requiere una suscripción válida. 
 
-Para obtener más detalles sobre la configuración del clúster y opciones de agentes de recursos, administración, visite [documentación de referencia RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Para obtener más información sobre la configuración del clúster y opciones de agentes de recursos, administración, visite [documentación de referencia RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 > [!NOTE] 
 > SQL Server no está integrado estrechamente como con marcapasos en Linux tal cual con los clústeres de conmutación por error de Windows Server. Una instancia de SQL Server no es consciente del clúster. Marcapasos proporciona la orquestación de recurso de clúster. Además, el nombre de red virtual es específico para clústeres de conmutación por error de Windows Server: no hay ningún equivalente en marcapasos. Vistas de administración dinámica de grupo de disponibilidad (DMV) que consultar la información de clúster devuelven filas vacías en clústeres marcapasos. Para crear un agente de escucha para la reconexión transparente después de la conmutación por error, registrar manualmente el nombre de agente de escucha en DNS con la dirección IP utilizada para crear el recurso IP virtual. 
@@ -129,7 +129,7 @@ sudo pcs property set stonith-enabled=false
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Establecer propiedades de clúster inicio error-es-grave en false
 
-`start-failure-is-fatal`indica si un error al iniciar un recurso en un nodo impide más intentos de inicio en ese nodo. Cuando se establece en `false`, el clúster decide si debe intentar iniciar en el mismo nodo nuevo, en función actual error recuento y migración el umbral del recurso. Después de producirse la conmutación por error, a partir de la disponibilidad de reintentos de marcapasos recurso de grupo en la primera estructura principal una vez que la instancia de SQL está disponible. Marcapasos degrada la réplica de base de datos secundaria y vuelve a unirse automáticamente el grupo de disponibilidad. 
+`start-failure-is-fatal` indica si un error al iniciar un recurso en un nodo impide más intentos de inicio en ese nodo. Cuando se establece en `false`, el clúster decide si debe intentar iniciar en el mismo nodo nuevo, en función actual error recuento y migración el umbral del recurso. Después de producirse la conmutación por error, a partir de la disponibilidad de reintentos de marcapasos recurso de grupo en la primera estructura principal una vez que la instancia de SQL está disponible. Marcapasos degrada la réplica de base de datos secundaria y vuelve a unirse automáticamente el grupo de disponibilidad. 
 
 Para actualizar el valor de propiedad para `false` ejecutar:
 

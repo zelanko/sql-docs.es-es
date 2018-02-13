@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - SQLXML Managed Classes, executing XPath queries
 - namespaces [SQLXML], XPath queries
 ms.assetid: c6fc46d8-6b42-4992-a8f1-a8d4b8886e6e
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d425087a4dec1f183d8dfef9c65520f4ab9f996
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d859b88d75365e57e2b6e802bc47eea6656cf07a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>Ejecutar consultas XPath con espacios de nombres (clases administradas de SQLXML)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Las consultas de XPath pueden incluir espacios de nombres. Si los elementos de esquema son espacios de nombres calificados (usan un espacio de nombres de destino), las consultas XPath que se realicen en el esquema deben especificar el espacio de nombres.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Las consultas XPath pueden incluir espacios de nombres. Si los elementos de esquema son espacios de nombres calificados (usan un espacio de nombres de destino), las consultas XPath que se realicen en el esquema deben especificar el espacio de nombres.  
   
  Dado que no se admite el uso del carácter comodín (*) en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0, debe especificar la consulta XPath mediante un prefijo de espacio de nombres. Para resolver el prefijo, utilice la propiedad de los espacios de nombres para especificar el enlace de espacio de nombres.  
   

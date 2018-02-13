@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: SetServiceAccountPassword Method (SqlService Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- SetServiceAccountPassword Method (SqlService Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: SetServiceAccountPassword method
+helpviewer_keywords:
+- SetServiceAccountPassword method
 ms.assetid: e577a1ac-985c-4799-bb38-9393efc3def2
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed9af242ee2f4c3083483ccc93b5de09b1cce3be
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a9cb68738ef2fc288f7b0f60c5e631b1e48b9673
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="setserviceaccountpassword-method-sqlservice-class"></a>Método SetServiceAccountPassword (clase SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Modifica la contraseña para la cuenta que se ejecuta el servicio que se hace referencia.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Modifica la contraseña de la cuenta en la que se ejecuta el servicio al que se hace referencia.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,7 +53,7 @@ object.SetServiceAccountPassword(AccountOldPassword , ServiceStartPassword)
  *ServiceStartPassword*  
  Valor de cadena que especifica la nueva contraseña para la cuenta.  
   
-## <a name="property-valuereturn-value"></a>Valor de propiedad/Valor devuelto  
+## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor **uint32** que es 0 si se modificó el servicio correctamente, 1 si no se admite la solicitud y cualquier otro número para indicar un error.  
   
 ## <a name="remarks"></a>Comentarios  

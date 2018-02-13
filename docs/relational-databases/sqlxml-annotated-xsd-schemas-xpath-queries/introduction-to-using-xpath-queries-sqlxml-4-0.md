@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - W3C XPath specification
 - XPath queries [SQLXML], functionality
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9113df3519ab212f3647b96c63620167c7913ffb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b08c314d50376e55d9825658aabc75385bbbe0be
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introducción al uso de consultas XPath (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Una consulta de XML Path Language (XPath) puede especificarse como parte de una dirección URL o dentro de una plantilla. El esquema de asignación determina la estructura de este fragmento resultante y los valores se recuperan de la base de datos. Este proceso es conceptualmente similar a crear vistas utilizando la instrucción CREATE VIEW y escribir consultas SQL en ellas.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Una consulta XPath (Lenguaje de rutas XML) puede especificarse como parte de una dirección URL o dentro de una plantilla. El esquema de asignación determina la estructura de este fragmento resultante y los valores se recuperan de la base de datos. Este proceso es conceptualmente similar a crear vistas utilizando la instrucción CREATE VIEW y escribir consultas SQL en ellas.  
   
 > [!NOTE]  
 >  Para entender las consultas XPath en SQLXML 4.0, debe estar familiarizado con las vistas XML y otros conceptos relacionados, como las plantillas y el esquema de asignación. Para obtener más información, vea [Introducción a los esquemas XSD anotados &#40; SQLXML 4.0 &#41; ](../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)y la norma XPath definida por el World Wide Web Consortium (W3C).  
@@ -101,9 +103,9 @@ ms.lasthandoff: 11/17/2017
 |Predicados con valores booleanos que incluyen predicados sucesivos y anidados||[Especificar operadores aritméticos en consultas XPath &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Todos los operadores relacionales|=, !=, <, \<=, >, >=|[Especificar operadores relacionales en consultas XPath &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Operadores aritméticos|+, -, *, div|[Especificar operadores aritméticos en consultas XPath &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|Funciones de conversión explícita|**Number()**, **string()**, **Boolean()**|[Especificar funciones de conversión explícita en consultas XPath &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|Funciones de conversión explícita|**number()**, **string()**, **Boolean()**|[Especificar funciones de conversión explícita en consultas XPath &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |operadores booleanos|AND, OR|[Especificar operadores booleanos en consultas XPath &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|funciones booleanas|**True()**, **false()**, **not()**|[Especificar funciones booleanas en consultas XPath &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|funciones booleanas|**true()**, **false()**, **not()**|[Especificar funciones booleanas en consultas XPath &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |variables de XPath||[Especificar Variables XPath en las consultas XPath &#40; SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
   
 ## <a name="unsupported-functionality"></a>Funcionalidad incompatible  
@@ -111,13 +113,13 @@ ms.lasthandoff: 11/17/2017
   
 |Característica|Elemento|  
 |-------------|----------|  
-|Ejes|**antecesor**, **ancestor-or-self**, **descendientes**, **descendant-or-self (/ /)**, **siguiente**, **siguiente**, **espacio de nombres**, **anterior**, **elemento anterior**|  
+|Ejes|**antecesor**, **ancestor-or-self**, **descendientes**, **descendant-or-self (/ /)**, **siguiente**,  **siguiente**, **espacio de nombres**, **anterior**, **elemento anterior**|  
 |Predicados con valores numéricos||  
 |Operadores aritméticos|mod|  
-|Funciones de nodo|**antecesor**, **ancestor-or-self**, **descendientes**, **descendant-or-self (/ /)**, **siguiente**, **siguiente**, **espacio de nombres**, **anterior**, **elemento anterior**|  
-|Funciones de cadena|**String()**, **concat()**, **starts-with()**, **contains()**, **substring-before()**,  **substring-after()**, **substring()**, **string-length()**, **normalize()**, **translate()**|  
+|Funciones de nodo|**antecesor**, **ancestor-or-self**, **descendientes**, **descendant-or-self (/ /)**, **siguiente**,  **siguiente**, **espacio de nombres**, **anterior**, **elemento anterior**|  
+|Funciones de cadena|**string()**, **concat()**, **starts-with()**, **contains()**, **substring-before()**, **substring-after()**, **substring()**, **string-length()**, **normalize()**, **translate()**|  
 |funciones booleanas|**lang()**|  
-|Funciones numéricas|**SUM()**, **floor()**, **ceiling()**, **round()**|  
+|Funciones numéricas|**sum()**, **floor()**, **ceiling()**, **round()**|  
 |Operador de unión|&#124;|  
   
  Cuando especifique consultas XPath en una plantilla, tenga en cuenta el siguiente comportamiento:  

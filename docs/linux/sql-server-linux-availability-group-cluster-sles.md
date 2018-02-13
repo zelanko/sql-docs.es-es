@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.workload: Inactive
-ms.openlocfilehash: c33c1cea948e64c69e52475e8c63ecce0c52bd6d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 9b0c068ce56a2f499ee452b56ca54025485163f5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configuración de clúster SLES para grupo de disponibilidad de SQL Server
 
@@ -27,15 +27,15 @@ ms.lasthandoff: 02/01/2018
 
 Esta guía proporciona instrucciones para crear un clúster de tres nodos para SQL Server en SUSE Linux Enterprise Server (SLES) 12 SP2. Para lograr alta disponibilidad, un grupo de disponibilidad en Linux requiere tres nodos: vea [alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad](sql-server-linux-availability-group-ha.md). El nivel de agrupación en clústeres se basa en SUSE [extensión de alta disponibilidad (HAE)](https://www.suse.com/products/highavailability) construidos sobre [marcapasos](http://clusterlabs.org/). 
 
-Para obtener más detalles sobre la configuración de clúster, opciones de recurso del agente, administración, prácticas recomendadas y recomendaciones, consulte [SUSE Linux Enterprise alta disponibilidad extensión 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
+Para obtener más información sobre la configuración de clúster, opciones de recurso del agente, administración, prácticas recomendadas y recomendaciones, consulte [SUSE Linux Enterprise alta disponibilidad extensión 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
 >[!NOTE]
->En este momento, la integración de SQL Server con marcapasos en Linux no es como acoplamiento como con WSFC en Windows. Servicio de SQL Server en Linux no es compatible con clústeres. Marcapasos controla todas las de la orquestación de los recursos de clúster, incluido el recurso de grupo de disponibilidad. En Linux, no deben depender siempre en disponibilidad grupo vistas de administración dinámica (DMV) que proporcionan información de clúster como sys.dm_hadr_cluster. Además, el nombre de red virtual es específico de WSFC, no hay ningún equivalente de la misma en marcapasos. Puede crear un agente de escucha para usarlo para la reconexión transparente después de la conmutación por error, pero tendrá que registrar manualmente el nombre de agente de escucha en el servidor DNS con la dirección IP utilizada para crear el recurso IP virtual (tal y como se explica más adelante).
+>En este momento, la integración de SQL Server con marcapasos en Linux no es como acoplamiento como con WSFC en Windows. Servicio de SQL Server en Linux no es compatible con clústeres. Marcapasos controla todas las de la orquestación de los recursos de clúster, incluido el recurso de grupo de disponibilidad. En Linux, no deben depender siempre en disponibilidad grupo vistas de administración dinámica (DMV) que proporcionan información de clúster como sys.dm_hadr_cluster. Además, el nombre de red virtual es específico de WSFC, no hay ningún equivalente de la misma en marcapasos. Puede crear un agente de escucha para usarlo para la reconexión transparente después de la conmutación por error, pero tendrá que registrar manualmente el nombre de agente de escucha en el servidor DNS con la dirección IP utilizada para crear el recurso IP virtual (como se explica en las secciones siguientes).
 
 
 ## <a name="roadmap"></a>Roadmap
 
-Los pasos para crear un grupo de disponibilidad en servidores Linux para lograr alta disponibilidad son diferentes de los pasos en un clúster de conmutación por error de Windows Server. En la lista siguiente se describe los pasos de alto niveles: 
+El procedimiento para crear un grupo de disponibilidad para la alta disponibilidad es diferente entre servidores Linux y un clúster de conmutación por error de Windows Server. En la lista siguiente describe los pasos generales: 
 
 1. [Configurar SQL Server en los nodos del clúster](sql-server-linux-setup.md).
 
@@ -46,7 +46,7 @@ Los pasos para crear un grupo de disponibilidad en servidores Linux para lograr 
    La manera de configurar un administrador de recursos de clúster depende de la distribución de Linux específica. 
 
    >[!IMPORTANT]
-   >Los entornos de producción requieren a un agente de barrera, como STONITH para lograr alta disponibilidad. Las demostraciones en esta documentación no utiliza a agentes de barrera. Las demostraciones son para pruebas y la validación solo. 
+   >Los entornos de producción requieren a un agente de barrera, como STONITH para lograr alta disponibilidad. Los ejemplos de este artículo no utilizan a agentes de barrera. Son para pruebas y la validación solo. 
    
    >Un clúster marcapasos usa barrera para devolver el clúster a un estado conocido. La manera de configurar la barrera depende de la distribución y el entorno. En este momento, no está disponible en algunos entornos de nube barrera. Vea [extensión de alta disponibilidad SUSE Linux Enterprise](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing).
 
@@ -54,7 +54,7 @@ Los pasos para crear un grupo de disponibilidad en servidores Linux para lograr 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Para completar el siguiente escenario de extremo a extremo necesita tres equipos para implementar el clúster de tres nodos. Los pasos siguientes describen cómo configurar estos servidores.
+Para completar el siguiente escenario de extremo a extremo, necesita tres equipos para implementar el clúster de tres nodos. Los pasos siguientes describen cómo configurar estos servidores.
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Instalar y configurar el sistema operativo en cada nodo del clúster 
 
@@ -92,7 +92,7 @@ El primer paso es configurar el sistema operativo en los nodos del clúster. Par
 
 ## <a name="configure-an-always-on-availability-group"></a>Configurar un grupo de disponibilidad AlwaysOn
 
-En servidores Linux configurar el grupo de disponibilidad y, a continuación, configure los recursos de clúster. Para configurar el grupo de disponibilidad, consulte [Configurar grupo de disponibilidad AlwaysOn para SQL Server en Linux](sql-server-linux-availability-group-configure-ha.md)
+En servidores Linux, configure el grupo de disponibilidad y, a continuación, configurar los recursos de clúster. Para configurar el grupo de disponibilidad, consulte [Configurar grupo de disponibilidad AlwaysOn para SQL Server en Linux](sql-server-linux-availability-group-configure-ha.md)
 
 ## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Instalar y configurar a marcapasos en cada nodo del clúster
 
@@ -118,11 +118,11 @@ En servidores Linux configurar el grupo de disponibilidad y, a continuación, co
 
    Si no se ha configurado el NTP para iniciar al arrancar el sistema, aparece un mensaje. 
 
-   Si decide continuar en cualquier caso, la secuencia de comandos generar claves para el acceso SSH y la herramienta de sincronización de Csync2 y automáticamente iniciar los servicios necesarios para ambos. 
+   Si decide continuar en cualquier caso, la secuencia de comandos automáticamente genera claves para el acceso SSH y la herramienta de sincronización de Csync2 e inicia los servicios necesarios para ambos. 
 
 3. Para configurar el nivel de comunicación de clúster (Corosync): 
 
-   A. Escriba una dirección de red para enlazar a. De forma predeterminada, la secuencia de comandos propondrá la dirección de red de eth0. O bien, escriba una dirección de red diferente, por ejemplo la dirección de bond0. 
+   A. Escriba una dirección de red para enlazar a. De forma predeterminada, la secuencia de comandos propuestos por la dirección de red de eth0. O bien, escriba una dirección de red diferente, por ejemplo la dirección de bond0. 
 
    B. Escriba una dirección de multidifusión. La secuencia de comandos propone una dirección aleatoria que puede usar como valor predeterminado. 
 
@@ -147,11 +147,11 @@ En servidores Linux configurar el grupo de disponibilidad y, a continuación, co
 
 ## <a name="add-nodes-to-the-existing-cluster"></a>Agregar nodos al clúster existente
 
-Si tiene un clúster que ejecute con uno o más nodos, agregar más nodos del clúster con el script de arranque de ha de clúster-combinación. La secuencia de comandos sólo necesita acceso a un nodo del clúster existente y se completará automáticamente la configuración básica de la máquina actual. Para hacerlo, siga estos pasos:
+Si tiene un clúster que ejecute con uno o más nodos, agregar más nodos del clúster con el script de arranque de ha de clúster-combinación. La secuencia de comandos sólo necesita acceso a un nodo del clúster existente y se completará automáticamente la configuración básica de la máquina actual. Siga estos pasos:
 
 Si ha configurado los nodos del clúster existente con el `YaST` módulo de clúster, asegúrese de que se cumplen los siguientes requisitos previos antes de ejecutar `ha-cluster-join`:
 - El usuario raíz en los nodos existentes tiene claves SSH en su lugar para inicio de sesión passwordless. 
-- `Csync2`se configura en los nodos existentes. Para obtener más información, consulte Configurar Csync2 con YaST. 
+- `Csync2` se configura en los nodos existentes. Para obtener más información, consulte Configurar Csync2 con YaST. 
 
 1. Inicie sesión como raíz para la máquina física o virtual debe unirse al clúster. 
 2. Iniciar la secuencia de arranque mediante la ejecución: 
@@ -166,7 +166,7 @@ Si ha configurado los nodos del clúster existente con el `YaST` módulo de clú
 
 4. Si ya no ha configurado un acceso SSH passwordless entre ambos equipos, también se pedirá la contraseña raíz del nodo existente. 
 
-   Después de iniciar sesión el nodo especificado, la secuencia de comandos se copie la configuración de Corosync, configure SSH y `Csync2`y aparecerá la máquina actual en línea como nuevo nodo de clúster. Aparte de eso, se iniciará el servicio necesario para Hawk. Si ha configurado el almacenamiento compartido con `OCFS2`, automáticamente creará el directorio de punto de montaje para el `OCFS2` sistema de archivos. 
+   Después de iniciar sesión el nodo especificado, el script copia la configuración de Corosync, configura SSH y `Csync2`y pone el equipo actual en línea como nuevo nodo de clúster. Aparte de eso, se inicia el servicio necesario para Hawk. Si ha configurado el almacenamiento compartido con `OCFS2`, se crea automáticamente el directorio de punto de montaje para el `OCFS2` sistema de archivos. 
 
 5. Repita los pasos anteriores para todos los equipos que desea agregar al clúster. 
 
@@ -185,37 +185,40 @@ Si ha configurado los nodos del clúster existente con el `YaST` módulo de clú
    ```
 
    >[!NOTE]
-   >`admin_addr`es el recurso de clúster IP virtual que se configura durante la instalación inicial de un nodo de clúster.
+   >`admin_addr` es el recurso de clúster IP virtual que se configura durante la instalación inicial de un nodo de clúster.
 
-Después de agregar todos los nodos, compruebe si necesita ajustar la directiva de quórum de ninguna de las opciones de clúster global. Esto es especialmente importante para los clústeres de dos nodos. Para obtener más información, consulte la sección 4.1.2, opción Directiva de quórum no. 
+Después de agregar todos los nodos, compruebe si necesita ajustar la directiva de quórum de ninguna de las opciones de clúster global. Esto es especialmente importante para los clústeres de dos nodos. Para obtener más información, vea la sección 4.1.2, opción no-quórum-policy. 
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Establecer propiedades de clúster inicio error-es-grave en false
 
-`Start-failure-is-fatal`indica si un error al iniciar un recurso en un nodo impide más intentos de inicio en ese nodo. Cuando se establece en `false`, el clúster decidirá si se intente iniciar en el mismo nodo nuevo, en función actual error recuento y migración el umbral del recurso. Por lo tanto, después de producirse la conmutación por error, marcapasos volverá a intentar iniciar el recurso de grupo de disponibilidad en la primera estructura principal una vez que la instancia de SQL está disponible. Marcapasos se encargará de degradación de la réplica secundaria y vuelve a unir automáticamente el grupo de disponibilidad. Además, si `start-failure-is-fatal` se establece en `false`, el clúster recurra a los límites configurados failcount configurados con el umbral de migración, por lo que debe realizar de forma predeterminada seguro para el umbral de migración se actualiza en consecuencia.
+`Start-failure-is-fatal` indica si un error al iniciar un recurso en un nodo impide más intentos de inicio en ese nodo. Cuando se establece en `false`, el clúster decide si debe intentar iniciar en el mismo nodo nuevo, en función actual error recuento y migración el umbral del recurso. Por lo tanto, después de producirse la conmutación por error, a partir de la disponibilidad de reintentos de marcapasos recurso de grupo en la primera estructura principal una vez que la instancia de SQL está disponible. Marcapasos se encarga de disminuir de nivel de la réplica secundaria y vuelve a unirse automáticamente el grupo de disponibilidad. Además, si `start-failure-is-fatal` se establece en `false`, el clúster vuelve a los límites configurados failcount configurados con el umbral de migración. Asegúrese de que el valor predeterminado de umbral de migración se actualiza en consecuencia.
 
 Para actualizar el valor de propiedad para ejecución false:
 ```bash
 sudo crm configure property start-failure-is-fatal=false
 sudo crm configure rsc_defaults migration-threshold=5000
 ```
-Si la propiedad tiene el valor predeterminado de `true`, si el primer intento de iniciar el recurso se produce un error, la intervención del usuario es necesario después de una conmutación por error automática para realizar la limpieza el recuento de errores de recursos y restablece la configuración mediante: `sudo crm resource cleanup <resourceName>` comando.
+Si la propiedad tiene el valor predeterminado de `true`, si el primer intento de iniciar el recurso se produce un error, la intervención del usuario es necesario después de una conmutación por error automática para limpiar el recuento de errores de recursos y restablecer la configuración mediante: `sudo crm resource cleanup <resourceName>` comando.
 
 Para obtener más información sobre propiedades de clúster marcapasos, consulte [configurar recursos de clúster](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html).
 
 # <a name="configure-fencing-stonith"></a>Configurar la barrera (STONITH)
 Los proveedores de clúster marcapasos requieren STONITH esté habilitado y un dispositivo de barrera configurado para una instalación de clúster compatibles. Cuando el Administrador de recursos de clúster no puede determinar el estado de un nodo o de un recurso en un nodo, barrera se utiliza para poner el clúster en un estado conocido de nuevo.
-Barrera de nivel de recurso principalmente garantiza que no hay ningún daños en los datos en el caso de una interrupción del sistema mediante la configuración de un recurso. Puede usar la barrera de nivel de recurso, por ejemplo, con DRBD (Distributed replican bloque dispositivo) para marcar el disco en un nodo como obsoleto cuando el vínculo de comunicación deja de funcionar.
-Barrera de nivel de nodo se asegura de que un nodo no ejecuta todos los recursos. Para ello, restablecer el nodo y la implementación de marcapasos del mismo se denomina STONITH (que es el acrónimo "grabar el otro nodo en el encabezado"). Marcapasos admite una gran variedad de dispositivos de la barrera, por ejemplo, una fuente de alimentación ininterrumpida o administración de tarjetas de interfaz de para los servidores.
+
+Barrera de nivel de recurso principalmente garantiza que no hay ningún daños en los datos durante una interrupción del sistema mediante la configuración de un recurso. Puede usar la barrera de nivel de recurso, por ejemplo, con DRBD (Distributed replican bloque dispositivo) para marcar el disco en un nodo como obsoleto cuando el vínculo de comunicación deja de funcionar.
+
+Barrera de nivel de nodo se asegura de que un nodo no ejecuta todos los recursos. Para ello, restablecer el nodo y la implementación de marcapasos del mismo se denomina STONITH (que es el acrónimo "grabar el otro nodo en el encabezado"). Marcapasos admite una gran variedad de dispositivos, como tarjetas de interfaz de una fuente de alimentación o de administración de sistema de alimentación ininterrumpida para servidores de barrera.
+
 Para obtener más información, consulte [marcapasos clústeres desde el principio](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [barrera y Stonith](http://clusterlabs.org/doc/crm_fencing.html) y [SUSE HA documentación: barrera y STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
 
-En el momento de inicialización de clúster, STONITH está deshabilitada si no se detecta ninguna configuración. Pueden habilitarse más adelante mediante la ejecución de comando siguiente
+En el momento de inicialización de clúster, STONITH está deshabilitada si no se detecta ninguna configuración. Se puede habilitar más tarde ejecutando el comando siguiente:
 
 ```bash
 sudo crm configure property stonith-enabled=true
 ```
   
 >[!IMPORTANT]
->Deshabilitar STONITH es solo para fines de prueba. Si tiene previsto usar marcapasos en un entorno de producción, debe planear una implementación de STONITH dependiendo de su entorno y manténgala habilitada. Tenga en cuenta que SUSE no proporciona a agentes de barrera para Hyper-V ni entornos de nube (incluido Azure). Por consiguiente, el proveedor de clúster no ofrece compatibilidad con la ejecución de clústeres de producción en estos entornos. Estamos trabajando en una solución para este vacío que estará disponible en futuras versiones.
+>Deshabilitar STONITH es solo para fines de prueba. Si tiene previsto usar marcapasos en un entorno de producción, debe planear una implementación de STONITH dependiendo de su entorno y manténgala habilitada. SUSE no proporciona a agentes de barrera para Hyper-V ni entornos de nube (incluido Azure). Por consiguiente, el proveedor de clúster no ofrece compatibilidad con la ejecución de clústeres de producción en estos entornos. Estamos trabajando en una solución para este vacío que estará disponible en futuras versiones.
 
 
 ## <a name="configure-the-cluster-resources-for-sql-server"></a>Configurar los recursos de clúster de SQL Server
@@ -224,7 +227,7 @@ Hacer referencia a [SLES administración Guid](https://www.suse.com/documentatio
 
 ### <a name="create-availability-group-resource"></a>Crear el recurso de grupo de disponibilidad
 
-El siguiente comando crea y configura el recurso de grupo de disponibilidad de 3 réplicas del grupo de disponibilidad [ag1]. Las operaciones de monitor y tiempos de espera tienen que especificarse explícitamente en SLES basada en que los tiempos de espera son altamente dependientes de la carga de trabajo y que deba ajustar cuidadosamente para cada implementación.
+El siguiente comando crea y configura el recurso de grupo de disponibilidad para las tres réplicas de grupo de disponibilidad [ag1]. Las operaciones de monitor y tiempos de espera tienen que especificarse explícitamente en SLES basada en que los tiempos de espera muy dependen de la carga de trabajo y que deba ajustar cuidadosamente para cada implementación.
 Ejecute el comando en uno de los nodos del clúster:
 
 1. Ejecute `crm configure` para abrir el símbolo del sistema de crm:
@@ -299,7 +302,7 @@ crm crm configure \
 >[!IMPORTANT]
 >Después de configurar el clúster y agregar el grupo de disponibilidad como un recurso de clúster, no puede usar Transact-SQL para conmutar los recursos del grupo de disponibilidad. Recursos de clúster de SQL Server en Linux no se acoplan estrechamente como con el sistema operativo tal como están en un clúster de conmutación por error de Windows Server (WSFC). Servicio SQL Server no es consciente de la presencia del clúster. Todas las orquestaciones se realiza a través de las herramientas de administración de clúster. En SLES usar `crm`. 
 
-Conmutar por error manualmente el grupo de disponibilidad con `crm`. No se inicie la conmutación por error con Transact-SQL. Para obtener instrucciones, consulte [conmutación por error](sql-server-linux-availability-group-failover-ha.md#failover).
+Conmutar por error manualmente el grupo de disponibilidad con `crm`. No iniciar la conmutación por error con Transact-SQL. Para obtener más información, consulte [conmutación por error](sql-server-linux-availability-group-failover-ha.md#failover).
 
 
 Para obtener más información, vea:

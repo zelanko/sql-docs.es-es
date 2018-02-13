@@ -1,6 +1,6 @@
 ---
 title: "' S New for SQL Server 2017 en Linux | Documentos de Microsoft"
-description: Este tema destacan Novedades de SQL Server 2017 en Linux.
+description: "Este artículo resalta cuáles son las novedades de SQL Server 2017 en Linux."
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.workload: On Demand
-ms.openlocfilehash: 768d939d0014ca1818f8195627f57e0110d149fb
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: cc0b40ba2cac9c14d6d4259c7ed35769c7114dbe
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Novedades de SQL Server 2017 en Linux
 

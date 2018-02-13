@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - overflow data [SQLXML]
 - sql:overflow-field
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d821e3aafa0b822995bb76a191e8c23adbdeefd4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f5b58728bc2af55830cc66ba0ed8f011095f2d5e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>Interpretación de anotaciones - SQL: overflow-campo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]En un esquema, puede identificar una columna como una columna de desbordamiento para recibir todos los datos no consumidos del documento XML. Esta columna se especifica en el esquema mediante la **SQL: overflow-campo** anotación. Es posible tener varias columnas de desbordamiento.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+En un esquema, puede identificar una columna como una columna de desbordamiento para que reciba todos los datos no consumidos del documento XML. Esta columna se especifica en el esquema mediante la **SQL: overflow-campo** anotación. Es posible tener varias columnas de desbordamiento.  
   
  Cada vez que un nodo XML (elemento o atributo) para el que hay un **SQL: overflow-campo** anotación definida entra en el ámbito, la columna de desbordamiento se activa y recibe los datos no consumidos. Cuando el nodo sale del ámbito, la columna de desbordamiento deja de estar activa y Carga masiva XML activa el campo de desbordamiento anterior (si existe).  
   

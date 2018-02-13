@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: Context Property (SecurityCertificate Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- Context Property (SecurityCertificate Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: Context property
+helpviewer_keywords:
+- Context property
 ms.assetid: 65dd737f-81ce-479e-8219-7b1b4d8f57c7
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee218627f4ccc49d6e3e0e68114105e019e27501
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 23d747129c298bec63674670033c204f44f025b2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="context-property-securitycertificate-class"></a>Propiedad Context (clase SecurityCertificate)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Obtiene el contexto del certificado de seguridad.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Obtiene el contexto del certificado de seguridad.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,7 +46,7 @@ object.Context [= value]
  *objeto*  
  Objeto de la [clase SecurityCertificate](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) que representa un certificado de seguridad.  
   
-## <a name="property-valuereturn-value"></a>Valor de propiedad/Valor devuelto  
+## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Un **sint32** valor que especifica el contexto del certificado de seguridad de matriz.  
   
 ## <a name="remarks"></a>Comentarios  

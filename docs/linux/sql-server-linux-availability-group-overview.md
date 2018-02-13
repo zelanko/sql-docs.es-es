@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.workload: On Demand
-ms.openlocfilehash: bfd36553e4ac30b6d551e60cde02d57a7eec8fbc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b9dd4b05cf69b8556c4c021e2ede576b1a805c5e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Grupos de disponibilidad AlwaysOn en Linux
 
@@ -65,9 +65,9 @@ Hay tres valores que se pueden establecer para `required_synchronized_secondarie
 -   1: una réplica secundaria debe estar en un estado sincronizado con la principal; es posible que la conmutación automática por error. La base de datos principal no está disponible hasta que una réplica secundaria sincrónica está disponible.
 -   2 – ambas réplicas secundarias en una configuración de AG de tres o más nodos deben estar sincronizadas con el elemento principal; es posible que la conmutación automática por error.
 
-`required_synchronized_secondaries_to_commit`controla no solo el comportamiento de las conmutaciones por error con réplicas sincrónicas, pero la pérdida de datos. Con un valor de 1 o 2, una réplica secundaria es obligatorio que se sincronizarán, por tanto, siempre habrá redundancia de datos. Esto no significa que se pierdan datos.
+`required_synchronized_secondaries_to_commit` controla no solo el comportamiento de las conmutaciones por error con réplicas sincrónicas, pero la pérdida de datos. Con un valor de 1 o 2, una réplica secundaria es obligatorio que se sincronizarán, por tanto, siempre habrá redundancia de datos. Esto no significa que se pierdan datos.
 
-Para cambiar el valor de `required_synchronized_secondaries_to_commit`, use la sintaxis siguiente.
+Para cambiar el valor de `required_synchronized_secondaries_to_commit`, use la siguiente sintaxis:
 
 >[!NOTE]
 >Cambiar el valor hace que el recurso que se reinicie, lo que significa una breve interrupción. La única manera de evitarlo es establecer el recurso no estén administrados por el clúster temporalmente.
@@ -132,7 +132,7 @@ Como en grupos de disponibilidad basados en Windows, la estructura de la unidad 
 
 El agente de escucha es una funcionalidad opcional para un AG. Proporciona un único punto de entrada para todas las conexiones (lectura/escritura a la réplica principal o a réplicas de solo lectura a secundaria) para que las aplicaciones y los usuarios finales no es necesario saber qué servidor hospeda los datos. En un WSFC, esto es la combinación de un recurso de nombre de red y un recurso IP, que, a continuación, se registra en AD DS (si es necesario), así como de DNS. En combinación con el propio recurso de AG, proporciona esa abstracción. Para obtener más información sobre un agente de escucha, vea [los agentes de escucha, conectividad de cliente y conmutación por error de aplicación](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).
 
-El agente de escucha en Linux se configura de manera diferente, pero su funcionalidad es la misma. No hay ningún concepto de un recurso de nombre de red en marcapasos ni se crea un objeto en AD DS; hay solo un recurso de dirección IP creado en marcapasos que se pueden ejecutar en cualquiera de los nodos. Una entrada asociada al recurso IP para el agente de escucha en DNS con un "nombre descriptivo" deberá crearse. El recurso IP para el agente de escucha sólo estará activo en el servidor que hospeda la réplica principal de ese grupo de disponibilidad.
+El agente de escucha en Linux se configura de manera diferente, pero su funcionalidad es la misma. No hay ningún concepto de un recurso de nombre de red en marcapasos ni se crea un objeto en AD DS; hay solo un recurso de dirección IP creado en marcapasos que se pueden ejecutar en cualquiera de los nodos. Se debe crear una entrada asociada al recurso IP para el agente de escucha en DNS con un "nombre descriptivo". El recurso IP para el agente de escucha sólo estará activo en el servidor que hospeda la réplica principal de ese grupo de disponibilidad.
 
 Si se utilizan marcapasos y se crea un recurso de dirección IP que está asociado con el agente de escucha, habrá una breve interrupción tal y como la dirección IP se detiene en un servidor y se inicia en el otro, ya sea la conmutación por error automática o manual. Si bien proporciona abstracción por medio de la combinación de un nombre único y la dirección IP, no se enmascara la interrupción. Una aplicación debe ser capaz de controlar la desconexión debido a algún tipo de funcionalidad detectarlo y volver a conectarse.
 
@@ -147,11 +147,11 @@ La instancia asociada con la dirección IP proporcionada a continuación, se con
 
 Un AG que tiene un tipo de clúster de externo o uno que sea WSFC no puede tener sus réplicas entre plataformas. Esto es cierto si el AG es [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)] o [!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)]. Esto significa que en una configuración AG tradicional con un clúster subyacente, no puede ser una réplica en un WSFC y el otro en Linux con marcapasos.
 
-Un AG con un tipo de clúster de ninguno puede tener sus réplicas cruzar los límites de sistema operativo, por lo que podría haber ambas réplicas basadas en Windows y Linux en el mismo AG. Se muestra un ejemplo a continuación en la réplica principal está basado en Windows, mientras la base de datos secundaria está en una de las distribuciones de Linux.
+Un AG con un tipo de clúster de ninguno puede tener sus réplicas cruzar los límites de sistema operativo, por lo que podría haber ambas réplicas basadas en Windows y Linux en el mismo AG. A continuación se muestra un ejemplo donde la réplica principal está basado en Windows, mientras que la base de datos secundaria se encuentra en una de las distribuciones de Linux.
 
 ![Híbrido ninguno](./media/sql-server-linux-availability-group-overview/image1.png)
 
-Un grupo de disponibilidad distribuido también puede cruzar los límites de sistema operativo. Los grupos de disponibilidad subyacentes están enlazados mediante las reglas de cómo estén configuradas, por ejemplo, una configurada con externo está solo Linux, pero el AG que se ha unido a podría configurarse con un WSFC. A continuación, se muestra un ejemplo.
+Un grupo de disponibilidad distribuido también puede cruzar los límites de sistema operativo. Los grupos de disponibilidad subyacentes están enlazados mediante las reglas de cómo estén configuradas, por ejemplo, una configurada con externo está solo Linux, pero el AG que se ha unido a podría configurarse con un WSFC. Considere el ejemplo siguiente:
 
 ![Híbrido Dist AG](./media/sql-server-linux-availability-group-overview/image2.png)
 

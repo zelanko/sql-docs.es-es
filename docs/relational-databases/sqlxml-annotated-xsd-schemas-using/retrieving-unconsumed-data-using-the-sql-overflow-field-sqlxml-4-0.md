@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - overflow data [SQLXML]
 - sql:overflow-field
 ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 803772c967bfb1fb0eaa621abbea8ceecaad4a05
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e1801fcd260dd674489a851361044ff6c9110c63
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Recuperar datos no utilizados mediante sql:overflow-field (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Cuando se insertan registros en una base de datos de un documento XML utilizando el [!INCLUDE[tsql](../../includes/tsql-md.md)] función OPENXML, todos los datos no consumidos del documento XML de origen pueden almacenarse en una columna. Cuando se recuperan datos de una base de datos mediante esquemas anotados, puede especificar el **SQL: overflow-campo** atributo para identificar la columna de la tabla en la que se almacenan los datos de desbordamiento. El **SQL: overflow-campo** atributo puede especificarse en  **\<elemento >**.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Cuando se insertan registros en una base de datos de un documento XML utilizando la función [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML, se pueden almacenar todos los datos no consumidos del documento XML en una columna. Cuando se recuperan datos de una base de datos mediante esquemas anotados, puede especificar el **SQL: overflow-campo** atributo para identificar la columna de la tabla en la que se almacenan los datos de desbordamiento. El **SQL: overflow-campo** atributo puede especificarse en  **\<elemento >**.  
   
  Este dato se recupera después de las siguientes maneras:  
   

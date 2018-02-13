@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 53c1bf7265cc15b9dd9401958317d4f14ea400d1
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 704cb4dfb96a2293bf1a595fda781519b70183cb
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configurar la instancia de clúster de conmutación por error - SMB - SQL Server en Linux
 
@@ -81,7 +81,7 @@ Estas son algunas sugerencias y notas para un uso correcto de SMB:
     mkdir <TempDir>
     ```
 
-    <TempDir>es el nombre de la carpeta. En el ejemplo siguiente se crea una carpeta denominada /var/opt/mssql/tmp.
+    <TempDir> es el nombre de la carpeta. En el ejemplo siguiente se crea una carpeta denominada /var/opt/mssql/tmp.
 
     ```bash
     mkdir /var/opt/mssql/tmp
@@ -172,7 +172,7 @@ Estas son algunas sugerencias y notas para un uso correcto de SMB:
     sudo systemctl status mssql-server
     ```
  
-   *    Para probar más, cree una base de datos para asegurarse de que los permisos son válidos. El ejemplo siguiente usa Transact-SQL; Puede usar SSMS.
+   *    Para probar más, cree una base de datos para asegurarse de que los permisos son válidos. En el ejemplo siguiente se utiliza Transact-SQL; Puede usar SSMS.
 
     ![10_testcreatedb][2] 
   
@@ -239,7 +239,7 @@ Estas son algunas sugerencias y notas para un uso correcto de SMB:
  
    * Escriba exit ya no sea el superusuario.
 
-   * Para probar, cree una base de datos en esa carpeta. El ejemplo que se muestra a continuación utiliza sqlcmd para crear una base de datos, cambiar el contexto a él, compruebe que los archivos existen en el nivel de sistema operativo y, a continuación, elimina la ubicación temporal. Puede usar SSMS.
+   * Para probar, cree una base de datos en esa carpeta. En el ejemplo siguiente se usa sqlcmd para crear una base de datos, cambiar el contexto a él, compruebe que los archivos existen en el nivel de sistema operativo y, a continuación, elimina la ubicación temporal. Puede usar SSMS.
  
    * Desmonte el recurso compartido 
 

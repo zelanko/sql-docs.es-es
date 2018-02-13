@@ -1,6 +1,6 @@
 ---
 title: "Empezar a trabajar con características de rendimiento de SQL Server en Linux | Documentos de Microsoft"
-description: "En este tema se proporciona una introducción de las características de rendimiento de SQL Server para los usuarios de Linux que están familiarizados con SQL Server. Muchos de estos ejemplos funcionan en todas las plataformas, pero el contexto de este artículo es Linux."
+description: "Este artículo proporciona una introducción de las características de rendimiento de SQL Server para los usuarios de Linux que están familiarizados con SQL Server. Muchos de estos ejemplos funcionan en todas las plataformas, pero el contexto de este artículo es Linux."
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,19 +9,21 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: d31f07a9ef05f056fe0887a3873f972b0683da5f
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 73b452cf99016b4b4f38c7debacadf32a270421d
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Tutorial para las características de rendimiento de SQL Server en Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Si es un usuario de Linux que es una novedad de SQL Server, las tareas siguientes le guiarán por algunas de las características de rendimiento. Estos no son únicas o específicas de Linux, pero es conveniente tener una idea de las áreas para investigar en profundidad. En cada ejemplo se proporciona un vínculo a la documentación de profundidad para dicha área.
 
@@ -31,7 +33,7 @@ Si es un usuario de Linux que es una novedad de SQL Server, las tareas siguiente
 ## <a name="create-a-columnstore-index"></a>Crear un índice de almacén
 Un índice de almacén de columnas es una tecnología para almacenar y consultar grandes almacenes de datos en un formato de datos en columnas denominado almacén de columnas.  
 
-1. Agregar un índice de almacén de columnas a la tabla SalesOrderDetail ejecutando el código T-SQL siguiente:
+1. Agregar un índice de almacén de columnas a la tabla SalesOrderDetail ejecutando los siguientes comandos de Transact-SQL:
 
    ```sql
    CREATE NONCLUSTERED COLUMNSTORE INDEX [IX_SalesOrderDetail_ColumnStore]
@@ -40,7 +42,7 @@ Un índice de almacén de columnas es una tecnología para almacenar y consultar
    GO
    ```
 
-2. Ejecute la consulta siguiente que utilizará el índice de almacén de columnas para examinar la tabla:
+2. Ejecute la siguiente consulta que usa el índice de almacén de columnas para examinar la tabla:
 
    ```sql
    SELECT ProductID, SUM(UnitPrice) SumUnitPrice, AVG(UnitPrice) AvgUnitPrice,
@@ -66,7 +68,7 @@ Un índice de almacén de columnas es una tecnología para almacenar y consultar
 SQL Server proporciona características de OLTP en memoria que pueden mejorar considerablemente el rendimiento de los sistemas de aplicaciones.  En esta sección de la Guía de evaluación le guiará por los pasos necesarios para crear una tabla con optimización para memoria almacenada en memoria y un procedimiento almacenado compilado de forma nativa que puede tener acceso a la tabla sin necesidad de que se compila o se interpreta.
 
 ### <a name="configure-database-for-in-memory-oltp"></a>Configurar la base de datos para OLTP en memoria
-1. Se recomienda establecer la base de datos en un nivel de compatibilidad de al menos 130 para utilizar OLTP en memoria.  Use la consulta siguiente para comprobar el nivel de compatibilidad actual de AdventureWorks:  
+1. Se recomienda establecer la base de datos en un nivel de compatibilidad de al menos 130 para utilizar OLTP en memoria.  Use la siguiente consulta para comprobar el nivel de compatibilidad actual de AdventureWorks:  
 
    ```sql
    USE AdventureWorks

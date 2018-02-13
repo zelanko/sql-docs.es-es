@@ -12,19 +12,20 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-caps.latest.revision: "100"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 4bbb387c935dc07e467125921ef11986ea004c21
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)] Este documento de notas de la versión describe problemas conocidos que es conveniente que conozca antes de instalar [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] o solucionar sus problemas.  
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+Este documento de notas de la versión describe problemas conocidos que es conveniente que conozca antes de instalar o antes de solucionar problemas de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 ## <a name="top"></a>Contenido  
 [1.0 Antes de la instalación](#BeforeInstall)  
@@ -298,13 +299,13 @@ Si ya tiene el problema con valores no coincidentes de instance_id, la única ma
   
 **Más información:**  
   
-El modo nativo de[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no se puede ejecutar en paralelo con ninguno de los elementos siguientes:  
+[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] El modo nativo no se puede ejecutar en paralelo con ninguno de los elementos siguientes:  
   
--   Complemento de[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para productos de SharePoint  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Complemento para productos de SharePoint  
   
--   Servicio compartido de SharePoint de[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]   
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Servicio compartido de SharePoint  
   
-La instalación en paralelo impide el inicio del servicio de Windows en modo nativo [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Aparecerán mensajes de error similares a los siguientes en el registro de eventos de Windows:  
+La instalación en paralelo impide el inicio del servicio de Windows en modo nativo [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Aparecerán mensajes de error similares a los siguientes en el registro de eventos de Windows:  
   
 ```  
 Log Name:   Application  
@@ -367,7 +368,7 @@ Esto se debe a que los agentes de escucha de los grupos de disponibilidad necesi
   
 1.  Descargue el proveedor MSOLAP.5 desde [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Instale el proveedor en los servidores de aplicaciones que ejecutan Excel Services. Para obtener más información, vea la sección "Proveedor OLE DB de Microsoft Analysis Services para Microsoft SQL Server 2012 SP1" de [Microsoft SQL Server 2012 SP1 Feature Pack](http://www.microsoft.com/download/details.aspx?id=35580).  
   
-2.  Registre MSOLAP.5 como proveedor de confianza con Servicios de Excel de SharePoint. Para obtener más información, vea [Agregar MSOLAP.5 como proveedor de datos de confianza en Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
+2.  Registre MSOLAP.5 como proveedor de confianza con Servicios de Excel de SharePoint. Para obtener más información, vea [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
   
 **Más información:**  
   
@@ -382,7 +383,7 @@ Esto se debe a que los agentes de escucha de los grupos de disponibilidad necesi
   
 1.  Descargue el proveedor MSOLAP.5 desde [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Instale el proveedor en los servidores de aplicaciones que ejecutan Excel Services. Para obtener más información, vea la sección "Proveedor OLE DB de Microsoft Analysis Services para Microsoft SQL Server 2012 SP1" de [Microsoft SQL Server 2012 SP1 Feature Pack](http://www.microsoft.com/download/details.aspx?id=35580).  
   
-2.  Registre MSOLAP.5 como proveedor de confianza con Servicios de Excel de SharePoint. Para obtener más información, vea [Agregar MSOLAP.5 como proveedor de datos de confianza en Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
+2.  Registre MSOLAP.5 como proveedor de confianza con Servicios de Excel de SharePoint. Para obtener más información, vea [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
   
 **Más información:**  
   

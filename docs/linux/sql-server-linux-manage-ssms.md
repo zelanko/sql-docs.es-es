@@ -9,23 +9,23 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: ae79f5e7a2f526b5ef1d153f333adab5c9a8c8a1
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 31bff0cb43048585fb03246b683ad71e673bb7f4
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Usar SQL Server Management Studio en Windows para administrar SQL Server en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este tema se presentan [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) y le guía a través de un par de tareas comunes. SSMS es una aplicación de Windows, así que usa SSMS cuando tiene una máquina de Windows que se puede conectar a una instancia remota de SQL Server en Linux.
+Este artículo se detallan [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) y le guía a través de un par de tareas comunes. SSMS es una aplicación de Windows, así que usa SSMS cuando tiene una máquina de Windows que se puede conectar a una instancia remota de SQL Server en Linux.
 
 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) forma parte de un conjunto de herramientas SQL que Microsoft ofrece gratuitamente para sus necesidades de desarrollo y administración. SSMS es un entorno integrado para tener acceso, configurar, administrar, administrar y desarrollar todos los componentes de SQL Server que se ejecutan de forma local o en la nube, en Linux, Windows o Docker en macOS y base de datos de SQL Azure y almacenamiento de datos de SQL Azure. SSMS combina un amplio grupo de herramientas gráficas con una serie de editores de script enriquecidos para proporcionar acceso a SQL Server a desarrolladores y administradores de todos los niveles.
 

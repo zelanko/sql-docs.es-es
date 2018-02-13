@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 25bcc2fb0ddb60198208d88ce9c19be139d6ec2f
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 368fce4b3c9595f89ea14ca310049a52cf180a28
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Configurar la instancia de clúster de conmutación por error - NFS: SQL Server en Linux
 
@@ -33,8 +33,8 @@ NFS o sistema de archivos de red es un método común para uso compartido de dis
 El origen de hospedaje NFS (un servidor Linux o algo) debe ser usar/compatible con versión 4.2 o posterior. Las versiones anteriores no funcionará con SQL Server en Linux.
 
 Al configurar las carpetas para compartirse en el servidor NFS, asegúrese de que siguen las opciones generales de estas directrices:
-- `rw`para asegurarse de que la carpeta puede leer y escribir en
-- `sync`para asegurarse de garantiza que escribe en la carpeta
+- `rw` para asegurarse de que la carpeta puede leer y escribir en
+- `sync` para asegurarse de garantiza que escribe en la carpeta
 - No use `no_root_squash` como una opción; se considera un riesgo de seguridad
 - Asegúrese de que la carpeta tiene derechos completos (777) aplicados
 
@@ -167,7 +167,7 @@ Asegúrese de que se apliquen los estándares de seguridad para tener acceso a. 
     sudo systemctl status mssql-server
     ```
     
-   * Crear una base de datos para probar que seguridad se ha configurado correctamente. En el ejemplo siguiente mostrará que se realiza a través de Transact-SQL; se puede realizar a través de SSMS.
+   * Crear una base de datos para probar que seguridad se ha configurado correctamente. En el ejemplo siguiente se muestra se realiza a través de Transact-SQL; se puede realizar a través de SSMS.
  
     ![CreateTestdatabase][3]
 
@@ -230,7 +230,7 @@ Asegúrese de que se apliquen los estándares de seguridad para tener acceso a. 
   
    * Escriba exit ya no sea el superusuario.
 
-   * Para probar, cree una base de datos en esa carpeta. El ejemplo que se muestra a continuación utiliza sqlcmd para crear una base de datos, cambiar el contexto a él, compruebe que los archivos existen en el nivel de sistema operativo y, a continuación, elimina la ubicación temporal. Puede usar SSMS.
+   * Para probar, cree una base de datos en esa carpeta. En el ejemplo siguiente se usa sqlcmd para crear una base de datos, cambiar el contexto a él, compruebe que los archivos existen en el nivel de sistema operativo y, a continuación, elimina la ubicación temporal. Puede usar SSMS.
 
     ![15-createtestdatabase][4]
  

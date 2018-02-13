@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: dd9d35a7fa6e8a8a0e826d584a4f78ca2581d9bc
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 303629364a954fec1328d571ec3b6f3df57b6527
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Implementar un clúster marcapasos para SQL Server en Linux
 
@@ -200,7 +200,7 @@ El proceso para crear un clúster marcapasos es completamente diferente en SLES 
 12. Repita los pasos del 8 al 11 para todos los demás servidores va a agregar al clúster.
 
 ## <a name="install-the-sql-server-ha-and-sql-server-agent-packages"></a>Instalar los paquetes de HA de SQL Server y Agente SQL Server
-Utilice los siguientes comandos para instalar el paquete HA de SQL Server y [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent, si no están ya instalados. Instalar el paquete de alta disponibilidad después de instalar [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] requiere un reinicio de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] para que se pueda usar. Estas instrucciones se supone que los repositorios de los paquetes de Microsoft se haya configurado, ya que [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] debe estar instalado en este momento.
+Use los siguientes comandos para instalar el paquete HA de SQL Server y [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent, si no están ya instalados. Instalar el paquete de alta disponibilidad después de instalar [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] requiere un reinicio de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] para que se pueda usar. Estas instrucciones se supone que los repositorios de los paquetes de Microsoft se haya configurado, ya que [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] debe estar instalado en este momento.
 > [!NOTE]
 > - Si no va a usar [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] agente de trasvase de registros o cualquier otro uso, no tiene que instalarse, por lo que empaqueta *agente de server mssql* puede omitirse.
 > - Los otros paquetes opcionales para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] en Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Full-Text Search (*mssql-server-FT*) y [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql servidor es*), no son es necesario para lograr alta disponibilidad, para ver si una FCI o un AG.

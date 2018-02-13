@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - queries [SQLXML], XPath
 - XML views [SQLXML]
 ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 659c3e790a656be039586b0586f09f6ee480bd4c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: febc71c72c209fc431b9bdc3bd545dc362ce34c8
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>Utilizar consultas XPath en SQLXML 4.0
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la compatibilidad con esquemas XSD anotados le permite crear vistas XML de los datos relacionales almacenados en la base de datos. Puede utilizar un subconjunto del lenguaje XPath para consultar las vistas XML creadas por un esquema XSD anotado.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La compatibilidad de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con los esquemas XSD anotados le permite crear vistas XML de los datos relacionales almacenadas en la base de datos. Puede utilizar un subconjunto del lenguaje XPath para consultar las vistas XML creadas por un esquema XSD anotado.  
   
 > [!NOTE]  
 >  Para entender las consultas XPath en SQLXML 4.0, debe estar familiarizado con las vistas XML y otros conceptos relacionados, como las plantillas y el esquema de asignación. Para obtener más información, vea [Introducción a los esquemas XSD anotados &#40; SQLXML 4.0 &#41; ](../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Para obtener más información sobre XPath, vea la norma sobre XPath establecida por el World Wide Web Consortium (W3C) en http://www.w3.org/TR/xpath.  

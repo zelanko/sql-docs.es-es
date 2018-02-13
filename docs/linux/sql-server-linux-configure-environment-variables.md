@@ -1,6 +1,6 @@
 ---
 title: "Configuración de SQL Server con las variables de entorno | Documentos de Microsoft"
-description: "En este tema se describe cómo usar variables de entorno para configurar valores específicos de 2017 de SQL Server en Linux."
+description: "Este artículo describe cómo usar las variables de entorno para configurar valores específicos de 2017 de SQL Server en Linux."
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: b32330aee4fcd427ecd05d27fba3ffb8539bffa6
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: c7a04b62625863d9f98521b1a408f572ac79a403
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configuración de SQL Server con las variables de entorno en Linux
 
@@ -39,7 +39,7 @@ Puede utilizar varias variables de entorno diferente para configurar SQL Server 
 |-----|-----|
 | **ACCEPT_EULA** | Acepte el contrato de licencia de SQL Server cuando se establece en cualquier valor (por ejemplo, ' Y'). |
 | **MSSQL_SA_PASSWORD** | Configurar la contraseña del usuario administrador. |
-| **MSSQL_PID** | Establecer la clave de producto o de edición de SQL Server. Los valores posibles incluyen: </br></br>**Evaluation**</br>**Para desarrolladores**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Una clave de producto**</br></br>Si se especifica una clave de producto, debe ser en forma de ###-###-###-###-###, donde '#' es una letra o un número.|
+| **MSSQL_PID** | Establecer la clave de producto o de edición de SQL Server. Los valores posibles incluyen: </br></br>**Evaluation**</br>**Para desarrolladores**</br>**Express**</br>Web</br>**Standard**</br>**Enterprise**</br>Una clave de producto</br></br>Si se especifica una clave de producto, debe ser en forma de ###-###-###-###-###, donde '#' es una letra o un número.|
 | **MSSQL_LCID** | Establece el identificador de idioma que se usará para SQL Server. Por ejemplo, 1036 es francés. |
 | **MSSQL_COLLATION** | Establece la intercalación predeterminada de SQL Server. Esto invalida la asignación predeterminada de identificador de idioma (LCID) a la intercalación. |
 | **MSSQL_MEMORY_LIMIT_MB** | Establece la cantidad máxima de memoria (en MB) que puede utilizar SQL Server. De forma predeterminada es el 80% de la memoria física total. |

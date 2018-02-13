@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - elementFormDefault attribute
 - target namespaces [SQLXML]
 ms.assetid: f3df9877-6672-4444-8245-2670063c9310
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a7333141672e9c6979202a95f24d42cae0ed82e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9b0b325cea845e82519752b04591c2c7724b1acf
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Especificar un espacio de nombres de destino mediante el atributo targetNamespace (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Crear esquemas XSD, puede utilizar el esquema XSD **targetNamespace** atributo para especificar un espacio de nombres de destino. Este tema se describe cómo el XSD **targetNamespace**, **elementFormDefault**, y **attributeFormDefault** funcionan los atributos, cómo afectan a la instancia XML que es genera, y cómo se especifican consultas XPath con espacios de nombres.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Crear esquemas XSD, puede utilizar el esquema XSD **targetNamespace** atributo para especificar un espacio de nombres de destino. Este tema se describe cómo el XSD **targetNamespace**, **elementFormDefault**, y **attributeFormDefault** funcionan los atributos, cómo afectan a la instancia XML que es genera, y cómo se especifican consultas XPath con espacios de nombres.  
   
  Puede usar el **xsd: targetNamespace** atributo para colocar elementos y atributos del espacio de nombres predeterminado en otro espacio de nombres. También puede especificar si los elementos y los atributos del esquema declarados localmente deben estar certificados por un espacio de nombres, ya sea explícitamente mediante un prefijo o implícitamente de forma predeterminada. Puede usar el **elementFormDefault** y **attributeFormDefault** atributos en el  **\<xsd: schema >** elemento para especificar globalmente la calificación de locales elementos y atributos o puede usar el **formulario** atributo para especificar los atributos y elementos individuales por separado.  
   

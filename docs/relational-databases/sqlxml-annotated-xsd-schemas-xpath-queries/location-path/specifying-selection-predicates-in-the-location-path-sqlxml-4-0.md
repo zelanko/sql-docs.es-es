@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - filtering [SQLXML]
 - location path for XPath query
 ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b2b476304fddd169a253a3777bb1a0fb4d53087f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 08a27de5e9c528d3e49156df804f19376ae5a6bd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Especificar predicados de selección en la ruta de acceso de ubicación (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Un predicado filtra un conjunto de nodos con respecto a un eje (similar a una cláusula WHERE en una instrucción SELECT). El predicado se especifica entre corchetes. Para cada nodo del conjunto de nodos que se va a filtrar, la expresión de predicado se evalúa con ese nodo como el nodo de contexto, con el número de nodos del conjunto de nodos como tamaño de contexto. Si la expresión de predicado se evalúa como TRUE para ese nodo, el nodo se incluye en el conjunto de nodos resultante.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Un predicado filtra un conjunto de nodos con respecto a un eje (similar a una cláusula WHERE en una instrucción SELECT). El predicado se especifica entre corchetes. Para cada nodo del conjunto de nodos que se va a filtrar, la expresión de predicado se evalúa con ese nodo como el nodo de contexto, con el número de nodos del conjunto de nodos como tamaño de contexto. Si la expresión de predicado se evalúa como TRUE para ese nodo, el nodo se incluye en el conjunto de nodos resultante.  
   
  XPath también permite el filtrado basado en posición. Una expresión de predicado que se evalúa como un número selecciona ese nodo ordinal. Por ejemplo, la ruta de acceso de la ubicación `Customer[3]` devuelve el tercer cliente. No se admiten tales predicados numéricos. Solo se admiten expresiones de predicado que devuelven un resultado Booleano.  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- En esta consulta XPath, `child` y `attribute` son nombres de eje. `Customer`es la prueba de nodo (TRUE si `Customer` es un  **\<nodo element >**, porque  **\<elemento >** es el tipo de nodo principal para el `child` eje). `attribute::CustomerID="ALFKI"` es el predicado. En el predicado, `attribute` es el eje y `CustomerID` es la prueba de nodo (TRUE si **CustomerID** es un atributo del nodo de contexto, porque  **\<atributo >** es la entidad de seguridad tipo de nodo de **atributo** eje).  
+ En esta consulta XPath, `child` y `attribute` son nombres de eje. `Customer` es la prueba de nodo (TRUE si `Customer` es un  **\<nodo element >**, porque  **\<elemento >** es el tipo de nodo principal para el `child` eje). `attribute::CustomerID="ALFKI"` es el predicado. En el predicado, `attribute` es el eje y `CustomerID` es la prueba de nodo (TRUE si **CustomerID** es un atributo del nodo de contexto, porque  **\<atributo >** es la entidad de seguridad tipo de nodo de **atributo** eje).  
   
  Con la sintaxis abreviada, la consulta XPath también se puede especificar como:  
   
@@ -77,7 +79,7 @@ child::Customer[child::ContactName]
   
  En este ejemplo se da por supuesto que el  **\<ContactName >** es un elemento secundario de la  **\<cliente >** elemento en el documento XML, que se conoce como  *asignación centrada en elementos* en un esquema XSD anotado.  
   
- En esta expresión XPath, `child` es el nombre de eje. `Customer`es la prueba de nodo (TRUE si `Customer` es un  **\<elemento >** nodo, porque  **\<elemento >** es el tipo de nodo principal para `child` eje). `child::ContactName` es el predicado. En el predicado, `child` es el eje y `ContactName` es la prueba de nodo (TRUE si `ContactName` es un  **\<elemento >** nodo).  
+ En esta expresión XPath, `child` es el nombre de eje. `Customer` es la prueba de nodo (TRUE si `Customer` es un  **\<elemento >** nodo, porque  **\<elemento >** es el tipo de nodo principal para `child` eje). `child::ContactName` es el predicado. En el predicado, `child` es el eje y `ContactName` es la prueba de nodo (TRUE si `ContactName` es un  **\<elemento >** nodo).  
   
  Esta expresión devuelve solo el  **\<cliente >** elementos secundarios del nodo de contexto que tienen  **\<ContactName >** elementos secundarios.  
   
@@ -96,7 +98,7 @@ child::Customer[not(child::ContactName)]
   
  En este ejemplo se da por supuesto que  **\<ContactName >** es un elemento secundario de la  **\<cliente >** elemento en el documento XML y el campo ContactName no es necesario en el base de datos.  
   
- En este ejemplo, `child` es el eje. `Customer`es la prueba de nodo (TRUE si `Customer` es un \<elemento > nodo). `not(child::ContactName)` es el predicado. En el predicado, `child` es el eje y `ContactName` es la prueba de nodo (TRUE si `ContactName` es un \<elemento > nodo).  
+ En este ejemplo, `child` es el eje. `Customer` es la prueba de nodo (TRUE si `Customer` es un \<elemento > nodo). `not(child::ContactName)` es el predicado. En el predicado, `child` es el eje y `ContactName` es la prueba de nodo (TRUE si `ContactName` es un \<elemento > nodo).  
   
  Con la sintaxis abreviada, la consulta XPath también se puede especificar como:  
   
@@ -120,7 +122,7 @@ Customer[@CustomerID]
 ```  
   
 ## <a name="selection-predicate-example-6"></a>Predicado de selección: Ejemplo 6  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 incluye compatibilidad para las consultas XPath que contienen un producto cruzado en el predicado, como se muestra en el ejemplo siguiente:  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 incluye compatibilidad para las consultas de XPath que contienen un producto cruzado en el predicado, como se muestra en el ejemplo siguiente:  
   
 ```  
 Customer[Order/@OrderDate=Order/@ShipDate]  

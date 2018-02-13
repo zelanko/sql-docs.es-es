@@ -8,7 +8,8 @@ ms.service:
 ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
-caps.latest.revision: "141"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
 ms.openlocfilehash: ad89b5180e55bbbcdde55e2856588ca46695baa1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="before-installing-failover-clustering"></a>Antes de instalar los clústeres de conmutación por error
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Antes de instalar un clúster de conmutación por error de SQL Server, debe seleccionar el hardware y el sistema operativo en el que se ejecutará SQL Server. También deberá configurar el servicio de clústeres de conmutación por error de Windows Server (WSFC), así como revisar la red, la seguridad y las consideraciones relativas al resto del software que se ejecutará en los clústeres de conmutación por error.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Antes de instalar un clúster de conmutación por error de SQL Server, debe seleccionar el hardware y el sistema operativo en el que se ejecutará SQL Server. También deberá configurar el servicio de clústeres de conmutación por error de Windows Server (WSFC), así como revisar la red, la seguridad y las consideraciones relativas al resto del software que se ejecutará en los clústeres de conmutación por error.  
   
  Si un clúster de Windows tiene una unidad de disco local y esa misma letra de unidad se usa también en uno o varios nodos del clúster como una unidad compartida, no puede instalar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en esa unidad.  
   
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/05/2017
 |Descripción del tema|Tema|  
 |-----------------------|-----------|  
 |Describe los conceptos de clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y proporciona vínculos a las tareas y contenido asociados.|[Instancias de clúster de conmutación por error de AlwaysOn &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)|  
-|Describe los conceptos de la directiva de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y proporciona vínculos para configurarla de modo que satisfaga los requisitos de su organización.|[Directiva de conmutación por error para instancias de clústeres de conmutación por error](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)|  
+|Describe los conceptos de la directiva de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y proporciona vínculos para configurarla de modo que satisfaga los requisitos de su organización.|[Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)|  
 |Describe cómo mantener el clúster de conmutación por error existente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Administración y mantenimiento de la instancia de clúster de conmutación por error](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)|  
 |Explica cómo instalar [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en un Clúster de conmutación por error de Windows Server (WSFC).|[Organizar en clúster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548)|  
   
@@ -256,7 +258,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="configure-includemsconameincludesmsconame-mdmd-distributed-transaction-coordinator"></a>Configurar el Coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
  Tras instalar el sistema operativo y configurar el clúster, debe configurar MSDTC para que funcione en un clúster mediante el Administrador de clústeres. Si no logra crear el clúster de MSDTC, no se bloqueará el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , pero la funcionalidad de la aplicación [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede verse afectada si MSDTC no se configura correctamente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Requisitos de hardware y software para instalar SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Comprobar los parámetros del Comprobador de configuración del sistema](../../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
  [Administración y mantenimiento de la instancia de clúster de conmutación por error](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)  

@@ -18,19 +18,20 @@ helpviewer_keywords:
 - monitoring events [WMI]
 - events [WMI]
 ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 37de98527c65803971285bd52134d26449954b23
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 90490b4884521f509d6e008f2bbde49605afd7b4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>Conceptos del proveedor WMI para eventos de servidor
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]El proveedor WMI para eventos de servidor le permite usar Instrumental de administración de Windows (WMI) para supervisar eventos en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+El proveedor WMI de eventos de servidor permite usar el Instrumental de administración de Windows (WMI) para supervisar eventos en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Descripción del proveedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/understanding-the-wmi-provider-for-server-events.md)  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - AUTO mode
 - client-side XPath
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e66f9c6503aa52add3de25c35365feeeca488e82
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 252164e0a5ce8b3eeae00549d36450acb1a7d44e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Diferencias entre XPath en el cliente y Aplicación de formato XML en el servidor (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Este tema describe las diferencias generales entre cliente y servidor formato XML en SQLXML.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+En este tema se describen las diferencias generales que existen entre la aplicación de formato XML del lado cliente y del lado servidor en SQLXML.  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>En el formato del cliente, no se admiten consultas de varios conjuntos de filas  
  Cuando la aplicación de formato XML es del lado cliente, no se admiten consultas que generen varios conjuntos de filas. Supongamos, por ejemplo, que tiene un directorio virtual en el que ha especificado que la aplicación formato se realice del lado cliente. Considere la posibilidad de esta plantilla de ejemplo, que tiene dos instrucciones SELECT en una  **\<SQL: >** bloque:  

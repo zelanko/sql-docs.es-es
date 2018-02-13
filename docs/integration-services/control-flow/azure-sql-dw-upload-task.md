@@ -22,10 +22,10 @@ ms.author: lingxl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 2d6c95bda5faf7f3ccf8f6b9bc4774a66d482e51
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="azure-sql-dw-upload-task"></a>Tarea de carga de Azure SQL DW
 La **tarea de carga de Azure SQL DW** habilita un paquete SSIS para cargar datos locales en una tabla de Azure SQL Data Warehouse (DW). El formato de archivo de origen de datos que se admite actualmente es texto delimitado en codificación UTF8. El proceso de carga sigue el enfoque eficaz de PolyBase, tal y como se describe en el artículo [Estrategias y patrones de carga de Azure SQL Data Warehouse](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/). En concreto, los datos primero se cargan en Azure Blob Storage y, a continuación, en Azure SQL DW. Por lo tanto, esta tarea requiere una cuenta de Azure Blob Storage.

@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: ProtocolOrder Property (ClientNetworkProtocol Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- ProtocolOrder Property (ClientNetworkProtocol Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: ProtocolOrder property
+helpviewer_keywords:
+- ProtocolOrder property
 ms.assetid: aa09b8ab-37db-4406-8973-acf503855fd2
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 74910097784812b920233198a81fede673d60443
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cb610179585806c0d2d9335e43a6023c50538100
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="protocolorder-property-clientnetworkprotocol-class"></a>Propiedad ProtocolOrder (clase ClientNetworkProtocol)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Obtiene el número de pedido del cliente actualmente que se hace referencia en el protocolo de red según lo especificado por el [método SetOrderValue (clase ClientNetworkProtocol)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md) método.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Obtiene el número de orden del protocolo de red del cliente al que se hace referencia actualmente especificado por el [método SetOrderValue (clase ClientNetworkProtocol)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,7 +46,7 @@ object.ProtocolOrder [= value]
  *objeto*  
  A [clase ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) que representa el protocolo de red utilizado por el cliente de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## <a name="property-valuereturn-value"></a>Valor de propiedad/Valor devuelto  
+## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor **uint32** que especifica el número de orden del protocolo de red del cliente al que se hace referencia actualmente establecido por el método **OrderValue** . Si el protocolo de red del cliente está deshabilitado, este valor será cero.  
   
 ## <a name="remarks"></a>Comentarios  

@@ -19,10 +19,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 29791eaade29aa28089dfb579206c2dbddbed1ad
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="look-up-process-chain"></a>Buscar cadena de procesos
   Use el cuadro de diálogo **Buscar cadena de procesos** para buscar una cadena de procesos que se haya definido en el sistema de SAP Netweaver BW. Cuando aparezca la lista de las cadenas de procesos, seleccione la cadena que desee y el origen rellenará las opciones asociadas a los valores necesarios.  

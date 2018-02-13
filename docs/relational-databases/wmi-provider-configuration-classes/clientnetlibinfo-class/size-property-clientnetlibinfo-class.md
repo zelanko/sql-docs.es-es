@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: Size Property (ClientNetLibInfo Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- Size Property (ClientNetLibInfo Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: Size property
+helpviewer_keywords:
+- Size property
 ms.assetid: 66f7264e-2c18-40f5-8091-b5dd83d5716f
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1842de4cb9be91aee1e6b331959c8e4ac626b434
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cd9a62c712e5d0399ebb2d3ef01bc1ea223f4e3e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="size-property-clientnetlibinfo-class"></a>Propiedad Size (clase ClientNetLibInfo)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Obtiene el tamaño del cliente de biblioteca de red en kilobytes.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Obtiene el tamaño de la biblioteca de red del cliente en kilobytes.  
   
 ## <a name="syntax"></a>Sintaxis  
   

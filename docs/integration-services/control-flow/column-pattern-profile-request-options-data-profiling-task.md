@@ -21,10 +21,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 154dc4da51c19363cb9fd41616e9e89ea3d3ded8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de patrón de columnas (tarea de generación de perfiles de datos)
   Utilice el panel **Propiedades de la solicitud** de la página **Solicitudes de perfil** para establecer las opciones de **Solicitud de perfil de patrón de columnas** seleccionadas en el panel de solicitudes. Un perfil de patrón de columnas notifica un conjunto de expresiones regulares que cubren el porcentaje especificado de valores en una columna de cadenas. Este perfil puede ayudarle a identificar problemas en los datos, como cadenas no válidas, y puede sugerir expresiones regulares que se pueden utilizar en el futuro para validar los valores nuevos. Por ejemplo, un perfil de patrón de una columna de códigos postales de Estados Unidos podría generar las expresiones regulares \d{5}-\d{4}, \d{5} y \d{9}. Si ve otras expresiones regulares, es posible que los datos contengan valores no válidos o tengan un formato incorrecto.  

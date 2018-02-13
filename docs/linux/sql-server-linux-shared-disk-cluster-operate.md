@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 6f8ba6ed2e56ea4dc97ab68fa85601d94edfe1fc
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 5e557c2ef6005a9e2822b973748928bae991875c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Funcionan de la instancia de clúster de conmutación por error: SQL Server en Linux
 
@@ -38,7 +38,7 @@ La forma de conmutación por error depende de la distribución de Linux. Siga la
 - [RHEL o Ubuntu](#rhelFailover)
 - [SLES](#slesFailover)
 
-## <a name = "#rhelFailover"></a>Conmutación por error manual (RHEL o Ubuntu)
+## <a name = "#rhelFailover"></a> Conmutación por error manual (RHEL o Ubuntu)
 
 Para llevar a cabo una conmutación por error manual, onn Red Hat Enterprise Linux (RHEL) o servidores Ubuntu, ejecute los siguientes pasos.
 1.  Emita el comando siguiente: 
@@ -59,7 +59,7 @@ Para llevar a cabo una conmutación por error manual, onn Red Hat Enterprise Lin
 
 \<FCIResourceName > es el nombre de recurso marcapasos para la FCI. 
 
-## <a name = "#slesFailover"></a>Conmutación por error manual (SLES)
+## <a name = "#slesFailover"></a> Conmutación por error manual (SLES)
 
 
 En Suse Linux Enterprise Server (SLES), use el `migrate` de comandos para la conmutación por error manualmente una FCI de SQL Server. Por ejemplo:

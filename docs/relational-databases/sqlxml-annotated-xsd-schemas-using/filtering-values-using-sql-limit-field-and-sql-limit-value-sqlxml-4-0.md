@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff0a1647573191483cc9c14e68734ee3a28707c4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77113446bfea793621c13567bdb30ff7381290ef
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtras valores mediante sql:limit-field y sql:limit-value (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Puede limitar las filas que se devuelven desde una consulta de base de datos basándose en algún valor de limitación. El **SQL: limit-campo** y **SQL: limit-valor** anotaciones se usan para identificar la columna de base de datos que contiene los valores de limitación y para especificar un valor de limitación concreto que se usará para filtrar los datos Devuelve.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Puede limitar filas devueltas de una consulta de base de datos en base a algún valor de limitación. El **SQL: limit-campo** y **SQL: limit-valor** anotaciones se usan para identificar la columna de base de datos que contiene los valores de limitación y para especificar un valor de limitación concreto que se usará para filtrar los datos Devuelve.  
   
  El **SQL: limit-campo** anotación se utiliza para identificar una columna que contiene un valor de limitación; se permite en cada atributo o elemento asignado.  
   

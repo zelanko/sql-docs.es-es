@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: cf0a61c924a10066a41bcf4127e444b60f0f50bc
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 68e41573c107725ef7af12e8b990678f8991bb02
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>Siempre funcionan en grupos de disponibilidad en Linux
 
@@ -129,7 +129,7 @@ Para obtener más información:
  [SLES Administration Guide - recursos](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
 
-### <a name="forceManual"></a>Manual mover cuando las herramientas de clúster no están respondiendo 
+### <a name="forceManual"></a> Manual mover cuando las herramientas de clúster no están respondiendo 
 
 En casos extremos, si un usuario no puede utilizar las herramientas de administración de clúster para interactuar con el clúster (es decir, el clúster no responde, herramientas de administración de clúster tienen un comportamiento defectuoso), el usuario podría tener que conmutar por error manualmente: omitiendo el Administrador de clústeres externa. Esto no se recomienda para las operaciones normales y debe usarse en casos de clúster no se puede ejecutar la acción de conmutación por error utilizando las herramientas de administración de clúster.
 
@@ -158,7 +158,7 @@ Si no se producirá un error en el grupo de disponibilidad con las herramientas 
    EXEC sp_set_session_context @key = N'external_cluster', @value = N'yes';
    ```
 
-1. Conmutar por error el grupo de disponibilidad con Transact-SQL. En el ejemplo siguiente reemplazar `<**MyAg**>` con el nombre del grupo de disponibilidad. Conéctese a la instancia de SQL Server que hospeda la réplica secundaria de destino y ejecute el siguiente comando:
+1. Conmutar por error el grupo de disponibilidad con Transact-SQL. En el ejemplo siguiente, reemplace `<**MyAg**>` con el nombre del grupo de disponibilidad. Conéctese a la instancia de SQL Server que hospeda la réplica secundaria de destino y ejecute el siguiente comando:
 
    ```Transact-SQL
    ALTER AVAILABILITY GROUP <**MyAg**> FAILOVER;
@@ -185,7 +185,7 @@ Las siguientes secciones explican cómo realizar una actualización gradual con 
 
 Una vez réplicas del grupo de disponibilidad en las instancias de SQL Server en Linux, el tipo de clúster del grupo de disponibilidad es `EXTERNAL` o `NONE`. Un grupo de disponibilidad que está administrado por un administrador de clústeres, además de clúster de conmutación por error de Windows Server (WSFC) es `EXTERNAL`. Marcapasos con Corosync es un ejemplo de un administrador de clústeres externa. Un grupo de disponibilidad con el Administrador de clúster no tiene el tipo de clúster `NONE` los pasos de actualización que se describen aquí son específicos para los grupos de disponibilidad del tipo de clúster `EXTERNAL` o `NONE`.
 
-1. Antes de comenzar, cada base de datos de copia de seguridad.
+1. Antes de comenzar, realizar una copia de cada base de datos.
 2. Actualizar las instancias de SQL Server que hospeden las réplicas secundarias.
 
     A. Actualice primero las réplicas secundarias asincrónicas.
@@ -244,7 +244,7 @@ Una vez réplicas del grupo de disponibilidad en las instancias de SQL Server en
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
       ```
 
-1. Después de la conmutación por error, actualice SQL Server en la réplica principal anterior repitiendo el mismo procedimiento descrito en los pasos anteriores de b.3 b.1.
+1. Después de la conmutación por error, actualice SQL Server en la réplica principal anterior repitiendo el mismo procedimiento descrito en los pasos b.1 b.3.
 
    Las siguientes actualizaciones de ejemplo `mssql-server` y `mssql-server-ha` paquetes.
 
@@ -267,7 +267,7 @@ Una vez réplicas del grupo de disponibilidad en las instancias de SQL Server en
    pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
    ```
 
-1. Para un grupos de disponibilidad con un clúster externo manager - donde escribir el clúster es externo, Liberador de espacio en la restricción de ubicación que es atribuible a la conmutación por error manual. 
+1. Para un grupos de disponibilidad con un administrador de clústeres externa - donde el tipo de clúster es externo, limpie la restricción de ubicación que es atribuible a la conmutación por error manual. 
 
    ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  

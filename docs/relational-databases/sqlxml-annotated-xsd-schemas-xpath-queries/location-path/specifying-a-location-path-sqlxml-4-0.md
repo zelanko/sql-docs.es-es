@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - relative location path [SQLXML]
 - location path for XPath query
 ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8954831cd600a5e10ec9e98879d8d68568c837d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f704e45b165ecb4e29d909bcce09f7af92fb0989
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Especificar una ruta de acceso de ubicación (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Las consultas XPath se especifican en forma de una expresión. Existen varios tipos de expresiones. Una ruta de acceso de ubicación es una expresión que selecciona un conjunto de nodos relativos al nodo de contexto. El resultado de evaluar una ruta de acceso de ubicación es un conjunto de nodos.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Las consultas XPath se especifican en forma de expresión. Existen varios tipos de expresiones. Una ruta de acceso de ubicación es una expresión que selecciona un conjunto de nodos relativos al nodo de contexto. El resultado de evaluar una ruta de acceso de ubicación es un conjunto de nodos.  
   
 ## <a name="types-of-location-paths"></a>Tipos de rutas de acceso de ubicación  
  Una ruta de acceso de ubicación puede usar cualquiera de estos formatos:  
@@ -49,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="location-steps"></a>Pasos de ubicación  
  Una ruta de acceso de ubicación (absoluta o relativa) está compuesta por pasos de ubicación que contienen tres partes:  
   
--   **Axis**  
+-   **Eje**  
   
      El eje especifica la relación jerárquica entre los nodos seleccionados por el paso de ubicación y el nodo de contexto. El **primario**, **secundarios**, **atributo**, y **en sí mismo** se admiten los ejes. Si un **secundarios** eje se especifica en la ruta de acceso de ubicación, todos los nodos seleccionados por la consulta son los elementos secundarios del nodo de contexto. Si un **primario** eje se especifica, el nodo seleccionado es el nodo primario del nodo de contexto. Si un **atributo** eje se especifica, los nodos seleccionados son los atributos del nodo de contexto.  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], queries
 - templates [SQLXML], annotated XSD schemas in queries
 ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a873bc0b382c1b81daed1cedb6ebb6229296ba7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6cd63b4426bdc1b4adf9020b5cf4bd3e50622528
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>Usar esquemas XSD anotados en consultas (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Puede especificar consultas en un esquema anotado para recuperar datos de la base de datos especificando consultas XPath en una plantilla en el esquema XSD.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Puede especificar consultas en un esquema anotado para recuperar datos de la base de datos especificando consultas XPath en una plantilla en el esquema XSD.  
   
  El  **\<sql:xpath-consulta >** elemento le permite especificar una consulta XPath en la vista XML definida por el esquema anotado. El esquema anotado en el que se ejecutará la consulta XPath se identifica mediante el **esquema de asignación** atributo de la  **\<sql:xpath-consulta >** elemento.  
   
@@ -145,6 +147,6 @@ ms.lasthandoff: 11/17/2017
 </sql:xpath-query>  
 ```  
   
- La plantilla especifica una consulta XPath, pero no especifica ningún esquema de asignación. Por lo tanto, esta consulta se considera un **dbobject** donde Production.ProductPhoto es el nombre de tabla de consulta de tipo y @ProductPhotoID= '100' es un predicado que busca una fotografía del producto con el valor de identificador de 100. @LargePhotoes la columna desde la que se va a recuperar el valor.  
+ La plantilla especifica una consulta XPath, pero no especifica ningún esquema de asignación. Por lo tanto, esta consulta se considera un **dbobject** donde Production.ProductPhoto es el nombre de tabla de consulta de tipo y @ProductPhotoID= '100' es un predicado que busca una fotografía del producto con el valor de identificador de 100. @LargePhoto es la columna desde la que se va a recuperar el valor.  
   
   

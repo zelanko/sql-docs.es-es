@@ -9,18 +9,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: 2da90e6cdf49531980e9014075d7b094b61271fd
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: b5dd38c166f869cfff730d091cee091582507114
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server en Linux preguntas más frecuentes (P+F)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Las secciones siguientes proporcionan preguntas y respuestas más comunes para SQL Server ejecutando en Linux.
 
@@ -94,7 +96,7 @@ Las secciones siguientes proporcionan preguntas y respuestas más comunes para S
 
 1. **¿SQL Server en Linux admite varias instancias en el mismo host?**
 
-   Se recomienda ejecutar varios contenedores en un host para tener varias instancias distintos. Cada contenedor debe escuchar en un puerto diferente. Para obtener más información, consulte [ejecutar varios contenedores de SQL Server](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers).
+   Se recomienda ejecutar varios contenedores en un host para tener varias instancias distintos. Cada contenedor que debe escuchar en un puerto diferente. Para obtener más información, consulte [ejecutar varios contenedores de SQL Server](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers).
 
 1. **¿Se admite la autenticación de Active Directory en Linux?**
 

@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - parent axis
 - axes [SQLXML]
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c89170aabd6734292fb6193a90161bb5001bf11
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aa306b70eaa1c91b352a6e2e19e7b76c4aabf52c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Especificar ejes en consultas XPath (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Los ejemplos siguientes muestran cómo se especifican los ejes en las consultas XPath.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Los ejemplos siguientes muestran cómo se especifican los ejes en las consultas XPath.  
   
  Las consultas XPath de estos ejemplos se especifican en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [esquema de XSD anotado de ejemplo para obtener ejemplos de XPath &#40; SQLXML 4.0 &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
@@ -167,7 +169,7 @@ ms.lasthandoff: 11/17/2017
   
  Si se especifica la consulta XPath como `Customer/Order/OrderDetail`, de cada nodo que coincide con  **\<cliente >** la consulta navega a su  **\<orden >** elementos. Y para cada nodo que coincide con  **\<orden >**, la consulta agrega los nodos  **\<OrderDetail >** al resultado. Solo  **\<OrderDetail >** se devuelve en el conjunto de resultados.  
   
-### <a name="c-use--to-specify-the-parent-axis"></a>C. Usar .. para especificar el eje primario  
+### <a name="c-use--to-specify-the-parent-axis"></a>C. Usar . para especificar el eje primario  
  La consulta siguiente recupera todos los  **\<orden >** elementos con un elemento primario  **\<cliente >** elemento con un **CustomerID** atributo valor de 1. La consulta utiliza la **secundarios** eje en el predicado para buscar el elemento primario de la  **\<orden >** elemento.  
   
 ```  

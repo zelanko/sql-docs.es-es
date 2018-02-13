@@ -1,5 +1,5 @@
 ---
-title: LOCALDB_ERROR_CANNOT_GET_USER_PROFILE_FOLDER | Documentos de Microsoft
+title: LOCALDB_ERROR_CANNOT_GET_USER_PROFILE_FOLDER | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 3625c9cb-579c-4b4b-be74-0d4de7b64bb6
-caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a538065552fdc3382e6ab1ee7a7a1078af5897d7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a316434a5c09f58ce5fcbb5b7b444ec47422b936
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="localdberrorcannotgetuserprofilefolder"></a>LOCALDB_ERROR_CANNOT_GET_USER_PROFILE_FOLDER
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/08/2018
 |||  
 |-|-|  
 |Nombre del producto|SQL Server|  
-|Identificador del evento|259|  
+|Id. de evento|259|  
 |Origen del evento|SQL Server Local Database Runtime 12.0|  
 |Componente|API de Local Database Runtime|  
 |Texto del mensaje|No puede tener acceso a la carpeta de perfil de los datos de aplicación locales (%%LOCALAPPDATA%%).|  

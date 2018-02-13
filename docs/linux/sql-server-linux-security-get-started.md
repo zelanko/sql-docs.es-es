@@ -1,6 +1,6 @@
 ---
 title: "Introducción a la seguridad de SQL Server en Linux | Documentos de Microsoft"
-description: "En este tema se describe las acciones de seguridad típica."
+description: "Este artículo describen las acciones de seguridad típica."
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,19 +9,21 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: Inactive
-ms.openlocfilehash: d927bf68b06050c8067d6f6d63d737f084219341
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 00c222c601cdf314f04db3cb9e3b818d9ea3a65f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Tutorial sobre las características de seguridad de SQL Server en Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Si es un usuario de Linux que es una novedad de SQL Server, las tareas siguientes le guiarán por algunas de las tareas de seguridad. Estos no son únicas o específicas de Linux, pero es conveniente tener una idea de las áreas para investigar en profundidad. En cada ejemplo se proporciona un vínculo a la documentación detallada para dicha área.
 
@@ -38,7 +40,7 @@ CREATE LOGIN Larry WITH PASSWORD = '************';
 ```
 
 >  [!NOTE]
->  Utilice siempre una contraseña segura en lugar de los asteriscos anteriores.
+>  En el comando anterior, use siempre una contraseña segura en lugar de los asteriscos.
 
 Los inicios de sesión pueden conectarse a SQL Server y tener acceso (con permisos limitados) a la base de datos maestra. Para conectarse a una base de datos de usuario, un inicio de sesión necesita una identidad correspondiente en el nivel de base de datos, llama a un usuario de base de datos. Los usuarios son específicos de cada base de datos y se deben crear por separado en cada base de datos para concederles acceso. El siguiente ejemplo se desplaza a la base de datos AdventureWorks2014 y, a continuación, usa el [CREATE USER](../t-sql/statements/create-user-transact-sql.md) instrucción para crear un usuario denominado Larry que está asociado con el inicio de sesión denominado Larry. Aunque el inicio de sesión y el usuario están relacionadas (asignados entre sí), son objetos diferentes. El inicio de sesión es una entidad de seguridad de nivel de servidor. El usuario es una entidad de seguridad de nivel de base de datos.
 
@@ -101,7 +103,7 @@ Para obtener más información sobre el sistema de permisos, consulte [Getting S
 
 [Seguridad de nivel de fila](../relational-databases/security/row-level-security.md) le permite restringir el acceso a las filas de una base de datos en función de usuario que ejecuta una consulta. Esta característica es útil para escenarios como asegurarse de que los clientes solo pueden tener acceso a sus propios datos o que los trabajadores solo puedan acceder a datos que son pertinentes para su departamento.   
 
-Los pasos siguientes tutorial configurar dos usuarios con diferentes acceso a nivel de fila el `Sales.SalesOrderHeader` tabla. 
+Los pasos siguientes abordan configurando los dos usuarios con acceso de nivel de fila diferente para el `Sales.SalesOrderHeader` tabla. 
 
 Cree dos cuentas de usuario para probar la seguridad de nivel de fila:    
    
@@ -247,7 +249,7 @@ ALTER DATABASE AdventureWorks2014
 SET ENCRYPTION ON;   
 ```
 
-Para quitar TDE, ejecute`ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
+Para quitar TDE, ejecute `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
 
 El programa de las operaciones de cifrado y descifrado se ejecutan en subprocesos en segundo plano, con SQL Server. Puede ver el estado de estas operaciones mediante las vistas de catálogo y las vistas de administración dinámica de la lista que se muestra más adelante en este tema.   
 

@@ -9,23 +9,23 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 30cc4564-f389-4707-9b25-8ba782cc5150
 ms.workload: On Demand
-ms.openlocfilehash: 98fdce174be9f7a3dc67d910a84f8558ede1b317
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 442d57154222fdb06ba26ad7858eb783103e93cd
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-sql-server-management-studio-ssms-on-windows-to-manage-sql-server-on-linux"></a>Usar SQL Server Management Studio (SSMS) de Windows para administrar SQL Server en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este tema muestra cómo usar [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) para conectarse a SQL Server 2017 en Linux. SSMS es una aplicación de Windows, así que usa SSMS cuando tiene una máquina de Windows que se puede conectar a una instancia remota de SQL Server en Linux.
+Este artículo muestra cómo usar [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) para conectarse a SQL Server 2017 en Linux. SSMS es una aplicación de Windows, así que usa SSMS cuando tiene una máquina de Windows que se puede conectar a una instancia remota de SQL Server en Linux.
 
 Después de conectarse correctamente, ejecute una consulta de Transact-SQL (T-SQL) simple para comprobar la comunicación con la base de datos.
 

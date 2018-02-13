@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - executing template files [SQLXML]
 - CommandText property
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 942bfa19ee6a90f1581ec189754d5ffea9f51fbf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ef0cc4fe9655e7ac183226f01bfba0a7a3901971
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Ejecutar archivos de plantilla utilizando la propiedad CommandText
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Este ejemplo muestra cómo se pueden especificar archivos de plantilla que están compuestos de consultas SQL o XPath utilizando la CommandTextproperty. En lugar de especificar la consulta SQL o XPath como el valor de CommandText, puede especificar un nombre de archivo como el valor. En el ejemplo siguiente, la propiedad CommandType se especifica como SqlXmlCommandType.TemplateFile.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Este ejemplo muestra cómo se pueden especificar archivos de plantilla que están compuestos de consultas SQL o XPath utilizando la CommandTextproperty. En lugar de especificar la consulta SQL o XPath como el valor de CommandText, puede especificar un nombre de archivo como el valor. En el ejemplo siguiente, la propiedad CommandType se especifica como SqlXmlCommandType.TemplateFile.  
   
  La aplicación de ejemplo ejecuta esta plantilla:  
   

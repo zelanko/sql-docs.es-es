@@ -21,10 +21,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 38216b9ef1b8c8ccaa3ca7656747defe077ee690
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de claves candidatas (tarea de generación de perfiles de datos)
   Utilice el panel **Propiedades de la solicitud** de la página **Solicitudes de perfil** para establecer las opciones de **Solicitud de perfil de claves candidatas** seleccionadas en el panel de solicitudes. Un perfil de claves candidatas notifica si una columna o conjunto de columnas es una clave, o una clave aproximada, para la tabla seleccionada. Este perfil también puede ayudarle a identificar problemas de los datos, por ejemplo valores duplicados en una posible columna de clave.  

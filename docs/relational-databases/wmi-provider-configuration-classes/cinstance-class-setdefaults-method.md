@@ -8,27 +8,32 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: SetDefaults Method (CInstance Class)
-apilocation: sqlmgmproviderxpsp2up.mof
+apiname:
+- SetDefaults Method (CInstance Class)
+apilocation:
+- sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
-helpviewer_keywords: SetDefaults method
+helpviewer_keywords:
+- SetDefaults method
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 744bfa80ab7207dc8b9178f4266b58ce7328d1c5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ea75930319239ca7e14a1f840b4cfad3b04226b3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="cinstance-class---setdefaults-method"></a>Clase CInstance - SetDefaults, método
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Establece todos los valores predeterminados para la instancia de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente con la opción para sobrescribir los datos existentes.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Establece todos los valores predeterminados para la instancia de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente con la opción para sobrescribir los datos existentes.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,7 +52,7 @@ object.SetDefaults(OverwriteAll)
 |---------------|-----------------|  
 |*OverwriteAll*|Un valor booleano que especifica si se debe sobrescribir los valores existentes en la instancia de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente: **true** para sobrescribir los datos existentes, o **false** si los datos existentes no se sobrescribirá.|  
   
-## <a name="property-valuereturn-value"></a>Valor de propiedad/Valor devuelto  
+## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor **uint32** que es 0 si se modificó el servicio correctamente, 1 si no se admite la solicitud y cualquier otro número para indicar un error.  
   
 ## <a name="remarks"></a>Comentarios  

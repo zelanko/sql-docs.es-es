@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 891047c2d748e5c3c07afc26af790619eda5e315
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Implementación y compatibilidad de versiones en SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] admite los escenarios siguientes:  
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/09/2018
 ##  <a name="bkmk_SupportedVersions"></a> Versiones admitidas  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el entorno de desarrollo de 32 bits para proyectos de servidor de informes, no está diseñado para ejecutarse en equipos basados en [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] y no se instala en servidores basados en [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. En cambio, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] sí es compatible con los equipos basados en x64.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el entorno de desarrollo de 32 bits para proyectos de servidor de informes, no está diseñado para ejecutarse en equipos basados en [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]y no se instala en servidores basados en [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. En cambio, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] sí es compatible con los equipos basados en x64.  
   
  En la tabla siguiente se describen las versiones compatibles para crear y publicar los informes en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   

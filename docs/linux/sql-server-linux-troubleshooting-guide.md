@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: 2771b3bc37eccf9fd24eecea3c716ea6d6b7b749
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: f56806313075865c53cbd3fc1f80c0d132804c04
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Solucionar problemas de SQL Server en Linux
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 02/01/2018
 
 Este documento describe cómo solucionar problemas de Microsoft SQL Server que se ejecutan en Linux o en un contenedor de Docker. Cuando solucione problemas de SQL Server en Linux, no olvide revisar las características compatibles y las limitaciones conocidas en el [SQL Server en las notas de la versión de Linux](sql-server-linux-release-notes.md).
 
-## <a id="connection"></a>Solucionar problemas de errores de conexión
+## <a id="connection"></a> Solucionar problemas de errores de conexión
 Si tiene dificultades para conectarse a SQL Server de Linux, hay algunas cosas para comprobar. 
 
 - Compruebe que el nombre del servidor o la dirección IP sea accesible desde el equipo cliente.

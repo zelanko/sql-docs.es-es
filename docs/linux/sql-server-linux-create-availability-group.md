@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 8c055558b2a1e8287272835a0a1c0d2e2dc94f02
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 4e1190fea92c1e84ce38bd46040a8b5fcdd532d7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Crear y configurar un grupo de disponibilidad para SQL Server en Linux
 
@@ -64,7 +64,7 @@ También puede modificar el `mssql.conf` archivo, situado bajo el `/var/opt/mssq
 hadr.hadrenabled = 1
 ```
 
-### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>Reinicio[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>Reinicio [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 Después de habilitar los grupos de disponibilidad, como en Windows, debe reiniciar [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Esto puede realizarse por el texto siguiente:
 
 ```bash
@@ -319,7 +319,7 @@ En este ejemplo creará certificados para una configuración de tres nodos. Los 
 
 Esta sección explica cómo usar [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) o Transact-SQL para crear el grupo de disponibilidad para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 
-### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>Uso[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]
+### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>Uso [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]
 
 Esta sección muestra cómo crear un grupo de disponibilidad con un tipo de clúster de externo con SSMS con el Asistente para nuevo grupo de disponibilidad.
 
@@ -365,7 +365,7 @@ Esta sección muestra cómo crear un grupo de disponibilidad con un tipo de clú
 
 12. Haga clic en **Siguiente**.
 
-13. Elija cómo se inicializará la secundaria. El valor predeterminado es usar [la propagación automática](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), lo que requiere la misma ruta de acceso en todos los servidores que participan en el AG. También puede hacer que el Asistente para hacer una copia de seguridad y restaurar (la segunda opción;) tiene combinar si tienen manualmente copia de seguridad, copiar y restaurar la base de datos en las réplicas (tercera opción;) o agregar la base de datos más adelante (la última opción). Al igual que con los certificados, si va a realizar copias de seguridad y copiarlos manualmente, necesitará permisos en los archivos de copia de seguridad que se establecerá en las otras réplicas. Haga clic en **Siguiente**.
+13. Elija cómo se inicializará la secundaria. El valor predeterminado es usar [la propagación automática](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), lo que requiere la misma ruta de acceso en todos los servidores que participan en el AG. También puede hacer que el Asistente para hacer una copia de seguridad y restaurar (la segunda opción;) tiene combinar si tienen manualmente copia de seguridad, copiar y restaurar la base de datos en las réplicas (tercera opción;) o agregar la base de datos más adelante (la última opción). Al igual que con los certificados, si va a realizar copias de seguridad y copiarlos manualmente, los permisos de los archivos de copia de seguridad debe establecerse en las otras réplicas. Haga clic en **Siguiente**.
 
 14. En el cuadro de diálogo de validación, si todo lo que no vuelven a estar como correcto, investigue. Algunas advertencias son aceptables y no grave, como si no crea un agente de escucha. Haga clic en **Siguiente**.
 
@@ -596,7 +596,7 @@ El recurso de AG que se crea es un tipo especial de recurso denominado un clon. 
     ```
 
     >[!NOTE]
-    >En RHEL 7.4, puede producirse una advertencia con el uso de--master. Para evitar esto, utilice`sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
+    >En RHEL 7.4, puede producirse una advertencia con el uso de--master. Para evitar esto, utilice `sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
    
     **SUSE Linux Enterprise Server (SLES)**
     

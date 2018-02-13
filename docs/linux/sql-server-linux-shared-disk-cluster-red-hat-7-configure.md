@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: 519728819aa79534a1c8cc3a079164d276924a44
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 5263a40e37388ea9a884cafeffe2302f56f0043e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configuración de clúster de disco compartido de Red Hat Enterprise Linux para SQL Server
 
@@ -30,22 +30,22 @@ Esta guía proporciona instrucciones para crear un clúster de disco compartido 
 > [!NOTE] 
 > Acceso a documentación y HA de Red Hat complemento requiere una suscripción. 
 
-Como muestra el diagrama siguiente se presenta el almacenamiento a dos servidores. Componentes de agrupación en clústeres - Corosync y marcapasos - coordinan las comunicaciones y administración de recursos. Uno de los servidores tiene la conexión activa a los recursos de almacenamiento y el servidor SQL Server. Cuando marcapasos detecta un error de los componentes de agrupación en clústeres administran mover los recursos a otro nodo.  
+Como se muestra en el diagrama siguiente, el almacenamiento se presenta a dos servidores. Componentes de agrupación en clústeres - Corosync y marcapasos - coordinan las comunicaciones y administración de recursos. Uno de los servidores tiene la conexión activa a los recursos de almacenamiento y el servidor SQL Server. Cuando marcapasos detecta un error de los componentes de agrupación en clústeres administran mover los recursos a otro nodo.  
 
 ![Red Hat Enterprise Linux 7 compartido de clúster de disco de SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-Para obtener más detalles sobre la configuración del clúster y opciones de agentes de recursos, administración, visite [documentación de referencia RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Para obtener más información sobre la configuración del clúster y opciones de agentes de recursos, administración, visite [documentación de referencia RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 
 > [!NOTE] 
 > En este momento, la integración de SQL Server con marcapasos no es como acoplamiento como con WSFC en Windows. Desde dentro de SQL, no hay ningún conocimiento sobre la presencia del clúster, todas las orquestaciones está fuera de y marcapasos controla el servicio como una instancia independiente. También, por ejemplo, sys.dm_os_cluster_properties y clúster DMV sys.dm_os_cluster_nodes no van a ningún registro.
-Para usar una cadena de conexión que apunta a un nombre de servidor de cadena y no usar la dirección IP, tendrá que registrar en su servidor DNS la dirección IP utilizada para crear el recurso IP virtual (tal y como se explica más adelante) con el nombre del servidor seleccionado.
+Para usar una cadena de conexión que apunta a un nombre de servidor de cadena y no usar la dirección IP, tendrá que registrar la dirección IP utilizada para crear el recurso IP virtual (como se explica en las secciones siguientes) en su servidor DNS con el nombre del servidor seleccionado.
 
 En las siguientes secciones abordan los pasos necesarios para configurar una solución de clúster de conmutación por error. 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Para completar el siguiente escenario de extremo a extremo debe tener dos máquinas para implementar el clúster de dos nodos y otro servidor para configurar el servidor NFS. Pasos siguientes describen cómo se configurarán estos servidores.
+Para completar el siguiente escenario de extremo a extremo, debe tener dos máquinas para implementar el clúster de dos nodos y otro servidor para configurar el servidor NFS. Pasos siguientes describen cómo se configurarán estos servidores.
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Instalar y configurar el sistema operativo en cada nodo del clúster
 
@@ -68,7 +68,7 @@ El primer paso es configurar el sistema operativo en los nodos del clúster. Par
 > [!NOTE] 
 > Durante la instalación, se genera para la instancia de SQL Server y se coloca en una clave maestra del servidor `/var/opt/mssql/secrets/machine-key`. En Linux, SQL Server siempre se ejecuta como una cuenta local denominada mssql. Dado que es una cuenta local, su identidad no se comparte en todos los nodos. Por lo tanto, debe copiar la clave de cifrado de nodo principal a cada nodo secundario para cada cuenta mssql local pueda acceder a él para descifrar la clave maestra de servidor. 
 
-1. En el nodo principal, cree un inicio de sesión SQL server para marcapasos y conceder el permiso de inicio de sesión para ejecutar `sp_server_diagnostics`. Marcapasos usará esta cuenta para comprobar qué nodo está ejecutando SQL Server. 
+1. En el nodo principal, cree un inicio de sesión SQL server para marcapasos y conceder el permiso de inicio de sesión para ejecutar `sp_server_diagnostics`. Marcapasos utiliza esta cuenta para comprobar qué nodo está ejecutando SQL Server. 
 
    ```bash
    sudo systemctl start mssql-server
@@ -131,19 +131,19 @@ En el servidor NFS realice lo siguiente:
    sudo yum -y install nfs-utils
    ```
 
-1. Habilitar e iniciar`rpcbind`
+1. Habilitar e iniciar `rpcbind`
 
    ```bash
    sudo systemctl enable rpcbind && sudo systemctl start rpcbind
    ```
 
-1. Habilitar e iniciar`nfs-server`
+1. Habilitar e iniciar `nfs-server`
  
    ```bash
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  Editar `/etc/exports` para exportar el directorio que desea compartir. Necesitará 1 línea para cada recurso compartido que desee. Por ejemplo: 
+1.  Editar `/etc/exports` para exportar el directorio que desea compartir. Necesita 1 línea para cada recurso compartido que desee. Por ejemplo: 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
@@ -203,7 +203,7 @@ Siga estos pasos en todos los nodos del clúster.
 
 1. Repita estos pasos en todos los nodos del clúster.
 
-Para obtener información adicional sobre el uso de NFS, consulte los siguientes recursos:
+Para obtener más información sobre el uso de NFS, consulte los siguientes recursos:
 
 * [NFS servidores y firewalld | Intercambio de pila](http://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [Montar un volumen NFS | Guía del Administrador de red de Linux](http://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
@@ -233,7 +233,7 @@ Para obtener información adicional sobre el uso de NFS, consulte los siguientes
    10.8.8.0:/mnt/nfs /var/opt/mssql/data nfs timeo=14,intr 
    ``` 
 > [!NOTE] 
->Si usa un recurso de sistema de archivos (FS) tal como se recomienda a continuación, no hay ninguna necesidad de conservar el comando de montaje en/etc/fstab. Marcapasos se encargará de la carpeta de montaje cuando se inicia el recurso de clúster de FS. Con la Ayuda de la barrera, hará lo siguiente ensurethe FS nunca se monta dos veces. 
+>Si usa un recurso de sistema de archivos (FS) tal como se recomienda aquí, no hay ninguna necesidad de conservar el comando de montaje en/etc/fstab. Marcapasos se encargará de la carpeta de montaje cuando se inicia el recurso de clúster de FS. Con la Ayuda de la barrera, garantizará que la FS nunca se monta dos veces. 
 
 1.  Ejecutar `mount -a` comando para el sistema actualizar las rutas de acceso montados.  
 
@@ -342,7 +342,7 @@ En este momento, ambas instancias de SQL Server se configuran para ejecutarse co
    - **dispositivo**: la ruta de acceso local que está montado en el recurso compartido
    - **fsType**: tipo de recurso compartido de archivo (es decir, nfs)
 
-   Actualice los valores de la secuencia de comandos a continuación para su entorno. Ejecutar en un nodo para configurar e iniciar el servicio en clúster.  
+   Actualice los valores de la siguiente secuencia de comandos para su entorno. Ejecutar en un nodo para configurar e iniciar el servicio en clúster.  
 
    ```bash
    sudo pcs cluster cib cfg 

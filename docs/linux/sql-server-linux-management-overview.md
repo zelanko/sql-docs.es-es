@@ -1,6 +1,6 @@
 ---
 title: Administrar SQL Server en Linux | Documentos de Microsoft
-description: "Este tema proporciona vínculos a tareas comunes de administración y herramientas de SQL Server ejecutando en Linux."
+description: "Este artículo contiene vínculos a tareas comunes de administración y herramientas de SQL Server ejecutando en Linux."
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-ms.custom: 
+ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: f6710b3e7bd40a2589333cebbf94c8b07f9aaa5d
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: de19f1952465c62bf026dbd3d92666b7a1b968ae
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Elija la herramienta adecuada para administrar SQL Server en Linux
 
@@ -36,7 +36,7 @@ Casi todo lo que puede hacer en una herramienta cliente también se puede lograr
 
 ## <a name="sql-server-operations-studio-preview"></a>SQL Server Operations Studio (versión preliminar)
 
-La nueva Microsoft SQL operaciones Studio (vista previa) es una herramienta multiplataforma para la administración de SQL Server. Para obtener más información, consulte [¿qué es Microsoft SQL operaciones Studio (versión preliminar)](../sql-operations-studio/what-is.md).
+La nueva Microsoft SQL operaciones Studio (vista previa) es una herramienta multiplataforma para la administración de SQL Server. Para obtener más información, consulte [Studio de operaciones SQL de Microsoft (versión preliminar)](../sql-operations-studio/what-is.md).
 
 ## <a name="sql-server-management-studio-on-windows"></a>SQL Server Management Studio en Windows
 

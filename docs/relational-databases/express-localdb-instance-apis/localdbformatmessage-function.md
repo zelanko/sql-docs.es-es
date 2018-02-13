@@ -8,26 +8,30 @@ ms.service:
 ms.component: localdb
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname: LocalDBFormatMessage
-apilocation: sqluserinstance.dll
+apiname:
+- LocalDBFormatMessage
+apilocation:
+- sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9387eff0f7249d443f145d2416b35c40f3760a4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: df02d647b06b45d2de772ff11737dbba9504a184
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="localdbformatmessage-function"></a>Función LocalDBFormatMessage
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Devuelve la descripción textual adaptada para el error de SQL Server Express LocalDB especificada.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Devuelve la descripción textual localizada del error de SQL Server Express LocalDB especificado.  
   
  **Archivo de encabezado:** sqlncli.h  
   

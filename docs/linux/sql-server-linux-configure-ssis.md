@@ -10,18 +10,20 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 015c170e998fc824a8816010288b33be33d89005
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ee15f5b5124d96b2f8033515f95f03c3aab89ae3
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Configurar SQL Server Integration Services en Linux con ssis-conf
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Ejecutar el `ssis-conf` script de configuración al instalar SQL Server Integration Services (SSIS) para Red Hat Enterprise Linux y Ubuntu. Para obtener más información acerca de cómo instalar SSIS, vea [instalar SQL Server Integration Services (SSIS) en Linux](sql-server-linux-setup-ssis.md).
 

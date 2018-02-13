@@ -8,14 +8,15 @@ ms.date: 10/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.component: sql-linux
+ms.component: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 645c3e11621b1c9faecffc7edf76df9a6a1eabab
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 613f6e1b0182d5003c68380bb5a5698397db2207
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="run-the-sql-server-2017-in-the-cloud"></a>Ejecutar el servidor de SQL 2017 en la nube
 
@@ -32,7 +33,7 @@ En este tutorial de inicio rápido, se instalará SQL Server 2017 en Red Hat Ent
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  Conectar con el AMI con ssh
-1.  Siga el tutorial rápido para la distrbution Linux que eligió: 
+1.  Siga el tutorial rápido para la distribución de Linux que eligió: 
     * [RHEL](quickstart-install-connect-red-hat.md)
     * [SLES](quickstart-install-connect-suse.md)
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -58,10 +59,10 @@ En este tutorial de inicio rápido, se instalará SQL Server 2017 en Red Hat Ent
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  Conectarse a la imagen con ssh
-1.  Siga el tutorial rápido para la distrbution Linux que eligió: 
+1.  Siga el tutorial rápido para la distribución de Linux que eligió: 
     * [RHEL](quickstart-install-connect-red-hat.md)
     * [SLES](quickstart-install-connect-suse.md)
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
 1.  Configurar para las conexiones remotas: 
     * Vaya a la [las reglas de Firewall](https://console.cloud.google.com/networking/firewalls)
-    * Agregar una regla de entrada para permitir el tráfico en el puerto en el que SQL Server escucha (apartado TCP del valor predeterminado: 1433)
+    * Agregar una regla de entrada para permitir el tráfico en el puerto en el que escucha SQL Server (valor predeterminado tcp: 1433)

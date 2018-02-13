@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - Active Server Pages
 - updategrams [SQLXML], ASP applications
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb9c833b0f36d0cdf617b73acf57c5d24b0cbddd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 81fae23978380765fdebc8868538fb4328dce4e1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>Utilizar un diagrama de actualización en una aplicación ASP de ejemplo (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Esta aplicación de páginas Active Server (ASP) le permite actualizar la información del cliente en la tabla Person.Contact en la base de datos de ejemplo de AdventureWorks en Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La aplicación hace lo siguiente:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Esta aplicación ASP (Páginas Active Server) le permite actualizar la información del cliente en la tabla Person.Contact de la base de datos de ejemplo AdventureWorks de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La aplicación hace lo siguiente:  
   
 -   Solicita al usuario que escriba un identificador de contacto.  
   

@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: d6a49bc2f3fb815cecda0e8a24a63993b5423103
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5f52c5f83ca91b196f0bf2f05e98fb73133b4c8a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurar clúster Ubuntu y grupo de disponibilidad de recursos
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/09/2018
 Este documento explica cómo crear un clúster de tres nodos en Ubuntu y agregar un grupo de disponibilidad creado anteriormente como un recurso en el clúster. Para lograr alta disponibilidad, un grupo de disponibilidad en Linux requiere tres nodos: vea [alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad](sql-server-linux-availability-group-ha.md).
 
 > [!NOTE] 
-> En este momento, la integración de SQL Server con marcapasos en Linux no es como acoplamiento como con WSFC en Windows. Desde dentro de SQL, no hay ningún conocimiento sobre la presencia del clúster, todas las orquestaciones está fuera de y marcapasos controla el servicio como una instancia independiente. Además, el nombre de red virtual es específico de WSFC, no hay ningún equivalente de la misma en marcapasos. Siempre en vistas de administración dinámica que consultar la información de clúster se devuelven filas vacías. Puede crear un agente de escucha para usarlo para la reconexión transparente después de la conmutación por error, pero tiene que registrar manualmente el nombre de agente de escucha en el servidor DNS con la dirección IP utilizada para crear el recurso IP virtual (tal y como se explica más adelante).
+> En este momento, la integración de SQL Server con marcapasos en Linux no es como acoplamiento como con WSFC en Windows. Desde dentro de SQL, no hay ningún conocimiento sobre la presencia del clúster, todas las orquestaciones está fuera de y marcapasos controla el servicio como una instancia independiente. Además, el nombre de red virtual es específico de WSFC, no hay ningún equivalente de la misma en marcapasos. Siempre en vistas de administración dinámica que consultar la información de clúster se devuelven filas vacías. Puede crear un agente de escucha para usarlo para la reconexión transparente después de la conmutación por error, pero se deben registrar manualmente el nombre de agente de escucha en el servidor DNS con la dirección IP utilizada para crear el recurso IP virtual (como se explica en las secciones siguientes).
 
 En las siguientes secciones abordan los pasos necesarios para configurar una solución de clúster de conmutación por error. 
 
@@ -116,7 +116,7 @@ sudo systemctl enable pacemaker
 1. Crear el clúster. 
 
    >[!WARNING]
-   >Debido a un problema conocido que el proveedor de la agrupación en clústeres está investigando, comenzando en el clúster ("equipos clúster start") produce un error con debajo de error. Esto es porque el archivo de registro configurado en /etc/corosync/corosync.conf que se crea cuando el comando de instalación de clúster se ejecute, es incorrecto. Para solucionar este problema, cambie el archivo de registro: /var/log/corosync/corosync.log. También puede crear el archivo /var/log/cluster/corosync.log.
+   >Debido a un problema conocido que el proveedor de la agrupación en clústeres está investigando, iniciar el clúster ('inicio de clúster de equipos') produce un error con el siguiente mensaje de error. Esto es porque el archivo de registro configurado en /etc/corosync/corosync.conf que se crea cuando el comando de instalación de clúster se ejecute, es incorrecto. Para solucionar este problema, cambie el archivo de registro: /var/log/corosync/corosync.log. También puede crear el archivo /var/log/cluster/corosync.log.
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
@@ -150,7 +150,7 @@ sudo pcs property set stonith-enabled=false
 
 ## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>Establecer propiedades de clúster inicio error-es-grave en false
 
-`start-failure-is-fatal`indica si un error al iniciar un recurso en un nodo impide más intentos de inicio en ese nodo. Cuando se establece en `false`, el clúster decide si debe intentar iniciar en el mismo nodo nuevo, en función actual error recuento y migración el umbral del recurso. Por lo tanto, después de producirse la conmutación por error, a partir de la disponibilidad de reintentos de marcapasos recurso de grupo en la primera estructura principal una vez que la instancia de SQL está disponible. Marcapasos degrada la réplica de base de datos secundaria y vuelve a unirse automáticamente el grupo de disponibilidad. 
+`start-failure-is-fatal` indica si un error al iniciar un recurso en un nodo impide más intentos de inicio en ese nodo. Cuando se establece en `false`, el clúster decide si debe intentar iniciar en el mismo nodo nuevo, en función actual error recuento y migración el umbral del recurso. Por lo tanto, después de producirse la conmutación por error, a partir de la disponibilidad de reintentos de marcapasos recurso de grupo en la primera estructura principal una vez que la instancia de SQL está disponible. Marcapasos degrada la réplica de base de datos secundaria y vuelve a unirse automáticamente el grupo de disponibilidad. 
 
 Para actualizar el valor de propiedad para `false` ejecute el siguiente script:
 

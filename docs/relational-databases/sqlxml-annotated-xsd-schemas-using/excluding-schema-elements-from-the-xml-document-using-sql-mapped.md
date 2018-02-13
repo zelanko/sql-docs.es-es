@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - attribute mapping [SQLXML], excluding schema elements
 - table/view mapping [SQLXML], excluding schema elements
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 660fe866db09675916d90cdf8130b2b99980b2ec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 104c3958a6964967629c32ad22a5371a41226f67
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Excluir elementos de esquema del documento XML mediante sql: asignado
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Cada elemento y atributo en el esquema XSD se asigna a una tabla o vista de base de datos y una columna debido a la asignación predeterminada. Si desea crear un elemento en el esquema XSD que no se asigna a ninguna tabla de base de datos (vista) o la columna y que no aparecen en el código XML, puede especificar el **sql: asignado** anotación.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Cada elemento y atributo del esquema XSD se asigna a una tabla/vista y columna de base de datos debido a la asignación predeterminada. Si desea crear un elemento en el esquema XSD que no se asigna a ninguna tabla de base de datos (vista) o la columna y que no aparecen en el código XML, puede especificar el **sql: asignado** anotación.  
   
  El **sql: asignado** anotación es especialmente útil si no se puede modificar el esquema o si el esquema se utiliza para validar XML de otros orígenes y aún contiene datos que no se almacenan en la base de datos. El **sql: asignado** anotación difiere de **sql: constante es** en que los atributos y elementos no asignados no aparecen en el documento XML.  
   

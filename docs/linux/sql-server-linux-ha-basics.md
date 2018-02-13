@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: d53e54c6e8e74970316de557ddf3bd60a09e9ffe
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: fd2079b0b0186192fc3b55e7a6ccefd25c1a46bc
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Conceptos básicos de la disponibilidad de SQL Server para las implementaciones de Linux
 
@@ -32,7 +32,7 @@ Además de la copia de seguridad y restauración, las mismas tres característic
 -   Siempre en instancias de clúster de conmutación por error (FCI)
 -   [Trasvase de registros](sql-server-linux-use-log-shipping.md)
 
-En Windows, fci siempre requiere un clúster de conmutación por error de Windows Server (WSFC) subyacente. Según el escenario de implementación, un AG normalmente requiere un WSFC subyacente, con la excepción que se va a la nueva ninguno variant en [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. No existe un WSFC en Linux. Implementación de Linux de agrupación en clústeres se describe a continuación en [marcapasos para clúster de conmutación por error y grupos de disponibilidad AlwaysOn instancias en Linux](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux).
+En Windows, fci siempre requiere un clúster de conmutación por error de Windows Server (WSFC) subyacente. Según el escenario de implementación, un AG normalmente requiere un WSFC subyacente, con la excepción que se va a la nueva ninguno variant en [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. No existe un WSFC en Linux. Implementación de Linux de agrupación en clústeres se describe en la sección [marcapasos para clúster de conmutación por error y grupos de disponibilidad AlwaysOn instancias en Linux](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux).
 
 ## <a name="a-quick-linux-primer"></a>Texto elemental sobre Linux rápido
 Aunque algunas instalaciones de Linux pueden instalarse con una interfaz, la mayoría son no es así, lo que significa que casi todo en el nivel de sistema operativo se realiza a través de la línea de comandos. El término común para esta línea de comandos en el mundo de Linux es un *shell de bash*.
@@ -59,9 +59,9 @@ Algunos comandos comunes, cada uno de los cuales tienen diversos modificadores y
 En esta sección se trata las tareas que son comunes a todos los basados en Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] las implementaciones.
 
 ### <a name="ensure-that-files-can-be-copied"></a>Asegúrese de que se pueden copiar los archivos
-Único lo que cualquier usuario con [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] en Linux, debe ser capaz de hacer es copiar archivos desde un servidor a otro. Esta tarea es muy importante para las configuraciones de AG.
+Copiar archivos desde un servidor a otro es una tarea que cualquier usuario con [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] en Linux, debe ser capaz de hacer. Esta tarea es muy importante para las configuraciones de AG.
 
-Cosas como problemas de permisos pueden existir en Linux, así como en las instalaciones basadas en Windows. Sin embargo, aquellos que estén familiarizados con la copia de un servidor a otro en Windows pueden no estar familiarizados con cómo se hizo en Linux. Un método común consiste en usar la utilidad de línea de comandos `scp`, que es el acrónimo copia seguro. En segundo plano, `scp` usa OpenSSH. SSH es el acrónimo shell seguro. Dependiendo de la distribución de Linux, puede que no estén instalado OpenSSH propio. Si no es así, OpenSSH deberá instalarse primero. Para obtener más información acerca de cómo configurar OpenSSH, consulte la información en los siguientes vínculos para cada distribución:
+Cosas como problemas de permisos pueden existir en Linux, así como en las instalaciones basadas en Windows. Sin embargo, aquellos que estén familiarizados con la copia de un servidor a otro en Windows pueden no estar familiarizados con cómo se hizo en Linux. Un método común consiste en usar la utilidad de línea de comandos `scp`, que es el acrónimo copia seguro. En segundo plano, `scp` usa OpenSSH. SSH es el acrónimo shell seguro. Dependiendo de la distribución de Linux, puede que no estén instalado OpenSSH propio. Si no es así, OpenSSH debe instalarse primero. Para obtener más información acerca de cómo configurar OpenSSH, consulte la información en los siguientes vínculos para cada distribución:
 -   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-OpenSSH.html)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
@@ -135,7 +135,7 @@ Cuando se configura grupos de disponibilidad o fci en una configuración basada 
 Los otros paquetes opcionales para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] en Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Full-Text Search (*mssql-server-FT*) y [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql servidor es*), no son es necesario para lograr alta disponibilidad, para ver si una FCI o un AG.
 
 ## <a name="pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux"></a>Marcapasos para instancias de clúster de conmutación por error en Linux y grupos de disponibilidad AlwaysOn
-Como se mencionó anteriormente, el único mecanismo de agrupación en clústeres admitido actualmente por Microsoft para grupos de disponibilidad y fci es marcapasos con Corosync. Esta sección ofrece la información básica para entender la solución, así como cómo planear e implementar para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] configuraciones.
+Anterior como se indicó, el único mecanismo de agrupación en clústeres admitido actualmente por Microsoft para grupos de disponibilidad y fci es marcapasos con Corosync. Esta sección ofrece la información básica para entender la solución, así como cómo planear e implementar para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] configuraciones.
 
 ### <a name="ha-add-onextension-basics"></a>Conceptos básicos de complemento en/extensión de alta disponibilidad
 Todas las distribuciones compatibles actualmente incluyen una alta disponibilidad complemento-on/extensión, que se basa en la pila de agrupación en clústeres de marcapasos. Esta pila incorpora dos componentes clave: marcapasos y Corosync. Todos los componentes de la pila son:
@@ -247,7 +247,7 @@ Actualmente, no hay ninguna manera directa de un WSFC y un clúster marcapasos t
 -   AG distribuida, que es un tipo especial de grupo de disponibilidad que permite a dos grupos de disponibilidad diferentes para configurarse como su propio grupo de disponibilidad. Para obtener más información sobre grupos de disponibilidad distribuidos, consulte la documentación [grupos de disponibilidad distribuidos](../database-engine/availability-groups/windows/distributed-availability-groups.md).
 
 #### <a name="other-linux-distributions"></a>Otras distribuciones de Linux
-En Linux, todos los nodos de un clúster marcapasos deben estar en la misma distribución. Por ejemplo, esto significa que un nodo RHEL no puede formar parte de un clúster marcapasos que tiene un nodo SLES. La razón principal para esto se ha indicado anteriormente: las distribuciones pueden tener distintas versiones y funcionalidad, para cosas no pudieran funcione correctamente. Combinación de distribuciones tiene el mismo artículo que mezclar WSFCs y Linux: utilizamos ninguno o grupos de disponibilidad está distribuido.
+En Linux, todos los nodos de un clúster marcapasos deben estar en la misma distribución. Por ejemplo, esto significa que un nodo RHEL no puede formar parte de un clúster marcapasos que tiene un nodo SLES. La razón principal para esto se indicados anteriormente: las distribuciones pueden tener distintas versiones y funcionalidad, para cosas no pudieran funcione correctamente. Combinación de distribuciones tiene el mismo artículo que mezclar WSFCs y Linux: utilizamos ninguno o grupos de disponibilidad está distribuido.
 
 ## <a name="next-steps"></a>Pasos siguientes
 [Implementar un clúster marcapasos para SQL Server en Linux](sql-server-linux-deploy-pacemaker-cluster.md)

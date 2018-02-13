@@ -8,7 +8,8 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,16 +31,16 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], stored procedures
 - Visual FoxPro commands and functions [ODBC]
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: c2fcdf0a9a7af2f34a2a0d87495d00ddf3373d3a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Compatibilidad con las reglas, desencadenadores, valores predeterminados y los procedimientos almacenados (controlador ODBC de Visual FoxPro)
 No se puede crear reglas de Visual FoxPro, desencadenadores, valores predeterminados o procedimientos almacenados con el controlador ODBC de Visual FoxPro. Sin embargo, la aplicación puede interactuar con los procedimientos almacenados, desencadenadores, valores predeterminados o reglas existentes tal y como inserta, actualiza o eliminan datos de Visual FoxPro almacenados en una base de datos.  
@@ -58,7 +59,7 @@ No se puede crear reglas de Visual FoxPro, desencadenadores, valores predetermin
 |Operador de $|% (Operador)|& Comando|  
 |& & Comando|* Comando|= Comando|  
   
-## <a name="a"></a>Un  
+## <a name="a"></a>A  
   
 ||||  
 |-|-|-|  
@@ -137,7 +138,7 @@ No se puede crear reglas de Visual FoxPro, desencadenadores, valores predetermin
   
 ||||  
 |-|-|-|  
-|RECOPILAR el comando|Función GETNEXTMODIFIED)|Comando GO/GOTO|  
+|RECOPILAR el comando|Función GETNEXTMODIFIED)|GO/GOTO Command|  
 |Función GETFLDSTATE)|Función GOMONTH)||  
 |Función GETCP)|GETENV () (función)||  
   
@@ -209,7 +210,7 @@ No se puede crear reglas de Visual FoxPro, desencadenadores, valores predetermin
 |PROCEDURE (comando)|PV () (función)||  
 |Comando pública|() PADL &#124; () PADR &#124; Funciones PADC)||  
   
-## <a name="r"></a>R  
+## <a name="r"></a>L  
   
 ||||  
 |-|-|-|  

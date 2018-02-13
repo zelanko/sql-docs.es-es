@@ -18,19 +18,20 @@ helpviewer_keywords:
 - connections [Analysis Services]
 - SSAS, data sources
 ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 0bdae9c95ea05d217db895331fb641b2a7038271
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="supported-data-sources-ssas---multidimensional"></a>Orígenes de datos admitidos (SSAS - Multidimensionales)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]En este tema se describe los tipos de orígenes de datos que puede usar en un modelo multidimensional.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+En este tema se describen los tipos de orígenes de datos que puede usar en un modelo multidimensional.  
   
 ##  <a name="bkmk_supported_ds"></a> Orígenes de datos compatibles  
  Puede recuperar datos de los siguientes orígenes de datos en la tabla siguiente. Al instalar [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el programa de instalación no instala los proveedores enumerados para cada origen de datos. Algunos proveedores ya podrían estar instalados con otras aplicaciones en el equipo; en otros casos tendrá que descargar e instalar el proveedor.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 01/08/2018
   
 |||||  
 |-|-|-|-|  
-|Source|Versiones|Tipo de archivo|Proveedores*|  
+|Origen|Versiones|Tipo de archivo|Proveedores*|  
 |Bases de datos de Access|Microsoft Access 2010, 2013, 2016|.accdb o .mdb|Proveedor Microsoft Jet 4.0 OLE DB|  
 |Bases de datos relacionales de SQL Server*|Microsoft SQL Server 2008, 2008 R2, 2012, 2014, 2016, [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], almacenamiento de datos SQL Azure, Microsoft Analytics Platform System (APS)<br /><br /> <br /><br /> Nota: Para obtener más información acerca de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , consulte [Azure.com](http://go.microsoft.com/fwlink/?LinkID=157856).<br /><br /> Nota: Analytics Platform System (APS) anteriormente se conocía como almacén de datos paralelos de SQL Server (PDW). Originalmente, conectar con PDW desde Analysis Services requería un proveedor de datos especial. Este proveedor se ha sustituido en SQL Server 2012. A partir de SQL Server 2012, el cliente nativo de SQL Server se utiliza para conexiones con PDW y APS. Para obtener más información sobre APS, vea el sitio web [Microsoft Analytics Platform System](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx).|(no aplicable)|Proveedor OLE DB para SQL Server<br /><br /> Proveedor OLE DB de SQL Server Native Client<br /><br /> Proveedor OLE DB de SQL Server 11.0 Native Client<br /><br /> Proveedor de datos de .NET Framework para SQL Client|  
 |Bases de datos relacionales de Oracle|Oracle 9i, 10g, 11g, 12g|(no aplicable)|Proveedor OLE DB de Oracle<br /><br /> Proveedor de datos de .NET Framework para cliente de Oracle<br /><br /> Proveedor de datos de .NET Framework para SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
@@ -54,8 +55,8 @@ ms.lasthandoff: 01/08/2018
   
  ** Algunas características requieren una base de datos relacional de SQL Server que se ejecute localmente. De manera específica, el almacenamiento ROLAP y la reescritura requieren que el origen de datos subyacente sea una base de datos relacional de SQL Server.  
   
-## <a name="see-also"></a>Ver también  
- [Orígenes de datos compatibles &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
+## <a name="see-also"></a>Vea también  
+ [Admitidas los orígenes de datos &#40; SSAS Tabular &#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [Orígenes de datos en modelos multidimensionales](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
  [Vistas del origen de datos en modelos multidimensionales](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   

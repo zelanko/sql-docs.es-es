@@ -16,19 +16,20 @@ helpviewer_keywords:
 - attributes [Analysis Services], unary operators
 - unary operators
 ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: a387b74a5e0f1a401249555bb470159394bc1338
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="parent-child-dimension-attributes---unary-operators"></a>Atributos de dimensión de elementos primarios y secundarios - operadores unarios
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]En una dimensión que contiene una relación de elementos primarios y secundarios en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], especifique un unario (o resúmenes personalizados) columna de operador que determina el resumen personalizado para todos los miembros no calculados del atributo primario. El operador unario se aplica a los miembros siempre que los valores de los miembros primarios se evalúan. El elemento **UnaryOperatorColumn** en un atributo primario (**Uso**= Primario) especifica la columna de una tabla en la vista del origen de datos que contiene operadores unarios. Los valores para los operadores de resumen personalizado que se almacenan en esta columna se aplican a cada miembro del atributo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+En una dimensión que contiene una relación de elementos primarios y secundarios en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], se especifica una columna de operador unario (o de resumen personalizado) que determina el resumen personalizado para todos los miembros no calculados del atributo primario. El operador unario se aplica a los miembros siempre que los valores de los miembros primarios se evalúan. El elemento **UnaryOperatorColumn** en un atributo primario (**Uso**= Primario) especifica la columna de una tabla en la vista del origen de datos que contiene operadores unarios. Los valores para los operadores de resumen personalizado que se almacenan en esta columna se aplican a cada miembro del atributo.  
   
  Puede crear y especificar un cálculo con nombre en una tabla de dimensiones de la vista del origen de datos como una columna de operador unario. La expresión más simple, como '+', devuelve el mismo operador para todos los miembros. Pero se puede usar cualquier expresión siempre que devuelva un operador para cada miembro.  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 01/08/2018
  En la pestaña **Explorador** del Diseñador de dimensiones, se pueden ver los operadores unarios junto a cada miembro en una jerarquía. También puede cambiar los operadores unarios al trabajar con una dimensión habilitada para escritura. Si la dimensión no está habilitada para escritura, debe usar una herramienta para modificar directamente el origen de datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de las propiedades de los atributos de dimensión](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
+ [Referencia de propiedades de atributos de dimensión](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
  [Operadores de resúmenes personalizados en dimensiones de elementos primarios y secundarios](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-custom-rollup-operators.md)   
  [Iniciar al Asistente de Business Intelligence en el Diseñador de dimensiones](../../analysis-services/multidimensional-models/database-dimensions-bi-wizard-in-dimension-designer.md)  
   

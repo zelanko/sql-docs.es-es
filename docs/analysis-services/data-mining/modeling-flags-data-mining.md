@@ -24,19 +24,20 @@ helpviewer_keywords:
 - MODEL_EXISTENCE_ONLY column
 - coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0b7139d1120e9b244ae4bc20e32951c52cc7f37d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="modeling-flags-data-mining"></a>Marcas de modelado (Minería de datos)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Puede utilizar marcas de modelado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para proporcionar información adicional a un algoritmo de minería de datos sobre los datos que se definen en una tabla de casos. El algoritmo puede usar esta información para crear un modelo de minería de datos más preciso.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Puede utilizar marcas de modelado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para proporcionar información adicional a un algoritmo de minería de datos acerca de los datos que se definen en una tabla de casos. El algoritmo puede usar esta información para crear un modelo de minería de datos más preciso.  
   
  Algunas marcas de modelado se definen en la estructura de minería de datos, mientras que otras se definen en la columna del modelo de minería de datos. Por ejemplo, la marca de modelado **NOT NULL** se utiliza con las columnas de la estructura de minería de datos. Puede definir marcas de modelado adicionales en las columnas del modelo de minería de datos, dependiendo del algoritmo que se utilice para crear el modelo.  
   
@@ -105,18 +106,18 @@ WHERE MODEL_NAME = '<model name>'
   
  Puede utilizar el parámetro FORCE_REGRESSOR para garantizar que el algoritmo utilizará un regresor determinado. Este parámetro se puede utilizar con el algoritmo de árboles de decisión y el algoritmo de regresión lineal.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tareas relacionadas  
  Utilice los vínculos siguientes para obtener más información acerca de cómo utilizar marcas de modelado.  
   
 |Tarea|Tema|  
 |----------|-----------|  
-|Modificar las marcas de modelado mediante el Diseñador de minería de datos|[Ver o cambiar marcas de modelado &#40;minería de datos&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
-|Especificar una sugerencia al algoritmo para recomendar regresores probables|[Especificar una columna para usar como regresor en un modelo](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|Ver las marcas de modelado admitidas por algoritmos concretos (en la sección Marcas de modelado de cada tema de referencia del algoritmo)|[Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
+|Modificar las marcas de modelado mediante el Diseñador de minería de datos|[Ver o cambiar modelado marcas &#40; minería de datos &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|Especificar una sugerencia al algoritmo para recomendar regresores probables|[Especificar una columna para utilizar como regresor en un modelo](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
+|Ver las marcas de modelado admitidas por algoritmos concretos (en la sección Marcas de modelado de cada tema de referencia del algoritmo)|[Algoritmos de minería de datos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
 |Obtener más información acerca de las columnas de la estructura de minería de datos y las propiedades que se pueden establecer en ellas|[Columnas de la estructura de minería de datos](../../analysis-services/data-mining/mining-structure-columns.md)|  
 |Obtener información sobre las marcas de modelado y las columnas del modelo de minería de datos que se pueden aplicar en el modelo|[Columnas del modelo de minería de datos](../../analysis-services/data-mining/mining-model-columns.md)|  
 |Ver la sintaxis para trabajar con marcas de modelado en instrucciones DMX|[Marcas de modelado &#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
-|Descripción de los valores que faltan y cómo trabajar con ellos|[Valores ausentes &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
+|Descripción de los valores que faltan y cómo trabajar con ellos|[Los valores que faltan &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
 |Obtener información sobre cómo administrar los modelos y las estructuras y establecer las propiedades de uso|[Mover objetos de minería de datos](../../analysis-services/data-mining/moving-data-mining-objects.md)|  
   
   

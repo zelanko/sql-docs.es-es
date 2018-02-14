@@ -5,16 +5,16 @@ manager: craigg
 author: MightyPen
 ms.author: genemi
 ms.topic: article
-ms.custom: UpdArt.exe
+ms.custom: sql-linux,UpdArt.exe
 ms.suite: sql
 ms.prod_service: sql-non-specified
-ms.component: linux
+ms.component: 
 ms.date: 02/03/2018
-ms.openlocfilehash: fc740b59397f0438a059b38df57ffc40999cc81e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 827399587a8147c59caf6bf31bf8b10f10c83211
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>Las nuevas y recientemente actualizado: SQL Server en documentos de Linux
 
@@ -123,7 +123,7 @@ Sin nada más, un tercer nodo y al menos una réplica sincronizada sería necesa
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-extract-transform-and-load-data-on-linux-with-ssissql-server-linux-migrate-ssismd"></a>2. &nbsp;[De extracción, transformación y carga datos en Linux con SSIS](sql-server-linux-migrate-ssis.md)
+### <a name="2-nbsp-extract-transform-and-load-data-on-linux-with-ssissql-server-linux-migrate-ssismd"></a>2. &nbsp;[Extraer, transformar y cargar datos en Linux con SSIS](sql-server-linux-migrate-ssis.md)
 
 *Actualizado: 2018-01-31* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([anterior](#TitleNum_1))
 

@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: b92ace95ff7d250fda16b1e021fddf61379cdb19
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Guardar informes en un servidor de informes (Generador de informes)
   En el Generador de informes, puede guardar una definición de informe en un servidor de informes (a lo que también se hace referencia como publicar un informe). Cuando el informe está guardado en un servidor de informes, otros usuarios pueden verlo. Cada vez que ejecute el informe publicado, recuperará los datos más actuales. Para guardar una copia estática de un informe representado, exporte el informe a un formato de archivo diferente y guárdelo o utilice la característica de historial de informes para guardar las versiones de los informes representados.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-save-a-report-to-a-report-server"></a>Guardar un informe en un servidor de informes  
   
-1.  Desde el botón Generador de informes, haga clic en **Guardar**. Se abre el cuadro de diálogo **Guardar como***\<elemento de informe>*.  
+1.  Desde el botón Generador de informes, haga clic en **Guardar**. Se abre el cuadro de diálogo **Guardar como***\<Elemento de informe>*.  
   
     > [!NOTE]  
     >  Si vuelve a guardar un informe, automáticamente se guarda en su ubicación anterior. Utilice la opción Guardar como para cambiar la ubicación.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-save-a-report-as-a-different-name"></a>Para guardar un informe con un nombre diferente  
   
-1.  En el botón Generador de informes, haga clic en **Guardar como**. Se abre el cuadro de diálogo **Guardar como***\<elemento de informe>*.  
+1.  En el botón Generador de informes, haga clic en **Guardar como**. Se abre el cuadro de diálogo **Guardar como***\<Elemento de informe>*.  
   
 2.  Vaya a la ubicación del servidor de informes o al recurso compartido de archivos donde desea guardar el informe.  
   

@@ -8,27 +8,30 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - logon triggers
 - login triggers
-helpviewer_keywords: triggers [SQL Server], logon
+helpviewer_keywords:
+- triggers [SQL Server], logon
 ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 66125703d69fd5e3bb5bba0572f47274c3bff824
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 123a1456150d99f47b6f524d76f0afa0d79ba86b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="logon-triggers"></a>Desencadenadores logon
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Los desencadenadores LOGON activan procedimientos almacenados en respuesta a un evento LOGON. Este evento se genera cuando se establece una sesión de usuario con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los desencadenadores logon se activan después de que termine la fase de autenticación del inicio de sesión, pero antes de que se establezca la sesión de usuario realmente. Por tanto, todos los mensajes que se originan dentro del desencadenador y que normalmente llegarían hasta el usuario, como los mensajes de error y los mensajes de la instrucción PRINT, se desvían al registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los desencadenadores logon no se activan si se produce un error en la autenticación.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Los desencadenadores LOGON activan procedimientos almacenados en respuesta a un evento LOGON. Este evento se genera cuando se establece una sesión de usuario con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los desencadenadores logon se activan después de que termine la fase de autenticación del inicio de sesión, pero antes de que se establezca la sesión de usuario realmente. Por tanto, todos los mensajes que se originan dentro del desencadenador y que normalmente llegarían hasta el usuario, como los mensajes de error y los mensajes de la instrucción PRINT, se desvían al registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los desencadenadores logon no se activan si se produce un error en la autenticación.  
   
  Puede utilizar desencadenadores logon para realizar auditorías y controlar sesiones de servidor, como el seguimiento de la actividad de inicio de sesión, la restricción de inicios de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o la limitación del número de sesiones para un inicio de sesión específico. Por ejemplo, en el siguiente código, el desencadenador LOGON rechaza los intentos de iniciar sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] iniciados por el inicio de sesión *login_test* si ya hay tres sesiones de usuario creadas por dicho inicio de sesión.  
   
@@ -76,7 +79,7 @@ END;
 ## <a name="disabling-a-logon-trigger"></a>Deshabilitar un desencadenador logon  
  Un desencadenador LOGON puede evitar la conexión a [!INCLUDE[ssDE](../../includes/ssde-md.md)] de todos los usuarios, incluidos los miembros del rol fijo de servidor **sysadmin** . Cuando el desencadenador LOGON evita que se realicen las conexiones, los miembros del rol fijo de servidor **sysadmin** pueden conectarse mediante la conexión de administrador dedicada o iniciando [!INCLUDE[ssDE](../../includes/ssde-md.md)] en modo de configuración mínima (-f). Para más información, consulte [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Tarea|Tema|  
 |----------|-----------|  
@@ -86,7 +89,7 @@ END;
 |Describe cómo devolver información acerca de los desencadenadores logon.|[sys.server_triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)<br /><br /> [sys.server_trigger_events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-trigger-events-transact-sql.md)|  
 |Describe cómo capturar los datos de evento de desencadenador logon.||  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Desencadenadores DDL](../../relational-databases/triggers/ddl-triggers.md)  
   
   

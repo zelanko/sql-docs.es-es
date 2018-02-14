@@ -8,20 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-security
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 531989070a8e3f416fee19af797555284294e7da
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ff8a5cd7317b34e5f5cb09c5fc1b85b3580e7fa1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Desarrollar con Always Encrypted con el proveedor de datos .NET Framework
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ En este artículo se proporciona información sobre cómo desarrollar aplicacion
 Always Encrypted permite a las aplicaciones cliente cifrar la información confidencial y nunca revelar los datos ni las claves de cifrado en SQL Server o Azure SQL Database. Un controlador habilitado para Always Encrypted, como el proveedor de datos .NET Framework para SQL Server, consigue esto al cifrar y descifrar de manera transparente la información confidencial en la aplicación cliente. El controlador determina automáticamente qué parámetros de consulta corresponden a columnas de bases de datos confidenciales (protegidas mediante Always Encrypted) y cifra los valores de esos parámetros antes de pasar los datos a SQL Server o Azure SQL Database. De forma similar, el controlador descifra de manera transparente los datos que se han recuperado de las columnas de bases de datos cifradas de los resultados de la consulta. Para obtener más información, vea [Always Encrypted (motor de base de datos)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 - Configure Always Encrypted en su base de datos. Esto implica el aprovisionamiento de las claves Always Encrypted y la configuración del cifrado para las columnas de las bases de datos seleccionadas. Si todavía no tiene una base de datos configurada con Always Encrypted, siga las instrucciones de [Introducción a Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_5).
 - Asegúrese de que la versión 4.6 o posterior de .NET Framework esté instalada en su equipo de desarrollo. Para obtener más información, vea [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx). También necesita asegurarse de que la versión 4.6 o posterior de .NET Framework esté configurada como la versión de .NET Framework de destino en su equipo de desarrollo. Si está usando Visual Studio, consulte [Cómo: Usar como destino una versión de .NET Framework](https://msdn.microsoft.com/library/bb398202.aspx). 
@@ -283,7 +284,7 @@ El proceso para obtener una clave de cifrado de columna:
 El proveedor de datos .NET Framework para SQL Server incluye los siguientes proveedores integrados de almacenamiento de claves maestras de columna, que se registran previamente con los nombres específicos del proveedor (se usan para buscar el proveedor).
 
 
-| Clase | Descripción | Nombre del proveedor (búsqueda) |
+| Clase | Description | Nombre del proveedor (búsqueda) |
 |:---|:---|:---|
 |Clase SqlColumnEncryptionCertificateStoreProvider| Un proveedor para el Almacén de certificados de Windows. | MSSQL_CERTIFICATE_STORE |
 |[Clase SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**Nota:** Este proveedor está disponible en la versión 4.6.1 y posteriores de .NET Framework. |Un proveedor de un almacén de claves que es compatible con [Microsoft Cryptography API: Next Generation (CNG) API (Cryptography API: Next Generation (CNG) de Microsoft)](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx). Normalmente, un almacén de este tipo es un módulo de seguridad de hardware (un dispositivo físico que protege y administra las claves digitales y proporciona un procesamiento criptográfico).  | MSSQL_CNG_STORE|
@@ -553,7 +554,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 
 
-|Nombre|Descripción|Incluido en la versión de .NET
+|Nombre|Description|Incluido en la versión de .NET
 |:---|:---|:---
 |[Clase SqlColumnEncryptionCertificateStoreProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Un proveedor de almacén de claves para el almacén de certificados de Windows.|  4.6
 |[Clase SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Un proveedor de almacén de claves para Microsoft Cryptography API: Next Generation (CNG).|  4.6.1
@@ -571,7 +572,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 |Nueva palabra clave de [cadena de conexión](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx) : `Column Encryption Setting=enabled`|Habilita o deshabilita la funcionalidad de Always Encrypted para la conexión.| 4.6 
   
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Ver también
 
 - [Always Encrypted (motor de base de datos)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Blog de Always Encrypted](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)

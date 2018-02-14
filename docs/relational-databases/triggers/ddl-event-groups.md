@@ -8,7 +8,8 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-ddl
+ms.technology:
+- dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - DDL event groups
 - DDL triggers, event groups
 ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
-caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec4272b36c365f38793bcf8ccd5692e5933e3164
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c3ffbbf2c2aa0fb781bc6f3a5927d95d4975092f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ddl-event-groups"></a>grupos de eventos DDL
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] En las tablas siguientes se muestran los grupos de eventos DDL que se pueden usar para ejecutar un desencadenador DDL o una notificación de eventos, así como las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que comprenden. Observe la naturaleza inclusiva de los grupos de eventos. Por ejemplo, un desencadenador DDL o una notificación de eventos que especifica FOR DDL_TABLE_EVENTS (10018) cubre las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE y DROP TABLE. Un desencadenador DLL o una notificación de eventos que especifica FOR DDL_TABLE_VIEW_EVENTS (10017) cubre todas las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] bajo los tipos DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS y DDL_STATISTICS_EVENTS.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+En las tablas siguientes se muestran los grupos de eventos DDL que se pueden usar para ejecutar un desencadenador DDL o una notificación de eventos, así como las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que comprenden. Observe la naturaleza inclusiva de los grupos de eventos. Por ejemplo, un desencadenador DDL o una notificación de eventos que especifica FOR DDL_TABLE_EVENTS (10018) cubre las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE y DROP TABLE. Un desencadenador DLL o una notificación de eventos que especifica FOR DDL_TABLE_VIEW_EVENTS (10017) cubre todas las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] bajo los tipos DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS y DDL_STATISTICS_EVENTS.  
   
 > [!NOTE]  
 >  Determinados procedimientos almacenados del sistema que realizan operaciones similares a DDL también pueden activar desencadenadores DDL o notificaciones de eventos. Pruebe los desencadenadores DDL y las notificaciones de eventos para determinar sus respuestas a los procedimientos almacenados del sistema que se ejecutan. Por ejemplo, tanto la instrucción CREATE TYPE como el procedimiento almacenado **sp_addtype** activarán un desencadenador DDL o una notificación de eventos creada en un evento CREATE_TYPE.  
@@ -38,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
 ||||  
 |-|-|-|  
-|parent_type|tipo|name|  
+|parent_type|Tipo|NAME|  
 |NULL|296|ALTER_SERVER_CONFIGURATION|  
 |NULL|10001|DDL_EVENTS|  
 |10001|10016|&#124;    DDL_DATABASE_LEVEL_EVENTS|  
@@ -321,7 +323,7 @@ FROM DirectReports
 ORDER BY sort;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Notificaciones de eventos](../../relational-databases/service-broker/event-notifications.md)   
  [Desencadenadores DDL](../../relational-databases/triggers/ddl-triggers.md)   
  [Eventos DDL](../../relational-databases/triggers/ddl-events.md)  

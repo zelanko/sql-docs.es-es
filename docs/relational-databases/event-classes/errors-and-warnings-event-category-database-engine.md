@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,29 +17,30 @@ helpviewer_keywords:
 - SQL Server event classes, Errors and Warnings event category
 - event classes [SQL Server], Errors and Warnings event category
 ms.assetid: 249c19b5-af68-4433-80f6-337395176641
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bdac2740a2db73a3cf548b37c288b8dd203ed46d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f6eaa88dfe9f1d01b72d63e44f30c9850e846f20
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Errores y advertencias (categoría de eventos del motor de base de datos)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La categoría de eventos **Errors and Warnings** contiene eventos generales de errores y advertencias.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La categoría de eventos **Errores y advertencias** contiene eventos generales de errores y advertencias.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Descripción|  
+|Tema|Description|  
 |-----------|-----------------|  
 |[Attention (clase de eventos)](../../relational-databases/event-classes/attention-event-class.md)|Indica que se ha producido un evento **Attention** .|  
 |[Background Job Error (clase de eventos)](../../relational-databases/event-classes/background-job-error-event-class.md)|Indica que un trabajo en segundo plano ha terminado de forma anómala.|  
 |[Bitmap Warning (clase de eventos)](../../relational-databases/event-classes/bitmap-warning-event-class.md)|Indica que el filtrado de mapas de bits se ha deshabilitado en una consulta.|  
 |[Blocked Process Report (clase de eventos)](../../relational-databases/event-classes/blocked-process-report-event-class.md)|Indica que una tarea ha estado bloqueada durante más tiempo del especificado.|  
-|[Clase de eventos Umbral de la CPU superado](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)|Indica que el regulador de recursos detecta una consulta que supera el umbral de la CPU especificado.|  
+|[CPU Threshold Exceeded (clase de eventos)](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)|Indica que el regulador de recursos detecta una consulta que supera el umbral de la CPU especificado.|  
 |[ErrorLog (clase de eventos)](../../relational-databases/event-classes/errorlog-event-class.md)|Indica que se han registrado eventos de error en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[EventLog (clase de eventos)](../../relational-databases/event-classes/eventlog-event-class.md)|Indica que se han registrado eventos en el registro de eventos de Windows.|  
 |[Exception (clase de eventos)](../../relational-databases/event-classes/exception-event-class.md)|Indica que se ha producido una excepción en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -50,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 |[Sort Warnings (clase de eventos)](../../relational-databases/event-classes/sort-warnings-event-class.md)|Indica que las operaciones de orden no caben en la memoria.|  
 |[User Error Message (clase de eventos)](../../relational-databases/event-classes/user-error-message-event-class.md)|Muestra mensajes de error que ve el usuario.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

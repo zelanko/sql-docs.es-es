@@ -8,23 +8,25 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
-caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d50be48fe1f6c1b57da6171e0bfaee8c8b23a1fe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5b32325de1691fae92ff7bcecfeeda305df98d31
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Comparar opciones para almacenar objetos Blob (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Explica y compara las opciones disponibles para almacenar archivos y documentos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Explica y compara las opciones que están disponibles para almacenar archivos y documentos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="Expectations"></a> Almacenar archivos de la base de datos - Ventajas y expectativas  
  Un porcentaje alto de los datos empresariales no se estructuran por naturaleza y se suelen almacenar como archivos y documentos en los sistemas de archivos. Las aplicaciones que tienen acceso a los archivos a través de las API de Windows generan, administran y consumen la mayor parte de los datos. Las empresas suelen mantener estos datos en el sistema de archivos, mientras que almacenan los metadatos relacionados de los archivos en una base de datos relacional.  
@@ -53,13 +55,13 @@ ms.lasthandoff: 11/17/2017
   
 |Característica|Servidor de archivos y solución de base de datos|Solución de FILESTREAM|Solución de FileTable|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
-|**Un solo artículo para tareas de administración**|No|Sí|**Sí**|  
-|**Un solo conjunto de servicios**: búsquedas, informes, consultas, etc.|No|Sí|**Sí**|  
-|**Modelo de seguridad integrada**|No|Sí|**Sí**|  
-|**Actualizaciones en contexto de datos FILESTREAM**|Sí|No|**Sí**|  
-|**Jerarquía de archivos y de directorios que se mantiene en la base de datos**|No|No|**Sí**|  
-|**Compatibilidad con aplicaciones Windows**|Sí|No|**Sí**|  
-|**Acceso relacional a los atributos de archivo**|No|No|**Sí**|  
+|**Un solo artículo para tareas de administración**|no|Sí|**Sí**|  
+|**Un solo conjunto de servicios**: búsquedas, informes, consultas, etc.|no|Sí|**Sí**|  
+|**Modelo de seguridad integrada**|no|Sí|**Sí**|  
+|**Actualizaciones en contexto de datos FILESTREAM**|Sí|no|**Sí**|  
+|**Jerarquía de archivos y de directorios que se mantiene en la base de datos**|no|no|**Sí**|  
+|**Compatibilidad con aplicaciones Windows**|Sí|no|**Sí**|  
+|**Acceso relacional a los atributos de archivo**|no|no|**Sí**|  
   
 ##  <a name="CompareRBS"></a> Comparar FILESTREAM y el almacén remoto de BLOBS (RBS)  
  Para obtener una comparación de estas dos características, vea este elemento de blogs del equipo RBS: comparación de característica de [del almacén remoto de blobs y FILESTREAM de SQL Server](http://go.microsoft.com/fwlink/?LinkId=210317).  

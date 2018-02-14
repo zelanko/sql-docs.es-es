@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 52a0c6ab3ddd9f88cc0da731795f1b3d61b72714
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 6f0bfa6d9cbbcfe33e1817c3c9df4b38b4f686f8
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tamaño de tabla y fila de las tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ La tabla con optimización para memoria, que consta de índices y filas.
 [table size] = [size of index 1] + … + [size of index n] + ([row size] * [row count])  
 ```  
   
- El tamaño de un índice hash se fija en el momento de creación de la tabla y depende del número real de depósitos. El bucket_count especificado con la especificación de índice se redondea a la potencia más cercana de 2 para obtener el [número real de depósitos]. Por ejemplo, si el bucket_count especificado es 100000, el [número real de depósitos] para el índice es 131072.  
+ El tamaño de un índice hash se fija en el momento de creación de la tabla y depende del número real de depósitos. El bucket_count especificado con la especificación de índice se redondea a la potencia más cercana de 2 para obtener el [número real de cubos]. Por ejemplo, si el bucket_count especificado es 100000, el [número real de cubos] para el índice es 131072.  
   
 ```  
 [hash index size] = 8 * [actual bucket count]  
@@ -146,7 +147,7 @@ La tabla con optimización para memoria, que consta de índices y filas.
 |Columnas de tipo profundo de longitud variable [tamaño real]|SUM([tamaño real de columnas de tipo profundo de longitud variable])<br /><br /> El tamaño real de cada columna es el siguiente:<br /><br /> n, donde n es el número de caracteres almacenados en la columna, para varchar(i).<br /><br /> 2 * n, donde n es el número de caracteres almacenados en la columna, para nvarchar(i).<br /><br /> n, donde n es el número de bytes almacenados en la columna, para varbinary(i).|Esta fila solo se aplica al [tamaño del texto real de la fila].<br /><br /> El tamaño real se determina con los datos almacenados en las columnas de la fila.|   
   
 ##  <a name="bkmk_ExampleComputation"></a> Ejemplo: Cálculo del tamaño de fila y tabla  
- Para los índices hash, el número de depósitos real se redondea a la potencia más cercana de 2. Por ejemplo, si el bucket_count especificado es 100000, el número real de depósitos para el índice es 131072.  
+ Para los índices hash, el número de cubos real se redondea a la potencia más cercana de 2. Por ejemplo, si el bucket_count especificado es 100000, el número real de cubos para el índice es 131072.  
   
  Considere una tabla Orders con la definición siguiente:  
   

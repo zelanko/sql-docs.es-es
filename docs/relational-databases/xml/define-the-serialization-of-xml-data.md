@@ -24,16 +24,17 @@ ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f58d6cbfa3c67e48890f4437a3c6ad08ee3d2797
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 02ae370490f638a0ad02d5539473c61c6c89b2b3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Definir la serialización de datos XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Cuando el tipo de datos xml se convierte de manera explícita o implícita a un tipo SQL binario o de cadena, el contenido del tipo de datos XML se serializa de acuerdo con las reglas que se describen en este tema.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Cuando el tipo de datos xml se convierte de manera explícita o implícita a un tipo SQL binario o de cadena, el contenido del tipo de datos xml se serializa de acuerdo con las reglas que se describen en este tema.  
   
 ## <a name="serialization-encoding"></a>Codificación de la serialización  
  Si el tipo SQL de destino es VARBINARY, el resultado se serializa en UTF-16 con una marca de orden de bytes UTF-16 delante, pero sin una declaración XML. Si el tipo de destino es demasiado pequeño, se genera un error.  

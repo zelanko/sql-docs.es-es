@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - database mirroring [SQL Server], event notifications
 - Database Suspect Data Page event class
 ms.assetid: 098e1443-a8a0-425c-9311-0a479b1370ed
-caps.latest.revision: "11"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b6882a854d3cb6ea7f4febf7d66ecf09f20e9e9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eb75bd05b77432f1ca68294bca96e79820f7642e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-suspect-data-page-event-class"></a>clase de eventos Database Suspect Data Page
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos **Database Suspect Data Page** indica cuándo se agrega una página a la tabla [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) en [msdb](../../relational-databases/databases/msdb-database.md). Incluya esta clase de eventos en los seguimientos que supervisan la aparición de páginas sospechosas.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La clase de eventos **Database Suspect Data Page** indica cuándo se agrega una página a la tabla [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) en [msdb](../../relational-databases/databases/msdb-database.md). Incluya esta clase de eventos en los seguimientos que supervisan la aparición de páginas sospechosas.  
   
 > [!NOTE]  
 >  Este evento se emite de forma asincrónica desde la inserción de una fila correspondiente en la tabla **suspect_pages** . Por consiguiente, es posible que un trabajo que realice escuchas en este evento no encuentre inmediatamente la entrada **suspect_pages** correspondiente.  
@@ -38,18 +40,18 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="database-suspect-data-page-event-class-data-columns"></a>Columnas de datos de la clase de eventos Database Suspect Data Page  
   
-|Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
+|Nombre de columna de datos|Tipo de datos|Description|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|Id. de la base de datos para la que se ha producido la alerta de evento de página sospechosa. Esto es lo mismo que la columna **database_id** de la tabla **suspect_pages** .|3|Sí|  
-|**EventClass**|**int**|El tipo de evento es 213.|27|No|  
-|**EventSequence**|**int**|Secuencia de la clase de eventos en el lote.|51|No|  
+|**EventClass**|**int**|El tipo de evento es 213.|27|no|  
+|**EventSequence**|**int**|Secuencia de la clase de eventos en el lote.|51|no|  
 |**SPID**|**int**|Id. de la tarea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que encontró la página sospechosa.|12|Sí|  
 |**StartTime**|**datetime**|Momento en el que se produjo el evento.|14|Sí|  
 |**ObjectID**|**int**|Id. de la fila de la base de datos que contiene la página sospechosa. Esto es el mismo que la columna **file_id** de la tabla **suspect_pages** .|22|Sí|  
 |**ObjectID2**|**int**|Id. de la página sospechosa del archivo. Esto es el mismo que la columna **page_id** de la tabla **suspect_pages** .|56|Sí|  
 |**Error**|**int**|Tipo de error que se encontró. Este valor es el mismo que el valor **event_type** de la página en la tabla **suspect_pages** .|31|Sí|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Administrar la tabla suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   

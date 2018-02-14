@@ -8,30 +8,33 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Log File Auto Shrink event class
+helpviewer_keywords:
+- Log File Auto Shrink event class
 ms.assetid: 4bf82a13-9985-4f20-9ef8-0083f104d124
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ff072f287fd371fb0239c2adbe80c90965fee4e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 15b9c03179f64ed3e764e7476798ce813d2d347d
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="log-file-auto-shrink-event-class"></a>Log File Auto Shrink, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos **Log File Auto Shrink** indica que el archivo de registro se ha reducido automáticamente. Este evento no se desencadena si el archivo de registro se reduce mediante una instrucción ALTER DATABASE explícita.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La clase de eventos **Log File Auto Shrink** indica que el archivo de registro se ha reducido automáticamente. Este evento no se desencadena si el archivo de registro se reduce mediante una instrucción ALTER DATABASE explícita.  
   
  Incluya la clase de eventos **Log File Auto Shrink** en los seguimientos que supervisen la reducción del archivo de registro. Cuando esta clase de eventos se incluye en un seguimiento, el volumen de sobrecarga suele ser bajo a no ser que el archivo se reduzca con frecuencia.  
   
 ## <a name="log-file-auto-shrink-event-class-data-columns"></a>Columnas de datos de la clase de eventos Log File Auto Shrink  
   
-|Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
+|Nombre de columna de datos|Tipo de datos|Description|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
 |**ClientProcessID**|**Int**|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  
@@ -39,8 +42,8 @@ ms.lasthandoff: 11/17/2017
 |**DatabaseName**|**nvarchar**|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
 |**Duración**|**bigint**|Tiempo (en milisegundos) necesario para ampliar el archivo.|13|Sí|  
 |**EndTime**|**datetime**|Hora final de la **reducción automática** del archivo de registro.|18|Sí|  
-|**EventClass**|**int**|Tipo de evento = 95.|27|No|  
-|**EventSequence**|**int**|Secuencia de la clase de evento **CursorClose** en el lote.|51|No|  
+|**EventClass**|**int**|Tipo de evento = 95.|27|no|  
+|**EventSequence**|**int**|Secuencia de la clase de evento **CursorClose** en el lote.|51|no|  
 |**Nombre de archivo**|**nvarchar**|Nombre lógico del archivo que se va a ampliar.|36|Sí|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |**IntegerData**|**Int**|Número de páginas de 8 KB en las que se incrementa el archivo.|25|Sí|  
@@ -48,12 +51,12 @@ ms.lasthandoff: 11/17/2017
 |**LoginName**|**nvarchar**|Nombre del inicio de sesión del usuario (inicio de sesión de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenciales de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en formato DOMINIO\nombreDeUsuario).|11|Sí|  
 |**LoginSid**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede encontrar esta información en la vista de catálogo **sys.server_principals** . Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |**NTDomainName**|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
-|**ServerName**|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
+|**ServerName**|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|no|  
 |**SessionLoginName**|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, **SessionLoginName** muestra inicioDeSesión1 y **LoginName** muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |**SPID**|**Int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

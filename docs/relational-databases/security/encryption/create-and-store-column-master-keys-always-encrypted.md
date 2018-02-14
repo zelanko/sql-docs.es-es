@@ -8,22 +8,23 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-security
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0aaccaa65855630a7b08cdae1af41fdfeeba62a5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 578d41ef39b11825a175d27dfcf9af08c658ad85
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
-# <a name="create-and-store-column-master-keys-always-encrypted"></a>Create and Store Column Master Keys (Always Encrypted) (Crear y almacenar claves maestras de columna (Always Encrypted))
+# <a name="create-and-store-column-master-keys-always-encrypted"></a>Crear y almacenar claves maestras de columna (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Las*claves maestras de columna* son claves que protegen las claves que se usan en Always Encrypted para cifrar las claves de cifrado de columnas. Las claves maestras de columna pueden almacenarse en un almacén de claves de confianza, y las claves deben ser accesibles a las aplicaciones que necesiten cifrar o descifrar datos y a las herramientas para configurar Always Encrypted y administrar las claves de Always Encrypted.
@@ -56,7 +57,7 @@ Los proveedores integrados disponibles dependen de qué controlador, qué versi�
 Puede usar [SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) y el [módulo de SqlServer PowerShell](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) para configurar Always Encrypted y administrar las claves de Always Encrypted. Para obtener una lista de los almacenes de claves admiten estas herramientas, vea:
 
 - [Configure Always Encrypted using SQL Server Management Studio (Configurar Always Encrypted con SQL Server Management Studio)](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-- [Configure Always Encrypted using PowerShell (Configurar Always Encrypted con PowerShell)](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
+- [Configurar Always Encrypted con PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
 
 
 ## <a name="creating-column-master-keys-in-windows-certificate-store"></a>Crear claves maestras de columna en el Almacén de certificados de Windows    
@@ -232,11 +233,11 @@ Consulte la sección Aprovisionar claves maestras de columna en Configuring Alwa
 Consulte la documentación de HSM y CSP sobre cómo configurar el CSP en un equipo y cómo conceder acceso a usuarios y aplicaciones al HSM.
  
  
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Next Steps  
   
 - [Configure Always Encrypted Keys using PowerShell (Configurar claves Always Encrypted con PowerShell)](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-- [Rotate Always Encrypted Keys using PowerShell (Rotar claves Always Encrypted con PowerShell)](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [Configure Always Encrypted using SQL Server Management Studio (Configurar Always Encrypted con SQL Server Management Studio)](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
+- [Rotar claves de Always Encrypted con PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
+- [Configurar Always Encrypted con SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
 
   
 ## <a name="additional-resources"></a>Recursos adicionales  

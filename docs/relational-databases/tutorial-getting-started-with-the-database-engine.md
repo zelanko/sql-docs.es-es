@@ -8,7 +8,8 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - failure to connect [SQL Server]
 - connecting tutorial [SQL Server]
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 35110508db09e7fc82fdabd4b9b77b831ad1548a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 64fca04ede55e3bf0e98c4cb62b4495fd19d576b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>Tutorial: Introducción al motor de base de datos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ Para usar este tutorial, debe tener el software siguiente instalado en el sistem
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para instalar [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], vea [Descarga de SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
   
   

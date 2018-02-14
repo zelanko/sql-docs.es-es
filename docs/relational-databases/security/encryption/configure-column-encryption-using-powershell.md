@@ -8,20 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: powershell
+ms.technology:
+- powershell
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f50d2a739aace9dbe433bda79d4827020fa8cd1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b558ecb78086123cff3c65ae95446fb1a30f9cf4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-column-encryption-using-powershell"></a>Configurar el cifrado de columna con PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 11/17/2017
 En este artículo se proporcionan los pasos necesarios para establecer la configuración de destino de Always Encrypted para las columnas de base de datos mediante el cmdlet [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) (en el módulo *SqlServer* de PowerShell). El cmdlet **Set-SqlColumnEncryption** modifica el esquema de la base de datos de destino y los datos almacenados en las columnas seleccionadas. Los datos almacenados en una columna se pueden cifrar, volver a cifrar o descifrar, en función de la configuración de cifrado de destino especificada para las columnas y la configuración de cifrado actual.
 Para más información sobre la compatibilidad de Always Encrypted con el módulo SqlServer de PowerShell, consulte [Configurar Always Encrypted con PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Para establecer la configuración de cifrado de destino, debe asegurarse de que:
 - Hay una clave de cifrado de columna configurada en la base de datos (si está cifrando o volviendo a cifrar una columna). Para obtener más información, vea [Configure Always Encrypted Keys using PowerShell (Configurar claves de Always Encrypted con PowerShell)](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md).
@@ -61,10 +62,10 @@ El cmdlet **Set-SqlColumnEncryption** , que se usa para configurar el cifrado de
 
 Tarea  |Artículo  |Accede a claves de texto no cifrado o a almacén de claves  |Accede a base de datos   
 ---|---|---|---
-Paso 1. Inicie un entorno de PowerShell e importe el módulo SqlServer. | [Importar el módulo SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | No | No
-Paso 2. Conecte con el servidor y la base de datos. | [Conectar a una base de datos](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Sí
-Paso 3. Autentíquese en Azure si la clave maestra de columna (que protege la clave de cifrado de columna que se va a rotar) se almacena en el Almacén de claves de Azure. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Sí | No
-Paso 4. Construya una matriz de objetos SqlColumnEncryptionSettings, una para cada columna de base de datos que quiera cifrar, volver a cifrar o descifrar. SqlColumnMasterKeySettings es un objeto que existe en memoria (en PowerShell). Especifica el esquema de cifrado de destino de una columna. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | No | No
+Paso 1. Inicie un entorno de PowerShell e importe el módulo SqlServer. | [Importar el módulo SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | no | no
+Paso 2. Conecte con el servidor y la base de datos. | [Conectar a una base de datos](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | no | Sí
+Paso 3. Autentíquese en Azure si la clave maestra de columna (que protege la clave de cifrado de columna que se va a rotar) se almacena en el Almacén de claves de Azure. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Sí | no
+Paso 4. Construya una matriz de objetos SqlColumnEncryptionSettings, una para cada columna de base de datos que quiera cifrar, volver a cifrar o descifrar. SqlColumnMasterKeySettings es un objeto que existe en memoria (en PowerShell). Especifica el esquema de cifrado de destino de una columna. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | no | no
 Paso 5. Establezca la configuración de cifrado que quiera, especificada en la matriz de objetos SqlColumnMasterKeySettings que creó en el paso anterior. Una columna se cifrará, se volverá a cifrar o se descifrará en función de la configuración de destino especificada y la configuración de cifrado actual de la columna.| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Nota:** Este paso puede llevar mucho tiempo. Las aplicaciones no podrán tener acceso a las tablas durante toda la operación o parte de esta, dependiendo del enfoque (en línea o sin conexión) que seleccione. | Sí | Sí
 
 ## <a name="encrypt-columns-using-offline-approach---example"></a>Cifrar columnas con el enfoque sin conexión: ejemplo

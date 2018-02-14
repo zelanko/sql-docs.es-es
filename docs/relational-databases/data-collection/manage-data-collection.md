@@ -8,28 +8,31 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: "Recopilación de datos"
+keywords:
+- "Recopilación de datos"
 helpviewer_keywords:
 - data collection [SQL Server]
 - data collector [SQL Server], Transact-SQL
 - data collector [SQL Server], SQL Server Management Studio
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82d9d1e74c0419f9ea685dc9ae9c243c9bba2840
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f48b2043f77c301cebdc6750d6445063ff121946
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="manage-data-collection"></a>Administrar la recopilación de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Use procedimientos almacenados y funciones de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] para administrar distintos aspectos de la recopilación de datos, como habilitar o deshabilitar la recopilación de datos, cambiar la configuración de un conjunto de recopilación o ver los datos en el almacén de administración de datos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Use procedimientos almacenados y funciones de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] para administrar distintos aspectos de la recopilación de datos, como habilitar o deshabilitar la recopilación de datos, cambiar la configuración de un conjunto de recopilación o ver los datos en el almacén de administración de datos.  
   
 ## <a name="manage-data-collection-using-ssms"></a>Administrar la recopilación de datos con SSMS  
  Realice las siguientes tareas relacionadas con el recopilador de datos usando Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
@@ -76,7 +79,7 @@ ms.lasthandoff: 11/17/2017
   
  La tabla siguiente describe los procedimientos almacenados que puede usar para trabajar con el recopilador de datos.  
   
-|Nombre del procedimiento|Descripción|  
+|Nombre del procedimiento|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)|Habilita el recopilador de datos.|  
 |[sp_syscollector_disable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)|Deshabilita el recopilador de datos.|  
@@ -85,7 +88,7 @@ ms.lasthandoff: 11/17/2017
   
  La tabla siguiente describe los procedimientos almacenados que puede usar para trabajar con conjuntos de recopilación.  
   
-|Nombre del procedimiento|Descripción|  
+|Nombre del procedimiento|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_run_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md)|Ejecuta una conjunto de recopilación a petición.|  
 |[sp_syscollector_start_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql.md)|Inicia un conjunto de recopilación.|  
@@ -99,7 +102,7 @@ ms.lasthandoff: 11/17/2017
   
  La tabla siguiente describe los procedimientos almacenados que puede usar para trabajar con elementos de recopilación.  
   
-|Nombre del procedimiento|Descripción|  
+|Nombre del procedimiento|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)|Crea un elemento de recopilación.|  
 |[sp_syscollector_delete_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)|Elimina un elemento de recopilación.|  
@@ -109,7 +112,7 @@ ms.lasthandoff: 11/17/2017
   
  La tabla siguiente describe los procedimientos almacenados que puede usar para trabajar con tipos de recopilador.  
   
-|Nombre del procedimiento|Descripción|  
+|Nombre del procedimiento|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_create_collector_type &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collector-type-transact-sql.md)|Crea un tipo de recopilador.|  
 |[sp_syscollector_update_collector_type &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-update-collector-type-transact-sql.md)|Actualiza un tipo de recopilador.|  
@@ -119,7 +122,7 @@ ms.lasthandoff: 11/17/2017
   
  La tabla siguiente describe las vistas que puede usar para obtener información de configuración y datos de registro de ejecución.  
   
-|Nombre de la vista|Descripción|  
+|Nombre de la vista|Description|  
 |---------------|-----------------|  
 |[syscollector_config_store &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)|Obtiene la configuración del recopilador de datos.|  
 |[syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)|Obtenga información del elemento de recopilación.|  
@@ -133,7 +136,7 @@ ms.lasthandoff: 11/17/2017
   
  La tabla siguiente describe los procedimientos almacenados que puede usar para configurar el acceso al almacén de administración de datos.  
   
-|Nombre del procedimiento|Descripción|  
+|Nombre del procedimiento|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_set_warehouse_database_name &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)|Especifica el nombre de la base de datos definido en la cadena de conexión para el almacén de administración de datos.|  
 |[sp_syscollector_set_warehouse_instance_name &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)|Especifique la instancia definida en la cadena de conexión para el almacén de administración de datos.|  
@@ -142,7 +145,7 @@ ms.lasthandoff: 11/17/2017
   
  La tabla siguiente describe los procedimientos almacenados que puede usar para trabajar con la configuración del almacén de administración de datos.  
   
-|Nombre del procedimiento|Descripción|  
+|Nombre del procedimiento|Description|  
 |--------------------|-----------------|  
 |[core.sp_create_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-create-snapshot-transact-sql.md)|Crea una instantánea de recopilación en el almacén de administración de datos.|  
 |[core.sp_update_data_source &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-update-data-source-transact-sql.md)|Actualiza el origen de datos para la recopilación de datos.|  
@@ -154,7 +157,7 @@ ms.lasthandoff: 11/17/2017
   
  La tabla siguiente describe los procedimientos almacenados que puede usar para trabajar con paquetes de carga.  
   
-|Nombre del procedimiento|Descripción|  
+|Nombre del procedimiento|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_set_cache_window &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)|Configura el número de intentos de carga de datos.|  
 |[sp_syscollector_set_cache_directory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)|Especifica el almacenamiento temporal para los datos entre los intentos de carga.|  
@@ -163,14 +166,14 @@ ms.lasthandoff: 11/17/2017
   
  La tabla siguiente describe los procedimientos almacenados que puede usar para trabajar con el registro de ejecución de recopilación de datos.  
   
-|Nombre del procedimiento|Descripción|  
+|Nombre del procedimiento|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_delete_execution_log_tree &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql.md)|Elimina entradas del conjunto de recopilación del registro de ejecución.|  
   
 ### <a name="functions"></a>Funciones  
  La tabla siguiente describe las funciones que puede usar para obtener información de seguimiento y ejecución.  
   
-|Nombre de función|Descripción|  
+|Nombre de función|Description|  
 |-------------------|-----------------|  
 |[fn_syscollector_get_execution_details &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)|Obtenga datos del registro de ejecución de [!INCLUDE[ssIS](../../includes/ssis-md.md)] para un paquete concreto.|  
 |[fn_syscollector_get_execution_stats &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|Obtenga las estadísticas de ejecución para un paquete o un conjunto de recopilación. Esta información incluye errores que están registrados.|  

@@ -8,30 +8,33 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Audit Add DB User event class
+helpviewer_keywords:
+- Audit Add DB User event class
 ms.assetid: ac9ed573-c84d-444c-81fb-923a6240c1ef
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 25d15b25de3c25223cb2a49a62f442afc51b5603
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f77357183147cf4fc5e6a651fae6543bd4d7743a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User [clase de eventos]
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos **Audit Add DB User** tiene lugar cuando se agrega o quita un inicio de sesión como un usuario de base de datos en una base de datos. Esta clase de eventos se usa con los procedimientos almacenados **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**y **sp_dropuser** .  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La clase de eventos **Audit Add DB User** tiene lugar cuando se agrega o quita un inicio de sesión como un usuario de base de datos en una base de datos. Esta clase de eventos se usa con los procedimientos almacenados **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**y **sp_dropuser** .  
   
  Es posible que esta clase de eventos se elimine en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En su lugar, se recomienda usar la clase de eventos **Audit Database Principal Management** .  
   
 ## <a name="audit-add-db-user-event-class-data-columns"></a>Columnas de datos de la clase de eventos Audit Add DB User  
   
-|Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
+|Nombre de columna de datos|Tipo de datos|Description|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
 |**ClientProcessID**|**int**|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona su identificador de proceso.|9|Sí|  
@@ -39,8 +42,8 @@ ms.lasthandoff: 11/17/2017
 |**DatabaseID**|**int**|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |**DatabaseName**|**nvarchar**|Nombre de la base de datos en la que se va a agregar o quitar el nombre de usuario.|35|Sí|  
 |**DBUserName**|**nvarchar**|Nombre de usuario del emisor en la base de datos.|40|Sí|  
-|**EventClass**|**int**|Tipo de evento = 109.|27|No|  
-|**EventSequence**|**int**|Secuencia de un evento determinado de la solicitud.|51|No|  
+|**EventClass**|**int**|Tipo de evento = 109.|27|no|  
+|**EventSequence**|**int**|Secuencia de un evento determinado de la solicitud.|51|no|  
 |**EventSubClass**|**int**|Tipo de la subclase de eventos.<br /><br /> 1=Agregar<br /><br /> 2=Quitar<br /><br /> 3=Conceder acceso a la base de datos<br /><br /> 4=Revocar el acceso a la base de datos|21|Sí|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
@@ -62,7 +65,7 @@ ms.lasthandoff: 11/17/2017
 |**TransactionID**|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |**XactSequence**|**bigint**|Token que se utiliza para describir la transacción actual.|50|Sí|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   

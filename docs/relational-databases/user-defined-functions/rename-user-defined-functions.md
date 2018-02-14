@@ -8,23 +8,25 @@ ms.service:
 ms.component: udf
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-udf
+ms.technology:
+- dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c2695a5c-9cc5-4b18-8771-53027ca9a9af
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2df378096ea362fc560141c9fa9744b9dee3917b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 19bff071242cdf7e68c7abe154a76378d9e76f90
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rename-user-defined-functions"></a>Cambiar el nombre de las funciones definidas por el usuario
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]Puede cambiar el nombre de las funciones definidas por el usuario en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Puede cambiar el nombre de las funciones definidas por el usuario en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  
   
@@ -40,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -52,7 +54,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a> Permissions  
  Para quitar la función, se requiere el permiso ALTER en el esquema al que pertenece la función o un permiso CONTROL en la función. Para volver a crear la función, se requiere el permiso CREATE FUNCTION en la base de datos y el permiso ALTER en el esquema en el que se va a crear la función.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -82,7 +84,7 @@ ms.lasthandoff: 11/17/2017
   
  Para obtener más información, vea [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md) y [DROP FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-function-transact-sql.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [Ver funciones definidas por el usuario](../../relational-databases/user-defined-functions/view-user-defined-functions.md)  
   

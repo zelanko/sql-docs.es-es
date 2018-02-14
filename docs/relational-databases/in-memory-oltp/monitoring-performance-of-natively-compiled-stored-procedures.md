@@ -8,23 +8,25 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d42b86732e2f752646ef7d71d61f037b8e66407
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: de69f1adb23ab36c7f35819762dba1578f7015fd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Supervisar el rendimiento de los procedimientos almacenados compilados de forma nativa
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] En este tema se describe cómo supervisar el rendimiento de los procedimientos almacenados compilados de forma nativa.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+En este tema se describe cómo supervisar el rendimiento de los procedimientos almacenados compilados de forma nativa.  
   
 ## <a name="using-extended-events"></a>Utilizar eventos extendidos  
  Use el evento extendido **sp_statement_completed** para realizar el seguimiento de la ejecución de una consulta. Cree una sesión de eventos extendidos con este evento, opcionalmente con un filtro en object_id para un procedimiento almacenado compilado de forma nativa específico. El evento extendido se genera tras la ejecución de cada consulta. El tiempo de CPU y la duración notificados por el evento extendido indican cuánta CPU utilizó la consulta y el tiempo de ejecución. Un procedimiento almacenado compilado de forma nativa que utiliza mucho tiempo de CPU puede tener problemas de rendimiento.  

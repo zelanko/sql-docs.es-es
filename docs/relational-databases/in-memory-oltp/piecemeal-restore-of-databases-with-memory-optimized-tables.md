@@ -8,23 +8,25 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d123b25121c645d3b0c6e2cb696b06b09cd9336
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a05251d1dacc28b837dc32f7adedcd42274ffc05
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>Restauración por etapas de bases de datos con tablas con optimización para memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La restauración por etapas se admite en bases de datos con tablas optimizadas para memoria, a excepción de una restricción que describe más adelante. Para obtener más información sobre la restauración y la copia de seguridad por etapas, vea [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) y [Restauraciones por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La restauración por etapas se admite en bases de datos con tablas optimizadas para memoria, a excepción de una restricción que describe más adelante. Para obtener más información sobre la restauración y la copia de seguridad por etapas, vea [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) y [Restauraciones por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
   
  La copia de seguridad y la restauración de un grupo de archivos principal y de un grupo de archivos optimizados para memoria deben realizarse conjuntamente:  
   
@@ -81,7 +83,7 @@ backup database imoltp filegroup='primary', filegroup='imoltp_mod' to disk='c:\d
 backup database imoltp filegroup='imoltp_secondary' to disk='c:\data\imoltp_secondary.dmp' with init  
 ```  
   
-### <a name="restore"></a>Restore  
+### <a name="restore"></a>Restaurar  
  En el ejemplo siguiente se muestra cómo restaurar conjuntamente el grupo de archivos principal y el grupo de archivos optimizados para memoria.  
   
 ```  
@@ -101,7 +103,7 @@ FROM  DISK = N'c:\data\imoltp_secondary.dmp' WITH  FILE = 1,  RECOVERY,  NOUNLOA
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Hacer copia de seguridad, restaurar y recuperar tablas con optimización para memoria](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

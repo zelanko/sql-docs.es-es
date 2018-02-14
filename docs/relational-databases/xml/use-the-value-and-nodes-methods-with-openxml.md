@@ -8,7 +8,8 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - value method [XML in SQL Server]
 - nodes method [XML in SQL Server]
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 56771eba840963660eb0160e6c5e5c45e98980b4
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 831efec8d02c212f5a037423c42148e0c93fd072
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>Utilizar los métodos de valor() y nodos() con OPENXML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Puede usar varios métodos **value()** en el tipo de datos **xml** de una cláusula **SELECT** para generar un conjunto de filas de valores extraídos. El método **nodes()** da como resultado una referencia interna para cada nodo seleccionado, que se puede usar para hacer más consultas. La combinación de los métodos **nodes()** y **value()** puede ser más eficaz para generar el conjunto de filas cuando tiene varias columnas y, tal vez, cuando las expresiones de ruta de acceso empleadas en su generación son complejas.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Puede usar varios métodos **value()** en el tipo de datos **xml** de una cláusula **SELECT** para generar un conjunto de filas de valores extraídos. El método **nodes()** da como resultado una referencia interna para cada nodo seleccionado, que se puede usar para hacer más consultas. La combinación de los métodos **nodes()** y **value()** puede ser más eficaz para generar el conjunto de filas cuando tiene varias columnas y, tal vez, cuando las expresiones de ruta de acceso empleadas en su generación son complejas.  
   
  El método **nodes()** da como resultado instancias de un tipo de datos **xml** especial, cada una de las cuales tiene su contexto establecido en un nodo seleccionado diferente. Este tipo de instancia XML admite los métodos **query()**, **value()**, **nodes()** y **exist()** y se puede usar en agregaciones **count(\*)**. Otros usos generarían un error.  
   

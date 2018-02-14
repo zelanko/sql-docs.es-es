@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43888872cd4d686363fbf995a71e0367beb3c7e7
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: cadb8454b9d9470afc7b0add40e21fd9f1346b00
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>Bloques ATOMIC en procedimientos nativos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -149,7 +150,7 @@ GO
 |----------------------|-----------------|  
 |**DATEFORMAT**|Se admiten todos los formatos de fecha de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando se especifica, **DATEFORMAT** reemplaza el formato de fecha predeterminado asociado a **LANGUAGE**.|  
 |**DATEFIRST**|Cuando se especifica, **DATEFIRST** reemplaza el valor predeterminado asociado a **LANGUAGE**.|  
-|**DELAYED_DURABILITY**|Los valores admitidos son **OFF** y **ON**.<br /><br /> Las confirmaciones de transacción de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden ser totalmente durables (el valor predeterminado) o durables diferidas. Para más información, vea [Controlar la durabilidad de las transacciones](../../relational-databases/logs/control-transaction-durability.md).|  
+|**DELAYED_DURABILITY**|Los valores admitidos son **OFF** y **ON**.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Las confirmaciones de transacción pueden ser totalmente durables (el valor predeterminado) o durables diferidas. Para obtener más información, vea [Controlar la durabilidad de las transacciones](../../relational-databases/logs/control-transaction-durability.md).|  
   
  Las opciones SET siguientes tienen el mismo valor predeterminado del sistema para todos los bloques atomic en todos los procedimientos almacenados compilados de forma nativa:  
   

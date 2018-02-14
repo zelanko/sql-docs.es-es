@@ -8,7 +8,8 @@ ms.service:
 ms.component: service-broker
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - target service [SQL Server]
 - event notifications [SQL Server], creating
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e942ea31c1a1cf97341863fea0449cb84eac15eb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 259065dc0de5207598a785e21815cfaddf37d4b1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="implement-event-notifications"></a>Implementar notificaciones de eventos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para implementar una notificación de eventos, debe crear primero un servicio de destino para que reciba las notificaciones de eventos y, a continuación, crear la notificación de eventos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Para implementar una notificación de eventos, debe crear primero un servicio de destino para que reciba las notificaciones de eventos y, a continuación, crear la notificación de eventos.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSB](../../includes/sssb-md.md)] se debe configurar para las notificaciones de eventos que envíen mensajes a un Service Broker en un servidor remoto. La seguridad del diálogo debe configurarse manualmente según el modelo de seguridad completa.  
@@ -102,7 +104,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
   
 -   [DROP EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-notification-transact-sql.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Obtener información sobre notificaciones de eventos](../../relational-databases/service-broker/get-information-about-event-notifications.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

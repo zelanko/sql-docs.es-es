@@ -19,16 +19,17 @@ ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ebfebc7ff04a526bd0a6aa7854b1d005dcad5f94
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 8fac630d1dd38409a6ba9d4877d803a9f064a992
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Crear, construir y consultar instancias de Geometry
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] El tipo de datos espaciales planar **geometry** representa los datos en un sistema de coordenadas euclidiano (plano). Implementan este tipo como un tipo de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de Common Language Runtime (CLR).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+El tipo de datos espaciales planar **geometry**representa los datos en un sistema de coordenadas euclidiano (plano). Implementan este tipo como un tipo de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de Common Language Runtime (CLR).  
   
  El tipo **geometry** está predefinido y está disponible en cada base de datos. Puede crear columnas de tabla de tipo **geometry** y operar con los datos **geometry** de la misma manera que con los demás tipos CLR.  
   

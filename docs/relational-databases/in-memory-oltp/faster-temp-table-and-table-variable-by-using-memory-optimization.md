@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 72f4daeb47e7c023e14cdd5a87a51e5dcbee2436
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 29b7fbe140943ba0f2f3493f00561e8cf2b509e2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Tabla temporal y variable de tabla más rápidas con optimización para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ Una variable de tabla optimizada para memoria:
 - No conlleva ningún uso o contención de tempdb.  
 - Se puede pasar a un procedimiento almacenado como un parámetro con valores de tabla (TVP).  
 - Debe tener al menos un índice, ya sea hash o no agrupado.  
-  - En el caso de un índice de hash, el número de depósitos idealmente debería ser entre una y dos veces el número de claves de índice únicas esperadas, aunque la sobrestimación de este número suele funcionar correctamente (hasta diez veces). Para obtener detalles, vea [Indexes for Memory-Optimized Tables (Índices de tablas con optimización para memoria)](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).  
+  - En el caso de un índice de hash, el número de cubos idealmente debería ser entre una y dos veces el número de claves de índice únicas esperadas, aunque la sobrestimación de este número suele funcionar correctamente (hasta diez veces). Para obtener detalles, vea [Indexes for Memory-Optimized Tables (Índices de tablas con optimización para memoria)](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).  
 
   
   
@@ -173,14 +174,14 @@ Observe que cada tabla optimizada para memoria debe tener al menos un índice.
         por  
             (MEMORY_OPTIMIZED = ON,  
              DURABILITY = SCHEMA_ONLY);  
-    go  
+    GO  
   
   
     CREATE SECURITY POLICY dbo.soSessionC_SpidFilter_Policy  
         ADD FILTER PREDICATE dbo.fn_SpidFilter(SpidFilter)  
         ON dbo.soSessionC  
         WITH (STATE = ON);  
-    go  
+    GO  
   
   
   
@@ -291,7 +292,7 @@ En Microsoft SQL Server, para usar las características de optimización para me
     ALTER DATABASE InMemTest2  
         ADD FILEGROUP FgMemOptim3  
             CONTAINS MEMORY_OPTIMIZED_DATA;  
-    go  
+    GO  
     ALTER DATABASE InMemTest2  
         ADD FILE  
         (  
@@ -300,7 +301,7 @@ En Microsoft SQL Server, para usar las características de optimización para me
                      --  C:\DATA\    preexisted.  
         )  
         TO FILEGROUP FgMemOptim3;  
-    go  
+    GO  
   
   
 El script siguiente crea el grupo de archivos y configura los valores recomendados de la base de datos: [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)

@@ -8,22 +8,26 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fe3fe62c9ab9ae24f0c3fdc366e61ebfd8d480a1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3b1f88c6df9ea20d8fb0b2b27dbd5e40d6c6dfa7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>Instalar SQL Server con el almacenamiento de recursos compartidos de archivos SMB
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], las bases de datos del sistema (Master, Model, MSDB y TempDB) y las bases de datos de usuario de [!INCLUDE[ssDE](../../includes/ssde-md.md)] se pueden instalar con el servidor de archivos del Bloque de mensajes del servidor (SMB) como opción de almacenamiento. Esto se aplica tanto a las instalaciones independientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como a las instalaciones de clústeres de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], las bases de datos del sistema (Master, Model, MSDB y TempDB) y las bases de datos de usuario del [!INCLUDE[ssDE](../../includes/ssde-md.md)] se pueden instalar con el servidor de archivos del Bloque de mensajes del servidor (SMB) como opción de almacenamiento. Esto se aplica tanto a las instalaciones independientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como a las instalaciones de clústeres de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  Secuencia de archivos no se admite actualmente en un recurso compartido de archivos SMB.  
@@ -87,7 +91,7 @@ ms.lasthandoff: 01/18/2018
   
 |Sistema operativo|Versión del protocolo SMB2|Ventajas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
-|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2,0|Rendimiento mejorado con respecto a las versiones anteriores de SMB.<br /><br /> Durabilidad, que ayuda a recuperarse de problemas temporales de red.|  
+|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2.0|Rendimiento mejorado con respecto a las versiones anteriores de SMB.<br /><br /> Durabilidad, que ayuda a recuperarse de problemas temporales de red.|  
 |[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1, incluido Server Core|2.1|Compatibilidad con MTU grande, lo que beneficia a las transferencias de datos grandes, como operaciones de copia de seguridad y restauración de SQL. Esta capacidad la debe habilitar el usuario. Para obtener más detalles sobre cómo habilitar esta capacidad, vea [Novedades de SMB](http://go.microsoft.com/fwlink/?LinkID=237319) (http://go.microsoft.com/fwlink/?LinkID=237319).<br /><br /> Mejoras significativas en el rendimiento, concretamente para las cargas de trabajo de estilo OLTP de SQL. Estas mejoras de rendimiento necesitan la aplicación de una revisión. Para obtener más información sobre la revisión, vea [esta página](http://go.microsoft.com/fwlink/?LinkId=237320) (http://go.microsoft.com/fwlink/?LinkId=237320).|  
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)], incluido Server Core|3.0|Admite conmutación por error transparente de los recursos compartidos de archivos que proporcionan cero tiempo de inactividad sin que sea necesaria la intervención del administrador DBA o del servidor de archivos de SQL en las configuraciones de clúster de servidores de archivos.<br /><br /> Compatibilidad con E/S usando varias interfaces de red simultáneamente, así como tolerancia a errores de interfaz de red.<br /><br /> Compatibilidad con interfaces de red con funciones de RDMA.<br /><br /> Para obtener más información sobre estas características y el bloque de mensajes de servidor, vea [Información general del bloque de mensajes de servidor](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Compatibilidad de la escala del servidor de archivos (SoFS) con disponibilidad continua.|  
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, incluido Server Core|3.2|Admite conmutación por error transparente de los recursos compartidos de archivos que proporcionan cero tiempo de inactividad sin que sea necesaria la intervención del administrador DBA o del servidor de archivos de SQL en las configuraciones de clúster de servidores de archivos.<br /><br /> Compatibilidad con E/S usando varias interfaces de red simultáneamente, así como tolerancia a errores de interfaz de red, con SMB multicanal.<br /><br /> Compatibilidad con interfaces de red con funciones de RDMA con SMB Direct.<br /><br /> Para obtener más información sobre estas características y el bloque de mensajes de servidor, vea [Información general del bloque de mensajes de servidor](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Compatibilidad de la escala del servidor de archivos (SoFS) con disponibilidad continua.<br /><br /> Optimizado para E/S pequeñas de lectura/escritura aleatoria comunes para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP.<br /><br /> Se activa la Unidad de transmisión máxima (MTU) de forma predeterminada, lo que mejora significativamente el rendimiento en las transferencias secuenciales grandes como el almacenamiento de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la copia de seguridad o restauración de la base de datos.|  

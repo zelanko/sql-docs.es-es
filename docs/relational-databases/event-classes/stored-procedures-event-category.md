@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,26 +17,27 @@ helpviewer_keywords:
 - SQL Server event classes, Stored Procedures event category
 - event classes [SQL Server], Stored Procedures event category
 ms.assetid: 71bebaa3-a05a-4695-b349-078cecd0949a
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd92c647ab35396dc36f3065605b6e0071964e49
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 392e922e32dcae4f6765503c5af24cf0b58b81e6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="stored-procedures-event-category"></a>Procedimientos almacenados (categoría de eventos)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]La categoría de eventos **Stored Procedures** contiene eventos de procedimientos almacenados generales.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La categoría de eventos **Procedimientos almacenados** contiene eventos de procedimientos almacenados generales.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Descripción|  
+|Tema|Description|  
 |-----------|-----------------|  
 |[RPC:Completed (clase de eventos)](../../relational-databases/event-classes/rpc-completed-event-class.md)|Indica que se ha completado una llamada a procedimiento remoto (RPC).|  
-|[PreConnect:Completed, clase de eventos](../../relational-databases/event-classes/preconnect-completed-event-class.md)|Indica el momento en que la función clasificadora del regulador de recursos finaliza la ejecución.|  
+|[PreConnect:Completed (clase de eventos)](../../relational-databases/event-classes/preconnect-completed-event-class.md)|Indica el momento en que la función clasificadora del regulador de recursos finaliza la ejecución.|  
 |[PreConnect:Starting, clase de eventos](../../relational-databases/event-classes/preconnect-starting-event-class.md)|Indica el momento en que la función clasificadora del regulador de recursos inicia la ejecución.|  
 |[RPC Output Parameter (clase de eventos)](../../relational-databases/event-classes/rpc-output-parameter-event-class.md)|Realiza un seguimiento de los valores de parámetros de salida de las llamadas a procedimiento remoto tras su ejecución.|  
 |[RPC:Starting (clase de eventos)](../../relational-databases/event-classes/rpc-starting-event-class.md)|Indica que se está iniciando una llamada a procedimiento remoto.|  
@@ -49,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 |[SP:StmtCompleted (clase de eventos)](../../relational-databases/event-classes/sp-stmtcompleted-event-class.md)|Indica que ha finalizado una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] de un procedimiento almacenado.|  
 |[SP:StmtStarting (clase de eventos)](../../relational-databases/event-classes/sp-stmtstarting-event-class.md)|Indica que se ha iniciado una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] de un procedimiento almacenado.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

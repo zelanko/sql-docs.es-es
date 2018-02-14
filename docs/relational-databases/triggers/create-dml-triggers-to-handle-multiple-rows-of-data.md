@@ -8,7 +8,8 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-dml
+ms.technology:
+- dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, multirow
 ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
-caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9b20cb4324e252d3de3c15ceb67e5f6ac7b1dd4e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 39adf5f718f4f4e0789e8e10bf6aa5e007fe6f0d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>Crear desencadenadores DML para administrar varias filas de datos
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Cuando escriba el código para un desencadenador DML, tenga en cuenta que la instrucción que hace que se active el disparador puede ser una sola instrucción que afecte a varias filas de datos, en lugar de una sola fila. Este comportamiento es habitual para los desencadenadores UPDATE y DELETE, ya que estas instrucciones suelen afectar a varias filas. No es tan corriente para los desencadenadores INSERT, porque la instrucción INSERT básica solo agrega una fila. Pero, dado que un desencadenador INSERT puede ser activado por una instrucción INSERT INTO (*nombre_tabla*) SELECT, la inserción de muchas filas puede tener como resultado la invocación de un solo desencadenador.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Cuando escriba el código para un desencadenador DML, tenga en cuenta que la instrucción que hace que se active el disparador puede ser una sola instrucción que afecte a varias filas de datos, en lugar de una sola fila. Este comportamiento es habitual para los desencadenadores UPDATE y DELETE, ya que estas instrucciones suelen afectar a varias filas. No es tan corriente para los desencadenadores INSERT, porque la instrucción INSERT básica solo agrega una fila. Pero, dado que un desencadenador INSERT puede ser activado por una instrucción INSERT INTO (*nombre_tabla*) SELECT, la inserción de muchas filas puede tener como resultado la invocación de un solo desencadenador.  
   
  Las consideraciones acerca de los procesos que afectan a varias filas son especialmente importantes cuando la función de un desencadenador DML consiste en volver a calcular automáticamente los valores de resumen de una tabla y almacenar los resultados en otra para realizar cálculos continuos.  
   
@@ -112,7 +114,7 @@ BEGIN
 END;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Desencadenadores DML](../../relational-databases/triggers/dml-triggers.md)  
   
   

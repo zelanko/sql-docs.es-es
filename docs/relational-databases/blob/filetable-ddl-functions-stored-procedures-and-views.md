@@ -8,24 +8,27 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: FileTables [SQL Server], database objects
+helpviewer_keywords:
+- FileTables [SQL Server], database objects
 ms.assetid: 7e2e0f7f-94a8-4178-8bc7-d2e14ac8528c
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10e3fa99c03e3b01c512f78e1d14998dd9094b9b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e2d7db20d24b87c674a1eb45960fd53e95954652
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="filetable-ddl-functions-stored-procedures-and-views"></a>DDL de FileTable, funciones, procedimientos almacenados y vistas
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Enumera las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] y los objetos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se han agregado o cambiado para admitir la característica FileTable en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Enumera las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] y los objetos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se han agregado o cambiado para admitir la característica FileTable en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  La columna Estado de las tablas siguientes indica si el elemento es nuevo en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o estaba en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pero se ha cambiado en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para admitir la búsqueda semántica.  
   
@@ -33,7 +36,7 @@ ms.lasthandoff: 11/17/2017
   
 ##  <a name="ddl"></a> Instrucciones del lenguaje de definición de datos (DDL) de Transact-SQL  
   
-|Object|Estado|Más información|  
+|Objeto|Estado|Más información|  
 |------------|------------|----------------------|  
 |[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)<br /><br /> [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)|Cambiado|[Habilitar los requisitos previos de FileTables](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)<br /><br /> [Administrar FileTables](../../relational-databases/blob/manage-filetables.md)|  
 |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|Cambiado|[Crear, modificar y quitar FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)<br /><br /> [Administrar FileTables](../../relational-databases/blob/manage-filetables.md)|  
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
 ##  <a name="func"></a> Funciones  
   
-|Object|Estado|Más información|  
+|Objeto|Estado|Más información|  
 |------------|------------|----------------------|  
 |[FileTableRootPath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filetablerootpath-transact-sql.md)|**Agregado**|[Trabajar con directorios y rutas de acceso de FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)|  
 |[GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)|**Agregado**|[Trabajar con directorios y rutas de acceso de FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)|  
@@ -51,13 +54,13 @@ ms.lasthandoff: 11/17/2017
   
 ##  <a name="sproc"></a> Procedimientos almacenados  
   
-|Object|Estado|Más información|  
+|Objeto|Estado|Más información|  
 |------------|------------|----------------------|  
 |[sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)|**Agregado**|[Administrar FileTables](../../relational-databases/blob/manage-filetables.md)|  
   
 ##  <a name="cv"></a> Vistas de catálogo  
   
-|Object|Estado|Más información|  
+|Objeto|Estado|Más información|  
 |------------|------------|----------------------|  
 |[sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md)|**Agregado**|[Habilitar los requisitos previos de FileTables](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)|  
 |[sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md)|**Agregado**|[Crear, modificar y quitar FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)<br /><br /> [Administrar FileTables](../../relational-databases/blob/manage-filetables.md)|  
@@ -66,11 +69,11 @@ ms.lasthandoff: 11/17/2017
   
 ##  <a name="dmv"></a> Vistas de administración dinámica  
   
-|Object|Estado|Más información|  
+|Objeto|Estado|Más información|  
 |------------|------------|----------------------|  
 |[sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)|**Agregado**|[Administrar FileTables](../../relational-databases/blob/manage-filetables.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administrar FileTables](../../relational-databases/blob/manage-filetables.md)  
   
   

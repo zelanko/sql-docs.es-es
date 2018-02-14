@@ -8,23 +8,24 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - swb.memoryoptimizationwizard.f1
 - sql13.swb.memoryoptimizationwizard.f1
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d473e1b6f50cf94618aff0947e74ceabab2d7664
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3c27cd83d09891b95c71abfb56aecbc87805e3e5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="memory-optimization-advisor"></a>Asesor de optimización de memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -113,7 +114,7 @@ ms.lasthandoff: 11/17/2017
  Seleccione el tipo de esta clave principal  
  OLTP en memoria admite dos tipos de índices en una tabla optimizada para memoria:  
   
--   Un índice NONCLUSTERED HASH. Este índice es mejor para los índices con muchas búsquedas de puntos. Puede configurar el número de depósitos para este índice en el campo **Recuento de depósitos** .  
+-   Un índice NONCLUSTERED HASH. Este índice es mejor para los índices con muchas búsquedas de puntos. Puede configurar el número de cubos para este índice en el campo **Número de cubos** .  
   
 -   Un índice NONCLUSTERED. Este tipo de índice es mejor para los índices con muchas consultas por rango. Puede configurar el criterio de ordenación para cada columna en la lista **Columna de ordenación y orden** .  
   
@@ -133,7 +134,7 @@ ms.lasthandoff: 11/17/2017
   
  Después de que finalice el proceso, actualice el **Explorador de objetos** para ver la nueva tabla optimizada para memoria y la tabla basada en disco antigua. Puede conservar la tabla antigua o eliminarla según le convenga.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Migrar a OLTP en memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

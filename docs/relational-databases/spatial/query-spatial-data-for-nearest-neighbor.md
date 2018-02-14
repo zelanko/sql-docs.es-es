@@ -8,23 +8,25 @@ ms.service:
 ms.component: spatial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-spatial
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0186678373fd9cc01391ba8ac45f9999e5fd15e2
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: d71460a10728236763ed3c3d168d0e7b079b8403
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>Consultar datos espaciales para el vecino más próximo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Una consulta frecuente utilizada con datos espaciales es la de vecino más próximo. Las consultas de vecino más cercano se emplean para encontrar los objetos espaciales más cercanos a un objeto espacial concreto. Por ejemplo, un buscador de tiendas de un sitio web debe encontrar a menudo las ubicaciones de las tiendas más cercanas a la ubicación de un cliente.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Una consulta frecuente utilizada con datos espaciales es la de vecino más cercano. Las consultas de vecino más cercano se emplean para encontrar los objetos espaciales más cercanos a un objeto espacial concreto. Por ejemplo, un buscador de tiendas de un sitio web debe encontrar a menudo las ubicaciones de las tiendas más cercanas a la ubicación de un cliente.  
   
  Se puede escribir una consulta de vecino más cercano en distintos formatos de consulta válidos, pero para que dicha consulta use un índice espacial se debe emplear la siguiente sintaxis.  
   

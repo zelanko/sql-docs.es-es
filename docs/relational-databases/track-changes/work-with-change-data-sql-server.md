@@ -8,7 +8,8 @@ ms.service:
 ms.component: track-changes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - change data capture [SQL Server], LSN boundaries
 - change data capture [SQL Server], query functions
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
-caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4a6407cbe969ff2d5e016849acbcd148e540a69
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 643ba52d666c9661d66a8a7e8039dba5e7f38549
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="work-with-change-data-sql-server"></a>Trabajar con datos modificados (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Los datos modificados están a disposición de los consumidores de capturas de datos modificados a través de las funciones con valores de tabla (TVF). Todas las consultas de estas funciones requieren dos parámetros para definir el intervalo de números de flujo de registro (LSN) que se pueden elegir al desarrollar el conjunto de resultados devuelto. Se considera que los valores superior e inferior de LSN que limitan el intervalo están incluidos dentro del intervalo.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Los datos modificados están a disposición de los consumidores de capturas de datos modificados a través de las funciones con valores de tabla (TVF). Todas las consultas de estas funciones requieren dos parámetros para definir el intervalo de números de flujo de registro (LSN) que se pueden elegir al desarrollar el conjunto de resultados devuelto. Se considera que los valores superior e inferior de LSN que limitan el intervalo están incluidos dentro del intervalo.  
   
  Se proporcionan varias funciones que ayudan a determinar los valores de LSN adecuados para utilizarse al consultar una función TVF. La función [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) devuelve el LSN más pequeño asociado a un intervalo de validez de la instancia de captura. El intervalo de validez es el intervalo de tiempo durante el cual los datos modificados están actualmente disponibles en sus instancias de captura. La función [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) devuelve el LSN más grande del intervalo de validez. Las funciones [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) y [sys.fn_cdc_map_lsn_to_time](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) están disponibles para ayudar a ubicar los valores LSN en una escala de tiempo convencional. Dado que la captura de datos modificados utiliza intervalos de consulta cerrados, a veces es necesario generar el valor de LSN siguiente en un flujo para garantizar que los cambios no estén duplicados en ventanas de consulta consecutivas. Las funciones [sys.fn_cdc_increment_lsn](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md) y [sys.fn_cdc_decrement_lsn](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md) son útiles cuando es necesario realizar un ajuste incremental en un valor LSN.  
   
@@ -133,7 +135,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="using-the-datetime-wrapper-functions-to-transition-between-capture-instances"></a>Utilizar las funciones contenedoras de fecha y hora en transiciones entre instancias de captura  
  La captura de datos modificados admite un máximo de dos instancias de captura para una única tabla de origen sometida a seguimiento. El uso principal de esta capacidad consiste en alojar una transición entre varias instancias de captura cuando los cambios del lenguaje de definición de datos (DDL) efectuados en la tabla de origen amplían el conjunto de columnas disponibles para llevar a cabo el seguimiento. Cuando la transición se realiza a una nueva instancia de captura, un modo de proteger los niveles superiores de la aplicación para que no se produzcan cambios en los nombres de las funciones de consulta subyacentes consiste en utilizar una función contenedora que incluya la llamada subyacente. A continuación, asegúrese de que el nombre de la función contenedora sigue siendo el mismo. Cuando vaya a producirse el cambio, la función contenedora antigua se puede quitar, pues se crea una nueva con el mismo nombre que hace referencia a las nuevas funciones de consulta. Al modificar primero el script generado para crear una función contenedora con el mismo nombre, puede hacer el cambio a la nueva instancia de captura sin que esto afecte a los niveles superiores de la aplicación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Seguimiento de cambios de datos &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Acerca de la captura de datos modificados &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Habilitar y deshabilitar la captura de datos modificados &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   

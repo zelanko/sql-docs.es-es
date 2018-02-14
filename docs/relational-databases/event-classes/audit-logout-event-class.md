@@ -8,28 +8,31 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Audit Logout event class
+helpviewer_keywords:
+- Audit Logout event class
 ms.assetid: 16a0178c-ca03-4078-bbdd-f481385fa2f1
-caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fbf12181cfe5ba30133df2ba05a9e5769642d6e3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 07d96ee2ea1cf3a53b0009d988b0927f922b6b4c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="audit-logout-event-class"></a>Audit Logout, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos **Audit Logout** indica que un usuario ha cerrado la sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los eventos de esta clase se activan mediante nuevas conexiones o mediante conexiones reutilizadas de un grupo de conexiones.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La clase de eventos **Audit Logout** indica que un usuario ha cerrado la sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los eventos de esta clase se activan mediante nuevas conexiones o mediante conexiones reutilizadas de un grupo de conexiones.  
   
 ## <a name="audit-logout-event-class-data-columns"></a>Columnas de datos de la clase de eventos Audit Logout  
   
-|Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
+|Nombre de columna de datos|Tipo de datos|Description|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
 |**ClientProcessID**|**int**|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona su identificador de proceso.|9|Sí|  
@@ -38,8 +41,8 @@ ms.lasthandoff: 11/17/2017
 |**DatabaseName**|**nvarchar**|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
 |**Duración**|**bigint**|Cantidad aproximada de tiempo desde el inicio de sesión del usuario.|13|Sí|  
 |**EndTime**|**datetime**|Hora de cierre de la sesión.|15|Sí|  
-|**EventClass**|**int**|Tipo de evento = 15.|27|No|  
-|**EventSequence**|**int**|Secuencia de un evento determinado dentro de la solicitud.|51|No|  
+|**EventClass**|**int**|Tipo de evento = 15.|27|no|  
+|**EventSequence**|**int**|Secuencia de un evento determinado dentro de la solicitud.|51|no|  
 |**EventSubClass**|**int**|Tipo de conexión usada por el inicio de sesión. 1 = No agrupada, 2 = Agrupada.|21|Sí|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/17/2017
 |**Writes**|**bigint**|Cantidad de operaciones de E/S de escritura lógica emitidas por el usuario durante la conexión.|17|Sí|  
 |**GroupID**|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

@@ -8,20 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-security
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3bdf8629-738c-489f-959b-2f5afdaf7d61
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e85070af106dd7f8aa334c7163fc0e1734ed86d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: df6980bfcc713c17d1a4c39c52c967922f5b9cb5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>Configure Always Encrypted Keys using PowerShell (Configurar claves Always Encrypted con PowerShell)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,12 +43,12 @@ Antes de ejecutar cualquiera de los pasos que impliquen el acceso a las claves d
 
 Tarea  |Artículo  |Accede a claves de texto no cifrado o a almacén de claves  |Accede a base de datos   
 ---------|---------|---------|---------
-Paso 1. Cree una clave maestra de columna en un almacén de claves.<br><br>**Nota:** El módulo SqlServer PowerShell no admite este paso. Para realizar esta tarea desde una línea de comandos, use herramientas específicas del almacén de claves seleccionado. |[Create and Store Column Master Keys (Always Encrypted) (Crear y almacenar claves maestras de columna (Always Encrypted))](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | Sí | No     
-Paso 2.  Inicie un entorno de PowerShell e importe el módulo SqlServer PowerShell.  |   [Configure Always Encrypted using PowerShell (Configurar Always Encrypted con PowerShell)](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   |    No    | No         
-Paso 3.  Conecte con el servidor y la base de datos.     |     [Conectar con una base de datos](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase)    |    No     | Sí         
-Paso 4.  Cree un objeto *SqlColumnMasterKeySettings* que contenga información sobre la ubicación de la clave maestra de columna. SqlColumnMasterKeySettings es un objeto que existe en memoria (en PowerShell). Use el cmdlet específico del almacén de claves.   |     [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)        |   No      | No         
-Paso 5.  Cree los metadatos sobre la clave maestra de columna en la base de datos.      |    [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**Nota:** En segundo plano, este cmdlet emite la instrucción [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) para crear metadatos de clave.|    No     |    Sí
-Paso 6.  Autentíquese en Azure si la clave maestra de columna se almacena en el Almacén de claves de Azure. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |  Sí   | No         
+Paso 1. Cree una clave maestra de columna en un almacén de claves.<br><br>**Nota:** El módulo SqlServer PowerShell no admite este paso. Para realizar esta tarea desde una línea de comandos, use herramientas específicas del almacén de claves seleccionado. |[Create and Store Column Master Keys (Always Encrypted) (Crear y almacenar claves maestras de columna (Always Encrypted))](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | Sí | no     
+Paso 2.  Inicie un entorno de PowerShell e importe el módulo SqlServer PowerShell.  |   [Configure Always Encrypted using PowerShell (Configurar Always Encrypted con PowerShell)](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   |    no    | no         
+Paso 3.  Conecte con el servidor y la base de datos.     |     [Conectar con una base de datos](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase)    |    no     | Sí         
+Paso 4.  Cree un objeto *SqlColumnMasterKeySettings* que contenga información sobre la ubicación de la clave maestra de columna. SqlColumnMasterKeySettings es un objeto que existe en memoria (en PowerShell). Use el cmdlet específico del almacén de claves.   |     [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)        |   no      | no         
+Paso 5.  Cree los metadatos sobre la clave maestra de columna en la base de datos.      |    [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**Nota:** En segundo plano, este cmdlet emite la instrucción [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) para crear metadatos de clave.|    no     |    Sí
+Paso 6.  Autentíquese en Azure si la clave maestra de columna se almacena en el Almacén de claves de Azure. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |  Sí   | no         
 Paso 7.  Genere una nueva clave de cifrado de columna, cífrela con la clave maestra de columna y cree los metadatos de clave de cifrado de columna en la base de datos.     |    [New-SqlColumnEncryptionKey](https://docs.microsoft.com/en-us/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**Nota:** Use una variación del cmdlet que genera internamente y cifra una clave de cifrado de columna.<br><br>**Nota:** En segundo plano, este cmdlet emite la instrucción [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) para crear los metadatos de clave.  | Sí | Sí
   
 
@@ -196,12 +197,12 @@ Para obtener más información, vea [Security Considerations for Key Management 
 
 Tarea  |Artículo  |Accede a claves de texto no cifrado o a almacén de claves  |Accede a base de datos  
 ---------|---------|---------|---------
-Paso 1. Cree una clave maestra de columna en un almacén de claves.<br><br>**Nota:** El módulo SqlServer no admite este paso. Para realizar esta tarea desde una línea de comandos, debe usar herramientas específicas del tipo del almacén de claves.     | [Create and Store Column Master Keys (Always Encrypted) (Crear y almacenar claves maestras de columna (Always Encrypted))](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)  |    Sí    | No 
-Paso 2.  Inicie una sesión de PowerShell e importe el módulo SqlServer.      |     [Importar el módulo SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule)     | No | No         
-Paso 3.  Cree un objeto *SqlColumnMasterKeySettings* que contenga información sobre la ubicación de la clave maestra de columna. *SqlColumnMasterKeySettings* es un objeto que existe en memoria (en PowerShell). Use el cmdlet específico del almacén de claves. |      [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)   | No         | No         
-Paso 4.  Autentíquese en Azure si la clave maestra de columna se almacena en el Almacén de claves de Azure. |    [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |Sí|No         
-Paso 5.  Genere una clave de cifrado de columna y cífrela con la clave maestra de columna para generar un valor cifrado de la clave de cifrado de columna.     |   [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)     |    Sí    | No        
-Paso 6.  Proporcione al DBA la ubicación de la clave maestra de columna (el nombre del proveedor y una ruta de acceso de la clave maestra de columna) y un valor cifrado de la clave de cifrado de columna.  | Vea los ejemplos siguientes.        |   No      | No         
+Paso 1. Cree una clave maestra de columna en un almacén de claves.<br><br>**Nota:** El módulo SqlServer no admite este paso. Para realizar esta tarea desde una línea de comandos, debe usar herramientas específicas del tipo del almacén de claves.     | [Create and Store Column Master Keys (Always Encrypted) (Crear y almacenar claves maestras de columna (Always Encrypted))](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)  |    Sí    | no 
+Paso 2.  Inicie una sesión de PowerShell e importe el módulo SqlServer.      |     [Importar el módulo SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule)     | no | no         
+Paso 3.  Cree un objeto *SqlColumnMasterKeySettings* que contenga información sobre la ubicación de la clave maestra de columna. *SqlColumnMasterKeySettings* es un objeto que existe en memoria (en PowerShell). Use el cmdlet específico del almacén de claves. |      [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)   | no         | no         
+Paso 4.  Autentíquese en Azure si la clave maestra de columna se almacena en el Almacén de claves de Azure. |    [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |Sí|no         
+Paso 5.  Genere una clave de cifrado de columna y cífrela con la clave maestra de columna para generar un valor cifrado de la clave de cifrado de columna.     |   [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)     |    Sí    | no        
+Paso 6.  Proporcione al DBA la ubicación de la clave maestra de columna (el nombre del proveedor y una ruta de acceso de la clave maestra de columna) y un valor cifrado de la clave de cifrado de columna.  | Vea los ejemplos siguientes.        |   no      | no         
 
 ### <a name="dba"></a>DBA 
 
@@ -209,12 +210,12 @@ Los DBA usan la información que reciben del Administrador de seguridad (paso 6 
 
 Tarea  |Artículo  |Accede a claves de texto no cifrado  |Accede a base de datos   
 ---------|---------|---------|---------
-Paso 1.  Obtenga la ubicación de la clave maestra de columna y un valor cifrado de la clave de cifrado de columna del Administrador de seguridad. |Vea los ejemplos siguientes. | No | No
-Paso 2.  Inicie un entorno de PowerShell e importe el módulo SqlServer.  | [Configure Always Encrypted using PowerShell (Configurar Always Encrypted con PowerShell)](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)  | No | No
-Paso 3.  Conecte con el servidor y una base de datos. | [Conectar con una base de datos](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Sí
-Paso 4.  Cree un objeto SqlColumnMasterKeySettings que contenga información sobre la ubicación de la clave maestra de columna. SqlColumnMasterKeySettings es un objeto que existe en memoria. | New-SqlColumnMasterKeySettings | No | No
-Paso 5. Cree los metadatos sobre la clave maestra de columna en la base de datos. | [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br>**Nota:** En segundo plano, este cmdlet emite la instrucción [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) para crear metadatos de clave maestra de columna. | No | Sí
-Paso 6. Cree los metadatos de clave de cifrado de columna en la base de datos. | New-SqlColumnEncryptionKey<br>**Nota:** Los DBA usan una variación del cmdlet que solo crea los metadatos de clave de cifrado de columna.<br>En segundo plano, este cmdlet emite la instrucción [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) para crear los metadatos de clave de cifrado de columna. | No | Sí
+Paso 1.  Obtenga la ubicación de la clave maestra de columna y un valor cifrado de la clave de cifrado de columna del Administrador de seguridad. |Vea los ejemplos siguientes. | no | no
+Paso 2.  Inicie un entorno de PowerShell e importe el módulo SqlServer.  | [Configure Always Encrypted using PowerShell (Configurar Always Encrypted con PowerShell)](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)  | no | no
+Paso 3.  Conecte con el servidor y una base de datos. | [Conectar con una base de datos](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | no | Sí
+Paso 4.  Cree un objeto SqlColumnMasterKeySettings que contenga información sobre la ubicación de la clave maestra de columna. SqlColumnMasterKeySettings es un objeto que existe en memoria. | New-SqlColumnMasterKeySettings | no | no
+Paso 5. Cree los metadatos sobre la clave maestra de columna en la base de datos. | [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br>**Nota:** En segundo plano, este cmdlet emite la instrucción [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) para crear metadatos de clave maestra de columna. | no | Sí
+Paso 6. Cree los metadatos de clave de cifrado de columna en la base de datos. | New-SqlColumnEncryptionKey<br>**Nota:** Los DBA usan una variación del cmdlet que solo crea los metadatos de clave de cifrado de columna.<br>En segundo plano, este cmdlet emite la instrucción [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) para crear los metadatos de clave de cifrado de columna. | no | Sí
   
 ## <a name="windows-certificate-store-with-role-separation-example"></a>Almacén de certificados de Windows con separación de roles (ejemplo)
 
@@ -280,7 +281,7 @@ $cekName = "CEK1"
 New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName -EncryptedValue $keyData.EncryptedValue
 ```  
  
-## <a name="next-steps"></a>Pasos siguientes    
+## <a name="next-steps"></a>Next Steps    
 
 - [Configurar el cifrado de columna con PowerShell](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md)    
 - [Rotar claves de Always Encrypted con PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)

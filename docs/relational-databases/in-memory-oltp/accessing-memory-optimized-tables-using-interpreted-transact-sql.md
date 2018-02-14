@@ -5,20 +5,21 @@ ms.date: 05/31/2016
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3784ec3a2bdd96ca06d40c05da217a940a2f6b16
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 5b683df32e55631bd4a896ec14dcf05c2f264f7c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Acceso a tablas con optimización para memoria mediante Transact-SQL interpretado
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -71,7 +72,7 @@ Al tener acceso a una tabla optimizada para memoria desde una transacción expl�
   
 No es necesaria una sugerencia de tabla de nivel de aislamiento para las tablas optimizadas para memoria a las que acceden las consultas que se ejecutan en [modo de confirmación automática](http://msdn.microsoft.com/en-us/c8de5b60-d147-492d-b601-2eeae8511d00).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Ver también
 
 [Compatibilidad de Transact-SQL con OLTP en memoria](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
 

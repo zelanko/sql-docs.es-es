@@ -18,16 +18,16 @@ helpviewer_keywords:
 - extended events [SQL Server], SQL Trace equivalents
 - extended events [SQL Server], user configurable events
 ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f35f2596f1dd2cdbe08ff5ea2f1b346b775893b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d179d2b485a69fabb747ed02a2e77c420db053fa
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Ver los eventos extendidos equivalentes a las clases de evento de Seguimiento de SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Para las clases de eventos de Seguimiento de SQL configurables por el usuario (de UserConfigurable:1 a UserConfigurable:9), los eventos extendidos usan un solo evento para reemplazarlos. El evento se denomina user_event. Este evento se produce al usar sp_trace_generateevent, que es el mismo procedimiento almacenado usado por el Seguimiento de SQL. El evento user_event se devuelve independientemente del identificador de evento que se pase al procedimiento almacenado. Pero un campo event_id se devuelve como parte de los datos de evento. Esto permite generar un predicado basado en el identificador de evento. Por ejemplo, si usa UserConfigurable:0 (event_id = 82) en el código, puede agregar el evento user_event a la sesión y especificar un predicado de "event_id = 82". Por tanto, no tiene que cambiar el código porque el procedimiento almacenado sp_trace_generateevent genera el evento user_event de eventos extendidos y la clase de eventos de Seguimiento de SQL equivalente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)  
   
   

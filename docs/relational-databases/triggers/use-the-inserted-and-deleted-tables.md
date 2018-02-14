@@ -22,18 +22,19 @@ helpviewer_keywords:
 - DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a285b7ece1c5f8c84c7cfc1292f4e5a4dffdc6f1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 269334b04860147254bf7430a7c9291ef83c08bc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Usar las tablas insertadas y eliminadas
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] En las instrucciones de desencadenadores DML se usan dos tablas especiales: la tabla inserted y la tabla deleted. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea y administra automáticamente ambas tablas. Puede utilizar estas tablas temporales residentes en memoria para probar los efectos de determinadas modificaciones de datos y para establecer condiciones para las acciones de los desencadenadores DML. No puede modificar directamente los datos de estas tablas ni realizar en ellas operaciones de lenguaje de definición de datos (DDL), como CREATE INDEX.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+En las instrucciones de desencadenadores DML se usan dos tablas especiales: la tabla inserted y la tabla deleted. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea y administra automáticamente ambas tablas. Puede utilizar estas tablas temporales residentes en memoria para probar los efectos de determinadas modificaciones de datos y para establecer condiciones para las acciones de los desencadenadores DML. No puede modificar directamente los datos de estas tablas ni realizar en ellas operaciones de lenguaje de definición de datos (DDL), como CREATE INDEX.  
   
  En los desencadenadores DML, las tablas inserted y deleted se utilizan principalmente para realizar las siguientes tareas:  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/17/2017
   
  Debido a que las restricciones CHECK solo pueden hacer referencia a las columnas en las que se han definido las restricciones de columna o de tabla, cualquier restricción entre tablas, en este caso, reglas de negocios, debe definirse como desencadenadores.  
   
- En este ejemplo se crea un desencadenador DML. El desencadenador comprueba que la solvencia del proveedor es satisfactoria cuando se intenta insertar un nuevo pedido de compra en la tabla `PurchaseOrderHeader` . Para obtener la solvencia de crédito del proveedor correspondiente al pedido de compra recién insertado, la tabla `Vendor` debe hacer referencia a la tabla insertada y estar combinada con ella. Si la solvencia no es satisfactoria, se obtiene un mensaje y no se ejecuta la inserción. Tenga en cuenta que en este ejemplo no se permiten las modificaciones de datos en varias filas. Para más información, consulte [Crear desencadenadores DML para administrar varias filas de datos](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
+ En este ejemplo se crea un desencadenador DML. El desencadenador comprueba que la solvencia del proveedor es satisfactoria cuando se intenta insertar un nuevo pedido de compra en la tabla `PurchaseOrderHeader` . Para obtener la solvencia de crédito del proveedor correspondiente al pedido de compra recién insertado, la tabla `Vendor` debe hacer referencia a la tabla insertada y estar combinada con ella. Si la solvencia no es satisfactoria, se obtiene un mensaje y no se ejecuta la inserción. Tenga en cuenta que en este ejemplo no se permiten las modificaciones de datos en varias filas. Para más información, consulte [Create DML Triggers to Handle Multiple Rows of Data](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
   
  [!code-sql[TriggerDDL#CreateTrigger3](../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql)]  
   

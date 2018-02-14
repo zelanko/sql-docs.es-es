@@ -8,24 +8,27 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: EXPLICIT mode
+helpviewer_keywords:
+- EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 069bf210891435de0cdd60e5c715ebbdd16ecc19
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: c3c7b4150738ac5dbf878014004c3bda20092e33
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="example-retrieving-employee-information"></a>Ejemplo: Recuperar información de los empleados
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] En este ejemplo, se recupera el identificador y el nombre de cada empleado. En la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , el identificador de empleado se puede obtener de la columna BusinessEntityID de la tabla Employee. Los nombres de los empleados se pueden obtener de la tabla Person. Para combinar las tablas, se puede usar la columna BusinessEntityID.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+En este ejemplo, se recupera el identificador y el nombre de cada empleado. En la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , el identificador de empleado se puede obtener de la columna BusinessEntityID de la tabla Employee. Los nombres de los empleados se pueden obtener de la tabla Person. Para combinar las tablas, se puede usar la columna BusinessEntityID.  
   
  Supongamos que desea una transformación FOR XML EXPLICIT para generar XML como se indica a continuación:  
   

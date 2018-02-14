@@ -18,14 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 051c080de8a5b670a7fe3dbe70ccebf73bfb57a3
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.openlocfilehash: 01d0f988103f39aa311b84a1bf9e03292e60f511
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio: Registro de cambios (SSMS)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En este artículo se proporcionan detalles sobre las actualizaciones, mejoras y correcciones de errores de las versiones actuales y anteriores de SSMS. Descargue las [versiones anteriores de SSMS a continuación](#previous-ssms-releases).
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+En este artículo, se proporcionan detalles sobre las actualizaciones, mejoras y correcciones de errores de las versiones actuales y anteriores de SSMS. Descargue las [versiones anteriores de SSMS a continuación](#previous-ssms-releases).
 
 
 ## <a name="ssms-174download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.4](download-sql-server-management-studio-ssms.md)
@@ -542,10 +543,10 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - Ctrl-R ahora alterna el panel de resultados en el editor de consultas DAX de SSMS.
 
 
-## <a name="downloadssdtmediadownloadpng-ssms-1653httpgomicrosoftcomfwlinklinkid799832"></a>![descargar](../ssdt/media/download.png) [SSMS 16.5.3](http://go.microsoft.com/fwlink/?LinkID=799832)
+## <a name="downloadssdtmediadownloadpng-ssms-1653httpgomicrosoftcomfwlinklinkid840946"></a>![descargar](../ssdt/media/download.png) [SSMS 16.5.3](http://go.microsoft.com/fwlink/?LinkID=840946)
 Disponible con carácter general | Número de compilación: 13.0.16106.4
 
-[Chino (República Popular China)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Chino (Taiwán)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
+[Chino (República Popular China)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804) | [Chino (Taiwán)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
 
 Se han corregido los problemas siguientes en esta versión:
 

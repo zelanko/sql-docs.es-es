@@ -8,26 +8,28 @@ ms.service:
 ms.component: service-broker
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - event notifications, about
 - events [SQL Server], notifications
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 963b05a3b4f233f5252ef97465cd8a251de1a9ae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8590e3177aefa3889743069c8b69b63ec5f93953
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="event-notifications"></a>Notificaciones de eventos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Las notificaciones de eventos envían información acerca de los eventos a un servicio [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Las notificaciones de eventos se ejecutan como respuesta a una variedad de instrucciones del lenguaje de definición de datos (DDL) [!INCLUDE[tsql](../../includes/tsql-md.md)] y eventos de Seguimiento de SQL enviando información acerca de esos eventos a un servicio de [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Las notificaciones de eventos envían información acerca de los eventos a un servicio [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Las notificaciones de eventos se ejecutan como respuesta a una variedad de instrucciones del lenguaje de definición de datos (DDL) [!INCLUDE[tsql](../../includes/tsql-md.md)] y eventos de Seguimiento de SQL enviando información acerca de esos eventos a un servicio de [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
   
  Las notificaciones de eventos se pueden usar para realizar lo siguiente:  
   
@@ -101,7 +103,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Describe cómo configurar la seguridad de diálogo de [!INCLUDE[ssSB](../../includes/sssb-md.md)] para las notificaciones de evento que envían mensajes a un Service Broker en un servidor remoto.|[Configurar la seguridad de diálogo para notificaciones de eventos](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)|  
 |Describe cómo devolver información acerca de las notificaciones de eventos.|[Obtener información sobre notificaciones de eventos](../../relational-databases/service-broker/get-information-about-event-notifications.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Desencadenadores DDL](../../relational-databases/triggers/ddl-triggers.md)   
  [Desencadenadores DML](../../relational-databases/triggers/dml-triggers.md)   
  [Seguimiento de SQL](../../relational-databases/sql-trace/sql-trace.md)  

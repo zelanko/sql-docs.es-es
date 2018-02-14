@@ -8,26 +8,28 @@ ms.service:
 ms.component: udf
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-udf
+ms.technology:
+- dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - user-defined functions [SQL Server], components
 - user-defined functions [SQL Server], about user-defined functions
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8ebc45dd380367954a9ad55d35b7543b49156779
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 03521903614a187ca0af708dd318bbc9b3ae599d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="user-defined-functions"></a>Funciones definidas por el usuario
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Al igual que las funciones de los lenguajes de programación, las funciones definidas por el usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son rutinas que aceptan parámetros, realizan una acción, como un cálculo complejo, y devuelven el resultado de esa acción como un valor. El valor devuelto puede ser un valor escalar único o un conjunto de resultados.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Al igual que las funciones de los lenguajes de programación, las funciones definidas por el usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son rutinas que aceptan parámetros, realizan una acción, como un cálculo complejo, y devuelven el resultado de esa acción como un valor. El valor devuelto puede ser un valor escalar único o un conjunto de resultados.  
    
 ##  <a name="Benefits"></a> Funciones definidas por el usuario  
 ¿Por qué usarlas? 
@@ -47,7 +49,7 @@ ms.lasthandoff: 11/17/2017
      Una operación que filtra datos basándose en restricciones complejas que no se puede expresar en una sola expresión escalar se puede expresar como una función. La función se puede invocar en la cláusula WHERE para reducir el número de filas que se envían al cliente.  
   
 > [!NOTE]
-> Las funciones definidas por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)] en consultas solo se pueden ejecutar en un único subproceso (plan de ejecución en serie).  
+> [!INCLUDE[tsql](../../includes/tsql-md.md)] en consultas solo se pueden ejecutar en un único subproceso (plan de ejecución en serie).  
   
 ##  <a name="FunctionTypes"></a> Tipos de funciones  
 **Función escalar**  
@@ -61,7 +63,7 @@ ms.lasthandoff: 11/17/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona numerosas funciones del sistema que se pueden usar para realizar diversas operaciones. No se pueden modificar. Para obtener más información, vea [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md), [Funciones almacenadas del sistema &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md) y [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ##  <a name="Guidelines"></a> Instrucciones  
- Los errores de [!INCLUDE[tsql](../../includes/tsql-md.md)] que producen la cancelación de una instrucción y continúan con la siguiente instrucción del módulo (como desencadenadores o procedimientos almacenados) se tratan de forma distinta dentro de una función. En las funciones, estos errores hacen que se detenga la ejecución de la función. Esto hace que se cancele la función que invocó la instrucción.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] que producen la cancelación de una instrucción y continúan con la siguiente instrucción del módulo, como desencadenadores o procedimientos almacenados, se tratan de forma distinta dentro de una función. En las funciones, estos errores hacen que se detenga la ejecución de la función. Esto hace que se cancele la función que invocó la instrucción.  
   
  Las instrucciones de un bloque BEGIN...END no pueden producir efectos secundarios. Los efectos secundarios de una función son cambios definitivos del estado de un recurso que está fuera del ámbito de la función, como una modificación de una tabla de base de datos. Los únicos cambios que pueden realizar las instrucciones de la función son cambios en objetos locales de la función, como cursores o variables locales. En una función no se pueden llevar a cabo algunas acciones como, por ejemplo, modificar tablas de base de datos, realizar operaciones en cursores no locales de la función, enviar correo electrónico, intentar modificar un catálogo o generar un conjunto de resultados que se devuelve al usuario.  
   
@@ -96,10 +98,10 @@ Entre los tipos de instrucciones válidos en una función se incluyen:
 |GET_TRANSMISSION_STATUS|@@PACK_RECEIVED|  
 |GETDATE|@@PACK_SENT|  
 |GETUTCDATE|@@PACKET_ERRORS|  
-|@@CONNECTIONS |@@TIMETICKS |  
-|@@CPU_BUSY |@@TOTAL_ERRORS |  
-|@@DBTS |@@TOTAL_READ |  
-|@@IDLE |@@TOTAL_WRITE |  
+|@@CONNECTIONS|@@TIMETICKS|  
+|@@CPU_BUSY|@@TOTAL_ERRORS|  
+|@@DBTS|@@TOTAL_READ|  
+|@@IDLE|@@TOTAL_WRITE|  
 |@@IO_BUSY||  
   
  Las siguientes funciones integradas no deterministas **no** se pueden usar en funciones Transact-SQL definidas por el usuario.  

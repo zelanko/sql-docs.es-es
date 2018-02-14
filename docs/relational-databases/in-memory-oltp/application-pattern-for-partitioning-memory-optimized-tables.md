@@ -8,26 +8,26 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d9fcd874e83a0fcecadf7dd76bb5bf67a21df6d6
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c1ac27b53e011580bb185ba0f264c130d44560be
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Patrón de aplicación para crear particiones de tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  
-            [!INCLUDE[hek_2](../../includes/hek-2-md.md)] admite un patrón en el que una cantidad limitada de datos activos se conserva en una tabla optimizada para memoria, mientras que los datos a los que se tiene acceso con menor frecuencia se procesan en disco. Por lo general, esto sería un escenario donde se almacenan datos en función de una clave **datetime** .  
+  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] admite un patrón en el que una cantidad limitada de datos activos se conserva en una tabla optimizada para memoria, mientras que los datos a los que se tiene acceso con menor frecuencia se procesan en disco. Por lo general, esto sería un escenario donde se almacenan datos en función de una clave **datetime** .  
   
  Se pueden emular las tablas con particiones con tablas optimizadas para memoria manteniendo una tabla con particiones y una tabla optimizada para memoria con un esquema común. Los datos actuales se insertarían y actualizarían en la tabla optimizada para memoria, mientras que los datos a los que se tiene acceso con menor frecuencia se conservarían en la tabla con particiones tradicional.  
   

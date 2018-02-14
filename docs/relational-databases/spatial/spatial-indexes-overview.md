@@ -18,16 +18,17 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1f78e577a704b4d1dc8bb62e0edf0f6c60c785ee
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 97c9aa05a5dc7eba5a47a616f15ba5e4faca0b16
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="spatial-indexes-overview"></a>Información general sobre los índices espaciales
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite datos espaciales e índices espaciales. Un *índice espacial* es un tipo de índice extendido que permite indizar una columna espacial. Una columna espacial es una columna de tabla que contiene datos de un tipo espacial, como **geometría** o **geografía**.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite datos espaciales e índices espaciales. Un *índice espacial* es un tipo de índice extendido que permite indizar una columna espacial. Una columna espacial es una columna de tabla que contiene datos de un tipo espacial, como **geometría** o **geografía**.  
   
 > [!IMPORTANT]  
 >  Para obtener una descripción detallada y ejemplos de las nuevas características espaciales de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluidas las características que afectan a los índices espaciales, descargue las notas del producto [Nuevas características espaciales de SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  

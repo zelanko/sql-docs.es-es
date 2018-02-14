@@ -8,7 +8,8 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - displaying XML schema collections
 - viewing XML schema collections
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c54c5a8f9246ee58fe6b07b5b728531863bd48d
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 6d7f795135dfc0bb1f10e0ac681d877f968e9309
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>Ver una colección de esquemas XML almacenada
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Después de importar una colección de esquema XML mediante [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md), los componentes del esquema se almacenan en los metadatos. Puede usar la función intrínseca [xml_schema_namespace](../../t-sql/xml/xml-schema-namespace.md)para reconstruir la colección de esquemas XML. La función devuelve una instancia de tipo de datos **xml** .  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Después de importar una colección de esquemas XML mediante [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md), los componentes del esquema se almacenan en los metadatos. Puede usar la función intrínseca [xml_schema_namespace](../../t-sql/xml/xml-schema-namespace.md)para reconstruir la colección de esquemas XML. La función devuelve una instancia de tipo de datos **xml** .  
   
  Por ejemplo, la siguiente consulta recupera una colección de esquemas XML (`ProductDescriptionSchemaCollection`) del esquema relacional de producción de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   

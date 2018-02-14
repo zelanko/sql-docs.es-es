@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e8a9a30e4221c0c425c45d46b1e3bdddda9a66e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 70b78fdbf26043595f8db1148cdec91ae8efc54b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Base de datos de ejemplo para OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Uso de memoria y de espacio en disco del ejemplo](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> Requisitos previos  
+##  <a name="Prerequisites"></a> Prerequisites  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
@@ -154,7 +155,7 @@ ms.lasthandoff: 11/17/2017
 -   
             *Columnas calculadas:* se omiten las columnas calculadas SalesOrderNumber y TotalDue, ya que [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] no admite columnas calculadas en tablas optimizadas para memoria. La nueva vista Sales.vSalesOrderHeader_extended_inmem refleja las columnas SalesOrderNumber y TotalDue. Por tanto, puede usar esta vista si se necesitan estas columnas.  
 
-    - **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se admiten columnas calculadas en tablas e índices optimizados para memoria.
 
   
@@ -778,7 +779,7 @@ ORDER BY state, file_type
   
  En este caso, hay dos pares de archivos de punto de comprobación en el estado 'under construction', lo que significa que varios pares de archivos pasaron por el estado 'under construction', probablemente debido al elevado nivel de simultaneidad de la carga de trabajo. Varios subprocesos simultáneos necesitaron un nuevo par de archivos al mismo tiempo, por lo que se movió un par de 'precreated' a 'under construction'.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [OLTP en memoria &#40;optimización en memoria&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

@@ -8,26 +8,26 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31182384eaf0b9ae13cca070ac18eba76a14df1e
-ms.sourcegitcommit: 8b774eff53c1043dc3d4305ce8329fcab8945615
+ms.openlocfilehash: 206337e355352ce6b1f1a13cd36f90f18937de91
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilidad de las tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  
-            [!INCLUDE[hek_2](../../includes/hek-2-md.md)] proporciona durabilidad total para las tablas optimizadas para memoria. Cuando una transacción que ha cambiado una tabla optimizada para memoria se confirma, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (como hace para las tablas basadas en disco) garantiza que los cambios son permanentes (sobrevivirán a un reinicio de la base de datos), siempre y cuando el almacenamiento subyacente esté disponible. Hay dos componentes clave de durabilidad: registro de transacciones y conservación de los cambios de los datos en el almacenamiento en disco.  
+  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] proporciona durabilidad total para las tablas optimizadas para memoria. Cuando una transacción que ha cambiado una tabla optimizada para memoria se confirma, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (como hace para las tablas basadas en disco) garantiza que los cambios son permanentes (sobrevivirán a un reinicio de la base de datos), siempre y cuando el almacenamiento subyacente esté disponible. Hay dos componentes clave de durabilidad: registro de transacciones y conservación de los cambios de los datos en el almacenamiento en disco.  
   
  Para obtener detalles sobre las limitaciones de tamaño de las tablas durables, vea [Estimar los requisitos de memoria para las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md). 
   

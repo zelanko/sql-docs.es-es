@@ -8,7 +8,8 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,25 +33,26 @@ helpviewer_keywords:
 - Database migration
 - Database connectivity
 ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a13f1130c7bd9deb72c07af66860c20c140eba7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 34f02c8fb4e7971da3ea246880ef3c84ce0294cf
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-lifecycle-management"></a>Administración del ciclo de vida de base de datos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Administración de ciclo de vida de base de datos (DLM) es un enfoque basado en directiva para administrar bases de datos y activos de datos. DLM no es un producto sino un enfoque integral para administrar el esquema de la base de datos, los datos y los metadatos para una aplicación de base de datos. Un enfoque proactivo y reflexivo de DLM permite a una organización administrar los recursos de datos según los niveles adecuados de rendimiento, protección, disponibilidad y costo.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Administración de ciclo de vida de base de datos (DLM) es un enfoque basado en directiva para administrar bases de datos y activos de datos. DLM no es un producto sino un enfoque integral para administrar el esquema de la base de datos, los datos y los metadatos para una aplicación de base de datos. Un enfoque proactivo y reflexivo de DLM permite a una organización administrar los recursos de datos según los niveles adecuados de rendimiento, protección, disponibilidad y costo.  
   
  DLM comienza con la descripción del diseño y el propósito del proyecto, continúa con las actividades de desarrollo, prueba, compilación, implementación, mantenimiento, supervisión y copia de seguridad de la base de datos, y finaliza con el archivado de datos. En este tema se proporciona información general de las fases de DLM que comienzan con el desarrollo de la base de datos y continúan con las acciones de compilación, implementación y supervisión (Figura 1). También se incluyen actividades de administración de datos y operaciones de portabilidad de datos como importación/exportación, copia de seguridad, migración y sincronización.  
   
  Para leer el tema completo, vea [Administración de ciclo de vida de base de datos (DLM)](http://go.microsoft.com/fwlink/?LinkId=276949).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Página principal de Windows Azure](http://www.windowsazure.com/)   
  [Centro para desarrolladores de Windows Azure](http://www.windowsazure.com/develop/overview/)   
  [Centro de administración de Windows Azure](http://www.windowsazure.com/manage/overview/)   

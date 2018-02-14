@@ -8,7 +8,8 @@ ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine-polybase
+ms.technology:
+- database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 f1_keywords:
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - Hadoop export
 - Hadoop export, PolyBase overview
 - Hadoop import, PolyBase overview
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5c47b393a4c91aa9e02b934834a00d3e2ec5a88d
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: 13f4dc7e877341917ebf4f41694cb886c81c53f2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-guide"></a>Guía de PolyBase
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] PolyBase es una tecnología que tiene acceso a datos fuera de la base de datos mediante el lenguaje T-SQL.  En SQL Server 2016, le permite ejecutar consultas sobre datos externos en Hadoop o importar/exportar datos desde Azure Blob Storage. Las consultas se optimizan para insertar cálculo en Hadoop. En Azure SQL Data Warehouse, puede importar o exportar datos desde Azure Blob Storage y Azure Data Lake Store.
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+PolyBase es una tecnología que tiene acceso a datos fuera de la base de datos mediante el lenguaje T-SQL.  En SQL Server 2016, le permite ejecutar consultas sobre datos externos en Hadoop o importar/exportar datos desde Azure Blob Storage. Las consultas se optimizan para insertar cálculo en Hadoop. En Azure SQL Data Warehouse, puede importar o exportar datos desde Azure Blob Storage y Azure Data Lake Store.
   
   
  Para usar PolyBase, vea [Introducción a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  

@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Hash Warning event class
+helpviewer_keywords:
+- Hash Warning event class
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
-caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e96888456d728f0ac572e526fdc00218d6e3b7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 78d4b5e927ac53e0a76ef758f9acb0028fc818e7
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning [clase de eventos]
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos Hash Warning se puede utilizar para supervisar cuándo se ha producido una recursividad hash o un cese de hash (salida hash) durante una operación de hash.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La clase de eventos Hash Warning se puede utilizar para supervisar cuándo se ha producido una recursividad hash o un cese de hash (salida hash) durante una operación de hash.  
   
  La recursividad hash se produce cuando no hay suficiente memoria para la entrada generada, lo que causa que ésta se divida en varias particiones que se procesan por separado. Si alguna de estas particiones sigue sin caber en la memoria disponible, se vuelve a dividir en subparticiones, que también se procesan por separado. El proceso de división continúa hasta que cada partición quepa en la memoria disponible o hasta que se alcance el nivel máximo de recursividad (que se muestra en la columna de datos IntegerData).  
   
@@ -51,14 +54,14 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="hash-warning-event-class-data-columns"></a>Columnas de datos de la clase de eventos Hash Warning  
   
-|Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
+|Nombre de columna de datos|Tipo de datos|Description|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se llena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra del programa.|10|Sí|  
 |ClientProcessID|**int**|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se llena si el cliente proporciona el Id. del proceso del cliente.|9|Sí|  
 |DatabaseID|**int**|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |DatabaseName|**nvarchar**|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
-|EventClass|**int**|Tipo de evento = 55.|27|No|  
-|EventSequence|**int**|Secuencia de un evento determinado de la solicitud.|51|No|  
+|EventClass|**int**|Tipo de evento = 55.|27|no|  
+|EventSequence|**int**|Secuencia de un evento determinado de la solicitud.|51|no|  
 |EventSubClass|**int**|Tipo de la subclase de eventos.<br /><br /> 0=Repetición<br /><br /> 1=Cese de hash|21|Sí|  
 |GroupID|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
@@ -77,7 +80,7 @@ ms.lasthandoff: 11/17/2017
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

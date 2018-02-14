@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - conjugating verbs [full-text search]
 - word breakers [full-text search]
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
-caps.latest.revision: "89"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2df4759c6f2715706be48799e4190e309ffe3904
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: e50f02ed70002a7f8af8d6464672328d20e70ea3
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Configurar y administrar separadores de palabras y lematizadores para la búsqueda
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Los separadores de palabras y lematizadores realizan un análisis lingüístico de todos los datos indexados de texto completo. El análisis lingüístico realiza las siguientes dos cosas:
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Los separadores de palabras y lematizadores realizan un análisis lingüístico de todos los datos indizados de texto completo. El análisis lingüístico realiza las siguientes dos cosas:
 
 -   **Buscar los límites de palabras (separación de palabras)**. El *separador de palabras* identifica las palabras individuales determinando los límites de palabras en función de las reglas léxicas de ese idioma. Cada palabra (también conocida como *token*) se inserta en el índice de texto completo usando una representación comprimida para reducir su tamaño.
 

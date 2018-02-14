@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - SQL Server event classes, listed
 - SQL Server event classes
 ms.assetid: 0f0fe567-e115-4ace-b63c-73dc3428c0f6
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a083ff406bf20d23e3453d642229b10210003834
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2fba1a18c8d5dca4490002b967d022c4f2924f31
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-event-class-reference"></a>Referencia de las clase de eventos de SQL Server
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite registrar eventos a medida que ocurren en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Los eventos registrados son instancias de las clases de evento de una definición de seguimiento. En el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], las clases de eventos y sus categorías están disponibles en la pestaña **Selección de eventos** del cuadro de diálogo **Propiedades del archivo de seguimiento** .  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite registrar eventos a medida que ocurren en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Los eventos registrados son instancias de las clases de evento de una definición de seguimiento. En el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], las clases de eventos y sus categorías están disponibles en la pestaña **Selección de eventos** del cuadro de diálogo **Propiedades del archivo de seguimiento** .  
   
  En la siguiente tabla se describen las categorías de eventos y las clases de eventos asociadas.  
   
@@ -57,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 |La [Categoría de eventos TSQL](../../relational-databases/event-classes/tsql-event-category.md) incluye las clases de eventos que se producen al ejecutar instrucciones Transact-SQL pasadas a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde el cliente.|[Exec Prepared SQL (clase de eventos)](../../relational-databases/event-classes/exec-prepared-sql-event-class.md)<br /><br /> [Prepare SQL (clase de eventos)](../../relational-databases/event-classes/prepare-sql-event-class.md)<br /><br /> [SQL:BatchCompleted (clase de eventos)](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)<br /><br /> [SQL:BatchStarting (clase de eventos)](../../relational-databases/event-classes/sql-batchstarting-event-class.md)<br /><br /> [SQL:StmtCompleted (clase de eventos)](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)<br /><br /> [SQL:StmtRecompile (clase de eventos)](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md)<br /><br /> [SQL:StmtStarting (clase de eventos)](../../relational-databases/event-classes/sql-stmtstarting-event-class.md)<br /><br /> [Unprepare SQL (clase de eventos)](../../relational-databases/event-classes/unprepare-sql-event-class.md)<br /><br /> [XQuery Static Type (clase de eventos)](../../relational-databases/event-classes/xquery-static-type-event-class.md)|  
 |La [categoría de eventos configurables por el usuario](../../relational-databases/event-classes/user-configurable-event-category.md) incluye las clases de eventos que se pueden definir.|[Clases de eventos configurables por el usuario](../../relational-databases/event-classes/user-configurable-event-class.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

@@ -8,24 +8,27 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Log File Viewer, opening
+helpviewer_keywords:
+- Log File Viewer, opening
 ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 58798cfeb515819c081be5fe24261209d96f18fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 171e5c05bef7c98c2e0ba8402ecd0c3354028c58
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="open-log-file-viewer"></a>Abrir el Visor de archivos de registro
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Puede usar el Visor del archivo de registros de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para obtener acceso a la información sobre los errores y eventos capturados en los registros siguientes:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Puede usar el Visor del archivo de registros de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para obtener acceso a la información sobre los errores y eventos capturados en los registros siguientes:  
   
 -   Recopilación de auditoría  
   
@@ -103,9 +106,9 @@ ms.lasthandoff: 11/17/2017
   
      Los registros son **Recopilación de auditoría** y **Windows NT**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Visor de archivos de registro](../../relational-databases/logs/log-file-viewer.md)   
  [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
- [Ver archivos del registro sin conexión](../../relational-databases/logs/view-offline-log-files.md)  
+ [Ver sin conexión archivos de registro](../../relational-databases/logs/view-offline-log-files.md)  
   
   

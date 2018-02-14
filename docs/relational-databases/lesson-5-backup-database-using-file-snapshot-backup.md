@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 910053b9953a1352c98b6b8f67dc844204933b2e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 075262fd0b079d8f4e9f2decab233f6f793dd2df
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-5-backup-database-using-file-snapshot-backup"></a>Lesson 5: Backup database using file-snapshot backup (Lección 5: Realizar una copia de seguridad de la base de datos mediante la copia de seguridad de instantáneas de archivos)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En esta lección, realizará una copia de seguridad de la base de datos AdventureWorks2014 en la máquina virtual de Azure mediante la copia de seguridad de instantáneas de archivos para realizar una copia de seguridad casi inmediata mediante instantáneas de Azure. Para obtener más información sobre las copias de seguridad de instantáneas de archivos, consulte [Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+En esta lección, realizará una copia de seguridad de la base de datos AdventureWorks2014 en la máquina virtual de Azure mediante la copia de seguridad de instantáneas de archivos para realizar una copia de seguridad casi inmediata mediante instantáneas de Azure. Para obtener más información sobre las copias de seguridad de instantáneas de archivos, consulte [Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
   
 Para realizar una copia de seguridad de la base de datos AdventureWorks2014 mediante la copia de seguridad de instantáneas de archivos, siga estos pasos:  
   
@@ -78,7 +81,7 @@ Para realizar una copia de seguridad de la base de datos AdventureWorks2014 medi
   
 [Lección 6: Generar el registro de actividades y copias de seguridad mediante la copia de seguridad de instantáneas de archivos](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)  
   

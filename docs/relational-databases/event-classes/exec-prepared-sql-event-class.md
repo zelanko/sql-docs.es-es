@@ -8,28 +8,31 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Exec Prepared SQL event class
+helpviewer_keywords:
+- Exec Prepared SQL event class
 ms.assetid: 2c61859b-00c9-4267-aef3-bc3ad075db69
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef510fd48719c0cd9c6fd47aaa1569bebdddc405
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 15ff424bc176592357cb9187851d4898815bbc0c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="exec-prepared-sql-event-class"></a>Exec Prepared SQL, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos Exec Prepared SQL indica que SqlClient, ODBC, OLE DB o DB-Library ha ejecutado una o varias instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] preparadas.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La clase de eventos Exec Prepared SQL indica que SqlClient, ODBC, OLE DB o DB-Library ha ejecutado una o varias instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] preparadas.  
   
 ## <a name="exec-prepared-sql-event-class-data-columns"></a>Columnas de datos de la clase de evento Exec Prepared SQL  
   
-|Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
+|Nombre de columna de datos|Tipo de datos|Description|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
 |ClientProcessID|**int**|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  
@@ -46,14 +49,14 @@ ms.lasthandoff: 11/17/2017
 |NTDomainName|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |NTUserName|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |IdSolicitud|**int**|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
-|ServerName|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
+|ServerName|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|no|  
 |SessionLoginName|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|**int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |StartTime|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que se utiliza para describir la transacción actual.|50|Sí|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

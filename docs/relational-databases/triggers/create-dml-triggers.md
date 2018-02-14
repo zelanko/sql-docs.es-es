@@ -8,7 +8,8 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-dml
+ms.technology:
+- dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,26 +22,27 @@ helpviewer_keywords:
 - testing column changes
 - results [SQL Server], DML triggers
 ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c1ce093e77f17a47cf1a52e68a36ddf307031357
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 51c2af4bc0830ac5452bb4f88e0b815e169fd428
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="create-dml-triggers"></a>Crear desencadenadores DML
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] En este tema se describe cómo crear un desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y usando la instrucción CREATE TRIGGER de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+En este tema se describe cómo crear un desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y usando la instrucción CREATE TRIGGER de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ##  <a name="Top"></a> Antes de comenzar  
   
 ### <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
  Para obtener una lista de las limitaciones y restricciones relacionadas con la creación de desencadenadores DML, vea [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
-###  <a name="Permissions"></a> Permisos  
+###  <a name="Permissions"></a> Permissions  
  Es necesario contar con permiso ALTER sobre la tabla o vista en la que se crea el desencadenador.  
   
 ##  <a name="Procedures"></a> Cómo crear un desencadenador DML  
@@ -66,7 +68,7 @@ ms.lasthandoff: 11/17/2017
     |---------------|-----------|  
     |Autor|*Su nombre.*|  
     |Create Date|*La fecha de hoy.*|  
-    |Descripción|Comprueba la solvencia del proveedor antes de permitir que se inserte un nuevo pedido de compra con el proveedor.|  
+    |Description|Comprueba la solvencia del proveedor antes de permitir que se inserte un nuevo pedido de compra con el proveedor.|  
     |Schema_Name|Purchasing|  
     |Trigger_Name|NewPODetail2|  
     |Table_Name|PurchaseOrderDetail|  

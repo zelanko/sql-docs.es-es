@@ -8,23 +8,25 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e05b1ab4-c10b-402a-9591-f6ec1e3db8c0
-caps.latest.revision: "5"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f416a2ce4e59d9d097348fb601825867df10d7b4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 97d6ddad9af98be0e5f92fb32a195c883e2c9635
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="capture-logon-trigger-event-data"></a>Capturar datos de eventos de desencadenador logon
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Para capturar datos XML acerca de los eventos LOGON para utilizarlos dentro de los desencadenadores logon, utilice la función [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md). El evento LOGON devuelve el siguiente esquema de datos de eventos:  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Para capturar datos XML acerca de los eventos LOGON para utilizarlos dentro de los desencadenadores logon, utilice la función [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md) . El evento LOGON devuelve el siguiente esquema de datos de eventos:  
   
  `<EVENT_INSTANCE>`  
   

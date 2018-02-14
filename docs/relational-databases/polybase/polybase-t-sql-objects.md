@@ -8,26 +8,28 @@ ms.service:
 ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-polybase
+ms.technology:
+- database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - PolyBase, fundamentals
 - PolyBase, SQL statements
 - PolyBase, SQL objects
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e2da04ae2845eff485a55dbe5a4046f5e774a5b3
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 9941f7e1c8bda690114a626315c9fe5afb4a2da7
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-t-sql-objects"></a>objetos T-SQL de PolyBase
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para usar PolyBase, debe crear tablas externas para hacer referencia a los datos externos.  
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Para usar PolyBase, debe crear tablas externas para hacer referencia a los datos externos.  
   
  [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
   
@@ -42,7 +44,7 @@ ms.lasthandoff: 11/18/2017
 > [!NOTE]
 >  PolyBase en SQL Server 2016 solo admite usuarios de Windows. Si intenta usar un usuario de SQL para consultar una tabla externa de PolyBase, se producirá un error en la consulta.
 
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Configure PolyBase. Consulte [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
   
 ## <a name="create-external-tables-for-hadoop"></a>Crear tablas externas para Hadoop
@@ -297,7 +299,7 @@ CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)
 ## <a name="next-steps"></a>Pasos siguientes  
  Para obtener ejemplos de consultas, vea [Consultas de PolyBase](../../relational-databases/polybase/polybase-queries.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Introducción a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
  [Guía de PolyBase](../../relational-databases/polybase/polybase-guide.md)  
   

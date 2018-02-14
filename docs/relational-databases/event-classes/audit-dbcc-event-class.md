@@ -8,28 +8,31 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Audit DBCC event class
+helpviewer_keywords:
+- Audit DBCC event class
 ms.assetid: 73724190-d6b7-4f11-9446-78bcafa6c693
-caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: baa47ae61e79cae5b447a6b40d512c5d68d1aac0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3d60834078c3742abac694d19d4dbc7cfdf251bd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="audit-dbcc-event-class"></a>Audit DBCC, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos **Audit DBCC** se produce cuando se emite un comando DBCC.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La clase de eventos **Audit DBCC** se produce cuando se emite un comando DBCC.  
   
 ## <a name="audit-dbcc-event-class-data-columns"></a>Columnas de datos de la clase de eventos Audit DBCC  
   
-|Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
+|Nombre de columna de datos|Tipo de datos|Description|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
 |**ClientProcessID**|**int**|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  
@@ -38,8 +41,8 @@ ms.lasthandoff: 11/17/2017
 |**DatabaseName**|**nvarchar**|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
 |**DBUserName**|**nvarchar**|Nombre de usuario del emisor en la base de datos.|40|Sí|  
 ||||||  
-|**EventClass**|**int**|Tipo de evento = 116.|27|No|  
-|**EventSequence**|**int**|Secuencia de un evento determinado de la solicitud.|51|No|  
+|**EventClass**|**int**|Tipo de evento = 116.|27|no|  
+|**EventSequence**|**int**|Secuencia de un evento determinado de la solicitud.|51|no|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
 |**LineNumber**|**int**|Muestra el número de la línea que contiene el error.|5|Sí|  
@@ -50,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 |**NTUserName**|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |**OwnerName**|**nvarchar**|Nombre de usuario de base de datos del propietario del objeto.|37|Sí|  
 |**IdSolicitud**|**int**|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
-|**ServerName**|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
+|**ServerName**|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|no|  
 |**SessionLoginName**|**Nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, **SessionLoginName** muestra inicioDeSesión1 y **LoginName** muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |**SPID**|**int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
@@ -61,7 +64,7 @@ ms.lasthandoff: 11/17/2017
 |**TransactionID**|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |**XactSequence**|**bigint**|Token que se utiliza para describir la transacción actual.|50|Sí|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

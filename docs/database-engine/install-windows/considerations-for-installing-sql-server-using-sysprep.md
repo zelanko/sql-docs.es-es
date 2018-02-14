@@ -8,23 +8,26 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c9ac38f6afb00dfc1b9077680c89b5dd99bdb785
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e1089089d6e0eb1a3085dad9306a6e598535b739
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Consideraciones acerca de la instalación de SQL Server con SysPrep
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep permite preparar una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un equipo y completar la configuración en un momento posterior. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep emplea un proceso de dos pasos para obtener una instancia independiente configurada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los pasos son los siguientes:  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep permite preparar una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un equipo y completar la configuración en un momento posterior. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep emplea un proceso de dos pasos para obtener una instancia independiente configurada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los pasos son los siguientes:  
   
 - [Preparar imagen](#BKMK_PrepareImage)  
   

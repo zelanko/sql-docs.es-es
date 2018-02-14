@@ -8,20 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-security
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 00fbddda37b58442e37618a25347576bc88caf07
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fbe87e904a8e46ae19d6dcb06600352a29949dc2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Overview of Key Management for Always Encrypted (Información general de administración de claves de Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,12 +101,12 @@ Para asegurarse de que Always Encrypted impida eficazmente estos ataques, el pro
 - No genere nunca claves maestras de columna ni claves de cifrado de columnas en un equipo que hospede la base de datos. En su lugar, genere las claves en un equipo independiente que sea exclusivo para la administración de claves o en un equipo que hospede las aplicaciones que necesitarán tener acceso a las claves. Esto significa que **nunca debe ejecutar las herramientas usadas para generar las claves en el equipo que hospeda la base de datos** , porque si un atacante obtiene acceso a un equipo usado para aprovisionar o mantener las claves de Always Encrypted podrá obtener sus claves, incluso si estas solo aparecen brevemente en la memoria de la herramienta.
 - Para asegurarse de que el proceso de administración de claves no revele accidentalmente las claves maestras de columna o las claves de cifrado de columnas, es fundamental que identifique los posibles adversarios y las amenazas de seguridad antes de definir e implementar un proceso de administración de claves. Por ejemplo, si su objetivo es garantizar que los DBA no tengan acceso a información confidencial, el responsable de generar las claves no puede ser un DBA. Pero un DBA *puede* administrar los metadatos de clave de la base de datos, ya que los metadatos no contienen las claves de texto no cifrado.
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Next Steps
 
 - [Create and Store Column Master Keys (Always Encrypted) (Crear y almacenar claves maestras de columna (Always Encrypted))](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
 - [Configure Always Encrypted Keys using PowerShell (Configurar claves de Always Encrypted con PowerShell)](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-- [Rotate Always Encrypted Keys using PowerShell (Rotar claves Always Encrypted con PowerShell)](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [Configure Always Encrypted using SQL Server Management Studio (Configurar Always Encrypted con SQL Server Management Studio)](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
+- [Rotar claves de Always Encrypted con PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
+- [Configurar Always Encrypted con SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
 
 ## <a name="additional-resources"></a>Recursos adicionales
 

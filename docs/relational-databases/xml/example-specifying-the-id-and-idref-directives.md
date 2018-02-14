@@ -8,26 +8,28 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - IDREF directive
 - ID directive
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 878e82dc8b2b36922983511aeafa8c69138c4d26
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 9998ad6318f303861473e5e510c782b16fbb42ff
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>Ejemplo: especificar las directivas ID e IDREF
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Este ejemplo es casi idéntico al ejemplo [Especificar la directiva ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md). La única diferencia consiste en que la consulta especifica las directivas **ID** e **IDREF** . Estas directivas sobrescriben los tipos del atributo **SalesPersonID** en los elementos <`OrderHeader`> y <`OrderDetail`>. De este modo, se forman vínculos dentro de los documentos. Para ver los tipos sobrescritos, se necesita el esquema. Por lo tanto, la consulta especifica la opción **XMLDATA** en la cláusula FOR XML para recuperar el esquema.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Este ejemplo es casi idéntico al ejemplo [Especificar la directiva ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) . La única diferencia consiste en que la consulta especifica las directivas **ID** e **IDREF** . Estas directivas sobrescriben los tipos del atributo **SalesPersonID** en los elementos <`OrderHeader`> y <`OrderDetail`>. De este modo, se forman vínculos dentro de los documentos. Para ver los tipos sobrescritos, se necesita el esquema. Por lo tanto, la consulta especifica la opción **XMLDATA** en la cláusula FOR XML para recuperar el esquema.  
   
 ```  
 USE AdventureWorks2012;  

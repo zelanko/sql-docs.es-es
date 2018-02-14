@@ -8,23 +8,24 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, thread and task architecture
 - thread and task architecture guide
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
-caps.latest.revision: "3"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4ee27d7a15dcd93fbeffc60ff8f6f67309efb2a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1684760951c661e50111028594c576661028da6e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="thread-and-task-architecture-guide"></a>guía de arquitectura de subprocesos y tareas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -123,13 +124,13 @@ La tabla siguiente contiene una lista de los componentes de SQL Server e indica 
 |Nombre del proceso   |Programa ejecutable |Utilizar más de 64 CPU |  
 |----------|----------|----------|  
 |Motor de base de datos de SQL Server |Sqlserver.exe  |Sí |  
-|Reporting Services |Rs.exe |No |  
-|Analysis Services  |As.exe |No |  
-|Integration Services   |Is.exe |No |  
-|Service Broker |Sb.exe |No |  
-|Búsqueda de texto completo   |Fts.exe    |No |  
-|Agente SQL Server   |Sqlagent.exe   |No |  
-|SQL Server Management Studio   |Ssms.exe   |No |  
-|programa de instalación de SQL Server   |Setup.exe  |No |  
+|Reporting Services |Rs.exe |no |  
+|Analysis Services  |As.exe |no |  
+|Integration Services   |Is.exe |no |  
+|Service Broker |Sb.exe |no |  
+|Búsqueda de texto completo   |Fts.exe    |no |  
+|Agente SQL Server   |Sqlagent.exe   |no |  
+|SQL Server Management Studio   |Ssms.exe   |no |  
+|programa de instalación de SQL Server   |Setup.exe  |no |  
 
 

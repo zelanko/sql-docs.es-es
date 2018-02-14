@@ -8,20 +8,21 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bee5fd436b1f2e8e493983774b45c70f533a5d77
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a9f8fc41e72885a9a08d7779afa611e07e1dc8f5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introducción al almacén de columnas para análisis operativos en tiempo real
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -225,7 +226,7 @@ ORDER BY created_time DESC
   
  Si el número de filas eliminadas en los grupos de filas comprimidas es mayor del 20 %, teniendo un nivel predefinido de los grupos de filas más antiguos con una variación de menos del 5 % (denominados grupos de filas inactivos), establezca COMPRESSION_DELAY = (youngest_rowgroup_created_time – current_time). Tenga en cuenta que este método funciona mejor en cargas de trabajo estables y relativamente homogéneas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Guía de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-overview.md)   
  [Carga de datos de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Rendimiento de las consultas de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   

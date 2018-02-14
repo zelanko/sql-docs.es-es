@@ -8,28 +8,31 @@ ms.service:
 ms.component: ssms-registration
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.importregisteredservers.f1
+f1_keywords:
+- sql13.swb.importregisteredservers.f1
 helpviewer_keywords:
 - transferring registered server information
 - Registered Servers [SQL Server], importing
 - importing registered server information
 ms.assetid: cc497a14-1360-4887-b70c-002f042823b6
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 09de6ba5cd90b6faa9b7f01471e788ef40b3b334
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 6292168f5b278d4c13daa853e0bd5c4859560236
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>Importar información de servidores registrados (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En este tema se describe cómo importar información guardada de servidores registrados en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. La exportación e importación de archivos de un servidor registrado permite configurar fácilmente varios equipos con los mismos servidores en Servidores registrados. Esto resulta útil cuando se administra un gran número de servidores desde equipos en distintas ubicaciones, o cuando desea establecer la configuración de conexión básica para un usuario menos experimentado.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+En este tema se describe cómo importar información guardada de servidores registrados en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. La exportación e importación de archivos de un servidor registrado permite configurar fácilmente varios equipos con los mismos servidores en Servidores registrados. Esto resulta útil cuando se administra un gran número de servidores desde equipos en distintas ubicaciones, o cuando desea establecer la configuración de conexión básica para un usuario menos experimentado.  
   
 > [!NOTE]  
 >  No puede importar información de servidores registrados en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] desde versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

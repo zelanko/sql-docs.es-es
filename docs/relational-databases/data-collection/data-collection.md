@@ -8,25 +8,29 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: "Recopilación de datos"
-helpviewer_keywords: data collection [SQL Server]
+keywords:
+- "Recopilación de datos"
+helpviewer_keywords:
+- data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
-caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e2ba0a8ac11577590da78a5975a9447f3478709b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 28d83f656e80e1e50b9176a3b705e6b5e62fe0f3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="data-collection"></a>Recopilación de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El recopilador de datos es un componente de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que recopila diferentes conjuntos de datos. La recopilación de datos se ejecuta de forma constante o según una programación definida por el usuario. El recopilador de datos almacena los datos recopilados en una base de datos relacional conocida como almacén de administración de datos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+El recopilador de datos es un componente de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que recopila diferentes conjuntos de datos. La recopilación de datos se ejecuta de forma constante o según una programación definida por el usuario. El recopilador de datos almacena los datos recopilados en una base de datos relacional conocida como almacén de administración de datos.  
   
 ## <a name="what-is-data-collector"></a>¿Qué es el recopilador de datos? 
  El recopilador de datos es un componente básico de la plataforma de recopilación de datos para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y las herramientas que se proporcionan a través de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El recopilador de datos proporciona un punto central para la recopilación de datos de los servidores de bases de datos y aplicaciones. Este punto de recopilación puede obtener datos de una variedad de orígenes y no se limita a los datos de rendimiento, a diferencia de Seguimiento de SQL.  
@@ -58,9 +62,9 @@ ms.lasthandoff: 11/17/2017
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) se usa para ejecutar paquetes que recopilan datos de proveedores de datos individuales. Debe estar familiarizado con los siguientes conceptos y herramientas de [!INCLUDE[ssIS](../../includes/ssis-md.md)] :  
   
--   Paquete de [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] paquete  
   
--   configuración de paquete de [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] configuración de paquete  
   
  Para obtener más información, vea [Paquetes de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md).  
   
@@ -115,7 +119,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="things-you-can-do"></a>Cosas que puede hacer  
   
-|Descripción|Tema|  
+|Description|Tema|  
 |----------------------|-----------|  
 |Administrar distintos aspectos de la recopilación de datos, como habilitar o deshabilitar la recopilación de datos, cambiar la configuración de un conjunto de recopilación o ver los datos en el almacén de administración de datos.|[Administrar la recopilación de datos](../../relational-databases/data-collection/manage-data-collection.md)|  
 |Usar los informes para obtener información con el fin de supervisar la capacidad del sistema y solucionar problemas de rendimiento del sistema.|[Informes de conjuntos de recopilación de datos del sistema](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  

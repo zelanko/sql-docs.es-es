@@ -8,7 +8,8 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -35,19 +36,20 @@ helpviewer_keywords:
 - PROPERTY index
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ca2fd82971fa8d4eb8c874b809961f5052d5fbf5
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 6ae2dbced7f4a077bcab341abf84eba5c189c3da
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xml-indexes-sql-server"></a>Índices XML (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Es posible crear índices XML en columnas del tipo de datos **xml**. Se indizan todas las etiquetas, los valores y las rutas de acceso de las instancias XML de la columna y se mejora el rendimiento de las consultas. Un índice XML puede afectar positivamente a una aplicación en estas situaciones:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Es posible crear índices XML en columnas del tipo de datos **xml** . Se indizan todas las etiquetas, los valores y las rutas de acceso de las instancias XML de la columna y se mejora el rendimiento de las consultas. Un índice XML puede afectar positivamente a una aplicación en estas situaciones:  
   
 -   Las consultas en columnas XML son habituales en su carga de trabajo. Es preciso considerar el costo de mantenimiento del índice XML durante la modificación de datos.  
   

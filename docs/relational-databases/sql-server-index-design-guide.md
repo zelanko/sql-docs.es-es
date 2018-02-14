@@ -8,7 +8,8 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - sql server index design guide
 - sql server index design guidance
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-caps.latest.revision: "3"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6d48c41769f674278a1597dd52e40758a928a9b6
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c11d217a3818d872071bb466ac2221e2c8adc3f7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-server-index-design-guide"></a>Guía de diseño de índices de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -267,7 +268,7 @@ Use estas vistas de metadatos para ver los atributos de los índices. Puede obte
      Un índice en las columnas especificadas en la cláusula ORDER BY o GROUP BY puede eliminar la necesidad de que [!INCLUDE[ssDE](../includes/ssde-md.md)] ordene los datos, puesto que las filas ya están ordenadas. De ese modo, el rendimiento de las consultas aumenta.  
   
 ### <a name="column-considerations"></a>Consideraciones sobre columnas  
- Por regla general, debe definir la clave de índice clúster con el menor número de columnas posible. Considere columnas que cuentan con uno o varios de los siguientes atributos:  
+ Por regla genera, debe definir la clave de índice clúster con el menor número de columnas posible. Considere columnas que cuentan con uno o varios de los siguientes atributos:  
   
 -   Son únicas o contienen muchos valores distintos  
   
@@ -732,12 +733,12 @@ Los índices de hash constan de una matriz de punteros, y cada elemento de la ma
 - Cada entrada apunta a la siguiente entrada en una lista de vínculos de entradas, todas ellas encadenadas al depósito actual.  
 
 El número de cubos debe especificarse en el momento de definir los índices:
-- Cuanto menor sea la proporción de depósitos con respecto a las filas de la tabla o valores distintos, más larga será la lista de vínculos de depósito promedio.  
+- Cuanto menor sea la proporción de depósitos con respecto a las filas de la tabla o valores distintos, mas larga será la lista de vínculos de depósito promedio.  
 - Las listas de vínculos cortas se ejecutan más rápidamente que las listas de vínculos largas.
 - El número máximo de cubos en los índices de hash es de 1 073 741 824.
 
 > [!TIP]
-> Para determinar el `BUCKET_COUNT` correcto para los datos, consulte [Configuración del número de depósitos de índice de hash](#configuring_bucket_count).
+> Para determinar el `BUCKET_COUNT` correcto para los datos, consulte [Configuración del número de cubos de índice de hash](#configuring_bucket_count).
 
 La función hash se aplica a las columnas de clave de índice, y el resultado de la función determina a qué contenedor pertenece dicha clave. Los cubos tienen un puntero a las filas cuyos valores de clave con hash se asignan a estos cubos.
 
@@ -756,7 +757,7 @@ La interacción del índice de hash y los cubos se resume en la siguiente imagen
 ### <a name="configuring_bucket_count"></a> Configuración del número de cubos de índice de hash
 El número de cubos de índice de hash se especifica al crear el índice y se puede modificar con la sintaxis `ALTER TABLE...ALTER INDEX REBUILD`.  
   
-En la mayoría de los casos, lo ideal es que el número de depósitos esté entre 1 y 2 veces el número de valores distintos de la clave de índice.   
+En la mayoría de los casos, lo ideal es que el número de cubos esté entre 1 y 2 veces el número de valores distintos de la clave de índice.   
 Es posible que no siempre consiga predecir cuántos valores puede tener o tendrá una clave de índice determinada. El rendimiento sigue siendo bueno por lo general si el valor **BUCKET_COUNT** está dentro de 10 veces el número real de valores de clave. A este respecto, suele ser mejor realizar estimaciones por lo alto que por lo bajo.  
   
 Un número muy **pequeño** de cubos tiene las siguientes desventajas:  
@@ -768,12 +769,12 @@ Un número muy **pequeño** de cubos tiene las siguientes desventajas:
   
 Un número muy **alto** de cubos tiene las siguientes desventajas::  
   
-- Un número excesivo de depósitos puede generar más depósitos vacíos.  
-- Los depósitos vacíos repercuten en el rendimiento de los exámenes de índice completos. Si se realizan con frecuencia, inclínese por un número de depósitos cercano al número de valores de clave de índice distintos.  
+- Un número excesivo de cubos puede generar más cubos vacíos.  
+- Los depósitos vacíos repercuten en el rendimiento de los exámenes de índice completos. Si se realizan con frecuencia, inclínese por un número de cubos cercano al número de valores de clave de índice distintos.  
 - Los depósitos vacíos usan la memoria, aunque cada depósito emplea únicamente 8 bytes.  
   
 > [!NOTE]
-> Agregar más depósitos no hace nada para reducir el encadenamiento de entradas que comparten un valor duplicado. La tasa de duplicación de valores sirve para decidir si un tipo de índice de hash es el adecuado, no para calcular el número de depósitos.  
+> Agregar más depósitos no hace nada para reducir el encadenamiento de entradas que comparten un valor duplicado. La tasa de duplicación de valores sirve para decidir si un tipo de índice de hash es el adecuado, no para calcular el número de cubos.  
 
 ### <a name="performance-considerations"></a>Consideraciones de rendimiento  
   
@@ -884,7 +885,7 @@ Al consultar una tabla optimizada para memoria con predicados de desigualdad, el
 [Mejorar el rendimiento con vistas indizadas de SQL Server 2008](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [Creación de una clave principal](../relational-databases/tables/create-primary-keys.md)    
-[Índices de tablas optimizadas para memoria](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
+[Índices de tablas con optimización para memoria](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
 [Introducción a los índices de almacén de columnas](../relational-databases/indexes/columnstore-indexes-overview.md)  
 [Solución de problemas de índices de hash de tablas optimizadas para memoria](../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)    
 [Vistas de administración dinámica de tablas optimizadas para memoria &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)   

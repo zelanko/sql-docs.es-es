@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-query-tuning
+ms.technology:
+- dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
-caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 87ab0fafc43294cd0d9178f966fd7e819a2416d3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 01e2469b6dc300c8ac03a8b8ccdd622a7ee599b7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Tutorial: Copias de seguridad y restauración de SQL Server en el servicio Azure Blob Storage
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tutorial le ayudará a entender cómo escribir copias de seguridad en el servicio Azure Blob Storage y cómo restaurar desde este.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este tutorial le ayudará a entender cómo escribir copias de seguridad en el servicio Azure Blob Storage y cómo restaurar desde este.  
   
 ## <a name="what-you-will-learn"></a>Aprendizaje  
 En este tutorial se muestra cómo crear una cuenta de Storage y un contenedor de blobs, cómo crear credenciales para acceder a la cuenta de almacenamiento, cómo escribir una copia de seguridad en el servicio de blobs y cómo realizar una restauración simple. El tutorial está compuesto por cuatro lecciones:  
@@ -61,5 +64,5 @@ A continuación, se indican algunas lecturas recomendadas para entender los conc
 2.  [SQL Server Backup to URL Best Practices and Troubleshooting](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md) (Procedimientos recomendados y solución de problemas de copia de seguridad en URL de SQL Server)  
   
 ## <a name="see-also"></a>Vea también  
-[SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) (Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage)
+[Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)
 

@@ -8,7 +8,8 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,18 +21,19 @@ helpviewer_keywords:
 - requesting cursors
 - cursors [SQL Server], about cursors
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.openlocfilehash: 4abe8b006f30fd200becd40374df8cd699ffaab0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 882f657706c9875732e89321ffb9d5fe3061b32a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cursors"></a>Cursores
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Las operaciones de una base de datos relacional actúan en un conjunto completo de filas. Por ejemplo, el conjunto de filas que devuelve una instrucción SELECT está compuesto por todas las filas que satisfacen las condiciones de la cláusula WHERE de la instrucción. Este conjunto completo de filas que devuelve la instrucción se conoce como conjunto de resultados. Las aplicaciones, especialmente las aplicaciones interactivas en línea, no siempre trabajan de forma eficaz con el conjunto de resultados completo si lo toman como una unidad. Estas aplicaciones necesitan un mecanismo que trabaje con una fila o un pequeño bloque de filas cada vez. Los cursores son una extensión de los conjuntos de resultados que proporcionan dicho mecanismo.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Las operaciones de una base de datos relacional actúan en un conjunto completo de filas. Por ejemplo, el conjunto de filas que devuelve una instrucción SELECT está compuesto por todas las filas que satisfacen las condiciones de la cláusula WHERE de la instrucción. Este conjunto completo de filas que devuelve la instrucción se conoce como conjunto de resultados. Las aplicaciones, especialmente las aplicaciones interactivas en línea, no siempre trabajan de forma eficaz con el conjunto de resultados completo si lo toman como una unidad. Estas aplicaciones necesitan un mecanismo que trabaje con una fila o un pequeño bloque de filas cada vez. Los cursores son una extensión de los conjuntos de resultados que proporcionan dicho mecanismo.  
   
  Los cursores amplían el procesamiento de los resultados porque:  
   
@@ -120,7 +122,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="related-content"></a>Contenido relacionado  
  [Comportamientos de los cursores](../relational-databases/native-client-odbc-cursors/cursor-behaviors.md) [Cómo se implementan los cursores](../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [Cursores &#40;Transact-SQL&#41;](../t-sql/language-elements/cursors-transact-sql.md)   
  [Funciones del cursor &#40;Transact-SQL&#41;](../t-sql/functions/cursor-functions-transact-sql.md)   

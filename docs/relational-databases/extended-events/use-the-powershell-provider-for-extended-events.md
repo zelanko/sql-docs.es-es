@@ -18,16 +18,16 @@ helpviewer_keywords:
 - extended events [SQL Server], PowerShell
 - PowerShell [SQL Server], extended events
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16073b8a0827364a823cf6ca9a9b150083e2abf2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e5accd33da019a93fa731bd48ce187a053aef21
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Usar el proveedor de PowerShell para eventos extendidos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ $session.Create()
 ## <a name="security"></a>Seguridad  
  Para crear, modificar o quitar una sesión de eventos extendidos, debe disponer del permiso ALTER ANY EVENT SESSION.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
  [Usar la sesión system_health](../../relational-databases/extended-events/use-the-system-health-session.md)   
  [Herramientas de eventos extendidos](../../relational-databases/extended-events/extended-events-tools.md)  

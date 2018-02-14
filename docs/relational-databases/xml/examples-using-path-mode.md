@@ -8,24 +8,27 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: PATH FOR XML mode, examples
+helpviewer_keywords:
+- PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 78a6640acab112d547ef882dbf405e6561a8a063
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: e5ea920b52ae42011da3810d4cf2f20e296b8ff9
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="examples-using-path-mode"></a>Ejemplos: Usar el modo PATH
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] El ejemplo siguiente ilustra el uso del modo PATH en la generación de XML a partir de una consulta SELECT. Muchas de estas consultas se especifican usando los documentos XML de instrucciones de fabricación de bicicletas almacenados en la columna Instructions de la tabla ProductModel.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+El ejemplo siguiente ilustra el uso del modo PATH en la creación de XML a partir de una consulta SELECT. Muchas de estas consultas se especifican usando los documentos XML de instrucciones de fabricación de bicicletas almacenados en la columna Instructions de la tabla ProductModel.  
   
 ## <a name="specifying-a-simple-path-mode-query"></a>Especificar una consulta sencilla de modo PATH  
  Esta consulta especifica un modo FOR XML PATH.  

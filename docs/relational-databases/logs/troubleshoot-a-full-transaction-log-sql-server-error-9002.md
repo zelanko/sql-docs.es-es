@@ -8,7 +8,8 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-transaction-log
+ms.technology:
+- dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - transaction logs [SQL Server], full log
 - full transaction logs [SQL Server]
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 42620b8d28d8a2663d5cb4ddc66f551c8801084d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e7aa56db8223c76b3d597da5c00ffe5be250aae7
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Solucionar problemas de un registro de transacciones lleno (Error 9002 de SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se tratan las posibles respuestas a un registro de transacciones lleno y se sugiere cómo evitar esta situación en el futuro. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+En este tema se tratan las posibles respuestas a un registro de transacciones lleno y se sugiere cómo evitar esta situación en el futuro. 
   
   Cuando el registro de transacciones se llena, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] genera un **error 9002**. El registro se puede llenar cuando la base de datos está en línea o en recuperación. Si el registro se llena cuando la base de datos está en línea, la base de datos seguirá en conexión, pero solo se puede leer y no actualizar. Si el registro se llena durante la recuperación, [!INCLUDE[ssDE](../../includes/ssde-md.md)] marca la base de datos como RESOURCE PENDING. En ambos casos, es necesaria la intervención del usuario para proporcionar espacio de registro.  
   

@@ -8,24 +8,27 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: FileTables [SQL Server], accessing files with T-SQL
+helpviewer_keywords:
+- FileTables [SQL Server], accessing files with T-SQL
 ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
-caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 500c1a775d10cef2efeca922870f977138b2688d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5b5ca174c60f14db6fbc86e80693d6132a6ece2a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="access-filetables-with-transact-sql"></a>Obtener acceso a FileTables con Transact-SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Describe el funcionamiento de los comandos del lenguaje de manipulación de datos (DML) de [!INCLUDE[tsql](../../includes/tsql-md.md)] con FileTables.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Describe el funcionamiento de los comandos del lenguaje de manipulación de datos (DML) de [!INCLUDE[tsql](../../includes/tsql-md.md)] con FileTables.  
   
 ##  <a name="BasicsInsert"></a> Operaciones INSERT en FileTables  
  Las consideraciones siguientes se aplican a las operaciones **INSERT** en FileTables:  
@@ -73,7 +76,7 @@ ms.lasthandoff: 11/17/2017
   
 -   El valor de **last_access_time** no puede ser anterior a **last_write_time** y **creation_time**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Cargar archivos en FileTables](../../relational-databases/blob/load-files-into-filetables.md)   
  [Trabajar con directorios y rutas de acceso de FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Obtener acceso a FileTables con API de entrada-salida de archivo](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)   

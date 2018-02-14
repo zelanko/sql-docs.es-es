@@ -8,26 +8,28 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - FOR XML clause, TYPE directive
 - TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7ade0766fd94e302d6df6204d64acd94b98522ed
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 20d3894f0f2eecbf491e20f10b0258686848b401
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Directiva TYPE en consultas FOR XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] La compatibilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) ofrece la posibilidad de solicitar la devolución del resultado de una consulta FOR XML como tipo de datos **xml** mediante la especificación de la directiva TYPE. Esto permite procesar el resultado de una consulta FOR XML en el servidor. Por ejemplo, puede especificar una XQuery en el mismo, asignar el resultado a una variable de tipo **xml** o escribir consultas [FOR XML anidadas](../../relational-databases/xml/use-nested-for-xml-queries.md).  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+  La compatibilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) ofrece la posibilidad de solicitar la devolución del resultado de una consulta FOR XML como tipo de datos **xml** mediante la especificación de la directiva TYPE. Esto permite procesar el resultado de una consulta FOR XML en el servidor. Por ejemplo, puede especificar una XQuery en el mismo, asignar el resultado a una variable de tipo **xml** o escribir consultas [FOR XML anidadas](../../relational-databases/xml/use-nested-for-xml-queries.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve al cliente datos de instancia de tipo XML como resultado de distintas construcciones de servidor, como por ejemplo consultas FOR XML que usan la directiva TYPE o en las que se usa el tipo de datos **xml** para devolver valores de datos de instancia XML procedentes de columnas de tablas SQL y parámetros de salida. En el código de las aplicaciones cliente, el proveedor ADO.NET solicita que se envíe esta información de tipo de datos XML con una codificación binaria desde el servidor. Sin embargo, si utiliza FOR XML sin la directiva TYPE, se devolverán los datos XML en forma de cadena. En cualquier caso, el proveedor del cliente siempre podrá controlar cualquier formato de tipo XML. Tenga en cuenta que la cláusula FOR XML de nivel superior sin la directiva TYPE no puede utilizarse con cursores.  

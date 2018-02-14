@@ -8,36 +8,39 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: User-Configurable event class
+helpviewer_keywords:
+- User-Configurable event class
 ms.assetid: 06fe5f07-a0dd-4968-b123-56b124a86020
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76c62dfdfecf2aa657d64f6bc6209749ea8bff35
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6858694e1407806db8763d8de3dd01feda3bab59
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="user-configurable-event-class"></a>clases de eventos configurables por el usuario
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Utilice las categorías de eventos configurables por el usuario para supervisar eventos definidos por el usuario. Cree clases de eventos definidas por el usuario para supervisar eventos cuya supervisión no es posible con las clases de eventos suministradas por el sistema que pertenecen a otras categorías de eventos. Por ejemplo, se puede crear un evento definido por el usuario para supervisar el progreso de la aplicación que se está probando. A medida que se ejecuta la aplicación, pueden generarse eventos en los puntos predefinidos, lo que permite determinar el punto de ejecución actual de la aplicación.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Utilice las categorías de eventos configurables por el usuario para supervisar eventos definidos por el usuario. Cree clases de eventos definidas por el usuario para supervisar eventos cuya supervisión no es posible con las clases de eventos suministradas por el sistema que pertenecen a otras categorías de eventos. Por ejemplo, se puede crear un evento definido por el usuario para supervisar el progreso de la aplicación que se está probando. A medida que se ejecuta la aplicación, pueden generarse eventos en los puntos predefinidos, lo que permite determinar el punto de ejecución actual de la aplicación.  
   
 ## <a name="user-configurable-event-class-data-columns"></a>Columnas de datos de las clases de eventos configurables por el usuario  
   
-|Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
+|Nombre de columna de datos|Tipo de datos|Description|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
 |BinaryData|**imagen**|Valor binario que depende de la clase de eventos que se captura en el seguimiento.|2|Sí|  
 |ClientProcessID|**int**|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  
 |DatabaseID|**int**|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |DatabaseName|**nvarchar**|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
-|EventClass|**int**|Tipo de evento = 82-91.|27|No|  
-|EventSequence|**int**|Secuencia de un evento determinado dentro de la solicitud.|51|No|  
+|EventClass|**int**|Tipo de evento = 82-91.|27|no|  
+|EventSequence|**int**|Secuencia de un evento determinado dentro de la solicitud.|51|no|  
 |GroupID|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |IsSystem|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
@@ -52,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 |TextData|**ntext**|Valor de texto que depende de la clase de eventos capturada en el seguimiento.|1|Sí|  
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)  

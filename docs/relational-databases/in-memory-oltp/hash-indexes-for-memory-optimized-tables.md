@@ -8,20 +8,21 @@ ms.reviewer:
 ms.service: 
 ms.component: in-memory-oltp
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4cb9c34d3abdc3aee0f51e09b39bca286ed099e9
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: def4dc86dc3dfe3d0d7f15f84f6ad503df11ce4e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>Solución de problemas de índices de hash para tablas optimizadas para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,17 +36,17 @@ Encontrará información de contexto importante para comprender este artículo e
  
 ## <a name="practical-numbers"></a>Números prácticos  
   
-Cuando se crea un índice de hash para una tabla optimizada para memoria, se debe especificar el número de depósitos en el momento de la creación. En la mayoría de los casos, lo ideal es que el número de depósitos esté entre 1 y 2 veces el número de valores distintos de la clave de índice. 
+Cuando se crea un índice de hash para una tabla optimizada para memoria, se debe especificar el número de depósitos en el momento de la creación. En la mayoría de los casos, lo ideal es que el número de cubos esté entre 1 y 2 veces el número de valores distintos de la clave de índice. 
 
 Sin embargo, aunque el **BUCKET_COUNT** esté moderadamente por debajo o por encima del rango preferido, es probable que el rendimiento del índice de hash sea tolerable o aceptable. Como mínimo, considere asignar al índice de hash un **BUCKET_COUNT** aproximadamente igual al número de filas que prevé que terminará teniendo la tabla optimizada para memoria.  
-Suponga que la tabla en aumento tiene 2 000 000 filas, pero la predicción indica que dicha cantidad crecerá 10 veces hasta 20 000 000 filas. Comience por un número de depósitos que sea 10 veces el número de filas de la tabla. Esto deja espacio para una mayor cantidad de filas.  
+Suponga que la tabla en aumento tiene 2 000 000 filas, pero la predicción indica que dicha cantidad crecerá 10 veces hasta 20 000 000 filas. Comience por un número de cubos que sea 10 veces el número de filas de la tabla. Esto deja espacio para una mayor cantidad de filas.  
   
-- Lo ideal es aumentar el número de depósitos cuando la cantidad de filas alcanza el número de depósitos inicial.  
-- Aunque la cantidad de filas aumente hasta 5 veces más que el número de depósitos, el rendimiento seguirá siendo bueno casi siempre.  
+- Lo ideal es aumentar el número de cubos cuando la cantidad de filas alcanza el número de cubos inicial.  
+- Aunque la cantidad de filas aumente hasta 5 veces más que el número de cubos, el rendimiento seguirá siendo bueno casi siempre.  
   
 Suponga que un índice de hash tiene 10 000 000 valores de claves distintos.  
   
-- Un número de depósitos de 2 000 000 sería la menor cantidad que podría aceptar. El grado de degradación del rendimiento puede ser tolerable.  
+- Un número de cubos de 2 000 000 sería la menor cantidad que podría aceptar. El grado de degradación del rendimiento puede ser tolerable.  
   
 ## <a name="too-many-duplicate-values-in-the-index"></a>¿Demasiados valores duplicados en el índice?  
   
@@ -70,9 +71,9 @@ go
   
 - Una proporción de 10,0 o superior significa que un tipo de índice de hash sería deficiente. Sopese la posibilidad de usar un índice no agrupado en su lugar.   
   
-## <a name="troubleshooting-hash-index-bucket-count"></a>Solución de problemas de número de depósitos de índice de hash  
+## <a name="troubleshooting-hash-index-bucket-count"></a>Solución de problemas de número de cubos de índice de hash  
   
-En esta sección se explica cómo resolver problemas relativos al número de depósitos del índice de hash.  
+En esta sección se explica cómo resolver problemas relativos al número de cubos del índice de hash.  
   
 ### <a name="monitor-statistics-for-chains-and-empty-buckets"></a>Supervisión de estadísticas de cadenas y depósitos vacíos  
   
@@ -106,7 +107,7 @@ Compare los resultados de SELECT con las siguientes directrices estadísticas:
   
 - Depósitos vacíos:  
   - 33 % es un buen valor de destino, pero un porcentaje mayor (incluso el 90 %) suele funcionar correctamente.  
-  - Cuando el número de depósitos es igual al número de valores de clave distintos, aproximadamente un 33 % de los cubos están vacíos.  
+  - Cuando el número de cubos es igual al número de valores de clave distintos, aproximadamente un 33 % de los cubos están vacíos.  
   - Un valor inferior al 10 % es demasiado bajo.  
 - Cadenas dentro de cubos:  
   - Una longitud media de cadena de 1 es ideal en caso de que no haya valores de clave de índice duplicados. Las longitudes de cadena de hasta 10 suelen ser aceptables.  
@@ -178,11 +179,11 @@ El bucle `INSERT` anterior hace lo siguiente:
 - Inserta valores únicos en el índice de clave principal y en *ix_OrderSequence*.  
 - Inserta un par de cientos de miles de filas que solo representan 8 valores distintos para `StatusCode`. Por lo tanto, hay una alta tasa de duplicación de valores en el índice *ix_StatusCode*.  
   
-Para solucionar problemas cuando el número de depósitos no es óptimo, examine la salida siguiente de la instrucción SELECT en **sys.dm_db_xtp_hash_index_stats**. Para estos resultados, hemos agregado `WHERE Object_Name(h.object_id) = 'SalesOrder_Mem'` a la instrucción SELECT que copiamos de la sección D.1.  
+Para solucionar problemas cuando el número de cubos no es óptimo, examine la salida siguiente de la instrucción SELECT en **sys.dm_db_xtp_hash_index_stats**. Para estos resultados, hemos agregado `WHERE Object_Name(h.object_id) = 'SalesOrder_Mem'` a la instrucción SELECT que copiamos de la sección D.1.  
   
 Los resultados de nuestra instrucción `SELECT` se muestran después del código, divididos artificialmente en dos tablas de resultados más estrechas para poder verlos mejor.  
   
-- Estos son los resultados del *número de depósitos*.  
+- Estos son los resultados del *número de cubos*.  
   
 | IndexName | total_bucket_count | empty_bucket_count | EmptyBucketPercent |  
 | :-------- | -----------------: | -----------------: | -----------------: |  
@@ -211,9 +212,9 @@ Vamos a interpretar la tabla de resultados anterior para los tres índices de ha
   
 - El 0 % de los depósitos están vacíos, lo que es demasiado bajo.  
 - La longitud promedio de la cadena es 8, aunque todos los valores de este índice sean únicos.  
-  - Por lo tanto, el número de depósitos debe aumentarse para reducir el promedio de longitud de cadena a un valor más cercano a 2 o 3.  
-- Como la clave de índice tiene 262 144 valores únicos, el número de depósitos debe ser al menos 262 144.  
-  - Si se espera un aumento futuro, el número de depósitos debe ser superior.  
+  - Por lo tanto, el número de cubos debe aumentarse para reducir el promedio de longitud de cadena a un valor más cercano a 2 o 3.  
+- Como la clave de índice tiene 262 144 valores únicos, el número de cubos debe ser al menos 262 144.  
+  - Si se espera un aumento futuro, el número de cubos debe ser superior.  
   
 *Índice de clave principal (PK_SalesOrd_...):*  
   
@@ -226,12 +227,12 @@ Las cargas de trabajo de OLTP se centran en filas individuales. Los recorridos d
   
 **Si el uso de memoria es la mayor preocupación:**  
   
-- Elija un número de depósitos cercano al número de registros de clave de índice.  
-- El número de depósitos no debería ser significativamente menor que el número de valores de clave de índice, puesto que esto afecta a la mayoría de las operaciones de DML así como al tiempo que lleva recuperar la base de datos después de reiniciar el servidor.  
+- Elija un número de cubos cercano al número de registros de clave de índice.  
+- El número de cubos no debería ser significativamente menor que el número de valores de clave de índice, puesto que esto afecta a la mayoría de las operaciones de DML así como al tiempo que lleva recuperar la base de datos después de reiniciar el servidor.  
   
 **Si las pruebas de rendimiento de igualdad es la mayor preocupación:**  
   
-- Un número mayor de depósitos, de dos o tres veces el número de valores de índice únicos, es adecuado. Un número mayor significa:  
+- Un número mayor de cubos, de dos o tres veces el número de valores de índice únicos, es adecuado. Un número mayor significa:  
   - Recuperaciones más rápidas cuando se busca un valor específico.  
   - Mayor uso de memoria.  
   - Aumento del tiempo necesario para un examen completo del índice de hash.  

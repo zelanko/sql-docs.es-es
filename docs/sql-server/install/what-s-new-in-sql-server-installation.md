@@ -8,23 +8,26 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9b136b27-4779-4284-904f-b5a1c12bdcc0
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 795e9e627916e62545c95be34c30f79fb4c45d2d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0bcea823209741e5fb675ff770cd89d7ad44d194
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>Novedades de la instalación de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La instalación se admite únicamente en procesadores x64. Para más información, vea [Requisitos de hardware y software para instalar SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+ La instalación se admite únicamente en procesadores x64. Para más información, vea [Requisitos de hardware y software para instalar SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
   
  La instalación de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] le solicitará que especifique el directorio para guardar el paquete extraído. Si no se escribe ninguna ubicación, el servidor, de forma predeterminada, será la unidad de sistema del equipo. Los archivos extraídos se conservarán una vez completada la instalación de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] .  
   
@@ -33,7 +36,7 @@ ms.lasthandoff: 12/05/2017
  Se admite la actualización desde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , pero no se admite la instalación\-en\-paralelo. Para más información sobre la compatibilidad con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Actualizaciones de ediciones y versiones admitidas](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Novedades de SQL Server](../../sql-server/what-s-new-in-sql-server-2017.md)
 
 [Especificaciones de capacidad máxima para SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md)   

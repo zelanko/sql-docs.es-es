@@ -8,7 +8,8 @@ ms.service:
 ms.component: track-changes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,19 +22,20 @@ helpviewer_keywords:
 - change data capture [SQL Server], security
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
-caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: acb1b3a650c43652dd6a2b46e52ce84690173f6d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d4f7c4422a192f60fec25e56553558041a579483
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="track-data-changes-sql-server"></a>Seguimiento de cambios de datos (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] proporciona dos características que realizan el seguimiento de los cambios en los datos de una base de datos: [captura de datos modificados](#Capture) y [seguimiento de cambios](#Tracking). Estas características permiten a las aplicaciones determinar los cambios de DML (operaciones de inserción, actualización y eliminación) que se realizaron en las tablas de usuario de una base de datos. La captura de datos modificados y el seguimiento de cambios pueden habilitarse en la misma base de datos; no se requiere ninguna consideración especial. Para obtener las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admitan la captura de datos modificados y el seguimiento de cambios, vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]admite el seguimiento de cambios.
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] proporciona dos características que realizan el seguimiento de los cambios en los datos de una base de datos: [captura de datos modificados](#Capture) y [seguimiento de cambios](#Tracking). Estas características permiten a las aplicaciones determinar los cambios de DML (operaciones de inserción, actualización y eliminación) que se realizaron en las tablas de usuario de una base de datos. La captura de datos modificados y el seguimiento de cambios pueden habilitarse en la misma base de datos; no se requiere ninguna consideración especial. Para obtener las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admitan la captura de datos modificados y el seguimiento de cambios, vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]admite el seguimiento de cambios.
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>Ventajas de utilizar la captura de datos modificados y el seguimiento de cambios  
  La capacidad para consultar los datos que han cambiado en una base de datos es un requisito importante para conseguir que algunas aplicaciones sean eficaces. Normalmente, para determinar los datos modificados, los desarrolladores de aplicaciones deben implementar un método de seguimiento personalizado en sus aplicaciones utilizando una combinación de desencadenadores, columnas de marca de tiempo y tablas adicionales. La creación de estas aplicaciones implica normalmente mucho trabajo de implementación, provoca actualizaciones del esquema y, a menudo, supone una gran sobrecarga en el rendimiento.  
@@ -62,7 +64,7 @@ ms.lasthandoff: 11/17/2017
 |**Cambios sometidos a seguimiento**|||  
 |Cambios de DML|Sí|Sí|  
 |**Información sometida a seguimiento**|||  
-|Datos históricos|Sí|No|  
+|Datos históricos|Sí|no|  
 |Si la columna cambió|Sí|Sí|  
 |Tipo de DML|Sí|Sí|  
   
@@ -93,7 +95,7 @@ ms.lasthandoff: 11/17/2017
 |Tipo de columna|Cambios capturados en tablas de cambios|Limitaciones|  
 |--------------------|---------------------------------------|-----------------|  
 |Columnas dispersas|Sí|No admite la captura de cambios cuando se usa un conjunto de columnas.|  
-|Columnas calculadas|No|No se hace un seguimiento de los cambios realizados en columnas calculadas. La columna aparecerá en la tabla de cambios con el tipo adecuado, pero tendrá un valor NULL.|  
+|Columnas calculadas|no|No se hace un seguimiento de los cambios realizados en columnas calculadas. La columna aparecerá en la tabla de cambios con el tipo adecuado, pero tendrá un valor NULL.|  
 |XML|Sí|No se hace un seguimiento de los cambios realizados en elementos XML individuales.|  
 |timestamp|Sí|El tipo de datos de la tabla de cambios se convierte a binario.|  
 |Tipos de datos BLOB|Sí|La imagen anterior de la columna BLOB solo se almacena si se cambia la propia columna.|  
@@ -116,7 +118,7 @@ ms.lasthandoff: 11/17/2017
   
  Para obtener más información sobre la creación de reflejo de la base de datos, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
-#### <a name="transactional-replication"></a>Replicación transaccional  
+#### <a name="transactional-replication"></a>replicación transaccional  
  La captura de datos modificados y la replicación transaccional pueden coexistir en la misma base de datos, pero el rellenado de las tablas de cambios se trata de forma diferente cuando se habilitan ambas características. La captura de datos modificados y la replicación transaccional siempre usan el mismo procedimiento, [sp_replcmds](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md), para leer los cambios del registro de transacciones. Cuando la captura de datos modificados se habilita sola, un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] llama a **sp_replcmds**. Cuando ambas características están habilitadas en la misma base de datos, el Agente de registro del LOG llama a **sp_replcmds**. Este agente rellena las tablas de cambios y las tablas de base de datos de distribución. Para obtener más información, consulte [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md).  
   
  Considere un escenario en el que la captura de datos modificados está habilitada en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] y se habilitan dos tablas para la captura. Para rellenar las tablas de cambios, el trabajo de captura llama a **sp_replcmds**. La base de datos se habilita para la replicación transaccional y se crea una publicación. Ahora, se crea el Agente de registro del LOG para la base de datos y se elimina el trabajo de captura. El Agente de registro del LOG continúa examinando el registro desde el último número de secuencia de registro que se confirmó en la tabla de cambios. De esta forma se asegura de la coherencia de los datos en las tablas de cambios. Si la replicación transaccional está deshabilitada en esta base de datos, se quita el Agente de registro del LOG y vuelve a recrear el trabajo de captura.  
@@ -175,7 +177,7 @@ ms.lasthandoff: 11/17/2017
 |Describe cómo administrar el seguimiento de cambios, configurar la seguridad y determinar los efectos en el almacenamiento y en el rendimiento cuando se utiliza el seguimiento de cambios.|[Administrar el seguimiento de cambios &#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)|  
 |Describe cómo las aplicaciones que utilizan el seguimiento de cambios pueden obtener los cambios que se han sometido a seguimiento, aplicarlos a otro almacén de datos y actualizar la base de datos de origen. En este tema también se describe el rol que desempeña el seguimiento de cambios cuando se produce una conmutación por error y se debe restaurar una base de datos a partir de una copia de seguridad.|[Trabajar con el seguimiento de cambios &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Funciones de captura de datos modificados &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
  [Funciones de seguimiento de cambios &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [Procedimientos almacenados de captura de datos modificados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   

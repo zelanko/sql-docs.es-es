@@ -8,26 +8,28 @@ ms.service:
 ms.component: udf
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-udf
+ms.technology:
+- dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - aggregate functions [SQL Server], user-defined
 - user-defined functions [CLR integration]
 ms.assetid: c278b746-6323-4b32-b460-239915acc067
-caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 48ec74f09990f3ace92feb25605c256d69166e32
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 16d6413cd47dc4775342e3cfb9adde33c0124cc5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="create-user-defined-aggregates"></a>Crear funciones de agregado definidas por el usuario
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] Es posible crear en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un objeto de base de datos programado en un ensamblado CLR. Los objetos de base de datos que pueden aprovechar el completo modelo de programación que proporciona CLR incluyen desencadenadores, procedimientos almacenados, funciones, funciones de agregado y tipos.  
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+Es posible crear en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un objeto de base de datos programado en un ensamblado CLR. Los objetos de base de datos que pueden aprovechar el completo modelo de programación que proporciona CLR incluyen desencadenadores, procedimientos almacenados, funciones, funciones de agregado y tipos.  
   
  Al igual que las funciones de agregado integradas que proporciona [!INCLUDE[tsql](../../includes/tsql-md.md)], las funciones de agregado definidas por el usuario realizan un cálculo en un conjunto de valores y devuelven un único valor.  
   
@@ -57,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [CREATE AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-aggregate-transact-sql.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Conceptos de programación en el ámbito de la integración de Common Language Runtime &#40;CLR&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

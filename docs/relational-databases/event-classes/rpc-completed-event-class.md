@@ -8,28 +8,31 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: RPC:Completed event class
+helpviewer_keywords:
+- RPC:Completed event class
 ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c14de50af756d8b58b4af5368f13b788b7c65e3a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4f3dd125555180acb996579ff07f184a8092722c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos RPC:Completed indica que se ha completado una llamada a procedimiento remoto.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La clase de eventos RPC:Completed indica que se ha completado una llamada a procedimiento remoto.  
   
 ## <a name="rpccompleted-event-class-data-columns"></a>Columnas de datos de la clase de eventos RPC:Completed  
   
-|Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
+|Nombre de columna de datos|Tipo de datos|Description|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
 |BinaryData|**imagen**|Valor binario que depende de la clase de eventos que se captura en el seguimiento.|2|Sí|  
@@ -37,11 +40,11 @@ ms.lasthandoff: 11/17/2017
 |CPU|**int**|Cantidad de tiempo de CPU que usa el evento. En microsegundos a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. En milisegundos en versiones anteriores.|18|Sí|  
 |DatabaseID|**int**|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |DatabaseName|**nvarchar**|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
-|Duración|**bigint**|Cantidad de tiempo que emplea el evento. En microsegundos a partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. En milisegundos en versiones anteriores.|13|Sí|  
+|Duration|**bigint**|Cantidad de tiempo que emplea el evento. En microsegundos a partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. En milisegundos en versiones anteriores.|13|Sí|  
 |EndTime|**datetime**|Hora a la que finalizó la llamada a procedimiento remoto.|15|Sí|  
 |Error|**int**|Número de error de un evento dado.<br /><br /> 0=Aceptar<br /><br /> 1=Error<br /><br /> 2=Anular<br /><br /> 3=Omitido|31|Sí|  
-|EventClass|**int**|Tipo de evento = 10.|27|No|  
-|EventSequence|**int**|Secuencia de un evento determinado de la solicitud.|51|No|  
+|EventClass|**int**|Tipo de evento = 10.|27|no|  
+|EventSequence|**int**|Secuencia de un evento determinado de la solicitud.|51|no|  
 |GroupID|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |IsSystem|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
@@ -62,7 +65,7 @@ ms.lasthandoff: 11/17/2017
 |Writes|**bigint**|Número de escrituras de páginas emitidas por la llamada a procedimiento remoto.|17|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

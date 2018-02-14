@@ -8,22 +8,23 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-security
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac3904e6dff2383dac9bbaa09621095b9b2ec11f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5116e95d422b182ddc8f9c102cae7cc286d5a4b1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
-# <a name="configure-always-encrypted-using-powershell"></a>Configure Always Encrypted using PowerShell (Configurar Always Encrypted con PowerShell)
+# <a name="configure-always-encrypted-using-powershell"></a>Configure Always Encrypted using PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 En el módulo SqlServer PowerShell se proporcionan cmdlets para configurar [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) en Azure SQL Database y SQL Server 2016.
@@ -34,7 +35,7 @@ Dado que el objetivo principal de Always Encrypted es garantizar la seguridad de
 
 Los vínculos a los artículos de cmdlet están al [final de esta página](#aecmdletreference).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Instale el [módulo SqlServer](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/sqlserver) en un equipo seguro distinto del equipo que hospeda la instancia de SQL Server. El módulo se puede instalar directamente desde la Galería de PowerShell.  Vea las instrucciones de [descarga](../../../ssms/download-sql-server-ps-module.md) para obtener más información.
 
@@ -120,7 +121,7 @@ $database | Get-SqlColumnMasterKey
 ## <a name="always-encrypted-tasks-using-powershell"></a>Tareas de Always Encrypted mediante PowerShell
 
 - [Configure Always Encrypted Keys using PowerShell (Configurar claves de Always Encrypted con PowerShell)](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md) 
-- [Rotate Always Encrypted Keys using PowerShell (Rotar claves Always Encrypted con PowerShell)](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
+- [Rotar claves de Always Encrypted con PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 - [Configurar el cifrado de columna con PowerShell](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md)
 
 
@@ -128,7 +129,7 @@ $database | Get-SqlColumnMasterKey
 
 Los siguientes cmdlets de PowerShell están disponibles para Always Encrypted:
 
-|CMDLET |Descripción
+|CMDLET |Description
 |:---|:---
 |**[Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)**   |Realiza la autenticación en Azure y adquiere un token de autenticación.
 |**[Add-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlcolumnencryptionkeyvalue)**   |Agrega un nuevo valor cifrado para un objeto de clave de cifrado de columnas existente en la base de datos.
@@ -156,6 +157,6 @@ Los siguientes cmdlets de PowerShell están disponibles para Always Encrypted:
 - [Always Encrypted (motor de base de datos)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Overview of Key Management for Always Encrypted (Información general de administración de claves de Always Encrypted)](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [Uso de Always Encrypted con el proveedor de datos .NET Framework para SQL Server](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
-- [Configure Always Encrypted using SQL Server Management Studio (Configurar Always Encrypted con SQL Server Management Studio)](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
+- [Configurar Always Encrypted con SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
 
 

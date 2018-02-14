@@ -58,11 +58,11 @@ author: MikeRayMSFT
 ms.author: MikeRayMSFT
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 85893d6f71a6caf270a56910418fe8217906ed76
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 32412d70d3dcf52fb467c5c4854526feb2fafe9d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurar los permisos y las cuentas de servicio de Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -136,7 +136,7 @@ En la tabla siguiente se enumeran las cuentas de servicio predeterminadas que ut
 |Componente|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]|Windows 7 y [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 y posterior|  
 |---------------|------------------------------------|----------------------------------------------------------------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]|[SERVICIO DE RED](#Network_Service)|[Cuenta virtual](#VA_Desc)*|  
-|e[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |[SERVICIO DE RED](#Network_Service)|[Cuenta virtual](#VA_Desc)*|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agente|[SERVICIO DE RED](#Network_Service)|[Cuenta virtual](#VA_Desc)*|  
 |[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[SERVICIO DE RED](#Network_Service)|[Cuenta virtual](#VA_Desc)*|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[SERVICIO DE RED](#Network_Service)|[Cuenta virtual](#VA_Desc)*|  
 |[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[SERVICIO DE RED](#Network_Service)|[Cuenta virtual](#VA_Desc)*|  
@@ -156,7 +156,7 @@ En la tabla siguiente se enumeran las cuentas de servicio predeterminadas que ut
 |Componente|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2|  
 |---------------|------------------------------------|---------------------------------------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]|Ninguno. Proporcione una cuenta de [usuario de dominio](#Domain_User) .|Proporcione una cuenta de [usuario de dominio](#Domain_User) .|  
-|e[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Ninguno. Proporcione una cuenta de [usuario de dominio](#Domain_User) .|Proporcione una cuenta de [usuario de dominio](#Domain_User) .|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agente|Ninguno. Proporcione una cuenta de [usuario de dominio](#Domain_User) .|Proporcione una cuenta de [usuario de dominio](#Domain_User) .|  
 |[!INCLUDE[ssAS](../../includes/ssas-md.md)]|Ninguno. Proporcione una cuenta de [usuario de dominio](#Domain_User) .|Proporcione una cuenta de [usuario de dominio](#Domain_User) .|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[SERVICIO DE RED](#Network_Service)|[Cuenta virtual](#VA_Desc)|  
 |[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[SERVICIO DE RED](#Network_Service)|[Cuenta virtual](#VA_Desc)|  
@@ -195,7 +195,7 @@ Las cuentas de servicio administradas, las cuentas de servicio administradas de 
   
 -   <a name="VA_Desc"></a>**Virtual Accounts**  
   
-    Las cuentas virtuales (a partir de Windows Server 2008 R2 y Windows 7) son *cuentas locales administradas* que proporcionan las siguientes características para simplificar la administración del servicio. La cuenta virtual se administra automáticamente y la cuenta virtual puede tener acceso a la red en un entorno de dominio. Si se usa el valor predeterminado de las cuentas de servicio durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se usará una cuenta virtual con el nombre de instancia como nombre del servicio, con el formato **NT SERVICE\\***\<NOMBREDESERVICIO>*. Los servicios que se ejecutan como cuentas virtuales acceden a los recursos de red mediante las credenciales de la cuenta del equipo con el formato *<nombre_de_dominio>***\\***<nombre_de_equipo>***$**.  Al especificar una cuenta virtual para iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], deje en blanco la contraseña. Si la cuenta virtual no puede registrar el nombre principal de servicio (SPN), registre el SPN manualmente. Para más información sobre cómo registrar un SPN manualmente, consulte [Registro manual de SPN](https://msdn.microsoft.com/library/ms191153.aspx).  
+    Las cuentas virtuales (a partir de Windows Server 2008 R2 y Windows 7) son *cuentas locales administradas* que proporcionan las siguientes características para simplificar la administración del servicio. La cuenta virtual se administra automáticamente y la cuenta virtual puede tener acceso a la red en un entorno de dominio. Si se usa el valor predeterminado de las cuentas de servicio durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se usará una cuenta virtual con el nombre de instancia como nombre del servicio, con el formato **NT SERVICE\\***\<NOMBREDESERVICIO>*. Los servicios que se ejecutan como cuentas virtuales acceden a los recursos de red mediante las credenciales de la cuenta del equipo con el formato *<nombre_dominio>*__\\__*<nombre_equipo>*__$__.  Al especificar una cuenta virtual para iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], deje en blanco la contraseña. Si la cuenta virtual no puede registrar el nombre principal de servicio (SPN), registre el SPN manualmente. Para más información sobre cómo registrar un SPN manualmente, consulte [Registro manual de SPN](https://msdn.microsoft.com/library/ms191153.aspx).  
   
     > [!NOTE]  
     >  No se pueden usar cuentas virtuales para la instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ya que la cuenta virtual no tendría el mismo SID en cada nodo del clúster.  
@@ -293,7 +293,7 @@ En esta sección se describen los permisos que el programa de instalación de [!
   
  En la tabla siguiente se muestran los permisos que el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solicita para las SID por servicio o los grupos locales de Windows que usan los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
-|Servicio[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Permisos concedidos por el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ssNoVersion|Permisos concedidos por el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|
 |---------------------------------------|------------------------------------------------------------|
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (Todos los derechos se conceden al SID por servicio. Instancia predeterminada: **NT SERVICE\MSSQLSERVER**. Instancia con nombre: **NT SERVICE\MSSQL$**InstanceName).|**Iniciar sesión como servicio** (SeServiceLogonRight)<br /><br /> **Reemplazar un token de nivel de proceso** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Omitir comprobación de recorrido** (SeChangeNotifyPrivilege)<br /><br /> **Ajustar las cuotas de la memoria para un proceso** (SeIncreaseQuotaPrivilege)<br /><br /> Permiso para iniciar el objeto de escritura de SQL<br /><br /> Permiso para leer el servicio Registro de eventos<br /><br /> Permiso para leer el servicio Llamada a procedimiento remoto|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :** \*<br /><br /> (Todos los derechos se conceden al SID por servicio. Instancia predeterminada: **NT Service\SQLSERVERAGENT**. Instancia con nombre: **NT Service\SQLAGENT$***NombreDeInstancia*).|**Iniciar sesión como servicio** (SeServiceLogonRight)<br /><br /> **Reemplazar un token de nivel de proceso** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Omitir comprobación de recorrido** (SeChangeNotifyPrivilege)<br /><br /> **Ajustar las cuotas de la memoria para un proceso** (SeIncreaseQuotaPrivilege)|  
@@ -312,7 +312,7 @@ En esta sección se describen los permisos que el programa de instalación de [!
  *El servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se deshabilita en las instancias de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
 ###  <a name="Reviewing_ACLs"></a> Permisos del sistema de archivos concedidos a SID por servicio de SQL Server o grupos locales de Windows  
- Las cuentas de servicio de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben tener acceso a los recursos. Las listas de control de acceso se establecen para el SID por servicio o el grupo local de Windows.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben tener acceso a los recursos. Las listas de control de acceso se establecen para el SID por servicio o el grupo local de Windows.  
   
 > [!IMPORTANT]  
 >  En las instalaciones de clústeres de conmutación por error, los recursos de discos compartidos se deben establecer en una ACL de una cuenta local.  
@@ -451,8 +451,8 @@ En la tabla siguiente se muestran los permisos que necesitan los servicios de [!
 |--------------------------|-------------------|-------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)|Escribir en un buzón de correo mediante xp_sendmail.|Permisos de escritura de la red.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)|Ejecute xp_cmdshell para un usuario que no sea administrador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Actuar como parte del sistema operativo y reemplazar un token de nivel de proceso.|  
-|Agente[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)|Usar la característica de reinicio automático.|Debe ser un miembro del grupo local Administradores.|  
-|Asistente para la optimización de[!INCLUDE[ssDE](../../includes/ssde-md.md)] |Optimiza las bases de datos para un rendimiento óptimo de las consultas.|Al utilizarla por primera vez, un usuario que tenga credenciales administrativas debe inicializar la aplicación. Después de la inicialización, los usuarios de dbo pueden usar el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para optimizar solo aquellas tablas de las que son propietarios. Para obtener más información, vea el tema que trata sobre cómo inicializar el Asistente para la optimización del [!INCLUDE[ssDE](../../includes/ssde-md.md)] en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agente (MSSQLSERVER)|Usar la característica de reinicio automático.|Debe ser un miembro del grupo local Administradores.|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] Asistente para la optimización|Optimiza las bases de datos para un rendimiento óptimo de las consultas.|Al utilizarla por primera vez, un usuario que tenga credenciales administrativas debe inicializar la aplicación. Después de la inicialización, los usuarios de dbo pueden usar el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para optimizar solo aquellas tablas de las que son propietarios. Para obtener más información, vea el tema que trata sobre cómo inicializar el Asistente para la optimización del [!INCLUDE[ssDE](../../includes/ssde-md.md)] en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
 > [!IMPORTANT]  
 >  Antes de actualizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], habilite la autenticación de Windows para el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y compruebe la configuración predeterminada necesaria: que la cuenta de servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sea miembro del grupo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sysadmin.  
@@ -488,7 +488,7 @@ El Instrumental de administración de Windows (WMI) debe poder conectarse al [!I
   
 -   Permiso de nivel de servidor**VIEW ANY DATABASE** .  
   
-     El programa de instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un espacio de nombres WMI SQL y concede el permiso de lectura al SID por servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación crea un espacio de nombres WMI SQL y concede permiso de lectura al SID por servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ###  <a name="Pipes"></a> Canalizaciones con nombre  
 
@@ -539,13 +539,13 @@ En toda la instalación, el programa de instalación de [!INCLUDE[ssNoVersion](.
  El SID por servicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer se proporciona como un inicio de sesión del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . El inicio de sesión del SID por servicio es un miembro del rol fijo de servidor **sysadmin** .  
   
 ####  <a name="SQLWMI"></a> WMI y privilegios de SQL  
- El programa de instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aprovisiona la cuenta **NT SERVICE\Winmgmt** como un inicio de sesión de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y la agrega al rol fijo de servidor **sysadmin** .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación aprovisiona la cuenta **NT SERVICE\Winmgmt** como un inicio de sesión de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y la agrega al rol fijo de servidor **sysadmin** .  
   
 #### <a name="ssrs-provisioning"></a>Aprovisionamiento de SSRS  
  La cuenta especificada durante la instalación se aprovisiona como miembro del rol de base de datos **RSExecRole** . Para obtener más información, vea [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
 ###  <a name="SSAS"></a> Aprovisionamiento de SSAS  
- Los requisitos de cuentas de servicio de[!INCLUDE[ssAS](../../includes/ssas-md.md)] varían en función de cómo se implementa en el servidor. Si va a instalar [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere que se configure el servicio de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para ejecutarse en una cuenta de dominio. Las cuentas de dominio son necesarias para admitir la facilidad administrada de la cuenta que está integrada en SharePoint. Por esta razón, el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no proporciona una cuenta de servicio predeterminada, como una cuenta virtual, para una instalación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Para obtener más información sobre el aprovisionamiento de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, vea [Configurar las cuentas de servicio Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md).  
+ [!INCLUDE[ssAS](../../includes/ssas-md.md)] varían en función de cómo se implementa en el servidor. Si va a instalar [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere que se configure el servicio de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para ejecutarse en una cuenta de dominio. Las cuentas de dominio son necesarias para admitir la facilidad administrada de la cuenta que está integrada en SharePoint. Por esta razón, el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no proporciona una cuenta de servicio predeterminada, como una cuenta virtual, para una instalación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Para obtener más información sobre el aprovisionamiento de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, vea [Configurar las cuentas de servicio Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md).  
   
  Para todas las demás instalaciones independientes de [!INCLUDE[ssAS](../../includes/ssas-md.md)] , puede aprovisionar el servicio para ejecutarse en una cuenta de dominio, una cuenta del sistema integrada, una cuenta administrada o una cuenta virtual. Para obtener más información sobre el aprovisionamiento de cuentas, vea [Configurar las cuentas de servicio &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md).  
   
@@ -622,7 +622,7 @@ En toda la instalación, el programa de instalación de [!INCLUDE[ssNoVersion](.
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   e[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]   
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agente  
   
      Tenga en cuenta que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se deshabilita en instancias de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] y [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] con Advanced Services.  
   

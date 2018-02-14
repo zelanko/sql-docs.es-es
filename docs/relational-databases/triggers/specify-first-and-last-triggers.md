@@ -8,7 +8,8 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-dml
+ms.technology:
+- dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,23 +19,24 @@ helpviewer_keywords:
 - INSTEAD OF triggers
 - AFTER triggers
 ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
-caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f49fe67e3a8663f9ef56941de33a6d918084febf
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e9aa886d4456a2dbfbad2c82aca4db83d119357a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="specify-first-and-last-triggers"></a>Especificar el primer y el último desencadenador
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Puede especificar que uno de los desencadenadores AFTER asociados a una tabla sea el primero o el último que se ejecute para cada una de las acciones desencadenadoras INSERT, DELETE y UPDATE. Los desencadenadores AFTER que se activan entre el primero y el último se ejecutan en un orden indefinido.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Puede especificar que uno de los desencadenadores AFTER asociados a una tabla sea el primero o el último que se ejecute para cada una de las acciones desencadenadoras INSERT, DELETE y UPDATE. Los desencadenadores AFTER que se activan entre el primero y el último se ejecutan en un orden indefinido.  
   
  Para especificar el orden de un desencadenador AFTER, use el procedimiento almacenado **sp_settriggerorder** . **sp_settriggerorder** tiene las opciones siguientes.  
   
-|Opción|Descripción|  
+|Opción|Description|  
 |------------|-----------------|  
 |**Primero**|Especifica que el desencadenador DML es el primer desencadenador AFTER que se activa para una acción desencadenadora.|  
 |**Último**|Especifica que el desencadenador DML es el último desencadenador AFTER que se activa para una acción desencadenadora.|  
@@ -61,7 +63,7 @@ sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UP
   
  La replicación genera automáticamente un primer desencadenador para cualquier tabla incluida en una suscripción de actualización inmediata o en cola. La replicación requiere que su desencadenador sea el primero. Generará un error si se intenta incluir una tabla con un primer desencadenador en una suscripción de actualización inmediata o en cola. Si intenta convertir un desencadenador en el primero después de haber incluido una tabla en una suscripción, **sp_settriggerorder** devolverá un error. Tanto si usa ALTER en el desencadenador de replicación como si usa **sp_settriggerorder** para convertir el desencadenador de replicación en un desencadenador último o sin orden definido, la suscripción no funcionará correctamente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [sp_settriggerorder &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql.md)  
   

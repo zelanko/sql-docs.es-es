@@ -8,24 +8,27 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: revoking permissions [SQL Server]
+helpviewer_keywords:
+- revoking permissions [SQL Server]
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f61f71a62cf148fc7cd5d40b096aa14f7937128c
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: dc855ac7206e483b4a024d2fa31876a73ffa80b3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>Revocar los permisos en una colección de esquemas XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Para revocar el permiso para crear una colección de esquemas XML, siga uno de los procedimientos siguientes:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Para revocar el permiso para crear una colección de esquemas XML, realice uno de los procedimientos siguientes:  
   
 -   Revocar el permiso ALTER para el esquema relacional. Entonces, la entidad de seguridad no podrá crear una colección de esquemas XML en el esquema relacional. No obstante, la entidad de seguridad todavía podría hacerlo en otros esquemas relacionales de la misma base de datos.  
   

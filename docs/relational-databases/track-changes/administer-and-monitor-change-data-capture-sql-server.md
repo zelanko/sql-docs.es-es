@@ -8,7 +8,8 @@ ms.service:
 ms.component: track-changes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - change data capture [SQL Server], administering
 - change data capture [SQL Server], jobs
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 08908c187ec2e548b4379aae11517f1ad50626fe
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: ffe44a6f8b86c1c745ac583ddccac3d6998612e5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrar y supervisar la captura de datos modificados (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo administrar y supervisar la captura de datos modificados.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+En este tema se describe cómo administrar y supervisar la captura de datos modificados.  
   
 ##  <a name="Capture"></a> Trabajo de captura  
  El trabajo de captura se inicia ejecutando el procedimiento almacenado sin parámetros **sp_MScdc_capture_job**. Este procedimiento almacenado empieza extrayendo los valores configurados para *maxtrans*, *maxscans*, *continuous*y *pollinginterval* para el trabajo de captura desde msdb.dbo.cdc_jobs. Después, estos valores configurados se transfieren como parámetros al procedimiento almacenado **sp_cdc_scan**. Esto se usa para llamar a **sp_replcmds** con el fin de realizar el examen del registro.  

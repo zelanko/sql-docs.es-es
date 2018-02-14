@@ -8,28 +8,29 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-transaction-log
+ms.technology:
+- dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - delayed durability
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c55b9f3bc4df4048c2edb058e7c70579fb80bdba
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 0f54b24d7395584a8182b607bfc491179e314336
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="control-transaction-durability"></a>Controlar la durabilidad de las transacciones
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Las confirmaciones de transacciones de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden ser totalmente durables (el valor predeterminado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) o durables diferidas (conocidas también como confirmaciones diferidas).    
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Las confirmaciones de transacciones pueden ser totalmente durables, el valor predeterminado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o durables diferidas (también conocidas como confirmaciones diferidas).    
     
  Las confirmaciones de transacciones totalmente durables son sincrónicas y notifican una instrucción COMMIT como correcta para devolver el control al cliente únicamente tras escribir en disco los registros de la transacción. Las confirmaciones de transacciones durables diferidas son asincrónicas y notifican una instrucción COMMIT como correcta antes de escribir en disco los registros de la transacción. Para que una transacción sea durable, es necesario escribir las entradas del registro de transacciones en el disco. Las transacciones durables diferidas pasan a ser durables cuando las entradas del registro de transacciones se vacían en el disco.    
     

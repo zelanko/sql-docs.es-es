@@ -8,28 +8,31 @@ ms.service:
 ms.component: ssms-registration
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.exportregisteredservers.f1
+f1_keywords:
+- sql13.swb.exportregisteredservers.f1
 helpviewer_keywords:
 - Registered Servers [SQL Server], exporting
 - exporting registered server information
 - transferring registered server information
 ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f65431cfdc98981e8bf4bcd6ae3fe2cd592a3e0e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: b47f3de05f1d1143774803579c0b1ede7258ab77
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>Exportar información de servidores registrados (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] En este tema se describe cómo guardar y exportar información de servidores registrados en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para distribuirla a otros empleados o servidores. Puede utilizar esta característica de exportación para crear una interfaz de usuario coherente en varios equipos.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+En este tema se describe cómo guardar y exportar información de servidores registrados en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]para distribuirla a otros empleados o servidores. Puede utilizar esta característica de exportación para crear una interfaz de usuario coherente en varios equipos.  
   
  La exportación y posterior importación de archivos de servidores registrados permite configurar fácilmente varios equipos con los mismos servidores en Servidores registrados. Esto resulta útil cuando se administra un gran número de servidores desde equipos en varias ubicaciones, o cuando se desea configurar un usuario menos experto con una configuración de conexión básica.  
   

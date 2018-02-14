@@ -8,26 +8,29 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: FileTables [SQL Server], table schema
+helpviewer_keywords:
+- FileTables [SQL Server], table schema
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
-caps.latest.revision: "7"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 04e37414b0614809ce631c1541a863810e2b62b4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2e19f00c854bdbc79acc2d83f3d3c8095166ce5a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="filetable-schema"></a>Esquema de FileTable
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Describe los esquemas predefinido y fijo de FileTable.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Describe los esquemas predefinido y fijo de una FileTable.  
   
-|Nombre de atributo de archivo|tipo|Tamaño|Valor de DB-Library|Descripción|Accesibilidad del sistema de archivos|  
+|Nombre de atributo de archivo|Tipo|Tamaño|Valor predeterminado|Description|Accesibilidad del sistema de archivos|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
 |**path_locator**|**hierarchyid**|variable|**hierarchyid** que identifica la posición de este elemento.|La posición de este nodo en el objeto FileNamespace jerárquico.<br /><br /> La clave principal de la tabla.|Se puede crear y modificar estableciendo los valores de la ruta de acceso de Windows.|  
 |**stream_id**|**[uniqueidentifier] rowguidcol**||Un valor devuelto por la función **NEWID()** .|Identificador único de los datos de FILESTREAM.|No aplicable.|  
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/17/2017
 |**is_system**|**bit**<br /><br /> **NOT NULL**|1 byte|FALSE|Atributo de archivo del sistema.|Calculado automáticamente. También se puede establecer con las API de Windows.|  
 |**is_temporary**|**bit**<br /><br /> **NOT NULL**|1 byte|FALSE|Atributo de archivo temporal.|Calculado automáticamente. También se puede establecer con las API de Windows.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Crear, modificar y quitar FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)  
   
   

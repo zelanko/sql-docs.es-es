@@ -8,19 +8,20 @@ ms.service:
 ms.component: extended-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology: xevents
+ms.technology:
+- xevents
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: 1733064f1503f9a8a0e082835b58f91ff195cd9e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+manager: craigg
+ms.openlocfilehash: 7415e768584c9256eaa600cb2302c7cc9aa0d529
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Advanced Viewing of Target Data from Extended Events in SQL Server (Visualización avanzada de datos de destino de eventos extendidos en SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ En este artículo se explica cómo usar las características avanzadas de SQL Se
 
 
 
-### <a name="prerequisites"></a>Requisitos previos
+### <a name="prerequisites"></a>Prerequisites
 
 En este artículo se da por hecho que ya sabe cómo crear e iniciar una sesión de eventos. En este artículo encontrará instrucciones sobre cómo crear una sesión de eventos:
 
@@ -44,7 +45,7 @@ En este artículo se da por hecho que ya sabe cómo crear e iniciar una sesión 
 
 En este artículo también se da por hecho que ha instalado una versión mensual muy reciente de SSMS. Encontrará ayuda para instalarlo en:
 
-- [Descarga de SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)
+- [Descargar SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)
 
 
 
@@ -289,7 +290,7 @@ Agrupar filas con valores coincidentes en una misma columna es el primer paso pa
 #### <a name="d41-grouping"></a>D.4.1 Agrupación
 
 
-En la barra de herramientas de eventos extendidos, el botón **Agrupación** abre un cuadro de diálogo que sirve para agrupar los datos recogidos en una columna determinada. En la siguiente captura de pantalla se muestra un cuadro de diálogo en el que los datos se agrupan por la columna *name* .
+En la barra de herramientas de eventos extendidos, el botón **Agrupación** abre un cuadro de diálogo que sirve para agrupar los datos recogidos en una columna determinada. En la siguiente captura de pantalla se muestra un cuadro de diálogo en el que los datos se agrupan por la columna *name*.
 
 ![Barra de herramientas > botón Agrupación y, después, cuadro de diálogo Agrupación](../../relational-databases/extended-events/media/xevents-ssms-ui53-grouping.png)
 

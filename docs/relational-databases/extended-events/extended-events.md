@@ -17,21 +17,21 @@ helpviewer_keywords:
 - extended events [SQL Server]
 - xe
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 97398ffda5f94b9a76adea40111c2f5bd9c3137a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 12c46e8d5a1496d21f2f4b0ab40956020a8ac612
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="extended-events"></a>Eventos extendidos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Los eventos extendidos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen una arquitectura muy escalable y configurable que permite a los usuarios recopilar la información justa y necesaria para solucionar o identificar un problema de rendimiento.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen una arquitectura muy escalable y configurable que permite a los usuarios recopilar la información justa y necesaria para solucionar o identificar un problema de rendimiento.  
 
 Encontrará más información sobre los eventos extendidos en:
 
@@ -97,22 +97,22 @@ Si mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o [!INCLUD
 |----------------------|-----------|  
 |Utilice el **Explorador de objetos** para administrar sesiones de eventos.|[Administrar sesiones de eventos en el Explorador de objetos](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)|  
 |Describe cómo crear una sesión de Extended Events.|[Crear una sesión de eventos extendidos](http://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)|  
-|Describe cómo ver y restaurar los datos de destino.| [Advanced Viewing of Target Data from Extended Events in SQL Server (Visualización avanzada de datos de destino de eventos extendidos en SQL Server)](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)|  
+|Describe cómo ver y restaurar los datos de destino.| [Visualización avanzada de datos de destino de eventos extendidos en SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)|  
 |Describe cómo usar las herramientas de Extended Events para crear administrar sesiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events.|[Herramientas de eventos extendidos](../../relational-databases/extended-events/extended-events-tools.md)|  
 |Describe cómo alterar una sesión de Extended Events.|[Modificar una sesión de eventos extendidos](../../relational-databases/extended-events/alter-an-extended-events-session.md)|  
 |Describe cómo obtener información acerca de los campos asociados a los eventos.|[Obtener los campos de todos los eventos](http://msdn.microsoft.com/library/4e4ee03f-5bca-42ed-a37c-db1c82e3aad2)|  
 |Describe cómo determinar los eventos que están disponibles en los paquetes registrados.|[Ver los eventos de los paquetes registrados](http://msdn.microsoft.com/library/9a90b1a2-aa69-43f6-bdeb-cc5f57a26c6f)|  
 |Describe cómo determinar los destinos de eventos extendidos que están disponibles en los paquetes registrados.|[Ver los destinos de eventos extendidos de los paquetes registrados](http://msdn.microsoft.com/library/4985aa5f-ac99-49f6-852c-9d25916549e9)|  
-|Describe cómo ver los eventos y las acciones de los eventos extendidos que son equivalentes a cada evento de Seguimiento de SQL y sus columnas asociadas.|[Ver los eventos extendidos equivalentes a las clases de evento de Seguimiento de SQL Server](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
+|Describe cómo ver los eventos y las acciones de los eventos extendidos que son equivalentes a cada evento de Seguimiento de SQL y sus columnas asociadas.|[Ver los eventos extendidos equivalentes a las clases de evento de Seguimiento de SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
 |Describe cómo determinar los parámetros que puede establecer al usar el argumento ADD TARGET en CREATE EVENT SESSION o ALTER EVENT SESSION.|[Obtener los parámetros configurables del argumento ADD TARGET](http://msdn.microsoft.com/library/08454543-c5c8-4ca3-9af9-f1d82264471c)|  
 |Describe cómo convertir un script de Seguimiento de SQL existente en una sesión de eventos extendidos.|[Convertir un script de seguimiento de SQL existente en una sesión de eventos extendidos](../../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
-|Describe cómo determinar las consultas que mantienen el bloqueo, el plan de la consulta y la pila de [!INCLUDE[tsql](../../includes/tsql-md.md)] en el momento en que se realizó el bloqueo.|[Determinar las consultas que mantienen bloqueos](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)|  
+|Describe cómo determinar las consultas que mantienen el bloqueo, el plan de la consulta y la pila de [!INCLUDE[tsql](../../includes/tsql-md.md)] en el momento en que se realizó el bloqueo.|[Determinar las consultas que retienen bloqueos](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)|  
 |Describe cómo identificar el origen de los bloqueas que afectan al rendimiento de la base de datos.|[Buscar los objetos que han obtenido más bloqueos](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |Describe cómo usar los eventos extendidos con el seguimiento de eventos para Windows a fin de supervisar la actividad del sistema.|[Supervisar la actividad del sistema mediante eventos extendidos](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)|  
 | Usar las vistas de catálogo y las vistas de administración dinámica (DMV) para eventos extendidos | [Instrucciones SELECT y JOIN en vistas del sistema para eventos extendidos en SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Compatibilidad de DAC con las versiones y objetos de SQL Server](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
  [Implementar una aplicación de capa de datos](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   

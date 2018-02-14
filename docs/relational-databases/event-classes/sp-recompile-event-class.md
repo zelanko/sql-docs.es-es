@@ -8,37 +8,40 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: SP:Recompile event class
+helpviewer_keywords:
+- SP:Recompile event class
 ms.assetid: 526c8eae-a07b-4d0e-b91e-8e537835d77d
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bbf4970fd14025832f234b194f3314b189013766
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f56543d46915673c51e1626d669f473416aed01f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sprecompile-event-class"></a>SP:Recompile, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos SP:Recompile indica que un procedimiento almacenado, desencadenador o función definida por el usuario se ha vuelto a compilar. Las recompilaciones notificadas por esta clase de eventos se producen en el nivel de instrucción.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La clase de eventos SP:Recompile indica que un procedimiento almacenado, desencadenador o función definida por el usuario se ha vuelto a compilar. Las recompilaciones notificadas por esta clase de eventos se producen en el nivel de instrucción.  
   
  La forma preferida de realizar un seguimiento de las recompilaciones de nivel de instrucción consiste en usar la clase de eventos SQL:StmtRecompile. La clase de eventos SP:Recompile está en desuso. Para más información, consulte [SQL:StmtRecompile Event Class](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md).  
   
 ## <a name="sprecompile-event-class-data-columns"></a>Columnas de datos de la clase de eventos SP:Recompile  
   
-|Nombre de columna de datos|**Tipo de datos**|Descripción|Identificador de columna|Filtrable|  
+|Nombre de columna de datos|**Data type**|Description|Identificador de columna|Filtrable|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
 |ClientProcessID|**int**|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se llena si el cliente proporciona el Id. de proceso.|9|Sí|  
 |DatabaseID|**int**|Id. de la base de datos en que se ejecuta el procedimiento almacenado. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |DatabaseName|**nvarchar**|Nombre de la base de datos en la que se ejecuta el procedimiento almacenado.|35|Sí|  
-|EventClass|**int**|Tipo de evento = 37.|27|No|  
-|EventSequence|**int**|Secuencia de un evento determinado dentro de la solicitud.|51|No|  
+|EventClass|**int**|Tipo de evento = 37.|27|no|  
+|EventSequence|**int**|Secuencia de un evento determinado dentro de la solicitud.|51|no|  
 |EventSubClass|**int**|Tipo de la subclase de eventos. Indica la razón de la recompilación.<br /><br /> 1 = Cambio en el esquema<br /><br /> 2 = Cambio en estadísticas<br /><br /> 3 = Recompilación DNR<br /><br /> 4 = Cambio en opción configurada<br /><br /> 5 = Cambio en tabla Temp<br /><br /> 6 = Cambio en conjunto de filas remoto<br /><br /> 7 = Cambio en permisos For Browse<br /><br /> 8 = Cambio en entorno de notificación de consultas<br /><br /> 9 = Cambio en vista MPI<br /><br /> 10 = Cambio en opciones de cursor<br /><br /> 11 = Opción con recompilación|21|Sí|  
 |GroupID|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
@@ -54,7 +57,7 @@ ms.lasthandoff: 11/17/2017
 |ObjectType|**int**|Valor que representa el tipo de objeto implicado en el evento. Para más información, consulte [ObjectType Trace Event Column](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sí|  
 |Offset|**int**|Desplazamiento inicial de la instrucción en el procedimiento almacenado o proceso por lotes que causó la recompilación.|61|Sí|  
 |IdSolicitud|**int**|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
-|ServerName|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
+|ServerName|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|no|  
 |SessionLoginName|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|**int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |SqlHandle|**varbinary**|Hash de 64 bits basado en el texto de una consulta ad hoc o en el Id. de base de datos y de objeto de un objeto SQL. Este valor puede pasarse a sys.dm_exec_sql_text para recuperar el texto SQL asociado.|63|Sí|  
@@ -63,8 +66,8 @@ ms.lasthandoff: 11/17/2017
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que se utiliza para describir la transacción actual.|50|Sí|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [SQL:StmtRecompile Event Class](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md)  
+ [SQL:StmtRecompile (clase de eventos)](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md)  
   
   

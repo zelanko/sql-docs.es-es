@@ -8,7 +8,8 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-dml
+ms.technology:
+- dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - DML triggers, about DML triggers
 - triggers [SQL Server]
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
-caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: afb92fc71dcb3581024950cfaac84c5b2dac7968
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 52773af792848bd628c238e0120f08f7441c2d6f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dml-triggers"></a>Desencadenadores DML
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Los desencadenadores DML constituyen un tipo especial de procedimiento almacenado que se aplica automáticamente cuando tiene lugar un evento de lenguaje de manipulación de datos (DML) que afecta a la tabla o la vista definida en el desencadenador. Los eventos DML incluyen las instrucciones INSERT, UPDATE o DELETE. Los desencadenadores DML pueden usarse para aplicar reglas de negocios y la integridad de datos, consultar otras tablas e incluir instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] complejas. El desencadenador y la instrucción que lo activa se tratan como una sola transacción, que puede revertirse desde el desencadenador. Si se detecta un error grave (por ejemplo, no hay suficiente espacio en disco), se revierte automáticamente toda la transacción.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Los desencadenadores DML constituyen un tipo especial de procedimiento almacenado que se inicia automáticamente cuando tiene lugar un evento de lenguaje de manipulación de datos (DML) que afecta a la tabla o la vista definida en el desencadenador. Los eventos DML incluyen las instrucciones INSERT, UPDATE o DELETE. Los desencadenadores DML pueden usarse para aplicar reglas de negocios y la integridad de datos, consultar otras tablas e incluir instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] complejas. El desencadenador y la instrucción que lo activa se tratan como una sola transacción, que puede revertirse desde el desencadenador. Si se detecta un error grave (por ejemplo, no hay suficiente espacio en disco), se revierte automáticamente toda la transacción.  
   
 ## <a name="dml-trigger-benefits"></a>Ventajas de los desencadenadores DML  
  Los desencadenadores DML se parecen a las restricciones en que pueden aplicar la integridad de entidad o de dominio. En general, la integridad de entidad se debe exigir siempre en el nivel más bajo mediante índices que formen parte de las restricciones PRIMARY KEY y UNIQUE o que se creen independientemente de las restricciones. La integridad de dominio se debe aplicar con restricciones CHECK y la integridad referencial (RI) se debe aplicar a las restricciones de FOREIGN KEY. Los desencadenadores DML resultan de especial utilidad cuando las características permitidas por las restricciones no cubren las necesidades funcionales de la aplicación.  
@@ -73,7 +75,7 @@ ms.lasthandoff: 11/17/2017
  Desencadenadores CLR  
  Un desencadenador CLR puede ser un desencadenador AFTER o INSTEAD OF. Un desencadenador CLR también puede ser un desencadenador DDL. En lugar de ejecutar un procedimiento almacenado [!INCLUDE[tsql](../../includes/tsql-md.md)] , un desencadenador CLR ejecuta uno o más métodos escritos en código administrado que son miembros de un ensamblado creado en .NET Framework y cargado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Tarea|Tema|  
 |----------|-----------|  
@@ -88,7 +90,7 @@ ms.lasthandoff: 11/17/2017
 |Describe cómo eliminar o deshabilitar los desencadenadores DML.|[Eliminar o deshabilitar desencadenadores DML](../../relational-databases/triggers/delete-or-disable-dml-triggers.md)|  
 |Describe cómo administrar la seguridad de los desencadenadores.|[Administrar la seguridad de los desencadenadores](../../relational-databases/triggers/manage-trigger-security.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

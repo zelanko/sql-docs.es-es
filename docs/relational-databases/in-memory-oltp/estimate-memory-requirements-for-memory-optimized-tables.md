@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1cb0435fd5e28952f71cc23ce61af4a3635f06cf
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2c1553db5a161b8ca4fb69694340f55d8d818ff5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar los requisitos de memoria para las tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -144,7 +145,7 @@ Para obtener información sobre cómo funcionan los índices de hash en las tabl
   
 #### <a name="setting-the-hash-index-array-size"></a>Establecer el tamaño de la matriz de índices hash  
   
-El tamaño de la matriz hash se establece mediante `(bucket_count= value)` donde `value` es un valor entero mayor que cero. Si `value` no es una potencia de 2, el valor real de bucket_count se redondea a la siguiente potencia más cercana de 2.  En la tabla de ejemplo (bucket_count = 5000000), como 5 000 000 no es una potencia de 2, el número de depósitos real se redondea hasta 8 388 608 (2^23).  Debe usar este número, no 5.000.000, al calcular la memoria necesaria para la matriz hash.  
+El tamaño de la matriz hash se establece mediante `(bucket_count= value)` donde `value` es un valor entero mayor que cero. Si `value` no es una potencia de 2, el valor real de bucket_count se redondea a la siguiente potencia más cercana de 2.  En la tabla de ejemplo (bucket_count = 5000000), como 5 000 000 no es una potencia de 2, el número de cubos real se redondea hasta 8 388 608 (2^23).  Debe usar este número, no 5.000.000, al calcular la memoria necesaria para la matriz hash.  
   
 Así, en nuestro ejemplo, la memoria necesaria para cada matriz hash es:  
   

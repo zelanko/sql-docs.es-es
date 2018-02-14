@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mail
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - Database Mail [SQL Server], architecture
 - Database Mail [SQL Server], components
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
-caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 71bd2fdde74342683016e6c99431ff8a244e04a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 530adcf1fdc0148283f8362c790cabff82314aa0
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-mail"></a>Correo electrónico de base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Correo electrónico de base de datos es una solución empresarial para enviar mensajes de correo electrónico desde [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. El Correo electrónico de base de datos permite a las aplicaciones de base de datos enviar mensajes de correo electrónico a los usuarios. Los mensajes enviados pueden incluir resultados de consultas y archivos de cualquier recurso de la red.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+El Correo electrónico de base de datos es una solución empresarial para enviar mensajes de correo electrónico desde [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. El Correo electrónico de base de datos permite a las aplicaciones de base de datos enviar mensajes de correo electrónico a los usuarios. Los mensajes enviados pueden incluir resultados de consultas y archivos de cualquier recurso de la red.  
   
   
 ##  <a name="Benefits"></a> Ventajas de usar el Correo electrónico de base de datos  

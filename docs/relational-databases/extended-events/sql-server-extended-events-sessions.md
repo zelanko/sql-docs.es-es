@@ -18,18 +18,18 @@ helpviewer_keywords:
 - sessions
 - extend events [SQL Server]
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bea1e28b3bd0530658611334ea55af7312c5aa93
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 09eae3690643f45896325c141bd79ac218f27c04
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
-# <a name="sql-server-extended-events-sessions"></a>Sesiones de SQL Server Extended Events
+# <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Una sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events se crea en el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda el motor de Extended Events. Los aspectos siguientes de una sesión de Extended Events proporcionan un contexto para entender la infraestructura de Extended Events y el procesamiento general que se produce:  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
  En la figura anterior, observe que el estado de la sesión cambia cuando se emiten los distintos comandos DDL para una sesión de evento. En la tabla siguiente se describen estos cambios de estado.  
   
-|Etiqueta de la ilustración|Instrucción DDL|Descripción|  
+|Etiqueta de la ilustración|Instrucción DDL|Description|  
 |------------------------|-------------------|-----------------|  
 |Crear|CREATE EVENT SESSION|El proceso de host crea un objeto de sesión que contiene los metadatos proporcionados por CREATE EVENT SESSION. El proceso de host valida la definición de la sesión, valida el nivel del permiso de usuario y almacena los metadatos en la base de datos maestra. En este punto la sesión no está activa.|  
 |Alter|ALTER EVENT SESSION, STATE=START|El proceso de host inicia la sesión. El proceso de host lee los metadatos almacenados, valida la definición de la sesión, comprueba el nivel del permiso de usuario y crea la sesión. Se cargan los objetos de sesión, como eventos y destinos, y el control de eventos está activo.|  
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/17/2017
   
  La arquitectura de Extended Events constituye un sistema flexible que permite utilizar diversos objetos conjuntamente para resolver problemas concretos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)  
   
   

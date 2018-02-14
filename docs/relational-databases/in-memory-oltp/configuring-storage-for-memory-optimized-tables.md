@@ -8,23 +8,25 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e72a08f08a3d6ad49c429739108e0e862d0e507
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a83f67f8f376f48bc76a66636138a6b971e5b834
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Configurar el almacenamiento para las tablas con optimización para memoria
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Debe configurar la capacidad de memoria y las operaciones de entrada/salida por segundo (IOPS).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Debe configurar la capacidad de memoria y las operaciones de entrada/salida por segundo (IOPS).  
   
 ## <a name="storage-capacity"></a>Capacidad de almacenamiento  
  Use la información de [Estimar los requisitos de memoria para las tablas optimizadas para memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) para calcular el tamaño en memoria de las tablas durables optimizadas para memoria de la base de datos. Puesto que los índices no se conservan en las tablas optimizadas para memoria, no incluya el tamaño de los índices. Una vez que determine el tamaño, necesita proporcionar una cantidad de espacio en disco que sea cuatro veces el tamaño de tablas durables en memoria.  
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="encryption"></a>Cifrado  
  En [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], se cifrará el almacenamiento de tablas optimizadas para memoria como parte de la habilitación de TDE en la base de datos. Para obtener más información, vea [Cifrado de datos transparente &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md). En [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], los archivos de punto de comprobación no se cifran, aunque el TDE esté habilitado en la base de datos.
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Crear y administrar el almacenamiento de objetos con optimización para memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

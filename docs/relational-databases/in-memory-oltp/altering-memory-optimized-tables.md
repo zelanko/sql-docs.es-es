@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bf905d416e81c6dbc30294559e83f247c9e3f197
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 89709d63c40233091fe01688e655ff5b53145711
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="altering-memory-optimized-tables"></a>Modificar tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +72,7 @@ La sintaxis ALTER TABLE se usa para realizar cambios en el esquema de la tabla, 
   
  Se admiten los siguientes tipos de modificaciones.  
   
--   Cambiar el número de depósitos  
+-   Cambiar el número de cubos  
   
 -   Agregar y quitar un índice  
   
@@ -106,7 +107,7 @@ En este caso, la operación de un solo subproceso registraría todo el contenido
     - *Excepción:* el alargamiento de una columna que ya no es consecutiva se registra de la forma optimizada. 
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se modifica el número de depósitos de un índice de hash existente. Esto vuelve a generar el índice de hash con el nuevo número de depósitos, mientras que las demás propiedades del índice de hash permanecen iguales.  
+ En el ejemplo siguiente se modifica el número de cubos de un índice de hash existente. Esto vuelve a generar el índice de hash con el nuevo número de cubos, mientras que las demás propiedades del índice de hash permanecen iguales.  
   
 ```sql
 ALTER TABLE Sales.SalesOrderDetail_inmem   

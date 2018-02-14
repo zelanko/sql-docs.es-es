@@ -8,10 +8,12 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 helpviewer_keywords:
 - AlwaysOn
 - DB_FAILOVER
@@ -19,21 +21,22 @@ helpviewer_keywords:
 - High Availability
 - SQL Server
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
-caps.latest.revision: "4"
-author: JasonWHowell
-ms.author: jasonh
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fe422c7445debc085f9d610550f365ccc4f1b8f2
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ce5cf8ff6cbbddd0e4a65d702494d80cf7537490
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Opción de conmutación por error de detección del estado del nivel de la base de datos de un grupo de disponibilidad
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Desde SQL Server 2016, hay una opción disponible de detección del estado del nivel de la base de datos (DB_FAILOVER) al configurar un grupo de disponibilidad AlwaysOn. La detección del estado del nivel de la base de datos advierte cuando una base de datos deja de estar en estado en línea, cuando algo va mal, y activará la conmutación automática por error del grupo de disponibilidad. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Desde SQL Server 2016, hay una opción disponible de detección del estado del nivel de la base de datos (DB_FAILOVER) al configurar un grupo de disponibilidad AlwaysOn. La detección del estado del nivel de la base de datos advierte cuando una base de datos deja de estar en estado en línea, cuando algo va mal, y activará la conmutación automática por error del grupo de disponibilidad.
 
-La detección del estado de nivel de la base de datos está habilitada en el grupo de disponibilidad como un todo, de ahí que supervise todas y cada una de las bases de datos del grupo de disponibilidad. Esta opción no se puede habilitar de manera selectiva para bases de datos específicas del grupo de disponibilidad. 
+La detección del estado de nivel de la base de datos está habilitada en el grupo de disponibilidad como un todo, de ahí que supervise todas y cada una de las bases de datos del grupo de disponibilidad. Esta opción no se puede habilitar de manera selectiva para bases de datos específicas del grupo de disponibilidad.
 
 ## <a name="benefits-of-database-level-health-detection-option"></a>Ventajas de la opción de detección del estado del nivel de la base de datos
 ---
@@ -43,15 +46,15 @@ Por ejemplo, si la opción de detección del estado del nivel de la base de dato
 
 <a name="enabling-database-level-health-detection"></a>Habilitar la detección del estado del nivel de la base de datos
 ----
-Aunque es recomendable en general, la opción de estado de la base de datos está **desactivada de forma predeterminada**, a fin de mantener la compatibilidad con la configuración predeterminada en las versiones anteriores. 
+Aunque es recomendable en general, la opción de estado de la base de datos está **desactivada de forma predeterminada**, a fin de mantener la compatibilidad con la configuración predeterminada en las versiones anteriores.
 
 Existen varias formas muy sencillas de habilitar la opción de detección del estado del nivel de la base de datos:
 
-1. En SQL Server Management Studio, conéctese a su Motor de base de datos de SQL Server. En la ventana del Explorador de objetos, haga clic con el botón derecho en el nodo Alta disponibilidad AlwaysOn y ejecute el **Asistente para nuevo grupo de disponibilidad**. Active la casilla **Detección del estado del nivel de la base de datos** en la página Especificar nombre. Luego, complete el resto de páginas del asistente. 
+1. En SQL Server Management Studio, conéctese a su Motor de base de datos de SQL Server. En la ventana del Explorador de objetos, haga clic con el botón derecho en el nodo Alta disponibilidad AlwaysOn y ejecute el **Asistente para nuevo grupo de disponibilidad**. Active la casilla **Detección del estado del nivel de la base de datos** en la página Especificar nombre. Luego, complete el resto de páginas del asistente.
 
    ![Casilla Detección del estado del nivel de la base de datos habilitada](../../../database-engine/availability-groups/windows/media/always-on-enable-database-health-checkbox.png)
 
-2. Vea las **Propiedades** de un grupo de disponibilidad existente en SQL Server Management Studio. Conéctese a su servidor SQL Server. En la ventana del Explorador de objetos, expanda el nodo Alta disponibilidad AlwaysOn. Expanda Grupos de disponibilidad. Haga clic con el botón derecho en el grupo de disponibilidad y elija Propiedades. Active la opción **Detección del estado del nivel de la base de datos** y haga clic en Aceptar o genere un script con el cambio. 
+2. Vea las **Propiedades** de un grupo de disponibilidad existente en SQL Server Management Studio. Conéctese a su servidor SQL Server. En la ventana del Explorador de objetos, expanda el nodo Alta disponibilidad AlwaysOn. Expanda Grupos de disponibilidad. Haga clic con el botón derecho en el grupo de disponibilidad y elija Propiedades. Active la opción **Detección del estado del nivel de la base de datos** y haga clic en Aceptar o genere un script con el cambio.
 
    ![Propiedades de la detección del estado del nivel de la base de datos de un grupo de disponibilidad AlwaysOn](../../../database-engine/availability-groups/windows/media/always-on-ag-properties-database-level-health-detection.png)
 
@@ -59,13 +62,13 @@ Existen varias formas muy sencillas de habilitar la opción de detección del es
 3. Use la sintaxis de Transact-SQL **CREATE AVAILABILITY GROUP** para crear un grupo de disponibilidad. El parámetro DB_FAILOVER acepta valores ON u OFF.
 
    ```Transact-SQL
-   CREATE AVAILABILITY GROUP [Contoso-ag] 
+   CREATE AVAILABILITY GROUP [Contoso-ag]
    WITH (DB_FAILOVER=ON)
-   FOR DATABASE [AutoHa-Sample] 
-   REPLICA ON 
-       N'SQLSERVER-0' WITH (ENDPOINT_URL = N'TCP://SQLSERVER-0.DOMAIN.COM:5022', 
-         FAILOVER_MODE = AUTOMATIC, AVAILABILITY_MODE = SYNCHRONOUS_COMMIT), 
-       N'SQLSERVER-1' WITH (ENDPOINT_URL = N'TCP://SQLSERVER-1.DOMAIN.COM:5022',  
+   FOR DATABASE [AutoHa-Sample]
+   REPLICA ON
+       N'SQLSERVER-0' WITH (ENDPOINT_URL = N'TCP://SQLSERVER-0.DOMAIN.COM:5022',
+         FAILOVER_MODE = AUTOMATIC, AVAILABILITY_MODE = SYNCHRONOUS_COMMIT),
+       N'SQLSERVER-1' WITH (ENDPOINT_URL = N'TCP://SQLSERVER-1.DOMAIN.COM:5022',
         FAILOVER_MODE = AUTOMATIC, AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
     ```
 
@@ -73,20 +76,20 @@ Existen varias formas muy sencillas de habilitar la opción de detección del es
 
    ```Transact-SQL
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = ON);
-   
+
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = OFF);
    ```
 
 ### <a name="caveats"></a>Advertencias
 
-Es importante tener en cuenta que, actualmente, la opción de detección del estado del nivel de la base de datos no hace que SQL Server supervise el tiempo de actividad del disco y SQL Server tampoco supervisa directamente la disponibilidad del archivo de base de datos. En caso de que se produzca un error en una unidad de disco o esta deje de estar disponible, esto en sí no provocaría que el grupo de disponibilidad conmutara automáticamente por error. 
+Es importante tener en cuenta que, actualmente, la opción de detección del estado del nivel de la base de datos no hace que SQL Server supervise el tiempo de actividad del disco y SQL Server tampoco supervisa directamente la disponibilidad del archivo de base de datos. En caso de que se produzca un error en una unidad de disco o esta deje de estar disponible, esto en sí no provocaría que el grupo de disponibilidad conmutara automáticamente por error.
 
 Por ejemplo, cuando una base de datos está inactiva, sin ninguna transacción ni escrituras físicas, si algunos de los archivos de la base de datos dejan de estar accesibles, SQL Server no realizará ningún trabajo de E/S de lectura o escritura en los archivos ni cambiará el estado de esa base de datos inmediatamente, de modo que no se desencadenará ninguna conmutación por error. Más adelante, si tiene lugar un punto de control de la base de datos o una lectura o escritura física para realizar una consulta, SQL Server se dará cuenta del problema con los archivos y reaccionará cambiando el estado de la base de datos, lo que, en última instancia, hará que el grupo de disponibilidad que tiene activada la detección del estado del nivel de la base de datos conmute por error debido al cambio de estado de la base de datos.
 
-Por poner otro ejemplo, cuando el Motor de base de datos de SQL Server necesita leer una página de datos para realizar una consulta, si la página de datos está almacenada en caché en la memoria del grupo de búferes, no será necesaria ninguna lectura de disco con acceso físico para cursar dicha solicitud de consulta. Por lo tanto, el hecho de que falte un archivo de datos o este no esté disponible no desencadenará inmediatamente una conmutación automática por error, incluso si está habilitada la opción de estado de la base de datos, ya que el estado de la base de datos no cambia de inmediato.  
+Por poner otro ejemplo, cuando el Motor de base de datos de SQL Server necesita leer una página de datos para realizar una consulta, si la página de datos está almacenada en caché en la memoria del grupo de búferes, no será necesaria ninguna lectura de disco con acceso físico para cursar dicha solicitud de consulta. Por lo tanto, el hecho de que falte un archivo de datos o este no esté disponible no desencadenará inmediatamente una conmutación automática por error, incluso si está habilitada la opción de estado de la base de datos, ya que el estado de la base de datos no cambia de inmediato.
 
 
-## <a name="database-failover-is-separate-from-flexible-failover-policy"></a>La conmutación por error de base de datos es independiente de la directiva de conmutación por error flexible 
+## <a name="database-failover-is-separate-from-flexible-failover-policy"></a>La conmutación por error de base de datos es independiente de la directiva de conmutación por error flexible
 Con la detección del estado del nivel de la base de datos se implementa una directiva de conmutación por error flexible que configura los umbrales del estado de los procesos de SQL Server. La detección del estado del nivel de la base de datos se configura con el parámetro DB_FAILOVER, mientras que la opción de grupo de disponibilidad FAILURE_CONDITION_LEVEL es independiente y sirve para configurar la detección del estado de los procesos de SQL Server. Ambas opciones son independientes.
 
 ## <a name="managing-and-monitoring-database-level-health-detection"></a>Administración y supervisión de la detección del estado del nivel de la base de datos
@@ -102,14 +105,14 @@ select name, db_failover from sys.availability_groups
 
 Ejemplo de resultado de esta DMV:
 
-NAME  |  db_failover  
+NAME  |  db_failover
 ---------|---------
 | Contoso-ag |  1  |
 
-### <a name="errorlog"></a>ErrorLog 
-El registro de errores de SQL Server (o el texto recogido en sp_readerrorlog) mostrará el mensaje de error 41653 si un grupo de disponibilidad ha conmutado por error a causa de las comprobaciones de detección del estado del nivel de la base de datos. 
+### <a name="errorlog"></a>ErrorLog
+El registro de errores de SQL Server (o el texto recogido en sp_readerrorlog) mostrará el mensaje de error 41653 si un grupo de disponibilidad ha conmutado por error a causa de las comprobaciones de detección del estado del nivel de la base de datos.
 
-Por ejemplo, este extracto del registro de errores pone de manifiesto que una escritura del registro de transacciones ha acabado en error debido a un problema de disco, lo que llevó a cerrar la base de datos denominada AutoHa-Sample y ello hizo que la detección del estado del nivel de la base de datos conmutara por error el grupo de disponibilidad.  
+Por ejemplo, este extracto del registro de errores pone de manifiesto que una escritura del registro de transacciones ha acabado en error debido a un problema de disco, lo que llevó a cerrar la base de datos denominada AutoHa-Sample y ello hizo que la detección del estado del nivel de la base de datos conmutara por error el grupo de disponibilidad.
 
 >2016-04-25 12:20:21.08 spid1s      Error: 17053, Severity: 16, State: 1.
 >
@@ -134,22 +137,22 @@ Por ejemplo, este extracto del registro de errores pone de manifiesto que una es
 
 ### <a name="extended-event-sqlserveravailabilityreplicadatabasefaultreporting"></a>Evento extendido sqlserver.availability_replica_database_fault_reporting
 
-Desde SQL Server 2016, existe un nuevo evento extendido definido que se desencadena a través de la detección del estado del nivel de la base de datos.  El nombre del evento es **sqlserver.availability_replica_database_fault_reporting**. 
+Desde SQL Server 2016, existe un nuevo evento extendido definido que se desencadena a través de la detección del estado del nivel de la base de datos.  El nombre del evento es **sqlserver.availability_replica_database_fault_reporting**.
 
-Este evento extendido se desencadena únicamente en la réplica principal, y lo hace cuando se detecta un problema de estado del nivel de la base de datos en una base de datos hospedada en un grupo de disponibilidad. 
+Este evento extendido se desencadena únicamente en la réplica principal, y lo hace cuando se detecta un problema de estado del nivel de la base de datos en una base de datos hospedada en un grupo de disponibilidad.
 
 Este es un ejemplo sobre cómo crear una sesión de XEvent que captura este evento. Como no se especifica ninguna ruta de acceso, el archivo de salida de XEvent se pondrá de forma predeterminada en la ruta del registro de errores de SQL Server. Ejecute lo siguiente en la réplica principal del grupo de disponibilidad:
 
 Ejemplo de script de sesión de evento extendido
 ```
-CREATE EVENT SESSION [AlwaysOn_dbfault] ON SERVER 
+CREATE EVENT SESSION [AlwaysOn_dbfault] ON SERVER
 ADD EVENT sqlserver.availability_replica_database_fault_reporting
 ADD TARGET package0.event_file(SET filename=N'dbfault.xel',max_file_size=(5),max_rollover_files=(4))
 WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=30 SECONDS,
     MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=ON)
-GO 
+GO
 ALTER EVENT SESSION AlwaysOn_dbfault ON SERVER STATE=START
-GO 
+GO
 ```
 
 #### <a name="extended-event-output"></a>Resultado del evento extendido
@@ -165,7 +168,7 @@ Explicación de los campos:
 |availability_replica_name  |Nombre de la réplica de disponibilidad.
 |database_name  |Nombre de la base de datos que informa del error.
 |database_replica_id    |Identificador de la base de datos de la réplica de disponibilidad.
-|failover_ready_replicas    |Número de réplicas secundarias de conmutación automática por error que están sincronizadas. 
+|failover_ready_replicas    |Número de réplicas secundarias de conmutación automática por error que están sincronizadas.
 |fault_type     | Identificador de error notificado. Valores posibles:  <br/> 0: ninguno <br/>1: desconocido<br/>2: apagado
 |is_critical    | Desde SQL Server 2016, este valor siempre debe devolver true para el XEvent.
 

@@ -8,31 +8,35 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords: sql13.swb.configurelogs.errorlog.f1
-helpviewer_keywords: Log File Viewer
+f1_keywords:
+- sql13.swb.configurelogs.errorlog.f1
+helpviewer_keywords:
+- Log File Viewer
 ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36d31e8fe3a5403342c244df36810de2e76f8cb1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 63be87acc6f5ef1f550f7ec9d03cad7eab93e6a6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="log-file-viewer-f1-help"></a>Ayuda F1 del Visor de archivos de registro
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Visor de archivos de registro muestra información de registro de muchos componentes diferentes. Cuando el Visor del archivo de registros esté abierto, utilice el panel **Seleccionar registros** para seleccionar los registros que desea que se muestren. Cada registro muestra las columnas apropiadas a ese tipo de registro.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+El Visor de archivos de registro muestra información de registro de muchos componentes diferentes. Cuando el Visor del archivo de registros esté abierto, utilice el panel **Seleccionar registros** para seleccionar los registros que desea que se muestren. Cada registro muestra las columnas apropiadas a ese tipo de registro.  
   
  La disponibilidad de los registros dependerá del modo en que se abra el Visor del archivo de registros. Para obtener más información, vea [Abrir el Visor de archivos de registro](../../relational-databases/logs/open-log-file-viewer.md).  
   
  El número de filas que se muestran para los registros de auditoría se puede configurar en la página **Explorador de objetos de SQL Server/Comandos** del cuadro de diálogo **Herramientas/Opciones**. Para obtener la descripción de las columnas que se muestran para los registros de auditoría, vea [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md).  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>.  
  **Cargar registro**  
  Abre un cuadro de diálogo donde puede especificar un archivo de registro para cargar.  
   
@@ -64,7 +68,7 @@ ms.lasthandoff: 11/17/2017
  **Fecha**  
  Muestra la fecha del evento.  
   
- **Origen**  
+ **Source**  
  Muestra la característica de origen desde la que se crea el evento, como el nombre del servicio (MSSQLSERVER, por ejemplo). No aparece para todos los tipos de registro.  
   
  **de mensaje**  
@@ -81,7 +85,7 @@ ms.lasthandoff: 11/17/2017
   
  Para tener acceso a los archivos de registro en instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sin conexión, se debe tener acceso de lectura tanto al espacio de nombres WMI **Root\Microsoft\SqlServer\ComputerManagement10** como a la carpeta donde están almacenados los archivos de registro. Para obtener más información, vea la sección Seguridad del tema [Ver archivos del registro sin conexión](../../relational-databases/logs/view-offline-log-files.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Visor de archivos de registro](../../relational-databases/logs/log-file-viewer.md)   
  [Abrir el Visor de archivos de registro](../../relational-databases/logs/open-log-file-viewer.md)   
  [Ver archivos del registro sin conexión](../../relational-databases/logs/view-offline-log-files.md)  

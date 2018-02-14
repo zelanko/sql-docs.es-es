@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - data warehouse
 - management data warehouse
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 107ccdd35c7ba36b74af7121b67b6c17e009cfb6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f61ec563867912a713504af1a291bc26507888ae
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="management-data-warehouse"></a>almacén de administración de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El almacén de administración de datos es una base de datos relacional que contiene los datos recopilados de un servidor que es el destino de la recopilación de datos. Estos datos se utilizan para generar informes para los conjuntos de recopilación de datos del sistema y también pueden utilizarse para crear informes personalizados.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+El almacén de administración de datos es una base de datos relacional que contiene los datos recopilados de un servidor que es el destino de la recopilación de datos. Estos datos se utilizan para generar informes para los conjuntos de recopilación de datos del sistema y también pueden utilizarse para crear informes personalizados.  
   
  La infraestructura del recopilador de datos define los trabajos y los planes de mantenimiento que se necesitan para implementar las directivas de retención definidas por el administrador de bases de datos.  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
  En la tabla siguiente se describen las tablas de base de datos del esquema de núcleo. Estas tablas de base de datos permiten al recopilador de datos realizar el seguimiento de la procedencia de los datos y saber quién los insertó y cuándo se cargaron en el almacenamiento de datos.  
   
-|Nombre de la tabla|Descripción|  
+|Nombre de la tabla|Description|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|Almacena información sobre la forma en que se deben agrupar y agregar los contadores de rendimiento en los informes del almacén de administración de datos.|  
 |core.snapshots_internal|Identifica cada nueva instantánea. En esta tabla se inserta una nueva fila cada vez que un paquete de carga inicia la carga de un nuevo lote de datos.|  
@@ -131,7 +133,7 @@ ms.lasthandoff: 11/17/2017
 |Se ha agregado la tabla core.performance_counter_report_group_items a la sección "Esquema de núcleo".|  
 |Se ha actualizado la lista de tablas de la sección "Esquema de instantáneas". Se ha agregado snapshots.os_memory_clerks, snapshots.sql_process_and_system_memory y snapshots.io_virtual_file_stats. Se ha quitado snapshots.os_process_memory y snapshots.distinct_query_stats.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Procedimientos almacenados de almacén de administración de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados del recopilador de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)   

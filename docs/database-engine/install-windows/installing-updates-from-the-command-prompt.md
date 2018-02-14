@@ -17,14 +17,16 @@ caps.latest.revision:
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7d365ed372be8fa77d846ee60ace1097ed61117a
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: ba512e9f78ab42ddcfd46d0945c4763e02e1f39e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>Instalar actualizaciones desde el símbolo del sistema
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 Pruebe y modifique los scripts de instalación para adaptarlos a las necesidades de su organización. 
  
 ## <a name="sample-syntax-for-installation"></a>Sintaxis de ejemplo para la instalación 

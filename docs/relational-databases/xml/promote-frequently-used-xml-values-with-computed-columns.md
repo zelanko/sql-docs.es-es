@@ -8,26 +8,28 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7374751ae2fd74f93ed0744853eb472689538347
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 38efa0d9948afdd31c93442f657d7f3d68c82f0e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promover los valores XML usados con frecuencia con columnas calculadas
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Si se efectúan consultas principalmente en una cantidad pequeña de valores de elementos y atributos, puede que sea conveniente promover estas cantidades a columnas relacionales. Esto es útil cuando se ejecutan consultas en una pequeña parte de los datos XML mientras se recupera toda la instancia XML. No es necesario crear un índice XML en la columna XML. En lugar de ello, se puede indizar la columna promocionada. Las consultas se deben escribir de modo que usen la columna promocionada. Es decir, que el optimizador de consultas no dirige de nuevo las consultas de la columna XML a la columna promocionada.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Si se efectúan consultas principalmente en una cantidad pequeña de valores de elementos y atributos, puede que sea conveniente promover estas cantidades a columnas relacionales. Esto es útil cuando se ejecutan consultas en una pequeña parte de los datos XML mientras se recupera toda la instancia XML. No es necesario crear un índice XML en la columna XML. En lugar de ello, se puede indizar la columna promocionada. Las consultas se deben escribir de modo que usen la columna promocionada. Es decir, que el optimizador de consultas no dirige de nuevo las consultas de la columna XML a la columna promocionada.  
   
  La columna promocionada puede ser una columna calculada de la misma tabla o puede ser una columna aparte, mantenida por el usuario, de una tabla. Esto es suficiente cuando se promocionan valores singleton desde cada instancia XML. No obstante, en el caso de propiedades con varios valores, es necesario crear una tabla aparte para la propiedad, como se describe en la sección siguiente.  
   

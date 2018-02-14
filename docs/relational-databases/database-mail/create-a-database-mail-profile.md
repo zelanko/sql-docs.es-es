@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mail
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,27 +17,28 @@ helpviewer_keywords:
 - profiles [SQL Server], Database Mail
 - public profiles [Database Mail]
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bddbe07f996ec575d2c25b1dd948b407190186d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a30265b02ca821a3d787162b60847e71e7260fa1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-a-database-mail-profile"></a>Crear un perfil de correo electrónico de base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para crear perfiles públicos y privados de Correo electrónico de base de datos, use el **Asistente para configuración de Correo electrónico de base de datos** o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para más información sobre los perfiles de correo electrónico, consulte [Perfil de Correo electrónico de base de datos](https://msdn.microsoft.com/library/ms175100.aspx#Anchor_2).
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Para crear perfiles públicos y privados de Correo electrónico de base de datos, use el **Asistente para configuración de Correo electrónico de base de datos** o [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para más información sobre los perfiles de correo electrónico, consulte [Perfil de Correo electrónico de base de datos](https://msdn.microsoft.com/library/ms175100.aspx#Anchor_2).
   
 -   **Antes de empezar:** [Requisitos previos](#Prerequisites), , [Seguridad](#Security)  
   
 -   **Para crear un perfil privado de Correo electrónico de base de datos mediante:**  [Asistente para configuración de Correo electrónico de base de datos](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
   
--   **Para crear un perfil público de Correo electrónico de base de datos mediante:**  [Asistente para configuración de Correo electrónico de base de datos](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
+-   **Para crear un perfil público de Correo electrónico de base de datos mediante:** [Asistente para configuración de Correo electrónico de base de datos](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Cree una o varias cuentas de correo de base de datos para el perfil. Para obtener más información sobre la creación de cuentas de Correo electrónico de base de datos, vea [Crear una nueva cuenta de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-account.md).  

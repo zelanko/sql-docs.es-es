@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ea5a719b09f55de405593a29445824ba01902a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 50e7a92d87b806a0eb26481cca92b89f932dfa9d
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introducción a las tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,14 +59,14 @@ A partir de SQL Server 2016, y en Azure SQL Database, no existen limitaciones pa
   
 ## <a name="accessing-data-in-memory-optimized-tables"></a>Acceso a datos en tablas con optimización para memoria  
 
-Se puede tener acceso a las tablas con optimización para memoria de forma más eficaz desde procedimientos almacenados compilados de forma nativa ([Procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)). Se puede tener acceso también a las tablas con optimización para memoria con [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretado (tradicional). [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado hace referencia al acceso a tablas optimizadas para memoria sin un procedimiento almacenado compilado de forma nativa. Algunos ejemplos de acceso con [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado son el acceso a una tabla optimizada para memoria desde un desencadenador DML, un lote ad hoc de [!INCLUDE[tsql](../../includes/tsql-md.md)] , una vista y una función con valores de tabla.  
+Se puede tener acceso a las tablas con optimización para memoria de forma más eficaz desde procedimientos almacenados compilados de forma nativa ([Procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)). Se puede tener acceso también a las tablas con optimización para memoria con [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretado (tradicional). [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado hace referencia al acceso a tablas optimizadas para memoria sin un procedimiento almacenado compilado de forma nativa.	 Algunos ejemplos de acceso con [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado son el acceso a una tabla optimizada para memoria desde un desencadenador DML, un lote ad hoc de [!INCLUDE[tsql](../../includes/tsql-md.md)] , una vista y una función con valores de tabla.  
   
  En la tabla siguiente se resume el acceso con [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado y nativo para varios objetos.  
   
 |Característica|Acceso con un procedimiento almacenado compilado de forma nativa|Acceso con [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado|Acceso CLR|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |Tabla con optimización para memoria|Sí|Sí|No*|  
-|Tipo de tabla con optimización para memoria|Sí|Sí|No|  
+|Tipo de tabla con optimización para memoria|Sí|Sí|no|  
 |Procedimiento almacenado compilado de forma nativa|Ahora se admite el anidamiento de procedimientos almacenados compilados de forma nativa. Puede usar la sintaxis EXECUTE dentro de los procedimientos almacenados, siempre que el procedimiento de referencia también se compile de forma nativa.|Sí|No*|  
   
  *No puede tener acceso a una tabla optimizada para memoria o a un procedimiento almacenado compilado de forma nativa desde la conexión de contexto (la conexión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al ejecutar un módulo CLR). Sin embargo, puede crear y abrir otra conexión en la que pueda tener acceso a las tablas optimizadas para memoria y a los procedimientos almacenados compilados de forma nativa.  
@@ -109,7 +110,7 @@ EXECUTE AS CALLER tiene una pequeña merma en el rendimiento (de aproximadamente
 
 Para obtener una breve descripción de los escenarios habituales en los que [!INCLUDE[hek_1](../../includes/hek-1-md.md)] puede mejorar el rendimiento, vea [OLTP en memoria](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Ver también
 
 [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

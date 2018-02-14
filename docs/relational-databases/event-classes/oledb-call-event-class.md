@@ -8,41 +8,44 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: OLEDB Call event class
+helpviewer_keywords:
+- OLEDB Call event class
 ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52b44fe50eac1dfbab29aeeebe9cc5f82107bcd5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a5eb28eace8c8aa1e5f37e952207b6cf18543251
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de evento **OLEDB Call** tiene lugar cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] llama a un proveedor OLE DB para consultas distribuidas y procedimientos almacenados remotos.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La clase de evento **OLEDB Call** tiene lugar cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] llama a un proveedor OLE DB para consultas distribuidas y procedimientos almacenados remotos.  
   
  Incluya la clase de evento **OLEDB Call** en seguimientos para supervisar solo aquellas llamadas que no solicitan datos o que no se realizan al método **QueryInterface** . Cuando se incluye la clase de evento **OLEDB Call** en un seguimiento, la cantidad de sobrecarga depende de la frecuencia con que se produzcan las llamadas OLE DB a la base de datos durante el seguimiento. Si se realizan llamadas con frecuencia, el seguimiento puede mermar notablemente el rendimiento.  
   
 ## <a name="oledb-call-event-class-data-columns"></a>Columnas de datos de la clase de evento OLEDB Call  
   
-|Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
+|Nombre de columna de datos|Tipo de datos|Description|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
 |ClientProcessID|**Int**|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  
 |DatabaseID|**Int**|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |DatabaseName|**nvarchar**|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
-|Duración|**Bigint**|Tiempo necesario para completar el evento de llamada OLE DB.|13|No|  
+|Duration|**Bigint**|Tiempo necesario para completar el evento de llamada OLE DB.|13|no|  
 |EndTime|**Fecha y hora**|Hora a la que finalizó el evento.|15|Sí|  
 |Error|**int**|Número de error de un evento dado. Con frecuencia, es el número de error almacenado en la vista de catálogo sys.messages.|31|Sí|  
-|EventClass|**Int**|Tipo de evento = 119.|27|No|  
-|EventSequence|**Int**|Secuencia de la clase de eventos OLE DB en el lote.|51|No|  
-|EventSubClass|**Int**|0=Inicio<br /><br /> 1=Completado|21|No|  
+|EventClass|**Int**|Tipo de evento = 119.|27|no|  
+|EventSequence|**Int**|Secuencia de la clase de eventos OLE DB en el lote.|51|no|  
+|EventSubClass|**Int**|0=Inicio<br /><br /> 1=Completado|21|no|  
 |GroupID|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |IsSystem|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
@@ -57,10 +60,10 @@ ms.lasthandoff: 11/17/2017
 |SessionLoginName|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, **SessionLoginName** muestra inicioDeSesión1 y **LoginName** muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|**Int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |StartTime|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
-|TextData|**nvarchar**|Parámetros enviados y recibidos en la llamada OLE DB.|1|No|  
+|TextData|**nvarchar**|Parámetros enviados y recibidos en la llamada OLE DB.|1|no|  
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Objetos de automatización OLE en Transact-SQL](../../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  

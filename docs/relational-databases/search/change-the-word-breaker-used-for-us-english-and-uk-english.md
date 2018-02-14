@@ -8,23 +8,25 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f6af23630a01f510b7e345cce694d5d675c95742
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eebf733d6c0f0048c8509abf1d1e9f30d30fa912
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Cambiar el separador de palabras usado para el inglés de Estados Unidos y el del Reino Unido
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala una nueva versión (versión 14.0.4999.1038) del separador de palabras y del lematizador para el idioma inglés, reemplazando la versión anterior de estos componentes (versión 12.0.6828.0). Para obtener más información sobre el comportamiento modificado de los nuevos componentes, vea [Cambios de comportamiento en la búsqueda de texto completo](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f). En este tema se describe cómo pasar de la nueva versión de estos componentes a la versión previa o viceversa. Para las instalaciones de clúster, estos cambios deben realizarse en todos los nodos principales y pasivos.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala una nueva versión (versión 14.0.4999.1038) del separador de palabras y del lematizador para el idioma inglés, reemplazando la versión anterior de estos componentes (versión 12.0.6828.0). Para obtener más información sobre el comportamiento modificado de los nuevos componentes, vea [Cambios de comportamiento en la búsqueda de texto completo](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f). En este tema se describe cómo pasar de la nueva versión de estos componentes a la versión previa o viceversa. Para las instalaciones de clúster, estos cambios deben realizarse en todos los nodos principales y pasivos.  
   
  Las versiones previas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizaban separadores de palabras distintos representados por CLSID diferentes para el inglés de Estados Unidos (LCID 1033) y el inglés del Reino Unido (LCID 2057). En esta versión, ambos LCID usan los mismos componentes con los mismos CLSID, como se muestra en la siguiente tabla:  
   
@@ -129,7 +131,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  Reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Revertir los separadores de palabras usados por las búsquedas a la versión anterior](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
  [Cambios de comportamiento en la búsqueda de texto completo](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   

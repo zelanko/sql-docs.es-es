@@ -8,38 +8,40 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Escalation event class
 - lock escalation [SQL Server], event class
 ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
-caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0afbac790b5d04dc8877bc2f13ed801b08b640e0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 90a86e21ca421d50bc94035fb57505630738fbb0
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lockescalation-event-class"></a>Lock:Escalation (clase de eventos)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos **Lock:Escalation** indica que un bloqueo específico se ha convertido en un bloqueo general; por ejemplo, un bloqueo de fila se ha convertido en un bloqueo de objeto. La clase de eventos de ampliación tiene Id. de Evento 60.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La clase de eventos **Lock:Escalation** indica que un bloqueo específico se ha convertido en un bloqueo general; por ejemplo, un bloqueo de fila se ha convertido en un bloqueo de objeto. La clase de eventos de ampliación tiene Id. de Evento 60.  
   
 ## <a name="lockescalation-event-class-data-columns"></a>Columnas de datos de la clase de evento Lock:Escalation  
   
-|Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
+|Nombre de columna de datos|Tipo de datos|Description|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
 |**ClientProcessID**|**int**|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  
 |**DatabaseID**|**int**|Identificador de la base de datos en la que se ha adquirido el bloqueo. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |**DatabaseName**|**nvarchar**|Nombre de la base de datos en la que ha ocurrido la extensión.|35|Sí|  
-|**EventClass**|**int**|Tipo de evento = 60.|27|No|  
+|**EventClass**|**int**|Tipo de evento = 60.|27|no|  
 |**EventSubClass**|**int**|Causa de la ampliación del bloqueo:<br /><br /> **0 - LOCK_THRESHOLD** indica que la instrucción superó el umbral del bloqueo.<br /><br /> **1 - MEMORY_THRESHOLD** indica que la instrucción superó el umbral de memoria.|21|Sí|  
-|**EventSequence**|**int**|Secuencia de un evento determinado de la solicitud.|51|No|  
+|**EventSequence**|**int**|Secuencia de un evento determinado de la solicitud.|51|no|  
 |**GroupID**|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |**IntegerData**|**int**|Recuento de bloqueo de HoBT. El número de bloqueos para el HoBT en el momento de la ampliación del bloqueo.|25|Sí|  
@@ -56,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 |**Offset**|**int**|Desplazamiento inicial de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] .|61|Sí|  
 |**OwnerID**|**int**|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE<br /><br /> 6=WAITFOR_QUERY|58|Sí|  
 |**IdSolicitud**|**int**|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
-|**ServerName**|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
+|**ServerName**|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|no|  
 |**SessionLoginName**|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, **SessionLoginName** muestra inicioDeSesión1 y **LoginName** muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |**SPID**|**int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
@@ -102,7 +104,7 @@ EXEC sp_trace_setstatus @TraceID, 2;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)  
   

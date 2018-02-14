@@ -8,24 +8,27 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: FileTables [SQL Server], using with other features
+helpviewer_keywords:
+- FileTables [SQL Server], using with other features
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
-caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f1d34f1aef0eddb13a57860fa8eb9f4219ec577
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3ba1eeb760eda46825448d3ba56bae1777c533ae
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilidad de FileTable con otras características de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Describe el funcionamiento de FileTables con otras características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Describe el funcionamiento de FileTables con otras características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="alwayson"></a> Grupos de disponibilidad AlwaysOn y FileTables  
  Cuando la base de datos que contiene datos de FILESTREAM o FileTable pertenece a un grupo de disponibilidad AlwaysOn:  
@@ -123,7 +126,7 @@ ms.lasthandoff: 11/17/2017
   
  Puede establecer la contención de la base de datos en PARTIAL si desea utilizar algunas características de bases de datos contenidas, como usuarios contenidos. Sin embargo, en este caso, debe tener en cuenta que algunas de las opciones de base de datos no están contenidas en la base de datos y no se mueven automáticamente cuando lo hace la base de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administrar FileTables](../../relational-databases/blob/manage-filetables.md)  
   
   

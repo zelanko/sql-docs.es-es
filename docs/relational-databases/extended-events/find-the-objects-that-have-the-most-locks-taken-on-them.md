@@ -19,16 +19,16 @@ helpviewer_keywords:
 - extended events [SQL Server], locks
 - objects [SQL Server], locks
 ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4ad77913a7e7356c1a04654c17e749261e8a9f4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a3bb0a5bf64e10535da964820b5a5ee51c55cc9e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="find-the-objects-that-have-the-most-locks-taken-on-them"></a>Buscar los objetos que han obtenido más bloqueos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,13 +109,13 @@ ms.lasthandoff: 11/17/2017
   
  Una vez finalizadas las instrucciones de este procedimiento, la pestaña **Resultados** del Editor de consultas mostrará las columnas siguientes:  
   
--   name  
+-   NAME  
   
 -   object_id  
   
 -   lock_count  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   

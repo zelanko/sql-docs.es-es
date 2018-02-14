@@ -8,24 +8,27 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Log File Viewer
+helpviewer_keywords:
+- Log File Viewer
 ms.assetid: a4ea7fc8-1cb2-4c98-bc86-8991c5e748b2
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4ec6cadb76a448fd54db16cef55dcf2019d9b6a5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d196f3e6964f310610bf336f6311eb9f3b33a2f1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="log-file-viewer"></a>Visor de archivos de registro
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El Visor del archivo de registro de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] se usa para obtener acceso a la información sobre los errores y eventos capturados en los archivos de registro.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+El Visor del archivo de registros de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] se usa para obtener acceso a la información sobre los errores y eventos capturados en los archivos de registro.  
   
 ## <a name="benefits-of-using-log-file-viewer"></a>Ventajas de usar el visor del archivo de registro  
  Puede ver los archivos de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde una instancia local o remota de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando la instancia de destino está sin conexión o no se puede iniciar. Puede tener acceso a los archivos de registro sin conexión de servidores registrados o mediante programación a través de consultas WMI y WQL (Lenguaje de la consulta de WMI). Para obtener más información, vea [Ver sin conexión archivos de registro](../../relational-databases/logs/view-offline-log-files.md). Estos son los tipos de archivos de registro a que se puede tener acceso con el visor del archivo de registro:  
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 |Describe cómo ver los archivos de registro sin conexión a través de servidores registrados y cómo comprobar los permisos de WMI.|[Ver sin conexión archivos de registro](../../relational-databases/logs/view-offline-log-files.md)|  
 |Proporciona la Ayuda F1 del visor del archivo de registro.|[Ayuda F1 del Visor de archivos de registro](../../relational-databases/logs/log-file-viewer-f1-help.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
  [Registro de errores del Agente SQL Server](http://msdn.microsoft.com/library/0b2d6e6e-cd2d-4b8b-9fa2-2bbd2fc0da41)  
   

@@ -8,24 +8,27 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Blocked Process Report event class
+helpviewer_keywords:
+- Blocked Process Report event class
 ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9b92c3ed426d733243916372a15df601d3c01e0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 36d8b302c134bdb18e55f69eeeb7bb916d825929
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La clase de eventos **Blocked Process Report** indica que una tarea ha estado bloqueada durante un tiempo superior al período de tiempo especificado. Esta clase de evento no incluye tareas del sistema ni tareas que estén esperando recursos no detectables por interbloqueo.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La clase de evento **Blocked Process Report** indica que una tarea ha estado bloqueada durante más de un período de tiempo especificado. Esta clase de evento no incluye tareas del sistema ni tareas que estén esperando recursos no detectables por interbloqueo.  
   
  Para configurar el umbral y la frecuencia con la que se genera el informe, use el comando **sp_configure** para configurar la opción **blocked process threshold** , que puede establecerse en segundos. De manera predeterminada, se producen informes de procesos no bloqueados. Para obtener más información sobre cómo configurar la opción **blocked process threshold**, vea [blocked process threshold (opción de configuración del servidor)](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md).  
   
@@ -33,13 +36,13 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="blocked-process-report-event-class-data-columns"></a>Columnas de datos de la clase de evento Blocked Process Report  
   
-|Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
+|Nombre de columna de datos|Tipo de datos|Description|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|Identificador de la base de datos en la que se ha adquirido el bloqueo. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |**Duración**|**bigint**|Período de tiempo (en milisegundos) que el proceso estuvo bloqueado.|13|Sí|  
 |**EndTime**|**datetime**|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como **SQL:BatchStarting** o **SP:Starting**.|15|Sí|  
-|**EventClass**|**int**|Tipo de evento = 137.|27|No|  
-|**EventSequence**|**int**|Secuencia de un evento determinado dentro de la solicitud.|51|No|  
+|**EventClass**|**int**|Tipo de evento = 137.|27|no|  
+|**EventSequence**|**int**|Secuencia de un evento determinado dentro de la solicitud.|51|no|  
 |**IndexID**|**int**|Id. del índice del objeto afectado por el evento. Para determinar el Id. de índice de un objeto, utilice la columna **indid** de la tabla del sistema **sysindexes** .|24|Sí|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
 |**LoginSid**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Este evento se notifica siempre desde el subproceso del sistema. IsSystem = 1; SID = sa.|41|Sí|  
@@ -50,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 |**TextData**|**ntext**|Valor de texto que depende de la clase de eventos capturada en el seguimiento.|1|Sí|  
 |**TransactionID**|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   

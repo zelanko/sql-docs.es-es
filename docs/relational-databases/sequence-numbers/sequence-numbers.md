@@ -8,7 +8,8 @@ ms.service:
 ms.component: sequence-numbers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - sequence numbers [SQL Server]
 - sequence number object
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e2d9ff3876144ce984c29e804016ec9a69bbd38b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4369c402254e0b0de8082c1670171b834585b2d5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sequence-numbers"></a>Números de secuencia
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Una secuencia es un objeto enlazado a un esquema definido por el usuario que genera una secuencia de valores numéricos según la especificación con la que se creó la secuencia. La secuencia de valores numéricos se genera en orden ascendente o descendente en un intervalo definido y puede repetirse cuando se solicite. Las secuencias, a diferencia de las columnas de identidad, no se asocian a tablas. Una aplicación hace referencia a un objeto de secuencia para recibir su valor siguiente. La aplicación controla la relación entre las secuencias y tablas. Las aplicaciones de usuario pueden hacer referencia a un objeto de secuencia y coordinar las claves de valores entre varias filas y tablas.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Una secuencia es un objeto enlazado a un esquema definido por el usuario que genera una secuencia de valores numéricos según la especificación con la que se creó la secuencia. La secuencia de valores numéricos se genera en orden ascendente o descendente en un intervalo definido y puede repetirse cuando se solicite. Las secuencias, a diferencia de las columnas de identidad, no se asocian a tablas. Una aplicación hace referencia a un objeto de secuencia para recibir su valor siguiente. La aplicación controla la relación entre las secuencias y tablas. Las aplicaciones de usuario pueden hacer referencia a un objeto de secuencia y coordinar las claves de valores entre varias filas y tablas.  
   
  Una secuencia se crea independientemente de las tablas utilizando la instrucción **CREATE SEQUENCE** . Las opciones permiten controlar el incremento, los valores máximo y mínimo, el punto de inicio, la capacidad de reinicio automático y el almacenamiento en caché para aumentar el rendimiento. Para obtener información acerca de las opciones, vea [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md).  
   
@@ -393,7 +395,7 @@ GO
   
 ```  
   
- Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que utilizan `SELECT *` recibirán la nueva columna como última columna, no como primera. Si esto no es aceptable, debe crear una tabla completamente nueva, mover los datos a ella y, a continuación, volver a crear los permisos en la nueva tabla.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] que utilizan `SELECT *` recibirán la nueva columna como última columna, no como primera. Si esto no es aceptable, debe crear una tabla completamente nueva, mover los datos a ella y, a continuación, volver a crear los permisos en la nueva tabla.  
   
 ## <a name="related-content"></a>Contenido relacionado  
  [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)  

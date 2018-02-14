@@ -8,24 +8,27 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-ddl
+ms.technology:
+- dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: DDL triggers, about DDL triggers
+helpviewer_keywords:
+- DDL triggers, about DDL triggers
 ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
-caps.latest.revision: "35"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6e2dea1e93b07c728120c9043b41ab9e03596420
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fe470ea983e3f397c5afdb41a3526dd87256746e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ddl-triggers"></a>Desencadenadores DDL
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Los desencadenadores DDL se inician en respuesta a una variedad de eventos de lenguaje de definición de datos (DDL). Estos eventos corresponden principalmente a las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que comienzan por las palabras clave CREATE, ALTER, DROP, GRANT, DENY, REVOKE o UPDATE STATISTICS. Algunos procedimientos almacenados del sistema que ejecutan operaciones de tipo DDL también pueden activar desencadenadores DDL.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Los desencadenadores DDL se inician en respuesta a una variedad de eventos de lenguaje de definición de datos (DDL). Estos eventos corresponden principalmente a las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que comienzan por las palabras clave CREATE, ALTER, DROP, GRANT, DENY, REVOKE o UPDATE STATISTICS. Algunos procedimientos almacenados del sistema que ejecutan operaciones de tipo DDL también pueden activar desencadenadores DDL.  
   
  Use desencadenadores DDL cuando desee hacer lo siguiente:  
   
@@ -113,7 +116,7 @@ GO
   
  Para obtener una lista de los grupos predefinidos de instrucciones DDL disponibles para los desencadenadores DDL, las instrucciones concretas que cubren los grupos de eventos y los ámbitos donde se pueden programar estos grupos de eventos, vea [DDL Event Groups](../../relational-databases/triggers/ddl-event-groups.md).  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Tarea|Tema|  
 |----------|-----------|  
@@ -123,7 +126,7 @@ GO
 |Describe cómo devolver información acerca de un evento que activa un desencadenador DDL mediante la función EVENTDATA.|[Usar la función EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md)|  
 |Describe cómo administrar la seguridad de los desencadenadores.|[Administrar la seguridad de los desencadenadores](../../relational-databases/triggers/manage-trigger-security.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Desencadenadores DML](../../relational-databases/triggers/dml-triggers.md)   
  [Desencadenadores logon](../../relational-databases/triggers/logon-triggers.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  

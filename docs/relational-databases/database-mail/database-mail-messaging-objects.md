@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mail
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - mail host databases [SQL Server]
 - host databases [Database Mail]
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
-caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bf2a7485e9769fe478c3f10e85d4b61b958d45b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8de888cea76c64cf8c5356b68ac8d852bd46bd1f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-mail-messaging-objects"></a>Objetos de mensajería de Correo electrónico de base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La base de datos **msdb** es la base de datos host del Correo electrónico de base de datos. Esta base de datos contiene los procedimientos almacenados y objetos de mensajería del Correo electrónico de base de datos. Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] incluye el Asistente para configuración del Correo electrónico de base de datos, que permite habilitar el correo electrónico de base de datos, crear y administrar perfiles y cuentas, y configurar las opciones del Correo electrónico de base de datos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+La base de datos **msdb** es la base de datos host del Correo electrónico de base de datos. Esta base de datos contiene los procedimientos almacenados y objetos de mensajería del Correo electrónico de base de datos. Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] incluye el Asistente para configuración del Correo electrónico de base de datos, que permite habilitar el correo electrónico de base de datos, crear y administrar perfiles y cuentas, y configurar las opciones del Correo electrónico de base de datos.  
   
 ##  <a name="ComponentsAndConcepts"></a> Objetos de la base de datos **msdb**  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] debe estar habilitado en la base de datos **msdb** . No obstante, el Correo electrónico de base de datos no usa la configuración de red de [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Por ello, los usuarios no tienen que crear un extremo de [!INCLUDE[ssSB](../../includes/sssb-md.md)] para usar el Correo electrónico de base de datos. El proceso externo de Correo electrónico de base de datos usa una conexión [!INCLUDE[vstecado](../../includes/vstecado-md.md)] estándar para comunicarse con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -38,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
  Estos objetos son la interfaz del Correo electrónico de base de datos en la base de datos host de correo. Hay instalados otros objetos para implementar las funciones proporcionadas por los objetos enumerados anteriormente. Sin embargo, dichos objetos están reservados para uso interno.  
   
-|Nombre|Tipo|Descripción|  
+|Nombre|Tipo|Description|  
 |----------|----------|-----------------|  
 |[sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|**Ver**|Enumera todos los mensajes enviados al Correo electrónico de base de datos.|  
 |[sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|**Ver**|Enumera los mensajes acerca del comportamiento del [Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md).|  
@@ -54,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 |[sysmail_stop_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|**Procedimiento almacenado**|Detiene los objetos de Service Broker que usa el programa externo.|  
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   

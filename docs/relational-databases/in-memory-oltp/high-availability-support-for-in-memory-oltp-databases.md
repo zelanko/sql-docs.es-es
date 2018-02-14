@@ -8,23 +8,25 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3f655fc9d0a88ab0c4f11e7b6adbeb0bb405467
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 299c2e0d7306fb1cca33eac4a26c1d3b04dca83c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Compatibilidad con alta disponibilidad para bases de datos OLTP en memoria
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Las bases de datos que contienen tablas optimizadas para memoria, con o sin procedimientos almacenados compilados nativos, son totalmente compatibles con grupos de disponibilidad AlwaysOn.  No hay ninguna diferencia en la configuración y la compatibilidad de las bases de datos que contienen objetos de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] en comparación con las que no tienen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Las bases de datos que contienen tablas optimizadas para memoria, con o sin procedimientos almacenados compilados nativos, son totalmente compatibles con grupos de disponibilidad AlwaysOn.  No hay ninguna diferencia en la configuración y la compatibilidad de las bases de datos que contienen objetos de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] en comparación con las que no tienen.  
   
  Cuando se implementa una base de datos de OLTP en memoria en una configuración de Grupo de disponibilidad AlwaysOn, los cambios en las tablas optimizadas para memoria en la réplica principal se aplican en memoria a las tablas de las réplicas secundarias, cuando se aplica REDO. Esto significa que la conmutación por error a una réplica secundaria puede ser muy rápida, puesto que los datos ya están en memoria. Además, las tablas están disponibles para las consultas en las réplicas secundarias que se han configurado para el acceso de lectura.  
   
@@ -52,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="support-for-transaction-replication-in-in-memory-oltp"></a>Compatibilidad para la replicación de transacciones en OLTP en memoria  
  Las tablas que actúan como suscriptores de replicación transaccional, excluida la replicación transaccional punto a punto, pueden configurarse como tablas optimizadas para memoria. Otras configuraciones de replicación no son compatibles con las tablas optimizadas para memoria.  Para obtener más información, vea [Replicación en suscriptores de tablas con optimización para memoria](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Grupos de disponibilidad AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Secundarias activas: réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   

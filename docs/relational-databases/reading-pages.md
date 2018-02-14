@@ -8,21 +8,23 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: pages
+helpviewer_keywords:
+- pages
 ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0da734a4a4ae5acde02874ea6c4cd53ec52d79f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1561e7c3cea406881dc9722f26a4dfa4cefe0310
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="reading-pages"></a>Leer páginas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,6 +61,6 @@ Por ejemplo, supongamos que dispone de una tabla con 500.000 páginas. El Usuari
 
 Sin el recorrido avanzado, cada usuario tendría que competir por espacio en búfer y se produciría una contención en el brazo del disco. Entonces se leerían las mismas páginas una vez por cada usuario, en lugar de leerlas una vez y compartirlas entre varios usuarios, lo que ralentizaría el rendimiento y consumiría muchos recursos.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Ver también
 [Guía de arquitectura de páginas y extensiones](../relational-databases/pages-and-extents-architecture-guide.md)   
  [Escribir páginas](../relational-databases/writing-pages.md)

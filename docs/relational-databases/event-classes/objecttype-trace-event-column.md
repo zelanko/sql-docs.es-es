@@ -8,7 +8,8 @@ ms.service:
 ms.component: event-classes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - event classes [SQL Server], Object Type column values
 - Object Type column values [SQL Server]
 ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d1c0753ed19215c5d45610aa5582fbce2c906cd6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 063bab84aeaa695ace1087df518640b611749b5f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="objecttype-trace-event-column"></a>Columna de evento de seguimiento ObjectType
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La columna de evento de seguimiento Object Type se utiliza en una variedad de eventos de seguimiento. En este tema se describen los valores posibles de esta columna y sus definiciones asociadas.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La columna de evento de seguimiento Object Type se utiliza en una variedad de eventos de seguimiento. En este tema se describen los valores posibles de esta columna y sus definiciones asociadas.  
   
 ## <a name="object-type-column-values"></a>Valores de la columna Object Type  
   
@@ -47,10 +49,10 @@ ms.lasthandoff: 11/17/2017
 |8280|Procedimiento almacenado extendido|  
 |16724|Desencadenador CLR|  
 |16964|Base de datos|  
-|16975|Object|  
+|16975|Objeto|  
 |17222|Catálogo de texto|  
 |17232|Procedimiento almacenado de CLR|  
-|17235|Esquema|  
+|17235|esquema|  
 |17475|Credencial|  
 |17491|Evento de DDL|  
 |17741|Evento de administración|  
@@ -86,7 +88,7 @@ ms.lasthandoff: 11/17/2017
 |20821|Restricción única|  
 |21057|Rol de aplicación|  
 |21059|Certificado|  
-|21075|Server|  
+|21075|Servidor|  
 |21076|Desencadenador de Transact-SQL|  
 |21313|Ensamblado|  
 |21318|Función escalar de CLR|  
@@ -107,7 +109,7 @@ ms.lasthandoff: 11/17/2017
 |22611|XMLSchema|  
 |22868|Tipo|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

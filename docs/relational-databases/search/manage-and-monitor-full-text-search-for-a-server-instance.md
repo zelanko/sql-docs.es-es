@@ -8,26 +8,28 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], server management
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
-caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5d37441c773b2934b544734889a9d7c86cbdfa2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e1dbd4fe6152e7318da0267d25c5900ec10c4814
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Administrar y supervisar la búsqueda de texto completo para una instancia de servidor
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La administración de texto completo de una instancia del servidor incluye:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La administración de texto completo de una instancia del servidor incluye:  
   
 -   Tareas de administración del sistema como administrar el servicio del iniciador de FDHOST (MSSQLFDLauncher), reiniciar el proceso de host de demonio de filtro si cambia las credenciales de la cuenta de servicio, configurar las propiedades de texto completo del servidor y realizar copia de seguridad de los catálogos de texto completo. En el nivel del servidor, por ejemplo, puede especificar un idioma de texto completo predeterminado que sea diferente del idioma predeterminado de la instancia del servidor en su totalidad.  
   
@@ -78,7 +80,7 @@ ms.lasthandoff: 11/17/2017
   
  En la tabla siguiente se enumeran las propiedades de texto completo de una instancia de servidor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus funciones [!INCLUDE[tsql](../../includes/tsql-md.md)] relacionadas.  
   
-|Propiedad|Descripción|Función|  
+|Propiedad|Description|Función|  
 |--------------|-----------------|--------------|  
 |**IsFullTextInstalled**|Si el componente de texto completo se instala con la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[FULLTEXTSERVICEPROPERTY](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)<br /><br /> [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)|  
 ||||  

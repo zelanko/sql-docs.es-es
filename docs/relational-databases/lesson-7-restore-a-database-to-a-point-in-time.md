@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b321e64b93a696f9a21ceef3279a6b89bea90974
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f2341db7864a6122ae9bb182afe664f10fd73359
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-7-restore-a-database-to-a-point-in-time"></a>Lección 7: Restaurar una base de datos a un momento dado
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En esta lección, restaurará la base de datos AdventureWorks2014 a un momento dado entre dos de las copias de seguridad del registro de transacciones.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+En esta lección, restaurará la base de datos AdventureWorks2014 a un momento dado entre dos de las copias de seguridad del registro de transacciones.  
   
 Con las copias de seguridad tradicionales, para lograr una restauración a un momento dado, necesitará usar la copia de seguridad de la base de datos completa, quizás una copia de seguridad diferencial y todos los archivos de registro de transacciones hasta el momento dado y justo después del momento dado al que quiere restaurar. Con las copias de seguridad de instantáneas de archivos, solo necesita los dos archivos de copia de seguridad de registros adyacentes que proporcionan los objetivos que enmarcan el momento al que quiere restaurar. Solo necesita dos conjuntos de copia de seguridad de registros de instantáneas de archivos, porque cada copia de seguridad de registros crea una instantánea de archivo de cada archivo de base de datos (cada archivo de datos y el archivo de registro).  
   

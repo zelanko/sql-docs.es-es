@@ -7,7 +7,8 @@ ms.reviewer:
 ms.suite: sql
 ms.prod_service: database-engine, sql-database
 ms.component: search
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - languages [SQL Server], full-text indexes
 - word breakers [full-text search]
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d70cc0b053c776f56041fbf961de711c4ad5c26
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 14f63ec1dd20561721c7713183835e5296b79470
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Elegir un idioma al crear un índice de texto completo
 
@@ -80,7 +81,7 @@ ms.lasthandoff: 12/21/2017
   
   
 ##  <a name="breaking"></a> Separación de palabras  
- Un separador de palabras acorta el texto que se va a indizar en límites de palabras, que son específicas del idioma. Por consiguiente, el comportamiento de separación de palabras difiere entre los diferentes idiomas. Si utiliza un idioma x para indizar varios idiomas {x, y y, z}, parte del comportamiento podría producir resultados inesperados. Por ejemplo un guión (-) o una coma (,) podrían ser elementos separadores de palabras que no se tienen en cuenta en un idioma, pero sí en otro. También, en raras ocasiones, se podría producir un comportamiento de lematización inesperado debido a que una palabra determinada podría derivarse de manera diferente en idiomas distintos. Por ejemplo, en inglés estos límites de palabras suelen ser espacios en blanco o alguna forma de puntuación. En otros idiomas, como el alemán, las palabras o caracteres se pueden combinar. Por consiguiente, el idioma de columna que elija debería representar el idioma que espera que se almacene en las filas de esa columna.  
+ Un separador de palabras acorta el texto que se va a indizar en límites de palabras, que son específicas del idioma. Por consiguiente, el comportamiento de separación de palabras difiere entre los diferentes idiomas. Si usa un idioma, x, para indizar varios idiomas {x, y, z}, parte del comportamiento podría producir resultados inesperados. Por ejemplo un guión (-) o una coma (,) podrían ser elementos separadores de palabras que no se tienen en cuenta en un idioma, pero sí en otro. También, en raras ocasiones, se podría producir un comportamiento de lematización inesperado debido a que una palabra determinada podría derivarse de manera diferente en idiomas distintos. Por ejemplo, en inglés estos límites de palabras suelen ser espacios en blanco o alguna forma de puntuación. En otros idiomas, como el alemán, las palabras o caracteres se pueden combinar. Por consiguiente, el idioma de columna que elija debería representar el idioma que espera que se almacene en las filas de esa columna.  
   
 ### <a name="western-languages"></a>Idiomas occidentales  
  Para la familia de idiomas occidentales, si duda de qué idiomas se van a almacenar en una columna o espera que se almacene más de uno, una solución alternativa general es utilizar el separador de palabras para el idioma más complejo que pueda almacenarse en la columna. Por ejemplo, imagine que en una columna cree que puede almacenarse contenido en inglés, español y alemán. Estos tres idiomas occidentales poseen patrones de separación de palabras muy similares y los patrones del alemán son los más complejos. Por consiguiente, una buena opción en este caso sería utilizar el separador de palabras alemán, que debería poder procesar correctamente el texto inglés y español. Por el contrario, el separador de palabras inglés no podría procesar perfectamente el texto alemán debido a sus palabras compuestas.  

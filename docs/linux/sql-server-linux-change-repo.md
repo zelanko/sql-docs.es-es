@@ -4,7 +4,7 @@ description: "Comprobar y configurar repositorios de origen para SQL Server 2017
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/07/2018
+ms.date: 02/14/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: bf9a129df2e76f0eafc6992fc0d81f1a397df963
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
-ms.translationtype: HT
+ms.openlocfilehash: 33f02349d10cfd0ada76325c378d0259ec931002
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurar repositorios de instalación y actualización de SQL Server en Linux
 
@@ -29,7 +29,7 @@ En este artículo se describe cómo configurar el repositorio correcta para SQL 
 > [!IMPORTANT]
 > Si instaló anteriormente un CTP o versión RC de 2017 de SQL Server, debe utilizar los pasos de este artículo para registrar un repositorio de disponibilidad General (GA) y actualizar o volver a instalar. Las versiones preliminares de SQL Server 2017 no se admiten y expirarán.
 
-## <a id="repositories"></a>Repositorios
+## <a id="repositories"></a> Repositorios
 
 Cuando instala SQL Server en Linux, debe configurar un repositorio de Microsoft. Este repositorio se usa para adquirir el paquete del motor de base de datos, **mssql server**y relacionados con paquetes de SQL Server. Actualmente hay tres repositorios principales:
 
@@ -181,8 +181,5 @@ Después de haber configurado el repositorio correcto, puede continuar con [inst
 
 > [!IMPORTANT]
 > En este punto, si opta por utilizar uno de los artículos de la instalación, como el [tutoriales](sql-server-linux-setup.md#platforms), recuerde que ya ha configurado el repositorio de destino. No repita este paso en los tutoriales. Esto es especialmente cierto si configura el repositorio GDR, ya que los tutoriales usan el repositorio de CU.
-
-> [!IMPORTANT]
-> Cualquier versión de SQL Server 2017 anteriores a la versión de CTP 2.1 debe actualizarse al menos 2.1 antes de actualizar a la versión de GA. Otra opción consiste en las bases de datos de copia de seguridad, desinstale la versión anterior y, a continuación, realizar una instalación nueva de una versión de GA.
 
 Para obtener más información sobre cómo instalar SQL Server 2017 en Linux, consulte [Guía de instalación para SQL Server en Linux](sql-server-linux-setup.md).

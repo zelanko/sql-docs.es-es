@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_nodes (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/19/2017
+ms.date: 02/13/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -27,29 +27,33 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f2abdd42300c8264f87513f428c7c6f4aa22645d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 53d10c2bc54517db851ef1fe40cb727c799ef223
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sysdmosnodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Un componente interno denominado SQLOS crea las estructuras de nodo que imitan el procesador de hardware. Estas estructuras se pueden cambiar utilizando NUMA de software para crear los diseños de nodo personalizados.  
+Un componente interno denominado SQLOS crea las estructuras de nodo que imitan el procesador de hardware. Estas estructuras se pueden cambiar mediante el uso de [soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md) para crear los diseños de nodo personalizados.  
+
+> [!NOTE]
+> A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usarán automáticamente NUMA de software para determinadas configuraciones de hardware. Para obtener más información, consulte [Soft-NUMA automático](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa).
   
- En la tabla siguiente se proporciona información acerca de estos nodos.  
+En la tabla siguiente se proporciona información acerca de estos nodos.  
   
-> **Nota:** para llamar a esta DMV de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_os_nodes**.  
+> [!NOTE]
+> Para llamar a esta DMV de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_os_nodes**.  
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|Identificador del nodo.|  
-|node_state_desc|**nvarchar(256)**|Descripción del estado del nodo. Los valores se muestran primero con los valores mutuamente exclusivos, seguidos de los valores combinables. Por ejemplo:<br /><br /> Online, Thread Resources Low, Lazy Preemptive<br /><br /> Hay cuatro valores node_state_desc mutuamente excluyentes. Se enumeran a continuación con sus descripciones.<br /><br /> En línea: El nodo está en línea<br /><br /> Sin conexión: Nodo está sin conexión<br /><br /> INACTIVO: Nodo no tiene ninguna solicitud de trabajo pendiente y ha entrado en un estado de inactividad.<br /><br /> IDLE_READY: Nodo no tiene trabajo solicitudes pendientes y está listo para entrar en un estado inactivo.<br /><br /> Hay cinco valores node_state_desc combinables, con sus descripciones.<br /><br /> DAC: Este nodo está reservado para la conexión administrativa dedicada.<br /><br /> THREAD_RESOURCES_LOW: No hay ningún subproceso nuevo puede crearse en este nodo debido a una condición de memoria insuficiente.<br /><br /> HOT ADDED: Indica los nodos se agregaron en respuesta a eventos de CPU de agregar un acceso rápido.|  
-|memory_object_address|**varbinary(8)**|Dirección del objeto de memoria asociada con este nodo. Relación uno a uno respecto a sys.dm_os_memory_objects.memory_object_address.|  
-|memory_clerk_address|**varbinary(8)**|Dirección de distribuidor de memoria asociada con este nodo. Relación uno a uno con respecto a sys.dm_os_memory_clerks.memory_clerk_address.|  
-|io_completion_worker_address|**varbinary(8)**|La dirección del trabajador asignada a la realización de E/S para este nodo. Relación uno a uno con respecto a sys.dm_os_workers.worker_address.|  
-|memory_node_id|**smallint**|Identificador del nodo de memoria al que pertenece este nodo. Relación varios a uno con respecto a  sys.dm_os_memory_nodes.memory_node_id.|  
+|node_state_desc|**nvarchar(256)**|Descripción del estado del nodo. Los valores se muestran primero con los valores mutuamente exclusivos, seguidos de los valores combinables. Por ejemplo:<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />Hay cuatro valores node_state_desc mutuamente excluyentes. Se enumeran a continuación con sus descripciones.<br /><ul><li>En línea: El nodo está en línea<li>Sin conexión: Nodo está sin conexión<li>INACTIVO: Nodo no tiene ninguna solicitud de trabajo pendiente y ha entrado en un estado de inactividad.<li>IDLE_READY: Nodo no tiene trabajo solicitudes pendientes y está listo para entrar en un estado inactivo.</li></ul><br />Hay tres valores node_state_desc combinables, con sus descripciones.<br /><ul><li>DAC: Este nodo se reserva para el [conexión administrativa dedicada](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<li>THREAD_RESOURCES_LOW: No hay ningún subproceso nuevo puede crearse en este nodo debido a una condición de memoria insuficiente.<li>HOT ADDED: Indica los nodos se agregaron en respuesta a eventos de CPU de agregar un acceso rápido.</li></ul>|  
+|memory_object_address|**varbinary(8)**|Dirección del objeto de memoria asociada con este nodo. Relación uno a uno con [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).memory_object_address.|  
+|memory_clerk_address|**varbinary(8)**|Dirección de distribuidor de memoria asociada con este nodo. Relación uno a uno con [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).memory_clerk_address.|  
+|io_completion_worker_address|**varbinary(8)**|La dirección del trabajador asignada a la realización de E/S para este nodo. Relación uno a uno con [sys.dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).worker_address.|  
+|memory_node_id|**smallint**|Identificador del nodo de memoria al que pertenece este nodo. Relación de varios a uno con [sys.dm_os_memory_nodes](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md).memory_node_id.|  
 |cpu_affinity_mask|**bigint**|Mapa de bits que identifica las CPU con las que este nodo está asociado.|  
 |online_scheduler_count|**smallint**|Número de programadores en línea que están administrados por este nodo.|  
 |idle_scheduler_count|**smallint**|Número de programadores en línea que no tienen ningún trabajador activo.|  
@@ -67,11 +71,7 @@ ms.lasthandoff: 02/03/2018
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles de Premium, requieren la `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles estándar y básico, requiere la **administrador del servidor** o un **Administrador de Azure Active Directory** cuenta.  
   
-## <a name="see-also"></a>Vea también  
-  
+## <a name="see-also"></a>Vea también    
  [Sistema operativo SQL Server relacionadas con vistas de administración dinámica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)  
   
-  
-
-

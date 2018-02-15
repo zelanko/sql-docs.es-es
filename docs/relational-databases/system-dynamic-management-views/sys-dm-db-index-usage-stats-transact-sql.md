@@ -27,16 +27,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9652e093a6b358a209bb7b84f1c4aa4c6854c328
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: fef54757181e9a4fc39a8eabf6399041ac0d6879
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sysdmdbindexusagestats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Devuelve recuentos de diferentes tipos de operaciones de índice y la hora en que se realizó por última vez cada uno de los tipos de operación en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Devuelve recuentos de diferentes tipos de operaciones de índice y la hora en que se realizó por última vez cada uno de los tipos de operación.  
   
  En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], las vistas de administración dinámica no pueden exponer información que impactaría a la contención de la base de datos ni acerca de otras bases de datos a las que el usuario tenga acceso. Para evitar exponer esta información, cada fila que contiene datos que no pertenecen al inquilino conectado se filtra.  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/03/2018
 >  **Sys.dm_db_index_usage_stats** no devuelve información acerca de los índices con optimización para memoria. Para obtener información sobre el uso de los índices con optimización para memoria, vea [sys.dm_db_xtp_index_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
 > [!NOTE]  
->  Para llamar a esta desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_db_index_usage_stats**.  
+>  Para llamar a esta vista de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use **sys.dm_pdw_nodes_db_index_usage_stats**.  
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
@@ -52,9 +52,9 @@ ms.lasthandoff: 02/03/2018
 |**object_id**|**int**|Id. de la tabla o vista en la que se define el índice.|  
 |**index_id**|**int**|Id. del índice.|  
 |**user_seeks**|**bigint**|Número de consultas de búsqueda realizadas por el usuario.|  
-|**user_scans**|**bigint**|Número de consultas de recorrido realizadas por el usuario. Representa los exámenes que no se ha utilizado 'Buscar' predicado.|  
+|**user_scans**|**bigint**|Número de recorrido realizadas por las consultas de usuario que no se usan 'búsqueda' predicado.|  
 |**user_lookups**|**bigint**|Número de búsquedas de marcadores realizadas por consultas de usuario.|  
-|**user_updates**|**bigint**|Número de consultas de actualización realizadas por el usuario. Esto incluye Insert, Delete y las actualizaciones que representa el número de operaciones realizadas no las filas reales que se ve afectadas. Por ejemplo, si elimina 1000 filas en una sola instrucción, este número se incrementará en 1|  
+|**user_updates**|**bigint**|Número de consultas de actualización realizadas por el usuario. Esto incluye Insert, Delete y las actualizaciones que representa el número de operaciones realizadas no las filas reales que se ve afectadas. Por ejemplo, si elimina 1000 filas en una sola instrucción, este número se incrementa en 1|  
 |**last_user_seek**|**datetime**|Hora en que el usuario realizó la última búsqueda.|  
 |**last_user_scan**|**datetime**|Hora en que el usuario realizó el último recorrido.|  
 |**last_user_lookup**|**datetime**|Hora de la última búsqueda del usuario.|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="permissions"></a>Permissions  
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles de Premium, requieren la `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles estándar y básico, requiere la **administrador del servidor** o un **Administrador de Azure Active Directory** cuenta.  
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.  
   
 ## <a name="see-also"></a>Vea también  
 

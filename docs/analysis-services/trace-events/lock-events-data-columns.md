@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: c223157f-41a0-405c-bc1a-41c999506936
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 71b4a1d084d56cdb260ac6ed4dd9688a7e388df3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lock-events-data-columns"></a>Columnas de datos de eventos de bloqueo
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoría de eventos de bloqueo tiene la siguiente clase de evento:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La categoría de eventos Bloqueos tiene las clases de eventos siguientes:  
   
 |**Identificador del evento**|**Nombre del evento**|**Descripción del evento**|  
 |------------------|--------------------|---------------------------|  
@@ -54,7 +55,7 @@ ms.lasthandoff: 01/08/2018
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |IntegerData|10|1|Datos enteros.|  
 |ObjectType|12|1|Tipo de objeto.|  
 |ObjectPath|14|8|Ruta del objeto. Lista separada por comas de elementos primarios, empezando por el elemento primario del objeto.|  
@@ -122,6 +123,6 @@ ms.lasthandoff: 01/08/2018
 |ServerName|43|8|Nombre del servidor que produce el evento.|  
   
 ## <a name="see-also"></a>Vea también  
- [Bloqueo (categoría de eventos)](../../analysis-services/trace-events/lock-events-category.md)  
+ [Categoría de eventos de bloqueo](../../analysis-services/trace-events/lock-events-category.md)  
   
   

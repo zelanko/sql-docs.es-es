@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 83dc82da-91fb-4e47-91a8-0e0db67339b8
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 7783dd3fabfe32359b8d2da35ad9eda25a91057f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-data-access"></a>Acceso a datos PowerPivot
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tema describe las maneras en que los datos se recuperan de un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] libro que se publica en una biblioteca de SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+En este tema se describen las diferentes formas de recuperar datos de un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicado en una biblioteca de SharePoint.  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se almacenan en un libro de Excel. La cadena de conexión es una dirección URL de un libro en un sitio de SharePoint.  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 01/08/2018
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint no administra todos los datos en un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Excel Services procesa las tablas y los datos de la celda en una hoja de cálculo. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint administra únicamente las tablas dinámicas, los gráficos dinámicos y las segmentaciones que tienen que ver con los datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 ## <a name="see-also"></a>Vea también  
- [Conectar a Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
- [Acceso a datos de modelos tabulares](../../analysis-services/tabular-models/tabular-model-data-access.md)  
+ [Conectarse a Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
+ [Acceso a datos de modelo tabular](../../analysis-services/tabular-models/tabular-model-data-access.md)  
   
   

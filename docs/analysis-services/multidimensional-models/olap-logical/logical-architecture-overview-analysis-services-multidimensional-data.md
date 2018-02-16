@@ -11,24 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - cubes [Analysis Services], examples
 - cubes [Analysis Services], about cubes
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2f3197d3962f7bce7b8882b9676643bed4a97bdb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Información general de arquitectura lógica (Analysis Services - Datos multidimensionales)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services funciona en un modo de implementación de servidor que determina el entorno de tiempo de ejecución y la arquitectura de memoria utilizado por diferentes tipos de modelos de Analysis Services. Determina el modo de servidor durante la instalación. **Modo multidimensional y minería de datos** admite OLAP tradicional y minería de datos. **Modo tabular** es compatible con los modelos tabulares. **El modo integrado de SharePoint** hace referencia a una instancia de Analysis Services que se instaló como [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint, que se usa para cargar y consultar Excel o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modelos de datos dentro de un libro.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Analysis Services funciona en un modo de implementación de servidor que determina la arquitectura de memoria y el entorno en tiempo de ejecución utilizados por diferentes tipos de modelos de Analysis Services. Determina el modo de servidor durante la instalación. **Modo multidimensional y minería de datos** admite OLAP tradicional y minería de datos. **Modo tabular** es compatible con los modelos tabulares. **El modo integrado de SharePoint** hace referencia a una instancia de Analysis Services que se instaló como [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint, que se usa para cargar y consultar Excel o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modelos de datos dentro de un libro.  
   
  En este tema se explica la arquitectura básica de Analysis Services cuando se usa en modo Multidimensional y Minería de datos. Para obtener más información acerca de los otros modos, consulte [creación de modelos tabulares &#40; SSAS &#41; ](../../../analysis-services/tabular-models/tabular-models-ssas.md) y [comparar soluciones tabulares y multidimensionales &#40; SSAS &#41; ](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
@@ -72,7 +74,7 @@ ms.lasthandoff: 01/08/2018
   
  Los valores alfanuméricos más pequeños que están alrededor del cubo son los miembros de las dimensiones. Los miembros de ejemplo son ground (miembro de la dimensión Route), Africa (miembro de la dimensión Source) y 1st quarter (miembro de la dimensión Time).  
   
-### <a name="measures"></a>medidas  
+### <a name="measures"></a>Medidas  
  Los valores de las celdas del cubo representan las dos medidas, Packages y Last. La medida Packages representa el número de paquetes importados y **suma** función se utiliza para agregar los hechos. La medida Last representa la fecha de recepción y el **Max** función se utiliza para agregar los hechos.  
   
 ### <a name="dimensions"></a>Dimensions  
@@ -88,13 +90,13 @@ ms.lasthandoff: 01/08/2018
 ||||.|||Último|||  
 |-|-|-|--------------|-|-|----------|-|-|  
 ||||All Sources|Eastern Hemisphere|Western Hemisphere|All Sources|Eastern Hemisphere|Western Hemisphere|  
-|All Time|||25110|6547|18563|29 de diciembre de 99|DEC-22-99|29 de diciembre de 99|  
+|All Time|||25110|6547|18563|29 de diciembre de 99|Dec-22-99|29 de diciembre de 99|  
 ||1st half||11173|2977|8196|Jun-28-99|Jun-20-99|Jun-28-99|  
 |||1st quarter|5108|1452|3656|Mar-30-99|Mar-19-99|Mar-30-99|  
 |||2nd quarter|6065|1525|4540|Jun-28-99|Jun-20-99|Jun-28-99|  
-||2nd half||13937|3570|10367|29 de diciembre de 99|DEC-22-99|29 de diciembre de 99|  
+||2nd half||13937|3570|10367|29 de diciembre de 99|Dec-22-99|29 de diciembre de 99|  
 |||3rd quarter|6119|1444|4675|Sep-30-99|Sep-18-99|Sep-30-99|  
-|||4th quarter|7818|2126|5692|29 de diciembre de 99|DEC-22-99|29 de diciembre de 99|  
+|||4th quarter|7818|2126|5692|29 de diciembre de 99|Dec-22-99|29 de diciembre de 99|  
   
  Una vez definido un cubo, se pueden crear agregaciones o cambiar agregaciones existentes para establecer opciones, como que las agregaciones se precalculen durante el procesamiento o se calculen en el momento de la consulta. **Tema relacionado:**[agregaciones y diseños de agregaciones](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
@@ -117,7 +119,7 @@ ms.lasthandoff: 01/08/2018
 |||||||  
 |-|-|-|-|-|-|  
 |Import_ReceiptKey|RouteKey|SourceKey|TimeKey|.|Último|  
-|3516987|1|6|1|15|10 de enero de 99|  
+|3516987|1|6|1|15|Jan-10-99|  
 |3554790|1|6|1|40|19 de enero de 99|  
 |3572673|1|6|1|34|Jan-27-99|  
 |3600974|1|6|1|45|Feb-02-99|  

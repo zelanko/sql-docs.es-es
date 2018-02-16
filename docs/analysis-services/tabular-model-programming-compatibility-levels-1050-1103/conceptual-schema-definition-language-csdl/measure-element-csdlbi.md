@@ -11,29 +11,31 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: bfbc9274-053a-421a-bb81-2095bba710be
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: bd9dfea18c7b201dfcf5838b43d59ae0f5b942a7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="measure-element-csdlbi"></a>Measure, elemento (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]El elemento Measure es un tipo complejo basado en el elemento Property de CSDL. Las anotaciones CSDLBI agregan atributos que admiten la definición de fórmulas complejas para su uso en modelos de datos de Business Intelligence.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+El elemento Measure es un tipo complejo basado en el elemento Property de CSDL. Las anotaciones CSDLBI agregan atributos que admiten la definición de fórmulas complejas para su uso en modelos de datos de Business Intelligence.  
   
 ## <a name="elements-and-attributes"></a>Atributos y elementos  
  En la tabla siguiente se enumeran los elementos y atributos que definen el elemento Measure, así como todos los atributos aplicables al elemento Property.  
   
-|Nombre|Es obligatorio|Description|  
+|Nombre|Es obligatorio|Descripción|  
 |----------|-----------------|-----------------|  
-|Kpi|no|Elemento necesario solo para las medidas que se utilizan como KPI. No todas las medidas son KPI, pero todos los KPI deben basarse en la definición de una medida.<br /><br /> [KPI, elemento &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md)|  
-|IsSimpleMeasure|no|Valor true/false que indica si la fórmula utilizada en la medida es una de las agregaciones simples (SUM, COUNT, MIN, MAX, AVG, DistinctCount).<br /><br /> El valor predeterminado es true.|  
+|Kpi|No|Elemento necesario solo para las medidas que se utilizan como KPI. No todas las medidas son KPI, pero todos los KPI deben basarse en la definición de una medida.<br /><br /> [KPI, elemento &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/kpi-element-csdlbi.md)|  
+|IsSimpleMeasure|No|Valor true/false que indica si la fórmula utilizada en la medida es una de las agregaciones simples (SUM, COUNT, MIN, MAX, AVG, DistinctCount).<br /><br /> El valor predeterminado es true.|  
   
 ## <a name="example"></a>Ejemplo  
  **Tabular**  
@@ -104,6 +106,6 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia técnica para las anotaciones de Business Intelligence en CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [Referencia técnica de anotaciones de BI para CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

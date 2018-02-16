@@ -1,7 +1,7 @@
 ---
 title: "Clases complementarias de AMO y métodos de programación | Documentos de Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - restores [AMO]
 - assemblies [AMO]
@@ -22,19 +23,19 @@ helpviewer_keywords:
 - traces [AMO]
 - backups [AMO]
 ms.assetid: 14aed554-d2e2-49e5-9c72-26660759bce2
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71341caed76270096627e3516ce87abb38ad6bf3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ea3f2a07cc5d6e39bec7db5faf333986a56062f9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-complementary-classes-and-methods"></a>Programar clases y métodos complementarios de AMO
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Este tema contiene las siguientes secciones:  
+  Este tema contiene las siguientes secciones:  
   
 -   [Assembly (clase)](#Assembly)  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Clase CaptureLog y atributo CaptureXML](#CL)  
   
-##  <a name="Assembly"></a>Assembly (clase)  
+##  <a name="Assembly">Assembly (clase)</a>  
  Ensamblados los usuarios pueden extender la funcionalidad de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] mediante la adición de nuevos procedimientos almacenados o funciones de expresiones multidimensionales (MDX). Para obtener más información, consulte [AMO otras clases y métodos](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md).  
   
  Agregar y quitar ensamblados es sencillo y se puede realizar en línea. Debe ser un administrador de bases de datos para agregar un ensamblado a la base de datos o bien un administrador del servidor para agregar el ensamblado al objeto de servidor.  
@@ -78,7 +79,7 @@ static public void CreateStoredProcedures(Database db)
   
 ```  
   
-##  <a name="BU"></a>Métodos de restauración y copia de seguridad  
+##  <a name="BU"></a> Métodos de restauración y copia de seguridad  
  Los métodos de copias de seguridad y restauración permiten a los administradores realizar copias de seguridad y restaurar bases de datos.  
   
  En el ejemplo siguiente se crean copias de seguridad para todas las bases de datos del servidor especificado. Si un archivo de copia de seguridad ya existe, se sobrescribe. Los archivos de copia de seguridad se guardan en la carpeta de copia de seguridad de la carpeta de datos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -105,7 +106,7 @@ static public void RestoreAdventureWorks(Server svr)
 }  
 ```  
   
-##  <a name="TRC"></a>Trace (clase)  
+##  <a name="TRC">Trace (clase)</a>  
  Al supervisar la actividad del servidor, se deben usar dos tipos de seguimientos: seguimientos de sesión y seguimientos del servidor. Realizar un seguimiento del servidor le puede indicar cómo se está realizando su tarea actual en el servidor (seguimientos de sesión) o le puede indicar el estado de la actividad total en el servidor, incluso sin estar conectado al servidor (seguimientos del servidor).  
   
  Al realizar un seguimiento de la actividad actual (seguimientos de sesión), el servidor envía notificaciones a la aplicación actual acerca de los eventos que provoca la aplicación y que se están produciendo en el servidor. Los eventos se capturan mediante controladores de eventos en la aplicación actual. En primer lugar, asigne las rutinas de control de eventos al objeto <xref:Microsoft.AnalysisServices.SessionTrace> y, a continuación, inicie el seguimiento de sesión.  
@@ -238,7 +239,7 @@ static public void TestServerTraces(Server svr)
 }  
 ```  
   
-##  <a name="CL"></a>Atributos CaptureLog y CaptureXml  
+##  <a name="CL"></a> Atributos CaptureLog y CaptureXml  
  El atributo CaptureLog le habilita para crear archivos por lotes XMLA a partir de sus operaciones AMO. CaptureLog le habilita para crear un script para objetos de servidor como bases de datos, cubos, dimensiones, estructuras de minería de datos, etc.  
   
  Para crear CaptureLog, es necesario realizar los pasos siguientes:  
@@ -282,7 +283,7 @@ static public string TestCaptureLog(Server svr)
 }  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  <xref:Microsoft.AnalysisServices>   
  [Introducción a las clases AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO otras clases y métodos](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)   

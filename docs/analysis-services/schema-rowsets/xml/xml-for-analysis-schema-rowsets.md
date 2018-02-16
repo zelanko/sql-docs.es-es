@@ -11,26 +11,28 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - rowsets [Analysis Services], XML for Analysis
 - XML for Analysis, schema rowsets
 - schema rowsets [Analysis Services], XML for Analysis
 - schema rowsets [XML for Analysis]
 ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 44c9f6740001c80fd01eaaf53f735bc539f39036
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis Schema Rowsets
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]El [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML para el proveedor de Analysis (XMLA) incluye conjuntos de filas de esquema que devuelven metadatos sobre el estado del servidor, la actividad y objetos. La recuperación de metadatos es necesaria si está desarrollando una aplicación cliente que se conecte a un modelo de Analysis Services cuyas estructura y características sean variables.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+El proveedor de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for analysis (XMLA) incluye conjuntos de filas de esquema que devuelven metadatos sobre el estado, la actividad y los objetos de servidor. La recuperación de metadatos es necesaria si está desarrollando una aplicación cliente que se conecte a un modelo de Analysis Services cuyas estructura y características sean variables.  
   
  Los conjuntos de filas de esquema también proporcionan una visión general de los procesos y operaciones internos que pueden ayudarle a supervisar el servidor y solucionar problemas. Para admitir mejor las tareas administrativas ad hoc, puede ejecutar una consulta DMV (Vista de administración dinámica) en la mayoría de los conjuntos de filas de esquema. Las consultas DMV devuelven resultados en un formato tabular legible que puede ver en [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
@@ -38,7 +40,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Conjunto de filas<sup>1</sup>|Description|  
+|Rowset<sup>1</sup>|Description|  
 |------------------------|-----------------|  
 |[Conjunto de filas DISCOVER_CALC_DEPENDENCY](../../../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md)|Devuelve información sobre las dependencias entre tablas, columnas, medidas y fórmulas de columnas calculadas.<br /><br /> Se aplica a los modelos tabulares implementados en una instancia de Analysis Services y [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modelos en los libros de Excel que se ejecutan en un entorno de SharePoint.|  
 |[Conjunto de filas DISCOVER_CONNECTIONS](../../../analysis-services/schema-rowsets/xml/discover-connections-rowset.md)|Proporciona información sobre el uso de los recursos y la actividad en las conexiones abiertas actualmente en el servidor.|  

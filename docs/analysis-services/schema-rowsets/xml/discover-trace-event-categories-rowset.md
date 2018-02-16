@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DISCOVER_TRACE_EVENT_CATEGORIES | Documentos de Microsoft
+title: DISCOVER_TRACE_EVENT_CATEGORIES Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: analysis-services
@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 1ad74fd2-4740-469d-85b5-abf0171737fd
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: b95fb2824757a4b45001dd5a1eed4871995b86cb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovertraceeventcategories-rowset"></a>Conjunto de filas DISCOVER_TRACE_EVENT_CATEGORIES
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Muestra la lista de categorías de eventos que son compatibles con el proveedor de seguimiento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Muestra la lista de categorías de eventos que admite el proveedor de seguimiento.  
   
  **Se aplica a:** modelos tabulares, modelos multidimensionales  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 01/08/2018
   
 |Nombre de columna|Indicador de tipo|Longitud|Description|  
 |-----------------|--------------------|------------|-----------------|  
-|**Data**|**DBTYPE_WSTR**||Contiene una cadena XML codificada que describe la información de categoría de eventos en el proveedor de seguimiento, incluido el nombre de categoría, el tipo y la descripción. El tipo es una cadena que indica el tipo de categoría. Los valores de enumeración son los siguientes:<br /><br /> 0=normal<br /><br /> 1=significativo<br /><br /> 2=Error|  
+|**Datos**|**DBTYPE_WSTR**||Contiene una cadena XML codificada que describe la información de categoría de eventos en el proveedor de seguimiento, incluido el nombre de categoría, el tipo y la descripción. El tipo es una cadena que indica el tipo de categoría. Los valores de enumeración son los siguientes:<br /><br /> 0=normal<br /><br /> 1=significativo<br /><br /> 2=Error|  
   
  Este conjunto de filas de esquema no está ordenado.  
   
@@ -49,6 +51,6 @@ ms.lasthandoff: 01/08/2018
 |String|DISCOVER_TRACE_EVENT_CATEGORIES|  
   
 ## <a name="see-also"></a>Vea también  
- [Conjuntos de filas de esquema de XML for Analysis](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML para conjuntos de filas de esquema de análisis](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

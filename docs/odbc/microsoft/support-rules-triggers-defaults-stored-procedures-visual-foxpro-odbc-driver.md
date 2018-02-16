@@ -37,10 +37,10 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: c2fcdf0a9a7af2f34a2a0d87495d00ddf3373d3a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Compatibilidad con las reglas, desencadenadores, valores predeterminados y los procedimientos almacenados (controlador ODBC de Visual FoxPro)
 No se puede crear reglas de Visual FoxPro, desencadenadores, valores predeterminados o procedimientos almacenados con el controlador ODBC de Visual FoxPro. Sin embargo, la aplicación puede interactuar con los procedimientos almacenados, desencadenadores, valores predeterminados o reglas existentes tal y como inserta, actualiza o eliminan datos de Visual FoxPro almacenados en una base de datos.  

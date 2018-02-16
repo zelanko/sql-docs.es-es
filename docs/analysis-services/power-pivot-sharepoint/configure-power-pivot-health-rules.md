@@ -12,20 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1bd59f4d64395ee1def3d8e1c1eaf31942a6533c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-health-rules"></a>Configuración de las reglas de mantenimiento de PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]para SharePoint incluye reglas de mantenimiento de SharePoint que le ayudarán a supervisar y solucionar problemas de configuración y disponibilidad del servidor. Las reglas de mantenimiento que se aplican a [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint aparecen en la página Revisar las definiciones de la regla.  
+[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint incluye reglas de mantenimiento de SharePoint que ayudan a supervisar y remediar problemas de configuración y disponibilidad del servidor. Las reglas de mantenimiento que se aplican a [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint aparecen en la página Revisar las definiciones de la regla.  
   
  Las reglas de estado permiten la detección temprana de problemas del servidor que podrían conducir a la larga a la interrupción del servicio. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint proporciona varias reglas para ayudarle a identificar y solucionar problemas antes de que afecten a los usuarios. Puede personalizar muchas de estas reglas para adaptarlas a las características únicas de la implementación. Por ejemplo, si desea más tiempo para solucionar las advertencias sobre el espacio en disco, podría subir el porcentaje de espacio en disco disponible desde el 5% hasta el 10% de modo que la advertencia aparezca antes.  
   
@@ -49,7 +49,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
  [Configurar las reglas de estado que se usan para evaluar la estabilidad de la aplicación (Aplicación de servicio PowerPivot)](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Debe ser administrador de la aplicación de servicio para cambiar las propiedades de configuración de la instancia de Analysis Services y de la aplicación de servicio [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .  
   
 ##  <a name="bkmk_view"></a> Ver las reglas de mantenimiento de PowerPivot  

@@ -16,19 +16,20 @@ helpviewer_keywords:
 - decision tree algorithms [Analysis Services]
 - decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 3e09cceda5b62fe4112fe15a7a69b520134a733b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de árboles de decisión (Analysis Services - Minería de datos)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tema describe el contenido del modelo de minería de datos que es específico de los modelos que utilizan la [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de árboles de decisión. Para obtener una explicación general sobre el contenido del modelo de minería de datos para todos los tipos de modelo, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md). Es importante recordar que el algoritmo de árboles de decisión de Microsoft es un algoritmo híbrido que puede crear modelos con funciones muy diferentes: un árbol de decisión puede representar asociaciones, reglas o incluso una regresión lineal. La estructura del árbol es básicamente la misma, pero la forma en la que se interpretará la información dependerá del propósito para el que creó el modelo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener una explicación general sobre el contenido del modelo de minería de datos para todos los tipos de modelo, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md). Es importante recordar que el algoritmo de árboles de decisión de Microsoft es un algoritmo híbrido que puede crear modelos con funciones muy diferentes: un árbol de decisión puede representar asociaciones, reglas o incluso una regresión lineal. La estructura del árbol es básicamente la misma, pero la forma en la que se interpretará la información dependerá del propósito para el que creó el modelo.  
   
 ##  <a name="bkmk_Top"></a> Descripción de la estructura de un modelo de árboles de decisión  
  Un modelo de árboles de decisión tiene un nodo primario único que representa el modelo y sus metadatos. Debajo del nodo primario aparecen árboles independientes que representan los atributos de predicción que se seleccionan. Por ejemplo, si configura su modelo de árboles de decisión para predecir si los clientes comprarán algo y, a continuación, proporciona entradas para el género y los ingresos, el modelo creará un árbol único para el atributo de compra, con muchas bifurcaciones que se dividen en función de condiciones relacionadas con el género y los ingresos.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 01/08/2018
  El algoritmo de árboles de decisión de Microsoft no admite tipos de datos continuos como entradas; por lo tanto, si alguna columna tiene un tipo de datos numérico continuo, los valores se discretizan. El algoritmo realiza su propia discretización en el punto de una división para todos los atributos continuos.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]elige automáticamente un método de creación de depósitos de los atributos continuos. Sin embargo, puede controlar los valores de forma continuos de las entradas se discretizan estableciendo el tipo de contenido de la columna de estructura de minería de datos para **Discretized** y, a continuación, establecer el <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> o <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> propiedad.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] elige automáticamente un método de creación de depósitos de los atributos continuos. Sin embargo, puede controlar los valores de forma continuos de las entradas se discretizan estableciendo el tipo de contenido de la columna de estructura de minería de datos para **Discretized** y, a continuación, establecer el <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> o <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> propiedad.  
   
  [Top](#bkmk_Top)  
   
@@ -212,7 +213,7 @@ ms.lasthandoff: 01/08/2018
  El atributo representado por el fragmento XML puede ser simple o complejo. Un atributo simple contiene el nombre de la columna del modelo y el valor del atributo. Si la columna del modelo contiene una tabla anidada, el atributo de tabla anidada se representa como una concatenación del nombre de tabla, el valor de clave y el atributo.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] es compatible con la versión 2.0 del estándar PMML, con extensiones para admitir el uso de la tabla anidada. Si los datos contienen tablas anidadas y genera una versión PMML del modelo, todos los elementos del modelo que incluyen los predicados se marcan como una extensión.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite la versión 2.0 del estándar PMML, con extensiones para admitir el uso de la tabla anidada. Si los datos contienen tablas anidadas y genera una versión PMML del modelo, todos los elementos del modelo que incluyen los predicados se marcan como una extensión.  
   
  [Top](#bkmk_Top)  
   
@@ -300,7 +301,7 @@ ms.lasthandoff: 01/08/2018
  Para obtener más información sobre los nodos de regresión, vea [Contenido del modelo de minería de datos para los modelos de regresión lineal &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Contenido del modelo de minería de datos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [Consultas de minería de datos](../../analysis-services/data-mining/data-mining-queries.md)   
  [Algoritmo de árboles de decisión de Microsoft](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  

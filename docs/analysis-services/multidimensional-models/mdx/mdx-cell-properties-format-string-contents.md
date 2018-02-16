@@ -18,19 +18,20 @@ helpviewer_keywords:
 - FORMATTED_VALUE property
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: b2e191b852e9d68c9f5e3790e38b9a15f5759324
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>Propiedades de celda MDX - FORMAT_STRING, contenido
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]El **FORMAT_STRING** formatos de propiedad de celda la **valor** propiedad de celda, crea el valor para el **FORMATTED_VALUE** propiedad de la celda. La propiedad de celda **FORMAT_STRING** controla los valores sin formato numéricos y de cadena con la aplicación de una expresión de formato al valor para devolver un valor con formato para la propiedad de celda **FORMATTED_VALUE** . En las siguientes tablas se detallan la sintaxis y los caracteres de formato utilizados para controlar los valores numéricos y de cadena.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+La propiedad de celda **FORMAT_STRING** da formato a la propiedad **VALUE** de la celda, lo que crea el valor para la propiedad de la celda **FORMATTED_VALUE** . La propiedad de celda **FORMAT_STRING** controla los valores sin formato numéricos y de cadena con la aplicación de una expresión de formato al valor para devolver un valor con formato para la propiedad de celda **FORMATTED_VALUE** . En las siguientes tablas se detallan la sintaxis y los caracteres de formato utilizados para controlar los valores numéricos y de cadena.  
   
 ## <a name="string-values"></a>Valores de cadena  
  Una expresión de formato para cadenas puede tener una sección o dos, separadas con punto y coma (;).  
@@ -158,6 +159,6 @@ ms.lasthandoff: 01/08/2018
  [LANGUAGE y FORMAT_STRING en FORMATTED_VALUE.](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md)   
  [Mediante las propiedades de celda &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
  [Creación y uso de valores de propiedad &#40; MDX &#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Aspectos básicos de consulta MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

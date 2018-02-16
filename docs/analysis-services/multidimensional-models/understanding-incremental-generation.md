@@ -16,21 +16,22 @@ helpviewer_keywords:
 - Schema Generation Wizard, incremental generation
 - relational schema [Analysis Services], incremental generation
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8527382a85e1e85fb7981e69ea02304d2a7a940c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="understanding-incremental-generation"></a>Descripción de la generación incremental
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Tras la generación del esquema inicial, puede cambiar las definiciones de cubos y dimensiones mediante [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]y, a continuación, vuelva a ejecutar el Asistente para generar esquemas. El asistente actualiza el esquema de la base de datos del área de asunto y de la vista de origen de datos asociada para reflejar los cambios y conservar los datos que existen actualmente en las tablas que se van a volver a generar, en la medida de lo posible. Si las tablas han cambiado tras la generación inicial, el Asistente para generar esquemas conservará en la medida de lo posible los cambios siguiendo estas reglas:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Tras la generación del esquema inicial, es posible cambiar las definiciones de cubo y de dimensión mediante [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]y volver a ejecutar el Asistente para generar esquemas. El asistente actualiza el esquema de la base de datos del área de asunto y de la vista de origen de datos asociada para reflejar los cambios y conservar los datos que existen actualmente en las tablas que se van a volver a generar, en la medida de lo posible. Si las tablas han cambiado tras la generación inicial, el Asistente para generar esquemas conservará en la medida de lo posible los cambios siguiendo estas reglas:  
   
--   Si la tabla se generó anteriormente utilizando el asistente, entonces se sobrescribirá. Para evitar que se sobrescriba una tabla generada con el asistente, debe cambiarse la propiedad **AllowChangesDuringGeneration** de la tabla en la vista de origen de datos a **false**. Al asumir el control de una tabla, ésta recibe el mismo tratamiento que una tabla definida por el usuario y no se ve afectada por la regeneración. Tras quitar una tabla de la generación, puede cambiarse más adelante la propiedad **AllowChangesDuringGeneration** de la tabla en la vista de origen de datos a **true** y volver a abrir la tabla para que tengan efecto los cambios realizados por el asistente. Para más información, vea [Cambiar las propiedades de una vista del origen de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md).  
+-   Si la tabla se generó anteriormente utilizando el asistente, entonces se sobrescribirá. Para evitar que se sobrescriba una tabla generada con el asistente, debe cambiarse la propiedad **AllowChangesDuringGeneration** de la tabla en la vista de origen de datos a **false**. Al asumir el control de una tabla, ésta recibe el mismo tratamiento que una tabla definida por el usuario y no se ve afectada por la regeneración. Tras quitar una tabla de la generación, puede cambiarse más adelante la propiedad **AllowChangesDuringGeneration** de la tabla en la vista de origen de datos a **true** y volver a abrir la tabla para que tengan efecto los cambios realizados por el asistente. Para obtener más información, vea [Cambiar las propiedades de una vista del origen de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md).  
   
 -   Si se ha agregado una tabla a la vista de origen de datos o a la base de datos subyacente por un medio distinto del asistente, no se sobrescribe la tabla.  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 01/08/2018
  Por otra parte, no se generarán errores si se cambia la cadena de conexión de origen de datos a una base de datos distinta de la generación anterior. Se utilizará la nueva base de datos y no se realizarán cambios en la base de datos anterior.  
   
 ## <a name="see-also"></a>Vea también  
- [Administrar los cambios de las vistas del origen de datos y los orígenes de datos](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)   
- [Asistente para generar esquemas &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
+ [Administrar los cambios en las vistas del origen de datos y orígenes de datos](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)   
+ [Asistente para generar esquemas &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
   
   

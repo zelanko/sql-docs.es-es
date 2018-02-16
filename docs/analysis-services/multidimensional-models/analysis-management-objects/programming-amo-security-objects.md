@@ -1,7 +1,7 @@
 ---
 title: Programar objetos de seguridad AMO | Documentos de Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,27 +11,28 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [AMO]
 - Analysis Management Objects, security
 - AMO, security
 ms.assetid: 5d963721-6e6e-46eb-bc9b-18724dd0b751
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f77d58eeaef6b127492f9944e15f0b751f03d704
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ee56a1d89bdf9d5712dcdb70043be95b9195d0ba
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-security-objects"></a>Programar objetos de seguridad AMO
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]En [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], programar objetos de seguridad o ejecutar aplicaciones que usan objetos de seguridad AMO requiere ser miembro del grupo Administrador del servidor o el grupo de administradores de base de datos. Administrador del servidor y Administrador de base de datos son un acceso niveles proporcionado por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  En [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], programar objetos de seguridad o ejecutar aplicaciones que usan objetos de seguridad AMO requiere ser un miembro del grupo administrador del servidor o del grupo administrador de base de datos. Tanto el administrador del servidor como el administrador de base de datos son niveles de acceso que proporciona [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
- En [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], el acceso de usuario a cualquier objeto se obtiene a través de la combinación de roles y permisos que se asignan a ese objeto. Para obtener más información, consulte [clases Security de AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md).  
+ En [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , el acceso de usuario a cualquier objeto se obtiene a través de la combinación de roles y permisos que se asignan a ese objeto. Para obtener más información, consulte [clases Security de AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md).  
   
 ## <a name="role-and-permission-objects"></a>Objetos de rol y permiso  
  Los roles del servidor contienen un único rol en la colección, el rol de los administradores. Los nuevos roles no se pueden agregar a la colección de roles del servidor. La pertenencia en el rol de los administradores permite el acceso completo a cada objeto del servidor  
@@ -145,7 +146,7 @@ static public void CreateRolesAndPermissions(Database db, Cube cube)
 }  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  <xref:Microsoft.AnalysisServices>   
  [Introducción a las clases AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [Programar objetos de seguridad de AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-security-objects.md)   

@@ -11,31 +11,33 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: fdf75c47-77dc-4bdb-9931-8eca198fdb88
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6d2896a01a8efeacb42bde203ad93e0efdb52be4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="level-element-csdlbi"></a>Level, elemento (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]El elemento Level es un tipo complejo que define un único nivel de una jerarquía  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+El elemento Level es un tipo complejo que define un solo nivel de una jerarquía  
   
 ## <a name="elements-and-attributes"></a>Atributos y elementos  
  En la tabla siguiente se enumeran los elementos y atributos que definen el elemento Level.  
   
-|Nombre|Es obligatorio|Description|  
+|Nombre|Es obligatorio|Descripción|  
 |----------|-----------------|-----------------|  
-|Source|Sí|Contenedor para la referencia de propiedad.|  
+|Origen|Sí|Contenedor para la referencia de propiedad.|  
 |PropertyRef|Sí|Referencia a una propiedad de instancia. Otros atributos del nivel, como títulos, nombre y nombre de referencia, se pueden obtener de la propiedad de instancia a la que se hace referencia. En tal caso, no necesita especificarlos en el elemento Level.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para más información sobre las jerarquías en los modelos tabulares, vea [Hierarchy, elemento &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/hierarchy-element-csdlbi.md).  
   
 ## <a name="example"></a>Ejemplo  
@@ -60,7 +62,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="example"></a>Ejemplo  
- **Multidimensional**  
+ **Multidimensionales**  
   
  En el ejemplo siguiente, en la versión 1.1 de CSDLBI, se muestra una jerarquía con varios niveles del cubo de operaciones de Contoso.  
   
@@ -87,7 +89,7 @@ ms.lasthandoff: 01/08/2018
 </bi:Hierarchy>  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Descripción del modelo de objetos tabulares en compatibilidad 1050 1103 a través de niveles](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
  [Descripción de las funciones para jerarquías de elementos primarios y secundarios en DAX](http://msdn.microsoft.com/en-us/b11f0cff-cee4-4ae7-a5b3-ebe288fc42d3)   
  [Configurar el &#40; Todas las &#41; Nivel de las jerarquías de atributo](../../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  

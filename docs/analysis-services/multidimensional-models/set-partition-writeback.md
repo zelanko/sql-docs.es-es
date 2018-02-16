@@ -17,19 +17,20 @@ helpviewer_keywords:
 - partitions [Analysis Services], write-enabled
 - writeback [Analysis Services], partitions
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c1e6971bd8c1bc228386ad5b39a498f0e0ed5d42
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="set-partition-writeback"></a>Establecer la reescritura de particiones
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Si habilita a un grupo de medida para escritura, los usuarios finales puede cambiar los datos del cubo mientras lo examinan, donde se guardan los cambios en una tabla independiente denominada tabla de reescritura, no en los datos del cubo ni los datos de origen. Los usuarios finales que examinan una partición habilitada para escritura verán el efecto neto de todos los cambios en la tabla de reescritura de la partición.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Si habilita para escritura un grupo de medida, los usuarios finales pueden cambiar los datos del cubo mientras lo examinan; en ese caso, los cambios se guardan en una tabla diferente denominada tabla de reescritura, no en los datos del cubo ni en los datos de origen. Los usuarios finales que examinan una partición habilitada para escritura verán el efecto neto de todos los cambios en la tabla de reescritura de la partición.  
   
  Los datos de reescritura se pueden examinar o eliminar. También puede convertir los datos de reescritura en una partición. En una partición habilitada para escritura, puede utilizar los roles de cubo para conceder acceso de lectura/escritura a usuarios y grupos de usuarios y para limitar el acceso a determinadas celdas o grupos de celdas de la partición.  
   
@@ -68,6 +69,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>Vea también  
  [Particiones habilitadas para escritura](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [Habilitar reescritura en un cubo OLAP en el nivel de celda en Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [Habilitación y seguridad de entrada de datos con reescritura de Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [Habilitación y seguridad de la entrada de datos con reescritura de Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

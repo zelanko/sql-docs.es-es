@@ -1,7 +1,7 @@
 ---
 title: Desarrollar con XMLA en Analysis Services | Documentos de Microsoft
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - XML for Analysis, data mining
 - commands [XML for Analysis]
@@ -20,23 +21,23 @@ helpviewer_keywords:
 - XML for Analysis, Analysis Services tasks
 - XMLA, Analysis Services tasks
 ms.assetid: 54445ee7-720c-4683-99a6-e75b3dcca904
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a9ba34222580b292fbc6281df49505f57739911a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6bf41801ce6b81c532d8be56b5afdfe4fd5e901f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>Desarrollar con XMLA en Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]XML for Analysis (XMLA) es un protocolo XML basado en SOAP, diseñado específicamente para el acceso de datos universal a cualquier origen de datos multidimensionales estándar que puede tener acceso a través de una conexión HTTP. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa XMLA como único protocolo al comunicar con aplicaciones cliente. Básicamente, todas las bibliotecas de cliente admitidas por Analysis Services formulan solicitudes y respuestas en XMLA.  
+  XML for Analysis (XMLA) es un protocolo XML basado en SOAP, diseñado específicamente para el acceso universal a los datos de cualquier origen de datos multidimensionales estándar a los que se puede acceder mediante una conexión HTTP. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa XMLA como único protocolo al comunicar con aplicaciones cliente. Básicamente, todas las bibliotecas de cliente admitidas por Analysis Services formulan solicitudes y respuestas en XMLA.  
   
  Como desarrollador, puede usar XMLA para integrar una aplicación cliente con [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], sin dependencias en las interfaces COM o .NET Framework. Los requisitos de la aplicación que incluyen el hospedaje en una amplia variedad de plataformas se pueden satisfacer utilizando XMLA y una conexión HTTP a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cumple totalmente la especificación 1.1 de XMLA, pero también la extiende para habilitar la definición de datos, la manipulación de datos y el soporte de control de datos. Se hace referencia a las extensiones de Analysis Services como Analysis Services Scripting Language (ASSL). El uso conjunto de XMLA y ASSL habilita un conjunto más amplio de funciones que las proporcionadas por XMLA en solitario. Para obtener más información acerca de ASSL, vea [desarrollar con Analysis Services Scripting Language &#40; ASSL &#41; ](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] es totalmente compatible con la especificación 1.1 de XMLA, pero también amplía para habilitar la definición de datos, manipulación de datos y la compatibilidad con el control de datos. Se hace referencia a las extensiones de Analysis Services como Analysis Services Scripting Language (ASSL). El uso conjunto de XMLA y ASSL habilita un conjunto más amplio de funciones que las proporcionadas por XMLA en solitario. Para obtener más información acerca de ASSL, vea [desarrollar con Analysis Services Scripting Language &#40; ASSL &#41; ](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/08/2018
 |[Procesar objetos &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)|Describe cómo utilizar el [proceso](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) comando al proceso una [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objeto.|  
 |[Mezclar particiones &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md)|Describe cómo utilizar el [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) comando mezclar particiones en un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia.|  
 |[Diseñar agregaciones &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md)|Describe cómo utilizar el [DesignAggregations](../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) comando, ya sea en iterativo o en modo por lotes, para diseñar agregaciones para un diseño de agregaciones en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
-|[Restaurar, sincronizar y realizar copias de seguridad de bases de datos &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)|Describe cómo utilizar el [copia de seguridad](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) y [restaurar](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) comandos para copia de seguridad y restaurar un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos desde un archivo de copia de seguridad.<br /><br /> También describe cómo utilizar el [sincronizar](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) comando para sincronizar un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos con una base de datos existente en la misma instancia o en una instancia diferente.|  
+|[Copia de seguridad, restaurar y sincronizar las bases de datos &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)|Describe cómo utilizar el [copia de seguridad](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) y [restaurar](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) comandos para copia de seguridad y restaurar un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos desde un archivo de copia de seguridad.<br /><br /> También describe cómo utilizar el [sincronizar](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) comando para sincronizar un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos con una base de datos existente en la misma instancia o en una instancia diferente.|  
 |[Insertar, actualizar y quitar miembros &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)|Describe cómo utilizar el [insertar](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [actualización](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), y [Drop](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) comandos para agregar, cambiar o eliminar miembros de una dimensión habilitada para escritura.|  
 |[Actualizar celdas &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md)|Describe cómo utilizar el [UpdateCells](../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md) comando para cambiar los valores de las celdas de una partición habilitada para escritura.|  
 |[Administración de las memorias caché &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-caches-xmla.md)|Detalla cómo utilizar el [ClearCache](../../analysis-services/xmla/xml-elements-commands/clearcache-element-xmla.md) comando para borrar las cachés de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos.|  
@@ -69,7 +70,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="namespace"></a>Espacio de nombres  
  El esquema definido en esta especificación utiliza el espacio de nombres XML `http://schemas.microsoft.com/AnalysisServices/2003/Engine` y la abreviatura estándar "DDL".  
   
-### <a name="schema"></a>esquema  
+### <a name="schema"></a>Esquema  
  La definición de un esquema de lenguaje de definición de esquema XML (XSD) para el lenguaje de definición de objeto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se basa en la definición de la jerarquía y los elementos del esquema en esta sección.  
   
 ## <a name="extensibility"></a>Extensibilidad  

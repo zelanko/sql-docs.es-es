@@ -37,19 +37,20 @@ helpviewer_keywords:
 - ScatterReceiveMultiplier property
 - network properties [Analysis Services]
 ms.assetid: ef4251e2-abe5-4c5b-9868-7549782d0244
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: a315095f7a7f7060964eb22c0c54698f5f68f9a9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="network-properties"></a>Propiedades de red
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades del servidor se enumeran en las tablas siguientes. Para obtener más información sobre otras propiedades de servidor y cómo establecerlas, vea [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor descritas en las siguientes tablas. Para obtener más información sobre otras propiedades de servidor y cómo establecerlas, vea [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Se aplica a:** modo de servidor multidimensional y tabular  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 01/08/2018
  **IPV4Support**  
  Una propiedad de entero de 32 bits con signo que define la compatibilidad con el protocolo IPv4. Esta propiedad tiene uno de los valores descritos en la tabla siguiente:  
   
-|Valor|Description|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |*0*|IPv4 deshabilitado; los clientes no pueden conectarse.|  
 |*1*|(Predeterminado) IPv4 es obligatorio; el servidor no se iniciará si no puede escuchar a IPv4.|  
@@ -70,7 +71,7 @@ ms.lasthandoff: 01/08/2018
  **IPV6Support**  
  Una propiedad de entero de 32 bits con signo que define la compatibilidad con el protocolo IPv6. Esta propiedad tiene uno de los valores descritos en la tabla siguiente:  
   
-|Valor|Description|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |*0*|IPv6 deshabilitado; los clientes no pueden conectarse.|  
 |*1*|(Predeterminado) IPv6 es obligatorio; el servidor no se iniciará si no puede escuchar a IPv6.|  

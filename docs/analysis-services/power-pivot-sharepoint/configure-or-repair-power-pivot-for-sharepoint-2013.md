@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 616877e3-464a-4c97-bc74-1fa6f4faa756
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0986792fb9c8e7d6300e85d9a700e75cac783aeb
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-or-repair-power-pivot-for-sharepoint-2013"></a>Configurar o reparar PowerPivot para SharePoint 2013
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Para configurar o reparar una instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013, use la [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para la herramienta de configuración de SharePoint. La herramienta de configuración comienza examinando el sistema y devuelve una lista de las acciones necesarias para completar o reparar una instalación. El Asistente para la instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala la Herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2010 y una Herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013. En este tema se describe la Herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013. Para obtener más información sobre SharePoint 2010, vea [Configurar o reparar PowerPivot para SharePoint 2010 (Herramienta de configuración de PowerPivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Para configurar o reparar una instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013, use la Herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. La herramienta de configuración comienza examinando el sistema y devuelve una lista de las acciones necesarias para completar o reparar una instalación. El Asistente para la instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala la Herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2010 y una Herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013. En este tema se describe la Herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013. Para obtener más información sobre SharePoint 2010, vea [Configurar o reparar PowerPivot para SharePoint 2010 (Herramienta de configuración de PowerPivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
@@ -130,7 +131,7 @@ ms.lasthandoff: 01/19/2018
 ||Puerto de Administración central de SharePoint|Valor predeterminado, si es necesario|Si la granja no está configurada, la herramienta proporciona opciones para crearla, incluida la creación de un extremo HTTP en Administración central. Elige un número de puerto generado aleatoriamente que no esté en uso.|  
 ||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel Services ([NombreDelServidor]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|Datos proporcionados por el usuario|Para habilitar las funcionalidades básicas de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se necesita el servidor [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel Services. El nombre del servidor que escriba en esta página también se agrega a la lista de la página **Configurar servidores [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.|  
 |**Configurar una nueva granja**|Servidor de bases de datos<br /><br /> Cuenta de granja<br /><br /> Frase de contraseña<br /><br /> Puerto de Administración central de SharePoint|Valor predeterminado, si es necesario|Las configuraciones usan como valor predeterminado lo que especificó en la página principal.|  
-|**Crear una aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**|Nombre de la aplicación de servicio|Predeterminado|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Nombre de la aplicación de servicio. El nombre predeterminado es **Valor de DB-Library [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service Application**. Podrá sustituirlo por otro valor de la herramienta.|  
+|**Crear una aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**|Nombre de la aplicación de servicio|Valor de DB-Library|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Nombre de la aplicación de servicio. El nombre predeterminado es **Aplicación de servicio de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] predeterminada**. Podrá sustituirlo por otro valor de la herramienta.|  
 ||Servidor de bases de datos|Predeterminado|El servidor de bases de datos que va a hospedar la base de datos de aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . El nombre del servidor predeterminado es el mismo servidor de bases de datos usado para la granja. Puede sustituir el nombre del servidor predeterminado por un valor diferente.|  
 ||Nombre de la base de datos|Predeterminado|Nombre de la base de datos que se va a crear para la base de datos de aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . El nombre predeterminado de la base de datos se basa en el nombre de aplicación de servicio, seguido de un GUID para garantizar un nombre único. Podrá sustituirlo por otro valor de la herramienta.|  
 |**Crear aplicación web predeterminada**|Nombre de aplicación web|Valor predeterminado, si es necesario|Si no existe ninguna aplicación web, la herramienta crea una. La aplicación web se configura para la autenticación en modo clásico y escucha en el puerto 80. El tamaño máximo de carga de archivos se establece en 2047, el máximo admitido por SharePoint. El tamaño máximo de carga de archivos es para incluir los archivos grandes de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que se cargarán en el servidor.|  

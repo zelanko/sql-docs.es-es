@@ -12,23 +12,24 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 264e09ecf72a638230a85ccf64c34ea66ccf86b3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>Uso de fuentes de distribución de datos (PowerPivot para SharePoint)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Fuentes de datos son uno o varios flujos de datos que se genera a partir de un origen de datos en línea y se transmiten a una aplicación o documento de destino. Si está usando [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel, las fuentes de distribución de datos pueden ayudarle a poner los datos empresariales o corporativos existentes de orígenes de datos arbitrarios en la ventana de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de un libro de Excel 2010. Después de importar una fuente de distribución de datos en un libro, puede hacer referencia a ella posteriormente en cualquier operación de actualización de datos que programe en un servidor de SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Las fuentes de distribución de datos son una o varias secuencias de datos que se generan en un origen de datos en línea y se difunden en un documento o aplicación de destino. Si está usando [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel, las fuentes de distribución de datos pueden ayudarle a poner los datos empresariales o corporativos existentes de orígenes de datos arbitrarios en la ventana de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de un libro de Excel 2010. Después de importar una fuente de distribución de datos en un libro, puede hacer referencia a ella posteriormente en cualquier operación de actualización de datos que programe en un servidor de SharePoint.  
   
  El modo de utilizar una fuente de distribución de datos depende de si se utilizan las características de exportación integradas en las aplicaciones compatibles con las fuentes de distribución de datos de Atom, o si se crean y usan servicios de datos personalizados. Las aplicaciones que pueden publicar y leer los datos XML de Atom permiten una transferencia de datos sin problemas que oculta la mecánica de los servicios de datos y fuentes de distribución de datos a los usuarios. Para un usuario, simplemente mueve los datos de una aplicación a otra.  
   
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y Microsoft SharePoint 2010 proporcionan fuentes de distribución de datos que se pueden usar en los libros [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Puede utilizar la información de este tema para saber cómo tener acceso a las fuentes de distribución de datos de los informes y las listas de que ya disponga.  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y Microsoft SharePoint Server 2010 proporcionan datos fuentes que pueden usar en [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] libros. Puede utilizar la información de este tema para saber cómo tener acceso a las fuentes de distribución de datos de los informes y las listas de que ya disponga.  
   
  Este tema contiene las siguientes secciones:  
   

@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - local mining models [Analysis Services]
 - Analysis Services, architecture
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - client architecture [Analysis Services]
 - local cubes [Analysis Services]
 ms.assetid: 03a8eb6b-159f-4a0a-afbe-06a2424b6090
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 5fa4192b9852d88100c1520a8c274dac199e1f48
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Requisitos de la arquitectura de cliente para el desarrollo de Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] admite una arquitectura de cliente ligero. El [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] motor de cálculo es completamente basada en servidor, por lo que todas las consultas se resuelven en el servidor. En consecuencia, para cada consulta solo se necesita realizar un viaje de ida y vuelta entre el cliente y el servidor, lo que produce un rendimiento escalable a medida que las consultas aumenten en complejidad.   
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] admite una arquitectura de cliente ligero. El [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] motor de cálculo es completamente basada en servidor, por lo que todas las consultas se resuelven en el servidor. En consecuencia, para cada consulta solo se necesita realizar un viaje de ida y vuelta entre el cliente y el servidor, lo que produce un rendimiento escalable a medida que las consultas aumenten en complejidad.   
   
  El protocolo nativo para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] es XML for analysis (XML/A). [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] proporciona varias interfaces de acceso a datos para aplicaciones cliente, pero todos estos componentes se comunican con una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] usando XML for analysis.  
   
@@ -51,7 +53,7 @@ ms.lasthandoff: 01/08/2018
 |Lenguajes .NET|ADO MD.NET|  
 |Cualquier lenguaje que admita SOAP|XML for Analysis|  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tiene una arquitectura web con un nivel medio completamente escalable para implementación en organizaciones pequeñas y medianas. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ofrece una amplia compatibilidad de nivel medio para servicios web. Las aplicaciones ASP son compatibles con OLE DB para OLAP y ADO MD, las aplicaciones ASP.NET son compatibles con ADOMD.NET. El nivel medio, que se muestra en la siguiente ilustración, se puede escalar a muchos usuarios simultáneos.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tiene una arquitectura Web con un nivel medio completamente escalable para la implementación de las organizaciones pequeñas y medianas. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ofrece una amplia compatibilidad de nivel medio para servicios web. Las aplicaciones ASP son compatibles con OLE DB para OLAP y ADO MD, las aplicaciones ASP.NET son compatibles con ADOMD.NET. El nivel medio, que se muestra en la siguiente ilustración, se puede escalar a muchos usuarios simultáneos.  
   
  ![Diagrama lógico de arquitectura de nivel medio](../../../analysis-services/multidimensional-models/olap-physical/media/as-midtierarch9.gif "diagrama lógico de arquitectura de nivel intermedio")  
   
@@ -60,7 +62,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="analysis-services-in-tabular-or-sharepoint-mode"></a>Analysis Services en el modo de SharePoint o tabular  
  En [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], se puede iniciar el servidor en modo de motor (VertiPaq) de análisis en memoria xVelocity para bases de datos tabulares y para [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] los libros que se han publicado en un sitio de SharePoint.  
   
- [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] y [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] son los únicos entornos del cliente que se admiten para crear y consultar las bases de datos en memoria que utilizan el modo SharePoint o tabular, respectivamente. El objeto incrustado [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] base de datos que se crea mediante el uso de Excel y [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] herramientas se encuentra dentro del libro de Excel y se guarda como parte del archivo .xlsx de Excel.  
+ [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] y [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] son los únicos entornos del cliente que se admiten para crear y consultar las bases de datos en memoria que utilizan el modo SharePoint o Tabular, respectivamente. El objeto incrustado [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] base de datos que se crea mediante el uso de Excel y [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] herramientas se encuentra dentro del libro de Excel y se guarda como parte del archivo .xlsx de Excel.  
   
  Sin embargo, un libro de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] puede utilizar datos almacenados en un cubo tradicional si los datos del cubo se importan en el libro. También se pueden importar datos de otro libro de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] si se ha publicado en un sitio de SharePoint.  
   
@@ -70,7 +72,7 @@ ms.lasthandoff: 01/08/2018
  Para obtener más información sobre el uso de un cubo de SSAS como origen de datos, vea el [PowerPivot para Excel](http://go.microsoft.com/fwlink/?LinkId=164234).  
   
 ### <a name="interfaces-for-power-pivot-client"></a>Interfaces de cliente de Power Pivot  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]interactúa con el motor de almacenamiento xVelocity (VertiPaq) del motor de análisis en memoria dentro del libro utilizando las interfaces y lenguajes establecidos para Analysis Services: AMO y ADOMD.NET y MDX y XMLA. Dentro del complemento, las medidas se definen utilizando un lenguaje de fórmulas parecido Excel, Expresiones de análisis de datos (DAX). Las expresiones DAX se insertan en los mensajes XMLA que se envían al servidor en proceso.  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] interactúa con el motor de almacenamiento xVelocity (VertiPaq) del motor de análisis en memoria dentro del libro utilizando las interfaces y lenguajes establecidos para Analysis Services: AMO y ADOMD.NET y MDX y XMLA. Dentro del complemento, las medidas se definen utilizando un lenguaje de fórmulas parecido Excel, Expresiones de análisis de datos (DAX). Las expresiones DAX se insertan en los mensajes XMLA que se envían al servidor en proceso.  
   
 ### <a name="providers"></a>Proveedores  
  Las comunicaciones entre [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] y Excel utilizan el proveedor de MSOLAP OLEDB (versión 11.0). Dentro del proveedor MSOLAP hay cuatro módulos diferentes, o transportes, que se pueden utilizar para enviar mensajes entre el cliente y el servidor.  

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: cd17ad086169a53673d7c9ba48f79058dd87769d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>Códigos de tipo de objeto de Analysis Services usados en seguimientos
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Esta página enumera el tipo de objeto (un número de seis dígitos) de cada objeto en un modelo de datos de Analysis Services. Estos códigos aparecen en registros de seguimiento y se usan para identificar el tipo de objeto asociado con un bloqueo concreto. Por ejemplo, un tiempo de espera de bloqueo en una base de datos indicará el tipo de objeto 100002, que es el tipo de objeto Database.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+En esta página se indica el tipo de objeto (un número de seis dígitos) de cada objeto en un modelo de datos de Analysis Services.  Estos códigos aparecen en registros de seguimiento y se usan para identificar el tipo de objeto asociado con un bloqueo concreto. Por ejemplo, un tiempo de espera de bloqueo en una base de datos indicará el tipo de objeto 100002, que es el tipo de objeto Database.  
   
 > [!NOTE]  
 >  Aquí se enumeran más códigos de los que realmente aparecerán en un registro de seguimiento. La lista que aparece a continuación es una lista exhaustiva de los códigos de tipo para cada objeto, pero solo los objetos que llevan bloqueo presentarán un código de tipo de objeto en un registro de seguimiento.  
@@ -33,15 +34,15 @@ ms.lasthandoff: 01/08/2018
   
 |Tipo de objeto|Nombre del objeto|  
 |-----------------|-----------------|  
-|100000|Servidor|  
-|100001|Comando|  
+|100000|Server|  
+|100001|Command|  
 |100002|Base de datos|  
 |100003|DataSource|  
 |100004|DatabasePermission|  
 |100005|Rol|  
 |100006|Dimensión|  
 |100007|DimensionAttribute|  
-|100008|Hierarchy|  
+|100008|Jerarquía|  
 |100009|Nivel|  
 |100010|Cube|  
 |100011|CubePermission|  
@@ -73,10 +74,10 @@ ms.lasthandoff: 01/08/2018
 |100047|CubeAttributePermission|  
 |100048|CellPermission|  
 |100049|CubeDimensionPermission|  
-|100050|Trace|  
+|100050|Seguimiento|  
 |100051|ServerAssembly|  
 |100052|CubeAssembly|  
-|100053|Comando|  
+|100053|Command|  
 |100054|KPI|  
 |100055|DataSourceView|  
 |100056|Perspective|  

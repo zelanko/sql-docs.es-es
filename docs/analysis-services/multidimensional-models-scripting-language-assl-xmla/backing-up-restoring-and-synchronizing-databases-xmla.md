@@ -1,7 +1,7 @@
 ---
 title: Copia de seguridad, restaurar y sincronizar las bases de datos (XMLA) | Documentos de Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - restoring databases [XML for Analysis]
 - backing up databases [XML for Analysis]
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - synchronization [XML for Analysis]
 - database restores [XML for Analysis]
 ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a01f7dc9f661ffde071b54a4c738557c4f2c8dad
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 33fc95e7b34b28c4233ede68927e60eada8bf5df
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Restaurar, sincronizar y realizar copias de seguridad de bases de datos (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]En XML for Analysis, hay tres comandos que hacer copia de, restauración y sincronización las bases de datos:  
+  En XML for Analysis, hay tres comandos que sirven para restaurar, sincronizar y realizar copias de seguridad de las bases de datos:  
   
 -   El [copia de seguridad](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) comando realiza una copia de un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con la base de datos un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] el archivo de copia de seguridad (.abf), como se describe en la sección [realizar una copia de seguridad de bases de datos](#backing_up_databases).  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 01/08/2018
   
 -   El [sincronizar](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) comando sincroniza uno [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] la base de datos con los datos y metadatos de otra base de datos, como se describe en la sección [sincronizar bases de datos](#synchronizing_databases).  
   
-##  <a name="backing_up_databases"></a>Copia de seguridad de bases de datos  
+##  <a name="backing_up_databases"></a> Copia de seguridad de bases de datos  
  Como se mencionó anteriormente, el **copia de seguridad** comando realiza una copia de un determinado [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos a un archivo de copia de seguridad. El **copia de seguridad** comando tiene varias propiedades que permiten especificar la base de datos realizar copia de seguridad, el archivo de copia de seguridad para usar, cómo realizar copias de seguridad de las definiciones de seguridad y las particiones remotas que se va a realizar copias de seguridad.  
   
 > [!IMPORTANT]  
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/08/2018
   
  El valor de la **seguridad** propiedad se limita a una de las cadenas enumeradas en la tabla siguiente.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*SkipMembership*|Incluye las definiciones de seguridad en el archivo de copia de seguridad, pero excluye la información de pertenencia.|  
 |*CopyAll*|Incluye las definiciones de seguridad y la información de pertenencia en el archivo de copia de seguridad.|  
@@ -77,7 +78,7 @@ ms.lasthandoff: 01/08/2018
   
  Para que cada origen de datos remoto realizar copias de seguridad, puede especificar el archivo de copia de seguridad correspondiente mediante la inclusión de un [ubicación](../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) elemento en el [ubicaciones](../../analysis-services/xmla/xml-elements-properties/locations-element-xmla.md) propiedad de la **copia de seguridad** comando. El **ubicación** elemento debería tener su **archivo** propiedad establecida en el nombre de archivo y ruta UNC del archivo de copia de seguridad remoto y su [DataSourceID](../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md) el identificador de la propiedad el origen de datos remoto definido en la base de datos.  
   
-##  <a name="restoring_databases"></a>Restaurar bases de datos  
+##  <a name="restoring_databases"></a> Restaurar bases de datos  
  El **restaurar** comando restaura un determinado [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos desde un archivo de copia de seguridad. El **restaurar** comando tiene varias propiedades que permiten especificar la base de datos para restaurar el archivo de copia de seguridad para usar, cómo restaurar definiciones de seguridad, las particiones remotas que se almacenará y la reubicación OLAP relacional (ROLAP) objetos.  
   
 > [!IMPORTANT]  
@@ -116,7 +117,7 @@ ms.lasthandoff: 01/08/2018
   
  Puede usar el **ubicación** elemento en un **restaurar** comando para cambiar la ubicación de los objetos ROLAP. Para cada **ubicación** elemento utilizado para reubicar un origen de datos, el **DataSourceType** propiedad debe establecerse explícitamente en *Local*. También tendrá que configurar el **ConnectionString** propiedad de la **ubicación** elemento a la cadena de conexión de la nueva ubicación. Durante la restauración, el **restaurar** comando reemplazará la cadena de conexión para el origen de datos identificado por la **DataSourceID** propiedad de la **ubicación** elemento con el valor de la **ConnectionString** propiedad de la **ubicación** elemento.  
   
-##  <a name="synchronizing_databases"></a>Sincronizar bases de datos  
+##  <a name="synchronizing_databases"></a> Sincronizar bases de datos  
  El **sincronizar** comando sincroniza los datos y metadatos de un determinado [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos con otra base de datos. El **sincronizar** comando tiene varias propiedades que permiten especificar la base de datos de origen, cómo sincronizar las definiciones de seguridad, las particiones remotas se sincronicen y la sincronización de los objetos ROLAP.  
   
 > [!NOTE]  
@@ -155,7 +156,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>Vea también  
  [Elemento backup &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
  [Restaurar elemento &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
- [Elemento Synchronize &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Sincronizar el elemento &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

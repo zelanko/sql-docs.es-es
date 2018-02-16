@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 28714c32-718f-4f31-a597-b3289b04b864
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8348c7c3ee60d7032f9c8af373ce5b9e1a026f8f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Comprobador de coherencia de base de datos (DBCC) para Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]DBCC proporciona validación de la base de datos a petición para bases de datos multidimensionales y tabulares en una instancia de Analysis Services. Puede ejecutar DBCC en una ventana de consulta XMLA o MDX en SQL Server Management Studio (SSMS) y realizar el seguimiento de la salida de DBCC en SQL Server Profiler o sesiones xEvent en SSMS.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+DBCC proporciona validación de base de datos a petición para bases de datos multidimensionales y tabulares en una instancia de Analysis Services. Puede ejecutar DBCC en una ventana de consulta XMLA o MDX en SQL Server Management Studio (SSMS) y realizar el seguimiento de la salida de DBCC en SQL Server Profiler o sesiones xEvent en SSMS.  
 El comando toma una definición de objeto y devuelve un conjunto de resultados vacío o la información detallada del error si el objeto está dañado.   En este artículo, aprenderá a ejecutar el comando, interpretar los resultados y solucionar los problemas que surjan.  
   
  En el caso de las bases de datos tabulares, las comprobaciones de coherencia realizadas por DBCC equivalen a la validación integrada que se produce automáticamente cada vez que se vuelve a cargar, se sincroniza o se restaura una base de datos.  En cambio, las comprobaciones de coherencia de bases de datos multidimensionales se producen solo al ejecutar DBCC a petición.  
@@ -172,7 +173,7 @@ Execution complete
   
 4.  En SQL Server Profiler, la actividad de DBCC se indica mediante eventos **Command** con una subclase de eventos de DBCC:  
   
-     ![SSAS-dbcc-generador de perfiles-eventsubclass](../../analysis-services/instances/media/ssas-dbcc-profiler-eventsubclass.PNG "eventsubclass-ssas-dbcc-generador de perfiles")  
+     ![ssas-dbcc-profiler-eventsubclass](../../analysis-services/instances/media/ssas-dbcc-profiler-eventsubclass.PNG "ssas-dbcc-profiler-eventsubclass")  
   
      El código de evento 32 es la ejecución de DBCC.  
   
@@ -233,20 +234,20 @@ Execution complete
 |Partición|Genera un error si el número total de registros, segmentos o registros por segmento no es válido (inferior a cero), o si el número de segmentos no coincide con el número calculado de segmentos requeridos en función del número total de registros.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar la asignación de segmentos.|  
 |Relación|Genera un error si la estructura que se utiliza para almacenar datos acerca de la relación no contiene registros o si el nombre de la tabla utilizada en la relación está vacío.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las relaciones.|  
 |Relación|Comprueba que el nombre de la tabla principal, la columna principal, la tabla externa y la columna externa están configurados y que es posible acceder a las columnas y las tablas que participan en la relación.<br /><br /> Comprueba que los tipos de columna implicados son válidos y que el índice de valores de Clave principal-Clave externa resulta en una estructura de consulta válida.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las relaciones.|  
-|Hierarchy|Genera un error si el criterio de ordenación para la jerarquía no es un valor reconocido.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar la jerarquía '%{hier/}'.|  
-|Hierarchy|Las comprobaciones realizadas en la jerarquía dependen del tipo interno de asignación de jerarquía utilizado.<br /><br /> Todas las jerarquías se comprueban para verificar el estado de procesado correcto, que el almacén de jerarquía existe y que, cuando sea aplicable, existen las estructuras de datos utilizadas para una conversión de identificador de datos a posición de jerarquía.<br /><br /> Suponiendo que todas las comprobaciones sean correctas, se recorre la estructura de la jerarquía para comprobar que cada posición en la jerarquía señala al miembro correcto.<br />Si se produce un error en cualquiera de estas pruebas, se genera un error.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar la jerarquía '%{hier/}'.|  
+|Jerarquía|Genera un error si el criterio de ordenación para la jerarquía no es un valor reconocido.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar la jerarquía '%{hier/}'.|  
+|Jerarquía|Las comprobaciones realizadas en la jerarquía dependen del tipo interno de asignación de jerarquía utilizado.<br /><br /> Todas las jerarquías se comprueban para verificar el estado de procesado correcto, que el almacén de jerarquía existe y que, cuando sea aplicable, existen las estructuras de datos utilizadas para una conversión de identificador de datos a posición de jerarquía.<br /><br /> Suponiendo que todas las comprobaciones sean correctas, se recorre la estructura de la jerarquía para comprobar que cada posición en la jerarquía señala al miembro correcto.<br />Si se produce un error en cualquiera de estas pruebas, se genera un error.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar la jerarquía '%{hier/}'.|  
 |Jerarquía definida por el usuario|Comprueba que están configurados los nombres de nivel de jerarquía.<br /><br /> Si se ha procesado la jerarquía, comprueba que el almacén de datos de jerarquía interna tiene el formato correcto.  Comprueba que el almacén interno de jerarquía no contiene valores de datos no válidos.<br /><br /> Si la jerarquía está marcada como sin procesar, confirma que este estado se aplica a las estructuras de datos anteriores y que todos los niveles de la jerarquía se marcan como vacíos.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar la jerarquía '%{hier/}'.|  
-|columna|Genera un error si no se establece la codificación utilizada para la columna en un valor conocido.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas de la columna.|  
-|columna|Comprueba si la columna se comprimió por el motor incorporado en la memoria o no.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas de la columna.|  
-|columna|Comprueba el tipo de compresión de la columna para valores conocidos.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas de la columna.|  
-|columna|Cuando la columna "tokenization" no se establece en un valor conocido, se genera un error.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas de la columna.|  
-|columna|Si el intervalo de identificadores almacenados para un diccionario de datos de columnas no coincide con el número de valores en el diccionario de datos o está fuera del intervalo permitido, se producirá un error.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar el diccionario de datos.|  
-|columna|Comprueba que el número de segmentos de datos para una columna coincide con el número de segmentos de datos para la tabla a la que pertenece.|Hay daños en la capa de almacenamiento. La colección de segmentos en la columna '%{parent/}' está dañada.|  
-|columna|Comprueba que el número de particiones de una columna de datos coincide con el número de particiones para la asignación de segmentos de datos para la columna.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar la asignación de segmentos.|  
-|columna|Comprueba que el número de registros en un segmento de columna coincide con el número de registros almacenados en el índice para ese segmento de columna.|Hay daños en la capa de almacenamiento. La colección de segmentos en la columna '%{parent/}' está dañada.|  
-|columna|Si una columna no tiene estadísticas del segmento, se producirá un error.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas del segmento.|  
-|columna|Si una columna no tiene información de compresión o almacenamiento de segmento, se producirá un error.|Los archivos de base de datos no superaron las comprobaciones de coherencia.|  
-|columna|Notifica un error si las estadísticas de segmento para una columna no coinciden con los valores de columna reales para el identificador de datos mínimo, el identificador de datos máximo, el número de valores distintos, el número de filas o la presencia de valores NULL.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas del segmento.|  
+|Columna|Genera un error si no se establece la codificación utilizada para la columna en un valor conocido.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas de la columna.|  
+|Columna|Comprueba si la columna se comprimió por el motor incorporado en la memoria o no.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas de la columna.|  
+|Columna|Comprueba el tipo de compresión de la columna para valores conocidos.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas de la columna.|  
+|Columna|Cuando la columna "tokenization" no se establece en un valor conocido, se genera un error.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas de la columna.|  
+|Columna|Si el intervalo de identificadores almacenados para un diccionario de datos de columnas no coincide con el número de valores en el diccionario de datos o está fuera del intervalo permitido, se producirá un error.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar el diccionario de datos.|  
+|Columna|Comprueba que el número de segmentos de datos para una columna coincide con el número de segmentos de datos para la tabla a la que pertenece.|Hay daños en la capa de almacenamiento. La colección de segmentos en la columna '%{parent/}' está dañada.|  
+|Columna|Comprueba que el número de particiones de una columna de datos coincide con el número de particiones para la asignación de segmentos de datos para la columna.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar la asignación de segmentos.|  
+|Columna|Comprueba que el número de registros en un segmento de columna coincide con el número de registros almacenados en el índice para ese segmento de columna.|Hay daños en la capa de almacenamiento. La colección de segmentos en la columna '%{parent/}' está dañada.|  
+|Columna|Si una columna no tiene estadísticas del segmento, se producirá un error.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas del segmento.|  
+|Columna|Si una columna no tiene información de compresión o almacenamiento de segmento, se producirá un error.|Los archivos de base de datos no superaron las comprobaciones de coherencia.|  
+|Columna|Notifica un error si las estadísticas de segmento para una columna no coinciden con los valores de columna reales para el identificador de datos mínimo, el identificador de datos máximo, el número de valores distintos, el número de filas o la presencia de valores NULL.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas del segmento.|  
 |ColumnSegment|Si el identificador de datos mínimo o el identificador de datos máximo es inferior al valor reservado del sistema para NULL, marque la información de segmento de la columna como dañado.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas del segmento.|  
 |ColumnSegment|Si no hay ninguna fila para este segmento, los valores de datos mínimo y máximo para la columna deben establecerse en el valor reservado del sistema para NULL.  Si el valor no es NULL, se producirá un error.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas del segmento.|  
 |ColumnSegment|Si la columna tiene filas y al menos un valor distinto de NULL, comprueba que el identificador de datos mínimo y máximo para la columna es mayor que el valor reservado para el sistema para NULL.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas del segmento.|  
@@ -258,8 +259,8 @@ Execution complete
 |Tabla DBCC|Para la tabla en la validación, comprueba si el número de columnas es inferior a cero y genera un error si es así.  También se produce un error si el almacén de columnas para una columna de la tabla es NULL.|Hay daños en la capa de almacenamiento. La colección de columnas de la tabla '%{parent/}' está dañada.|  
 |Partición DBCC|Comprueba la tabla a la que pertenece la partición que se valida, y si el número de columnas de la tabla es inferior a cero, indica que la colección de columnas se ha dañado para la tabla. También se producirá un error si el almacén de columnas para una columna de la tabla es NULL.|Hay daños en la capa de almacenamiento. La colección de columnas de la tabla '%{parent/}' está dañada.|  
 |Partición DBCC|Itera por cada columna de la partición seleccionada y comprueba que cada segmento de la partición tiene un vínculo válido a una estructura de segmento de columna.  Si algún segmento tiene un vínculo NULL, la partición se considera dañada.|Hay daños en la capa de almacenamiento. La colección de segmentos en la columna '%{parent/}' está dañada.|  
-|columna|Devuelve un error si el tipo de columna no es válido.|Se ha encontrado un tipo de segmento incorrecto.|  
-|columna|Devuelve un error si alguna columna tiene una cantidad negativa para el número de segmentos de una columna, o si el puntero a la estructura de segmentos de las columnas para un segmento tiene un vínculo NULL.|Hay daños en la capa de almacenamiento. La colección de segmentos en la columna '%{parent/}' está dañada.|  
+|Columna|Devuelve un error si el tipo de columna no es válido.|Se ha encontrado un tipo de segmento incorrecto.|  
+|Columna|Devuelve un error si alguna columna tiene una cantidad negativa para el número de segmentos de una columna, o si el puntero a la estructura de segmentos de las columnas para un segmento tiene un vínculo NULL.|Hay daños en la capa de almacenamiento. La colección de segmentos en la columna '%{parent/}' está dañada.|  
 |Comando DBCC|El comando DBCC notificará varios mensajes de estado mientras pasa a través de la operación de DBCC.  Emitirá un mensaje de estado antes de iniciar que incluye el nombre de la base de datos, la tabla o la columna del objeto, y otro después de finalizar cada comprobación de los objetos.|Comprobando la coherencia de la \<objectname > \<objecttype >. Fase: comprobación previa.<br /><br /> Comprobando la coherencia de la \<objectname > \<objecttype >. Fase: comprobación posterior.|  
   
 ## <a name="common-resolutions-for-error-conditions"></a>Soluciones habituales de las condiciones de error  

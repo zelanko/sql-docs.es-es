@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
-caps.latest.revision: "97"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: f6645a2a5da1e63050c0d448bc1006c85d85f212
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>¿Qué &#39; s nuevos en Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -89,7 +89,7 @@ Una *tabla calculada* es una construcción de solo modelo basada en una consulta
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>Procesamiento en paralelo para varias particiones de tabla en los modelos tabulares    
  Esta versión incluye una nueva funcionalidad para el procesamiento en paralelo de las tablas con dos o más particiones, lo que aumenta el rendimiento del procesamiento. No hay valores de configuración para esta característica. Para obtener más información sobre la configuración de particiones y el procesamiento de tablas, vea [Particiones de modelos tabulares &#40;SSAS tabular&#41;](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>Adición de cuentas de equipo como administradores en SSMS    
- Los administradores de[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ahora pueden usar [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para configurar las cuentas de equipo para que sean miembros del grupo de administradores de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . En el cuadro de diálogo **Seleccionar usuarios o grupos** , establezca **Ubicaciones** para el dominio de equipos y, a continuación, agregue el tipo de objeto **Equipos** . Para obtener más información, vea [Conceder permisos de administrador de servidor (Analysis Services)](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ahora pueden usar [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para configurar cuentas de equipo para que sean miembros del grupo de administradores de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . En el cuadro de diálogo **Seleccionar usuarios o grupos** , establezca **Ubicaciones** para el dominio de equipos y, a continuación, agregue el tipo de objeto **Equipos** . Para obtener más información, vea [Conceder permisos de administrador de servidor (Analysis Services)](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
  ### <a name="dbcc-for-analysis-services"></a>DBCC para Analysis Services.    
  DBCC (Database Consistency Checker, comprobador de coherencia de base de datos) se ejecuta internamente para detectar posibles problemas de errores de datos en la base de datos de carga, pero también se puede ejecutar a petición si sospecha que hay problemas en los datos o el modelo. DBCC ejecuta comprobaciones diferentes dependiendo de si el modelo es tabular o multidimensional. Vea [Comprobador de coherencia de base de datos &#40;DBCC&#41; para bases de datos multidimensionales y tabulares de Analysis Services](../analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services.md) para obtener más información.    
  ### <a name="extended-events-updates"></a>Actualizaciones de eventos extendidos    

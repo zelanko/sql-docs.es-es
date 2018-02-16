@@ -22,19 +22,20 @@ helpviewer_keywords:
 - manipulating objects [Analysis Services]
 - Analysis Services data access interfaces, about data access interfaces
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 8e1271ca7bf45132f07a9a94ddef70bf5379084f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Acceso a datos de modelos multidimensionales (Analysis Services: datos multidimensionales)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Use la información de este tema para obtener información sobre cómo obtener acceso a [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] datos multidimensionales utilizando métodos de programación, script o aplicaciones de cliente que incluyan compatibilidad integrada para conectarse a un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] servidor en la red.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Utilice la información de este tema para aprender a acceder a los datos multidimensionales de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] empleando métodos de programación, script o aplicaciones cliente que incluyan compatibilidad integrada para la conexión a un servidor de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en la red.  
   
  Este tema contiene las siguientes secciones:  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="performancepoint-dashboards"></a>Paneles de PerformancePoint  
  Los paneles de PerformancePoint se utilizan para crear tarjetas de puntuación en SharePoint que comuniquen el rendimiento empresarial en función de medidas predefinidas. PerformancePoint incluye compatibilidad con conexiones de datos a datos multidimensionales de Analysis Services. Para obtener más información, vea [Creación de una conexión de datos de Analysis Services (PerformancePoint Services)](http://go.microsoft.com/fwlink/?linkid=232471).  
   
-### <a name="sql-server-data-tools"></a>Herramientas de datos de SQL Server  
+### <a name="sql-server-data-tools"></a>SQL Server Data Tools  
  Los diseñadores de modelos y de informes utilizan las herramientas de de datos de SQL Server para generar soluciones que incluyen modelos multidimensionales. La implementación de la solución en una instancia de Analysis Services es lo que crea la base de datos a la que se conecta posteriormente desde Excel, Reporting Services y otras aplicaciones cliente de Business Intelligence.  
   
  SQL Server Data Tools se generan en un shell de Visual Studio y usan proyectos para organizar y contener el modelo. Para obtener más información, vea [Crear modelos multidimensionales al usar las herramientas de datos de SQL Server &#40;SSDT&#41;](../../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md).  
@@ -75,11 +76,11 @@ ms.lasthandoff: 01/08/2018
   
  [Consultar datos multidimensionales con MDX](../../../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)  
   
- [Conceptos clave de MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [Conceptos clave de MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
  [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
- [Aspectos básicos de scripting MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [Aspectos básicos de Scripting de MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
 ##  <a name="bkmk_api"></a> Interfaces de programación  
  Si está generando una aplicación personalizada que usa datos multidimensionales, el enfoque para tener acceso a los datos entrará muy probablemente en una de las siguientes categorías:  
@@ -101,10 +102,10 @@ ms.lasthandoff: 01/08/2018
 |XMLA|XMLA es la API de nivel más bajo disponible para un programador de Analysis Services, y es el denominador común que subyace a todas las metodologías de acceso a datos de Analysis Services. XMLA es un estándar del sector, protocolo XML basado en SOAP que admite el acceso universal a los datos de cualquier origen de datos multidimensionales disponible en una conexión HTTP. Utiliza SOAP para formular solicitudes y respuestas para datos multidimensionales. Si la aplicación se ejecuta en una plataforma que no es Windows, se puede usar XMLA para acceder a una base de datos multidimensional que se esté ejecutando en un servidor Windows en la red. Para obtener más información, vea [Desarrollar con XMLA en Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md).|  
 |Analysis Services Scripting Language (ASSL)|ASSL es un término descriptivo que se aplica a extensiones de Analysis Services del protocolo XMLA. Mientras que los métodos Execute y Discover se describen en el protocolo XMLA, ASSL agrega la funcionalidad siguiente:<br /><br /> -Script XMLA<br /><br /> -Definiciones de objetos XMLA<br /><br /> -Comandos XMLA<br /><br /> Las extensiones de ASSL permiten que Analysis Services utilice construcciones XMLA más allá de las disposiciones básicas de protocolo, agregando definición de datos, manipulación de datos y soporte de control de datos. Para obtener más información, vea [Desarrollar aplicaciones con Analysis Services Scripting Language &#40;ASSL&#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Conectar a Analysis Services](../../../analysis-services/instances/connect-to-analysis-services.md)   
  [Desarrollar con Analysis Services Scripting Language &#40; ASSL &#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Desarrollar con XMLA en Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
- [Acceso a datos de modelos tabulares](../../../analysis-services/tabular-models/tabular-model-data-access.md)  
+ [Acceso a datos de modelo tabular](../../../analysis-services/tabular-models/tabular-model-data-access.md)  
   
   

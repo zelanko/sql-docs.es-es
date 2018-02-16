@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 86d4c1dcc16cc97b04a3c228087a9e9793cc5651
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Lección 4: 3: Agrupar automáticamente los miembros de atributo
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +36,7 @@ La propiedad **DiscretizationMethod** determina si [!INCLUDE[ssASnoversion](../i
 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crea intervalos de grupos de modo que la población total de los miembros de dimensión quede distribuida de forma homogénea en los grupos.  
   
 **Clusters**  
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crea grupos realizando una agrupación en clústeres unidimensionales en los valores de entrada mediante el método de agrupación en clústeres mediana-K con distribuciones gausianas. Esta opción solo es válida para columnas numéricas.  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crea grupos realizando una agrupación en clústeres unidimensionales en los valores de entrada mediante el método de agrupación en clústeres k-means con distribuciones gausianas. Esta opción solo es válida para columnas numéricas.  
   
 Una vez que haya especificado un método de agrupación, debe especificar el número de grupos mediante la propiedad **DiscretizationBucketCount** . Para obtener más información, consulte [Agrupar miembros de atributos &#40;discretización&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   

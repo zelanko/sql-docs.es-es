@@ -11,26 +11,28 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 399aaa34-896c-48e7-aacb-18564f31b568
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8c1bb47c2273d79e320e53b49c524112b067a2d3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="memberref-element-csdlbi"></a>MemberRef, elemento (CSDLBI)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]El elemento MemberRef identifica el nombre de una propiedad que es el destino de una referencia.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+El elemento MemberRef identifica el nombre de una propiedad que es el destino de una referencia.  
   
 ## <a name="elements-and-attributes"></a>Atributos y elementos  
  En la tabla siguiente se enumeran los elementos y atributos que definen el elemento MemberRef.  
   
-|Nombre|Es obligatorio|Description|  
+|Nombre|Es obligatorio|Descripción|  
 |----------|-----------------|-----------------|  
 |Nombre|Sí|El nombre de la propiedad contenida en un elemento MemberRef.|  
   
@@ -39,7 +41,7 @@ ms.lasthandoff: 01/08/2018
   
  En la tabla siguiente se enumeran los elementos y atributos del tipo MemberRefs.  
   
-|Nombre|Es obligatorio|Description|  
+|Nombre|Es obligatorio|Descripción|  
 |----------|-----------------|-----------------|  
 |MemberRef|Sí|Cadena que contiene la referencia de miembro.|  
   
@@ -60,7 +62,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="example"></a>Ejemplo  
- **Multidimensional**  
+ **Multidimensionales**  
   
  En el ejemplo siguiente, en la versión 1.1 de CSDLBI, se representa una parte del cubo de operaciones de Contoso que define la tabla Bikes. En este ejemplo, se utiliza un elemento MemberRef para especificar el nombre de la columna utilizada como el conjunto de campos predeterminado en los informes, y se usa otro elemento MemberRef para hacer referencia a la columna que proporciona el criterio de ordenación.  
   
@@ -77,6 +79,6 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia técnica para las anotaciones de Business Intelligence en CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [Referencia técnica de anotaciones de BI para CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

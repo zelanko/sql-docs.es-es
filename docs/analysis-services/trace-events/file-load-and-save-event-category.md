@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 8051a7d8-d815-45e1-a764-a5992b07b4fd
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 35e87b8be69035997a6ba466d45f426d6e236a9c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="file-load-and-save-event-category"></a>Categoría de eventos Cargar y guardar archivos
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoría de eventos cargar y guardar archivos tiene las clases de eventos se describen en la tabla siguiente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La categoría de eventos Cargar y guardar archivos tiene las clases de eventos que se describen en la tabla siguiente.  
   
 |Clase de eventos|Identificador del evento|Description|  
 |-----------------|--------------|-----------------|  

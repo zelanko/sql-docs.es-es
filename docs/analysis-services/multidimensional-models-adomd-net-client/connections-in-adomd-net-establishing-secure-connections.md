@@ -1,7 +1,7 @@
 ---
 title: Establecer conexiones seguras en ADOMD.NET | Documentos de Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,24 +11,25 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - connections [ADOMD.NET]
 - security [ADOMD.NET]
 ms.assetid: b084d447-1456-45a4-8e0e-746c07d7d6fd
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a6665fb3cc1ca653a35224300e6dc021646547d2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6916e57fc0135fc5688c6569eaeb8341caa23b82
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connections-in-adomdnet---establishing-secure-connections"></a>Conexiones en ADOMD.NET - establecer conexiones seguras
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cuando se usa una conexión en ADOMD.NET, el método de seguridad que se usa para la conexión depende del valor de la **ProtectionLevel** propiedad de cadena de conexión utilizada cuando se llama a la <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> método de la <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
+  Cuando se usa una conexión en ADOMD.NET, el método de seguridad que se usa para la conexión depende del valor de la **ProtectionLevel** propiedad de cadena de conexión utilizada cuando se llama a la <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> método de la <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
   
  El **ProtectionLevel** propiedad ofrece cuatro niveles de seguridad: no autenticado, autenticado, firmados y cifrados. En la tabla siguiente se describen estos distintos niveles de seguridad.  
   

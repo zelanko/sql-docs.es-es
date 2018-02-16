@@ -35,19 +35,20 @@ helpviewer_keywords:
 - measure groups [Analysis Services], bindings
 - partitions [Analysis Services], bindings
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 49a0e62db64a1eb0dc27df9785a90234a4b39207
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Orígenes de datos y enlaces (SSAS multidimensional)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cubos, dimensiones y otros [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos se pueden enlazar a un origen de datos. Un origen de datos puede ser uno de los objetos siguientes:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Es posible enlazar cubos, dimensiones y otros objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a un origen de datos. Un origen de datos puede ser uno de los objetos siguientes:  
   
 -   Un origen de datos relacional.  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 01/08/2018
 |Bigint|Entero de 64 bits con signo. Este tipo de datos se asigna internamente al tipo de datos Int64 en Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_I8 en OLE DB.|  
 |Bool|Valor booleano. Este tipo de datos se asigna internamente al tipo de datos Booleano en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_BOOL en OLE DB.|  
 |Moneda|Valor de moneda comprendido entre -263 (o -922.337.203.685.477,5808) y 263-1 (o +922.337.203.685.477,5807) con una precisión de una diezmilésima de unidad de moneda. Este tipo de datos se asigna internamente al tipo de datos Decimal en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_CY en OLE DB.|  
-|date|Datos de fecha, almacenados como un número de punto flotante de doble precisión. La parte entera es el número de días transcurridos desde el 30 de diciembre de 1899 y la parte decimal es una fracción del día. Este tipo de datos se asigna internamente al tipo de datos DateTime en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_DATE en OLE DB.|  
+|Date|Datos de fecha, almacenados como un número de punto flotante de doble precisión. La parte entera es el número de días transcurridos desde el 30 de diciembre de 1899 y la parte decimal es una fracción del día. Este tipo de datos se asigna internamente al tipo de datos DateTime en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_DATE en OLE DB.|  
 |Doble|Número de punto flotante de doble precisión comprendido entre -1,79E +308 y 1,79E +308. Este tipo de datos se asigna internamente al tipo de datos Doble en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_R8 en OLE DB.|  
 |Integer|Entero de 32 bits con signo. Este tipo de datos se asigna internamente al tipo de datos Int32 en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_I4 en OLE DB.|  
 |Único|Número de punto flotante de precisión simple comprendido entre -3,40E +38 y 3,40E +38. Este tipo de datos se asigna internamente al tipo de datos Single en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_R4 en OLE DB.|  

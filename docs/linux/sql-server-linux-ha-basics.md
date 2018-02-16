@@ -15,10 +15,10 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
 ms.openlocfilehash: fd2079b0b0186192fc3b55e7a6ccefd25c1a46bc
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Conceptos básicos de la disponibilidad de SQL Server para las implementaciones de Linux
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 02/13/2018
 
 A partir de [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] es compatible con Linux y Windows. Basado en Windows, como [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] las implementaciones, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] las bases de datos e instancias deben estar altamente disponible en Linux. Este artículo tratan los aspectos técnicos de planificación e implementación de alta disponibilidad basadas en Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] bases de datos e instancias, así como algunas de las diferencias de las instalaciones basadas en Windows. Dado que [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] puede ser nuevo para profesionales de TI de Linux y Linux pueden ser nuevo para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] profesionales de TI, el artículo a veces presenta conceptos que pueden ser poco familiar para otros usuarios y familiar a algunas.
 
-## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Opciones de disponibilidad para las implementaciones de Linux
+## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Opciones de disponibilidad para las implementaciones de Linux
 Además de la copia de seguridad y restauración, las mismas tres características de disponibilidad están disponibles en Linux que para las implementaciones basadas en Windows:
 -   Grupos de disponibilidad AlwaysOn (AG)
 -   Siempre en instancias de clúster de conmutación por error (FCI)
@@ -43,16 +43,16 @@ En Linux, muchos comandos tienen que ejecutarse con privilegios elevados, igual 
 2. La más común y seguridad consciente forma ejecutar cosas es usar `sudo` antes de ejecutar cualquier cosa. Muchos de los ejemplos de este artículo utilizan `sudo`.
 
 Algunos comandos comunes, cada uno de los cuales tienen diversos modificadores y opciones que se pueden investigar en línea:
--   `cd`: cambiar el directorio
--   `chmod`: cambiar los permisos de un archivo o directorio
--   `chown`: cambiar la propiedad de un archivo o directorio
--   `ls`: mostrar el contenido de un directorio
--   `mkdir`: cree una carpeta (directorio) en una unidad
--   `mv`: mover un archivo de una ubicación a otra
--   `ps`: mostrar todos los procesos de trabajo
--   `rm`: elimina un archivo localmente en un servidor
--   `rmdir`: eliminar una carpeta (directorio)
--   `systemctl`: iniciar, detener o habilitar los servicios
+-   `cd` : cambiar el directorio
+-   `chmod` : cambiar los permisos de un archivo o directorio
+-   `chown` : cambiar la propiedad de un archivo o directorio
+-   `ls` : mostrar el contenido de un directorio
+-   `mkdir` : cree una carpeta (directorio) en una unidad
+-   `mv` : mover un archivo de una ubicación a otra
+-   `ps` : mostrar todos los procesos de trabajo
+-   `rm` : elimina un archivo localmente en un servidor
+-   `rmdir` : eliminar una carpeta (directorio)
+-   `systemctl` : iniciar, detener o habilitar los servicios
 -   Comandos del editor de texto. En Linux, hay varias opciones del editor de texto, como vi y emacs.
 
 ## <a name="common-tasks-for-availability-configurations-of-includessnoversion-mdincludesssnoversion-mdmd-on-linux"></a>Tareas comunes para las configuraciones de disponibilidad de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] en Linux
@@ -90,15 +90,15 @@ Las distribuciones de Linux similar a Windows, tienen un firewall integrado. Si 
 
 | Número de puerto | Tipo     | Description                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS:`rpcbind/sunrpc`                                                                                                    |
+| 111         | TCP/UDP  | NFS: `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (si se usan): asignador de puntos finales                                                                                          |
 | 137         | UDP      | Samba (si se usan): servicio de nombres NetBIOS                                                                                      |
 | 138         | UDP      | Samba (si se usan): datagrama NetBIOS                                                                                          |
 | 139         | TCP      | Samba (si se usan): sesión de NetBIOS                                                                                           |
 | 445         | TCP      | Samba (si se usan): SMB a través de TCP                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] –; el puerto predeterminado Si lo desea, puede cambiar con`mssql-conf set network.tcpport <portnumber>`                       |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] –; el puerto predeterminado Si lo desea, puede cambiar con `mssql-conf set network.tcpport <portnumber>`                       |
 | 2049        | TCP, UDP | NFS (si se usa)                                                                                                               |
-| 2224        | TCP      | Marcapasos – utilizados por`pcsd`                                                                                                |
+| 2224        | TCP      | Marcapasos – utilizados por `pcsd`                                                                                                |
 | 3121        | TCP      | Marcapasos: necesario si hay nodos marcapasos remotos                                                                    |
 | 3260        | TCP      | iSCSI del iniciador (si se usan): se puede modificar en `/etc/iscsi/iscsid.config` (RHEL), pero debe coincidir con el puerto de destino iSCSI |
 | 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -usa para un extremo AG; el puerto predeterminado se puede cambiar al crear el punto de conexión                                |
@@ -203,15 +203,15 @@ El `corosync.conf` archivo contiene la configuración del clúster. Se encuentra
 
 #### <a name="cluster-log-location"></a>Ubicación del registro de clúster
 Ubicaciones de registro para los clústeres de marcapasos varían según la distribución.
--   RHEL y SLES-`/var/log/cluster/corosync.log`
--   Ubuntu:`/var/log/corosync/corosync.log`
+-   RHEL y SLES- `/var/log/cluster/corosync.log`
+-   Ubuntu: `/var/log/corosync/corosync.log`
 
 Para cambiar la ubicación de registro de forma predeterminada, modifique `corosync.conf`.
 
-## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Plan marcapasos clústeres para[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Plan marcapasos clústeres para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 Esta sección describen los puntos de planeación importantes para un clúster marcapasos.
 
-### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Para los clústeres de virtualización marcapasos basados en Linux[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Para los clústeres de virtualización marcapasos basados en Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 Uso de máquinas virtuales para implementar basados en Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] las implementaciones de grupos de disponibilidad y fci está cubierto por las mismas reglas que sus homólogos basados en Windows. Hay un conjunto básico de reglas para la compatibilidad de virtualizado [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] implementaciones proporcionadas por Microsoft en [956893 de KB de soporte técnico de Microsoft](https://support.microsoft.com/en-us/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment). Hipervisores diferentes, como los Hyper-V de Microsoft y VMware ESXi pueden tener diferentes variaciones en el mismo, debido a diferencias en las plataformas a sí mismos.
 
 En cuanto a grupos de disponibilidad y fci en virtualización, asegúrese de que antiafinidad se establece para los nodos de un determinado clúster marcapasos. Cuando se configura para alta disponibilidad en una configuración AG o FCI, las máquinas virtuales de hospedaje [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] nunca debe ejecutarse en el mismo host del hipervisor. Por ejemplo, si se implementa una FCI de dos nodos, se debe haber *al menos* tres hosts de hipervisor por lo que existe en algún lugar de una de las máquinas virtuales que hospeda un nodo para ir si se produce un error del host, especialmente si usa características como Live La migración o vMotion.

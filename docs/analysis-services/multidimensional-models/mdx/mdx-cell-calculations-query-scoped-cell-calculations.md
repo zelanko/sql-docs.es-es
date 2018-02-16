@@ -15,19 +15,20 @@ helpviewer_keywords:
 - WITH keyword
 - query-scoped cell calculations [MDX]
 ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 34ef680e855c0a6b29363923ba6984189a4e9119
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>Cálculos de celdas MDX - cálculos de celdas del ámbito de consulta
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Usa el **WITH** palabra clave en expresiones multidimensionales (MDX) para describir las celdas calculadas en el contexto de una consulta. La palabra clave **WITH** tiene la siguiente sintaxis:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+La palabra clave **WITH** en las expresiones multidimensionales (MDX) se usa para describir las celdas calculadas en el contexto de una consulta. La palabra clave **WITH** tiene la siguiente sintaxis:  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  
@@ -60,6 +61,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  Por otro lado, MDX procesa la fórmula de cálculo siempre que se emite una consulta MDX en el cubo y ésta implica celdas incluidas en la definición de celdas calculadas. Este procesamiento se lleva a cabo independientemente del ámbito de creación.  
   
 ## <a name="see-also"></a>Vea también  
- [CREATE CELL CALCULATION &#40;Instrucción, MDX&#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+ [CREATE CELL CALCULATION instrucción &#40; MDX &#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
   

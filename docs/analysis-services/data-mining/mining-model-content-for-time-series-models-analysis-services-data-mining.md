@@ -16,19 +16,20 @@ helpviewer_keywords:
 - time series [Analysis Services]
 - mining model content, time series models
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 31909fbe1a60bca85249d7c28b11574a512f442d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de serie temporal (Analysis Services - Minería de datos)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Todos los modelos de minería de datos utilizan la misma estructura para almacenar su contenido. Esta estructura se define según el conjunto de filas de esquema de contenido de minería de datos. Sin embargo, dentro de esa estructura estándar, los nodos que contienen información están organizados de maneras diferentes que representan varios tipos de árboles. En este tema se describe cómo se organizan los nodos, y lo que significa cada uno de ellos, para los modelos de minería de datos basados en el algoritmo de serie temporal [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Todos los modelos de minería de datos utilizan la misma estructura para almacenar su contenido. Esta estructura se define según el conjunto de filas de esquema de contenido de minería de datos. Sin embargo, dentro de esa estructura estándar, los nodos que contienen información están organizados de maneras diferentes que representan varios tipos de árboles. En este tema se describe cómo se organizan los nodos, y lo que significa cada uno de ellos, para los modelos de minería de datos basados en el algoritmo de serie temporal [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  Para obtener una explicación del contenido general del modelo de minería de datos que se aplica a todos los tipos de modelos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
@@ -377,7 +378,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 ### <a name="time-series-formula-for-arima"></a>Fórmula de serie temporal para ARIMA  
  Para ver la fórmula completa de cualquier nodo ARIMA, recomendamos utilizar la **Leyenda de minería de datos** del [Visor de series temporales de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), que presenta el orden de regresión automática, las medias móviles y otros elementos de la ecuación organizados en un formato coherente.  
   
--   [Ver la fórmula de un modelo de serie temporal &#40;Minería de datos&#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [Ver la fórmula de serie temporal de un modelo &#40; minería de datos &#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
   
  En esta sección se presenta una ecuación de ejemplo y se explican los términos básicos.  
   
@@ -413,7 +414,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  **NODE_DISTRIBUTION:** muestra los términos de la ecuación en una tabla anidada, que se puede consultar para obtener términos concretos. La tabla de distribución de nodos sigue la misma estructura jerárquica que las reglas XML. Es decir, el nodo raíz de la serie ARIMA (NODE_TYPE = 27) contiene el valor de intersección y las periodicidades de toda la ecuación, que puede incluir varias periodicidades; por su parte, los nodos secundarios contienen únicamente información específica de una estructura periódica determinada o de los nodos secundarios de esa estructura periódica.  
   
-|Tipo de nodo|Attribute|Tipo de valor|  
+|Tipo de nodo|Atributo|Tipo de valor|  
 |---------------|---------------|----------------|  
 |27 (Raíz ARIMA)|Interceptar<br /><br /> Periodicidad|11|  
 |28 (Estructura periódica ARIMA)|periodicidad<br /><br /> Orden de regresión automática<br /><br /> orden de diferencia<br /><br /> Orden de media móvil|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  
@@ -443,7 +444,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
  Puede resultar complicado recuperar información de un árbol ARTXP, porque la información correspondiente a cada división se encuentra en un lugar diferente dentro del árbol. Por consiguiente, con un modelo ARTXP, debe obtener todas las piezas y, a continuación, procesarlas de alguna forma para reconstituir la fórmula completa. Recuperar una ecuación a partir de un modelo ARIMA es más fácil, porque el árbol pone la fórmula a su disposición en distintos puntos. Para obtener información sobre cómo crear una consulta que recupere esta información, vea [Ejemplos de consultas de modelos de serie temporal](../../analysis-services/data-mining/time-series-model-query-examples.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Contenido del modelo de minería de datos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo de serie temporal de Microsoft](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Ejemplos de consultas de modelo de serie temporal](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [Referencia técnica del algoritmo de serie temporal de Microsoft](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  

@@ -25,19 +25,20 @@ helpviewer_keywords:
 - HighMemoryPrice property
 - HeapTypeForObjects property
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 15e0fc6fa123fd4d9ca71f35804d2f06d0342b5a
-ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="memory-properties"></a>Propiedades de memoria
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] preasigna una pequeña cantidad de memoria en el inicio de la forma que se pueden administrar las solicitudes inmediatamente. Se asigna memoria adicional a medida que aumentan las cargas de trabajo de procesamiento y consultas. 
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] asigna previamente una pequeña cantidad de memoria al inicio para que las peticiones se puedan administrar inmediatamente. Se asigna memoria adicional a medida que aumentan las cargas de trabajo de procesamiento y consultas. 
   
   Al especificar valores de configuración, puede controlar los umbrales en los que se liberará la memoria. Por ejemplo, el valor **HardMemoryLimit** especifica una condición de memoria insuficiente autoimpuesta (de forma predeterminada, este umbral no está habilitado), donde las nuevas peticiones se rechazan de forma absoluta hasta que haya disponibles más recursos.
 

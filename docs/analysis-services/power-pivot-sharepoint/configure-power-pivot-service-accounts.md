@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 590f8ebba552477bf3622570c3cb6aa1e2a73247
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Configurar las cuentas de servicio Power Pivot
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]instalación incluye dos servicios compatibles con las operaciones del servidor. El servicio **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** es un servicio de Windows que proporciona compatibilidad con las consultas y el procesamiento de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en un servidor de aplicaciones. La cuenta de inicio de sesión para este servicio siempre se especifica durante la ejecución del programa de instalación de SQL Server al instalar Analysis Services en modo integrado de SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Una instalación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]incluye dos servicios compatibles con operaciones de servidor. El servicio **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** es un servicio de Windows que proporciona compatibilidad con las consultas y el procesamiento de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en un servidor de aplicaciones. La cuenta de inicio de sesión para este servicio siempre se especifica durante la ejecución del programa de instalación de SQL Server al instalar Analysis Services en modo integrado de SharePoint.  
   
  Es necesario especificar una segunda cuenta para la aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , un servicio web compartido que se ejecuta bajo una identidad del grupo de aplicaciones en una granja de SharePoint. Se especifica esta cuenta al configurar una instalación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]mediante la herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o PowerShell.  
   

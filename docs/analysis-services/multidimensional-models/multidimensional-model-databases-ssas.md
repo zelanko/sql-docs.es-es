@@ -20,19 +20,20 @@ helpviewer_keywords:
 - Business Intelligence Development Studio, databases [Analysis Services]
 - databases [Analysis Services]
 ms.assetid: 78b2f22a-b7bd-4a2b-b6fc-0bff4d2b3168
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 854371e81b8adf0ecf32c2685e64f5d136d00987
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multidimensional-model-databases-ssas"></a>Bases de datos de modelos multidimensionales (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos es una colección de orígenes de datos, vistas del origen de datos, cubos, dimensiones y roles. Una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] también puede incluir estructuras de minería de datos y ensamblados personalizados que proporcionan un método para agregar funciones definidas por el usuario a la base de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] es una colección del orígenes de datos, vistas del origen de datos, cubos, dimensiones y roles. Una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] también puede incluir estructuras de minería de datos y ensamblados personalizados que proporcionan un método para agregar funciones definidas por el usuario a la base de datos.  
   
  Los cubos son los objetos de consulta fundamentales de Analysis Services. Cuando se conecta con una base de datos de Analysis Services a través de una aplicación cliente, se está conectando con un cubo de esa base de datos. Una base de datos puede contener varios cubos si se reutilizan dimensiones, ensamblados, roles o estructuras de minería de datos en varios contextos.  
   
@@ -44,12 +45,12 @@ ms.lasthandoff: 01/08/2018
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa la integración con software de control de código fuente para permitir que varios desarrolladores de software trabajen con objetos distintos de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a la vez. Un programador también puede interactuar con una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] directamente, en lugar de hacerlo a través de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , pero entonces existe el riesgo de que los objetos de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dejen de estar sincronizados con el proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizado para su implementación. Después de la implementación, una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se administra con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Hay algunos cambios que se pueden hacer en una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], por ejemplo en particiones y roles, que pueden hacer que los objetos de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dejen de estar sincronizados con el proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usado para su implementación.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tareas relacionadas  
  [Adjuntar y separar bases de datos de Analysis Services](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   
  [Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
- [Documentar y crear scripts en una base de datos de Analysis Services](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)  
+ [Documentar y crear scripts de una base de datos de Analysis Services](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)  
   
  [Modificar o eliminar una base de datos de Analysis Services](../../analysis-services/multidimensional-models/modify-or-delete-an-analysis-services-database.md)  
   
@@ -63,9 +64,9 @@ ms.lasthandoff: 01/08/2018
   
  [Sincronizar bases de datos de Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)  
   
- [Cambiar entre los modos ReadOnly y ReadWrite en una base de datos de Analysis Services](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Cambiar una base de datos de Analysis Services entre los modos ReadOnly y ReadWrite](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Conectar con una base de datos de Analysis Services en modo en línea](../../analysis-services/multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md)   
  [Crear un proyecto de Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)   
  [Consulta de datos multidimensionales con MDX](../../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)  

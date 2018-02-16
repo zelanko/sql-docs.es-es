@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 5b159965ba0428c267b62fd712cd34bc26cca833
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tables---key-performance-indicator-representation"></a>Tablas: representación de indicadores clave de rendimiento
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Un KPI se usa para medir el rendimiento de un valor, definido por una medida Base, con respecto a un valor de destino  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Los KPI se usan para medir el rendimiento de un valor, definido por una medida base, con respecto a un valor de destino.  
   
 ## <a name="key-performance-indicator-representation"></a>Representación de indicadores clave de rendimiento  
  En los modelos de objetos tabulares, un indicador clave de rendimiento (KPI) es una medida con información adicional para que la aplicación cliente la muestre gráficamente. Un KPI normalmente tiene información sobre el objetivo que se pretende obtener, el estado de la medida en comparación con el objetivo e información para que la herramienta cliente sepa cómo va a mostrar gráficamente el estado.  

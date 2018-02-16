@@ -1,7 +1,7 @@
 ---
 title: "Clases de minería de datos AMO | Documentos de Microsoft"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,25 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - data mining [AMO]
 - AMO, data mining
 - Analysis Management Objects, data mining
 ms.assetid: e4108825-b722-417c-9647-ab30ce35e549
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: de2b66f2dea7dfa29301ddd14f831d7318c6f4f9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a1a5ca970ee22d91b06a945e8a3b600b74892790
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-data-mining-classes"></a>Clases de minería de datos de AMO
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Clases de minería de datos le ayudarán a crear, modificar, eliminar y procesar los objetos de minería de datos. Trabajar con objetos de minería de datos incluye crear estructuras y modelos de minería de datos y procesar los modelos.  
+  Las clases de minería de datos ayudan a crear, modificar, eliminar y procesar objetos de minería de datos. Trabajar con objetos de minería de datos incluye crear estructuras y modelos de minería de datos y procesar los modelos.  
   
  Para obtener más información acerca de cómo configurar el entorno y sobre <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, y <xref:Microsoft.AnalysisServices.DataSourceView> los objetos, vea [clases fundamentales de AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md).  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
  ![Clases DataMining de AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/media/amo-dataminingclasses.gif "clases DataMining de AMO")  
   
-##  <a name="MiningStructure"></a>Objetos MiningStructure  
+##  <a name="MiningStructure">Objetos MiningStructure</a>  
  Una estructura de minería de datos es el contenedor de los modelos de minería de datos. La estructura define todas las columnas posibles que pueden utilizar los modelos de minería de datos. Cada modelo de minería de datos define sus propias columnas a partir del conjunto de columnas definidas en la estructura.  
   
  Un objeto <xref:Microsoft.AnalysisServices.MiningStructure> simple se compone de: información básica, una vista del origen de datos, uno o más elementos <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>, cero o más elementos <xref:Microsoft.AnalysisServices.TableMiningStructureColumn> y un elemento <xref:Microsoft.AnalysisServices.MiningModelCollection>.  
@@ -97,7 +98,7 @@ ms.lasthandoff: 01/08/2018
   
  Para quitar un objeto <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>, éste debe quitarse de la colección del objeto <xref:Microsoft.AnalysisServices.MiningStructure> primario y el objeto <xref:Microsoft.AnalysisServices.MiningStructure> primario debe actualizarse en el servidor mediante el método Update.  
   
-##  <a name="MiningModel"></a>Objetos MiningModel  
+##  <a name="MiningModel">Objetos MiningModel</a>  
  <xref:Microsoft.AnalysisServices.MiningModel> es el objeto que permite elegir las columnas de la estructura y el algoritmo que se van a utilizar y, opcionalmente, los parámetros específicos para optimizar el modelo. Por ejemplo, puede que desee definir varios modelos de minería de datos en la misma estructura de minería de datos que utilicen los mismos algoritmos, pero omitir algunas columnas de dicha estructura en un modelo, usarlas como entradas en otro modelo y usarlas como entrada y predicción en un tercer modelo. Esto puede resultar útil si desea tratar una columna como continua en un modelo de minería de datos, pero en otro modelo desea tratarla como columna de datos discretos.  
   
  Un objeto <xref:Microsoft.AnalysisServices.MiningModel> simple se compone de: información básica, definición de algoritmos y columnas.  

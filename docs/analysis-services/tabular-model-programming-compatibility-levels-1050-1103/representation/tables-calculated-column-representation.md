@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 190bfa92-2445-404d-86df-7cc94d283add
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 21e4a28e2be7492302e1b68506b4e74f695d30fd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tables---calculated-column-representation"></a>Tablas: representación de la columna calculada
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Una columna calculada es la expresión de DAX que crea una nueva columna en una tabla y los valores obtenidos se almacenan en la tabla. La expresión de columna calculada se evalúa cada vez que se procesa la tabla.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Una columna calculada es una expresión de DAX que crea una nueva columna en una tabla, en la que se almacenan los valores obtenidos. La expresión de columna calculada se evalúa cada vez que se procesa la tabla.  
   
 ## <a name="calculated-column-representation"></a>Representación de la columna calculada  
   

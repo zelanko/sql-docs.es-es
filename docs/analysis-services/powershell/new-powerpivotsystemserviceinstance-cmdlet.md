@@ -1,5 +1,5 @@
 ---
-title: Cmdlet New-PowerPivotSystemServiceInstance | Documentos de Microsoft
+title: New-PowerPivotSystemServiceInstance cmdlet | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7ea94113-c0f1-4cca-9228-f1a034fba5db
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f2e412047e4d859de637da933d2335232961ee13
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-powerpivotsystemserviceinstance-cmdlet"></a>Cmdlet New-PowerPivotSystemServiceInstance
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Agrega una nueva instancia de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] servicio de sistema para un servidor de aplicaciones.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Agrega una nueva instancia del Servicio de sistema de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a un servidor de aplicaciones.  
 
 >[!NOTE] 
 >En este artículo puede contener información no actualizada y ejemplos. Use el cmdlet Get-Help para la versión más reciente.
@@ -42,7 +43,7 @@ New-PowerPivotSystemServiceInstance [[-ParentService] <PowerPivotMidTierServiceP
   
 ## <a name="parameters"></a>Parámetros  
   
-### <a name="-parentservice-powerpivotmidtierservicepipebind"></a>-ParentService \<PowerPivotMidTierServicePipeBind >  
+### <a name="-parentservice-powerpivotmidtierservicepipebind"></a>-ParentService \<PowerPivotMidTierServicePipeBind>  
  Especifica el GUID del objeto primario del Servicio de sistema de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en la granja. En esta versión, solo hay un objeto primario permitido. Puede usar Get-PowerPivotSystemService para devolver el objeto de servicio o su GUID.  
   
 |||  

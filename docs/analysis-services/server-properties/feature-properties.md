@@ -21,19 +21,20 @@ helpviewer_keywords:
 - LinkInsideInstanceEnabled property
 - UseCachedPageAllocators property
 ms.assetid: a34d046a-6562-4d98-b827-37cebc6d77b4
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0c12d59deb8a039ed5d8af5033d65e2614d4feb2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="feature-properties"></a>Propiedades de características
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Propiedades de características corresponden a las características de producto, la mayoría de ellas avanzadas, incluidas las propiedades que controlan los vínculos entre las instancias de servidor.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Las propiedades de características corresponden a las características del producto, la mayor parte de ellas avanzadas, incluidas las propiedades que controlan los vínculos entre las instancias de servidor.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor enumeradas en la tabla siguiente. Para obtener más información sobre otras propiedades de servidor y cómo establecerlas, vea [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="properties"></a>Propiedades  
   
-|Propiedad|Valor predeterminado|Description|  
+|Propiedad|Predeterminado|Description|  
 |--------------|-------------|-----------------|  
 |**ManagedCodeEnabled**|1|Una propiedad booleana que indica si los procedimientos de almacenamiento CLR están habilitados.|  
 |**LinkInsideInstanceEnabled**|1|Una propiedad booleana que indica si se puede crear un objeto vinculado dentro de la misma instancia del servidor.|  
@@ -56,6 +57,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>Vea también  
  [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Determinar el modo de servidor de una instancia de Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [Usar vistas de administración dinámica &#40;DMV&#41; para supervisar Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [Usar dinámica vistas de administración &#40; DMV &#41; para supervisar Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

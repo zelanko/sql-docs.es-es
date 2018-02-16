@@ -1,7 +1,7 @@
 ---
 title: Supervisar los seguimientos (XMLA) | Documentos de Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,26 +11,27 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - XML for Analysis, traces
 - XMLA, traces
 - monitoring traces [XMLA]
 - traces [Analysis Services]
 ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3ae92fd24e3e9d5abbf3084472eac09a0e2d59fb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3895ae75a7e7e34456756ea9dfb5b2fe4198e32c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="monitoring-traces-xmla"></a>Supervisar los seguimientos (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Puede usar el [suscribir](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md) comando XML for Analysis (XMLA) para supervisar un seguimiento existente definido en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El **suscribir** comando devuelve los resultados de un seguimiento como un conjunto de filas.  
+  Puede usar el [suscribir](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md) comando XML for Analysis (XMLA) para supervisar un seguimiento existente definido en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El **suscribir** comando devuelve los resultados de un seguimiento como un conjunto de filas.  
   
 ## <a name="specifying-a-trace"></a>Especificar un seguimiento  
  El [objeto](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) propiedad de la **suscribir** comando debe contener una referencia de objeto a una [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia o un seguimiento en un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia. Si el **objeto** no se especifica la propiedad o un identificador de seguimiento no se especifica en el **objeto** propiedad, el **suscribir** comando supervisa el seguimiento de sesión predeterminada para la sesión explícita especificada en el encabezado SOAP para el comando.  
@@ -40,14 +41,14 @@ ms.lasthandoff: 01/08/2018
   
  El conjunto de filas contiene las columnas que se muestran en la tabla siguiente.  
   
-|columna|Data type|Description|  
+|Columna|Data type|Description|  
 |------------|---------------|-----------------|  
 |EventClass|Integer|Clase del evento que recibe el seguimiento.|  
 |EventSubclass|Entero largo|Subclase del evento que recibe el seguimiento.|  
-|CurrentTime|DATETIME|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|StartTime|DATETIME|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|EndTime|DATETIME|Hora a la que finalizó el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".<br /><br /> Esta columna no se rellena para las clases de eventos que describen el inicio de un proceso o acción.|  
-|Duration|Entero largo|Tiempo total transcurrido (en milisegundos) para el evento.|  
+|CurrentTime|Fecha y hora|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
+|StartTime|Fecha y hora|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
+|EndTime|Fecha y hora|Hora a la que finalizó el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".<br /><br /> Esta columna no se rellena para las clases de eventos que describen el inicio de un proceso o acción.|  
+|Duración|Entero largo|Tiempo total transcurrido (en milisegundos) para el evento.|  
 |CPUTime|Entero largo|Tiempo de procesador transcurrido (en milisegundos) para el evento.|  
 |JobID|Entero largo|Identificador de trabajo para el proceso.|  
 |SessionID|String|Identificador de la sesión para la que se produjo el evento.|  
@@ -62,7 +63,7 @@ ms.lasthandoff: 01/08/2018
 |NestLevel|Integer|Nivel de la transacción para la que se produjo el evento.|  
 |NumSegments|Entero largo|Número de segmentos de datos afectados por el comando para el que se produjo el evento o a los que éste tuvo acceso.|  
 |Severity|Integer|Nivel de gravedad de una excepción del evento La columna puede contener uno de los siguientes valores:<br /><br /> <br /><br /> 0: correcto<br /><br /> <br /><br /> 1: información<br /><br /> <br /><br /> 2: advertencia<br /><br /> <br /><br /> 3: error|  
-|Correcto|Boolean|Indica si un comando se ha ejecutado correctamente o no.|  
+|Success|Boolean|Indica si un comando se ha ejecutado correctamente o no.|  
 |Error|Entero largo|Número de error del evento, si procede.|  
 |ConnectionID|String|Identificador de la conexión para la que se produjo el evento.|  
 |DatabaseName|String|Nombre de la base de datos para la que se produjo el evento.|  
@@ -79,6 +80,6 @@ ms.lasthandoff: 01/08/2018
 |RequestProperties|String|Propiedades del método XMLA para el que se produjo el evento.|  
   
 ## <a name="see-also"></a>Vea también  
- [Desarrollo con XMLA en Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Desarrollar con XMLA en Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

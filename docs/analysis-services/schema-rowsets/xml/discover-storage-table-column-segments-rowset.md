@@ -11,37 +11,39 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 3e514715-9fe6-4e6a-accb-4149ffd7e0bf
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 878568721816c90e202727dc3e516370f9c3ee56
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS, conjunto de filas
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Proporciona información en el nivel de columna y segmento acerca de las tablas de almacenamiento utilizado por una base de datos de Analysis Services que se ejecutan en tabular o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modo. Este conjunto de filas se utiliza principalmente para solucionar problemas y realizar análisis.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Proporciona información en el nivel de columna y segmento acerca de las tablas de almacenamiento utilizado por una base de datos de Analysis Services que se ejecutan en tabular o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] modo. Este conjunto de filas se utiliza principalmente para solucionar problemas y realizar análisis.  
   
  **Se aplica a:** modelos tabulares  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
  El conjunto de filas **DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS** contiene las siguientes columnas.  
   
-|**Nombre de columna**|**Indicador de tipo**|**Restricción**|**Descripción**|  
+|**Nombre de columna**|**Indicador de tipo**|**Restricción**|**Description**|  
 |---------------------|------------------------|---------------------|---------------------|  
 |**DATABASE_NAME**|**DBTYPE_WSTR**|Sí|Especifica la base de datos tabular.<br /><br /> El conjunto de filas **DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS** puede restringirse mediante esta columna. Si se omite, se utiliza la base de datos actual.|  
-|**RESTRICCIONES OBLIGATORIAS CUBE_NAME**|**DBTYPE_WSTR**|Sí|Nombre del modelo.<br /><br /> El conjunto de filas **DISCOVER_STORAGE_TABLES** puede restringirse mediante esta columna.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Sí|Nombre del modelo.<br /><br /> El conjunto de filas **DISCOVER_STORAGE_TABLES** puede restringirse mediante esta columna.|  
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|Sí|Nombre del grupo de medida.|  
 |**PARTICIÓN**|**DBTYPE_WSTR**|Sí|Nombre de la partición.|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**||Nombre de la dimensión.|  
 |**TABLE_ID**|**DBTYPE_WSTR**||Identificador interno del segmento de la tabla.|  
 |**COLUMN_ID**|**DBTYPE_WSTR**||Identificador interno de la columna.|  
-|**_NÚMERO DE SEGMENTO**|**DBTYPE_I8**||Número ordinal del segmento de la tabla.|  
+|**SEGMENT _NUMBER**|**DBTYPE_I8**||Número ordinal del segmento de la tabla.|  
 |**TABLE_PARTTION_NUMBER**|**DBTYPE_I8**||Número ordinal de la partición.|  
 |**RECORDS_COUNT**|**DBTYPE_I8**||Número de registros de la partición.|  
 |**ALLOCATED_SIZE**|**DBTYPE_UI8**||Tamaño en bytes asignado al segmento de la columna.|  

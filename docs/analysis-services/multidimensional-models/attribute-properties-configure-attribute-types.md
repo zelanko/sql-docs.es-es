@@ -19,19 +19,20 @@ helpviewer_keywords:
 - currency dimensions [Analysis Services]
 - Type property
 ms.assetid: c2c6a3da-555e-4362-a83f-88da28427520
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: f0011391fde6ea0445553587b0ac2a396f66974e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---configure-attribute-types"></a>Propiedades de atributo: configurar los tipos de atributos
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], tipos de atributos ayudan a clasificar un atributo en términos de funcionalidad empresarial. Existen muchos tipos de atributos que, en su mayor parte, se utilizan en las aplicaciones cliente para mostrar o admitir un atributo. No obstante, algunos tipos de atributos también tienen significado específico para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por ejemplo, algunos tipos de atributos identifican atributos que representan períodos en diferentes calendarios para las dimensiones de tiempo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], los tipos de atributos ayudan a clasificar un atributo en función de su funcionalidad empresarial. Existen muchos tipos de atributos que, en su mayor parte, se utilizan en las aplicaciones cliente para mostrar o admitir un atributo. No obstante, algunos tipos de atributos también tienen significado específico para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por ejemplo, algunos tipos de atributos identifican atributos que representan períodos en diferentes calendarios para las dimensiones de tiempo.  
   
 ##  <a name="setting_attibute_types"></a> Establecer tipos de atributos  
  El valor de la propiedad **Type** de un atributo determina el tipo de atributo de dicho atributo. Distintos asistentes de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] establecen los tipos de atributos al definir dimensiones o atributos. Estos asistentes de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] también establecen los tipos de atributos al agregar funcionalidad a las dimensiones. Por ejemplo, el Asistente de Business Intelligence aplica varios tipos de atributo a los atributos en una dimensión cuando agrega inteligencia de cuentas para identificar atributos que contienen los nombres, códigos, números y estructuras de cuentas en la dimensión. El Asistente de Business Intelligence también utiliza tipos de atributo, por ejemplo para la conversión de moneda. Para más información, vea [Crear una dimensión de tipo moneda](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
@@ -312,7 +313,7 @@ ms.lasthandoff: 01/08/2018
 |**Years**|Representa los años|  
   
 ## <a name="see-also"></a>Vea también  
- [Atributos y jerarquías de atributos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Referencia de las propiedades de los atributos de dimensión](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Atributos y jerarquías de atributo](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
+ [Referencia de propiedades de atributos de dimensión](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

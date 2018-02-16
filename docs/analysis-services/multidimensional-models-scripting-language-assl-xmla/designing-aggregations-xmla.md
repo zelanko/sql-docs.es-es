@@ -1,7 +1,7 @@
 ---
 title: "Diseñar agregaciones (XMLA) | Documentos de Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - statistical information [XML for Analysis]
 - batches [XML for Analysis]
@@ -21,19 +22,19 @@ helpviewer_keywords:
 - XML for Analysis, aggregations
 - iterative aggregation process [XMLA]
 ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fdc973309fe87792aa135813c23e4e68d7650043
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 07e7d766fa70662c55330ef2a7569ecf22b88ccc
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="designing-aggregations-xmla"></a>Diseñar agregaciones (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Diseños de agregaciones están asociados a las particiones de un grupo de medida determinado para asegurarse de que las particiones utilizan la misma estructura al almacenar agregaciones. Utilizando la misma estructura de almacenamiento para particiones le permite definir con facilidad las particiones que pueden combinarse más tarde mediante el [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) comando. Para obtener más información acerca de los diseños de agregaciones, consulte [agregaciones y diseños de agregaciones](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+  Los diseños de agregaciones están asociados a las particiones de un grupo de medida determinado para asegurar que las particiones usan la misma estructura al almacenar agregaciones. Utilizando la misma estructura de almacenamiento para particiones le permite definir con facilidad las particiones que pueden combinarse más tarde mediante el [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) comando. Para obtener más información acerca de los diseños de agregaciones, consulte [agregaciones y diseños de agregaciones](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
  Para definir las agregaciones para un diseño de agregaciones, puede usar el [DesignAggregations](../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) comando de XML for Analysis (XMLA). El **DesignAggregations** comando tiene propiedades que identifican el diseño de agregaciones que se usará como una referencia y cómo controlar el proceso de diseño basado en esa referencia. Mediante el **DesignAggregations** comandos y sus propiedades, puede diseñar agregaciones de forma iterativa o por lote y, a continuación, ver las estadísticas de diseño resultantes para evaluar el proceso de diseño.  
   
@@ -108,18 +109,18 @@ ms.lasthandoff: 01/08/2018
 ## <a name="returning-design-statistics"></a>Devolver estadísticas de diseño  
  Cuando el **DesignAggregations** comando devuelve el control a la aplicación cliente, el comando devuelve un conjunto de filas que contiene una sola fila que representa las estadísticas de diseño para el comando. El conjunto de filas contiene las columnas que se muestran en la tabla siguiente.  
   
-|columna|Data type|Description|  
+|Columna|Data type|Description|  
 |------------|---------------|-----------------|  
 |Pasos|Integer|El número de pasos que realiza el comando antes de devolver el control a la aplicación cliente.|  
 |Time|Entero largo|El número de milisegundos que tarda el comando antes de devolver el control a la aplicación cliente.|  
 |Optimization|Doble|El porcentaje estimado de mejora del rendimiento que alcanza el comando antes de devolver el control a la aplicación cliente.|  
-|Storage|Entero largo|El número estimado de bytes que toma el comando antes de devolver el control a la aplicación cliente.|  
+|Almacenamiento|Entero largo|El número estimado de bytes que toma el comando antes de devolver el control a la aplicación cliente.|  
 |Agregaciones|Entero largo|El número de agregaciones definido por el comando antes de devolver el control a la aplicación cliente.|  
 |LastStep|Boolean|Indica si los datos en el conjunto de filas representan el último paso del proceso de diseño. Si el **Materialize** propiedad del comando se estableció en true, el valor de esta columna se establece en true.|  
   
  Puede utilizar las estadísticas de diseño que se encuentran en el conjunto de filas devuelto después de cada uno **DesignAggregations** comando en ambos diseños, iterativo y por lotes. En diseño iterativo, puede usar estadísticas de diseño para determinar y mostrar el progreso. Cuando diseña agregaciones por lotes, puede usar estadísticas de diseño para determinar el número de agregaciones que crea el comando.  
   
 ## <a name="see-also"></a>Vea también  
- [Desarrollo con XMLA en Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Desarrollar con XMLA en Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

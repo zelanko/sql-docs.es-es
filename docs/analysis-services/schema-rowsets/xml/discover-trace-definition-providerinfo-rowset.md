@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 8dda2ef7-202a-454b-93f9-a2b29c2d277c
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2dc1525abfdef6b54311f1a2eb470b8350a04cc8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovertracedefinitionproviderinfo-rowset"></a>Conjunto de filas DISCOVER_TRACE_DEFINITION_PROVIDERINFO
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Devuelve información básica sobre el proveedor de seguimiento, como su nombre y descripción.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Devuelve información básica sobre el proveedor de seguimiento, como su nombre y descripción.  
   
  **Se aplica a:** modelos tabulares, modelos multidimensionales  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 01/08/2018
   
 |Nombre de columna|Indicador de tipo|Restricción|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**Data**|**DBTYPE_WSTR**|Sí|Contiene una cadena XML codificada que describe el proveedor de seguimiento, incluido el nombre de proveedor, la versión, el número de compilación y la descripción.|  
+|**Datos**|**DBTYPE_WSTR**|Sí|Contiene una cadena XML codificada que describe el proveedor de seguimiento, incluido el nombre de proveedor, la versión, el número de compilación y la descripción.|  
   
  Este conjunto de filas de esquema no está ordenado.  
   
@@ -49,6 +51,6 @@ ms.lasthandoff: 01/08/2018
 |ADOMDNAME|TraceDefinitionProviderInfo|  
   
 ## <a name="see-also"></a>Vea también  
- [Conjuntos de filas de esquema de XML for Analysis](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML para conjuntos de filas de esquema de análisis](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

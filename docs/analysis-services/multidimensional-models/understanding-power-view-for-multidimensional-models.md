@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 103d42ffa1f2f4bc823c8b95327347323f0ccf86
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Descripción de Power View para modelos multidimensionales
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este artículo describe la característica Power View para modelos multidimensionales en SQL Server y proporciona información importante para profesionales de BI y los administradores que pretenden implementar Power View para modelos multidimensionales en su organización.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+En este artículo se describe la característica Power View para modelos multidimensionales de SQL Server y se proporciona información importante para los profesionales y los administradores de BI que pretenden implementar Power View para modelos multidimensionales en su organización.  
   
  Los modelos multidimensionales ofrecen soluciones de análisis, almacenamiento y modelado de datos OLAP punteras del sector. Los modelos multidimensionales de SQL Server permiten el análisis de datos, la exploración y la visualización ad hoc mediante Microsoft Power View.  
   
@@ -34,7 +35,7 @@ ms.lasthandoff: 01/08/2018
   
  ![Power View para modelos multidimensionales arquitectura](../../analysis-services/multidimensional-models/media/daxmd-architecture.gif "Power View para modelos multidimensionales arquitectura")  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  **Requisitos de servidor**  
   
 -   Microsoft SQL Server 2016 Analysis Services ejecutándose en modo multidimensional.  
@@ -63,14 +64,14 @@ ms.lasthandoff: 01/08/2018
 |-----------------------------|--------------------|  
 |Cube|Modelo|  
 |Dimensión de cubo|Table|  
-|Atributos de dimensión (claves, nombre)|columna|  
+|Atributos de dimensión (claves, nombre)|Columna|  
 |Grupo de medida|Table|  
 |Measure|Measure|  
 |Medida sin grupo de medida|En una tabla denominada Medidas|  
 |Relación de la dimensión del cubo del grupo de medida|Relación|  
 |Perspective|Perspective|  
 |KPI|KPI|  
-|Jerarquías de usuario y elementos primarios y secundarios|Hierarchy|  
+|Jerarquías de usuario y elementos primarios y secundarios|Jerarquía|  
 |Carpeta para mostrar|Carpeta para mostrar|  
   
 ## <a name="measures-measure-groups-and-kpis"></a>Medidas, grupos de medida y KPI  

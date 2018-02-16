@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Windows Firewall [Analysis Services]
 - firewall systems [Analysis Services]
 ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
 ms.openlocfilehash: 0cb0930e6fd3faf0b44c5b8ac46359ec959b85c9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Configurar Firewall de Windows para permitir el acceso a Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un primer paso esencial para hacer que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] está disponible en la red determinar si necesita desbloquear puertos en un servidor de seguridad. La mayoría de las instalaciones necesitarán que cree al menos una regla de firewall de entrada que permita las conexiones a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un primer paso esencial para hacer que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] esté disponible en la red consiste en determinar si es necesario desbloquear puertos en un firewall. La mayoría de las instalaciones necesitarán que cree al menos una regla de firewall de entrada que permita las conexiones a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  Los requisitos de configuración del firewall varían según cómo instalara [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   

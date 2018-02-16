@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 32dfe1b5c7367121bd36dae57d0175304fc2fe14
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="subselects-in-queries"></a>Subselecciones en las consultas
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Las expresiones de Subselección son expresiones SELECT anidadas que se utilizan para restringir el espacio del cubo donde se evalúa la instrucción SELECT externa exterior. Las subselecciones permiten definir un nuevo espacio en el que se evalúan todos los cálculos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Las expresiones de subselección son expresiones SELECT anidadas que se utilizan para restringir el espacio del cubo donde se evalúa la instrucción SELECT externa exterior. Las subselecciones permiten definir un nuevo espacio en el que se evalúan todos los cálculos.  
   
 ## <a name="subselects-by-example"></a>Ejemplo de subselecciones  
  Comencemos con un ejemplo de cómo pueden ayudar las subselecciones a generar los resultados que deseamos mostrar. Suponga que le solicitan que genere una tabla que muestra el comportamiento de las ventas, a través de varios años, de los diez productos más vendidos.  
@@ -33,10 +34,10 @@ ms.lasthandoff: 01/08/2018
   
 |||||  
 |-|-|-|-|  
-||Suma de años|Año 1|…|  
+||Suma de años|Año 1|...|  
 |Suma de los 10 productos más vendidos||||  
 |Producto A||||  
-|…||||  
+|...||||  
   
  Para hacer algo como lo anterior, podría escribir la siguiente expresión MDX:  
   
@@ -344,7 +345,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  Como puede ver, hay diferencias en los resultados entre ambos conjuntos. La primera consulta respondía a la pregunta de cuáles son los productos que más se venden en las cinco regiones de mayores ventas; la segunda consulta respondía a la pregunta de dónde se producen las ventas más importantes de los cinco productos que más se venden.  
   
-### <a name="remarks"></a>Notas  
+### <a name="remarks"></a>Comentarios  
  Las subselecciones tienen las siguientes restricciones y limitaciones:  
   
 -   La cláusula WHERE no filtra el subespacio.  

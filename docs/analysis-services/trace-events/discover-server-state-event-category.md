@@ -17,19 +17,20 @@ helpviewer_keywords:
 - discover server state events
 - event classes [Analysis Services], discover server state
 ms.assetid: b62ebf66-d090-4f74-8c83-11ed518b2018
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 38da7056ebdb294516ea8f88125ddb13c118d297
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discover-server-state-event-category"></a>detección de estado del servidor, categoría de eventos
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoría de eventos de detección de estado de servidor tiene las clases de eventos se describen en la tabla siguiente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La categoría de eventos Detección de estado del servidor tiene las clases de eventos que se describen en la siguiente tabla.  
   
 |Clase de eventos|Identificador del evento|Description|  
 |-----------------|--------------|-----------------|  

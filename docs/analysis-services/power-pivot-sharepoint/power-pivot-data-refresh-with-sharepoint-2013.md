@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 59648b6a3f3dc221fa1e80be1e737606b5fede04
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>Actualización de datos Power Pivot con SharePoint 2013
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El diseño de la actualización de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modelos de datos en SharePoint 2013 emplea Excel Services como componente principal para cargar y actualizar modelos de datos en una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo de SharePoint. El servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ejecuta fuera de la granja de servidores de SharePoint. La arquitectura de SharePoint 2013 Excel Services admite tanto la **actualización de datos interactiva** como la **actualización de datos programada**.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+El diseño de la actualización de modelos de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de SharePoint 2013 emplea Excel Services como componente principal para cargar y actualizar modelos de datos en una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecuta en modo de SharePoint. El servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ejecuta fuera de la granja de servidores de SharePoint. La arquitectura de SharePoint 2013 Excel Services admite tanto la **actualización de datos interactiva** como la **actualización de datos programada**.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 01/08/2018
 ||||  
 |-|-|-|  
 ||Libros de Excel 2013|Libros de Excel 2010|  
-|Desencadenar la actualización de datos|**Interactivo:** Usuario autenticado<br /><br /> **Programada:** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servicio de sistema|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servicio de sistema|  
+|Desencadenar la actualización de datos|**Interactivo:** Usuario autenticado<br /><br /> **Programada:** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servicio de sistema|  
 |Cargar el libro desde las bases de datos de contenido|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
 |Cargar modelo de datos en la instancia de Analysis Services|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
 |Enviar comandos de procesamiento a la instancia de Analysis Services|SharePoint 2013 Excel Services|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servicio de sistema|  
@@ -60,8 +61,8 @@ ms.lasthandoff: 01/08/2018
 |Libro creado en|actualización de datos programada|Actualización interactiva|  
 |-------------------------|----------------------------|-------------------------|  
 |2008 R2 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel|No compatible. Actualizar el libro **(\*)**|No compatible. Actualizar el libro **(\*)**|  
-|2012 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel|Admitida|No compatible. Actualizar el libro **(\*)**|  
-|Excel 2013|Admitida|Admitida|  
+|2012 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel|Compatible|No compatible. Actualizar el libro **(\*)**|  
+|Excel 2013|Compatible|Compatible|  
   
  **(\*)** Para obtener más información sobre actualizaciones de libros, vea [Actualizar libros y actualización de datos programada &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   

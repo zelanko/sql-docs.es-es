@@ -12,21 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: a94b3198-be85-4935-845d-1cd4e121fc94
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: d547a887a05120405f6bf26049a567e1aa8026c8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="query-processing-events-category"></a>Procesamiento de consultas (categoría de eventos)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoría de eventos de procesamiento de consultas tiene las clases de eventos se describen en la tabla siguiente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La categoría de eventos Procesamiento de consultas contiene las clases de eventos que se describen en la siguiente tabla.  
   
-|**Clase de eventos**|**Identificador del evento**|**Descripción**|  
+|**Clase de eventos**|**Identificador del evento**|**Description**|  
 |---------------------|------------------|---------------------|  
 |Query Subcube|11|Consulta de subcubo para optimización basada en el uso.|  
 |Query Subcube Verbose|12|Consulta de subcubo con información detallada. Este evento puede tener un impacto negativo en el rendimiento cuando está activado.|  

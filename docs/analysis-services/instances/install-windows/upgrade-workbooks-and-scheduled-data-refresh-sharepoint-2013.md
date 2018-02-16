@@ -19,13 +19,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: b76561da72c6a4502f451d9ee39f8e9f90c97546
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Actualizar libros y actualización de datos programada (SharePoint 2013)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Este tema explica la experiencia del usuario de libros creados anteriormente en [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] entornos y cómo actualizar [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] libros de modo que puede aprovechar las nuevas características presentadas en esta versión. Para obtener más información sobre las nuevas características, vea [Novedades de Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+En este tema se explica la experiencia de usuario de libros creados en entornos anteriores de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] y cómo actualizar los libros de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para poder aprovechar las nuevas características presentadas en esta versión. Para obtener más información sobre las nuevas características, vea [Novedades de Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
   
 > [!WARNING]  
 >  No se puede revertir la actualización de los libros que se actualizan automáticamente en el servidor. Una vez actualizado un libro, permanece actualizado. Para usar una versión anterior, puede volver a publicar el libro anterior en SharePoint, restaurar una versión anterior o reciclar el libro. Para obtener más información acerca de cómo restaurar o reciclar un documento en SharePoint, vea [Planear la protección de contenido mediante papeleras de reciclaje y control de versiones](http://go.microsoft.com/fwlink/?LinkId=238669).  

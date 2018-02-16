@@ -17,19 +17,20 @@ helpviewer_keywords:
 - custom member properties [MDX]
 - IIf function
 ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 1fb9052d74a19941a41a915e12acec04bfc38f1c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-data-manipulation---rollupchildren-function"></a>Manipulación de datos MDX - RollupChildren, función
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Las expresiones multidimensionales (MDX) [RollupChildren](../../../mdx/rollupchildren-mdx.md) función acumula los miembros secundarios de un miembro, aplicar un operador unario diferente a cada elemento secundario y devuelve el valor de este resumen como un número. El operador unario utilizado puede ser proporcionado mediante una propiedad de miembro asociada al miembro secundario, o bien puede ser una expresión de cadena proporcionada directamente a la función.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+La función MDX (expresiones multidimensionales) [RollupChildren](../../../mdx/rollupchildren-mdx.md) acumula los elementos secundarios de un miembro con la aplicación de un operador unario diferente a cada elemento secundario y devuelve el valor de este resumen como un número. El operador unario utilizado puede ser proporcionado mediante una propiedad de miembro asociada al miembro secundario, o bien puede ser una expresión de cadena proporcionada directamente a la función.  
   
 ## <a name="rollupchildren-function-examples"></a>Ejemplos de la función RollupChildren  
  El uso de la función **RollupChildren** en instrucciones MDX (expresiones multidimensionales) es fácil de explicar, pero esta función puede tener un impacto muy variado en las consultas MDX.  
@@ -78,7 +79,7 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
   
  La instrucción MDX examina el operador unario del miembro secundario. Si el operador unario se usa para una resta (como sucede con los miembros de los valores nacionales y extranjeros devueltos), la función **IIf** sustituye al operador unario tilde (~). De lo contrario, la función **IIf** utiliza el operador unario del miembro secundario. Finalmente, el total de resumen devuelto se multiplica por 1.1 para proporcionar el valor de predicción de las ventas brutas domésticas y extranjeras.  
   
-## <a name="see-also"></a>Ver también  
- [Manipular datos &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+## <a name="see-also"></a>Vea también  
+ [Manipulación de datos &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

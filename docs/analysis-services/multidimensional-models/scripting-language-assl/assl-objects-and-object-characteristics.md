@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - reference exceptions [Analysis Services Scripting Language]
 - ASSL, objects
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - Analysis Services Scripting Language, objects
 - expansion [Analysis Services Scripting Language]
 ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 51c9b6140396cfc5080e3aee21cd8e708c05eb69
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="assl-objects-and-object-characteristics"></a>Objetos y características de objetos ASSL
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Objetos de Analysis Services Scripting Language (ASSL) siguen instrucciones concretas en lo que respecta a los grupos de objetos, herencia, nomenclatura, expansión y procesamiento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Los objetos en ASSL (Analysis Services Scripting Language) siguen instrucciones concretas con respecto a los grupos de objetos, herencia, nomenclatura, expansión y procesamiento.  
   
 ## <a name="object-groups"></a>Grupos de objetos  
  Todos los [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos tienen una representación XML. Los objetos están divididos en dos grupos:  
@@ -54,7 +56,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Particiones  
   
--   perspectivas  
+-   Perspectivas  
   
 -   Modelos de minería de datos  
   

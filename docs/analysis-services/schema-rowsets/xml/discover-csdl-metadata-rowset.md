@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DISCOVER_CSDL_METADATA | Documentos de Microsoft
+title: DISCOVER_CSDL_METADATA Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: analysis-services
@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 91fa99b0a5338f705cecff4d1622a2db0a262154
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discovercsdlmetadata-rowset"></a>DISCOVER_CSDL_METADATA, conjunto de filas
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Devuelve información sobre un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] modelo de datos (tabular o multidimensional), proporcionando la definición del modelo en el formato CSDLBI (Conceptual Schema Definition Language con anotaciones BI). CSDLBI está basado en CSDL, un esquema XML utilizado por Entity Data Framework para la comunicación entre un servidor de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] y el cliente de [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] . Las anotaciones Business Intelligence (BI) proporcionan metadatos adicionales sobre los modelos tabulares y los objetos incluidos en ellos. Para más información sobre los modelos de datos tabulares, vea [Anotaciones de CSDL para Business Intelligence &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Devuelve información sobre un modelo de datos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] (ya sea tabular o multidimensional), proporcionando la definición del modelo en el formato CSDLBI (lenguaje de definición de esquemas conceptuales con anotaciones BI). CSDLBI está basado en CSDL, un esquema XML utilizado por Entity Data Framework para la comunicación entre un servidor de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] y el cliente de [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] . Las anotaciones Business Intelligence (BI) proporcionan metadatos adicionales sobre los modelos tabulares y los objetos incluidos en ellos. Para más información sobre los modelos de datos tabulares, vea [Anotaciones de CSDL para Business Intelligence &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
   
  El contexto de seguridad del comando afecta al conjunto de filas que se devuelve. Se requiere que los permisos Read en la instancia de Analysis Services obtengan la definición de CSDL desde servidor.  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
  El conjunto de filas **DISCOVER_CSDL_METADATA** contiene las siguientes columnas.  
   
-|**Nombre de columna**|**Indicador de tipo**|**Restricción**|**Descripción**|  
+|**Nombre de columna**|**Indicador de tipo**|**Restricción**|**Description**|  
 |---------------------|------------------------|---------------------|---------------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**|Sí|Especifica el nombre de la base de datos cuya descripción CSDLBI se solicita. Si se omite, se utiliza la base de datos actual.<br /><br /> Esta restricción es obligatoria para todos los tipos de modelos.|  
 |**PERSPECTIVE_ID**|**DBTYPE_WSTR**|Sí|Especifica el identificador de una perspectiva que se ha definido en el modelo especificado por CATALOG_NAME.<br /><br /> Es una restricción opcional. Se aplica a todos los tipos de modelos.|  
@@ -42,7 +44,7 @@ ms.lasthandoff: 01/08/2018
 |**METADATOS**|**DBTYPE_WSTR**|no|Cadena que contiene la definición XML de un origen de datos y sus propiedades, de acuerdo con el esquema CSDLBI.|  
 |**CUBE_ID**|**DBTYPE_WSTR**|Sí|Identificador de cadena.<br /><br /> Esta restricción es opcional para las bases de datos multidimensionales. Si hay varios cubos disponibles y se omite la restricción, se devuelve el cubo predeterminado.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  DISCOVER_CSDL_METADATA tiene los requisitos siguientes:  
   
 -   La solicitud DISCOVER producirá un error si no se especifica una base de datos mediante la restricción CATALOG_NAME.  
@@ -61,7 +63,7 @@ ms.lasthandoff: 01/08/2018
   
  La cadena XML que se devuelve en el conjunto de filas puede incluir las propiedades o los valores específicos del idioma siguientes. Por ejemplo, si se emite la solicitud de conjunto de filas desde un cliente con el LCID 0403 (catalán de España), la propiedad devolverá los valores siguientes correspondientes para dicho idioma. Si las traducciones no están disponibles en el servidor, se devuelve la cadena para el idioma predeterminado del servidor.  
   
--   Título  
+-   Caption  
   
 -   Calificador  
   
@@ -94,7 +96,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="example"></a>Ejemplo  
- **Multidimensional**  
+ **Multidimensionales**  
   
  La consulta XMLA siguiente devuelve las representaciones CSDLBI de cubo de operaciones de Contoso. Es necesaria la restricción VERSION para consultar una base de datos multidimensional. La base de datos de Contoso Retail contiene dos cubos, de modo que se hace referencia al cubo de operaciones mediante restricciones PERSPECTIVE_NAME.  
   
@@ -127,7 +129,7 @@ ms.lasthandoff: 01/08/2018
 |GUID|3444B255-171E-4cb9-AD98-19E57888A75F|  
 |ADOMDNAME|Csdl|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Conjuntos de filas de esquema de Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)   
  [Anotaciones de CSDL para Business Intelligence &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: Clases de OLAP en AMO | Documentos de Microsoft
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,25 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Analysis Management Objects, OLAP
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: 397509b7-a4fb-40de-aa30-c66dc9ed2105
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 05bf661e22f6c85a97b14955308660fbaa8d0d49
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 609958fd81ee7c703d7608f9a353c15658c1528b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-olap-classes"></a>Clases de OLAP en AMO
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Clases de Analysis Management Objects (AMO) OLAP le ayudarán a crear, modificar, eliminar y procesar cubos, dimensiones y objetos relacionados como indicadores clave de rendimiento (KPI), acciones y almacenamiento en caché automático.  
+  Las clases de OLAP en AMO (Objetos de administración de análisis) sirven de ayuda para crear, modificar, eliminar y procesar cubos, dimensiones y objetos relacionados como indicadores de clave de rendimiento (KPI), acciones y almacenamiento en caché automático.  
   
  Para obtener más información acerca de cómo configurar el entorno de programación de AMO, cómo establecer una conexión con un servidor de acceso a una base de datos o definir los datos de orígenes y vistas del origen de datos, vea [clases fundamentales de AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md).  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="basic-classes"></a>Clases básicas  
   
-###  <a name="Dimensions"></a>Objetos de dimensión  
+###  <a name="Dimensions"></a> Objetos de dimensión  
  Para crear una dimensión, ésta se agrega a la colección de dimensiones de la base de datos primaria y el objeto <xref:Microsoft.AnalysisServices.Dimension> se actualiza en el servidor mediante el método Update.  
   
  Para quitar una dimensión, ésta se quita mediante el método Drop de <xref:Microsoft.AnalysisServices.Dimension>. Cuando se quita un objeto <xref:Microsoft.AnalysisServices.Dimension> de la colección de dimensiones de la base de datos mediante el método Remove, no se elimina del servidor, únicamente se elimina en el modelo de objetos AMO.  
@@ -72,7 +73,7 @@ ms.lasthandoff: 01/08/2018
   
  Para obtener más información acerca de los métodos y propiedades disponibles, vea <xref:Microsoft.AnalysisServices.Dimension> en <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Cubes"></a>Objetos de cubo  
+###  <a name="Cubes"></a> Objetos de cubo  
  Para crear un cubo, éste se agrega a la colección de cubos de la base de datos y el objeto <xref:Microsoft.AnalysisServices.Cube> se actualiza en el servidor mediante el método Update. El método Update del cubo puede incluir el parámetro UpdateOptions.ExpandFull, que garantiza que todos los objetos del cubo que se han modificado se actualizarán en el servidor en esta acción de actualización.  
   
  Para quitar un cubo, se tiene que hacer mediante el método Drop de <xref:Microsoft.AnalysisServices.Cube>. Quitar un cubo de la colección no afecta al servidor.  
@@ -81,24 +82,24 @@ ms.lasthandoff: 01/08/2018
   
  Para obtener más información acerca de los métodos y propiedades disponibles, vea <xref:Microsoft.AnalysisServices.Cube> en <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="MeasureGroups"></a>Objetos MeasureGroup  
+###  <a name="MeasureGroups">Objetos MeasureGroup</a>  
  Para crear un grupo de medida, éste se agrega a la colección de grupo de medida del cubo y el objeto <xref:Microsoft.AnalysisServices.MeasureGroup> se actualiza en el servidor mediante su propio método Update. Para quitar un objeto <xref:Microsoft.AnalysisServices.MeasureGroup>, se usa su propio método Drop.  
   
  Se puede procesar un objeto <xref:Microsoft.AnalysisServices.MeasureGroup> una vez que se ha creado. <xref:Microsoft.AnalysisServices.MeasureGroup> se puede procesar mediante su propio método Process o bien cuando un objeto primario se procese con su propio método Process.  
   
  Para obtener más información acerca de los métodos y propiedades disponibles, vea <xref:Microsoft.AnalysisServices.MeasureGroup> en <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Partition"></a>Objetos de partición  
+###  <a name="Partition">Objetos de partición</a>  
  Para crear un objeto <xref:Microsoft.AnalysisServices.Partition>, éste se agrega a la colección de particiones del grupo de medida primario y el objeto <xref:Microsoft.AnalysisServices.Partition> se actualiza en el servidor mediante el método Update. Para quitar un objeto <xref:Microsoft.AnalysisServices.Partition>, se usa el método Drop.  
   
  Para obtener más información acerca de los métodos y propiedades disponibles, vea <xref:Microsoft.AnalysisServices.Partition> en <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="AggregationDesign"></a>Objetos AggregationDesign  
+###  <a name="AggregationDesign">Objetos AggregationDesign</a>  
  Los diseños de agregaciones se construyen mediante el método AggregationDesign de un objeto <xref:Microsoft.AnalysisServices.AggregationDesign>.  
   
  Para obtener más información acerca de los métodos y propiedades disponibles, vea <xref:Microsoft.AnalysisServices.AggregationDesign> en <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Aggregation"></a>Objetos Aggregation  
+###  <a name="Aggregation">Objetos Aggregation</a>  
  Para crear un objeto <xref:Microsoft.AnalysisServices.Aggregation>, éste se agrega a la colección de diseños de agregaciones del grupo de medida primario y el objeto de grupo de medida primario se actualiza en el servidor mediante el método Update. Una agregación se quita de <xref:Microsoft.AnalysisServices.AggregationCollection> mediante el método Remove o el método RemoveAt.  
   
  Para obtener más información acerca de los métodos y propiedades disponibles, vea <xref:Microsoft.AnalysisServices.Aggregation> en <xref:Microsoft.AnalysisServices>.  
@@ -118,7 +119,7 @@ ms.lasthandoff: 01/08/2018
   
  AMO se usa para establecer las definiciones de este comportamiento mejorado, pero la experiencia real la define el cliente de exploración que implementa todas estas mejoras.  
   
-###  <a name="Action"></a>Objetos Action  
+###  <a name="Action">Objetos Action</a>  
  Para crear un objeto <xref:Microsoft.AnalysisServices.Action>, éste se agrega a la colección de acciones del cubo y el objeto <xref:Microsoft.AnalysisServices.Cube> se actualiza en el servidor mediante el método Update. El método Update del cubo puede incluir el parámetro UpdateOptions.ExpandFull, que garantiza que todos los objetos del cubo que se han modificado se actualizarán en el servidor con esta acción de actualización.  
   
  Para quitar un <xref:Microsoft.AnalysisServices.Action> objeto, éste se debe quitar de la colección y se debe actualizar el cubo primario.  
@@ -127,7 +128,7 @@ ms.lasthandoff: 01/08/2018
   
  Para obtener más información acerca de los métodos y propiedades disponibles, vea <xref:Microsoft.AnalysisServices.Action> en <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="KPI"></a>Objetos KPI  
+###  <a name="KPI"></a> Objetos KPI  
  Para crear un objeto  <xref:Microsoft.AnalysisServices.Kpi>, éste se agrega a la colección KPI del cubo y el objeto <xref:Microsoft.AnalysisServices.Cube> se actualiza en el servidor mediante el método Update. El método Update del cubo puede incluir el parámetro UpdateOptions.ExpandFull, que garantiza que todos los objetos del cubo que se han modificado se actualizarán en el servidor con esta acción de actualización.  
   
  Para quitar un <xref:Microsoft.AnalysisServices.Kpi> objeto, éste se debe quitar de la colección, y se debe actualizar el cubo primario.  
@@ -136,7 +137,7 @@ ms.lasthandoff: 01/08/2018
   
  Para obtener más información acerca de los métodos y propiedades disponibles, vea <xref:Microsoft.AnalysisServices.Kpi> en <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Perspective"></a>Objetos de perspectiva  
+###  <a name="Perspective">Objetos de perspectiva</a>  
  Para crear un objeto <xref:Microsoft.AnalysisServices.Perspective>, éste se debe agregar a la colección de perspectivas del cubo y el objeto <xref:Microsoft.AnalysisServices.Cube> se debe actualizar en el servidor mediante el método Update. El método Update del cubo puede incluir el parámetro UpdateOptions.ExpandFull, que garantiza que todos los objetos del cubo que se han modificado se actualizarán en el servidor con esta acción de actualización.  
   
  Para quitar un objeto <xref:Microsoft.AnalysisServices.Perspective>, éste se debe quitar de la colección y se debe actualizar el cubo primario  
@@ -145,14 +146,14 @@ ms.lasthandoff: 01/08/2018
   
  Para obtener más información acerca de los métodos y propiedades disponibles, vea <xref:Microsoft.AnalysisServices.Perspective> en <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="Translation"></a>Objetos Translation  
+###  <a name="Translation">Objetos Translation</a>  
  Para crear un objeto <xref:Microsoft.AnalysisServices.Translation>, éste se debe agregar a la colección de traducción del objeto deseado y el objeto principal primario más próximo se debe actualizar en el servidor mediante el método Update. El método Update del objeto primario más próximo puede incluir el parámetro UpdateOptions.ExpandFull, que garantiza que todos los objetos secundarios que se han modificado se actualizarán en el servidor con esta acción de actualización.  
   
  Para quitar un objeto <xref:Microsoft.AnalysisServices.Translation>, éste se debe quitar de la colección y se debe actualizar el objeto primario más próximo.  
   
  Para obtener más información acerca de los métodos y propiedades disponibles, vea <xref:Microsoft.AnalysisServices.Translation> en <xref:Microsoft.AnalysisServices>.  
   
-###  <a name="ProactiveCaching"></a>Objetos ProactiveCaching  
+###  <a name="ProactiveCaching">Objetos ProactiveCaching</a>  
  Para crear un objeto <xref:Microsoft.AnalysisServices.ProactiveCaching>, éste se agrega a la colección de objetos de almacenamiento en caché automático de la dimensión o partición, y el objeto de dimensión o partición se debe actualizar en el servidor mediante el método Update.  
   
  Para quitar un objeto <xref:Microsoft.AnalysisServices.ProactiveCaching>, éste se debe quitar de la colección y se debe actualizar el objeto primario  

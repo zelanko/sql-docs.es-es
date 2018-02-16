@@ -23,10 +23,10 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 2dabd364fb0a7415a4cf05035d06f5a1dd5838e5
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Apéndice B: tablas de transición de estado de ODBC
 Las tablas de este apéndice muestran cómo hacen que las transiciones del entorno, conexión, instrucción y Estados de descriptor funciones ODBC. Normalmente, el estado del entorno, conexión, instrucción o descriptor dicta cuando puede llamar a funciones que usan el tipo de identificador (entorno, conexión, instrucción o descriptor) correspondiente. Los Estados de entorno, conexión, instrucción y descriptor se superponen aproximadamente tal como se muestra en la siguiente ilustración. Por ejemplo, la superposición de conexión exacta Estados C5 y C6 y Estados de instrucción que s1 a través de S12 es, depende del origen de datos, ya que las transacciones empiezan en momentos diferentes en distintos orígenes de datos, y depende del estado de descriptor D1i (implícitamente asignado descriptor) en el estado de la instrucción que está asociado el descriptor, mientras que el estado D1e (asignado explícitamente descriptor) es independiente del estado de cualquier instrucción. Para obtener una descripción de cada estado, vea [transiciones de entorno](../../../odbc/reference/appendixes/environment-transitions.md), [conexión transiciones](../../../odbc/reference/appendixes/connection-transitions.md), [transiciones de instrucción](../../../odbc/reference/appendixes/statement-transitions.md), y [Descriptor transiciones ](../../../odbc/reference/appendixes/descriptor-transitions.md), más adelante en este apéndice.  
@@ -49,10 +49,10 @@ Las tablas de este apéndice muestran cómo hacen que las transiciones del entor
   
  Cada entrada de una tabla de transición puede ser uno de los siguientes valores:  
   
--   **--**No se modifica el estado después de ejecutar la función.  
+-   **--** No se modifica el estado después de ejecutar la función.  
   
 -   **E**  
-     ***n***, **C*n *** **S*n***, o **d. * n***  : el estado del entorno, conexión, instrucción o descriptor se mueve a el estado especificado.  
+     ***n*** , **C*n *** **S*n***, o **d. * n***  : el estado del entorno, conexión, instrucción o descriptor se mueve a la estado especificado.  
   
 -   **(IH)**  : Se pasó un identificador no válido a la función. Si el identificador es un identificador nulo o es un identificador válido de un tipo incorrecto: por ejemplo, se pasó un identificador de conexión cuando se requiere un identificador de instrucción, la función devuelve SQL_INVALID_HANDLE; en caso contrario, el comportamiento es indefinido y probablemente irrecuperable. Este error se muestra solo cuando es el resultado solo es posible llamar a la función en el estado especificado. Este error no cambia el estado y siempre se detecta mediante el Administrador de controladores, como se indica en los paréntesis.  
   

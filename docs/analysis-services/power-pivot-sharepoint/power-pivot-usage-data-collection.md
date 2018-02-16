@@ -12,25 +12,26 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 69286dea78c53adc50b447ffa8e55339d07c4d9e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-usage-data-collection"></a>Recopilación de datos de uso de Power Pivot
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Recopilación de datos de uso es una característica de nivel de granja de SharePoint. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint usa y extiende este sistema para proporcionar informes en el panel de administración de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] que muestran cómo se usan los datos y servicios de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] . Según cómo haya instalado SharePoint, la recopilación de datos de uso podría estar desactivada para la granja. El administrador de una granja debe habilitar el registro de uso para crear los datos de uso que aparecen en el panel de administración de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La recopilación de datos de uso es una característica propia de SharePoint para las granjas. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint usa y extiende este sistema para proporcionar informes en el panel de administración de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] que muestran cómo se usan los datos y servicios de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] . Según cómo haya instalado SharePoint, la recopilación de datos de uso podría estar desactivada para la granja. El administrador de una granja debe habilitar el registro de uso para crear los datos de uso que aparecen en el panel de administración de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .  
   
  Para obtener información sobre los datos de uso en el Panel de administración de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] , vea [Panel de administración de Power Pivot y datos de uso](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
   
 ##  <a name="usagearch"></a> Recopilación de datos de uso y arquitectura de los informes  
- [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]datos de uso se recopilan, almacenan y administran mediante una combinación de características de la infraestructura de SharePoint y los componentes de servidor de PowerPivot. La infraestructura de SharePoint proporciona un servicio de uso centralizado y trabajos del temporizador integrados. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint agrega un almacenamiento a mayor plazo para los datos de uso y los informes de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] que se ven en la Administración central de SharePoint.  
+ [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] datos de uso se recopilan, almacenan y administran mediante una combinación de características de la infraestructura de SharePoint y los componentes de servidor de PowerPivot. La infraestructura de SharePoint proporciona un servicio de uso centralizado y trabajos del temporizador integrados. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] para SharePoint agrega un almacenamiento a mayor plazo para los datos de uso y los informes de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] que se ven en la Administración central de SharePoint.  
   
  En el sistema de recopilación de datos de uso, la información de los eventos se introduce en el sistema de recopilación de datos de uso en el servidor de aplicaciones o front-end web. Los datos de uso se mueven a través del sistema como respuesta a los trabajos del temporizador que hacen que los datos se pasen de los archivos de datos temporales del servidor físico a un almacenamiento persistente en un servidor de bases de datos. El siguiente diagrama muestra los componentes y procesos que mueven los datos de uso a través del sistema de informes y recopilación de datos.  
   

@@ -16,19 +16,20 @@ helpviewer_keywords:
 - refreshing data source views
 - data source views [Analysis Services], refreshing
 ms.assetid: 634b0504-1437-43e7-8ac7-3248ac7989a3
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 31b9c4f95cca42e2150cab40b92308df89efbef6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Actualizar el esquema de una vista del origen de datos (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Después de definir una vista del origen de datos (DSV) en un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proyecto o base de datos, puede cambiar el esquema de un origen de datos subyacente. Estos cambios no se detectan ni se actualizan automáticamente en un proyecto de desarrollo. Además, si implementó el proyecto en un servidor y Analysis Services no puede establecer conexión con el origen de datos externo, se producirán errores de procesamiento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Después de definir una vista del origen de datos (DSV) en un proyecto o base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], el esquema de un origen de datos subyacente puede cambiar. Estos cambios no se detectan ni se actualizan automáticamente en un proyecto de desarrollo. Además, si implementó el proyecto en un servidor y Analysis Services no puede establecer conexión con el origen de datos externo, se producirán errores de procesamiento.  
   
  Para actualizar la DSV de forma que coincida con el origen de datos externo, puede hacerlo en Business Intelligence Development Studio (BIDS). El proceso de actualización de la DSV detecta los cambios que se han producido en los orígenes de datos externos en los que se basa la DSV, y crea una lista con dichos cambios; en ella se enumeran las adiciones o eliminaciones que han tenido lugar en el origen de datos externo. A continuación, puede aplicar el conjunto de cambios a la DSV para que esta se vuelva a alinear con el origen de datos subyacente. Tenga en cuenta que a menudo es necesario trabajo adicional para actualizar los cubos y las dimensiones del proyecto que usa la DSV.  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Adición de nuevas restricciones únicas. Si existe una clave principal lógica para una tabla en la DSV y se agrega una clave física a la tabla del origen de datos, la clave lógica se quita y se reemplaza por la clave física.  
   
- El proceso de actualización nunca agrega nuevas tablas a la DSV. Si desea agregar una nueva tabla, debe hacerlo manualmente. Para más información, vea [Agregar o quitar tablas o vistas en una vista del origen de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
+ El proceso de actualización nunca agrega nuevas tablas a la DSV. Si desea agregar una nueva tabla, debe hacerlo manualmente. Para obtener más información, vea [Agregar o quitar tablas o vistas en una vista del origen de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
   
 ##  <a name="bkmk_DSVrefresh"></a> Actualizar una DSV en SQL Server Data Tools  
  Para actualizar una DSV, haga doble clic en la DSV desde el Explorador de soluciones en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  Se abre el Diseñador de origen de datos.  A continuación, haga clic en el botón Actualizar vista del origen de datos en el diseñador o elija **actualizar** en el menú Vista del origen de datos.  

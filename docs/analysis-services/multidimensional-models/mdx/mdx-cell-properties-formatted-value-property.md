@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0e69f9e798dd5922bae7c677fc599c8f82293ee1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-properties---formattedvalue-property"></a>Propiedades de celda MDX - FORMATTED_VALUE, propiedad
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]La propiedad FORMATTED_VALUE se basa en las interacciones de las propiedades VALUE, FORMAT_STRING y LANGUAGE de la celda. En este tema se explica cómo interactúan estas propiedades para generar la propiedad FORMATTED_VALUE.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+La propiedad FORMATTED_VALUE se basa en las interacciones de las propiedades VALUE, LANGUAGE y FORMAT_STRING de la celda. En este tema se explica cómo interactúan estas propiedades para generar la propiedad FORMATTED_VALUE.  
   
 ## <a name="value-formatstring-language-properties"></a>Propiedades VALUE, FORMAT_STRING y LANGUAGE  
  En la tabla siguiente se explica en qué consisten estas propiedades para ayudar a preparar su uso de forma conjunta.  
@@ -84,14 +85,14 @@ ms.lasthandoff: 01/08/2018
   
 |Miembro|FORMATTED_VALUE|Explicación|  
 |------------|----------------------|-----------------|  
-|Un|$5,040.00|FORMAT_STRING se establece en `Currency` y LANGUAGE es `1033`al heredar el valor de la configuración regional del sistema.|  
+|A|$5,040.00|FORMAT_STRING se establece en `Currency` y LANGUAGE es `1033`al heredar el valor de la configuración regional del sistema.|  
 |B|€5.040,00|FORMAT_STRING se establece en `Currency` (al heredar de A) y LANGUAGE se establece explícitamente en `1034` (España); por tanto, se usa el signo de euro, además de un separador decimal y un separador de miles diferentes.|  
 |C|$5.040,00|FORMAT_STRING se establece en `$#,##0.00` e invalida a Currency (heredado de A) y LANGUAGE se establece explícitamente en `1034` (España). Dado que la propiedad FORMAT_STRING establece de forma explícita el símbolo de moneda en $, FORMATTED_VALUE se presenta con el signo $. Sin embargo, dado que `.` (punto) y `,` (coma) son respectivamente los marcadores de posición del separador decimal y el separador de miles, la especificación del lenguaje tiene efecto a la hora de generar una salida adaptada para el separador decimal y el separador de miles.|  
 |D|5.04E+03|FORMAT_STRING se establece en `Scientific` y LANGUAGE en `1033`, al heredar el valor de la configuración regional del sistema; por tanto, `.` (punto) será el separador decimal.|  
 |E|5,04E+03|FORMAT_STRING se establece en `Scientific` y LANGUAGE se establece explícitamente en `1034,` , por tanto, `,` (coma) será el separador decimal.|  
-|F|50,40 %|FORMAT_STRING se establece en `Percent` y LANGUAGE en `1033`, al heredar el valor de la configuración regional del sistema; por tanto, `.` (punto) será el separador decimal.<br /><br /> Observe que VALUE se ha modificado de 5040 a 0.5040|  
+|F|50,40 %|FORMAT_STRING se establece en `Percent` y LANGUAGE en `1033`, al heredar el valor de la configuración regional del sistema; por tanto, `.` (punto) será el separador decimal.<br /><br /> Observe que VALUE se ha modificado de 5040 a 0.5040|  
 |G|50,40 %|FORMAT_STRING se establece en `Percent`, al heredar de F, y LANGUAGE se establece explícitamente en `1034` ; por tanto, `,` (coma) será el separador decimal.<br /><br /> Observe que VALUE se ha heredado del valor F.|  
-|H|no|FORMAT_STRING se establece en `YES/NO`, VALUE se establece en 0 y LANGUAGE se establece explícitamente en `1034`; como no hay diferencia entre el inglés NO y el español NO, el usuario no puede apreciar ninguna diferencia en FORMATTED_VALUE.|  
+|H|No|FORMAT_STRING se establece en `YES/NO`, VALUE se establece en 0 y LANGUAGE se establece explícitamente en `1034`; como no hay diferencia entre el inglés NO y el español NO, el usuario no puede apreciar ninguna diferencia en FORMATTED_VALUE.|  
 |I|SI|FORMAT_STRING se establece en `YES/NO`, VALUE se establece en 59 y LANGUAGE se establece explícitamente en `1034`; tal y como se definió para el formato YES/NO, cualquier valor que no sea cero (0) es YES y, dado que el idioma está establecido en español, FORMATTED_VALUE es SI.|  
 |J|Desactivado|FORMAT_STRING se establece en `ON/OFF`, VALUE se establece en 0 y LANGUAGE se establece explícitamente en `1034`; tal y como se definió para el formato ON/OFF, cualquier valor igual a cero (0) es OFF y, dado que el idioma se estableció en español, FORMATTED_VALUE es Desactivado.|  
 |K|Activado|FORMAT_STRING se establece en `ON/OFF`, VALUE se establece en -312 y LANGUAGE se establece explícitamente en `1034`; tal y como se definió en el formato de ON/OFF, cualquier valor distinto de (0) es ON, y dado que el idioma está establecido en español, el valor de FORMATTED_VALUE es Activado.|  
@@ -134,7 +135,7 @@ ms.lasthandoff: 01/08/2018
   
 |Miembro|FORMATTED_VALUE|Explicación|  
 |------------|----------------------|-----------------|  
-|Un|3/12/1959 6:30:00 AM|FORMAT_STRING se establece implícitamente en `General Date` a través de la expresión CDate() y LANGUAGE es `1033` (inglés), al heredar el valor de la configuración regional del sistema.|  
+|A|3/12/1959 6:30:00 AM|FORMAT_STRING se establece implícitamente en `General Date` a través de la expresión CDate() y LANGUAGE es `1033` (inglés), al heredar el valor de la configuración regional del sistema.|  
 |B|Thursday, March 12, 1959|FORMAT_STRING se establece explícitamente en `Long Date` y LANGUAGE es `1033` (inglés) al heredar el valor de la configuración regional del sistema.|  
 |C|12/03/1959 6:30:00|FORMAT_STRING se establece explícitamente en `General Date` y LANGUAGE en `1034` (español).<br /><br /> Observe que el mes y el día cambian de lugar con respecto al estilo de formato de EE.UU.|  
 |D|jueves, 12 de marzo de 1959|FORMAT_STRING se establece explícitamente en `Long Date` y LANGUAGE en `1034` (español).<br /><br /> Observe que el mes y el día de la semana se expresan alfabéticamente en español.|  
@@ -148,9 +149,9 @@ ms.lasthandoff: 01/08/2018
 |L|06:30|FORMAT_STRING se establece explícitamente en `Short Time` y LANGUAGE en `1041` (japonés).|  
   
 ## <a name="see-also"></a>Vea también  
- [FORMAT_STRING, contenido &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
+ [FORMAT_STRING, contenido &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
  [Mediante las propiedades de celda &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
  [Creación y uso de valores de propiedad &#40; MDX &#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Aspectos básicos de consulta MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

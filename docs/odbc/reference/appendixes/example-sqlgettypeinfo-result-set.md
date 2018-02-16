@@ -23,10 +23,10 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 0953a2a8de3dce18d404929ee23d054192a2e3e7
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="example-sqlgettypeinfo-result-set"></a>Conjunto de resultados de SQLGetTypeInfo de ejemplo
 Una aplicación llama **SQLGetTypeInfo** para determinar qué tipos de datos son compatibles con un origen de datos y las características de esos tipos de datos. Las siguientes tablas muestran un conjunto de resultados de ejemplo devuelto por **SQLGetTypeInfo** para un origen de datos que admita SQL_CHAR, SQL_LONGVARCHAR, SQL_DECIMAL de ODBC, SQL_REAL, SQL_DATETIME, SQL_INTERVAL_YEAR y SQL_INTERVAL_DAY_TO_SECOND.  

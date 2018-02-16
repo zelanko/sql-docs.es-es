@@ -1,7 +1,7 @@
 ---
 title: Las clases fundamentales de AMO | Documentos de Microsoft
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - data sources [AMO]
 - AMO, database objects
@@ -22,19 +23,19 @@ helpviewer_keywords:
 - AMO, data sources
 - Analysis Management Objects, data sources
 ms.assetid: 440e9287-53a2-4db3-9481-1d2ceb6e5b5a
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2549f0581c8f428e91014c64dc4e8cc90dbe373a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bd2d58e6791a7dd576523f3400264e538ac01307
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="amo-fundamental-classes"></a>Clases fundamentales de AMO
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Clases fundamentales son el punto de partida para trabajar con objetos de administración de análisis (AMO). A través de estas clases puede establecer su entorno para el resto de los objetos que se usarán en su aplicación. Las clases fundamentales incluyen los objetos siguientes: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>y <xref:Microsoft.AnalysisServices.DataSourceView>.  
+  Las clases fundamentales son el punto inicial cuando se trabaja con AMO (Objetos de administración de análisis). A través de estas clases puede establecer su entorno para el resto de los objetos que se usarán en su aplicación. Las clases fundamentales incluyen los objetos siguientes: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>y <xref:Microsoft.AnalysisServices.DataSourceView>.  
   
  La ilustración siguiente muestra la relación de las clases que se explican en este tema.  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Objetos DataSource y DataSourceView](#DSandDSV)  
   
-##  <a name="ServerObjects"></a>Objetos de servidor  
+##  <a name="ServerObjects"></a> Objetos de servidor  
  Además, obtendrá acceso a los métodos siguientes:  
   
 -   Administración de conexiones: Connect, Disconnect, Reconnect y GetConnectionState.  
@@ -65,14 +66,14 @@ ms.lasthandoff: 01/08/2018
   
  Para obtener más información acerca de los métodos y propiedades disponibles, vea <xref:Microsoft.AnalysisServices.Server> en <xref:Microsoft.AnalysisServices>.  
   
-##  <a name="DatabaseObjects"></a>Objetos de base de datos  
+##  <a name="DatabaseObjects"></a> Objetos de base de datos  
  Para trabajar con un objeto <xref:Microsoft.AnalysisServices.Database> en su aplicación, debe recibir una instancia de la base de datos de la colección de bases de datos del servidor principal. Para crear una base de datos, agregue un objeto <xref:Microsoft.AnalysisServices.Database> a una colección de bases de datos servidor y actualice la nueva instancia en el servidor. Para eliminar una base de datos, quite el objeto <xref:Microsoft.AnalysisServices.Database> utilizando su propio método Drop.  
   
  Se pueden realizar copias de seguridad de las bases de datos mediante el método BackUp (del objeto <xref:Microsoft.AnalysisServices.Database> o del objeto <xref:Microsoft.AnalysisServices.Server> ), pero únicamente se pueden restaurar del objeto <xref:Microsoft.AnalysisServices.Server> con el método Restore.  
   
  Para obtener más información acerca de los métodos y propiedades disponibles, vea <xref:Microsoft.AnalysisServices.Database> en <xref:Microsoft.AnalysisServices>.  
   
-##  <a name="DSandDSV"></a>Objetos DataSource y DataSourceView  
+##  <a name="DSandDSV">Objetos DataSource y DataSourceView</a>  
  Los orígenes de datos se administran mediante <xref:Microsoft.AnalysisServices.DataSourceCollection> de la clase de base de datos. Se puede crear una instancia de <xref:Microsoft.AnalysisServices.DataSource> mediante el método Add de un objeto <xref:Microsoft.AnalysisServices.DataSourceCollection>. Se puede eliminar una instancia de <xref:Microsoft.AnalysisServices.DataSource> mediante el método Remove de un objeto <xref:Microsoft.AnalysisServices.DataSourceCollection>.  
   
  Los objetos <xref:Microsoft.AnalysisServices.DataSourceView> se administran desde el objeto <xref:Microsoft.AnalysisServices.DataSourceViewCollection> en la clase de base de datos.  

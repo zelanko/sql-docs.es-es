@@ -1,7 +1,7 @@
 ---
 title: "Recuperar metadatos de un origen de datos analíticos | Documentos de Microsoft"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 02/14/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -11,24 +11,25 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - metadata [ADOMD.NET]
 - retrieving metadata
 ms.assetid: 00043ebd-7164-4ceb-b945-6e44378ea00a
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1ccc559449edeb5274c22aa892c21a4677f75f61
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f2e387b3c60c2738e5da4f2b28af4aa75f2735ce
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>Recuperar metadatos de un origen de datos analíticos
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Los metadatos son importantes para las aplicaciones que recuperan y trabajan con datos analíticos. Al recuperar datos de un origen de datos relacional, la dimensionalidad de tales datos es predecible, incluso con conjuntos de datos anidados. Los conjuntos de resultados de una base de datos relacional suelen ser bidimensionales o escalares en estructura. Sin embargo, los datos que se recuperan de los orígenes de datos analíticos pueden ser de dimensionalidad variable, organizados a lo largo de jerarquías potencialmente profundas.  
+  Los metadatos son importantes para las aplicaciones que recuperan y trabajan con datos analíticos. Al recuperar datos de un origen de datos relacional, la dimensionalidad de tales datos es predecible, incluso con conjuntos de datos anidados. Los conjuntos de resultados de una base de datos relacional suelen ser bidimensionales o escalares en estructura. Sin embargo, los datos que se recuperan de los orígenes de datos analíticos pueden ser de dimensionalidad variable, organizados a lo largo de jerarquías potencialmente profundas.  
   
  Para administrar la complejidad de la recuperación de metadatos de los orígenes de datos analíticos, ADOMD.NET proporciona dos maneras de recuperación de metadatos:  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/08/2018
   
  Para obtener más información: [trabajar con el modelo de objetos de ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-adomd-net-object-model.md)  
   
- **Conjuntos de filas de esquema**  
+ **Schema Rowsets**  
  Un método completo para recuperar metadatos, pero más difícil, consiste en usar conjuntos de filas de esquema. Un conjunto de filas de esquema es un conjunto de filas OLE DB que encapsula la descripción de todos los objetos de un tipo determinado en la base de datos. La información de esquema en un origen de datos analíticos incluye las bases de datos o los catálogos disponibles en dicho origen de datos, los cubos y los modelos de minería de datos de una base de datos, los roles que existen para los cubos en el origen de datos, etc. Estos metadatos se pueden recuperar mediante el <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.GetSchemaDataSet%2A> método, pasando una **GUID** o un XML para el nombre de Analysis (XMLA).  
   
  Para obtener más información: [trabajar con conjuntos de filas de esquema en ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-schema-rowsets.md)  

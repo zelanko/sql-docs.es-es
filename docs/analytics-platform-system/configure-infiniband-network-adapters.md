@@ -14,12 +14,12 @@ description: "Describe cómo configurar los adaptadores de red InfiniBand en un 
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
-caps.latest.revision: "15"
+caps.latest.revision: 
 ms.openlocfilehash: 052dfcb32de7fb84acc0ce97c55775944a1d0dc1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configurar adaptadores de red InfiniBand para Analytics Platform System
 Describe cómo configurar los adaptadores de red InfiniBand en un servidor no sea de dispositivo cliente para conectarse al nodo de Control en almacenamiento de datos paralelos de SQL Server (PDW). Siga estas instrucciones para la conectividad básica y para lograr alta disponibilidad, para que los procesos de carga, la copia de seguridad y otros se conectarán automáticamente a la red InfiniBand active.  
@@ -58,7 +58,7 @@ Necesita una cuenta de dominio de aplicación de puntos de acceso para iniciar s
   
 Necesita una cuenta de Windows en el servidor de cliente que tiene permiso para configurar los adaptadores de red.  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Requisitos previos  
 Estas instrucciones se supone el servidor de cliente ya está en rack y conectado a la red InfiniBand de dispositivo. Para la instalación en rack y cableado de instrucciones, consulte [adquirir y configurar un servidor de carga](acquire-and-configure-loading-server.md).  
   
 ### <a name="general-remarks"></a>Notas generales  
@@ -77,9 +77,9 @@ Para satisfacer sus requisitos empresariales, también puede unir el servidor de
   
     ![Conexiones InfiniBand en el nodo Administración](media/network-teamib.png "conexiones InfiniBand en el nodo de administración")  
   
-4.  En la ventana Propiedades de protocolo de Internet versión 4 (TCP/IPv4), anote los valores de la **dirección IP** y **máscara de subred**.  La dirección IP de la  ***appliance_domain*-AD01** nodo es la dirección IP del servidor DNS de sistema de plataforma de análisis.  
+4.  En la ventana Propiedades de protocolo de Internet versión 4 (TCP/IPv4), anote los valores de la **dirección IP** y **máscara de subred**.  La dirección IP de la ***appliance_domain *-AD01** nodo es la dirección IP del servidor DNS de sistema de plataforma de análisis.  
   
-5.  Repita los pasos 1 a 5 anteriores para el adaptador TeamIB1 en  ***appliance_domain*-AD02** server.  
+5.  Repita los pasos 1 a 5 anteriores para el adaptador TeamIB1 en ***appliance_domain *-AD02** server.  
   
     ![Propiedades de InfiniBand 1 nodo de administración de PDW](media/network-ip1-properties.png "propiedades de InfiniBand 1 nodo de administración de PDW")  
   
@@ -168,7 +168,7 @@ Para satisfacer sus requisitos empresariales, también puede unir el servidor de
   
 2.  Haga clic en Avanzadas... .  
   
-3.  En la ventana de configuración avanzada de TCP/IP, si el anexado estas opciones de sufijos DNS (en orden) no está atenuada, llama a la casilla de verificación Anexar estos sufijos DNS (en orden):, seleccione el sufijo de dominio de aplicación y haga clic en Agregar... Será el sufijo de dominio de aplicación`appliance_domain.local`  
+3.  En la ventana de configuración avanzada de TCP/IP, si el anexado estas opciones de sufijos DNS (en orden) no está atenuada, llama a la casilla de verificación Anexar estos sufijos DNS (en orden):, seleccione el sufijo de dominio de aplicación y haga clic en Agregar... Será el sufijo de dominio de aplicación `appliance_domain.local`  
   
 4.  Si la anexar estos sufijos DNS (en orden): opción está atenuada, puede agregar el dominio de puntos de acceso a este servidor mediante la modificación de la clave del registro HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient.  
   
@@ -182,10 +182,10 @@ Para satisfacer sus requisitos empresariales, también puede unir el servidor de
   
     Ejemplos para un dispositivo denominado denominados MyAPS con una región de MyPDW PDW:  
   
-    -   MyPDW SQLCTL01.MyAPS.local  
+    -   MyPDW-SQLCTL01.MyAPS.local  
   
-    -   MyPDW SQLCTL01  
+    -   MyPDW-SQLCTL01  
   
 ## <a name="see-also"></a>Vea también  
-[Adquirir y configurar un servidor de carga](acquire-and-configure-loading-server.md)  
+[Adquirir y configurar un servidor de carga ](acquire-and-configure-loading-server.md)  
   

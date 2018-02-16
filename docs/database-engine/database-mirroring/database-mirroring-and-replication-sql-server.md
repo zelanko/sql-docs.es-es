@@ -8,28 +8,30 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - replication [SQL Server], database mirroring and
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3e4757ca79a259ac4d7ddbc554954d139828f0f9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 31e0e930a3ebc1d81d3182de30e8cb3ae5b4d701
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Replicación y creación de reflejo de la base de datos (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La creación de reflejo de la base de datos se puede usar conjuntamente con la replicación para mejorar la disponibilidad para la base de datos de publicación. La creación de reflejo de la base de datos incluye la creación de dos copias de una sola base de datos que suelen residir en diferentes equipos. En cada momento, solo una copia de la base de datos está disponible para los clientes. Esta copia se conoce como la base de datos principal. Las actualizaciones realizadas por los clientes en la base de datos de la entidad de seguridad se aplican a la otra copia de la base de datos, conocida como la base de datos reflejada. La creación de reflejo incluye la aplicación a la base de datos reflejada del registro de transacciones con todas las inserciones, actualizaciones o eliminaciones efectuadas en la base de datos de la entidad de seguridad.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+La creación de reflejo de la base de datos se puede usar conjuntamente con la replicación para mejorar la disponibilidad para la base de datos de publicación. La creación de reflejo de la base de datos incluye la creación de dos copias de una sola base de datos que suelen residir en diferentes equipos. En cada momento, solo una copia de la base de datos está disponible para los clientes. Esta copia se conoce como la base de datos principal. Las actualizaciones realizadas por los clientes en la base de datos de la entidad de seguridad se aplican a la otra copia de la base de datos, conocida como la base de datos reflejada. La creación de reflejo incluye la aplicación a la base de datos reflejada del registro de transacciones con todas las inserciones, actualizaciones o eliminaciones efectuadas en la base de datos de la entidad de seguridad.  
   
- La conmutación por error de replicación en un reflejo se admite totalmente para las bases de datos de publicación, con compatibilidad limitada con las bases de datos de suscripciones. La creación de reflejo de la base de datos no se admite para la base de datos de distribución. Para obtener información sobre la recuperación de una base de datos de distribución o una base de datos de suscripciones sin necesidad de volver configurar la replicación, vea [Back Up and Restore Replicated Databases (Realizar copias de seguridad y restaurar bases de datos replicadas)](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md). Para obtener información sobre la creación de reflejo de la base de datos de suscriptor, vea  
+ La conmutación por error de replicación en un reflejo se admite totalmente para las bases de datos de publicación, con compatibilidad limitada con las bases de datos de suscripciones. La creación de reflejo de la base de datos no se admite para la base de datos de distribución. Para obtener información sobre la recuperación de una base de datos de distribución o una base de datos de suscripciones sin necesidad de volver configurar la replicación, vea [Back Up and Restore Replicated Databases (Realizar copias de seguridad y restaurar bases de datos replicadas)](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).   
   
 > [!NOTE]  
 >  Después de una conmutación por error, la entidad reflejada se convierte en la entidad de seguridad. En este tema, los términos "entidad de seguridad" y "reflejada" siempre hacen referencia a las entidades de seguridad y reflejada originales.  

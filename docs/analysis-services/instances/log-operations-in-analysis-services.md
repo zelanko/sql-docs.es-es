@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 59471831fc651827944e958898ad5d2d8e5cb879
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="log-operations-in-analysis-services"></a>Operaciones de registro en Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una instancia de Analysis Services registrará las advertencias, errores y las notificaciones de servidor en el archivo msmdsrv.log: uno para cada instancia que instale. Los administradores consultan este registro para obtener información sobre eventos, tanto rutinarios como extraordinarios. En las versiones recientes, los registros se han mejorado para incluir más información. Las entradas de registro ahora incluyen información de la versión y la edición, así como del procesador, la memoria, la conectividad y los eventos de bloqueo. Puede revisar la lista completa de cambios en [Mejoras de los registros](http://support.microsoft.com/kb/2965035).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Una instancia de Analysis Services registrará las advertencias, los errores y las notificaciones del servidor en el archivo msmdsrv.log: uno para cada instancia que instale. Los administradores consultan este registro para obtener información sobre eventos, tanto rutinarios como extraordinarios. En las versiones recientes, los registros se han mejorado para incluir más información. Las entradas de registro ahora incluyen información de la versión y la edición, así como del procesador, la memoria, la conectividad y los eventos de bloqueo. Puede revisar la lista completa de cambios en [Mejoras de los registros](http://support.microsoft.com/kb/2965035).  
   
  Además de la característica de registro integrada, muchos administradores y desarrolladores también usan herramientas proporcionadas por la comunidad de Analysis Services para recopilar datos sobre las operaciones de servidor, como **ASTrace**. Vea [Microsoft SQL Server Community Samples: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) (Ejemplos de la comunidad de Microsoft SQL Server: Analysis Services) para acceder a los vínculos de descarga.  
   
@@ -158,7 +159,7 @@ ms.lasthandoff: 01/08/2018
   
  El ajuste de configuración que se modificará con más probabilidad es **CreateAndSendCrashReports** , que se usa para determinar si se generará un archivo de volcado de memoria.  
   
-|Valor|Description|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |0|Desactiva el archivo de volcado de memoria. Se omiten todas las demás opciones de la sección Exception.|  
 |1|Habilita, pero no envía, el archivo de volcado de memoria (valor predeterminado).|  

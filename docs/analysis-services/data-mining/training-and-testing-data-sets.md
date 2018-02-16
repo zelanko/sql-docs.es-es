@@ -17,19 +17,20 @@ helpviewer_keywords:
 - testing data mining models
 - accuracy testing [data mining]
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: b85aca1abd948d42710633d65e7b79ad30d0629a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="training-and-testing-data-sets"></a>Conjuntos de datos de entrenamiento y de prueba
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Al separar los datos en conjuntos de prueba y entrenamiento es una parte importante de la evaluación de modelos de minería de datos. Normalmente, al dividir un conjunto de datos en un conjunto de entrenamiento y un conjunto de prueba, la mayoría de los datos se usan para el entrenamiento y una parte menor se emplea para las pruebas. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] muestrea los datos de forma aleatoria para asegurarse de que los conjuntos de entrenamiento y de prueba son similares. Si usa datos similares para el entrenamiento y las pruebas, puede minimizar los efectos de las diferencias en los datos y comprender mejor las características del modelo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Separar los datos en conjuntos de entrenamiento y de prueba es una parte importante de la evaluación de los modelos de minería de datos. Normalmente, al dividir un conjunto de datos en un conjunto de entrenamiento y un conjunto de prueba, la mayoría de los datos se usan para el entrenamiento y una parte menor se emplea para las pruebas. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] muestrea los datos de forma aleatoria para asegurarse de que los conjuntos de entrenamiento y de prueba son similares. Si usa datos similares para el entrenamiento y las pruebas, puede minimizar los efectos de las diferencias en los datos y comprender mejor las características del modelo.  
   
  Una vez procesado un modelo utilizando el conjunto de entrenamiento, se prueba realizando predicciones con el conjunto de pruebas. Dado que los datos del conjunto de prueba ya contienen valores conocidos para el atributo que desea predecir, es fácil determinar si las estimaciones del modelo son correctas.  
   
@@ -108,15 +109,15 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |Temas|Vínculos|  
 |------------|-----------|  
 |Describe cómo interactúan los filtros de un modelo con los conjuntos de datos de entrenamiento y de prueba.|[Filtros para modelos de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)|  
-|Describe cómo afecta a la validación cruzada el uso de los datos de entrenamiento y de prueba.|[Validación cruzada &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|Describe cómo afecta a la validación cruzada el uso de los datos de entrenamiento y de prueba.|[La validación cruzada &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
 |Proporciona información sobre las interfaces de programación para trabajar con conjuntos de entrenamiento y de prueba en una estructura de minería de datos.|[Modelo de objetos y conceptos de AMO](../../analysis-services/multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)<br /><br /> [Elemento MiningStructure &#40;ASSL&#41;](../../analysis-services/scripting/objects/miningstructure-element-assl.md)|  
-|Proporciona la sintaxis DMX para crear conjuntos de datos de exclusión.|[CREATE MINING STRUCTURE &#40;DMX&#41;](../../dmx/create-mining-structure-dmx.md)|  
+|Proporciona la sintaxis DMX para crear conjuntos de datos de exclusión.|[CREAR ESTRUCTURA DE MINERÍA DE DATOS &#40; DMX &#41;](../../dmx/create-mining-structure-dmx.md)|  
 |Recupera información sobre los casos de los conjuntos de entrenamiento y de prueba.|[Conjuntos de filas de esquema de minería de datos](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)<br /><br /> [Conjuntos de filas de esquema de minería de datos &#40;SSA&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Herramientas de minería de datos](../../analysis-services/data-mining/data-mining-tools.md)   
  [Conceptos de minería de datos](../../analysis-services/data-mining/data-mining-concepts.md)   
  [Soluciones de minería de datos](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Prueba y validación &#40; minería de datos &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

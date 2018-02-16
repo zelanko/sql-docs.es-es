@@ -17,19 +17,20 @@ helpviewer_keywords:
 - mining model content, clustering models
 - clustering algorithms [Analysis Services]
 ms.assetid: aed1b7d3-8f20-4eeb-b156-0229f942cefd
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 4f00b10d96682d72fde39277ceeeabb866d460e5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de agrupación en clústeres (Analysis Services - Minería de datos)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tema describe el contenido del modelo de minería de datos que es específico de los modelos que utilizan el algoritmo Microsoft Clustering. Para obtener una explicación general sobre el contenido del modelo de minería de datos para todos los tipos de modelo, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de clústeres de Microsoft. Para obtener una explicación general sobre el contenido del modelo de minería de datos para todos los tipos de modelo, vea [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-clustering-model"></a>Descripción de la estructura de un modelo de agrupación en clústeres  
  Un modelo de agrupación en clústeres tiene una estructura simple. Cada modelo tiene un único nodo primario que representa el modelo y sus metadatos, y cada nodo primario tiene una lista plana de clústeres (NODE_TYPE = 5). Esta organización se muestra en la imagen siguiente.  
@@ -43,13 +44,13 @@ ms.lasthandoff: 01/08/2018
   
  El nodo primario contiene estadísticas útiles que describen la distribución real de todos los casos de entrenamiento. Estas estadísticas se encuentran en la columna de la tabla anidada NODE_DISTRIBUTION. Por ejemplo, en la tabla siguiente se muestran varias filas de la tabla NODE_DISTRIBUTION que describen la distribución de los datos demográficos de los clientes para el modelo de agrupación en clústeres, `TM_Clustering`, que se crea en [Tutorial básico de minería de datos](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c):  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Support|PROBABILITY|varianza|VALUE_TYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
 |Age|Missing|0|0|0|1 (ausente)|  
 |Age|44.9016152716593|12939|1|125.663453102554|3 (continuo)|  
-|Sexo|Missing|0|0|0|1 (ausente)|  
-|Sexo|F|6350|0.490764355823479|0|4 (Discreto)|  
-|Sexo|M|6589|0.509235644176521|0|4 (Discreto)|  
+|Gender|Missing|0|0|0|1 (ausente)|  
+|Gender|F|6350|0.490764355823479|0|4 (Discreto)|  
+|Gender|M|6589|0.509235644176521|0|4 (Discreto)|  
   
  En estos resultados se puede observar que se utilizaron 12.939 casos para generar el modelo, que la proporción entre hombres y mujeres fue de 50-50, aproximadamente, y que la edad media fue de 44 años. Las estadísticas descriptivas varían dependiendo de si el atributo sobre el que se está informando es un tipo de datos numérico continuo, como la edad, o un tipo de valor discreto, como el género. Las medidas estadísticas *media* y *varianza* se calculan para los tipos de datos continuos, mientras que la *probabilidad* y el *soporte* se calculan para los tipos de datos discretos.  
   
@@ -165,7 +166,7 @@ ms.lasthandoff: 01/08/2018
 >  La estructura y el contenido del modelo permanecen invariables, independientemente del método de agrupación en clústeres o de los parámetros utilizados.  
   
 ## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Contenido del modelo de minería de datos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [Algoritmo de clústeres de Microsoft](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
  [Consultas de minería de datos](../../analysis-services/data-mining/data-mining-queries.md)  

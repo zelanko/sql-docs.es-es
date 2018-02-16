@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 115db2e7cc02805cd41e79363d8ff0a83d1c719e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-projects"></a>Proyectos de minería de datos
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un proyecto de minería de datos forma parte de un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solución. Durante el proceso de diseño, los objetos que crea en este proyecto están disponibles para probarlos y consultarlos como parte de una base de datos del área de trabajo. Cuando desee que los usuarios puedan consultar o examinar los objetos del proyecto, debe implementarlo en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecute en modo multidimensional.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un proyecto de minería de datos forma parte de una solución de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Durante el proceso de diseño, los objetos que crea en este proyecto están disponibles para probarlos y consultarlos como parte de una base de datos del área de trabajo. Cuando desee que los usuarios puedan consultar o examinar los objetos del proyecto, debe implementarlo en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecute en modo multidimensional.  
   
  En este tema se proporciona la información básica necesaria para comprender y crear proyectos de minería de datos.  
   
@@ -160,7 +161,7 @@ ms.lasthandoff: 01/08/2018
   
  Según sus necesidades, puede combinar varios modelos en un solo proyecto o crear proyectos distintos para cada tipo de tarea analítica o modelo.  
   
- Una vez creada una estructura y un modelo, *procese* cada modelo ejecutando los datos de la vista del origen de datos a través del algoritmo, lo que genera un modelo matemático de los datos. Este proceso también se conoce como *entrenar el modelo*. Para más información, vea [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
+ Una vez creada una estructura y un modelo, *procese* cada modelo ejecutando los datos de la vista del origen de datos a través del algoritmo, lo que genera un modelo matemático de los datos. Este proceso también se conoce como *entrenar el modelo*. Para obtener más información, vea [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
  Una vez procesado el modelo, a continuación puede explorar visualmente el modelo de minería de datos y crear las consultas de predicción con él. Si los datos del proceso de entrenamiento se almacenan en la memoria caché, puede utilizar las consultas de *obtención de detalles* para devolver información detallada sobre los casos que se usan en el modelo.  
   
@@ -208,22 +209,22 @@ ms.lasthandoff: 01/08/2018
  También puede llevar a cabo estas tareas mediante el Lenguaje de scripting de Analysis Services (ASSL) o bien usando Objetos de administración de análisis (AMO). Para obtener más información, vea [Desarrollar con XMLA en Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md).  
   
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tareas relacionadas  
  En los temas siguientes se describe el uso del Asistente para minería de datos para crear un proyecto de minería de datos y sus objetos asociados.  
   
 |Tareas|Temas|  
 |-----------|------------|  
 |Describe cómo trabajar con columnas de estructura de minería de datos|[Crear una estructura de minería de datos relacional](../../analysis-services/data-mining/create-a-relational-mining-structure.md)|  
-|Proporciona más información sobre cómo agregar nuevos modelos de minería de datos y procesar una estructura y los modelos|[Agregar modelos de minería de datos a una estructura &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|Proporciona más información sobre cómo agregar nuevos modelos de minería de datos y procesar una estructura y los modelos|[Agregar modelos de minería de datos a una estructura &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Proporciona vínculos a recursos que ayudan a personalizar los algoritmos que generan modelos de minería de datos|[Personalizar la estructura y los modelos de minería de datos](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
 |Proporciona vínculos a información sobre cada uno de los visores de modelos de minería de datos|[Visores de modelos de minería de datos](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
-|Proporciona información sobre cómo crear un gráfico de elevación, un gráfico de beneficios o una matriz de clasificación, o probar una estructura de minería de datos|[Prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
+|Proporciona información sobre cómo crear un gráfico de elevación, un gráfico de beneficios o una matriz de clasificación, o probar una estructura de minería de datos|[Prueba y validación &#40; minería de datos &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |Proporciona información sobre los permisos y las opciones de procesamiento|[Procesar objetos de minería de datos](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|Proporciona información acerca de Analysis Services|[Bases de datos de modelos multidimensionales &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|Proporciona información acerca de Analysis Services|[Bases de datos de modelo multidimensional &#40; SSAS &#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>Vea también  
- [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md)   
- [Crear modelos multidimensionales utilizando las herramientas de datos de SQL Server &#40;SSDT&#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Base de datos del área de trabajo &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
+ [Diseñador de minería de datos](../../analysis-services/data-mining/data-mining-designer.md)   
+ [Crear modelos multidimensionales utilizando las herramientas de datos SQL Server &#40; SSDT &#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [Base de datos del área de trabajo &#40; SSAS Tabular &#41;](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
   
   

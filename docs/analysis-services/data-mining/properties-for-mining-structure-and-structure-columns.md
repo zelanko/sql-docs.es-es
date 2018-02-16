@@ -17,19 +17,20 @@ helpviewer_keywords:
 - columns [data mining], properties
 - properties [data mining]
 ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 0bc682b950c696f801bef26f3b258b55ba7d93bb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Propiedades de estructuras de minería de datos y columnas de estructuras
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Puede establecer o cambiar las propiedades de una estructura de minería de datos y de sus columnas asociadas y tablas anidadas mediante el **estructura de minería de datos** pestaña del Diseñador de minería de datos. Las propiedades que se configuran en esta pestaña se propagan a todos los modelos de minería de datos asociados con la estructura.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Puede establecer o cambiar las propiedades de una estructura de minería de datos, y de sus columnas y tablas anidadas asociadas, mediante la pestaña **Estructura de minería de datos** del Diseñador de minería de datos. Las propiedades que se configuran en esta pestaña se propagan a todos los modelos de minería de datos asociados con la estructura.  
   
 > [!NOTE]  
 >  Si cambia el valor de cualquier propiedad de la estructura de minería de datos, incluso los metadatos como un nombre o una descripción, es necesario volver a procesar la estructura de minería de datos y sus modelos para ver o consultar el modelo.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 01/08/2018
 |--------------|-----------------|  
 |**CacheMode**|Especifica si los casos utilizados en entrenamiento deberían almacenarse en memoria caché o descartarse una vez completado el entrenamiento. **Nota:**  Esta propiedad se debe establecer en **KeepTrainingCases** para habilitar la obtención de detalles y la exclusión.|  
 |**Intercalación**|Especifica la intercalación predeterminada de columna. Si no se especifica ninguna intercalación, se usa la del servidor.|  
-|**Descripción**|Describe la estructura de minería de datos. Como práctica recomendada, la descripción debería indicar el propósito y la composición de los datos de la estructura.|  
+|**Description**|Describe la estructura de minería de datos. Como práctica recomendada, la descripción debería indicar el propósito y la composición de los datos de la estructura.|  
 |**ErrorConfiguration (valor predeterminado)**|Especifica las opciones para el control especial de errores, de existir alguno.|  
 |**HoldoutMaxCases**|Especifica el número máximo de casos de estructura que se pueden reservar como un conjunto de datos de prueba.  Si se especifican valores tanto para **HoldoutMaxCases** como para **HoldoutPercent**, se combinan las condiciones. **Nota:**  Para establecer esta propiedad, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> debe establecerse en **KeepTrainingCases**.|  
 |**HoldoutPercent**|Especifica el porcentaje de los casos de estructura para reservar como un conjunto de datos de prueba. Si se especifican valores tanto para **HoldoutMaxCases** como para **HoldoutPercent**, se combinan las condiciones. **Nota:**  Para establecer esta propiedad, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> debe establecerse en **KeepTrainingCases**.|  
@@ -63,7 +64,7 @@ ms.lasthandoff: 01/08/2018
 |--------------|-----------------|  
 |**ClassifiedColumns**|Identifica la columna que describe una columna clasificada.|  
 |**Contenido**|El tipo de contenido de la columna.|  
-|**Descripción**|Describe la columna. Como práctica recomendada, la descripción de la columna debería proporcionar información sobre cómo se han obtenido los datos de la columna o se han modificado para la minería de datos.|  
+|**Description**|Describe la columna. Como práctica recomendada, la descripción de la columna debería proporcionar información sobre cómo se han obtenido los datos de la columna o se han modificado para la minería de datos.|  
 |**DiscretizationBucketCount**|Muestra el número de cubos de la columna de datos discretos.<br /><br /> Se habilita solo si el tipo de contenido se establece en **Discretized**.<br /><br /> Esta propiedad es de solo lectura.|  
 |**DiscretizationMethod**|Muestra el método usado para discretizar la columna.<br /><br /> Se habilita solo si el tipo de contenido se establece en **Discretized**.<br /><br /> Esta propiedad es de solo lectura.|  
 |**Distribución**|Especifica la distribución del contenido de la columna.|  

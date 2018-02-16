@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 72a2181917ded838c8ab538fbd1c017147fc91d6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="add-a-standard-action"></a>Agregar una acción estándar
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Agregar una acción a una base de datos mediante la vista de acciones del Diseñador de cubos. Se puede tener acceso a esta vista desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Una vez creada la acción, estará disponible para los usuarios después de volver a procesar el cubo correspondiente. Para más información, consulte [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Para agregar una acción a una base de datos, use la vista de acciones del Diseñador de cubos. Se puede tener acceso a esta vista desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Una vez creada la acción, estará disponible para los usuarios después de volver a procesar el cubo correspondiente. Para más información, consulte [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
   
 ### <a name="to-create-an-action"></a>Para crear una acción  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/08/2018
         |Celdas|La única selección disponible es Todas las celdas. Si elige **Celdas** como tipo de destino, puede escribir una expresión en **Condición** para restringir las celdas con las que está asociada la acción.|  
         |Cube|La única selección disponible es CURRENTCUBE. La acción está asociada con el cubo actual.|  
         |miembros de dimensión|Seleccione una sola dimensión. La acción se asociará a todos los miembros de la dimensión.|  
-        |Hierarchy|Seleccione una sola jerarquía. La acción solo se asociará con el objeto de jerarquía. Las jerarquías de atributo solo aparecen en la lista si sus propiedades **AttributeHierarchyEnabled** y **AttributeHierarchyVisible** se establecen en **True**.|  
+        |Jerarquía|Seleccione una sola jerarquía. La acción solo se asociará con el objeto de jerarquía. Las jerarquías de atributo solo aparecen en la lista si sus propiedades **AttributeHierarchyEnabled** y **AttributeHierarchyVisible** se establecen en **True**.|  
         |Miembros de la jerarquía|Seleccione una sola jerarquía. La acción se asociará con todos los miembros de la jerarquía seleccionada. Las jerarquías de atributo solo aparecen en la lista si sus propiedades **AttributeHierarchyEnabled** y **AttributeHierarchyVisible** se establecen en **True**.|  
         |Nivel|Seleccione un solo nivel. La acción solo se asociará con el objeto de nivel.|  
         |Miembros del nivel|Seleccione un solo nivel. La acción se asociará con todos los miembros del nivel seleccionado.|  
@@ -55,7 +56,7 @@ ms.lasthandoff: 01/08/2018
   
         |Tipo|Description|  
         |----------|-----------------|  
-        |Dataset|Recupera un conjunto de datos.|  
+        |Conjunto de datos|Recupera un conjunto de datos.|  
         |Propietario|Ejecuta una operación con una interfaz que no aparece en esta tabla.|  
         |Conjunto de filas|Recupera un conjunto de filas.|  
         |.|Ejecuta un comando OLE DB.|  

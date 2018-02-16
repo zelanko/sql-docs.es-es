@@ -16,19 +16,20 @@ helpviewer_keywords:
 - mining model content, logistic regression models
 - regression algorithms [Analysis Services]
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 5490990412aa4883d575a1fc65fee7e29db06dde
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-logistic-regression-models"></a>Contenido del modelo de minería de datos para los modelos de regresión logística
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tema describe el contenido del modelo de minería de datos que es específico de los modelos que utilizan el algoritmo de regresión logística de Microsoft. Para obtener una explicación de cómo interpretar las estadísticas y la estructura compartidas por todos los tipos de modelos, así como las definiciones generales de los términos relacionados con el contenido del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de regresión logística de Microsoft. Para obtener una explicación de cómo interpretar las estadísticas y la estructura compartidas por todos los tipos de modelos, así como las definiciones generales de términos relacionados con el contenido del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-logistic-regression-model"></a>Descripción de la estructura de un modelo de regresión logística  
  Un modelo de regresión logística se crea utilizando el algoritmo de red neuronal de Microsoft con parámetros que restringen el modelo para eliminar el nodo oculto. Por consiguiente, la estructura global de un modelo de regresión logística es casi idéntica a la de una red neuronal: cada modelo tiene un único nodo primario que representa el modelo y sus metadatos, y un nodo de estadísticas marginal especial (NODE_TYPE = 24) que proporciona estadísticas descriptivas sobre las entradas que se usan en el modelo.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="model-content-for-a-logistic-regression-model"></a>Contenido del modelo de minería de datos para un modelo de regresión logística  
  En esta sección solo se proporcionan detalles y ejemplos de las columnas del contenido del modelo de minería de datos que tienen una relevancia especial para la regresión logística. El contenido del modelo es casi idéntico al de un modelo de red neuronal, pero las descripciones que se aplican a los modelos de red neuronal se pueden repetir en esta tabla por comodidad.  
   
- Para obtener información sobre las columnas de uso general en el conjunto de filas de esquema, como MODEL_CATALOG y MODEL_NAME (que no se describen aquí), o para obtener una explicación de la terminología del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+ Para más información sobre las columnas de uso general en el conjunto de filas de esquema, como MODEL_CATALOG y MODEL_NAME (que no se describen aquí), o para obtener una explicación de la terminología del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Nombre de la base de datos en la que se almacena el modelo.  
@@ -63,7 +64,7 @@ ms.lasthandoff: 01/08/2018
 |Estadísticas marginales|En blanco|  
 |Nivel de entrada|En blanco|  
 |Nodo de entrada|Nombre del atributo de entrada|  
-|Nivel oculto|En blanco|  
+|nivel oculto|En blanco|  
 |Nivel de salida|En blanco|  
 |Nodo de salida|Nombre del atributo de salida|  
   
@@ -119,7 +120,7 @@ ms.lasthandoff: 01/08/2018
 |Estadísticas marginales|En blanco|  
 |Nivel de entrada|En blanco|  
 |Nodo de entrada|Nombre del atributo de entrada|  
-|Nivel oculto|En blanco|  
+|nivel oculto|En blanco|  
 |Nivel de salida|En blanco|  
 |Nodo de salida|Si el atributo de salida es continuo, contiene su nombre.<br /><br /> Si el atributo de salida es discreto o discretizado, contiene el nombre del atributo y el valor.|  
   

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b9b6f4c9-7e1f-4f61-b657-8986e39a6af2
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 77b32b08e1ffc1765d731e9bc9112f093ef854bd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-power-view-report-with-a-multidimensional-data-source"></a>Crear un informe de Power View con un origen de datos multidimensionales
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Crear una vista avanzada informe basado en un modelo multidimensional no es diferente de la creación de un informe basado en un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] libro o en un modelo Tabular de Analysis Services. Los informes de Power View se crean a partir de un archivo de conexión de origen de datos de informe (.rsds) de una biblioteca de SharePoint. Para obtener más información sobre cómo se crea un archivo .rsds, vea [Create a Report Data Source](../../analysis-services/multidimensional-models/create-a-report-data-source.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La creación de un informe de Power View basado en un modelo multidimensional no difiere en nada de la creación de un informe basado en un libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o en un modelo tabular de Analysis Services. Los informes de Power View se crean a partir de un archivo de conexión de origen de datos de informe (.rsds) de una biblioteca de SharePoint. Para obtener más información sobre cómo se crea un archivo .rsds, vea [Create a Report Data Source](../../analysis-services/multidimensional-models/create-a-report-data-source.md).  
   
  Antes de empezar, debe conocer:  
   

@@ -19,19 +19,20 @@ helpviewer_keywords:
 - mining structures [Analysis Services], how-to topics
 - mining structures [Analysis Services], processing
 ms.assetid: 0f6993c0-0917-4935-82f9-7b8a8a7cc627
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e4726de9acf90a805ff15791d6ab8d76fa20adc6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-data-mining-objects"></a>Procesar objetos de minería de datos
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un objeto de minería de datos es sólo un contenedor vacío hasta que se ha procesado. El*procesamiento* de un modelo de minería de datos también se denomina *entrenamiento*.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un objeto de minería de datos solo es un contenedor vacío hasta que se procesa. El*procesamiento* de un modelo de minería de datos también se denomina *entrenamiento*.  
   
  **Procesar estructuras de minería de datos** : una estructura de minería de datos obtiene los datos de un origen de datos externo, definido por los enlaces de columna y el uso de los metadatos, y los lee. Se leen todos los datos y, a continuación, se analizan para extraer varias estadísticas. Analysis Services almacena una representación compacta de los datos, que puede ser analizada por los algoritmos de minería de datos, en una caché local. Una vez procesados los modelos, puede conservar esta caché o eliminarla. De forma predeterminada, la caché se almacena. Para más información, consulte [Process a Mining Structure](../../analysis-services/data-mining/process-a-mining-structure.md).  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
  Una vez procesado un modelo de minería de datos, éste solo contiene los patrones derivados del análisis y las asignaciones de los resultados del modelo a los datos de entrenamiento almacenados en caché. Puede examinar o consultar los resultados del modelo, denominados *contenido del modelo*, o puede consultar el modelo y los casos de la estructura, si se han almacenado en caché.  
   
- El contenido del modelo para cada modelo de minería de datos depende del algoritmo usado para crearlo. Por ejemplo, si un modelo es de clústeres y otro es de árboles de decisión, el contenido del modelo es muy diferente aunque ambos usen exactamente los mismos datos. Para obtener más información, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+ El contenido del modelo para cada modelo de minería de datos depende del algoritmo usado para crearlo. Por ejemplo, si un modelo es de clústeres y otro es de árboles de decisión, el contenido del modelo es muy diferente aunque ambos usen exactamente los mismos datos. Para más información, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="processing-requirements"></a>Requisitos del procesamiento de datos  
  Los requisitos de procesamiento pueden diferir dependiendo de si los modelos de minería de datos están basados únicamente en datos relacionales o en un origen de datos multidimensionales.  
@@ -62,9 +63,9 @@ ms.lasthandoff: 01/08/2018
  Para más información, vea [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Consultas de obtención de detalles &#40;minería de datos&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
- [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Las consultas de obtención de detalles &#40; minería de datos &#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
+ [Estructuras de minería de datos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Modelos de minería de datos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
- [Arquitectura lógica &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [Arquitectura lógica &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
   

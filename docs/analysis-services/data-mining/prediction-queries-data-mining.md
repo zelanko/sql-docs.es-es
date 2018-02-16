@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 89a8d2a3edf4cf3d875f582918d714c2e6dc72e5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="prediction-queries-data-mining"></a>Consultas de predicción (minería de datos)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El objetivo de un proyecto de minería de datos típico es usar el modelo de minería de datos para realizar predicciones. Por ejemplo, quizás desee predecir el tiempo de inactividad esperado para un clúster de servidores determinado, o generar una puntuación que indique si es probable que los segmentos de clientes respondan a una campaña de publicidad. Para hacer todas estas cosas, crearía una consulta de predicción.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+El objetivo de un proyecto de minería de datos típico es usar el modelo de minería de datos para realizar predicciones. Por ejemplo, quizás desee predecir el tiempo de inactividad esperado para un clúster de servidores determinado, o generar una puntuación que indique si es probable que los segmentos de clientes respondan a una campaña de publicidad. Para hacer todas estas cosas, crearía una consulta de predicción.  
   
  Funcionalmente, hay diferentes tipos de consultas de predicción admitidos en SQL Server, dependiendo del tipo de entradas a la consulta:  
   
@@ -154,7 +155,7 @@ FROM
  Si el proveedor no puede procesar conjuntos de filas jerárquicos, se puede eliminar la estructura de los resultados utilizando la palabra clave FLATTEN en la consulta de predicción. Para más información y ejemplos de conjuntos de filas planas, vea [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Consultas de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
- [Consultas de definición de datos &#40;minería de datos&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [Contenido consultas &#40; minería de datos &#41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
+ [Consultas de definición de datos &#40; minería de datos &#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
   

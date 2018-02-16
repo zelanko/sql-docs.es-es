@@ -16,19 +16,20 @@ helpviewer_keywords:
 - name columns [Analysis Services]
 - attributes [Analysis Services], binding
 ms.assetid: 467f0cf3-8691-476d-a7fb-a5df4e374eaf
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 4b17e4ed33f172dd109fdd3aad43269a0daf31b3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---bind-an-attribute-to-a-name-column"></a>Propiedades de atributo: enlazar un atributo a una columna de nombre
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este procedimiento describe cómo enlazar un atributo a una columna de nombre manualmente mediante el uso de la **atributos** panel en el Diseñador de dimensiones y usando la **enlace de objetos** cuadro de diálogo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Este procedimiento describe cómo enlazar un atributo a una columna de nombre mediante el panel **Atributos** del Diseñador de dimensiones y el cuadro de diálogo **Enlace de objetos** .  
   
 ### <a name="to-bind-an-attribute-to-a-name-column"></a>Para enlazar un atributo a una columna de nombre  
   

@@ -16,19 +16,20 @@ helpviewer_keywords:
 - mining structures [Analysis Services], creating
 - OLAP [Analysis Services], mining models
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: a60a88bbf9816e4af0260cde3063f5bd6d5240e6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Crear una estructura de minería de datos OLAP
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Puede usar el Asistente para minería de datos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para crear una estructura de minería de datos que utiliza datos de un modelo multidimensional. Los modelos de minería de datos basados en los cubos OLAP pueden utilizar las columnas y los valores de las tablas de hechos, las dimensiones y los grupos de medida como atributos para el análisis.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Puede usar el Asistente para minería de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para crear una estructura de minería de datos que utilice datos de un modelo multidimensional. Los modelos de minería de datos basados en los cubos OLAP pueden utilizar las columnas y los valores de las tablas de hechos, las dimensiones y los grupos de medida como atributos para el análisis.  
   
 ### <a name="to-create-a-new-olap-mining-structure"></a>Para crear una estructura de minería de datos OLAP  
   
@@ -136,6 +137,6 @@ ms.lasthandoff: 01/08/2018
      **Crear el cubo con la dimensión del modelo de minería de datos**: seleccione esta casilla y especifique un nombre para el nuevo cubo. Al utilizar esta opción, se creará un nuevo cubo que contiene tanto las dimensiones existentes que se usaron para generar la estructura como la nueva dimensión de minería de datos que contiene los resultados del modelo.  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas y procedimientos de las estructuras de minería de datos](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Tareas de estructura de minería de datos y procedimientos](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

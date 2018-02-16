@@ -21,19 +21,20 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 - HOLDOUT_SEED parameter
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: fd3dee20e57342542e271cfb3f153b1c35c0764d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Referencia técnica del algoritmo de regresión logística de Microsoft
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de regresión logística es una variación de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de red neuronal, donde el *HIDDEN_NODE_RATIO* parámetro está establecido en 0. Este valor creará un modelo de red neuronal que no contenga un nivel oculto y que, por consiguiente, sea equivalente a la regresión logística.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+El algoritmo de regresión logística de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es una variación del algoritmo de red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , donde el parámetro *HIDDEN_NODE_RATIO* se establece en 0. Este valor creará un modelo de red neuronal que no contenga un nivel oculto y que, por consiguiente, sea equivalente a la regresión logística.  
   
 ## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Implementación del algoritmo de regresión logística de Microsoft  
  Supongamos que la columna de predicción solo contiene dos estados, pero que aun así desea realizar un análisis de regresión, relacionando las columnas de entrada con la probabilidad de que la columna de predicción contenga un estado específico. El siguiente diagrama muestra los resultados que obtendrá si asigna 1 y 0 a los estados de la columna de predicción, calcula la probabilidad de que la columna contenga un estado específico y realiza una regresión lineal en una variable de entrada.  
@@ -153,15 +154,15 @@ WHERE NODE_TYPE = 23
 ### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción  
  El algoritmo de regresión logística de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite los tipos de contenido de columna de entrada, tipos de contenido de columna de predicción y marcas de modelado específicos que se enumeran en la siguiente tabla. Para más información sobre lo que significan los tipos de contenido cuando se usan en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|columna|Tipos de contenido|  
+|Columna|Tipos de contenido|  
 |------------|-------------------|  
 |Atributo de entrada|Continuo, discreto, de datos discretos, clave, tabla|  
 |Atributo de predicción|Continuo, discreto, de datos discretos|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Algoritmo de regresión logística de Microsoft](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [Ejemplos de consultas de modelo de regresión lineal](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [Contenido del modelo de minería de datos para los modelos de regresión logística &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
+ [Contenido del modelo de minería de datos para los modelos de regresión logística &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [Algoritmo de red neuronal de Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)  
   
   

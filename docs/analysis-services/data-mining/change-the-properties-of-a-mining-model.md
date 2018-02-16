@@ -15,19 +15,20 @@ helpviewer_keywords:
 - mining models [Analysis Services], properties
 - properties [data mining]
 ms.assetid: aefaeb7f-d174-48d1-a188-0987a3b1196b
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 84259428c78b013577d50b6f48818bb2cd0dc554
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Cambiar las propiedades de un modelo de minería de datos
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Algunas propiedades del modelo de minería de datos se aplican al modelo como un todo, y otras propiedades del modelo que se aplican a columnas individuales. Ejemplos de propiedades que se aplican a todo el modelo son las propiedades **Drillthrough** , que especifica si los datos de los casos deben estar disponibles para las consultas, y **Description** . Entre las propiedades que se aplican a la columna se incluyen **Usage** y **ModelingFlags**, que controlan cómo se utilizan los datos en la columna dentro del modelo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Algunas propiedades del modelo de minería de datos se aplican al modelo en su conjunto, mientras que otras se aplican a columnas individuales. Ejemplos de propiedades que se aplican a todo el modelo son las propiedades **Drillthrough** , que especifica si los datos de los casos deben estar disponibles para las consultas, y **Description** . Entre las propiedades que se aplican a la columna se incluyen **Usage** y **ModelingFlags**, que controlan cómo se utilizan los datos en la columna dentro del modelo.  
   
  Las propiedades del modelo siguientes disponen de editores avanzados que se pueden utilizar para crear expresiones o configurar propiedades complejas del modelo. Las propiedades siguientes proporcionan:  
   
@@ -57,6 +58,6 @@ ms.lasthandoff: 01/08/2018
      El nuevo valor tendrá efecto cuando se seleccione otro elemento diferente en el diseñador.  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas y procedimientos de los modelos de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Tareas y tareas de modelo de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

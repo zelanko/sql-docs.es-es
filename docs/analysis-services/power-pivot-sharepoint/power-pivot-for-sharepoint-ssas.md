@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 864e795be41ccc9e68df3d1fc33b05f73e0695c7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-for-sharepoint-ssas"></a>Power Pivot para SharePoint (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server en [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modo proporciona hospedaje de servidor de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] datos en una granja de SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] son un modelo de datos analíticos que se genera mediante uno de los siguientes procedimientos:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] proporciona hospedaje de servidor de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en una granja de servidores de SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] son un modelo de datos analíticos que se genera mediante uno de los siguientes procedimientos:  
   
 -   El complemento de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel 2010  
   

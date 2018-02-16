@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aec8aa98-b77d-4f8f-9684-2618b1d8e970
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: fde665f7dea3efe26d61d6d183f8ca35834f732e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="calculation-context"></a>Contexto de cálculo
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]El contexto de cálculo es el subespacio conocido del cubo donde se evalúa una expresión y todas las coordenadas se conocen explícitamente o se pueden derivar de la expresión.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+El contexto de cálculo es el subespacio conocido del cubo donde se evalúa una expresión y todas las coordenadas se conocen explícitamente o se pueden derivar de la expresión.  
   
 ## <a name="determining-the-calculation-context"></a>Determinar el contexto del cálculo  
  Cada conjunto, miembro, tupla o función numérica se ejecuta en el contexto de toda la expresión o instrucción MDX. Cuando se pasa un argumento, como una tupla, a una función, solo se proporcionan explícitamente algunas coordenadas del espacio de cubo. Las otras coordenadas se obtienen según el contexto de cálculo actual.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
 5.  Las celdas de cubo o subcubo en cada eje, lo que elimina las tuplas vacías del eje y aplica la cláusula HAVING.  
   
-6.  Para más información, vea [Establecer el contexto de cubo en una consulta &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md).  
+6.  Para más información, vea [Establishing Cube Context in a Query &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md).  
   
  En la siguiente consulta, el contexto de cálculo del eje de fila está limitado por el miembro de atributo Country y el miembro de atributo Calendar Year especificados en la cláusula WHERE.  
   
@@ -75,9 +76,9 @@ WHERE (Customer.Country.France,
 > [!IMPORTANT]  
 >  Para aumentar el rendimiento de la consulta, debe eliminar los miembros y las tuplas lo más pronto posible en el proceso de resolución. De esta manera, los cálculos de tiempo de consulta complejos en el conjunto final de miembros operan en la menor cantidad de celdas posible.  
   
-## <a name="see-also"></a>Ver también  
- [Establecer el contexto de cubo en una consulta &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
+## <a name="see-also"></a>Vea también  
+ [Establecer el contexto de cubo en una consulta &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
  [Aspectos básicos de consulta MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [Conceptos clave de MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [Conceptos clave de MDX &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
   

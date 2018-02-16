@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: abf47bc1e00a810eb82dfc2e34a95a60d05e84c4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-power-pivot-workbook"></a>Crear una conexión de modelo semántico de BI a un libro PowerPivot
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Utilice la información de este tema para configurar una conexión de modelo semántico de BI que redirija a un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] libro en la misma granja.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Utilice la información de este tema para configurar una conexión de modelo semántico de BI que redirija a un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de la misma granja.  
   
  Después de crear una conexión de modelo semántico de BI y configurar los permisos de SharePoint, puede utilizarla como origen de datos para Excel o informes de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
   

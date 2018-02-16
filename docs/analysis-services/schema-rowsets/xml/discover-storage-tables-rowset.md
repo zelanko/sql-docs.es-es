@@ -11,29 +11,31 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 13df6f10-8efe-4fe9-83a6-96d108809ed1
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 51b5bd319480be4c7757d4fb642859af54f209a3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverstoragetables-rowset"></a>DISCOVER_STORAGE_TABLES, conjunto de filas
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Permite al cliente determinar las tablas que se incluyen en una base de datos de Analysis Services que se ejecuta en modo Tabular o SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Permite al cliente determinar las tablas incluidas en una base de datos de Analysis Services que se ejecuta en modo Tabular o SharePoint.  
   
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
  El conjunto de filas **DISCOVER_STORAGE_TABLES** contiene las siguientes columnas.  
   
-|**Nombre de columna**|**Indicador de tipo**|**Longitud**|**Descripción**|  
+|**Nombre de columna**|**Indicador de tipo**|**Longitud**|**Description**|  
 |---------------------|------------------------|----------------|---------------------|  
 |**DATABASE_NAME**|**DBTYPE_WSTR**||Especifica el nombre de la base de datos que contiene las tablas.<br /><br /> El conjunto de filas **DISCOVER_STORAGE_TABLES** puede restringirse mediante esta columna. Si esta columna no se utiliza para restringir el conjunto de filas, se utiliza la base de datos actual.|  
-|**RESTRICCIONES OBLIGATORIAS CUBE_NAME**|**DBTYPE_WSTR**||Especifica el cubo o el modelo que contiene las tablas.<br /><br /> El conjunto de filas **DISCOVER_STORAGE_TABLES** puede restringirse mediante esta columna.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**||Especifica el cubo o el modelo que contiene las tablas.<br /><br /> El conjunto de filas **DISCOVER_STORAGE_TABLES** puede restringirse mediante esta columna.|  
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**||Nombre del grupo de medida.|  
 |**PARTICIÓN**|**DBTYPE_WSTR**||Nombre de la partición.|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**||Nombre de la dimensión.|  
@@ -49,7 +51,7 @@ ms.lasthandoff: 01/08/2018
 |**Nombre de columna**|**Indicador de tipo**|**Estado de restricción**|  
 |---------------------|------------------------|---------------------------|  
 |**DATABASE_NAME**|**DBTYPE_WSTR**|Opcional.|  
-|**RESTRICCIONES OBLIGATORIAS CUBE_NAME**|**DBTYPE_WSTR**|Opcional.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Opcional.|  
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|Opcional|  
 |**PARTICIÓN**|**DBTYPE_WSTR**|Opcional|  
   

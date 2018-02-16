@@ -17,19 +17,20 @@ helpviewer_keywords:
 - mining structures [Analysis Services], nested tables
 - adding nested tables
 ms.assetid: 6cf9c701-9cff-4fae-94c2-73796c24ef59
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: d5495f39dfd44c27326592f2efe34e66f4392440
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>Agregar una tabla anidada a una estructura de minería de datos
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Utilizar el Diseñador de minería de datos para agregar una tabla anidada a una estructura de minería de datos una vez creada por el Asistente para minería de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+El Diseñador de minería de datos puede utilizarse para agregar una estructura de minería de datos después de haber sido creada por el Asistente para minería de datos.  
   
 ### <a name="to-add-a-nested-table-to-a-mining-structure"></a>Para agregar una tabla anidada a una estructura de minería de datos  
   
@@ -50,6 +51,6 @@ ms.lasthandoff: 01/08/2018
      Una nueva columna de tabla que contiene la columna de clave se agrega a la estructura de minería de datos. Para obtener información sobre cómo agregar columnas adicionales, vea [Agregar columnas a una estructura de minería de datos](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas y procedimientos de las estructuras de minería de datos](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Tareas de estructura de minería de datos y procedimientos](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

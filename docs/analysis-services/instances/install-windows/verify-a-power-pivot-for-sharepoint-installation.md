@@ -18,13 +18,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6d745e0de3f7d18571d904a31cf34a8e30217555
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>Comprobar una instalación de PowerPivot para SharePoint
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Un [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint la instancia que se instala en una granja de SharePoint se administra a través de Administración Central de SharePoint. Como mínimo, puede comprobar las páginas de Administración central y de sitios de SharePoint para comprobar que están disponibles los componentes de servidor y las características de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Sin embargo, para comprobar una instalación por completo, debe tener un libro [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] que pueda publicar en SharePoint y al que pueda tener acceso desde una biblioteca. Para realizar la prueba, puede publicar un libro de ejemplo que contenga datos [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] y usarlo para confirmar que la integración de SharePoint está configurada correctamente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Una instancia de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint que instale en una granja de servidores de SharePoint se administra a través de Administración central de SharePoint. Como mínimo, puede comprobar las páginas de Administración central y de sitios de SharePoint para comprobar que están disponibles los componentes de servidor y las características de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Sin embargo, para comprobar una instalación por completo, debe tener un libro [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] que pueda publicar en SharePoint y al que pueda tener acceso desde una biblioteca. Para realizar la prueba, puede publicar un libro de ejemplo que contenga datos [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] y usarlo para confirmar que la integración de SharePoint está configurada correctamente.  
 
   
 ##  <a name="verifyinstall"></a> Comprobar la integración de Administración central  

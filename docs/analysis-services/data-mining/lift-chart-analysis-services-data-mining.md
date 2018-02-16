@@ -19,19 +19,20 @@ helpviewer_keywords:
 - profit charts [Analysis Services]
 - accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 5effa132a9ccb440ccf3b8a7c004e6692a4aef57
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Gráfico de mejora respecto al modelo predictivo (Analysis Services - Minería de datos)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A *gráfico de elevación* gráficamente representa la mejora que proporciona un modelo de minería de datos cuando se comparan con una estimación aleatoria, y mide el cambio en términos de un *elevación* puntuación. Si compara las puntuaciones de mejora de los distintos modelos, puede determinar qué modelo es mejor. También puede determinar el punto en el que las predicciones del modelo pasan a ser menos útiles. Por ejemplo, revisando el gráfico de elevación, podría observar que es probable que una campaña de promoción solo sea eficaz para un 30 % de los clientes y usar esa cifra para limitar el ámbito de la campaña.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+A *mejora respecto al modelo predictivo chart* representa gráficamente la mejora que proporciona un modelo de minería de datos en comparación con una estimación aleatoria, y mide el cambio en términos de puntuación de la *mejora respecto al modelo predictivo* . Si compara las puntuaciones de mejora de los distintos modelos, puede determinar qué modelo es mejor. También puede determinar el punto en el que las predicciones del modelo pasan a ser menos útiles. Por ejemplo, revisando el gráfico de elevación, podría observar que es probable que una campaña de promoción solo sea eficaz para un 30 % de los clientes y usar esa cifra para limitar el ámbito de la campaña.  
   
  En la minería de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el gráfico de elevación puede comparar la precisión de varios modelos que tienen el mismo atributo de predicción. También puede evaluar la exactitud de la predicción para un único resultado (un único valor del atributo de predicción) o para todos los resultados (todos los valores del atributo especificado).  
   
@@ -128,6 +129,6 @@ ms.lasthandoff: 01/08/2018
  [Volver al principio](#bkmk_Top)  
   
 ## <a name="see-also"></a>Vea también  
- [Prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Prueba y validación & #40; minería de datos & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

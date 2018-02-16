@@ -18,19 +18,20 @@ helpviewer_keywords:
 - cubes [Analysis Services], actions
 - OLAP objects [Analysis Services], actions
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: bd000979f6a7db2ea3da1b449312193edaa2c6ef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Acciones (Analysis Services - Datos multidimensionales)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Las acciones pueden ser de tipos diferentes y se deben crear como corresponda. Las acciones pueden ser:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Las acciones pueden ser de tipos diferentes y se deben crear como corresponda. Las acciones pueden ser:  
   
 -   Acciones de obtención de detalles, que devuelven el conjunto de filas que representa los datos subyacentes de las celdas seleccionadas del cubo donde se produce la acción.  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 01/08/2018
 |Tipo de acción|Description|  
 |-----------------|-----------------|  
 |CommandLine|Ejecuta un comando en el símbolo del sistema.|  
-|Dataset|Devuelve un conjunto de datos a una aplicación cliente.|  
+|Conjunto de datos|Devuelve un conjunto de datos a una aplicación cliente.|  
 |Obtención de detalles|Devuelve una instrucción de obtención de detalles como una expresión, que el cliente ejecuta para devolver un conjunto de filas.|  
 |Html|Ejecuta un script HTML en un explorador de Internet.|  
 |Propietario|Ejecuta una operación con una interfaz que no aparece en esta tabla.|  

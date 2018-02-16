@@ -16,19 +16,20 @@ helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 2ad96596830cc3bb091a7f57639c0a7d0d84dd9c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Referencia técnica del algoritmo de regresión lineal de Microsoft
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de regresión lineal es una versión especial del algoritmo de árboles de decisión de Microsoft que está optimizado para modelar pares de atributos continuos. Este tema explica la implementación del algoritmo, describe cómo personalizar su comportamiento y proporciona vínculos a información adicional sobre cómo consultar los modelos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+El algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es una versión especial del algoritmo de árboles de decisión de Microsoft que está optimizado para modelar pares de atributos continuos. Este tema explica la implementación del algoritmo, describe cómo personalizar su comportamiento y proporciona vínculos a información adicional sobre cómo consultar los modelos.  
   
 ## <a name="implementation-of-the-linear-regression-algorithm"></a>Implementación del algoritmo de regresión lineal  
  El algoritmo de árboles de decisión de Microsoft se puede utilizar para muchas tareas: regresión lineal, clasificación o análisis de la asociación. Para implementar este algoritmo con el propósito de la regresión lineal, los parámetros del algoritmo se controlan para restringir el crecimiento del árbol y mantener todos los datos en el modelo en un nodo único. En otras palabras, aunque la regresión lineal está basada en un árbol de decisión, el árbol únicamente contiene una raíz y ninguna bifurcación: todos los datos residen en el nodo raíz.  
@@ -80,9 +81,9 @@ ms.lasthandoff: 01/08/2018
  Un modelo de regresión lineal debe contener una columna de clave, columnas de entrada y al menos una columna de predicción.  
   
 ### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción  
- El algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se incluyen en la tabla siguiente. Para más información sobre el significado de los tipos de contenido usados en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
+ El algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se incluyen en la tabla siguiente. Para obtener más información sobre lo que significan los tipos de contenido cuando se usan en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|columna|Tipos de contenido|  
+|Columna|Tipos de contenido|  
 |------------|-------------------|  
 |Atributo de entrada|Continuo, cíclico, clave, tabla y ordenado|  
 |Atributo de predicción|Continuo, cíclico y ordenado|  
@@ -90,9 +91,9 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Se admiten los tipos de contenido**Cyclical** y **Ordered**, pero el algoritmo los trata como valores discretos y no realiza un procesamiento especial.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Algoritmo de regresión lineal de Microsoft](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Ejemplos de consultas de modelo de regresión lineal](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [Contenido del modelo de minería de datos para los modelos de regresión lineal &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Contenido del modelo de minería de datos para los modelos de regresión lineal & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

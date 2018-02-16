@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], partitions
 - hybrid OLAP
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - MOLAP
 - ROLAP
 ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 2d5eab13f606ada93eaf927e8c01ecb09644b7ac
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>Particiones - procesamiento y modos de almacenamiento de partición
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El modo de almacenamiento de una partición afecta a la consulta y procesamiento de rendimiento, los requisitos de almacenamiento y ubicaciones de almacenamiento de la partición y su grupo de medida primario y el cubo. La elección del modo de almacenamiento afecta también a las opciones de procesamiento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+El modo de almacenamiento de una partición afecta al rendimiento de las consultas y el procesamiento, a los requisitos de almacenamiento y a las ubicaciones de almacenamiento de la partición y de su grupo de medida y cubo primario.  La elección del modo de almacenamiento afecta también a las opciones de procesamiento.  
   
  Una partición puede utilizar uno de estos tres modos de almacenamiento básicos:  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 01/08/2018
   
 -   OLAP híbrido (HOLAP)  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite todos los tres modos de almacenamiento básico. También admite el almacenamiento en caché automático, que permite combinar las características de almacenamiento ROLAP y MOLAP para mejorar la disponibilidad de los datos y el rendimiento de las consultas. Para más información, vea [Almacenamiento en caché automático &#40;Particiones&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite todos los tres modos de almacenamiento básico. También admite el almacenamiento en caché automático, que permite combinar las características de almacenamiento ROLAP y MOLAP para mejorar la disponibilidad de los datos y el rendimiento de las consultas. Para más información, vea [Almacenamiento en caché automático &#40;Particiones&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
 ## <a name="molap"></a>MOLAP  
  El modo de almacenamiento MOLAP da lugar a que las agregaciones de la partición y una copia de sus datos de origen se almacenen en una estructura multidimensional en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Esta estructura MOLAP está muy optimizada para maximizar el rendimiento de las consultas. La ubicación de almacenamiento puede estar en el equipo en donde se define la partición o en otro equipo que ejecute [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Dado que una copia de los datos de origen reside en la estructura multidimensional, las consultas se pueden resolver sin necesidad de obtener acceso a los datos de origen de la partición. Si se utilizan agregaciones, los tiempos de respuesta a las consultas pueden disminuir notablemente. Los datos de la estructura MOLAP de la partición están tan actualizados como el procesamiento más reciente de la misma.  
@@ -79,7 +81,7 @@ ms.lasthandoff: 01/08/2018
   
     -   QUOTED_IDENTIFIER  
   
--   En [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], el tamaño total de la clave de índice no puede superar los 900 bytes. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]impondrá esta condición basándose en las columnas de clave de longitud fija cuando se procese la instrucción CREATE INDEX. Sin embargo, si hay columnas de longitud variable en la clave de índice, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] también impondrá esta condición para todas las actualizaciones a las tablas base. Dado que las agregaciones diferentes tienen definiciones de vistas distintas, el procesamiento ROLAP mediante vistas indizadas puede realizarse correcta o incorrectamente, dependiendo del diseño de las agregaciones.  
+-   En [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], el tamaño total de la clave de índice no puede superar los 900 bytes. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] impondrá esta condición basándose en las columnas de clave de longitud fija cuando se procese la instrucción CREATE INDEX. Sin embargo, si hay columnas de longitud variable en la clave de índice, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] también impondrá esta condición para todas las actualizaciones a las tablas base. Dado que las agregaciones diferentes tienen definiciones de vistas distintas, el procesamiento ROLAP mediante vistas indizadas puede realizarse correcta o incorrectamente, dependiendo del diseño de las agregaciones.  
   
 -   La sesión que crea la vista indizada debe tener activadas las siguientes opciones: ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING y ANSI_WARNING. Esta configuración puede crearse en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -93,6 +95,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>Vea también  
  [Almacenamiento en caché automático &#40; Particiones &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
  [Sincronizar bases de datos de Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Particiones &#40; Analysis Services - datos multidimensionales &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

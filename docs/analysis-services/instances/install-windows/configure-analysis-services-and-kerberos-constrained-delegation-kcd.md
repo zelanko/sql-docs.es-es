@@ -18,13 +18,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9f1a5ab2c98e45d705be57658238077d88daefb5
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Configurar Analysis Services y Delegación limitada de Kerberos (KCD)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Restringida la delegación Kerberos (KCD) es un protocolo de autenticación que se puede configurar con la autenticación de Windows para delegar las credenciales de cliente de servicio a servicio en todo el entorno. KCD requiere una infraestructura adicional, por ejemplo, un controlador de dominio y una configuración adicional del entorno. KCD es un requisito en algunos escenarios que implican datos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] y [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] con SharePoint 2016. En SharePoint 2016, Excel Services se ha trasladado de la granja de SharePoint a un nuevo servidor independiente, **Office Online Server**. Puesto que Office Online Server es independiente, se hace más necesaria una forma de delegar las credenciales de cliente en los escenarios típicos de dos saltos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+La delegación limitada de Kerberos (KCD) es un protocolo de autenticación que se puede configurar con la autenticación de Windows para delegar las credenciales de cliente de servicio a servicio en todo el entorno. KCD requiere una infraestructura adicional, por ejemplo, un controlador de dominio y una configuración adicional del entorno. KCD es un requisito en algunos escenarios que implican datos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] y [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] con SharePoint 2016. En SharePoint 2016, Excel Services se ha trasladado de la granja de SharePoint a un nuevo servidor independiente, **Office Online Server**. Puesto que Office Online Server es independiente, se hace más necesaria una forma de delegar las credenciales de cliente en los escenarios típicos de dos saltos.  
   
 ## <a name="overview"></a>Información general  
  KCD permite a una cuenta suplantar a otra con el fin de proporcionar acceso a los recursos. La cuenta de suplantación corresponde a una cuenta de servicio asignada a una aplicación web o a la cuenta de equipo de un servidor web, mientras que la cuenta suplantada es una cuenta de usuario que requiere acceso a los recursos. KCD trabaja en el nivel de servicio, de modo que la cuenta de suplantación puede conceder acceso a unos servicios concretos de un servidor y denegárselo a la vez a otros servicios del mismo servidor o a servicios en otros servidores.  

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 95a989d092a5b69662fc9f7f542792d9c2895b47
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Miembros calculados en subselecciones y subcubos
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Un miembro calculado es un miembro de dimensión cuyo valor se calcula a partir de una expresión en tiempo de ejecución y se puede usar en las subselecciones y los subcubos más definen con precisión el espacio del cubo de una consulta.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Un miembro calculado es un miembro de dimensión cuyo valor se calcula a partir de una expresión en tiempo de ejecución, y se puede usar en las subselecciones y los subcubos para definir con mayor precisión el espacio del cubo de una consulta.  
   
 ## <a name="enabling-calculated-members-in-the-subspace"></a>Habilitación de los miembros calculados en el subespacio  
  La propiedad de cadena de conexión **SubQueries** en <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o la propiedad **DBPROPMSMDSUBQUERIES** en [Propiedades XMLA compatibles &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) definen el comportamiento o concesión de miembros calculados o conjuntos calculados en subselecciones o subcubos. En el contexto de este documento, subselección hace referencia a subselecciones y subcubos, a menos que se indique lo contrario.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 01/08/2018
   
 |||  
 |-|-|  
-|Valor|Description|  
+|Value|Descripción|  
 |0|Los miembros calculados no se permiten en subselecciones ni en subcubos.<br /><br /> Se produce un error al evaluar la subselección o subcubo si se hace referencia a un miembro calculado.|  
 |1|Los miembros calculados se permiten en subselecciones y subcubos pero sin que se introduzca ningún miembro antecesor en el subespacio que se devuelve.|  
 |2|Los miembros calculados se permiten en subselecciones y subcubos y los miembros antecesores se introducen en el subespacio que se devuelve. Asimismo, la granularidad mixta se permite en la selección de miembros calculados.|  

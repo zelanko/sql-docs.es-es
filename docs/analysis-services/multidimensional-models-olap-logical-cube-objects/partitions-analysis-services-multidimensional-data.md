@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], partitions
 - incremental updates [Analysis Services]
@@ -26,19 +27,20 @@ helpviewer_keywords:
 - remote partitions [Analysis Services]
 - measure groups [Analysis Services], partitions
 ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 1a44581e828d92756c46b897d9e7c9be69144c5b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>Particiones (Analysis Services - Datos multidimensionales)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una partición es un contenedor para una parte de los datos del grupo de medida. Las particiones no se ven de las consultas MDX; todas las consultas reflejan el contenido completo del grupo de medidas, sin tener en cuenta cuántas particiones se definen para el grupo de medidas. Los enlaces de consultas de la partición, y la expresión de segmentación, definen el contenido de los datos de una partición.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Una partición es un contenedor para una parte de los datos del grupo de medidas. Las particiones no se ven de las consultas MDX; todas las consultas reflejan el contenido completo del grupo de medidas, sin tener en cuenta cuántas particiones se definen para el grupo de medidas. Los enlaces de consultas de la partición, y la expresión de segmentación, definen el contenido de los datos de una partición.  
   
  Un objeto <xref:Microsoft.AnalysisServices.Partition> simple se crea con la información básica, la definición de segmentación y el diseño de agregaciones, entre otros. La información básica incluye el nombre de la partición, el modo de almacenamiento, el modo de procesamiento y otros aspectos. La definición de la segmentación es una expresión MDX que especifica una tupla o un conjunto. La definición de la segmentación tiene las mismas restricciones que la función MDX StrToSet. Junto con el parámetro CONSTRAINED, la definición de la segmentación puede usar la dimensión, la jerarquía, el nivel y los nombres de miembros, las claves, los nombres únicos u otros objetos con nombre del cubo, pero no puede usar funciones MDX. El diseño de agregaciones es una colección de definiciones de agregaciones que se pueden compartir en varias particiones. El valor predeterminado se toma del diseño de agregaciones del cubo primario.  
   

@@ -15,19 +15,20 @@ helpviewer_keywords:
 - prediction queries [Analysis Services]
 - Mining Model Prediction [Analysis Services], prediction queries
 ms.assetid: e02836e5-dd8c-4c97-a078-840ae79d3660
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: af9277de8848136f2123b7acf476dbee80a92ce1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Crear una consulta de predicción con el Generador de consultas de predicción
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Puede crear consultas de predicción o mientras se crea una solución de minería de datos en BI Development Studio, o haciendo clic en un modelo de minería de datos existente de SQL Server Management Studio y, a continuación, elija la opción **generar consulta de predicción**.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Puede crear consultas de predicción mientras está generando una solución de minería de datos en BI Development Studio o al hacer clic con el botón derecho en un modelo de minería de datos existente en SQL Server Management Studio y, después, elegir la opción **Generar consulta de predicción**.  
   
  El **Generador de consultas de predicción** tiene los tres modos de diseño siguientes, entre los que puede cambiar haciendo clic en los iconos en la esquina superior izquierda.  
   
@@ -97,7 +98,7 @@ ms.lasthandoff: 01/08/2018
 8.  Ejecute la consulta haciendo clic en el primer botón de la barra de herramientas de la pestaña **Predicción de modelo de minería de datos** y seleccione **Resultado**.  
   
 ## <a name="see-also"></a>Vea también  
- [Crear una consulta singleton en el Diseñador de minería de datos](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
+ [Crear una consulta Singleton en el Diseñador de minería de datos](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
  [Consultas de minería de datos](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

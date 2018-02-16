@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - measure groups [Analysis Services], cubes
 - cubes [Analysis Services], storage
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - partitions [Analysis Services], cubes
 - storage [Analysis Services], cubes
 ms.assetid: 1b1ad360-9a9b-4996-bee9-84238a2bb4ac
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: bf2333da378e88992b54db5169a2cf8fedc5ec9c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Almacenamiento de cubos (Analysis Services - Datos multidimensionales)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Almacenamiento puede incluir solo los metadatos del cubo, o puede incluir todos los datos de origen de la tabla de hechos, así como las agregaciones definidas por dimensiones relacionadas con el grupo de medida. La cantidad de datos almacenados varía en función del modo de almacenamiento seleccionado y el número de agregaciones. La cantidad de datos almacenados afecta directamente al rendimiento de las consultas. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa varias técnicas para minimizar el espacio necesario para el almacenamiento de datos del cubo y las agregaciones:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Puede que el almacenamiento solamente incluya metadatos del cubo o puede que incluya todos los datos de origen de la tabla de hechos y las agregaciones definidas por dimensiones relacionadas con el grupo de medida. La cantidad de datos almacenados varía en función del modo de almacenamiento seleccionado y el número de agregaciones. La cantidad de datos almacenados afecta directamente al rendimiento de las consultas. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa varias técnicas para minimizar el espacio necesario para el almacenamiento de datos del cubo y las agregaciones:  
   
 -   Las opciones de almacenamiento permiten seleccionar las ubicaciones y los modos de almacenamiento más adecuados a los datos del cubo.  
   
@@ -55,6 +57,6 @@ ms.lasthandoff: 01/08/2018
  Puede que se necesite gran cantidad de espacio en disco para almacenar varias copias de un cubo en distintas instancias de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], pero se puede reducir considerablemente el espacio necesario si se reemplazan las copias del grupo de medida por grupos de medida vinculados. Un grupo de medida vinculado se basa en un grupo de medida de un cubo de otra base se datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], en la misma instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o en otra instancia. Un grupo de medida vinculado también se puede utilizar con dimensiones vinculadas del mismo cubo de origen. Las dimensiones y grupos de medida vinculados utilizan las agregaciones del cubo de origen o no tienen requisitos de almacenamiento de datos propios. Por lo tanto, al mantener las dimensiones y los grupos de medida de origen en una base de datos, y crear dimensiones y cubos vinculados en cubos de otras bases de datos, se puede ahorrar espacio en disco que de lo contrario se utilizaría para almacenamiento. Para obtener más información, consulte [grupos de medida vinculados](../../analysis-services/multidimensional-models/linked-measure-groups.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Agregaciones y diseños de agregaciones](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
+ [Las agregaciones y diseños de agregaciones](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

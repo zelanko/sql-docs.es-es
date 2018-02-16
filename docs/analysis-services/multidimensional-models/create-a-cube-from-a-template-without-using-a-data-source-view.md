@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: ed5bd7197fa455d5ea93f39e529961a16828ba77
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Crear un cubo a partir de una plantilla sin usar una vista del origen de datos
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Seleccione **generar el cubo sin un origen de datos** en la primera página del Asistente para cubos para crear un cubo sin utilizar una vista del origen de datos. Posteriormente, podrá usar el Asistente para generar esquemas para generar el esquema relacional para la vista del origen de datos basándose en la estructura de cubo y, posiblemente, en otros objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para más información sobre cómo generar un esquema, vea [Asistente para generar esquemas &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Seleccione **Generar el cubo sin un origen de datos** en la primera página del Asistente para cubos para crear un cubo sin usar una vista del origen de datos. Posteriormente, podrá usar el Asistente para generar esquemas para generar el esquema relacional para la vista del origen de datos basándose en la estructura de cubo y, posiblemente, en otros objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para más información sobre cómo generar un esquema, vea [Asistente para generar esquemas &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md).  
   
 ## <a name="selecting-the-build-method"></a>Seleccionar el método de generación  
  En la página **Seleccionar método de generación** del Asistente para cubos, haga clic en **Generar el cubo sin un origen de datos**. Para generar el cubo usando una plantilla de cubo existente, active la casilla **Usar una plantilla de cubo** . . Si prefiere no usar una plantilla, deberá establecer las opciones manualmente.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
  Las cuadrículas **Seleccionar medidas de plantilla** y **Agregar nuevas medidas** muestran valores debajo de las columnas descritas en la tabla siguiente. Puede hacer clic en un valor de cualquier lista para cambiarlo.  
   
-|columna|Description|  
+|Columna|Description|  
 |------------|-----------------|  
 |**Nombre de medida**|Cada valor de esta columna define el nombre de una medida del cubo. Haga clic en un valor de esta columna para escribir un nombre. Haga clic en **Agregar nueva medida** en esta columna para crear una nueva medida. Esta columna establece la propiedad **Name** del objeto de medida.|  
 |**Grupo de medida**|El nombre del grupo de medida que contiene la medida. Haga clic en este valor para elegir o escribir un nombre. Si elimina todas las medidas que pertenecen a un grupo de medida determinado, se quita el grupo de medida. Esta columna establece la propiedad **Name** del objeto de grupo de medida.|  
@@ -61,7 +62,7 @@ ms.lasthandoff: 01/08/2018
   
  Las cuadrículas **Seleccionar dimensiones de plantilla** y **Agregar nuevas dimensiones** muestran valores debajo de las columnas descritas en la tabla siguiente. Puede hacer clic en un valor de cualquier lista para cambiarlo.  
   
-|columna|Description|  
+|Columna|Description|  
 |------------|-----------------|  
 |**Tipo**|Muestra el tipo de dimensión de una dimensión de la plantilla. Haga clic en esta celda para cambiar el tipo de dimensión. Esta columna establece la propiedad **Type** del objeto de dimensión.|  
 |**Nombre**|Muestra el nombre de la dimensión. Haga clic en esta celda para escribir otro nombre. Este valor establece la propiedad **Name** del objeto de dimensión.|  

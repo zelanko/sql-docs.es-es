@@ -15,19 +15,20 @@ helpviewer_keywords:
 - data feed library
 - data feeds [Analysis Services with SharePoint]
 ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9f536c0956cec0be863b099b2c0540ccf7ac3da2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>Crear o personalizar una biblioteca de fuentes de distribución de datos (PowerPivot para SharePoint)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A *biblioteca de fuentes de datos* es una biblioteca de SharePoint especial que le permite registrar y compartir los documentos de servicio de datos de Atom (.atomsvc). En estos documentos se proporcionan fuentes de distribución de datos XML para libros [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] u otras aplicaciones cliente que admitan el formato de distribución de datos Atom. Una biblioteca de fuentes de distribución de datos es diferente de otras bibliotecas de SharePoint porque permite:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Una *biblioteca de fuentes de distribución de datos* es una biblioteca de SharePoint especial que le permite registrarse y compartir los documentos (.atomsvc) de servicio de datos de Atom. En estos documentos se proporcionan fuentes de distribución de datos XML para libros [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] u otras aplicaciones cliente que admitan el formato de distribución de datos Atom. Una biblioteca de fuentes de distribución de datos es diferente de otras bibliotecas de SharePoint porque permite:  
   
 -   Crear o modificar un *documento de servicio de datos*, que se usa para especificar una conexión HTTP a una fuente concreta.  
   

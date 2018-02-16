@@ -22,19 +22,20 @@ helpviewer_keywords:
 - mining model content, neural network models
 - neural network model [Analysis Services]
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 8368189052f70da2e93b7d87a13787bf1793b006
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de red neuronal (Analysis Services - Minería de datos)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Este tema describe el contenido del modelo de minería de datos que es específico de los modelos que utilizan el algoritmo de red neuronal de Microsoft. Para obtener una explicación de cómo interpretar las estadísticas y la estructura compartidas por todos los tipos de modelos, así como las definiciones generales de los términos relacionados con el contenido del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de red neuronal de Microsoft. Para obtener una explicación de cómo interpretar las estadísticas y la estructura compartidas por todos los tipos de modelos, así como las definiciones generales de términos relacionados con el contenido del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-neural-network-model"></a>Descripción de la estructura de un modelo de red neuronal  
  Cada modelo de red neuronal tiene un nodo primario único que representa el modelo y sus metadatos, y un nodo de estadísticas marginal (NODE_TYPE = 24) que proporciona estadísticas descriptivas sobre los atributos de entrada. El nodo de estadísticas marginal es útil porque resume información sobre las entradas, de modo que no necesite consultar los datos de los nodos individuales.  
@@ -78,7 +79,7 @@ ms.lasthandoff: 01/08/2018
 |Estadísticas marginales|En blanco|  
 |Nivel de entrada|En blanco|  
 |Nodo de entrada|Nombre del atributo de entrada|  
-|Nivel oculto|En blanco|  
+|nivel oculto|En blanco|  
 |Nodo oculto|En blanco|  
 |Nivel de salida|En blanco|  
 |Nodo de salida|Nombre del atributo de salida|  
@@ -137,7 +138,7 @@ ms.lasthandoff: 01/08/2018
 |Estadísticas marginales|En blanco|  
 |Nivel de entrada|En blanco|  
 |Nodo de entrada|Nombre del atributo de entrada|  
-|Nivel oculto|En blanco|  
+|nivel oculto|En blanco|  
 |Nodo oculto|Entero que indica la secuencia del nodo oculto en la lista de nodos ocultos.|  
 |Nivel de salida|En blanco|  
 |Nodo de salida|Si el atributo de salida es continuo, contiene su nombre.<br /><br /> Si el atributo de salida es discreto o discretizado, contiene el nombre del atributo y el valor.|  
@@ -243,8 +244,8 @@ ms.lasthandoff: 01/08/2018
  **Atributo continuo:** las dos filas finales de la tabla NODE_DISTRIBUTION contienen la media del atributo, el coeficiente para el nodo en conjunto y la varianza del coeficiente.  
   
 ## <a name="see-also"></a>Vea también  
- [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Algoritmo de red neuronal de Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Referencia técnica del algoritmo de red neuronal de Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
- [Ejemplos de consultas de modelos de red neuronal](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
+ [Ejemplos de consultas de modelo de red neuronal](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

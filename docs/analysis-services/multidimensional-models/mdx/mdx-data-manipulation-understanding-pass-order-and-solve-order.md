@@ -20,19 +20,20 @@ helpviewer_keywords:
 - pass orders [MDX]
 - expressions [MDX], solve orders
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e081b07e8512e49d2fb09a8b119373f53fa4075a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>Manipulación de datos MDX - descripción paso ordenar y el orden de resolución
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Un cubo se calcula como resultado de un script MDX, puede ir a través de varias fases de computación según el uso de varias características relacionadas con el cálculo. Cada una de estas fases se denomina paso de cálculo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Cuando un cubo se calcula como el resultado de un script de MDX, puede atravesar varias fases de computación según el uso de varias características relativas al cálculo. Cada una de estas fases se denomina paso de cálculo.  
   
  Se puede hacer referencia a un paso de cálculo con una posición ordinal, llamada número de paso de cálculo. El recuento de los pasos de cálculo necesarios para calcular por completo todas las celdas de un cubo se denomina profundidad de paso de cálculo del cubo.  
   
@@ -124,7 +125,7 @@ FROM [Adventure Works]
 ||Internet Sales Amount|Costo total del producto por Internet|Margen de beneficio|  
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60 %|  
-|**CY 2008**|$9,770,899.74|$5,721,205.24|41.45 %|  
+|**CY 2008**|$9,770,899.74|$5,721,205.24|41.45 %|  
   
  La diferencia de los conjuntos de resultados entre la primera y la segunda consulta radica en la distinta colocación del miembro calculado. En la primera consulta, el miembro calculado se encuentra en el eje ROWS, mientras que en la segunda consulta se encuentra en el eje COLUMNS. Esta distinta colocación adquiere importancia en la siguiente consulta, en la que se combinan dos miembros calculados en una única consulta MDX.  
   
@@ -155,7 +156,7 @@ ON ROWS
 FROM [Adventure Works]  
 ```  
   
- En este ejemplo combinado de consulta MDX, `Profit Margin` posee el orden de resolución superior, por lo que tendrá prioridad si interactúan las dos expresiones. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] evalúa dicha celda mediante la fórmula `Profit Margin` . Los resultados de este cálculo anidado pueden verse en la siguiente tabla.  
+ En este ejemplo combinado de consulta MDX, `Profit Margin` posee el orden de resolución superior, por lo que tendrá prioridad si interactúan las dos expresiones. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] evalúa dicha celda mediante la fórmula `Profit Margin`. Los resultados de este cálculo anidado pueden verse en la siguiente tabla.  
   
 ||Internet Sales Amount|Costo total del producto por Internet|Margen de beneficio|  
 |-|---------------------------|---------------------------------|-------------------|  
@@ -169,7 +170,7 @@ FROM [Adventure Works]
 ((9,770,899.74 - 9,791,060.30) - (5,721,205.24 - 5,718,327.17)) / (9,770,899.74 - 9,791,060.30) = 1.14275744   
 ```  
   
- o Administrador de configuración de  
+ o bien  
   
 ```  
 (23,038.63) / (20,160.56) = 114.28%  
@@ -219,9 +220,9 @@ FROM [Adventure Works]
  El orden de resolución puede ser un aspecto muy complicado, especialmente en cubos con un gran número de dimensiones que tienen miembros calculados, fórmulas de resúmenes personalizados o celdas calculadas. Cuando [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] evalúa una consulta MDX, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tiene en cuenta los valores del orden de resolución de todos los elementos implicados en un paso determinado, incluidas las dimensiones del cubo especificado en la consulta MDX.  
   
 ## <a name="see-also"></a>Vea también  
- [CalculationCurrentPass &#40;MDX&#41;](../../../mdx/calculationcurrentpass-mdx.md)   
+ [CalculationCurrentPass &#40; MDX &#41;](../../../mdx/calculationcurrentpass-mdx.md)   
  [CalculationPassValue &#40; MDX &#41;](../../../mdx/calculationpassvalue-mdx.md)   
- [CREATE MEMBER &#40;instrucción MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)   
- [Manipular datos &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [CREATE MEMBER, instrucción &#40; MDX &#41;](../../../mdx/mdx-data-definition-create-member.md)   
+ [Manipulación de datos &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

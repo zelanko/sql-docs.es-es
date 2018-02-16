@@ -18,13 +18,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 92dc344de6a88459a2ec718a30f893cff50b16af
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>Configuración de Power Pivot e implementación de soluciones (SharePoint 2016)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Estos temas se explica la implementación y configuración de mejoras de nivel intermedio para la [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] características de [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] incluidos [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] galería, programar la actualización de datos, panel de administración y proveedores de datos. Ejecute la herramienta **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2016** para hacer lo siguiente:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+En estos temas se explica cómo configurar e implementar mejoras de nivel intermedio realizadas en las características de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] en [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] , incluidas la galería [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , la programación de actualización de datos, el panel de administración y los proveedores de datos. Ejecute la herramienta **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2016** para hacer lo siguiente:  
   
 -   Implementar archivos de solución de SharePoint.  
   
@@ -115,9 +116,9 @@ ms.lasthandoff: 01/29/2018
   
     -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Uso de datos de carga  
   
-    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Uso de consultas  
+    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Uso de consultas de  
   
-    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Uso de datos de descarga  
+    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Uso de datos de descarga de  
   
 4.  Compruebe que **Habilitar la recolección de datos de mantenimiento** esté activada.  
   

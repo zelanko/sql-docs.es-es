@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
 ms.openlocfilehash: 992a09878aece468b52a26241c362cb71ae43ec9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="install-sql-server-analysis-services"></a>Instalar SQL Server Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services es un servidor de bases de datos analíticas que hospeda modelos tabulares, cubos multidimensionales y modelos de minería de datos que se pueden acceder desde informes, hojas de cálculo y paneles.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+SQL Server Analysis Services es un servidor de bases de datos analíticas que hospeda modelos tabulares, cubos multidimensionales y modelos de minería de datos que se pueden acceder desde informes, hojas de cálculo y paneles.  
   
  Analysis Services es varias instancias, lo que significan que puede instalar más de una copia en un único equipo o ejecutar versiones nuevas y antiguas en paralelo. Cualquier instancia que se instale se ejecuta en uno de tres modos, según lo que se determine durante la instalación: multidimensional y de minería de datos, tabular o SharePoint. Si quiere usar varios modos, necesitará una instancia independiente para cada uno.  
   
@@ -72,9 +73,9 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  **ASSERVERMODE** distingue entre mayúsculas y minúsculas.  Todos los valores se deben expresar en mayúsculas. En la tabla siguiente se describen los valores válidos de **ASSERVERMODE**.  
   
-|Valor|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|TABULAR|Este es el valor predeterminado. Si no establece **ASSERVERMODE**, el servidor está instalado en modo Tabular.|
+|TABULAR|Es el valor predeterminado. Si no establece **ASSERVERMODE**, el servidor está instalado en modo Tabular.|
 |MULTIDIMENSIONAL|Este valor es opcional.|  
 |POWERPIVOT|Este valor es opcional. En ejercicio, si establece el parámetro **ROLE** , el modo de servidor se establece automáticamente en 1, haciendo que **ASSERVERMODE** sea opcional en una instalación de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint. Para obtener más información, consulte [Instalar Power Pivot desde el símbolo del sistema](http://msdn.microsoft.com/en-us/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328).|  
   

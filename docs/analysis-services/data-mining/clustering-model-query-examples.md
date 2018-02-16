@@ -16,19 +16,20 @@ helpviewer_keywords:
 - content queries [DMX]
 - clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 34300c8642dcc48aff1b470a0b027a0e85cf8076
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="clustering-model-query-examples"></a>Ejemplos de consultas de modelos de agrupación en clústeres
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cuando se crea una consulta en un modelo de minería de datos, puede recuperar metadatos sobre el modelo o crear una consulta de contenido que se proporciona detalles sobre los patrones detectados durante el análisis. También puede crear una consulta de predicción, que usa los patrones del modelo para realizar predicciones para los nuevos datos. Cada tipo de consulta proporcionará información diferente. Por ejemplo, una consulta de contenido puede proporcionar detalles adicionales sobre los clústeres encontrados, mientras que una consulta de predicción puede indicar a qué clúster pertenece con mayor probabilidad un nuevo punto de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Al crear una consulta en un modelo de minería de datos, puede recuperar metadatos sobre el modelo o crear una consulta de contenido que proporcione detalles sobre los patrones detectados en el análisis. También puede crear una consulta de predicción, que usa los patrones del modelo para realizar predicciones para los nuevos datos. Cada tipo de consulta proporcionará información diferente. Por ejemplo, una consulta de contenido puede proporcionar detalles adicionales sobre los clústeres encontrados, mientras que una consulta de predicción puede indicar a qué clúster pertenece con mayor probabilidad un nuevo punto de datos.  
   
  En esta sección se explica cómo crear consultas en modelos basados en el algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -83,7 +84,7 @@ WHERE NODE_TYPE = 1
 |NODE_CAPTION|Cluster Model|  
 |NODE_SUPPORT|12939|  
 |CHILDREN_CARDINALITY|10|  
-|NODE_DESCRIPTION|All|  
+|NODE_DESCRIPTION|Todos|  
   
  Para ver una definición de lo que significan estas columnas en un modelo de agrupación en clústeres, vea [Contenido del modelo de minería de datos para modelos de agrupaciones en clúster &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
   
@@ -375,21 +376,21 @@ NATURAL PREDICTION JOIN
   
 |||  
 |-|-|  
-|función de predicción|Uso|  
+|Función de predicción|Uso|  
 |[Cluster &#40;DMX&#41;](../../dmx/cluster-dmx.md)|Devuelve el clúster que tiene la mayor probabilidad de contener el caso de entrada.|  
 |[ClusterDistance &#40;DMX&#41;](../../dmx/clusterdistance-dmx.md)|Devuelve la distancia del caso de entrada con relación al clúster especificado o, si no se ha especificado ninguno, la distancia del caso de entrada del clúster más probable.<br /><br /> Devuelve la probabilidad de que el caso de entrada pertenezca al clúster especificado.|  
 |[ClusterProbability &#40;DMX&#41;](../../dmx/clusterprobability-dmx.md)|Devuelve la probabilidad de que el caso de entrada pertenezca al clúster especificado.|  
-|[IsDescendant &#40;DMX&#41;](../../dmx/isdescendant-dmx.md)|Determina si un nodo es un elemento secundario de otro nodo del modelo.|  
-|[IsInNode &#40;DMX&#41;](../../dmx/isinnode-dmx.md)|Indica si el nodo especificado contiene el caso actual.|  
-|[PredictAdjustedProbability &#40;DMX&#41;](../../dmx/predictadjustedprobability-dmx.md)|Devuelve la probabilidad ponderada.|  
-|[PredictAssociation &#40;DMX&#41;](../../dmx/predictassociation-dmx.md)|Predice los miembros de un conjunto de datos asociativo.|  
+|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|Determina si un nodo es un elemento secundario de otro nodo del modelo.|  
+|[IsInNode &#40; DMX &#41;](../../dmx/isinnode-dmx.md)|Indica si el nodo especificado contiene el caso actual.|  
+|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|Devuelve la probabilidad ponderada.|  
+|[PredictAssociation &#40; DMX &#41;](../../dmx/predictassociation-dmx.md)|Predice los miembros de un conjunto de datos asociativo.|  
 |[PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md)|Devuelve la probabilidad de que un caso de entrada se ajuste al modelo existente.|  
 |[PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)|Devuelve una tabla de valores relacionados con el valor de predicción actual.|  
-|[PredictNodeId &#40;DMX&#41;](../../dmx/predictnodeid-dmx.md)|Devuelve el Node_ID de cada caso.|  
-|[PredictProbability &#40;DMX&#41;](../../dmx/predictprobability-dmx.md)|Devuelve la probabilidad del valor de predicción.|  
-|[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|Devuelve la desviación estándar predicha para la columna especificada.|  
-|[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|Devuelve el valor de soporte de un estado especificado.|  
-|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|Devuelve la varianza de una columna especificada.|  
+|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|Devuelve el Node_ID de cada caso.|  
+|[PredictProbability &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|Devuelve la probabilidad del valor de predicción.|  
+|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|Devuelve la desviación estándar predicha para la columna especificada.|  
+|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|Devuelve el valor de soporte de un estado especificado.|  
+|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|Devuelve la varianza de una columna especificada.|  
   
  Para más información sobre la sintaxis de funciones específicas, vea [Referencia de funciones de Extensiones de minería de datos &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   

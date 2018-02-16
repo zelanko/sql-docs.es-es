@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: ecb1a5b33ede8c99150fd8b3ce1cf9babdb1f519
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>Registro de SPN para una instancia de Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un nombre principal de servicio (SPN) identifica de forma única una instancia de servicio en un dominio de Active Directory cuando se usa Kerberos para autenticar mutuamente las identidades de cliente y el servicio. Un SPN está asociado a la cuenta de inicio de sesión bajo la que se ejecuta la instancia del servicio.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un nombre principal del servicio (SPN) identifica una instancia de servicio en un dominio de Active Directory cuando se usa Kerberos para autenticar mutuamente las identidades del cliente y del servicio. Un SPN está asociado a la cuenta de inicio de sesión bajo la que se ejecuta la instancia del servicio.  
   
  Para las aplicaciones cliente que se conectan a Analysis Services a través de la autenticación Kerberos, las bibliotecas de cliente de Analysis Services crean un SPN con el nombre de host de la cadena de conexión y otras variables conocidas, como la clase de servicio, que son fijas en cualquier versión determinada de Analysis Services.  
   
@@ -172,12 +173,12 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
  [Autenticación y delegación de identidades de Microsoft BI](http://go.microsoft.com/fwlink/?LinkID=286576)   
  [Autenticación mutua con Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
  [Cómo configurar SQL Server 2008 Analysis Services y SQL Server 2005 Analysis Services para usar la autenticación de Kerberos](http://support.microsoft.com/kb/917409)   
- [Nombres de entidad de servicio (SPN) sintaxis de SetSPN (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [Sintaxis de nombres SetSPN de los nombres de entidad de servicio (SPN) (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [¿Qué SPN se debe usar y cómo llega allí?](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [SetSPN](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
  [Guía paso a paso de las cuentas de servicio](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
- [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [Cómo usar SPN al configurar aplicaciones Web que se hospedan en Internet Information Services](http://support.microsoft.com/kb/929650)   
+ [Configurar los permisos y cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
+ [Cómo usar SPN al configurar aplicaciones web que se hospedan en Internet Information Services](http://support.microsoft.com/kb/929650)   
  [Novedades de las cuentas de servicio](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
  [Configurar la autenticación de Kerberos para productos de SharePoint 2010 (notas del producto)](http://technet.microsoft.com/library/ff829837.aspx)  
   

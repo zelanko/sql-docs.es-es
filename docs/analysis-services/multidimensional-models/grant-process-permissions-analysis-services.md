@@ -15,19 +15,20 @@ helpviewer_keywords:
 - permissions [Analysis Services], process
 - process permissions [Analysis Services]
 ms.assetid: c1531c23-6b46-46a8-9ba3-b6d3f2016443
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: b63cc40a5620fc0ae23f2b9d17a52acdea2ae3ef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="grant-process-permissions-analysis-services"></a>Otorgar permisos de procesamiento (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Como administrador, puede crear un rol dedicado para las operaciones de procesamiento de Analysis Services, lo que le permite delegar esa tarea en particular a otros usuarios, o para aplicaciones que se usan para el procesamiento programado desatendido. Los permisos de procesamiento pueden concederse en los niveles de base de datos, cubo, dimensión y estructura de minería de datos. Salvo que esté trabajando en una base de datos tabular o un cubo muy extenso, le recomendamos que otorgue derechos de procesamiento en el nivel de la base de datos, donde se engloben todos los objetos, incluso aquellos que tengan dependencias entre sí.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Como administrador, puede crear un rol dedicado para las operaciones de procesamiento de Analysis Services, lo cual le permitirá delegar esa tarea en particular a otros usuarios o a aplicaciones destinadas al procesamiento programado desatendido. Los permisos de procesamiento pueden concederse en los niveles de base de datos, cubo, dimensión y estructura de minería de datos. Salvo que esté trabajando en una base de datos tabular o un cubo muy extenso, le recomendamos que otorgue derechos de procesamiento en el nivel de la base de datos, donde se engloben todos los objetos, incluso aquellos que tengan dependencias entre sí.  
   
  Los permisos se otorgan mediante roles que asocian objetos con permisos y cuentas de usuario o grupo de Windows. Recuerde que los permisos son acumulativos. Si un rol otorga permisos para procesar un cubo, y un segundo rol otorga al mismo usuario permiso para procesar una dimensión, los permisos de los dos roles diferentes se combinan para proporcionar al usuario permiso para procesar el cubo y para procesar la dimensión específica en la base de datos.  
   
@@ -98,7 +99,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="see-also"></a>Vea también  
  [Procesar base de datos, tabla o partición &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [Procesar un modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Otorgar permisos de base de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
- [Otorgar permisos Leer definición en metadatos de objetos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+ [Conceder permisos de base de datos &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
+ [Otorgar permisos Leer definición en metadatos de objetos &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

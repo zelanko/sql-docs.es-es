@@ -19,40 +19,41 @@ helpviewer_keywords:
 - Mining Model Viewer [Analysis Services], how-to topics
 - Mining Model Viewer [Analysis Services]
 ms.assetid: 00076475-d687-4376-90f4-6536f17631a0
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 49b33d951d759ea941ad8944db5f9e515698bfc7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>Tareas y procedimientos del Visor de modelos de minería de datos
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contiene varias herramientas que puede usar para explorar los modelos de minería de datos. Los temas siguientes proporcionan instrucciones paso a paso para completar las tareas específicas del uso de la pestaña **Visor de modelos de minería de datos** en el diseñador.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+El Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contiene varias herramientas que pueden usarse para explorar modelos de minería de datos. Los temas siguientes proporcionan instrucciones paso a paso para completar las tareas específicas del uso de la pestaña **Visor de modelos de minería de datos** en el diseñador.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Seleccionar un modelo de minería de datos y un visor de minería de datos](../../analysis-services/data-mining/select-a-mining-model-and-a-data-mining-viewer.md)  
+-   [Seleccione un modelo de minería de datos y un visor de minería de datos](../../analysis-services/data-mining/select-a-mining-model-and-a-data-mining-viewer.md)  
   
 -   [Copiar una vista de un modelo de minería de datos](../../analysis-services/data-mining/copy-a-view-of-a-mining-model.md)  
   
--   [Buscar un nodo determinado en una red de dependencias](../../analysis-services/data-mining/find-a-specific-node-in-a-dependency-network.md)  
+-   [Buscar un nodo específico en una red de dependencias](../../analysis-services/data-mining/find-a-specific-node-in-a-dependency-network.md)  
   
--   [Filtrar una regla en un modelo de reglas de asociación](../../analysis-services/data-mining/filter-a-rule-in-an-association-rules-model.md)  
+-   [Filtro de modelo de reglas de una regla en una asociación](../../analysis-services/data-mining/filter-a-rule-in-an-association-rules-model.md)  
   
--   [Filtrar un conjunto de elementos en un modelo de reglas de asociación](../../analysis-services/data-mining/filter-an-itemset-in-an-association-rules-model.md)  
+-   [Filtro de modelo de reglas de un conjunto de elementos de una asociación](../../analysis-services/data-mining/filter-an-itemset-in-an-association-rules-model.md)  
   
--   [Obtener detalles de datos de caso a partir de un modelo de minería de datos](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)  
+-   [Profundizar en los datos de los casos de un modelo de minería de datos](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)  
   
--   [Ver la fórmula de un modelo de serie temporal &#40;Minería de datos&#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [Ver la fórmula de serie temporal de un modelo &#40; minería de datos &#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
   
--   [Cambiar los colores usados en los visores de minería de datos](../../analysis-services/data-mining/change-the-colors-used-in-the-data-mining-viewer.md)  
+-   [Cambiar los colores utilizados en el Visor de minería de datos](../../analysis-services/data-mining/change-the-colors-used-in-the-data-mining-viewer.md)  
   
-## <a name="see-also"></a>Ver también  
- [Tutorial básico de minería de datos](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)   
+## <a name="see-also"></a>Vea también  
+ [Tutorial de minería de datos básicos](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)   
  [Visores de modelos de minería de datos &#40; el Diseñador de modelo de minería de datos &#41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)  
   
   

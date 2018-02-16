@@ -23,19 +23,20 @@ helpviewer_keywords:
 - process clear structure option [Analysis Services]
 - process default option [Analysis Services]
 ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: e05c1a60cc016b9f72d486a5b0f03037b0faa9ef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>Opciones y valores de procesamiento (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Si procesa objetos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede seleccionar una opción de procesamiento para controlar el tipo de procesamiento que se produce para cada objeto. Los tipos de procesamiento difieren entre objetos y por los cambios producidos en el objeto debido a su último procesamiento. Si habilita [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para seleccionar automáticamente un método de procesamiento, el programa utilizará el método que devuelve el objeto a un estado totalmente procesado en el menor tiempo posible.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Cuando procesa objetos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede seleccionar una opción de procesamiento para controlar el tipo de procesamiento que se produce para cada objeto. Los tipos de procesamiento difieren entre objetos y por los cambios producidos en el objeto debido a su último procesamiento. Si habilita [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para seleccionar automáticamente un método de procesamiento, el programa utilizará el método que devuelve el objeto a un estado totalmente procesado en el menor tiempo posible.  
   
  La configuración de procesamiento permite controlar los objetos que se procesan y los métodos que se utilizan para procesar dichos objetos. Algunas configuraciones de procesamiento se utilizan principalmente por trabajos de procesamiento por lotes. Para más información sobre el procesamiento por lotes, vea [Procesamiento por lotes &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md).  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="processing-options"></a>Opciones de procesamiento  
  En la siguiente tabla se describen los métodos de procesamiento disponibles en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]y se identifican los objetos compatibles con cada método.  
   
-|Mode|Se aplica a|Description|  
+|Modo|Se aplica a|Description|  
 |----------|----------------|-----------------|  
 |**Proceso predeterminado**|Cubos, bases de datos, dimensiones, grupos de medida, modelos de minería de datos, estructuras de minería de datos y particiones.|Detecta el estado de proceso de los objetos de base de datos y realiza el procesamiento necesario para devolver objetos sin procesar o procesados parcialmente a un estado de procesamiento completo. Si cambia un enlace de datos, el Proceso predeterminado realizará un Proceso completo en el objeto afectado.|  
 |**Proceso completo**|Cubos, bases de datos, dimensiones, grupos de medida, modelos de minería de datos, estructuras de minería de datos y particiones.|Procesa un objeto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y todos los objetos que contiene. Cuando se ejecuta Proceso completo en un objeto que ya se ha procesado, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quita todos los datos del objeto y, a continuación, lo procesa. Este tipo de procesamiento es necesario cuando se ha realizado un cambio estructural en un objeto; por ejemplo, cuando se agrega, se elimina o se cambia el nombre de una jerarquía de atributo.|  

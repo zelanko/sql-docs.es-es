@@ -17,19 +17,20 @@ helpviewer_keywords:
 - Data Mining Wizard
 - relational mining models [Analysis Services]
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: eab8188020685603ba45054b42957f6cc725b638
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Asistente para minería de datos (Analysis Services - Minería de datos)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El Asistente para minería de datos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inicia cada vez que se agrega una nueva estructura de minería de datos a un proyecto de minería de datos. El asistente le ayuda a elegir un origen de datos y a configurar una vista del origen de datos que defina los datos que se van a utilizar para el análisis, y luego le ayuda a crear un modelo inicial.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+El Asistente para minería de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se ejecuta cada vez que se agrega una nueva estructura de minería de datos a un proyecto de minería de datos. El asistente le ayuda a elegir un origen de datos y a configurar una vista del origen de datos que defina los datos que se van a utilizar para el análisis, y luego le ayuda a crear un modelo inicial.  
   
  En la fase final del asistente, si lo desea puede dividir los datos en conjuntos de entrenamiento y de prueba, y habilitar características como la obtención de detalles.  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="choosing-an-algorithm"></a>Elegir un algoritmo  
  A continuación, debe decidir qué algoritmo utilizar en el procesamiento de los datos. Esta decisión puede ser difícil de tomar. Cada algoritmo proporcionado en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tiene características diferentes y produce resultados distintos, de modo que puede experimentar y probar varios modelos antes de determinar cuál es el más adecuado para sus datos y su problema empresarial. Vea el tema siguiente para obtener una explicación de las tareas en las que cada algoritmo es más adecuado:  
   
- [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmos de minería de datos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  De nuevo, puede crear varios modelos utilizando algoritmos diferentes o cambiar los parámetros de los algoritmos para crear modelos distintos. No está limitado en su elección de algoritmo y es recomendable crear varios modelos con los mismos datos.  
   
@@ -110,15 +111,15 @@ ms.lasthandoff: 01/08/2018
 ## <a name="related-content"></a>Contenido relacionado  
  Para obtener más información sobre las decisiones que debe tomar al crear un modelo de minería de datos, vea los vínculos siguientes:  
   
- [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmos de minería de datos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Tipos de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-types-data-mining.md)  
+ [Contenido tipos &#40; minería de datos &#41;](../../analysis-services/data-mining/content-types-data-mining.md)  
   
- [Tipos de datos &#40;minería de datos&#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
+ [Tipos de datos &#40; minería de datos &#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
   
- [Selección de características &#40;minería de datos&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)  
+ [Selección de características &#40; minería de datos &#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)  
   
- [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
+ [Los valores que faltan &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
   
  [Obtención de detalles en modelos de minería de datos](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   

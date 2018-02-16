@@ -43,19 +43,20 @@ helpviewer_keywords:
 - Type property
 - ProactiveCaching property
 ms.assetid: e9031078-c4f5-4986-b0c9-4d064b622ab7
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: d448349dfa423810a6bdfd70a5d79a1dfd41f0b1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-measure-properties"></a>Configurar propiedades de medidas
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Las medidas tienen propiedades que le permiten definir cómo la función de medidas y para controlar cómo aparecen las medidas a los usuarios.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Las medidas tienen propiedades que permiten definir su funcionamiento, así como controlar cómo aparecen ante los usuarios.  
   
  Puede establecer propiedades en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] al crear o editar un cubo o una medida. También puede establecerlas mediante programación, usando MDX o AMO. Vea [Crear medidas y grupos de medida en modelos multidimensionales](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md), [CREATE MEMBER &#40;instrucción MDX&#41;](../../mdx/mdx-data-definition-create-member.md) y [Programar objetos básicos OLAP en AMO](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md) para obtener más información.  
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 01/08/2018
 |--------------|----------------|  
 |**AggregateFunction**|Requerido. Determina cómo se agregan las medidas. **Sum** es la agregación predeterminada. Para más información, vea [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) para obtener una descripción de cada función.|  
 |**DataType**|Requerido. Especifica el tipo de datos de la columna de la tabla de hechos subyacente a la que se enlaza la medida. Este valor se hereda de la columna de origen de forma predeterminada.|  
-|**Descripción**|Ofrece una descripción de la medida, que se puede mostrar en aplicaciones cliente.|  
+|**Description**|Ofrece una descripción de la medida, que se puede mostrar en aplicaciones cliente.|  
 |**DisplayFolder**|Especifica la carpeta en la que se mostrará la medida a los usuarios cuando se conecten al cubo. Cuando un cubo tiene muchas medidas, se pueden utilizar carpetas para mostrar para categorizar las medidas y mejorar la exploración para el usuario.|  
 |**FormatString**|Puede seleccionar el formato que se utiliza para mostrar los valores de las medidas a los usuarios mediante la propiedad **FormatString** de la medida.<br /><br /> Aunque se proporciona una lista de los formatos de visualización en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], se pueden especificar muchos otros formatos que no están en la lista. Puede especificar cualquier formato con nombre o definido por el usuario que sea válido en Microsoft Visual Basic.|  
 |**ID**|Requerido. Muestra el identificador único (Id.) de la medida. Esta propiedad es de solo lectura.|  
@@ -76,7 +77,7 @@ ms.lasthandoff: 01/08/2018
 |**Visible**|Determina la visibilidad de la medida en las aplicaciones cliente.|  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar las propiedades de los grupos de medida](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)   
+ [Configurar las propiedades de grupo de medida](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)   
  [Modificar medidas](../../analysis-services/lesson-3-1-modifying-measures.md)  
   
   

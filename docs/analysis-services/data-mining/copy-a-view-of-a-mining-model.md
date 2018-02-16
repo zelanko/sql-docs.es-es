@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Mining Model Viewer [Analysis Services], clipboards
 - copying mining models to clipboard
 ms.assetid: 768372db-e5b4-4990-b459-03d854fd9a6d
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: c1b439df2696fc44552d42680e1d4642e4728aa9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="copy-a-view-of-a-mining-model"></a>Copiar una vista de un modelo de minería de datos
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El **Visor de modelos de minería de datos** pestaña del Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utiliza un visor independiente para cada tipo de modelo de minería de datos. Varios de los visores tienen componentes cuyo contenido se puede copiar al Portapapeles, y desde ahí, pegar el contenido en un documento o en un software de tratamiento de imágenes. Los componentes que permiten realizar esta funcionalidad son:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La pestaña **Visor de modelos de minería de datos** del Diseñador de minería de datos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utiliza un visor separado para cada tipo de modelo de minería de datos. Varios de los visores tienen componentes cuyo contenido se puede copiar al Portapapeles, y desde ahí, pegar el contenido en un documento o en un software de tratamiento de imágenes. Los componentes que permiten realizar esta funcionalidad son:  
   
 -   Diagrama del clúster en el Visor de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] y el Visor de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
@@ -72,6 +73,6 @@ ms.lasthandoff: 01/08/2018
 5.  Haga clic con el botón derecho en el panel **Detalles del nodo** de nuevo y seleccione **Copiar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas y procedimientos del Visor de modelos de minería de datos](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+ [Tareas y tareas del Visor de modelo de minería de datos](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

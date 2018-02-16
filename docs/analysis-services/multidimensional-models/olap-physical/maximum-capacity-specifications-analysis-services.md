@@ -11,24 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [Analysis Services], maximum number
 - objects [Analysis Services], maximum size
 ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 8e60e818b40d2aa7c266903a23d0fec908039b44
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>Especificaciones de capacidad máxima (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Las siguientes tablas especifican el tamaño y número máximo de diversos objetos definidos en [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] componentes en los modos de implementación de servidor diferente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+En las siguientes tablas se especifican el tamaño y la cantidad máximos de diversos objetos definidos en los componentes de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en distintos modos de implementación de servidor.  
   
  Este tema contiene las siguientes secciones:  
   
@@ -38,10 +40,10 @@ ms.lasthandoff: 01/08/2018
   
  [Tabulares (DeploymentMode = 2)](#bkmk_vertipaq)  
   
-##  <a name="bkmk_OLAP"></a>Multidimensional y minería de datos (DeploymentMode = 0)  
+##  <a name="bkmk_OLAP">Multidimensional y minería de datos (DeploymentMode = 0)</a>  
  El modo de almacenamiento MOLAP, que almacena datos y metadatos, tiene límites físicos adicionales en el tamaño de los archivos. Los archivos de cadenas tienen un tamaño máximo de 4 GB de forma predeterminada. Si necesita archivos mayores para los almacenes de cadenas, puede especificar otro arquitectura de almacenamiento de cadenas. Para obtener más información, consulte [configurar el almacenamiento de cadenas para dimensiones y particiones](../../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md).  
   
-|Objeto|Tamaños/números máximos|  
+|Object|Tamaños/números máximos|  
 |------------|----------------------------|  
 |Bases de datos en una instancia|2^31-1 = 2,147,483,647|  
 |Dimensiones de una base de datos|2^31-1 = 2,147,483,647|  
@@ -68,9 +70,9 @@ ms.lasthandoff: 01/08/2018
   
  Para obtener más información acerca de las limitaciones de origen de datos de procesamiento analítico en línea (OLAP) y minería de datos, vea [admite orígenes de datos &#40; SSAS - Multidimensional &#41; ](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md), [Admite orígenes de datos &#40; SSAS - Multidimensional &#41; ](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md), y [ASSL y características de objetos](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md).  
   
-##  <a name="bkmk_sharepoint"></a>SharePoint (DeploymentMode = 1)  
+##  <a name="bkmk_sharepoint">SharePoint (DeploymentMode = 1)</a>  
   
-|Objeto|Tamaños/números máximos|  
+|Object|Tamaños/números máximos|  
 |------------|----------------------------|  
 |Bases de datos en una instancia|2^31-1 = 2,147,483,647|  
 |Tablas de una base de datos|2^31-1 = 2,147,483,647|  
@@ -86,10 +88,10 @@ ms.lasthandoff: 01/08/2018
 |Tamaño del registro de la consulta de origen|64K|  
 |Longitud de nombres de objeto|100 caracteres|  
   
-##  <a name="bkmk_vertipaq"></a>Tabulares (DeploymentMode = 2)  
+##  <a name="bkmk_vertipaq">Tabulares (DeploymentMode = 2)</a>  
 Los siguientes son límites teóricos. Rendimiento se verá reducido en los números más bajos.   
 
-|Objeto|Tamaños/números máximos|  
+|Object|Tamaños/números máximos|  
 |------------|----------------------------|  
 |Bases de datos en una instancia|16,000|  
 |Número combinado de tablas y columnas de una base de datos|16,000|  

@@ -17,19 +17,20 @@ helpviewer_keywords:
 - cross-validation [data mining]
 - statistical standard deviation
 ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 6b8b5dad234adf73717b5785fc0f3b06becaebce
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-cross-validation-report"></a>Crear un informe de validación cruzada
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]En este tema le guía por la creación de un informe de validación cruzada mediante la pestaña gráfico de precisión en el Diseñador de minería de datos. Para obtener información general sobre el aspecto de un informe de validación cruzada y sobre las medidas estadísticas que se incluyen en este, vea [Validación cruzada &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Este tema le guía a través del proceso de creación de un informe de validación cruzada utilizando la pestaña Gráfico de precisión del Diseñador de minería de datos. Para obtener información general sobre el aspecto de un informe de validación cruzada y sobre las medidas estadísticas que se incluyen en este, vea [Validación cruzada &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
   
  Un informe de validación cruzada es totalmente diferente de un gráfico de precisión, como un gráfico de mejora respecto al modelo predictivo o una matriz de clasificación.  
   

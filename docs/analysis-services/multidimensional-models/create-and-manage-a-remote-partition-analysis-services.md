@@ -15,32 +15,33 @@ helpviewer_keywords:
 - partitions [Analysis Services], remote
 - remote partitions [Analysis Services]
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: d5793220e57962f801573e8201688dd1c03b9c0e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Crear y administrar una partición remota (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Al crear particiones en un grupo de medida, puede configurar una base de datos secundaria en un equipo remoto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia como almacenamiento de partición.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Al crear particiones en un grupo de medida, puede configurar una base de datos secundaria en una instancia remota de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como almacenamiento de partición.  
   
  Las particiones remotas para un cubo (denominado base de datos maestra) se almacenan en una base de datos dedicada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la instancia remota de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (denominada base de datos secundaria).  
   
  Una base de datos secundaria dedicada puede almacenar particiones remotas para una y solo una base de datos maestra, pero la base de datos maestra puede usar varias bases de datos secundarias, siempre y cuando todas las bases de datos secundarias estén en la misma instancia remota de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Las dimensiones de una base de datos dedicada a las particiones remotas se crean como dimensiones vinculadas.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para poder crear una partición remota, deben cumplirse las siguientes condiciones:  
   
 -   Debe tener una segunda instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y una base de datos dedicada para almacenar las particiones. La base de datos secundaria se usa para un único fin: proporciona almacenamiento para las particiones remotas de una base de datos maestra.  
   
 -   Ambas instancias del servidor deben ser de la misma versión. Ambas bases de datos deben ser del mismo nivel funcional.  
   
--   Ambas instancias deben estar configuradas para conexiones TCP. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no admite la creación de particiones remotas mediante el protocolo HTTP.  
+-   Ambas instancias deben estar configuradas para conexiones TCP. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]no se admite la creación de particiones remotas mediante el protocolo HTTP.  
   
 -   Se debe establecer la configuración de firewall de ambos equipos para que acepten conexiones externas. Para obtener más información sobre la configuración de firewall, vea [Configurar Firewall de Windows para permitir el acceso a Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
@@ -138,6 +139,6 @@ ms.lasthandoff: 01/08/2018
 >  Aunque las bases de datos dedicadas al almacenamiento de particiones remotas no se exponen a los conjuntos de filas de esquema, las aplicaciones que usan Objetos de administración de análisis (AMO) pueden seguir detectando una base de datos dedicada mediante el uso del comando Discover de XML for Analysis. Cualquier comando CREATE o DELETE que se envíe directamente a una base de datos dedicada mediante un cliente TCP o HTTP se ejecutará correctamente, pero el servidor devolverá una advertencia que indica que la acción puede dañar la base de datos estrechamente administrada.  
   
 ## <a name="see-also"></a>Vea también  
- [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Particiones &#40; Analysis Services - datos multidimensionales &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

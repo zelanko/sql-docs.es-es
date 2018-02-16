@@ -11,7 +11,8 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - regular attributes [Analysis Services]
 - parent attributes [Analysis Services]
@@ -25,19 +26,20 @@ helpviewer_keywords:
 - attributes [Analysis Services]
 - relationships [Analysis Services], attributes
 ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 012caa5210886a9c2f6e72a6c1b7338154358d1f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>Atributos y jerarquías de atributos
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Las dimensiones son colecciones de atributos que están enlazados a una o más columnas de una tabla o vista en la vista del origen de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Las dimensiones son colecciones de atributos que están enlazados a una o varias columnas de una tabla o vista de la vista del origen de datos.  
   
 ## <a name="key-attribute"></a>Atributo clave  
  Cada dimensión contiene un atributo clave. Cada atributo está enlazado a una o varias columnas de una tabla de dimensiones. El atributo clave es el atributo de una dimensión que identifica las columnas de la tabla principal de dimensiones que se utilizan en las relaciones de clave externa con la tabla de hechos. Normalmente, el atributo clave representa a la columna o columnas de clave principal de la tabla de dimensiones. Puede definir una clave principal lógica en una tabla de una vista del origen de datos que carece de clave principal física en el origen de datos subyacente. **Para obtener más información**, consulte [definir claves principales lógicas en una vista del origen de datos &#40; Analysis Services &#41; ](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md). Al definir atributos clave, el Asistente para cubos y el Asistente para dimensiones intentan hacer uso de las columnas de clave principal de la tabla de dimensiones en la vista del origen de datos. Si la tabla de dimensiones no tiene definida una clave principal lógica o una clave principal física, los asistentes no podrán definir correctamente los atributos clave de la dimensión.  
@@ -53,9 +55,9 @@ ms.lasthandoff: 01/08/2018
 ## <a name="attribute-relationships-star-schemas-and-snowflake-schemas"></a>Relaciones de atributo, esquemas en estrella y esquemas de copo de nieve  
  De forma predeterminada, en un esquema en estrella, todos los atributos se relacionan directamente con el atributo clave, lo que permite a los usuarios examinar los hechos del cubo basándose en cualquier jerarquía de atributo de la dimensión. En un esquema de copo de nieve, un atributo está directamente vinculado al atributo clave si la tabla subyacente está directamente vinculada a la tabla de hechos o indirectamente vinculado por medio del atributo enlazado a la clave de la tabla subyacente que vincula la tabla de copo de nieve a la tabla vinculada directamente.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Crear jerarquías definidas por el usuario](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [Definir relaciones de atributo](../../analysis-services/multidimensional-models/attribute-relationships-define.md)   
- [Referencia de las propiedades de los atributos de dimensión](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Referencia de propiedades de atributos de dimensión](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

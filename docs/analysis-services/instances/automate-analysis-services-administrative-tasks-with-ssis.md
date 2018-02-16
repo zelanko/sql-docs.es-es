@@ -15,19 +15,20 @@ helpviewer_keywords:
 - Execute DDL Task [Analysis Services]
 - Analysis Services Processing task
 ms.assetid: e960a9a2-80b4-45da-9369-bc560ecdccac
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 308c7910d408fcb29689484eb71726a669ed6d98
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>Automatizar tareas administrativas de Analysis Services con SSIS
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] le permite automatizar la ejecución de scripts DDL, cubo y procesamiento de tareas y tareas de consulta de minería de datos del modelo de minería de datos. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] puede considerarse como una colección de tareas de flujo de control y de mantenimiento, que pueden vincularse para formar trabajos de procesamiento de datos secuenciales y paralelos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] le permite automatizar la ejecución de scripts DDL, cubo y procesamiento de tareas y tareas de consulta de minería de datos del modelo de minería de datos. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] puede considerarse como una colección de tareas de flujo de control y de mantenimiento, que pueden vincularse para formar trabajos de procesamiento de datos secuenciales y paralelos.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se ha diseñado para realizar operaciones de limpieza de datos durante las tareas de procesamiento y para reunir datos procedentes de diferentes orígenes de datos. Cuando se trabaja con cubos y modelos de minería de datos, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] puede transformar datos no numéricos en datos numéricos y puede garantizar que esos valores de datos se encuentran dentro de los límites esperados, creando así datos limpios desde los cuales llenar dimensiones y tablas de hechos.  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="analysis-services-processing-task"></a>Procesamiento de Analysis Services, tarea  
  La tarea Procesamiento de Analysis Services de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite llenar automáticamente los cubos con nueva información cuando se realizan actualizaciones periódicas de la base de datos relacional de origen. Puede realizar el procesamiento en el nivel de dimensión, de cubo o de partición mediante la tarea Procesamiento de Analysis Services. El propio procesamiento puede ser de tipo **incremental** o **full**; esta opción se selecciona basándose en los requisitos del trabajo. El procesamiento incremental agrega nuevos datos y lleva a cabo suficiente trabajo de cálculo para mantener actualizado el destino, en tanto que el procesamiento completo realiza una nueva carga y un nuevo cálculo completos de los datos existentes. El procesamiento completo requiere más tiempo, pero es más absoluto. Para obtener más información acerca de cómo implementar esta tarea, vea [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md).  
   
-## <a name="data-mining-query-task"></a>Data Mining Query Task  
+## <a name="data-mining-query-task"></a>Tarea Consulta de minería de datos  
  La tarea Consulta de minería de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite extraer y almacenar información de los modelos de minería de datos. Por lo general, la información se almacena en una base de datos relacional y puede utilizarse, por ejemplo, para aislar una lista de clientes potenciales para una campaña de correo directo. La minería de datos puede identificar el valor de un cliente y la probabilidad de que ese cliente responda a una determinada acción de marketing. Puede utilizar la tarea Consulta de minería de datos para extraer y modificar datos en un formato de preferencia. Para obtener más información acerca de cómo implementar esta tarea, vea [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md).  
   
 ## <a name="see-also"></a>Vea también  

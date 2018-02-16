@@ -11,26 +11,28 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - schema rowsets [OLE DB]
 - schema rowsets [Analysis Services], OLE DB
 - OLE DB schema rowsets
 - rowsets [Analysis Services], OLE DB
 ms.assetid: ca2ee87a-ba04-4501-9125-33934c58ab31
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 59d17cb1345f7ba32a2cbaac27f5ec002aadfa40
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="ole-db-schema-rowsets"></a>Conjuntos de filas de esquema OLE DB
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Los siguientes conjuntos de filas de esquema de OLE DB son compatibles con el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML para el proveedor de Analysis (XMLA). Use la **DISCOVER_ENUMERATORS** conjunto de filas con el [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) método para comprobar si un proveedor de origen de datos determinado admite un conjunto de filas.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+El proveedor XML for Analysis (XMLA) de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] admite los conjuntos de filas de esquemas OLE DB siguientes. Use la **DISCOVER_ENUMERATORS** conjunto de filas con el [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) método para comprobar si un proveedor de origen de datos determinado admite un conjunto de filas.  
   
  También puede encontrar información detallada sobre estos conjuntos de filas buscando el tema sobre los conjuntos de filas de esquemas en la parte correspondiente a la referencia del programador OLE DB de MSDN® Library en el sitio web en [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 01/08/2018
 |**DBSCHEMA_COLLATIONS**|Identifica las intercalaciones de caracteres definidas en el catálogo al que puede tener acceso un usuario determinado.|  
 |**DBSCHEMA_COLUMN_DOMAIN_USAGE**|Identifica las columnas definidas en el catálogo que dependen de un dominio definido en el catálogo y que pertenecen a un usuario determinado.|  
 |**DBSCHEMA_COLUMN_PRIVILEGES**|Identifica los privilegios para columnas de las tablas definidas en el catálogo que están disponibles para un usuario determinado o que este concede.|  
-|[Conjunto de filas DBSCHEMA_COLUMNS](../../../analysis-services/schema-rowsets/ole-db/dbschema-columns-rowset.md) <sup>1</sup>|Proporciona información de columna de todas las columnas que cumplen los criterios de restricción proporcionados.|  
+|[DBSCHEMA_COLUMNS Rowset](../../../analysis-services/schema-rowsets/ole-db/dbschema-columns-rowset.md) <sup>1</sup>|Proporciona información de columna de todas las columnas que cumplen los criterios de restricción proporcionados.|  
 |**DBSCHEMA_CONSTRAINT_COLUMN_USAGE**|Identifica las columnas que se usan en las restricciones referenciales, restricciones únicas, restricciones CHECK y aserciones definidas en el catálogo y que pertenecen a un usuario determinado.|  
 |**DBSCHEMA_CONSTRAINT_TABLE_USAGE**|Identifica las tablas que se usan en usan las restricciones referenciales, restricciones únicas, restricciones CHECK y aserciones definidas en el catálogo y que pertenecen a un usuario determinado.|  
 |**DBSCHEMA_FOREIGN_KEYS**|Identifica las columnas de clave externa definidas en el catálogo por un usuario determinado. Este conjunto de filas de esquemas se genera a partir de varias vistas de esquemas ISO por comodidad para los programadores que no usan SQL. Si se admite, este conjunto de filas de esquema debe estar sincronizada con las vistas ISO relacionadas (**REFERENTIAL_CONSTRAINTS** y **CONSTRAINT_COLUMN_USAGE**).|  
@@ -56,7 +58,7 @@ ms.lasthandoff: 01/08/2018
 |**DBSCHEMA_PROCEDURE_COLUMNS**|Devuelve información sobre las columnas de los conjuntos de filas que devuelven los procedimientos.|  
 |**DBSCHEMA_PROCEDURE_PARAMETERS**|Devuelve información sobre los parámetros y los códigos devueltos de los procedimientos.|  
 |**DBSCHEMA_PROCEDURES**|Identifica los procedimientos que se definen en el catálogo y que posee un usuario determinado. Ésta es una extensión OLE DB.|  
-|[Conjunto de filas DBSCHEMA_PROVIDER_TYPES](../../../analysis-services/schema-rowsets/ole-db/dbschema-provider-types-rowset.md) <sup>1</sup>|Identifica los tipos de datos (básicos) admitidos por el proveedor de datos.|  
+|[DBSCHEMA_PROVIDER_TYPES Rowset](../../../analysis-services/schema-rowsets/ole-db/dbschema-provider-types-rowset.md) <sup>1</sup>|Identifica los tipos de datos (básicos) admitidos por el proveedor de datos.|  
 |**DBSCHEMA_REFERENTIAL_CONSTRAINTS**|Identifica las restricciones referenciales que se definen en el catálogo y que posee un usuario determinado.|  
 |**DBSCHEMA_SCHEMATA**|Identifica los esquemas que posee un usuario determinado.|  
 |**DBSCHEMA_SQL_LANGUAGES**|Identifica los niveles, opciones y dialectos de compatibilidad que admiten los datos de procesamiento de la implementación SQL definidos en el catálogo.|  

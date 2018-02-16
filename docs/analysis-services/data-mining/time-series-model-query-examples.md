@@ -22,19 +22,20 @@ helpviewer_keywords:
 - PREDICTION_SMOOTHING
 - content queries [DMX]
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 4467fa9fcf4b695b77d533e358019b020545861c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="time-series-model-query-examples"></a>Ejemplos de consultas de modelos de serie temporal
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cuando se crea una consulta en un modelo de minería de datos, puede crear cualquier una consulta de contenido, que proporciona detalles sobre los patrones detectados durante el análisis, o puede crear una consulta de predicción, que utiliza los patrones en el modelo para realizar predicciones para los nuevos datos. Por ejemplo, una consulta de contenido para un modelo de serie temporal podría proporcionar detalles adicionales sobre las estructuras periódicas que se detectaron, mientras que una consulta de predicción podría ofrecer predicciones para los intervalos de tiempo 5 a 10 siguientes. También se pueden recuperar metadatos sobre el modelo mediante una consulta.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles sobre las reglas y los conjuntos de elementos detectados durante el análisis, o una consulta de predicción, que usa las asociaciones detectadas en los datos para realizar predicciones. Por ejemplo, una consulta de contenido para un modelo de serie temporal podría proporcionar detalles adicionales sobre las estructuras periódicas que se detectaron, mientras que una consulta de predicción podría ofrecer predicciones para los intervalos de tiempo 5 a 10 siguientes. También se pueden recuperar metadatos sobre el modelo mediante una consulta.  
   
  En esta sección se explica cómo crear ambos tipos de consultas en modelos basados en el algoritmo de serie temporal de Microsoft.  
   
@@ -104,17 +105,17 @@ WHERE NODE_NAME = 'TA00000007'
   
  Resultados del ejemplo:  
   
-|Ecuación corta|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
+|Ecuación corta|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |--------------------|-----------------------|------------------------|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24….|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|1|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|12|  
   
- Para obtener más información sobre cómo interpretar estos datos, vea [Contenido del modelo de minería de datos para los modelos de serie temporal &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
+ Para obtener más información sobre cómo interpretar estos datos, vea [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
   
 ###  <a name="bkmk_Query3"></a> Ejemplo de consulta 3: Recuperar la ecuación para un modelo ARTXP  
- Para un modelo ARTXP, se almacena información diferente en cada nivel del árbol. Para obtener más información sobre la estructura de un modelo ARTXP y sobre cómo interpretar la información en la ecuación, vea [Contenido del modelo de minería de datos para los modelos de serie temporal &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
+ Para un modelo ARTXP, se almacena información diferente en cada nivel del árbol. Para obtener más información sobre la estructura de un modelo ARTXP y sobre cómo interpretar la información en la ecuación, vea [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
  La instrucción DMX siguiente recupera información de una parte del árbol ARTXP que representa la cantidad de ventas del modelo R250 en Europa.  
   
@@ -131,7 +132,7 @@ WHERE NODE_ATTRIBUTE_NAME = 'R250 Europe:Quantity'
 AND NODE_TYPE = 15  
 ```  
   
- Para obtener más información sobre cómo interpretar estos datos, vea [Contenido del modelo de minería de datos para los modelos de serie temporal &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
+ Para obtener más información sobre cómo interpretar estos datos, vea [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
   
 ## <a name="creating-predictions-on-a-time-series-model"></a>Crear las predicciones en un modelo de serie temporal  
@@ -221,11 +222,11 @@ AND NODE_TYPE = 15
 |||  
 |-|-|  
 |función de predicción|Uso|  
-|[Lag &#40;DMX&#41;](../../dmx/lag-dmx.md)|Devuelve un número de intervalos de tiempo entre la fecha del caso actual y la última fecha del conjunto de entrenamiento.<br /><br /> Un uso típico de esta función consiste en identificar los recientes escenarios de aprendizaje con el fin de poder recuperar datos detallados sobre los escenarios.|  
-|[PredictNodeId &#40;DMX&#41;](../../dmx/predictnodeid-dmx.md)|Devuelve el ID del nodo para la columna predecible especificada.<br /><br /> Un uso típico de esta función consiste en identificar el nodo que generó un determinado valor predicho de forma que se puedan revisar los escenarios asociados al nodo o recuperar la ecuación y otros detalles.|  
-|[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|Devuelve la desviación estándar de las predicciones de la columna predecible especificada.<br /><br /> Esta función reemplaza el argumento INCLUDE_STATISTICS, que no se admite para los modelos de serie temporal.|  
-|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|Devuelve la varianza de las predicciones para la columna predecible especificada.<br /><br /> Esta función reemplaza el argumento INCLUDE_STATISTICS, que no se admite para los modelos de serie temporal.|  
-|[PredictTimeSeries &#40;DMX&#41;](../../dmx/predicttimeseries-dmx.md)|Devuelve valores históricos o futuros predichos en una serie temporal.<br /><br /> También puede consultar los modelos de serie temporal usando la función de predicción general, [Predict &#40;DMX&#41;](../../dmx/predict-dmx.md).|  
+|[Lag &#40; DMX &#41;](../../dmx/lag-dmx.md)|Devuelve un número de intervalos de tiempo entre la fecha del caso actual y la última fecha del conjunto de entrenamiento.<br /><br /> Un uso típico de esta función consiste en identificar los recientes escenarios de aprendizaje con el fin de poder recuperar datos detallados sobre los escenarios.|  
+|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|Devuelve el ID del nodo para la columna predecible especificada.<br /><br /> Un uso típico de esta función consiste en identificar el nodo que generó un determinado valor predicho de forma que se puedan revisar los escenarios asociados al nodo o recuperar la ecuación y otros detalles.|  
+|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|Devuelve la desviación estándar de las predicciones de la columna predecible especificada.<br /><br /> Esta función reemplaza el argumento INCLUDE_STATISTICS, que no se admite para los modelos de serie temporal.|  
+|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|Devuelve la varianza de las predicciones para la columna predecible especificada.<br /><br /> Esta función reemplaza el argumento INCLUDE_STATISTICS, que no se admite para los modelos de serie temporal.|  
+|[PredictTimeSeries &#40; DMX &#41;](../../dmx/predicttimeseries-dmx.md)|Devuelve valores históricos o futuros predichos en una serie temporal.<br /><br /> También puede consultar los modelos de serie temporal usando la función de predicción general, [Predict &#40;DMX&#41;](../../dmx/predict-dmx.md).|  
   
  Para consultar una lista de las funciones comunes a todos los algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)], vea [Funciones de predicción generales &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). Para más información sobre la sintaxis de funciones específicas, vea [Referencia de funciones de Extensiones de minería de datos &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
@@ -234,6 +235,6 @@ AND NODE_TYPE = 15
  [Consultas de minería de datos](../../analysis-services/data-mining/data-mining-queries.md)   
  [Algoritmo de serie temporal de Microsoft](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Referencia técnica del algoritmo de serie temporal de Microsoft](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [Contenido del modelo de minería de datos para los modelos de serie temporal &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Contenido del modelo de minería de datos para modelos de serie temporal &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

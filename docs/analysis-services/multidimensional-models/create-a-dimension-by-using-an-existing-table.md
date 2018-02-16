@@ -17,19 +17,20 @@ helpviewer_keywords:
 - dimensions [Analysis Services], standard
 - standard dimensions [Analysis Services]
 ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: b748f139d4eed14ea9d00d275aedcc8ef8fc9fec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Crear una dimensión usando una tabla existente
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede usar el Asistente para dimensiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para crear una dimensión de una tabla existente. Para hacerlo, debe seleccionar la opción **Usar una tabla existente** en la página **Seleccionar método de creación** del asistente. Con esta opción, el asistente basa la estructura de la dimensión en las tablas de dimensiones, sus columnas y las posibles relaciones entre esas columnas en una vista del origen de datos existente. El asistente prueba los datos en la tabla de origen y las tablas relacionadas. Usa estos datos para definir columnas de atributos que se basan en las columnas de las tablas de dimensiones, así como para definir jerarquías de atributos (denominadas jerarquías *definidas por el usuario* ). Tras utilizar el Asistente para dimensiones para crear su dimensión, puede usar el Diseñador de dimensiones para agregar, quitar o configurar atributos y jerarquías de la dimensión.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede usar el Asistente para dimensiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para crear una dimensión a partir de una tabla existente. Para hacerlo, debe seleccionar la opción **Usar una tabla existente** en la página **Seleccionar método de creación** del asistente. Con esta opción, el asistente basa la estructura de la dimensión en las tablas de dimensiones, sus columnas y las posibles relaciones entre esas columnas en una vista del origen de datos existente. El asistente prueba los datos en la tabla de origen y las tablas relacionadas. Usa estos datos para definir columnas de atributos que se basan en las columnas de las tablas de dimensiones, así como para definir jerarquías de atributos (denominadas jerarquías *definidas por el usuario* ). Tras utilizar el Asistente para dimensiones para crear su dimensión, puede usar el Diseñador de dimensiones para agregar, quitar o configurar atributos y jerarquías de la dimensión.  
   
  Si está utilizando una tabla existente para crear una dimensión, el Asistente para dimensiones lo guía a través de los siguientes pasos:  
   
@@ -82,7 +83,7 @@ ms.lasthandoff: 01/08/2018
 -   La columna **Tipos de cuenta integrados** muestra los tipos de cuenta estándar correspondientes compatibles con el servidor. Si los datos de origen usan nombres estándar, el asistente asigna automáticamente el tipo de origen al tipo de servidor y rellena la columna **Tipos de cuenta integrados** con esta información. Si el servidor no asigna los tipos de cuenta o si usted quiere cambiar la asignación, seleccione un tipo diferente en la lista de la columna **Tipos de cuenta integrados** .  
   
 > [!NOTE]  
->  Si los tipos de cuenta no se asignan cuando el asistente crea una dimensión Accounts, use el Asistente de Business Intelligence para configurar las asignaciones una vez creada la dimensión. Para obtener más información, vea [Agregar inteligencia de cuentas a una dimensión](../../analysis-services/multidimensional-models/bi-wizard-add-account-intelligence-to-a-dimension.md).  
+>  Si los tipos de cuenta no se asignan cuando el asistente crea una dimensión Accounts, use el Asistente de Business Intelligence para configurar las asignaciones una vez creada la dimensión. Para más información, vea [Agregar inteligencia de cuentas a una dimensión](../../analysis-services/multidimensional-models/bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
 ## <a name="completing-the-wizard"></a>Finalizar el Asistente  
  El asistente examina las tablas de dimensiones para detectar las relaciones. El asistente creará automáticamente las relaciones de atributo entre los atributos clave de dimensiones de copo de nieve.  
@@ -92,10 +93,10 @@ ms.lasthandoff: 01/08/2018
  Para terminar el asistente, en la página **Finalización del asistente** , escriba un nombre para la nueva dimensión y revise la estructura de la dimensión.  
   
 ## <a name="see-also"></a>Vea también  
- [Crear una dimensión generando una tabla que no sea de tiempos en el origen de datos](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
+ [Crear una dimensión generando una tabla no sea de tiempos en el origen de datos](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
  [Crear una dimensión de tiempo generando una tabla de tiempos](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
- [Referencia de las propiedades de los atributos de dimensión](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
+ [Referencia de propiedades de atributos de dimensión](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
  [Crear una dimensión de tiempo generando una tabla de tiempos](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
- [Crear una dimensión generando una tabla que no sea de tiempos en el origen de datos](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
+ [Crear una dimensión generando una tabla no sea de tiempos en el origen de datos](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   

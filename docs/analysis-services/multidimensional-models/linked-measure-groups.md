@@ -18,19 +18,20 @@ helpviewer_keywords:
 - measure groups [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: a5139e2e9e9d5bb06d594f9463f6632b6ee9fb78
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="linked-measure-groups"></a>Grupos de medida vinculados
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un grupo de medida vinculado se basa en otro grupo de medida de un cubo diferente dentro de la misma base de datos o en otra base de datos de Analysis Services. Puede usar un grupo de medida vinculada si desea reutilizar un conjunto de medidas, y los valores de datos correspondientes, en varios cubos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un grupo de medida vinculado está basado en otro grupo de medida de un cubo diferente dentro de la misma base de datos o en una base de datos de Analysis Services diferente. Puede usar un grupo de medida vinculada si desea reutilizar un conjunto de medidas, y los valores de datos correspondientes, en varios cubos.  
   
  Microsoft recomienda que los grupos de medida vinculados y originales residan en soluciones que se ejecuten en el mismo servidor. La creación de un vínculo a un grupo de medida en un servidor remoto está programada para desuso en una versión futura (vea [Características en desuso de Analysis Services en SQL Server 2016](../../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)).  
   

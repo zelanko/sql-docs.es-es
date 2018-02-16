@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9376a1f4124a86fa7acc313c7985d0a7f1c450f3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Proyectos relacionados en las soluciones de minería de datos
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lo mínimo que se requiere para una solución de minería de datos es el proyecto de minería de datos, que define los orígenes de datos, vistas del origen de datos, estructuras de minería de datos y modelos de minería de datos. Sin embargo, cuando los modelos de minería de datos se utilizan en la toma de decisiones diaria, es importante que la minería de datos se integre con otra parte de una solución de predicción de análisis, que puede incluir estos procesos y componentes:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Lo mínimo que se requiere para una solución de minería de datos es el proyecto de minería de datos, que define los orígenes de datos, las vistas del origen de datos, las estructuras y los modelos de minería de datos. Sin embargo, cuando los modelos de minería de datos se utilizan en la toma de decisiones diaria, es importante que la minería de datos se integre con otra parte de una solución de predicción de análisis, que puede incluir estos procesos y componentes:  
   
 -   Preparación y selección de datos y variables. Incluye la limpieza de datos, la administración metadatos y la integración de orígenes de datos, y la conversión, combinación y carga de datos en un almacenamiento de datos.  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 01/08/2018
   
  **Componentes de flujo de control**  
   
--   [Tarea Ejecutar DDL de Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
+-   [Tarea Ejecutar DDL Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
 -   [Tarea de procesamiento de Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
   
@@ -71,27 +72,27 @@ ms.lasthandoff: 01/08/2018
   
 -   [Limpieza de datos](../../data-quality-services/data-cleansing.md)  
   
--   [Tarea Consulta de minería de datos](../../integration-services/control-flow/data-mining-query-task.md)  
+-   [Tarea consulta de minería de datos](../../integration-services/control-flow/data-mining-query-task.md)  
   
 -   [Tarea de generación de perfiles de datos](../../integration-services/control-flow/data-profiling-task.md)  
   
  **Componentes de flujo de datos**  
   
--   [Componentes del flujo de CDC](../../integration-services/data-flow/cdc-flow-components.md)  
+-   [Componentes de flujo de CDC](../../integration-services/data-flow/cdc-flow-components.md)  
   
 -   [Transformación División condicional](../../integration-services/data-flow/transformations/conditional-split-transformation.md)  
   
--   [Transformación Conversión de datos](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
+-   [Transformación conversión de datos](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
   
 -   [Destino de entrenamiento del modelo de minería de datos](../../integration-services/data-flow/data-mining-model-training-destination.md)  
   
--   [Transformación Consulta de minería de datos](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
+-   [Transformación de consulta de minería de datos](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
   
 -   [Transformación Columna derivada](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
   
 -   [Transformación Muestreo de porcentaje](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
   
--   [Transformación Extracción de términos](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
+-   [Transformación extracción de términos](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   
 -   [Transformación Búsqueda de términos](../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
   
@@ -108,11 +109,11 @@ ms.lasthandoff: 01/08/2018
   
  Para obtener más información sobre cómo usar Reporting Services con consultas DMX como origen de datos, vea los siguientes vínculos:  
   
- [Recuperar datos de un modelo de minería de datos &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [Recuperar datos de un modelo de minería de datos &#40; DMX &#41; &#40; SSRS &#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
  [Interfaz de usuario del Diseñador de consultas DMX de Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [Tipo de conexión de Analysis Services para DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Tipo de conexión de Analysis Services para DMX &#40; SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  Sin embargo, no es necesario utilizar DMX como origen de datos. Los componentes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para minería de datos también permite guardar los resultados de una consulta de predicción en una base de datos relacional. Si tiene un flujo de trabajo establecido para actualizar los modelos con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], las predicciones de persistencia y otros resultados de consulta de minería de datos en SQL Server le permiten utilizar [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] para los informes, así como otras herramientas que no interactúen con DMX.  
   
@@ -207,7 +208,7 @@ ms.lasthandoff: 01/08/2018
 -   No todos los idiomas de texto completo admiten la indización semántica. Para consultar la lista de idiomas compatibles, vea [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Soluciones de modelos multidimensionales &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Soluciones de modelos tabulares &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+ [Soluciones de modelos multidimensionales &#40; SSAS &#41;](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [Soluciones de modelos tabulares &#40; SSAS Tabular &#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   
   

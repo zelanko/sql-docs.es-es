@@ -18,19 +18,20 @@ helpviewer_keywords:
 - filters [data mining]
 - filtering data [Analysis Services]
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 83c491408707f1a7107a3bb6d485418189d9eb1c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtros para modelos de minería (Analysis Services - Minería de datos)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Filtrado de modelos de bases de datos le ayuda a crear modelos de minería de datos que usan subconjuntos de datos en una estructura de minería de datos. El filtrado proporciona flexibilidad a la hora de diseñar orígenes de datos y estructuras de minería de datos propios, porque se puede crear una estructura de minería de datos única basándose en una vista del origen de datos completa. A continuación, puede crear filtros para usar solo una parte de esos datos para aprendizaje y probar una variedad de modelos, en lugar de generar una estructura diferente y un modelo relacionado para cada subconjunto de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+El filtrado de modelos basado en datos ayuda a crear modelos de minería de datos que usan subconjuntos de datos en una estructura de minería de datos. El filtrado proporciona flexibilidad a la hora de diseñar orígenes de datos y estructuras de minería de datos propios, porque se puede crear una estructura de minería de datos única basándose en una vista del origen de datos completa. A continuación, puede crear filtros para usar solo una parte de esos datos para aprendizaje y probar una variedad de modelos, en lugar de generar una estructura diferente y un modelo relacionado para cada subconjunto de datos.  
   
  Por ejemplo, define la vista del origen de datos en la tabla Customers y las tablas relacionadas. Luego define una estructura de minería de datos única que incluye todos los campos necesarios. Por último, crea un modelo que se filtra en un atributo de cliente determinado, como Región. A continuación, puede realizar fácilmente una copia de ese modelo y cambiar la condición de filtro para generar un nuevo modelo basado en una región diferente.  
   
@@ -128,6 +129,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Vea también  
  [Sintaxis y ejemplos del filtro de modelos &#40;Analysis Services: Minería de datos&#41;](../../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Prueba y validación &#40; minería de datos &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

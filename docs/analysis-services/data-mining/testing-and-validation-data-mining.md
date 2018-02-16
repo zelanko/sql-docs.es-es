@@ -30,19 +30,20 @@ helpviewer_keywords:
 - CRISP-DM
 - accuracy testing [data mining]
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: bf43af38fc18b67c37ec5409ccb90a1d8e798259
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="testing-and-validation-data-mining"></a>Prueba y validación (minería de datos)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La validación es el proceso de evaluar cómo los modelos de minería de datos se comportan con datos reales. Es importante que valide sus modelos de minería de datos entendiendo su calidad y sus características antes de implementarlos en un entorno de producción.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+La validación es el proceso de evaluar cuál sería el rendimiento de sus modelos de minería de datos con datos reales. Es importante que valide sus modelos de minería de datos entendiendo su calidad y sus características antes de implementarlos en un entorno de producción.  
   
  En esta sección se presentan algunos conceptos básicos relacionados con la calidad de los modelos y se describen las estrategias para la validación de modelos que se proporcionan en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obtener información general sobre cómo la validación del modelo se adapta a procesos de minería de datos de mayor tamaño, vea [Soluciones de minería de datos](../../analysis-services/data-mining/data-mining-solutions.md).  
   
@@ -91,14 +92,14 @@ ms.lasthandoff: 01/08/2018
   
 |Temas|Vínculos|  
 |------------|-----------|  
-|Obtenga información sobre cómo configurar un conjunto de datos de prueba mediante un asistente o mediante los comandos DMX|[Conjuntos de datos de entrenamiento y de prueba](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
-|Obtenga información sobre cómo probar la distribución y la representatividad de los datos de una estructura de minería de datos|[Validación cruzada &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|Obtenga información acerca de los tipos de gráfico de precisión proporcionados.|[Gráfico de mejora respecto al modelo predictivo &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de beneficios &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de dispersión &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|Aprenda a crear una matriz de clasificación, a veces denominada una matriz de confusión, para evaluar el número de verdaderos positivos, falsos positivos, verdaderos negativos y falsos negativos.|[Matriz de clasificación &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
+|Obtenga información sobre cómo configurar un conjunto de datos de prueba mediante un asistente o mediante los comandos DMX|[Conjuntos de datos de aprendizaje y prueba](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
+|Obtenga información sobre cómo probar la distribución y la representatividad de los datos de una estructura de minería de datos|[La validación cruzada &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|Obtenga información acerca de los tipos de gráfico de precisión proporcionados.|[Gráfico de elevación &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de beneficios &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de dispersión &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|Aprenda a crear una matriz de clasificación, a veces denominada una matriz de confusión, para evaluar el número de verdaderos positivos, falsos positivos, verdaderos negativos y falsos negativos.|[Matriz de clasificación &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Herramientas de minería de datos](../../analysis-services/data-mining/data-mining-tools.md)   
  [Soluciones de minería de datos](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Tareas y procedimientos de prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Pruebas y las tareas de validación y procedimientos &#40; minería de datos &#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

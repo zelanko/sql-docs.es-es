@@ -16,19 +16,20 @@ helpviewer_keywords:
 - relationships [Analysis Services], data source views
 - data source views [Analysis Services], relationships
 ms.assetid: a20d6dae-e769-4131-8a59-7ef56f174220
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: d1975eb94bc8ad2d69808279a5358b7a40180866
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Definir relaciones lógicas en una vista del origen de datos (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El Asistente para vistas de origen de datos y el Diseñador de vistas del origen de datos definen automáticamente las relaciones entre las tablas agregadas a una vista de origen de datos (DSV) en función de las relaciones de base de datos subyacente o el nombre que coincida con los criterios que especifique.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+El Asistente para vistas del origen de datos y el Diseñador de vistas del origen de datos definen automáticamente las relaciones entre las tablas agregadas a una vista del origen de datos (DSV), en función de las relaciones de la base de datos subyacente o de los criterios de coincidencia de nombres que se especifiquen.  
   
  En caso de que esté trabajando con datos de varios orígenes de datos, puede que necesite definir manualmente relaciones lógicas en la DSV para complementar las relaciones definidas automáticamente. Las relaciones son necesarias en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para identificar las tablas de hechos y dimensiones, para construir consultas para la recuperación de datos y metadatos de orígenes de datos subyacentes, y para usar las características avanzadas de Business Intelligence.  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 01/08/2018
   
 3.  Haga clic con el botón derecho en la relación que quiere modificar y, después, haga clic en **Editar relación**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Vistas del origen de datos en modelos multidimensionales](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

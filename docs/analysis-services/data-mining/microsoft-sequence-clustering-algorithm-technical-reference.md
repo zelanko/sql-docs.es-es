@@ -18,19 +18,20 @@ helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - CLUSTER_COUNT parameter
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e0a53d359debe447cc4e1cc94197516c75f53f8d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Referencia técnica del algoritmo de clústeres de secuencia de Microsoft
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]El algoritmo de clústeres de secuencia de Microsoft es un algoritmo híbrido que usa el análisis de cadenas de Markov para identificar secuencias ordenadas y combina los resultados de este análisis con técnicas para generar clústeres basados en las secuencias y otros atributos de agrupación en clústeres en el modelo. En este tema se describe la implementación del algoritmo y cómo personalizarlo, y se detallan los requisitos especiales para los modelos de agrupación en clústeres de secuencia.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+El algoritmo de clústeres de secuencia de Microsoft es un algoritmo híbrido que usa el análisis de cadenas de Markov para identificar secuencias ordenadas, y combina los resultados de este análisis con técnicas de agrupación en clústeres para generar clústeres basados en las secuencias y otros atributos del modelo. En este tema se describe la implementación del algoritmo y cómo personalizarlo, y se detallan los requisitos especiales para los modelos de agrupación en clústeres de secuencia.  
   
  Para obtener más información general sobre el algoritmo, incluyendo cómo examinar y consultar los modelos de agrupación en clústeres de secuencia, vea [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md).  
   
@@ -135,7 +136,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción  
  El algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se enumeran en la tabla siguiente. Para obtener más información sobre lo que significan los tipos de contenido cuando se usan en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|columna|Tipos de contenido|  
+|Columna|Tipos de contenido|  
 |------------|-------------------|  
 |Atributo de entrada|Continuous, Cyclical, Discrete, Discretized, Key, Key Sequence, Table y Ordered|  
 |Atributo de predicción|Continuous, Cyclical, Discrete, Discretized, Table y Ordered|  
@@ -149,8 +150,8 @@ ms.lasthandoff: 01/08/2018
 -   El algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite la obtención de detalles y el uso de modelos de minería de datos OLAP y de dimensiones de minería de datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Algoritmo de clústeres de secuencia de Microsoft](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [Ejemplos de consultas de modelo de clústeres de secuencia](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres de secuencia &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Contenido del modelo de minería de datos para modelos de agrupación en clústeres de secuencia &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

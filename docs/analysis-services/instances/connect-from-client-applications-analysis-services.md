@@ -16,19 +16,20 @@ f1_keywords:
 - sql13.swb.connecttoas.connectionproperties.f1
 - sql13.swb.connecttoas.login.f1
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 20302da167c1ba1d19fb1b65ab871d81f7170591
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Conectarse desde aplicaciones cliente (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Si está familiarizado con Analysis Services, use la información de este tema para conectarse a una instancia existente de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mediante herramientas y aplicaciones comunes. En este tema también explica cómo conectarse bajo distintas identidades de usuario para realizar pruebas.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Si no está familiarizado con Analysis Services, use la información de este tema para conectarse a una instancia existente de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mediante herramientas y aplicaciones comunes. En este tema también explica cómo conectarse bajo distintas identidades de usuario para realizar pruebas.  
   
 -   [Conectarse con SQL Server Management Studio (SSMS)](#bkmk_SSMS)  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Configurar Firewall de Windows para permitir el acceso a Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [Cómo autorizar el acceso a objetos y operaciones &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Autorización de acceso a objetos y operaciones &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> Conectarse con SQL Server Management Studio (SSMS)  
  Conéctese a Analysis Services en SSMS para administrar las instancias de servidor y las bases de datos de forma interactiva. También puede ejecutar consultas XMLA o MDX para realizar tareas administrativas o recuperar datos. A diferencia de otras herramientas y aplicaciones que solo cargan bases de datos cuando se envía una consulta, SSMS carga todas las bases de datos cuando se conecta al servidor, siempre y cuando tenga permiso para ver la base de datos. Esto significa que si tiene numerosas bases de datos tabulares en el servidor, todas ellas se cargan en la memoria del sistema cuando se conecta mediante SSMS.  
@@ -141,6 +142,6 @@ ms.lasthandoff: 01/08/2018
  [Conectar a Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Metodologías de autenticación admitidas por Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Suplantación &#40; SSAS Tabular &#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
- [Crear un origen de datos &#40;SSAS multidimensional&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [Crear un origen de datos &#40; SSAS Multidimensional &#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

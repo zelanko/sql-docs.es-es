@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5da8e29-7ffd-44e7-bf61-344fa5bea8ce
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 888a9c7c06a43f1fcee9306a7edeaed4b484e24b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>Conectar la aplicación de servicio de Power Pivot para la aplicación Web de SharePoint en la entidad emisora de certificados
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aplicación de servicio se puede utilizar cualquier número de aplicaciones Web de SharePoint en la granja de servidores. Para hacer que una aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] esté disponible, agréguela a una lista de asociaciones de servicio.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Una aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] puede ser utilizada por cualquier número de aplicaciones web de SharePoint de la granja de servidores. Para hacer que una aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] esté disponible, agréguela a una lista de asociaciones de servicio.  
   
 > [!IMPORTANT]  
 >  Debe haber una aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en el grupo predeterminado para asegurarse de que el Panel de administración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] funciona correctamente. No agregue más de una aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] al grupo predeterminado. Agregar varias entradas del mismo tipo de aplicación de servicio no se admite y podría producir errores. Si va a crear aplicaciones de servicio adicionales, agréguelas a listas personalizadas.  

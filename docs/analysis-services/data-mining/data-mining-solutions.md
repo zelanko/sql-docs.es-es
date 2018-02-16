@@ -15,19 +15,20 @@ helpviewer_keywords:
 - data mining [Analysis Services], about data mining
 - data mining [Analysis Services], development
 ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 595282e28a55171ed5a528d28f37500a21f71c0d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-solutions"></a>Soluciones de minería de datos
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una solución de minería de datos es un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solución que contiene uno o varios proyectos de minería de datos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Una solución de minería de datos es una solución de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contiene uno o más proyectos de minería de datos.  
   
  En los temas de esta sección se ofrece información acerca del diseño y la implementación de una solución de minería de datos integrada mediante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obtener información general acerca del proceso de diseño de minería de datos y de las herramientas relacionadas, vea [Data Mining Concepts](../../analysis-services/data-mining/data-mining-concepts.md).  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 01/08/2018
   
  [Procesar objetos de minería de datos](../../analysis-services/data-mining/processing-data-mining-objects.md)  
   
- [Proyectos relacionados en las soluciones de minería de datos](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
+ [Proyectos relacionados en las soluciones de minería de datos de](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
   
  [Implementación de soluciones de minería de datos](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md)  
   
@@ -84,13 +85,13 @@ ms.lasthandoff: 01/08/2018
   
 |Tareas|Temas|  
 |-----------|------------|  
-|Pruebe los modelos que cree, valide la calidad de los datos de entrenamiento y cree gráficos que representen la precisión de los modelos de minería de datos.|[Prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
+|Pruebe los modelos que cree, valide la calidad de los datos de entrenamiento y cree gráficos que representen la precisión de los modelos de minería de datos.|[Prueba y validación &#40; minería de datos &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |Entrene el modelo rellenando la estructura y los modelos relacionados con datos. Actualice y amplía los modelos con nuevos datos.|[Procesar objetos de minería de datos](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
 |Personalice un modelo de minería de datos aplicando filtros a los datos de entrenamiento, eligiendo un algoritmo diferente o estableciendo parámetros avanzados para el algoritmo.|[Personalizar la estructura y los modelos de minería de datos](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
-|Personalice un modelo de minería de datos aplicando filtros a los datos usados en el entrenamiento del modelo.|[Agregar modelos de minería de datos a una estructura &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|Personalice un modelo de minería de datos aplicando filtros a los datos usados en el entrenamiento del modelo.|[Agregar modelos de minería de datos a una estructura &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Actualice y administre las soluciones de minería de datos.|Vínculo TBD|  
   
-## <a name="see-also"></a>Ver también  
- [Tutoriales de minería de datos &#40;Analysis Services&#41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
+## <a name="see-also"></a>Vea también  
+ [Tutoriales de minería de datos &#40; Analysis Services &#41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
   
   

@@ -20,23 +20,24 @@ helpviewer_keywords:
 - multiple data source views
 - SSAS, data source views
 ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 9e443b461a01c7a8e2ba04e7d759984062f63d6c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Vistas del origen de datos en modelos multidimensionales
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Una vista del origen de datos (DSV) es una abstracción de un origen de datos relacional que se convierte en la base de los cubos y dimensiones que haya creado en un proyecto multidimensional. La finalidad de una DSV es proporcionar el control sobre las estructuras de datos utilizadas en el proyecto, y trabajar independientemente de los orígenes de datos subyacentes (por ejemplo, la capacidad de cambiar de nombre o concatenar columnas sin modificar directamente el origen de datos original).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Una vista del origen de datos (DSV) es una abstracción de un origen de datos relacional que se convierte en la base de los cubos y dimensiones creadas en un proyecto multidimensional. La finalidad de una DSV es proporcionar el control sobre las estructuras de datos utilizadas en el proyecto, y trabajar independientemente de los orígenes de datos subyacentes (por ejemplo, la capacidad de cambiar de nombre o concatenar columnas sin modificar directamente el origen de datos original).  
   
  Puede crear varias vistas del origen de datos en un proyecto o una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en uno o varios orígenes de datos y crear cada una de ellas de forma que cumpla los requisitos de una solución distinta.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tareas relacionadas  
  [Definir una vista del origen de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
   
  [Agregar o quitar tablas o vistas en una vista del origen de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  

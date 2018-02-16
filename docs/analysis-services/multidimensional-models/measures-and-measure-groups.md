@@ -22,27 +22,28 @@ helpviewer_keywords:
 - aggregations [Analysis Services], measures
 - fact tables [Analysis Services]
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: c8775c33a50d25379f1de53f00b7e66830cbf971
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="measures-and-measure-groups"></a>Medidas y grupos de medida
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un cubo incluye *medidas* en *grupos de medida*, lógica de negocios, además de una colección de dimensiones que proporcionan contexto para evaluar los datos numéricos que proporciona una medida. Las medidas y los grupos de medida son componentes esenciales de un cubo. Un cubo no puede existir sin, al menos, uno de cada uno de estos componentes.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Un cubo incluye *medidas* en *grupos de medida*, lógica de negocios y una colección de dimensiones que proporcionan contexto para evaluar los datos numéricos que proporciona una medida. Las medidas y los grupos de medida son componentes esenciales de un cubo. Un cubo no puede existir sin, al menos, uno de cada uno de estos componentes.  
   
  En este tema se describen [Measures](#bkmk_measure) y [Measure Groups](#bkmk_mg). También contiene la siguiente tabla, con vínculos a procedimientos para crear y configurar grupos de medida y medidas.  
   
-|**Vínculo**|**Descripción**|  
+|**Vínculo**|**Description**|  
 |--------------|---------------------|  
 |[Crear medidas y grupos de medida en modelos multidimensionales](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|Elija uno de varios enfoques para crear medidas y grupos de medida.|  
 |[Configurar propiedades de medidas](../../analysis-services/multidimensional-models/configure-measure-properties.md)|Si usa el Asistente para cubos para iniciar el cubo, puede que deba cambiar el método de agregación, aplicar un formato de datos, establecer la visibilidad de la medida en las aplicaciones cliente o, posiblemente, agregar una expresión de medida para manipular los datos antes de que se agreguen los valores.|  
-|[Configurar las propiedades de los grupos de medida](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)|En un modelo multidimensional, un grupo de medida equivale a una tabla de hechos en el almacén de datos de origen. Las propiedades de un grupo de medida le permiten especificar comportamientos de almacenamiento en caché, el almacenamiento y las directivas de procesamiento que funcionan en conjunto en el nivel del grupo de medida. La configuración de particiones está determinada en parte por las propiedades establecidas en los objetos de grupos de medida.|  
+|[Configurar las propiedades de grupo de medida](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)|En un modelo multidimensional, un grupo de medida equivale a una tabla de hechos en el almacén de datos de origen. Las propiedades de un grupo de medida le permiten especificar comportamientos de almacenamiento en caché, el almacenamiento y las directivas de procesamiento que funcionan en conjunto en el nivel del grupo de medida. La configuración de particiones está determinada en parte por las propiedades establecidas en los objetos de grupos de medida.|  
 |[Usar funciones de agregado](../../analysis-services/multidimensional-models/use-aggregate-functions.md)|Asegúrese de comprender los métodos de agregación que se pueden asignar a una medida.|  
 |[Definir el comportamiento de suma parcial](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)|El comportamiento de suma parcial corresponde a las agregaciones que son válidas para algunas dimensiones, pero no para otras. Un ejemplo común es un saldo de cuenta bancaria. Quizás quiera agregar saldos por cliente y región, pero no por tiempo. Por ejemplo, es poco probable que quiera agregar saldos de la misma cuenta en días consecutivos. Para definir el comportamiento de suma parcial, use el Asistente para agregar inteligencia empresarial.|  
 |[Grupos de medida vinculados](../../analysis-services/multidimensional-models/linked-measure-groups.md)|Reasigne un grupo de medida existente de otros cubos a la misma base de datos o a diferentes bases de datos de Analysis Services.|  

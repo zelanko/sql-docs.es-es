@@ -16,19 +16,20 @@ helpviewer_keywords:
 - partitions [Analysis Services], local
 - partitions [Analysis Services], creating
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 94cf5d3bdf0feadadf2180c6eb03f9898a4b6966
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Crear y administrar una partición local (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Puede crear particiones adicionales para un grupo de medida mejorar el rendimiento del procesamiento. Tener varias particiones permite asignar datos de hechos en un número correspondiente de archivos de datos físicos tanto en servidores locales como en servidores remotos. En Analysis Services, las particiones se pueden procesar independientemente y en paralelo, lo que permite tener más control sobre las cargas de trabajo de procesamiento del servidor.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Puede crear particiones adicionales para un grupo de medida con el fin de mejorar el rendimiento de procesamiento. Tener varias particiones permite asignar datos de hechos en un número correspondiente de archivos de datos físicos tanto en servidores locales como en servidores remotos. En Analysis Services, las particiones se pueden procesar independientemente y en paralelo, lo que permite tener más control sobre las cargas de trabajo de procesamiento del servidor.  
   
  Las particiones se pueden crear en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] durante el diseño del modelo o una vez implementada la solución mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o XMLA. Se recomienda elegir un enfoque solamente. Si alterna entre las herramientas, puede que los cambios realizados en una base de datos implementada en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] se sobrescriban al volver a implementar la solución posteriormente desde [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
@@ -128,8 +129,8 @@ ms.lasthandoff: 01/08/2018
  Como último paso, normalmente deseará quitar la partición predeterminada basada en la propia tabla (si todavía existe); de lo contrario, las particiones basadas en consultas se superpondrán a la consulta basada en la tabla completa.  
   
 ## <a name="see-also"></a>Vea también  
- [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Particiones &#40; Analysis Services - datos multidimensionales &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Particiones remotas](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [Mezclar particiones en Analysis Services &#40;SSAS - Multidimensional&#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Mezclar particiones en Analysis Services &#40; SSAS - Multidimensional &#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

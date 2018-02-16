@@ -15,19 +15,20 @@ helpviewer_keywords:
 - attributes [Analysis Services], member properties
 - member properties [Analysis Services], creating
 ms.assetid: 137b2f40-5dfb-4141-9110-70f961f259cb
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: e521c6eb3bbcb1c40dde10c5767ea024e6eaa3c1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-relationships---create-modify-or-delete-relationship"></a>Atributo relaciones - crear, modificar o Eliminar relación
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Puede crear, modificar o eliminar una relación de atributo entre los atributos de una dimensión utilizando la **relaciones de atributo** pestaña del Diseñador de dimensiones en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Puede crear, modificar o eliminar una relación de atributo entre los atributos de una dimensión utilizando la pestaña **Relación de los atributos** en el Diseñador de dimensiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-create-an-attribute-relationship"></a>Para crear una relación de atributo  
   
@@ -66,6 +67,6 @@ ms.lasthandoff: 01/08/2018
 3.  En el cuadro de diálogo **Eliminar objetos** , haga clic en **Aceptar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Relación de los atributos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
+ [Relaciones de atributo](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

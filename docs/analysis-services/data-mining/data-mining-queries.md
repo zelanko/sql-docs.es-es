@@ -18,19 +18,20 @@ helpviewer_keywords:
 - Prediction Query Builder
 - mining models [Analysis Services], querying
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
 ms.openlocfilehash: 260a6d48b6da55f65098790df73b01a10e35e126
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-queries"></a>Consultas de minería de datos
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Las consultas de minería de datos son útiles para muchos propósitos. Puede hacer lo siguiente:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Las consultas de minería de datos son útiles para muchos propósitos. Puede hacer lo siguiente:  
   
 -   Aplicar el modelo a nuevos datos, para realizar una o varias predicciones. Proporcionar valores de entrada como parámetros o en un lote.  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_Understand"></a> Descripción de las consultas de minería de datos  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite los siguientes tipos de consultas:  
   
--   [Consultas de predicción &#40;minería de datos&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+-   [Consultas de predicción &#40; minería de datos &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
      Consultas que realizan deducciones basadas en los patrones del modelo y partiendo de los datos de entrada.  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 01/08/2018
   
      Consultas que devuelven metadatos, estadísticas y otra información sobre el propio modelo.  
   
--   [Consultas de obtención de detalles &#40;minería de datos&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+-   [Las consultas de obtención de detalles &#40; minería de datos &#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
      Consultas que pueden recuperar los datos de casos subyacentes del modelo o incluso los datos de la estructura que no se utilizó en el modelo.  
   
@@ -115,9 +116,9 @@ ms.lasthandoff: 01/08/2018
     |||  
     |-|-|  
     |[Ejemplos de consultas del modelo de asociación](../../analysis-services/data-mining/association-model-query-examples.md)|[Algoritmo Bayes naive de Microsoft](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)|  
-    |[Ejemplos de consultas de modelos de agrupación en clústeres](../../analysis-services/data-mining/clustering-model-query-examples.md)|[Ejemplos de consultas de modelos de red neuronal](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
+    |[Ejemplos de consultas de modelos de agrupación en clústeres](../../analysis-services/data-mining/clustering-model-query-examples.md)|[Ejemplos de consultas de modelo de red neuronal](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
     |[Ejemplos de consultas de modelos de árboles de decisión](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|[Ejemplos de consultas de modelos de clústeres de secuencia](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
-    |[Ejemplos de consultas de modelos de regresión lineal](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|[Ejemplos de consultas de modelos de serie temporal](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
+    |[Ejemplos de consultas de modelos de regresión lineal](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|[Ejemplos de consultas de modelo de serie temporal](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
     |[Ejemplos de consultas de modelos de regresión logística](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)||  
   
      También puede llamar a funciones VBA o crear sus propias funciones. Para más información, vea [Funciones &#40;DMX&#41;](../../dmx/functions-dmx.md).  
@@ -148,17 +149,17 @@ ms.lasthandoff: 01/08/2018
 ## <a name="in-this-section"></a>En esta sección  
  Los temas de esta sección presentan cada tipo de consulta de minería de datos con más detalle, y proporcionan vínculos a ejemplos detallados de cómo crear consultas en los modelos de minería de datos.  
   
- [Consultas de predicción &#40;minería de datos&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [Consultas de predicción &#40; minería de datos &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
  [Consultas de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)  
   
  [Consultas de obtención de detalles &#40;minería de datos&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
- [Consultas de definición de datos &#40;minería de datos&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [Consultas de definición de datos &#40; minería de datos &#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
  [Herramientas de consulta de minería de datos](../../analysis-services/data-mining/data-mining-query-tools.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tareas relacionadas  
  Use estos vínculos para aprender a crear y a trabajar con consultas de minería de datos.  
   
 |Tareas|Vínculos|  
@@ -167,13 +168,13 @@ ms.lasthandoff: 01/08/2018
 |Usar las herramientas de consulta de minería de datos en SQL Server Management Studio y en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[Crear una consulta DMX en SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [Crear una consulta de predicción con el Generador de consultas de predicción](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [Aplicar funciones de predicción a un modelo](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)<br /><br /> [Modificar manualmente una consulta de predicción](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)|  
 |Trabajar con los datos externos usados en consultas de predicción|[Elegir y asignar datos de entrada para una consulta de predicción](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [Elegir y asignar datos de entrada para una consulta de predicción](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)|  
 |Trabajar con los resultados de las consultas|[Ver y guardar los resultados de una consulta de predicción](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)|  
-|Usar las plantillas de consultas DMX y XMLA proporcionadas en Management Studio|[Crear una consulta de predicción singleton desde una plantilla](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [Crear una consulta de minería de datos utilizando XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [Usar las plantillas de Analysis Services en SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
+|Usar las plantillas de consultas DMX y XMLA proporcionadas en Management Studio|[Crear una consulta de predicción Singleton desde una plantilla](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [Crear una consulta de minería de datos utilizando XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [Usar las plantillas de Analysis Services en SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |Obtener más información acerca de las consultas de contenido y ver ejemplos|[Crear una consulta de contenido en un modelo de minería de datos](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)<br /><br /> [Consultar los parámetros usados para crear un modelo de minería de datos](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [Consultas de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)|  
-|Establecer opciones de consulta y solucionar problemas relacionados con los permisos y otros problemas de las consultas|[Cambiar el valor del tiempo de espera para las consultas de minería de datos](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)|  
+|Establecer opciones de consulta y solucionar problemas relacionados con los permisos y otros problemas de las consultas|[Cambie el valor de tiempo de espera para las consultas de minería de datos](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)|  
 |Usar los componentes de minería de datos en Integration Services|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)  
   
   

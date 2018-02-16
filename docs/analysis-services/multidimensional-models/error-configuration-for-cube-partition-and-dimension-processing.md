@@ -22,13 +22,14 @@ ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 9dcbefced6fd34dd5fa69537733d7820b0130f4d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>Configuración de errores de procesamiento de dimensiones, particiones y cubos
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Propiedades de configuración de error objetos de cubo, partición o dimensión determinan cómo responde el servidor cuando se produzcan errores de integridad de datos durante el procesamiento. Claves duplicadas, claves que faltan y valores NULL en una columna de clave suelen desencadenar esos errores, y mientras el registro que produce el error no se agregue a la base de datos, puede establecer las propiedades que determinan qué ocurre después. De forma predeterminada, el procesamiento se detiene. Sin embargo, durante el desarrollo de un cubo, puede ser conveniente que el procesamiento continúe cuando se produzcan errores para que pueda probar los comportamientos del cubo con datos importados, aunque sean incompletos.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Las propiedades de configuración de errores de objetos de cubo, partición o dimensión determinan cómo responde el servidor cuando se producen errores de integridad de datos durante el procesamiento. Claves duplicadas, claves que faltan y valores NULL en una columna de clave suelen desencadenar esos errores, y mientras el registro que produce el error no se agregue a la base de datos, puede establecer las propiedades que determinan qué ocurre después. De forma predeterminada, el procesamiento se detiene. Sin embargo, durante el desarrollo de un cubo, puede ser conveniente que el procesamiento continúe cuando se produzcan errores para que pueda probar los comportamientos del cubo con datos importados, aunque sean incompletos.  
   
  En este tema se incluyen las secciones siguientes:  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 01/08/2018
   
  **Respuesta del servidor a errores concretos**  
   
-|Propiedad|Valor predeterminado|Otros valores|  
+|Propiedad|Valor de DB-Library|Otros valores|  
 |--------------|-------------|------------------|  
 |**CalculationError**<br /><br /> Se produce al inicializar la configuración de errores.|**IgnoreError** no registra ni cuenta el error; el procesamiento continúa siempre y cuando el recuento de errores esté por debajo del límite máximo.|**ReportAndContinue** registra y cuenta el error.<br /><br /> **ReportAndStop** notifica el error y detiene el procesamiento inmediatamente, cualquiera que sea el límite de errores.|  
 |**KeyNotFound**<br /><br /> Se produce cuando una clave externa de una tabla de hechos no tiene una clave principal coincidente en una tabla de dimensiones relacionada (por ejemplo, una tabla de hechos Ventas tiene un registro con un identificador de producto que no existe en la tabla de dimensión Producto). Este error puede producirse durante el procesamiento de particiones o durante el procesamiento de dimensiones de copo de nieve.|**ReportAndContinue** registra y cuenta el error.|**ReportAndStop** notifica el error y detiene el procesamiento inmediatamente, cualquiera que sea el límite de errores.<br /><br /> **IgnoreError** no registra ni cuenta el error; el procesamiento continúa siempre y cuando el recuento de errores esté por debajo del límite máximo. Los registros que desencadenan este error se convierten al miembro desconocido de forma predeterminada, pero puede cambiar la propiedad **KeyErrorAction** para que se descarten en su lugar.|  
@@ -115,7 +116,7 @@ ms.lasthandoff: 01/08/2018
   
 2.  En Propiedades, haga clic en **Configuración de errores**.  
   
-#### <a name="sql-server-data-tools"></a>Herramientas de datos de SQL Server  
+#### <a name="sql-server-data-tools"></a>SQL Server Data Tools  
   
 1.  En el Explorador de soluciones, haga doble clic en una dimensión o en un cubo. Aparece**ErrorConfiguration** en Propiedades, en el panel inferior.  
   

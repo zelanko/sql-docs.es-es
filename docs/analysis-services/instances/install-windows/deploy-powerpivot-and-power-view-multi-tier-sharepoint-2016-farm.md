@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e36a632-0750-4247-92b6-1fe38c7a4ce2
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: da59f6eddb113c8af70e3ddcf3bcb3f35d6a6123
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="deploy-powerpivot-and-power-view---multi-tier-sharepoint-2016-farm"></a>Implementar PowerPivot y Power View - granja de SharePoint 2016 de niveles múltiples
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**Resumen:** resumen: este documento ofrece a los administradores de SharePoint y arquitectos incluye instrucciones detalladas para implementar y configurar un entorno de demostración de Microsoft BI en una granja de SharePoint con varios servidores se basa en las versiones preliminares de SharePoint Server 2016, Office Online Server y la pila de SQL Server 2016 BI para SharePoint 2016. Tras una breve presentación de los cambios importantes en la arquitectura y las correspondientes dependencias del sistema, se describen los requisitos de software y de configuración y el camino de implementación recomendado para habilitar y comprobar las funcionalidades de BI en tres fases principales. En este documento también se analizan los problemas conocidos que existen en las versiones SharePoint Server 2016 Beta 2, Office Online Server Preview y SQL Server 2016 CTP 3.1 y se sugieren las soluciones más adecuadas. Estas soluciones ya no será necesarias en las versiones finales de los productos. Cuando vaya a implementar versiones de RTM, busque una versión actualizada de este documento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  **Resumen:** este documento va dirigido a administradores y arquitectos de SharePoint, e incluye instrucciones detalladas para la implementación y la configuración de un entorno de demostración de Microsoft BI en una granja de SharePoint con varios servidores. Esta información se basa en las versiones preliminares de SharePoint Server 2016, Office Online Server y la pila SQL Server 2016 BI para SharePoint 2016. Tras una breve presentación de los cambios importantes en la arquitectura y las correspondientes dependencias del sistema, se describen los requisitos de software y de configuración y el camino de implementación recomendado para habilitar y comprobar las funcionalidades de BI en tres fases principales. En este documento también se analizan los problemas conocidos que existen en las versiones SharePoint Server 2016 Beta 2, Office Online Server Preview y SQL Server 2016 CTP 3.1 y se sugieren las soluciones más adecuadas. Estas soluciones ya no será necesarias en las versiones finales de los productos. Cuando vaya a implementar versiones de RTM, busque una versión actualizada de este documento.  
   
  **Escritor:**Kay Unkroth, Jason Haak  
   

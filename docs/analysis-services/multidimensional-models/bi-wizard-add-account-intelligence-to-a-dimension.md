@@ -16,19 +16,20 @@ helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services], account intelligence
 - account intelligence [Analysis Services]
 ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: 970daabf89244a93719e273b4bff7f322cb23fe6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>Asistente de BI - agregar inteligencia de cuentas a una dimensión
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Agregue la mejora de inteligencia de cuentas a un cubo o dimensión para asignar las clasificaciones de cuenta estándar, como ingresos y gastos, a los miembros de un atributo de cuenta. Esta mejora también identifica los tipos de cuenta (como Asset y Liability) y asigna la agregación adecuada a cada tipo de cuenta. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] puede usar las clasificaciones para agregar cuentas a lo largo del tiempo.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Agregue la mejora de inteligencia de cuentas a un cubo o dimensión para asignar las clasificaciones de cuenta estándar, como ingresos y gastos, a los miembros de un atributo de cuenta. Esta mejora también identifica los tipos de cuenta (como Asset y Liability) y asigna la agregación adecuada a cada tipo de cuenta. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] puede usar las clasificaciones para agregar cuentas con el tiempo.  
   
 > [!NOTE]  
 >  La inteligencia de cuentas solo está disponible en dimensiones basadas en los orígenes de datos existentes. En las dimensiones que se crearon sin utilizar un origen de datos, debe ejecutar el Asistente para generar esquemas para crear una vista del origen de datos antes de agregar la inteligencia de cuentas.  

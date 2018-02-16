@@ -18,19 +18,20 @@ helpviewer_keywords:
 - Data Mining Designer
 - properties [data mining]
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
 ms.openlocfilehash: fcc84bc6effb3e4a831ce58b81fcbe9e7eda3437
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-properties"></a>Propiedades del modelo de minería de datos
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Los modelos de minería de datos tienen los siguientes tipos de propiedades:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Los modelos de minería de datos tienen las siguientes clases de propiedades:  
   
 -   Las propiedades que se heredan de la estructura de minería de datos que define el tipo de datos y el tipo de contenido de los datos que usa el modelo;  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 01/08/2018
 |--------------|-----------------|  
 |**Algoritmo**|Establece el tipo de algoritmo para el modelo de minería de datos.|  
 |**AlgorithmParameters**|Establece los valores de los parámetros de algoritmo disponibles para cada tipo de algoritmo.|  
-|**Filter**|Establece un filtro que se aplica a los datos que se utilizan para el aprendizaje y prueba del modelo de minería de datos. La definición del filtro está almacenada con el modelo y se utiliza opcionalmente al crear consultas de predicción o al probar la exactitud del modelo.<br /><br /> El filtro de modelos no es opcional en el aprendizaje del modelo.|  
+|**Filtro**|Establece un filtro que se aplica a los datos que se utilizan para el aprendizaje y prueba del modelo de minería de datos. La definición del filtro está almacenada con el modelo y se utiliza opcionalmente al crear consultas de predicción o al probar la exactitud del modelo.<br /><br /> El filtro de modelos no es opcional en el aprendizaje del modelo.|  
 |**Nombre**|Establece el nombre del modelo de minería de datos.|  
 |**AllowDrillThrough**|Especifica si se habilita la obtención de detalles en el modelo de minería de datos.|  
   
@@ -58,19 +59,19 @@ ms.lasthandoff: 01/08/2018
   
 |Propiedad|Description|  
 |--------------|-----------------|  
-|**Descripción**|Describe el propósito de la columna de minería.|  
+|**Description**|Describe el propósito de la columna de minería.|  
 |**Nombre**|Establece el nombre de la columna del modelo de minería de datos. Puede escribir un nuevo nombre que sirva de alias para la columna del modelo de minería de datos.|  
 |**ModelingFlags**|Configura las marcas específicas de algoritmo de la columna.|  
 |**SourceColumnID**|Indica el nombre de la columna de estructura de minería de datos en la que se basa la columna de modelo.<br /><br /> Esta propiedad es de solo lectura.|  
-|**Usage**|Establece la forma en que el modelo de minería de datos va a utilizar la columna.|  
+|**Uso**|Establece la forma en que el modelo de minería de datos va a utilizar la columna.|  
   
 ## <a name="see-also"></a>Vea también  
  [Columnas del modelo de minería de datos](../../analysis-services/data-mining/mining-model-columns.md)   
- [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Tareas y procedimientos de los modelos de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Estructuras de minería de datos &#40; Analysis Services: minería de datos &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Tareas y tareas de modelo de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Cambiar las propiedades de un modelo de minería de datos](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)   
  [Herramientas de minería de datos](../../analysis-services/data-mining/data-mining-tools.md)   
  [Crear una estructura de minería de datos relacional](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
- [Crear un alias para una columna de modelo](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
+ [Crear un Alias para una columna de modelo](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
   
   

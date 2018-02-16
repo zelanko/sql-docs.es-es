@@ -1,4 +1,4 @@
----
+﻿---
 title: "Notas de la versión de SQL Server 2017 en Linux | Documentos de Microsoft"
 description: "Este tema contiene las notas de la versión y características admitidas en SQL Server 2017 ejecutando en Linux. Notas de la versión se incluyen con la versión más reciente y varias versiones anteriores."
 author: rothja
@@ -23,7 +23,7 @@ ms.lasthandoff: 02/09/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de la versión de SQL Server 2017 en Linux
 
-Las siguientes notas se aplican a SQL Server 2017 ejecutando en Linux. El siguiente tema se divide en secciones para cada versión. La versión de GA tiene detallada compatibilidad y listados de problemas conocidos. Cada versión de la actualización acumulativa (CU) tiene un vínculo a un tema de compatibilidad que describe los cambios CU, así como vínculos para el paquete de descarga de Linux.
+Las siguientes notas de versión se aplican a SQL Server 2017 para Linux. Este artículo está dividido en secciones para cada versión. La versión de disponibilidad general (GA) incluye la compatibilidad detallada y los problemas conocidos. Cada versión de actualización acumulativa (CU) tiene un vínculo a un tema de soporte técnico en el que se describen los cambios en la CU, así como vínculos a las descargas de paquetes de Linux.
 
 ## <a name="supported-platforms"></a>Plataformas compatibles
 
@@ -111,7 +111,7 @@ Para las instalaciones de paquete manual o sin conexión, puede descargar los pa
 
 ## <a id="GA"></a>GA (octubre de 2017)
 
-Se trata de la versión de disponibilidad General (GA) de SQL Server 2017. La versión del motor de SQL Server para esta versión es 14.0.1000.169.
+Se trata de la versión de disponibilidad general (GA) de SQL Server 2017. La versión del motor de SQL Server para esta versión es 14.0.1000.169.
 
 ### <a name="package-details"></a>Detalles del paquete
 

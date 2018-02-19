@@ -1,25 +1,20 @@
 ---
 title: 'Actualizados: documentos de PowerShell | Microsoft Docs'
 description: "Muestra fragmentos de contenido actualizado de documentación modificada recientemente de PowerShell."
-services: na
-documentationcenter: 
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: stevestein
-ms.service: na
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.workload: powershell
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 12/02/2017
 ms.author: genemi
-ms.openlocfilehash: 94c3d09494907f4b09f8ca710e3f84f565a98998
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: powershell
+ms.date: 02/03/2018
+ms.openlocfilehash: 4c14ff7713b6ca4138407cd105bb010e004e781c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-and-recently-updated-powershell-docs"></a>Nuevos y actualizados recientemente: documentos de PowerShell
 
@@ -33,7 +28,7 @@ Se informa de las actualizaciones recientes del siguiente intervalo de fechas y 
 
 
 
-- *Intervalo de fechas de las actualizaciones:* &nbsp; **28-09-2017** &nbsp; a &nbsp; **02-12-2017**
+- *Intervalo de fechas de las actualizaciones:* &nbsp; del **03-12-2017** &nbsp; al &nbsp; **03-02-2018**
 - *Área temática:* &nbsp; **PowerShell**.
 
 
@@ -46,7 +41,21 @@ Se informa de las actualizaciones recientes del siguiente intervalo de fechas y 
 Los siguientes vínculos llevan a nuevos artículos que se han agregado recientemente.
 
 
-***En este momento no hay ningún artículo nuevo en la lista.***
+1. [Instalación de un módulo de SQL Server PowerShell](download-sql-server-ps-module.md)
+2. [Codificar y descodificar identificadores de SQL Server](encode-and-decode-sql-server-identifiers.md)
+3. [Identificadores de SQL Server de escape](escape-sql-server-identifiers.md)
+4. [Cargar ensamblados SMO en Windows PowerShell](load-the-smo-assemblies-in-windows-powershell.md)
+5. [Administrar la autenticación en PowerShell del motor de base de datos](manage-authentication-in-database-engine-powershell.md)
+6. [Administrar la finalización mediante tabulador (SQL Server PowerShell)](manage-tab-completion-sql-server-powershell.md)
+7. [Navegar por las rutas de acceso de SQL Server PowerShell](navigate-sql-server-powershell-paths.md)
+8. [Ejecutar Windows PowerShell desde SQL Server Management Studio](run-windows-powershell-from-sql-server-management-studio.md)
+9. [Ejecutar los pasos Windows PowerShell del Agente SQL Server](run-windows-powershell-steps-in-sql-server-agent.md)
+10. [Especificar instancias del proveedor de SQL Server PowerShell](specify-instances-in-the-sql-server-powershell-provider.md)
+11. [Identificadores de SQL Server en PowerShell](sql-server-identifiers-in-powershell.md)
+12. [SQL Server PowerShell](sql-server-powershell.md)
+13. [Términos de licencia de PowerShell SQL Server](sql-server-powershell-license-terms.md)
+14. [Proveedor de SQL Server PowerShell Provider](sql-server-powershell-provider.md)
+15. [Trabajar con rutas acceso de SQL Server PowerShell](work-with-sql-server-powershell-paths.md)
 
 
 
@@ -85,45 +94,44 @@ En esta lista compacta se proporcionan vínculos a todos los artículos actualiz
 
 
 
-## <a name="similar-articles"></a>Artículos similares
-
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+## <a name="similar-articles-about-new-or-updated-articles"></a>Artículos similares sobre artículos nuevos o actualizados
 
 En esta sección se enumeran artículos muy similares a los artículos actualizados recientemente en otras áreas temáticas, dentro de nuestro repositorio público de GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Áreas temáticas con artículos nuevos o actualizados recientemente
 
-- [Nuevos + Actualizados (3+14): documentos de **Análisis avanzado para SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Nuevos + Actualizados (1+0): documentos de **Analysis Services para SQL**](../analysis-services/new-updated-analysis-services.md)
-- [Nuevos + Actualizados (87+0): documentos de **Analytics Platform System para SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Nuevos + Actualizados (5+4): documentos de **Conexión a SQL**](../connect/new-updated-connect.md)
-- [Nuevos + Actualizados (0+1): documentos de **Motor de base de datos de SQL**](../database-engine/new-updated-database-engine.md)
-- [Nuevos + Actualizados (2+2): documentos de **Integration Services para SQL**](../integration-services/new-updated-integration-services.md)
-- [Nuevos + Actualizados (10+9): documentos de **Linux para SQL**](../linux/new-updated-linux.md)
-- [Nuevos + Actualizados (2+4): documentos de **Bases de datos relacionales para SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Nuevos + Actualizados (4+2): documentos de **Reporting Services para SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Nuevos + Actualizados (0+1): documentos de **Ejemplos para SQL**](../sample/new-updated-sample.md)
-- [Nuevos + Actualizados (21+0): documentos de **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Nuevos + Actualizados (5+1): documentos de **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Nuevos + Actualizados (0+1): documentos de **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Nuevos + Actualizados (1+0): documentos de **SQL Server Migration Assistant (SSMA)**](../ssma/new-updated-ssma.md)
-- [Nuevos + Actualizados (0+1): documentos de **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Nuevos + Actualizados (0+2): documentos de **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Áreas temáticas *con* artículos nuevos o actualizados recientemente
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Áreas temáticas sin artículos nuevos ni actualizados recientemente
+
+- [Nuevos + actualizados (1+3): &nbsp;documentos de **Análisis avanzado para SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nuevos + actualizados (0+1): &nbsp;documentos de **Analytics Platform System para SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Nuevos + actualizados (0+1): &nbsp;documentos de **Conexión a SQL**](../connect/new-updated-connect.md)
+- [Nuevos + actualizados (0+1): &nbsp;documentos del **Motor de base de datos de SQL**](../database-engine/new-updated-database-engine.md)
+- [Nuevos + actualizados (12+1): **documentos de** Integration Services para SQL](../integration-services/new-updated-integration-services.md)
+- [Nuevos + actualizados (6+2): &nbsp;documentos de **Linux para SQL**](../linux/new-updated-linux.md)
+- [Nuevos + actualizados (15+0): **documentos de** PowerShell para SQL](../powershell/new-updated-powershell.md)
+- [Nuevos + actualizados (2+9): &nbsp;documentos de **Bases de datos relacionales para SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Nuevos + actualizados (1+0): &nbsp;documentos de **Reporting Services para SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Nuevos + actualizados (1+1): &nbsp;documentos de **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Nuevos + actualizados (1+1): &nbsp;documentos de **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Nuevos + actualizados (0+1): &nbsp;documentos de **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Nuevos + actualizados (1+2): &nbsp;documentos de **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Nuevos + actualizados (0+2): &nbsp;documentos de **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Áreas temáticas que *no* tienen artículos nuevos o actualizados recientemente
+
 
 - [Nuevos + Actualizados (0+0): documentos de **Data Migration Assistant (DMA) para SQL**](../dma/new-updated-dma.md)
 - [Nuevos + Actualizados (0+0): documentos de **Objetos de datos ActiveX (ADO) para SQL**](../ado/new-updated-ado.md)
+- [Nuevos + actualizados (0+0): documentos de **Analysis Services para SQL**](../analysis-services/new-updated-analysis-services.md)
 - [Nuevos + Actualizados (0+0): documentos de **Data Quality Services para SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Nuevos + Actualizados (0+0): documentos de **Extensiones de minería de datos (DMX) para SQL**](../dmx/new-updated-dmx.md)
 - [Nuevos + actualizados (0+0): documentos de **Master Data Services (MDS) para SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Nuevos + Actualizados (0+0): documentos de **Expresiones multidimensionales (MDX) para SQL**](../mdx/new-updated-mdx.md)
 - [Nuevos + Actualizados (0+0): documentos de **ODBC (conectividad abierta de bases de datos) para SQL**](../odbc/new-updated-odbc.md)
-- [Nuevos + Actualizados (0+0): documentos de **PowerShell para SQL**](../powershell/new-updated-powershell.md)
+- [Nuevos + Actualizados (0+0): documentos de **Ejemplos para SQL**](../sample/new-updated-sample.md)
+- [Nuevos + Actualizados (0+0): documentos de **SQL Server Migration Assistant (SSMA)**](../ssma/new-updated-ssma.md)
 - [Nuevos + actualizados (0+0): documentos de **Herramientas para SQL**](../tools/new-updated-tools.md)
 - [Nuevos + Actualizados (0+0): documentos de **XQuery para SQL**](../xquery/new-updated-xquery.md)
 

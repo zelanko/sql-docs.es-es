@@ -8,24 +8,28 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: management tools, upgrading
+helpviewer_keywords:
+- management tools, upgrading
 ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0b350052dbe780d37cfe84b5525e31d04b44801
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5c0a15d22956bc7b4076bceb2498cdaf2e5c3683
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-sql-server-management-tools"></a>Actualizar las herramientas de administración de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite la actualización desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores. En este tema se documenta la compatibilidad y el comportamiento de la actualización de las Herramientas de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los componentes de administración como el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Correo electrónico de base de datos, Planes de mantenimiento, XPStar y XPWeb.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite la actualización desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores. En este artículo se documenta la compatibilidad y el comportamiento de la actualización de las Herramientas de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los componentes de administración como el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Correo electrónico de base de datos, Planes de mantenimiento, XPStar y XPWeb.  
   
 > [!IMPORTANT]  
 >  En las instalaciones locales debe ejecutar el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como administrador. Si ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un recurso compartido remoto, debe utilizar una cuenta de dominio que tenga permisos de lectura y ejecución para el recurso compartido remoto.  

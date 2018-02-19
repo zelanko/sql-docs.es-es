@@ -8,7 +8,8 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - tools [SQL Server], SQL Server Configuration Manager
 - configuration manager [SQL Server]
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
-caps.latest.revision: "58"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2cfc445cf008f0eecb3d6ebf11a0e21f23ad1ad9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 81c3fc1a8bc1b582fd4f8d696f1382e5a88bd706
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-server-configuration-manager"></a>Administrador de configuración de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="available-network-protocols"></a>Protocolos de red disponibles  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es compatible con los protocolos Memoria compartida, TCP/IP y Canalizaciones con nombre. Para obtener más información acerca de cómo elegir un protocolo de red, vea [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no es compatible con los protocolos de red VIA (Protocolo de paquetes secuenciados) de Banyan VINES, Multiprotocolo, AppleTalk o NWLink SPP/IPX. Los clientes anteriormente conectados con estos protocolos deben seleccionar uno distinto para conectarse a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No es posible utilizar el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para configurar el proxy WinSock. Para configurar el proxy WinSock, consulte la documentación de ISA Server.  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Temas de procedimientos de administración de servicios &#40;Administrador de configuración de SQL Server&#41;](http://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
   
  [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  

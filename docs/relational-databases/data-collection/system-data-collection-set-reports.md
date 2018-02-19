@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-collection
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - query statistics reports [SQL Server]
 - disk usage reports [SQL Server]
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 73dc17666d055ffbd4646befb43ff2a40ab77053
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a2395391111bcd8b21fd030d02bc4756aa98d1fc
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="system-data-collection-set-reports"></a>Informes de conjuntos de recopilación de datos del sistema
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] El recopilador de datos proporciona un informe histórico para cada uno de los conjuntos de recopilación de datos del sistema. Cada uno de los informes siguientes utiliza datos que están almacenados en el almacén de administración de datos:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+El recopilador de datos proporciona un informe histórico para cada uno de los conjuntos de recopilación de datos del sistema. Cada uno de los informes siguientes utiliza datos que están almacenados en el almacén de administración de datos:  
   
 -   [Resumen de uso de disco](#Disk)  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 11/17/2017
 |--------------|----------------|  
 |Índice|Cantidad de espacio en disco utilizada para contener las páginas de índice.|  
 |Sin asignar|La cantidad de espacio en disco disponible para la base de datos pero que aún no se ha asignado a ningún objeto.|  
-|Datos|La cantidad de espacio en disco utilizada por páginas de datos.|  
+|data|La cantidad de espacio en disco utilizada por páginas de datos.|  
 |No utilizado|La cantidad de espacio de disco asignado a uno o más objetos, pero que aún no se ha usado.|  
   
  El uso de espacio para el archivo de registro de transacciones se categoriza como espacio usado y como espacio sin usar.  
@@ -138,7 +140,7 @@ ms.lasthandoff: 11/17/2017
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Esperas|El gráfico Esperas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra las esperas que encontraron los subprocesos que se ejecutan por cada categoría de espera. Puede tener acceso a un informe detallado haciendo clic en cualquier segmento del gráfico. Además de ofrecer estadísticas gráficas de las esperas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de un intervalo de tiempo más reducido, este informe proporciona información sobre las categorías de las esperas en formato tabular. Para cada categoría, como CPU y sus subcategorías, la tabla muestra el número de esperas, el tiempo de espera y el porcentaje de tiempo de espera total.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Actividad|Desde el gráfico Actividad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se puede tener acceso a diferentes aspectos de la actividad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los informes que puede obtener haciendo clic en un punto de la línea del gráfico Compilaciones SQL/s son los siguientes:<br /><br /> <br /><br /> Conexiones y sesiones<br /><br /> Solicitudes<br /><br /> Frecuencia de aciertos de caché de plan<br /><br /> Características de TempDb|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)   
  [Ver un informe de conjunto de recopilación &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md)  
   

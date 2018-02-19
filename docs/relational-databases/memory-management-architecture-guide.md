@@ -8,23 +8,24 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
-caps.latest.revision: "6"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1e764d14059dbb4015c213fc9f35e75f529d4b10
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 06721e22794de1ed9e7661d8606759e2035f710f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="memory-management-architecture-guide"></a>guía de arquitectura de administración de memoria
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,8 +62,8 @@ Mediante AWE y el privilegio Bloquear páginas en memoria, puede proporcionar la
 | |32 bits <sup>1</sup> |64 bits|
 |-------|-------|-------| 
 |Memoria convencional |Todas las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Hasta el límite de espacio de direcciones virtuales del proceso: <br>- 2 GB<br>- 3 GB con el parámetro de arranque /3gb <sup>2</sup> <br>- 4 GB en WOW64 <sup>3</sup> |Todas las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Hasta el límite de espacio de direcciones virtuales del proceso: <br>- 7 TB con la arquitectura IA64 (IA64 no se admite en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] y versiones superiores)<br>- Sistema operativo máximo con arquitectura x64 <sup>4</sup>
-|Mecanismo AWE (permite a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] superar el límite del espacio de direcciones virtuales del proceso en plataformas de 32 bits). |Ediciones Standard, Enterprise y Developer de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] : el grupo de búferes puede tener acceso a un máximo de 64 GB de memoria.|No aplicable <sup>5</sup> |
-|Privilegio del sistema operativo (OS) Bloquear páginas en la memoria (permite bloquear memoria física e impedir la paginación en el sistema operativo de la memoria bloqueada). <sup>6</sup> |Ediciones Standard, Enterprise y Developer de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: requerido para que el proceso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilice el mecanismo AWE. La memoria asignada a través del mecanismo AWE no se puede paginar. <br> Si se concede este privilegio sin habilitar AWE, no tiene efecto en el servidor. | Solo se debe usar cuando sea necesario, principalmente si hay algún indicio de que el proceso sqlservr se está transfiriendo al almacenamiento auxiliar. En este caso, se informará sobre el error 17890 en el registro de errores, similar al siguiente ejemplo: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
+|Mecanismo AWE (permite a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] superar el límite del espacio de direcciones virtuales del proceso en plataformas de 32 bits). |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Ediciones Standard, Enterprise y Developer: el grupo de búferes puede tener acceso a un máximo de 64 GB de memoria.|No aplicable <sup>5</sup> |
+|Privilegio del sistema operativo (OS) Bloquear páginas en la memoria (permite bloquear memoria física e impedir la paginación en el sistema operativo de la memoria bloqueada). <sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Ediciones Standard, Enterprise y Developer: necesario para que el proceso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] use el mecanismo AWE. La memoria asignada a través del mecanismo AWE no se puede paginar. <br> Si se concede este privilegio sin habilitar AWE, no tiene efecto en el servidor. | Solo se debe usar cuando sea necesario, principalmente si hay algún indicio de que el proceso sqlservr se está transfiriendo al almacenamiento auxiliar. En este caso, se informará sobre el error 17890 en el registro de errores, similar al siguiente ejemplo: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
 
 <sup>1</sup> Las versiones de 32 bits no están disponibles a partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
 <sup>2</sup> /3gb es un parámetro de arranque del sistema operativo. Para obtener más información, visite MSDN Library.  
@@ -279,7 +280,7 @@ La protección de suma de comprobación, característica implementada en [!INCLU
 
 ## <a name="understanding-non-uniform-memory-access"></a>Descripción del acceso no uniforme a memoria
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  está preparado para el acceso no uniforme a memoria (NUMA) y realiza un buen rendimiento en hardware NUMA sin necesidad de establecer ninguna configuración especial. A medida que aumentan la velocidad del reloj y el número de procesadores, resulta cada vez más difícil reducir la latencia de la memoria necesaria para utilizar esta potencia de procesamiento adicional. Para evitarlo, los proveedores de hardware proporcionan cachés L3 grandes, pero esto es solo una solución limitada. La arquitectura NUMA proporciona una solución escalable para este problema. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se ha diseñado para aprovechar los equipos basados en NUMA sin necesidad de realizar cambios en las aplicaciones. Para obtener más información, vea [Cómo configurar SQL Server para que use NUMA de software](../database-engine/configure-windows/soft-numa-sql-server.md).
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está preparado para el acceso no uniforme a memoria (NUMA) y realiza un buen rendimiento en hardware NUMA sin necesidad de establecer ninguna configuración especial. A medida que aumentan la velocidad del reloj y el número de procesadores, resulta cada vez más difícil reducir la latencia de la memoria necesaria para utilizar esta potencia de procesamiento adicional. Para evitarlo, los proveedores de hardware proporcionan cachés L3 grandes, pero esto es solo una solución limitada. La arquitectura NUMA proporciona una solución escalable para este problema. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se ha diseñado para aprovechar los equipos basados en NUMA sin necesidad de realizar cambios en las aplicaciones. Para obtener más información, vea [Cómo configurar SQL Server para que use NUMA de software](../database-engine/configure-windows/soft-numa-sql-server.md).
 
 ## <a name="see-also"></a>Ver también
 [Opciones de configuración de memoria del servidor](../database-engine/configure-windows/server-memory-server-configuration-options.md)   

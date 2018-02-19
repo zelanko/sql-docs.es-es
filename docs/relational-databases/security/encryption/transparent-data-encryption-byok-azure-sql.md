@@ -19,11 +19,11 @@ ms.devlang: na
 ms.topic: article
 ms.date: 01/31/2018
 ms.author: aliceku
-ms.openlocfilehash: 8c192f5d1114ddab7d75761b385e91c0f22e481b
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 1fdb7da4fe1276a66494873fc38aa15ae67bae27
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Cifrado de datos transparente compatible con Bring Your Own Key (versión preliminar) para Azure SQL Database y SQL Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -59,9 +59,8 @@ Cuando TDE se configura por primera vez para usar un protector del TDE de Key Va
 
 ### <a name="general-guidelines"></a>Directrices generales
 - Asegúrese de que Azure Key Vault y Azure SQL Database vayan a estar en el mismo inquilino.  **No se admiten** interacciones entre el servidor y el almacén de claves de varios inquilinos.
-
 - Decida qué suscripciones se van a usar para los recursos necesarios, ya que para mover el servidor por las suscripciones más adelante se necesitará una nueva configuración de TDE con BYOK.
-- Configure Azure Key Vault en una sola suscripción exclusivamente para protectores del TDE de SQL Database.  Todas las bases de datos asociadas a un servidor lógico utilizan el mismo protector del TDE, así que se debe tener en cuenta la agrupación de bases de datos en un servidor lógico. 
+- Al configurar TDE con BYOK, es importante tener en cuenta la carga depositada en el almacén de claves por las operaciones repetidas de encapsular/desencapsular. Por ejemplo, dado que todas las bases de datos asociadas a un servidor lógico usan el mismo protector de TDE, una conmutación por error de ese servidor desencadenará tantas operaciones de clave en el almacén como bases de datos haya en el servidor. Según nuestra experiencia y los [límites de servicio del almacén de claves](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits) que hemos documentado, se recomienda asociar como máximo 500 bases de datos estándar o 200 bases de datos Premium con un Azure Key Vault en una sola suscripción para garantizar una disponibilidad alta uniforme al acceder al protector de TDE en el almacén. 
 - Opción recomendada: Guarde una copia local del protector del TDE.  Para ello es necesario que un dispositivo HSM cree un protector del TDE localmente y que un sistema de custodia de claves almacene una copia local del protector del TDE.
 
 
@@ -86,7 +85,8 @@ Cuando TDE se configura por primera vez para usar un protector del TDE de Key Va
 - Asigne una custodia a la clave en un sistema de custodia de clave.  
 - Importe el archivo de clave de cifrado (.pfx, .byok o .backup) a Azure Key Vault. 
     
-    >[!NOTE] 
+
+>[!NOTE] 
     >Si quiere llevar a cabo pruebas, puede crear una clave con Azure Key Vault. Sin embargo, dicha clave no se puede tener en custodia porque la clave privada debe permanecer siempre en el almacén de claves.  En el momento de usar claves para cifrar los datos de producción, es necesario crear una copia de seguridad de estas y asignarles una custodia, ya que la pérdida de una clave (al eliminarla del almacén de claves por error o en caso de que expire) supone una pérdida de datos permanente.
     >
     
@@ -148,3 +148,5 @@ Para mitigarlo, ejecute el cmdlet [Get-AzureRmSqlServerKeyVaultKey](/powershell/
    -ResourceGroup <SQLDatabaseResourceGroupName>
    ```
 Para más información sobre la recuperación de copia de seguridad para SQL Database, vea [Recuperación de una Base de datos SQL de Azure mediante copias de seguridad automatizadas](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups). Si quiere saber más sobre la recuperación de copias de seguridad para SQL Data Warehouse, vea [Restauración de SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-restore-database-overview).
+
+Para la copia de seguridad de archivos de registro tenga también en cuenta que los archivos de registro que se han copiado permanecen cifrados con el sistema de cifrado de TDE original, aunque se haya cambiado de protector de TDE y la base de datos use ahora un nuevo protector de TDE.  Durante la restauración, se necesitarán las dos claves para restaurar la base de datos.  Si el archivo de registro está usando un protector de TDE almacenado en Azure Key Vault, se necesitará esta clave durante la restauración, aunque mientras tanto se haya cambiado la base de datos para usar TDE administrado del servicio.   

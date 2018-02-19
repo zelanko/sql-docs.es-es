@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: ba793c8f-665a-4c46-b68d-f558a37906b2
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 09801cfab4da23ee4c4b082d649d0ff40649b257
-ms.sourcegitcommit: 27f1143cf9b52dd27acf81234a516c32a239a320
+ms.openlocfilehash: 57394ec4dcc62b6d7e8bdd490fb95bfdcfe30def
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-4-restore-database-to-virtual-machine-from-url"></a>Lección 4: Restaurar la base de datos a la máquina virtual desde la dirección URL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En esta lección, restaurará la base de datos AdventureWorks2014 en la instancia de SQL Server 2016 de la máquina virtual de Azure.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+En esta lección, restaurará la base de datos AdventureWorks2014 en la instancia de SQL Server 2016 de la máquina virtual de Azure.
   
 > [!NOTE]  
 > Para simplificar este tutorial, usamos el mismo contenedor para los archivos de datos y de registros que se usan para la copia de seguridad de la base de datos. En un entorno de producción, usaría varios contenedores y, con frecuencia, varios archivos de datos. Con SQL Server 2016, también puede considerar la posibilidad de crear bandas de la copia de seguridad en varios blobs para aumentar el rendimiento de la copia de seguridad al realizar la copia de seguridad de una base de datos de gran tamaño.  

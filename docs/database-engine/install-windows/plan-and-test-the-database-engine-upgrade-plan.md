@@ -8,34 +8,38 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: server-general
+ms.technology:
+- server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd45301f5ce4497a672ffd4a684f972b08ac8013
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a10e7d35aa5a72f9dcc7ba34b11b6486fb9ac1cf
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>Planear y probar el plan de actualización del Motor de base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para realizar una actualización de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] correcta, se precisa una planeación adecuada, con independencia del enfoque.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+ Para realizar una actualización a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] correcta, se precisa una planeación adecuada, con independencia del enfoque.  
   
 ## <a name="release-notes-and-known-upgrade-issues"></a>Notas de la versión y problemas conocidos de la actualización  
  Antes de actualizar el [!INCLUDE[ssDE](../../includes/ssde-md.md)], revise lo siguiente:
 
 - [Notas de la versión de SQL Server 2017](../../sql-server/sql-server-2017-release-notes.md) 
 - [Notas de la versión de SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md) 
-- El tema [Compatibilidad con versiones anteriores del Motor de base de datos de SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
+- Artículo [Compatibilidad con versiones anteriores del motor de base de datos de SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md).  
   
 ## <a name="pre-upgrade-planning-checklist"></a>Lista de comprobación previa a la planificación de la actualización  
- Antes de actualizar el [!INCLUDE[ssDE](../../includes/ssde-md.md)], consulte la siguiente lista de comprobación y los temas relacionados. Estos temas se aplican a todas las actualizaciones, al margen del método de actualización, y lo ayudarán a determinar cuál es el más adecuado: local, gradual o mediante una nueva instalación. Por ejemplo, es posible que no pueda realizar una actualización local o gradual si va a actualizar el sistema operativo, o bien si actualiza desde SQL Server 2005 o desde una versión de 32 bits de SQL Server. Para ver un árbol de decisión, consulte [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
+ Antes de actualizar [!INCLUDE[ssDE](../../includes/ssde-md.md)], revise esta lista de comprobación y los artículos relacionados. Estos artículos se aplican a todas las actualizaciones, independientemente del método de actualización, y con ellos podrá determinar cuál es la actualización más adecuada: local, gradual o una nueva instalación. Por ejemplo, es posible que no pueda realizar una actualización local o gradual si va a actualizar el sistema operativo, o bien si actualiza desde SQL Server 2005 o desde una versión de 32 bits de SQL Server. Para ver un árbol de decisión, consulte [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   
--   **Requisitos de hardware y software:** revise los requisitos de hardware y software para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Podrá encontrarlos en [Requisitos de hardware y software para instalar SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Una parte de cualquier plan de ciclo de actualización es plantearse la actualización del hardware (el hardware más reciente es más rápido y puede reducir el número de licencias debido a menos procesadores o a la consolidación de los servidores y las bases de datos) y del sistema operativo. Estos tipos de cambios de hardware y software repercutirán en el tipo de método de actualización que elija.  
+-   **Requisitos de hardware y software:** revise los requisitos de hardware y software para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Podrá encontrarlos en [Requisitos de hardware y software para instalar SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Una parte de cualquier plan de ciclo de actualización es plantearse la actualización del hardware (el hardware más reciente es más rápido y necesita menos licencias porque tiene menos procesadores o debido a la consolidación de los servidores y las bases de datos) y del sistema operativo. Estos tipos de cambios de hardware y software repercutirán en el tipo de método de actualización que elija.  
   
 -   **Entorno actual:** investigue su entorno actual para descubrir los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se utilizan y los clientes que se conectan a él.  
   
@@ -61,7 +65,7 @@ ms.lasthandoff: 01/18/2018
     > [!NOTE]  
     >  Al actualizar [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition, elija entre “Enterprise Edition: licencia básica” y “Enterprise Edition”. Estas ediciones Enterprise solo se diferencian en los modos de licencia. Para obtener más información, consulte [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
--   **Compatibilidad con versiones anteriores:** consulte el tema sobre la compatibilidad con versiones anteriores del motor de base de datos de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] para ver los cambios en el comportamiento entre [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] y la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde la que vaya a actualizar. Consulte [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md).  
+-   **Compatibilidad con versiones anteriores:** lea el artículo sobre la compatibilidad con versiones anteriores del motor de base de datos de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] para ver los cambios en el comportamiento entre [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] y la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde la que vaya a actualizar. Consulte [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md).  
   
 -   **Asesor de actualizaciones:**  ejecute el Asesor de actualizaciones de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] para ayudarlo a diagnosticar problemas que podrían bloquear el proceso de actualización o precisar la modificación de scripts o aplicaciones existentes debido a un cambio importante. [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] contiene una nueva versión del Asesor de actualizaciones para ayudar a los clientes a preparar la actualización de un sistema existente.  Con esta herramienta, también podrá comprobar sus bases de datos existentes para ver si pueden aprovechar las nuevas características, como las tablas de Stretch, tras haber completado la actualización.   
     Puede descargar el Asesor de actualizaciones de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] [aquí](https://www.microsoft.com/en-us/download/details.aspx?id=48119).  

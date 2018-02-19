@@ -8,24 +8,27 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
-caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e9fcfd0dfb1171371a8b1ead7543ec14d67035d1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e853ee12af38d0a48a448f8d0798fd4b192c110
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lección 2: Conectarse desde otro equipo
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Para mejorar la seguridad, no se puede obtener acceso a [!INCLUDE[ssDE](../includes/ssde-md.md)] de las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer, Express y Evaluation desde otro equipo cuando se instala inicialmente. En esta lección se muestra cómo habilitar los protocolos, configurar los puertos y configurar el Firewall de Windows para conectarse desde otros equipos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Para mejorar la seguridad, no se puede obtener acceso a [!INCLUDE[ssDE](../includes/ssde-md.md)] de las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer, Express y Evaluation desde otro equipo cuando se instala inicialmente. En esta lección se muestra cómo habilitar los protocolos, configurar los puertos y configurar el Firewall de Windows para conectarse desde otros equipos.  
   
 Esta lección contiene las siguientes tareas:  
   
@@ -132,7 +135,7 @@ Cuando el servicio Explorador de [!INCLUDE[ssNoVersion](../includes/ssnoversion-
 3.  En el cuadro **Nombre del servidor** , escriba **tcp:** para especificar el protocolo, seguido del nombre del equipo, una coma y el número de puerto. Para conectarse a la instancia predeterminada, el puerto 1433 está implícito y se puede omitir, por lo que deberá escribir **tcp:***<nombre_equipo>*. En nuestro ejemplo de una instancia con nombre, escriba **tcp:***<nombre_equipo>***,49172**.  
   
     > [!NOTE]  
-    > Si omite **tcp:** en el cuadro **Nombre del servidor**, el cliente probará todos los protocolos habilitados en el orden especificado en la configuración del cliente.  
+    > Si omite **tcp:** en el cuadro **Nombre del servidor** , el cliente probará todos los protocolos habilitados en el orden especificado en la configuración del cliente.  
   
 4.  En el cuadro **Autenticación** , confirme **Autenticación de Windows**y luego haga clic en **Conectar**.  
   

@@ -17,14 +17,17 @@ caps.latest.revision:
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 164c24f5cfd3c4120c75776764221560392ebd4d
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+ms.openlocfilehash: 1cb3ad0fe1c3678799c557cf9c3b66286505276c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Elegir un método de actualización del motor de base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Existen varios métodos que se deben considerar a la hora de planear la actualización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] de una versión previa de SQL Server si se pretende reducir al mínimo el tiempo de inactividad y los riesgos. Puede realizar una actualización local, migrar a una nueva instalación o efectuar una actualización gradual. El siguiente diagrama le ayudará a elegir uno de estos enfoques. Además, más adelante en este artículo se describen todos los enfoques presentes en el diagrama. Si quiere obtener ayuda para tomar las decisiones que se le presentan en el diagrama, consulte también [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  Existen varios métodos que se deben considerar a la hora de planear la actualización del [!INCLUDE[ssDE](../../includes/ssde-md.md)] de una versión previa de SQL Server si se pretende reducir al mínimo el tiempo de inactividad y los riesgos. Puede realizar una actualización local, migrar a una nueva instalación o efectuar una actualización gradual. El siguiente diagrama le ayudará a elegir uno de estos enfoques. Además, más adelante en este artículo se describen todos los enfoques presentes en el diagrama. Si quiere obtener ayuda para tomar las decisiones que se le presentan en el diagrama, consulte también [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
  ![Árbol de decisión del método de actualización de motor de base de datos](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Árbol de decisión del método de actualización de motor de base de datos")  
   
@@ -35,7 +38,7 @@ ms.lasthandoff: 01/29/2018
 -   ¿Tiene una cuenta de Azure?  Si es así, haga clic **[aquí](http://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.FreeLicenseSQLServer2016SP1DeveloperWindowsServer2016)** para poner en marcha una máquina virtual con [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition ya instalado.  
   
 > [!NOTE]  
->  También puede plantearse actualizar la base de datos SQL de Azure o virtualizar su entorno de SQL Server como parte de su plan de actualización. Estos temas escapan al propósito de este artículo, pero aquí le proporcionamos algunos vínculos:
+>  También puede plantearse actualizar la base de datos SQL de Azure o virtualizar su entorno de SQL Server como parte de su plan de actualización. Estos artículos están fuera del ámbito de este artículo, pero aquí incluimos algunos vínculos:
 >   - [Información general de SQL Server en máquinas virtuales de Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
 >   - [Azure SQL Database](https://azure.microsoft.com/en-us/services/sql-database/) 
 >   - [Selección de una opción de SQL Server en Azure](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)  
@@ -105,7 +108,7 @@ ms.lasthandoff: 01/29/2018
      ![Método de actualización de nueva instalación por medio de separar y adjuntar en el almacenamiento conectado](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "Método de actualización de nueva instalación por medio de separar y adjuntar en el almacenamiento conectado")  
   
 ##  <a name="RollingUpgrade"></a> Actualización gradual  
- Se requiere una actualización gradual en entornos de soluciones de SQL Server donde se deba actualizar varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un orden determinado para maximizar el tiempo de actividad, minimizar los riesgos y conservar determinada funcionalidad. Una actualización gradual consiste básicamente en la actualización de varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un orden determinado, ya sea mediante una actualización local en cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]existente o efectuando una actualización con una nueva instalación a fin de facilitar la actualización del hardware o el sistema operativo como parte del proyecto de actualización. Hay una serie de escenarios en los que deberá poner en práctica el enfoque de actualización gradual. Estos se documentan en los siguientes temas:  
+ Se requiere una actualización gradual en entornos de soluciones de SQL Server donde se deba actualizar varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un orden determinado para maximizar el tiempo de actividad, minimizar los riesgos y conservar determinada funcionalidad. Una actualización gradual consiste básicamente en la actualización de varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un orden determinado, ya sea mediante una actualización local en cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]existente o efectuando una actualización con una nueva instalación a fin de facilitar la actualización del hardware o el sistema operativo como parte del proyecto de actualización. Hay una serie de escenarios en los que deberá poner en práctica el enfoque de actualización gradual. Estos se documentan en los siguientes artículos:  
   
 -   Grupos de disponibilidad AlwaysOn: si quiere obtener instrucciones detalladas para realizar una actualización gradual en un entorno de este tipo, vea [Actualización de instancias de la réplica del grupo de disponibilidad AlwaysOn](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).  
   

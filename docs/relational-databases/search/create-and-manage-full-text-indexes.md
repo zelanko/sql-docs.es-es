@@ -8,24 +8,27 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: full-text indexes [SQL Server], about
+helpviewer_keywords:
+- full-text indexes [SQL Server], about
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 90bd63c6177591fbc3a92bf88f11f72eca4b2e58
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 25599964a3e210e59fcbb2a1eade782e2109502b
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Crear y administrar índices de texto completo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] En este tema se describe cómo crear, rellenar y administrar índices de texto completo en SQL Server.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+En este tema se describe cómo crear, rellenar y administrar índices de texto completo en SQL Server.
   
 ## <a name="prerequisite---create-a-full-text-catalog"></a>Requisito previo: crear un catálogo de texto completo
 Antes de poder crear un índice de texto completo, necesita tener un catálogo de texto completo. El catálogo es un contenedor virtual de uno o más índices de texto completo. Para obtener más información, vea [Creación y administración de catálogos de texto completo](../../relational-databases/search/create-and-manage-full-text-catalogs.md).
@@ -80,7 +83,7 @@ Para obtener más información, vea [Rellenar índices de texto completo](../../
     |**Columnas**|Muestra las columnas de tabla que están disponibles para la indización de texto completo. La columna o columnas seleccionadas son de índices de texto completo. Puede seleccionar tantas columnas disponibles como desee incluir en el índice de texto completo. Para obtener más información, vea [Propiedades del índice de texto completo &#40;página Columnas&#41;](http://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35).|  
     |**Programaciones**|Utilice esta página para crear o administrar programaciones para un trabajo del Agente SQL Server que inicie un rellenado de tabla incremental para los rellenados del índice de texto completo. Para obtener más información, vea [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md) (Rellenar índices de texto completo).<br /><br /> Nota: Después de salir del cuadro de diálogo **Propiedades del índice de texto completo** , cualquier programación que se cree se asociará a un trabajo del Agente SQL Server (Iniciar rellenado incremental de tablas en *nombre_basededatos*.*nombre_tabla*).|  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] para guardar cualquier cambio y salir del cuadro de diálogo **Propiedades del índice de texto completo**.  
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] para guardar cualquier cambio y salir del cuadro de diálogo **Propiedades del índice de texto completo** .  
   
 ##  <a name="props"></a> Ver las propiedades de tablas y columnas indexadas  
  Varias de las funciones de [!INCLUDE[tsql](../../includes/tsql-md.md)], como OBJECTPROPERTYEX, se pueden usar para obtener el valor de diversas propiedades de indización de texto completo. Esta información es útil para administrar y solucionar problemas de la búsqueda de texto completo.  
@@ -131,7 +134,7 @@ SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID
   
 ### <a name="find-the-identifier-of-the-full-text-key-column"></a>Buscar el identificador de la columna de clave de texto completo  
   
-Todas las tablas habilitadas para texto completo tienen una columna que se usa para aplicar las filas únicas de la tabla (*columna de clave* *única*). La propiedad **TableFulltextKeyColumn** obtenida mediante la función OBJECTPROPERTY proporciona la identidad de esta columna de clave única.  
+Todas las tablas habilitadas para texto completo tienen una columna que se usa para aplicar las filas únicas de la tabla (*columna de clave**única*). La propiedad **TableFulltextKeyColumn** obtenida mediante la función OBJECTPROPERTY proporciona la identidad de esta columna de clave única.  
  
 Para obtener este identificador, puede utilizar una instrucción SELECT con el fin de llamar a la función OBJECTPROPERTYEX. Use la función OBJECT_ID para convertir el nombre de la tabla (*nombre_tabla*) en el identificador de tabla y especificar la propiedad **TableFulltextKeyColumn** como sigue:  
   

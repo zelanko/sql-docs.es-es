@@ -8,7 +8,8 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,21 +18,22 @@ helpviewer_keywords:
 - Stretch Database, inline table-valued functions
 - inline table-valued functions for Stretch Database
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a898c757120d29a8c64de5623cec02c35c5b5ac1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: efb55816db5f692231b66ca53780ab26318da90c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Seleccionar las filas que se van a migrar mediante una función de filtro (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Si almacena los datos inactivos en una tabla independiente, puede configurar Stretch Database para migrar toda la tabla. Por otro lado, si la tabla contiene datos activos e inactivos, puede especificar un predicado de filtro para seleccionar las filas que se migrarán. El predicado de filtro es una función insertada con valores de tabla. En este tema se describe cómo escribir una función insertada con valores de tabla para seleccionar las filas que se migrarán.  
+
+  Si almacena los datos inactivos en una tabla independiente, puede configurar Stretch Database para migrar toda la tabla. Por otro lado, si la tabla contiene datos activos e inactivos, puede especificar un predicado de filtro para seleccionar las filas que se migrarán. El predicado de filtro es una función insertada con valores de tabla. En este artículo se describe cómo escribir una función insertada con valores de tabla para seleccionar las filas que se migrarán.  
   
 > [!IMPORTANT]
 > Si se indica una función de filtro que tiene un rendimiento bajo, la migración de datos también tendrá un rendimiento bajo. Stretch Database aplica la función de filtro a la tabla mediante el operador CROSS APPLY.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Ejecute la instrucción ALTER TABLE para especificar una función de filtro después de salir del asistente.  
   
- Más adelante en este tema se describe la sintaxis de ALTER TABLE para agregar una función.  
+ Más adelante en este artículo se describe la sintaxis de ALTER TABLE para agregar una función.  
   
 ## <a name="basic-requirements-for-the-filter-function"></a>Requisitos básicos para la función de filtro  
  La función insertada con valores de tabla necesaria para un predicado de Stretch Database es parecida al ejemplo siguiente.  
@@ -617,7 +619,7 @@ Una cuenta en peligro con privilegios db_owner puede hacer lo siguiente.
   
 -   Crear y aplicar una función con valores de tabla que permite deducir el contenido de una tabla para la que el usuario ha denegado explícitamente el acceso de lectura.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   

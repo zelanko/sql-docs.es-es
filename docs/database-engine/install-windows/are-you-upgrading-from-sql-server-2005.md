@@ -8,22 +8,26 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ad40e66f-71fe-4ee6-9ce3-17127e7b1d7a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eae5931014a84ff1169412b830a20e217627918c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d582d7d9ca0bc90ca40ee34e946d49bf545024bd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>¿Desea actualizar desde SQL Server 2005?
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Como el soporte técnico extendido de SQL Server 2005 llega a su fin, es un buen momento para actualizar a una versión más reciente de SQL Server y a Azure SQL Database. La actualización permite mantener la seguridad y el cumplimiento, lograr un rendimiento excepcional y optimizar la infraestructura de su plataforma de datos.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+ 
+ Como el soporte extendido de SQL Server 2005 llega a su fin, es un buen momento para actualizar a una versión más reciente de SQL Server y a Base de datos SQL de Azure. La actualización permite mantener la seguridad y el cumplimiento, lograr un rendimiento excepcional y optimizar la infraestructura de su plataforma de datos.  
   
  Para obtener más información, orientación y herramientas para planear y automatizar la actualización o migración, consulte [Finalización del soporte de SQL Server 2005](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/).  
   
@@ -64,10 +68,10 @@ Para ver un análisis más exhaustivo de estas opciones, [haga clic aquí](http:
   
 -   Lea cómo llevar a cabo la actualización.  
   
-    -   Revise los métodos de actualización disponibles y aprenda a planear y realizar pruebas en el tema [Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md).  
+    -   Revise los métodos de actualización disponibles y aprenda a planear y realizar pruebas con el artículo [Actualizar el motor de base de datos](../../database-engine/install-windows/upgrade-database-engine.md).  
   
         > [!IMPORTANT]  
-        >  No se puede actualizar una instancia de SQL Server 2005 a SQL Server 2017 in situ. Deberá instalar una instancia de SQL Server 2017 y, después, migrar las bases de datos de SQL Server 2005 a la nueva instalación. Para más información, vea la sección "New Installation Upgrade" (Nueva actualización de la instalación) en el tema [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
+        >  No se puede actualizar una instancia de SQL Server 2005 a SQL Server 2017 in situ. Deberá instalar una instancia de SQL Server 2017 y, después, migrar las bases de datos de SQL Server 2005 a la nueva instalación. Para más información, vea la sección "Nueva actualización de la instalación" en el artículo [Elegir un método de actualización del motor de base de datos](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
    
   
 -   Para obtener más información, orientación y herramientas para planear y automatizar la actualización o migración, consulte [Finalización del soporte de SQL Server 2005](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/).  

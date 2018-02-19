@@ -8,7 +8,8 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,30 +26,31 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 90d281884a092adda6f50777dd5403e275611bf4
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: 0827e7946df18bff42ad09285ad93c5c3a3b3996
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 
  > Para obtener contenido relacionado con las versiones anteriores de SQL Server, vea [Configurar Firewall de Windows para permitir el acceso a SQL Server](https://msdn.microsoft.com/en-US/library/cc646023(SQL.120).aspx).
 
 Los sistemas de firewall ayudan a evitar el acceso no autorizado a los recursos de los equipos. Si un firewall está activado pero no está configurado correctamente, es posible que se bloqueen los intentos de conexión a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-Para obtener acceso a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de un firewall, debe configurar el firewall en el equipo en el que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El firewall es un componente de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. También puede instalar un firewall de otra compañía. En este tema se discute cómo configurar el firewall de Windows, pero los principios básicos se aplican a otros programas de firewall.  
+Para obtener acceso a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de un firewall, debe configurar el firewall en el equipo en el que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El firewall es un componente de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. También puede instalar un firewall de otra compañía. En este artículo se explica cómo configurar el firewall de Windows, pero los principios básicos se aplican a otros programas de firewall.  
   
 > [!NOTE]  
->  En este tema se proporciona información general de configuración del firewall y se resume información de interés para un administrador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información acerca del firewall e información autorizada, vea la documentación sobre el firewall como [Windows Firewall con seguridad avanzada e IPsec](http://go.microsoft.com/fwlink/?LinkID=116904).  
+>  En este artículo se proporciona información general para configurar el firewall y se resume información de interés para administradores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información acerca del firewall e información autorizada, vea la documentación sobre el firewall como [Windows Firewall con seguridad avanzada e IPsec](http://go.microsoft.com/fwlink/?LinkID=116904).  
   
- Los usuarios que conozcan el elemento **Firewall de Windows** del Panel de control y el complemento Microsoft Management Console (MMC) de Firewall de Windows con seguridad avanzada, y que sepan qué opciones del firewall quieren configurar, pueden ir directamente a los temas de la lista siguiente:  
+ Los usuarios que conozcan el elemento **Firewall de Windows** del Panel de control y el complemento Microsoft Management Console (MMC) de Firewall de Windows con seguridad avanzada, y que sepan qué opciones del firewall quieren configurar, pueden ir directamente a los artículos de esta lista:  
   
 -   [Configurar Firewall de Windows para el acceso al motor de base de datos](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
@@ -65,7 +67,7 @@ Para obtener acceso a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssn
   
 -   Un administrador configura las excepciones para el firewall. Esto permite el acceso a programas específicos que se ejecutan en el equipo o el acceso a los puertos de conexión especificados en el equipo. En este caso, el equipo acepta el tráfico de entrada no solicitado cuando actúa como un servidor, un agente de escucha o un equipo del mismo nivel. Éste es el tipo de configuración que se debe completar para conectar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Elegir una estrategia del firewall es más complejo que decidir simplemente si un puerto determinado debe estar abierto o cerrado. Al diseñar una estrategia de firewall para la empresa, asegúrese considerar todas las reglas y opciones de configuración disponibles. En este tema no se revisan todas las posibles opciones de firewall. Se recomienda que revise los siguientes documentos:  
+ Elegir una estrategia del firewall es más complejo que decidir simplemente si un puerto determinado debe estar abierto o cerrado. Al diseñar una estrategia de firewall para la empresa, asegúrese considerar todas las reglas y opciones de configuración disponibles. En este artículo no se revisan todas las posibles opciones de firewall. Se recomienda que revise los siguientes documentos:  
   
  [Guía de introducción del Firewall de Windows con seguridad avanzada](http://go.microsoft.com/fwlink/?LinkId=116080)  
   
@@ -84,11 +86,11 @@ Configure el Firewall de Windows con **Microsoft Management Console** o **netsh*
 
 -  **Microsoft Management Console (MMC)**  
   
-     El complemento MMC del Firewall de Windows con seguridad avanzada permite establecer opciones de configuración de firewall más avanzadas. Este complemento presenta la mayoría de las opciones de firewall de una manera fácil de usar y presenta todos los perfiles de firewall. Para obtener más información, vea [Utilizar el complemento Firewall de Windows con seguridad avanzada](#BKMK_WF_msc) , más adelante en este tema.  
+     El complemento MMC del Firewall de Windows con seguridad avanzada permite establecer opciones de configuración de firewall más avanzadas. Este complemento presenta la mayoría de las opciones de firewall de una manera fácil de usar y presenta todos los perfiles de firewall. Para más información, vea [Utilizar el complemento Firewall de Windows con seguridad avanzada](#BKMK_WF_msc), más adelante en este artículo.  
   
 -   **netsh**  
   
-     Un administrador puede usar la herramienta **netsh.exe** para configurar y supervisar equipos basados en Windows en un símbolo del sistema o un archivo por lotes**.** Con la herramienta **netsh** , puede dirigir los comandos de contexto que escriba a la aplicación auxiliar adecuada y la aplicación auxiliar ejecutará el comando. Una aplicación auxiliar es un archivo de biblioteca de vínculos dinámicos (.dll) que extiende la funcionalidad de la herramienta **netsh** proporcionando funciones de configuración, supervisión y soporte técnico de uno o más servicios, utilidades o protocolos. Todos los sistemas operativos que admiten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen una aplicación auxiliar de firewall. [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] también tiene una aplicación auxiliar avanzada denominada **advfirewall**. Los detalles del uso de **netsh** no se explican en este tema. Sin embargo, muchas de las opciones de configuración descritas se pueden configurar con **netsh**. Por ejemplo, ejecute el script siguiente en un símbolo del sistema para abrir el puerto TCP 1433:  
+     Un administrador puede usar la herramienta **netsh.exe** para configurar y supervisar equipos basados en Windows en un símbolo del sistema o un archivo por lotes**.** Con la herramienta **netsh** , puede dirigir los comandos de contexto que escriba a la aplicación auxiliar adecuada y la aplicación auxiliar ejecutará el comando. Una aplicación auxiliar es un archivo de biblioteca de vínculos dinámicos (.dll) que extiende la funcionalidad de la herramienta **netsh** proporcionando funciones de configuración, supervisión y soporte técnico de uno o más servicios, utilidades o protocolos. Todos los sistemas operativos que admiten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen una aplicación auxiliar de firewall. [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] también tiene una aplicación auxiliar avanzada denominada **advfirewall**. Los detalles del uso de **netsh** no se explican en este artículo. Sin embargo, muchas de las opciones de configuración descritas se pueden configurar con **netsh**. Por ejemplo, ejecute el script siguiente en un símbolo del sistema para abrir el puerto TCP 1433:  
   
     ```  
     netsh firewall set portopening protocol = TCP port = 1433 name = SQLPort mode = ENABLE scope = SUBNET profile = CURRENT  
@@ -116,7 +118,7 @@ Configure el Firewall de Windows con **Microsoft Management Console** o **netsh*
   
 |Escenario|Puerto|Comentarios|  
 |--------------|----------|--------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecutándose sobre TCP|Puerto TCP 1433|Éste es el puerto más común que permite el firewall. Se aplica a las conexiones rutinarias a la instalación predeterminada de [!INCLUDE[ssDE](../../includes/ssde-md.md)]o a una instancia con nombre que sea la única instancia que se ejecuta en el equipo. (Las instancias con nombre tienen consideraciones especiales. Vea [Puertos dinámicos](#BKMK_dynamic_ports) más adelante en este tema.)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecutándose sobre TCP|Puerto TCP 1433|Éste es el puerto más común que permite el firewall. Se aplica a las conexiones rutinarias a la instalación predeterminada de [!INCLUDE[ssDE](../../includes/ssde-md.md)]o a una instancia con nombre que sea la única instancia que se ejecuta en el equipo. (Las instancias con nombre tienen consideraciones especiales. Vea [Puertos dinámicos](#BKMK_dynamic_ports) más adelante en este artículo).|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la configuración predeterminada|El puerto TCP es un puerto dinámico determinado en el momento en el que se inicia [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|Vea la explicación siguiente en la sección [Puertos dinámicos](#BKMK_dynamic_ports). El puerto UDP 1434 puede ser necesario para el servicio Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se utilizan instancias con nombre.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando están configuradas para utilizar un puerto fijo|El número de puerto configurado por el administrador.|Vea la explicación siguiente en la sección [Puertos dinámicos](#BKMK_dynamic_ports).|  
 |Conexión de administrador dedicada|Puerto TCP 1434 para la instancia predeterminada. Otros puertos se utilizan para las instancias con nombre. Compruebe en el registro de errores el número de puerto.|De forma predeterminada, las conexiones remotas a DAC (Conexión de administrador dedicada) no están habilitadas. Para habilitar la DAC remota, utilice la faceta Configuración de área expuesta. Para obtener más información, vea [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).|  
@@ -125,7 +127,7 @@ Configure el Firewall de Windows con **Microsoft Management Console** o **netsh*
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecutándose en un extremo HTTPS.|Puerto TCP 443|Se utiliza para una conexión HTTPS a través de una dirección URL. HTTPS es una conexión HTTP que utiliza SSL (Capa de sockets seguros).|  
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|Puerto 4022 TCP. Para comprobar el puerto que se usa, ejecute la siguiente consulta:<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|No hay ningún puerto predeterminado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)], pero esta es la configuración convencional que se usa en los ejemplos de Libros en pantalla.|  
 |Creación de reflejo de base de datos|Puerto elegido por el administrador. Para determinar el puerto, ejecute la siguiente consulta:<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|No hay ningún puerto predeterminado para la creación de reflejo de la base de datos, pero en los ejemplos de los Libros en pantalla se usa el puerto TCP 5022 o 7022. Es muy importante evitar interrumpir un extremo de creación de reflejo que se esté usando, sobre todo en el modo de alta seguridad con conmutación automática por error. La configuración del firewall debe evitar el romper el quórum. Para obtener más información, vea [Especificar una dirección de red de servidor &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).|  
-|Replicación|Las conexiones de replicación a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizan los puertos de [!INCLUDE[ssDE](../../includes/ssde-md.md)] normales (puerto TCP 1433, para la instancia predeterminada, etc.) habituales.<br /><br /> La sincronización web y el acceso de tipo FTP/UNC para la instantánea de replicación requieren que se abran puertos adicionales en el firewall. Para transferir los datos iniciales y los esquemas de una ubicación a otra, la replicación puede utilizar FTP (puerto TCP 21) o sincronizar sobre HTTP (puerto TCP 80) o Uso compartido de archivos. El uso compartido de archivos utiliza los puertos UDP 137 y 138, y el puerto TCP 139 si usa NetBIOS. El uso compartido de archivos usa el puerto TCP 445.|Para la sincronización sobre HTTP, la replicación utiliza el extremo IIS (para el que se pueden configurar los puertos, pero cuyo puerto predeterminado es el 80), pero el proceso IIS se conecta al servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de los puertos estándar (1433 para la instancia predeterminada).<br /><br /> Durante la sincronización web mediante FTP, la transferencia FTP tiene lugar entre IIS y el publicador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , no entre el suscriptor e IIS.|  
+|REPLICATION|Las conexiones de replicación a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizan los puertos de [!INCLUDE[ssDE](../../includes/ssde-md.md)] normales (puerto TCP 1433, para la instancia predeterminada, etc.) habituales.<br /><br /> La sincronización web y el acceso de tipo FTP/UNC para la instantánea de replicación requieren que se abran puertos adicionales en el firewall. Para transferir los datos iniciales y los esquemas de una ubicación a otra, la replicación puede utilizar FTP (puerto TCP 21) o sincronizar sobre HTTP (puerto TCP 80) o Uso compartido de archivos. El uso compartido de archivos utiliza los puertos UDP 137 y 138, y el puerto TCP 139 si usa NetBIOS. El uso compartido de archivos usa el puerto TCP 445.|Para la sincronización sobre HTTP, la replicación utiliza el extremo IIS (para el que se pueden configurar los puertos, pero cuyo puerto predeterminado es el 80), pero el proceso IIS se conecta al servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de los puertos estándar (1433 para la instancia predeterminada).<br /><br /> Durante la sincronización web mediante FTP, la transferencia FTP tiene lugar entre IIS y el publicador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , no entre el suscriptor e IIS.|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] depurador|Puerto TCP 135<br /><br /> Vea [Consideraciones especiales para el puerto 135](#BKMK_port_135)<br /><br /> Quizá sea necesaria también la excepción [IPsec](#BKMK_IPsec) .|Si utiliza [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], en el equipo host [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] debe agregar también **Devenv.exe** a la lista Excepciones y abrir el puerto TCP 135.<br /><br /> Si utiliza [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], en el equipo host [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] debe agregar también **ssms.exe** a la lista Excepciones y abrir el puerto TCP 135. Para obtener más información, vea [Configurar reglas de firewall antes de ejecutar al depurador de TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).|  
   
  Para obtener instrucciones detalladas sobre cómo configurar Firewall de Windows para el [!INCLUDE[ssDE](../../includes/ssde-md.md)], vea [Configurar Firewall de Windows para el acceso al motor de base de datos](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
@@ -316,7 +318,7 @@ La tabla siguiente muestra los puertos y servicios de los que puede depender [!I
   
 -   La utilidad **PortQry** se puede usar para notificar el estado de los puertos TCP/IP para indicar que están escuchando, no escuchando o filtrados. (Con un estado de filtrado, el puerto puede o no estar escuchando; este estado indica que la utilidad no ha recibido una respuesta del puerto.) La utilidad **PortQry** se puede descargar desde el [Centro de descargas de Microsoft](http://go.microsoft.com/fwlink/?LinkId=28590).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Introducción al servicio y requisitos del puerto de red para el sistema Windows Server](http://support.microsoft.com/kb/832017)   
  [Configurar los valores de firewall (Base de datos SQL de Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   

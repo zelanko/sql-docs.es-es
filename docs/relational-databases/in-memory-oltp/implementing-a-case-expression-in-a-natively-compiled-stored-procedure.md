@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 350e9a3e8605aedec6791d135d08127a14d72c8a
-ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.openlocfilehash: 6419acc6380b15d289d3ac3602d6a28c0fc5c75b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>Implementación de una expresión CASE de un procedimiento almacenado compilado de forma nativa
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -106,7 +107,7 @@ EXEC dbo.usp_SOHOnlineOrderResult
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Problemas de migración para los procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)   
  [Construcciones Transact-SQL no admitidas por OLTP en memoria](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   

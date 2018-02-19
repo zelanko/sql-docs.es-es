@@ -22,18 +22,21 @@ helpviewer_keywords:
 - installing Analysis Services, upgrading
 - SSAS, upgrading
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.openlocfilehash: 4286f2266d115d39ad97ff3f6255187e7a01d968
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: eb0bcf7a72e59e58bdd4f980c5be175c2a0affdd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-analysis-services"></a>Actualizar Analysis Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Es posible actualizar las instancias de Analysis Services a una versión de SQL Server del mismo modo de servidor con el objetivo de aprovechar las características que incorpora la nueva versión, tal y como se describe en [What's New in Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md) (Novedades de Analysis Services).  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  Es posible actualizar las instancias de Analysis Services a una versión de SQL Server del mismo modo de servidor con el objetivo de aprovechar las características que incorpora la nueva versión, tal y como se describe en [What's New in Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md) (Novedades de Analysis Services).  
   
  Puede actualizar cada instancia de forma local, por separado de otras instancias que se ejecuten en el mismo hardware. Pero la mayoría de los administradores optan por instalar una nueva instancia de la versión más reciente para efectuar pruebas con aplicaciones antes de transferir las cargas de trabajo de producción al nuevo servidor. Pero, en el caso de los servidores de entornos de desarrollo o pruebas, una actualización local puede resultar más práctica.  
   
@@ -76,7 +79,7 @@ ms.lasthandoff: 01/08/2018
   
  Las bases de datos tabulares y multidimensionales siguen rutas de versión distintas. Es una coincidencia que los modelos multidimensionales y tabulares tengan niveles de compatibilidad numerada similares.  Los modos avanzarán a ritmos distintos si los cambios de características solo repercuten en uno de ellos.  
   
- Para ofrecer un poco de contexto, en la siguiente tabla se resumen los niveles de compatibilidad. Sin embargo, debe revisar los temas detallados para comprender qué ofrece cada nivel.  
+ Para ofrecer un poco de contexto, en la siguiente tabla se resumen los niveles de compatibilidad, aunque le recomendamos que lea los artículos detallados para comprender qué ofrece cada nivel.  
   
 ||||  
 |-|-|-|  

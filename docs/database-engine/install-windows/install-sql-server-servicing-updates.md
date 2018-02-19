@@ -8,22 +8,26 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a277fd883b517c238052ee0a328fbb0b4feb95ce
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d543239bfec50ec6b5466bf8e57d98fba542e8b7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-servicing-updates"></a>Instalar actualizaciones de servicio de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tema proporciona información acerca de cómo instalar actualizaciones para [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]. Esta sección proporciona información acerca de lo siguiente:  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+En este artículo se proporciona información sobre el procedimiento para instalar actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]. Esta sección proporciona información acerca de lo siguiente:
   
 - Instalar actualizaciones para [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] durante una nueva instalación  
   
@@ -53,10 +57,10 @@ En una instancia instalada de [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-
   
 Las actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] están disponibles a través de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update (MU), Windows Server Update Services (WSUS) y del Centro de descarga de Microsoft. Las actualizaciones críticas y de seguridad para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] están disponibles a través de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update y para poder verlas necesita suscribirse a Microsoft Update a través del applet Windows Update del Panel de control.  
   
-Cuando reciba una actualización a través de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, se actualizan todas las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la versión más reciente en modo desatendido. Si necesita más flexibilidad o no tiene acceso a Internet o a WSUS, deberá obtener las actualizaciones en el Centro de descarga de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+Cuando reciba una actualización a través de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, se actualizan todas las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la versión más reciente en modo desatendido. Si necesita más flexibilidad o no tiene acceso a Internet o a WSUS, debe obtener las actualizaciones en el Centro de descarga de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 ## <a name="see-also"></a>Ver también  
-[Instalación de SQL Server desde el asistente para instalación](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
-[Agregar características a una instancia de SQL Server &#40;programa de instalación&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)   
+[Instalar SQL Server desde el Asistente para la instalación &#40;programa de instalación&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
+[Agregar características a una instancia de SQL Server &#40;programa de instalación&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)
 [Reparar una instalación de SQL Server con errores](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  
 

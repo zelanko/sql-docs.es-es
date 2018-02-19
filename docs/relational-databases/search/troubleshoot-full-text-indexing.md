@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - troubleshooting [SQL Server], full-text search
 - troubleshooting [full-text search]
 ms.assetid: 964c43a8-5019-4179-82aa-63cd0ef592ef
-caps.latest.revision: "44"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e273a9963b26f5c6361cf459bba54010ad58d56
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ddb9ea039218fa967132572df461103957300161
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="troubleshoot-full-text-indexing"></a>Solucionar problemas de indización de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
 -   El indizador no puede encontrar o cargar un componente de un filtro o separador de palabras. Este error puede producirse si la fila de la tabla contiene un formato de documento o un contenido en un idioma que no se ha registrado para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este error también puede darse si el componente del separador de palabras o del filtro no se firmó o si no superó la comprobación de firmas al cargarse.  
   
--   Un componente, como un separador de palabras o un filtro, devuelve un error al indizador. Esto puede ocurrir si el documento que se está indizando está dañado y el filtro no puede extraer texto del documento. También puede suceder cuando un componente no puede administrar el contenido de una sola fila que supere cierto tamaño, debido a los límites de memoria del host de demonio de filtro de texto completo (fdhost.exe).  
+-   Se produce un error en un componente, como un separador de palabras o un filtro, y devuelve un error al indizador. Este error puede ocurrir si el documento que se está indizando está dañado y el filtro no puede extraer texto del documento. También puede suceder cuando un componente no puede administrar el contenido de una sola fila que supere cierto tamaño, debido a los límites de memoria del host de demonio de filtro de texto completo (fdhost.exe).  
   
  El registro de rastreo contiene información relativa al motivo del error para cada error de nivel de fila. Los recuentos de errores se encuentran resumidos al final de un llenado completo o incremental.  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Un grupo de archivos que contiene la tabla cuyo texto completo se está indizando se queda sin conexión o pasa a ser de solo lectura.  
   
- Debe consultar el registro de rastreo al final de cualquier operación de llenado de índice de texto completo importante o cuando el llenado no llega a completarse.  
+ Revise el registro de rastreo al final de cualquier operación de llenado de índice de texto completo importante o cuando el llenado no llega a completarse.  
   
 ### <a name="unsigned-components"></a>Componentes sin firmar  
  De forma predeterminada, el indizador de texto completo necesita los filtros y los separadores de palabras que carga para firmarse. Si no están firmados, lo cual puede ocurrir cuando se instalan componentes personalizados, debe configurar el indizador de texto completo para que omita la comprobación de firmas.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/17/2017
  Al restaurar el registro de transacciones de una base de datos, es posible que aparezca una advertencia que indica que el índice de texto completo no es coherente. El motivo es que se ha modificado el índice de texto completo en una tabla después de realizar la copia de seguridad de la base de datos. Si esto ocurre, deberá ejecutar un rellenado completo (rastreo) en la tabla para devolver la coherencia al índice de texto completo. Para obtener más información, vea [Rellenar índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).  
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [Rellenar índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md)  
   

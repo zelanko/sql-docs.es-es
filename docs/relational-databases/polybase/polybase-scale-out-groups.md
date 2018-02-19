@@ -8,7 +8,8 @@ ms.service:
 ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-polybase
+ms.technology:
+- database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - PolyBase, scale-out groups
 - scale-out PolyBase
 ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d235f0af092b5780686abbe2b8d191f04547fd6a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 018d765aace9ef2f46a1dd8da4e0a6c503a0d35f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-scale-out-groups"></a>Grupos de escalado horizontal de PolyBase
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Una instancia de SQL Server independiente con PolyBase puede convertirse en un cuello de botella de rendimiento cuando se trabaja con grandes conjuntos de datos en Hadoop o Azure Blob Storage. La característica de grupos de PolyBase permite crear un clúster de instancias de SQL Server para procesar grandes conjuntos de datos a partir de orígenes de datos externos, como Hadoop o Almacenamiento de blobs de Azure, en un modo de escalado horizontal para mejorar el rendimiento de las consultas.  
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Una instancia de SQL Server independiente con PolyBase puede convertirse en un cuello de botella de rendimiento cuando se trabaja con grandes conjuntos de datos en Hadoop o Almacenamiento de blobs de Azure. La característica de grupos de PolyBase permite crear un clúster de instancias de SQL Server para procesar grandes conjuntos de datos a partir de orígenes de datos externos, como Hadoop o Almacenamiento de blobs de Azure, en un modo de escalado horizontal para mejorar el rendimiento de las consultas.  
   
  Vea [Introducción a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) y [Guía de PolyBase](../../relational-databases/polybase/polybase-guide.md).  
   
@@ -40,7 +42,7 @@ ms.lasthandoff: 11/18/2017
  El nodo principal contiene la instancia de SQL Server a la que se envían las consultas PolyBase. Cada grupo de PolyBase solo puede tener un nodo principal. Un nodo principal es un grupo lógico del motor de base de datos de SQL, el motor de PolyBase y el servicio de movimiento de datos de PolyBase de la instancia de SQL Server.  
   
 ### <a name="compute-node"></a>Nodo de ejecución  
- Un nodo de ejecución contiene la instancia de SQL Server que ayuda a escalar horizontalmente el procesamiento de las consultas de los datos externos. Un nodo de ejecución es un grupo lógico de SQL Server y el servicio de movimiento de datos de PolyBase de la instancia de SQL Server. Un grupo de PolyBase puede tener varios nodos de ejecución.  
+ Un nodo de ejecución contiene la instancia de SQL Server que ayuda a escalar horizontalmente el procesamiento de las consultas de los datos externos. Un nodo de ejecución es un grupo lógico de SQL Server y el servicio de movimiento de datos de PolyBase de la instancia de SQL Server. Un grupo de PolyBase puede tener varios nodos de ejecución.  El nodo principal y los nodos de ejecución deben ejecutar la misma versión de SQL Server.
   
 ### <a name="distributed-query-processing"></a>Procesamiento de consultas distribuidas  
  Las consultas de PolyBase se envían a SQL Server en el nodo principal. La parte de la consulta que hace referencia a las tablas externas se entregan al motor de PolyBase.  
@@ -54,7 +56,7 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="to-configure-a-polybase-group"></a>Pasos para configurar un grupo de PolyBase  
   
-### <a name="prerequisites"></a>Requisitos previos  
+### <a name="prerequisites"></a>Prerequisites  
   
 -   Cualquier número de máquinas en el mismo dominio  
   
@@ -62,7 +64,7 @@ ms.lasthandoff: 11/18/2017
   
 ### <a name="steps"></a>Pasos  
   
-1.  Instale SQL Server con PolyBase en cualquier número de máquinas.  
+1.  Instale la misma versión de SQL Server con PolyBase en cualquier número de máquinas.  
   
 2.  Seleccione una instancia de SQL Server como nodo principal. Solo se puede designar un nodo principal en una instancia de SQL Server Enterprise.  
   
@@ -137,7 +139,7 @@ ms.lasthandoff: 11/18/2017
 ## <a name="next-steps"></a>Pasos siguientes  
  Para solucionar problemas, consulte [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Introducción a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
  [Guía de PolyBase](../../relational-databases/polybase/polybase-guide.md)   
  [Configuración de PolyBase &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)  

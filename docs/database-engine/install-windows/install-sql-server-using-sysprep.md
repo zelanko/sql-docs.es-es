@@ -8,23 +8,26 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 87615ca4a3601ab92b37e97a8392b392accb1695
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e538fc7315661cf76dc807cb54cbd0d518cb8603
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-sql-server-with-sysprep"></a>Instalar SQL Server con SysPrep
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Se puede acceder a las acciones de configuración relacionadas de SysPrep de 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde Centro de instalación. La página **Avanzadas** del **Centro de instalación** tiene dos opciones: **Preparar imagen de una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** y **Completar imagen de una instancia independiente preparada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Las secciones [Preparar](#prepare) y [Completar](#complete) describen el proceso de instalación en detalle. Para obtener más información, vea [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md). 
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relacionadas con SysPrep. La página **Avanzadas** del **Centro de instalación** tiene dos opciones: **Preparar imagen de una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** y **Completar imagen de una instancia independiente preparada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Las secciones [Preparar](#prepare) y [Completar](#complete) describen el proceso de instalación en detalle. Para obtener más información, vea [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md). 
   
 También puede preparar y completar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el símbolo del sistema o un archivo de configuración. Para obtener más información, vea:  
   
@@ -33,7 +36,7 @@ También puede preparar y completar una instancia de [!INCLUDE[ssNoVersion](../.
 - [Instalar SQL Server mediante un archivo de configuración](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)  
   
 ## <a name="prerequisites"></a>Prerequisites  
-Antes de instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], revise los temas de [Planear una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md). 
+Antes de instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], revise los artículos de [Planear una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md). 
   
 Para más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los requisitos de hardware y software, vea [Requisitos de hardware y software para instalar SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). 
     
@@ -106,7 +109,7 @@ Para más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../inclu
   
     |||  
     |-|-|  
-    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replicación<br /><br /> Características de texto completo<br /><br /> Data Quality Services<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Características redistribuibles<br /><br /> Características compartidas|  
+    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] REPLICATION<br /><br /> Características de texto completo<br /><br /> Data Quality Services<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Características redistribuibles<br /><br /> Características compartidas|  
   
      Al resaltar el nombre de la característica, se muestra una descripción de cada grupo de componentes en el panel derecho. Puede activar cualquier combinación de casillas. Para más información, vea [Ediciones y características admitidas de SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md). 
   
@@ -173,7 +176,7 @@ Para más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../inclu
   
      **Instancias instaladas:** la cuadrícula muestra las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que están en el equipo en el que se ejecuta el programa de instalación. 
   
-10. El flujo de trabajo en el resto del tema depende de las características seleccionadas durante el paso de preparación. En función de las selecciones, es posible que no vea todas las páginas. 
+10. El flujo de trabajo en el resto del artículo depende de las características seleccionadas durante el paso de preparación. En función de las selecciones, es posible que no vea todas las páginas. 
   
 11. En la página **Configuración del servidor** - Cuentas de servicio, especifique las cuentas de inicio de sesión para los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los servicios reales que se configuran en esta página dependen de las características que se van a instalar. 
   
@@ -301,7 +304,7 @@ Para más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../inclu
 10. Repita los pasos 1 a 9 hasta que se hayan quitado todos los componentes de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . 
   
 ##  <a name="bk_Modifying_Uninstalling"></a> Modificar o desinstalar una instancia completada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
- El proceso para agregar o quitar características, o bien para desinstalar una instancia completada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es similar al proceso de una instancia instalada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte los temas siguientes:  
+ El proceso para agregar o quitar características, o bien para desinstalar una instancia completada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es similar al proceso de una instancia instalada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea los siguientes artículos:  
   
 - [Agregar características a una instancia de SQL Server &#40;programa de instalación&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)  
   

@@ -20,22 +20,23 @@ helpviewer_keywords:
 - instances of SQL Server, uninstalling
 - uninstalling SQL Server
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
-caps.latest.revision: "74"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c00d5d9eea412be35b5cb5d53008237d51c95898
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f5c422a4d1a25ed210f857b9de31aaadec481847
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Desinstalar una instancia existente de SQL Server (programa de instalación)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
  > Para obtener contenido relacionado con las versiones anteriores de SQL Server, vea [Desinstalar una instancia existente de SQL Server (programa de instalación)](https://msdn.microsoft.com/en-US/library/ms143412(SQL.120).aspx).
 
-  En este artículo se describe cómo desinstalar una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Siguiendo los pasos de este tema, también prepara el sistema para reinstalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  En este artículo se describe cómo desinstalar una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Siguiendo los pasos de este tema también podrá preparar el sistema para reinstalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 >**IMPORTANTE:** Para desinstalar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe ser administrador local con permiso para iniciar sesión como servicio.  
   
@@ -115,7 +116,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  Si no puede solucionar la causa del error de desinstalación, puede ponerse en contacto con el servicio de soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . En algunos casos, como en la eliminación accidental de archivos importantes, puede ser necesario reinstalar el sistema operativo antes de reinstalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Ver y leer los archivos de registro de instalación de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

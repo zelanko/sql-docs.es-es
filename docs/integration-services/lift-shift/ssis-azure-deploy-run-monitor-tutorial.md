@@ -1,6 +1,6 @@
 ---
 title: Implementar, ejecutar y supervisar un paquete SSIS en Azure | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 02/05/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,21 +8,22 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bf9df198105549f481dda8472f7142533fa8f23
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: aa1cc5db91745fb7773856a8f66b03c82bba3e9a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Implementar, ejecutar y supervisar un paquete SSIS en Azure
 Este tutorial muestra cómo implementar un proyecto de SQL Server Integration Services para la base de datos del catálogo de SSISDB en Azure SQL Database, ejecutar un paquete en Azure-SSIS Integration Runtime y supervisar el paquete en ejecución.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Antes de comenzar, asegúrese de que tiene instalada la versión 17.2 (o posterior) de SQL Server Management Studio. Para descargar la versión más reciente de SSMS, consulte [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) [Descargar SQL Server Management Studio (SSMS)].
 
@@ -53,7 +54,7 @@ Use SQL Server Management Studio para conectarse al catálogo de SSIS en el serv
 
 5. En el Explorador de objetos, expanda la opción **Catálogos de Integration Services** y, a continuación, expanda **SSISDB** para ver los objetos de la base de datos del catálogo de SSIS.
 
-## <a name="deploy-a-project"></a>Implementar un proyecto
+## <a name="deploy-a-project-with-the-deployment-wizard"></a>Implementar un proyecto con el Asistente para implementación
 
 ### <a name="start-the-integration-services-deployment-wizard"></a>Iniciar el Asistente para implementación de Integration Services
 1. En el Explorador de objetos de SSMS, con el nodo **Catálogos de Integration Services** y el nodo **SSISDB** expandidos, expanda una carpeta de proyecto.
@@ -78,11 +79,75 @@ Use SQL Server Management Studio para conectarse al catálogo de SSIS en el serv
 4.  En la página **Revisión**, revise la configuración seleccionada.
     -   Puede cambiar las selecciones si hace clic en **Anterior** o en cualquiera de los pasos del panel izquierdo.
     -   Seleccione **Implementar** para iniciar el proceso de implementación.
-  
+
+    > ![NOTA] Si recibe el mensaje de error **No hay ningún agente de trabajo activo (proveedor de datos .NetSqlClient)**, asegúrese de que se está ejecutando Azure-SSIS IR. Este error se produce si intenta implementar mientras Azure-SSIS IR está en estado detenido.
+
 5.  Una vez completado el proceso de implementación, se abrirá la página **Resultados**. Esta página muestra si cada acción si se completó correctamente o no.
     -   Si la acción no se realiza correctamente, seleccione **Error** en la columna **Resultado** para que aparezca una explicación del error.
     -   De forma opcional, seleccione **Guardar informe** para guardar los resultados en un archivo XML.
     -   Seleccione **Cerrar** para salir del asistente.
+
+## <a name="deploy-a-project-with-powershell"></a>Implementar un proyecto con PowerShell
+
+Para implementar un proyecto con PowerShell en SSISDB en Azure SQL Database, adapte el siguiente script según sus requisitos:
+
+```powershell
+# Variables
+$ProjectFilePath = "C:\<folder>"
+$SSISDBServerEndpoint = "<servername>.database.windows.net"
+$SSISDBServerAdminUserName = "<username>"
+$SSISDBServerAdminPassword = "<password>"
+
+# Load the IntegrationServices Assembly
+[System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Management.IntegrationServices") | Out-Null;
+
+# Store the IntegrationServices Assembly namespace to avoid typing it every time
+$ISNamespace = "Microsoft.SqlServer.Management.IntegrationServices"
+
+Write-Host "Connecting to server ..."
+
+# Create a connection to the server
+$sqlConnectionString = "Data Source=" + $SSISDBServerEndpoint + ";User ID="+ $SSISDBServerAdminUserName +";Password="+ $SSISDBServerAdminPassword + ";Initial Catalog=SSISDB"
+$sqlConnection = New-Object System.Data.SqlClient.SqlConnection $sqlConnectionString
+
+# Create the Integration Services object
+$integrationServices = New-Object $ISNamespace".IntegrationServices" $sqlConnection
+
+# Get the catalog
+$catalog = $integrationServices.Catalogs['SSISDB']
+
+write-host "Enumerating all folders..."
+
+$folders = ls -Path $ProjectFilePath -Directory
+
+if ($folders.Count -gt 0)
+{
+    foreach ($filefolder in $folders)
+    {
+        Write-Host "Creating Folder " $filefolder.Name " ..."
+
+        # Create a new folder
+        $folder = New-Object $ISNamespace".CatalogFolder" ($catalog, $filefolder.Name, "Folder description")
+        $folder.Create()
+
+        $projects = ls -Path $filefolder.FullName -File -Filter *.ispac
+        if ($projects.Count -gt 0)
+        {
+            foreach($projectfile in $projects)
+            {
+                $projectfilename = $projectfile.Name.Replace(".ispac", "")
+                Write-Host "Deploying " $projectfilename " project ..."
+
+                # Read the project file, and deploy it to the folder
+                [byte[]] $projectFileContent = [System.IO.File]::ReadAllBytes($projectfile.FullName)
+                $folder.DeployProject($projectfilename, $projectFileContent)
+            }
+        }
+    }
+}
+
+Write-Host "All done." 
+```
 
 ## <a name="run-a-package"></a>Ejecutar un paquete
 

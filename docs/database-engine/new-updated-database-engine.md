@@ -1,25 +1,20 @@
 ---
 title: Documentos actualizados sobre el motor de base de datos | Microsoft Docs
 description: "Muestra fragmentos de contenido actualizado de la documentación modificada recientemente relativa al motor de base de datos."
-services: na
-documentationcenter: 
-author: MightyPen
 manager: craigg
-editor: barbkess
-ms.service: na
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.workload: database-engine
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 12/02/2017
+author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cbf472ba2b8d2d7abad095992895b56940a82d92
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: database-engine
+ms.date: 02/03/2018
+ms.openlocfilehash: d01d9fa13342709a74d98033d093d9856ab5d680
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="new-and-recently-updated-database-engine-docs"></a>Documentos nuevos y actualizados recientemente sobre el motor de base de datos
 
@@ -33,7 +28,7 @@ Se informa de las actualizaciones recientes del siguiente intervalo de fechas y 
 
 
 
-- *Intervalo de fechas de las actualizaciones:* &nbsp; **28-09-2017** &nbsp; a &nbsp; **02-12-2017**
+- *Intervalo de fechas de las actualizaciones:* &nbsp; del **03-12-2017** &nbsp; al &nbsp; **03-02-2018**
 - *Área de asunto:* &nbsp; **motor de base de datos**.
 
 
@@ -72,7 +67,7 @@ Por estas y otras razones, no copie código de estos fragmentos y no tome como v
 
 En esta lista compacta se proporcionan vínculos a todos los artículos actualizados que aparecen en la sección de extractos.
 
-1. [Opción de configuración del servidor Optimizar para cargas de trabajo ad hoc](#TitleNum_1)
+1. [Actualización de instancias de la réplica del grupo de disponibilidad Always On](#TitleNum_1)
 
 
 
@@ -83,83 +78,87 @@ En esta lista compacta se proporcionan vínculos a todos los artículos actualiz
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-optimize-for-ad-hoc-workloads-server-configuration-optionconfigure-windowsoptimize-for-ad-hoc-workloads-server-configuration-optionmd"></a>1. &nbsp; [Opción de configuración del servidor Optimizar para cargas de trabajo ad hoc](configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md)
+### <a name="1-nbsp-upgrading-always-on-availability-group-replica-instancesavailability-groupswindowsupgrading-always-on-availability-group-replica-instancesmd"></a>1. &nbsp; [Actualización de instancias de la réplica del grupo de disponibilidad Always On](availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)
 
-*Actualizado: 20-11-2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*Actualizado: 29-01-2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 38.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 174.  ms.author= "mikeray".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 6ca71358f13780b930e6fd10e431d4df2bb96441 221306c4554ebd383ab68ed67cdaeca390f57106  (PR=4032  ,  Filename=optimize-for-ad-hoc-workloads-server-configuration-option.md  ,  Dirpath=docs\database-engine\configure-windows\  ,  MergeCommitSha40=7f8aebc72e7d0c8cff3990865c9f1316996a67d5) -->
+<!-- git diff --ignore-all-space --unified=0 20ca282e8965889a7a530fb67e125cc876410e41 9f27d0f9a74333b291c1cdc1529edc13960fae29  (PR=4741  ,  Filename=upgrading-always-on-availability-group-replica-instances.md  ,  Dirpath=docs\database-engine\availability-groups\windows\  ,  MergeCommitSha40=0a44ce9993ebf61f86e409255a1d58d47993951a) -->
 
 
 
-**Recomendaciones**
-
-Si el número de planes de uso único consume una parte significativa de memoria de ..!NCLUDE-NotShown--ssDEnoversion--../../includes/ssdenoversion-md.md)] en un servidor OLTP y estos planes son planes ad hoc, use esta opción de servidor para reducir el uso de memoria con estos objetos.
-Para determinar el número de planes almacenados en caché de uso único, ejecute la consulta siguiente:
-
-```
-SELECT objtype, cacheobjtype,
-  AVG(usecounts) AS Avg_UseCount,
-  SUM(refcounts) AS AllRefObjects,
-  SUM(CAST(size_in_bytes AS bigint))/1024/1024 AS Size_MB
-FROM sys.dm_exec_cached_plans
-WHERE objtype = 'Adhoc' AND usecounts = 1
-GROUP BY objtype, cacheobjtype;
-```
-
-> [!IMPORTANT]
-> Establecer la opción **Optimizar para cargas de trabajo ad hoc** en 1 afecta solo a los planes nuevos; los planes que ya están en la memoria caché del plan no resultan afectados.
-> Para que afecte de manera inmediata a los planes de consulta ya almacenados en caché, la caché de planes debe borrarse mediante [ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE--../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) o tendrá que reiniciarse ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)].
+**Pasos especiales para la replicación o captura de datos modificados**
 
 
+Dependiendo de la actualización que se aplique, es posible que sea necesario realizar pasos adicionales para bases de datos de réplica de AG habilitados para replicar o capturar datos modificados. Consulte las notas de la versión de la actualización para determinar si necesita realizar los siguientes pasos o no:
+
+1. Actualice todas las réplicas secundarias.
+
+1. Tras actualizar todas las réplicas secundarias, conmute por error el AG en una instancia actualizada.
+
+1. Ejecute el siguiente comando de Transact-SQL en la instancia que hospeda la réplica principal:
+
+   ```
+   EXECUTE [master].[sys].[sp_vupgrade_replication];
+   ```
+
+   >[!NOTE]
+   >La ejecución de este comando puede llevar varios minutos.
+
+1. Actualice la instancia que estaba originalmente en la réplica principal.
+
+Para obtener información general, consulte [CDC functionality may break after upgrading to the latest CU](http://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/) (Es posible que la funcionalidad CDC no funcione después de actualizar a la última CU).
 
 
 
 
 
-## <a name="similar-articles"></a>Artículos similares
 
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
-    2017-12-02  23:00pm
--->
+
+
+
+## <a name="similar-articles-about-new-or-updated-articles"></a>Artículos similares sobre artículos nuevos o actualizados
 
 En esta sección se enumeran artículos muy similares a los artículos actualizados recientemente en otras áreas temáticas, dentro de nuestro repositorio público de GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Áreas temáticas con artículos nuevos o actualizados recientemente
 
-- [Nuevos + Actualizados (3+14): documentos de **Análisis avanzado para SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Nuevos + Actualizados (1+0): documentos de **Analysis Services para SQL**](../analysis-services/new-updated-analysis-services.md)
-- [Nuevos + Actualizados (87+0): documentos de **Analytics Platform System para SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Nuevos + Actualizados (5+4): documentos de **Conexión a SQL**](../connect/new-updated-connect.md)
-- [Nuevos + Actualizados (0+1): documentos de **Motor de base de datos de SQL**](../database-engine/new-updated-database-engine.md)
-- [Nuevos + Actualizados (2+2): documentos de **Integration Services para SQL**](../integration-services/new-updated-integration-services.md)
-- [Nuevos + Actualizados (10+9): documentos de **Linux para SQL**](../linux/new-updated-linux.md)
-- [Nuevos + Actualizados (2+4): documentos de **Bases de datos relacionales para SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Nuevos + Actualizados (4+2): documentos de **Reporting Services para SQL**](../reporting-services/new-updated-reporting-services.md)
-- [Nuevos + Actualizados (0+1): documentos de **Ejemplos para SQL**](../sample/new-updated-sample.md)
-- [Nuevos + Actualizados (21+0): documentos de **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Nuevos + Actualizados (5+1): documentos de **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Nuevos + Actualizados (0+1): documentos de **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Nuevos + Actualizados (1+0): documentos de **SQL Server Migration Assistant (SSMA)**](../ssma/new-updated-ssma.md)
-- [Nuevos + Actualizados (0+1): documentos de **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Nuevos + Actualizados (0+2): documentos de **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Áreas temáticas *con* artículos nuevos o actualizados recientemente
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Áreas temáticas sin artículos nuevos ni actualizados recientemente
+
+- [Nuevos + actualizados (1+3): &nbsp;documentos de **Análisis avanzado para SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nuevos + actualizados (0+1): &nbsp;documentos de **Analytics Platform System para SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Nuevos + actualizados (0+1): &nbsp;documentos de **Conexión a SQL**](../connect/new-updated-connect.md)
+- [Nuevos + actualizados (0+1): &nbsp;documentos del **Motor de base de datos de SQL**](../database-engine/new-updated-database-engine.md)
+- [Nuevos + actualizados (12+1): **documentos de** Integration Services para SQL](../integration-services/new-updated-integration-services.md)
+- [Nuevos + actualizados (6+2): &nbsp;documentos de **Linux para SQL**](../linux/new-updated-linux.md)
+- [Nuevos + actualizados (15+0): **documentos de** PowerShell para SQL](../powershell/new-updated-powershell.md)
+- [Nuevos + actualizados (2+9): &nbsp;documentos de **Bases de datos relacionales para SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Nuevos + actualizados (1+0): &nbsp;documentos de **Reporting Services para SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Nuevos + actualizados (1+1): &nbsp;documentos de **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Nuevos + actualizados (1+1): &nbsp;documentos de **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Nuevos + actualizados (0+1): &nbsp;documentos de **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Nuevos + actualizados (1+2): &nbsp;documentos de **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Nuevos + actualizados (0+2): &nbsp;documentos de **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Áreas temáticas que *no* tienen artículos nuevos o actualizados recientemente
+
 
 - [Nuevos + Actualizados (0+0): documentos de **Data Migration Assistant (DMA) para SQL**](../dma/new-updated-dma.md)
 - [Nuevos + Actualizados (0+0): documentos de **Objetos de datos ActiveX (ADO) para SQL**](../ado/new-updated-ado.md)
+- [Nuevos + actualizados (0+0): documentos de **Analysis Services para SQL**](../analysis-services/new-updated-analysis-services.md)
 - [Nuevos + Actualizados (0+0): documentos de **Data Quality Services para SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Nuevos + Actualizados (0+0): documentos de **Extensiones de minería de datos (DMX) para SQL**](../dmx/new-updated-dmx.md)
 - [Nuevos + actualizados (0+0): documentos de **Master Data Services (MDS) para SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Nuevos + Actualizados (0+0): documentos de **Expresiones multidimensionales (MDX) para SQL**](../mdx/new-updated-mdx.md)
 - [Nuevos + Actualizados (0+0): documentos de **ODBC (conectividad abierta de bases de datos) para SQL**](../odbc/new-updated-odbc.md)
-- [Nuevos + Actualizados (0+0): documentos de **PowerShell para SQL**](../powershell/new-updated-powershell.md)
+- [Nuevos + Actualizados (0+0): documentos de **Ejemplos para SQL**](../sample/new-updated-sample.md)
+- [Nuevos + Actualizados (0+0): documentos de **SQL Server Migration Assistant (SSMA)**](../ssma/new-updated-ssma.md)
 - [Nuevos + actualizados (0+0): documentos de **Herramientas para SQL**](../tools/new-updated-tools.md)
 - [Nuevos + Actualizados (0+0): documentos de **XQuery para SQL**](../xquery/new-updated-xquery.md)
 

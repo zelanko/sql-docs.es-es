@@ -8,23 +8,24 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-caps.latest.revision: "5"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d3588fd2410fdacb3c4e332c3485b40640b5587
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: c55426d6723749d9edda2b6244ae7e75f47047b2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -240,7 +241,7 @@ No se permiten sugerencias en las definiciones de vistas indizadas. En los modos
 
 El procesador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] optimiza el rendimiento de las vistas con particiones distribuidas. El aspecto más importante del rendimiento de las vistas con particiones distribuidas es la minimización de la cantidad de datos transferidos entre los servidores miembro.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] crea planes dinámicos e inteligentes que hacen un uso eficaz de las consultas distribuidas para tener acceso a los datos de las tablas miembro remotas: 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] crea planes dinámicos e inteligentes que hacen un uso eficaz de las consultas distribuidas para acceder a los datos de las tablas miembro remotas: 
 
 * El Procesador de consultas usa en primer lugar OLE DB para recuperar las definiciones de la restricción CHECK de cada tabla miembro. Esto permite al procesador de consultas asignar la distribución de valores clave a las tablas miembro.
 * The Query Processor compares the key ranges specified in an SQL statement `WHERE` de una instrucción SQL con el mapa que muestra cómo se distribuyen las filas en las tablas miembro. El procesador de consultas crea entonces un plan de ejecución de consultas que utiliza consultas distribuidas para recuperar únicamente las filas remotas necesarias para completar la instrucción SQL. El plan de ejecución se crea también de tal manera que cualquier acceso a las tablas miembro remotas, para datos o metadatos, se demora hasta que se requiere la información.
@@ -278,19 +279,19 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
    Retrieve row from linked table Server3.CustomerData.dbo.Customer_99
 ```
 
-A veces [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] genera ese tipo de planes de ejecución dinámicos incluso para consultas sin parámetros. El Optimizador puede parametrizar una consulta de modo que el plan de ejecución pueda volver a usarse. Si el Optimizador de consultas parametriza una consulta que hace referencia a una vista con particiones, el optimizador ya no puede dar por supuesto que las filas necesarias vendrán de una tabla base de datos especificada, y tendrá que utilizar los filtros dinámicos en el plan de ejecución.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] genera a veces ese tipo de planes de ejecución dinámicos incluso para consultas sin parámetros. El Optimizador puede parametrizar una consulta de modo que el plan de ejecución pueda volver a usarse. Si el Optimizador de consultas parametriza una consulta que hace referencia a una vista con particiones, el optimizador ya no puede dar por supuesto que las filas necesarias vendrán de una tabla base de datos especificada, y tendrá que utilizar los filtros dinámicos en el plan de ejecución.
 
 ## <a name="stored-procedure-and-trigger-execution"></a>Ejecutar un procedimiento almacenado y un desencadenador
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]almacena únicamente el origen de procedimientos almacenados y desencadenadores. La primera vez que se ejecuta un procedimiento almacenado o un desencadenador, el origen se compila en un plan de ejecución. Si el procedimiento almacenado o el desencadenador se ejecutan de nuevo antes de que el plan de ejecución quede anticuado en la memoria, el motor relacional detecta el plan existente y vuelve a utilizarlo. Si el plan ha quedado anticuado en la memoria, se genera uno nuevo. Este proceso es similar al que sigue [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para procesar todas las instrucciones SQL. La principal ventaja de rendimiento que tienen los procedimientos almacenados y los desencadenadores en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]en comparación con lotes de SQL dinámico, es que sus instrucciones SQL siempre son las mismas. Por lo tanto, el motor relacional los hace coincidir fácilmente con los planes de ejecución existentes. El procedimiento almacenado y los planes del desencadenador se reutilizan fácilmente.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] almacena únicamente el origen de procedimientos almacenados y desencadenadores. La primera vez que se ejecuta un procedimiento almacenado o un desencadenador, el origen se compila en un plan de ejecución. Si el procedimiento almacenado o el desencadenador se ejecutan de nuevo antes de que el plan de ejecución quede anticuado en la memoria, el motor relacional detecta el plan existente y vuelve a utilizarlo. Si el plan ha quedado anticuado en la memoria, se genera uno nuevo. Este proceso es similar al que sigue [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para procesar todas las instrucciones SQL. La principal ventaja de rendimiento que tienen los procedimientos almacenados y los desencadenadores en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]en comparación con lotes de SQL dinámico, es que sus instrucciones SQL siempre son las mismas. Por lo tanto, el motor relacional los hace coincidir fácilmente con los planes de ejecución existentes. El procedimiento almacenado y los planes del desencadenador se reutilizan fácilmente.
 
 El plan de ejecución para los procedimientos almacenados y los desencadenadores se ejecuta aparte del plan de ejecución del lote que llama al procedimiento almacenado o que activa el desencadenador. Esto proporciona mayor flexibilidad para volver a utilizar los planes de ejecución de los procedimientos almacenados y desencadenadores.
 
 ## <a name="execution-plan-caching-and-reuse"></a>Almacenar en caché y volver a utilizar un plan de ejecución
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene un bloque de memoria que se utiliza para almacenar planes de ejecución y búferes de datos. El porcentaje del conjunto que se asigna a los planes de ejecución o a los búferes de datos varía dinámicamente según el estado del sistema. La parte del bloque de memoria que se usa para almacenar los planes de ejecución se denomina caché de planes.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene un bloque de memoria que sirve para almacenar planes de ejecución y búferes de datos. El porcentaje del conjunto que se asigna a los planes de ejecución o a los búferes de datos varía dinámicamente según el estado del sistema. La parte del bloque de memoria que se usa para almacenar los planes de ejecución se denomina caché de planes.
 
-Los planes de ejecución de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tienen los siguientes componentes principales: 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene planes de ejecución con estos componentes principales: 
 
 * Plan de ejecución de consulta: la mayor parte del plan de ejecución es una estructura de datos reentrante de solo lectura que varios usuarios pueden usar. Esto se conoce como plan de consulta. No se almacena ningún contexto de usuario en el plan de consulta. Nunca hay más de una o dos copias del plan de consulta en la memoria: una copia para todas las ejecuciones en serie y otra para todas las ejecuciones en paralelo. La copia en paralelo cubre todas las ejecuciones en paralelo, sin tener en cuenta el grado de paralelismo. 
 * Contexto de ejecución: cada usuario que ejecuta la consulta tiene una estructura de datos que alberga los datos específicos de su ejecución, como los valores de los parámetros. Esta estructura de datos se conoce como contexto de ejecución. Las estructuras de datos del contexto de ejecución se vuelven a utilizar. Si un usuario ejecuta una consulta y una de las estructuras no está en uso, ésta se reinicializa con el contexto del nuevo usuario. 
@@ -782,7 +783,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite dos mét
         Employees);
   ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza OLE DB para la comunicación entre el motor relacional y el motor de almacenamiento. El motor relacional divide cada instrucción Transact-SQL en un grupo de operaciones sobre conjuntos de filas OLE DB simples abiertos por el motor de almacenamiento desde las tablas base. Esto significa que el motor relacional también puede abrir conjuntos de filas OLE DB simples en cualquier origen de datos OLE DB.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa OLE DB para la comunicación entre el motor relacional y el motor de almacenamiento. El motor relacional divide cada instrucción Transact-SQL en un grupo de operaciones sobre conjuntos de filas OLE DB simples abiertos por el motor de almacenamiento desde las tablas base. Esto significa que el motor relacional también puede abrir conjuntos de filas OLE DB simples en cualquier origen de datos OLE DB.  
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
 El motor relacional utiliza la interfaz de programación de aplicaciones (API) OLE DB para abrir los conjuntos de filas en servidores vinculados, capturar las filas y administrar las transacciones.
 
@@ -798,7 +799,7 @@ Cuando es posible, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] insert
 
 ## <a name="query-processing-enhancements-on-partitioned-tables-and-indexes"></a>Mejoras de procesamiento de consultas en las tablas e índices con particiones
 
-En [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)], se ha perfeccionado el rendimiento del procesamiento de las consultas en tablas con particiones en muchos planes paralelos, se ha modificado la forma de representación de los planes paralelos y en serie, y se ha mejorado la información sobre la creación de particiones que los planes de ejecución en tiempo de compilación y en tiempo de ejecución proporcionan. En este tema se describen estas mejoras y se proporcionan consejos sobre la interpretación de los planes de ejecución de consultas sobre tablas e índices con particiones, así como las prácticas recomendadas para la mejora del rendimiento de las consultas en objetos con particiones. 
+[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] ha perfeccionado el rendimiento del procesamiento de las consultas en tablas con particiones en muchos planes paralelos, ha modificado la forma de representación de los planes paralelos y en serie, y ha mejorado la información sobre la creación de particiones que los planes de ejecución en tiempo de compilación y en tiempo de ejecución proporcionan. En este tema se describen estas mejoras y se proporcionan consejos sobre la interpretación de los planes de ejecución de consultas sobre tablas e índices con particiones, así como las prácticas recomendadas para la mejora del rendimiento de las consultas en objetos con particiones. 
 
 > [!NOTE]
 > Las tablas e índices con particiones solo se admiten en las ediciones Enterprise, Developer y Evaluation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
@@ -839,7 +840,7 @@ Estas herramientas le proporcionarán la siguiente información:
 
 #### <a name="partition-information-enhancements"></a>Mejoras en la información sobre particiones
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona una mejor información acerca del particionamiento tanto para los planes de ejecución en tiempo de compilación como para los planes de ejecución en tiempo de ejecución. Los planes de ejecución proporcionan ahora la siguiente información:
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona mejor información sobre el particionamiento para los planes de ejecución en tiempo de compilación y para los planes de ejecución en tiempo de ejecución. Los planes de ejecución proporcionan ahora la siguiente información:
 
 * Un atributo `Partitioned` opcional que indica que un operador, como `seek`, `scan`, `insert`, `update`, `merge`o `delete`, se ejecuta en una tabla con particiones.  
 * Un nuevo elemento `SeekPredicateNew` con un subelemento `SeekKeys` que incluye `PartitionID` como columna de clave de índice principal y condiciones de filtro que especifican búsquedas de intervalos en `PartitionID`. La presencia de dos subelementos `SeekKeys` indica el uso de una operación de búsqueda selectiva sobre `PartitionID` .   

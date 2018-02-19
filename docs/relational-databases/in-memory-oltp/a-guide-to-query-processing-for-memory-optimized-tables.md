@@ -8,20 +8,21 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine-imoltp
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9f4dcd81deb9f16e21cd1b63df80cebb25a53ca
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: ee2351e74989e9a574b591366af4a8764b89dea0
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guía del procesamiento de consultas para tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -230,7 +231,7 @@ Ejecución de los procedimientos almacenados compilados de forma nativa.
   
  La invocación de un procedimiento almacenado compilado de forma nativa se describe como sigue:  
   
-1.  El usuario emite una instrucción **EXEC***usp_myproc* .  
+1.  El usuario emite una instrucción **EXEC***usp_myproc*.  
   
 2.  El analizador extrae los parámetros del nombre y del procedimiento almacenado.  
   

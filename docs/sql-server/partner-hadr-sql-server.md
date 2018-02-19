@@ -19,11 +19,11 @@ ms.date: 09/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 1c0f95e02d7b214d9a1ed295c55e42f8416451f0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 18a740fa623665b6978bf5897f5654657602270d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>Asociados de alta disponibilidad y recuperación ante desastres de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ Para proporcionar alta disponibilidad y recuperación ante desastres para los se
 | --- | --- | --- |
 |![azure][5] |**Azure Site Recovery**<br>Site Recovery replica las cargas de trabajo que se ejecutan en servidores físicos o máquinas virtuales para que sigan estando disponibles en una ubicación secundaria si el sitio primario no lo está. Puede replicar y conmutar por error máquinas de virtuales de SQL Server desde el centro de datos local a Azure o a otro centro de datos local o entre centros de datos de Azure.<br><br> Ediciones Enterprise y Standard de SQL Server 2008 R2 a SQL Server 2016|[Sitio web][azure_website]<br>[Marketplace][azure_marketplace]<br>[Hoja de datos][azure_datasheet]<br>[Twitter][azure_twitter]<br>[Vídeo][azure_youtube]|
 |![dh2i][2] |**DH2i**<br>DxEnterprise es un software de disponibilidad inteligente para Windows, Linux y Docker que ayuda a conseguir el tiempo de inactividad planeado y no planeado más próximo a cero, permite un ahorro significativo en costos, simplifica drásticamente la administración y permite conseguir una consolidación tanto física como lógica.<br><br>SQL Server 2005+, Windows Server 2008R2+, Ubuntu 16+, RHEL 7+ y CentOS 7+|[Sitio web][dh2i_website]<br>[Hoja de datos][dh2i_datasheet]<br>[Twitter][dh2i_twitter]<br>[Vídeo][dh2i_youtube]|
-|![hpe][4] |**HPE Serviceguard**<br>Proteja las cargas de trabajo de SQL Server 2017 críticas en Linux® frente a tiempos de inactividad planeados y no planeados con multitud de errores de infraestructura y aplicaciones en entornos físicos y virtuales a cualquier distancia con HPE Serviceguard para Linux (SGLX). Como parte del programa beta, HPE SGLX ofrece opciones de recuperación y supervisión contextuales para cargas de trabajo de instancias de clúster de conmutación por error y grupos de disponibilidad Always On en cargas de trabajo de SQL Server. Maximice el tiempo de actividad con HPE SGLX sin comprometer el rendimiento ni la integridad de los datos.<br><br>SQL Server 2017 en Linux: RedHat 7.3, 7.4, SUSE 12 SP2, SP3|[Sitio web][hpe_website]<br>[Hoja de datos][hpe]<br>[Descargar versión beta][hpe_download]<br>[Blog][hpe_download]<br>[Twitter][hpe_twitter]
+|![hpe][4] |**HPE Serviceguard**<br>Proteja las cargas de trabajo de SQL Server 2017 críticas en Linux® frente a tiempos de inactividad planeados y no planeados con multitud de errores de infraestructura y aplicaciones en entornos físicos y virtuales a cualquier distancia con HPE Serviceguard para Linux (SGLX). HPE SGLX A.12.20.00 y versiones posteriores ofrecen opciones de recuperación y supervisión contextuales para cargas de trabajo de instancias de clúster de conmutación por error y grupos de disponibilidad Always On en cargas de trabajo de SQL Server. Maximice el tiempo de actividad con HPE SGLX sin comprometer el rendimiento ni la integridad de los datos.<br><br>SQL Server 2017 en Linux: RedHat 7.3, 7.4, SUSE 12 SP2, SP3|[Sitio web][hpe_website]<br>[Hoja de datos][hpe]<br>[Descargar evaluación][hpe_download]<br>[Blog][hpe_download]<br>[Twitter][hpe_twitter]
 |![idera][3]|**IDERA**<br>SQL Safe Backup es una solución de copia de seguridad y recuperación de alto rendimiento para SQL Server que ahorra dinero gracias a la reducción del tiempo de copia de seguridad de la base de datos y del tamaño del archivo de copia de seguridad y también por el acceso de lectura y escritura instantáneo a las bases de datos en los archivos de copia de seguridad.<br><br>Microsoft SQL Server: 2005 SP1 o posterior, 2008, 2008 R2, 2012, 2014, 2016; todas las ediciones |[Sitio web][idera_website]|
 |![nec][7]|**NEC**<br>ExpressCluster es una completa solución de recuperación ante desastres y alta disponibilidad totalmente automatizada que ofrece protección ante los principales errores, incluidos los de hardware, software, red y sitio para SQL Server y las aplicaciones asociadas ejecutadas en máquinas virtuales o físicas, en entornos locales o de nube.<br><br>Microsoft SQL Server: 2005 o posterior; todas las ediciones |[Sitio web][necec_website]<br>[Hoja de datos][necec_datasheet]<br>[Vídeo][necec_youtube]<br>[Descargar][necec_download]|
 |![portworx][6] |**Portworx**<br>Portworx es la solución para contenedores con estado que se ejecutan en producción. Con Portworx, los usuarios pueden administrar cualquier base de datos o servicio con estado en infraestructuras de todo tipo mediante cualquier programador de contenedores, entre otros, Kubernetes, Mesosphere DC/OS y Docker Swarm. Portworx resuelve los cinco problemas más comunes que los equipos de DevOps encuentran al ejecutar bases de datos en contenedores y otros servicios con estado en producción: persistencia, alta disponibilidad, automatización de datos, compatibilidad con múltiples almacenes de datos e infraestructuras y seguridad.<br><br>SQL Server 2017 en Docker |[Sitio web][portworx_website]<br>[Documentación][portworx_docs]<br>[Vídeo][portworx_youtube]|
@@ -104,7 +104,7 @@ Para obtener más información sobre otros asociados, vea los artículos sobre [
 [portworx_docs]: http://docs.portworx.com/
 
 <!--Download links-->
-[hpe_download]: http://downloads.linux.hpe.com/SDR/project/sglx/sglx-beta/
+[hpe_download]: https://h20392.www2.hpe.com/portal/swdepot/displayProductInfo.do?productNumber=SGLX-DEMO
 [necec_download]: https://www.necam.com/ExpressCluster/30daytrial/
 <!--Blog links-->
 [hpe_blog]: https://community.hpe.com/t5/Servers-The-Right-Compute/SQL-Server-for-Linux-Is-Here-and-A-New-Chapter-for-Mission/ba-p/6977571#.WiHWW0xFwUE

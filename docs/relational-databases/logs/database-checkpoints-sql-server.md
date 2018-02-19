@@ -8,7 +8,8 @@ ms.component: logs
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,19 +29,20 @@ helpviewer_keywords:
 - flushing pages
 - active logs
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
-caps.latest.revision: "74"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3505f3976f56af67a939650d474b85b4adb63c20
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b46508013b66ab14175b0edc2710c9c98ed901a9
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-checkpoints-sql-server"></a>Puntos de comprobación de base de datos (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Un *punto de control* crea un buen punto conocido desde donde [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] puede empezar a aplicar cambios incluidos en el registro durante la recuperación después de un cierre inesperado o un bloqueo del sistema.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Un *punto de comprobación* crea un buen punto conocido desde donde [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] puede empezar a aplicar cambios incluidos en el registro durante la recuperación después de un cierre inesperado o un bloqueo del sistema.  
  
   
 ##  <a name="Overview"></a> Información general   
@@ -48,9 +50,9 @@ Por motivos de rendimiento, [!INCLUDE[ssDE](../../includes/ssde-md.md)] realiza 
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] admite varios tipos de puntos de comprobación: automáticos, indirectos, manuales e internos. En la tabla siguiente se resumen los tipos de **puntos de comprobación**:
   
-|Nombre|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interfaz|Descripción|  
+|Nombre|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interfaz|Description|  
 |----------|----------------------------------|-----------------|  
-|Automática|EXEC sp_configure **'**recovery interval**','***seconds***'**|Se emite automáticamente en segundo plano para cumplir el límite de tiempo superior que sugiere la opción de configuración de servidor **recovery interval** . Los puntos de comprobación automáticos se ejecutan hasta completarse.  Los puntos de comprobación automáticos están limitados según el número de operaciones de escritura pendientes y en función de si [!INCLUDE[ssDE](../../includes/ssde-md.md)] detecta un aumento de la latencia de escritura superior a 50 milisegundos.<br /><br /> Para más información, consulte [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
+|Automático|EXEC sp_configure **'**recovery interval**','***seconds***'**|Se emite automáticamente en segundo plano para cumplir el límite de tiempo superior que sugiere la opción de configuración de servidor **recovery interval** . Los puntos de comprobación automáticos se ejecutan hasta completarse.  Los puntos de comprobación automáticos están limitados según el número de operaciones de escritura pendientes y en función de si [!INCLUDE[ssDE](../../includes/ssde-md.md)] detecta un aumento de la latencia de escritura superior a 50 milisegundos.<br /><br /> Para más información, consulte [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
 |Indirecto|ALTER DATABASE … SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS &#124; MINUTES }|Se emiten en segundo plano para cumplir un tiempo de recuperación de destino especificado por el usuario para una determinada base de datos. Empezando por [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], el valor predeterminado es 1 minuto. El valor predeterminado es 0 para versiones antiguas, que indica que la base de datos utilizará puntos de comprobación automáticos, cuya frecuencia depende del valor de intervalo de recuperación de la instancia de servidor.<br /><br /> Para más información, consulte [Cambiar el tiempo de recuperación de destino de una base de datos &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).|  
 |Manual|CHECKPOINT [ *checkpoint_duration* ]|Se emite cuando se ejecuta un comando CHECKPOINT de [!INCLUDE[tsql](../../includes/tsql-md.md)] . El punto de comprobación manual se produce en la base de datos actual para la conexión. De forma predeterminada, los puntos de comprobación manuales se ejecutan hasta completarse. La limitación funciona de la misma forma que para los puntos de comprobación automáticos.  Opcionalmente, el parámetro *checkpoint_duration* especifica un periodo de tiempo solicitado, en segundos, para que se complete el punto de comprobación.<br /><br /> Para más información, consulte [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md).|  
 |Interno|Ninguno.|Se emite por varias operaciones de servidor, como la copia de seguridad y la creación de instantánea de base de datos, para garantizar que las imágenes de disco coinciden con el estado actual del registro.|  
@@ -70,7 +72,7 @@ Por motivos de rendimiento, [!INCLUDE[ssDE](../../includes/ssde-md.md)] realiza 
 |target_recovery_time|"recovery interval"|Tipo de punto de comprobación usado|  
 |----------------------------|-------------------------|-----------------------------|  
 |0|0|Puntos de comprobación automáticos cuyo intervalo de recuperación de destino es 1 minuto.|  
-|0|>0|Puntos de comprobación automáticos cuyo intervalo de recuperación de destino lo especifica la configuración definida por el usuario de la opción **“sp_configure” recovery interval** .|  
+|0|>0|Puntos de comprobación automáticos cuyo intervalo de recuperación de destino lo especifica la configuración definida por el usuario de la opción **“sp_configure” recovery interval**.|  
 |>0|No aplicable.|Puntos de comprobación indirectos cuyo tiempo de recuperación de destino lo determina la configuración TARGET_RECOVERY_TIME, expresado en segundos.|  
   
 ##  <a name="AutomaticChkpt"></a> Puntos de comprobación automáticos  

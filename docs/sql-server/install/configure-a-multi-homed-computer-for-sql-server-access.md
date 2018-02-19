@@ -8,7 +8,8 @@ ms.service:
 ms.component: install
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,24 +17,26 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 64c02e1d3e2c0304acebd9d8c8c9a60982841c10
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 084fc871f35c8902fab894ad170db57b44f2b824
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurar un equipo de host múltiple para el acceso a SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cuando un servidor debe proporcionar una conexión a dos o más redes o subredes de la red, un escenario típico utiliza un equipo de host múltiple. Con frecuencia, este equipo se encuentra en una red perimetral (también conocida como DMZ, zona desmilitarizada o subred filtrada). En este tema se describe cómo configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Firewall de Windows con seguridad avanzada para proporcionar las conexiones de red a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un entorno de host múltiple.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  Cuando un servidor debe proporcionar una conexión a dos o más redes o subredes de la red, un escenario típico utiliza un equipo de host múltiple. Con frecuencia, este equipo se encuentra en una red perimetral (también conocida como DMZ, zona desmilitarizada o subred filtrada). En este artículo se describe cómo configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Firewall de Windows con seguridad avanzada para proporcionar las conexiones de red a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un entorno de host múltiple.  
   
 > [!NOTE]  
 >  Un equipo de host múltiple tiene varios adaptadores de red o se ha configurado con el fin de utilizar varias direcciones IP para un único adaptador de red. Un equipo de host doble tiene dos adaptadores de red o se ha configurado para utilizar dos direcciones IP para un único adaptador de red.  
   
- Antes de continuar con este tema, debe conocer la información que se proporciona en el tema [Configurar Firewall de Windows para permitir el acceso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md). Este tema contiene información básica sobre cómo funcionan los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el firewall.  
+ Antes de continuar con este artículo, debe conocer la información que se proporciona en el artículo [Configurar Firewall de Windows para permitir el acceso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md). Este artículo contiene información básica sobre cómo funcionan los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el firewall.  
   
  **Las suposiciones para este ejemplo son:**  
   
@@ -44,7 +47,7 @@ ms.lasthandoff: 12/05/2017
     > [!NOTE]  
     >  Las direcciones IPv4 son una serie de cuatro números conocidos como octetos. Cada número es menor que 255, separados por puntos, como 127.0.0.1. Las direcciones IPv6 son una serie de ocho números hexadecimales separada por dos puntos, como fe80:4898:23:3:49a6:f5c1:2452:b994.  
   
--   Las reglas de firewall podrían permitir el acceso a través de un puerto concreto, por ejemplo el 1433. O bien, las reglas de firewall podrían permitir el acceso al programa de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] (sqlservr.exe). Ninguno de los métodos es mejor que el otro. Dado que un servidor de una red perimetral es más vulnerable ante los ataques que los servidores de una intranet, en este tema se supone que desea tener un control más preciso y seleccionar individualmente los puertos que abre. Por esa razón, en este tema se supone que configurará [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para escuchar en un puerto fijo. Para obtener más información sobre los puertos que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa, vea [Configurar Firewall de Windows para permitir el acceso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+-   Las reglas de firewall podrían permitir el acceso a través de un puerto concreto, por ejemplo el 1433. O bien, las reglas de firewall podrían permitir el acceso al programa de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] (sqlservr.exe). Ninguno de los métodos es mejor que el otro. Dado que un servidor de una red perimetral es más vulnerable ante los ataques que los servidores de una intranet, en este artículo se supone que quiere tener un control más preciso y seleccionar individualmente los puertos que abre. Por esa razón, en este artículo se supone que configurará [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para escuchar en un puerto fijo. Para obtener más información sobre los puertos que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa, vea [Configurar Firewall de Windows para permitir el acceso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 -   En este ejemplo se configura el acceso a [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizando el puerto TCP 1433. Los otros puertos que usan los diferentes componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden configurar utilizando los mismos pasos generales.  
   
@@ -144,7 +147,7 @@ ms.lasthandoff: 12/05/2017
   
 9. Para configurar las otras direcciones IP en un equipo de host múltiple, repita este procedimiento con otra dirección IP y otra regla.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Servicio SQL Server Browser &#40;motor de base de datos y SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  [Conectarse a SQL Server a través de un servidor proxy &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md)  
   

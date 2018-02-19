@@ -14,22 +14,23 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 932ac3a8337af5871910c9aabd7a906508b1455d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a3ad97ccd909c55268cf2be050d913fdc931433a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Revertir los separadores de palabras usados por las búsquedas a la versión anterior
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala y habilita una versión de los separadores de palabras y lematizadores para todos los idiomas que admite la búsqueda de texto completo, excepto el coreano. En este tema se describe cómo pasar de esta versión de estos componentes a la versión previa o viceversa.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala y habilita una versión de los separadores de palabras y lematizadores para todos los idiomas admitidos por búsqueda de texto completo, a excepción del coreano. En este artículo se describe cómo pasar de esta versión de estos componentes a la versión previa o viceversa.  
   
- En este tema no se explican los siguientes idiomas:  
+ En este artículo no se explican los siguientes idiomas:  
   
--   **Inglés**. Para revertir o restaurar los componentes en inglés, vea [Cambiar el separador de palabras usado para el inglés de Estados Unidos y el del Reino Unido](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+-   **Inglés**. Para revertir o restaurar los componentes en inglés, vea [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 -   **Danés, polaco y turco**. Se han reemplazado los separadores de palabras de terceros para danés, polaco y turco que se incluían en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con componentes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/17/2017
  Para obtener información general sobre los separadores de palabras y lematizadores, vea [Configurar y administrar separadores de palabras y lematizadores para la búsqueda](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
 ##  <a name="overview"></a> Información general sobre la reversión y restauración de los separadores de palabras y los lematizadores  
- Las instrucciones para revertir y restaurar los separadores de palabras y lematizadores dependen del idioma. En la tabla siguiente se resumen los 3 conjuntos de acciones que pueden ser necesarios para revertir los componentes a la versión anterior.  
+ Las instrucciones para revertir y restaurar los separadores de palabras y lematizadores dependen del idioma. En la tabla siguiente se resumen los tres conjuntos de acciones que pueden ser necesarios para revertir los componentes a la versión anterior.  
   
 |Archivo actual|Archivo anterior|Número de idiomas afectados|Acción de archivos|Acción de entradas del Registro|  
 |------------------|-------------------|----------------------------------|----------------------|---------------------------------|  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 > [!WARNING]  
 >  Si reemplaza la versión actual del archivo NaturalLanguage6.dll con una versión distinta, el comportamiento de todos los idiomas que utilizan este archivo se verá afectado.  
   
- Los archivos descritos en este tema son archivos DLL instalados en la carpeta `MSSQL\Binn` de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La ruta de acceso completa normalmente es:  
+ Los archivos descritos en este artículo son archivos DLL instalados en la carpeta `MSSQL\Binn` de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La ruta de acceso completa normalmente es:  
   
  `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/17/2017
   
  **Lista de idiomas afectados**  
   
-|Lenguaje|Abreviatura<br />utilizada en el<br />Registro|LCID|  
+|Idioma|Abreviatura<br />utilizada en el<br />Registro|LCID|  
 |--------------|---------------------------------------|----------|  
 |Bengalí|ben|1093|  
 |Búlgaro|bgr|1026|  
@@ -134,10 +135,10 @@ ms.lasthandoff: 11/17/2017
   
  **Lista de idiomas afectados**  
   
-|Lenguaje|Abreviatura<br />utilizada en el<br />Registro|LCID|  
+|Idioma|Abreviatura<br />utilizada en el<br />Registro|LCID|  
 |--------------|---------------------------------------|----------|  
 |Árabe|ara|1025|  
-|Alemán|deu|1031|  
+|German|deu|1031|  
 |Japonés|jpn|1041|  
 |Neerlandés|nld|1043|  
 |Ruso|rus|1049|  
@@ -219,8 +220,8 @@ ms.lasthandoff: 11/17/2017
 |---------------|------------------|-------------|  
 |CLSID anterior|7EFD3C7E-9E4B-4a93-9503-DECD74C0AC6D|483B0283-25DB-4c92-9C15-A65925CB95CE|  
 |Nombre de archivo anterior|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|CLSID actual|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|Ninguno|  
-|Nombre de archivo actual|MSWB7.dll|Ninguno|  
+|CLSID actual|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|None|  
+|Nombre de archivo actual|MSWB7.dll|None|  
   
  **Alemán (deu), LCID 1031**  
   
@@ -229,7 +230,7 @@ ms.lasthandoff: 11/17/2017
 |CLSID anterior|45EACA36-DBE9-4e4a-A26D-5C201902346D|65170AE4-0AD2-4fa5-B3BA-7CD73E2DA825|  
 |Nombre de archivo anterior|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |CLSID actual|dfa00c33-bf19-482e-a791-3c785b0149b4|8a474d89-6e2f-419c-8dd5-9b50edc8c787|  
-|Nombre de archivo actual|MSWB7.dll|MSWB7.dll|  
+|Nombre de archivo actual|MsWb7.dll|MSWB7.dll|  
   
  **Japonés (jpn), LCID 1041**  
   
@@ -237,8 +238,8 @@ ms.lasthandoff: 11/17/2017
 |---------------|------------------|-------------|  
 |CLSID anterior|E1E8F15E-8BEC-45df-83BF-50FF84D0CAB5|3D5DF14F-649F-4cbc-853D-F18FEDE9CF5D|  
 |Nombre de archivo anterior|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|CLSID actual|04096682-6ece-4e9e-90c1-52d81f0422ed|Ninguno|  
-|Nombre de archivo actual|MsWb70011.dll|Ninguno|  
+|CLSID actual|04096682-6ece-4e9e-90c1-52d81f0422ed|None|  
+|Nombre de archivo actual|MsWb70011.dll|None|  
   
  **Holandés (nld), LCID 1043**  
   
@@ -247,7 +248,7 @@ ms.lasthandoff: 11/17/2017
 |CLSID anterior|2C9F6BEB-C5B0-42b6-A5EE-84C24DC0D8EF|F7A465EE-13FB-409a-B878-195B420433AF|  
 |Nombre de archivo anterior|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |CLSID actual|69483c30-a9af-4552-8f84-a0796ad5285b|CF923CB5-1187-43ab-B053-3E44BED65FFA|  
-|Nombre de archivo actual|MSWB7.dll|MSWB7.dll|  
+|Nombre de archivo actual|MsWb7.dll|MSWB7.dll|  
   
  **Ruso (rus), LCID 1049**  
   
@@ -256,14 +257,14 @@ ms.lasthandoff: 11/17/2017
 |CLSID anterior|2CB6CDA4-1C14-4392-A8EC-81EEF1F2E079|E06A0DDD-E81A-4e93-8A8D-F386C3A1B670|  
 |Nombre de archivo anterior|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |CLSID actual|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
-|Nombre de archivo actual|MSWB7.dll|MSWB7.dll|  
+|Nombre de archivo actual|MsWb7.dll|MSWB7.dll|  
   
 ##  <a name="newnew"></a> Idiomas para los que ni el nombre de archivo anterior ni el actual es NaturalLanguage6.dll  
  Para los idiomas en la tabla siguiente, los nombres de archivo de los separadores de palabras y los lematizadores anteriores son diferentes de los nombres de archivo de las nuevas versiones. Ni el nombre de archivo anterior ni el actual es NaturalLanguage6.dll. No tendrá que reemplazar los archivos, porque la instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] copia la versión actual y las anteriores de los componentes en la carpeta Binn. Sin embargo, tendrá que cambiar un conjunto de entradas del Registro para especificar la versión anterior o actual de los componentes.  
   
  **Lista de idiomas afectados**  
   
-|Lenguaje|Abreviatura<br />utilizada en el<br />Registro|LCID|  
+|Idioma|Abreviatura<br />utilizada en el<br />Registro|LCID|  
 |--------------|---------------------------------------|----------|  
 |Chino simplificado|chs|2052|  
 |Chino tradicional|cht|1028|  
@@ -353,8 +354,8 @@ ms.lasthandoff: 11/17/2017
 |---------------|------------------|-------------|  
 |CLSID anterior|CCA22CF4-59FE-11D1-BBFF-00C04FB97FDA|CEDC01C7-59FE-11D1-BBFF-00C04FB97FDA|  
 |Nombre de archivo anterior|Thawbrkr.dll|Thawbrkr.dll|  
-|CLSID actual|F70C0935-6E9F-4ef1-9F06-7876536DB900|Ninguno|  
-|Nombre de archivo actual|MsWb7001e.dll|Ninguno|  
+|CLSID actual|F70C0935-6E9F-4ef1-9F06-7876536DB900|None|  
+|Nombre de archivo actual|MsWb7001e.dll|None|  
   
  **Chino tradicional (zh-hk), LCID 3076**  
   
@@ -383,8 +384,8 @@ ms.lasthandoff: 11/17/2017
 |CLSID actual|E0831C90-BAB0-4ca5-B9BD-EA254B538DAC|  
 |Nombre de archivo actual|MsWb70804.dll|  
   
-## <a name="see-also"></a>Vea también  
- [Cambiar el separador de palabras usado para el inglés de Estados Unidos y el del Reino Unido](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+## <a name="see-also"></a>Ver también  
+ [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [Cambios de comportamiento en la búsqueda de texto completo](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   
   

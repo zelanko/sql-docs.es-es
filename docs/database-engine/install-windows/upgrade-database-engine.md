@@ -8,7 +8,8 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,27 +17,30 @@ helpviewer_keywords:
 - compatibility levels [SQL Server], after upgrade
 - Database Engine [SQL Server], upgrading
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
-caps.latest.revision: "62"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 02c161b78ee291d30cfad1861138743369cba037
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a43aff2cc08b0a86bcd371e899d6b754aaa791b0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-database-engine"></a>Actualizar el motor de base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los temas de esta sección le ayudarán a actualizar el motor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
-1.  [Elección de un método de actualización del motor de base de datos](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) Antes de comenzar una actualización, debe comprender los distintos métodos de actualización. En este tema se describen los métodos de actualización y los pasos implicados con cada método de actualización.  
+  Con los artículos de esta sección aprenderá a actualizar el motor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-2.  [Planeación y prueba del plan de actualización del motor de base de datos](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) Después de revisar los métodos de actualización, está listo para desarrollar el método de actualización adecuado para su entorno y, después, probar el método de actualización antes de actualizar el entorno existente. En este tema se describe el desarrollo de un plan de actualización y su prueba.  
+1.  [Elección de un método de actualización del motor de base de datos](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) Antes de comenzar una actualización, debe comprender los distintos métodos de actualización. En este artículo se describen los métodos de actualización y los pasos implicados en cada método de actualización.  
   
-3.  [Completar la actualización del motor de base de datos](../../database-engine/install-windows/complete-the-database-engine-upgrade.md) Después de actualizar las bases de datos a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], existen pasos adicionales que debe llevar a cabo, como realizar una copia de seguridad nueva, habilitar nuevas características y volver a rellenar los catálogos de texto completo. En este tema se trata lo siguiente:  
+2.  [Planeación y prueba del plan de actualización del motor de base de datos](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) Después de revisar los métodos de actualización, está listo para desarrollar el método de actualización adecuado para su entorno y, después, probar el método de actualización antes de actualizar el entorno existente. En este artículo se describe el desarrollo de un plan de actualización y su prueba.  
   
-4.  [Cambiar el modo de compatibilidad de la base de datos y usar el almacén de consultas](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md) Uno de los pasos que se deben realizar después de actualizar las bases de datos a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] consiste en habilitar las nuevas características cambiando el modo de compatibilidad de base de datos y, después, usando el almacén de consultas para supervisar el rendimiento. En este tema se trata este proceso y proporciona el flujo de trabajo recomendado.  
+3.  [Completar la actualización del motor de base de datos](../../database-engine/install-windows/complete-the-database-engine-upgrade.md) Después de actualizar las bases de datos a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], debe realizar otros pasos, como realizar una copia de seguridad nueva, habilitar nuevas características y volver a rellenar los catálogos de texto completo. En este artículo se describen estos pasos.  
   
-5.  [Aprovechamiento de las nuevas características de SQL Server](http://www.microsoft.com/sql-server/sql-server-2017) Finalmente, después de haber completado los pasos anteriores, ya está preparado para sacar partido de mejoras concretas del motor de base de datos. En este tema se sugieren algunas de estas mejoras y proporciona vínculos para más información.  
+4.  [Cambiar el modo de compatibilidad de la base de datos y usar el almacén de consultas](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md) Uno de los pasos que se deben realizar después de actualizar las bases de datos a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] consiste en habilitar las nuevas características cambiando el modo de compatibilidad de base de datos y, después, usando el almacén de consultas para supervisar el rendimiento. En este artículo se explica este proceso y el flujo de trabajo recomendado.  
+  
+5.  [Aprovechamiento de las nuevas características de SQL Server](http://www.microsoft.com/sql-server/sql-server-2017) Finalmente, después de haber completado los pasos anteriores, ya está preparado para sacar partido de mejoras concretas del motor de base de datos. En este artículo se sugieren algunas de estas mejoras y se ofrecen vínculos para ampliar información.  
   
   

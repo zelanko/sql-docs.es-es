@@ -8,7 +8,8 @@ ms.service:
 ms.component: xml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,19 +27,20 @@ helpviewer_keywords:
 - schema collections [SQL Server], guidelines
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
-caps.latest.revision: "84"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d12b4ae5ef18aadaf580945f5326dc08f00c11ac
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: e60de9c75202dc0c5c02a8765a1c2f8d4c631498
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Requisitos y limitaciones de las colecciones de esquemas XML en el servidor
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] La validación del lenguaje de definición de esquemas XML (XSD) tiene algunas limitaciones relativas a las columnas SQL que usan el tipo de datos **xml**. En la tabla siguiente se proporcionan detalles acerca de estas limitaciones, así como directrices para modificar el esquema XSD para que funcione con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los temas de esta sección proporcionan información adicional sobre limitaciones específicas y orientación para trabajar con ellas.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+La validación del lenguaje de definición de esquemas XML (XSD) tiene algunas limitaciones relativas a las columnas SQL que usan el tipo de datos **xml** . En la tabla siguiente se proporcionan detalles acerca de estas limitaciones, así como directrices para modificar el esquema XSD para que funcione con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los temas de esta sección proporcionan información adicional sobre limitaciones específicas y orientación para trabajar con ellas.  
   
 |Elemento|Limitación|  
 |----------|----------------|  

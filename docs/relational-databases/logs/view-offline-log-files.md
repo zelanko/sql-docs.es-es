@@ -8,26 +8,28 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Log File Viewer, viewing offline logs
 - offline log files
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 225e2dafcaac744ed1ecd67ec928d13490472c7a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0e87fd686f9962562af63a50f216254081a17581
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
-# <a name="view-offline-log-files"></a>Ver archivos del registro sin conexión
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], los archivos de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden ver desde una instancia local o remota de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando la instancia de destino está sin conexión o no se puede iniciar.  
+# <a name="view-offline-log-files"></a>Ver sin conexión archivos de registro
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], los archivos de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden ver desde una instancia local o remota de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando la instancia de destino está sin conexión o no se puede iniciar.  
   
  Puede tener acceso a los archivos de registro sin conexión de servidores registrados o mediante programación a través de consultas WMI y WQL (Lenguaje de la consulta de WMI).  
   
@@ -80,7 +82,7 @@ ms.lasthandoff: 11/17/2017
   
     3.  Escriba el nombre del equipo remoto y haga clic en **Aceptar**.  
   
-3.  Haga clic con el botón derecho en **Control WMI (local)** o **Control WMI (***nombreEquipoRemoto***)**y, después, haga clic en **Propiedades**.  
+3.  Haga clic con el botón derecho en **Control WMI (local)** o **Control WMI (***nombreEquipoRemoto***)** y, después, haga clic en **Propiedades**.  
   
 4.  En el cuadro de diálogo **Propiedades de Control WMIP** , haga clic en la pestaña **Seguridad** .  
   
@@ -124,7 +126,7 @@ ms.lasthandoff: 11/17/2017
     > [!NOTE]  
     >  Si los archivos de registro tardan demasiado en cargarse, puede hacer clic en **Detener** en la barra de herramientas del Visor del archivo de registros.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Visor de archivos de registro](../../relational-databases/logs/log-file-viewer.md)  
   
   

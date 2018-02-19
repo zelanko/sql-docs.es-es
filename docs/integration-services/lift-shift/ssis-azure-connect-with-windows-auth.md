@@ -1,6 +1,6 @@
 ---
 title: "Conexión a orígenes de datos y a recursos compartidos de archivos con la autenticación de Windows | Microsoft Docs"
-ms.date: 01/12/2018
+ms.date: 02/05/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,16 +8,17 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a8dc3c1f39ca65e9616372fee7995dfa41cd89a1
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+ms.openlocfilehash: 87f8b79fd8e950038658c13b502f5f26ac9a8f87
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>Conectarse a orígenes de datos locales y a recursos compartidos de archivos de Azure con la autenticación de Windows
 En este artículo se describe cómo configurar el catálogo de SSIS en Azure SQL Database para ejecutar paquetes que usan la autenticación de Windows para conectarse a orígenes de datos locales y a recursos compartidos de archivos de Azure. Puede usar la autenticación de Windows para conectarse a orígenes de datos que están en la misma red virtual que Azure SSIS Integration Runtime, tanto de manera local como en las máquinas virtuales de Azure y en Azure Files.
@@ -25,7 +26,11 @@ En este artículo se describe cómo configurar el catálogo de SSIS en Azure SQL
 > [!WARNING]
 > Si no proporciona credenciales de dominio válidas para la Autenticación de Windows mediante la ejecución de `catalog`.`set_execution_credential`, tal y como se describe en este artículo, los paquetes que dependan de la Autenticación de Windows no podrán conectarse a los orígenes de datos y se producirá un error en tiempo de ejecución.
 
-Las credenciales de dominio que proporcione al seguir los pasos descritos en este artículo se aplican a todas las ejecuciones de paquetes, tanto interactivas como programadas, en la instancia de SQL Database hasta que cambie o quite esas credenciales.
+## <a name="you-can-only-use-one-set-of-credentials"></a>Solo se puede usar un conjunto de credenciales
+
+En este momento, solo se puede usar un conjunto de credenciales en un paquete. Las credenciales de dominio que proporcione al seguir los pasos descritos en este artículo se aplican a todas las ejecuciones de paquetes, tanto interactivas como programadas, en la instancia de SQL Database hasta que cambie o quite esas credenciales. Si el paquete tiene que conectarse a varios orígenes de datos con diferentes conjuntos de credenciales, es posible que tenga que separarlo en varios paquetes.
+
+Si uno de los orígenes de datos es Azure Files, puede evitar esta limitación montando el recurso compartido de archivo de Azure en el tiempo de ejecución del paquete con `net use` o su equivalente en una tarea Ejecutar proceso. Para más información, vea [Montaje de un recurso compartido de archivos de Azure y acceso al recurso compartido en Windows](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows).
 
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>Proporcionar credenciales de dominio de autenticación de Windows
 Para proporcionar las credenciales de dominio que permiten que los paquetes usen la autenticación de Windows para conectarse a orígenes de datos locales, realice lo siguiente:

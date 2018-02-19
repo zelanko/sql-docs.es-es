@@ -8,7 +8,8 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - search property lists [SQL Server], about
 - property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ade7dbffabb11419e8eeb43f50fa2ecf6d27dc9
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 24c1ffc5cc5f68271343a078cd02296b9d6b42c3
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Buscar propiedades de documento con listas de propiedades de búsqueda
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Anteriormente, el contenido de las propiedades de documento no podía distinguirse del contenido del cuerpo del documento. Esta limitación restringía las consultas de texto completo a búsquedas genéricas en documentos enteros. En cambio, ahora puede configurar un índice de texto completo para efectuar búsquedas referentes a determinadas propiedades, como Author y Title, en los tipos de documento admitidos en una columna **varbinary**, **varbinary(max)** (incluido **FILESTREAM**) o una columna de datos binarios de **imagen** . Esta forma de búsqueda se denomina *búsqueda de propiedades*.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Anteriormente, el contenido de las propiedades de documento no podían distinguirse del contenido del cuerpo del documento. Esta limitación restringía las consultas de texto completo a búsquedas genéricas en documentos enteros. En cambio, ahora puede configurar un índice de texto completo para efectuar búsquedas referentes a determinadas propiedades, como Author y Title, en los tipos de documento admitidos en una columna **varbinary**, **varbinary(max)** (incluido **FILESTREAM**) o una columna de datos binarios de **imagen** . Esta forma de búsqueda se denomina *búsqueda de propiedades*.  
   
  El [filtro](../../relational-databases/search/configure-and-manage-filters-for-search.md) asociado (IFilter) determina si la búsqueda de propiedades es posible en un tipo de documento específico. En algunos tipos de documento, el IFilter asociado extrae algunas o todas las propiedades definidas para ese tipo de documento, así como el contenido del cuerpo del documento. Puede configurar un índice de texto completo para que admita la búsqueda de propiedades solo en aquellas propiedades extraídas por un IFilter durante la indización de texto completo. Entre los IFilters que extraen muchas propiedades de documento se encuentran los IFilters para tipos de documento de Microsoft Office (como .docx, .xlsx y .pptx). Por otra parte, el IFilter XML no emite propiedades.  
   
@@ -56,7 +58,7 @@ ms.lasthandoff: 01/02/2018
   
  ![Índice de texto completo que usa una lista de propiedades de búsqueda](../../relational-databases/search/media/ifts-spl-and-fti.gif "Índice de texto completo que usa una lista de propiedades de búsqueda")  
   
- Los términos de búsqueda de la propiedad Title, "Favorite," "Biking," y "Trails", se asocian con el identificador de propiedad interno asignado a Title para este índice, 1. Los términos de búsqueda de la propiedad Keywords, "biking" y "mountain", se asocian con el identificador de propiedad interno asignado a Tags para este índice, 2. En el caso de los términos de búsqueda de la propiedad Author, "Jane" y "Doe", y los términos de búsqueda del cuerpo del documento, el identificador de propiedad interno es 0. Tenga en cuenta que el término "biking" tiene lugar en la propiedad Title, en la propiedad Keywords (Tags) y en el cuerpo del documento. Si se realizara una búsqueda de propiedades con el término "biking" en la propiedad Title o Keywords (Tags), en los resultados se devolvería este documento. Una consulta de texto completo genérica con el término "biking", devolvería también este documento, exactamente igual que si el índice no estuviera configurado para la búsqueda de propiedades. Una búsqueda de propiedades con el término "biking" en la propiedad Author no devolvería este documento.  
+ Los términos de búsqueda de la propiedad Title, "Favorite," "Biking," y "Trails", se asocian con el identificador de propiedad interno asignado a Title para este índice, 1. Los términos de búsqueda de la propiedad Keywords, "biking" y "mountain", se asocian con el identificador de propiedad interno asignado a Tags para este índice, 2. En el caso de los términos de búsqueda de la propiedad Author, "Jane" y "Doe", y los términos de búsqueda del cuerpo del documento, el identificador de propiedad interno es 0. El término "biking" tiene lugar en la propiedad Title, en la propiedad Keywords (Tags) y en el cuerpo del documento. Si se realizara una búsqueda de propiedades con el término "biking" en la propiedad Title o Keywords (Tags), en los resultados se devolvería este documento. Una consulta de texto completo genérica con el término "biking", devolvería también este documento, exactamente igual que si el índice no estuviera configurado para la búsqueda de propiedades. Una búsqueda de propiedades con el término "biking" en la propiedad Author no devolvería este documento.  
   
  Las consultas de texto completo referentes a propiedades usan los identificadores de propiedad internos registrados en la lista actual de propiedades de búsqueda del índice de texto completo.  
   
@@ -105,7 +107,7 @@ ms.lasthandoff: 01/02/2018
   
 -   Identificador entero de propiedad  
   
-     Cada propiedad de búsqueda posee un identificador que es único dentro del conjunto de propiedades. Tenga en cuenta que para una propiedad determinada, el identificador puede ser un entero o una cadena; sin embargo, la búsqueda de texto completo admite exclusivamente identificadores enteros.  
+     Cada propiedad de búsqueda posee un identificador que es único dentro del conjunto de propiedades. Para una propiedad determinada, el identificador puede ser un entero o una cadena, aunque la búsqueda de texto completo solamente admite identificadores de enteros.  
   
 -   Nombre de propiedad  
   
@@ -130,7 +132,7 @@ ms.lasthandoff: 01/02/2018
   
  **Para agregar una propiedad a una lista de propiedades de búsqueda con Transact-SQL**  
   
- Use la instrucción [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md) con los valores obtenidos mediante uno de los métodos descritos en el tema [Buscar GUID del conjunto de propiedades e identificadores de enteros de propiedad para las propiedades de búsqueda](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md).  
+ Use la instrucción [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md) con los valores obtenidos mediante uno de los métodos descritos en el artículo [Buscar GUID del conjunto de propiedades e identificadores de enteros de propiedad para las propiedades de búsqueda](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md).  
   
  En el ejemplo siguiente se muestra el uso de estos valores cuando se agrega una propiedad a una lista de propiedades de búsqueda:  
   

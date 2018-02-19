@@ -8,26 +8,28 @@ ms.service:
 ms.component: search
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-search
+ms.technology:
+- dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], FDHOST Launcher (MSSQLFDLauncher) service account
 - FDHOST Launcher (MSSQLFDLauncher) [SQL Server]
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
-caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dea4f2872a3d60bc49b9cd028a3c19b32f7e3ce7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4f77e69ed4950e71302ef55d161fea96970789ea
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Establecer la cuenta del servicio para el selector del demonio de filtro completo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] En este tema se describe cómo establecer o cambiar la cuenta de servicio para el servicio Selector de demonio de filtro de texto completo de SQL Server (MSSQLFDLauncher) mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La cuenta de servicio predeterminada usada por el programa de instalación de SQL Server es `NT Service\MSSQLFDLauncher`.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+En este tema se describe cómo establecer o cambiar la cuenta de servicio para el servicio Selector del demonio de filtro de texto completo de SQL Server (MSSQLFDLauncher) mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La cuenta de servicio predeterminada usada por el programa de instalación de SQL Server es `NT Service\MSSQLFDLauncher`.
   
   
 ## <a name="about-the-sql-full-text-filter-daemon-launcher-service"></a>Acerca del servicio del Selector de demonio de filtro de texto completo de SQL
@@ -39,7 +41,7 @@ El servicio Selector del demonio de filtro de texto completo de SQL Server es un
   
 1.  En el menú **Inicio**, seleccione **Todos los programas**, expanda [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] y, luego, haga clic en **Administrador de configuración de SQL Server 2016**.  
   
-2.  En **Administrador de configuración de SQL Server**, haga clic en **Servicios de SQL Server**, haga clic con el botón derecho en **Selector de demonio de filtro de texto completo de SQL (***nombre de instancia***)**y luego haga clic en **Propiedades**.  
+2.  En **Administrador de configuración de SQL Server**, haga clic en **Servicios de SQL Server**, haga clic con el botón derecho en **Selector de demonio de filtro de texto completo de SQL (***nombre de instancia***)** y luego haga clic en **Propiedades**.  
   
 3.  Haga clic en la pestaña **Iniciar sesión** del cuadro de diálogo y, luego, seleccione o escriba la cuenta en la que se van a ejecutar los procesos que inicia el servicio Selector de demonio de filtro de texto completo de SQL.  
   
@@ -81,7 +83,7 @@ El servicio Selector del demonio de filtro de texto completo de SQL Server es un
   
      El servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actúa como servidor de canalizaciones con nombre para el cliente del servicio Selector del demonio de filtro de texto completo de SQL. Si otro proceso ya creó la canalización con nombre antes de que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inicie, se grabará un error en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en el registro de eventos de Windows, y la búsqueda de texto completo no estará disponible.  Averigüe qué proceso o aplicación está intentando utilizar la misma canalización con nombre y detenga la aplicación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Temas de procedimientos de administración de servicios &#40;Administrador de configuración de SQL Server&#41;](http://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)   
  [Actualizar la búsqueda de texto completo](../../relational-databases/search/upgrade-full-text-search.md)  
   

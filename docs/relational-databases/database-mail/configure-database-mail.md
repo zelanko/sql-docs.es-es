@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mail
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -41,19 +42,20 @@ f1_keywords:
 - sql13.swb.dbmail.manageexistingprofile.f1
 - sql13.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
-caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5a22d5c69dd9e3250f559dc0d08ae639ed2ff2da
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3d88087b9d1142919f844155c805e2284e954e54
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-database-mail"></a>Configuración de Correo electrónico de base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En este tema se describe cómo habilitar y configurar Correo electrónico de base de datos con el Asistente para configuración de Correo electrónico de base de datos y crear un script de configuración de Correo electrónico de base de datos mediante plantillas.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+En este tema se describe cómo habilitar y configurar el Correo electrónico de base de datos con el Asistente para configuración de Correo electrónico de base de datos y crear un script de configuración de Correo electrónico de base de datos mediante plantillas.  
   
 -   **Antes de empezar:**  [Limitaciones y restricciones](#Restrictions), [Seguridad](#Security)  
   
@@ -193,7 +195,7 @@ ms.lasthandoff: 11/17/2017
  **Nombre de cuenta**  
  Seleccione la cuenta que va a ver, actualizar o eliminar.  
   
- **Delete**  
+ **Eliminar**  
  Elimina la cuenta seleccionada. Debe quitar esta cuenta de los perfiles asociados, o eliminar dichos perfiles, antes de eliminar la cuenta seleccionada.  
   
  **Descripción**  
@@ -223,7 +225,7 @@ ms.lasthandoff: 11/17/2017
  **Autenticación básica**  
  Se especifica el nombre de usuario y la contraseña que requiere el servidor SMTP.  
   
- **Nombre de usuario.**  
+ **User name**  
  Muestra o actualiza el nombre de usuario que utiliza el Correo electrónico de base de datos para iniciar la sesión en el servidor SMTP. Si el servidor SMTP requiere autenticación básica, el nombre de usuario es necesario.  
   
  **Contraseña**  
@@ -273,7 +275,7 @@ ms.lasthandoff: 11/17/2017
  **Nombre del perfil**  
  Permite seleccionar el nombre del perfil que se va a administrar.  
   
- **Delete**  
+ **Eliminar**  
  Permite eliminar el perfil seleccionado. Se le pedirá que seleccione **Sí** para eliminar el perfil seleccionado y para no enviar los mensajes no enviados; o bien seleccione **No** para eliminar el perfil seleccionado solo si no existen mensajes sin enviar.  
   
  **Descripción**  
@@ -367,7 +369,7 @@ ms.lasthandoff: 11/17/2017
   
  Los perfiles pueden ser predeterminados. En este caso, los usuarios o los roles pueden utilizar el perfil para enviar correo electrónico sin especificarlo explícitamente. Si el usuario o el rol que envía el mensaje de correo electrónico tiene un perfil privado predeterminado, el Correo electrónico de base de datos utilizará dicho perfil. Si el usuario o el rol no tiene un perfil privado predeterminado, **sp_send_dbmail** usa el perfil público predeterminado de la base de datos **msdb** . Si no hay ningún perfil privado predeterminado para el usuario o el rol ni tampoco ningún perfil público predeterminado para la base de datos, **sp_send_dbmail** devuelve un error.  
   
- **Nombre de usuario.**  
+ **User name**  
  Seleccione el nombre de un usuario o un rol de la base de datos **msdb** .  
   
  **Acceso**  
@@ -424,7 +426,7 @@ ms.lasthandoff: 11/17/2017
  [Asistente para configuración de Correo electrónico de base de datos](#DBWizard)  
   
 ###  <a name="TestEmail"></a> Send Test E-Mail Page  
- Use la página **Enviar correo electrónico de prueba desde***<nombreDeInstancia>* para enviar un mensaje de correo electrónico con el perfil de Correo electrónico de base de datos especificado. Los miembros del rol fijo de servidor **sysadmin** son los únicos que pueden enviar un mensaje de correo electrónico de prueba mediante esta página.  
+ Use la página **Enviar correo electrónico de prueba desde***<nombre_instancia>* para enviar un mensaje de correo con el perfil de Correo electrónico de base de datos especificado. Los miembros del rol fijo de servidor **sysadmin** son los únicos que pueden enviar un mensaje de correo electrónico de prueba mediante esta página.  
   
  **Perfil de Correo electrónico de base de datos**  
  Seleccione un perfil de Correo electrónico de base de datos de la lista. Este campo es obligatorio. Si no aparece ningún perfil, significa que no hay ninguno o que no tiene permiso para ninguno. Utilice el **Asistente para configuración de Correo electrónico de base de datos** para crear y configurar perfiles. Si no aparece ningún perfil, utilice el Asistente para configuración de Correo electrónico de base de datos para crear un perfil para su utilización.  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], read-only routing
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f21ea2afcf50beb80ec3cdfdc39c0d1f79d5adbe
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a7e5ed2cc2df42469baf3b28e36e6c1444d892a9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>Agentes de escucha, conectividad de cliente y conmutación por error de una aplicación
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Este tema contiene información acerca de las consideraciones de conectividad del cliente de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y la funcionalidad de conmutación por error de aplicaciones.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Este tema contiene información acerca de las consideraciones de conectividad del cliente de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y la funcionalidad de conmutación por error de aplicaciones.  
   
 > [!NOTE]  
 >  Para la mayoría de las configuraciones habituales de agente de escucha, puede crear el primer agente de escucha del grupo de disponibilidad utilizando simplemente instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] o cmdlets de PowerShell. Para obtener más información, vea [Tareas relacionadas](#RelatedTasks), más adelante en este mismo tema.  
@@ -121,7 +123,9 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  El*enrutamiento de solo lectura* se refiere a la capacidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de enrutar las conexiones entrantes a un agente de escucha de grupo de disponibilidad a una réplica secundaria configurada para permitir las cargas de trabajo de solo lectura. Una conexión entrante que hace referencia al nombre de un agente de escucha del grupo de disponibilidad se puede enrutar automáticamente a una réplica de solo lectura si se cumple lo siguiente:  
   
 -   Al menos una réplica secundaria se establece para acceso de solo lectura, y cada réplica secundaria de solo lectura y la réplica principal se configuran para admitir el enrutamiento de solo lectura. Para obtener más información, vea [Para configurar réplicas de disponibilidad para el enrutamiento de solo lectura](#ConfigureARsForROR), más adelante en esta sección.  
-  
+
+-   La cadena de conexión hace referencia a una base de datos implicada en el grupo de disponibilidad. Una alternativa para esto sería que el inicio de sesión usado en la conexión tenga la base de datos configurada como su base de datos predeterminada. Para más información, vea [Calculating read_only_routing_url for Always On](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/) (Calcular read_only_routing_url para Always On).
+
 -   La cadena de conexión hace referencia a un agente de escucha de grupo de disponibilidad y la intención de aplicaciones de la conexión entrante se establece en solo lectura (por ejemplo, al usar la palabra clave **Application Intent=ReadOnly** en las cadenas de conexión, los atributos de conexión o las propiedades de ODBC u OLEDB). Para obtener más información, vea [Intención de aplicación de solo lectura y enrutamiento de solo lectura](#ReadOnlyAppIntent), más adelante en esta sección.  
   
 ###  <a name="ConfigureARsForROR"></a> Para configurar réplicas de disponibilidad para el enrutamiento de solo lectura  
@@ -152,7 +156,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- En este ejemplo de cadena de comparación, el cliente intenta conectarse a un agente de escucha del grupo de disponibilidad denominado `AGListener` en el puerto 1433 (también puede omitir el puerto si el agente de escucha del grupo de disponibilidad escucha en 1433).  La cadena de conexión tiene la propiedad **ApplicationIntent** establecida en **ReadOnly**, lo que la convierte en una *cadena de conexión de intención de lectura*.  Sin este valor, el servidor no habría intentado un enrutamiento de solo lectura de la conexión.  
+ En este ejemplo de cadena de comparación, el cliente intenta conectarse a la base de datos AdventureWorks mediante un agente de escucha del grupo de disponibilidad denominado `AGListener` en el puerto 1433 (también puede omitir el puerto si el agente de escucha del grupo de disponibilidad escucha en 1433).  La cadena de conexión tiene la propiedad **ApplicationIntent** establecida en **ReadOnly**, lo que la convierte en una *cadena de conexión de intención de lectura*.  Sin este valor, el servidor no habría intentado un enrutamiento de solo lectura de la conexión.  
   
  La base de datos principal del grupo de disponibilidad procesa la solicitud de enrutamiento de solo lectura entrante e intenta localizar una réplica en línea de solo lectura que esté unida a la réplica principal y esté configurada para el enrutamiento de solo lectura.  El cliente recibe información de conexión del servidor de réplica principal y se conecta a la réplica de solo lectura identificada.  
   

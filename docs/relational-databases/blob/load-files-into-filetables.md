@@ -8,7 +8,8 @@ ms.service:
 ms.component: blob
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-blob
+ms.technology:
+- dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
-caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7731c50b99ae5602f29de94bfd098cd9906d48d8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: b9eef4bd725efda114727b5d6e7902daa2eaae93
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="load-files-into-filetables"></a>Cargar archivos en FileTables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Describe cómo se cargan o migran archivos en FileTables.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Describe cómo se cargan o migran archivos en las FileTables.  
   
 ##  <a name="BasicsLoadNew"></a> Cargar o migrar archivos en una FileTable  
  El método que elija para cargar o migrar archivos en una FileTable dependerá del lugar en el que estén almacenados actualmente los archivos.  
@@ -36,29 +38,29 @@ ms.lasthandoff: 01/02/2018
 |Ubicación actual de los archivos|Opciones de migración|  
 |-------------------------------|---------------------------|  
 |Los archivos están almacenados actualmente en el sistema de archivos.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no tiene información de los archivos.|Dado que una FileTable aparece como carpeta en el sistema de archivos de Windows, puede cargar archivos fácilmente en una nueva FileTable mediante cualquiera de los métodos disponibles para mover o copiar archivos. Estos métodos incluyen el Explorador de Windows, las opciones de la línea de comandos (incluidas xcopy y robocopy), así como aplicaciones o scripts personalizados.<br /><br /> No puede convertir una carpeta existente en una FileTable.|  
-|Los archivos están almacenados actualmente en el sistema de archivos.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye una tabla de metadatos que contiene punteros a los archivos.|El primer paso es mover o copiar los archivos mediante uno de los métodos mencionados anteriormente.<br /><br /> El segundo paso es actualizar la tabla de metadatos existente para que señale a la nueva ubicación de los archivos.<br /><br /> Para obtener más información, vea [Migrar archivos desde el sistema de archivos a una FileTable](#HowToMigrateFiles) más adelante en este tema.|  
+|Los archivos están almacenados actualmente en el sistema de archivos.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye una tabla de metadatos que contiene punteros a los archivos.|El primer paso es mover o copiar los archivos mediante uno de los métodos anteriores.<br /><br /> El segundo paso es actualizar la tabla de metadatos existente para que señale a la nueva ubicación de los archivos.<br /><br /> Para más información, vea [Migrar archivos desde el sistema de archivos a una FileTable](#HowToMigrateFiles) más adelante en este artículo.|  
   
 ###  <a name="HowToLoadNew"></a> Cargar archivos en una FileTable  
- Los métodos que puede usar para cargar archivos en una FileTable son:  
+Puede usar estos métodos para cargar archivos en una FileTable:  
   
 -   Arrastrar y colocar los archivos desde las carpetas de origen hasta la nueva carpeta de FileTable del Explorador de Windows.  
   
--   Usar opciones de la línea de comando como MOVE, COPY, XCOPY o ROBOCOPY desde el símbolo del sistema o en un archivo o un script por lotes.  
+-   Usar opciones de la línea de comandos, como MOVE, COPY, XCOPY o ROBOCOPY, desde el símbolo del sistema o en un archivo o un script por lotes.  
   
--   Escribir una aplicación personalizada en C# o Visual Basic.NET que use los métodos del espacio de nombres **System.IO** para mover o copiar los archivos.  
+-   Escribir una aplicación personalizada para mover o copiar los archivos en C# o Visual Basic.NET. Llamar a métodos del espacio de nombres **System.IO**.  
   
 ###  <a name="HowToMigrateFiles"></a> Migrar archivos desde el sistema de archivos a una FileTable  
  En este escenario, los archivos se almacenan en el sistema de archivos y dispone de una tabla de metadatos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contiene punteros a los archivos. Puede mover los archivos a una FileTable y reemplazar después la ruta de acceso UNC original de cada archivo de los metadatos por la ruta de acceso UNC de la FileTable. La función [GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md) sirve para lograr este propósito.  
   
  En este ejemplo, se supone que hay una tabla de base de datos existente, **PhotoMetadata**, que contiene datos sobre fotografías. Esta tabla tiene una columna **UNCPath** de tipo **varchar**(512) que contiene la ruta de acceso UNC real de un archivo .jpg.  
   
- Debe emprender las siguientes acciones para migrar los archivos de imagen desde el sistema de archivos a una FileTable:  
+ Debe realizar las siguientes acciones para migrar los archivos de imagen desde el sistema de archivos a una FileTable:  
   
 1.  Cree una nueva FileTable para almacenar los archivos. En este ejemplo se usa el nombre de tabla, **dbo.PhotoTable**, pero no se muestra el código para crearla.  
   
 2.  Usar xcopy o una herramienta similar para copiar los archivos .jpg, con su estructura de directorio, en el directorio raíz de la FileTable.  
   
-3.  Corregir los metadatos de la tabla **PhotoMetadata** , mediante el uso de código parecido al siguiente:  
+3.  Corregir los metadatos de la tabla **PhotoMetadata**, mediante el uso de código parecido a este:  
   
 ```sql  
 --  Add a path locator column to the PhotoMetadata table.  
@@ -83,7 +85,7 @@ UPDATE PhotoMetadata
 ```  
   
 ##  <a name="BasicsBulkLoad"></a> Cargar de forma masiva archivos en una FileTable  
- Una FileTable se comporta como una tabla normal en las operaciones masivas, con los requisitos siguientes.  
+ Una FileTable se comporta como una tabla normal en las operaciones masivas, con los requisitos siguientes:  
   
  Una FileTable tiene restricciones definidas por el sistema que garantizan que se mantiene la integridad del espacio de nombres de archivo o de directorio. Estas restricciones deben comprobarse en los datos cargados de forma masiva en la FileTable. Como algunas operaciones de inserción masiva permiten omitir las restricciones de tabla, se aplicarán los siguientes requisitos.  
   

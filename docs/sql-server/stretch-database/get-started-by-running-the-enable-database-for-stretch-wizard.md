@@ -8,7 +8,8 @@ ms.service:
 ms.component: stretch-database
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 f1_keywords:
@@ -25,21 +26,22 @@ helpviewer_keywords:
 - Stretch Database, wizard
 - Enable Database for Stretch Wizard
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9097c3213bf64185c24814156e38d10584a7c20c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 976561b457dc1eac740df5075bf0a02fd5a95a23
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Introducción mediante la ejecución del Asistente para Habilitar base de datos para Stretch
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
- Si desea configurar una base de datos de Stretch Database, ejecute el Asistente para Habilitar base de datos para Stretch.  En este tema se describen la información que tendrá que especificar y las decisiones que deberá tomar en el asistente.  
+
+ Si desea configurar una base de datos de Stretch Database, ejecute el Asistente para Habilitar base de datos para Stretch.  En este artículo se describe la información que tendrá que especificar y las decisiones que deberá tomar en el asistente.  
   
  Para obtener más información sobre Stretch Database, consulte [Stretch Database](../../sql-server/stretch-database/stretch-database.md). 
  
@@ -69,7 +71,7 @@ Las tablas con muchas filas aparecen en la parte superior de la lista ordenada. 
   
  ![Página Seleccionar tablas del Asistente para la base de datos de Stretch](../../sql-server/stretch-database/media/stretch-wizard-2.png "Página Seleccionar tablas del Asistente para la base de datos de Stretch")  
   
-|Columna|Descripción|  
+|columna|Description|  
 |------------|-----------------|  
 |(sin título)|Active la casilla de verificación de esta columna a fin de habilitar la tabla seleccionada para Stretch.|  
 |**Nombre**|Especifica el nombre de la tabla de la base de datos.|  
@@ -159,7 +161,7 @@ Si quiere usar un tipo de función de filtro diferente para seleccionar las fila
   
  Si la base de datos no tiene una clave maestra existente, escriba una contraseña segura para crear una clave maestra de base de datos.  
   
- ![Página Credenciales de seguridad del Asistente para la base de datos de Stretch](../../relational-databases/tables/media/stretch-wizard-6.png "Página Credenciales de seguridad del Asistente para la base de datos de Stretch")  
+ ![Página Credenciales de seguridad del asistente para Stretch Database](../../relational-databases/tables/media/stretch-wizard-6.png "Página Credenciales de seguridad del asistente para Stretch Database")  
   
  Para obtener más información sobre la clave maestra de base de datos, vea [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md) y [Crear la clave maestra de una base de datos](../../relational-databases/security/encryption/create-a-database-master-key.md). Para obtener más información sobre la credencial que crea el asistente, vea [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
   
@@ -201,7 +203,7 @@ Si quiere usar un tipo de función de filtro diferente para seleccionar las fila
   
 -   [Restore Stretch-enabled databases (Restauración de bases de datos habilitadas para Stretch)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Habilitación de Stretch Database para una base de datos](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
  [Enable Stretch Database for a table (Habilitar Stretch Database para una tabla)](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   

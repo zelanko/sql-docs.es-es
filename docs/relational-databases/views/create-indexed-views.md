@@ -24,11 +24,11 @@ caps.latest.revision:
 author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d291e4ab071aeafd6db43f48749e4e9ff9bcfd25
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: dc562d47b04c20a3878bc0e1b8c63bf5d1151e09
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="create-indexed-views"></a>Crear vistas indizadas
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,73 +37,73 @@ En este tema se describe cómo crear índices en una vista. El primer índice cr
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
  Para crear una vista indizada, es necesario seguir los pasos descritos a continuación, que son fundamentales para la correcta implementación de la vista indizada:  
   
-1.  Compruebe que las opciones SET sean correctas para todas las tablas existentes a las que se hará referencia en la vista.   
-2.  Compruebe que las opciones SET de la sesión estén establecidas correctamente antes de crear cualquier tabla y la vista.  
-3.  Compruebe que la definición de vista sea determinista.  
-4.  Cree la vista con la opción `WITH SCHEMABINDING`.  
-5.  Cree el índice clúster único en la vista.  
+1.  Compruebe que las opciones SET sean correctas para todas las tablas existentes a las que se hará referencia en la vista.    
+2.  Compruebe que las opciones SET de la sesión estén establecidas correctamente antes de crear cualquier tabla y la vista.   
+3.  Compruebe que la definición de vista sea determinista.   
+4.  Cree la vista con la opción `WITH SCHEMABINDING`.   
+5.  Cree el índice clúster único en la vista.   
 
 > [!IMPORTANT]
-> Al ejecutar DML<sup>1</sup> en una tabla a la que hace referencia un gran número de vistas indexadas, o bien menos vistas indexadas pero muy complejas, dichas vistas indexadas a las que se hace referencia deberán actualizarse igualmente. Como resultado, el rendimiento de la consulta DML se puede degradar notablemente o, en algunos casos, puede que tampoco se genere un plan de consulta.
-> En estos casos, pruebe las consultas DML antes de usarlas en entornos de producción, analice el plan de consulta y ajuste o simplifique la instrucción DML.
->
-> <sup>1</sup> Como las operaciones UPDATE, DELETE o INSERT.
+> Al ejecutar DML<sup>1</sup> en una tabla a la que hace referencia un gran número de vistas indexadas, o bien menos vistas indexadas pero muy complejas, dichas vistas indexadas a las que se hace referencia deberán actualizarse igualmente. Como resultado, el rendimiento de la consulta DML se puede degradar notablemente o, en algunos casos, puede que tampoco se genere un plan de consulta.   
+> En estos casos, pruebe las consultas DML antes de usarlas en entornos de producción, analice el plan de consulta y ajuste o simplifique la instrucción DML.   
+>   
+> <sup>1</sup> Como las operaciones UPDATE, DELETE o INSERT.   
   
 ###  <a name="Restrictions"></a> Opciones SET requeridas para vistas indizadas  
- La evaluación de la misma expresión puede producir resultados diferentes en el [!INCLUDE[ssDE](../../includes/ssde-md.md)] cuando hay diferentes opciones SET activas cuando se ejecuta la consulta. Por ejemplo, después de establecer la opción SET `CONCAT_NULL_YIELDS_NULL` en ON, la expresión **"**abc**"** + NULL devuelve el valor NULL, aunque al establecer `CONCAT_NULL_YIEDS_NULL` en OFF, la misma expresión genera **"**abc**"**.  
+La evaluación de la misma expresión puede producir resultados diferentes en el [!INCLUDE[ssDE](../../includes/ssde-md.md)] cuando hay diferentes opciones SET activas cuando se ejecuta la consulta. Por ejemplo, después de establecer la opción SET `CONCAT_NULL_YIELDS_NULL` en ON, la expresión `'abc' + NULL` devuelve el valor NULL `NULL`, aunque al establecer `CONCAT_NULL_YIEDS_NULL` en OFF, la misma expresión genera `'abc'`.  
   
- Para asegurar el correcto mantenimiento de las vistas y la generación de resultados coherentes, las vistas indizadas requieren valores fijos para varias opciones SET. Las opciones SET de la tabla siguiente se deben establecer en los valores que se muestran en la columna **Valor requerido** siempre que se den las siguientes condiciones:  
+Para asegurar el correcto mantenimiento de las vistas y la generación de resultados coherentes, las vistas indizadas requieren valores fijos para varias opciones SET. Las opciones SET de la tabla siguiente se deben establecer en los valores que se muestran en la columna **Valor requerido** siempre que se den las siguientes condiciones:  
   
--   Se crean la vista y los índices siguientes en la vista.  
+-   Se crean la vista y los índices siguientes en la vista.    
   
--   Las tablas base a las que se hace referencia en la vista cuando se crea la tabla.  
+-   Las tablas base a las que se hace referencia en la vista cuando se crea la tabla.    
   
--   Se realiza una operación de inserción, actualización o eliminación en cualquier tabla que participa en la vista indizada. Este requisito incluye operaciones como copia masiva, replicación y consultas distribuidas.  
+-   Se realiza una operación de inserción, actualización o eliminación en cualquier tabla que participa en la vista indizada. Este requisito incluye operaciones como copia masiva, replicación y consultas distribuidas.    
   
--   El optimizador de consultas utiliza la vista indizada para producir el plan de consulta.  
+-   El optimizador de consultas utiliza la vista indizada para producir el plan de consulta.   
   
-    |Opciones SET|Valor requerido|Valor de servidor predeterminado|Valor predeterminado<br /><br /> Valor de OLE DB y ODBC|Valor predeterminado<br /><br /> predeterminado|  
-    |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
-    |ANSI_NULLS|ON|ON|ON|OFF|  
-    |ANSI_PADDING|ON|ON|ON|OFF|  
-    |ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|  
-    |ARITHABORT|ON|ON|OFF|OFF|  
-    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
-    |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
+|Opciones SET|Valor requerido|Valor de servidor predeterminado|Valor predeterminado<br /><br /> Valor de OLE DB y ODBC|Valor predeterminado<br /><br /> predeterminado|  
+|-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
+|ANSI_NULLS|ON|ON|ON|OFF|  
+|ANSI_PADDING|ON|ON|ON|OFF|  
+|ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|  
+|ARITHABORT|ON|ON|OFF|OFF|  
+|CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
+|NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
+|QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
   
-     <sup>1</sup> Si se establece `ANSI_WARNINGS` en ON, `ARITHABORT` se establece implícitamente en ON.  
+<sup>1</sup> Si se establece `ANSI_WARNINGS` en ON, `ARITHABORT` se establece implícitamente en ON.  
   
- Si usa una conexión de servidor OLE DB u ODBC, el único valor que se debe modificar es la configuración de `ARITHABORT`. Todos los valores de DB-Library se deben establecer correctamente en el nivel de servidor mediante **sp_configure** o desde la aplicación a través del comando SET.  
+Si usa una conexión de servidor OLE DB u ODBC, el único valor que se debe modificar es la configuración de `ARITHABORT`. Todos los valores de DB-Library se deben establecer correctamente en el nivel de servidor mediante **sp_configure** o desde la aplicación a través del comando SET.  
   
 > [!IMPORTANT]  
 > Se recomienda encarecidamente que establezca la opción de usuario `ARITHABORT` en ON en todo el servidor en cuanto se cree la primera vista indizada o el primer índice en una columna calculada en cualquier base de datos del servidor.  
   
 ### <a name="deterministic-views"></a>Vistas deterministas  
- La definición de una vista indizada debe ser determinista. Una vista es determinista si todas las expresiones de la lista de selección y las cláusulas `WHERE` y `GROUP BY` son deterministas. Las expresiones deterministas siempre devuelven el mismo resultado cada vez que son evaluadas con un conjunto específico de valores de entrada. Solo las funciones deterministas pueden participar en expresiones deterministas. Por ejemplo, la función `DATEADD` es determinista porque siempre devuelve el mismo resultado para cualquier conjunto dado de valores de argumento para sus tres parámetros. `GETDATE` no es determinista porque siempre se invoca con el mismo argumento, pero el valor que devuelve varía cada vez que se ejecuta.  
+La definición de una vista indizada debe ser determinista. Una vista es determinista si todas las expresiones de la lista de selección y las cláusulas `WHERE` y `GROUP BY` son deterministas. Las expresiones deterministas siempre devuelven el mismo resultado cada vez que son evaluadas con un conjunto específico de valores de entrada. Solo las funciones deterministas pueden participar en expresiones deterministas. Por ejemplo, la función `DATEADD` es determinista porque siempre devuelve el mismo resultado para cualquier conjunto dado de valores de argumento para sus tres parámetros. `GETDATE` no es determinista porque siempre se invoca con el mismo argumento, pero el valor que devuelve varía cada vez que se ejecuta.  
   
- Para determinar si una columna de la vista es determinista, use la propiedad **IsDeterministic** de la función [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) . Para determinar si una columna determinista de una vista con enlaces de esquema es precisa, use la propiedad **IsPrecise** de la función COLUMNPROPERTY. COLUMNPROPERTY devuelve 1 si el valor es TRUE, 0 si es FALSE y NULL en entradas no válidas. Esto significa que la columna no es determinista ni precisa.  
+Para determinar si una columna de la vista es determinista, use la propiedad **IsDeterministic** de la función [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) . Para determinar si una columna determinista de una vista con enlaces de esquema es precisa, use la propiedad **IsPrecise** de la función `COLUMNPROPERTY`. `COLUMNPROPERTY` devuelve 1 si el valor es TRUE, 0 si es FALSE y NULL en entradas no válidas. Esto significa que la columna no es determinista ni precisa.  
   
- Aun cuando una expresión sea determinista, si contiene expresiones de tipo float, es posible que un resultado exacto dependa de la arquitectura de procesador o de la versión de microcódigo. Para asegurar la integridad de los datos, estas expresiones solo pueden participar como columnas que no son de clave de vistas indizadas. Las expresiones deterministas que no contienen expresiones flotantes se denominan expresiones precisas. Solo las expresiones deterministas precisas pueden participar en columnas de clave y en cláusulas WHERE o GROUP BY de vistas indizadas.  
+Aun cuando una expresión sea determinista, si contiene expresiones de tipo float, es posible que un resultado exacto dependa de la arquitectura de procesador o de la versión de microcódigo. Para asegurar la integridad de los datos, estas expresiones solo pueden participar como columnas que no son de clave de vistas indizadas. Las expresiones deterministas que no contienen expresiones flotantes se denominan expresiones precisas. Solo las expresiones deterministas precisas pueden participar en columnas de clave y en cláusulas `WHERE` o `GROUP BY` de vistas indizadas.  
 
 ### <a name="additional-requirements"></a>Requisitos adicionales  
- Además de las opciones SET y los requisitos de funciones deterministas, se deben cumplir los requisitos siguientes:  
+Además de las opciones SET y los requisitos de funciones deterministas, se deben cumplir los requisitos siguientes:  
   
--   El usuario que ejecuta `CREATE INDEX` debe ser el propietario de la vista.  
+-   El usuario que ejecuta `CREATE INDEX` debe ser el propietario de la vista.    
   
--   Cuando crea el índice, la opción `IGNORE_DUP_KEY` debe establecerse en OFF (configuración predeterminada).  
+-   Cuando crea el índice, la opción `IGNORE_DUP_KEY` debe establecerse en OFF (configuración predeterminada).    
   
--   En la definición de vista, se debe hacer referencia a las tablas mediante nombres de dos partes, *esquema***.***nombredetabla*.  
+-   En la definición de vista, se debe hacer referencia a las tablas mediante nombres de dos partes, *esquema***.***nombredetabla*.    
   
--   Las funciones definidas por el usuario a las que se hace referencia en la vista se deben crear con la opción `WITH SCHEMABINDING`.  
+-   Las funciones definidas por el usuario a las que se hace referencia en la vista se deben crear con la opción `WITH SCHEMABINDING`.    
   
--   Para hacer referencia a las funciones definidas por el usuario a las que se hace referencia en la vista, se deben usar nombres de dos partes, *esquema***.***función*.  
+-   Para hacer referencia a las funciones definidas por el usuario a las que se hace referencia en la vista, se deben usar nombres de dos partes, *\<schema>***.***\<function>*.   
   
--   La propiedad de acceso a datos de una función definida por el usuario debe ser `NO SQL` y la propiedad de acceso externo debe ser `NO`.  
+-   La propiedad de acceso a datos de una función definida por el usuario debe ser `NO SQL` y la propiedad de acceso externo debe ser `NO`.   
   
--   Las funciones de Common Language Runtime (CLR) pueden aparecer en la lista de selección de la vista, pero no pueden formar parte de la definición de la clave de índice clúster. Las funciones CLR no pueden aparecer en la cláusula WHERE de la vista ni en la cláusula ON de una operación JOIN en la vista.  
+-   Las funciones de Common Language Runtime (CLR) pueden aparecer en la lista de selección de la vista, pero no pueden formar parte de la definición de la clave de índice clúster. Las funciones CLR no pueden aparecer en la cláusula WHERE de la vista ni en la cláusula ON de una operación JOIN en la vista.   
   
--   Los métodos y las funciones CLR de tipos definidos por el usuario CLR utilizados en la definición de la vista deben establecer las propiedades según se indica en la tabla siguiente.  
+-   Los métodos y las funciones CLR de tipos definidos por el usuario CLR utilizados en la definición de la vista deben establecer las propiedades según se indica en la tabla siguiente.   
   
     |Propiedad|Nota|  
     |--------------|----------|  
@@ -143,7 +143,7 @@ En este tema se describe cómo crear índices en una vista. El primer índice cr
 ###  <a name="Recommendations"></a> Recomendaciones  
  Cuando haga referencia a los literales de cadena **datetime** y **smalldatetime** de las vistas indizadas, se recomienda convertir explícitamente el literal al tipo de datos deseado mediante un estilo de formato de fecha determinista. Para obtener una lista de los estilos de formato de fecha deterministas, vea [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Para obtener más información sobre las expresiones deterministas y no deterministas, consulte la sección [Consideraciones](#nondeterministic) de esta página.
 
-Al ejecutar DML (como UPDATE, DELETE o INSERT) en una tabla a la que hace referencia un gran número de vistas indexadas, o menos vistas indexadas pero muy complejas, dichas vistas indexadas deberán actualizarse igualmente durante la ejecución de DML. Como resultado, el rendimiento de la consulta DML se puede degradar notablemente o, en algunos casos, puede que tampoco se genere un plan de consulta. En estos casos, pruebe las consultas DML antes de usarlas en entornos de producción, analice el plan de consulta y ajuste o simplifique la instrucción DML.
+Al ejecutar DML (como `UPDATE`, `DELETE` or `INSERT`) en una tabla a la que hace referencia un gran número de vistas indexadas, o menos vistas indexadas pero muy complejas, dichas vistas indexadas deberán actualizarse igualmente durante la ejecución de DML. Como resultado, el rendimiento de la consulta DML se puede degradar notablemente o, en algunos casos, puede que tampoco se genere un plan de consulta. En estos casos, pruebe las consultas DML antes de usarlas en entornos de producción, analice el plan de consulta y ajuste o simplifique la instrucción DML.
   
 ###  <a name="Considerations"></a> Consideraciones  
  La configuración de la opción **large_value_types_out_of_row** de las columnas de una vista indexada se hereda de la configuración de la columna correspondiente de la tabla base. Este valor se establece mediante [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). La configuración predeterminada de las columnas formadas a partir de expresiones es 0. Esto significa que los tipos de valores grandes se almacenan de forma consecutiva.  
@@ -161,7 +161,7 @@ Al ejecutar DML (como UPDATE, DELETE o INSERT) en una tabla a la que hace refere
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permissions  
- Se necesita el permiso CREATE VIEW en la base de datos y el permiso ALTER en el esquema en que se crea la vista.  
+ Se necesita el permiso **CREATE VIEW** en la base de datos y el permiso **ALTER** en el esquema en que se crea la vista.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
@@ -220,7 +220,7 @@ Al ejecutar DML (como UPDATE, DELETE o INSERT) en una tabla a la que hace refere
     GO  
     ```  
   
- Para obtener más información, vea [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
+Para obtener más información, vea [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
 ## <a name="see-also"></a>Ver también  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   

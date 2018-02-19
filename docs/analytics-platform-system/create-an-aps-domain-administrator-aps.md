@@ -30,7 +30,7 @@ Tener permisos suficientes para configurar todos los nodos APS, el usuario que e
   
 #### <a name="to-add-a-user-to-the-domain-admins-group"></a>Para agregar un usuario al grupo Admins. del dominio  
   
-1.  Inicie sesión en el nodo activo de AD **(*appliance_domain*-AD01** o ***appliance_domain *-AD02**) con una cuenta de administrador de dominio de aplicación existente.  
+1.  Inicie sesión en el nodo activo de AD **(*appliance_domain*-AD01** o ***appliance_domain*-AD02**) con una cuenta de administrador de dominio de aplicación existente.  
   
 2.  En el menú Iniciar, haga clic en **Ejecutar**. En el **abiertos** , escriba **dsa.msc**. Haga clic en **Aceptar**.  
   

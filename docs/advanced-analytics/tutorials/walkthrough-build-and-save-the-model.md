@@ -20,11 +20,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: aec87866d4bf22b5e1f685ba5fdf41fd259fc6e3
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: d8bd3c158c40accf191c775f0fe8466c05c32203
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>Generar un modelo de R y guardar en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -51,9 +51,7 @@ El modelo que se genera es un clasificador binario que predice si el controlador
 
      *Resultado*
 
-     *Resultados de regresión logística para:-superpuesto ~ passenger_count + trip_distance + trip_time_in_secs +*
-     <br/>*direct_distance*
-     <br/>*Datos: featureDataSource (origen de datos de RxSqlServerData)*
+     *Resultados de regresión logística para:-superpuesto ~ passenger_count + trip_distance + trip_time_in_secs +* direct_distance *   <br/>*Datos: featureDataSource (origen de datos de RxSqlServerData)*
      <br/>*Dependent variable(s): superpuesto*
      <br/>*Total de las variables independientes: 5*
      <br/>*Número de observaciones válidas: 17068*
@@ -62,8 +60,8 @@ El modelo que se genera es un clasificador binario que predice si el controlador
      <br/>*Coeficientes:*
      <br/>*Estimate Std. Valor de error z Pr (> | z |)*
      <br/>*(Intercept)       -2.509e-03  3.223e-02  -0.078  0.93793*
-     <br/>*passenger_count-5.753e-02 1.088e-02-5.289 1. 23E-07\*\*\**
-     <br/>*trip_distance-3.896e-02 1.466e-02-2.658 0.00786\*\**
+     <br/>*passenger_count-5.753e-02 1.088e-02-5.289 1. 23E-07 \*\*\**
+     <br/>*trip_distance-3.896e-02 1.466e-02-2.658 0.00786 \*\**
      <br/>*trip_time_in_secs  2.115e-04  4.336e-05   4.878 1.07e-06 \*\*\**
      <br/>*direct_distance    6.156e-02  2.076e-02   2.966  0.00302 \*\**
      <br/>*---*
@@ -210,7 +208,7 @@ En esta sección, aprenderá cómo conservar el modelo y cómo llamar para reali
     Para guardar un modelo en una tabla, solo hace falta una instrucción INSERT. Sin embargo, resulta más sencillo cuando se ajusta en un procedimiento almacenado, como _PersistModel_.
 
     > [!NOTE]
-    > Si se produce un error, como "EXECUTE se denegó el permiso en el objeto PersistModel", asegúrese de que el inicio de sesión tiene permiso. Puede conceder permisos explícitos simplemente el procedimiento almacenado mediante la ejecución de una instrucción de T-SQL como ésta:`GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
+    > Si se produce un error, como "EXECUTE se denegó el permiso en el objeto PersistModel", asegúrese de que el inicio de sesión tiene permiso. Puede conceder permisos explícitos simplemente el procedimiento almacenado mediante la ejecución de una instrucción de T-SQL como ésta: `GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
 
 4. Después de crear un modelo y guardarlo en una base de datos, se puede llamar directamente desde [!INCLUDE[tsql](../../includes/tsql-md.md)] de código, mediante el procedimiento almacenado del sistema, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 

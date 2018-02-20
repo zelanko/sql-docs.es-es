@@ -1,7 +1,7 @@
 ---
 title: Multidimensional de modelado (Tutorial de Adventure Works) | Documentos de Microsoft
 ms.custom: 
-ms.date: 02/02/2018
+ms.date: 02/13/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -22,18 +22,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 1a6323632e17efab87ecf64358b5055288dfa5db
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: af9371e71223eedc44b7b7ec8cbeb3ab20423da8
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>Creación de modelos multidimensionales (tutorial de Adventure Works)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Este es el Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. En este tutorial se describe cómo usar [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para desarrollar e implementar un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , usando la empresa ficticia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] para todos los ejemplos.  
   
-## <a name="what-you-will-learn"></a>Aprendizaje  
+## <a name="what-you-learn"></a>¿Qué aprenderá  
 En este tutorial, aprenderá a:  
   
 -   Definir orígenes de datos, vistas del origen de datos, dimensiones, atributos, relaciones de atributo, jerarquías y cubos en un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
@@ -72,7 +72,7 @@ Este tutorial incluye las siguientes lecciones.
 |[Lección 10: Definir Roles administrativos](../analysis-services/lesson-10-defining-administrative-roles.md)|15 minutos|  
   
 > [!NOTE]  
-> La base de datos del cubo que creará en este tutorial es una versión simplificada del proyecto de modelo multidimensional de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que forma parte de las bases de datos de ejemplo Adventure Works que se pueden descargar en el sitio de codeplex. La versión del tutorial de la base de datos multidimensional de Adventure Works se ha simplificado para centrarse en los conocimientos específicos que le interesará dominar inmediatamente. Después de completar el tutorial, considere la posibilidad de explorar el proyecto de modelo multidimensional por su cuenta para entender mejor el modelado multidimensional de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+> La base de datos de cubo que va a crear en este tutorial es una versión simplificada de la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proyecto de modelos multidimensionales que forma parte de las bases de datos de ejemplo Adventure Works disponibles para su descarga en GitHub. La versión del tutorial de la base de datos multidimensional de Adventure Works se ha simplificado para centrarse en los conocimientos específicos que le interesará dominar inmediatamente. Después de completar el tutorial, considere la posibilidad de explorar el proyecto de modelo multidimensional por su cuenta para entender mejor el modelado multidimensional de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ## <a name="next-step"></a>Paso siguiente  
 Para comenzar el tutorial, vaya a la primera lección: [Lección 1: Definir una vista del origen de datos en un proyecto de Analysis Services](../analysis-services/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md).  

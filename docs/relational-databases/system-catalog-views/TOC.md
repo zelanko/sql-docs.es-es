@@ -5,7 +5,7 @@
 # [Mensajes (de errores): sys.messages](messages-for-errors-catalog-views-sys-messages.md)  
 # [Propiedades extendidas: sys.extended_properties](extended-properties-catalog-views-sys-extended-properties.md)  
 
-# Seguimiento de cambios
+# seguimiento de cambios
 ## [sys.change_tracking_databases](change-tracking-catalog-views-sys-change-tracking-databases.md)  
 ## [sys.change_tracking_tables](change-tracking-catalog-views-sys-change-tracking-tables.md)  
 
@@ -36,9 +36,6 @@
 ## [sys.resource_stats](sys-resource-stats-azure-sql-database.md)  
 ## [sys.resource_usage](sys-resource-usage-azure-sql-database.md)  
 ## [dbo.server_quotas](dbo-server-quotas-azure-sql-database.md)  
-## [dbo.slo_assignment_history](dbo-slo-assignment-history-azure-sql-database.md)  
-## [dbo.slo_database_objectives](dbo-slo-database-objectives-azure-sql-database.md)  
-## [dbo.slo_service_objectives](dbo-slo-service-objectives-azure-sql-database.md)  
 
 # [Ensamblado CLR](clr-assembly-catalog-views-transact-sql.md)  
 ## [sys.assemblies](sys-assemblies-transact-sql.md)  
@@ -129,7 +126,7 @@
 ## [sys.remote_logins](sys-remote-logins-transact-sql.md)  
 ## [sys.servers](sys-servers-transact-sql.md)  
 
-# [Object](object-catalog-views-transact-sql.md)  
+# [Objeto](object-catalog-views-transact-sql.md)  
 ## [sys.all_columns](sys-all-columns-transact-sql.md)  
 ## [sys.all_objects](sys-all-objects-transact-sql.md)  
 ## [sys.all_parameters](sys-all-parameters-transact-sql.md)  
@@ -211,7 +208,7 @@
 ## [syspolicy_policy_category_subscriptions](syspolicy-policy-category-subscriptions-transact-sql.md)  
 ## [syspolicy_system_health_state](syspolicy-system-health-state-transact-sql.md)  
 
-# [Regulador de recursos](resource-governor-catalog-views-transact-sql.md)  
+# [regulador de recursos](resource-governor-catalog-views-transact-sql.md)  
 ## [sys.resource_governor_configuration](sys-resource-governor-configuration-transact-sql.md)  
 ## [sys.resource_governor_external_resource_pools](sys-resource-governor-external-resource-pools-transact-sql.md)  
 ## [sys.resource_governor_resource_pools](sys-resource-governor-resource-pools-transact-sql.md)  

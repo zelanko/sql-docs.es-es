@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d37f4c7e9c21231e99bf8cce8e588969d824b40b
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 90a1b92087d0f753fdd637830bc4dd4c86d601a3
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lección 4-1: uso de una versión modificada del proyecto Tutorial de Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,15 +34,15 @@ Para poder continuar con el tutorial, debe descargar, extraer, cargar y procesar
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Descargar y extraer el archivo de proyecto  
   
-1.  [Haga clic aquí](http://go.microsoft.com/fwlink/?LinkID=221866) para ir a la página de descarga que proporciona los proyectos de ejemplo relacionados con este tutorial. Los proyectos del tutorial se incluyen en la descarga de **Tutorial de Analysis Services SQL Server 2012** .  
+1.  [Haga clic aquí](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) para ir a la página de descarga que proporciona los proyectos de ejemplo relacionados con este tutorial. Los proyectos del tutorial se incluyen en el **adventure-works-multidimensionales-tutorial-projects.zip** descargar.  
   
-2.  Haga clic en **Tutorial de Analysis Services de SQL Server 2012** para descargar el paquete que contiene los proyectos para este tutorial.  
+2.  Haga clic en **adventure-works-multidimensionales-tutorial-projects.zip** para descargar el paquete que contiene los proyectos para este tutorial.  
   
     De forma predeterminada, se guarda un archivo .zip en la carpeta Descargas. Debe mover el archivo .zip a una ubicación que tenga una ruta de acceso más corta (por ejemplo, cree una carpeta C:\Tutoriales para almacenar los archivos).  Después puede extraer los archivos contenidos en el archivo .zip. Si intentar descomprimir los archivos desde la carpeta Descargas, que tiene una ruta de acceso más larga, solo obtendrá la lección 1.  
   
 3.  Cree una subcarpeta en la unidad raíz, o cerca de ella, por ejemplo C:\Tutorial.  
   
-4.  Mueva el archivo **Analysis Services Tutorial SQL Server 2012.zip** a la subcarpeta.  
+4.  Mover el **adventure-works-multidimensionales-tutorial-projects.zip** archivo en la subcarpeta.  
   
 5.  Haga clic con el botón derecho en el archivo y seleccione **Extraer todo**.  
   

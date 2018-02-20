@@ -1,7 +1,7 @@
 ---
 title: Instalar datos de ejemplo y proyectos | Documentos de Microsoft
 ms.custom: 
-ms.date: 02/02/2018
+ms.date: 02/13/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -19,43 +19,45 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: af6002ed27aabacf1b9e9a08cf3e659559daf5f5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ab7162604cfd201a541f6ea3b053a7ed799e5e87
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="install-sample-data-and-multidimensional-projects"></a>Instalar datos de ejemplo y los proyectos multidimensionales 
 [!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
 
-Use las instrucciones y los vínculos proporcionados en este tema para instalar los archivos de proyecto y los datos usados en los tutoriales de Analysis Services.  Si está completando el tutorial multidimensional, basta con instalar los proyectos de ejemplo, si desea comparar un proyecto completado totalmente con el que se crea en el tutorial.
+Use las instrucciones y los vínculos proporcionados en este artículo para instalar los archivos de proyecto y los datos usados en los tutoriales de Analysis Services. 
   
-## <a name="step-1-install-sql-server-software"></a>Paso 1: instalar el software SQL Server  
+## <a name="step-1-install-prerequisites"></a>Paso 1: Requisitos previos de instalación 
 En las lecciones de este tutorial se supone que tiene el siguiente software instalado. Puede instalar todas las características en un único equipo. Para instalar estas características, ejecute el programa de instalación de SQL Server y selecciónelas en la página Selección de características.  
   
--   Motor de base de datos  
+-   Motor de base de datos de SQL Server  
   
--   Analysis Services  
+-   SQL Server Analysis Services (SSAS) 
   
-    Analysis Services solo está disponible en estas ediciones: Evaluation, Enterprise, Business Intelligence, Standard.  
+    Analysis Services solo está disponible en estas ediciones: Evaluation, Enterprise, Business Intelligence, Standard. No se admiten los modelos multidimensionales de Analysis Services de Azure.
   
-    De forma predeterminada, Analysis Services 2016 y versiones posteriores se instala como una instancia tabular, que puede invalidar si elige modo servidor Multidimensional en el servidor de página de configuración del Asistente para la instalación. Si desea ejecutar ambos modos de servidor, vuelva a ejecutar el programa de instalación de SQL Server en el mismo equipo para instalar una segunda instancia de Analysis Services en el otro modo.  
+    De forma predeterminada, Analysis Services 2016 y versiones posteriores se instala como una instancia tabular, que puede invalidar si elige modo servidor Multidimensional en el servidor de página de configuración del Asistente para la instalación.
   
--   [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)  
+## <a name="step-2-download-and-install-developer-and-management-tools"></a>Paso 2: Descargar e instalar el desarrollador y herramientas de administración
+SQL Server Data Tools (SSDT) para Visual Studio se descarga e instala por separado de otras características de SQL Server. Los diseñadores y plantillas de proyecto que se usa para crear modelos de BI e informes se incluyen en SSDT para Visual Studio 2015 o como [paquetes de Nuget](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) para Visual Studio de 2017.  
   
+[Descargar SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=827542).   
+
+SQL Server Management Studio (SSMS) es descargado y se instala por separado de otras características de SQL Server.  
+
+[Descargar SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)  
+
 Opcionalmente, considere la posibilidad de instalar Excel para examinar los datos multidimensionales a medida que recorre el tutorial. Al instalar Excel, se habilita la característica **Analizar en Excel** , que inicia Excel con una lista de campos de tabla dinámica conectada al cubo que se está compilando. Se recomienda utilizar Excel para examinar los datos porque puede se puede crear rápidamente un informe dinámico que permite interactuar con los datos.  
   
 O bien, puede examinar los datos usando el diseñador de consultas MDX integrado en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. El diseñador de consultas devuelve los mismos datos, excepto los presentados como un conjunto de filas plano.  
   
-## <a name="step-2-download-sql-server-data-tools-for-visual-studio"></a>Paso 2: Descargar SQL Server Data Tools para Visual Studio 
-En esta versión, SQL Server Data Tools se descarga e instala de forma independiente de otras características de SQL Server. Los diseñadores y plantillas de proyecto que se usa para crear modelos de BI e informes se incluyen en SSDT para Visual Studio 2015 o como [paquetes de Nuget](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) para Visual Studio de 2017.  
+## <a name="step-3-install-databases"></a>Paso 3: Las bases de datos de instalación  
+Un modelo multidimensional de Analysis Services usa datos transaccionales importados de un sistema de administración de bases de datos relacionales. Para los fines de este tutorial, utilice la siguiente base de datos relacional como origen de datos.  
   
--   [Descargar SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=827542). El archivo se guarda en la carpeta Descargas. Ejecute el programa de instalación para instalar la herramienta.  
-  
-## <a name="step-3-install-databases"></a>Paso 3: Instalar bases de datos  
-Un modelo multidimensional de Analysis Services usa datos transaccionales importados de un sistema de administración de bases de datos relacionales. Para los propósitos de este tutorial, utilizará la siguiente base de datos relacional como origen de datos.  
-  
--   **AdventureWorksDW 2012 o posterior** : se trata de un almacén de datos relacional que se ejecuta en una instancia del motor de base de datos. Proporciona los datos originales que serán utilizados por las bases de datos de Analysis Services y los proyectos que va a compilar e implementar a lo largo del tutorial.  
+-   **AdventureWorksDW2012 o una versión posterior** : se trata de un almacén de datos relacional que se ejecuta en una instancia del motor de base de datos. Proporciona los datos originales usados por las bases de datos de Analysis Services y los proyectos que generará e implementará a lo largo del tutorial. El tutorial supone que está usando AdventureWorksDW2012, sin embargo, ¿funcionan las versiones posteriores.
   
     Puede utilizar esta base de datos de ejemplo con [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] y versiones posteriores. En general, debe usar la versión de base de datos de ejemplo que coincida con la versión del motor de base de datos.
   
@@ -69,8 +71,8 @@ Para instalar la base de datos, haga lo siguiente:
   
 4.  Restaure la base de datos.  
   
-## <a name="step-4-grant-database-permissions"></a>Paso 4: Otorgar permisos de base de datos  
-En los proyectos de ejemplo se usa la configuración de suplantación del origen de datos que especifica el contexto de seguridad bajo el que se importan o se procesan los datos. De forma predeterminada, los valores de suplantación especifican la cuenta de servicio de Analysis Services para obtener acceso a los datos. Para usar esta configuración predeterminada, debe asegurarse de que la cuenta de servicio en la que se ejecuta Analysis Services tiene permisos de lector de datos en el **AdventureWorksDW2014** base de datos.  
+## <a name="step-4-grant-database-permissions"></a>Paso 4: Conceder permisos de base de datos  
+En los proyectos de ejemplo se usa la configuración de suplantación del origen de datos que especifica el contexto de seguridad bajo el que se importan o se procesan los datos. De forma predeterminada, los valores de suplantación especifican la cuenta de servicio de Analysis Services para obtener acceso a los datos. Para usar esta configuración predeterminada, debe asegurarse de que la cuenta de servicio en la que se ejecuta Analysis Services tiene permisos de lector de datos en el **AdventureWorksDW** base de datos.  
   
 > [!NOTE]  
 > Para los propósitos de aprendizaje, se recomienda que use la opción de suplantación de cuenta de servicio predeterminada y que otorgue permisos de lector de datos a la cuenta de servicio en SQL Server. Aunque hay otras opciones de suplantación disponibles, no todas ellas son convenientes para procesar las operaciones. Concretamente, la opción de usar las credenciales del usuario actual no se admite para el procesamiento.  
@@ -85,27 +87,27 @@ En los proyectos de ejemplo se usa la configuración de suplantación del origen
   
 5.  Haga clic en **Asignación de usuarios**.  
   
-6.  Active la casilla de verificación junto a la **AdventureWorksDW2014** base de datos. La pertenencia al rol debería incluir **db_datareader** y **public**de forma automática. Haga clic en **Aceptar** para aceptar los valores predeterminados.  
+6.  Active la casilla de verificación junto a la **AdventureWorksDW** base de datos. La pertenencia al rol debería incluir **db_datareader** y **public**de forma automática. Haga clic en **Aceptar** para aceptar los valores predeterminados.  
   
-## <a name="step-5-install-projects"></a>Paso 5: Instalar los proyectos  
+## <a name="step-5-install-projects"></a>Paso 5: Proyectos de instalación  
 
-Los proyectos de ejemplo solo son necesarios para comparar con lo que crea en el tutorial de modelado multidimensional. Estos no son necesarios para completar el tutorial.
+El tutorial incluye proyectos de ejemplo para que pueda comparar sus resultados con un proyecto acabado, o iniciar una lección que está más adelante en la secuencia.  
   
-1.  Descargue el [adventure-works-multidimensionales-modelo-project.zip](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) en el ejemplo de Adventure Works para la página de ejemplos de Analysis Services en GitHub.  
+1.  Descargue el [adventure-works-multidimensionales-tutorial-projects.zip](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) en el ejemplo de Adventure Works para la página de ejemplos de Analysis Services en GitHub.  
   
-    Este proyecto funciona para SSAS 2014 y versiones posteriores.  
+    Los proyectos del tutorial de trabajo para [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] y versiones posteriores.  
   
 2.  Mueva el archivo de .zip a una carpeta que esté debajo de la unidad raíz (por ejemplo, C:\Tutorial). Este paso mitiga el error “Ruta de acceso demasiado larga” que aparece en ocasiones si intenta descomprimir los archivos en la carpeta Descargas.  
   
-3.  Descomprima los proyectos de ejemplo: haga clic con el botón derecho en el archivo y seleccione **Extraer todo**. 
+3.  Descomprima los proyectos de ejemplo: haga clic con el botón derecho en el archivo y seleccione **Extraer todo**. Después de extraer los archivos, debe tener las carpetas lección 1, 2, 3, 5, 6, 7, 8, 9, 10 completas e Lesson 4 Start. 
   
 4.  Quite los permisos de solo lectura de estos archivos. Haga clic en la carpeta principal, seleccione **propiedades**y desactive la casilla de verificación **de sólo lectura**. Haga clic en **Aceptar**. Aplique los cambios a esta carpeta, sus subcarpetas y sus archivos.  
 
-5.  Abra el archivo de solución (.sln) en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+5.  Abra el archivo de solución (.sln) que corresponde a la lección en que se encuentra. Por ejemplo, en la carpeta denominada “Lesson 1 Complete”, abriría el archivo Analysis Services Tutorial.sln.  
   
-6.  Implemente la solución para comprobar que los permisos de base de datos y la información de ubicación del servidor se han configurado correctamente.  
+6.  Implementar la solución para comprobar que los permisos de base de datos e información de ubicación de servidor estén configurados correctamente.  
   
-    Si Analysis Services y el motor de base de datos se instalan como la instancia predeterminada (MSSQLServer) y todo el software se está ejecutando en el mismo equipo, puede hacer clic en **Implementar solución** en el menú Compilar para compilar e implementar el proyecto de ejemplo en la instancia local de Analysis Services. Durante la implementación, datos desea procesar (o importar) desde el **AdventureWorksDW** base de datos en la instancia del motor de base de datos local. Se creará una nueva base de datos de Analysis Services en la instancia de Analysis Services que contiene los datos recuperados del motor de base de datos.  
+    Si Analysis Services y el motor de base de datos se instalan como la instancia predeterminada (MSSQLServer) y todo el software se está ejecutando en el mismo equipo, puede hacer clic en **Implementar solución** en el menú Compilar para compilar e implementar el proyecto de ejemplo en la instancia local de Analysis Services. Durante la implementación, datos se procesan (o importar) desde el **AdventureWorksDW** base de datos en la instancia del motor de base de datos local. Se crea una nueva base de datos de Analysis Services en la instancia de Analysis Services que contiene los datos recuperados desde el motor de base de datos.  
   
     Si encuentra los errores, revise los pasos anteriores de configuración de los permisos de base de datos. Además, puede ser necesario cambiar los nombres de servidor. El nombre de servidor predeterminado es localhost. Si los servidores están instalados en equipos remotos o como instancias con nombre, debe invalidar el valor predeterminado para usar un nombre de servidor válido para la instalación. Además, si los servidores están en equipos remotos, podría ser necesario configurar Firewall de Windows para permitir el acceso a los servidores.  
   

@@ -16,28 +16,40 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5aecc3796565d4c32d91fe28304bdd04f5793980
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 8fe5c32ed34d9056c69069d6b390a49fc71b396c
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Notas de la versión para Microsoft ODBC Driver for SQL Server en Linux y Mac OS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Novedades el [!INCLUDE[msCoName](../../../includes/msconame_md.md)] 17 del controlador de ODBC para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] en Linux y Mac OS
 
-SQL Azure administra la instancia (extendida vista previa privada). Tenga en cuenta que hay varias diferencias cuando se usa la instancia administrada:
--   No se admite FILESTREAM 
--   Acceso de sistema de archivos local no se admiten, pero se necesitan para cosas como tracefiles 
--   Crear el UDT de ruta de acceso local no compatible 
--   Autenticación integrada de Windows no compatible 
--   DTC no compatible 
--   cuenta 'sa' no está presente (cuenta predeterminada se denomina 'cloudSA')
--   ERROR de símbolo (token) de TDS (0xAA) devuelve el nombre de servidor incorrecto
--   No se admiten caracteres especiales en el nombre de la base de datos 
--   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] no es compatible
--   Los mensajes de error siempre se muestran en inglés, independientemente del lenguaje configuración (igual que Azure) 
+**Nuevo distribuciones admitidas**: macOS Sierra alta y Ubuntu 17.10 
+
+**Mejoras de rendimiento**: mayor que 10 x mejora del rendimiento al controlador convierte de UTF-8 o 16.
+
+**Características agregadas**:
+
+Always Encrypted compatibilidad con API de BCP
+
+Nuevo atributo de cadena de conexión UseFMTOnly hace controlador utilizar los metadatos heredados en casos especiales que requieren tablas temporales.
+
+Compatibilidad con la instancia administrada de SQL Azure (vista previa privada extendida). 
+> [!NOTE]
+> Hay varias diferencias cuando se usa la instancia administrada:
+> -   No se admite FILESTREAM 
+> -   Acceso de sistema de archivos local no se admiten, pero se necesitan para cosas como tracefiles 
+> -   Crear el UDT local no se admite la ruta de acceso 
+> -   No se admite la autenticación integrada de Windows 
+> -   No se admite el DTC 
+> -   cuenta 'sa' no está presente (cuenta predeterminada se denomina 'cloudSA')
+> -   ERROR de símbolo (token) de TDS (0xAA) devuelve el nombre de servidor incorrecto
+> -   No se admiten caracteres especiales en el nombre de la base de datos 
+> -   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] no es compatible
+> -   Los mensajes de error siempre se muestran en inglés, independientemente del lenguaje configuración (igual que Azure) 
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Novedades el [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] en Linux y Mac OS  
 

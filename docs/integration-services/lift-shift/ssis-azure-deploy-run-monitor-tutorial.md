@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa1cc5db91745fb7773856a8f66b03c82bba3e9a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0bfa4f23ea87d7429075d1039df56286b7d4785e
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Implementar, ejecutar y supervisar un paquete SSIS en Azure
 Este tutorial muestra cómo implementar un proyecto de SQL Server Integration Services para la base de datos del catálogo de SSISDB en Azure SQL Database, ejecutar un paquete en Azure-SSIS Integration Runtime y supervisar el paquete en ejecución.
@@ -89,7 +89,9 @@ Use SQL Server Management Studio para conectarse al catálogo de SSIS en el serv
 
 ## <a name="deploy-a-project-with-powershell"></a>Implementar un proyecto con PowerShell
 
-Para implementar un proyecto con PowerShell en SSISDB en Azure SQL Database, adapte el siguiente script según sus requisitos:
+Para implementar un proyecto con PowerShell en SSISDB en Azure SQL Database, adapte el siguiente script según sus requisitos. El script enumera las carpetas secundarias en `$ProjectFilePath` y los proyectos de cada carpeta secundaria, a continuación, crea las mismas carpetas en SSISDB e implementa los proyectos en esas carpetas.
+
+Este script requiere la versión 17.x de SQL Server Data Tools o SQL Server Management Studio instalado en el equipo donde se ejecuta el script.
 
 ```powershell
 # Variables

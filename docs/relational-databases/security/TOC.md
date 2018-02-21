@@ -12,6 +12,7 @@
 # [Configuración de Área expuesta](surface-area-configuration.md)  
 # [Inyección de código SQL](sql-injection.md)
 # [Evaluación de vulnerabilidad de SQL](sql-vulnerability-assessment.md)  
+# [Clasificación y detección de datos de SQL](sql-data-discovery-and-classification.md)  
 # [Propiedad de base de datos TRUSTWORTHY](trustworthy-database-property.md)  
 # [Permisos](permissions-database-engine.md)  
 # [Jerarquía de permisos](permissions-hierarchy-database-engine.md)  

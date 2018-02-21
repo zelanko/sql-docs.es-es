@@ -43,14 +43,19 @@
 # [Tutoriales de SQL Server](tutorials-for-sql-server-2016.md)
 
 # Recursos
+
 ## Blogs
 ### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ### [Motor de base de datos de SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/)
 ### [Seguridad de SQL Server](https://blogs.msdn.microsoft.com/sqlsecurity/)
 ### [SQL Server Data Tools](https://blogs.msdn.microsoft.com/ssdt/)
 
+## Obtener información
+### [Academia virtual de Microsoft](https://mva.microsoft.com/product-training/sql-server#!lang=1033)
+### [SQL en Channel 9](https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year)
+
 ## Comentarios y ayuda
-### [Sugerencias para SQL Server](https://feedback.azure.com/forums/908035-sql-server)
+### [UserVoice: sugerir una mejora de SQL Server](https://feedback.azure.com/forums/908035-sql-server)
 ### [Cambio de la pila DBA](https://dba.stackexchange.com/questions/tagged/sql-server)
 ### [Desbordamiento de pila](http://stackoverflow.com/questions/tagged/sql-server)
 ### [Foros de MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)

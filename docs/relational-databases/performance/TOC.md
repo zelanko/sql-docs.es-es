@@ -55,4 +55,8 @@
 ## [Eliminar una guía de plan](delete-a-plan-guide.md)  
 ## [Habilitar o deshabilitar una guía de plan](enable-or-disable-a-plan-guide.md)  
 
-#[Supervisar el uso de recursos (Monitor de sistema)](../performance-monitor/monitor-resource-usage-system-monitor.md) 
+# [Supervisar el uso de recursos (Monitor de sistema)](../performance-monitor/monitor-resource-usage-system-monitor.md)    
+
+# [Combinaciones](joins.md)   
+
+# [Subconsultas](subqueries.md)    

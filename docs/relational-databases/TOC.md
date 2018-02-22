@@ -12,7 +12,7 @@
 ## [Arquitectura de procesamiento de consultas](query-processing-architecture-guide.md)
 ## [Arquitectura de subprocesos y tareas](thread-and-task-architecture-guide.md)
 ## [Arquitectura y administración de registros de transacciones](sql-server-transaction-log-architecture-and-management-guide.md)
-## Guía de versiones de fila y bloqueo de transacciones
+## [Guía de versiones de fila y bloqueo de transacciones](sql-server-transaction-locking-and-row-versioning-guide.md)
 
 # [Copias de seguridad y restauración](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
 # [Blob](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
@@ -55,12 +55,13 @@
 ## [Administración del ciclo de vida de base de datos](database-lifecycle-management.md)  
 ## [Administrar varios servidores mediante Servidores de administración central](administer-multiple-servers-using-central-management-servers.md)  
 
+# [Combinaciones](../relational-databases/performance/joins.md)
 # [Particiones](../relational-databases/partitions/partitioned-tables-and-indexes.md)
 # [Rendimiento](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 # [Administración basada en directivas](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)
 # [PolyBase](../relational-databases/polybase/polybase-guide.md)
 # [Replicación](../relational-databases/replication/sql-server-replication.md)
-# [Regulador de recursos](../relational-databases/resource-governor/resource-governor.md)
+# [regulador de recursos](../relational-databases/resource-governor/resource-governor.md)
 # [Scripting](../relational-databases/scripting/database-engine-scripting.md)
 # [Buscar](../relational-databases/search/full-text-search.md)
 # [Seguridad](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)
@@ -71,6 +72,7 @@
 # [Seguimiento de SQL](../relational-databases/sql-trace/sql-trace.md)
 # [Estadísticas](../relational-databases/statistics/statistics.md)
 # [Procedimientos almacenados](../relational-databases/stored-procedures/stored-procedures-database-engine.md)
+# [Subconsultas](../relational-databases/performance/subqueries.md)
 # [Sinónimos](../relational-databases/synonyms/synonyms-database-engine.md)
 # [Vistas de catálogo del sistema](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
 # [Vistas de compatibilidad del sistema](../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)

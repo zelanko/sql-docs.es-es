@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
-ms.openlocfilehash: d3abecd450bbb734304c8c04909c38ae216595ad
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 36834e634f26e7918b6577379c24b9914d41f308
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Funcionar el clúster de disco compartido de Red Hat Enterprise Linux para SQL Server
 
@@ -41,7 +41,7 @@ El siguiente diagrama ilustra los componentes en un clúster de Linux con SQL Se
 
 ![Red Hat Enterprise Linux 7 compartido de clúster de disco de SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-Para obtener más detalles sobre la configuración del clúster y opciones de agentes de recursos, administración, visite [documentación de referencia RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Para obtener más información sobre la configuración del clúster y opciones de agentes de recursos, administración, visite [documentación de referencia RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 ## <a name = "failManual"></a>Clúster de conmutación por error manualmente
 
@@ -73,7 +73,7 @@ Ver el estado activo del clúster y recursos:
 sudo crm_mon 
 ```
 
-Ver los registros de recursos de agente en`/var/log/cluster/corosync.log`
+Ver los registros de recursos de agente en `/var/log/cluster/corosync.log`
 
 ## <a name="add-a-node-to-a-cluster"></a>Agregar un nodo a un clúster
 
@@ -105,7 +105,7 @@ Ver los registros de recursos de agente en`/var/log/cluster/corosync.log`
 
 1. Siga las instrucciones para montar el directorio del archivo de base de datos a la ubicación compartida:
 
-   Desde el servidor NFS, instalar`nfs-utils`
+   Desde el servidor NFS, instalar `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils 
@@ -224,7 +224,7 @@ PCSD debe estar en ejecución para poder usar `pcs` herramientas.
 
 ### <a name="current-cluster-status"></a>Estado actual del clúster 
 
-`sudo pcs status`Devuelve información básica sobre el estado de clúster, quórum, nodos, recursos y el demonio para cada nodo. 
+`sudo pcs status` Devuelve información básica sobre el estado de clúster, quórum, nodos, recursos y el demonio para cada nodo. 
 
 Un ejemplo de una salida de quórum marcapasos correcto sería:
 
@@ -253,9 +253,9 @@ pacemaker: active/enabled
 
 En el ejemplo, `partition with quorum` significa que un quórum de mayoría de nodos está en línea. Si el clúster pierde un quórum de mayoría de nodos, `pcs status` devolverá `partition WITHOUT quorum` y todos los recursos que se van a detener. 
 
-`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]`Devuelve el nombre de todos los nodos que participan actualmente en el clúster. Si todos los nodos no están participando, `pcs status` devuelve `OFFLINE: [<nodename>]`.
+`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` Devuelve el nombre de todos los nodos que participan actualmente en el clúster. Si todos los nodos no están participando, `pcs status` devuelve `OFFLINE: [<nodename>]`.
 
-`PCSD Status`Muestra el estado del clúster para cada nodo.
+`PCSD Status` Muestra el estado del clúster para cada nodo.
 
 ### <a name="reasons-why-a-node-may-be-offline"></a>Motivos por qué un nodo puede estar sin conexión
 

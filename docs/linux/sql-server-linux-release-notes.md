@@ -1,6 +1,6 @@
 ---
 title: "Notas de la versión de SQL Server 2017 en Linux | Documentos de Microsoft"
-description: "Este tema contiene las notas de la versión y características admitidas en SQL Server 2017 ejecutando en Linux. Notas de la versión se incluyen con la versión más reciente y varias versiones anteriores."
+description: "Este artículo contiene las notas de la versión y características admitidas en SQL Server 2017 ejecutando en Linux. Notas de la versión se incluyen con la versión más reciente y varias versiones anteriores."
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,21 +9,23 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: e8160ec17a856a3c14d1177085c95c329e5d2b3b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 3d53adc21ff54f8fe6171f361fbfba3208a427d1
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de la versión de SQL Server 2017 en Linux
 
-Las siguientes notas se aplican a SQL Server 2017 ejecutando en Linux. El siguiente tema se divide en secciones para cada versión. La versión de GA tiene detallada compatibilidad y listados de problemas conocidos. Cada versión de la actualización acumulativa (CU) tiene un vínculo a un tema de compatibilidad que describe los cambios CU, así como vínculos para el paquete de descarga de Linux.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+Las siguientes notas de versión se aplican a SQL Server 2017 para Linux. Este artículo está dividido en secciones para cada versión. La versión de disponibilidad general (GA) incluye la compatibilidad detallada y los problemas conocidos. Cada versión de actualización acumulativa (CU) tiene un vínculo a un tema de soporte técnico en el que se describen los cambios en la CU, así como vínculos a las descargas de paquetes de Linux.
 
 ## <a name="supported-platforms"></a>Plataformas compatibles
 
@@ -35,7 +37,7 @@ Las siguientes notas se aplican a SQL Server 2017 ejecutando en Linux. El siguie
 | Motor de docker 1.8 + en Windows, Mac o Linux | N/D | [Guía de instalación](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
-> Para obtener más detalles, revise la [requisitos del sistema](sql-server-linux-setup.md#system) para SQL Server en Linux. Para la directiva de soporte técnico más reciente para SQL Server 2017, consulte el [directiva de soporte técnico de Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
+> Para obtener más información, revise la [requisitos del sistema](sql-server-linux-setup.md#system) para SQL Server en Linux. Para la directiva de soporte técnico más reciente para SQL Server 2017, consulte el [directiva de soporte técnico de Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
 ## <a name="supported-client-tools"></a>Herramientas de cliente admitidos
 
@@ -56,7 +58,7 @@ En la tabla siguiente se enumera el historial de versiones de SQL Server 2017.
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
 | [GA](#GA) | 14.0.1000.169 | 10-2017 |
 
-## <a id="cuinstall"></a>Cómo instalar actualizaciones acumulativas
+## <a id="cuinstall"></a> Cómo instalar actualizaciones acumulativas
 
 Si ha configurado el repositorio de la actualización acumulativa, obtendrá la actualización acumulativa más reciente de los paquetes de SQL Server al realizar nuevas instalaciones. El repositorio de actualización acumulativa es el valor predeterminado para todos los artículos de la instalación de paquetes de SQL Server en Linux. Para obtener más información acerca de la configuración del repositorio, consulte [configurar repositorios para SQL Server en Linux](sql-server-linux-change-repo.md).
 
@@ -67,7 +69,7 @@ Si va a actualizar los paquetes existentes de SQL Server, ejecute el comando de 
 - [Instalar el paquete del Agente SQL Server](sql-server-linux-setup-sql-agent.md)
 - [Instalar SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 
-## <A id="CU2"></a>Actualización acumulativa 3 (enero de 2018)
+## <A id="CU2"></a> Actualización acumulativa 3 (enero de 2018)
 
 Se trata de la versión de la actualización acumulativa 3 (CU3) de SQL Server 2017. La versión del motor de SQL Server para esta versión es 14.0.3015.40. Para obtener información acerca de las correcciones y mejoras en esta versión, consulte [https://support.microsoft.com/en-us/help/4052987](https://support.microsoft.com/en-us/help/4052987).
 
@@ -81,7 +83,7 @@ Para las instalaciones de paquete manual o sin conexión, puede descargar los pa
 | Paquete de SLES RPM | 14.0.3015.40-1 | [paquete de RPM del motor de servidor MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3015.40-1.x86_64.rpm)</br>[Paquete alta disponibilidad RPM](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3015.40-1.x86_64.rpm)</br>[Paquete de RPM de búsqueda de texto completo](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3015.40-1.x86_64.rpm)</br>[Paquete RPM de agente de SQL Server](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3015.40-1.x86_64.rpm) | 
 | Paquete de Debian Ubuntu 16.04 | 14.0.3015.40-1 | [Motor de paquete Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3015.40-1_amd64.deb)</br>[Paquete de Debian de alta disponibilidad](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3015.40-1_amd64.deb)</br>[Paquete de Debian de búsqueda de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3015.40-1_amd64.deb)</br>[Paquete SQL Server Agent Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3015.40-1_amd64.deb)<br/>[Paquete SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <A id="CU2"></a>Actualización acumulativa 2 (noviembre de 2017)
+## <A id="CU2"></a> Actualización acumulativa 2 (noviembre de 2017)
 
 Se trata de la versión de la actualización acumulativa 2 (CU2) de SQL Server 2017. La versión del motor de SQL Server para esta versión es 14.0.3008.27. Para obtener información acerca de las correcciones y mejoras en esta versión, consulte [https://support.microsoft.com/help/4052574](https://support.microsoft.com/help/4052574).
 
@@ -95,7 +97,7 @@ Para las instalaciones de paquete manual o sin conexión, puede descargar los pa
 | Paquete de SLES RPM | 14.0.3008.27-1 | [paquete de RPM del motor de servidor MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3008.27-1.x86_64.rpm)</br>[Paquete alta disponibilidad RPM](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3008.27-1.x86_64.rpm)</br>[Paquete de RPM de búsqueda de texto completo](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3008.27-1.x86_64.rpm)</br>[Paquete RPM de agente de SQL Server](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3008.27-1.x86_64.rpm) | 
 | Paquete de Debian Ubuntu 16.04 | 14.0.3008.27-1 | [Motor de paquete Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3008.27-1_amd64.deb)</br>[Paquete de Debian de alta disponibilidad](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3008.27-1_amd64.deb)</br>[Paquete de Debian de búsqueda de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3008.27-1_amd64.deb)</br>[Paquete SQL Server Agent Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3008.27-1_amd64.deb)<br/>[Paquete SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <A id="CU1"></a>La actualización acumulativa 1 (octubre de 2017)
+## <A id="CU1"></a> La actualización acumulativa 1 (octubre de 2017)
 
 Se trata de la versión de actualización acumulativa 1 (CU1) de SQL Server 2017. La versión del motor de SQL Server para esta versión es 14.0.3006.16. Para obtener información acerca de las correcciones y mejoras en esta versión, consulte [https://support.microsoft.com/help/4038634](https://support.microsoft.com/help/4038634).
 
@@ -109,9 +111,9 @@ Para las instalaciones de paquete manual o sin conexión, puede descargar los pa
 | Paquete de SLES RPM | 14.0.3006.16-3 | [paquete de RPM del motor de servidor MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3006.16-3.x86_64.rpm)</br>[Paquete alta disponibilidad RPM](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3006.16-3.x86_64.rpm)</br>[Paquete de RPM de búsqueda de texto completo](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3006.16-3.x86_64.rpm)</br>[Paquete RPM de agente de SQL Server](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3006.16-3.x86_64.rpm) | 
 | Paquete de Debian Ubuntu 16.04 | 14.0.3006.16-3 | [Motor de paquete Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3006.16-3_amd64.deb)</br>[Paquete de Debian de alta disponibilidad](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3006.16-3_amd64.deb)</br>[Paquete de Debian de búsqueda de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3006.16-3_amd64.deb)</br>[Paquete SQL Server Agent Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3006.16-3_amd64.deb)<br/>[Paquete SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="GA"></a>GA (octubre de 2017)
+## <a id="GA"></a> GA (octubre de 2017)
 
-Se trata de la versión de disponibilidad General (GA) de SQL Server 2017. La versión del motor de SQL Server para esta versión es 14.0.1000.169.
+Se trata de la versión de disponibilidad general (GA) de SQL Server 2017. La versión del motor de SQL Server para esta versión es 14.0.1000.169.
 
 ### <a name="package-details"></a>Detalles del paquete
 
@@ -128,13 +130,13 @@ En la tabla siguiente se muestran los detalles del paquete y ubicaciones de desc
 | Paquete de SLES RPM | 14.0.1000.169-2 | [paquete de RPM del motor de servidor MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[Paquete alta disponibilidad RPM](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[Paquete de RPM de búsqueda de texto completo](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[Paquete RPM de agente de SQL Server](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm) | 
 | Paquete de Debian Ubuntu 16.04 | 14.0.1000.169-2 | [Motor de paquete Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.1000.169-2_amd64.deb)</br>[Paquete de Debian de alta disponibilidad](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1000.169-2_amd64.deb)</br>[Paquete de Debian de búsqueda de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.1000.169-2_amd64.deb)</br>[Paquete SQL Server Agent Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.1000.169-2_amd64.deb)<br/>[Paquete SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-### <a name="Unsupported"></a>Servicios y características no admitidas
+### <a name="Unsupported"></a> Servicios y características no admitidas
 
 Las siguientes características y servicios no están disponibles en Linux en este momento. La compatibilidad de estas características se habilitarán cada vez más con el tiempo.
 
 | Área | Característica no admitida o un servicio |
 |-----|-----|
-| **Motor de base de datos** | Replicación transaccional |
+| Motor de base de datos | Replicación transaccional |
 | &nbsp; | Replicación de mezcla |
 | &nbsp; | Stretch DB |
 | &nbsp; | Polybase |
@@ -227,7 +229,7 @@ Características que implican las conexiones TCP salientes desde el proceso sqls
 
 1. La instancia de origen tiene IPv6 deshabilitado en el kernel. Para comprobar que si el sistema tiene IPv6 habilitada en el kernel, deben pasar todas las pruebas siguientes:
 
-   - `cat /proc/cmdline`se imprimirá el cmdline de arranque del núcleo actual. El resultado no debe contener `ipv6.disable=1`.
+   - `cat /proc/cmdline` se imprimirá el cmdline de arranque del núcleo actual. El resultado no debe contener `ipv6.disable=1`.
    - Sys/proc / / net/ipv6/directorio debe existir.
    - Un programa de C que llama `socket(AF_INET6, SOCK_STREAM, IPPROTO_IP)` debe ejecutarse correctamente: la syscall debe devolver un fd! = -1 y no producirá un error con EAFNOSUPPORT.
 

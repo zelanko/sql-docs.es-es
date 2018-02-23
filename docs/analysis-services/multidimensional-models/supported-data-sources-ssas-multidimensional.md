@@ -23,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0bdae9c95ea05d217db895331fb641b2a7038271
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2089ceaf95022e1bed0e7409d9ccbc4af3a64fba
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="supported-data-sources-ssas---multidimensional"></a>Orígenes de datos admitidos (SSAS - Multidimensionales)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ En este tema se describen los tipos de orígenes de datos que puede usar en un m
  ** Algunas características requieren una base de datos relacional de SQL Server que se ejecute localmente. De manera específica, el almacenamiento ROLAP y la reescritura requieren que el origen de datos subyacente sea una base de datos relacional de SQL Server.  
   
 ## <a name="see-also"></a>Vea también  
- [Admitidas los orígenes de datos &#40; SSAS Tabular &#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Orígenes de datos admitidos](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [Orígenes de datos en modelos multidimensionales](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
  [Vistas del origen de datos en modelos multidimensionales](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   

@@ -1,7 +1,7 @@
 ---
-title: Eliminar una tabla (SSAS Tabular) | Documentos de Microsoft
+title: Eliminar una tabla | Documentos de Microsoft
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: be4ed45f-fde3-466c-9869-49bd3ddb505e
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b3d1ec8c0c56a7fd1fb83f2b0401907eb0c0302c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a4f9c2850798353cb6e16413f395aad1a370a69e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="delete-a-table-ssas-tabular"></a>Eliminar una tabla (SSAS tabular)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]En el Diseñador de modelos, puede eliminar las tablas de la base de datos del área de trabajo de modelo que ya no necesite. Eliminar una tabla no afecta a los datos de origen originales, solo a los datos que importó y con los que trabajó. No puede deshacer la eliminación de una tabla.  
+# <a name="delete-a-table"></a>Eliminar una tabla 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+En el diseñador de modelos, puede eliminar las tablas de la base de datos del área de trabajo del modelo que no necesite. Eliminar una tabla no afecta a los datos de origen originales, solo a los datos que importó y con los que trabajó. No puede deshacer la eliminación de una tabla.  
   
 ### <a name="to-delete-a-table"></a>Para eliminar una tabla  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Si creó alguna columna calculada usando esa tabla, también se eliminan las columnas de esa tabla; cualquier columna calculada de otras tablas que usen columnas de la tabla eliminada mostrará un error.  
   
-## <a name="see-also"></a>Ver también  
- [Definir tablas y columnas &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)  
+## <a name="see-also"></a>Vea también  
+ [Tablas y columnas](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

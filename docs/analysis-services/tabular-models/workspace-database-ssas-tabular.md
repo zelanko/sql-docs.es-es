@@ -1,7 +1,7 @@
 ---
-title: "Base de datos del área de trabajo (SSAS Tabular) | Documentos de Microsoft"
+title: "Base de datos del área de trabajo | Documentos de Microsoft"
 ms.custom: 
-ms.date: 07/24/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 73cbfa40573fcf08774a576aaa7f09bb1ea21195
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2ab6a38542e9c6702edcf98401db0796fc5e78e4
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="workspace-database-ssas-tabular"></a>Base de datos del área de trabajo (SSAS tabular)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]La base de datos de área de trabajo de modelos tabulares, utilizada durante la creación de modelos, se crea cuando se crea un nuevo proyecto de modelo tabular en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].
+# <a name="workspace-database"></a>Base de datos del área de trabajo 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+La base de datos del área del trabajo de modelos tabulares, utilizada durante la creación de modelos, se crea cuando se crea un nuevo proyecto de modelos tabulares en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].
   
 ## <a name="specifying-a-workspace-instance"></a>Especificar una instancia del área de trabajo  
   Al crear un proyecto de modelo tabular en SSDT, puede especificar una instancia de Analysis Services para usarla al crear el proyecto. A partir de la versión de septiembre de 2016 (14.0.60918.0) de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], se introducen dos modos para especificar una instancia del área de trabajo al crear un proyecto de modelo tabular. 
@@ -32,8 +33,6 @@ ms.lasthandoff: 01/08/2018
 **Área de trabajo integrada** : usa la propia instancia interna de Analysis Services de SSDT.
 
 **Servidor del área de trabajo** : se crea una base de datos del área de trabajo en una instancia explícita de Analysis Services, muchas veces en el mismo equipo de SSDT o en otro equipo de la misma red.
-
-
   
 ### <a name="integrated-workspace"></a>Área de trabajo integrada
 Con el área de trabajo integrada, se crea una base de datos de trabajo en memoria mediante la propia instancia implícita de Analysis Services de SSDT. El modo de área de trabajo integrada reduce considerablemente la complejidad a la hora de crear proyectos tabulares en SSDT, porque no se necesita ninguna instalación independiente explícita de SQL Server Analysis Services.
@@ -56,7 +55,7 @@ Mediante las propiedades de la Base de datos del área de trabajo y del Servidor
   
  Cuando se ven tablas, columnas y datos en el Diseñador de modelos después de haber agregado datos a un proyecto de modelos mediante el uso del Asistente para la importación de tablas o con copiar y pegar, lo que se ve en realidad es la base de datos del área de trabajo. Si agrega otras tablas, columnas, relaciones, etc., cambiará la base de datos del área de trabajo.  
   
- Cuando se implementa un proyecto de modelos tabulares, la base de datos del modelo implementada, que es básicamente una copia de la base de datos del área de trabajo, se crea en la instancia del servidor de Analysis Services especificada en la propiedad Servidor de implementación. Para más información sobre las propiedades del servidor de implementación, vea [Propiedades del proyecto &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md).  
+ Cuando se implementa un proyecto de modelos tabulares, la base de datos del modelo implementada, que es básicamente una copia de la base de datos del área de trabajo, se crea en la instancia del servidor de Analysis Services especificada en la propiedad Servidor de implementación. Para obtener más información acerca de la propiedad de servidor de implementación, consulte [propiedades del proyecto](../../analysis-services/tabular-models/project-properties-ssas-tabular.md).  
   
  La base de datos del área de trabajo del modelo reside normalmente en un host local o en una instancia local con nombre de un servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si lo desea, puede usar una instancia remota de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para hospedar la base de datos del área de trabajo; sin embargo, no se recomienda usar esta configuración debido a la latencia que se produce durante las consultas de datos y otras restricciones. En condiciones óptimas, la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que hospedará la base de datos del área de trabajo se encuentra en el mismo equipo que [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Crear proyectos de modelos en el mismo equipo en que se encuentra la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que hospeda la base de datos del área de trabajo puede mejorar el rendimiento.  
   
@@ -82,7 +81,7 @@ Mediante las propiedades de la Base de datos del área de trabajo y del Servidor
  Las propiedades de la base de datos del área de trabajo están incluidas entre las propiedades del modelo. Para ver las propiedades del modelo, en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], en el **Explorador de soluciones**, haga clic en el archivo **Model.bim** . Las propiedades del modelo se pueden configurar usando la ventana **Propiedades** . Entre las propiedades específicas de la base de datos del área de trabajo se encuentran:  
   
 > [!NOTE]  
->  Las propiedades **Modo de área de trabajo integrada**, **Servidor del área de trabajo**, **Retención del área de trabajo** y **Copia de seguridad de datos** tienen valores predeterminados que se aplican al crear un proyecto de modelos. Puede cambiar la configuración predeterminada de los nuevos proyectos de modelos en la página **Modelado de datos** de la configuración de **Analysis Server** del cuadro de diálogo Herramientas\Opciones. Estas propiedades, junto con otras, también se pueden establecer para cada proyecto de modelos en la ventana **Propiedades** . Si se cambia la configuración predeterminada, la nueva configuración no se aplicará a los proyectos de modelos creados previamente. Para más información, vea [Configurar las propiedades predeterminadas de modelado de datos y de implementación &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
+>  Las propiedades **Modo de área de trabajo integrada**, **Servidor del área de trabajo**, **Retención del área de trabajo** y **Copia de seguridad de datos** tienen valores predeterminados que se aplican al crear un proyecto de modelos. Puede cambiar la configuración predeterminada de los nuevos proyectos de modelos en la página **Modelado de datos** de la configuración de **Analysis Server** del cuadro de diálogo Herramientas\Opciones. Estas propiedades, junto con otras, también se pueden establecer para cada proyecto de modelos en la ventana **Propiedades** . Si se cambia la configuración predeterminada, la nueva configuración no se aplicará a los proyectos de modelos creados previamente. Para obtener más información, consulte [configurar las propiedades de implementación y de modelado de datos predeterminadas](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
   
 |Propiedad|Valor predeterminado|Description|  
 |--------------|---------------------|-----------------|  
@@ -95,6 +94,6 @@ Mediante las propiedades de la Base de datos del área de trabajo y del Servidor
  Puede usar SQL Server Management Studio (SSMS) para conectarse a un servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que hospeda una base de datos del área de trabajo. Por lo general, no es necesaria ninguna administración de la base de datos del área de trabajo; la excepción es cuando hay que separar o eliminar una base de datos del área de trabajo, operación que debe realizarse desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. No utilice [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para administrar la base de datos del área de trabajo mientras el proyecto está abierto en el diseñador de modelos. Si lo hace, podría provocar la pérdida de datos.
    
 ## <a name="see-also"></a>Vea también  
-[Propiedades del modelo &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md) 
+[Propiedades del modelo](../../analysis-services/tabular-models/model-properties-ssas-tabular.md) 
   
   

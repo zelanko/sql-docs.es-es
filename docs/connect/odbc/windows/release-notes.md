@@ -1,7 +1,7 @@
 ---
-title: "Notas de la versión | Documentos de Microsoft"
+title: Notas (controlador ODBC para SQL Server) | Documentos de Microsoft
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 02/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -17,11 +17,11 @@ caps.latest.revision:
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.openlocfilehash: 44c73c4d632fd434fcd296dc6fc2cc70af26086c
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: 2b0846781a17fdad4c8cf9e39cab743595a20e7e
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="release-notes"></a>Notas de la versión
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -50,6 +50,7 @@ Compatibilidad con la instancia administrada de SQL Azure (vista previa privada 
 > -   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] no es compatible
 > -   Los mensajes de error siempre se muestran en inglés, independientemente del lenguaje configuración (igual que Azure) 
   
+
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Novedades el [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] en Windows  
  ODBC Driver 13.1 para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] agrega compatibilidad para [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) y [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md) cuando se utiliza junto con Microsoft SQL Server 2016.  Conexión correspondiente se describen los atributos y palabras clave de agrupación en [controlador compatible con agrupación de conexiones en el controlador ODBC para SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).
 

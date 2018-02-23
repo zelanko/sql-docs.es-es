@@ -12,24 +12,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e0acafbad6d869b31b7560f059adb0a7a3e8da03
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 24d32bd54651eb173ca6de920d9e457c6331c8ca
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="impersonation"></a>Suplantación 
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Este tema proporciona a los autores de modelos tabulares una descripción de cómo las credenciales de inicio de sesión se usa Analysis Services cuando se conecta a un origen de datos para importar y procesar (actualizar) los datos.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Este artículo proporciona a los autores de modelos tabulares una descripción de cómo las credenciales de inicio de sesión se usa Analysis Services cuando se conecta a un origen de datos para importar y procesar (actualizar) los datos.  
 
-##  <a name="bkmk_conf_imp_info"></a>Configurar la suplantación  
+##  <a name="bkmk_conf_imp_info"></a> Configurar la suplantación  
  El lugar y en qué contexto existe un modelo determina cómo se configura la información de suplantación. Al crear un nuevo proyecto de modelo, la suplantación se configura en SQL Server Data Tools (SSDT) cuando se conecta a un origen de datos para importar datos. Una vez implementado un modelo, suplantación puede configurarse en la propiedad de cadena de conexión de base de datos de modelo mediante el uso de SQL Server Management Studio (SSMS). Para los modelos tabulares en Analysis Services de Azure, puede usar SSMS o **ver como: Script** modo en el diseñador basado en navegador para editar el archivo Model.bim en JSON.
   
-##  <a name="bkmk_how_imper"></a>¿Cómo se utiliza la suplantación  
+##  <a name="bkmk_how_imper"></a> ¿Cómo se utiliza la suplantación  
  La*suplantación* es la capacidad de una aplicación de servidor, como Analysis Services, de asumir la identidad de una aplicación cliente. Analysis Services se ejecuta con una cuenta de servicio; sin embargo, cuando el servidor establece una conexión a un origen de datos, utiliza la suplantación para que las comprobaciones de acceso para la importación de datos y el procesamiento se puede realizar.  
   
  Son diferentes de las credenciales que han iniciado sesión con las credenciales usadas para la suplantación. Usuario que inició sesión credenciales se utilizan para las operaciones de cliente determinadas al crear un modelo.  

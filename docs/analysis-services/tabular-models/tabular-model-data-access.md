@@ -12,21 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e004604829a9b7701744d41df53c4bf00afa432d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4c1fa9b4e4f9003b193628d114ad6832436a7c8f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tabular-model-data-access"></a>Acceso a datos de modelos tabulares
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Pueden tener acceso a bases de datos de modelo tabular de Analysis Services con la mayoría de los mismos clientes, interfaces e idiomas que se usan para recuperar datos o metadatos de un modelo multidimensional. Para más información, vea [Acceso a datos de modelos multidimensionales &#40;Analysis Services: datos multidimensionales&#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+A las bases de datos modelo tabulares de Analysis Services se puede tener acceso con la mayoría de los clientes, interfaces e idiomas que se usan para recuperar los datos o metadatos de un modelo multidimensional. Para obtener más información, vea [Acceso a datos de modelos multidimensionales &#40;Analysis Services: datos multidimensionales&#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
   
- En este tema se describen los clientes, los lenguajes de consulta y las interfaces de programación que funcionan con modelos tabulares.  
+ Este artículo describen los clientes, lenguajes de consulta y las interfaces de programación que funcionan con modelos tabulares.  
   
 ## <a name="clients"></a>Clientes  
  Las aplicaciones cliente siguientes de Microsoft admiten conexiones nativas a las bases de datos de modelos tabulares de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -37,7 +38,7 @@ Se puede conectar a una base de datos de modelo tabular de Analysis Services loc
 ### <a name="excel"></a>Excel  
  Puede conectarse a bases de datos de modelos tabulares de Excel, utilizando las capacidades de visualización y análisis de los datos en Excel para trabajar con los datos. Para tener acceso a los datos, defina una conexión de datos de Analysis Services, especifique un servidor que se ejecute en modo de servidor tabular y elija la base de datos que desea utilizar. Para obtener más información, vea [Conectarse a datos o importarlos desde SQL Server Analysis Services](http://go.microsoft.com/fwlink/?linkID=215150).  
   
- Excel también es la aplicación recomendada para examinar modelos tabulares en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. La herramienta incluye una opción **Analizar en Excel** que inicia una nueva instancia de Excel, crea un libro de Excel y abre una conexión de datos del libro con la base de datos del área de trabajo del modelo. Al examinar datos de modelo tabulares en Excel, tenga en cuenta que Excel emite consultas en el modelo utilizando el cliente de tablas dinámicas de Excel. En consecuencia, las operaciones en el libro de Excel dan lugar a que se envíen consultas MDX a la base de datos del área de trabajo, en lugar de consultas DAX. Si utiliza SQL Server profiler u otra herramienta de supervisión para supervisar consultas, puede suceder que vea MDX y no DAX en el seguimiento del analizador. Para más información sobre la característica Analizar en Excel, vea [Analizar en Excel &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
+ Excel también es la aplicación recomendada para examinar modelos tabulares en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. La herramienta incluye una opción **Analizar en Excel** que inicia una nueva instancia de Excel, crea un libro de Excel y abre una conexión de datos del libro con la base de datos del área de trabajo del modelo. Al examinar datos de modelo tabulares en Excel, tenga en cuenta que Excel emite consultas en el modelo utilizando el cliente de tablas dinámicas de Excel. En consecuencia, las operaciones en el libro de Excel dan lugar a que se envíen consultas MDX a la base de datos del área de trabajo, en lugar de consultas DAX. Si utiliza SQL Server profiler u otra herramienta de supervisión para supervisar consultas, puede suceder que vea MDX y no DAX en el seguimiento del analizador. Para obtener más información acerca de la característica analizar en Excel, vea [analizar en Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
   
 ### <a name="power-view"></a>Power View  
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] es una aplicación cliente de informes de Reporting Services que se ejecuta en un entorno de SharePoint 2010. Combina la exploración de datos, el diseño de la consulta, y el diseño de la presentación en una experiencia ad hoc integrada de informes. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] puede utilizar modelos tabulares como orígenes de datos, independientemente de si el modelo está hospedado en una instancia de Analysis Services que se ejecuta en modo tabular o se recupera de un almacén de datos relacional con el modo DirectQuery. Para conectarse a un modelo tabular en [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], debe crear un archivo de conexión que contenga la ubicación del servidor y el nombre de la base de datos. Puede crear un origen de datos compartido de Reporting Services o un archivo de conexión de modelo semántico de BI en SharePoint. Para más información sobre las conexiones de modelos semánticos de BI, vea [Conexión del modelo semántico de BI de Power Pivot &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md).  
@@ -53,7 +54,7 @@ Se puede conectar a una base de datos de modelo tabular de Analysis Services loc
   
 -   [Conectar a Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
--   [Supervisión de una instancia de Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
+-   [Supervisar una instancia de Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
  Puede utilizar las ventanas de consulta MDX y XMLA en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para recuperar datos y metadatos de una base de datos de modelo tabular. Sin embargo, tenga en cuenta que existen las siguientes restricciones:  
   
@@ -90,7 +91,7 @@ Se puede conectar a una base de datos de modelo tabular de Analysis Services loc
 ### <a name="data-and-metadata"></a>Datos y metadatos  
  Puede recuperar datos y metadatos de modelos tabulares en aplicaciones administradas mediante ADOMD.NET. 
   
--   [Usar vistas de administración dinámica &#40;DMV&#41; para supervisar Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+-   [Usar dinámica vistas de administración &#40; DMV &#41; para supervisar Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  Puede usar el proveedor OLE DB 9.0 para Analysis Services en aplicaciones cliente sin administrar para admitir el acceso OLE DB a los modelos tabulares. Se requiere una versión actualizada del proveedor OLE DB de Analysis Services para habilitar el acceso al modelo tabular. Para más información sobre los proveedores utilizados con los modelos tabulares, vea [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) .  
   
@@ -123,7 +124,7 @@ Se puede conectar a una base de datos de modelo tabular de Analysis Services loc
   
 -   [Conjunto de filas MDSCHEMA_HIERARCHIES](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)  
   
-     La nueva enumeración de **STRUCTURE_TYPE** admite la identificación de las jerarquías definidas por el usuario creadas en los modelos tabulares. Para más información, vea [Jerarquías &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
+     La nueva enumeración de **STRUCTURE_TYPE** admite la identificación de las jerarquías definidas por el usuario creadas en los modelos tabulares. Para obtener más información, consulte [jerarquías](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
   
  En esta versión, no hay actualizaciones de OLE DB para los conjuntos de filas de esquema de minería de datos.  
   
@@ -131,7 +132,7 @@ Se puede conectar a una base de datos de modelo tabular de Analysis Services loc
 >  No pueden utilizar consultas DMX o MDX en una base de datos que se haya implementado en el modo DirectQuery; por consiguiente, si necesita ejecutar una consulta en un modelo DirectQuery con conjuntos de filas de esquema, debe usar XMLA y no el DMV asociado. Para los DMV que devuelven resultados del servidor como un todo, como SELECT * from $system.DBSCHEMA_CATALOGS o DISCOVER_TRACES, puede ejecutar la consulta en el contenido de una base de datos que se implemente en un modo de caché.  
   
 ## <a name="see-also"></a>Vea también  
- [Conectar a una base de datos de modelo tabular &#40;SSAS&#41;](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)   
+ [Conectarse a una base de datos de modelo tabular ](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)   
  [Acceso a datos de Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-access.md)   
  [Conectar a Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   

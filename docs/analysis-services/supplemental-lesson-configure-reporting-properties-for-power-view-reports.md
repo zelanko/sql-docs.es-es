@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 04edc4aeea3123ad58775fddf3a821f65decd90b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bbc725ce1d2f5999486f46f4ab30f6e3fb98f42d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>Complementario de lecciones: configurar propiedades de informes para informes de Power View
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +32,7 @@ En esta lección complementaria, establecerá propiedades para el proyecto AW In
   
 Tiempo estimado para completar esta lección: **30 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
 Este tema de la lección complementaria forma parte de un tutorial de creación de modelos tabulares, que se debe completar de forma ordenada. Antes de realizar las tareas de esta lección complementaria, debe haber completado todas las lecciones anteriores.  
 Para completar esta lección complementaria concreta, también debe tener lo siguiente:  
   
@@ -79,7 +80,7 @@ A veces puede ser necesario crear nuevos datos en el modelo mediante fórmulas D
 ## <a name="default-field-set"></a>Conjunto de campos predeterminado  
 El conjunto de campos predeterminado es una lista predefinida de columnas y medidas para una tabla que se agregan automáticamente a un lienzo de informe cuando se hace clic en la tabla en la lista de campos de informe. Esencialmente, puede especificar la clasificación de los campos, las medidas y las columnas predeterminadas que los usuarios desearán ver cuando esta tabla se visualice en informes Power View.  Para el modelo Internet Sales, definirá un conjunto de campos predeterminado y un orden para las tablas Customer, Geography y Product. Se incluyen solo aquellas columnas más comunes que los usuarios desearán ver al analizar los datos de Adventure Works Internet Sales con informes Power View.  
   
-Para obtener información detallada sobre el conjunto de campos predeterminado, vea [Configurar un conjunto de campos predeterminado para informes de Power View &#40;SSAS tabular&#41;](../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md) en los Libros en pantalla de SQL Server.  
+Para obtener información detallada sobre el conjunto de campos predeterminado, consulte [configurar conjunto de campos predeterminado para informes de Power View](../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md) en libros en pantalla de SQL Server.  
   
 #### <a name="to-set-default-field-set-for-tables"></a>Para establecer el conjunto de campos predeterminado para las tablas  
   
@@ -114,7 +115,7 @@ Para obtener información detallada sobre el conjunto de campos predeterminado, 
 ## <a name="table-behavior"></a>Comportamiento de tabla  
 Con las propiedades de Comportamiento de tabla, puede cambiar el comportamiento predeterminado de los diferentes tipos de visualización y el comportamiento de agrupación para las tablas usadas en los informes de Power View. Esto permite una ubicación predeterminada más eficaz de la información de identificación como los nombres, imágenes o títulos en los diseños de mosaico, tarjeta y gráfico.  
   
-Para obtener más información sobre las propiedades de comportamiento de una tabla, vea [Configurar las propiedades de comportamiento de las tablas para informes de Power View &#40;SSAS tabular&#41;](../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md) en los Libros en pantalla de SQL Server.  
+Para obtener información detallada acerca de las propiedades de comportamiento de la tabla, vea [configurar propiedades de comportamiento de tabla para informes de Power View](../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md) en libros en pantalla de SQL Server.  
   
 #### <a name="to-set-table-behavior"></a>Para establecer el comportamiento de la tabla 
   
@@ -139,7 +140,7 @@ Para obtener más información sobre las propiedades de comportamiento de una ta
 ## <a name="reporting-properties-for-columns"></a>Propiedades de informe para las columnas  
 Hay varias propiedades de columna básicas y propiedades de informe específicos en las columnas que puede establecer para mejorar la experiencia de informes de modelo. Por ejemplo, puede no ser necesario que los usuarios vena cada columna de cada tabla. Igual que ocultó las tablas Product Category y Product Subcategory antes, mediante la propiedad Hidden de una columna puede ocultar columnas concretas de una tabla que de otro modo se mostrarían. Otras propiedades, como Data Format y Sort by Column, también pueden afectar al modo en que los datos de columna pueden aparecer en los informes. Establecerá algunas de esas columnas concretas ahora. Otras columnas no requieren ninguna acción y no se muestran a continuación.  
   
-Solo establecerá algunas propiedades de columna distintas aquí, pero hay muchas otras. Para obtener más información sobre las propiedades de informes de columna, vea [Pestaña Propiedades de columna &#40;SSAS tabular&#41;](../analysis-services/tabular-models/column-properties-ssas-tabular.md) en los Libros en pantalla de SQL Server.  
+Solo establecerá algunas propiedades de columna distintas aquí, pero hay muchas otras. Para obtener más información acerca de la columna de propiedades de informes, consulte [propiedades de columna](../analysis-services/tabular-models/column-properties-ssas-tabular.md) en libros en pantalla de SQL Server.  
   
 #### <a name="to-set-properties-for-columns"></a>Para establecer las propiedades de las columnas  
   
@@ -155,57 +156,57 @@ Solo establecerá algunas propiedades de columna distintas aquí, pero hay mucha
   
     **Customer**  
   
-    |columna|Propiedad|Valor|  
+    |Columna|Propiedad|Value|  
     |----------|------------|---------|  
-    |Geography Id|Hidden|True|  
+    |Geography Id|Oculto|True|  
     |Birth Date|Formato de datos|Short Date|  
   
     **Date**  
   
     > [!NOTE]  
-    > Dado que la tabla Date se seleccionó como la tabla de fechas de modelos con la opción Marcar como tabla de fechas, en la lección 7, Marcar como tabla de fechas, y la columna Date de la tabla Date como la columna que se usa como identificador único, la propiedad Identificador de fila de la columna Date se establecerá automáticamente en True y no se puede cambiar. Cuando se usan funciones de inteligencia temporal en fórmulas DAX, debe especificar una tabla de fechas. En este modelo, creó una serie de medidas con las funciones de inteligencia temporal para calcular los datos de ventas para varios periodos como los trimestres anteriores y actuales y también para usarse en KPI. Para obtener más información sobre cómo especificar una tabla de fechas, vea [Especificar Marcar como tabla de fechas con inteligencia de tiempo &#40;SSAS tabular&#41;](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) en los Libros en pantalla de SQL Server.  
+    > Dado que la tabla Date se seleccionó como la tabla de fechas de modelos con la opción Marcar como tabla de fechas, en la lección 7, Marcar como tabla de fechas, y la columna Date de la tabla Date como la columna que se usa como identificador único, la propiedad Identificador de fila de la columna Date se establecerá automáticamente en True y no se puede cambiar. Cuando se usan funciones de inteligencia temporal en fórmulas DAX, debe especificar una tabla de fechas. En este modelo, creó una serie de medidas con las funciones de inteligencia temporal para calcular los datos de ventas para varios periodos como los trimestres anteriores y actuales y también para usarse en KPI. Para obtener más información acerca de cómo especificar una tabla de fechas, vea [especificar marcar como tabla de fechas para su uso con inteligencia de tiempo](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) en libros en pantalla de SQL Server.  
   
-    |columna|Propiedad|Valor|  
+    |Columna|Propiedad|Value|  
     |----------|------------|---------|  
-    |date|Formato de datos|Short Date|  
-    |Día de la semana|Hidden|True|  
+    |Date|Formato de datos|Short Date|  
+    |Día de la semana|Oculto|True|  
     |Nombre del día|Sort By Column|Día de la semana|  
-    |Día de la semana|Hidden|True|  
-    |Día del mes|Hidden|True|  
-    |Día del año|Hidden|True|  
+    |Día de la semana|Oculto|True|  
+    |Día del mes|Oculto|True|  
+    |Día del año|Oculto|True|  
     |Nombre del mes|Sort By Column|Month|  
-    |Month|Hidden|True|  
-    |Month Calendar|Hidden|True|  
-    |Trimestre fiscal|Hidden|True|  
-    |Año fiscal|Hidden|True|  
+    |Month|Oculto|True|  
+    |Month Calendar|Oculto|True|  
+    |Trimestre fiscal|Oculto|True|  
+    |Año fiscal|Oculto|True|  
     |Semestre fiscal|Hidden|True|  
   
     **Geography**  
   
-    |columna|Propiedad|Valor|  
+    |Columna|Propiedad|Value|  
     |----------|------------|---------|  
-    |Geography Id|Hidden|True|  
-    |Sales Territory Id|Hidden|True|  
+    |Geography Id|Oculto|True|  
+    |Sales Territory Id|Oculto|True|  
   
     **Product**  
   
-    |columna|Propiedad|Valor|  
+    |Columna|Propiedad|Value|  
     |----------|------------|---------|  
-    |Product Id|Hidden|True|  
+    |Product Id|Oculto|True|  
     |Product Alternate Id|Etiqueta predeterminada|True|  
-    |Id. de subcategoría del producto|Hidden|True|  
+    |Id. de subcategoría del producto|Oculto|True|  
     |Fecha de inicio del producto|Formato de datos|Short Date|  
     |Fecha de finalización del producto|Formato de datos|Short Date|  
   
     **Internet Sales**  
   
-    |columna|Propiedad|Valor|  
+    |Columna|Propiedad|Value|  
     |----------|------------|---------|  
-    |Product Id|Hidden|True|  
-    |Customer Id|Hidden|True|  
-    |Id. de promoción|Hidden|True|  
-    |Id. de moneda|Hidden|True|  
-    |Sales Territory Id|Hidden|True|  
+    |Product Id|Oculto|True|  
+    |Customer Id|Oculto|True|  
+    |Id. de promoción|Oculto|True|  
+    |Id. de moneda|Oculto|True|  
+    |Sales Territory Id|Oculto|True|  
     |Cantidad del pedido|Tipo de datos<br /><br />Formato de datos<br /><br />Posiciones decimales|Decimal Number<br /><br />Decimal Number<br /><br />0|  
     |Order Date|Formato de datos|Short Date|  
     |Due Date|Formato de datos|Short Date|  

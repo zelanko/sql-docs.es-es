@@ -1,5 +1,5 @@
 ---
-title: Configurar las propiedades de comportamiento de tablas para informes de Power View (SSAS Tabular) | Documentos de Microsoft
+title: Configurar las propiedades de comportamiento de tablas para informes de Power View | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.tablebehavior.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f202d090127d93ec0786e0b7cca90f54f7fac0b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 23fcfac88cb0ab2a1ba390d003039b11bdf8bfc3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View: configurar las propiedades de comportamiento de tablas para informes
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Si está utilizando un modelo tabular como modelo de datos para [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], puede establecer las propiedades de comportamiento de tablas que exponen filas de detalles en un nivel más específico. El establecimiento de las propiedades del comportamiento de las tablas cambia el comportamiento de agrupación de las filas de detalle y genera una mejor colocación predeterminada de la información de identificación (como nombres, carnets con fotografía o imágenes de logotipo) en diseños de mosaicos, tarjetas y gráficos.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Si va a utilizar un modelo tabular como modelo de datos para [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], puede establecer las propiedades del comportamiento de las tablas que exponen filas de detalles en un nivel más específico. El establecimiento de las propiedades del comportamiento de las tablas cambia el comportamiento de agrupación de las filas de detalle y genera una mejor colocación predeterminada de la información de identificación (como nombres, carnets con fotografía o imágenes de logotipo) en diseños de mosaicos, tarjetas y gráficos.  
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] se diferencia de otras aplicaciones de informes en que agrupará automáticamente los elementos durante el diseño de informe, evaluando las columnas que se han colocado en la lista de campos del informe con el formato de presentación que se está utilizando. En la mayoría de los casos, la agrupación predeterminada genera un resultado óptimo. Pero en algunas tablas, normalmente aquellas que contienen datos detallados, el comportamiento de agrupación predeterminada agrupará a veces filas que no deberían estarlo. Para estas tablas, puede establecer propiedades que cambien la forma de evaluar los grupos.  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 01/08/2018
   
 -   Quite los subtotales no deseados de un informe de matriz. La agrupación predeterminada en el nivel de campo crea un subtotal para cada campo. Si desea que solo se calcule un subtotal en el nivel de fila, con el establecimiento del identificador de fila obtendrá este resultado.  
   
- No puede establecer un identificador de fila para las tablas marcadas como tablas de fechas. En las tablas de fechas, el identificador de fila se especifica cuando se marca la tabla. Para más información, vea [Cuadro de diálogo Marcar como tabla de fecha &#40;SSAS&#41;](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9).  
+ No puede establecer un identificador de fila para las tablas marcadas como tablas de fechas. En las tablas de fechas, el identificador de fila se especifica cuando se marca la tabla. Para obtener más información, consulte [marcar como tabla de fechas, cuadro de diálogo ](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9).  
   
 ## <a name="setting-the-keep-unique-rows-property"></a>Definindo a propriedade Manter Linhas Exclusivas  
  Esta propiedad permite especificar las columnas que contienen información de identidad (como un nombre de empleado o un código de producto) de manera que se distinga una fila de otra. En los casos en que las filas parezcan idénticas (como dos clientes con el mismo nombre), las columnas que especifique para esta propiedad se repetirán en la tabla de informe.  
@@ -138,7 +140,7 @@ ms.lasthandoff: 01/08/2018
   
  ![Gráfico basado en agrupación de Id. de fila](../../analysis-services/tabular-models/media/ssas-rptprop-chartrowid.gif "gráfico basado en agrupación de Id. de fila")  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
  Después de haber evaluado las tablas del modelo y establecer las propiedades del comportamiento de las tablas para que las que contengan filas de detalles aparezcan siempre como elementos individuales, puede optimizar aún más el modelo mediante propiedades o configuraciones adicionales.  
   
   

@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: dd568426-a415-41bf-b1e9-ea2261babf81
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7960dbd174c0f959439029dc05cd16efbc42f319
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fce99eb78e6e5a40b825d13b81def4a87deb48b5
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="mergepartitions-command-tmsl"></a>Comando MergePartitions (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Combina los datos de una o varias particiones de origen en una partición de destino y, a continuación, elimina la partición de origen. No se actualizará la consulta SQL de la partición de destino como parte de la combinación. Para asegurarse de que el procesamiento posterior de la partición recupera todos los datos, debe revisar la consulta para que seleccione todos los datos de la partición combinada.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Combina los datos de una o varias particiones de origen en una partición de destino y, a continuación, elimina la partición de origen. No se actualizará la consulta SQL de la partición de destino como parte de la combinación. Para asegurarse de que el procesamiento posterior de la partición recupera todos los datos, debe revisar la consulta para que seleccione todos los datos de la partición combinada.  
   
 ## <a name="request"></a>Solicitud  
  Debe especificar la base de datos, tabla y particiones de origen y destino. Solo puede mezclar particiones de la misma tabla.  
@@ -72,6 +73,6 @@ ms.lasthandoff: 01/08/2018
 
 ## <a name="see-also"></a>Vea también  
  [Tabular Model Scripting Language &#40;TMSL&#41; Reference (Referencia de Tabular Model Scripting Language [TMSL])](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [Crear y administrar particiones de modelos tabulares &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [Crear y administrar particiones de modelos tabulares](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

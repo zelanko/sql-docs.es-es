@@ -1,7 +1,7 @@
 ---
-title: Definir particiones de modelos de DirectQuery (SSAS Tabular) | Documentos de Microsoft
+title: Definir las particiones en los modelos DirectQuery | Documentos de Microsoft
 ms.custom: 
-ms.date: 07/06/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5f179ba9-6efb-46ae-90e5-945bbfddb719
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 88079b80a84e692ca07695f718c161f626093cec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 21e629bbac90f30562c6b8434e2a73a71fdea4ed
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="define-partitions-in-directquery-models"></a>Definición de particiones en los modelos DirectQuery
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Esta sección explica cómo se utilizan las particiones en los modelos DirectQuery. Para obtener información general sobre las particiones en los modelos tabulares, vea [Particiones &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+En esta sección se explica cómo se utilizan las particiones en los modelos DirectQuery. Para obtener más información acerca de las particiones en los modelos tabulares, vea [particiones](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
 > [!NOTE]  
 >  Aunque una tabla puede tener varias particiones, en el modo DirectQuery, solo una de ellas puede designarse para uso en la ejecución de consultas. El requisito de una sola partición se aplica a los modelos DirectQuery en todos los niveles de compatibilidad.  
@@ -82,6 +83,6 @@ ms.lasthandoff: 01/08/2018
 |DirectQueryUsage=InMemory With DirectQuery<br /><br /> Se aplica a los modelos Tabular 1100 o 1103 que se ejecutan en una combinación de en memoria y el modo DirectQuery.|Permitir procesar la partición|Si el modelo utiliza el modo híbrido, debe usar la misma partición para las consultas en memoria y las consultas en memoria y en el origen de datos de DirectQuery.|  
   
 ## <a name="see-also"></a>Vea también  
- [Particiones &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
+ [Particiones](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
   
   

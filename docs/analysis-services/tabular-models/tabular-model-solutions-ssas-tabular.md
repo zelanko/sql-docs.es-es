@@ -1,5 +1,5 @@
 ---
-title: Soluciones de modelos tabulares (SSAS Tabular) | Documentos de Microsoft
+title: Soluciones de modelos tabulares | Documentos de Microsoft
 ms.date: 05/22/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e9931ff-439e-4e1a-9ef2-5d3971187eb9
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 89c542d5d9bba99c9d44a1431524e028de619f8a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5b84ae0fa5911c0140213583462b20c9054f0f4b
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="creating-tabular-models"></a>Crear modelos tabulares
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Temas de esta sección proporcionan información acerca de cómo crear modelos tabulares mediante el Diseñador de modelos tabulares en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+En los temas de esta sección se proporciona información sobre la creación de modelos tabulares usando el diseñador de modelos tabulares de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Diseñador de modelos tabulares](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)  
@@ -61,9 +62,9 @@ ms.lasthandoff: 01/08/2018
   
  [Analizar en Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [Implementación de soluciones de modelos tabulares](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [Implementación de la solución de modelo tabular](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Descargar SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)   
  [Herramientas y aplicaciones utilizadas en Analysis Services](../../analysis-services/tools-and-applications-used-in-analysis-services.md)  
   

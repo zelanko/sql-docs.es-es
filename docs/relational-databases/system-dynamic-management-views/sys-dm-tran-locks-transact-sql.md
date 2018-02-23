@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 77f18549714e52e2d5681084b0b2246c838b5467
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c54a97a7b84dcb4d9873ee2537e31714b6f62172
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/03/2018
  Las columnas del conjunto de resultados se dividen en dos grupos principales: recurso y solicitud. El grupo sobre el recurso describe el recurso en que se ha solicitado realizar el bloqueo; el grupo sobre la solicitud describe la solicitud de bloqueo.  
   
 > [!NOTE]  
->  Para llamar a esta desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_tran_locks**.  
+> Para llamar a esta desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_tran_locks**.  
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
@@ -70,8 +70,6 @@ ms.lasthandoff: 02/03/2018
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles de Premium, requieren la `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles estándar y básico, requiere la **administrador del servidor** o un **Administrador de Azure Active Directory** cuenta.  
  
-
-  
 ## <a name="remarks"></a>Comentarios  
  Un estado de solicitud Granted indica que se ha concedido el bloqueo sobre un recurso al solicitante. Una solicitud en espera indica que la solicitud aún no se ha concedido. Devuelven los siguientes tipos de solicitud en espera la **request_status** columna:  
   
@@ -295,7 +293,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles de Premium, requiere
 ### <a name="a-using-sysdmtranlocks-with-other-tools"></a>A. Usar sys.dm_tran_locks con otras herramientas  
  En el ejemplo siguiente se trabaja con un escenario en el que una operación de actualización ha sido bloqueada por otra transacción. Mediante el uso de **sys.dm_tran_locks** y otras herramientas, que se proporciona información acerca de los recursos de bloqueo.  
   
-```  
+```sql  
 USE tempdb;  
 GO  
   
@@ -333,7 +331,7 @@ BEGIN TRAN
   
  La siguiente consulta mostrará información de bloqueo. El valor de `<dbid>` debe reemplazarse por el **database_id** de **sys.databases**.  
   
-```  
+```sql  
 SELECT resource_type, resource_associated_entity_id,  
     request_status, request_mode,request_session_id,  
     resource_description   
@@ -351,7 +349,7 @@ SELECT object_name(object_id), *
   
  La siguiente consulta mostrará información de bloqueo.  
   
-```  
+```sql  
 SELECT   
         t1.resource_type,  
         t1.resource_database_id,  
@@ -366,7 +364,7 @@ SELECT
   
  Libere los recursos revirtiendo las transacciones.  
   
-```  
+```sql  
 -- Session 1  
 ROLLBACK;  
 GO  
@@ -379,7 +377,7 @@ GO
 ### <a name="b-linking-session-information-to-operating-system-threads"></a>B. Vincular información de sesión a subprocesos del sistema operativo  
  En el ejemplo siguiente se devuelve información que asocia un identificador de sesión con un identificador de subproceso de Windows. El rendimiento del subproceso puede supervisarse en el Monitor de rendimiento de Windows. Esta consulta no devuelve ningún Id. de sesión que esté actualmente inactiva.  
   
-```  
+```sql  
 SELECT STasks.session_id, SThreads.os_thread_id  
     FROM sys.dm_os_tasks AS STasks  
     INNER JOIN sys.dm_os_threads AS SThreads  
@@ -391,9 +389,6 @@ GO
   
 ## <a name="see-also"></a>Vea también  
  [sys.dm_tran_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
- [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funciones y vistas de administración dinámica relacionadas con transacciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
-  
-
-

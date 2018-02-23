@@ -11,28 +11,30 @@ ms.custom:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
+f1_keywords:
+- sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1d0894a7718907bcbfa26565f80494cdce719287
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 98eb6a35d2dba7c71dcd857ffdfbe08c6e8bd17c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tabular-model-designer-ssas"></a>Diseñador de modelos tabulares (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]El Diseñador de modelos tabulares forma parte de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], integrado con Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], con plantillas de tipo de proyecto adicionales específicamente para desarrollar soluciones de modelos tabulares profesionales.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] se instala como una descarga web gratuita. Vea [Descargar SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md) para más información.    
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+El diseñador de modelos tabulares forma parte de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], integrado con Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], con plantillas adicionales de tipo de proyecto para el desarrollo específico de soluciones de modelos tabulares profesionales.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] se instala como una descarga web gratuita. Vea [Descargar SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md) para más información.    
   
 ##  <a name="bkmk_benefits"></a> Ventajas  
  Al instalar [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], se agregan nuevas plantillas de proyecto para crear modelos tabulares a los tipos de proyecto disponibles. Una vez creado un proyecto de modelo tabular mediante una de las plantillas, puede empezar a crear modelos mediante las herramientas y los asistentes del diseñador de modelos tabulares.  
   
  Además de las nuevas plantillas y herramientas para crear soluciones de modelos tabulares y multidimensionales profesionales, el entorno de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] proporciona funciones para la depuración y el ciclo de vida de los proyectos que le permiten asegurarse de que crea las soluciones BI más eficaces para su organización. Para obtener más información sobre [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], vea [Introducción a Visual Studio](http://go.microsoft.com/fwlink/?LinkId=206389).  
   
-##  <a name="bkmk_proj_temp"></a>Plantillas de proyecto  
+##  <a name="bkmk_proj_temp"></a> Plantillas de proyecto  
  Al instalar [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], se agregan las siguientes plantillas de proyectos de modelos tabulares a los tipos de proyecto de Business Intelligence:  
   
  **Proyecto tabular de Analysis Services**  
@@ -92,11 +94,11 @@ ms.lasthandoff: 01/08/2018
   
 -   Table  
   
--   columna  
+-   Columna  
   
 -   Measure  
   
- En Propiedades del proyecto solo se muestra el nombre y la carpeta del proyecto en la ventana Propiedades. Los proyectos también tienen valores de opciones de implementación y de servidor de implementación adicionales que se pueden establecer mediante un cuadro de diálogo de propiedades modales. Para ver estas propiedades, en el **Explorador de soluciones**, haga clic con el botón secundario en el proyecto y, a continuación, haga clic en **Propiedades**.  
+ Propiedades del proyecto solo muestran el nombre del proyecto y carpeta del proyecto en la ventana Propiedades. Los proyectos también tienen valores de opciones de implementación y de servidor de implementación adicionales que se pueden establecer mediante un cuadro de diálogo de propiedades modales. Para ver estas propiedades, en el **Explorador de soluciones**, haga clic con el botón secundario en el proyecto y, a continuación, haga clic en **Propiedades**.  
   
  Los campos de la ventana Propiedades tienen incrustados controles que se abren al hacer clic en ellos. El tipo de control de edición depende de la propiedad concreta. Entre los controles se incluyen cuadros de edición, listas desplegables y vínculos a cuadros de diálogo personalizados. Las propiedades que aparecen atenuadas son de solo lectura.  
   
@@ -126,7 +128,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="toolbar"></a>Barra de herramientas  
  La barra de herramientas de Analysis Services proporciona un acceso rápido y fácil a los comandos de creación de modelos usados con más frecuencia.  
   
-##  <a name="bkmk_vsint"></a>Integración de Visual Studio  
+##  <a name="bkmk_vsint"></a> Integración de Visual Studio  
  **Control de código fuente**  
  Los proyectos de Analysis Services se integran con el complemento de control de código fuente seleccionado. Si ha configurado Visual Studio para usar el control de código fuente, puede usar las funciones de protección/desprotección desde el Explorador de soluciones. Para configurar el uso de Team Foundation Server, vea [Configurar Visual Studio con el control de versiones de Team Foundation](http://msdn.microsoft.com/library/ms253064.aspx). También se admiten muchos complementos de control de código fuente de terceros.  
   
@@ -137,7 +139,7 @@ ms.lasthandoff: 01/08/2018
  Los métodos abreviados de teclado de Analysis Services se pueden configurar/reasignar con el cuadro de diálogo Herramientas->Opciones->Teclado. Algunos métodos abreviados globales de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , como compilar, guardar, depurar, nuevo proyecto, etc. se admiten en el contexto del diseñador de modelos tabulares. Otros métodos abreviados específicos del diseñador de modelos tabulares se encuentran en el contexto de Analysis Services.  
   
 ## <a name="see-also"></a>Vea también  
- [Proyectos de modelos tabulares &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
- [Propiedades &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
+ [Proyectos de modelos tabulares](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
+ [Propiedades](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   

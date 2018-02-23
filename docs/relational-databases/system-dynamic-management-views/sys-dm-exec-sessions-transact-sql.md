@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: aa248e9733c17b734eb60095f65b462e42e8b0c7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f2cf9c01c280848403ca2998e550213f2de78ad6
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.lasthandoff: 02/03/2018
 ## <a name="permissions"></a>Permissions  
 Todos pueden ver su propia información de sesión.  
 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** Requiere `VIEW SERVER STATE` permiso en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] para ver todas las sesiones en el servidor.  
-**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** Requiere `VIEW DATABASE STATE` para ver todas las conexiones a la base de datos actual. `VIEW DATABASE STATE`no se puede conceder en el `master` base de datos. 
+**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** Requiere `VIEW DATABASE STATE` para ver todas las conexiones a la base de datos actual. `VIEW DATABASE STATE` no se puede conceder en el `master` base de datos. 
   
   
 ## <a name="remarks"></a>Comentarios  
@@ -114,7 +114,7 @@ Todos pueden ver su propia información de sesión.
  Si esta opción no está habilitada, estas columnas devuelven valores NULL. Para obtener más información acerca de cómo establecer esta opción de configuración servidor, consulte [compatibilidad con criterio común habilitada la opción de configuración del servidor](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md).  
  
  
- Las conexiones de administrador de base de datos de SQL Azure verá una fila por cada sesión autenticada, mientras que las conexiones de administrador no solo verá información relacionada con sus sesiones de usuario de base de datos. 
+ Las conexiones de administrador de base de datos de SQL Azure verá una fila por cada sesión autenticada. Las sesiones de "sa" que aparecen en el conjunto de resultados, no tiene ningún efecto en la cuota de usuario para las sesiones. Las conexiones de administrador no solamente podrá ver la información relacionada con sus sesiones de usuario de base de datos.
  
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  

@@ -1,6 +1,6 @@
 ---
 title: "Instalar la búsqueda de texto completo SQL Server en Linux | Documentos de Microsoft"
-description: "En este tema se describe cómo instalar la búsqueda de texto completo de SQL Server en Linux."
+description: "En este artículo se describe cómo instalar la búsqueda de texto completo de SQL Server en Linux."
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.workload: Inactive
-ms.openlocfilehash: 8b1f14ca454582ee85506cd68b07a38f17ada1b4
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 1ffb4caadffb8f292f6bd8e495a457fe86e9d641
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Instalar la búsqueda de texto completo SQL Server en Linux
 
@@ -51,7 +51,7 @@ sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
-Si tiene una instalación sin conexión, busque la descarga del paquete de búsqueda de texto completo en el [notas de la versión](sql-server-linux-release-notes.md). A continuación, utilice los mismos pasos de instalación sin conexión se describe en el tema [instalar SQL Server](sql-server-linux-setup.md#offline).
+Si tiene una instalación sin conexión, busque la descarga del paquete de búsqueda de texto completo en el [notas de la versión](sql-server-linux-release-notes.md). A continuación, utilice los mismos pasos de instalación sin conexión se describe en el artículo [instalar SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="ubuntu">Instalar en Ubuntu</a>
 
@@ -69,7 +69,7 @@ sudo apt-get update
 sudo apt-get install -y mssql-server-fts 
 ```
 
-Si tiene una instalación sin conexión, busque la descarga del paquete de búsqueda de texto completo en el [notas de la versión](sql-server-linux-release-notes.md). A continuación, utilice los mismos pasos de instalación sin conexión se describe en el tema [instalar SQL Server](sql-server-linux-setup.md#offline).
+Si tiene una instalación sin conexión, busque la descarga del paquete de búsqueda de texto completo en el [notas de la versión](sql-server-linux-release-notes.md). A continuación, utilice los mismos pasos de instalación sin conexión se describe en el artículo [instalar SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="SLES">Instalar en SLES</a>
 
@@ -86,7 +86,7 @@ sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
 
-Si tiene una instalación sin conexión, busque la descarga del paquete de búsqueda de texto completo en el [notas de la versión](sql-server-linux-release-notes.md). A continuación, utilice los mismos pasos de instalación sin conexión se describe en el tema [instalar SQL Server](sql-server-linux-setup.md#offline).
+Si tiene una instalación sin conexión, busque la descarga del paquete de búsqueda de texto completo en el [notas de la versión](sql-server-linux-release-notes.md). A continuación, utilice los mismos pasos de instalación sin conexión se describe en el artículo [instalar SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="supported-languages"></a>Idiomas compatibles
 
@@ -148,7 +148,7 @@ Búsqueda de texto completo utiliza [separadores de palabras](../relational-data
 | Urdu | 1056 |
 | Vietnamita | 1066 |
 
-## <a id="filters"></a>Filtros
+## <a id="filters"></a> Filtros
 
 Búsqueda de texto completo también funciona con texto almacenado en archivos binarios. Pero en este caso, es necesario un filtro instalado para procesar el archivo. Para obtener más información acerca de los filtros, vea [configurar y administrar filtros para búsquedas](../relational-databases/search/configure-and-manage-filters-for-search.md).
 

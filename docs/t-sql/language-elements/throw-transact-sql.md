@@ -8,25 +8,28 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - THROW_TSQL
 - THROW
-dev_langs: TSQL
-helpviewer_keywords: THROW statement
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- THROW statement
 ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 32527795209b49b2b698962c86aee61b2956dd18
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: 04e09db13babdf05ba4cfa2f213f6d6e0d58c1a5
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -46,18 +49,18 @@ THROW [ { error_number | @local_variable },
   
 ## <a name="arguments"></a>Argumentos  
  *error_number*  
- Es una constante o una variable que representan la excepción. *error_number* es **int** y debe ser mayor o igual que 50000 y menor o igual que 2147483647.  
+ Es una constante o una variable que representan la excepción. *error_number* es de tipo **int** y debe ser mayor o igual que 50000 y menor o igual que 2147483647.  
   
  *message*  
- Es una cadena o una variable que describe la excepción. *mensaje* es **nvarchar (2048)**.  
+ Es una cadena o una variable que describe la excepción. *message* es **nvarchar (2048)**.  
   
  *state*  
- Es una constante o una variable comprendida entre 0 y 255 que indica el estado que se ha de asociar al mensaje. *estado* es **tinyint**.  
+ Es una constante o una variable comprendida entre 0 y 255 que indica el estado que se ha de asociar al mensaje. *state* es **tinyint**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La instrucción anterior a la instrucción THROW debe ir seguida del terminador de instrucción punto y coma (;).  
   
- Si una construcción TRY...CATCH no está disponible, la sesión se finaliza. Se establecen el número de línea y el procedimiento donde se produce la excepción. La gravedad se establece en 16.  
+ Si una construcción TRY...CATCH no está disponible, el lote de instrucciones se finaliza. Se establecen el número de línea y el procedimiento donde se produce la excepción. La gravedad se establece en 16.  
   
  Si la instrucción THROW se especifica sin parámetros, debe aparecer dentro de un bloque CATCH. Esto hace que se produzca la excepción detectada. Cualquier error que se produzca en una instrucción THROW hace que el lote de instrucciones se finalice.  
   
@@ -68,9 +71,9 @@ THROW [ { error_number | @local_variable },
   
 |RAISERROR, instrucción|Instrucción THROW|  
 |-------------------------|---------------------|  
-|Si un *msg_id* se pasa a RAISERROR, el identificador debe definirse en sys.messages.|El *error_number* parámetro no tienen que definirse en sys.messages.|  
-|El *msg_str* parámetro puede contener **printf** estilos de formato.|El *mensaje* parámetro no acepta **printf** el formato de estilo.|  
-|El *gravedad* parámetro especifica la gravedad de la excepción.|No hay ningún *gravedad* parámetro. La gravedad de la excepción siempre está establecida en 16.|  
+|Si se pasa *msg_id* a RAISERROR, el identificador se debe definir en sys.messages.|El parámetro *error_number* no tiene que definirse en sys.messages.|  
+|El parámetro *msg_str* puede contener estilos de formato de **printf**.|El parámetro *message* no acepta el formato de estilo de **printf**.|  
+|El parámetro *severity* especifica la gravedad de la excepción.|No hay ningún parámetro *severity*. La gravedad de la excepción siempre está establecida en 16.|  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -121,7 +124,7 @@ END CATCH;
  ```  
   
 ### <a name="c-using-formatmessage-with-throw"></a>C. Usar FORMATMESSAGE con THROW  
- En el ejemplo siguiente se muestra cómo usar la función `FORMATMESSAGE` con `THROW` para producir un mensaje de error personalizado. En el ejemplo se crea primero un mensaje de error definido por el usuario mediante `sp_addmessage`. Dado que la instrucción THROW no permite parámetros de sustitución en el *mensaje* parámetro de la manera en que lo hace RAISERROR, la función FORMATMESSAGE se utiliza para pasar los tres valores de parámetro esperados el mensaje de error 60000.  
+ En el ejemplo siguiente se muestra cómo usar la función `FORMATMESSAGE` con `THROW` para producir un mensaje de error personalizado. En el ejemplo se crea primero un mensaje de error definido por el usuario mediante `sp_addmessage`. Como la instrucción THROW no permite parámetros de sustitución en el parámetro *message* de la manera en que lo hace RAISERROR, la función FORMATMESSAGE se emplea para pasar los tres valores de parámetro esperados por el mensaje de error 60000.  
   
 ```sql  
 EXEC sys.sp_addmessage  
@@ -144,15 +147,15 @@ THROW 60000, @msg, 1;
  This is a test message with one numeric parameter (500), one string parameter (First string), and another string parameter (second string).
  ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
- [Niveles de gravedad de Error de motor de base de datos](../../relational-databases/errors-events/database-engine-error-severities.md)   
+ [Niveles de gravedad de error del motor de base de datos](../../relational-databases/errors-events/database-engine-error-severities.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
  [GOTO &#40;Transact-SQL&#41;](../../t-sql/language-elements/goto-transact-sql.md)   

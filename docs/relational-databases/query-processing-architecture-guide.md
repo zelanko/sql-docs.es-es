@@ -1,7 +1,7 @@
 ---
 title: "Guía de arquitectura de procesamiento de consultas | Microsoft Docs"
 ms.custom: 
-ms.date: 11/07/2017
+ms.date: 02/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c55426d6723749d9edda2b6244ae7e75f47047b2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 625481946af508b626a6bc142113298298a7fca2
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,6 +35,40 @@ El [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] procesa consultas 
 ## <a name="sql-statement-processing"></a>Procesamiento de instrucciones SQL
 
 El procesamiento de una única instrucción SQL es el método más básico de ejecución de instrucciones SQL en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Los pasos que se usan para procesar una única instrucción `SELECT` que solo hace referencia a tablas base locales (no a vistas ni a tablas remotas) ilustran el proceso básico.
+
+#### <a name="logical-operator-precedence"></a>Prioridad de los operadores lógicos
+
+Cuando en una instrucción se usa más de un operador lógico, primero se evalúa `NOT`, luego `AND` y, finalmente, `OR`. Los operadores aritméticos y bit a bit se tratan antes que los operadores lógicos. Para más información, vea [Prioridad de operador](../t-sql/language-elements/operator-precedence-transact-sql.md).
+
+En el siguiente ejemplo, la condición de color pertenece al modelo de producto 21 y no al modelo de producto 20, ya que porque `AND` tiene prioridad sobre `OR`.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR ProductModelID = 21
+  AND Color = 'Red';
+GO
+```
+
+Puede cambiar el significado de la consulta si agrega paréntesis para provocar que `OR` se evalúe primero. La siguiente consulta busca solamente los productos en los modelos 20 y 21 que sean rojos.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE (ProductModelID = 20 OR ProductModelID = 21)
+  AND Color = 'Red';
+GO
+```
+
+El uso de paréntesis, incluso cuando no se necesitan, puede mejorar la comprensión de las consultas y reducir las posibilidades de cometer un error debido a la prioridad de los operadores. No hay ninguna reducción significativa del rendimiento que sea achacable al uso de paréntesis. El siguiente ejemplo se lee mejor que el ejemplo original, aunque ambos son sintácticamente iguales.
+
+```sql
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR (ProductModelID = 21
+  AND Color = 'Red');
+GO
+```
 
 #### <a name="optimizing-select-statements"></a>Optimización de las instrucciones SELECT
 
@@ -49,7 +83,6 @@ Una instrucción `SELECT` define únicamente los siguientes elementos:
 * Las tablas que contienen los datos de origen. Se especifica en la cláusula `FROM` .
 * Cómo se relacionan las tablas de forma lógica para la instrucción `SELECT` . Esto se define en las especificaciones de combinación, que pueden aparecer en la cláusula `WHERE` o en una cláusula `ON` que sigue a `FROM`.
 * Las condiciones que deben cumplir las filas de las tablas de origen para satisfacer los requisitos de la instrucción `SELECT` . Se especifican en las cláusulas `WHERE` y `HAVING` .
-
 
 Un plan de ejecución de consulta es una definición de los siguientes elementos: 
 
@@ -1045,4 +1078,5 @@ GO
  [Eventos extendidos](../relational-databases/extended-events/extended-events.md)  
  [Procedimiento recomendado con el Almacén de consultas](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Estimación de cardinalidad](../relational-databases/performance/cardinality-estimation-sql-server.md)  
- [Procesamiento de consultas adaptable](../relational-databases/performance/adaptive-query-processing.md)
+ [Procesamiento de consultas adaptable](../relational-databases/performance/adaptive-query-processing.md)   
+ [Prioridad de los operadores](../t-sql/language-elements/operator-precedence-transact-sql.md)

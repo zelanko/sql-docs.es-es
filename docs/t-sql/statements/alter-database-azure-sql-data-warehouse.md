@@ -1,32 +1,34 @@
 ---
-title: ALTER DATABASE (almacenamiento de datos SQL Azure) | Documentos de Microsoft
+title: ALTER DATABASE (Azure SQL Data Warehouse) | Microsoft Docs
 ms.custom: 
-ms.date: 03/03/2017
+ms.date: 02/15/2018
 ms.prod: 
 ms.prod_service: sql-data-warehouse
 ms.reviewer: 
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: da712a46-5f8a-4888-9d33-773e828ba845
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
-ms.openlocfilehash: 71737beb817cfeebed195c90d056768aef678a3e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: b70750eebf7727348f9058bea2aecd0508d544bd
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/19/2018
 ---
-# <a name="alter-database-azure-sql-data-warehouse"></a>Modificar base de datos (almacenamiento de datos SQL Azure)
+# <a name="alter-database-azure-sql-data-warehouse"></a>ALTER DATABASE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Modifica el nombre, el tamaño máximo o el objetivo de servicio para una base de datos.  
+Modifica el nombre, el tamaño máximo o el objetivo del servicio de una base de datos.  
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,52 +57,52 @@ ALTER DATABASE database_name
   
 ## <a name="arguments"></a>Argumentos  
 *database_name*  
-Especifica el nombre de la base de datos a modificarse.  
+Especifica el nombre de la base de datos que se va a modificar.  
 
 MODIFY NAME = *new_database_name*  
-Cambia el nombre de la base de datos con el nombre especificado como *new_database_name*.  
+Reemplaza el nombre de la base de datos por el nombre especificado como *new_database_name*.  
   
 MAXSIZE  
-El valor predeterminado es 10240 GB (10 TB).  
+El valor predeterminado es 245 760 GB (240 TB).  
 
-**Se aplica a:** optimizado para el nivel de rendimiento de elasticidad
+**Se aplica a:** optimizado para el nivel de rendimiento de Elasticity.
 
-El tamaño máximo permitido para la base de datos. La base de datos no puede crecer más allá de MAXSIZE. 
+El tamaño máximo permitido para la base de datos. La base de datos no puede superar el valor de MAXSIZE. 
 
-**Se aplica a:** optimizado para el nivel de rendimiento de proceso
+**Se aplica a:** optimizado para el nivel de rendimiento de Compute.
 
-El tamaño máximo permitido para los datos del almacén de la base de datos. Datos almacenados en tablas de almacén de filas, el almacén delta del índice de almacén de columnas o un índice no agrupado en un índice de almacén de columnas agrupado no pueden crecer más allá de MAXSIZE.  Los datos comprimidos en formato de almacén de columnas no tiene un límite de tamaño y no está limitados por MAXSIZE. 
+Tamaño máximo permitido para los datos de almacenamiento de filas de la base de datos. Los datos almacenados en tablas de almacenamiento de filas, en el almacén delta de un índice de almacén de columnas o en un índice no agrupado de un índice de almacén de columnas en clúster no pueden superar el valor de MAXSIZE.  Los datos comprimidos en formato de almacén de columnas no tienen un límite de tamaño y no están restringidos por el valor de MAXSIZE. 
   
 SERVICE_OBJECTIVE  
-Especifica el nivel de rendimiento. Para obtener más información acerca de los objetivos de servicio para [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], consulte [niveles de rendimiento](https://azure.microsoft.com/documentation/articles/performance-tiers/).  
+Especifica el nivel de rendimiento. Para más información sobre los objetivos de servicio para [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], vea [Niveles de rendimiento](https://azure.microsoft.com/documentation/articles/performance-tiers/).  
   
-## <a name="permissions"></a>Permissions  
-Estos permisos se necesita:  
+## <a name="permissions"></a>Permisos  
+Se requieren estos permisos:  
   
--   Inicio de sesión principal del nivel de servidor (creado por el proceso de aprovisionamiento uno), o  
+-   Inicio de sesión principal en el nivel de servidor (creado por el proceso de aprovisionamiento), o  
   
--   Miembro de la `dbmanager` rol de base de datos.  
+-   Miembro del rol de base de datos `dbmanager`.  
   
-El propietario de la base de datos no puede modificar la base de datos a menos que el propietario es un miembro de la `dbmanager` rol.  
+El propietario de la base de datos no puede modificarla a menos que sea miembro del rol `dbmanager`.  
   
 ## <a name="general-remarks"></a>Notas generales  
-La base de datos actual debe ser otra base de datos a la que se está modificando, por lo tanto, **ALTER debe ejecutarse mientras está conectado a la base de datos maestra**.  
+La base de datos actual debe ser diferente de la base de datos que está modificando, por lo que **ALTER debe ejecutarse mientras se está conectado a la base de datos maestra**.  
   
-Almacenamiento de datos de SQL está establecido en COMPATIBILITY_LEVEL 130 y no se puede cambiar. Para obtener más información, consulte [mejora el rendimiento de la consulta con 130 de nivel de compatibilidad de base de datos de SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
+SQL Data Warehouse está establecido en COMPATIBILITY_LEVEL 130 y no se puede cambiar. Para más información, vea [Rendimiento de consultas mejorado con el nivel de compatibilidad 130 en Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
   
-Para reducir el tamaño de una base de datos, utilice [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
+Para reducir el tamaño de una base de datos, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
   
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
-Para ejecutar ALTER DATABASE, la base de datos debe estar en línea y no puede estar en un estado de pausa.  
+Para ejecutar ALTER DATABASE, la base de datos debe estar en línea y no puede encontrarse en estado de pausa.  
   
 La instrucción ALTER DATABASE debe ejecutarse en modo de confirmación automática, que es el modo de administración de transacciones predeterminado. Esto se establece en la configuración de conexión.  
   
 La instrucción ALTER DATABASE no puede formar parte de una transacción definida por el usuario.
 
-No se puede cambiar la intercalación de base de datos.  
+No es posible cambiar la intercalación de base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
-Antes de ejecutar estos ejemplos, asegúrese de que la base de datos que se está modificando no es la base de datos actual. La base de datos actual debe ser otra base de datos a la que se está modificando, por lo tanto, **ALTER debe ejecutarse mientras está conectado a la base de datos maestra**.  
+Antes de ejecutar estos ejemplos, asegúrese de que la base de datos que está modificando no es la base de datos actual. La base de datos actual debe ser diferente de la base de datos que está modificando, por lo que **ALTER debe ejecutarse mientras se está conectado a la base de datos maestra**.  
 
 ### <a name="a-change-the-name-of-the-database"></a>A. Cambiar el nombre de la base de datos  
 
@@ -127,7 +129,7 @@ ALTER DATABASE dw1 MODIFY ( SERVICE_OBJECTIVE= 'DW1200' );
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );  
 ```  
   
-## <a name="see-also"></a>Vea también  
-[CREATE DATABASE (almacenamiento de datos de SQL Azure)](../../t-sql/statements/create-database-azure-sql-data-warehouse.md)
-[lista de almacenamiento de datos SQL de temas de referencia](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/)  
+## <a name="see-also"></a>Ver también  
+[CREATE DATABASE (Azure SQL Data Warehouse)](../../t-sql/statements/create-database-azure-sql-data-warehouse.md)
+[Lista de temas de referencia de SQL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/)  
   

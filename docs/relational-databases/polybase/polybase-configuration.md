@@ -1,7 +1,7 @@
 ---
 title: "Configuración de PolyBase | Microsoft Docs"
 ms.custom: 
-ms.date: 09/13/2017
+ms.date: 02/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -12,17 +12,15 @@ ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 80ff73c1-2861-438b-a13f-309155f3d6e1
-caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f46ca117e763d5ec6d4bb76eb4beff6c3b15f358
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: a202fe4cb2a6f6bd24ce6279259e6cbc46a622f6
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="polybase-configuration"></a>Configuración de PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +31,9 @@ ms.lasthandoff: 02/12/2018
  Debe asegurarse de que funciona correctamente la conectividad desde SQL Server al origen de datos externo. El tipo de conectividad influye significativamente en el rendimiento de las consultas. Por ejemplo, un vínculo de 10 Gigabit Ethernet producirá un tiempo de respuesta de consulta menor en las consultas PolyBase que uno de 1 Gigabit Ethernet.  
   
  Debe configurar SQL Server para conectarse a la versión de Hadoop o a Almacenamiento de blobs de Azure con **sp_configure**. PolyBase es compatible con dos distribuciones de Hadoop: Hortonworks Data Platform (HDP) y Cloudera Distributed Hadoop (CDH).  Para obtener una lista completa de los orígenes de datos externos compatibles, vea [Configuración de PolyBase &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
-1 Nota: PolyBase no admite las zonas cifradas de Cloudera. 
+
+Tenga en cuenta que PolyBase admite las zonas de cifrado de Hadoop a partir de SQL Server 2016 SP1 CU7 y SQL Server 2017.
+
   
 ### <a name="run-spconfigure"></a>Ejecución de sp_configure  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 02/12/2018
 4. Para todas las versiones 5.X de CDH, deberá agregar los parámetros de **mapreduce.application.classpath** al final del archivo **yarn.site.xml** o en el archivo **mapred-site.xml file**. HortonWorks incluye estas configuraciones dentro de las configuraciones **yarn.application.classpath**.
 
 ## <a name="connecting-to-hadoop-cluster-with-hadooprpcprotection-setting"></a>Conectarse al clúster de Hadoop con la opción de configuración Hadoop.RPC.Protection
-Una forma habitual de proteger la comunicación en un clúster de Hadoop consiste en cambiar la configuración de hadoop.rpc.protection a "Privacy" (Privacidad) o "Integrity" (Integridad). De forma predeterminada, PolyBase da por hecho que la configuración está establecida en "Authenticate" (Autenticar). Para reemplazar esta configuración predeterminada, debe agregar la siguiente propiedad al archivo core-site.xml. Cambiar esta configuración permitirá efectuar una transferencia de datos segura entre los nodos de Hadoop y permitirá establecer una conexión SSL con SQL Server.
+Una forma habitual de proteger la comunicación en un clúster de Hadoop consiste en cambiar la configuración de hadoop.rpc.protection a "Privacy" (Privacidad) o "Integrity" (Integridad). De forma predeterminada, PolyBase da por hecho que la configuración está establecida en "Autenticar". Para reemplazar esta configuración predeterminada, agregue la siguiente propiedad al archivo core-site.xml. Si cambia esta configuración, permitirá que se efectúe una transferencia de datos segura entre los nodos de Hadoop y que se establezca una conexión SSL con SQL Server.
 
 ```
 <!-- RPC Encryption information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG -->
@@ -192,7 +192,7 @@ Tenga en cuenta que hemos agregado la propiedad mapreduce.application.classpath.
 ```
   
 ## <a name="kerberos-configuration"></a>Configuración de Kerberos  
-Tenga en cuenta que cuando PolyBase se autentica en un clúster protegido de Kerberos, se requiere establecer la configuración de hadoop.rpc.protection para la autenticación. Esta acción dejará la comunicación de datos entre los nodos Hadoop sin cifrar. 
+Tenga en cuenta que cuando PolyBase se autentica en un clúster protegido de Kerberos, espera que la configuración de hadoop.rpc.protection esté establecida en "Autenticar" de forma predeterminada. Esta acción dejará la comunicación de datos entre los nodos Hadoop sin cifrar. Para usar la configuración de "Privacidad" o "Integridad" para hadoop.rpc.protection, actualice el archivo core-site.xml en el servidor de PolyBase. Para más información, vea la sección anterior titulada [Conectarse al clúster de Hadoop con la opción de configuración Hadoop.RPC.Protection](#connecting-to-hadoop-cluster-with-hadooprpcprotection-setting).
 
  Para conectarse a un clúster de Hadoop protegido con Kerberos [con MIT KDC]:
    

@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlxml
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 - implicit schema mapping
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b5a9ef6b56ee32f31b277273fb644a03925fdf0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2dc3ce73bfe3da97e6567c1819eea34a8bc1dfaa
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Introducción a los diagramas de actualización (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Puede modificar (Insertar, actualizar o eliminar) una base de datos en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] desde un documento XML de documento mediante un diagrama de actualización o el OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] función.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Puede modificar (Insertar, actualizar o eliminar) una base de datos en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] desde un documento XML de documento mediante un diagrama de actualización o el OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] función.  
   
  La función OPENXML modifica una base de datos dividiendo el documento XML existente y proporcionando un conjunto de filas que puede pasarse a una instrucción INSERT, UPDATE o DELETE. Con OPENXML, las operaciones se realizan directamente en las tablas de la base de datos. Por lo tanto, el uso de OPENXML resulta más adecuado siempre que los proveedores de conjuntos de filas, como una tabla, puedan aparecer como un origen.  
   
@@ -66,13 +68,13 @@ ms.lasthandoff: 11/17/2017
   
  Las definiciones siguientes describen el rol de cada uno de estos bloques:  
   
- **\<antes de >**  
+ **\<before>**  
  Identifica el estado existente (que también recibe el nombre de "estado before") de la instancia de registro.  
   
- **\<una vez >**  
+ **\<after>**  
  Identifica el nuevo estado al que van a cambiarse los datos.  
   
- **\<sincronización >**  
+ **\<sync>**  
  Contiene el  **\<antes >** y  **\<después >** bloques. A  **\<sincronización >** bloque puede contener más de un conjunto de  **\<antes >** y  **\<después >** bloques. Si hay más de un conjunto de  **\<antes >** y  **\<después >** bloques, estos bloques (incluso si están vacías) debe especificarse como pares. Además, un diagrama de actualización puede tener más de un  **\<sincronización >** bloque. Cada  **\<sincronización >** bloque es una unidad de transacción (lo que significa que cualquier todo el contenido de la  **\<sincronización >** bloque se realiza o no se hace nada). Si especifica varios  **\<sincronización >** bloques en un diagrama de actualización, el error de un  **\<sincronización >** bloque no afecta a los demás  **\<sincronización >** bloques.  
   
  Si un diagrama de actualización elimina, inserta o actualiza una instancia de registro depende del contenido de la  **\<antes >** y  **\<después >** bloques:  

@@ -1,11 +1,11 @@
 ---
 title: "SQL Server Always On patrones de implementación del grupo de disponibilidad | Documentos de Microsoft"
-ms.custom: 
+ms.custom: sql-linux
 ms.date: 10/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d0f5fe75b65efbea49df143e573316b50675a93
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 25d20ff22474c8df65184cab9ddd0a9f1efb7a8c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad
 
@@ -70,7 +70,7 @@ Escala de lectura, alta disponibilidad y protección de datos, puede proporciona
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
 |Interrupción principal | Conmutación por error manual. Es posible que haya pérdida de datos. Nuevo elemento principal es R / w. |Conmutación por error automática. Nuevo elemento principal es R / w. |Conmutación por error automática. Nuevo elemento principal no está disponible para las transacciones de usuario hasta que el objeto principal anterior se recupera y une a grupo de disponibilidad como secundaria. 
 |Interrupción de réplica secundaria  | Principal es R / w. No hay conmutación automática por error si se produce un error en la principal. |Principal es R / w. No hay conmutación automática por error si falla el sitio primario también. | Principal no está disponible para las transacciones de usuario. 
-<sup>*</sup>Valor predeterminado
+<sup>*</sup> Valor predeterminado
 
 <a name="twoSynch"></a>
 
@@ -87,7 +87,7 @@ Un grupo de disponibilidad con dos réplicas sincrónicas proporciona protecció
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |Interrupción principal | Conmutación por error manual. Es posible que haya pérdida de datos. Nuevo elemento principal es R / w.| Conmutación por error automática. Nuevo elemento principal no está disponible para las transacciones de usuario hasta que el objeto principal anterior se recupera y une a grupo de disponibilidad como secundaria.
 |Interrupción de réplica secundaria  |Principal es lectura/escritura, ejecución expuesta a la pérdida de datos. |Principal no está disponible para las transacciones de usuario hasta que recupera secundaria.
-<sup>*</sup>Valor predeterminado
+<sup>*</sup> Valor predeterminado
 
 >[!NOTE]
 >El escenario anterior es el comportamiento antes de 2017 CU 1 de SQL Server. 
@@ -117,7 +117,7 @@ El valor predeterminado de `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` es 0. E
 |Interrupción de la réplica secundaria | Principal es de lectura/escritura, ejecución expuesta a la pérdida de datos (si principal produce un error y no se puede recuperar). No hay conmutación automática por error si falla el sitio primario también. | Principal no está disponible para las transacciones de usuario. No hay ninguna réplica para conmutar a si falla el sitio primario también. 
 |Interrupción de réplica solo configuración | Principal es R / w. No hay conmutación automática por error si falla el sitio primario también. | Principal es R / w. No hay conmutación automática por error si falla el sitio primario también. 
 |Elemento secundario sincrónico + configuración solo interrupción de réplica| Principal no está disponible para las transacciones de usuario. No hay conmutación por error automática. | Principal no está disponible para las transacciones de usuario. No hay ninguna réplica en conmutación por error como si también generará errores principales. 
-<sup>*</sup>Valor predeterminado
+<sup>*</sup> Valor predeterminado
 
 >[!NOTE]
 >La instancia de SQL Server que hospeda la única réplica de configuración también puede hospedar otras bases de datos. También puede participar como una configuración única base de datos de más de un grupo de disponibilidad. 
@@ -142,7 +142,7 @@ El valor predeterminado de `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` es 0. E
 
 ## <a name="understand-sql-server-resource-agent-for-pacemaker"></a>Comprender el agente de recursos de SQL Server para marcapasos
 
-SQL Server de 2017 CTP 1.4 agrega `sequence_number` a `sys.availability_groups` para permitir marcapasos identificar el grado de actualización secundaria réplicas están con la réplica principal. `sequence_number`es un progresión BIGINT que representa el grado de actualización la réplica del grupo de disponibilidad local. Las actualizaciones de marcapasos el `sequence_number` con cada cambio de configuración del grupo de disponibilidad. Conmutación por error, adición de réplica o eliminación son ejemplos de cambios de configuración. El número se actualiza en el servidor principal, a continuación, replica en las réplicas secundarias. Por lo tanto, una réplica secundaria que tiene la configuración actualizada tiene el mismo número de secuencia que la réplica principal. 
+SQL Server de 2017 CTP 1.4 agrega `sequence_number` a `sys.availability_groups` para permitir marcapasos identificar el grado de actualización secundaria réplicas están con la réplica principal. `sequence_number` es un progresión BIGINT que representa el grado de actualización la réplica del grupo de disponibilidad local. Las actualizaciones de marcapasos el `sequence_number` con cada cambio de configuración del grupo de disponibilidad. Conmutación por error, adición de réplica o eliminación son ejemplos de cambios de configuración. El número se actualiza en el servidor principal, a continuación, replica en las réplicas secundarias. Por lo tanto, una réplica secundaria que tiene la configuración actualizada tiene el mismo número de secuencia que la réplica principal. 
 
 Cuando decida marcapasos promocionar una réplica principal, en primer lugar envía una *previamente promover* notificación a todas las réplicas. Las réplicas devuelven el número de secuencia. A continuación, cuando realmente marcapasos intenta promover una réplica principal, la réplica solo promueve a sí mismo si su número de secuencia es el nivel más alto de todos los números de secuencia. Si su propio número de secuencia no coincide con el número de secuencia superior, la réplica rechaza la operación de promoción. De esta manera, solo se puede promover a principal la réplica con el número de secuencia más alto, lo que garantiza que no se producirá una pérdida de datos. 
 
@@ -150,7 +150,7 @@ Este proceso requiere al menos una réplica disponible para su promoción con el
 
 Por ejemplo, un grupo de disponibilidad con tres réplicas sincrónicas - una réplica principal y dos réplicas secundarias sincrónicas.
 
-- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`es 1; (3 / 2 -> 1).
+- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` es 1; (3 / 2 -> 1).
 
 - El número necesario de réplicas para responder para promover la acción previamente es 2. (3 - 1 = 2). 
 

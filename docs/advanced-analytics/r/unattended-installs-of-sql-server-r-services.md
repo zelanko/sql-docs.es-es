@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 7d41bd73398c016b920fa67244ffea1af865bde2
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: f1c7aaf35c0c58e9a7aab3c5b31725f586ffd2ac
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="unattended-installation-of-machine-learning-services-in-database"></a>Instalación desatendida de servicios de aprendizaje de máquina (In-Database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -49,9 +49,9 @@ Instalación desatendida, se entiende que no utilice las características intera
 
 > [!IMPORTANT]
 > 
-> Una vez finalizada la instalación para habilitar la característica, se requieren pasos adicionales. Éstos incluyen una reconfiguración y reiniciaron la instancia. Seguro para revisar todos los elementos en la sección [pasos posteriores a la instalación] (#bkmk_PostInstall) para determinar las acciones necesitarse una vez completada la instalación.
+> Una vez finalizada la instalación para habilitar la característica, se requieren pasos adicionales. Éstos incluyen una reconfiguración y reiniciaron la instancia. No olvide revisar todos los elementos de la sección en [pasos posteriores a la instalación](#bkmk_PostInstall) para determinar las acciones necesarias una vez completada la instalación.
 
-## <a name="bkmk_NewInstall"></a>Instalación de línea de comandos para SQL Server 2017
+## <a name="bkmk_NewInstall"></a>  Instalación de línea de comandos para SQL Server 2017
 
 Los siguientes ejemplos incluyen el **mínimo** características necesarias.
 
@@ -97,7 +97,7 @@ El ejemplo siguiente muestra los argumentos necesarios para realizar un silencio
 Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR, SQL_INST_MPY /INSTANCENAME=MSSQLSERVER.ServerName /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONOPENLICENSETERMS
 ```
 
-## <a name="OldInstall"></a>Instalación de línea de comandos para SQL Server 2016
+## <a name="OldInstall"></a> Instalación de línea de comandos para SQL Server 2016
  
 El ejemplo siguiente muestra los argumentos necesarios para realizar un silenciosa, desatendida la instalación de SQL Server 2016 con el lenguaje R agregado.
 

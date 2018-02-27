@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Inactive
-ms.openlocfilehash: ccb754ce5b37e3364ebe68b7b2065ce7b68d050f
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 26ccd4389bd02f659110c0fe3ac2cd8b23b240db
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configurar la instancia de clúster de conmutación por error: SQL Server en Linux (RHEL)
 
@@ -41,7 +41,7 @@ Para obtener información conceptual, consulte [instancia de clúster de conmuta
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Para completar el siguiente escenario de extremo a extremo debe tener dos máquinas para implementar el clúster de dos nodos y otro servidor para el almacenamiento. Pasos siguientes describen cómo se configurarán estos servidores.
+Para completar el siguiente escenario de extremo a extremo, debe tener dos máquinas para implementar el clúster de dos nodos y otro servidor para el almacenamiento. Pasos siguientes describen cómo se configurarán estos servidores.
 
 ## <a name="set-up-and-configure-linux"></a>Instalar y configurar Linux
 
@@ -63,7 +63,7 @@ El primer paso es configurar el sistema operativo en los nodos del clúster. En 
     > [!NOTE] 
     > En el conjunto de tiempo de actividad, se genera para la instancia de SQL Server y se coloca en una clave maestra del servidor `var/opt/mssql/secrets/machine-key`. En Linux, SQL Server siempre se ejecuta como una cuenta local denominada mssql. Dado que es una cuenta local, su identidad no se comparte en todos los nodos. Por lo tanto, debe copiar la clave de cifrado de nodo principal a cada nodo secundario para cada cuenta mssql local pueda acceder a él para descifrar la clave maestra de servidor. 
 
-1.  En el nodo principal, cree un inicio de sesión SQL server para marcapasos y conceder el permiso de inicio de sesión para ejecutar `sp_server_diagnostics`. Marcapasos usará esta cuenta para comprobar qué nodo está ejecutando SQL Server. 
+1.  En el nodo principal, cree un inicio de sesión SQL server para marcapasos y conceder el permiso de inicio de sesión para ejecutar `sp_server_diagnostics`. Marcapasos utiliza esta cuenta para comprobar qué nodo está ejecutando SQL Server. 
 
     ```bash
     sudo systemctl start mssql-server
@@ -207,7 +207,7 @@ En este ejemplo se creará una FCI en el grupo NewLinFCIGrp. El nombre del grupo
 
     \<FolderToMountNFSShare > es la carpeta para montar el disco (para las bases de datos del sistema y la ubicación predeterminada, sería /var/opt/mssql/data)
 
-     A continuación se muestra un ejemplo:
+    A continuación, se muestra un ejemplo:
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr

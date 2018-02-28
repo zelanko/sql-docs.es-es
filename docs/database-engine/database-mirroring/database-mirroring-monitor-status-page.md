@@ -21,13 +21,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7b0ad2d6c9773860640bbf25ecac671dfae2dbe1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Monitor de creación de reflejo de la base de datos (página Estado)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] En esta página de solo lectura se muestra el estado más reciente de la creación de reflejo de las instancias del servidor principal y reflejado seleccionadas actualmente en el árbol de navegación. Si la información sobre una instancia no se encuentra disponible, algunas celdas de la cuadrícula **Estado** correspondientes a dicha instancia aparecerán atenuadas y mostrarán **Desconocido**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+En esta página de solo lectura se muestra el estado más reciente de la creación de reflejo de las instancias del servidor principal y reflejado seleccionadas actualmente en el árbol de navegación. Si la información sobre una instancia no se encuentra disponible, algunas celdas de la cuadrícula **Estado** correspondientes a dicha instancia aparecerán atenuadas y mostrarán **Desconocido**.  
   
  **Para utilizar SQL Server Management Studio a fin de supervisar la creación de reflejo de la base de datos**  
   

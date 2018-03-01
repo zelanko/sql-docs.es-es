@@ -148,7 +148,7 @@ Para obtener información sobre propiedades de clúster marcapasos, consulte [ma
 
 ## <a name="create-availability-group-resource"></a>Crear el recurso de grupo de disponibilidad
 
-Para crear el recurso de grupo de disponibilidad, utilice `pcs resource create` comando y establezca las propiedades del recurso. El comando siguiente crea un `ocf:mssql:ag` maestro/esclavo el recurso de tipo para el grupo de disponibilidad con el nombre `ag1`.
+Para crear el recurso de grupo de disponibilidad, utilice `pcs resource create` comando y establezca las propiedades del recurso. El comando siguiente crea un `ocf:mssql:ag` maestro/subordinado el recurso de tipo para el grupo de disponibilidad con el nombre `ag1`.
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 master notify=true

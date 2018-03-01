@@ -8,7 +8,8 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -80,4 +81,4 @@ Se generará una advertencia durante la validación si un paquete contiene una t
 El formato Orc no se admite en el destino de HDFS ni en el destino de Azure Data Lake Store.
 
 ## <a name="next-steps"></a>Pasos siguientes
-Pata obtener información sobre la programación de ejecución de paquetes en Azure, consulte [Schedule the execution of an SSIS package on Azure](ssis-azure-schedule-packages.md) (Programación de la ejecución de un paquete de SSIS en Azure).
+Para obtener información sobre la programación de ejecución de paquetes en Azure, consulte [Schedule the execution of an SSIS package on Azure](ssis-azure-schedule-packages.md) (Programación de la ejecución de un paquete de SSIS en Azure).

@@ -98,12 +98,12 @@ Búsqueda de texto completo utiliza [separadores de palabras](../relational-data
 | Árabe | 1025 |
 | Bengali (India) | 1093 |
 | Bokmål | 1044 |
-| Portugués de Brasil | 1046 |
+| Portugués (Brasil) | 1046 |
 | British English | 2057 |
 | Búlgaro | 1026 |
 | Catalán | 1027 |
-| Chino (Hong Kong RAE, RPC) | 3076 |
-| Chino (Macao RAE) | 5124 |
+| Chino (RAE de Hong Kong, RPC) | 3076 |
+| Chino (RAE de Macao) | 5124 |
 | Chino (Singapur) | 4100 |
 | Croata | 1050 |
 | Checo | 1029 |

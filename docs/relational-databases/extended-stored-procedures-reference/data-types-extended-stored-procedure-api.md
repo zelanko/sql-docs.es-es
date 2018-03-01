@@ -52,7 +52,7 @@ ms.lasthandoff: 02/09/2018
 |SRVDECIMALN|**decimal null**|Tipo de datos **decimal**, permite valores NULL.|  
 |SRVFLT4|**real**|Tipo de datos **real** de 4 bytes.|  
 |SRVFLT8|**float**|Tipo de datos **float** de 8 bytes.|  
-|SRVFLTN|**real** &#124; **float es null**|Tipo de datos **real** o **float**, permite valores NULL.|  
+|SRVFLTN|**real** &#124; **float null**|Tipo de datos **real** o **float**, permite valores NULL.|  
 |SRVIMAGE|**imagen**|Tipo de datos **image**.|  
 |SRVINT1|**tinyint**|Tipo de datos **tinyint** de 1 byte.|  
 |SRVINT2|**smallint**|Tipo de datos **smallint** de 2 bytes.|  
@@ -60,7 +60,7 @@ ms.lasthandoff: 02/09/2018
 |SRVINTN|**tinyint** &#124; **smallint** &#124; **int null**|Tipo de datos **tinyint**, **smallint** o **int**, permite valores NULL.|  
 |SRVMONEY4|**smallmoney**|Tipo de datos **smallmoney** de 4 bytes.|  
 |SRVMONEY|**money**|Tipo de datos **money** de 8 bytes.|  
-|SRVMONEYN|**Money** &#124; **smallmoney null**|Tipo de datos **smallmoney** o **money**, permite valores NULL.|  
+|SRVMONEYN|**money** &#124; **smallmoney null**|Tipo de datos **smallmoney** o **money**, permite valores NULL.|  
 |SRVNCHAR|**nchar**|Tipo de datos **character** Unicode.|  
 |SRVNTEXT|**ntext**|Tipo de datos **text** Unicode.|  
 |SRVNUMERIC|**numeric**|Tipo de datos **numeric**.|  

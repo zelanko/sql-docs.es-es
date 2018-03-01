@@ -109,7 +109,7 @@ Especifica la intercalación predeterminada del catálogo de metadatos. *DATABAS
  *MAXSIZE*  
  Especifica el tamaño máximo de la base de datos. El valor de MAXSIZE debe ser válido para el valor de EDITION (nivel de servicio) especificado A continuación se indican los valores de MAXSIZE admitidos y los valores predeterminados (D) de los niveles de servicio.  
   
-|**MAXSIZE**|**Básico**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** 
+|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** 
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100 MB|√|√|√|√|√|  
 |250 MB|√|√|√|√|√|  

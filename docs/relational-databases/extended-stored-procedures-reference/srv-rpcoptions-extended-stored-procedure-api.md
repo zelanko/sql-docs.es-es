@@ -57,7 +57,7 @@ srvproc
 ## <a name="returns"></a>Devuelve  
  Un mapa de bits que contiene las marcas en tiempo de ejecución combinadas en un OR lógico para el procedimiento almacenado remoto actual. Si no hay un procedimiento almacenado remoto actual, se devuelve 0 y se genera un mensaje.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  En la tabla siguiente se describen las marcas de tiempo de ejecución.  
   
 |Marca de tiempo de ejecución|Description|  

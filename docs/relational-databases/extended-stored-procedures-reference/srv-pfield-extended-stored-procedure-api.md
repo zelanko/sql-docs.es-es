@@ -64,7 +64,7 @@ len
  *field*  
  Especifica los datos que se van a devolver en la conexión.  
   
-|Value|Devuelve|  
+|Valor|Devuelve|  
 |-----------|-------------|  
 |SRV_APPLNAME|El nombre de aplicación proporcionado por el cliente cuando estableció la conexión.|  
 |SRV_BCPFLAG|Una marca que es TRUE si el cliente está preparando una operación de copia masiva; de lo contrario, FALSE.|  

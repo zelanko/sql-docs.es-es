@@ -21,13 +21,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: d7b807d914d84a818e9ce9cccadde597a163955c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Artículos transaccionales: especificar cómo se propagan los cambios
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La replicación transaccional permite especificar cómo se propagan los cambios de datos del publicador a los suscriptores. Para cada tabla publicada, puede especificar uno de los cuatro métodos siguientes para propagar cada operación (INSERT, UPDATE o DELETE) al suscriptor:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+La replicación transaccional permite especificar cómo se propagan los cambios de datos del publicador a los suscriptores. Para cada tabla publicada, puede especificar uno de los cuatro métodos siguientes para propagar cada operación (INSERT, UPDATE o DELETE) al suscriptor:  
   
 -   Especifique que la replicación transaccional debe crear un script para un procedimiento almacenado y posteriormente, llamarlo para propagar los cambios a los suscriptores (la opción predeterminada).  
   

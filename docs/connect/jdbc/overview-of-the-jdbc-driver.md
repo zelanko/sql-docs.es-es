@@ -1,32 +1,33 @@
 ---
 title: "Información general sobre el controlador JDBC | Documentos de Microsoft"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/18/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5caebf50c2f7ec29bef49b2b42bbd5a1452218a8
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 3783933de0579de9c0da9f227280656b3583b7b7
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Introducción al controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  El controlador JDBC de Microsoft para SQL Server es un controlador compatible de tipo 4 Java Database Connectivity (JDBC) 4.2 que proporciona acceso a datos sólido a SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 y base de datos de SQL Azure.  
+  El controlador JDBC de Microsoft para SQL Server es un controlador compatible de tipo 4 Java Database Connectivity (JDBC) 4.2 que proporciona acceso a datos sólido a 2017 de SQL Server, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 y base de datos de SQL Azure .  
   
  Los temas de esta sección proporcionan una introducción general al controlador JDBC, incluidos los requisitos necesarios del sistema para usarlo, cómo se puede usar y dónde encontrar información adicional.  
   
@@ -44,7 +45,8 @@ ms.lasthandoff: 11/18/2017
 |[Más información sobre el controlador JDBC](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|Describe dónde encontrar más información sobre Microsoft JDBC Driver, incluidos los vínculos a recursos externos.|  
 |[Matriz de compatibilidad de Microsoft JDBC Driver para SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Matriz de compatibilidad y directiva de ciclo de vida de soporte de Microsoft JDBC Driver para SQL Server.|  
 |[Más frecuentes preguntas &#40; Preguntas más frecuentes sobre &#41; para el controlador JDBC](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Preguntas más frecuentes sobre Microsoft JDBC Driver.|  
-  
+|[Dependencias de características de Microsoft JDBC Driver para SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Dependencias de características de Microsoft JDBC Driver para SQL Server.|
+
 ## <a name="see-also"></a>Vea también  
  [Repositorio de GitHub del controlador JDBC](https://github.com/microsoft/mssql-jdbc)  
  [Referencia de API del controlador JDBC](../../connect/jdbc/reference/jdbc-driver-api-reference.md)  

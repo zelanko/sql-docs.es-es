@@ -1,7 +1,8 @@
 ---
 title: Evitar errores en paquetes de R instalados en bibliotecas de usuario | Documentos de Microsoft
+titleSuffix: SQL Server
 ms.custom: 
-ms.date: 11/16/2017
+ms.date: 02/20/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -16,22 +17,22 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: f58cb0fbc6ca62bbd4fe02e0c29d71569140fde2
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: b7f640cc33cb61ab8dffc57edb3b522808129880
+ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="avoiding-errors-on-r-packages-installed-in-user-libraries"></a>Evitar errores en paquetes de R instalados en bibliotecas de usuario
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Los usuarios experimentados de R están acostumbrados a la instalación de paquetes de R en una biblioteca de usuario, siempre que la biblioteca predeterminada está bloqueado o no está disponible. Sin embargo, este enfoque no se admite en SQL Server y la instalación en una biblioteca de usuario finaliza normalmente un error "no se encontró el paquete".
 
-Este tema proporciona soluciones para ayudarle a evitar este error. Explica cómo puede modificar el código de R y sugiere el proceso de instalación de paquetes de R correcto para el uso de paquetes de R desde una instancia de SQL Server.
+Este artículo describe soluciones alternativas para evitar este error. Explica cómo puede modificar el código de R y sugiere el proceso de instalación de paquetes de R correcto para el uso de paquetes de R desde una instancia de SQL Server.
 
 ## <a name="why-r-user-libraries-cannot-be-accessed-from-sql-server"></a>¿Por qué no se pueden tener acceso a las bibliotecas de usuario de R desde SQL Server
 
-Los desarrolladores de R que necesitan para instalar nuevos paquetes de R están acostumbrados a la instalación de paquetes a voluntad y utilizar una biblioteca de usuario privada, siempre que la biblioteca predeterminada no está disponible, o cuando el desarrollador no es un administrador en el equipo.
+Los desarrolladores de R que necesitan para instalar nuevos paquetes de R están acostumbrados a la instalación de paquetes cuando lo desee, con una privada, la biblioteca de usuario cada vez que la biblioteca predeterminada no está disponible, o cuando el desarrollador no es un administrador en el equipo.
 
 Por ejemplo, en un entorno de desarrollo de R típico, el usuario podría agregar la ubicación del paquete a la variable de entorno de R `libPath`, o hacer referencia a la ruta de acceso de paquete completo, similar al siguiente:
 
@@ -39,36 +40,24 @@ Por ejemplo, en un entorno de desarrollo de R típico, el usuario podría agrega
 library("c:/Users/<username>/R/win-library/packagename")
 ```
 
-Sin embargo, esto nunca funcionará al ejecutar soluciones en R en SQL Server, porque los paquetes de R deben instalarse en una biblioteca de datos específica que está asociada a la instancia.
-
-Si el paquete no está instalado en la biblioteca predeterminada, podría aparecer este error al intentar llamar al paquete:
+Esto no funciona al ejecutar soluciones en R en SQL Server, porque los paquetes de R deben instalarse en una biblioteca de datos específica que está asociada a la instancia. Cuando un paquete no está disponible en la biblioteca predeterminada, obtendrá este error al intentar llamar al paquete:
 
 *Error en library(xxx): no hay ningún paquete denominado 'nombre del paquete'*
 
-También es una práctica de desarrollo incorrecta para instalar paquetes de R necesarios en una biblioteca de usuario personalizada, ya que puede provocar errores si se ejecuta una solución de otro usuario que no tiene acceso a la ubicación de la biblioteca.
+## <a name="how-to-avoid-package-not-found-errors"></a>Cómo evitar los errores de "no se encontró el paquete"
 
-## <a name="how-to-install-r-packages-to-an-accessible-library"></a>Cómo instalar paquetes de R en una biblioteca de accesible
++ Eliminar las dependencias en las bibliotecas de usuario 
 
-**Para SQL Server 2016**
+    Es una práctica de desarrollo incorrecta para instalar paquetes de R necesarios en una biblioteca de usuario personalizada, ya que puede provocar errores si se ejecuta una solución de otro usuario que no tiene acceso a la ubicación de la biblioteca.
 
-Utilice la biblioteca de paquete asociada a la instancia. Para obtener más información, vea [paquetes de R instalados con SQL Server](installing-and-managing-r-packages.md)
+    Además, si un paquete está instalado en la biblioteca de forma predeterminada, el runtime de R carga el paquete de la biblioteca de forma predeterminada, incluso si ha especificado una versión diferente en el código de R.
 
-**Para SQL Server de 2017**
++ Modificar el código para que se ejecute en un entorno compartido.
 
-SQL Server proporciona características para ayudarle a administrar varias versiones de paquete y otorgar permisos de usuarios a los paquetes individuales, sin necesidad de que los usuarios tengan acceso al sistema de archivos.
++ Evitar la instalación de paquetes como parte de una solución. Si no tiene permisos para instalar paquetes, se producirá un error en el código. Incluso si tiene permisos para instalar paquetes, debe hacerlo por separado desde otro código que desea ejecutar.
 
-Para obtener más información sobre cómo configurar una biblioteca compartida de paquete y asignar usuarios a roles, consulte [administración de paquetes de R para SQL Server](r-package-management-for-sql-server-r-services.md).
++ Comprobar el código para asegurarse de que no hay ninguna llamada a paquetes no instalados.
 
-Si toma el enfoque de administración del paquete basado en roles de base de datos, no es necesario instalar varias copias del mismo paquete en los directorios de usuario diferente. Instalar una única copia del paquete que necesita y compartirlo con los usuarios autenticados. Puesto que los paquetes se administran en el nivel de base de datos, también puede copiar los grupos de los paquetes y permiso relacionada entre bases de datos.
++ Actualice el código para quitar las referencias directas a las rutas de acceso de paquetes de R o bibliotecas de R. 
 
-## <a name="tips-for-avoiding-package-not-found-errors"></a>Sugerencias para evitar errores de "no se encontró el paquete"
-
-+ Modifique el código para eliminar las dependencias de bibliotecas de usuario. Al migrar las soluciones de R se ejecuten [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)], es importante que haga lo siguiente:
-
-    + Instalar los paquetes que necesita en la biblioteca predeterminada asociada a la instancia.
-
-    + Modifique el código para asegurarse de que los paquetes se cargan desde la biblioteca de forma predeterminada, no desde directorios ad hoc o bibliotecas de usuario.
-
-+ Evite la instalación del paquete ad hoc como parte de una solución. Compruebe el código para asegurarse de que no hay ninguna llamada a paquetes instalados, o el código que instala paquetes dinámicamente. Si no tiene permisos para instalar paquetes, se producirá un error en el código. Incluso si tiene permisos para instalar paquetes, debe hacerlo por separado desde otro código que desea ejecutar.
-
-+ Actualice el código para quitar las referencias directas a las rutas de acceso de paquetes de R o bibliotecas de R. Si un paquete está instalado en la biblioteca predeterminada, el tiempo de ejecución de R lo cargará desde la biblioteca predeterminada, aunque se haya especificado otra biblioteca en el código de R.
++ Saber qué biblioteca del paquete está asociado a la instancia. Para obtener más información, vea [paquetes de R instalados con SQL Server](installing-and-managing-r-packages.md)

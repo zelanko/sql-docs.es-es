@@ -1,27 +1,28 @@
 ---
 title: Always Encrypted referencia de API para el controlador JDBC | Documentos de Microsoft
 ms.custom: 
-ms.date: 11/10/2016
+ms.date: 1/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7c0d47b3ef5dc4bb01cbc667299902aa283eb039
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: e3ed6ba1720ffff58967b4deaeda04194dcf156a
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>Always Encrypted referencia de API para el controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,11 +32,13 @@ ms.lasthandoff: 11/18/2017
 > [!NOTE]  
 >  Always Encrypted es compatible con Microsoft JDBC Driver 6.0 o posterior para que SQL Server con SQL Server 2016.  
   
+ ## <a name="always-encrypted-api-references"></a>Always Encrypted referencias de API
+ 
  Hay varias nuevas adiciones y modificaciones a la API de controlador JDBC que se pueden usar en aplicaciones cliente y que utilizan Always Encrypted.  
   
  **Clase SQLServerConnection**  
   
-|Nombre|Descripción|  
+|Nombre|Description|  
 |----------|-----------------|  
 |Nueva palabra clave de cadena de conexión:<br /><br /> columnEncryptionSetting|columnEncryptionSetting = Enabled habilita la funcionalidad de Always Encrypted para la conexión y columnEncryptionSetting = Disabled la deshabilita. Los valores aceptados son Enabled y Disabled. El valor predeterminado es Disabled.|  
 |Nuevos métodos:<br /><br /> setColumnEncryptionTrustedMasterKeyPaths de void estático público (mapa < cadena, se muestran\<cadena >> trustedKeyPaths)<br /><br /> updateColumnEncryptionTrustedMasterKeyPaths de void estático público (servidor de cadena, lista\<cadena > trustedKeyPaths)<br /><br /> removeColumnEncryptionTrustedMasterKeyPaths void estático público (servidor de cadena)|Permite conjunto/actualizar/quitar una lista de rutas de acceso de claves confianza para un servidor de base de datos. Si durante el procesamiento de una consulta de aplicación el controlador recibe una ruta de acceso a la clave que no figura en la lista, se producirá un error en la consulta. Esta propiedad proporciona protección adicional contra los ataques de seguridad que implican un servidor SQL Server comprometido que proporciona rutas de acceso a la clave falsas que pueden provocar la divulgación de las credenciales del almacén de claves.|  
@@ -63,7 +66,7 @@ ms.lasthandoff: 11/18/2017
 |setKeyStoreLocation void público (cadena keyStoreLocation)|Establece la ubicación incluido el nombre de archivo para el almacén de claves de Java. Tenga en cuenta que se debe establecer keyStoreAuthentication con "JavaKeyStorePassword".|
 |getKeyStoreLocation() de cadena pública|Recupera el keyStoreLocation para el almacén de claves de Java.|
   
- **Clase SQLServerColumnEncryptionJavaKeyStoreProvider**  
+ **SQLServerColumnEncryptionJavaKeyStoreProvider Class**  
   
  La implementación del proveedor de almacén de claves para el almacén de claves de Java. Esta clase permite usar certificados almacenados en el almacén de claves de Java como claves maestras de columna.  
   
@@ -77,12 +80,12 @@ ms.lasthandoff: 11/18/2017
   
 |Nombre|Description|  
 |----------|-----------------|  
-|pública byte [] decryptColumnEncryptionKey (masterKeyPath de cadena, cadena encryptionAlgorithm, byte [] encryptedColumnEncryptionKey)|Descifra el valor cifrado especificado de una clave de cifrado de columna. Se espera que el valor cifrado se haya cifrado mediante el certificado con la ruta de acceso a la clave especificada y mediante el algoritmo especificado.<br /><br /> **El formato de la ruta de acceso de clave debe ser uno de los siguientes:**<br /><br /> Thumbprint:<huella_digital_certificado><br /><br /> Alias:<alias_certificado><br /><br /> (Reemplaza a SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey (cadena, cadena, Byte[]).)|  
-|pública byte [] encryptColumnEncryptionKey (masterKeyPath de cadena, cadena encryptionAlgorithm, byte [] plainTextColumnEncryptionKey)|Cifra una clave de cifrado de columna mediante el certificado con la ruta de acceso a la clave especificada y con el algoritmo especificado.<br /><br /> **El formato de la ruta de acceso de clave debe ser uno de los siguientes:**<br /><br /> Thumbprint:<huella_digital_certificado><br /><br /> Alias:<alias_certificado><br /><br /> (Reemplaza a SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey (cadena, cadena, Byte[]).)|  
+|pública byte [] decryptColumnEncryptionKey (masterKeyPath de cadena, cadena encryptionAlgorithm, byte [] encryptedColumnEncryptionKey)|Descifra el valor cifrado especificado de una clave de cifrado de columna. Se espera que el valor cifrado se haya cifrado mediante el certificado con la ruta de acceso a la clave especificada y mediante el algoritmo especificado.<br /><br /> **El formato de la ruta de acceso de clave debe ser uno de los siguientes:**<br /><br /> Thumbprint:<huella_digital_certificado><br /><br /> Alias:<alias_certificado><br /><br /> (Overrides SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).)|  
+|pública byte [] encryptColumnEncryptionKey (masterKeyPath de cadena, cadena encryptionAlgorithm, byte [] plainTextColumnEncryptionKey)|Cifra una clave de cifrado de columna mediante el certificado con la ruta de acceso a la clave especificada y con el algoritmo especificado.<br /><br /> **El formato de la ruta de acceso de clave debe ser uno de los siguientes:**<br /><br /> Thumbprint:<huella_digital_certificado><br /><br /> Alias:<alias_certificado><br /><br /> (Overrides SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|  
 |setName void público (nombre de cadena)|Establece el nombre de este proveedor de almacén de claves.|
 |pública getName de String)|Obtiene el nombre de este proveedor de almacén de claves.|
   
- **Clase SQLServerColumnEncryptionAzureKeyVaultProvider**  
+ **SQLServerColumnEncryptionAzureKeyVaultProvider Class**  
   
  La implementación del proveedor de almacén de claves para el almacén de claves de Azure. Esta clase permite usar claves almacenadas en el almacén de claves de Azure como claves maestras de columna.  
   
@@ -90,19 +93,19 @@ ms.lasthandoff: 11/18/2017
   
 |Nombre|Description|  
 |----------|-----------------|  
-|SQLServerColumnEncryptionAzureKeyVaultProvider pública (SQLServerKeyVaultAuthenticationCallback authenticationCallback, ExecutorService executorService)|Proveedor de almacén de claves para el almacén de claves de Azure.  Debe proporcionar una implementación para la interfaz SQLServerKeyVaultAuthenticationCallback recuperar un token de acceso para la clave en el almacén de claves de Azure.|  
+|SQLServerColumnEncryptionAzureKeyVaultProvider pública (clientId de cadena, cadena clientKey)|Proveedor de almacén de claves para el almacén de claves de Azure.  Debe proporcionar el identificador y la clave del cliente solicita el token para autenticarse en el almacén de claves de Azure.|  
   
  Métodos  
   
 |Nombre|Description|  
 |----------|-----------------|  
-|pública byte [] decryptColumnEncryptionKey (masterKeyPath de cadena, cadena encryptionAlgorithm, byte [] encryptedColumnEncryptionKey)|Descifra el valor cifrado especificado de una clave de cifrado de columna. Se espera el valor cifrado se cifre mediante la clave de la columna especificada IDmaster clave y mediante el algoritmo especificado. <br />(Reemplaza a SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey (cadena, cadena, Byte[]).)|  
-|pública byte [] encryptColumnEncryptionKey (masterKeyPath de cadena, cadena encryptionAlgorithm, byte [] columnEncryptionKey)|Cifra una clave de cifrado de columna con la clave maestra de columna especificada y utilizando el algoritmo especificado. <br />(Reemplaza a SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey (cadena, cadena, Byte[]).)|  
+|pública byte [] decryptColumnEncryptionKey (masterKeyPath de cadena, cadena encryptionAlgorithm, byte [] encryptedColumnEncryptionKey)|Descifra el valor cifrado especificado de una clave de cifrado de columna. Se espera el valor cifrado se cifre mediante la clave de la columna especificada IDmaster clave y mediante el algoritmo especificado. <br />(Overrides SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).)|  
+|pública byte [] encryptColumnEncryptionKey (masterKeyPath de cadena, cadena encryptionAlgorithm, byte [] columnEncryptionKey)|Cifra una clave de cifrado de columna con la clave maestra de columna especificada y utilizando el algoritmo especificado. <br />(Overrides SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|  
 |setName void público (nombre de cadena)|Establece el nombre de este proveedor de almacén de claves.|
 |pública getName de String)|Obtiene el nombre de este proveedor de almacén de claves.|  
   
   
- **Interfaz SQLServerKeyVaultAuthenticationCallback**  
+ **SQLServerKeyVaultAuthenticationCallback Interface**  
   
  Esta interfaz contiene un método para la autenticación de almacén de claves de Azure, que consiste en ser implementada por el usuario.  
   
@@ -112,7 +115,7 @@ ms.lasthandoff: 11/18/2017
 |----------|-----------------|  
 |getAccessToken de cadena pública (entidad de cadena, recurso de cadena, cadena ámbito);|El método debe invalidarse. El método se utiliza para obtener acceso token al almacén de claves de Azure.|  
   
- **Clase SQLServerColumnEncryptionKeyStoreProvider**  
+ **SQLServerColumnEncryptionKeyStoreProvider Class**  
   
  Amplíe esta clase para implementar un proveedor del almacén de claves personalizado.  
   
@@ -195,7 +198,7 @@ Public enum  SQLServerStatementColumnEncryptionSetting
 >   
 >  Si Always Encrypted está deshabilitado para una consulta y la consulta devuelve los resultados de las columnas cifradas, la consulta devolverá valores cifrados. Los valores cifrados tendrá el tipo de datos varbinary.  
   
-## <a name="see-also"></a>Vea también  
+ ## <a name="see-also"></a>Vea también  
  [Usar Always Encrypted con el controlador JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
   
-  
+

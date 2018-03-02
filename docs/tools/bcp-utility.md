@@ -35,17 +35,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d394c689e4f4220781342dca687906d46a673c8e
-ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.openlocfilehash: 57dc975f2307a4f05afc3e71a8a9514d2aa84302
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="bcp-utility"></a>bcp (utilidad)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > Para el contenido relacionado con las versiones anteriores de SQL Server, vea [bcp (utilidad)](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx).
 
+ > Para obtener la versión más reciente de la utilidad bcp, vea [14.0 de utilidades de línea de comandos de Microsoft para SQL Server ](http://go.microsoft.com/fwlink/?LinkID=825643)
+
+ > Para usar bcp en Linux, consulte [instalar sqlcmd y bcp en Linux](../linux/sql-server-linux-setup-tools.md).
 
  > Para obtener información detallada sobre el uso de bcp con almacenamiento de datos de SQL Azure, consulte [carga los datos con bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
 
@@ -497,18 +500,18 @@ La utilidad bcp también se puede descargar por separado desde el [Feature Pack 
 ### <a name="example-test-conditions"></a>**Condiciones de prueba de ejemplo**
 Los ejemplos siguientes usan la base de datos de ejemplo `WideWorldImporters` para SQL Server (desde 2016) y Azure SQL Database.  `WideWorldImporters` se puede descargar de [https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0).  Consulte [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) para conocer la sintaxis para restaurar la base de datos de ejemplo.  Salvo que se especifique lo contrario, los ejemplos suponen que usa la autenticación de Windows y que existe una conexión de confianza con la instancia del servidor en la que se ejecuta el comando **bcp** .  Muchos de los ejemplos usarán un directorio denominado `D:\BCP` .
 
-El script siguiente crea una copia vacía de la tabla `WorlWideImporters.Warehouse.StockItemTransactions` y luego agrega una restricción PRIMARY KEY.  Ejecute el siguiente script T-SQL en SQL Server Management Studio (SSMS)
+El script siguiente crea una copia vacía de la tabla `WideWorldImporters.Warehouse.StockItemTransactions` y luego agrega una restricción PRIMARY KEY.  Ejecute el siguiente script T-SQL en SQL Server Management Studio (SSMS)
 
 ```tsql  
-USE WorlWideImporters;  
+USE WideWorldImporters;  
 GO  
 
 SET NOCOUNT ON;
 
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Warehouse.StockItemTransactions_bcp')     
 BEGIN
-    SELECT * INTO WorlWideImporters.Warehouse.StockItemTransactions_bcp
-    FROM WorlWideImporters.Warehouse.StockItemTransactions  
+    SELECT * INTO WideWorldImporters.Warehouse.StockItemTransactions_bcp
+    FROM WideWorldImporters.Warehouse.StockItemTransactions  
     WHERE 1 = 2;  
 
     ALTER TABLE Warehouse.StockItemTransactions_bcp 
@@ -520,7 +523,7 @@ END
 > [!NOTE]
 > Trunque la tabla `StockItemTransactions_bcp` según sea necesario.
 >
-> TRUNCATE TABLE WorlWideImporters.Warehouse.StockItemTransactions_bcp;
+> TRUNCAR tabla WideWorldImporters.Warehouse.StockItemTransactions_bcp;
 
 ### <a name="a--identify-bcp-utility-version"></a>A.  Identificar la versión de la utilidad **bcp**
 En el símbolo del sistema, escriba el siguiente comando:
@@ -529,14 +532,14 @@ bcp -v
 ```
   
 ### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>B. Copiar filas de tablas en un archivo de datos (con una conexión de confianza)  
-En el siguiente ejemplo se ilustra la opción **out** de la tabla `WorlWideImporters.Warehouse.StockItemTransactions` .
+En el siguiente ejemplo se ilustra la opción **out** de la tabla `WideWorldImporters.Warehouse.StockItemTransactions`.
 
 - **Básico**  
 En este ejemplo se crea un archivo de datos con el nombre `StockItemTransactions_character.bcp` y se usa el formato de **caracteres** para copiar los datos de la tabla en ese archivo.
 
   En el símbolo del sistema, escriba el siguiente comando:
   ```
-  bcp WorlWideImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
+  bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
  
  - **Expandido**  
@@ -544,30 +547,30 @@ En este ejemplo se crea un archivo de datos con el nombre `StockItemTransactions
 
     En el símbolo del sistema, escriba el siguiente comando:
     ```
-    bcp WorlWideImporters.Warehouse.StockItemTransactions OUT D:\BCP\StockItemTransactions_native.bcp -m 1 -n -e D:\BCP\Error_out.log -o D:\BCP\Output_out.log -S -T
+    bcp WideWorldImporters.Warehouse.StockItemTransactions OUT D:\BCP\StockItemTransactions_native.bcp -m 1 -n -e D:\BCP\Error_out.log -o D:\BCP\Output_out.log -S -T
     ``` 
  
 Revise `Error_out.log` y `Output_out.log`.  `Error_out.log` debe estar en blanco.  Compare los tamaños de archivo entre `StockItemTransactions_character.bcp` y `StockItemTransactions_native.bcp`. 
    
 ### <a name="c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication"></a>C. Copiar filas de tablas en un archivo de datos (con autenticación de modo mixto)  
-En el siguiente ejemplo se ilustra la opción **out** de la tabla `WorlWideImporters.Warehouse.StockItemTransactions` .  En este ejemplo se crea un archivo de datos con el nombre `StockItemTransactions_character.bcp` y se usa el formato de **caracteres** para copiar los datos de la tabla en ese archivo.  
+En el siguiente ejemplo se ilustra la opción **out** de la tabla `WideWorldImporters.Warehouse.StockItemTransactions`.  En este ejemplo se crea un archivo de datos con el nombre `StockItemTransactions_character.bcp` y se usa el formato de **caracteres** para copiar los datos de la tabla en ese archivo.  
   
  En el ejemplo se da por hecho que usa la autenticación de modo mixto; hay que usar el modificador **-U** para especificar su identificador de inicio de sesión. Además, a menos que se esté conectando a la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el equipo local, use el modificador **-S** para especificar el nombre del sistema y, opcionalmente, un nombre de instancia.  
 
 En un símbolo del sistema, escriba el comando siguiente: \(El sistema pedirá la contraseña.\)
 ```  
-bcp WorlWideImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
+bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```  
   
 ### <a name="d-copying-data-from-a-file-to-a-table"></a>D. Copiar datos de un archivo en una tabla  
-Los ejemplos siguientes ilustran la opción **in** en la tabla `WorlWideImporters.Warehouse.StockItemTransactions_bcp` con los archivos que se crearon anteriormente.
+Los ejemplos siguientes ilustran la opción **in** en la tabla `WideWorldImporters.Warehouse.StockItemTransactions_bcp` con los archivos que se crearon anteriormente.
   
 - **Básico**  
 En este ejemplo se usa el archivo de datos `StockItemTransactions_character.bcp` que se creó anteriormente.
 
   En el símbolo del sistema, escriba el siguiente comando:
   ```  
-  bcp WorlWideImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T  
+  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T  
   ```  
 
 - **Expandido**  
@@ -575,7 +578,7 @@ En este ejemplo se usa el archivo de datos `StockItemTransactions_native.bcp` qu
   
   En el símbolo del sistema, escriba el siguiente comando:
   ```  
-  bcp WorlWideImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T 
+  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T 
   ```    
   Revise `Error_in.log` y `Output_in.log`.
    
@@ -585,39 +588,39 @@ Para copiar una columna específica, puede usar la opción **queryout** .  El si
 En el símbolo del sistema, escriba el siguiente comando:
   
 ```  
-bcp "SELECT StockItemTransactionID FROM WorlWideImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
+bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
 ```  
   
 ### <a name="f-copying-a-specific-row-into-a-data-file"></a>F. Copiar una fila específica en un archivo de datos  
-Para copiar una fila específica, puede usar la opción **queryout** . El siguiente ejemplo copia únicamente la fila correspondiente a la persona con el nombre `Amy Trefl` de la tabla `WorlWideImporters.Application.People` en un archivo de datos `Amy_Trefl_c.bcp`.  Nota: El modificador **-d** se usa para identificar la base de datos.
+Para copiar una fila específica, puede usar la opción **queryout** . El siguiente ejemplo copia únicamente la fila correspondiente a la persona con el nombre `Amy Trefl` de la tabla `WideWorldImporters.Application.People` en un archivo de datos `Amy_Trefl_c.bcp`.  Nota: El modificador **-d** se usa para identificar la base de datos.
   
 En el símbolo del sistema, escriba el siguiente comando: 
 ```  
-bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WorlWideImporters -c -T
+bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
 ```  
   
 ### <a name="g-copying-data-from-a-query-to-a-data-file"></a>G. Copiar datos de una consulta en un archivo de datos  
-Para copiar el conjunto de resultados de una instrucción Transact-SQL en un archivo de datos, use la opción **queryout** .  El ejemplo siguiente copia los nombres de la tabla `WorlWideImporters.Application.People` , ordenados por nombre completo, en el archivo de datos `People.txt` .  Nota: El modificador **-t** se usa para crear un archivo delimitado por comas.
+Para copiar el conjunto de resultados de una instrucción Transact-SQL en un archivo de datos, use la opción **queryout** .  El ejemplo siguiente copia los nombres de la tabla `WideWorldImporters.Application.People`, ordenados por nombre completo, en el archivo de datos `People.txt`.  Nota: El modificador **-t** se usa para crear un archivo delimitado por comas.
   
 En el símbolo del sistema, escriba el siguiente comando:
 ```  
-bcp "SELECT FullName, PreferredName FROM WorlWideImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
+bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
 ```  
   
 ### <a name="h-creating-format-files"></a>H. Creación de archivos de formato  
-El ejemplo siguiente crea tres archivos de formato distintos para la tabla `Warehouse.StockItemTransactions` en la base de datos `WorlWideImporters` .  Revise el contenido de cada archivo creado.
+El ejemplo siguiente crea tres archivos de formato distintos para la tabla `Warehouse.StockItemTransactions` en la base de datos `WideWorldImporters`.  Revise el contenido de cada archivo creado.
   
 En un símbolo del sistema, escriba los comandos siguientes:
   
 ```  
 REM non-XML character format
-bcp WorlWideImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
+bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
 REM non-XML native format
-bcp WorlWideImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_n.fmt -n -T
+bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_n.fmt -n -T
 
 REM XML character format
-bcp WorlWideImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.xml -x -c -T
+bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.xml -x -c -T
  
 ```  
   
@@ -631,7 +634,7 @@ Para usar un archivo de formato creado anteriormente al importar datos a una ins
   
 En el símbolo del sistema, escriba el siguiente comando:
 ```  
-bcp WorlWideImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T 
+bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T 
 ```  
   
 > [!NOTE]  

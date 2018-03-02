@@ -5,29 +5,38 @@ ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
-ms.date: 09/22/2017
+ms.date: 03/01/2018
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b159377cfa3ff160d9be60dba91af5561649c4a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 487fa165ce29ae2ae2a7fffe4463e88fb45001c6
+ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/01/2018
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Novedades de SSMA para Access (AccessToSQL)
 En este tema se enumera SSMA de cambios de acceso en cada versión.  
+
+## <a name="ssma-v77"></a>SSMA v7.7
+La versión v7.7 de SSMA para Access contiene los siguientes cambios:
+- SSMA para Access se ha mejorado con correcciones de destino que mejoran las métricas de calidad y la conversión.
+- Según la gran demanda existente, la versión de 32 bits de SSMA para Access es volver. En comparación con la implementación anterior (anterior a v7.4), hay dos paquetes de instalador, pero no se puede instalar en paralelo. Como resultado, debe elegir la versión más adecuada en función de los componentes de conectividad que tiene. Siempre es preferible utilizar la versión de 64 bits, si es posible.
+
+> [!IMPORTANT]
+> Con SSMA v7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación.
 
 ## <a name="ssma-v76"></a>SSMA v7.6
 La versión v7.6 de SSMA para Access se ha mejorado con correcciones de destino que mejoran las métricas de calidad y la conversión y con el soporte para SQL Server 2017 (vista previa pública). Compatibilidad con SQL Server 2017 en Windows y Linux se encuentra en versión preliminar pública y no debe usarse para las migraciones de producción.
@@ -35,7 +44,7 @@ La versión v7.6 de SSMA para Access se ha mejorado con correcciones de destino 
 > [!IMPORTANT]
 > Con SSMA v7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación y se ha cancelado la versión de 32 bits de la herramienta.
 
-## <a name="ssma-v75"></a>SSMA 7.5
+## <a name="ssma-v75"></a>SSMA v7.5
 La versión 7.5 de SSMA para Access se ha mejorado con varias mejoras para garantizar una mayor accesibilidad para personas con discapacidades.
 
 > [!IMPORTANT]

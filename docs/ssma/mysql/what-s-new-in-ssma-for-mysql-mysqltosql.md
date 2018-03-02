@@ -5,29 +5,39 @@ ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
-ms.date: 09/30/2017
+ms.date: 03/01/2018
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6da0bf47b7976da1f21262d23bd29d8e093a0516
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 503e6c5a6c2d06a5c6a98ae1e9f45faebc40ae34
+ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/01/2018
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Novedades de SSMA para MySQL (MySQLToSql)
 Este tema enumeran SSMA para cambios de MySQL en cada versión. 
+
+## <a name="ssma-v77"></a>SSMA v7.7
+La versión de v7.7 de SSMA para MySQL contiene los siguientes cambios:
+- SSMA para MySQL se ha mejorado con correcciones de destino que mejoran las métricas de calidad y la conversión.
+- Según la gran demanda existente, la versión de 32 bits de SSMA para MySQL es volver. En comparación con la implementación anterior (anterior a v7.4), hay dos paquetes de instalador, pero no se puede instalar en paralelo. Como resultado, debe elegir la versión más adecuada en función de los componentes de conectividad que tiene. Siempre es preferible utilizar la versión de 64 bits, si es posible.
+- SSMA para MySQL tiene ahora el modo de conexión de la cadena de conexión ODBC, que le permite usar los controladores ODBC de otros fabricantes que es compatible con MySQL.
+
+> [!IMPORTANT]
+> Con SSMA v7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación.
 
 ## <a name="ssma-v76"></a>SSMA v7.6
 Se ha mejorado la versión v7.6 de SSMA para MySQL con correcciones de destino que mejoran las métricas de calidad y la conversión y con el soporte para SQL Server 2017 (vista previa pública). Compatibilidad con SQL Server 2017 en Windows y Linux se encuentra en versión preliminar pública y no debe usarse para las migraciones de producción.
@@ -35,7 +45,7 @@ Se ha mejorado la versión v7.6 de SSMA para MySQL con correcciones de destino q
 > [!IMPORTANT]
 > Con SSMA v7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación y se ha cancelado la versión de 32 bits de la herramienta.
 
-## <a name="ssma-v75"></a>SSMA 7.5
+## <a name="ssma-v75"></a>SSMA v7.5
 La versión 7.5 de SSMA para MySQL se ha mejorado con varias mejoras para garantizar una mayor accesibilidad para personas con discapacidades.
 
 > [!IMPORTANT]

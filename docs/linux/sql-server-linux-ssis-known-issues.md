@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: fc2455ea79931b051c83677fc918c0382afcab3b
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: c366afc1b8755a22b13fa6224ec117db045c8dd3
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Limitaciones y problemas conocidos de SSIS en Linux
 
@@ -132,3 +132,8 @@ Los proveedores de registro SSIS para archivos de texto, para los archivos XML y
 -   Si no proporciona una ruta de acceso, el proveedor de registro se escribe en el directorio actual del host. Si el usuario actual no tiene permiso para escribir en el directorio actual del host, el proveedor de registro genera un error.
 -   No se puede usar una variable de entorno en una ruta de acceso de archivo. Si especifica una variable de entorno, aparece el texto literal que se especifique en la ruta de acceso de archivo. Por ejemplo, si especifica `%TMP%/log.txt`, el proveedor de registro anexa el texto literal `/%TMP%/log.txt` en el directorio actual del host.
 
+## <a name="related-content-about-ssis-on-linux"></a>Contenido relacionado sobre SSIS en Linux
+-   [Extraer, transformar y cargar datos en Linux con SSIS](sql-server-linux-migrate-ssis.md)
+-   [Instalar SQL Server Integration Services (SSIS) en Linux](sql-server-linux-setup-ssis.md)
+-   [Configurar SQL Server Integration Services en Linux con ssis-conf](sql-server-linux-configure-ssis.md)
+-   [Ejecución en Linux con cron del paquete de programación de SQL Server Integration Services](sql-server-linux-schedule-ssis-packages.md)

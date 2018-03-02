@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: d2715583f9898afe9101be4d24729547730ae376
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 70e5bddb584135585042d9521ab580777e0e8b5a
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Instalar SQL Server Integration Services (SSIS) en Linux
 
@@ -148,3 +148,9 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 Para ejecutar paquetes SSIS en Linux, consulte [extracción, transformación y carga de datos para SQL Server en Linux con SSIS](sql-server-linux-migrate-ssis.md).
 
 Para configurar opciones adicionales de SSIS en Linux, consulte [configurar SQL Server Integration Services en Linux con ssis-conf](sql-server-linux-configure-ssis.md).
+
+## <a name="related-content-about-ssis-on-linux"></a>Contenido relacionado sobre SSIS en Linux
+-   [Extraer, transformar y cargar datos en Linux con SSIS](sql-server-linux-migrate-ssis.md)
+-   [Configurar SQL Server Integration Services en Linux con ssis-conf](sql-server-linux-configure-ssis.md)
+-   [Limitaciones y problemas conocidos de SSIS en Linux](sql-server-linux-ssis-known-issues.md)
+-   [Ejecución en Linux con cron del paquete de programación de SQL Server Integration Services](sql-server-linux-schedule-ssis-packages.md)

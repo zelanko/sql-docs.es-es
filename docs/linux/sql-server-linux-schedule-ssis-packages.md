@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 005757c0a1b1f4309201fc7b7c63987f4ff3bcb8
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 7543c17a0ac9a1014658f83f0c8595bff2cda608
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>Ejecución en Linux con cron del paquete de programación de SQL Server Integration Services
 
@@ -80,3 +80,9 @@ Para obtener una descripción más detallada del formato de archivo crontab, use
 Este es un ejemplo parcial de la salida que ayuda a explicar el ejemplo de este artículo:
 
 ![Descripción detallada de parcial del formato de crontab](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)
+
+## <a name="related-content-about-ssis-on-linux"></a>Contenido relacionado sobre SSIS en Linux
+-   [Extraer, transformar y cargar datos en Linux con SSIS](sql-server-linux-migrate-ssis.md)
+-   [Instalar SQL Server Integration Services (SSIS) en Linux](sql-server-linux-setup-ssis.md)
+-   [Configurar SQL Server Integration Services en Linux con ssis-conf](sql-server-linux-configure-ssis.md)
+-   [Limitaciones y problemas conocidos de SSIS en Linux](sql-server-linux-ssis-known-issues.md)

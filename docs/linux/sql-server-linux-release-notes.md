@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: a661da062d65ca699627bc2b5bf0683e5fe08806
-ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
-ms.translationtype: HT
+ms.openlocfilehash: 23f93527aa295815304f76676f2efc3506fd9878
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de la versión de SQL Server 2017 en Linux
 
@@ -39,13 +39,9 @@ Las siguientes notas de versión se aplican a SQL Server 2017 para Linux. Este a
 > [!TIP]
 > Para obtener más información, revise la [requisitos del sistema](sql-server-linux-setup.md#system) para SQL Server en Linux. Para la directiva de soporte técnico más reciente para SQL Server 2017, consulte el [directiva de soporte técnico de Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
-## <a name="supported-client-tools"></a>Herramientas de cliente admitidos
+## <a name="tools"></a>Herramientas
 
-| Herramienta | Versión mínima |
-|-----|-----|
-| [SQL Server Management Studio (SSMS) para Windows](https://go.microsoft.com/fwlink/?linkid=847722) | 17.0 |
-| [SQL Server Data Tools para Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
-| [Código de Visual Studio](https://code.visualstudio.com) con el [mssql extensión](https://aka.ms/mssql-marketplace) | más reciente |
+La mayoría herramientas de cliente existente que tengan como destino de SQL Server sin problemas pueden acceder a SQL Server que se ejecutan en Linux. Algunas herramientas pueden tener un requisito de versión específica que funcionen bien con Linux. Para obtener una lista completa de herramientas de SQL Server, vea [SQL herramientas y utilidades de SQL Server](../tools/overview-sql-tools.md).
 
 ## <a name="release-history"></a>Historial de versiones
 
@@ -180,6 +176,7 @@ Las siguientes características y servicios no están disponibles en Linux en el
 | &nbsp; | Reporting Services |
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
+| &nbsp; | Coordinador de transacciones distribuidas (DTC) |
 
 ## <a name="known-issues"></a>Problemas conocidos
 
@@ -332,3 +329,5 @@ Para empezar, vea los siguientes tutoriales:
 - [Ejecutar en Docker](quickstart-install-connect-ubuntu.md)
 - [Aprovisionar una máquina virtual de SQL en Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 - [Ejecución y conexión: nube](quickstart-install-connect-clouds.md)
+
+Para obtener respuestas a las preguntas más frecuentes, consulte el [SQL Server en Linux preguntas más frecuentes sobre](sql-server-linux-faq.md).

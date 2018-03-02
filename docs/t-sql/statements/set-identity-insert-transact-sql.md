@@ -1,5 +1,5 @@
 ---
-title: SET IDENTITY_INSERT (Transact-SQL) | Documentos de Microsoft
+title: SET IDENTITY_INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - SET_IDENTITY_INSERT_TSQL
 - IDENTITY_INSERT_TSQL
 - IDENTITY_INSERT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - IDENTITY_INSERT option
 - SET IDENTITY_INSERT statement
 - identity values [SQL Server], explicit values
 - identity columns [SQL Server], explicit values
 ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: fb788c885cee9f082c18ebd315d05a4a961e88b3
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2017
 ---
@@ -58,14 +60,14 @@ SET IDENTITY_INSERT [ database_name . [ schema_name ] . ] table { ON | OFF }
  *table*  
  Es el nombre de la tabla con una columna de identidad.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  En todo momento, solo una tabla de una sesión puede tener la propiedad IDENTITY_INSERT establecida en ON. Si ya existe una tabla con esta propiedad establecida en ON y se ejecuta una instrucción SET IDENTITY_INSERT ON para otra tabla, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve un mensaje de error que indica que SET IDENTITY_INSERT ya está establecido en ON y la tabla para la que se ha establecido.  
   
  Si el valor insertado es mayor que el valor de identidad actual de la tabla, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza automáticamente el nuevo valor insertado como valor de identidad actual.  
   
  La opción SET IDENTITY_INSERT se establece en tiempo de ejecución, no en tiempo de análisis.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  El usuario debe ser el propietario de la tabla o disponer del permiso ALTER en esta.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -117,7 +119,7 @@ DROP TABLE dbo.Tool;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [IDENTITY &#40;propiedad&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
  [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)   

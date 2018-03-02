@@ -5,26 +5,37 @@ ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
-ms.date: 09/22/2017
+ms.date: 03/01/2018
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 908bd781fcbb32e2991976ad197401da0c5c0776
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 63bc96b49c351d9923c5e4d4ae59056c7911ae40
+ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/01/2018
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Novedades de SSMA para Oracle (OracleToSQL)
 Este tema enumeran SSMA para cambios de Oracle en cada versión.  
+
+## <a name="ssma-v77"></a>SSMA v7.7
+La versión v7.7 de SSMA para Oracle contiene los siguientes cambios:
+- SSMA para Oracle se ha mejorado con correcciones de destino que mejoran las métricas de calidad y la conversión.
+- Según la gran demanda existente, la versión de 32 bits de SSMA para Oracle es volver. En comparación con la implementación anterior (anterior a v7.4), hay dos paquetes de instalador, pero no se puede instalar en paralelo. Como resultado, debe elegir la versión más adecuada en función de los componentes de conectividad que tiene. Siempre es preferible utilizar la versión de 64 bits, si es posible.
+- Compatibilidad con SQL Server 2017 ahora es oficial con el módulo de extensión de Oracle admiten también en Linux (nueva opción de instalación remota). Tenga en cuenta que la funcionalidad del módulo de extensión se limita cuando está instalado en Linux, como la herramienta de comprobación y no se admiten características de migración de datos del servidor 
+- SSMA para Oracle le permite migrar vistas materializadas como tablas normales (configurables a través de la configuración en **configuración del proyecto** -> **sincronización**  ->  **Detectar tablas de copia de seguridad para las vistas materializadas**).
+
+> [!IMPORTANT]
+> Con SSMA v7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación.
 
 ## <a name="ssma-v76"></a>SSMA v7.6
 La versión v7.6 de SSMA para Oracle se ha mejorado con correcciones de destino que mejoran las métricas de calidad y la conversión y con el soporte para SQL Server 2017 (vista previa pública). Compatibilidad con SQL Server 2017 en Windows y Linux se encuentra en versión preliminar pública y no debe usarse para las migraciones de producción.
@@ -32,7 +43,7 @@ La versión v7.6 de SSMA para Oracle se ha mejorado con correcciones de destino 
 > [!IMPORTANT]
 > Con SSMA v7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación y se ha cancelado la versión de 32 bits de la herramienta.
 
-## <a name="ssma-v75"></a>SSMA 7.5
+## <a name="ssma-v75"></a>SSMA v7.5
 La versión 7.5 de SSMA para Oracle contiene los siguientes cambios:
 - Mejorado con varias mejoras para garantizar una mayor accesibilidad para personas con discapacidades.
 - Actualizado para mejorar la métrica de calidad y la conversión con correcciones de destino, como la mejora del tratamiento de tipos de datos de fecha y float durante la migración de datos, en función de los comentarios de clientes.

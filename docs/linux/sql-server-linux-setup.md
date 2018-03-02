@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: a93be0508eff85d4e653a1e0d0790c71ceaaeb44
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
-ms.translationtype: HT
+ms.openlocfilehash: c686e97bd3d06b99fcbb847c23ac7e174e85dd6b
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guía de instalación para SQL Server en Linux
 
@@ -29,6 +29,8 @@ En este artículo se explica cómo instalar, actualizar y desinstalar SQL Server
 
 > [!TIP]
 > Para empezar a trabajar rápidamente, saltar a uno de los tutoriales para [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), o [Docker](quickstart-install-connect-docker.md).
+
+Para obtener respuestas a las preguntas más frecuentes, consulte el [SQL Server en Linux preguntas más frecuentes sobre](../linux/sql-server-linux-faq.md).
 
 ## <a id="supportedplatforms"></a> Plataformas compatibles
 
@@ -40,6 +42,9 @@ SQL Server 2017 es compatible con las siguientes plataformas de Linux:
 | **SUSE Linux Enterprise Server** | v12 SP2 | [Obtener el Service Pack 2 SLES v12](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Obtener Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Motor de docker** | 1.8+ | [Obtener Docker](http://www.docker.com/products/overview)
+
+> [!NOTE]
+> En ocasiones, es posible instalar y ejecutar SQL Server en otras plataformas de Linux estrechamente relacionado con, pero SQL Server solo se prueba y se admiten en las plataformas que se muestran en la tabla anterior.
 
 Microsoft admite la implementación y administración de contenedores de SQL Server mediante OpenShift y Kubernetes.
 

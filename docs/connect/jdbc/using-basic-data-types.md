@@ -1,27 +1,28 @@
 ---
 title: "Uso de tipos de datos básicos | Documentos de Microsoft"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
-caps.latest.revision: "73"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0fe716f57850c4daf3e3f319376626bee3195b6e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 66da5301a12427ed50a212abf74a0700d89e8668
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="using-basic-data-types"></a>Usar tipos de datos básicos
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,21 +39,21 @@ ms.lasthandoff: 11/18/2017
 |bit|BIT|boolean|  
 |char|CHAR|String|  
 |date|DATE|java.sql.Date|  
-|datetime|timestamp|java.sql.Timestamp|  
-|datetime2|timestamp|java.sql.Timestamp|  
+|datetime|TIMESTAMP|java.sql.Timestamp|  
+|datetime2|TIMESTAMP|java.sql.Timestamp|  
 |datetimeoffset (2)|microsoft.sql.Types.DATETIMEOFFSET|microsoft.sql.DateTimeOffset|  
 |decimal|DECIMAL|java.math.BigDecimal|  
 |float|DOUBLE|double|  
 |imagen|LONGVARBINARY|byte[]|  
 |int|INTEGER|int|  
 |money|DECIMAL|java.math.BigDecimal|  
-|nchar|CHAR<br /><br /> NCHAR (Java SE 6.0)|String|  
+|NCHAR|CHAR<br /><br /> NCHAR (Java SE 6.0)|String|  
 |ntext|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String|  
 |numeric|NUMERIC|java.math.BigDecimal|  
 |nvarchar|VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)|String|  
 |nvarchar(max)|VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)|String|  
 |real|REAL|float|  
-|smalldatetime|timestamp|java.sql.Timestamp|  
+|smalldatetime|TIMESTAMP|java.sql.Timestamp|  
 |smallint|SMALLINT|short|  
 |smallmoney|DECIMAL|java.math.BigDecimal|  
 |texto|LONGVARCHAR|String|  
@@ -64,14 +65,13 @@ ms.lasthandoff: 11/18/2017
 |varbinary|VARBINARY|byte[]|  
 |varbinary(max)|VARBINARY|byte[]|  
 |varchar|VARCHAR|String|  
-|varchar(max)|VARCHAR|String|  
+|ntext|VARCHAR|String|  
 |xml|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String<br /><br /> SQLXML|  
+|SQLVARIANT|SQLVARIANT|Object|  
   
  (1) para utilizar java.sql.Time con el tiempo [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo, debe establecer el **sendTimeAsDatetime** propiedad de conexión en false.  
   
  (2) mediante programación se pueden obtener acceso a valores de **datetimeoffset** con [clase DateTimeOffset](../../connect/jdbc/reference/datetimeoffset-class.md).  
-  
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de datos sqlvariant no es compatible actualmente con el controlador JDBC. Si se usa una consulta para recuperar datos de una tabla que contenga una columna del tipo de datos sqlvariant, se producirá una excepción.  
   
  Las siguientes secciones proporcionan ejemplos de cómo puede usar el controlador JDBC y los tipos de datos básicos. Para obtener un ejemplo más detallado de cómo usar los tipos de datos básicos en una aplicación Java, consulte [ejemplo básico de tipos de datos](../../connect/jdbc/basic-data-types-sample.md).  
   

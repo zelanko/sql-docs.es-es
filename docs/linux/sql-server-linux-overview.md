@@ -4,7 +4,7 @@ description: "Este artículo describe cómo SQL Server se ejecuta en Linux y pro
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/20/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
-ms.openlocfilehash: 71efe59db9de4b60389f40ee6718627817ecee37
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: faa2898017347f59d415f7f5bf5bd6795a3f9de6
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sql-server-on-linux"></a>SQL Server en Linux
 
@@ -54,12 +54,9 @@ Después de la instalación, conéctese a la instancia de SQL Server en su equip
 
 SQL Server 2017 tiene el mismo motor de base de datos subyacente en todas las plataformas admitidas, incluidos Linux. Por lo que muchas características y capacidades existentes funcionan de la misma forma en Linux. Esta área de la documentación expone algunas de estas características desde la perspectiva de Linux. También resalta las áreas que tienen requisitos únicos en Linux.
 
-Si ya está familiarizado con SQL Server, revise la [notas de la versión](sql-server-linux-release-notes.md) de directrices generales y problemas conocidos de esta versión. A continuación, examine [what's new for SQL Server en Linux](sql-server-linux-whats-new.md) como [Novedades de SQL Server 2017 general](../sql-server/what-s-new-in-sql-server-2017.md). Para obtener respuestas a las preguntas más frecuentes, consulte el [SQL Server en Linux preguntas más frecuentes sobre](sql-server-linux-faq.md).
+Si ya está familiarizado con SQL Server, revise la [notas de la versión](sql-server-linux-release-notes.md) de directrices generales y problemas conocidos de esta versión. A continuación, examine [what's new for SQL Server en Linux](sql-server-linux-whats-new.md) como [Novedades de SQL Server 2017 general](../sql-server/what-s-new-in-sql-server-2017.md). 
 
-##  <a name="infotipmediageneralinfotippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](./media/general/info_tip.png) Comunicación con el equipo de ingeniería de SQL Server
+> [!TIP]
+> Para obtener respuestas a las preguntas más frecuentes, consulte el [SQL Server en Linux preguntas más frecuentes sobre](sql-server-linux-faq.md).
 
-- [Cambio de la pila de DBA](https://dba.stackexchange.com/questions/tagged/sql-server): formular preguntas de administración de base de datos
-- [Desbordamiento de pila](http://stackoverflow.com/questions/tagged/sql-server): formular preguntas de desarrollo
-- [Foros de MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): hacer preguntas técnicas
-- [Enviar comentarios](https://feedback.azure.com/forums/908035-sql-server): informe de errores y la característica de solicitud
-- [Reddit](https://www.reddit.com/r/SQLServer/): analizar SQL Server
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

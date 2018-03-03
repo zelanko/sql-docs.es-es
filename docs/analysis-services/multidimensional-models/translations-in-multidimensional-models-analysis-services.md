@@ -11,9 +11,10 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.dimensiondesigner.deletelanguagefirm.f1
+f1_keywords:
+- sql13.asvs.dimensiondesigner.deletelanguagefirm.f1
 ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
@@ -25,7 +26,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/08/2018
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>Particiones en modelos multidimensionales (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Puede definir traducciones en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilizando el diseñador adecuado para el [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos que se deben traducir. Al definir una traducción, se crea un objeto **Translation** asociado con el objeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] adecuado que contiene los valores literales explícitos especificados, en el idioma especificado, para las propiedades del objeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] asociado.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)] Puede definir traducciones en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilizando el diseñador adecuado para el [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos que se deben traducir. Al definir una traducción, se crea un objeto **Translation** asociado con el objeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] adecuado que contiene los valores literales explícitos especificados, en el idioma especificado, para las propiedades del objeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] asociado.  
   
 ## <a name="elements-of-a-multi-lingual-data-model"></a>Elementos de un modelo de datos en varios idiomas  
  Un modelo de datos que se use en una solución multilingüe no solo necesitará las etiquetas traducidas (los nombres de campo y las descripciones). También debe proporcionar los valores de los datos que se articulan en los diferentes alfabetos de los idiomas. Para conseguir una solución multilingüe, necesita atributos individuales, enlazados a las columnas de una base de datos externa que devuelva los datos.  
@@ -97,11 +98,11 @@ ms.lasthandoff: 01/08/2018
   
 1.  En el Explorador de soluciones, haga clic con el botón derecho en el nombre del proyecto | **Editar base de datos** para abrir el Diseñador de bases de datos.  
   
-2.  En Traducciones, especifique el idioma de destino (se resuelve en un LCID), el título traducido y la descripción traducida. La lista de idiomas es coherente en todo Analysis Services, tanto si configura el idioma del servidor en Management Studio como si agrega una invalidación de traducción en un solo atributo.  
+2.  En Traducciones, especifique el idioma de destino (se resuelve en un LCID), el título traducido y la descripción traducida. La lista de idiomas es coherente en Analysis Services, tanto si configura el idioma del servidor en Management Studio como si agrega la sustitución de una traducción en un solo atributo.  
   
 3.  En la página de propiedades de la base de datos, configure **Language** con el mismo LCID que especificó para la traducción. Si quiere, configure también **Collation** si el valor predeterminado no es adecuado.  
   
-4.  Compile e implemente la base de datos.  
+4.  Compilar e implementar la base de datos.  
   
 ## <a name="deleting-translation-objects"></a>Eliminar objetos de traducción  
  Puede hacer clic con el botón secundario en un objeto de traducción en el diseñador de cubos o dimensiones para quitarlo de forma definitiva. No es posible restaurar ni reciclar un objeto eliminado, de modo que asegúrese de revisar la lista de objetos afectados antes de continuar.  
@@ -115,8 +116,8 @@ ms.lasthandoff: 01/08/2018
   
     |Identificador de idioma especificado|Identificador de idioma alternativo|  
     |-----------------------------------|-----------------------------------|  
-    |3076 - Chino (Hong Kong, ZAE, RPC)|1028 - Chino (Taiwán)|  
-    |5124 - Chino (Macao RAE)|1028 - Chino (Taiwán)|  
+    |3076 - Chino (RAE de Hong Kong, RPC)|1028 - Chino (Taiwán)|  
+    |5124 - Chino (RAE de Macao)|1028 - Chino (Taiwán)|  
     |1028 - Chino (Taiwán)|Idioma predeterminado|  
     |4100 - Chino (Singapur)|2052 - Chino (RPC)|  
     |2074 - Croata|Idioma predeterminado|  

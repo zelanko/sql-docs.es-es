@@ -54,8 +54,8 @@ ms.lasthandoff: 02/03/2018
 |British English|2057|  
 |Búlgaro|1026|  
 |Catalán|1027|  
-|Chino (Hong Kong RAE, RPC)|3076|  
-|Chino (Macao RAE)|5124|  
+|Chino (RAE de Hong Kong, RPC)|3076|  
+|Chino (RAE de Macao)|5124|  
 |Chino (Singapur)|4100|  
 |Croata|1050|  
 |Checo|1029|  

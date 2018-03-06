@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cd276306b5fd40dd41602a573a2eb152ef5a6dda
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c8d5917a0faed7d4861a03097a2072db3cfa0670
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guía de arquitectura y administración de registros de transacciones de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -253,7 +253,9 @@ Se recomiendan los artículos y libros siguientes para obtener información adic
 [El registro de transacciones &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)    
 [Administrar el tamaño del archivo de registro de transacciones](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
 [Copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
-[sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
+[Puntos de comprobación de base de datos &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md)   
+[Establecer la opción de configuración del servidor Intervalo de recuperación](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)    
+[sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
 [Descripción del registro y la recuperación en SQL Server por Paul Randal](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
 [Administración de registros de transacciones de SQL Server por Tony Davis y Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  

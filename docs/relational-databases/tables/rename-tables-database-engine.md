@@ -1,7 +1,7 @@
 ---
 title: Cambio de nombre de las tablas (motor de base de datos) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 02/23/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - table names [SQL Server]
 - tables [SQL Server], Visual Database Tools
 - renaming tables
-ms.assetid: 2f5c922d-4d71-4694-9fca-28dd99375799
-caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 66529f13e4eae406cb4e85d507a9da2d4629d895
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 61aa8b3a739b03201e92cd81007bc1c43c6ab435
+ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="rename-tables-database-engine"></a>Cambiar el nombre a las tablas (motor de base de datos)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Puede cambiar el nombre de una tabla en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+Cambie el nombre de una tabla en SQL Server o Azure SQL Database.
+
+Para cambiar el nombre de una tabla en Azure SQL Data Warehouse o en Almacenamiento de datos paralelos, use la instrucción [RENAME OBJECT](../../t-sql/statements/rename-transact-sql.md) de Transact-SQL. 
   
 > [!CAUTION]  
 >  Piénselo bien antes de cambiar el nombre de una tabla. Si las consultas, vistas, funciones definidas por el usuario, procedimientos almacenados o programas existentes hacen referencia a esta tabla, la modificación del nombre hará que estos objetos dejen de ser válidos.  

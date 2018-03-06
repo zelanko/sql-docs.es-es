@@ -1,7 +1,7 @@
 ---
 title: Descargar SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: 
-ms.date: 02/15/2018
+ms.date: 02/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: 
@@ -31,11 +31,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fc8fe6a41661acd176c43cdf1de2a857846a7b83
-ms.sourcegitcommit: 03021482208259e6c67599b47df23fbbe8f3a393
+ms.openlocfilehash: de6d0b4d679dab1f008ef53afef4a173311ea20e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Descarga de SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -106,14 +106,12 @@ Plan de presentación:
 
 
 
-
-
 ## <a name="supported-sql-offerings"></a>Ofertas de SQL admitidas
 
 * Esta versión de SSMS funciona con todas las [versiones compatibles de SQL Server 2008 - SQL Server 2017](https://support.microsoft.com/lifecycle?C2=1044) y proporciona el mayor nivel de compatibilidad para trabajar con las últimas características de nube en Azure SQL Database y en Azure SQL Data Warehouse.
-* No hay ningún bloqueo explícito para SQL Server 2000 o SQL Server 2005, pero es posible que algunas características no funcionen correctamente.
+* Use SSMS 17.x para conectar con [SQL Server en Linux](../linux/sql-server-linux-overview.md).
 * Además, SSMS 17.x puede instalarse en paralelo con SSMS 16.x o SQL Server 2014 SSMS y versiones anteriores.
-* SQL Server Integration Services (SSIS) - SSMS versión 17.x no admite la conexión con el servicio heredado de SQL Server Integration Services. Para conectarse a una versión anterior del servicio heredado de Integration Services, use la versión de SSMS alineada con la versión de SQL Server. Por ejemplo, use SSMS 16.x para conectar con el servicio heredado de SQL Server 2016 Integration Services. SSMS 17.x y SSMS 16.x pueden instalarse en paralelo en el mismo equipo. Desde el lanzamiento de SQL Server 2012, la base de datos del catálogo de SSIS (SSISDB) es la manera recomendada de almacenar, administrar, ejecutar y supervisar los paquetes de Integration Services.
+* SQL Server Integration Services (SSIS) - SSMS versión 17.x no admite la conexión con el servicio heredado de SQL Server Integration Services. Para conectarse a una versión anterior del servicio heredado de Integration Services, use la versión de SSMS alineada con la versión de SQL Server. Por ejemplo, use SSMS 16.x para conectar con el servicio heredado de SQL Server 2016 Integration Services. SSMS 17.x y SSMS 16.x pueden instalarse en paralelo en el mismo equipo. Desde el lanzamiento de SQL Server 2012, la base de datos del catálogo de SSIS (SSISDB) es la manera recomendada de almacenar, administrar, ejecutar y supervisar los paquetes de Integration Services. Para más información, vea [Catálogo de SSIS](../integration-services/catalog/ssis-catalog.md).
 
 ## <a name="supported-operating-systems"></a>Sistemas operativos admitidos
   

@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 757a6b2aebe68dc32ddc493c3e6649a8b589be3e
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 770b33f7fb7fa22d1a2e86d4b5c7a9d3f8c84b35
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-3-2---create-custom-templates"></a>Lección 3.2: Crear plantillas personalizadas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/17/2018
 7.  En el Editor de consultas, escriba el siguiente script para crear un procedimiento almacenado que busque pedidos de una pieza concreta, en este caso, una cuchilla (Blade). Puede copiar y pegar el código de la ventana del tutorial.  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   
@@ -73,11 +73,11 @@ ms.lasthandoff: 01/17/2018
   
 8.  Pulse F5 para ejecutar este script y crear el procedimiento **WorkOrdersForBlade** .  
   
-9. En el Explorador de objetos, haga clic con el botón derecho en el servidor y, después, en **Nueva consulta**. Se abrirá una ventana nueva del Editor de consultas.  
+9. En el Explorador de objetos, haga clic con el botón derecho en la base de datos **AdventureWorks2012** y, después, haga clic en **Nueva consulta**. Se abrirá una ventana nueva del Editor de consultas.  
   
 10. En el Editor de consultas, escriba **EXECUTE dbo.WorkOrdersForBlade**y, después, pulse F5 para ejecutar la consulta. Confirme que el panel **Resultados** devuelve una lista de los pedidos de trabajo relativos a cuchillas.  
   
-11. Edite el script de la plantilla (el script del paso 7) y reemplace el nombre del producto (Blade) por el parámetro ***\<*nombre_de_producto**, **nvarchar(50)**, **nombre*>***, en cuatro lugares.  
+11. Edite el script de la plantilla (el script del paso 7) y reemplace el nombre del producto (Blade) por el parámetro **\<nombre_de_producto, nvarchar(50), nombre>**, en cuatro lugares.  
   
     > [!NOTE]  
     > Los parámetros requieren tres elementos: el nombre del parámetro que desea reemplazar, el tipo de datos del parámetro y un valor predeterminado para el parámetro.  
@@ -85,7 +85,7 @@ ms.lasthandoff: 01/17/2018
 12. Ahora, el script debe tener el aspecto siguiente:  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   

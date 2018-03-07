@@ -8,10 +8,12 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: Security [SQL Server]
+f1_keywords:
+- Security [SQL Server]
 helpviewer_keywords:
 - database objects [SQL Server], security
 - SQL Server, security
@@ -19,19 +21,20 @@ helpviewer_keywords:
 - security [SQL Server], planning
 - applications [SQL Server], security
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bbd55e01a64a767b08156cde776c030a081b65e9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 24936f55d153d046b775ddbbf4188fc4a81c583d
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="securing-sql-server"></a>Proteger SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La protección de la seguridad en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conlleva una serie de pasos que afectan a cuatro áreas: la plataforma, la autenticación, los objetos (incluidos los datos) y las aplicaciones que tienen acceso al sistema. Los siguientes temas le guiarán durante el proceso de creación e implementación de un plan de seguridad eficaz.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+La protección de la seguridad en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conlleva una serie de pasos que afectan a cuatro áreas: la plataforma, la autenticación, los objetos (incluidos los datos) y las aplicaciones que tienen acceso al sistema. Los siguientes temas le guiarán durante el proceso de creación e implementación de un plan de seguridad eficaz.  
   
  Puede buscar más información sobre la seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el sitio web de [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) . En él encontrará una guía de prácticas recomendadas y una lista de comprobación de seguridad. Este sitio también incluye las últimas descargas e información sobre los Service Packs.  
   
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/21/2017
 |Configurar un firewall para que funcione con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurar Firewall de Windows para el acceso al motor de base de datos](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |Configurar un firewall para que funcione con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Servicio Integration Services &#40;servicio SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md)|  
 |Configurar un firewall para que funcione con [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Configurar Firewall de Windows para permitir el acceso a Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
-|Abrir puertos específicos de un firewall para permitir el acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurar Firewall de Windows para permitir el acceso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
+|Abrir puertos específicos de un firewall para permitir el acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configure the Windows Firewall to Allow SQL Server Access (Configurar el Firewall de Windows para permitir el acceso a SQL Server)](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |Configurar la compatibilidad con Protección ampliada para la autenticación utilizando enlace de canal y enlace de servicio|[Conectar al motor de base de datos con protección ampliada](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
   
  La reducción del área expuesta es una medida de seguridad que implica detener o deshabilitar los componentes que no se utilizan. La reducción del área expuesta ayuda a mejorar la seguridad al proporcionar menos accesos para ataques potenciales al sistema. La clave para limitar el área expuesta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste en ejecutar los servicios requeridos que tienen "privilegios mínimos" concediendo exclusivamente los derechos necesarios a los servicios y los usuarios. En la tabla siguiente se incluye más información sobre el acceso al sistema y a los servicios.  
@@ -129,7 +132,7 @@ GO
 |Para obtener información acerca de|Vea|  
 |---------------------------|---------|  
 |Conectarse, configurar y controlar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Usar SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
-|Conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y ejecutar consultas en el símbolo del sistema|[sqlcmd (utilidad)](../../tools/sqlcmd-utility.md)|  
+|Conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y ejecutar consultas en el símbolo del sistema|[sqlcmd Utility](../../tools/sqlcmd-utility.md)|  
 |Control y configuración de red para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Administrador de configuración de SQL Server](../../relational-databases/sql-server-configuration-manager.md)|  
 |Habilitar y deshabilitar características con Administración basada en directiva|[Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
 |Manipular claves simétricas para un servidor de informes|[rskeymgmt (utilidad) &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)|  
@@ -149,7 +152,6 @@ GO
 [Procedimientos recomendados de seguridad de SQL Server 2012: tareas operativas y administrativas](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
 [Blog de seguridad de SQL Server](https://blogs.msdn.microsoft.com/sqlsecurity/)  
 [Notas del producto de procedimientos recomendados de seguridad y seguridad de etiquetas](https://blogs.msdn.microsoft.com/sqlsecurity/2012/03/06/security-best-practice-and-label-security-whitepapers/)  
-[Consideraciones de seguridad para una instalación de SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
 [Seguridad de nivel de fila](../../relational-databases/security/row-level-security.md)   
 [Proteger su propiedad intelectual de SQL Server](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
   

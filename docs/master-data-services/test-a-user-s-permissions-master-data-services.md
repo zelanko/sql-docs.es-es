@@ -8,20 +8,21 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
-caps.latest.revision: "4"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52d966b73cb5bf50534c8fb62be0b85db8e31aef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5c84a7d6c678f7bf98d62ed63e78b6922243c7e
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>Probar los permisos de un usuario (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede crear un usuario y un registro de pruebas en la aplicación web para probar los permisos. Cuando un usuario intenta tener acceso a la dirección URL de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , se autentican las credenciales del usuario. En Internet Explorer, la configuración de seguridad controla si esto ocurre automáticamente o si el usuario debe escribir un nombre de usuario y una contraseña. Para cambiar estos valores, complete los siguientes pasos:  

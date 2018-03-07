@@ -8,21 +8,23 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: transactions [Master Data Services], reversing
+helpviewer_keywords:
+- transactions [Master Data Services], reversing
 ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
-caps.latest.revision: "8"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2e176eb73c1285719ecb040cd87515407c32fd97
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b18b69452ad8739c0e8c1e55943e6b96904d518d
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>Invertir una transacción (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], los administradores pueden invertir una transacción cuando sea necesario deshacer una acción. Los ejemplos de transacciones son cambios del valor de atributo, movimientos de la jerarquía o eliminaciones de miembro. Este tema se aplica solo a las transacciones de las entidades con el tipo de registro de transacciones "Attribute". Vaya a la página del explorador de entidades para ver el historial de transacciones de las entidades con el tipo de registro de transacciones "Member".  

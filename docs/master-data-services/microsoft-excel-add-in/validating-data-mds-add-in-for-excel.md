@@ -8,20 +8,21 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
-caps.latest.revision: "9"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 141c09b1b809468aaf17455b7180f711ae2b2fc0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6900e6cd61c5ea332c515fff99a802a63ccaf655
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>Validar datos (complemento MDS para Excel)
   En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], al publicar datos, tienen lugar dos tipos de validación:  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/20/2017
 |Solo lectura|El usuario que ha iniciado sesión tiene permisos de solo lectura en uno o varios valores de fila y los valores no pueden actualizarse.|  
 |Sin cambios|No se ha cambiado ningún valor de la fila en la hoja de cálculo. Esto no significa que los valores del repositorio no hayan cambiado; para obtener los datos más recientes de la hoja, en el grupo **Conectar y cargar** , haga clic en **Cargar o actualizar**.<br /><br /> Esta es la configuración predeterminada de cada fila.|  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  

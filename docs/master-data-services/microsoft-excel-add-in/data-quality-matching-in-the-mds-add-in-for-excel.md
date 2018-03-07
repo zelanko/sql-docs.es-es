@@ -8,20 +8,21 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
-caps.latest.revision: "9"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 59e9c9163328ec3e751a4b7c095818440137c4dd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6630871f9fd5104db43e11017b6b14a92d1cded3
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Coincidencia de calidad de datos en el Complemento MDS para Excel
   Con el tiempo, le interesará agregar más datos al repositorio MDS. Antes de agregar datos, puede ser útil comparar los nuevos datos con los datos que ya se administran en MDS, para asegurarse de que no se agregan datos duplicados o imprecisos.  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/20/2017
   
  Para obtener más información acerca de las bases de conocimiento, vea [DQS Knowledge Bases and Domains](../../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  

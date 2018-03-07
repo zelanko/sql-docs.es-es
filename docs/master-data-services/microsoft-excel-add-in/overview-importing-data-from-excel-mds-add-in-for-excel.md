@@ -8,20 +8,21 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
-caps.latest.revision: "13"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0bd74580364facb4936b6ad9ddeb793c201a35da
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c833e31ff82e1a5ca1c319be4f12717f269bc143
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>Información general: Importación de datos desde Excel (complemento MDS para Excel)
   En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], puede publicar los datos en el repositorio MDS si desea compartirlo con otros usuarios. En cuanto se publiquen los datos, estarán disponibles para otros usuarios del complemento para su descarga.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="business-rule-and-other-validation"></a>Regla de negocios y otras validaciones  
  Al publicar datos, se realiza la validación para asegurarse de que los datos son precisos antes de agregarlos al repositorio MDS. Si los datos no cumplen los criterios especificados, no se publicarán en el repositorio. Para obtener más información, consulte [Validar datos &#40;complemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md).  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  

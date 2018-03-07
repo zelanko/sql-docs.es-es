@@ -8,20 +8,21 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
-caps.latest.revision: "30"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 965902950f4b49d9923f3e92f5954393c044e359
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8f1e34eb5bb7992661f79e2c524b660442a6df35
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Complemento Master Data Services para Microsoft Excel
   Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], puede cargar listas filtradas de datos de MDS a Excel y trabajar con ellas igual que con cualquier dato. Cuando termine, puede publicar los datos en MDS, donde se almacenan centralmente. La seguridad determina los datos que los usuarios pueden ver y actualizar.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Un *attribute* es una columna de datos. Cada miembro tiene atributos. Por ejemplo, el atributo **Código** del miembro **Azul** es **A**. Para obtener más información sobre los atributos, consulte [Atributos &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md).  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  

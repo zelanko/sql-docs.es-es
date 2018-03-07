@@ -1,7 +1,7 @@
 ---
 title: Registro HTTP del servidor de informes | Microsoft Docs
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 03/02/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.service: 
@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: HTTP [Reporting Services]
+helpviewer_keywords:
+- HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0c05dfdbb99322caa42412c9d2bc2636625cf0b7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 705ec73a7198793754a70edfdc854a5c9c15e47c
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="report-server-http-log"></a>Registro HTTP del servidor de informes
   El archivo de registro HTTP del servidor de informes guarda un registro de cada solicitud y respuesta HTTP administradas por el servidor de informes. Dado que los errores de desbordamiento y de tiempo de espera de la solicitud no alcanzan el servidor de informes, no se graban en el archivo de registro.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 01/09/2018
 ## <a name="configuration-settings-for-report-server-http-log"></a>Parámetros de configuración para el registro HTTP del servidor de informes  
  Para configurar el registro HTTP del servidor de informes, utilice el Bloc de notas para modificar el archivo ReportingServicesService.exe.config. El archivo de configuración se encuentra en la carpeta \Archivos de programa\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin.  
   
- Para habilitar el servidor HTTP, debe agregar **http:4** a la sección RStrace del archivo ReportingServicesService.exe.config. Las restantes entradas del archivo de registro HTTP son opcionales. El ejemplo siguiente incluye todos los valores para que pueda pegar la sección entera sobre la sección RStrace y, a continuación, eliminar los valores que no sean necesarios.  
+ Para habilitar el servidor HTTP, debe agregar **http:4** a la sección RStrace del archivo ReportingServicesService.exe.config. Las restantes entradas del archivo de registro HTTP son opcionales. El ejemplo siguiente incluye todos los valores para que pueda pegar la sección entera sobre la sección RStrace y, a continuación, eliminar los valores que no sean necesarios.
   
 ```  
    <RStrace>  
@@ -53,7 +54,7 @@ ms.lasthandoff: 01/09/2018
          <add name="TraceListeners" value="debugwindow, file" />  
          <add name="TraceFileMode" value="unique" />  
          <add name="HttpTraceFileName" value="ReportServerService_HTTP_" />  
-         <add name="HttpTraceSwitches" value="date,time, clientip,username,serverip,serverport,host,method,uristem,uriquery,protocolstatus,bytesreceived,timetaken,protocolversion,useragent,cookiereceived,cookiesent,referrer" />  
+         <add name="HttpTraceSwitches" value="date,time,clientip,username,serverip,serverport,host,method,uristem,uriquery,protocolstatus,bytesreceived,timetaken,protocolversion,useragent,cookiereceived,cookiesent,referrer" />  
          <add name="Components" value="all:3,http:4" />  
    </RStrace>  
 ```  

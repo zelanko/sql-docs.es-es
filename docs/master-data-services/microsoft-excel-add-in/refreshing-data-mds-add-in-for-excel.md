@@ -8,20 +8,21 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
-caps.latest.revision: "10"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 784bf12fe74c9cb16877984f31ec19204138d946
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a9fc25e1a301616c530953ce43d4950cba5a680a
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>Actualizar datos (complemento MDS para Excel)
   En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], actualice los datos si desea obtener la información más reciente del repositorio MDS sin abrir una nueva hoja de cálculo. Puede actualizar todas las celdas o una selección de ellas. Esto puede resultar útil si ha insertado columnas con fórmulas personalizadas u otros datos que no se administran en MDS y desea mantenerlos.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="how-to-refresh-mds-managed-data"></a>Cómo actualizar los datos administrados por MDS  
  En el grupo de **Conectar y cargar** en la cinta de opciones, el botón **Actualizar** tiene dos opciones, **Actualizar todo** y **Actualizar selección**. La acción predeterminada del botón de la cinta de opciones es **Actualizar todo**. Para actualizar la hoja completa con valores desde el servidor, haga clic en el botón de **Actualizar** o elija la opción **Actualizar todo** . Para actualizar solo algunas de las celdas de una hoja, seleccione las celdas (debe ser una selección contigua) y elija la opción **Actualizar selección** .  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  

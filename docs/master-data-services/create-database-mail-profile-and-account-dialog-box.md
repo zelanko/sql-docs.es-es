@@ -8,21 +8,23 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.mds.configmanager.dbmailprofileacct.f1
+f1_keywords:
+- sql13.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
-caps.latest.revision: "7"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ad5962c25cc48dcb95ff3d8efe8de37886cd971
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 99221347b323c5353d681c372865616083bdbd5b
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>Cuadro de diálogo Crear un perfil y una cuenta de Correo electrónico de base datos
   Utilice el cuadro de diálogo **Crear un perfil y una cuenta de Correo electrónico de base de datos** para crear un perfil de Correo electrónico de base de datos y una cuenta de Correo electrónico de base de datos para la base de datos [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Este perfil se utilizará para notificar por correo electrónico a usuarios y grupos cuando se produzcan errores en la validación de una regla de negocios.  
@@ -45,7 +47,7 @@ ms.lasthandoff: 12/21/2017
 |**Dirección de correo electrónico**|Escriba el nombre de la dirección de correo electrónico de la cuenta. Es la dirección de correo electrónico desde la que se envían los correos electrónicos y debe tener el formato *nombre_correo*@*nombre_dominio*. Un ejemplo de dirección de correo electrónico sería sales@contoso.com.|  
 |**Nombre para mostrar**|Valor opcional. Escriba el nombre para mostrar en los mensajes de correo electrónico enviados desde esta cuenta. Un ejemplo de nombre para mostrar es Grupo de ventas Contoso.|  
 |**Dirección de correo electrónico de respuesta**|Valor opcional. Escriba la dirección de correo electrónico que se utilizará para las respuestas a los mensajes enviados desde esta cuenta. Un ejemplo de dirección de correo electrónico de respuesta sería admin@contoso.com.|  
-|**Servidor SMTP**|Escriba el nombre o la dirección IP del servidor SMTP que utiliza la cuenta para enviar correo electrónico. Un formato de servidor SMTP de ejemplo es **smtp.***<nombre_empresa>***.com**. Si necesita ayuda, consulte a su administrador de correo.|  
+|**Servidor SMTP**|Escriba el nombre o la dirección IP del servidor SMTP que utiliza la cuenta para enviar correo electrónico. Un formato de servidor SMTP de ejemplo es **smtp.***<company_name>***.com**. Si necesita ayuda, consulte a su administrador de correo.|  
 |**Número de puerto**|Escriba el número de puerto del servidor SMTP de esta cuenta. El número de puerto SMTP es 25.|  
 |**Este servidor requiere una conexión segura (SSL)**|Cifra la comunicación mediante SSL (Capa de sockets seguros).|  
   

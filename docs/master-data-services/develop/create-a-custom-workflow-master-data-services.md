@@ -11,21 +11,22 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
-caps.latest.revision: "8"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 51c1529c330b6cbb6c7b1b0905a34dca3984f824
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c7b982bce7e48811dbfa9874fba2a3084374ff5e
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Crear un flujo de trabajo personalizado (Master Data Services)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] utiliza reglas de negocio para crear soluciones básicas de flujo de trabajo, como actualizar y validar datos automáticamente, y enviar notificaciones por correo electrónico en función de las condiciones que especifique. Cuando requiera un procesamiento más complejo que el que proporcionan las acciones de flujo de trabajo integradas, puede usar un flujo de trabajo personalizado. Un flujo de trabajo personalizado es un ensamblado de .NET creado por usted. Cuando se llama a su ensamblado de flujo de trabajo, el código puede realizar cualquier acción que requiera la situación. Por ejemplo, si su flujo de trabajo requiere un procesamiento de eventos más complejos, como aprobaciones de varios niveles o árboles de decisiones complejos, puede configurar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para que inicie un flujo de trabajo personalizado que analice los datos y determine dónde enviarlos para su aprobación.  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] usa reglas de negocio para crear soluciones básicas de flujo de trabajo, como actualizar y validar datos automáticamente y enviar notificaciones por correo electrónico en función de las condiciones que especifique. Cuando requiera un procesamiento más complejo que el que proporcionan las acciones de flujo de trabajo integradas, puede usar un flujo de trabajo personalizado. Un flujo de trabajo personalizado es un ensamblado de .NET creado por usted. Cuando se llama a su ensamblado de flujo de trabajo, el código puede realizar cualquier acción que requiera la situación. Por ejemplo, si su flujo de trabajo requiere un procesamiento de eventos más complejos, como aprobaciones de varios niveles o árboles de decisiones complejos, puede configurar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para que inicie un flujo de trabajo personalizado que analice los datos y determine dónde enviarlos para su aprobación.  
   
 ## <a name="how-custom-workflows-are-processed"></a>Cómo se procesan los flujos de trabajo personalizados  
  Hay tres componentes principales implicados en el procesamiento de flujos de trabajo personalizados: la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], el servicio de integración de flujos de trabajo MDS de SQL Server y el ensamblado controlador del flujo de trabajo. Estos componentes procesan un flujo de trabajo personalizado de la manera siguiente:  

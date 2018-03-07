@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f125db75de84856b8754a305a1c6ce8be9d29868
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: a87476c668bcbf8226348349d6886c39ce8563bf
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio: Registro de cambios (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -718,7 +718,7 @@ Disponible con carácter general | Número de compilación: 13.0.15900.1
     
 *  Se corrigió un problema donde un modelo tabular de Analysis Services de 1200 niveles no generaría scripts de la contraseña para scripting, aunque la versión del servidor tuviera [objeto de modelo de cliente está ahora sincronizado antes de aplicar el script].
     
-*  Se corrigió un problema donde opción “SELECT TOP N ROWS” generaba una sintaxis en desuso para el operador TOP.  
+*  Se ha corregido un problema donde la opción "SELECT TOP N ROWS" generaba una sintaxis en desuso para el operador TOP.  
 [Microsoft Connect, nº 3065435](https://connect.microsoft.com/SQLServer/feedback/details/3065435)
     
 *  Se corrigieron varios problemas de diseño a lo largo de SSMS, incluida la página Propiedades de inicio de sesión y las opciones de ejecución de consultas avanzadas.   

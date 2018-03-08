@@ -1,4 +1,4 @@
----
+﻿---
 title: "Notas de la versión de SQL Server 2017 en Linux | Documentos de Microsoft"
 description: "Este artículo contiene las notas de la versión y características admitidas en SQL Server 2017 ejecutando en Linux. Notas de la versión se incluyen con la versión más reciente y varias versiones anteriores."
 author: rothja

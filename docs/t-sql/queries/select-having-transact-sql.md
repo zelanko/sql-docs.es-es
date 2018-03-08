@@ -1,5 +1,5 @@
 ---
-title: TENER (Transact-SQL) | Documentos de Microsoft
+title: HAVING (Transact-SQL) | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/28/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="select---having-transact-sql"></a>SELECT - tener (Transact-SQL)
+# <a name="select---having-transact-sql"></a>SELECT - HAVING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Especifica una condición de búsqueda para un grupo o agregado. HAVING solo se puede utilizar con la instrucción SELECT. HAVING se utiliza normalmente con una cláusula GROUP BY. Cuando no se usa GROUP BY, hay un grupo único y agregado implícito.   

@@ -12,26 +12,27 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 1357ae7e-30a4-481a-831c-7b046fe15aa4
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 07c2eb15addda49071fa962518eae322c014d8ad
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 13f647affa03844562f479223df57e1f8a2102f8
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="datasources-object-tmsl"></a>Objeto de orígenes de datos (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Define una conexión a un origen de datos utilizado por el modelo durante la importación para agregar datos al modelo o de paso a través de las consultas mediante el modo DirectQuery.  Los modelos en el modo DirectQuery sólo pueden tener una **DataSource** objeto.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Define una conexión a un origen de datos utilizado por el modelo durante la importación para agregar datos al modelo o de paso a través de las consultas mediante el modo DirectQuery.  Los modelos en el modo DirectQuery sólo pueden tener una **DataSource** objeto.  
   
  A menos que se va a crear, reemplazar, o modificar el propio objeto de origen de datos, cualquier origen de datos al que hace referencia en la secuencia de comandos (como en la secuencia de comandos de partición) debe ser una existente **DataSource** objeto en el modelo.  
   
 ## <a name="object-definition"></a>Definición del objeto  
  Todos los objetos tienen un conjunto común de propiedades, incluidos el nombre, tipo, descripción, una colección de propiedades y las anotaciones. **Origen de datos** objetos también tienen las siguientes propiedades.  
   
- Tipo  
+ tipo  
  El tipo de objeto DataSource. En la actualidad, el único valor válido es proveedor (1) - cadena de conexión Normal.  
   
  connectionString  
@@ -185,9 +186,9 @@ ms.lasthandoff: 01/08/2018
   
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Tabular Model Scripting Language &#40;TMSL&#41; Reference (Referencia de Tabular Model Scripting Language [TMSL])](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [Modo DirectQuery &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [Configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ [Modo DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
+ [Configurar el acceso HTTP a Analysis Services de servicios de Internet Information Server &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

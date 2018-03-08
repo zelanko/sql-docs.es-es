@@ -1,39 +1,41 @@
 ---
 title: Microsoft ODBC Driver for SQL Server en Windows | Documentos de Microsoft
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 02/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e32deba2343ac385175760685e50ab10a156017a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 990665bcb7091b61bc8579a1a33e30c3cc56874e
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server en Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Microsoft ODBC Driver 13.1, 13 y 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] son controladores ODBC independientes que proporcionan una interfaz de programación de aplicaciones (API) que implementa las interfaces ODBC estándares en Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].
+Los controladores ODBC de Microsoft para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] son controladores ODBC independientes que proporcionan una interfaz de programación de aplicaciones (API) que implementa las interfaces ODBC estándares en Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].
 
-Microsoft ODBC Driver for SQL Server puede utilizarse para crear nuevas aplicaciones. También puede actualizar sus aplicaciones más antiguas que usen actualmente un controlador ODBC anterior. El controlador ODBC para SQL Server admite conexiones a la base de datos de SQL Azure, almacenamiento de datos de SQL Azure, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 y SQL Server 2005.  
+Microsoft ODBC Driver for SQL Server puede utilizarse para crear nuevas aplicaciones. También puede actualizar sus aplicaciones más antiguas que usen actualmente un controlador ODBC anterior. El controlador ODBC para SQL Server admite conexiones a la base de datos de SQL Azure, almacenamiento de datos de SQL Azure, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 y SQL Server 2005.  
 
 ## <a name="summary"></a>Resumen
 
 | Versión       | Características admitidas      |
 | ------------- |---------------| 
+| Microsoft ODBC Driver 17 para SQL Server | <ul><li>Always Encrypted compatibilidad con API de BCP</li><li>Nuevo atributo de cadena de conexión UseFMTONLY hace que el controlador usar los metadatos heredados en casos especiales que requieren tablas temporales</li>
 | Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>Always Encrypted</li><li>Autenticación de Azure AD</li><li>Grupos de disponibilidad (AG) AlwaysOn</li></ul>   | 
 | Microsoft ODBC Driver 13 for SQL Server      | <ul><li>Nombre de dominio internacionalizado (IDN)</li></ul> |
 | Controlador ODBC 11 de Microsoft para SQL Server | <ul><li>Agrupación de conexiones dependientes del controlador</li><li>Resistencia de conexión</li><li>Ejecución asincrónica (método de sondeo)</li></ul> |    
@@ -57,7 +59,7 @@ Estos son los temas que trata esta documentación sobre Microsoft ODBC Driver fo
   
 ## <a name="see-also"></a>Vea también  
 - [Sobre SQL Server Native Client](https://msdn.microsoft.com/sqlserver/ff658532.aspx)   
-- [Generar aplicaciones con SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)   
+- [Creación de aplicaciones con SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)   
 - [Preguntas más frecuentes de SQL Server Native Client](https://msdn.microsoft.com/sqlserver/aa937707.aspx)   
 - [Referencia del programador de ODBC](../../../odbc/reference/odbc-programmer-s-reference.md)   
 - [SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  

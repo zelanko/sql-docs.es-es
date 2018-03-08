@@ -1,7 +1,7 @@
 ---
-title: Propiedades de columna (SSAS Tabular) | Documentos de Microsoft
+title: Propiedades de columna | Documentos de Microsoft
 ms.custom: 
-ms.date: 05/23/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -11,21 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.columnprop.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.columnprop.f1
 ms.assetid: 4046c1a3-46c7-47db-b355-52e9c2f23671
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 654da35ef9e7541e2d6d03a049b85413a88a72bd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b4198d0d71f5c0d14c12391426f4ac4397ede93c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="column-properties-ssas-tabular"></a>Pestaña Propiedades de columna (SSAS tabular)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]En este tema se describe las propiedades de columna de modelo tabular.  
+# <a name="column-properties"></a>Propiedades de columna 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Este artículo describen las propiedades de columna de modelo tabular.  
   
 >  [!NOTE]  
 >  Algunas propiedades no se admiten en todos los niveles de compatibilidad.    
@@ -44,15 +46,15 @@ ms.lasthandoff: 01/08/2018
 |**Nombre de la columna**||El nombre de la columna como se almacena en el modelo y como se muestra en una lista de campos del cliente de informes.|  
 |**Formato de datos**|Se determina automáticamente durante la importación.|Especifica el formato de presentación que se debe utilizar para los datos de esta columna. Esta propiedad tiene las opciones siguientes:<br /><br /> **General**<br /><br /> **Decimal Number**<br /><br /> **Whole Number**<br /><br /> **Moneda**<br /><br /> **Porcentaje**<br /><br /> **Científico**<br /><br /> Después de establecer un formato de datos, puede establecer propiedades que son específicas de cada formato. Por ejemplo, si elige el formato de **Moneda** , puede establecer el número de posiciones decimales visibles, elegir el separador de miles y seleccionar el símbolo de moneda.<br /><br /> <br /><br /> Si los valores de columna contienen imágenes, vea **Imagen representativa**.|  
 |**Tipo de datos**|Se determina automáticamente durante la importación.|Especifica el tipo de datos de todos los valores de la columna.|  
-|**Descripción**||Una descripción de texto de la columna.<br /><br /> En determinados clientes de informes, si un usuario final coloca el cursor sobre esta columna en la lista de campos, aparece la descripción como una información sobre herramientas.|  
-|**Oculto**|False|Especifica si la columna se oculta en las listas de campos del cliente de informes.<br /><br /> Establezca esta propiedad en **True** para ocultar esta columna de la presentación. Por ejemplo, las columnas que contienen identificadores o claves normalmente no son útiles para el usuario final.<br /><br /> Si oculta una columna del cliente de informes, el campo no se suprime en los datos del modelo. El campo todavía está visible si crea una consulta en el modelo. Una columna oculta todavía se puede utilizar para agrupar u ordenar.<br /><br /> La propiedad **Hidden** no proporciona ningún método de seguridad para los datos. Para proteger los datos, utilice filtros de fila en roles. Para obtener más información, vea [Roles &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md).|  
+|**Description**||Una descripción de texto de la columna.<br /><br /> En determinados clientes de informes, si un usuario final coloca el cursor sobre esta columna en la lista de campos, aparece la descripción como una información sobre herramientas.|  
+|**Oculto**|False|Especifica si la columna se oculta en las listas de campos del cliente de informes.<br /><br /> Establezca esta propiedad en **True** para ocultar esta columna de la presentación. Por ejemplo, las columnas que contienen identificadores o claves normalmente no son útiles para el usuario final.<br /><br /> Si oculta una columna del cliente de informes, el campo no se suprime en los datos del modelo. El campo todavía está visible si crea una consulta en el modelo. Una columna oculta todavía se puede utilizar para agrupar u ordenar.<br /><br /> La propiedad **Hidden** no proporciona ningún método de seguridad para los datos. Para proteger los datos, utilice filtros de fila en roles. Para obtener más información, consulte [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md).|  
 |**Ordenar por columna**||Especifica otra columna por la que ordenar los valores de esta columna. Debe existir una relación entre las dos columnas.<br /><br /> Este valor debe ser el nombre de una columna existente. No puede especificar ninguna fórmula o medida.|  
 
- **Varios**  
+ **Misc.**  
   
 |Propiedad|Valor predeterminado|Description|  
 |--------------|---------------------|-----------------|  
-|**Sugerencias de codificación**|Valor predeterminado|Especifica la codificación para optimizar el procesamiento. Valor codificación puede mejorar el rendimiento de las consultas para las columnas numéricas que se suelen usar en agregaciones. La codificación hash es columnas group by (a menudo valores de tabla de dimensiones) y claves externas. Las columnas de cadena siempre son hash codificado.|  
+|**Sugerencias de codificación**|Predeterminado|Especifica la codificación para optimizar el procesamiento. Valor codificación puede mejorar el rendimiento de las consultas para las columnas numéricas que se suelen usar en agregaciones. La codificación hash es columnas group by (a menudo valores de tabla de dimensiones) y claves externas. Las columnas de cadena siempre son hash codificado.|  
 
  **Propiedades de informes**  
   
@@ -63,7 +65,7 @@ ms.lasthandoff: 01/08/2018
 |Dirección URL de imagen/Categoría de datos (SP1)|False|Especifica el valor de esta columna como un hipervínculo a una imagen de un servidor. Por ejemplo: `http://localhost/images/image1.jpg`.|  
 |Mantener filas únicas|False|Especifica qué columnas proporcionan valores que se deben tratar como únicos aunque estén duplicados (por ejemplo, nombre y apellidos del empleado para los casos en que dos o varios empleados compartan el mismo nombre).|  
 |Identificador de fila|False|Especifica una columna que contiene solo valores únicos, lo que permite usarla como clave interna de agrupación.|  
-|Resumir por|Valor predeterminado|Especifica las herramientas de cliente de generación de informes que se aplican a la función de agregado SUM para cálculos de columnas cuando esta columna se agrega a una lista de campos. Para cambiar el cálculo predeterminado, selecciónelo en la lista desplegable. Esta propiedad solo se aplica a las columnas de tipo que se pueden agregar.|  
+|Resumir por|Predeterminado|Especifica las herramientas de cliente de generación de informes que se aplican a la función de agregado SUM para cálculos de columnas cuando esta columna se agrega a una lista de campos. Para cambiar el cálculo predeterminado, selecciónelo en la lista desplegable. Esta propiedad solo se aplica a las columnas de tipo que se pueden agregar.|  
 |Posición de detalles de la tabla|Ningún conjunto de campos predeterminado|Especifica que esta columna o medida se puede agregar a un conjunto de campos de una tabla para mejorar la experiencia de visualización de la misma en un cliente de informes.|  
   
 ##  <a name="bkmk_config_prop"></a> Configurar los valores de las propiedades de columna  
@@ -73,7 +75,7 @@ ms.lasthandoff: 01/08/2018
 2.  En la ventana **Propiedades** , haga clic en una propiedad y, a continuación, escriba un valor o haga clic en la flecha abajo para seleccionar una opción de configuración.  
   
 ## <a name="see-also"></a>Vea también  
- [Propiedades de informes de Power View](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)   
+ [Propiedades informes de Power View](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)   
  [Ocultar o Inmovilizar columnas](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)   
  [Agregar columnas a una tabla](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)  
   

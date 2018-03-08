@@ -1,27 +1,28 @@
 ---
 title: Microsoft JDBC Driver para SQL Server Support Matrix | Documentos de Microsoft
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9867704e5fe3b5522d22c70cc1b79b495de1bfa5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 30e750a2f69b52c04907c91aa0d47f2a3a60be91
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Matriz de compatibilidad de Microsoft JDBC Driver para SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 11/18/2017
   Esta página contiene la matriz de compatibilidad y la directiva de ciclo de vida de soporte de Microsoft JDBC Driver para SQL Server.  
   
 ## <a name="microsoft-jdbc-driver-support-lifecycle-matrix-and-policy"></a>Directiva y matriz de ciclo de vida de soporte de Microsoft JDBC Driver  
- La directiva de ciclo de vida de soporte de Microsoft (MSL) proporciona información transparente y predecible sobre el ciclo de vida de soporte de productos de Microsoft. Las versiones 3.0 y 4.x de Microsoft JDBC Driver incluyen cinco años de soporte estándar del controlador a partir de la fecha de lanzamiento. El soporte estándar se define en el sitio web del ciclo de vida de soporte de Microsoft.  
+ La directiva de ciclo de vida de soporte de Microsoft (MSL) proporciona información transparente y predecible sobre el ciclo de vida de soporte de productos de Microsoft. Versiones del controlador JDBC 3.0, 4.x y 6.x tienen cinco años de soporte estándar del controlador de la fecha de lanzamiento. El soporte estándar se define en el sitio web del ciclo de vida de soporte de Microsoft.  
   
  Las opciones de soporte extendido y personalizado no están disponibles para Microsoft JDBC Driver.  
     
@@ -37,7 +38,8 @@ ms.lasthandoff: 11/18/2017
   
 |Nombre del controlador|Versión del paquete de controladores|JAR(s) aplicable|Finalización del soporte estándar|
 |-|-|-|-|  
-|Microsoft JDBC Driver 6.2 para SQL Server|6.2|MSSQL-jdbc-6.2.2.jre8.jar<br> MSSQL-jdbc-6.2.2.jre7.jar|30 de junio de 2022|    
+|Microsoft JDBC Driver 6.4 para SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|22 de enero de 2023|    
+|Microsoft JDBC Driver 6.2 para SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|30 de junio de 2022|    
 |Microsoft JDBC Driver 6.0 para SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|14 de julio de 2021|    
 |Microsoft JDBC Driver 4.2 para SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|24 de agosto de 2020|  
 |Controlador JDBC 4.1 de Microsoft para SQL Server|4.1|sqljdbc41.jar|12 de diciembre de 2019|  
@@ -48,7 +50,7 @@ ms.lasthandoff: 11/18/2017
 |-|-|-|
 |Microsoft JDBC Driver 4.0 para SQL Server|4.0|6 de marzo de 2017|  
 |Controlador JDBC de Microsoft SQL Server 3.0|3.0|23 de abril de 2015|  
-|Microsoft JDBC Driver 2.0 para SQL Server|2,0|31 de diciembre de 2012|  
+|Microsoft JDBC Driver 2.0 para SQL Server|2.0|31 de diciembre de 2012|  
 |Controlador JDBC de Microsoft SQL Server 2005 versión 1.2|1.2|25 de junio de 2011|  
 |Microsoft JDBC Driver 1.1 para SQL Server 2005|1.1|25 de junio de 2011|  
 |Microsoft JDBC Driver 1.0 para SQL Server 2005|1,0|25 de junio de 2011|  
@@ -56,20 +58,21 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="sql-version-compatibility"></a>Compatibilidad con versiones de SQL  
   
-|Versión del controlador|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Base de datos SQL de Azure|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|  
-|-|-|-|-|-|-|-|-|-| 
-|6.2|S|S|S|S|S|S|S|S|  
-|6.1|S|S|S|S|S|S|S|N|  
-|6.0|S|S|S|S|S|S|S|N|  
-|4.2|S|S|S|S|S|S|S|N|  
-|4.1|S|S|S|S|S|S|S|N|  
-|4.0|S|S|S|S|S|S|S|N|  
-|3.0|S|S|Y<sup>1</sup>|Y<sup>2</sup>|N|Y<sup>5</sup>|N|N|  
-|2,0|Y<sup>3</sup>|Y<sup>3</sup>|N|N|N|N|N|N|  
-|1.2|Y<sup>3</sup>|N|N|N|N|N|N|N|  
-|1.1|N|N|N|N|N|N|N|N|  
-|1,0|N|N|N|N|N|N|N|N|  
-|2000|N|N|N|N|N|N|N|N|  
+|Versión del controlador|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Azure administra la instancia (vista previa privada de extendida)|  
+|-|-|-|-|-|-|-|-|-|-|
+|6.4|N|S|S|S|S|S|S|S|S|  
+|6.2|S|S|S|S|S|S|S|S|N|
+|6.1|S|S|S|S|S|S|S|N|N|
+|6.0|S|S|S|S|S|S|S|N|N|
+|4.2|S|S|S|S|S|S|S|N|N|
+|4.1|S|S|S|S|S|S|S|N|N|
+|4.0|S|S|S|S|S|S|S|N|N|
+|3.0|S|S|Y<sup>1</sup>|Y<sup>2</sup>|N|Y<sup>5</sup>|N|N|N|
+|2.0|Y<sup>3</sup>|Y<sup>3</sup>|N|N|N|N|N|N|N|
+|1.2|Y<sup>3</sup>|N|N|N|N|N|N|N|N|
+|1.1|N|N|N|N|N|N|N|N|N|  
+|1,0|N|N|N|N|N|N|N|N|N|  
+|2000|N|N|N|N|N|N|N|N|N|  
   
  <sup>1</sup>versión 3.0 de controlador de JDBC de Microsoft SQL Server puede conectarse a SQL Server 2012 como un cliente de nivel inferior.  
   
@@ -85,6 +88,7 @@ ms.lasthandoff: 11/18/2017
   
 |Versión de Microsoft JDBC Driver|Versiones de JRE|Versión de la API de JDBC| 
 |-|-|-|  
+|6.4|1.7, 1.8, 1.9|4.1, 4.2, 4.3 (parcial)|  
 |6.2|1.7, 1.8|4.1, 4.2|  
 |6.1|1.7, 1.8|4.1, 4.2|  
 |6.0|1.7, 1.8|4.1, 4.2|  
@@ -92,7 +96,7 @@ ms.lasthandoff: 11/18/2017
 |4.1|1.7|4.0|  
 |4.0|1.5, 1.6, 1.7|3.0, 4.0|  
 |3.0|1.5, 1.6,|3.0, 4.0|  
-|2,0|1.5, 1.6|3.0, 4.0|  
+|2.0|1.5, 1.6|3.0, 4.0|  
 |1.2|1.4, 1.5, 1.6|3.0|  
 |1.1|1.4|3.0|  
 |1,0|1.4|3.0|  

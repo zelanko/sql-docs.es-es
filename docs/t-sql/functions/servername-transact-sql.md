@@ -1,5 +1,5 @@
 ---
-title: '@@SERVERNAME (Transact-SQL) | Documentos de Microsoft'
+title: '@@SERVERNAME (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/17/2017
 ms.prod: sql-non-specified
@@ -8,32 +8,34 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '@@SERVERNAME'
 - '@@SERVERNAME_TSQL'
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - '@@SERVERNAME function'
 - local servers [SQL Server]
 ms.assetid: b0ef33fb-954a-4294-b05b-a87c14ce25a3
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 5f1e7dbd47562368653ce75eee9d2a412164a9c9
 ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="x40x40servername-transact-sql"></a>&#x40;&#x40;SERVERNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve el nombre del servidor local que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Devuelve el nombre del servidor local en el que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,21 +49,21 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipos devueltos  
  **nvarchar**  
   
-## <a name="remarks"></a>Comentarios  
- El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] establece durante la instalación el nombre del equipo como nombre de servidor. Para cambiar el nombre del servidor, utilice **sp_addserver**y, a continuación, reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="remarks"></a>Notas  
+ El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] establece durante la instalación el nombre del equipo como nombre de servidor. Para cambiar el nombre del servidor, use **sp_addserver** y después reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Con varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalada, @@SERVERNAME devuelve el siguiente servidor local de información de nombre si no se cambió el nombre del servidor local desde el programa de instalación.  
+ Si tiene instaladas varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], @@SERVERNAME devuelve la siguiente información del nombre del servidor local, siempre que el nombre no se haya cambiado desde la instalación.  
   
 |Instancia|Información de servidor|  
 |--------------|------------------------|  
 |Instancia predeterminada|'*servername*'|  
-|Instancia con nombre|'*servername*\\*nombreDeInstancia*'|  
-|instancia en clúster de conmutación por error: instancia predeterminada|'*nombreDeServidorVirtual*'|  
-|instancia en clúster de conmutación por error: instancia con nombre|'*nombreDeServidorVirtual*\\*nombreDeInstancia*'|  
+|Instancia con nombre|'*servername*\\*instancename*'|  
+|instancia en clúster de conmutación por error: instancia predeterminada|'*virtualservername*'|  
+|instancia en clúster de conmutación por error: instancia con nombre|'*virtualservername*\\*instancename*'|  
   
- Aunque el @@SERVERNAME función y la propiedad SERVERNAME de la función SERVERPROPERTY pueden devolver cadenas con formatos similares, la información puede ser diferente. La propiedad SERVERNAME informa automáticamente de los cambios en el nombre de red del equipo.  
+ Aunque la función @@SERVERNAME y la propiedad SERVERNAME de la función SERVERPROPERTY puedan devolver cadenas con formatos similares, la información puede ser distinta. La propiedad SERVERNAME informa automáticamente de los cambios en el nombre de red del equipo.  
   
- En cambio, @@SERVERNAME no informa de estos cambios. @@SERVERNAME informa de los cambios realizados en el nombre de servidor local mediante la **sp_addserver** o **sp_dropserver** procedimiento almacenado.  
+ Por el contrario, @@SERVERNAME no informa de estos cambios. @@SERVERNAME informa de los cambios realizados en el nombre del servidor local utilizando el procedimiento almacenado **sp_addserver** o **sp_dropserver**.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se muestra la forma de utilizar `@@SERVERNAME`.  
@@ -79,9 +81,9 @@ ACCTG
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Funciones de configuración &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
- [sp_addserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)  
+ [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)  
   
   

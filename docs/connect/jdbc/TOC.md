@@ -19,6 +19,7 @@
 ## [Más información sobre el controlador JDBC](finding-additional-jdbc-driver-information.md)
 ## [Matriz de compatibilidad de Microsoft JDBC Driver para SQL Server](microsoft-jdbc-driver-for-sql-server-support-matrix.md)
 ## [Preguntas más frecuentes (P+F) sobre el controlador JDBC](frequently-asked-questions-faq-for-jdbc-driver.md)
+## [Dependencias de características de Microsoft JDBC Driver para SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) 
 
 # [Proteger las aplicaciones del controlador JDBC](securing-jdbc-driver-applications.md)
 ## [Proteger las cadenas de conexión](securing-connection-strings.md)
@@ -36,6 +37,7 @@
 ## [Trabajar con instrucciones y conjuntos de resultados](working-with-statements-and-result-sets.md)
 ## [Usar el almacenamiento en búfer adaptable](using-adaptive-buffering.md)
 ## [Columnas dispersas](sparse-columns.md)
+## [Almacenamiento en caché de metadatos de instrucción preparado para el controlador JDBC](prepared-statement-metadata-caching-for-the-jdbc-driver.md)
 
 # [Diagnosticar problemas del controlador JDBC](diagnosing-problems-with-the-jdbc-driver.md)
 ## [Control de errores](handling-errors.md)
@@ -63,6 +65,7 @@
 # [Cumplimiento y aspectos legales del controlador JDBC para SQL](compliance-and-legal-for-the-jdbc-sql-driver.md)
 ## [Cumplimiento de JDBC 4.1 con el controlador JDBC](jdbc-4-1-compliance-for-the-jdbc-driver.md)
 ## [Cumplimiento de JDBC 4.2 con el controlador JDBC](jdbc-4-2-compliance-for-the-jdbc-driver.md)
+## [Cumplimiento de JDBC 4.3 con el controlador JDBC](jdbc-4-3-compliance-for-the-jdbc-driver.md)
 
 # [Guía de programación del controlador JDBC para SQL](programming-guide-for-jdbc-sql-driver.md)
 ## [Conexión a SQL Server con el controlador JDBC](connecting-to-sql-server-with-the-jdbc-driver.md)
@@ -125,3 +128,5 @@
 ### [Configurar el modo en que los valores java.sql.Time se envían al servidor](configuring-how-java-sql-time-values-are-sent-to-the-server.md)
 ### [Usar secuencias de escape SQL](using-sql-escape-sequences.md)
 ### [Usar instrucciones con procedimientos almacenados](using-statements-with-stored-procedures.md)
+### [Versión de ejemplo de Azure Key Vault 6.0.0](azure-key-vault-sample-version-6.0.0.md)
+### [Versión de ejemplo de Azure Key Vault 6.2.2](azure-key-vault-sample-version-6.2.2.md)

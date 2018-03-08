@@ -5,29 +5,38 @@ ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
-ms.date: 09/30/2017
+ms.date: 03/01/2018
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5ce602bd9726c8762793d9289daf5c52b2176494
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 70bda1f659a284a31896ff15ee0638b64a9d0bac
+ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/01/2018
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Novedades de SSMA para DB2 (DB2ToSQL)
 Este tema enumeran SSMA para cambios de DB2 en cada versión.  
+
+## <a name="ssma-v77"></a>SSMA v7.7
+La versión de v7.7 de SSMA para DB2 contiene los siguientes cambios:
+- SSMA para DB2 se ha mejorado con correcciones de destino que mejoran las métricas de calidad y la conversión.
+- Según la gran demanda existente, la versión de 32 bits de SSMA para DB2 es volver. En comparación con la implementación anterior (anterior a v7.4), hay dos paquetes de instalador, pero no se puede instalar en paralelo. Como resultado, debe elegir la versión más adecuada en función de los componentes de conectividad que tiene. Siempre es preferible utilizar la versión de 64 bits, si es posible.
+
+> [!IMPORTANT]
+> Con SSMA v7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación.
 
 ## <a name="ssma-v76"></a>SSMA v7.6
 Se ha mejorado la versión v7.6 de SSMA para DB2 con correcciones de destino que mejoran las métricas de calidad y la conversión y con el soporte para SQL Server 2017 (vista previa pública). Compatibilidad con SQL Server 2017 en Windows y Linux se encuentra en versión preliminar pública y no debe usarse para las migraciones de producción.
@@ -35,7 +44,7 @@ Se ha mejorado la versión v7.6 de SSMA para DB2 con correcciones de destino que
 > [!IMPORTANT]
 > Con SSMA v7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación y se ha cancelado la versión de 32 bits de la herramienta.
 
-## <a name="ssma-v75"></a>SSMA 7.5
+## <a name="ssma-v75"></a>SSMA v7.5
 La versión 7.5 de SSMA para DB2 se ha mejorado con varias mejoras para garantizar una mayor accesibilidad para personas con discapacidades.
 
 > [!IMPORTANT]

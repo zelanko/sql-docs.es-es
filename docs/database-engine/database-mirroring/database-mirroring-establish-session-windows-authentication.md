@@ -22,18 +22,18 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: c58ad04d7b1574d6954e31f8117ff23827ab1375
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>Creación de reflejo de la base de datos - Establecer la sesión - Autenticación de Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilice [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en su lugar.  
   
- Una vez preparada la base de datos reflejada (vea [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)), puede establecer una sesión de creación de reflejo de la base de datos. Las instancias de servidor principal, reflejado y testigo deben ser instancias de servidor independientes y se deben encontrar en sistemas host distintos.  
+ Una vez preparada la base de datos reflejada (vea [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)), puede establecer una sesión de creación de reflejo de la base de datos. Las instancias de servidor principal, reflejado y testigo deben ser instancias de servidor independientes y se deben encontrar en sistemas host distintos.  
   
 > [!IMPORTANT]  
 >  Es recomendable que configure la creación de reflejo de la base de datos durante las horas de menor actividad, ya que puede afectar al rendimiento.  

@@ -1,27 +1,28 @@
 ---
 title: "Descripción de la compatibilidad con Java EE | Documentos de Microsoft"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5f692489b6d8e701e13c6700d63de6df0b9607a5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: cb98529d22b17ad21bfcab786064a8c8882f3b5b
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="understanding-java-ee-support"></a>Descripción de la compatibilidad con Java EE
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/18/2017
  Primero, asegúrese de que el entorno de Java (JDK, JRE) incluye el paquete javax.sql. Es un paquete necesario para cualquier aplicación JDBC que utilice la API opcional. JDK 1.5 y las versiones posteriores ya contienen este paquete, por lo que no tiene que instalarlo por separado.  
   
 ## <a name="driver-name"></a>Nombre del controlador  
- El nombre de clase de controlador es **com.microsoft.sqlserver.jdbc.SQLServerDriver**. Para los controladores JDBC 4.0, 4.1, 4.2 y 6.0, el controlador se encuentra en el archivo sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar o sqljdbc42.jar. Para 6.2 de controlador JDBC, el controlador se encuentra en mssql-jdbc-6.2.1.jre7.jar o mssql-jdbc-6.2.1.jre8.jar.
+ El nombre de clase de controlador es **com.microsoft.sqlserver.jdbc.SQLServerDriver**. Para controladores de JDBC 4.1, 4.2 y 6.0, el controlador se encuentra en el archivo sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar o sqljdbc42.jar. Para 6.2 de controlador JDBC, el controlador se encuentra en mssql-jdbc-6.2.1.jre7.jar o mssql-jdbc-6.2.1.jre8.jar. Para 6.4 de controlador JDBC, el controlador se encuentra en mssql-jdbc-6.4.0.jre7.jar, mssql-jdbc-6.4.0.jre8.jar o mssql-jdbc-6.4.0.jre9.jar.
   
  El nombre de clase se usa siempre que se carga el controlador con la clase del Administrador de controladores JDBC. Se utiliza también cada vez que deba especificar el nombre de clase del controlador en la configuración de cualquier controlador. Por ejemplo, configurar un origen de datos dentro de un servidor de aplicaciones de Java EE podría requerir que se escribiera el nombre de clase del controlador.  
   

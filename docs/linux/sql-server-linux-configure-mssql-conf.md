@@ -1,25 +1,25 @@
 ---
 title: Configurar SQL Server en Linux | Documentos de Microsoft
-description: "En este tema se describe cómo usar la herramienta mssql-conf para configurar SQL Server 2017 en Linux."
+description: "Este artículo describe cómo usar la herramienta mssql-conf para configurar SQL Server 2017 en Linux."
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 09/20/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.workload: On Demand
-ms.openlocfilehash: fe0a3bc095e1dcd76f9fdc98e1621974dca6693e
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 7b921f563b769a1a4c6a3edb5089a04050d0df74
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurar SQL Server en Linux con la herramienta mssql-conf
 
@@ -29,12 +29,16 @@ ms.lasthandoff: 02/01/2018
 
 |||
 |---|---|
+| [Agente](#agent) | Habilitar el Agente SQL Server |
 | [Intercalación](#collation) | Establecer una nueva intercalación de SQL Server en Linux. |
 | [Comentarios de clientes](#customerfeedback) | Elija si SQL Server envía comentarios a Microsoft. |
 | [Perfil de Correo electrónico de base de datos](#dbmail) | Establecer el perfil de correo electrónico de base de datos predeterminado de SQL Server en Linux |
 | [Directorio de datos predeterminado](#datadir) | Cambie el directorio predeterminado para nuevos archivos de datos de base de datos de SQL Server (.mdf). |
 | [Directorio de registro predeterminado](#datadir) | Cambia el directorio predeterminado para nuevos archivos de registro (.ldf) de base de datos de SQL Server. |
+| [Directorio de archivos de base de datos maestra predeterminado](#masterdatabasedir) | Cambia el directorio predeterminado para los archivos de base de datos maestra en la instalación existente de SQL.|
+| [Nombre de archivo de base de datos maestra predeterminado](#masterdatabasename) | Cambia el nombre de los archivos de base de datos maestra. |
 | [Directorio de volcado de memoria predeterminado](#dumpdir) | Cambie el directorio predeterminado para nuevos archivos de volcado de memoria y otros archivos de solución de problemas. |
+| [Directorio de registro de error predeterminado](#errorlogdir) | Cambia el directorio predeterminado para los nuevos archivos de registro de errores de SQL Server, traza del analizador de forma predeterminada, XE de sesión de estado de sistema y XE de sesión de Hekaton. |
 | [Directorio de copia de seguridad predeterminado](#backupdir) | Cambiar el directorio predeterminado para los nuevos archivos de copia de seguridad. |
 | [Tipo de volcado de memoria](#coredump) | Elija el tipo de archivo de volcado de memoria de volcado de memoria a recopilar. |
 | [Alta disponibilidad](#hadr) | Habilite los grupos de disponibilidad. |
@@ -56,7 +60,25 @@ ms.lasthandoff: 02/01/2018
 
 * Estos ejemplos ejecutar mssql-conf por especifican la ruta de acceso completa: **/opt/mssql/bin/mssql-conf**. Si elige navegar a esa ruta de acceso en su lugar, ejecute mssql-conf en el contexto del directorio actual: **. / conf mssql**.
 
-## <a id="collation"></a>Cambiar la intercalación de SQL Server
+## <a id="agent"></a> Habilitar el Agente SQL Server
+
+El **sqlagent.enabled** configuración permite [Agente SQL Server](sql-server-linux-run-sql-server-agent-job.md). De forma predeterminada, el Agente SQL Server está deshabilitado.
+
+Para cambiar esta configuración, siga estos pasos:
+
+1. Habilitar al Agente SQL Server:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
+   ```
+
+1. Reinicie el servicio de SQL Server:
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
+## <a id="collation"></a> Cambiar la intercalación de SQL Server
 
 El **conjunto intercalación** opción cambia el valor de intercalación a cualquiera de las intercalaciones admitidas.
 
@@ -76,7 +98,7 @@ El **conjunto intercalación** opción cambia el valor de intercalación a cualq
 
 Para obtener una lista de intercalaciones admitidas, ejecute el [sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) función: `SELECT Name from sys.fn_helpcollations()`.
 
-## <a id="customerfeedback"></a>Configurar los comentarios de clientes
+## <a id="customerfeedback"></a> Configurar los comentarios de clientes
 
 El **telemetry.customerfeedback** cambios en la configuración si SQL Server envía comentarios a Microsoft o no. De forma predeterminada, este valor se establece en **true**. Para cambiar el valor, ejecute los siguientes comandos:
 
@@ -94,7 +116,7 @@ El **telemetry.customerfeedback** cambios en la configuración si SQL Server env
 
 Para obtener más información, consulte [comentarios de los clientes de SQL Server en Linux](sql-server-linux-customer-feedback.md).
 
-## <a id="datadir"></a>Cambiar la ubicación del directorio de datos o de registro de forma predeterminada
+## <a id="datadir"></a> Cambiar la ubicación del directorio de datos o de registro de forma predeterminada
 
 El **filelocation.defaultdatadir** y **filelocation.defaultlogdir** configuración cambia la ubicación donde se crean los nuevos archivos de registro y base de datos. De forma predeterminada, esta ubicación es /var/opt/mssql/data. Para cambiar esta configuración, siga estos pasos:
 
@@ -131,7 +153,89 @@ El **filelocation.defaultdatadir** y **filelocation.defaultlogdir** configuraci�
 
 1. Este comando también se supone que existe un directorio de registro/tmp /, y que se encuentra en el usuario y grupo **mssql**.
 
-## <a id="dumpdir"></a>Cambiar la ubicación predeterminada del directorio de volcado de memoria
+
+## <a id="masterdatabasedir"></a> Cambiar la ubicación de directorio del archivo de base de datos maestra predeterminada
+
+El **filelocation.masterdatafile** y **filelocation.masterlogfile** cambios de configuración de la ubicación donde el motor de SQL Server busca los archivos de base de datos maestra. De forma predeterminada, esta ubicación es /var/opt/mssql/data. 
+
+Para cambiar esta configuración, siga estos pasos:
+
+1. Crear el directorio de destino para los nuevos archivos de registro de error. En el ejemplo siguiente se crea un nuevo **masterdatabasedir/tmp/** directory:
+
+   ```bash
+   sudo mkdir /tmp/masterdatabasedir
+   ```
+
+1. Cambiar el propietario y el grupo del directorio para la **mssql** usuario:
+
+   ```bash
+   sudo chown mssql /tmp/masterdatabasedir
+   sudo chgrp mssql /tmp/masterdatabasedir
+   ```
+
+1. Usar mssql-conf para cambiar el directorio de base de datos maestra predeterminado para los archivos de registro y de datos maestros con la **establecer** comando:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /tmp/masterdatabasedir/master.mdf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterlogfile /tmp/masterdatabasedir/mastlog.ldf
+   ```
+
+1. Detenga el servicio de SQL Server:
+
+   ```bash
+   sudo systemctl stop mssql-server
+   ```
+
+1. Mover el master.mdf y masterlog.ldf: 
+
+   ```bash
+   sudo mv /var/opt/mssql/data/master.mdf /tmp/masterdatabasedir/master.mdf 
+   sudo mv /var/opt/mssql/data/mastlog.ldf /tmp/masterdatabasedir/mastlog.ldf
+   ```
+
+1. Inicie el servicio de SQL Server:
+
+   ```bash
+   sudo systemctl start mssql-server
+   ```
+   
+> [!NOTE]
+> Si SQL Server no puede encontrar los archivos master.mdf y mastlog.ldf en el directorio especificado, se creará automáticamente una copia con plantilla de las bases de datos del sistema en el directorio especificado y se iniciará correctamente SQL Server. Sin embargo, los metadatos, como las bases de datos de usuario, los inicios de sesión de servidor, certificados de servidor, las claves de cifrado, trabajos del Agente SQL o antigua contraseña de inicio de sesión de SA no se actualizará en la nueva base de datos maestra. Tendrá que detener SQL Server y mover el antiguo master.mdf y mastlog.ldf a la nueva ubicación especificada e iniciar SQL Server para continuar usando los metadatos existentes. 
+
+
+## <a id="masterdatabasename"></a> Cambie el nombre de los archivos de base de datos maestra.
+
+El **filelocation.masterdatafile** y **filelocation.masterlogfile** cambios de configuración de la ubicación donde el motor de SQL Server busca los archivos de base de datos maestra. De forma predeterminada, esta ubicación es /var/opt/mssql/data. Para cambiar esta configuración, siga estos pasos:
+
+1. Detenga el servicio de SQL Server:
+
+   ```bash
+   sudo systemctl stop mssql-server
+   ```
+
+1. Utilice mssql-conf para cambiar los nombres de base de datos maestra prevista para los archivos de registro y de datos maestros con la **establecer** comando:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /var/opt/mssql/data/masternew.mdf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data /mastlognew.ldf
+   ```
+
+1. Cambiar el nombre de los archivos de datos y registro de base de datos maestra 
+
+   ```bash
+   sudo mv /var/opt/mssql/data/master.mdf /var/opt/mssql/data/masternew.mdf
+   sudo mv /var/opt/mssql/data/mastlog.ldf /var/opt/mssql/data/mastlognew.ldf
+   ```
+
+1. Inicie el servicio de SQL Server:
+
+   ```bash
+   sudo systemctl start mssql-server
+   ```
+
+
+
+## <a id="dumpdir"></a> Cambiar la ubicación predeterminada del directorio de volcado de memoria
 
 El **filelocation.defaultdumpdir** cambios de configuración de la ubicación predeterminada donde se generan la memoria y los archivos de volcado SQL siempre que haya un bloqueo. De forma predeterminada, estos archivos se generan en /var/opt/mssql/log.
 
@@ -162,7 +266,39 @@ Para configurar esta nueva ubicación, use los siguientes comandos:
    sudo systemctl restart mssql-server
    ```
 
-## <a id="backupdir"></a>Cambiar la ubicación del directorio de copia de seguridad predeterminada
+## <a id="errorlogdir"></a> Cambiar la ubicación de directorio predeterminada archivo de registro de error
+
+El **filelocation.errorlogfile** cambios de configuración de la ubicación donde se crean el nuevo registro de errores, traza del analizador de forma predeterminada, sesión de estado del sistema XE y archivos de sesión XE de Hekaton. De forma predeterminada, esta ubicación es /var/opt/mssql/log. El directorio en el que se establece el archivo de registro de errores SQL se convierte en el directorio de registro predeterminado para otros registros.
+
+Para cambiar esta configuración:
+
+1. Crear el directorio de destino para los nuevos archivos de registro de error. En el ejemplo siguiente se crea un nuevo **/tmp/logs** directorio:
+
+   ```bash
+   sudo mkdir /tmp/logs
+   ```
+
+1. Cambiar el propietario y el grupo del directorio para la **mssql** usuario:
+
+   ```bash
+   sudo chown mssql /tmp/logs
+   sudo chgrp mssql /tmp/logs
+   ```
+
+1. Utilice mssql-conf para cambiar el nombre de archivo de registro de errores de forma predeterminada con la **establecer** comando:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set filelocation.errorlogfile /tmp/logs/errorlog
+   ```
+
+1. Reinicie el servicio de SQL Server:
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
+
+## <a id="backupdir"></a> Cambiar la ubicación del directorio de copia de seguridad predeterminada
 
 El **filelocation.defaultbackupdir** cambios de configuración de la ubicación predeterminada donde se generan los archivos de copia de seguridad. De forma predeterminada, estos archivos se generan en /var/opt/mssql/data.
 
@@ -193,7 +329,7 @@ Para configurar esta nueva ubicación, use los siguientes comandos:
    sudo systemctl restart mssql-server
    ```
 
-## <a id="coredump"></a>Especificar la configuración de volcado de memoria del núcleo
+## <a id="coredump"></a> Especificar la configuración de volcado de memoria del núcleo
 
 Si se produce una excepción en uno de los procesos de SQL Server, SQL Server crea un volcado de memoria.
 
@@ -226,14 +362,14 @@ La primera captura fase se controla mediante la **coredump.coredumptype** config
     | **filtered** | Diseño de usos filtrado basado en resta donde se incluye toda la memoria en el proceso a menos que se excluyan específicamente. El diseño entiende el funcionamiento interno de SQLPAL y el entorno de host, excepto algunas regiones desde el volcado de memoria.
     | **full** | Completa se encuentra un volcado de memoria de proceso completo que incluye todas las regiones en **/proc / $pid/asignaciones**. Esto no se controla mediante **coredump.captureminiandfull** configuración. |
 
-## <a id="dbmail"></a>Establecer el perfil de correo electrónico de base de datos predeterminado de SQL Server en Linux
+## <a id="dbmail"></a> Establecer el perfil de correo electrónico de base de datos predeterminado de SQL Server en Linux
 
 El **sqlpagent.databasemailprofile** permite establecer el perfil de correo electrónico de base de datos predeterminada para alertas por correo electrónico.
 
 ```bash
 sudo /opt/mssq/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
 ```
-## <a id="hadr"></a>Alta disponibilidad
+## <a id="hadr"></a> Alta disponibilidad
 
 El **hadr.hadrenabled** opción permite a los grupos de disponibilidad en la instancia de SQL Server. El siguiente comando habilita grupos de disponibilidad estableciendo **hadr.hadrenabled** en 1. Debe reiniciar SQL Server para la configuración surta efecto.
 
@@ -247,7 +383,7 @@ Para obtener información de cómo se utiliza con grupos de disponibilidad, cons
 - [Configurar siempre en el grupo de disponibilidad para SQL Server en Linux](sql-server-linux-availability-group-configure-ha.md)
 - [Configurar grupo de disponibilidad de la escala de lectura para SQL Server en Linux](sql-server-linux-availability-group-configure-rs.md)
 
-## <a id="localaudit"></a>Directorio del conjunto de auditoría local
+## <a id="localaudit"></a> Directorio del conjunto de auditoría local
 
 El **telemetry.userrequestedlocalauditdirectory** configuración habilita la auditoría Local y se crea permite establecer el directorio donde se registra la auditoría Local.
 
@@ -278,7 +414,7 @@ El **telemetry.userrequestedlocalauditdirectory** configuración habilita la aud
 
 Para obtener más información, consulte [comentarios de los clientes de SQL Server en Linux](sql-server-linux-customer-feedback.md).
 
-## <a id="lcid"></a>Cambiar la configuración regional de SQL Server
+## <a id="lcid"></a> Cambiar la configuración regional de SQL Server
 
 El **language.lcid** cambios en la configuración la configuración regional de SQL Server a cualquier identificador de idioma admitidos (LCID). 
 
@@ -294,7 +430,7 @@ El **language.lcid** cambios en la configuración la configuración regional de 
    sudo systemctl restart mssql-server
    ```
 
-## <a id="memorylimit"></a>Establecer el límite de memoria
+## <a id="memorylimit"></a> Establecer el límite de memoria
 
 El **memory.memorylimitmb** opción controla la cantidad memoria física (en MB) disponible para SQL Server. El valor predeterminado es 80% de la memoria física.
 
@@ -310,7 +446,7 @@ El **memory.memorylimitmb** opción controla la cantidad memoria física (en MB)
    sudo systemctl restart mssql-server
    ```
 
-## <a id="tcpport"></a>Cambiar el puerto TCP
+## <a id="tcpport"></a> Cambiar el puerto TCP
 
 El **network.tcpport** cambios en la configuración del puerto TCP donde SQL Server realiza escuchas para las conexiones. De forma predeterminada, este puerto se establece en 1433. Para cambiar el puerto, ejecute los siguientes comandos:
 
@@ -332,7 +468,7 @@ El **network.tcpport** cambios en la configuración del puerto TCP donde SQL Ser
    sqlcmd -S localhost,<new_tcp_port> -U test -P test
    ```
 
-## <a id="tls"></a>Especificar la configuración de TLS
+## <a id="tls"></a> Especificar la configuración de TLS
 
 Las siguientes opciones configura TLS para una instancia de SQL Server que se ejecutan en Linux.
 
@@ -341,13 +477,13 @@ Las siguientes opciones configura TLS para una instancia de SQL Server que se ej
 |**network.forceencryption** |Si es 1, a continuación, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] obliga a todas las conexiones que se cifren. De forma predeterminada, esta opción es 0. |
 |**network.tlscert** |Archivo de la ruta de acceso absoluta para el certificado que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza para TLS. Ejemplo: `/etc/ssl/certs/mssql.pem` el archivo de certificado debe ser accesible para la cuenta de mssql. Microsoft recomienda restringir el acceso al archivo mediante `chown mssql:mssql <file>; chmod 400 <file>`. |
 |**network.tlskey** |Archivo de la ruta de acceso absoluta a la clave privada que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza para TLS. Ejemplo: `/etc/ssl/private/mssql.key` el archivo de certificado debe ser accesible para la cuenta de mssql. Microsoft recomienda restringir el acceso al archivo mediante `chown mssql:mssql <file>; chmod 400 <file>`. |
-|**network.tlsprotocols** |Una lista separada por comas de las TLS protocolos se admiten en SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]siempre intenta negociar el protocolo permitido más fuerte. Si un cliente no es compatible con cualquier protocolo permitido, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rechazará el intento de conexión.  Para la compatibilidad, se permiten todos los protocolos admitidos de forma predeterminada (1.2, 1.1, 1.0).  Si los clientes admiten TLS 1.2, Microsoft recomienda que permite solo TLS 1.2. |
+|**network.tlsprotocols** |Una lista separada por comas de las TLS protocolos se admiten en SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] siempre intenta negociar el protocolo permitido más fuerte. Si un cliente no es compatible con cualquier protocolo permitido, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rechazará el intento de conexión.  Para la compatibilidad, se permiten todos los protocolos admitidos de forma predeterminada (1.2, 1.1, 1.0).  Si los clientes admiten TLS 1.2, Microsoft recomienda que permite solo TLS 1.2. |
 |**network.tlsciphers** |Especifica los cifrados permitidos por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para TLS. Esta cadena debe tener el formato por [formato de lista de cifrado de OpenSSL](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). En general, no es necesario cambiar esta opción. <br /> De forma predeterminada, se permiten los cifrados siguientes: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | **network.kerberoskeytabfile** |Ruta de acceso al archivo de tabla de claves de Kerberos |
 
 Para obtener un ejemplo del uso de la configuración de TLS, consulte [cifrar conexiones a SQL Server en Linux](sql-server-linux-encrypted-connections.md).
 
-## <a id="traceflags"></a>Habilitar/deshabilitar traceflags
+## <a id="traceflags"></a> Habilitar/deshabilitar traceflags
 
 Esto **marca de seguimiento** opción habilita o deshabilita el seguimiento para el inicio del servicio SQL Server. Para habilitar o deshabilitar una marca de seguimiento use los siguientes comandos:
 

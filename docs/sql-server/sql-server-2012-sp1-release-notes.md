@@ -12,19 +12,20 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 72171357-28de-4edd-bdfd-194f97225a6f
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: ac1dcd75aa97cb12142d142c82d5c0c6d3f59791
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="sql-server-2012-sp1-release-notes"></a>SQL Server 2012 SP1 Release Notes
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Este documento de notas de la versión describe problemas conocidos que es conveniente que conozca antes de instalar [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 1 o solucionar sus problemas. Este documento de notas de la versión solo está disponible en línea, no en el disco de instalación, y se actualiza periódicamente.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+Este documento de notas de la versión describe problemas conocidos que es conveniente que conozca antes de instalar o antes de solucionar problemas de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 1. Este documento de notas de la versión solo está disponible en línea, no en el disco de instalación, y se actualiza periódicamente.  
   
 ## <a name="bkmk_top"></a>Contenido  
 [1.0 Antes de la instalación](#bmk_Install)  
@@ -56,7 +57,7 @@ Use la tabla siguiente para determinar qué archivo va a descargar e instalar. C
   
 |Si la versión que tiene instalada actualmente es...|Y desea...|Descargue e instale...|  
 |-------------------------------------------|----------------------|---------------------------|  
-|**Instalaciones de 32 bits:**|||  
+|**Instalaciones de&32; bits:**|||  
 |Una versión de 32 bits de cualquier edición de SQL Server 2012|Actualizar a la versión de 32 bits de SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Una versión de 32 bits de SQL Server 2012 RTM Express|Actualizar a la versión de 32 bits de SQL Server 2012 Express SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Una versión de 32 bits únicamente las herramientas de cliente y de administración para SQL Server 2012 (incluido SQL Server 2012 Management Studio)|Actualizar las herramientas de cliente y de administración a la versión de 32 bits de SQL Server 2012 SP1|SQLManagementStudio_x86_ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkID=267905)|  
@@ -67,7 +68,7 @@ Use la tabla siguiente para determinar qué archivo va a descargar e instalar. C
 |No instalar la versión de 32 bits de SQL Server 2012 Management Studio|Instalar la versión de 32 bits de SQL Server 2012 Management Studio junto con el SP1|SQLManagementStudio_x86_ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkId=267905)|  
 |Sin versión de 32 bits de SQL Server 2012 RTM Express|Instalar versión de 32 bits de SQL Server 2012 Express incluido el SP1|SQLEXPR32_x86_ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkId=267905)|  
 |Instalación de una versión de 32 bits de **SQL Server 2008** o **SQL Server 2008 R2**|**Actualización en contexto** a la versión de 32 bits de SQL Server 2012 incluido el SP1|SQLServer2012SP1-FullSlipstream-x86-ENU.exe **y** SQLServer2012SP1-FullSlipstream-x86-ENU.box desde [aquí](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
-|**Instalaciones de 64 bits:**|||  
+|**Instalaciones de&64; bits:**|||  
 |Una versión de 64 bits de cualquier edición de SQL Server 2012|Actualizar a la versión de 64 bits de SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x64-ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Una versión de 64 bits de SQL Server 2012 RTM Express|Actualizar a la versión de 64 bits de SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x64-ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Una versión de 64 bits únicamente las herramientas de cliente y de administración para SQL Server 2012 (incluido SQL Server 2012 Management Studio)|Actualizar las herramientas de cliente y de administración a la versión de 64 bits de SQL Server 2012 SP1|SQLManagementStudio_x64_ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkID=267905)|  
@@ -125,7 +126,7 @@ Los detalles del error interno contendrán un mensaje similar al siguiente:
   
 -   "El valor 'SharePoint Principal' no es compatible con la propiedad de la cadena de conexión 'User Identity'."  
   
-**Solución alternativa:** instale el paquete del instalador de PowerPivot para SharePoint 2013 (**spPowerPivot.msi**) en SharePoint Server 2013. El paquete del instalador está disponible como parte de [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Feature Pack se puede descargar desde el centro de descargas de [!INCLUDE[msCoName](../includes/msconame-md.md)] en [SQL Server 2012 SP1 Feature Pack](http://go.microsoft.com/fwlink/p/?LinkID=268266)  
+**Solución alternativa:** instale el paquete del instalador de PowerPivot para SharePoint 2013 (**spPowerPivot.msi**) en SharePoint Server 2013. El paquete del instalador está disponible como parte de [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack. Feature Pack se puede descargar desde el centro de descargas de [!INCLUDE[msCoName](../includes/msconame-md.md)] en [SQL Server 2012 SP1 Feature Pack](http://go.microsoft.com/fwlink/p/?LinkID=268266)(http://go.microsoft.com/fwlink/p/?LinkID=268266).  
   
 ### <a name="33-power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>3.3 Las hojas de Power View en un libro PowerPivot se borran tras una actualización de datos programada  
 **Problema**: en el complemento PowerPivot para SharePoint, con **Actualización de datos programada** en un libro con Power View se eliminarán todas las hojas de Power View.  
@@ -182,7 +183,7 @@ Anteriormente, DACFx no conservaba el estado (WITH CHECK/NOCHECK) de las restric
   
 **Actualizaciones de SqlPackage.exe (herramienta de línea de comandos DACFx)**  
   
--   Extraer DACPAC con datos – Crea un archivo de captura de pantalla de base de datos (.dacpac) a partir de una Base de datos SQL de Windows Azure o de SQL Server que contiene datos de tablas de usuario además del esquema de la base de datos. Estos paquetes se pueden publicar en una Base de datos SQL de Windows Azure o de SQL Server nueva o existente con la acción Publicar de SqlPackage.exe. Los datos contenidos en el paquete reemplazan a los datos existentes en la base de datos de destino.  
+-   Extraer DACPAC con datos – Crea un archivo de captura de pantalla de base de datos (.dacpac) a partir de una Base de datos SQL de Windows Azure o de SQL Server que contiene datos de tablas de usuario además del esquema de la base de datos. Estos paquetes se pueden publicar en una SQL Database de Microsoft Azure o de SQL Server nueva o existente con la acción Publicar de SqlPackage.exe. Los datos contenidos en el paquete reemplazan a los datos existentes en la base de datos de destino.  
   
 -   Exportar BACPAC - Crea un archivo de copia de seguridad lógica (.bacpac) a partir de una Base de datos SQL de Windows Azure o SQL Server que contiene el esquema de base de datos y los datos de usuario que se pueden usar para migrar una base de datos de una Base de datos SQL de Windows Azure a un SQL Server local. Las bases de datos compatibles con Azure se pueden exportar y a continuación importar entre versiones compatibles de SQL Server.  
   
@@ -203,7 +204,7 @@ Para obtener una lista completa de errores y de problemas conocidos corregidos e
   
 [Contenido](#bkmk_top)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Cómo determinar la versión y la edición de SQL Server](http://support.microsoft.com/kb/321185)  
 [Características compatibles con las ediciones de SQL Server 2014](http://msdn.microsoft.com/en-us/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
   

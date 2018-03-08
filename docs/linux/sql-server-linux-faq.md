@@ -4,7 +4,7 @@ description: "Este artículo proporciona respuestas a preguntas frecuentes acerc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/21/2017
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: b5dd38c166f869cfff730d091cee091582507114
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 3fad3fb2892e5a91e42eefb5f00932c39d00064f
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server en Linux preguntas más frecuentes (P+F)
 
@@ -30,7 +30,11 @@ Las secciones siguientes proporcionan preguntas y respuestas más comunes para S
 
 1. **¿En qué plataformas Linux son compatibles?**
 
-   SQL Server se admite actualmente en Red Hat Enterprise Server, SUSE Linux Enterprise Server y Ubuntu. Para ver la información más reciente acerca de las versiones compatibles, consulte [las plataformas admitidas](sql-server-linux-setup.md#supportedplatforms).
+   SQL Server se admite actualmente en Red Hat Enterprise Server, SUSE Linux Enterprise Server y Ubuntu. También se ejecuta en un contenedor con Docker. Para ver la información más reciente acerca de las versiones compatibles, consulte [las plataformas admitidas](sql-server-linux-setup.md#supportedplatforms).
+
+1. **¿SQL Server en Linux funcione en otras plataformas**?
+
+   Posiblemente, puede instalar y ejecutar SQL Server en otras distribuciones de Linux. Por ejemplo, CentOS está estrechamente relacionado con Red Hat Enterprise Server, por lo que es posible que pueda instalar los paquetes RPM SQL Server. Esto podría darse también otras distribuciones estrechamente relacionados. El principal problema es probar y soporte técnico. SQL Server sólo se ha probado y solo se admite en Red Hat Enterprise Linux, SUSE Linux Enterprise Server y Ubuntu.
 
 1. **¿Las características de SQL Server admitidas en Linux?**
 
@@ -130,6 +134,4 @@ Las secciones siguientes proporcionan preguntas y respuestas más comunes para S
 
    No se admite cambiar la propiedad de directorio de SQL Server y los archivos de la instalación predeterminada. La cuenta de mssql y el grupo se utiliza específicamente para SQL Server y no tiene acceso de inicio de sesión interactivo.
 
-## <a name="next-steps"></a>Pasos siguientes
-
-Para obtener más información acerca de cómo ejecutar SQL Server en Linux, consulte la [información general de SQL Server en Linux](sql-server-linux-overview.md).
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

@@ -11,24 +11,26 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql11.asvs.ssmsimbi.RestoreFromPP.f1
+f1_keywords:
+- sql11.asvs.ssmsimbi.RestoreFromPP.f1
 ms.assetid: 232ac8ed-77fe-47d8-acd3-59bc2fdfdf48
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7beb148b2090fcdcb7a150d3b5eb789beaf7bb08
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ab75dfb620c3d0fc41799f2f59a88b6e741440ea
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="restore-from-power-pivot"></a>Restaurar de Power Pivot
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Puede utilizar la restauración a partir de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] característica de SQL Server Management Studio para crear una nueva base de datos de modelo Tabular en una instancia de Analysis Services (ejecutándose en modo Tabular) o restaurar una base de datos existente desde un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] libro (.xlsx).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Puede usar la característica Restaurar de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en SQL Server Management Studio para crear una base de datos de modelo tabular en una instancia de Analysis Services (que se ejecute en modo tabular) o para realizar una restauración en una base de datos existente desde un libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (.xlsx).  
   
 > [!NOTE]  
->  La plantilla de proyecto Importar de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en SQL Server Data Tools proporciona una funcionalidad similar. Para más información, vea [Importación desde PowerPivot &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md).  
+>  La plantilla de proyecto Importar de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en SQL Server Data Tools proporciona una funcionalidad similar. Para obtener más información, consulte [importación desde PowerPivot](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md).  
   
  Cuando use Restaurar de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], tenga en cuenta lo siguiente:  
   
@@ -36,7 +38,7 @@ ms.lasthandoff: 01/08/2018
   
 -   La cuenta de servicio de la instancia de Analysis Services debe tener permisos de lectura en el archivo de libro desde el que va a restaurar.  
   
--   De forma predeterminada, cuando se restaura una base de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], la propiedad Información de suplantación de origen de datos de la base de datos de modelo tabular se establece en Valor predeterminado, que especifica la cuenta de servicio de la instancia de Analysis Services. Se recomienda cambiar las credenciales de suplantación a una cuenta de usuario de Windows en Propiedades de la base de datos. Para más información, vea [Suplantación &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md).  
+-   De forma predeterminada, cuando se restaura una base de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], la propiedad Información de suplantación de origen de datos de la base de datos de modelo tabular se establece en Valor predeterminado, que especifica la cuenta de servicio de la instancia de Analysis Services. Se recomienda cambiar las credenciales de suplantación a una cuenta de usuario de Windows en Propiedades de la base de datos. Para obtener más información, consulte [suplantación](../../analysis-services/tabular-models/impersonation-ssas-tabular.md).  
   
 -   Los datos del modelo de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se copiarán en una base de datos de modelo tabular nueva o existente en la instancia de Analysis Services. Si el libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] contiene tablas vinculadas, se volverán a crear como una tabla sin un origen de datos, de manera similar a una tabla creada mediante Pegar en nueva tabla.  
   
@@ -53,7 +55,7 @@ ms.lasthandoff: 01/08/2018
 5.  En **Opciones**, deje activada **Incluir información de seguridad** . Cuando la restauración se realiza desde un libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , este valor no se aplica.  
   
 ## <a name="see-also"></a>Vea también  
- [Bases de datos de modelo tabular &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)   
- [Importación desde PowerPivot &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)  
+ [Bases de datos de modelo tabular](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)   
+ [Importación desde Power Pivot](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)  
   
   

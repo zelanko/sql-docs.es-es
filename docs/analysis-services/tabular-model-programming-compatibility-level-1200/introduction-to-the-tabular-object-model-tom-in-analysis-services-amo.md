@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 57a4a934-ecd0-4365-8147-d36899d86751
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 92b6d35f7ad2a4c32b7f9ba6d7dcb1e2fdc8e407
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7efb5e145bbc4b481f73624a4c0d08d9698dc24c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Introducción al modelo de objetos Tabular (TOM) en Analysis Services AMO
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]El modelo de objetos tabulares (TOM) es una extensión de la biblioteca de cliente de objeto de administración de servicios de análisis (AMO), creada para admitir escenarios de programación para los modelos tabulares que se integró en el nivel de compatibilidad 1200 y versiones posterior. Al igual que con AMO, TOM ofrece un mecanismo de programación para controlar funciones administrativas como la creación de modelos, importar y actualizar los datos y asignación de roles y permisos.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+El modelo de objetos tabulares (TOM) es una extensión de la biblioteca de cliente de objeto de administración de servicios de análisis (AMO), creada para admitir escenarios de programación para los modelos tabulares que se integró en el nivel de compatibilidad 1200 y versiones posterior. Al igual que con AMO, TOM ofrece un mecanismo de programación para controlar funciones administrativas como la creación de modelos, importar y actualizar los datos y asignación de roles y permisos.  
   
 TOM expone metadatos tabulares nativo, como **modelo**, **tablas**, **columnas**, y **relaciones** objetos.  Una vista de alto nivel del árbol de modelo de objetos, que se proporciona a continuación, muestra cómo se relacionan los componentes.  
   
@@ -53,7 +54,7 @@ En cambio, cuando se administran los objetos que forman parte de los metadatos t
 
 ### <a name="tom-and-xmla"></a>TOM y XMLA
 
-En la conexión, TOM usa el protocolo XMLA para comunicarse con el servidor de Analysis Services y para administrar los objetos. Al administrar los objetos no tabulares, TOM usa [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), la extensión de Analysis Services Scripting Language de XMLA. Al administrar los objetos tabulares, TOM usa el protocolo tabular de SSAS, también una extensión de XMLA. Vea [documentación del protocolo MS-SSAS-T SQL Server Analysis Services Tabular](https://msdn.microsoft.com/library/mt719260.aspx) para obtener más información.
+En la conexión, TOM usa el protocolo XMLA para comunicarse con el servidor de Analysis Services y para administrar los objetos. Al administrar los objetos no tabulares, TOM usa [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), la extensión de Analysis Services Scripting Language de XMLA. Al administrar los objetos tabulares, TOM usa el protocolo de tabular de SSAS de MS, también una extensión de XMLA. Vea [documentación del protocolo MS-SSAS-T SQL Server Analysis Services Tabular](https://msdn.microsoft.com/library/mt719260.aspx) para obtener más información.
 
 ### <a name="tom-and-json"></a>TOM y JSON
 

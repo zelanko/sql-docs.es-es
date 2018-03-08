@@ -8,7 +8,8 @@ ms.service:
 ms.component: sqlcmd
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,22 +29,23 @@ helpviewer_keywords:
 - RESET command
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-caps.latest.revision: "155"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 78bad0a1dfd518bb29c8bbdc5f04d0c173756e9f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 66a5e1f8b450fcc6d7cb13ba8e3d6bff36c46f4a
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd (utilidad)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > Para SQL Server 2014 e inferior, consulte [utilidad sqlcmd](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx).
 
+ > Para usar sqlcmd en Linux, consulte [instalar sqlcmd y bcp en Linux](../linux/sql-server-linux-setup-tools.md).
 
   El **sqlcmd** utilidad le permite escribir instrucciones Transact-SQL, procedimientos del sistema y archivos de script en el símbolo del sistema, en **Editor de consultas** en modo SQLCMD, en un archivo de script de Windows o en un paso de trabajo del sistema operativo (Cmd.exe) de un trabajo del Agente SQL Server. Esta utilidad usa ODBC para ejecutar lotes de Transact-SQL. 
   
@@ -55,14 +57,14 @@ Puede probar la utilidad sqlcmd desde Shell de nube de Azure como previamente se
   Para ejecutar instrucciones sqlcmd en SSMS, seleccione Modo SQLCMD en la lista desplegable del menú de consulta de la navegación superior.  
   
 > [!IMPORTANT] 
-> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)](SSMS) usa Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient para la ejecución en normal y el modo SQLCMD en **Editor de consultas**. Cuando **sqlcmd** se ejecuta desde la línea de comandos, **sqlcmd** usa el controlador ODBC. Dado que se pueden aplicar diferentes opciones predeterminadas, podría obtener un comportamiento diferente al ejecutar la misma consulta en el modo SQLCMD de [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] y en la utilidad **sqlcmd** .  
+> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) usa Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient para la ejecución en normal y el modo SQLCMD en **Editor de consultas**. Cuando **sqlcmd** se ejecuta desde la línea de comandos, **sqlcmd** usa el controlador ODBC. Dado que se pueden aplicar diferentes opciones predeterminadas, podría obtener un comportamiento diferente al ejecutar la misma consulta en el modo SQLCMD de [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] y en la utilidad **sqlcmd** .  
 >   
   
  Actualmente, **sqlcmd** no requiere un espacio entre la opción de línea de comandos y el valor. Sin embargo, en versiones futuras, se puede requerir un espacio entre la opción de línea de comandos y el valor.  
  
  Otros temas:
 - [Iniciar la utilidad sqlcmd](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
--  [Usar la utilidad sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+- [Usar la utilidad sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -400,15 +402,15 @@ Establece el valor de cifrado de columnas en `Enabled`. Para obtener más inform
  **-Y** *anchura_de_visualización_de_tipo_de_longitud_fija*  
  Establece la variable de scripting de **sqlcmd** `SQLCMDMAXFIXEDTYPEWIDTH`. El valor predeterminado es 0 (ilimitado). Limita el número de caracteres que se devuelve para los siguientes tipos de datos:  
   
--   **char(** *n* **)**, where 1<=n<=8000  
+-   **Char (**  *n*  **)**, donde 1 < = n < = 8000  
   
--   **nchar(n** *n* **)**, where 1<=n<=4000  
+-   **nchar (n**  *n*  **)**, donde 1 < = n < = 4000  
   
--   **varchar(n** *n* **)**, where 1<=n<=8000  
+-   **varchar (n**  *n*  **)**, donde 1 < = n < = 8000  
   
--   **nvarchar(n** *n* **)**, where 1<=n<=4000  
+-   **nvarchar (n**  *n*  **)**, donde 1 < = n < = 4000  
   
--   **varbinary(n** *n* **)**, where 1<=n\<=4000  
+-   **varbinary (n**  *n*  **)**, donde 1 < = n\<= 4000  
   
 -   **variant**  
   
@@ -452,7 +454,7 @@ Establece el valor de cifrado de columnas en `Enabled`. Para obtener más inform
   
  Donde:  
   
- `x`Indica el número de transacciones que se procesan por SQL Server.  
+ `x` Indica el número de transacciones que se procesan por SQL Server.  
   
  `t1` indica el tiempo total de todas las transacciones.  
   
@@ -688,7 +690,7 @@ Establece el valor de cifrado de columnas en `Enabled`. Para obtener más inform
  GO marca tanto el final de un lote y la ejecución de cualquier en caché las instrucciones de Transact-SQL. El lote se ejecuta varias veces como lotes independientes; no se puede declarar una variable de más de una vez en un único lote.
   
  **Otros comandos**  
-  **:r \<** *filename***>**  
+  **: r \<**  *nombre de archivo* **>**  
  Analiza las instrucciones de Transact-SQL adicionales y **sqlcmd** comandos desde el archivo especificado por  **\< ***filename***>**en la instrucción memoria caché.  
   
  Si el archivo contiene instrucciones de Transact-SQL que no van seguidas **vaya**, debe escribir **vaya** en la línea que sigue a **: r**.  

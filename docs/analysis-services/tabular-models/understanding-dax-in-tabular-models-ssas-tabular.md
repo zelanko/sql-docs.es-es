@@ -1,5 +1,5 @@
 ---
-title: DAX en modelos tabulares (SSAS Tabular) | Documentos de Microsoft
+title: DAX en modelos tabulares | Documentos de Microsoft
 ms.custom: 
 ms.date: 10/21/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a95f7acdcf05c003521a4471f07036b5f458b65e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8bf7c6895b62fb992094bb3850a90ee904b7a956
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="dax-in-tabular-models-ssas-tabular"></a>DAX en modelos tabulares (SSAS Tabular)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Expresiones de análisis de datos (DAX) es un lenguaje de fórmulas que se utiliza para crear cálculos personalizados en Analysis Services, Power BI Desktop y Power Pivot en Excel. Las fórmulas DAX incluyen funciones, operadores y valores para realizar cálculos avanzados sobre datos de tablas y columnas.  
+# <a name="dax-in-tabular-models"></a>DAX en los modelos tabulares 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Expresiones de análisis de datos (DAX) es un lenguaje de fórmulas que se utiliza para crear cálculos personalizados en Analysis Services, Power BI Desktop y Power Pivot en Excel. Las fórmulas DAX incluyen funciones, operadores y valores para realizar cálculos avanzados sobre datos de tablas y columnas.  
   
  Mientras DAX se usa en Analysis Services, Power BI Desktop y Power Pivot en Excel, en este tema se aplica más a los proyectos de modelo tabular de Analysis Services creados en SQL Server Data Tools (SSDT).  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 01/08/2018
 |Decimal Number|Número real de 64 bits (ocho bytes) <sup>1, 2</sup>|Los números reales son aquellos que pueden tener posiciones decimales. Abarcan un amplio intervalo de valores:<br /><br /> Valores negativos de -1,79E +308 a -2,23E -308<br /><br /> Cero<br /><br /> Valores positivos desde 2,23E -308 hasta 1,79E + 308<br /><br /> Sin embargo, el número de dígitos significativos se limita a 17 dígitos decimales.|  
 |Booleano|Boolean|Valor True o False.|  
 |Texto|String|Cadena de datos de carácter Unicode. Pueden ser cadenas, números o fechas representados en un formato de texto.|  
-|date|Fecha y hora|Fechas y horas en una representación de fecha y hora aceptada.<br /><br /> Las fechas válidas son todas las fechas posteriores al 1 de marzo de 1900.|  
+|Date|Fecha y hora|Fechas y horas en una representación de fecha y hora aceptada.<br /><br /> Las fechas válidas son todas las fechas posteriores al 1 de marzo de 1900.|  
 |Moneda|Moneda|El tipo de datos de moneda permite los valores comprendidos entre -922.337.203.685.477,5808 y 922.337.203.685.477,5807 con cuatro dígitos decimales de precisión fija.|  
 |N/D|En blanco|Un tipo en blanco es un tipo de datos de DAX que representa y reemplaza los valores NULL de SQL. Un valor en blanco se puede crear con la función BLANK y se puede comprobar si es tal con la función lógica ISBLANK.|  
   
@@ -366,7 +367,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  El procesamiento y el recálculo no tienen ningún efecto en las fórmulas de filtro de fila, a menos que el resultado de un recálculo devuelva un valor diferente, con lo que hace que los miembros del rol puedan consultar o no la fila.  
   
- Para más información, vea [Procesar datos &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
+ Para obtener más información, consulte [procesar datos](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
 ##  <a name="bkmk_troubleshoot"></a> Solucionar errores en fórmulas  
  Si recibe un error al definir una fórmula, esta podría contener un *error sintáctico*, un *error semántico*o un *error de cálculo*.  
@@ -398,7 +399,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [Referencia de expresiones de análisis de datos (DAX)](http://msdn.microsoft.com/en-us/70a82136-0926-4a91-bcb3-e18e82593b0d)   
  [Medidas](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [Columnas calculadas](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
- [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
+ [roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [KPI](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [Orígenes de datos compatibles](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   

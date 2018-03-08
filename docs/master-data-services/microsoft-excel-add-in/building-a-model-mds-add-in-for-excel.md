@@ -8,20 +8,21 @@ ms.service:
 ms.component: microsoft-excel-add-in
 ms.reviewer: 
 ms.suite: sql
-ms.technology: master-data-services
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
-caps.latest.revision: "5"
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 60af1e39eba582211afe06e4f8c7e5414cd004bb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a205aa008476eab04faa3570d8d34f68662b460c
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>Generar un modelo (complemento MDS para Excel)
   En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], los administradores pueden realizar un subconjunto de las funciones administrativas disponibles en la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .  
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/20/2017
   
  Como administrador, debe crear el modelo con el servicio Web o la aplicación Web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . Puede usar [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] para crear entidades y atributos dentro del modelo. Para obtener más información sobre los objetos de modelo, consulte [Modelos &#40;Master Data Services&#41;](../../master-data-services/models-master-data-services.md).  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  La mayoría de las tareas administrativas se deben realizar en la aplicación Web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] o utilizando el servicio Web. En la siguiente tabla se muestran las herramientas que los administradores pueden usar para completar las tareas en MDS.  
   
 |Descripción de la tarea|Herramienta|Tema|  

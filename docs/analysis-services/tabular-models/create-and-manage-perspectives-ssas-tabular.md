@@ -1,7 +1,7 @@
 ---
-title: Crear y administrar perspectivas (SSAS Tabular) | Documentos de Microsoft
+title: Crear y administrar perspectivas | Documentos de Microsoft
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -11,33 +11,23 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.perspectivedb.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.perspectivedb.f1
 ms.assetid: 2a411c2b-2820-4086-ad7f-ce6a941fefc7
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7c414c0edae99923b8c8e3d370a1d998fe39ccef
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5149052156082507c6c970512ab7db0194209ab5
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-and-manage-perspectives-ssas-tabular"></a>Crear y administrar perspectivas (SSAS tabular)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Las perspectivas definen subconjuntos visibles de un modelo que ofrecen puntos de vista centrados, específicos del negocio o específicos de la aplicación del modelo. Las tareas de este tema explican cómo crear y administrar perspectivas mediante el cuadro de diálogo **Perspectivas** del diseñador de modelos.  
-  
- En este tema se incluyen las tareas siguientes:  
-  
--   [Para agregar una perspectiva](#bkmk_add)  
-  
--   [Para editar una perspectiva](#bkmk_edit)  
-  
--   [Para cambiar el nombre de una perspectiva](#bkmk_rename)  
-  
--   [Para eliminar una perspectiva](#bkmk_delete)  
-  
--   [Para copiar una perspectiva](#bkmk_copy)  
+# <a name="create-and-manage-perspectives"></a>Crear y administrar perspectivas 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Las perspectivas definen subconjuntos visibles de un modelo que ofrecen puntos de vista centrados, específicos del negocio o específicos de la aplicación del modelo. Las tareas de este tema explican cómo crear y administrar perspectivas mediante el cuadro de diálogo **Perspectivas** del diseñador de modelos.  
   
 ## <a name="tasks"></a>Tareas  
  Para crear las perspectivas, use el cuadro de diálogo **Perspectivas** , donde podrá agregar, editar, eliminar, copiar y ver las perspectivas. Para ver el cuadro de diálogo **Perspectivas** , en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga clic en el menú **Modelo** y en **Perspectivas**.  
@@ -64,8 +54,8 @@ ms.lasthandoff: 01/08/2018
   
 -   Al mantener el mouse sobre el encabezado de columna de una perspectiva, aparece el botón **Copiar** . Para crear una copia de esa perspectiva, haga clic en el botón **Copiar** . Se agregará una copia de la perspectiva seleccionada como una perspectiva nueva a la derecha de las perspectivas existentes. La nueva perspectiva hereda el nombre de la perspectiva copiada y se anexa una anotación *-Copia* al final del nombre. Por ejemplo, si se crea una copia de la perspectiva *Ventas* , la nueva perspectiva se llama *Ventas – Copiar*.  
   
-## <a name="see-also"></a>Ver también  
- [Perspectivas &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
- [Jerarquías &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
+## <a name="see-also"></a>Vea también  
+ [Perspectivas](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
+ [Jerarquías](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
   
   

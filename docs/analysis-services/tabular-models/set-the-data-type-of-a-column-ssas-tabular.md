@@ -1,5 +1,5 @@
 ---
-title: Establece el tipo de datos de una columna (SSAS Tabular) | Documentos de Microsoft
+title: Establece el tipo de datos de una columna | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 441bb1316c22d0a701ded998def0b1f94c84e4de
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d40df86ee45154243d854dea65162b49a5e6352e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Establecer el tipo de datos de una columna (SSAS tabular)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Cuando se importan datos o se pegan datos en un modelo, el Diseñador de modelos detectará automáticamente y aplicar tipos de datos. Después de haber agregado los datos al modelo, puede modificar manualmente el tipo de datos de una columna para cambiar el modo en que se almacenan los datos. Si solo desea cambiar el formato de visualización de los datos sin cambiar la forma de almacenarlos, puede hacer eso en su lugar.  
+# <a name="set-the-data-type-of-a-column"></a>Establecer el tipo de datos de una columna 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Cuando se importan o se pegan datos en un modelo, el diseñador de modelos detecta automáticamente los tipos de datos y los aplica. Después de haber agregado los datos al modelo, puede modificar manualmente el tipo de datos de una columna para cambiar el modo en que se almacenan los datos. Si solo desea cambiar el formato de visualización de los datos sin cambiar la forma de almacenarlos, puede hacer eso en su lugar.  
   
 ### <a name="to-change-the-data-type-or-display-format-for-a-column"></a>Para cambiar el tipo de datos o el formato de presentación de una columna  
   
@@ -79,9 +80,9 @@ ms.lasthandoff: 01/08/2018
   
  Si se admite el tipo de datos, pero el diseñador de modelos detecta valores que no se admiten en el nuevo tipo de datos, obtendrá otro error y deberá corregir los valores de datos antes de continuar.  
   
- Para obtener información detallada sobre los tipos de datos que se usan en los modelos semánticos de Business Intelligence, cómo se convierten implícitamente y cómo se usan los diferentes tipos de datos en las fórmulas, vea [Tipos de datos compatibles &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
+ Para obtener información detallada sobre los tipos de datos que se utilizan en modelos semánticos de business intelligence, cómo son tipos de datos convierten implícitamente y cómo diferentes se utiliza en las fórmulas, consulte [tipos de datos compatibles](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
   
-## <a name="see-also"></a>Ver también  
- [Tipos de datos compatibles &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
+## <a name="see-also"></a>Vea también  
+ [Tipos de datos compatibles](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
   
   

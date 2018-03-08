@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae5acd43bb7d4bd4956cc5dae36e7dc15787a83f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0077f3a970f872329db9c30e16ae5653a4ccb13f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Crear una conexión de modelo semántico de BI a una base de datos de modelo tabular
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -86,7 +86,7 @@ Utilice la información de este tema para configurar una conexión de modelo sem
 ##  <a name="bkmk_BISM"></a> Conceder permisos de lectura en la base de datos de modelo tabular  
  Dado que la base de datos se ejecuta en un servidor que es externo a la granja, parte de la configuración de las conexiones incluirá conceder permisos de base de datos en el servidor back-end de Analysis Services. Analysis Services utiliza un modelo de permisos basado en roles. Los usuarios que se conectan a bases de datos modelo deben hacerlo con permisos de lectura o superiores, a través de un rol que conceda acceso de lectura a sus miembros.  
   
- Los roles y, a veces, la pertenencia a roles, se definen cuando el modelo se crea en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. No puede utilizar SQL Server Management Studio para crear roles, pero puede usarlo para agregar miembros a un rol que ya está definido. Para más información sobre cómo crear roles, vea [Crear y administrar roles &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
+ Los roles y, a veces, la pertenencia a roles, se definen cuando el modelo se crea en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. No puede utilizar SQL Server Management Studio para crear roles, pero puede usarlo para agregar miembros a un rol que ya está definido. Para obtener más información sobre cómo crear roles, consulte [crear y administrar funciones](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
   
 #### <a name="assign-role-membership"></a>Asignar pertenencia a roles  
   

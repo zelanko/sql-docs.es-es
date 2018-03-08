@@ -13,11 +13,11 @@ ms.workload: data-management
 ms.topic: article
 ms.date: 08/09/2017
 ms.author: genemi
-ms.openlocfilehash: d289af96467634c144c7d0bc5ee362968c646333
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9c85a5e40ca7d3b6e35cdb09fc4becbe5c9c65c3
+ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Módulos de conexión para bases de datos SQL de Microsoft
 
@@ -57,11 +57,11 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | Lenguaje | Descargue el controlador SQL |
 | :------- | :---------------------- |
 | C#       | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[Núcleo de. NET, para Ubuntu Linux](https://www.microsoft.com/net/core#Ubuntu)<br />[Núcleo de. NET, para MacOS](https://www.microsoft.com/net/core#macos)<br />[Núcleo de. NET, para Windows](https://www.microsoft.com/net/core) |
-| C++      | [ODBC 13.1](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
+| C++      | [ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Java     | [JDBC](http://www.microsoft.com/download/details.aspx?id=55539) |
 | Node.js  | [Controlador de Node.js, las instrucciones de instalación](http://docs.microsoft.com/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development) |
 | PHP      | *Sistema operativo:*<br /><br />[Controladores de Windows para PHP](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Ubuntu o MacOS PHP controlador, desde Github](http://github.com/Microsoft/msphpsql/tree/dev#install-unix) |
-| Python   | [pyodbc, las instrucciones de instalación](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[Descargar ODBC 13.1](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
+| Python   | [pyodbc, las instrucciones de instalación](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[Descargar ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Ruby     | [Controlador Ruby, las instrucciones de instalación](https://docs.microsoft.com/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development)<br />[Página de descarga Ruby](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |
 
@@ -90,9 +90,9 @@ En la tabla siguiente se muestra ejemplos de marcos de trabajo de asignación re
 ## <a name="build-an-app-webpages"></a>Generar una aplicación las páginas Web
 
 
-[http://AKA.ms/sqldev](http://aka.ms/sqldev) le lleva a un conjunto de nuestro *compilación una aplicación* las páginas Web. Las páginas Web proporcionan información acerca de diversas combinaciones de idioma, el sistema operativo y el controlador de conexión de SQL de la programación. Entre la información proporcionada por las páginas de generar una aplicación Web se encuentran los siguientes elementos:
+[http://AKA.ms/sqldev](http://aka.ms/sqldev) le lleva a un conjunto de *compilación una aplicación* las páginas Web. Las páginas Web proporcionan información acerca de diversas combinaciones de idioma, el sistema operativo y el controlador de conexión de SQL de la programación. Entre la información proporcionada por las páginas de generar una aplicación Web se encuentran los siguientes elementos:
 
-- Obtener más información acerca de cómo empezar a trabajar desde el principio, para cada combinación de idioma, oper sys + controlador.
+- Obtener más información acerca de cómo empezar a trabajar desde el principio, para cada combinación de idioma, sistema operativo + controlador.
     - Instrucciones para instalar a los controladores más recientes de conexión de SQL.
 - Ejemplos de código para cada uno de los siguientes elementos:
     - Ejemplos de código objeto relacional.

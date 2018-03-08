@@ -1,7 +1,7 @@
 ---
-title: "Crear y administrar jerarquías (SSAS Tabular) | Documentos de Microsoft"
+title: "Crear y administrar jerarquías | Documentos de Microsoft"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,21 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6a8646985a0d9eb8dbba35123c2c3b1d049e62a5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 96af188d39d583c53b2520d03f6fd0962092a90f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-and-manage-hierarchies-ssas-tabular"></a>Crear y administrar jerarquías (SSAS tabular)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Las jerarquías pueden crearse y administrarse en el Diseñador de modelos, en la vista de diagrama. Para ver el diseñador de modelos en la Vista de diagrama, en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga clic en el menú **Modelo** , seleccione **Vista de modelo**y haga clic en **Vista de diagrama**.  
+# <a name="create-and-manage-hierarchies"></a>Crear y administrar jerarquías 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Las jerarquías se pueden crear y administrar en la Vista de diagrama del diseñador de modelos. Para ver el diseñador de modelos en la Vista de diagrama, en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga clic en el menú **Modelo** , seleccione **Vista de modelo**y haga clic en **Vista de diagrama**.  
   
- En este tema se incluyen las tareas siguientes:  
+ Este artículo incluye las siguientes tareas:  
   
 -   [Crear una jerarquía](#bkmk_create)  
   
@@ -100,8 +101,8 @@ ms.lasthandoff: 01/08/2018
 -   O bien, haga clic en el nivel primario de la jerarquía y, a continuación, presione Supr. Esto también quitará todos los niveles secundarios.  
   
 ## <a name="see-also"></a>Vea también  
- [Diseñador de modelos tabulares &#40;SSAS&#41;](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
- [Jerarquías &#40; SSAS Tabular &#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
- [Medidas &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
+ [Diseñador de modelos tabulares ](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
+ [Jerarquías](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
+ [Medidas](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   
   

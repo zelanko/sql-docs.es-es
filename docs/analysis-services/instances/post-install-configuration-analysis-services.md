@@ -17,17 +17,17 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 58d6481958138346ee40b9815b8209cb41bf2bae
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 92eb00cbcfbc07ebb8b55445a246c1df04c06feb
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="post-install-configuration-analysis-services"></a>Configuración posterior a la instalación (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 Después de instalar Analysis Services, se necesita cierta configuración adicional para que el servidor sea totalmente operativo y esté disponible para su uso general. En esta sección se presentan las tareas adicionales que completan la instalación. Según los requisitos de conexión, puede ser necesario configurar también la autenticación (vea [Conectar a Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)).  
   
- Más adelante, será necesario realizar tareas adicionales una vez que tenga bases de datos listas para implementar. Tendrá que configurar las pertenencias a roles de la base de datos para conceder al usuario acceso a los datos, diseñar una estrategia de copia de seguridad y recuperación de la base de datos, y determinar si necesita una carga de trabajo de procesamiento programada para actualizar los datos periódicamente. Encontrará más información sobre la implementación y administración de bases de datos en estos vínculos: [Bases de datos de modelos multidimensionales &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) y [Bases de datos de modelo tabular &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md).  
+ Más adelante, será necesario realizar tareas adicionales una vez que tenga bases de datos listas para implementar. Tendrá que configurar las pertenencias a roles de la base de datos para conceder al usuario acceso a los datos, diseñar una estrategia de copia de seguridad y recuperación de la base de datos, y determinar si necesita una carga de trabajo de procesamiento programada para actualizar los datos periódicamente. Puede encontrar más información sobre la implementación de la base de datos y administración en estos vínculos: [bases de datos de modelo multidimensionales ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) y [bases de datos de modelo tabulares](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md).  
   
 ## <a name="instance-configuration"></a>Configuración de instancia  
  Analysis Services es un servicio replicable, lo que significa que puede instalar varias instancias del servicio en un único servidor. Cada instancia adicional se instala por separado como una instancia con nombre, mediante el programa de instalación de SQL Server, y se configura independientemente para admitir su propósito previsto. Por ejemplo, un servidor de desarrollo puede ejecutar Caja negra o usar valores predeterminados para el almacenamiento de datos que de otra forma cambiaría en los servidores que atienden cargas de trabajo de producción. Otro ejemplo que precisa ajustar la configuración del sistema es la instalación de la instancia de Analysis Services en hardware compartido por otros servicios. Cuando se hospedan en el mismo hardware varias aplicaciones que usan muchos datos, puede que desee configurar las propiedades del servidor que reducen los umbrales de memoria para optimizar los recursos disponibles en todas las aplicaciones.  

@@ -20,21 +20,22 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 528ccfba2c8060cc73edfbaff29b714b3bdb7e30
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: fc308b9b961ab98c5c44e8f6708e40cb9cf61ef0
+ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="binary-large-object-blob-data-sql-server"></a>Datos de objeto binario grande (Blob) (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona soluciones para almacenar archivos y documentos en la base de datos o en dispositivos de almacenamiento remoto.  
   
-##  <a name="section"></a> En esta sección  
-### <a name="compare-options-for-storing-blobs-40sql-server41relational-databasesblobcompare-options-for-storing-blobs-sql-servermd"></a>[Comparar opciones para almacenar blobs &#40;SQL Server&#41;](../../relational-databases/blob/compare-options-for-storing-blobs-sql-server.md)  
+## <a name="compare-options-for-storing-blobs-in-sql-server"></a>Comparar opciones para almacenar blobs en SQL Server
 
-Comparar las ventanas de FILESTREAM, FileTables y almacén remoto de blobs.  
+Comparar las ventanas de FILESTREAM, FileTables y almacén remoto de blobs. Consulte [Comparar opciones para almacenar blobs &#40;SQL Server&#41;](../../relational-databases/blob/compare-options-for-storing-blobs-sql-server.md).
   
+##  <a name="options-for-storing-blobs"></a>Opciones para almacenar blobs  
+
 ### <a name="filestream-40sql-server41relational-databasesblobfilestream-sql-servermd"></a>[FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
 
 FILESTREAM permite a las aplicaciones basadas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]almacenar datos no estructurados, como documentos e imágenes, en el sistema de archivos. Las aplicaciones pueden aprovechar las API de transmisión de datos enriquecidas y el rendimiento del sistema de archivos al mismo tiempo que mantienen la coherencia transaccional entre los datos no estructurados y los datos estructurados correspondientes.  

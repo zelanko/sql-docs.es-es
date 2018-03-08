@@ -32,7 +32,7 @@
 ### [Agregar columnas a una tabla](add-columns-to-a-table-ssas-tabular.md)  
 ### [Eliminar una columna](delete-a-column-ssas-tabular.md)  
 ### [Cambiar las asignaciones de filtros de tabla, columna o fila](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
-### [Especificar Marcar como tabla de fechas con inteligencia de tiempo (SSAS tabular)](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)  
+### [Especificar Marcar como tabla de fechas con inteligencia de tiempo](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)  
 ### [Agregar una tabla](add-a-table-ssas-tabular.md)  
 ### [Eliminar una tabla](delete-a-table-ssas-tabular.md)  
 ### [Crear una tabla calculada](create-a-calculated-table-ssas-tabular.md)  

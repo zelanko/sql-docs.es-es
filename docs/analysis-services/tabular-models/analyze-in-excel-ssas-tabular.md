@@ -1,7 +1,7 @@
 ---
-title: Analizar en Excel (SSAS Tabular) | Documentos de Microsoft
+title: Analizar en Excel | Documentos de Microsoft
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,21 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2f17b4df-eea2-48c7-a1f2-a3fb7748c15f
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 13d0f86ae2413e0d54af32a97fb74100284bacd9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bd537debaa43c89c2d09295f12598a9bfe9927b3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="analyze-in-excel"></a>Analizar en Excel
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]La característica analizar en Excel, en SSDT, proporciona a los autores de modelos tabulares una manera de analizar rápidamente proyectos de modelos durante el desarrollo. Esta característica abre Microsoft Excel, crea una conexión de origen de datos con la base de datos del área de trabajo del modelo y agrega automáticamente una tabla dinámica a la hoja de cálculo. Los objetos de la base de datos del área de trabajo (tablas, columnas y medidas) aparecen como campos en la lista de campos de la tabla dinámica. De esta forma, los objetos y los datos se podrán ver en el contexto del usuario o del rol vigente y de la perspectiva.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+La característica analizar en Excel, en SSDT, proporciona a los autores de modelos tabulares una manera de analizar rápidamente proyectos de modelos durante el desarrollo. Esta característica abre Microsoft Excel, crea una conexión de origen de datos con la base de datos del área de trabajo del modelo y agrega automáticamente una tabla dinámica a la hoja de cálculo. Los objetos de la base de datos del área de trabajo (tablas, columnas y medidas) aparecen como campos en la lista de campos de la tabla dinámica. De esta forma, los objetos y los datos se podrán ver en el contexto del usuario o del rol vigente y de la perspectiva.  
   
- En este tema se supone que ya sabe cómo usar Microsoft Excel, las tablas dinámicas y los gráficos dinámicos. Para obtener más información acerca del uso de Excel, vea la Ayuda de Excel.  
+ En este artículo se da por supuesto que ya está familiarizados con Microsoft Excel, tablas dinámicas y gráficos dinámicos. Para obtener más información acerca del uso de Excel, vea la Ayuda de Excel.  
   
 ##  <a name="bkmk_benefits"></a> Ventajas  
  La característica Analizar en Excel proporciona a los autores de modelos la capacidad de probar la eficacia de un proyecto de modelos mediante el uso de la aplicación de análisis de datos comunes Microsoft Excel. Para usar la característica analizar en Excel, debe tener Microsoft Office 2003 o posterior instalado en el mismo equipo que SSDT.  
@@ -48,13 +49,13 @@ ms.lasthandoff: 01/08/2018
   
 ##  <a name="bkmk_rt"></a> Related tasks  
   
-|**Tema**|**Descripción**|  
+|**Tema**|**Description**|  
 |---------------|---------------------|  
-|[Analizar un modelo tabular en Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|En este tema se describe cómo usar la característica Analizar en Excel del diseñador de modelos para abrir Excel, crear una conexión de origen de datos con la base de datos del área de trabajo del modelo y agregar una tabla dinámica a la hoja de cálculo.|  
+|[Analizar un modelo tabular en Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|En este artículo se describe cómo usar la característica analizar en Excel en el Diseñador de modelos para abrir Excel, crear una conexión de origen de datos a la base de datos del área de trabajo de modelo y agregar una tabla dinámica a la hoja de cálculo.|  
   
 ## <a name="see-also"></a>Vea también  
- [Analizar un modelo Tabular en Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)   
- [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
+ [Analizar un modelo tabular en Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)   
+ [roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [Perspectivas](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
   
   

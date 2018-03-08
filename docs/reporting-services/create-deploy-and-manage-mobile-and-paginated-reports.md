@@ -19,7 +19,7 @@ helpviewer_keywords:
 - Reporting Services
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-caps.latest.revision: "70"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
@@ -94,7 +94,7 @@ Para los usuarios finales de Reporting Services en modo nativo, la entrada princ
 
 Puede aplicar su propia marca personalizada al portal web y puede crear KPI directamente en él. Los KPI pueden hacer que en el explorador aparezcan métricas empresariales clave para que pueda echarles un vistazo sin tener que abrir ningún informe. 
 
-El nuevo portal web es una versión totalmente nueva del Administrador de informes. Ahora se trata de una aplicación HTML5 de una sola página y basada en estándares, para la que los exploradores modernos están optimizados: Edge, Internet Explorer 10 y 11, Chrome, Firefox, Safari y todos los exploradores principales.
+El nuevo portal web es una versión totalmente nueva del Administrador de informes. Ahora se trata de una aplicación HTML5 de una sola página y basada en estándares, para la que los exploradores modernos están optimizados: Microsoft Edge, Internet Explorer 10 y 11, Chrome, Firefox, Safari y todos los exploradores principales.
 
 El contenido del portal web está organizado por tipo: informes móviles y paginados y KPI de Reporting Services, más informes de Power BI Desktop, libros de Excel, conjuntos de datos compartidos y orígenes de datos compartidos que se usan como bloques de creación de los informes. Puede almacenarlos y administrarlos con seguridad aquí, en la jerarquía de carpetas tradicional. Puede etiquetar sus favoritos y administrar el contenido si dispone de ese rol.
 

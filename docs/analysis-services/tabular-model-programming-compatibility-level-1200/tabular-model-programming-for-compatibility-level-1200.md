@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d343f693-c800-42fe-bb4f-2c38a10919f1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 30122388bc5e1c82f26bbaa37452330b97a77077
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c7e1ec3e7ef85cb567d70e96d5c9f3bdd6655f3d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>Programación de modelo tabulares de 1200 de nivel de compatibilidad y versiones posteriores
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]A partir de nivel de compatibilidad 1200, metadatos tabulares se utilizan para describir las construcciones del modelo, reemplazando históricos metadatos multidimensionales como descriptores de objetos de modelo Tabular. Metadatos de tablas, columnas y relaciones son tabla, columna y relación, en lugar de los equivalentes multidimensionales (dimensión y atributo).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+A partir de nivel de compatibilidad 1200, metadatos tabulares se utilizan para describir las construcciones del modelo, reemplazando históricos metadatos multidimensionales como descriptores de objetos de modelo Tabular. Metadatos de tablas, columnas y relaciones son tabla, columna y relación, en lugar de los equivalentes multidimensionales (dimensión y atributo).  
   
 Puede crear nuevos modelos de nivel de compatibilidad 1200 o superior mediante las APIs Microsoft.AnalysisServices.Tabular, la versión más reciente de SQL Server Data Tools (SSDT), o cambiando la **CompatibilityLevel** de un Tabular existente modelo para actualizarlo (que también se hace en SSDT). Si lo hace, enlaza el modelo a las versiones más recientes de servidor, herramientas y las interfaces de programación.   
   
@@ -57,7 +58,7 @@ Actualizar una solución Tabular existente se recomienda, aunque no es necesario
 ## <a name="see-also"></a>Vea también  
  [Guía del desarrollador (Analysis Services)](../../analysis-services/analysis-services-developer-documentation.md)   
  [Programación de modelo tabular para la compatibilidad 1050 1103 a través de niveles](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
- [Referencia técnica de &#40; SSAS &#41; ](../../analysis-services/powershell/technical-reference-ssas.md) [Actualizar Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
+ [Referencia técnica de ](../../analysis-services/powershell/technical-reference-ssas.md) [actualizar Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
  [Niveles de compatibilidad de los modelos tabulares y las bases de datos](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
   
   

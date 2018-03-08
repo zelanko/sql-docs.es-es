@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 9720eb3b4254f2592e3c237bc2af16bc5360d2ad
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 19a7f03471af7aaf9e55fe371e02f9201cf1464f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configurar la instancia de clúster de conmutación por error - iSCSI: SQL Server en Linux
 
@@ -41,7 +41,7 @@ Lo más importante para asegurarse de completar en el destino es que los discos 
 
 Esta sección explica cómo configurar un iniciador iSCSI en los servidores que servirá como nodos para la FCI. Las instrucciones deben funcionar cuando se encuentra en RHEL y Ubuntu.
 
-Para obtener información adicional en el iniciador de iSCSI para las distribuciones admitidas, consulte los siguientes vínculos:
+Para obtener más información sobre el iniciador de iSCSI para las distribuciones admitidas, consulte los siguientes vínculos:
 - [Red Hat](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
 - [SUSE](http://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
 - [Ubuntu](https://help.ubuntu.com/lts/serverguide/iscsi-initiator.html)
@@ -210,7 +210,7 @@ Para obtener información adicional en el iniciador de iSCSI para las distribuci
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
     ``` 
 
-    \<VolumeGroupName > es el nombre del grupo de volúmenes y \<LogicalVolumeName > es el nombre del volumen lógico que se creó. La sintaxis de ejemplo siguiente coincide con el grupo de volúmenes y el volumen lógico creada anteriormente.
+    \<VolumeGroupName > es el nombre del grupo de volúmenes y \<LogicalVolumeName > es el nombre del volumen lógico que se creó. La sintaxis de ejemplo siguiente coincide con el grupo de volúmenes y el volumen lógico del comando anterior.
 
     ```bash
     mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data

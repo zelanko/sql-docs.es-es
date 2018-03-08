@@ -1,5 +1,5 @@
 ---
-title: Roles (SSAS Tabular) | Documentos de Microsoft
+title: Roles | Documentos de Microsoft
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: analysis-services
@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bbbcfdbaafa7e5cbc17defc91b5dc7e391d92ad6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 15030b1b2c5345d3072ff188356aaa532857c90b
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="roles"></a>Roles
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Roles, en los modelos tabulares, definen los permisos de miembro para un modelo. Los miembros del rol pueden realizar en el modelo las acciones definidas por el permiso de rol. Los roles que se han definido con permisos de lectura también pueden proporcionar seguridad adicional en el nivel de fila mediante filtros de fila. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Los roles, en los modelos tabulares, definen los permisos de los miembros para un modelo. Los miembros del rol pueden realizar en el modelo las acciones definidas por el permiso de rol. Los roles que se han definido con permisos de lectura también pueden proporcionar seguridad adicional en el nivel de fila mediante filtros de fila. 
   
  Para SQL Server Analysis Services, roles contienen a miembros de usuario por nombre de usuario o grupo de Windows y permisos (lectura, process, administrador). Para los servicios de análisis de Azure, los usuarios deben estar en su Azure Active Directory y los nombres de usuario y grupos especificados deben ser por una dirección de correo electrónico profesional o UPN. 
   

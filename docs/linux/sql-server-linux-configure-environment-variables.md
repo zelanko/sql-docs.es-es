@@ -4,7 +4,7 @@ description: "Este artículo describe cómo usar las variables de entorno para c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/21/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: c7a04b62625863d9f98521b1a408f572ac79a403
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: e6d21c8f2e7636ee787bbd735b3d69b71ac20671
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configuración de SQL Server con las variables de entorno en Linux
 
@@ -39,7 +39,7 @@ Puede utilizar varias variables de entorno diferente para configurar SQL Server 
 |-----|-----|
 | **ACCEPT_EULA** | Acepte el contrato de licencia de SQL Server cuando se establece en cualquier valor (por ejemplo, ' Y'). |
 | **MSSQL_SA_PASSWORD** | Configurar la contraseña del usuario administrador. |
-| **MSSQL_PID** | Establecer la clave de producto o de edición de SQL Server. Los valores posibles incluyen: </br></br>**Evaluation**</br>**Para desarrolladores**</br>**Express**</br>Web</br>**Standard**</br>**Enterprise**</br>Una clave de producto</br></br>Si se especifica una clave de producto, debe ser en forma de ###-###-###-###-###, donde '#' es una letra o un número.|
+| **MSSQL_PID** | Establecer la clave de producto o de edición de SQL Server. Los valores posibles incluyen: </br></br>**Evaluation**</br>**Para desarrolladores**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Una clave de producto**</br></br>Si se especifica una clave de producto, debe ser en forma de ###-###-###-###-###, donde '#' es una letra o un número.|
 | **MSSQL_LCID** | Establece el identificador de idioma que se usará para SQL Server. Por ejemplo, 1036 es francés. |
 | **MSSQL_COLLATION** | Establece la intercalación predeterminada de SQL Server. Esto invalida la asignación predeterminada de identificador de idioma (LCID) a la intercalación. |
 | **MSSQL_MEMORY_LIMIT_MB** | Establece la cantidad máxima de memoria (en MB) que puede utilizar SQL Server. De forma predeterminada es el 80% de la memoria física total. |
@@ -49,7 +49,11 @@ Puede utilizar varias variables de entorno diferente para configurar SQL Server 
 | **MSSQL_DATA_DIR** | Cambie el directorio donde se crean los nuevos archivos de datos de base de datos de SQL Server (.mdf). |
 | **MSSQL_LOG_DIR** | Cambie el directorio donde se crean los nuevos archivos de registro (.ldf) de la base de datos de SQL Server. |
 | **MSSQL_DUMP_DIR** | Cambie el directorio donde SQL Server se deposite los volcados de memoria y otros archivos de solución de problemas de forma predeterminada. |
-| **MSSQL_ENABLE_HADR** | Habilite los grupos de disponibilidad. |
+| **MSSQL_ENABLE_HADR** | Habilitar grupo de disponibilidad. Por ejemplo, '1' está habilitada, y está deshabilitado '0' |
+| **MSSQL_AGENT_ENABLED** | Habilitar el Agente SQL Server. Por ejemplo, se habilita 'true' y 'false' está deshabilitado. De forma predeterminada, el agente está deshabilitado.  |
+| **MSSQL_MASTER_DATA_FILE** | Establece la ubicación del archivo de datos de base de datos maestra. |
+| **MSSQL_MASTER_LOG_FILE** | Establece la ubicación del archivo de registro de base de datos maestra. |
+
 
 ## <a name="example-initial-setup"></a>Ejemplo: el programa de instalación inicial
 
@@ -86,7 +90,7 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 ```
 
 > [!NOTE]
-> El proceso para ejecutar las ediciones de producción en contenedores es ligeramente diferente. Para obtener más información, consulte [ejecutar producción imágenes del contenedor](sql-server-linux-configure-docker.md#production).
+> El proceso para ejecutar las ediciones de producción en contenedores es ligeramente diferente. Para obtener más información, vea [Run production container image](sql-server-linux-configure-docker.md#production) (Ejecutar imágenes de contenedor de producción).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

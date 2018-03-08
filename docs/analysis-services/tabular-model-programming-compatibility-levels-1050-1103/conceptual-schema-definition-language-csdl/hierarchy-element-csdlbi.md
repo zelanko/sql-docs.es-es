@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 21e11773cfe402d85d661c009bf1b6a2fef7235a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 230e5438e9494a873a0045eebb2870597834b5be
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hierarchy-element-csdlbi"></a>Hierarchy, elemento (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ El elemento Hierarchy es un contenedor lógico para los campos de una tabla que 
 |Nivel|Sí|Uno o más elementos Level que definen las columnas utilizadas en la jerarquía.<br /><br /> Vea [Level, elemento &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/level-element-csdlbi.md).|  
   
 ## <a name="remarks"></a>Comentarios  
- En los modelos tabulares, las jerarquías se crean especificando relaciones de elementos primarios y secundarios entre las columnas de la misma tabla. Para más información, vea [Jerarquías &#40;SSAS tabular&#41;](../../../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
+ En los modelos tabulares, las jerarquías se crean especificando relaciones de elementos primarios y secundarios entre las columnas de la misma tabla. Para obtener más información, consulte [jerarquías](../../../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
   
 ## <a name="example"></a>Ejemplo  
  **Tabular**  

@@ -50,13 +50,14 @@ ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 21e6296382acf84d5ca1aa6a7ec84cd1e171c321
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="publish-data-and-database-objects"></a>Publicar datos y objetos de base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Al crear una publicación, elegirá las tablas y otros objetos de base de datos que quiera publicar. Puede publicar los siguientes objetos de base de datos utilizando la replicación.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Al crear una publicación puede elegir las tablas y otros objetos de base de datos que desee publicar. Puede publicar los siguientes objetos de base de datos utilizando la replicación.  
   
 |Objeto de base de datos|Replicación de instantáneas y replicación transaccional|Replicación de mezcla|  
 |---------------------|--------------------------------------------------------|-----------------------|  

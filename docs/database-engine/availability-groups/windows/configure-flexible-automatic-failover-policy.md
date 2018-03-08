@@ -23,10 +23,10 @@ ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7e82b63c2bbc3d3788272f065d1cdb795decc8b1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configure-flexible-automatic-failover-policy"></a>Configurar la directiva de conmutación por error automática flexible
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.lasthandoff: 01/18/2018
   
          La relación de estos valores enteros con los niveles de condición de error es la siguiente:  
   
-        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] Valor|Nivel|La conmutación por error iniciada es automática cuando se produce…|  
+        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] Valor|Level|La conmutación por error iniciada es automática cuando se produce…|  
         |------------------------------|-----------|-------------------------------------------|  
         |1|Uno|Por inactividad de servidor. El servicio SQL Server se detiene debido a una conmutación por error o reinicio.|  
         |2|Dos|Al dejar de responder el servidor. Se cumple cualquier condición de un valor inferior, el servicio SQL Server se conecta al clúster y se supera el umbral del tiempo de espera de comprobación de estado, o la réplica principal actual está en un estado de error.|  

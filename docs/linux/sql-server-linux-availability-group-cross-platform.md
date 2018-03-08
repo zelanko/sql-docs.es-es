@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: 3f3c33387db96da502a9890093d0a1b68dd61fd0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 58eb51a5a3ad174e9cd785a7da3ecb482b2f9f28
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Configurar SQL Server grupo de disponibilidad AlwaysOn en Windows y Linux (multiplataforma)
 
@@ -47,7 +47,7 @@ Los pasos para crear el AG son igual que los pasos para crear un AG para las car
    >[!TIP]
    >Si va a validar esta solución en Azure, coloque los servidores en el mismo conjunto de disponibilidad para asegurarse de que están separados en el centro de datos. 
 
-   **Habilitar a los grupos de disponibilidad**
+   Habilitar a los grupos de disponibilidad
 
    Para obtener instrucciones, consulte [habilitar y deshabilitar grupos de disponibilidad AlwaysOn (SQL Server)](../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).
 

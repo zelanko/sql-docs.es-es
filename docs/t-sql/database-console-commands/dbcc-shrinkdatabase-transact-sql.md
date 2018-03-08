@@ -1,5 +1,5 @@
 ---
-title: DBCC SHRINKDATABASE (Transact-SQL) | Documentos de Microsoft
+title: DBCC SHRINKDATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,7 +17,8 @@ f1_keywords:
 - DBCC SHRINKDATABASE
 - SHRINKDATABASE_TSQL
 - SHRINKDATABASE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - data shrinking [SQL Server]
 - shrinking files
@@ -28,19 +30,19 @@ helpviewer_keywords:
 - logs [SQL Server], shrinking
 - reducing database size
 ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
-caps.latest.revision: "62"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b8ca8cceddccd4066b7c1762bc75dffee02be842
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: 6df29a0951f565bbe622e2ca3f8752a827488685
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Reduce el tamaño de los archivos de datos y de registro de la base de datos especificada.
   
@@ -65,14 +67,14 @@ DBCC SHRINKDATABASE
  Es el porcentaje de espacio disponible que se desea dejar en el archivo de la base de datos después de reducir la base de datos.  
   
  NOTRUNCATE  
- Compacta los datos de archivos de datos moviendo páginas asignadas del final de un archivo a páginas no asignadas del principio del archivo. *porcentaje de destino* es opcional. Esta opción no es compatible con almacenamiento de datos de SQL Azure. 
+ Compacta los datos de archivos de datos moviendo páginas asignadas del final de un archivo a páginas no asignadas del principio del archivo. *target_percent* es opcional. Esta opción no es compatible con Azure SQL Data Warehouse. 
   
  El espacio disponible del final del archivo no se devuelve al sistema operativo y el tamaño físico del archivo no cambia. Por tanto, si se especifica NOTRUNCATE, parecerá que la base de datos no se reduce.  
   
  NOTRUNCATE solo es aplicable a archivos de datos. No afecta al archivo de registro.  
   
  TRUNCATEONLY  
- Devuelve al sistema operativo todo el espacio disponible del final del archivo, pero no realiza ningún movimiento de página dentro del archivo. El archivo de datos solo se reduce hasta el último tamaño asignado. *porcentaje de destino* se omite si se especifica con TRUNCATEONLY. Esta opción no es compatible con almacenamiento de datos de SQL Azure.
+ Devuelve al sistema operativo todo el espacio disponible del final del archivo, pero no realiza ningún movimiento de página dentro del archivo. El archivo de datos solo se reduce hasta el último tamaño asignado. *target_percent* se omite si se especifica con TRUNCATEONLY. Esta opción no es compatible con Azure SQL Data Warehouse.
   
  TRUNCATEONLY afecta al archivo de registro. Para truncar solo el archivo de datos, use DBCC SHRINKFILE.  
   
@@ -94,8 +96,8 @@ En la tabla siguiente se describen las columnas del conjunto de resultados.
 >[!NOTE]
 > El [!INCLUDE[ssDE](../../includes/ssde-md.md)] no presenta filas para los archivos que no se reducen.  
   
-## <a name="remarks"></a>Comentarios  
-Para reducir todos los archivos de datos y de registro de una base de datos específica, ejecute el comando DBCC SHRINKDATABASE. Para reducir los datos o archivo de registro a la vez para una base de datos, ejecute el [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) comando.
+## <a name="remarks"></a>Notas  
+Para reducir todos los archivos de datos y de registro de una base de datos específica, ejecute el comando DBCC SHRINKDATABASE. Para reducir un archivo de datos o de registro de cada vez para una base de datos específica, ejecute el comando [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md).
   
 Para ver la cantidad actual de espacio disponible (sin asignar) en la base de datos, ejecute [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md).
   
@@ -110,22 +112,22 @@ La base de datos que se comprime no tiene que estar en modo de usuario único; o
 No se puede reducir una base de datos mientras se está realizando una copia de seguridad de la misma. Asimismo, no se puede realizar una copia de seguridad de una base de datos mientras se está realizando una operación de reducción de ésta.
 
 >[!NOTE]
-> Actualmente, el almacenamiento de datos de SQL Azure no admite DBCC SHRINKDATABASE con TDE habilitado.
+> Actualmente, Azure SQL Data Warehouse no admite DBCC SHRINKDATABASE con TDE habilitado.
   
 ## <a name="how-dbcc-shrinkdatabase-works"></a>Cómo funciona DBCC SHRINKDATABASE  
 DBCC SHRINKDATABASE reduce los archivos de datos de uno en uno, pero reduce los archivos de registro como si todos estuvieran en una agrupación de registros contiguos.  Los archivos se reducen siempre desde el final.
   
-Suponga una base de datos denominada **mydb** con un archivo de datos y dos archivos de registro. Los archivos de datos y de registro están 10 MB y el archivo de datos contiene 6 MB de datos.
+Suponga que una base de datos llamada **mydb** tiene un archivo de datos y dos archivos de registro. Los archivos de datos y de registro tienen 10 MB cada uno, y el archivo de datos contiene 6 MB de datos.
   
-Para cada archivo, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] calcula un tamaño de destino. Este es el tamaño al que se debe reducir el archivo. Cuando DBCC SHRINKDATABASE se especifica con *porcentaje deseado*, [!INCLUDE[ssDE](../../includes/ssde-md.md)] calcula el tamaño de destino para que sea el *porcentaje deseado* cantidad de espacio libre en el archivo después de la reducción. Por ejemplo, si especifica un *porcentaje deseado* de 25 para reducir **mydb**, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] calcula el tamaño de destino para el archivo de datos de 8 MB (6 MB de datos más 2 MB de espacio libre). Por lo tanto, la [!INCLUDE[ssDE](../../includes/ssde-md.md)] pasa los datos de los últimos 2 MB del archivo de datos al espacio disponible en los primeros 8 MB del archivo de datos y, a continuación, se reduce el archivo.
+Para cada archivo, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] calcula un tamaño de destino. Este es el tamaño al que se debe reducir el archivo. Cuando DBCC SHRINKDATABASE se especifica con *target_percent*, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] calcula el tamaño final para que quede *target_percent* de espacio disponible en el archivo tras la reducción. Por ejemplo, si establece el valor de *target_percent* en 25 para reducir **mydb**, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] calcula que el tamaño final del archivo de datos será de 8 MB (6 MB de datos más 2 MB de espacio disponible). Por tanto, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] pasa los datos de los últimos 2 MB del archivo de datos al espacio disponible de los primeros 8 MB del archivo de datos y, después, reduce el archivo.
   
-Se supone el archivo de datos de **mydb** contiene 7 MB de datos. Especificar un *porcentaje deseado* de 30, este archivo de datos se puede reducir al porcentaje libre de 30. Sin embargo, al especificar un *porcentaje deseado* de 40 no se reduce el archivo de datos porque el [!INCLUDE[ssDE](../../includes/ssde-md.md)] no se reducirá un archivo a un tamaño menor que ocupan actualmente los datos. También se puede considerar de este problema de otra manera: 40 por ciento espacio disponible + archivo de datos completo de 70 por ciento (7 MB de 10 MB) es más del 100 por ciento. Dado que el porcentaje de espacio libre deseado más el porcentaje actual que ocupa el archivo de datos es más de 100 por ciento (en un 10 por ciento), cualquier *target_size* superiores a 30 no se reducirá el archivo de datos.
+Suponga que el archivo de datos de **mydb** contiene 7 MB de datos. Si se especifica un *target_percent* de 30, este archivo de datos se puede reducir al porcentaje libre de 30. En cambio, si se especifica un *target_percent* de 40, no se reduce el archivo de datos porque el [!INCLUDE[ssDE](../../includes/ssde-md.md)] no reducirá ningún archivo a un tamaño menor que el que los datos ocupan actualmente. O lo que es lo mismo: 40 % de espacio disponible deseado + 70 % de datos en el archivo (7 MB de 10 MB) es mayor que 100 %. Como el porcentaje de espacio disponible deseado más el porcentaje actual ocupado por los datos supera el 100 % (en un 10 %), un *target_size* superior a 30 no reducirá el archivo de datos.
   
-Para los archivos de registro, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] utiliza *porcentaje deseado* para calcular el tamaño final del registro entero; por lo tanto, *porcentaje deseado* es la cantidad de espacio libre en el registro después de la operación de reducción. El tamaño final del registro entero se traduce al tamaño final de cada archivo de registro.
+En los archivos de registro, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa el parámetro *target_percent* para calcular el tamaño final de todo el registro, de forma que *target_percent* es la cantidad de espacio disponible en el registro después de la operación de reducción. El tamaño final del registro entero se traduce al tamaño final de cada archivo de registro.
   
 DBCC SHRINKDATABASE intenta reducir cualquier archivo de registro físico a su tamaño final de forma inmediata. Si ninguna parte del registro lógico se encuentra en los registros virtuales más allá del tamaño final del archivo de registro, el archivo se trunca de manera correcta y DBCC SHRINKDATABASE finaliza sin mensajes. Sin embargo, si parte del registro lógico está en los registros virtuales más allá del tamaño final, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] libera tanto espacio como sea posible y a continuación emite un mensaje informativo. El mensaje indica las acciones que se deben llevar a cabo para mover el registro lógico de los registros virtuales al final del archivo. Después de que se realizan estas acciones, se puede utilizar DBCC SHRINKDATABASE para liberar el espacio restante.
   
-Como un archivo de registro solo puede reducirse al límite de un archivo de registro virtual, puede que no sea posible reducirlo a un tamaño menor que el de un archivo de registro virtual, aunque no esté siendo utilizado. El tamaño del archivo de registro virtual se elige dinámicamente el [!INCLUDE[ssDE](../../includes/ssde-md.md)] cuando se crean o se extienden los archivos de registro.
+Como un archivo de registro solo puede reducirse al límite de un archivo de registro virtual, puede que no sea posible reducirlo a un tamaño menor que el de un archivo de registro virtual, aunque no esté siendo utilizado. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] elige dinámicamente el tamaño del archivo de registro virtual cuando se crean o se extienden archivos de registro.
   
 ## <a name="best-practices"></a>Procedimientos recomendados  
 Tenga en cuenta la siguiente información cuando vaya a reducir una base de datos:
@@ -135,7 +137,7 @@ Tenga en cuenta la siguiente información cuando vaya a reducir una base de dato
 -   A menos que tenga un requisito específico, no establezca la opción de base de datos AUTO_SHRINK en ON.  
   
 ## <a name="troubleshooting"></a>Solucionar problemas  
- Es posible que las operaciones de reducción estar bloqueado por una transacción que se está ejecutando un [nivel de aislamiento basado en las versiones de fila](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). Por ejemplo, si se está ejecutando una operación de eliminación grande con un nivel de aislamiento basado en versiones de fila cuando se ejecuta una operación DBCC SHRINK DATABASE, la operación de reducción esperará a que la operación de eliminación se haya completado antes de reducir los archivos. Cuando esto sucede, las operaciones DBCC SHRINKFILE y DBCC SHRINKDATABASE imprimen un mensaje informativo (5202 en el caso de SHRINKDATABASE y 5203 para SHRINKFILE) en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cada cinco minutos durante la primera hora, y cada hora sucesivamente.   Por ejemplo, si el registro de errores contiene el siguiente mensaje de error:  
+ Es posible bloquear las operaciones de reducción mediante una transacción que se ejecuta con un [nivel de aislamiento basado en versiones de fila](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). Por ejemplo, si se está ejecutando una operación de eliminación grande con un nivel de aislamiento basado en versiones de fila cuando se ejecuta una operación DBCC SHRINK DATABASE, la operación de reducción esperará a que la operación de eliminación se haya completado antes de reducir los archivos. Cuando esto sucede, las operaciones DBCC SHRINKFILE y DBCC SHRINKDATABASE imprimen un mensaje informativo (5202 en el caso de SHRINKDATABASE y 5203 para SHRINKFILE) en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cada cinco minutos durante la primera hora, y cada hora sucesivamente.   Por ejemplo, si el registro de errores contiene el siguiente mensaje de error:  
   
 ```sql
 DBCC SHRINKDATABASE for database ID 9 is waiting for the snapshot   
@@ -143,14 +145,14 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-Esto significa que la operación de reducción está bloqueada por transacciones de instantánea que tienen marcas de tiempo anteriores a 109, que es la última transacción que ha completado la operación de reducción. También indica que la **transaction_sequence_num**, o **first_snapshot_sequence_num** columnas en la [sys.dm_tran_active_snapshot_database_transactions &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) vista de administración dinámica contiene un valor de 15. Si el **transaction_sequence_num**, o **first_snapshot_sequence_num** columnas de la vista contiene un número menor que la última transacción completada mediante una operación de reducción (109), el reducir operación esperará a que las transacciones finalicen.
+Esto significa que la operación de reducción está bloqueada por transacciones de instantánea que tienen marcas de tiempo anteriores a 109, que es la última transacción que ha completado la operación de reducción. También indica que las columnas **transaction_sequence_num** o **first_snapshot_sequence_num** de la vista de administración dinámica [sys.dm_tran_active_snapshot_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) contienen el valor de 15. Si las columnas **transaction_sequence_num** o **first_snapshot_sequence_num** contienen un número inferior al de la última transacción completada mediante una operación de reducción (109), la operación de reducción esperará a que las transacciones finalicen.
   
-Para resolver el problema, puede hacer una de las tareas siguientes:
+Para resolver el problema, puede llevar a cabo una de las tareas siguientes:
 -   Finalizar la transacción que está bloqueando la operación de reducción.  
 -   Finalizar la operación de reducción. Se conservará todo el trabajo completado.  
 -   No hacer nada y permitir que la operación de reducción espere a que finalice la transacción que la está bloqueando.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol fijo de servidor **sysadmin** o al rol fijo de base de datos **db_owner** .  
   
 ## <a name="examples"></a>Ejemplos  

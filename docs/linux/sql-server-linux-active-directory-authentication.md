@@ -1,39 +1,32 @@
 ---
-title: "Autenticación de Active Directory con SQL Server en Linux | Documentos de Microsoft"
+title: "Tutorial de autenticación de directorio activo para SQL Server en Linux | Documentos de Microsoft"
 description: "Este tutorial indican los pasos de configuración para la autenticación de AAD para SQL Server en Linux."
 author: meet-bhagdev
-ms.date: 01/30/2018
+ms.date: 02/23/2018
 ms.author: meetb
 manager: craigg
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: 7de515aa08ec73ff6c7b90e9a630e59ca6f71252
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: a0939dfa0f8304dc47a6925cf4c6f0375eb6a8df
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="active-directory-authentication-with-sql-server-on-linux"></a>Autenticación de Active Directory con SQL Server en Linux
+# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Tutorial: Autenticación uso de Active Directory con SQL Server en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este tutorial le explica cómo configurar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en Linux para admitir la autenticación de Active Directory (AD), la autenticación también se denomina integrada. Autenticación de Active Directory permite que los clientes Unidos a un dominio de Windows o Linux para autenticarse en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con sus credenciales de dominio y el protocolo Kerberos.
-
-Autenticación de Active Directory tiene las siguientes ventajas sobre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticación:
-
-* Los usuarios se autentican a través de inicio de sesión único, sin que se solicite una contraseña.   
-* Al crear los inicios de sesión para los grupos de AD, puede administrar el acceso y permisos en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con las pertenencias a grupos de AD.  
-* Cada usuario tiene una identidad única en toda la organización, por lo que no es necesario realizar un seguimiento del que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] los inicios de sesión corresponden a las personas.   
-* AD permite aplicar una directiva de contraseña centralizada a través de su organización.   
+Este tutorial le explica cómo configurar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en Linux para admitir la autenticación de Active Directory (AD), la autenticación también se denomina integrada. Para obtener información general, vea [autenticación de Active Directory para SQL Server en Linux](sql-server-linux-active-directory-auth-overview.md).
 
 Este tutorial consta de las siguientes tareas:
 
@@ -54,12 +47,7 @@ Antes de configurar la autenticación de Active Directory, debe:
   * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-> [!IMPORTANT]
-> Limitaciones:
-> - En este momento, el único método de autenticación admitido para el extremo de reflejo de la base de datos es certificado. Método de autenticación de WINDOWS se habilitarán en futuras versiones.
-> - Herramientas de AD de terceros como Centrify, Powerbroker, y no se admiten Vintela 
-
-## <a name="join-includessnoversionincludesssnoversion-mdmd-host-to-ad-domain"></a>Unir [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host del dominio de Active Directory
+## <a id="join"></a> Unir [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host del dominio de Active Directory
 
 Siga estos pasos para unir un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host a un dominio de Active Directory:
 
@@ -157,7 +145,7 @@ Siga estos pasos para unir un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.
   
 5. Compruebe que ahora puede recopilar información sobre un usuario del dominio y que puede adquirir un vale de Kerberos como dicho usuario.
 
-   We will use **id**, **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)** and **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** commands for this.
+   En el ejemplo siguiente se utiliza **identificador**,  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**, y  **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)**  comandos para este.
 
    ```bash
    id user@contoso.com
@@ -179,10 +167,10 @@ Siga estos pasos para unir un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.
 
 Para obtener más información, consulte la documentación de Red Hat para [Descubra y unirse a dominios de identidad](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html). 
 
-## <a name="create-ad-user-for-includessnoversionincludesssnoversion-mdmd-and-set-spn"></a>Crear usuario de AD para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y establecer SPN
+## <a id="createuser"></a> Crear usuario de AD para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y establecer SPN
 
   > [!NOTE]
-  > En los pasos que se usará el [nombre de dominio completo](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Si se encuentra en **Azure**, primero debe  **[crearlo](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  antes de continuar.
+  > Los siguientes pasos utilizan la [nombre de dominio completo](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Si se encuentra en **Azure**, primero debe  **[crearlo](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  antes de continuar.
 
 1. En el controlador de dominio, ejecute el [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) comando de PowerShell para crear un nuevo usuario de AD con una contraseña que no expira nunca. Este ejemplo asigna nombre a la cuenta "mssql", pero el nombre de cuenta puede ser que desee. Se le pedirá que escriba una contraseña nueva para la cuenta:
 
@@ -195,7 +183,7 @@ Para obtener más información, consulte la documentación de Red Hat para [Desc
    > [!NOTE]
    > Es un procedimiento recomendado de seguridad para tener una cuenta de AD dedicada de SQL Server, por lo que las credenciales de SQL Server no se comparten con otros servicios que utilicen la misma cuenta. Sin embargo, puede volver a usar una cuenta de AD existente si lo prefiere, si conoce la contraseña de la cuenta (necesaria para generar un archivo de tabla de claves en el paso siguiente).
 
-2. Establecer el ServicePrincipalName (SPN) para esta cuenta mediante la `setspn.exe` herramienta. El SPN debe tener el formato exactamente como se especifica en el siguiente ejemplo: puede encontrar el nombre de dominio completo de la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] equipo host mediante la ejecución de `hostname --all-fqdns` en el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host y el puerto TCP deben ser 1433 a menos que haya configurado [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizar un número de puerto diferente.
+2. Establecer el ServicePrincipalName (SPN) para esta cuenta mediante la `setspn.exe` herramienta. El SPN debe tener el formato exactamente como se especifica en el ejemplo siguiente. Puede encontrar el nombre de dominio completo de la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] equipo host mediante la ejecución de `hostname --all-fqdns` en el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host y el puerto TCP deben ser 1433 a menos que haya configurado [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizar un número de puerto diferente.
 
    ```PowerShell
    setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
@@ -208,7 +196,7 @@ Para obtener más información, consulte la documentación de Red Hat para [Desc
 
 3. Para obtener más información, vea [Registrar un nombre de entidad de seguridad de servicio para las conexiones con Kerberos](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
 
-## <a name="configure-includessnoversionincludesssnoversion-mdmd-service-keytab"></a>Configurar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] keytab de servicio
+## <a id="configurekeytab"></a> Configurar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] keytab de servicio
 
 1. Compruebe el número de versión de clave (kvno) para la cuenta de AD que creó en el paso anterior. Normalmente es 2, pero podría ser otro entero si cambia la contraseña de cuenta de varias veces. En el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] equipo host, ejecute lo siguiente:
 
@@ -218,7 +206,7 @@ Para obtener más información, consulte la documentación de Red Hat para [Desc
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
-2. Cree un archivo de tabla de claves para el usuario de AD que creó en el paso anterior. Para ello, utilizaremos  **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**. Cuando se le solicite, escriba la contraseña para esa cuenta de AD.
+2. Crear un archivo keytab con  **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**  para el usuario de AD que creó en el paso anterior. Cuando se le solicite, escriba la contraseña para esa cuenta de AD.
 
    ```bash
    sudo ktutil
@@ -249,7 +237,7 @@ Para obtener más información, consulte la documentación de Red Hat para [Desc
    sudo systemctl restart mssql-server
    ```
 
-## <a name="create-ad-based-logins-in-transact-sql"></a>Crear inicios de sesión basados en AD en Transact-SQL
+## <a id="createsqllogins"></a> Crear inicios de sesión basados en AD en Transact-SQL
 
 1. Conectarse a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y crear un inicio de sesión nuevo, en función de AD:
 
@@ -263,13 +251,13 @@ Para obtener más información, consulte la documentación de Red Hat para [Desc
    SELECT name FROM sys.server_principals;
    ```
 
-## <a name="connect-to-includessnoversionincludesssnoversion-mdmd-using-ad-authentication"></a>Conectarse a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante la autenticación de AD
+## <a id="connect"></a> Conectarse a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante la autenticación de AD
 
 Inicie sesión en un equipo cliente mediante sus credenciales de dominio. Ahora puede conectarse a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sin volver a escribir la contraseña, mediante la autenticación de AD. Si crea un inicio de sesión para un grupo de AD, puede conectar cualquier usuario de AD que sea un miembro de ese grupo de la misma manera.
 
-El parámetro de cadena de conexión específica para los clientes que usen la autenticación de Active Directory depende de qué controlador que esté utilizando. Algunos ejemplos son a continuación.
+El parámetro de cadena de conexión específica para los clientes que usen la autenticación de Active Directory depende de qué controlador que esté utilizando. Considere los ejemplos siguientes:
 
-* `sqlcmd`en un cliente de Linux Unidos a un dominio
+* `sqlcmd` en un cliente de Linux Unidos a un dominio
 
    Inicie sesión en un cliente Linux Unidos a un dominio mediante `ssh` y sus credenciales de dominio:
 

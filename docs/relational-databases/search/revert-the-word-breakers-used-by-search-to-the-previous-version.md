@@ -87,7 +87,7 @@ ms.lasthandoff: 02/13/2018
 |Neutro|Neutro|0000|  
 |Noruego (Bokmal)|nor|1044|  
 |Punjabí|pan|1094|  
-|Portugués brasileño|ptb|1046|  
+|Portugués (Brasil)|ptb|1046|  
 |Portugués|ptg|2070|  
 |Rumano|rom|1048|  
 |Eslovaco|sky|1051|  

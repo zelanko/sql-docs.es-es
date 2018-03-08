@@ -107,7 +107,7 @@ Para las otras herramientas que se ejecutan en Windows pero se conectan a SQL Se
 - [Windows PowerShell](../linux/sql-server-linux-manage-powershell.md)
 - [SQL Server Data Tools (SSDT)](../linux/sql-server-linux-develop-use-ssdt.md)
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="additional-resources"></a>Recursos adicionales
 
 Para otros escenarios de instalación, vea los siguientes recursos:
 
@@ -118,6 +118,21 @@ Para otros escenarios de instalación, vea los siguientes recursos:
 | [Instalación desatendida](../linux/sql-server-linux-setup.md#unattended) | Obtenga información sobre cómo crear un script para la instalación sin pedir confirmación |
 | [Instalación sin conexión](../linux/sql-server-linux-setup.md#offline) | Obtenga información sobre cómo descargar manualmente los paquetes de instalación sin conexión |
 
-Para explorar otras formas de conectar y administrar SQL Server, vea [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) y [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md).
+Para explorar otras formas de conectarse y administrar SQL Server, explorar las siguientes herramientas:
+
+|||
+|---|---|
+| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Editor de código de interfaz gráfica de usuario multiplataforma que se ejecutan las instrucciones de Transact-SQL con la extensión mssql. |
+| [Studio de operaciones de SQL Server](../sql-operations-studio/index.md) | Una utilidad de administración de base de datos de interfaz gráfica de usuario multiplataforma. |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Una interfaz de línea de comandos multiplataforma para ejecutar comandos de Transact-SQL. |
+| [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md) | Una utilidad de administración de base de datos de GUI basadas en Windows que puede conectarse y administrar instancias de SQL Server en Linux. |
 
 Para más información sobre cómo escribir consultas e instrucciones Transact-SQL, vea [Tutorial: Escribir instrucciones Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
+
+> [!TIP]
+> Para obtener respuestas a las preguntas más frecuentes, consulte el [SQL Server en Linux preguntas más frecuentes sobre](../linux/sql-server-linux-faq.md).
+
+## <a name="next-steps"></a>Pasos siguientes
+
+> [!div class="nextstepaction"]
+> [Explorar los tutoriales de SQL Server en Linux](../linux/sql-server-linux-migrate-restore-database.md)

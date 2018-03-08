@@ -84,7 +84,7 @@ ms.lasthandoff: 02/09/2018
 |Estonio|1061|1061|  
 |Letón|1062|1062|  
 |Lituano|1063|1063|  
-|Portugués de Brasil|1046|1046|  
+|Portugués (Brasil)|1046|1046|  
 |Chino tradicional|1028|1028|  
 |Coreano|1042|1042|  
 |Chino simplificado|2052|2052|  

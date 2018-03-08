@@ -11,18 +11,19 @@ ms.suite: pro-bi
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: report servers [Reporting Services], network load balancing
+helpviewer_keywords:
+- report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3576aec75cab9961b6d7423b65c66e885834ff88
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0512371abbf0f958b065363c7b145da0bd915489
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurar un servidor de informes en un clúster con equilibrio de carga de red
   Si va a configurar una ampliación escalada de un servidor de informes para ejecutarse en un clúster con equilibrio de carga de red (NLB), debe hacer lo siguiente:  
@@ -49,27 +50,24 @@ ms.lasthandoff: 01/09/2018
 |7|Compruebe que los servidores son accesibles a través del nombre de host que especificó.|[Comprobar el acceso del servidor de informes](#Verify) en este tema.|  
   
 ##  <a name="ViewState"></a> Cómo configurar la validación del estado de la vista  
- Para ejecutar una implementación escalada en un clúster NLB, debe configurar la validación del estado de la vista para que los usuarios puedan ver los informes HTML interactivos. Debe hacer esto con el servidor de informes y el Administrador de informes.  
+ Para ejecutar una implementación escalada en un clúster NLB, debe configurar la validación del estado de la vista para que los usuarios puedan ver los informes HTML interactivos.
   
  ASP.NET controla la validación del estado de la vista. De forma predeterminada, la validación del estado de la vista está habilitada y utiliza la identidad del servicio web para realizarse. Sin embargo, en un escenario con clústeres NLB hay varias instancias de servicios e identidades de servicios web que se ejecutan en equipos diferentes. Dado que la identidad del servicio varía para cada nodo, no puede confiar en una única identidad del proceso para realizar la validación.  
   
  Para evitar este problema, puede generar una clave de validación arbitraria que admita la validación del estado de la vista y, después, configurar manualmente cada nodo del servidor de informes para que utilice la misma clave. Puede utilizar cualquier secuencia hexadecimal generada de forma aleatoria. El algoritmo de validación (como SHA1) determina la longitud que debe tener la secuencia hexadecimal.  
+
+1.  Genere una clave de validación y una clave de descifrado utilizando la funcionalidad de generación automática que proporciona [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Al final, debe tener una única entrada \<**MachineKey**> que podrá pegar en el archivo RSReportServer.config para cada instancia del servidor de informes de la implementación escalada.
   
-1.  Genere una clave de validación y una clave de descifrado utilizando la funcionalidad de generación automática que proporciona [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Al final, debe tener una única entrada \<**machineKey**> que puede pegar en el archivo Web.config para cada instancia del Administrador de informes de la implementación escalada.  
-  
-     En el ejemplo siguiente se ilustra el valor que se debe obtener. No copie el ejemplo en sus archivos de configuración; los valores de las claves no son válidos.  
+     En el ejemplo siguiente se ilustra el valor que se debe obtener. No copie el ejemplo en sus archivos de configuración; los valores de las claves no son válidos. El servidor de informes requiere el uso correcto de mayúsculas y minúsculas.
   
     ```  
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
-    ```  
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
+    ```   
+2.  Guarde el archivo.  
   
-2.  Abra el archivo Web.config del Administrador de informes y, en la sección \<**system.web**>, pegue el elemento \<**machineKey**> generado. De forma predeterminada, el archivo Web.config del Administrador de informes se encuentra en \Archivos de programa\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager\Web.config.  
+3.  Repita el paso anterior en cada servidor de informes de la implementación escalada.  
   
-3.  Guarde el archivo.  
-  
-4.  Repita el paso anterior en cada servidor de informes de la implementación escalada.  
-  
-5.  Compruebe que todos los archivos Web.Config de las carpetas \Reporting Services\Administrador de informes contienen elementos \<**machineKey**> idénticos en la sección \<**system.web**>.  
+4.  Compruebe que todos los archivos RSReportServer.config de las carpetas que forman parte de \Reporting Services\Report Server contengan elementos \<**MachineKey**> idénticos.  
   
 ##  <a name="SpecifyingVirtualServerName"></a> Cómo configurar Hostname y UrlRoot  
  Para configurar una implementación escalada del servidor de informes en un clúster NLB, debe definir un nombre único del servidor virtual que proporcione un solo punto de acceso al clúster de servidores. A continuación, registre este nombre de servidor virtual con el Servidor de nombres de dominio (DNS) del entorno.  

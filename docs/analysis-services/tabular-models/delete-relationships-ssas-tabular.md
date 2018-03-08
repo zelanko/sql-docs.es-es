@@ -1,7 +1,7 @@
 ---
-title: Eliminar relaciones (SSAS Tabular) | Documentos de Microsoft
+title: Eliminar relaciones | Documentos de Microsoft
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,21 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d40e3f05-54e8-4c4b-807a-0b06f446079b
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 54f2d9205ec7e8815572e9107e6319262c343edd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 690224c1798494e75f6b26add07d51c3afa7134f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="delete-relationships-ssas-tabular"></a>Eliminar relaciones (SSAS tabular)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Puede eliminar las relaciones existentes mediante el Diseñador de modelos en la vista de diagrama o utilizando el cuadro de diálogo Administrar relaciones. Para más información sobre cómo se usan las relaciones en los modelos tabulares, vea [Relaciones &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
+# <a name="delete-relationships"></a>Eliminar relaciones 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Puede eliminar las relaciones existentes utilizando el diseñador de modelos en la Vista de diagrama o utilizando el cuadro de diálogo Administrar relaciones. Para obtener información acerca de cómo se usan las relaciones en los modelos tabulares, vea [relaciones](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
   
-## <a name="considerations-for-deleting-relationships"></a>Aspectos que se deben tener en cuenta al eliminar relaciones  
+## <a name="considerations-for-deleting-relationships"></a>Consideraciones para eliminar relaciones  
  Tenga en cuenta los siguientes problemas a la hora de decidir si va a eliminar una relación:  
   
 -   No hay ninguna manera de deshacer la eliminación de una relación. Puede volver a crearla, pero esta acción requiere que se vuelvan a calcular completamente las fórmulas del modelo. Por consiguiente, compruebe siempre si una relación se usa en fórmulas antes de eliminarla.  
@@ -58,7 +59,7 @@ ms.lasthandoff: 01/08/2018
 4.  En el cuadro de diálogo **Administrar las relaciones** , haga clic en **Cerrar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Relaciones &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md)   
- [Crear una relación entre dos tablas &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)  
+ [Relaciones](../../analysis-services/tabular-models/relationships-ssas-tabular.md)   
+ [Crear una relación](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)  
   
   

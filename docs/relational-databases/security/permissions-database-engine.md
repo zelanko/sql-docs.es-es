@@ -8,7 +8,8 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-caps.latest.revision: "76"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e37b0da02e9608249c2283683324fee42fe9a8e3
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: a1648f5ecd3170b2b60c157e4debb25d7c7f793a
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="permissions-database-engine"></a>Permisos (motor de base de datos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -114,7 +115,7 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 |Ejecute|Tipos de CLR, scripts externos, procedimientos ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR), funciones escalares y de agregado ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR) y sinónimos|  
 |IMPERSONATE|Inicios de sesión y usuarios|  
 |INSERT|Sinónimos, tablas y columnas, vistas y columnas. El permiso se puede conceder en el nivel de base de datos, en el de esquema o en el de objeto.|  
-|RECEIVE|Colas de[!INCLUDE[ssSB](../../includes/sssb-md.md)] |  
+|RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] colas|  
 |REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT, <br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br />VIEW y<br />XML SCHEMA COLLECTION|  
 |SELECT|Sinónimos, tablas y columnas, vistas y columnas. El permiso se puede conceder en el nivel de base de datos, en el de esquema o en el de objeto.|  
 |TAKE OWNERSHIP|Todas las clases de objetos excepto DATABASE SCOPED CONFIGURATION, LOGIN, SERVER y USER.|  
@@ -421,7 +422,7 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
   
 7.  La comprobación del permiso es correcta si no se denegó el **permiso requerido** y el **permiso requerido** contiene un permiso GRANT o un permiso GRANT WITH GRANT directo o implícito para cualquiera de las identidades del **contexto de seguridad** de cualquier objeto del **espacio del permiso**.  
 
-## <a name="secial-considerations-for-column-level-permissions"></a>Consideraciones especiales sobre los permisos de nivel de columna
+## <a name="special-considerations-for-column-level-permissions"></a>Consideraciones especiales sobre los permisos de nivel de columna
 
 Los permisos de nivel de columna se conceden con la sintaxis *<nombre_tabla> (<nombre_columna\<)*. Por ejemplo:
 ```sql

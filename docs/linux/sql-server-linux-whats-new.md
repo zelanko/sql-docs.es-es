@@ -4,7 +4,7 @@ description: "Este artículo resalta cuáles son las novedades de SQL Server 201
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/28/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.workload: On Demand
-ms.openlocfilehash: cc0b40ba2cac9c14d6d4259c7ed35769c7114dbe
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: fd7f69a8cb21fa8aaabb518f9b3d1d178606a685
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Novedades de SQL Server 2017 en Linux
 
@@ -70,8 +70,9 @@ Para instalar a SQL Server en Linux, utilice uno de los siguientes tutoriales:
 - [Ejecutar en Docker](quickstart-install-connect-docker.md)
 - [Aprovisionar una máquina virtual de SQL en Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
-Por otra información con respecto a SQL Server en Linux, consulte la [Introducción](sql-server-linux-overview.md). Para descargar los paquetes y una lista de características no admitidas y los problemas conocidos, consulte el [notas de la versión](sql-server-linux-release-notes.md).
-
 Para ver otras mejoras introducidas en SQL Server 2017, consulte [What's New en SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
+
+> [!TIP]
+> Para obtener respuestas a las preguntas más frecuentes, consulte el [SQL Server en Linux preguntas más frecuentes sobre](sql-server-linux-faq.md).
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

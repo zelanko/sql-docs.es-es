@@ -1,27 +1,28 @@
 ---
 title: Miembros SQLServerDataSource | Documentos de Microsoft
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7e749bc5-d765-4864-be2b-7822d4c20c09
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6feb87ad1bb5054b800a001a30af6b94679e977a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: d046db6ae560e0384d3966286952069e940a189b
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="sqlserverdatasource-members"></a>Miembros SQLServerDataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,6 +49,8 @@ ms.lasthandoff: 11/18/2017
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|Devuelve el nombre de la aplicación.|  
 |[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md)|Intenta establecer una conexión con los datos de origen que este [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) objeto representa.|  
 |[getDatabaseName](../../../connect/jdbc/reference/getdatabasename-method-sqlserverdatasource.md)|Devuelve el nombre de la base de datos.|  
+|[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverdatasource.md)|Devuelve el valor de **disableStatementPooling** propiedad de conexión. Esta configuración controla si la agrupación de instrucción está habilitada o no para esta conexión.|  
+|[getEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/getenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource.md)|Devuelve el valor de **enablePrepareOnFirstPreparedStatementCall** propiedad de conexión.|  
 |[getEncrypt](../../../connect/jdbc/reference/getencrypt-method-sqlserverdatasource.md)|Devuelve un **booleano** valor que indica si está habilitada la propiedad de cifrado.|  
 |[getDescription](../../../connect/jdbc/reference/getdescription-method-sqlserverdatasource.md)|Devuelve una descripción del origen de datos.|  
 |[getFailoverPartner](../../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md)|Devuelve el nombre del servidor de conmutación por error que se usa en la configuración de la creación de reflejo de la base de datos.|  
@@ -62,10 +65,14 @@ ms.lasthandoff: 11/18/2017
 |[getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md)|Devuelve el número de puerto actual utilizado para comunicarse con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].|  
 |[getReference](../../../connect/jdbc/reference/getreference-method-sqlserverdatasource.md)|Devuelve una referencia a este [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) objeto.|  
 |[getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverdatasource.md)|Devuelve la respuesta del modo de almacenamiento en búfer para esta [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) objeto.|  
-|[método getSelectMethod](../../../connect/jdbc/reference/getselectmethod-method-sqlserverdatasource.md)|Devuelve el tipo de cursor predeterminado usado para todos los conjuntos de resultados creados mediante este [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) objeto.|  
+|[getSelectMethod](../../../connect/jdbc/reference/getselectmethod-method-sqlserverdatasource.md)|Devuelve el tipo de cursor predeterminado usado para todos los conjuntos de resultados creados mediante este [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) objeto.|  
 |[getSendStringParametersAsUnicode](../../../connect/jdbc/reference/getsendstringparametersasunicode-method-sqlserverdatasource.md)|Devuelve un **booleano** valor que indica si está habilitado el envío de parámetros de cadena al servidor en formato UNICODE.|  
 |[getSendTimeAsDatetime](../../../connect/jdbc/reference/getsendtimeasdatetime-method-sqlserverdatasource.md)|Devuelve el valor de la **SendTimeAsDatetime** propiedad de conexión.|  
 |[getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md)|Devuelve el nombre del equipo que ejecuta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].|  
+|[getServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/getserverpreparedstatementdiscardthreshold-method-sqlserverdatasource.md)|Devuelve el valor de **serverPreparedStatementDiscardThreshold** propiedad de conexión.|  
+|[getStatementPoolingCacheSize](../../../connect/jdbc/reference/getstatementpoolingcachesize-method-sqlserverdatasource.md)|Devuelve el tamaño de la caché de instrucciones preparadas para esta conexión.|  
+|[getTrustManagerClass](../../../connect/jdbc/reference/gettrustmanagerclass-method-sqlserverdatasource.md)|Devuelve el valor de cadena de la propiedad de conexión TrustManagerClass.|  
+|[getTrustManagerConstructorArg](../../../connect/jdbc/reference/gettrustmanagerconstructorarg-method-sqlserverdatasource.md)|Devuelve el valor de cadena de la propiedad de conexión TrustManagerConstructorArg.|  
 |[getTrustServerCertificate](../../../connect/jdbc/reference/gettrustservercertificate-method-sqlserverdatasource.md)|Devuelve un **booleano** valor que indica si la propiedad trustServerCertificate está habilitada.|  
 |[getTrustStore](../../../connect/jdbc/reference/gettruststore-method-sqlserverdatasource.md)|Devuelve la ruta de acceso (incluido el nombre de archivo) del archivo trustStore del certificado.|  
 |[getURL](../../../connect/jdbc/reference/geturl-method-sqlserverdatasource.md)|Devuelve la dirección URL utilizada para conectarse al origen de datos.|  
@@ -79,6 +86,8 @@ ms.lasthandoff: 11/18/2017
 |[setAuthenticationScheme](../../../connect/jdbc/reference/setauthenticationscheme-sqlserverdatasource.md)|Indica el tipo de seguridad integrada que desea que use la aplicación.|  
 |[setDatabaseName](../../../connect/jdbc/reference/setdatabasename-method-sqlserverdatasource.md)|Establece el nombre de la base de datos a la que se va a efectuar la conexión.|  
 |[setDescription](../../../connect/jdbc/reference/setdescription-method-sqlserverdatasource.md)|Establece la descripción del origen de datos.|  
+|[setDisableStatementPooling](../../../connect/jdbc/reference/setdisablestatementpooling-method-sqlserverdatasource.md)|Establece la agrupación de instrucciones en true o false.|  
+|[setEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/setenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource.md)|Especifica el nuevo valor de la **enablePrepareOnFirstPreparedStatementCall** propiedad de conexión.|  
 |[setEncrypt](../../../connect/jdbc/reference/setencrypt-method-sqlserverdatasource.md)|Establece un **booleano** valor que indica si está habilitada la propiedad de cifrado.|  
 |[setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md)|Establece el nombre del servidor de conmutación por error que se usa en la configuración de la creación de reflejo de la base de datos.|  
 |[setHostNameInCertificate](../../../connect/jdbc/reference/sethostnameincertificate-method-sqlserverdatasource.md)|Establece el nombre de host que se va a utilizar para validar el certificado de Capa de sockets seguros (SSL) de SQL Server.|  
@@ -97,6 +106,10 @@ ms.lasthandoff: 11/18/2017
 |[setSendStringParametersAsUnicode](../../../connect/jdbc/reference/setsendstringparametersasunicode-method-sqlserverdatasource.md)|Establece un **booleano** valor que indica si está habilitado el envío de parámetros de cadena al servidor en formato UNICODE.|  
 |[setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)|Especifica cómo enviar los valores java.sql.Time al servidor.|  
 |[setServerName](../../../connect/jdbc/reference/setservername-method-sqlserverdatasource.md)|Establece el nombre del equipo que ejecuta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].|  
+|[setServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/setserverpreparedstatementdiscardthreshold-method-sqlserverdatasource.md)|Establece el nuevo valor de la **serverPreparedStatementDiscardThreshold** propiedad de conexión.|  
+|[setStatementPoolingCacheSize](../../../connect/jdbc/reference/setstatementpoolingcachesize-method-sqlserverdatasource.md)|Establece el tamaño de la caché de instrucciones preparadas para esta conexión.|  
+|[setTrustManagerClass](../../../connect/jdbc/reference/settrustmanagerclass-method-sqlserverdatasource.md)|Establece el valor de cadena de la propiedad de conexión TrustManagerClass.|  
+|[setTrustManagerConstructorArg](../../../connect/jdbc/reference/settrustmanagerconstructorarg-method-sqlserverdatasource.md)|Establece el valor de cadena de la propiedad de conexión TrustManagerConstructorArg.|  
 |[setTrustServerCertificate](../../../connect/jdbc/reference/settrustservercertificate-method-sqlserverdatasource.md)|Establece un **booleano** valor que indica si la propiedad trustServerCertificate está habilitada.|  
 |[setTrustStore](../../../connect/jdbc/reference/settruststore-method-sqlserverdatasource.md)|Establece la ruta de acceso (incluido el nombre de archivo) del archivo trustStore del certificado.|  
 |[setTrustStorePassword](../../../connect/jdbc/reference/settruststorepassword-method-sqlserverdatasource.md)|Establece la contraseña que se usa para comprobar la integridad de los datos trustStore.|  
@@ -104,7 +117,7 @@ ms.lasthandoff: 11/18/2017
 |[setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md)|Establece el nombre de usuario usado para conectar al origen de datos.|  
 |[setWorkstationID](../../../connect/jdbc/reference/setworkstationid-method-sqlserverdatasource.md)|Establece el nombre del nombre del equipo cliente que se utiliza para la conexión al origen de datos.|  
 |[setXopenStates](../../../connect/jdbc/reference/setxopenstates-method-sqlserverdatasource.md)|Establece un **booleano** valor que indica si está habilitada la conversión de Estados SQL Estados conformes a XOPEN.|  
-|[Unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)|Devuelve un objeto que implementa la interfaz especificada para permitir el acceso a la [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-métodos específicos.|  
+|[unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)|Devuelve un objeto que implementa la interfaz especificada para permitir el acceso a la [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-métodos específicos.|  
   
 ## <a name="inherited-methods"></a>Métodos heredados  
   

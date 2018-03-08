@@ -4,7 +4,7 @@ description: Proporciona sugerencias para solucionar problemas para utilizar SQL
 author: annashres
 ms.author: anshrest
 manager: craigg
-ms.date: 01/18/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,17 +15,20 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: f56806313075865c53cbd3fc1f80c0d132804c04
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: b3dc37601859ee4125f9f7885592e3a0653e8d0c
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Solucionar problemas de SQL Server en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Este documento describe cómo solucionar problemas de Microsoft SQL Server que se ejecutan en Linux o en un contenedor de Docker. Cuando solucione problemas de SQL Server en Linux, no olvide revisar las características compatibles y las limitaciones conocidas en el [SQL Server en las notas de la versión de Linux](sql-server-linux-release-notes.md).
+
+> [!TIP]
+> Para obtener respuestas a las preguntas más frecuentes, consulte el [SQL Server en Linux preguntas más frecuentes sobre](sql-server-linux-faq.md).
 
 ## <a id="connection"></a> Solucionar problemas de errores de conexión
 Si tiene dificultades para conectarse a SQL Server de Linux, hay algunas cosas para comprobar. 
@@ -200,12 +203,4 @@ Si accidentalmente han iniciado SQL Server con otro usuario, debe cambiar la pro
    Recursos: [caracteres especiales](http://tldp.org/LDP/abs/html/special-chars.html)
    [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
 
-## <a name="support"></a>Soporte técnico
-
-Soporte técnico está disponible a través de la Comunidad y supervisado por el equipo de ingeniería. Para preguntas específicas, use los siguientes recursos:
-
-- [Cambio de la pila de DBA](https://dba.stackexchange.com/questions/tagged/sql-server): formular preguntas de administración de base de datos
-- [Desbordamiento de pila](http://stackoverflow.com/questions/tagged/sql-server): formular preguntas de desarrollo
-- [Foros de MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): hacer preguntas técnicas
-- [Enviar comentarios](https://feedback.azure.com/forums/908035-sql-server): informe de errores y la característica de solicitud
-- [Reddit](https://www.reddit.com/r/SQLServer/): analizar SQL Server
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

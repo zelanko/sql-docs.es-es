@@ -22,7 +22,7 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: f6e639bf97ed132b6ace7128b4cbe9b6f3ce474e
 ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/25/2018
 ---

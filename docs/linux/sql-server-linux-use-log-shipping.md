@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 48f1782ca1da3e730181402ed947453b6eeefc35
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: af88c21dc246238274ab66b47bb76302f0a86f06
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Empezar a trabajar con el trasvase de registros en Linux
 
@@ -30,7 +30,7 @@ Trasvase de registros de SQL Server es una configuración de alta disponibilidad
   ![Trasvase de registros](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 
-Como se describe en la figura anterior, una sesión de trasvase de registros implica los pasos siguientes:
+Como se describe en esta imagen, una sesión de trasvase de registros implica los pasos siguientes:
 
 - Realizar una copia de seguridad del archivo de registro de transacciones en la instancia principal de SQL Server
 - Copiar el archivo de copia de seguridad de registro de transacciones a través de la red a una o más instancias de SQL Server secundarias

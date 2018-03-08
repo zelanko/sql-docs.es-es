@@ -9,19 +9,21 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: sql-linux
+ms.component: 
 ms.suite: sql
-ms.custom: 
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 3731e8fd8d5a90b063bf27c012e7cb5670193b23
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: a9e8964b16eff5da35ef3abac6f493afc7615903
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>Instancias de clúster de conmutación por error: SQL Server en Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 En este artículo se explica los conceptos relacionados con instancias de clúster de conmutación por error (FCI) de SQL Server en Linux. 
 
@@ -36,17 +38,17 @@ Para crear una FCI de SQL Server en Linux, consulte [configurar FCI de SQL Serve
 
 * En SLES, el nivel de agrupación en clústeres se basa en SUSE Linux Enterprise [extensión de alta disponibilidad (HAE)](https://www.suse.com/products/highavailability).
 
-    Para obtener más detalles sobre la configuración de clúster, opciones de recurso del agente, administración, prácticas recomendadas y recomendaciones, consulte [SUSE Linux Enterprise alta disponibilidad extensión 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
+    Para obtener más información sobre la configuración de clúster, opciones de recurso del agente, administración, prácticas recomendadas y recomendaciones, consulte [SUSE Linux Enterprise alta disponibilidad extensión 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
 El complemento HA de RHEL y el SUSE HAE se compilan en [marcapasos](http://clusterlabs.org/).
 
-Como muestra el diagrama siguiente se presenta el almacenamiento a dos servidores. Componentes de agrupación en clústeres - Corosync y marcapasos - coordinan las comunicaciones y administración de recursos. Uno de los servidores tiene la conexión activa a los recursos de almacenamiento y el servidor SQL Server. Cuando marcapasos detecta un error de los componentes de agrupación en clústeres administran mover los recursos a otro nodo.  
+Como se muestra en el diagrama siguiente, el almacenamiento se presenta a dos servidores. Componentes de agrupación en clústeres - Corosync y marcapasos - coordinan las comunicaciones y administración de recursos. Uno de los servidores tiene la conexión activa a los recursos de almacenamiento y el servidor SQL Server. Cuando marcapasos detecta un error de los componentes de agrupación en clústeres administran mover los recursos a otro nodo.  
 
 ![Red Hat Enterprise Linux 7 compartido de clúster de disco de SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
 
 > [!NOTE]
-> En este momento, la integración de SQL Server con marcapasos en Linux no es como acoplamiento como con WSFC en Windows. Desde dentro de SQL, no hay ningún conocimiento sobre la presencia del clúster, todas las orquestaciones está fuera de y marcapasos controla el servicio como una instancia independiente. Además, el nombre de red virtual es específico de WSFC, no hay ningún equivalente de la misma en marcapasos. Se espera que @@servername y sys.servers para devolver el nombre del nodo, mientras que el clúster DMV sys.dm_os_cluster_nodes y sys.dm_os_cluster_properties no trabajará en ningún registro. Para usar una cadena de conexión que apunta a un nombre de servidor de cadena y no usar la dirección IP, tendrá que registrar en su servidor DNS la dirección IP utilizada para crear el recurso IP virtual (tal y como se explica más adelante) con el nombre del servidor seleccionado.
+> En este momento, la integración de SQL Server con marcapasos en Linux no es como acoplamiento como con WSFC en Windows. Desde dentro de SQL, no hay ningún conocimiento sobre la presencia del clúster, todas las orquestaciones está fuera de y marcapasos controla el servicio como una instancia independiente. Además, el nombre de red virtual es específico de WSFC, no hay ningún equivalente de la misma en marcapasos. Se espera que @@servername y sys.servers para devolver el nombre del nodo, mientras que el clúster DMV sys.dm_os_cluster_nodes y sys.dm_os_cluster_properties no trabajará en ningún registro. Para usar una cadena de conexión que apunta a un nombre de servidor de cadena y no usar la dirección IP, tendrá que registrar la dirección IP utilizada para crear el recurso IP virtual (como se explica en las secciones siguientes) en su servidor DNS con el nombre del servidor seleccionado.
 
 ## <a name="number-of-instances-and-nodes"></a>Número de instancias y nodos
 
@@ -57,7 +59,7 @@ Un clúster marcapasos solo puede tener hasta 16 nodos cuando está implicada Co
 En una FCI de SQL Server, la instancia de SQL Server está activa en un nodo o la otra.
 
 ## <a name="ip-address-and-name"></a>Nombre y dirección IP
-En un clúster de Linux marcapasos, cada FCI de SQL Server tendrá su propia dirección IP única y el nombre. Si la configuración de FCI abarca varias subredes, se requerirá una dirección IP por subred. El nombre único y direcciones IP se utilizan para tener acceso a la FCI para que las aplicaciones y los usuarios finales no es necesario saber qué servidor del clúster marcapasos subyacente.
+En un clúster de Linux marcapasos, cada FCI de SQL Server necesita su propia dirección IP única y el nombre. Si la configuración de FCI abarca varias subredes, se requerirá una dirección IP por subred. El nombre único y direcciones IP se utilizan para tener acceso a la FCI para que las aplicaciones y los usuarios finales no es necesario saber qué servidor del clúster marcapasos subyacente.
 
 El nombre de la FCI en DNS debe ser el mismo que el nombre del recurso FCI que se crea en el clúster marcapasos.
 El nombre y la dirección IP deben estar registrados en DNS.

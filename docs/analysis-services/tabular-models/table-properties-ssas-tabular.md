@@ -1,5 +1,5 @@
 ---
-title: Propiedades (SSAS Tabular) de la tabla | Documentos de Microsoft
+title: Propiedades de la tabla | Documentos de Microsoft
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
@@ -11,21 +11,23 @@ ms.custom:
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.tableprop.f1
+f1_keywords:
+- sql13.asvs.bidtoolset.tableprop.f1
 ms.assetid: 16d3347b-7e43-4a6b-9956-fdd6ede092e6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 864075fb43cd0912a581daa36d996b577c7beaae
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 202902448a31fda27ab2c4d8c0bc894cc50da3db
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="table-properties-ssas-tabular"></a>Propiedades de la tabla (SSAS tabular)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Este tema describen las propiedades de tabla de modelo tabular. Las propiedades que se describen aquí son diferentes de las del cuadro de diálogo Editar propiedades de tabla, que definen qué columnas del origen se importan.  
+# <a name="table-properties"></a>Table Properties 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Este artículo describen las propiedades de tabla de modelo tabular. Las propiedades que se describen aquí son diferentes de las del cuadro de diálogo Editar propiedades de tabla, que definen qué columnas del origen se importan.  
   
  Secciones de este tema:  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
  **Propiedades de informes**  
   
- Para obtener descripciones detalladas e información sobre la configuración de propiedades de informes, vea [Propiedades de informes de Vista avanzada &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md).  
+ Para obtener descripciones detalladas e información de configuración de propiedades de informes, consulte [propiedades de informes de Power View](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md).  
   
 |Propiedad|Valor predeterminado|Description|  
 |--------------|---------------------|-----------------|  

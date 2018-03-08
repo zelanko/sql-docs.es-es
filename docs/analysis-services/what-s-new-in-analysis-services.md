@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f6645a2a5da1e63050c0d448bc1006c85d85f212
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6ec1299dc5e82e4af6093c914742d456e7897807
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>¿Qué &#39; s nuevos en Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -77,7 +77,7 @@ Como novedad de esta versión se ha introducido un enfoque integrado para permit
  ### <a name="calculated-tables-in-ssdt"></a>Tablas calculadas en SSDT    
 Una *tabla calculada* es una construcción de solo modelo basada en una consulta o una expresión de DAX en SSDT. Cuando se implementa en una base de datos, una tabla calculada no se distingue de las tablas normales.    
 
- Existen varios usos para las tablas calculadas, incluida la creación de nuevas tablas para exponer una tabla existente en un rol específico. El ejemplo clásico es una tabla de fechas que funciona en varios contextos (fecha de pedido, fecha de envío etc.). Mediante la creación de una tabla calculada para un rol determinado, ahora puede activar una relación de tabla para facilitar la interacción de datos o consultas con la tabla calculada. Otro uso de las tablas calculadas es combinar partes de las tablas existentes en una tabla completamente nueva que solo existe en el modelo.  Vea [Crear una tabla calculada &#40;SSAS tabular&#41](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md) para obtener más información.    
+ Existen varios usos para las tablas calculadas, incluida la creación de nuevas tablas para exponer una tabla existente en un rol específico. El ejemplo clásico es una tabla de fechas que funciona en varios contextos (fecha de pedido, fecha de envío etc.). Mediante la creación de una tabla calculada para un rol determinado, ahora puede activar una relación de tabla para facilitar la interacción de datos o consultas con la tabla calculada. Otro uso de las tablas calculadas es combinar partes de las tablas existentes en una tabla completamente nueva que solo existe en el modelo.  Vea [crear una tabla calculada](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md) para obtener más información.    
  ### <a name="formula-fixup"></a>Corrección de fórmula    
  Con la corrección de fórmula en un modelo tabular 1200, SSDT actualizará automáticamente cualquier medida que haga referencia a una columna o tabla cuyo nombre haya cambiado.    
  ### <a name="support-for-visual-studio-configuration-manager"></a>Compatibilidad con el administrador de configuración de Visual Studio    
@@ -87,7 +87,7 @@ Una *tabla calculada* es una construcción de solo modelo basada en una consulta
  ### <a name="administer-tabular-1200-models-in-ssms"></a>Administración de modelos tabulares 1200 en SSMS    
  En esta versión, una instancia de Analysis Services en el modo de servidor tabular puede ejecutar modelos tabulares en cualquier nivel de compatibilidad (1100, 1103 y 1200). La última versión de [SQL Server Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) se ha actualizado para mostrar las propiedades y proporcionar la administración del modelo de base de datos para los modelos tabulares en el nivel de compatibilidad 1200.    
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>Procesamiento en paralelo para varias particiones de tabla en los modelos tabulares    
- Esta versión incluye una nueva funcionalidad para el procesamiento en paralelo de las tablas con dos o más particiones, lo que aumenta el rendimiento del procesamiento. No hay valores de configuración para esta característica. Para obtener más información sobre la configuración de particiones y el procesamiento de tablas, vea [Particiones de modelos tabulares &#40;SSAS tabular&#41;](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
+ Esta versión incluye una nueva funcionalidad para el procesamiento en paralelo de las tablas con dos o más particiones, lo que aumenta el rendimiento del procesamiento. No hay valores de configuración para esta característica. Para obtener más información sobre cómo configurar particiones y tablas de procesamiento, vea [particiones de modelos tabulares](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>Adición de cuentas de equipo como administradores en SSMS    
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ahora pueden usar [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para configurar cuentas de equipo para que sean miembros del grupo de administradores de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . En el cuadro de diálogo **Seleccionar usuarios o grupos** , establezca **Ubicaciones** para el dominio de equipos y, a continuación, agregue el tipo de objeto **Equipos** . Para obtener más información, vea [Conceder permisos de administrador de servidor (Analysis Services)](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
  ### <a name="dbcc-for-analysis-services"></a>DBCC para Analysis Services.    
@@ -206,7 +206,7 @@ En esta versión se incluyen mejoras considerables en DirectQuery para los model
 ### <a name="new-data-sources-for-directquery-mode"></a>Nuevos orígenes de datos para el modo DirectQuery    
  Orígenes de datos admitidos para los modelos tabulares 1200 en el modo DirectQuery ahora incluyen Oracle, Teradata y Microsoft Analytics Platform (anteriormente conocido como almacenamiento de datos paralelos).    
     
-Para obtener más información, vea [Modo DirectQuery &#40;SSAS tabular&#41;](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).    
+Para obtener más información, consulte [Directquerymode](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).    
 
 ## <a name="see-also"></a>Vea también
 [Blog del equipo de Analysis Services](http://blogs.msdn.microsoft.com/analysisservices/)    

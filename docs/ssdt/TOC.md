@@ -3,6 +3,7 @@
 # [Registro de cambios para SSDT](changelog-for-sql-server-data-tools-ssdt.md)
 # [Marco de trabajo de la aplicación de capa de datos: Términos de la licencia](data-tier-application-framework-license-terms.md)
 # [Versiones anteriores de SSDT y SSDT-BI](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)
+# [Compatibilidad de Azure Active Directory](azure-active-directory.md)
 # [Herramientas de SQL Server](sql-server-tools.md)
 # [Términos de licencia: SSDT](sql-server-data-tools-license-terms.md)
 # [Términos de licencia: SSDT (Visual Studio 2017)](sql-server-data-tools-license-terms-vs2017.md)

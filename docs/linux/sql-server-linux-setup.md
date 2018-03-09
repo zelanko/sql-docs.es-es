@@ -1,10 +1,10 @@
 ---
-title: Instalar SQL Server de 2017 en Linux | Documentos de Microsoft
+title: "Guía de instalación de SQL Server 2017 en Linux | Documentos de Microsoft"
 description: "Instalar, actualizar y desinstalar SQL Server en Linux. Este artículo tratan los escenarios en línea, sin conexión y desatendidos."
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/21/2017
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,26 +15,30 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: c686e97bd3d06b99fcbb847c23ac7e174e85dd6b
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: d8f8cde3d3a299008d75c4b701be224c458880eb
+ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guía de instalación para SQL Server en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-En este artículo se explica cómo instalar, actualizar y desinstalar SQL Server 2017 en Linux. SQL Server 2017 es compatible con Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) y Ubuntu. También está disponible como una imagen de Docker, que se puede ejecutar en el motor de Docker en Linux o Docker para Windows y Mac.
+En este artículo se proporciona instrucciones para instalar, actualizar y desinstalar SQL Server 2017 en Linux.
 
 > [!TIP]
-> Para empezar a trabajar rápidamente, saltar a uno de los tutoriales para [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), o [Docker](quickstart-install-connect-docker.md).
+> Esta guía coves varios escenarios de implementación. Si solo desea obtener instrucciones de instalación paso a paso, vaya a uno de los tutoriales:
+> - [Inicio rápido RHEL](quickstart-install-connect-red-hat.md)
+> - [Inicio rápido SLES](quickstart-install-connect-suse.md)
+> - [Inicio rápido de Ubuntu](quickstart-install-connect-ubuntu.md)
+> - [Inicio rápido de docker](quickstart-install-connect-docker.md)
 
 Para obtener respuestas a las preguntas más frecuentes, consulte el [SQL Server en Linux preguntas más frecuentes sobre](../linux/sql-server-linux-faq.md).
 
 ## <a id="supportedplatforms"></a> Plataformas compatibles
 
-SQL Server 2017 es compatible con las siguientes plataformas de Linux:
+SQL Server 2017 es compatible con Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) y Ubuntu. También se admite como una imagen de Docker, que se puede ejecutar en el motor de Docker en Linux o Docker para Windows y Mac.
 
 | Plataforma | Versiones admitidas | Obtener
 |-----|-----|-----
@@ -69,6 +73,13 @@ Si usa **Network File System (NFS)** recursos compartidos remotos en producción
 - Busque sólo el **/var/opt/mssql** directorios en el montaje NFS. No se admiten otros archivos, como los archivos binarios del sistema de SQL Server.
 - Asegúrese de que los clientes NFS usan la opción 'nolock' al montar el recurso compartido remoto.
 
+## <a id="repositories"></a> Configurar repositorios de origen
+
+Al instalar o actualizar SQL Server, obtendrá la versión más reciente de SQL Server 2017 desde el repositorio de Microsoft configurado. Utilice los tutoriales el **actualización acumulativa (CU)** repositorio. Pero en su lugar, puede configurar la **GDR** repositorio. Para obtener más información sobre los repositorios y cómo configurarlas, consulte [configurar repositorios para SQL Server en Linux](sql-server-linux-change-repo.md).
+
+> [!IMPORTANT]
+> Si instaló anteriormente un CTP o versión RC de 2017 de SQL Server, debe eliminar el repositorio de vista previa y registrar una disponibilidad General (GA) uno. Para obtener más información, consulte [configurar repositorios para SQL Server en Linux](sql-server-linux-change-repo.md).
+
 ## <a id="platforms"></a> Instalar SQL Server
 
 Puede instalar a SQL Server en Linux desde la línea de comandos. Para obtener instrucciones, consulte uno de los siguientes tutoriales:
@@ -78,13 +89,6 @@ Puede instalar a SQL Server en Linux desde la línea de comandos. Para obtener i
 - [Instalar en Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Ejecutar en Docker](quickstart-install-connect-docker.md)
 - [Aprovisionar una máquina virtual de SQL en Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
-
-## <a id="repositories"></a> Configurar repositorios de origen
-
-Al instalar o actualizar SQL Server, obtendrá la versión más reciente de SQL Server 2017 desde el repositorio de Microsoft configurado. Utilice los tutoriales el **actualización acumulativa (CU)** repositorio. Pero en su lugar, puede configurar la **GDR** repositorio. Para obtener más información sobre los repositorios y cómo configurarlas, consulte [configurar repositorios para SQL Server en Linux](sql-server-linux-change-repo.md).
-
-> [!IMPORTANT]
-> Si instaló anteriormente un CTP o versión RC de 2017 de SQL Server, debe eliminar el repositorio de vista previa y registrar una disponibilidad General (GA) uno. Para obtener más información, consulte [configurar repositorios para SQL Server en Linux](sql-server-linux-change-repo.md).
 
 ## <a id="upgrade"></a> Actualizar SQL Server
 
@@ -202,18 +206,16 @@ Si su equipo Linux no tiene acceso a los repositorios en línea que se utiliza e
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="optional-sql-server-features"></a>Características opcionales de SQL Server
 
-Después de la instalación, también puede instalar otros paquetes de SQL Server opcionales.
+Después de la instalación, también puede instalar o habilitar características opcionales de SQL Server.
 
 - [Herramientas de línea de comandos de SQL Server](sql-server-linux-setup-tools.md)
 - [Agente SQL Server](sql-server-linux-setup-sql-agent.md)
 - [Búsqueda de texto completo de SQL Server](sql-server-linux-setup-full-text-search.md)
 - [Servicios de integración de SQL Server (Ubuntu)](sql-server-linux-setup-ssis.md)
 
-Conectarse a la instancia de SQL Server para empezar a crear y administrar bases de datos. Para empezar, vea los tutoriales:
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 
-- [Instalar en Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
-- [Instalar en SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
-- [Instalar en Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Ejecutar en Docker](quickstart-install-connect-ubuntu.md)
+> [!TIP]
+> Para obtener respuestas a las preguntas más frecuentes, consulte el [SQL Server en Linux preguntas más frecuentes sobre](sql-server-linux-faq.md).

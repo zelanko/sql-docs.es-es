@@ -2,7 +2,7 @@
 title: "Inicio rápido: Conectarse y consultar SQL Server mediante las operaciones de SQL Studio (versión preliminar) | Documentos de Microsoft"
 description: "Este tutorial rápido muestra cómo utilizar las operaciones de SQL Studio (versión preliminar) para conectarse a SQL Server y ejecute una consulta"
 ms.custom: tools|sos
-ms.date: 11/15/2017
+ms.date: 03/08/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,16 +14,16 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7588368dcd64316551a9eaa72aeb8ce1d2ea67a6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5c0f78537429026583fe970a65426bc909a46557
+ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/09/2018
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Inicio rápido: Conectarse y consultar mediante SQL Server[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Inicio rápido: Conectarse y consultar mediante SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Este tutorial rápido muestra cómo usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectarse a SQL Server y, a continuación, utilice las instrucciones de Transact-SQL (T-SQL) para crear el *TutorialDB* utilizados en [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutoriales.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 Para completar este tutorial rápido, necesita [!INCLUDE[name-sos](../includes/name-sos-short.md)]y el acceso a un servidor SQL Server.
 
@@ -92,7 +92,10 @@ El editor de consultas aún está conectado a la *maestro* base de datos, pero d
 
 
 
-1. Pegue el siguiente fragmento de código en la ventana de consulta:
+1. Pegue el siguiente fragmento de código en la ventana de consulta y haga clic en **ejecutar**:
+
+   > [!NOTE]
+   > Puede anexar a o sobrescriba la consulta anterior en el editor. Tenga en cuenta que al hacer clic **ejecutar** ejecuta solo la consulta seleccionada. Si se selecciona nada, haga clic en **ejecutar** ejecuta todas las consultas en el editor.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -115,7 +118,8 @@ Una vez finalizada la consulta, el nuevo **clientes** tabla aparece en la lista 
 
 ## <a name="insert-rows"></a>Insertar filas
 
-1. Pegue el siguiente fragmento de código en la ventana de consulta:
+- Pegue el siguiente fragmento de código en la ventana de consulta y haga clic en **ejecutar**:
+
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
@@ -128,18 +132,17 @@ Una vez finalizada la consulta, el nuevo **clientes** tabla aparece en la lista 
    GO
    ```
 
-1. Para ejecutar la consulta, haga clic en **ejecutar**.
 
 
 ## <a name="view-the-data-returned-by-a-query"></a>Ver los datos devueltos por una consulta
-1. Pegue el siguiente fragmento de código en la ventana de consulta:
+1. Pegue el siguiente fragmento de código en la ventana de consulta y haga clic en **ejecutar**:
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
 
-1. Para ejecutar la consulta, haga clic en **ejecutar**.
+1. Se muestran los resultados de la consulta:
 
    ![Seleccione los resultados](media/quickstart-sql-server/select-results.png)
 

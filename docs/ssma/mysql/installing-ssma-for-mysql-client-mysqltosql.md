@@ -8,24 +8,26 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology:
+- sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: Installing client,Licensing
+helpviewer_keywords:
+- Installing client,Licensing
 ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 20e2b46e1b020865359431a4999e097c20e14da1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8ef326d0a41ceb09a412216c8dd36574b10f694b
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>Instalación de SSMA para cliente de MySQL (MySQLToSQL)
 SSMA para cliente de MySQL consta de los archivos de programa que llevan a cabo las siguientes tareas:  
@@ -42,22 +44,22 @@ SSMA para cliente de MySQL consta de los archivos de programa que llevan a cabo 
   
 Este tema proporciona los requisitos previos de instalación e instrucciones para la instalación de SSMA para cliente de MySQL.  
   
-## <a name="prerequisites"></a>Prerequisites  
-SSMA para MySQL está diseñado para trabajar con MySQL 4.1 o versiones posteriores y todas las ediciones de SQL Server 2005, SQL Server 2008, SQL Server 2012, SQL Server 2014, SQL Server 2016 y base de datos de SQL Azure.  
+## <a name="prerequisites"></a>Requisitos previos  
+SSMA para MySQL está diseñado para trabajar con MySQL 4.1 o versiones posteriores y todas las ediciones de SQL Server 2005, SQL Server 2008, SQL Server 2012, SQL Server 2014, SQL Server 2016, SQL Server 2017 y base de datos de SQL Azure.  
   
 Antes de instalar SSMA, asegúrese de que el equipo cumple los requisitos siguientes:  
   
 -   Windows 7 o versiones posteriores, o Windows Server 2008 o versiones posteriores.  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3.1 o una versión posterior.  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 o una versión posterior.  
   
 -   El [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] versión 4.0 o una versión posterior. El [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] versión 4.0 está disponible en el CD del producto SQL Server. También puede obtener desde la [Centro para desarrolladores de .NET Framework](http://go.microsoft.com/fwlink/?LinkId=48882).  
   
--   Controlador de MySQL ODBC 5.1 y la conectividad a las bases de datos de MySQL que se van a migrar. Puede instalar MySQL desde el sitio MySQL Web. Para obtener información acerca de la conectividad, vea [conectarse a MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
+-   Controlador de MySQL ODBC 5.1 y la conectividad a las bases de datos de MySQL que se van a migrar. Puede instalar MySQL desde el sitio MySQL Web. Para obtener información acerca de la conectividad, vea [conectar con MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
--   Acceso a y los permisos necesarios en el equipo que hospeda la instancia de destino de SQL Server donde se va a migrar datos y objetos de base de datos. Para obtener más información, vea [conectarse a SQL Server &#40; MySQLToSQL &#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
+-   Acceso a y los permisos necesarios en el equipo que hospeda la instancia de destino de SQL Server donde se va a migrar datos y objetos de base de datos. Para obtener más información, consulte [conectarse a SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
--   En el caso de proyectos de SQL Azure, acceso y los permisos necesarios para la instancia de base de datos de SQL de Azure donde va a migrar objetos y base de datos. Para obtener más información, vea [conectarse a base de datos de SQL de Azure &#40; MySQLToSQL &#41; ](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md).  
+-   En el caso de proyectos de SQL Azure, acceso y los permisos necesarios para la instancia de base de datos de SQL de Azure donde va a migrar objetos y base de datos. Para obtener más información, consulte [conectarse a la base de datos de SQL Azure &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md).  
   
 -   4 GB de RAM recomendado.  
   
@@ -68,7 +70,7 @@ Después de descargar la versión más reciente, debe extraer los archivos de in
   
 **Para instalar al cliente SSMA**  
   
-1.  Haga doble clic en SSMA para MySQL  *n* . Install.exe, donde  *n*  es el número de compilación.  
+1.  Haga doble clic en SSMA para MySQL *n*. Install.exe, donde *n* es el número de compilación.  
   
 2.  En la página de bienvenida, haga clic en **siguiente**.  
   
@@ -88,5 +90,5 @@ La ubicación de instalación predeterminada es C:\Program Files\Microsoft SQL S
 En el equipo de Windows de 64 bits se instala el producto en C:\Microsoft SQL Server Migration Assistant para MySQL.  
   
 ## <a name="see-also"></a>Vea también  
-[Migrar bases de datos de MySQL a SQL Server: base de datos de SQL Azure &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Bases de datos de migración desde MySQL a SQL Server: base de datos de SQL Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

@@ -2,7 +2,7 @@
 title: "Descargue e instale Microsoft SQL operaciones Studio (versión preliminar) | Documentos de Microsoft"
 description: "Descargue e instale Microsoft SQL operaciones Studio (versión preliminar) para Windows, Mac OS o Linux"
 ms.custom: tools|sos
-ms.date: 02/15/2018
+ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dda75f01b68816c971d31354f08686381597271f
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: 1cb41e1824fc157932e2cb08292608bb97e46712
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>Descargue e instale las operaciones de SQL Studio (versión preliminar)
 
@@ -65,16 +65,25 @@ Esta versión de [!INCLUDE[name-sos](../includes/name-sos-short.md)] incluye una
 
    ```bash
    cd ~
-   cp ~/Downloads/sqlops-linux-<version string>.tar.gz ~
-   tar -xvf ~/sqlops-linux-<version string>.tar.gz
-   echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc
-   source ~/.bashrc
+   sudo dpkg -i ./Downloads/sqlops-linux-<version string>.deb
+
    sqlops
    ```
 
    > [!NOTE]
-   > En Ubuntu y Redhat, puede tener dependencias que faltan. Use los comandos siguientes para instalar estas dependencias según su versión de Linux:
+   > En Debian, Redhat y Ubuntu, pueden tener dependencias que faltan. Use los comandos siguientes para instalar estas dependencias según su versión de Linux:
    
+
+   **Debian:** 
+   ```bash
+   sudo apt-get install libuwind8
+   ```
+
+   **RedHat:** 
+   ```bash
+   yum install libXScrnSaver
+   ```
+
    **Ubuntu:** 
    ```bash
    sudo apt-get install libxss1
@@ -84,10 +93,6 @@ Esta versión de [!INCLUDE[name-sos](../includes/name-sos-short.md)] incluye una
    sudo apt-get install libunwind8
    ```
 
-   **RedHat:** 
-   ```bash
-   yum install libXScrnSaver
-   ```
 
 ## <a name="uninstall-sql-operations-studio-preview"></a>Desinstalar Studio de operaciones de SQL (vista previa)
 

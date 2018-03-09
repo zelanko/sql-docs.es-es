@@ -1,7 +1,7 @@
 ---
-title: "Publicar y consumir código Python | Documentos de Microsoft"
+title: "Publicar y consumir código Python - servidor de aprendizaje de máquina de SQL Server (independiente) | Documentos de Microsoft"
 ms.custom: 
-ms.date: 11/09/2017
+ms.date: 03/07/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -12,39 +12,34 @@ ms.tgt_pltfrm:
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: cgronlund
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 8720440872fb0b41a76d4ac644fd3b60d52a095e
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 9a7e56d5f2726b627381d24e3cfd8e50ade325f6
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="publish-and-consume-python-web-services"></a>Publicar y consumir servicios web de Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Puede implementar una solución de Python y en funcionamiento en un servicio web mediante la característica de puesta en marcha en el servidor de aprendizaje de máquina de Microsoft. En este tema se describe los pasos para publicar correctamente y, a continuación, ejecutar la solución.
+Puede implementar un trabajo solución Python a un servicio web mediante la característica de puesta en marcha en un [aprendizaje de máquina SQL Server (independiente)](../r/r-server-standalone.md) instancia. Este artículo describen los pasos para publicar correctamente y, a continuación, ejecutar la solución.
 
-La audiencia de destino para este artículo es científicos de datos que desean obtener información sobre cómo publicar código Python o modelos como servicios web hospedados en el servidor de aprendizaje de máquina de Microsoft. El artículo también explica cómo las aplicaciones pueden consumir el el código o los modelos. Este artículo se supone que son expertos en Python.
+Está dirigida a los científicos de datos que desean aprender a publicar código Python o modelos en un servidor de aprendizaje de máquina y cómo consumir el código o los modelos en una aplicación personalizada. 
 
-> [!IMPORTANT]
->
-> Este ejemplo se desarrolló para la versión de Python que se incluye con el servidor de aprendizaje de máquina (independiente) y utiliza las características de la versión del servidor de aprendizaje de máquina **9.1.0**.
- > 
- > Haga clic en el vínculo siguiente para ver el mismo ejemplo, volver a publicar mediante las bibliotecas más recientes en el servidor de aprendizaje de máquina. Vea [implementar y administrar servicios web de Python](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services).
-
-**Se aplica a: Microsoft R Server (independiente)**
+Este artículo se supone que son expertos en Python. También debe tener un servidor independiente, que se instala independientemente de otras características de SQL Server. El servidor debe ser [configurado para la puesta en marcha](../operationalization-with-mrsdeploy.md) para habilitar el hospedaje de servicio web. 
 
 ## <a name="overview-of-workflow"></a>Información general del flujo de trabajo
 
 El flujo de trabajo de publicación para consumir un servicio web de Python, se puede resumir de la siguiente manera:
 
-1. Cumplir los [prerequisite](#prereq) consiste en generar la biblioteca de cliente de Python del documento de Swagger de la API de núcleo.
-2. Agregar lógica de autenticación y el encabezado en el script de Python.
-3. Crear una sesión de Python, preparar el entorno y crear una instantánea para mantener el entorno.
-4. Publicar el servicio web y lo inserte esta instantánea.
-5. Probar el servicio web, puede usarlo en la sesión.
-6. Administrar estos servicios.
+1. Compruebe que la instalación de servidor independiente del servidor de aprendizaje de máquina con Python.
+2. Cumplir los [prerequisite](#prereq) consiste en generar la biblioteca de cliente de Python del documento de Swagger de la API de núcleo.
+3. Agregar lógica de autenticación y el encabezado en el script de Python.
+4. Crear una sesión de Python, preparar el entorno y crear una instantánea para mantener el entorno.
+5. Publicar el servicio web y lo inserte esta instantánea.
+6. Probar el servicio web, puede usarlo en la sesión.
+7. Administrar estos servicios.
 
 ![Flujo de trabajo de swagger](./media/data-scientist-python-workflow.png)
 
@@ -52,9 +47,9 @@ En este artículo se describe cada paso del flujo de trabajo e incluye código d
 
 ## <a name="sample-code"></a>Código de ejemplo
 
-Este código de ejemplo se da por supuesto que se han cumplido los [requisitos previos](#prereq) para generar una biblioteca de cliente de Python desde ese Swagger archivo y que han usado Autorest.
+Este código de ejemplo se da por supuesto que tiene [genera la biblioteca de cliente de Python requisitos previos](#prereq) de Swagger y que ha usado Autorest. Ejecute este código en una instancia de servidor de aprendizaje de máquina (independiente) de SQL Server que se ha configurado para la puesta en marcha.
 
-Después del bloque de código, encontrará un tutorial paso a paso con descripciones más detalladas del proceso completo.
+Para explorar este código en profundidad, ir directamente a la [tutorial paso a paso](#walkthrough) para obtener más descripciones del proceso completo.
 
 > [!IMPORTANT]
 > Este ejemplo utiliza la variable local `admin` cuenta para la autenticación. Sin embargo, debería sustituir las credenciales y [método de autenticación](#python-auth) configurado por el administrador.
@@ -289,14 +284,16 @@ for service in client.get_all_web_services(headers):
 client.delete_web_service_version("Iris","V2.0",headers)
 ```
 
+<a name="walkthrough"></a>
+
 ## <a name="walkthrough"></a>Tutorial
 
 Esta sección describe cómo funciona el código con más detalle.
 
 
-### <a name="prereq"></a>Paso 1. Crear bibliotecas de cliente de requisitos previos
+### <a name="prereq"></a> Paso 1. Crear bibliotecas de cliente de requisitos previos
 
-Antes de poder empezar a publicar su Python código y los modelos thorugh aprendizaje de máquina de Microsoft Server, debe generar una biblioteca de cliente con el documento de Swagger proporcionado en esta versión.
+Antes de poder empezar a publicar el código Python y modelos a través del servidor de aprendizaje de máquina, debe generar una biblioteca de cliente con el documento de Swagger proporcionado en esta versión.
 
 1. Instale un generador de código de Swagger en el equipo local y familiarizarse con él. Se usará para generar las bibliotecas de cliente de la API de Python. Herramientas populares incluyen [Azure AutoRest](https://github.com/Azure/autorest) (requiere Node.js) y [Swagger Codegen](https://github.com/swagger-api/swagger-codegen). 
 

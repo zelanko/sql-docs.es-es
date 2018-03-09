@@ -20,11 +20,11 @@ ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: data-services
 ms.date: 12/15/2016
-ms.openlocfilehash: 32643cbe6ab7019cbac912eb26fe3e78423bdeb9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35c8de2f1105bbbda05642b993d8fe0c88d76f39
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="language-elements"></a>Elementos de lenguaje
 Elementos del lenguaje Transact-SQL (T-SQL) para análisis Platform System (APS) SQL Server paralelo almacenamiento de datos (PDW).
@@ -33,12 +33,12 @@ Elementos del lenguaje Transact-SQL (T-SQL) para análisis Platform System (APS)
 * [convenciones de sintaxis](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [reglas de nomenclatura de objetos](../relational-databases/databases/database-identifiers.md)
 * [palabras clave reservadas](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [intercalaciones](https://msdn.microsoft.com/library/ff848763.aspx)
-* [comentarios](../t-sql/language-elements/comment-transact-sql.md)
-* [constantes](../t-sql/data-types/constants-transact-sql.md)
-* [tipos de datos](../t-sql/data-types/data-types-transact-sql.md)
+* [Intercalaciones](https://msdn.microsoft.com/library/ff848763.aspx)
+* [Comentarios](../t-sql/language-elements/comment-transact-sql.md)
+* [constants](../t-sql/data-types/constants-transact-sql.md)
+* [Tipos de datos](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
-* [expresiones](../t-sql/language-elements/expressions-transact-sql.md)
+* [Expresiones](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
 * [Solución de la propiedad de identidad](../t-sql/statements/create-table-transact-sql-identity-property.md)
 * [PRINT](../t-sql/language-elements/print-transact-sql.md)
@@ -61,7 +61,7 @@ Elementos del lenguaje Transact-SQL (T-SQL) para análisis Platform System (APS)
 * [- (Negativo)](../t-sql/language-elements/unary-operators-negative.md)
 * [- (Restar)](../t-sql/language-elements/subtract-transact-sql.md)
 * [* (Multiplicar)](../t-sql/language-elements/multiply-transact-sql.md)
-* [/ (Dividir)](../t-sql/language-elements/divide-transact-sql.md)
+* [/ (Divide)](../t-sql/language-elements/divide-transact-sql.md)
 * [Módulo](../t-sql/language-elements/modulo-transact-sql.md)
 
 ## <a name="wildcard-characters-to-match"></a>Caracteres de comodín para coincidir con
@@ -76,7 +76,7 @@ Elementos del lenguaje Transact-SQL (T-SQL) para análisis Platform System (APS)
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
 * [EXISTS](../t-sql/language-elements/exists-transact-sql.md)
 * [IN](../t-sql/language-elements/in-transact-sql.md)
-* [ES [NO](../t-sql/queries/is-null-transact-sql.md)
+* [NO ES](../t-sql/queries/is-null-transact-sql.md)
 * [LIKE](../t-sql/language-elements/like-transact-sql.md)
 * [NOT](../t-sql/language-elements/not-transact-sql.md)
 * [O BIEN](../t-sql/language-elements/or-transact-sql.md)
@@ -235,7 +235,7 @@ Elementos del lenguaje Transact-SQL (T-SQL) para análisis Platform System (APS)
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
 ## <a name="transactions"></a>Transactions
-* [transacciones](../t-sql/language-elements/transactions-sql-data-warehouse.md)
+* [transactions](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
 ## <a name="diagnostic-sessions"></a>Sesiones de diagnóstico
 * [CREATE DIAGNOSTICS SESSION](../t-sql/language-elements/create-diagnostics-session-transact-sql.md)

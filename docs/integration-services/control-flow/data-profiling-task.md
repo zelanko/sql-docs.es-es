@@ -25,10 +25,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 62c240d11e15eea39fb7246d147680b39370c7a6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: HT
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="data-profiling-task"></a>Tarea de generación de perfiles de datos
   La tarea de generación de perfiles de datos calcula diversos perfiles que le ayudan a familiarizarse con un origen de datos y a identificar en los datos problemas que deban corregirse.  
@@ -123,7 +123,7 @@ ms.lasthandoff: 02/15/2018
 |**DataProfilingTaskTrace**|Proporciona información descriptiva sobre el estado de la tarea. Los mensajes incluyen la información siguiente:<br /><br /> Inicio de las solicitudes de procesamiento<br /><br /> Inicio de la consulta<br /><br /> Query End<br /><br /> Finalización de la solicitud de cálculo|  
   
 ## <a name="output-and-its-schema"></a>Salida y su esquema  
- La tarea de generación de perfiles de datos genera los perfiles seleccionados en XML y se estructura según el esquema DataProfile.xsd. Puede especificar si este XML generado se guarda en un archivo o en una variable de paquete. Puede ver este esquema en Internet en [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Desde la página web puede guardar una copia local del esquema. A continuación, puede ver la copia local del esquema en Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] u otro editor de esquemas, en un editor XML o en un editor de texto, como el Bloc de notas.  
+ La tarea de generación de perfiles de datos genera los perfiles seleccionados en XML y se estructura según el esquema DataProfile.xsd. Puede especificar si este XML generado se guarda en un archivo o en una variable de paquete. Puede ver este esquema en línea en [ http://schemas.microsoft.com/sqlserver/2008/DataDebugger/ ](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Desde la página web puede guardar una copia local del esquema. A continuación, puede ver la copia local del esquema en Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] u otro editor de esquemas, en un editor XML o en un editor de texto, como el Bloc de notas.  
   
  Este esquema de información sobre la calidad de los datos podría ser útil para:  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 02/15/2018
   
 -   Generar herramientas personalizadas para trabajar con información sobre la calidad de los datos.  
   
- El espacio de nombres de destino se identifica en el esquema como [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
+ El espacio de nombres de destino se identifica en el esquema como [ http://schemas.microsoft.com/sqlserver/2008/DataDebugger/ ](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>Salida en el flujo de trabajo condicional de un paquete  
  Los componentes que generan perfiles de datos no incluyen funcionalidad integrada para implementar la lógica condicional en el flujo de trabajo del paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] basándose en el resultado de la tarea de generación de perfiles de datos. Sin embargo, puede agregar fácilmente esta lógica en una tarea Script con una cantidad de programación mínima. Este código realizaría una consulta XPath en el XML generado y, a continuación, guardaría el resultado en una variable de paquete. Las restricciones de precedencia que conectan la tarea Script con las tareas subsiguientes pueden utilizar una expresión para determinar el flujo de trabajo. Por ejemplo, la tarea Script detecta que el porcentaje de valores NULL de una columna supera un cierto umbral. Cuando esta condición sea True, quizá desee interrumpir el paquete y resolver el problema antes de continuar.  
@@ -145,7 +145,7 @@ ms.lasthandoff: 02/15/2018
  [Página Solicitudes de perfil](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
  En la página **Solicitudes de perfil** , especifique el origen de datos y seleccione y configure los perfiles de los datos que quiere calcular. Para obtener más información sobre los diversos perfiles que puede configurar, vea los temas siguientes:  
   
--   [Opciones de Solicitud de perfil de claves candidatas &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Opciones de solicitud de perfil de claves candidatas &#40; los datos de generación de perfiles de tarea &#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   
 -   [Opciones de Solicitud de perfil de distribución de longitud de columna &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
   

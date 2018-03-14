@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.p2pwizard.peers.f1
+f1_keywords:
+- sql13.rep.p2pwizard.peers.f1
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
-caps.latest.revision: "29"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba3f308aaa3e5eea99a7cae23630c8462414a1fb
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 9e7cfe0b50d1b33d4b95654766fd3dce952d8793
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Configurar topología (replicación punto a punto)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilice la página **Configurar topología** para realizar las tareas de configuración comunes, como agregar nuevos nodos, eliminar nodos y agregar las nuevas conexiones entre los nodos existentes. El nodo que seleccionó en la página **Publicación** de este asistente se muestra en la superficie de diseño. Para especificar las opciones de configuración, haga clic con el botón secundario en un nodo, una conexión o la superficie de diseño.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Utilice la página **Configurar topología** para realizar las tareas de configuración comunes, como agregar nuevos nodos, eliminando nodos y agregar las nuevas conexiones entre los nodos existentes. El nodo que seleccionó en la página **Publicación** de este asistente se muestra en la superficie de diseño. Para especificar las opciones de configuración, haga clic con el botón secundario en un nodo, una conexión o la superficie de diseño.  
   
 > [!NOTE]  
 >  El Asistente de configuración de la topología punto a punto solicita información de la topología cuando se cierra el asistente. Si el asistente se cierra y se vuelve a abrir antes de que todos los nodos respondan a la solicitud de información, el asistente puede mostrar una red parcial.  

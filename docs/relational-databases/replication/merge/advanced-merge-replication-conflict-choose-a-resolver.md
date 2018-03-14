@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - articles [SQL Server replication], conflict resolution
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
-caps.latest.revision: "33"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1312413f12476c9be36ed3595fed82a75fd375fb
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c3d5dc46d5c364a9e5c128ce101499330d29efbe
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="advanced-merge-replication-conflict---choose-a-resolver"></a>Conflictos de replicación de mezcla avanzada: elegir un solucionador
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Al elegir un solucionador, tenga en cuenta la importancia que tiene la resolución de conflictos en la aplicación y considere si debe utilizar el solucionador de conflictos predeterminado basado en prioridad o un solucionador de artículos.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Al elegir un solucionador, tenga en cuenta la importancia que tiene la resolución de conflictos en la aplicación y considere si debe utilizar el solucionador de conflictos predeterminado basado en prioridad o un solucionador de artículos.  
   
  Si los datos están divididos sin que varios usuarios escriban en las mismas particiones, y la topología de replicación es relativamente básica (un publicador y unos pocos suscriptores), los conflictos serán escasos o inexistentes. En estos entornos, es probable que no necesite una estrategia de resolución de conflictos compleja. Se recomienda una estrategia que utilice la configuración predeterminada para la resolución de conflictos, por medio de suscripciones en el cliente y una directiva de prioridad. Si la topología es más compleja (por ejemplo, si utiliza suscriptores de republicación), es posible que sea más apropiado utilizar suscripciones en el servidor con prioridades específicas.  
   

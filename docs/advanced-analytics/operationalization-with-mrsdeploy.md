@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: b090579bd0a32b901d1c1cedcc26b290d7a68771
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 4b439725c8c9e522ed500f717686b8a9cf7d972a
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="deploy-and-consume-analytics-using-mrsdeploy"></a>Implementar y consumir análisis mediante mrsdeploy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,10 +56,6 @@ Esta característica de implementación de R Server ofrece estas ventajas:
   
   Puede usar en tiempo real de puntuación con un objeto de modelo de R admitido para mejorar la velocidad de las operaciones de puntuación.
 
-+ Publicar código Python como un servicio web
-
-  Para obtener ejemplos, vea [publicar y consumir código Python](./python/publish-consume-python-code.md).
-
 + Consumo de lote asincrónico
 
   Servicios Web que requieren datos de entrada de gran tamaño ahora pueden utilizarse de forma asincrónica a través de la ejecución por lotes.
@@ -88,7 +84,7 @@ Sin embargo, si necesita instalarlas juntas, siga estos pasos adicionales para c
 
 3. Después de completar el programa de instalación de **aprendizaje de máquina de Microsoft Server**, manualmente agregar la siguiente clave del registro para **mrsdeploy**, que especifica la carpeta base para los archivos R_SERVER. 
 
-    + Cree una nueva clave del registro`H_KEY_LOCAL_MACHINE\SOFTWARE\R Server\Path`
+    + Cree una nueva clave del registro `H_KEY_LOCAL_MACHINE\SOFTWARE\R Server\Path`
     + Establezca el valor de la clave `"C:\Program Files\Microsoft SQL Server\140\R_SERVER"`.
 
 4. Cuando haya finalizado, abra el [administrador utilidad](https://docs.microsoft.com/r-server/operationalize/configure-use-admin-utility).

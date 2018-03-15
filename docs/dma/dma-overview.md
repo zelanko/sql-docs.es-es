@@ -1,7 +1,7 @@
 ---
 title: "Información general del Asistente de migración de datos (SQL Server) | Documentos de Microsoft"
 ms.custom: 
-ms.date: 02/07/2018
+ms.date: 03/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
@@ -21,11 +21,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c23ed7d07474cc763da951e782badd42458dacdb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c387e5bb2a0b5cef10217b32807f88a8aee6c627
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="overview-of-data-migration-assistant"></a>Información general del Asistente de migración de datos
 
@@ -45,27 +45,20 @@ El Asistente para la migración de datos (DMA) le permite actualizar a una plata
 - Detectar problemas que pueden afectar a una actualización a un servidor local de SQL. Estos se describen como problemas de compatibilidad y se organizan en las siguientes categorías:
 
   - Cambios importantes
-
   - Cambios de comportamiento
-
   - Características desusadas
 
 - Descubra nuevas características de la plataforma de SQL Server de destino que la base de datos puede beneficiarse de tras la actualización. Estos se describen como recomendaciones de la característica y se organizan en las siguientes categorías:
 
   - Rendimiento
-
   - Seguridad
-
   - Almacenamiento
 
 - Migrar una instancia de SQL Server local a una instancia de SQL Server moderna, hospedada de forma local o en una máquina virtual Azure (VM) que sea accesible desde la red local. La máquina virtual de Azure puede tener acceso mediante VPN u otras tecnologías. El flujo de trabajo de migración le ayuda a migrar los siguientes componentes:
 
   - Esquema de bases de datos
-
   - Datos y usuarios
-
   - Roles del servidor
-
   - Inicios de sesión de SQL Server y Windows
 
 - Después de la migración correcta, las aplicaciones pueden conectarse a las bases de datos de destino SQL server sin problemas.
@@ -89,6 +82,9 @@ DMA reemplaza todas las versiones anteriores del Asesor de actualizaciones de SQ
 - SQL Server 2016
 - SQL Server de 2017 en Windows y Linux
 - Azure SQL Database
+
+> [!NOTE] 
+> DMA no admite actualmente la instancia de base de datos administrada de SQL de Azure como destino.
 
 ## <a name="installation"></a>Installation
 

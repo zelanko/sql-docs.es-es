@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96384f918239772c3c6a859f523c04a4d53ec4d0
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 36a844cb2dcda45701c29066b825e64a864d5757
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift
 Los paquetes y las cargas de trabajo de SQL Server Integration Services (SSIS) se pueden mover ahora a la nube de Azure.
@@ -92,6 +92,8 @@ Para implementar proyectos y ejecutar paquetes en SQL Database, puede usar una d
 -   PowerShell
 -   C# y el modelo de objetos de administración de SSIS
 
+Para comenzar, consulte [Implementar, ejecutar y supervisar un paquete SSIS en Azure](ssis-azure-deploy-run-monitor-tutorial.md).
+
 ### <a name="monitor-packages"></a>Supervisar paquetes
 Para supervisar paquetes en ejecución en SSMS, puede usar una de las siguientes herramientas de informes de SSMS.
 -   Haga clic con el botón derecho en **SSISDB** y, a continuación, seleccione **Operaciones activas** para abrir el cuadro de diálogo **Operaciones activas**.
@@ -107,4 +109,4 @@ Para obtener más información, consulte [Programar la ejecución de paquetes SS
 ## <a name="next-steps"></a>Pasos siguientes
 Para comenzar con las cargas de trabajo de SSIS en Azure, consulte los artículos siguientes:
 -   [Implementación de paquetes SSIS en Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)
--   [Implementar, ejecutar y supervisar un paquete SSIS en Azure](ssis-azure-deploy-run-monitor-tutorial.md)
+-   [Deploy, run, and monitor an SSIS package on Azure](ssis-azure-deploy-run-monitor-tutorial.md) (Implementar, ejecutar y supervisar un paquete SSIS en Azure)

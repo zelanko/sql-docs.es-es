@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49cdcb7768103ba9cfd62a58bcdcbf5399ae09a1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b6ed067a54cc867ed091dd27f5a4af91954045f1
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>Admitir múltiples versiones de los componentes personalizados
  Ahora puede usar el Diseñador SSIS en SQL Server Data Tools (SSDT) para crear, mantener y ejecutar paquetes que se destinen a SQL Server 2016, SQL Server 2014 o SQL Server 2012. Para obtener SSDT para Visual Studio 2015, consulte [Descargar SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md). 
@@ -104,7 +104,7 @@ public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersio
 
 **Mensaje de error.** No se puede convertir el objeto COM del tipo "System.__ComObject" al tipo de interfaz "Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100". Se produjo un error en esta operación debido a que la llamada QueryInterface en el componente COM para la interfaz con IID "{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}" generó el siguiente error: No se admite dicha interfaz (Excepción de HRESULT: 0x80004002 (E_NOINTERFACE)). (Microsoft.SqlServer.DTSPipelineWrap).
 
-**Solución.** Si la extensión personalizada hace referencia a ensamblados de interoperabilidad de SSIS, como Microsoft.SqlServer.DTSPipelineWrap o Microsoft.SqlServer.DTSRuntimeWrap, establezca el valor de la propiedad **Incrustar tipos de interoperabilidad** en "False".
+**Solución.** Si la extensión personalizada hace referencia a ensamblados de interoperabilidad de SSIS, como Microsoft.SqlServer.DTSPipelineWrap o Microsoft.SqlServer.DTSRuntimeWrap, establezca el valor de la propiedad **Insertar tipos de interoperabilidad** en **False**.
 
 ![Insertar tipos de interoperabilidad](../../integration-services/extending-packages-custom-objects/media/embed-interop-types.png)
 

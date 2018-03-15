@@ -1,14 +1,15 @@
 ---
 title: "Suscriptores de replicación y grupos de disponibilidad AlwaysOn (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
+ms.date: 03/08/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e868d03cfe57b78affa81b00f5f91376ae9a89e8
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6020be0ea9568611a0e427917bc02c2a3a53cc3a
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>Suscriptores de replicación y grupos de disponibilidad AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,15 +34,7 @@ ms.lasthandoff: 01/18/2018
   Cuando el grupo de disponibilidad AlwaysOn que contiene una base de datos que es un suscriptor de replicación realiza una conmutación por error, se puede producir un error en la suscripción de replicación. Para los suscriptores transaccionales, el agente de escucha seguirá replicando automáticamente si la suscripción usa el nombre del agente de escucha del grupo de disponibilidad del suscriptor. Para los suscriptores de mezcla, un administrador de replicación debe volver a configurar manualmente el suscriptor volviendo a crear la suscripción.  
   
 ## <a name="what-is-supported"></a>Qué se admite  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite la conmutación por error automática del publicador, la conmutación por error de suscriptores transaccionales y la conmutación por error manual de los suscriptores de mezcla. No se admite la conmutación por error de un distribuidor de una base de datos de disponibilidad. AlwaysOn no puede combinarse con los escenarios Websync y ssNoVersion Compact.  
-  
- **Conmutación por error de una suscripción de extracción de mezcla**  
-  
- Se produce un error en una suscripción de extracción tras la conmutación por error del grupo de disponibilidad porque el agente de extracción no puede encontrar los trabajos almacenados en la base de datos **msdb** de la instancia de servidor que hospeda la réplica principal, que no está disponible porque se ha producido un error en la instancia de servidor.  
-  
- **Conmutación por error de una suscripción de inserción de mezcla**  
-  
- Se produce un error en una suscripción de inserción tras la conmutación por error del grupo de disponibilidad porque el agente de inserción ya no puede conectarse a la base de datos de suscripciones original en el suscriptor original.  
+ La replicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite la conmutación por error automática del publicador y la conmutación por error automática de los suscriptores transaccionales. No se admite la conmutación por error de un distribuidor de una base de datos de disponibilidad. Los suscriptores de mezcla pueden ser parte de un grupo de disponibilidad, pero se requieren acciones manuales para configurar el suscriptor nuevo después de una conmutación por error. Los grupos de disponibilidad no pueden combinarse con los escenarios Websync y ssNoVersion Compact.  
   
 ## <a name="how-to-create-transactional-subscription-in-an-always-on-environment"></a>Cómo crear una suscripción transaccional en un entorno de AlwaysOn  
  Para la replicación transaccional, utilice los pasos siguientes para configurar y conmutar por error un grupo de disponibilidad de suscriptor:  

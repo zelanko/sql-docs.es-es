@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 98aed78b69a108ae5b0c8f914540b385403a60f9
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 218890a01c98c51c570255dce0ad2c34bc5c26db
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Conectarse a la base de datos del catálogo de SSISDB en Azure
 
@@ -55,14 +55,20 @@ Antes de comenzar, asegúrese de que tiene instalada la versión 17.2 (o posteri
    | **Inicio de sesión** | Cuenta de administrador del servidor | Se trata de la cuenta que especificó cuando creó el servidor. |
    | **Contraseña** | Contraseña de la cuenta de administrador del servidor | Se trata de la contraseña que especificó cuando creó el servidor. |
 
+    ![Conexión al servidor con SSMS](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-1.png)
+
 3. **Conéctese a la base de datos de SSISDB**. Seleccione **Opciones** para expandir el cuadro de diálogo **Conectar con el servidor**. En el cuadro de diálogo **Conectar con el servidor** expandido, seleccione la pestaña **Propiedades de conexión**. En el campo **Conectar con la base de datos**, seleccione o especifique `SSISDB`.
 
     > [!IMPORTANT]
     > Si no selecciona `SSISDB` cuando se conecte, es posible que no vea el catálogo de SSIS en el Explorador de objetos.
 
-4. Seleccione **Conectar**.
+    ![Selección de la base de datos SSISDB para la conexión](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-2.png)
+
+4. A continuación, seleccione **Conectar**.
 
 5. En el Explorador de objetos, expanda la opción **Catálogos de Integration Services** y, a continuación, expanda **SSISDB** para ver los objetos de la base de datos del catálogo de SSIS.
+
+    ![Búsqueda de la base de datos SSISDB en el Explorador de objetos de SSMS](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-3.png)
 
 ## <a name="next-steps"></a>Pasos siguientes
 - Implementar un paquete. Para obtener más información, consulte [Deploy an SSIS project with SQL Server Management Studio (SSMS) (Implementar un proyecto de SSIS con SQL Server Management Studio [SSMS])](../ssis-quickstart-deploy-ssms.md).

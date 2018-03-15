@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bde92101af0b761df9f37171b35952fa3ab9d25b
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 7b17cdd39e1eb155581d070ef659d6c34c044b4d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Implementar, ejecutar y supervisar un paquete SSIS en Azure
 Este tutorial muestra cómo implementar un proyecto de SQL Server Integration Services para la base de datos del catálogo de SSISDB en Azure SQL Database, ejecutar un paquete en Azure-SSIS Integration Runtime y supervisar el paquete en ejecución.
@@ -29,9 +29,16 @@ Antes de comenzar, asegúrese de que tiene instalada la versión 17.2 (o posteri
 
 Asegúrese también de que la base de datos SSISDB esté configurada y Azure-SSIS Integration Runtime aprovisionado. Para obtener información sobre cómo aprovisionar SSIS en Azure, vea [Implementación de paquetes SSIS en Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
 
+> [!NOTE]
+> La implementación en Azure solo admite el modelo de implementación del proyecto.
+
 ## <a name="connect-to-the-ssisdb-database"></a>Conectarse a la base de datos de SSISDB
 
-Use SQL Server Management Studio para conectarse al catálogo de SSIS en el servidor de Azure SQL Database. Para obtener más información, consulte [Connect to the SSISDB Catalog database on Azure](ssis-azure-connect-to-catalog-database.md) (Conectarse a la base de datos del catálogo de SSISDB en Azure).
+Use SQL Server Management Studio para conectarse al catálogo de SSIS en el servidor de Azure SQL Database. Para más información y capturas de pantalla, consulte [Conectarse a la base de datos del catálogo de SSISDB en Azure](ssis-azure-connect-to-catalog-database.md).
+
+Estas son las dos consideraciones más importantes que debe recordar. Estos pasos se describen en el procedimiento siguiente.
+-   Escriba el nombre completo del servidor de Azure SQL Database con el formato **mysqldbserver.database.windows.net**.
+-   Seleccione `SSISDB` como la base de datos para la conexión.
 
 > [!IMPORTANT]
 > Un servidor Azure SQL Database escucha en el puerto 1433. Si está intentando conectarse a un servidor de Azure SQL Database desde un firewall corporativo, este puerto debe estar abierto en el firewall corporativo para poder conectarse correctamente.
@@ -56,12 +63,18 @@ Use SQL Server Management Studio para conectarse al catálogo de SSIS en el serv
 
 ## <a name="deploy-a-project-with-the-deployment-wizard"></a>Implementar un proyecto con el Asistente para implementación
 
+Para más información sobre cómo implementar los paquetes y respecto del Asistente para implementación, consulte [Implementación de proyectos y paquetes de Integration Services (SSIS)](../packages/deploy-integration-services-ssis-projects-and-packages.md) y [Asistente para implementación de Integration Services](../packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
+
 ### <a name="start-the-integration-services-deployment-wizard"></a>Iniciar el Asistente para implementación de Integration Services
 1. En el Explorador de objetos de SSMS, con el nodo **Catálogos de Integration Services** y el nodo **SSISDB** expandidos, expanda una carpeta de proyecto.
 
 2.  Seleccione el nodo **Proyectos**.
 
 3.  Haga doble clic en el nodo **Proyectos** y seleccione **Implementar proyecto**. Se abre el Asistente para implementación de Integration Services. Puede implementar un proyecto desde una base de datos del catálogo de SSIS o desde el sistema de archivos.
+
+    ![Implementación de un proyecto desde SSMS](media/ssis-azure-deploy-run-monitor-tutorial/ssisdb-deploy-project1.png)
+
+    ![Se abre el cuadro de diálogo del Asistente para implementación de SSIS](media/ssis-azure-deploy-run-monitor-tutorial/ssisdb-deploy-project2.png)
 
 ### <a name="deploy-a-project-with-the-deployment-wizard"></a>Implementar un proyecto con el Asistente para implementación
 1. En la página **Introducción** del Asistente para implementación, revise la introducción. Seleccione **Siguiente** para abrir la página **Seleccionar origen**.

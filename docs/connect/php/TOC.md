@@ -54,6 +54,7 @@
 ### [Especificación de tipos de datos de SQL Server cuando se utiliza el controlador SQLSRV](how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)
 ### [Especificación de tipos de datos PHP](how-to-specify-php-data-types.md)
 ### [Envío y recuperación de datos UTF-8 gracias a la compatibilidad integrada con UTF-8](how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
+### [Envío y recuperación de datos ASCII en Linux y Mac OS](how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
 ## [Control de errores y advertencias](handling-errors-and-warnings.md)
 ### [Configuración del control de errores y advertencias con el controlador SQLSRV](how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
 ### [Control de errores y advertencias con el controlador SQLSRV](how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)

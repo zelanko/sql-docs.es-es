@@ -1,13 +1,8 @@
-# [Introducción](getting-started-with-machine-learning-services.md)
-
 # Información general
-## [¿Qué es Microsoft Machine Learning Services?](r/r-services.md)
-## [Novedades de Machine Learning](what-s-new-in-sql-server-machine-learning-services.md)
-## [Artículos nuevos y actualizados](new-updated-advanced-analytics.md)
-## [Información general y arquitectura](architecture-overview-machine-learning.md)
-## [Diferencias en las características de aprendizaje automático entre las ediciones de SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)
-
-## [Uso de R en Azure SQL Database](r/using-r-in-azure-sql-database.md)
+## [¿Qué es SQL Server Machine Learning Services?](what-is-sql-server-machine-learning.md)
+## [Nuevas características](what-s-new-in-sql-server-machine-learning-services.md)
+## [Información general sobre la arquitectura](architecture-overview-machine-learning.md)
+## [Características por edición](r/differences-in-r-features-between-editions-of-sql-server.md)
 
 # [Machine Learning Services: R](r/sql-server-r-services.md)
 
@@ -97,8 +92,6 @@
 #### [Entrenar y guardar el modelo](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [Hacer operativo el modelo](tutorials/sqldev-py6-operationalize-the-model.md)
 
-### [Python: implementación y uso de modelos mediante un servidor independiente](../advanced-analytics/python/publish-consume-python-code.md)
-
 # [Machine Learning Server: independiente](r/r-server-standalone.md)
 ## [Introducción](r/getting-started-with-microsoft-r-server-standalone.md)
 ## [Configurar Machine Learning Server (independiente)](r/create-a-standalone-r-server.md)
@@ -175,6 +168,8 @@
 
 ## [Problemas conocidos](known-issues-for-sql-server-machine-learning-services.md)
 ## [Notas de la versión](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
+## [Artículos nuevos y actualizados](new-updated-advanced-analytics.md)
+## [Uso de R en Azure SQL Database](r/using-r-in-azure-sql-database.md)
 
 ## [Sugerencias de instalación y solución de problemas](machine-learning-troubleshooting-faq.md)
 ### [Recopilación de datos para la solución de problemas](data-collection-ml-troubleshooting-process.md)

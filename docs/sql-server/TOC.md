@@ -52,6 +52,7 @@
 ### [SQL en Channel 9](https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year)
 
 ## Comentarios y ayuda
+### [¡Contribuya a la documentación de SQL!](sql-server-docs-contribute.md)
 ### [UserVoice: sugerir una mejora de SQL Server](https://feedback.azure.com/forums/908035-sql-server)
 ### [Cambio de la pila DBA](https://dba.stackexchange.com/questions/tagged/sql-server)
 ### [Desbordamiento de pila](http://stackoverflow.com/questions/tagged/sql-server)

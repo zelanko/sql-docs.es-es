@@ -1,5 +1,5 @@
 ---
-title: ERROR_NUMBER (Transact-SQL) | Documentos de Microsoft
+title: ERROR_NUMBER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -56,10 +56,10 @@ ERROR_NUMBER ( )
   
  Devuelve NULL si se le llama desde fuera del ámbito del bloque CATCH.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta función se puede llamar desde cualquier lugar dentro del ámbito de un bloque CATCH.  
   
- ERROR_NUMBER devuelve el número de error con independencia de las veces que se ejecuta o de la parte donde se ejecuta en el ámbito del bloque CATCH. Esto es diferencia@ERROR, que sólo devuelve el número de error en la instrucción inmediatamente posterior a la que se produzca un error o bloquear la primera instrucción de un bloque CATCH.  
+ ERROR_NUMBER devuelve el número de error con independencia de las veces que se ejecuta o de la parte donde se ejecuta en el ámbito del bloque CATCH. No ocurre lo mismo con @@ERROR, que solo devuelve el número de error en la instrucción inmediatamente posterior a la que provoca un error o la primera instrucción de un bloque CATCH.  
   
  En los bloques CATCH anidados, ERROR_NUMBER devuelve el número de error específico para el ámbito del bloque CATCH donde se hace referencia a él. Por ejemplo, el bloque CATCH de una construcción TRY...CATCH externa podría tener una construcción TRY...CATCH anidada. En el bloque CATCH anidado, ERROR_NUMBER devuelve el número del error que ha invocado el bloque CATCH anidado. Si ERROR_NUMBER se ejecuta en el bloque CATCH externo, devuelve el número del error que ha invocado el bloque CATCH.  
   
@@ -100,7 +100,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>C. Usar ERROR_NUMBER en un bloque CATCH con otras herramientas de control de errores  
  El siguiente ejemplo de código muestra una instrucción `SELECT` que genera un error de división por cero. Además del número de error, se devuelve información relacionada con el error.  
@@ -122,14 +122,14 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

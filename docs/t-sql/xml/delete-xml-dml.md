@@ -1,5 +1,5 @@
 ---
-title: eliminar (XML DML) | Documentos de Microsoft
+title: delete (XML DML) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -45,12 +45,12 @@ delete Expression
   
 ## <a name="arguments"></a>Argumentos  
  *Expresión*  
- Es una expresión XQuery que identifica los nodos que se deben eliminar. Se eliminarán todos los nodos seleccionados por la expresión y los nodos o valores incluidos en los mismos. Como se describe en [Insertar (XML DML)](../../t-sql/xml/insert-xml-dml.md), ésta debe ser una referencia a un nodo existente en el documento. No puede ser un nodo construido. La expresión no puede ser el nodo raíz (/). Si la expresión devuelve una secuencia vacía, no se produce ninguna eliminación y no se devuelven errores.  
+ Es una expresión XQuery que identifica los nodos que se deben eliminar. Se eliminarán todos los nodos seleccionados por la expresión y los nodos o valores incluidos en los mismos. Tal y como se describe en [insert (XML DML)](../../t-sql/xml/insert-xml-dml.md), debe ser una referencia a un nodo existente en el documento. No puede ser un nodo construido. La expresión no puede ser el nodo raíz (/). Si la expresión devuelve una secuencia vacía, no se produce ninguna eliminación y no se devuelven errores.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-deleting-nodes-from-a-document-stored-in-an-untyped-xml-variable"></a>A. Eliminar nodos de un documento almacenado en una variable xml sin tipo  
- En el ejemplo siguiente se muestra cómo eliminar varios nodos de un documento. En primer lugar, una instancia XML se asigna a la variable de **xml** tipo. A continuación, las instrucciones delete XML DML posteriores eliminan varios nodos del documento.  
+ En el ejemplo siguiente se muestra cómo eliminar varios nodos de un documento. En primer lugar, se asigna una instancia XML a una variable de tipo **xml**. A continuación, las instrucciones delete XML DML posteriores eliminan varios nodos del documento.  
   
 ```  
 DECLARE @myDoc xml  
@@ -92,7 +92,7 @@ SELECT @myDoc
 ```  
   
 ### <a name="b-deleting-nodes-from-a-document-stored-in-an-untyped-xml-column"></a>B. Eliminar nodos de un documento almacenado en una columna xml sin tipo  
- En el ejemplo siguiente, un **eliminar** instrucción XML DML quita el segundo elemento secundario <`Features`> del documento almacenado en la columna.  
+ En el siguiente ejemplo, una instrucción XML DML **delete** elimina el segundo elemento secundario de <`Features`> del documento almacenado en la columna.  
   
 ```  
 CREATE TABLE T (i int, x xml)  
@@ -119,14 +119,14 @@ FROM T
   
  Observe lo siguiente en la consulta anterior:  
   
--   El [modify() (método) (tipo de datos xml)](../../t-sql/xml/modify-method-xml-data-type.md) se utiliza para especificar el **eliminar** palabra clave XML DML.  
+-   Se usa el [método modify() del tipo de datos xml](../../t-sql/xml/modify-method-xml-data-type.md) para especificar la palabra clave XML DML **delete**.  
   
--   El [método query() (tipo de datos xml)](../../t-sql/xml/query-method-xml-data-type.md) se usa para consultar el documento.  
+-   Se usa el [método query() del tipo de datos xml](../../t-sql/xml/query-method-xml-data-type.md) para consultar el documento.  
   
 ### <a name="c-deleting-nodes-from-a-typed-xml-column"></a>C. Eliminar nodos de una columna xml con tipo  
- Este ejemplo elimina nodos de un documento XML se almacena en con instrucciones de fabricación con tipo **xml** columna.  
+ En este ejemplo se eliminan nodos de un documento XML con instrucciones de fabricación almacenado en una columna **xml** con tipo.  
   
- En el ejemplo, primero se crea una tabla (T) con un tipo **xml** columna en la base de datos de AdventureWorks. A continuación, se copia una instancia XML con instrucciones de fabricación de la columna Instructions de la tabla ProductModel en la tabla T y se eliminan uno o varios nodos del documento.  
+ En el ejemplo, se crea en primer lugar una tabla (T) con una columna **xml** con tipo en la base de datos AdventureWorks. A continuación, se copia una instancia XML con instrucciones de fabricación de la columna Instructions de la tabla ProductModel en la tabla T y se eliminan uno o varios nodos del documento.  
   
 ```  
 use AdventureWorks  
@@ -192,10 +192,10 @@ drop table T
 go  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Comparar XML con tipo y XML sin tipo](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Crear instancias de datos XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [Métodos de tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md)   
- [Lenguaje de manipulación de datos XML &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [métodos del tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [Lenguaje de manipulación de datos XML &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

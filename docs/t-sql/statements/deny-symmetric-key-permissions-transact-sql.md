@@ -1,5 +1,5 @@
 ---
-title: "DENEGAR permisos de clave simétrica (Transact-SQL) | Documentos de Microsoft"
+title: "DENY (permisos de clave simétrica de Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -60,19 +60,19 @@ DENY permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permiso*  
+ *permission*  
  Especifica un permiso que se puede denegar en una clave simétrica. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
- CLAVE SIMÉTRICA de ON::*asymmetric_key_name*  
+ ON SYMMETRIC KEY ::*asymmetric_key_name*  
  Especifica la clave simétrica en la que se va a denegar el permiso. Se requiere el calificador de ámbito (::).  
   
- PARA \< *database_principal*>  
+ TO \<*database_principal*>  
  Especifica la entidad de seguridad desde la que se revoca el permiso.  
   
  CASCADE  
  Indica que el permiso que se va a denegar también se denegará a otras entidades de seguridad a las que esta entidad de seguridad ha concedido permisos.  
   
- AS \<database_principal >  
+ AS \<database_principal>  
  Especifica una entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de denegar el permiso.  
   
  *Database_user*  
@@ -99,8 +99,8 @@ DENY permission [ ,...n ]
  *Database_user_with_no_login*  
  Especifica un usuario de base de datos sin entidad de seguridad de servidor correspondiente.  
   
-## <a name="remarks"></a>Comentarios  
- Información acerca de las claves simétricas está visible en el [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) vista de catálogo.  
+## <a name="remarks"></a>Notas  
+ Puede ver información sobre claves simétricas en la vista de catálogo [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md).  
   
  Una clave simétrica es un elemento protegible de nivel de base de datos que contiene la base de datos que es su entidad primaria en la jerarquía de permisos. La mayoría de permisos limitados y específicos que se pueden denegar en una clave simétrica se muestran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.  
   
@@ -112,7 +112,7 @@ DENY permission [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL en la clave simétrica o el permiso ALTER ANY SYMMETRIC KEY en la base de datos. Si utiliza la opción AS, la entidad de seguridad especificada debe ser propietaria de la clave simétrica.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -124,10 +124,10 @@ DENY ALTER ON SYMMETRIC KEY::SamInventory42 TO HamidS;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Sys.symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [CONCEDER permisos de clave simétrica &#40; Transact-SQL &#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)   
- [REVOCAR permisos de clave simétrica &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [GRANT &#40;permisos de clave simétrica de Transact-SQL&#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)   
+ [REVOKE &#40;permisos de clave simétrica de Transact-SQL&#41;](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

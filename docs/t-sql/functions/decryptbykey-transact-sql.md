@@ -1,5 +1,5 @@
 ---
-title: DECRYPTBYKEY (Transact-SQL) | Documentos de Microsoft
+title: DECRYPTBYKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -50,8 +50,8 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *texto cifrado*  
- Son datos que se han cifrado con la clave. *texto cifrado* es **varbinary**.  
+ *ciphertext*  
+ Son datos que se han cifrado con la clave. *ciphertext* es **varbinary**.  
   
  **@ciphertext**  
  Es una variable de tipo **varbinary** que contiene los datos que se han cifrado con la clave.  
@@ -59,22 +59,22 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
  *add_authenticator*  
  Indica si se ha cifrado un autenticador junto con el texto simple. Debe ser el mismo valor pasado a EncryptByKey cuando se cifraron los datos. *add_authenticator* es **int**.  
   
- *autenticador*  
- Son los datos de los que se generará un autenticador. Debe coincidir con el valor que se proporcionó para EncryptByKey. *autenticador* es **sysname**.  
+ *authenticator*  
+ Son los datos de los que se generará un autenticador. Debe coincidir con el valor que se proporcionó para EncryptByKey. *authenticator* es **sysname**.  
   
  **@authenticator**  
  Es una variable que contiene los datos a partir de los cuales se generará un autenticador. Debe coincidir con el valor que se proporcionó para EncryptByKey.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- **varbinary** con un tamaño máximo de 8.000 bytes.  
+ **varbinary** con un tamaño máximo de 8000 bytes.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  DecryptByKey utiliza una clave simétrica. La clave simétrica ya debe estar abierta en la base de datos. Puede haber varias claves abiertas a la vez. No tiene que abrir la clave inmediatamente antes de descifrar el texto cifrado.  
   
  El cifrado y descifrado simétrico es relativamente rápido y se puede adaptar para trabajar con grandes cantidades de datos.  
   
-## <a name="permissions"></a>Permissions  
- Requiere que se haya abierto la clave simétrica en la sesión actual. Para obtener más información, vea [OPEN SYMMETRIC KEY &#40; Transact-SQL &#41; ](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
+## <a name="permissions"></a>Permisos  
+ Requiere que se haya abierto la clave simétrica en la sesión actual. Para más información, vea [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -119,8 +119,8 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [ENCRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   

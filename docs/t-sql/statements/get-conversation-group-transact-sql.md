@@ -1,5 +1,5 @@
 ---
-title: "OBTENER grupo de conversación (Transact-SQL) | Documentos de Microsoft"
+title: GET CONVERSATION GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -72,21 +72,21 @@ ms.lasthandoff: 01/25/2018
  Especifica la cola de la que se obtiene el grupo de conversación.  
   
  *database_name*  
- Es el nombre de la base de datos que contiene la cola de la que obtiene el grupo de conversación. Si no *database_name* se proporciona, el valor predeterminado es la base de datos actual.  
+ Es el nombre de la base de datos que contiene la cola de la que obtiene el grupo de conversación. Si no se proporciona *database_name*, el valor predeterminado es la base de datos actual.  
   
  *schema_name*  
- Es el nombre del esquema propietario de la cola de la que obtiene el grupo de conversación. Si no *schema_name* se proporciona, el valor predeterminado es el esquema predeterminado para el usuario actual.  
+ Es el nombre del esquema propietario de la cola de la que obtiene el grupo de conversación. Si no se proporciona *schema_name*, se usa el esquema predeterminado del usuario actual.  
   
  *queue_name*  
  Es el nombre de la cola de la que se obtiene el grupo de conversación.  
   
- Tiempo de espera *tiempo de espera*  
- Especifica el tiempo, en milisegundos, que espera Service Broker a que llegue un mensaje a la cola. Esta cláusula solo puede utilizarse con la cláusula WAITFOR. Si una instrucción que utiliza WAITFOR no incluye esta cláusula o la *tiempo de espera* es -1, el tiempo de espera es ilimitado. Si se agota el tiempo de espera, GET CONVERSATION GROUP establece la  *@conversation_group_id*  variable en NULL.  
+ TIMEOUT *tiempo_de_espera*  
+ Especifica el tiempo, en milisegundos, que espera Service Broker a que llegue un mensaje a la cola. Esta cláusula solo se puede usar con la cláusula WAITFOR. Si una instrucción que usa WAITFOR no incluye esta cláusula o *tiempo_de_espera* es -1, el tiempo de espera es ilimitado. Si se agota el tiempo de espera, GET CONVERSATION GROUP establece la variable *@conversation_group_id* en NULL.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 > [!IMPORTANT]  
->  Si la instrucción GET CONVERSATION GROUP no es la primera instrucción de un lote o procedimiento almacenado, la instrucción anterior debe terminarse con punto y coma (**;**), el [!INCLUDE[tsql](../../includes/tsql-md.md)] terminador de instrucción.  
+>  Si la instrucción GET CONVERSATION GROUP no es la primera de un lote o un procedimiento almacenado, la instrucción anterior debe terminar en un punto y coma (**;**), que es el terminador de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Si la cola especificada en la instrucción GET CONVERSATION GROUP no está disponible, la instrucción genera un error de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 01/25/2018
   
  GET CONVERSATION GROUP no es válido en una función definida por el usuario.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para obtener un identificador de grupo de conversación de una cola, el usuario actual debe tener el permiso RECEIVE en la cola.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -143,8 +143,8 @@ GET CONVERSATION GROUP @conversation_group_id
 FROM AdventureWorks.dbo.ExpenseQueue ;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [EMPEZAR conversación de diálogo &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [Mover conversación &#40; Transact-SQL &#41;](../../t-sql/statements/move-conversation-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [MOVE CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/move-conversation-transact-sql.md)  
   
   

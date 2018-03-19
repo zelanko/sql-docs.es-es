@@ -1,5 +1,5 @@
 ---
-title: "Nombre de intercalación de Windows (Transact-SQL) | Documentos de Microsoft"
+title: "Nombre de intercalación de Windows (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -59,31 +59,31 @@ CollationDesignator_<ComparisonStyle>
   
 -   La página de códigos que se utiliza para almacenar datos de caracteres no Unicode.  
   
- Algunos ejemplos son:  
+ He aquí algunos ejemplos:  
   
 -   Latín-1_General o francés: ambos utilizan la página de códigos 1252.  
   
 -   Turco: utiliza la página de códigos 1254.  
   
- *Propiedades CaseSensitivity*  
- **CI** especifica mayúsculas de minúsculas, **CS** especifica entre mayúsculas y minúsculas.  
+ *CaseSensitivity*  
+ **CI** especifica que no se diferencia mayúsculas de minúsculas, **CS** especifica que se diferencia mayúsculas de minúsculas.  
   
  *AccentSensitivity*  
- **AI** especifica acentos, **AS** especifica la distinción de acentos.  
+ **AI** especifica que no se distinguen acentos, **AS** especifica que se distinguen acentos.  
   
  *KanatypeSensitive*  
- **Se omite** especifica tipos de Kana pero no distingue **KS** especifica kana.  
+ **Omitted** especifica que no se distinguen tipos de kana, **KS** especifica que se distinguen tipos de kana.  
   
  *WidthSensitivity*  
- **Se omite** especifica no distinguir ancho, **WS** especifica distinguen el ancho.  
+ **Omitted** especifica que no se distingue el ancho, **WS** especifica que se distingue el ancho.  
   
- **PAPELERA**  
+ **BIN**  
  Especifica el criterio de ordenación binario compatible con versiones anteriores que se va a utilizar.  
   
  **BIN2**  
  Especifica el criterio de ordenación binario que utiliza la semántica de comparación de punto de código.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  En función de la versión de las intercalaciones, es posible que algunos puntos de código no estén definidos. Por ejemplo, compare:  
   
 ```  
@@ -224,18 +224,18 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |Desusado, no disponible en el nivel de servidor en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versiones posteriores|Lithuanian_Classic|Lithuanian_Classic|  
 |Desusado, no disponible en el nivel de servidor en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versiones posteriores|Macedonian|Macedonian|  
   
- <sup>1</sup>intercalaciones solo Unicode de Windows solo pueden aplicarse a los datos de columna o expresión. No se pueden utilizar como intercalaciones de base de datos o de servidor.  
+ <sup>1</sup>Las intercalaciones exclusivas de Unicode de Windows solo se pueden aplicar a datos de nivel de columna o de nivel de expresión. No se pueden utilizar como intercalaciones de base de datos o de servidor.  
   
- <sup>2</sup>como la intercalación chino (Taiwán), chino (Macao) usa las reglas de chino simplificado; a diferencia de chino (Taiwán), usa la página de códigos 950.  
+ <sup>2</sup>Al igual que la intercalación Chino (Taiwán), Chino (Macao) usa las reglas de chino simplificado; a diferencia de Chino (Taiwán), usa la página de códigos 950.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [Constantes &#40; Transact-SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)   
+ [Constantes &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)   
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [tabla &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)   
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)  
   
   

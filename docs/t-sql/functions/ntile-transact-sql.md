@@ -1,5 +1,5 @@
 ---
-title: NTILE (Transact-SQL) | Documentos de Microsoft
+title: NTILE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -49,19 +49,19 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
   
 ## <a name="arguments"></a>Argumentos  
  *integer_expression*  
- Es una expresión constante de tipo entero positivo que especifica el número de grupos en que se debe dividir cada partición. *integer_expression* puede ser de tipo **int**, o **bigint**.  
+ Es una expresión constante de tipo entero positivo que especifica el número de grupos en que se debe dividir cada partición. *integer_expression* puede ser de tipo **int** o **bigint**.  
   
- \<partition_by_clause >  
- Divide el conjunto de resultados generado por la [FROM](../../t-sql/queries/from-transact-sql.md) cláusula en particiones a las que se aplica la función. Para obtener la sintaxis PARTITION BY, vea [la cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ \<partition_by_clause>  
+ Divide el conjunto de resultados generado por la cláusula [FROM](../../t-sql/queries/from-transact-sql.md) en particiones a las que se aplica la función. Para obtener la sintaxis PARTITION BY, vea [OVER &#40;cláusula de Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
- \<order_by_clause >  
- Determina el orden en que los valores NTILE se asignan a las filas de una partición. Un entero no puede representar una columna cuando la \<order_by_clause > se utiliza en una función de categoría.  
+ \<order_by_clause>  
+ Determina el orden en que los valores NTILE se asignan a las filas de una partición. Un entero no puede representar una columna cuando se usa \<order_by_clause> en una función de categoría.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **bigint**  
   
-## <a name="remarks"></a>Comentarios  
- Si el número de filas en una partición no es divisible por *integer_expression*, esto hará que los grupos de dos tamaños que difieren en un miembro. Los grupos de mayor tamaño preceden a los grupos de menor tamaño en el orden especificado por la cláusula OVER. Por ejemplo, si el número total de filas es 53 y el número de grupos es cinco, los tres primeros grupos tienen 11 filas y los otros dos grupos tienen 10 filas cada uno. Por otra parte, si el número total de filas es divisible por el número de grupos, las filas se distribuyen por igual entre los grupos. Por ejemplo, si el número total de filas es 50 y hay cinco grupos, cada grupo contiene 10 filas.  
+## <a name="remarks"></a>Notas  
+ Si el número de filas de una partición no se puede dividir por *integer_expression*, producirá grupos de dos tamaños que difieren en un miembro. Los grupos de mayor tamaño preceden a los grupos de menor tamaño en el orden especificado por la cláusula OVER. Por ejemplo, si el número total de filas es 53 y el número de grupos es cinco, los tres primeros grupos tienen 11 filas y los otros dos grupos tienen 10 filas cada uno. Por otra parte, si el número total de filas es divisible por el número de grupos, las filas se distribuyen por igual entre los grupos. Por ejemplo, si el número total de filas es 50 y hay cinco grupos, cada grupo contiene 10 filas.  
   
  NTILE es no determinista. Para obtener más información, consulte [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
@@ -112,7 +112,7 @@ Pamela         Ansman-Wolfe          4         1,352,577.13   98027
 ```  
   
 ### <a name="b-dividing-the-result-set-by-using-partition-by"></a>B. Dividir el conjunto de resultados mediante PARTITION BY  
- En el ejemplo siguiente se agrega el argumento `PARTITION BY` al código del ejemplo A. Primero se dividen por `PostalCode` y, a continuación, en cuatro grupos dentro de cada `PostalCode`. El ejemplo también declara una variable `@NTILE_Var` y utiliza esa variable para especificar el valor de la *integer_expression* parámetro.  
+ En el ejemplo siguiente se agrega el argumento `PARTITION BY` al código del ejemplo A. Primero se dividen por `PostalCode` y, a continuación, en cuatro grupos dentro de cada `PostalCode`. En el ejemplo también se declara una variable `@NTILE_Var` y se usa esa variable para especificar el valor del parámetro *integer_expression*.  
   
 ```  
 USE AdventureWorks2012;  
@@ -156,10 +156,10 @@ Lynn         Tsoflias             4        1,421,810.92  98055
 (14 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-dividing-rows-into-groups"></a>C. Dividir filas en grupos  
- En el ejemplo siguiente se utiliza la función NTILE para dividir un conjunto de vendedores en cuatro grupos según sus cuotas de ventas asignado para el año 2003. Dado que el número total de filas no es divisible por el número de grupos, el primer grupo tiene cinco filas y los grupos restantes tienen cuatro filas.  
+ En este ejemplo se usa la función NTILE para dividir un conjunto de vendedores en cuatro grupos, según sus cuotas de ventas asignadas para el año 2003. Como el número total de filas no se puede dividir por el número de grupos, el primer grupo tiene cinco filas y los grupos restantes tienen cuatro filas cada uno.  
   
 ```  
 -- Uses AdventureWorks  
@@ -199,7 +199,7 @@ Tsoflias          4          867,000.00
 ```  
   
 ### <a name="d-dividing-the-result-set-by-using-partition-by"></a>D. Dividir el conjunto de resultados mediante PARTITION BY  
- En el ejemplo siguiente se agrega el argumento PARTITION BY para el código de ejemplo A. Las filas se dividen en primer lugar por `SalesTerritoryCountry` y, a continuación, se dividen en dos grupos dentro de cada `SalesTerritoryCountry`. Observe que la cláusula ORDER BY en la cláusula OVER ordena la NTILE y la cláusula ORDER BY de la instrucción SELECT ordena el conjunto de resultados.  
+ En este ejemplo se agrega el argumento PARTITION BY al código del ejemplo A. Primero se dividen las filas por `SalesTerritoryCountry` y, después, se dividen en dos grupos dentro de cada `SalesTerritoryCountry`. Observe que ORDER BY en la cláusula OVER ordena NTILE, y ORDER BY de la instrucción SELECT ordena el conjunto de resultados.  
   
 ```  
 -- Uses AdventureWorks  
@@ -241,11 +241,11 @@ Ito               2        2,644,000.00     United States
 Ansman-Wolfe      2        1,183,000.00     United States
 ```  
   
-## <a name="see-also"></a>Vea también  
- [RANGO &#40; Transact-SQL &#41;](../../t-sql/functions/rank-transact-sql.md)   
- [DENSE_RANK &#40; Transact-SQL &#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
- [ROW_NUMBER &#40; Transact-SQL &#41;](../../t-sql/functions/row-number-transact-sql.md)   
- [Funciones de categoría &#40; Transact-SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [RANK &#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   
+ [DENSE_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [ROW_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   
+ [Funciones de categoría &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

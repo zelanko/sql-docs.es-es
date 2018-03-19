@@ -1,5 +1,5 @@
 ---
-title: TIMEFROMPARTS (Transact-SQL) | Documentos de Microsoft
+title: TIMEFROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/02/2018
 # <a name="timefromparts-transact-sql"></a>TIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Devuelve un **tiempo** valor durante el tiempo especificado y con la precisión especificada.  
+  Devuelve un valor **time** para la hora especificada y con la precisión indicada.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,30 +45,30 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *hora*  
+ *hour*  
  Expresión entera que especifica horas.  
   
- *minuto*  
+ *minute*  
  Expresión entera que especifica minutos.  
   
  *segundos*  
  Expresión entera que especifica segundos.  
   
- *fracciones*  
+ *fractions*  
  Expresión entera que especifica fracciones.  
   
  *precisión*  
- Literal entero que especifica la precisión de la **tiempo** valor va a devolver.  
+ Literal entero que especifica la precisión del valor **time** que se va a devolver.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- **tiempo (** *precisión* **)**  
+ **time(** *precision* **)**  
   
-## <a name="remarks"></a>Comentarios  
- TIMEROMPARTS devuelve un valor de hora totalmente inicializado. Si los argumentos no son válidos, se generará un error. Si alguno de los parámetros es NULL, se devuelve NULL. Sin embargo, si la *precisión* del argumento es null, a continuación, se produce un error.  
+## <a name="remarks"></a>Notas  
+ TIMEROMPARTS devuelve un valor de hora totalmente inicializado. Si los argumentos no son válidos, se generará un error. Si alguno de los parámetros es NULL, se devuelve NULL. Pero si el argumento *precision* es NULL, se generará un error.  
   
- El *fracciones* argumento depende el *precisión* argumento. Por ejemplo, si *precisión* es 7, a continuación, cada fracción representa 100 nanosegundos; si *precisión* es 3, cada fracción representa un milisegundo. Si el valor de *precisión* es cero, el valor de *fracciones* también debe ser cero; en caso contrario, se produce un error.  
+ El argumento *fractions* depende del argumento *precision*. Por ejemplo, si *precision* es 7, cada fracción representa 100 nanosegundos; si *precision* es 3, cada fracción representa un milisegundo. Si el valor de *precision* es cero, el valor de *fractions* también debe ser cero; de lo contrario, se generará un error.  
   
- Esta función se puede enviar de forma remota a servidores [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y posteriores. No se puede enviar de forma remota a servidores que tengan una versión inferior a[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+ Esta función se puede enviar de forma remota a servidores [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y posteriores. No se puede enviar de forma remota a servidores que tengan una versión anterior a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -89,13 +89,13 @@ Result
 ```  
   
 ### <a name="b-example-with-fractions-of-a-second"></a>B. Ejemplo con fracciones de segundo  
- En el ejemplo siguiente se muestra el uso de la *fracciones* y *precisión* parámetros:  
+ En este ejemplo se muestra el uso de los parámetros *fractions* y *precision*:  
   
-1.  Cuando *fracciones* tiene un valor de 5 y *precisión* tiene un valor de 1, a continuación, el valor de *fracciones* representa 5/10 de un segundo.  
+1.  Cuando *fractions* tiene el valor 5 y *precision* tiene el valor 1, el valor de *fractions* representa 5/10 de segundo.  
   
-2.  Cuando *fracciones* tiene un valor de 50 y *precisión* tiene un valor de 2, a continuación, el valor de *fracciones* representa 50/100 de un segundo.  
+2.  Cuando *fractions* tiene el valor 50 y *precision* tiene el valor 2, el valor de *fractions* representa 50/100 de segundo.  
   
-3.  Cuando *fracciones* tiene un valor de 500 y *precisión* tiene un valor de 3, a continuación, el valor de *fracciones* representa 500/1000 de un segundo.  
+3.  Cuando *fractions* tiene el valor 500 y *precision* tiene el valor 3, el valor de *fractions* representa 500/1000 de segundo.  
   
 ```sql  
 SELECT TIMEFROMPARTS ( 14, 23, 44, 5, 1 );  

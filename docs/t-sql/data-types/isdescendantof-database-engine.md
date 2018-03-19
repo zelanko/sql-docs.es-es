@@ -1,5 +1,5 @@
 ---
-title: IsDescendantOf (motor de base de datos) | Documentos de Microsoft
+title: IsDescendantOf (motor de base de datos) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf (motor de base de datos)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve true si *esto* es un descendiente del elemento primario.
+Devuelve true si *this* es descendiente del elemento primario.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -49,15 +49,15 @@ SqlHierarchyId IsDescendantOf (SqlHierarchyId parent )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-*elemento primario*  
-El **hierarchyid** nodo para el que se debe realizar la prueba IsDescendantOf.
+*parent*  
+El nodo **hierarchyid** para el que se debe realizar la prueba IsDescendantOf.
   
 ## <a name="return-types"></a>Tipos devueltos  
-**Tipo: bit devuelto de SQL Server**
+**Tipo de valor devuelto de SQL Server:bit**
   
-**Tipo: SqlBoolean devuelto de CLR**
+**Tipo de valor devuelto de CLR:SqlBoolean**
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 Devuelve true para todos los nodos del subárbol con la raíz en el elemento primario y false para todos los demás nodos.
   
 El elemento primario se considera su propio descendiente.

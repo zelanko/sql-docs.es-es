@@ -1,5 +1,5 @@
 ---
-title: STUnion (tipo de datos geography) | Documentos de Microsoft
+title: STUnion (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stunion-geography-data-type"></a>STUnion (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve un objeto que representa la unión de un **geography** instancia con otro **geography** instancia.  
+  Devuelve un objeto que representa la unión de una instancia de **geography** con otra instancia de **geography**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,20 +45,20 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *other_geography*  
- Es otra **geography** instancia para formar la unión con la instancia en la que se está llamando a STUnion().  
+ Es otra instancia de **geography** para formar la unión con la instancia en la que se invoca STUnion().  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geography**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
 ## <a name="exceptions"></a>Excepciones  
- Este método produce una **ArgumentException** si la instancia contiene un borde opuesto.  
+ Este método produce una excepción **ArgumentException** si la instancia contiene un borde opuesto.  
   
-## <a name="remarks"></a>Comentarios  
- Este método siempre devuelve null si los identificadores de referencia espacial (SRID) de la **geography** instancias no coinciden.  
+## <a name="remarks"></a>Notas  
+ Este método siempre devuelve NULL si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geography**.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite instancias espaciales mayores que un hemisferio. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el conjunto de resultados posibles devuelto en el servidor se ha ampliado a **FullGlobe** instancias.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite instancias espaciales mayores que un hemisferio. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el conjunto de resultados posibles devuelto en el servidor se ha ampliado a las instancias de **FullGlobe**.  
   
  El resultado puede contener segmentos de arco circulares solo si las instancias de entrada contienen segmentos de arco circulares.  
   
@@ -95,7 +95,7 @@ SELECT @g.STUnion(@h).ToString();
  SELECT @g.STUnion(@h).ToString();
  ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de OGC en instancias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

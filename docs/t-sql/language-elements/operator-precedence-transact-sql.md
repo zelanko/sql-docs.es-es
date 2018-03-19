@@ -1,5 +1,5 @@
 ---
-title: Precedencia de operadores (Transact-SQL) | Documentos de Microsoft
+title: Prioridad de operador (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -41,9 +41,9 @@ ms.lasthandoff: 01/25/2018
 |Nivel|Operadores|  
 |-----------|---------------|  
 |1|~ (operador bit a bit NOT)|  
-|2|* (Multiplicar), / (dividir), % (módulo)|  
-|3|+ (Positivo), - (negativo), + (suma), (+ concatenación),-(resta), & (AND bit a bit), ^ (bit a bit OR exclusivo), &#124; (OR bit a bit)|  
-|4|=, >, \<, > =, < =, <>,! =,! >,! < (operadores de comparación)|  
+|2|* (multiplicación), / (división), % (módulo)|  
+|3|+ (positivo), - (negativo), + (suma), (+ concatenación), - (resta), & (AND bit a bit), ^ (OR exclusivo bit a bit), &#124; (OR bit a bit)|  
+|4|=, >, \<, >=, <=, <>, !=, !>, !< (operadores de comparación)|  
 |5|NOT|  
 |6|y|  
 |7|ALL, ANY, BETWEEN, IN, LIKE, OR, SOME|  
@@ -88,9 +88,9 @@ SET @MyNumber = 2 * (4 + (5 - 3) );
 SELECT @MyNumber;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Operadores lógicos &#40; Transact-SQL &#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [Operadores lógicos &#40;Transact-SQL&#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

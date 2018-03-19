@@ -1,5 +1,5 @@
 ---
-title: RAND (Transact-SQL) | Documentos de Microsoft
+title: RAND (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="rand-transact-sql"></a>RAND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Devuelve un seudoaleatorios **float** valor comprendido entre 0 y 1, ambos excluidos.  
+  Devuelve un valor **float** pseudoaleatorio de 0 a 1, ambos excluidos.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,13 +48,13 @@ RAND ( [ seed ] )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *valor de inicialización*  
- Es un número entero [expresión](../../t-sql/language-elements/expressions-transact-sql.md) (**tinyint**, **smallint**, o **int**) que proporciona el valor de inicialización. Si *inicialización* no se especifica, el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] asigna un valor de inicialización de forma aleatoria. Para un valor de inicialización especificado, el resultado devuelto es siempre el mismo.  
+ *seed*  
+ Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de tipo entero (**tinyint**, **smallint** o **int**) que proporciona el valor de inicialización. Si no se especifica *seed*, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] asigna un valor de inicialización de forma aleatoria. Para un valor de inicialización especificado, el resultado devuelto es siempre el mismo.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **float**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Las llamadas repetitivas de RAND() con el mismo valor de inicialización devuelven los mismos resultados.  
   
  Para una conexión, si se llama a RAND() con el valor de inicialización especificado, todas las llamadas posteriores de RAND() generan resultados basados en la llamada a RAND() inicializada. Por ejemplo, la siguiente consulta siempre devuelve la misma secuencia de números.  
@@ -77,7 +77,7 @@ WHILE @counter < 5
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Funciones matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [Funciones matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   

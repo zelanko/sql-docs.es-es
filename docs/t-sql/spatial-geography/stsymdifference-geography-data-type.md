@@ -1,5 +1,5 @@
 ---
-title: STSymDifference (tipo de datos geography) | Documentos de Microsoft
+title: STSymDifference (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsymdifference-geography-data-type"></a>STSymDifference (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve un objeto que representa todos los puntos que están en una **geography** instancia u otra **geography** instancia, pero no los puntos que se encuentran en ambas instancias.  
+  Devuelve un objeto que representa todos los puntos que están en una instancia de **geography** o en otra instancia de **geography**, pero no los puntos que pertenecen a ambas instancias.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,17 +45,17 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *other_geography*  
- Es otra **geography** instancia además de la instancia en la que se está llamando a STSymDistance().  
+ Es otra instancia de **geography**, además de la instancia en la que se invoca a STSymDistance().  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geography**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Comentarios  
- Este método siempre devuelve null si los identificadores de referencia espacial (SRID) de la **geography** instancias no coinciden.  
+## <a name="remarks"></a>Notas  
+ Este método siempre devuelve NULL si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geography**.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite instancias espaciales mayores que un hemisferio. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el conjunto de resultados posibles en el servidor se ha ampliado a **FullGlobe** instancias.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite instancias espaciales mayores que un hemisferio. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el conjunto de resultados posibles en el servidor se ha ampliado a las instancias de **FullGlobe**.  
   
  El resultado puede contener segmentos de arco circulares solo si las instancias de entrada contienen segmentos de arco circulares.  
   
@@ -80,7 +80,7 @@ SELECT @g.STSymDifference(@h).ToString();
  SELECT @g.STSymDifference('FULLGLOBE').ToString();
  ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de OGC en instancias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

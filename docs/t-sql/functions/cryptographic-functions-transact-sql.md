@@ -1,5 +1,5 @@
 ---
-title: Funciones de cifrado (Transact-SQL) | Documentos de Microsoft
+title: "Funciones criptográficas (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -33,12 +33,12 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="cryptographic-functions-transact-sql"></a>Funciones de cifrado (Transact-SQL)
+# <a name="cryptographic-functions-transact-sql"></a>Funciones criptográficas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Las siguientes funciones admiten el cifrado, descifrado, firma digital y la validación de firmas digitales.
   
-## <a name="symmetric-encryption-and-decryption"></a>Cifrado y descifrado simétrico
+## <a name="symmetric-encryption-and-decryption"></a>Cifrado y descifrado simétricos
   
 |||  
 |-|-|  
@@ -68,7 +68,7 @@ Las siguientes funciones admiten el cifrado, descifrado, firma digital y la vali
   
 |||  
 |-|-|  
-|[DecryptByKeyAutoCert()](../../t-sql/functions/decryptbykeyautocert-transact-sql.md)||  
+|[DecryptByKeyAutoCert](../../t-sql/functions/decryptbykeyautocert-transact-sql.md)||  
   
 ## <a name="encryption-hashing"></a>Hash de cifrado
   
@@ -76,12 +76,12 @@ Las siguientes funciones admiten el cifrado, descifrado, firma digital y la vali
 |-|-|  
 |[HASHBYTES](../../t-sql/functions/hashbytes-transact-sql.md)||  
   
-## <a name="copying-certificates"></a>Copiar certificados
+## <a name="copying-certificates"></a>Copia de certificados
   
 |||  
 |-|-|  
-|[CERTENCODED &#40; Transact-SQL &#41;](../../t-sql/functions/certencoded-transact-sql.md)||  
-|[CERTPRIVATEKEY &#40; Transact-SQL &#41;](../../t-sql/functions/certprivatekey-transact-sql.md)||  
+|[CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)||  
+|[CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)||  
   
 ## <a name="see-also"></a>Vea también
 [Funciones](../../t-sql/functions/functions.md)  

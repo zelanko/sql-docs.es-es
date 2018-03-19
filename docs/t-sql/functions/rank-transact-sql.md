@@ -1,5 +1,5 @@
 ---
-title: RANGO (Transact-SQL) | Documentos de Microsoft
+title: RANK (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/25/2016
 ms.prod: sql-non-specified
@@ -39,10 +39,10 @@ ms.lasthandoff: 11/21/2017
 
   Devuelve el rango de cada fila en la partición de un conjunto de resultados. El rango de una fila es uno más el número de rangos anteriores a la fila en cuestión.  
 
-  ROW_NUMBER y rango son similares. Números ROW_NUMBER todas las filas secuencialmente (por ejemplo 1, 2, 3, 4, 5). RANGO proporciona el mismo valor numérico valores equivalentes (por ejemplo 1, 2, 2, 4, 5).   
+  ROW_NUMBER y RANK son similares. ROW_NUMBER enumera todas las filas secuencialmente (por ejemplo 1, 2, 3, 4, 5). RANK proporciona el mismo valor numérico para valores equivalentes (por ejemplo 1, 2, 2, 4, 5).   
   
 > [!NOTE]
-> El rango es que un valor temporal calcula cuando se ejecuta la consulta. Para conservar los números de una tabla, vea [propiedad IDENTITY](../../t-sql/statements/create-table-transact-sql-identity-property.md) y [secuencia](../../t-sql/statements/create-sequence-transact-sql.md). 
+> RANK es un valor temporal que se calcula cuando se ejecuta la consulta. Para conservar los números de una tabla, vea [Propiedad IDENTITY](../../t-sql/statements/create-table-transact-sql-identity-property.md) y [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). 
    
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,13 +53,13 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- SOBRE **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones al que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. *order_by_clause* determina el orden de los datos antes de que se aplica la función. El *order_by_clause* es necesario. El \<filas o cláusula range > de la cláusula no se puede especificar para la función RANK. Para obtener más información, consulte [la cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones a las que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. *order_by_clause* determina el orden de los datos antes de que se aplique la función. *order_by_clause* es obligatorio. La \<cláusula rows o range> de la cláusula OVER no se puede especificar para la función RANK. Para más información, vea [OVER &#40;cláusula de Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **bigint**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si dos o más filas se enlazan en un rango, cada fila enlazada recibe el mismo rango. Por ejemplo, si los dos mejores vendedores tienen el mismo valor de SalesYTD, los dos tienen el rango uno. El vendedor con el siguiente valor más alto de SalesYTD recibe el rango tres, porque ya hay dos filas con un rango superior. Por tanto, la función RANK no siempre devuelve enteros consecutivos.  
   
  El criterio de ordenación empleado por la consulta global determina el orden en que aparecen las filas en el conjunto de resultados.  
@@ -135,10 +135,10 @@ BusinessEntityID Rate                  RankBySalary
 10               42.4808               9  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-ranking-rows-within-a-partition"></a>C: clasificar filas dentro de una partición  
- En el ejemplo siguiente se clasifica a los representantes de ventas en cada territorio de ventas según sus ventas totales. Se crean particiones del conjunto de filas por `SalesTerritoryGroup` y se ordenan por `SalesAmountQuota`.  
+### <a name="c-ranking-rows-within-a-partition"></a>C. Clasificar filas dentro de una partición  
+ En este ejemplo se clasifican los representantes de ventas de cada territorio de ventas según sus ventas totales. Se crean particiones del conjunto de filas por `SalesTerritoryGroup` y se ordenan por `SalesAmountQuota`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -173,11 +173,11 @@ Ito               7804000.0000   Southwest            2
 Pak               10514000.0000  United Kingdom       1
 ```  
   
-## <a name="see-also"></a>Vea también  
- [DENSE_RANK &#40; Transact-SQL &#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
- [ROW_NUMBER &#40; Transact-SQL &#41;](../../t-sql/functions/row-number-transact-sql.md)   
- [NTILE &#40; Transact-SQL &#41;](../../t-sql/functions/ntile-transact-sql.md)   
- [Funciones de categoría &#40; Transact-SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [DENSE_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [ROW_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   
+ [NTILE &#40;Transact-SQL&#41;](../../t-sql/functions/ntile-transact-sql.md)   
+ [Funciones de categoría &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Insertar y actualizar datos en una tabla (Tutorial) | Documentos de Microsoft
+title: "Inserción y actualización de datos en una tabla (Tutorial) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-1-3---inserting-and-updating-data-in-a-table"></a>Lección 1: 3: insertar y actualizar datos en una tabla
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Ahora que ha creado la **productos** tabla, está listo para insertar datos en la tabla mediante el uso de la instrucción INSERT. Después de insertar los datos, cambiará el contenido de una fila con una instrucción UPDATE. Utilizará la cláusula WHERE de la instrucción UPDATE para restringir la actualización a una sola fila. Las cuatro instrucciones introducirán los siguientes datos.  
+# <a name="lesson-1-3---inserting-and-updating-data-in-a-table"></a>Lección 1-3: Inserción y actualización de datos en una tabla
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Ahora que ha creado la tabla **Products**, ya está listo para insertar datos en la tabla mediante la instrucción INSERT. Después de insertar los datos, cambiará el contenido de una fila con una instrucción UPDATE. Utilizará la cláusula WHERE de la instrucción UPDATE para restringir la actualización a una sola fila. Las cuatro instrucciones introducirán los siguientes datos.  
   
 |ProductID|ProductName|Price|ProductDescription|  
 |-------------|---------------|---------|----------------------|  
@@ -95,7 +95,7 @@ La sintaxis básica es: INSERT, nombre de tabla, lista de columnas, VALUES y, a 
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
 [Leer datos de una tabla &#40;Tutorial&#41;](../t-sql/lesson-1-4-reading-the-data-in-a-table.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [INSERT &#40;Transact-SQL&#41;](../t-sql/statements/insert-transact-sql.md)  
 [UPDATE &#40;Transact-SQL&#41;](../t-sql/queries/update-transact-sql.md)  
   

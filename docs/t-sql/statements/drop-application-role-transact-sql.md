@@ -1,5 +1,5 @@
 ---
-title: "Quitar rol de aplicación (Transact-SQL) | Documentos de Microsoft"
+title: DROP APPLICATION ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -50,16 +50,16 @@ DROP APPLICATION ROLE rolename
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *roleName*  
+ *rolename*  
  Especifica el nombre del rol de aplicación que se va a quitar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si el rol de aplicación tiene elementos protegibles no se puede quitar. Para poder quitar un rol de aplicación que posea elementos protegibles, primero debe transferir la propiedad de esos elementos o quitarlos.  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER ANY APPLICATION ROLE en la base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -70,10 +70,10 @@ DROP APPLICATION ROLE weekly_ledger;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Roles de aplicación](../../relational-databases/security/authentication-access/application-roles.md)   
- [Crear rol de aplicación &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [ALTER APPLICATION ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [ALTER APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-application-role-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

@@ -34,7 +34,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Concatena un número variable de argumentos con un delimitador especificado en el argumento 1. (`CONCAT_WS` indica *concatenar con separador*.)
+Concatena un número variable de argumentos con un delimitador especificado en el primer argumento. (`CONCAT_WS` indica *concatenar con separador*).
 
 ##  <a name="syntax"></a>Sintaxis   
 ```sql
@@ -43,33 +43,33 @@ CONCAT_WS ( separator, argument1, argument1 [, argumentN]… )
 
 ## <a name="arguments"></a>Argumentos   
 separador  
-Es una expresión de cualquier tipo de caracteres (`nvarchar`, `varchar`, `nchar`, o `char`).
+Es una expresión de cualquier tipo de carácter (`nvarchar`, `varchar`, `nchar` o `char`).
 
-argumento1, argumento2, argumento*N*  
+argument1, argument2, argument*N*  
 Es una expresión de cualquier tipo.
 
-## <a name="return-types"></a>Tipos de valor devuelto
+## <a name="return-types"></a>Tipos de valores devueltos
 : cadena. El tipo y longitud dependen de la entrada.
 
-## <a name="remarks"></a>Comentarios   
-`CONCAT_WS`toma un número variable de argumentos y los concatena en una sola cadena con el primer argumento como separador. Requiere un separador y un mínimo de dos argumentos; en caso contrario, se produce un error. Todos los argumentos se convierten implícitamente en tipos de cadena y, a continuación, se concatenan. 
+## <a name="remarks"></a>Notas   
+`CONCAT_WS` toma un número variable de argumentos y los concatena en una sola cadena utilizando el primer argumento como separador. Necesita un separador y un mínimo de dos argumentos; de lo contrario, se produce un error. Todos los argumentos se convierten implícitamente a tipos de cadena y después se concatenan. 
 
-La conversión implícita de cadenas sigue las reglas existentes para las conversiones de tipos de datos. Para obtener más información acerca de las conversiones de tipo de comportamiento y los datos, vea [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md).
+La conversión implícita de cadenas sigue las reglas existentes para las conversiones de tipos de datos. Para obtener más información sobre las conversiones de tipo de datos y comportamiento, consulte [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md).
 
 ### <a name="treatment-of-null-values"></a>Tratamiento de valores NULL
 
-`CONCAT_WS`omite la `SET CONCAT_NULL_YIELDS_NULL {ON|OFF}` configuración.
+`CONCAT_WS` omite el valor `SET CONCAT_NULL_YIELDS_NULL {ON|OFF}`.
 
-Si todos los argumentos son null, una cadena vacía de tipo `varchar(1)` se devuelve. 
+Si todos los argumentos son NULL, se devuelve una cadena vacía de tipo `varchar(1)`. 
 
-Valores NULL se omiten durante la concatenación y no agregan el separador. Esto facilita el escenario común de concatenación de cadenas que a menudo tienen valores en blanco, como un segundo campo de dirección. Vea el ejemplo B.
+Los valores NULL se omiten durante la concatenación y no se agrega el separador. Esto facilita el escenario común de cadenas concatenadas que a menudo tienen valores en blanco, como un segundo campo de dirección. Vea el ejemplo B.
 
-Si su escenario requiere que se incluye con un separador de valores null, vea el ejemplo C utiliza la `ISNULL` (función).
+Si su escenario requiere que se incluyan valores NULL con un separador, vea el ejemplo C utilizando la función `ISNULL`.
 
 ## <a name="examples"></a>Ejemplos   
 
 ### <a name="a--concatenating-values-with-separator"></a>A.  Concatenación de valores con separador
-En el ejemplo siguiente se concatenan tres columnas de la tabla sys.databases, separe los valores con un `- `.   
+En el ejemplo siguiente se concatenan tres columnas de la tabla sys.databases separando los valores con `- `.   
 
 ```sql
 SELECT CONCAT_WS( ' - ', database_id, recovery_model_desc, containment_desc) AS DatabaseInfo
@@ -80,14 +80,14 @@ FROM sys.databases;
 
 |DatabaseInfo |  
 |---------|
-|1 - SIMPLE - NINGUNO |
-|2 - SIMPLE - NINGUNO |
-|3 - FULL - NINGUNO |
-|4 - SIMPLE - NINGUNO |
+|1 - SIMPLE - NONE |
+|2 - SIMPLE - NONE |
+|3 - FULL - NONE |
+|4 - SIMPLE - NONE |
 
 
 ### <a name="b--skipping-null-values"></a>B.  Omitir valores NULL
-En el ejemplo siguiente se pasa por alto `NULL` valores en la lista de argumentos.
+En el ejemplo siguiente se pasan por alto valores `NULL` de la lista de argumentos.
 
 ```sql
 SELECT CONCAT_WS(',','1 Microsoft Way', NULL, NULL, 'Redmond', 'WA', 98052) AS Address;
@@ -101,8 +101,8 @@ Address
 1 Microsoft Way,Redmond,WA,98052
 ```
 
-### <a name="c--generating-csv-file-from-table"></a>C.  Generar el archivo CSV de tabla
-En el ejemplo siguiente se utiliza una coma como separador y agrega el carácter de retorno de carro que dan como resultado en el formato de valores separados de la columna.
+### <a name="c--generating-csv-file-from-table"></a>C.  Generar el archivo CSV a partir de la tabla
+En el ejemplo siguiente se utiliza una coma como separador y se agrega el carácter de retorno de carro que resulta en el formato de valores separados de la columna.
 
 ```sql
 SELECT 
@@ -121,7 +121,7 @@ DatabaseInfo
 4,SIMPLE,NONE 
 ```
 
-CONCAT_WS pasará por alto los valores NULL en las columnas. Si alguna de las columnas que aceptan valores NULL, inclúyalo con `ISNULL` función y proporcionar el valor predeterminado como en el ejemplo siguiente:
+CONCAT_WS pasará por alto los valores NULL en las columnas. Si alguna de las columnas acepta valores NULL, incluya la función `ISNULL` y proporcione el valor predeterminado como en el ejemplo siguiente:
 
 ```sql
 SELECT 
@@ -139,5 +139,5 @@ FROM sys.databases;
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [Funciones de cadena &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funciones de cadena &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
 

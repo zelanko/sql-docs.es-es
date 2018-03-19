@@ -1,5 +1,5 @@
 ---
-title: LOGINPROPERTY (Transact-SQL) | Documentos de Microsoft
+title: LOGINPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -64,16 +64,16 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
  *login_name*  
  Es el nombre de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el que se devolverá el estado de la propiedad login.  
   
- *PropertyName*  
- Es una expresión que contiene la información de propiedad que se va a devolver para el inicio de sesión. *PropertyName* puede ser uno de los siguientes valores.  
+ *propertyname*  
+ Es una expresión que contiene la información de propiedad que se va a devolver para el inicio de sesión. *propertyname* puede ser uno de los valores siguientes.  
   
 |Valor|Description|  
 |-----------|-----------------|  
 |**BadPasswordCount**|Devuelve el número de intentos consecutivos de inicio de sesión con una contraseña incorrecta.|  
 |**BadPasswordTime**|Devuelve la hora del último intento de inicio de sesión con una contraseña incorrecta.|  
 |**DaysUntilExpiration**|Devuelve el número de días que faltan para que expire la contraseña.|  
-|**DefaultDatabase**|Devuelve el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos de inicio de sesión predeterminada tal como se almacena en los metadatos o **maestro** si no se especifica ninguna base de datos. Devuelve NULL para no[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aprovisionar los usuarios (por ejemplo, los usuarios de Windows autenticado).|  
-|**DefaultLanguage**|Devuelve el idioma predeterminado de inicio de sesión tal y como se almacena en los metadatos. Devuelve NULL para no[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los usuarios autentican de los usuarios aprovisionados, por ejemplo, Windows.|  
+|**DefaultDatabase**|Devuelve la base de datos predeterminada de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tal y como se almacena en los metadatos, o **master** si no se ha especificado ninguna base de datos. Devuelve NULL para los usuarios que no se han autenticado a través de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (como los usuarios autenticados a través de Windows).|  
+|**DefaultLanguage**|Devuelve el idioma predeterminado de inicio de sesión tal y como se almacena en los metadatos. Devuelve NULL para los usuarios que no se han autenticado a través de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (como los usuarios autenticados a través de Windows).|  
 |**HistoryLength**|Devuelve el número de contraseñas comprobadas para el inicio de sesión con el mecanismo de imposición de la directiva de contraseñas. 0 si la directiva de contraseñas no se exige. La exigencia de aplicar la directiva de contraseñas se vuelve a iniciar con 1.|  
 |**IsExpired**|Indica si el inicio de sesión ha expirado.|  
 |**IsLocked**|Indica si el inicio de sesión está bloqueado.|  
@@ -86,13 +86,13 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 ## <a name="returns"></a>Devuelve  
  El tipo de datos depende del valor solicitado.  
   
- **IsLocked**, **IsExpired**, y **IsMustChange** son de tipo **int**.  
+ **IsLocked**, **IsExpired** e **IsMustChange** son de tipo **int**.  
   
 -   1 si el inicio de sesión está en el estado especificado.  
   
 -   0 si el inicio de sesión está en el estado especificado.  
   
- **BadPasswordCount** y **HistoryLength** son de tipo **int**.  
+ **BadPasswordCount** e **HistoryLength** son de tipo **int**.  
   
  **BadPasswordTime**, **LockoutTime**, **PasswordLastSetTime** son de tipo **datetime**.  
   
@@ -112,22 +112,22 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 -   0 si es un hash SQL7.0  
   
--   1 si un hash SHA-1  
+-   1 si es un hash SHA-1  
   
 -   2 si es un hash SHA-2  
   
 -   NULL si el inicio de sesión no es un inicio de sesión de SQL Server válido.  
   
-## <a name="remarks"></a>Comentarios  
- Esta función integrada devuelve información sobre la configuración de la directiva de contraseñas de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los nombres de las propiedades no distinguen mayúsculas de minúsculas, por lo que los nombres de propiedades como **BadPasswordCount** y **badpasswordcount** son equivalentes. Los valores de la **PasswordHash, PasswordHashAlgorithm**, y **PasswordLastSetTime** propiedades están disponibles en todas las configuraciones admitidas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero las demás propiedades solo están disponible cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] y tanto CHECK_POLICY como CHECK_EXPIRATION están habilitadas. Para obtener más información, vea [Password Policy](../../relational-databases/security/password-policy.md).  
+## <a name="remarks"></a>Notas  
+ Esta función integrada devuelve información sobre la configuración de la directiva de contraseñas de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los nombres de las propiedades no distinguen mayúsculas de minúsculas, por lo que nombres de propiedades como **BadPasswordCount** y **badpasswordcount** son equivalentes. Los valores de las propiedades **PasswordHash, PasswordHashAlgorithm** y **PasswordLastSetTime** están disponibles en todas las configuraciones compatibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero las demás propiedades solo están disponibles cuando se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] y tanto CHECK_POLICY como CHECK_EXPIRATION están habilitadas. Para obtener más información, vea [Password Policy](../../relational-databases/security/password-policy.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere permiso VIEW en el inicio de sesión. También se necesita permiso CONTROL SERVER para solicitar el hash de contraseña.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-checking-whether-a-login-must-change-its-password"></a>A. Comprobar si se debe cambiar la contraseña de un inicio de sesión  
- El ejemplo siguiente se comprueba si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión `John3` debe cambiar su contraseña la próxima vez que se conecta a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ En el ejemplo siguiente se comprueba si el inicio de sesión `John3` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe cambiar la contraseña la próxima vez que se conecte a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 SELECT LOGINPROPERTY('John3', 'IsMustChange');  
@@ -142,7 +142,7 @@ SELECT LOGINPROPERTY('John3', 'IsLocked');
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)  
   

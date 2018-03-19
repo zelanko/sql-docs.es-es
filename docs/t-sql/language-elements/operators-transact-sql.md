@@ -1,5 +1,5 @@
 ---
-title: Operadores (Transact-SQL) | Documentos de Microsoft
+title: Operadores (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/25/2018
 |[Operadores de comparación](../../t-sql/language-elements/comparison-operators-transact-sql.md)|[Operador de concatenación de cadenas](../../t-sql/language-elements/string-operators-transact-sql.md)|  
 |[Operadores compuestos](../../t-sql/language-elements/compound-operators-transact-sql.md)|[Operadores unarios](http://msdn.microsoft.com/library/c4748146-4049-4040-8826-56c464410878)|  
   
-## <a name="see-also"></a>Vea también  
- [Prioridad de operador & #40; Transact-SQL & #41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [Prioridad de los operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
   
   

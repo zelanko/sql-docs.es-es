@@ -1,5 +1,5 @@
 ---
-title: Crear cola (Transact-SQL) | Documentos de Microsoft
+title: CREATE QUEUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
@@ -80,11 +80,11 @@ CREATE QUEUE <object>
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *database_name* (objeto)  
- Es el nombre de la base de datos en que se crea la nueva cola. *database_name* debe especificar el nombre de una base de datos existente. Cuando *database_name* no es siempre, se crea la cola en la base de datos actual.  
+ *database_name* (object)  
+ Es el nombre de la base de datos en que se crea la nueva cola. *database_name* debe especificar el nombre de una base de datos existente. Si no se proporciona *database_name*, la cola se crea en la base de datos actual.  
   
  *schema_name* (object)  
- Nombre del esquema al que pertenece la nueva cola. El valor predeterminado del esquema es el esquema predeterminado del usuario que ejecuta la instrucción. Si se ejecuta la instrucción CREATE QUEUE por un miembro del rol fijo de servidor sysadmin o un miembro de la db_dbowner o db_ddladmin fija roles de base de datos en la base de datos especificada por *database_name*, *schema_name* puede especificar un esquema distinto del asociado con el inicio de sesión de la conexión actual. En caso contrario, *schema_name* debe ser el esquema predeterminado para el usuario que ejecuta la instrucción.  
+ Nombre del esquema al que pertenece la nueva cola. El valor predeterminado del esquema es el esquema predeterminado del usuario que ejecuta la instrucción. Si la instrucción CREATE QUEUE es ejecutada por un miembro del rol fijo de servidor sysadmin o por un miembro de los roles fijos de base de datos db_dbowner o db_ddladmin en la base de datos especificada por *database_name*, *schema_name* puede especificar un esquema distinto del asociado con el inicio de sesión de la conexión actual. De no ser así, *schema_name* debe ser el esquema predeterminado del usuario que ejecuta la instrucción.  
   
  *queue_name*  
  Nombre de la cola que se va a crear. Este nombre debe cumplir las directrices de los identificadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -104,7 +104,7 @@ CREATE QUEUE <object>
  STATUS (activación)   
  Especifica si [!INCLUDE[ssSB](../../includes/sssb-md.md)] inicia el procedimiento almacenado. Si STATUS = ON, la cola inicia el procedimiento almacenado especificado con PROCEDURE_NAME cuando el número de procedimientos que se ejecutan actualmente es menor que MAX_QUEUE_READERS y cuando los mensajes llegan a la cola antes de que los procedimientos almacenados reciban mensajes. Si STATUS = OFF, la cola no inicia el procedimiento almacenado. Si no se especifica esta cláusula, el valor predeterminado es ON.  
   
- Procedure_name = \<procedimiento >  
+ PROCEDURE_NAME = \<procedure>  
  Especifica el nombre del procedimiento almacenado que es necesario iniciar para procesar mensajes en esta cola. Este valor debe ser un identificador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  *database_name*(procedure)  
@@ -117,16 +117,16 @@ CREATE QUEUE <object>
  Es el nombre del procedimiento almacenado.  
   
  MAX_QUEUE_READERS =*max_readers*  
- Especifica el número máximo de instancias del procedimiento almacenado de activación que la cola inicia al mismo tiempo. El valor de *max_readers* debe ser un número entre **0** y **32767**.  
+ Especifica el número máximo de instancias del procedimiento almacenado de activación que la cola inicia al mismo tiempo. El valor de *max_readers* debe ser un número comprendido entre **0** y **32767**.  
   
  EXECUTE AS  
- Especifica la cuenta de usuario de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la que se ejecuta el procedimiento almacenado de activación. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]debe ser capaz de comprobar los permisos para este usuario en el momento en que la cola inicia el procedimiento almacenado. En el caso de un usuario de dominio, el servidor debe estar conectado al dominio cuando se inicie el procedimiento o se producirá un error en la activación. En usuarios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el servidor siempre puede comprobar los permisos.  
+ Especifica la cuenta de usuario de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la que se ejecuta el procedimiento almacenado de activación. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe poder comprobar los permisos de este usuario en el momento en que la cola inicia el procedimiento almacenado. En el caso de un usuario de dominio, el servidor debe estar conectado al dominio cuando se inicie el procedimiento o se producirá un error en la activación. En usuarios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el servidor siempre puede comprobar los permisos.  
   
  SELF  
  Especifica que el procedimiento almacenado se ejecuta como el usuario actual. Es la entidad de seguridad de base de datos que ejecuta esta instrucción CREATE QUEUE.  
   
  '*user_name*'  
- Es el nombre del usuario con el que se ejecuta el procedimiento almacenado. El *nombre_usuario* parámetro debe ser válido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usuario especificado como un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificador. El usuario actual debe tener el permiso IMPERSONATE para el *nombre_usuario* especificado.  
+ Es el nombre del usuario con el que se ejecuta el procedimiento almacenado. El parámetro *user_name* debe ser un usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido especificado como identificador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El usuario actual debe tener el permiso IMPERSONATE para el valor de *user_name* especificado.  
   
  OWNER  
  Especifica que el procedimiento almacenado se ejecuta como el propietario de la cola.  
@@ -136,13 +136,13 @@ CREATE QUEUE <object>
   
  Una cola que tenga configurado en OFF el control de mensajes dudosos no se deshabilitará después de cinco reversiones de transacción consecutivas. Esto permite que el sistema de control de mensajes dudosos sea definido por la aplicación.  
   
- ON *grupo de archivos |* [**Predeterminado**]  
- Especifica el grupo de archivos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en que se va a crear esta cola. Puede usar el *archivos* parámetro para identificar un grupo de archivos, o usar el identificador predeterminado que se usará el grupo de archivos predeterminado para la base de datos de service broker. En el contexto de esta cláusula, DEFAULT no es una palabra clave y debe delimitarse como un identificador. Si no se especifica ningún grupo de archivos, la cola utiliza el grupo de archivos predeterminado de la base de datos.  
+ ON *filegroup |* [**DEFAULT**]  
+ Especifica el grupo de archivos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en que se va a crear esta cola. Puede usar el parámetro *filegroup* para identificar un grupo de archivos o emplear el identificador DEFAULT para usar el grupo de archivos predeterminado de la base de datos de Service Broker. En el contexto de esta cláusula, DEFAULT no es una palabra clave y debe delimitarse como un identificador. Si no se especifica ningún grupo de archivos, la cola utiliza el grupo de archivos predeterminado de la base de datos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Una cola puede ser el destino de una instrucción SELECT. No obstante, el contenido de una cola solo puede modificarse mediante instrucciones que funcionan en conversaciones de [!INCLUDE[ssSB](../../includes/sssb-md.md)], como SEND, RECEIVE y END CONVERSATION. Una cola no puede ser el destino de una instrucción INSERT, UPDATE, DELETE o TRUNCATE.  
   
- Una cola no puede ser un objeto temporal. Por lo tanto, a partir de los nombres de cola  **#**  no son válidos.  
+ Una cola no puede ser un objeto temporal. Por lo tanto, los nombres de cola que empiezan por **#** no son válidos.  
   
  Si crea una cola en estado inactivo, puede obtener la infraestructura de un servicio antes de permitir que los mensajes se reciban en la cola.  
   
@@ -158,7 +158,7 @@ CREATE QUEUE <object>
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|status|**tinyint**|Estado del mensaje. La instrucción RECEIVE devuelve todos los mensajes que tengan un estado de **1**. Si la retención de los mensajes está activada, el estado se establece en 0. Si está desactivada, el mensaje se elimina de la cola. Los mensajes de la cola pueden contener uno de los valores siguientes:<br /><br /> **0**= mensaje recibido retenido<br /><br /> **1**= listo para recibir<br /><br /> **2**= sin completar<br /><br /> **3**= mensaje enviado retenido|  
+|status|**tinyint**|Estado del mensaje. La instrucción RECEIVE devuelve todos los mensajes que tienen **1** como estado. Si la retención de los mensajes está activada, el estado se establece en 0. Si está desactivada, el mensaje se elimina de la cola. Los mensajes de la cola pueden contener uno de los valores siguientes:<br /><br /> **0**=Mensaje recibido retenido<br /><br /> **1**=Listo para recibir<br /><br /> **2**=Sin completar<br /><br /> **3**=Mensaje enviado retenido|  
 |priority|**tinyint**|Nivel de prioridad asignado a este mensaje.|  
 |queuing_order|**bigint**|Número de orden del mensaje en la cola.|  
 |conversation_group_id|**uniqueidentifier**|Identificador para el grupo de conversación al que pertenece este mensaje.|  
@@ -174,7 +174,7 @@ CREATE QUEUE <object>
 |message_body|**varbinary(max)**|Contenido del mensaje.|  
 |message_id|**uniqueidentifier**|Identificador único para el mensaje.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Tienen permiso para crear una cola los miembros de los roles fijos de base de datos  db_ddladmin o db_owner y el rol fijo de servidor sysadmin.  
   
  De forma predeterminada, tienen permiso REFERENCES en una cola el propietario de ésta, los miembros los roles fijos de base de datos db_ddladmin o db_owner y los miembros del rol fijo de servidor sysadmin.  
@@ -218,7 +218,7 @@ CREATE QUEUE ExpenseQueue
 ```  
   
 ### <a name="e-creating-a-queue-with-multiple-parameters"></a>E. Crear una cola con varios parámetros  
- En el ejemplo siguiente se crea una cola en el `DEFAULT` grupo de archivos. La cola no está disponible. Los mensajes se retienen en la cola hasta que finaliza la conversación a la que pertenecen. Cuando la cola pasa a estar disponible mediante ALTER QUEUE, la cola inicia el procedimiento almacenado `2008R2.dbo.expense_procedure` para procesar los mensajes. El procedimiento almacenado se ejecuta como el usuario que ejecutó la instrucción `CREATE QUEUE`. La cola inicia un máximo de `10` instancias del procedimiento almacenado.  
+ En el siguiente ejemplo se crea una cola en el grupo de archivos `DEFAULT`. La cola no está disponible. Los mensajes se retienen en la cola hasta que finaliza la conversación a la que pertenecen. Cuando la cola pasa a estar disponible mediante ALTER QUEUE, la cola inicia el procedimiento almacenado `2008R2.dbo.expense_procedure` para procesar los mensajes. El procedimiento almacenado se ejecuta como el usuario que ejecutó la instrucción `CREATE QUEUE`. La cola inicia un máximo de `10` instancias del procedimiento almacenado.  
   
 ```  
 CREATE QUEUE ExpenseQueue  
@@ -231,8 +231,8 @@ CREATE QUEUE ExpenseQueue
     ON [DEFAULT] ;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [ALTER QUEUE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
  [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
  [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   

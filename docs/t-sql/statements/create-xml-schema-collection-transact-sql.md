@@ -1,5 +1,5 @@
 ---
-title: CREAR XML SCHEMA COLLECTION (Transact-SQL) | Documentos de Microsoft
+title: CREATE XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
@@ -61,14 +61,14 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
  Es el identificador de SQL para la colección de esquemas XML.  
   
  *Expresión*  
- Es una constante de cadena o una variable escalar. Es **varchar**, **varbinary**, **nvarchar**, o **xml** tipo.  
+ Es una constante de cadena o una variable escalar. Es de tipo **varchar**, **varbinary**, **nvarchar** o **xml**.  
   
-## <a name="remarks"></a>Comentarios  
- También puede agregar nuevos espacios de nombres a la colección o agregar nuevos componentes a espacios de nombres existentes en la colección mediante [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md).  
+## <a name="remarks"></a>Notas  
+ También puede agregar nuevos espacios de nombres a la colección o agregar nuevos componentes a espacios de nombres existentes en la colección con [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md).  
   
- Para quitar las colecciones, use [DROP XML SCHEMA COLLECTION &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
+ Para quitar colecciones, use [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para crear XML SCHEMA COLLECTION se requieren al menos uno de los siguientes conjuntos de permisos:  
   
 -   Permiso CONTROL en el servidor  
@@ -165,13 +165,13 @@ Set @MySchemaCollection  = N' copy the schema collection here'
 CREATE XML SCHEMA COLLECTION MyCollection AS @MySchemaCollection   
 ```  
   
- La variable del ejemplo es de tipo `nvarchar(max)`. La variable también puede ser de **xml** tipo de datos, en cuyo caso, se convierte implícitamente en una cadena.  
+ La variable del ejemplo es de tipo `nvarchar(max)`. La variable también puede ser del tipo de datos **xml**; si es así, se convierte de forma implícita en una cadena.  
   
  Para obtener más información, vea [Ver una colección de esquemas XML almacenada](../../relational-databases/xml/view-a-stored-xml-schema-collection.md).  
   
- Puede almacenar colecciones de esquemas en una **xml** columna de tipo. En este caso, para crear la colección de esquemas XML, realice lo siguiente:  
+ Puede almacenar colecciones de esquemas en una columna de tipo **xml**. En este caso, para crear la colección de esquemas XML, realice lo siguiente:  
   
-1.  Recuperar la colección de esquemas de la columna mediante el uso de una instrucción SELECT y asígnela a una variable de **xml** tipo, o un **varchar** tipo.  
+1.  Recupere la colección de esquemas de la columna mediante una instrucción SELECT y asígnela a una variable de tipo **xml** o **varchar**.  
   
 2.  Especifique el nombre de la variable en la instrucción CREATE XML SCHEMA COLLECTION.  
   
@@ -236,7 +236,7 @@ GO
 ```  
   
 ### <a name="c-importing-a-schema-that-does-not-specify-a-target-namespace"></a>C. Importar un esquema que no especifique un espacio de nombres de destino  
- Si un esquema que no contenga un **targetNamespace** atributo se importa en una colección, sus componentes están asociados con el espacio de nombres de destino de una cadena vacía como se muestra en el ejemplo siguiente. Tenga en cuenta que no asociar uno o varios esquemas importados a la colección provoca que varios componentes del esquema (potencialmente no relacionados) se asocien con el espacio de nombres de cadena vacía.  
+ Si un esquema que no contiene un atributo **targetNamespace** se importa en una colección, sus componentes se asocian al espacio de nombres de destino de cadena vacío, como se muestra en el ejemplo siguiente. Tenga en cuenta que no asociar uno o varios esquemas importados a la colección provoca que varios componentes del esquema (potencialmente no relacionados) se asocien con el espacio de nombres de cadena vacía.  
   
 ```  
 -- Create a collection that contains a schema with no target namespace.  
@@ -269,12 +269,12 @@ CREATE TABLE T (Col1 xml (mySC));
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [ALTER XML SCHEMA COLLECTION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
- [DROP XML SCHEMA COLLECTION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [ALTER XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
+ [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Comparar XML con tipo y XML sin tipo](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [DROP XML SCHEMA COLLECTION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
+ [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
  [Requisitos y limitaciones de las colecciones de esquemas XML en el servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

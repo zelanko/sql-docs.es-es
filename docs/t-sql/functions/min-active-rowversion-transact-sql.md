@@ -1,5 +1,5 @@
 ---
-title: MIN_ACTIVE_ROWVERSION (Transact-SQL) | Documentos de Microsoft
+title: MIN_ACTIVE_ROWVERSION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.lasthandoff: 11/21/2017
 # <a name="minactiverowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve el valor **rowversion** activo más bajo de la base de datos actual. Un valor **rowversion** está activo si se utiliza en una transacción que no se ha confirmado todavía. Para obtener más información, vea [rowversion &#40; Transact-SQL &#41; ](../../t-sql/data-types/rowversion-transact-sql.md).  
+  Devuelve el valor **rowversion** activo más bajo de la base de datos actual. Un valor **rowversion** está activo si se utiliza en una transacción que no se ha confirmado todavía. Para más información, vea [rowversion &#40;Transact-SQL&#41;](../../t-sql/data-types/rowversion-transact-sql.md).  
   
 > [!NOTE]  
->  El **rowversion** es de tipo de datos también se denomina **marca de tiempo**.  
+>  El tipo de datos **rowversion** también se conoce como **timestamp**.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,17 +49,17 @@ MIN_ACTIVE_ROWVERSION
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- Devuelve un **binary (8)** valor.  
+ Devuelve un valor **binary(8)**.  
   
-## <a name="remarks"></a>Comentarios  
- MIN_ACTIVE_ROWVERSION es una función no determinista que devuelve el activo más bajo **rowversion** valor en la base de datos actual. Normalmente, se genera un nuevo valor **rowversion** cuando se realiza una inserción o una actualización en una tabla que contiene una columna de tipo **rowversion**. Si no hay ningún valor activo en la base de datos, MIN_ACTIVE_ROWVERSION devuelve el mismo valor que @@DBTS + 1.  
+## <a name="remarks"></a>Notas  
+ MIN_ACTIVE_ROWVERSION es una función no determinista que devuelve el valor **rowversion** activo más bajo de la base de datos actual. Normalmente, se genera un nuevo valor **rowversion** cuando se realiza una inserción o una actualización en una tabla que contiene una columna de tipo **rowversion**. Si no hay ningún valor activo en la base de datos, MIN_ACTIVE_ROWVERSION devuelve el mismo valor que @@DBTS + 1.  
   
- MIN_ACTIVE_ROWVERSION es útil en escenarios como la sincronización de datos que usan **rowversion** valores para agrupar conjuntos de cambios. Si una aplicación utiliza@DBTS en lugar de MIN_ACTIVE_ROWVERSION, es posible error de cambios que están activos cuando se produce la sincronización.  
+ MIN_ACTIVE_ROWVERSION es útil en escenarios como la sincronización de datos que usa valores **rowversion** para agrupar conjuntos de cambios. Si una aplicación usa @@DBTS en lugar de MIN_ACTIVE_ROWVERSION, es posible que se pierdan los cambios que están activos cuando se produce la sincronización.  
   
  La función MIN_ACTIVE_ROWVERSION no se ve afectada por los cambios en los niveles de aislamiento de transacciones.  
   
 ## <a name="examples"></a>Ejemplos  
- El ejemplo siguiente devuelve **rowversion** valores mediante el uso de `MIN_ACTIVE_ROWVERSION` y `@@DBTS`. Observe que los valores difieren cuando no hay ninguna transacción activa en la base de datos.  
+ En el ejemplo siguiente se devuelven valores **rowversion** al usar `MIN_ACTIVE_ROWVERSION` y `@@DBTS`. Observe que los valores difieren cuando no hay ninguna transacción activa en la base de datos.  
   
 ```  
 -- Create a table that has a ROWVERSION column in it.  
@@ -141,7 +141,7 @@ GO
 --0x00000000000007E5  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [@@DBTS &#40;Transact-SQL&#41;](../../t-sql/functions/dbts-transact-sql.md)   
  [rowversion &#40;Transact-SQL&#41;](../../t-sql/data-types/rowversion-transact-sql.md)  
   

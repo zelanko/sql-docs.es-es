@@ -1,5 +1,5 @@
 ---
-title: STDifference (tipo de datos geometry) | Documentos de Microsoft
+title: STDifference (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdifference-geometry-data-type"></a>STDifference (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve un objeto que representa el punto establecido desde una **geometry** instancia que no se encuentra dentro de otra **geometry** instancia.
+Devuelve un objeto que representa el punto establecido desde una instancia de **geometry** que no queda dentro de otra instancia de **geometry**.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,15 +45,15 @@ Devuelve un objeto que representa el punto establecido desde una **geometry** in
   
 ## <a name="arguments"></a>Argumentos  
  *other_geometry*  
- Es otra **geometry** instancia que indica que apunta a quitar de la instancia en la que `STDifference()` que se está llamando.  
+ Es otra instancia de **geometry** que indica los puntos que hay que quitar de la instancia en la que se invoca `STDifference()`.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geometry**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentarios  
- Este método siempre devuelve null si los identificadores de referencia espacial (SRID) de la **geometry** instancias no coinciden.   El resultado puede contener segmentos de arco circulares solo si las instancias de entrada contienen segmentos de arco circulares.  
+## <a name="remarks"></a>Notas  
+ Este método siempre devuelve NULL si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geometry**.   El resultado puede contener segmentos de arco circulares solo si las instancias de entrada contienen segmentos de arco circulares.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -78,7 +78,7 @@ SELECT @g.STDifference(@h).ToString();
  SELECT @h.STDifference(@g).ToString(), @g.STDifference(@h).ToString();
  ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

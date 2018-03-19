@@ -1,5 +1,5 @@
 ---
-title: ALTER ENDPOINT (Transact-SQL) | Documentos de Microsoft
+title: ALTER ENDPOINT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/25/2018
 -   Cambiando las propiedades de un extremo.  
   
 > [!NOTE]  
->  En este tema se describen la sintaxis y los argumentos son específicos de ALTER ENDPOINT. Para obtener descripciones de los argumentos que son comunes a CREATE ENDPOINT y ALTER ENDPOINT, vea [CREATE ENDPOINT &#40; Transact-SQL &#41; ](../../t-sql/statements/create-endpoint-transact-sql.md).  
+>  En este tema se describen la sintaxis y los argumentos son específicos de ALTER ENDPOINT. Para obtener descripciones de los argumentos comunes a CREATE ENDPOINT y ALTER ENDPOINT, vea [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md).  
   
  Los servicios web XML nativos (extremos HTTP/SOAP) se han quitado a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
@@ -106,38 +106,38 @@ FOR DATABASE_MIRRORING (
 ## <a name="arguments"></a>Argumentos  
   
 > [!NOTE]  
->  Los siguientes argumentos son específicos de ALTER ENDPOINT. Ver las descripciones de los argumentos restantes, [CREATE ENDPOINT &#40; Transact-SQL &#41; ](../../t-sql/statements/create-endpoint-transact-sql.md).  
+>  Los siguientes argumentos son específicos de ALTER ENDPOINT. Para obtener las descripciones de los argumentos restantes, vea [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md).  
   
  **AS** { **TCP** }  
- No se puede cambiar el protocolo de transporte con **ALTER ENDPOINT**.  
+ No puede cambiar el protocolo de transporte con **ALTER ENDPOINT**.  
   
- **AUTORIZACIÓN** *inicio de sesión*  
- El **autorización** opción no está disponible en **ALTER ENDPOINT**. La propiedad solo puede asignarse cuando se crea el extremo.  
+ **AUTHORIZATION** *inicio_de_sesión*  
+ La opción **AUTHORIZATION** no está disponible en **ALTER ENDPOINT**. La propiedad solo puede asignarse cuando se crea el extremo.  
   
  **FOR** { **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
- No se puede cambiar el tipo de carga con **ALTER ENDPOINT**.  
+ No se puede cambiar el tipo de carga útil con **ALTER ENDPOINT**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando use ALTER ENDPOINT, especifique solo los parámetros que desee actualizar. Todas las propiedades de un extremo se conservan a menos que las cambie explícitamente.  
   
  Las instrucciones ENDPOINT DDL no se pueden ejecutar dentro de una transacción de usuario.  
   
- Para obtener información sobre cómo elegir un algoritmo de cifrado para su uso con un punto de conexión, vea [elegir un algoritmo de cifrado](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md).  
+ Para obtener información sobre cómo elegir un algoritmo de cifrado para su uso con un extremo, vea [Selección de un algoritmo de cifrado](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md).  
   
 > [!NOTE]  
 >  El algoritmo RC4 se admite únicamente por razones de compatibilidad con versiones anteriores. El material nuevo solo se puede cifrar con RC4 o RC4_128 cuando la base de datos tenga el nivel de compatibilidad 90 o 100. (No se recomienda). Use un algoritmo más reciente como uno de los algoritmos AES en su lugar. En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores, el material cifrado con RC4 o RC4_128 se puede descifrar en cualquier nivel de compatibilidad.  
 >   
 >  RC4 es un algoritmo relativamente poco seguro y AES un algoritmo relativamente seguro. Sin embargo, AES resulta considerablemente más lento que RC4. Si la seguridad es una prioridad más importante que la velocidad, se recomienda utilizar AES.  
   
-## <a name="permissions"></a>Permissions  
- Usuario debe ser un miembro de la **sysadmin** rol fijo de servidor, el propietario del punto de conexión, o tener concedido permiso ALTER ANY ENDPOINT.  
+## <a name="permissions"></a>Permisos  
+ El usuario debe ser un miembro del rol fijo de servidor **sysadmin**, el propietario del extremo o tener concedido el permiso ALTER ANY ENDPOINT.  
   
- Para cambiar la propiedad de un extremo existente, debe usar la instrucción ALTER AUTHORIZATION. Para obtener más información, vea [ALTER AUTHORIZATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ Para cambiar la propiedad de un extremo existente, debe usar la instrucción ALTER AUTHORIZATION. Para obtener más información, vea [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
  Para obtener más información, vea [GRANT &#40;permisos de punto de conexión de Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
-## <a name="see-also"></a>Vea también  
- [Eliminar punto de conexión &#40; Transact-SQL &#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

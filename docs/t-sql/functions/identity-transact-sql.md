@@ -1,5 +1,5 @@
 ---
-title: '@@IDENTITY (Transact-SQL) | Documentos de Microsoft'
+title: '@@IDENTITY (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
@@ -49,23 +49,23 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipos devueltos  
  **numeric(38,0)**  
   
-## <a name="remarks"></a>Comentarios  
- Después de una INSERCIÓN, SELECT INTO o masiva se complete la instrucción de copia, @@IDENTITY contiene el último valor de identidad generado por la instrucción. Si la instrucción no afectó a ninguna tabla con columnas de identidad, @@IDENTITY devuelve NULL. Si se insertan varias filas, generar varios valores de identidad, @@IDENTITY devuelve el último valor de identidad generado. Si la instrucción activa uno o más desencadenadores que realizan inserciones que generan valores de identidad, al llamar a@IDENTITY inmediatamente después de la instrucción devuelve el último valor de identidad generado por los desencadenadores. Si un desencadenador se activa después de una acción insert en una tabla que tiene una columna de identidad, y se inserta en otra tabla que no tiene una columna de identidad, @@IDENTITY devuelve el valor de identidad de la primera instrucción insert. El @@IDENTITY valor no vuelve a un valor anterior si se produce un error en la copia de instrucción o bulk INSERT o SELECT INTO, o si se revierte la transacción.  
+## <a name="remarks"></a>Notas  
+ Cuando se completa una instrucción INSERT, SELECT INTO o de copia masiva, @@IDENTITY contiene el último valor de identidad generado por la instrucción. Si la instrucción no afectó a ninguna tabla con columnas de identidad, @@IDENTITY devuelve NULL. Si se insertan varias filas, lo que genera varios valores de identidad, @@IDENTITY devuelve el último valor de identidad generado. Si la instrucción activa uno o más desencadenadores que realizan inserciones que, a su vez, generan valores de identidad, al llamar a @@IDENTITY inmediatamente después de la instrucción se obtiene el último valor de identidad generado por los desencadenadores. Si un desencadenador se activa tras una acción de inserción en una tabla que tiene una columna de identidad y se inserta en otra tabla que no tiene una columna de identidad, @@IDENTITY devuelve el valor de identidad de la primera inserción. Si se produce un error en la instrucción INSERT o SELECT INTO o en la copia masiva o se revierte la transacción, el valor de @@IDENTITY no revierte a un valor anterior.  
   
  Las instrucciones y transacciones con errores pueden cambiar la identidad actual de una tabla y crear huecos en los valores de columna de identidad. El valor de identidad jamás se revierte, aun cuando no se haya confirmado la transacción que intentó insertar el valor en la tabla. Por ejemplo, si se produce un error en una instrucción INSERT debido a una infracción de tipo IGNORE_DUP_KEY, el valor de identidad actual de la tabla se sigue incrementando.  
   
- @@IDENTITY, SCOPE_IDENTITY e IDENT_CURRENT son funciones parecidas ya que devuelven el último valor insertado en la columna de identidad de una tabla.  
+ Las funciones @@IDENTITY, SCOPE_IDENTITY e IDENT_CURRENT se parecen, porque devuelven el último valor insertado en la columna IDENTITY de una tabla.  
   
- @@IDENTITY y SCOPE_IDENTITY devuelve el último valor de identidad generado en cualquier tabla en la sesión actual. No obstante, SCOPE_IDENTITY devuelve el valor dentro del ámbito actual; @@IDENTITY no está limitado a un ámbito concreto.  
+ @@IDENTITY y SCOPE_IDENTITY devuelven el último valor de identidad generado en una tabla en la sesión actual. SCOPE_IDENTITY solo devuelve el valor en el ámbito actual y @@IDENTITY no se limita a un ámbito específico.  
   
- IDENT_CURRENT no está limitado por el ámbito y la sesión; se limita a una tabla especificada. IDENT_CURRENT devuelve el valor de identidad generado para una tabla específica en cualquier sesión y cualquier ámbito. Para obtener más información, vea [IDENT_CURRENT &#40; Transact-SQL &#41; ](../../t-sql/functions/ident-current-transact-sql.md).  
+ IDENT_CURRENT no está limitado por el ámbito y la sesión; se limita a una tabla especificada. IDENT_CURRENT devuelve el valor de identidad generado para una tabla específica en cualquier sesión y cualquier ámbito. Para más información, vea [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md).  
   
- El ámbito de la @@IDENTITY función es la sesión actual en el servidor local en el que se ejecuta. Esta función no se puede aplicar a servidores remotos o vinculados. Para obtener un valor de identidad de un servidor diferente, ejecute un procedimiento almacenado en ese servidor remoto o vinculado y haga que dicho procedimiento (que se está ejecutando en el contexto del servidor remoto o vinculado) recopile el valor de identidad y lo devuelva a la conexión que llama del servidor local.  
+ El ámbito de la función @@IDENTITY es la sesión actual en el servidor local en el que se ejecuta. Esta función no se puede aplicar a servidores remotos o vinculados. Para obtener un valor de identidad de un servidor diferente, ejecute un procedimiento almacenado en ese servidor remoto o vinculado y haga que dicho procedimiento (que se está ejecutando en el contexto del servidor remoto o vinculado) recopile el valor de identidad y lo devuelva a la conexión que llama del servidor local.  
   
- La replicación puede afectar a las @@IDENTITY valor, puesto que se usa dentro de los procedimientos almacenados y desencadenadores de replicación. @@IDENTITY no es un indicador confiable de la identidad más reciente creada por el usuario si la columna forma parte de un artículo de replicación. Puede usar la sintaxis de la función SCOPE_IDENTITY () en lugar de @@IDENTITY. Para obtener más información, vea [SCOPE_IDENTITY &#40; Transact-SQL &#41;](../../t-sql/functions/scope-identity-transact-sql.md)  
+ La replicación puede afectar al valor @@IDENTITY, ya que se usa en los desencadenadores de replicación y en los procedimientos almacenados. @@IDENTITY no es un indicador confiable de la identidad más reciente creada por el usuario si la columna forma parte de un artículo de replicación. Puede usar la sintaxis de función SCOPE_IDENTITY() en lugar de @@IDENTITY. Para más información, vea [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)  
   
 > [!NOTE]  
->  La llamada a procedimiento almacenado o [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción se debe escribir para que utilicen el `SCOPE_IDENTITY()` función, que devuelve la última identidad usada dentro del ámbito de esa instrucción de usuario y no la identidad en el ámbito del desencadenador anidado usado por replicación.  
+>  Es necesario reescribir la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] o el procedimiento almacenado que realiza la llamada para que usen la función `SCOPE_IDENTITY()`, lo que devuelve la última identidad usada en el ámbito de esa instrucción de usuario en lugar de la identidad en el ámbito del desencadenador anidado usado por la replicación.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se inserta una fila en una tabla con una columna de identidad (`LocationID`) y se utiliza `@@IDENTITY` para mostrar el valor de identidad empleado en la nueva fila.  
@@ -86,7 +86,7 @@ SELECT MAX(LocationID) FROM Production.Location;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)   

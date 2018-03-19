@@ -1,5 +1,5 @@
 ---
-title: SET ARITHIGNORE (Transact-SQL) | Documentos de Microsoft
+title: SET ARITHIGNORE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -57,7 +57,7 @@ SET ARITHIGNORE { ON | OFF }
 SET ARITHIGNORE OFF
 ```
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La opción SET ARITHIGNORE solo controla si se devuelve un mensaje de error. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve NULL en un cálculo en que se invoca un error de desbordamiento o de división por cero con independencia de esta opción. La opción SET ARITHABORT se puede utilizar para determinar si la consulta ha finalizado o no. Esta opción no afecta a los errores producidos al ejecutar las instrucciones INSERT, UPDATE y DELETE.  
   
  Si SET ARITHABORT o SET ARITHIGNORE es OFF y SET ANSI_WARNINGS es ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devolverá un mensaje de error cuando haya errores de división por cero o desbordamiento.  
@@ -73,7 +73,7 @@ SELECT @ARITHIGNORE AS ARITHIGNORE;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol public.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -105,8 +105,8 @@ SELECT CAST(256 AS TINYINT) AS Overflow;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- En el ejemplo siguiente se muestra la división por cero y los errores de desbordamiento. En este ejemplo no devuelve un mensaje de error para estos errores porque ARITHIGNORE es OFF.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ En el siguiente ejemplo se muestran los errores de división entre cero y de desbordamiento. No se devuelve un mensaje de error relativo a estos errores porque ARITHIGNORE está establecido en OFF.  
   
 ```  
 -- SET ARITHIGNORE OFF and testing.  
@@ -116,9 +116,9 @@ SELECT CAST(256 AS TINYINT) AS Overflow;
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Instrucciones SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ARITHABORT &#40; Transact-SQL &#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
+ [SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
   
   
 

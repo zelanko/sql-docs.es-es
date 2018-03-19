@@ -1,5 +1,5 @@
 ---
-title: ERROR_STATE (Transact-SQL) | Documentos de Microsoft
+title: ERROR_STATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -57,8 +57,8 @@ ERROR_STATE ( )
   
  Devuelve NULL si se le llama desde fuera del ámbito del bloque CATCH.  
   
-## <a name="remarks"></a>Comentarios  
- Algunos mensajes de error se pueden generar en varios puntos en el código de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por ejemplo, el error "1105" se puede generar bajo diferentes condiciones. Cada condición específica que genera el error asigna un código de estado único.  
+## <a name="remarks"></a>Notas  
+ Algunos mensajes de error se pueden generar en varios puntos del código de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por ejemplo, el error "1105" se puede generar bajo diferentes condiciones. Cada condición específica que genera el error asigna un código de estado único.  
   
  Cuando se ven las bases de datos de problemas conocidos, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base, puede utilizar el número de estado para determinar si el problema registrado puede ser el mismo que el error que ha encontrado. Por ejemplo, si un artículo de Knowledge Base trata un mensaje de error 1105 con un estado de 2 y el mensaje de error 1105 que recibió tiene un estado de 3, probablemente su error tiene un origen distinto del registrado en el artículo.  
   
@@ -66,14 +66,14 @@ ERROR_STATE ( )
   
  ERROR_STATE puede llamarse en cualquier lugar del ámbito de un bloque CATCH.  
   
- ERROR_STATE devuelve el estado de error independientemente de las veces que se ejecute o de dónde se ejecute en el ámbito del bloque CATCH. Esto difiere de las funciones como @@ERROR, que sólo devuelve el número de error en la instrucción inmediatamente posterior a la que se produzca un error, o en la primera instrucción de un bloque CATCH.  
+ ERROR_STATE devuelve el estado de error independientemente de las veces que se ejecute o de dónde se ejecute en el ámbito del bloque CATCH. Esto contrasta con funciones como @@ERROR, que solo devuelve el número de error en la instrucción inmediatamente posterior a la que causa un error, o en la primera instrucción de un bloque CATCH.  
   
  En los bloques CATCH anidados, ERROR_STATE devuelve el estado de error específico del ámbito del bloque CATCH en el que se hace referencia al mismo. Por ejemplo, el bloque CATCH de una construcción TRY...CATCH externa podría tener una construcción TRY...CATCH anidada. En el bloque CATCH anidado, ERROR_STATE devuelve el estado del error que invocó el bloque CATCH anidado. Si ERROR_STATE se ejecuta en el bloque CATCH externo, devuelve el estado del error que invocó ese bloque CATCH.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-using-errorstate-in-a-catch-block"></a>A. Utilizar ERROR_STATE en un bloque CATCH  
- El ejemplo siguiente muestra un `SELECT` instrucción que genera un error de división por cero. Se devuelve el estado del error.  
+ En este ejemplo de código se muestra una instrucción `SELECT` que genera un error de división por cero. Se devuelve el estado del error.  
   
 ```  
 BEGIN TRY  
@@ -87,7 +87,7 @@ GO
 ```  
   
 ### <a name="b-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>B. Utilizar ERROR_STATE en un bloque CATCH con otras herramientas de control de errores  
- El ejemplo siguiente muestra un `SELECT` instrucción que genera un error de división por cero. Además del estado de error, se devuelve otra información relacionada con el error.  
+ En este ejemplo de código se muestra una instrucción `SELECT` que genera un error de división por cero. Además del estado de error, se devuelve otra información relacionada con el error.  
   
 ```  
 BEGIN TRY  
@@ -106,10 +106,10 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>C. Utilizar ERROR_STATE en un bloque CATCH con otras herramientas de control de errores  
- El ejemplo siguiente muestra un `SELECT` instrucción que genera un error de división por cero. Además del estado de error, se devuelve otra información relacionada con el error.  
+ En este ejemplo de código se muestra una instrucción `SELECT` que genera un error de división por cero. Además del estado de error, se devuelve otra información relacionada con el error.  
   
 ```  
 BEGIN TRY  
@@ -127,7 +127,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: COLUMNPROPERTY (Transact-SQL) | Documentos de Microsoft
+title: COLUMNPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,20 +48,20 @@ COLUMNPROPERTY ( id , column , property )
   
 ## <a name="arguments"></a>Argumentos  
 *id*  
-Es un [expresión](../../t-sql/language-elements/expressions-transact-sql.md) que contiene el identificador (ID) de la tabla o el procedimiento.
+Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) que contiene el identificador (Id.) de la tabla o del procedimiento.
   
-*columna*  
+*column*  
 Es una expresión que contiene el nombre de la columna o del parámetro.
   
-*propiedad*  
-Es una expresión que contiene la información que se devuelve para *identificador*, y puede tener uno de los siguientes valores.
+*property*  
+Es una expresión que contiene la información que se devuelve para *id* y puede tener uno de los siguientes valores.
   
 |Valor|Description|Valor devuelto|  
 |---|---|---|
-|**AllowsNull**|Permite valores null.|1 = TRUE<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida.|  
-|**ColumnId**|Valor de Id. de columna correspondiente a **sys.columns.column_id**.|Identificador de columna<br /><br /> **Nota:** al consultar varias columnas, pueden aparecer espacios en la secuencia de valores de Id. de columna.|  
-|**FullTextTypeColumn**|La columna TYPE de la tabla que contiene la información de tipo de documento de la *columna*.|Id. de TYPE COLUMN de texto completo de la columna pasada como segundo parámetro de esta propiedad.|  
-|**Es calculado**|La columna es una columna calculada.|1 = TRUE<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida.|  
+|**AllowsNull**|Permite valores NULL.|1 = TRUE<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida.|  
+|**ColumnId**|Valor del Id. de columna correspondiente a **sys.columns.column_id**.|Identificador de columna<br /><br /> **Nota:** Cuando se consultan varias columnas, pueden aparecer espacios en la secuencia de valores de los Id. de columna.|  
+|**FullTextTypeColumn**|El valor TYPE COLUMN de la tabla que contiene la información del tipo de documento de la *columna*.|Id. de TYPE COLUMN de texto completo de la columna pasada como segundo parámetro de esta propiedad.|  
+|**IsComputed**|La columna es una columna calculada.|1 = TRUE<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida.|  
 |**IsCursorType**|El parámetro de procedimiento es del tipo CURSOR.|1 = TRUE<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida.|  
 |**IsDeterministic**|La columna es determinista. Esta propiedad solo se aplica a columnas calculadas y columnas de vistas.|1 = TRUE<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida. No es una columna calculada o una columna de vista.|  
 |**IsFulltextIndexed**|La columna se ha registrado para la indización de texto completo.|1 = TRUE<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida.|  
@@ -70,21 +70,21 @@ Es una expresión que contiene la información que se devuelve para *identificad
 |**IsIndexable**|La columna se puede indizar.|1 = TRUE<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida.|  
 |**IsOutParam**|El parámetro de procedimiento es un parámetro de salida.|1 = TRUE<br /><br /> 0 = FALSE o NULL = La entrada no es válida.|  
 |**IsPrecise**|La columna es precisa. Esta propiedad solo se aplica a columnas deterministas.|1 = TRUE<br /><br /> 0 = FALSE o NULL = La entrada no es válida. No es una columna determinista|  
-|**IsRowGuidCol**|La columna tiene el **uniqueidentifier** tipo de datos y se define con la propiedad ROWGUIDCOL.|1 = TRUE<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida.|  
-|**IsSystemVerified**|El [!INCLUDE[ssDE](../../includes/ssde-md.md)] puede comprobar las propiedades de determinismo y precisión de la columna. Esta propiedad solo se aplica a las columnas calculadas y columnas de vistas.|1 = TRUE<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida.|  
+|**IsRowGuidCol**|La columna es del tipo de datos **uniqueidentifier** y se ha definido con la propiedad ROWGUIDCOL.|1 = TRUE<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida.|  
+|**IsSystemVerified**|El [!INCLUDE[ssDE](../../includes/ssde-md.md)] puede comprobar las propiedades de determinismo y precisión de la columna. Esta propiedad solo se aplica a columnas calculadas y columnas de vistas.|1 = TRUE<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida.|  
 |**IsXmlIndexable**|La columna XML se puede utilizar en un índice XML.|1 = TRUE<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida.|  
 |**Precisión**|Longitud del tipo de datos de la columna o del parámetro.|Longitud del tipo de datos especificado para la columna<br /><br /> -1 = **xml** o tipos de valores grandes<br /><br /> NULL = La entrada no es válida.|  
 |**Escala**|Escala del tipo de datos de la columna o del parámetro.|La escala<br /><br /> NULL = La entrada no es válida.|  
 |**StatisticalSemantics**|La columna está habilitada para la indización semántica.|1 = TRUE<br /><br /> 0 = False|  
-|**SystemDataAccess**|La columna se deriva de una función que tiene acceso a los datos de los catálogos del sistema o de las tablas virtuales del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta propiedad solo se aplica a las columnas calculadas y columnas de vistas.|1 = TRUE (indica acceso de solo lectura)<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida.|  
-|**UserDataAccess**|La columna se deriva de una función que tiene acceso a los datos de las tablas de usuario, incluidas las vistas y tablas temporales, almacenadas en la instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta propiedad solo se aplica a las columnas calculadas y columnas de vistas.|1 = TRUE (indica acceso de solo lectura)<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida.|  
+|**SystemDataAccess**|La columna se deriva de una función que tiene acceso a los datos de los catálogos del sistema o de las tablas virtuales del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta propiedad solo se aplica a columnas calculadas y columnas de vistas.|1 = TRUE (indica acceso de solo lectura)<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida.|  
+|**UserDataAccess**|La columna se deriva de una función que tiene acceso a los datos de las tablas de usuario, incluidas las vistas y tablas temporales, almacenadas en la instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta propiedad solo se aplica a columnas calculadas y columnas de vistas.|1 = TRUE (indica acceso de solo lectura)<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida.|  
 |**UsesAnsiTrim**|ANSI_PADDING se estableció en ON la primera vez que se creó la tabla. Esta propiedad solo se aplica a columnas o parámetros de tipo **char** o **varchar**.|1= TRUE <br /><br /> 0= FALSE <br /><br /> NULL = La entrada no es válida.|  
 |**IsSparse**|La columna es una columna dispersa. Para obtener más información, vea [Usar columnas dispersas](../../relational-databases/tables/use-sparse-columns.md).|1= TRUE <br /><br /> 0= FALSE <br /><br /> NULL = La entrada no es válida.|  
 |**IsColumnSet**|La columna es un conjunto de columnas. Para obtener más información, vea [Usar conjuntos de columnas](../../relational-databases/tables/use-column-sets.md).|1= TRUE <br /><br /> 0= FALSE <br /><br /> NULL = La entrada no es válida.|  
-|**GeneratedAlwaysType**|Es el valor de columna generado por el sistema. Corresponde a **sys.columns.generated_always_type**|**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = no generado siempre<br /><br /> 1 = generadas siempre como inicio de la fila<br /><br /> 2 – generado siempre como final de fila|  
-|**IsHidden**|Es el valor de columna generado por el sistema. Corresponde a **sys.columns.is_hidden**|**Se aplica a**: desde [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = no ocultos<br /><br /> 1 = Hidden|  
+|**GeneratedAlwaysType**|Es el valor de columna generado por el sistema. Corresponde a **sys.columns.generated_always_type**|**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = No siempre se genera<br /><br /> 1 = Se genera siempre como comienzo de fila<br /><br /> 2 = Se genera siempre como fin de fila|  
+|**IsHidden**|Es el valor de columna generado por el sistema. Corresponde a **sys.columns.is_hidden**|**Se aplica a**: desde [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 = No está oculto<br /><br /> 1 = Oculto|  
   
-## <a name="return-types"></a>Tipos de valor devuelto
+## <a name="return-types"></a>Tipos de valor devueltos
  **int**  
   
 ## <a name="exceptions"></a>Excepciones  
@@ -92,7 +92,7 @@ Devuelve NULL si se produce un error o si el autor de la llamada no tiene permis
   
 Un usuario solo puede ver los metadatos de elementos protegibles que posea o para los que se le haya concedido permiso. Esto significa que las funciones integradas de emisión de metadatos, como COLUMNPROPERTY, pueden devolver NULL si el usuario no tiene ningún permiso para el objeto. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 Cuando compruebe la propiedad determinista de una columna, compruebe primero si se trata de una columna calculada. **IsDeterministic** devuelve NULL para las columnas no calculadas. Las columnas calculadas se pueden especificar como columnas de índice.
   
 ## <a name="examples"></a>Ejemplos  
@@ -114,7 +114,7 @@ Column Length
 ```  
   
 ## <a name="see-also"></a>Vea también
-[Funciones de metadatos &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
-[TYPEPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md)
+[Metadata Functions &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)
   
   

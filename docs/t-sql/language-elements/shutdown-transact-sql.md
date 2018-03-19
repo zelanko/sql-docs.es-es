@@ -1,5 +1,5 @@
 ---
-title: SHUTDOWN (Transact-SQL) | Documentos de Microsoft
+title: SHUTDOWN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  SQL Server se detiene inmediatamente.  
+  Detiene SQL Server inmediatamente.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,38 +53,38 @@ SHUTDOWN [ WITH NOWAIT ]
  WITH NOWAIT  
  Opcional. Cierra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sin ejecutar puntos de comprobación en cada base de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se cierra tras intentar finalizar todos los procesos de usuario. Cuando el servidor se reinicia, se produce una operación de reversión para las transacciones incompletas.  
   
-## <a name="remarks"></a>Comentarios  
- A menos que se utiliza la opción WITHNOWAIT, SHUTDOWN cierra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por:  
+## <a name="remarks"></a>Notas  
+ A menos que se use la opción WITHNOWAIT, SHUTDOWN cierra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al:  
   
-1.  Deshabilitar los inicios de sesión (excepto para los miembros de la **sysadmin** y **serveradmin** roles fijos de servidor).  
+1.  Deshabilitar inicios de sesión (salvo en el caso de los miembros de los roles fijos de servidor **sysadmin** y **serveradmin**).  
   
     > [!NOTE]  
-    >  Para mostrar una lista de todos los usuarios actuales, ejecute **sp_who**.  
+    >  Ejecute **sp_who** para mostrar una lista de todos los usuarios actuales.  
   
-2.  Esperar a que terminen las instrucciones Transact-SQL o los procedimientos almacenados que se están ejecutando. Para mostrar una lista de todos los procesos y bloqueos activos, ejecute **sp_who** y **sp_lock**, respectivamente.  
+2.  Esperar a que terminen las instrucciones Transact-SQL o los procedimientos almacenados que se están ejecutando. Ejecute **sp_who** y **sp_lock** para mostrar una lista de todos los procesos y bloqueos activos respectivamente.  
   
 3.  Insertar un punto de comprobación en cada base de datos.  
   
- Usar la instrucción SHUTDOWN minimiza la cantidad trabajo de recuperación automática necesario cuando los miembros de la **sysadmin** fijo reinicio del rol de servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Al usar la instrucción SHUTDOWN, se reduce el volumen de trabajo de recuperación automática necesario cuando los miembros del rol fijo de servidor **sysadmin** reinician [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  También se pueden utilizar otros métodos y herramientas para detener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cada uno de ellos emite un punto de comprobación en todas las bases de datos. Puede vaciar los datos confirmados de la caché de datos y detener el servidor.  
   
 -   Con el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Mediante la ejecución de **net stop mssqlserver** desde un símbolo del sistema para una instancia predeterminada, o bien ejecutando **net stop mssql$ *** nombreDeInstancia* desde un símbolo del sistema para una instancia con nombre.  
+-   Ejecutando **net stop mssqlserver** desde un símbolo del sistema para una instancia predeterminada, o bien ejecutando **net stop mssql$***instancename* desde un símbolo del sistema para una instancia con nombre.  
   
 -   Con Servicios del Panel de control.  
   
- Si **sqlservr.exe** se inició desde el símbolo del sistema, al presionar CTRL+C se cierra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sin embargo, al presionar CTRL+C no se inserta ningún punto de comprobación.  
+ Si **sqlservr.exe** se ha iniciado desde el símbolo del sistema, al presionar CTRL+C se cierra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sin embargo, al presionar CTRL+C no se inserta ningún punto de comprobación.  
   
 > [!NOTE]  
 >  Al usar cualquiera de estos métodos para detener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se envía el mensaje `SERVICE_CONTROL_STOP` a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="permissions"></a>Permissions  
- Permisos de SHUTDOWN se asignan a los miembros de la **sysadmin** y **serveradmin** roles fijos de servidor y no son transferibles.  
+## <a name="permissions"></a>Permisos  
+ Los permisos de SHUTDOWN se asignan a los miembros de los roles fijos de servidor **sysadmin** y **serveradmin** y no son transferibles.  
   
-## <a name="see-also"></a>Vea también  
- [Punto de comprobación &#40; Transact-SQL &#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
  [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [sqlservr (aplicación)](../../tools/sqlservr-application.md)   

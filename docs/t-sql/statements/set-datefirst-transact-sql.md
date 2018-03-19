@@ -1,5 +1,5 @@
 ---
-title: SET DATEFIRST (Transact-SQL) | Documentos de Microsoft
+title: SET DATEFIRST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 
   Establece el primer día de la semana en un número del 1 al 7.  
   
- Para obtener información general de todos los [!INCLUDE[tsql](../../includes/tsql-md.md)] tipos de datos de fecha y hora y funciones, vea [funciones y tipos de datos de hora y fecha &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ Para ver información general sobre todos los tipos de datos y funciones de fecha y hora de [!INCLUDE[tsql](../../includes/tsql-md.md)], vea [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) (Tipos de datos y funciones de fecha y hora [Transact-SQL]).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,7 +62,7 @@ SET DATEFIRST 7 ;
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *número* | **@***number_var*  
+ *number* | **@***number_var*  
  Es un entero que indica el primer día de la semana. Puede ser uno de los siguientes valores.  
   
 |Valor|Primer día de la semana:|  
@@ -73,16 +73,16 @@ SET DATEFIRST 7 ;
 |**4**|Jueves|  
 |**5**|Viernes|  
 |**6**|Sábado|  
-|**7** (valor predeterminado, EE. UU. inglés de EE.UU.)|Domingo|  
+|**7** (predeterminado, inglés de EE.UU.)|Domingo|  
   
-## <a name="remarks"></a>Comentarios  
- Para ver la configuración actual de SET DATEFIRST, use la [@@DATEFIRST ](../../t-sql/functions/datefirst-transact-sql.md) (función).  
+## <a name="remarks"></a>Notas  
+ Para ver el valor actual de SET DATEFIRST, use la función [@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md).  
   
  La opción SET DATEFIRST se establece en tiempo de ejecución, no en tiempo de análisis.  
   
  La especificación de SET DATEFIRST no tiene efecto en DATEDIFF. DATEDIFF siempre utiliza Domingo como el primer día de la semana para garantizar que la función es determinística.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
 ## <a name="examples"></a>Ejemplos  
@@ -108,7 +108,7 @@ SELECT CAST('1999-1-1' AS datetime2) AS SelectDate
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Instrucciones SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

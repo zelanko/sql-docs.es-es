@@ -1,5 +1,5 @@
 ---
-title: Las instrucciones RESTORE para restaurar, recuperar, administrar las copias de seguridad (T-SQL) | Documentos de Microsoft
+title: Instrucciones RESTORE para restaurar, recuperar y administrar copias de seguridad (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -52,10 +52,10 @@ ms.lasthandoff: 01/25/2018
 |[RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|Describe la instrucción Transact-SQL RESTORE FILELISTONLY, que se utiliza para devolver un conjunto de resultados que contiene una lista de los archivos de registro y base de datos contenidos en el conjunto de copia de seguridad.|  
 |[RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|Describe la instrucción Transact-SQL RESTORE HEADERONLY, que se utiliza para devolver un conjunto de resultados que contiene toda la información de encabezado de copia de seguridad para todos los conjuntos de copia de seguridad en un dispositivo de copia de seguridad determinado.|  
 |[RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|Describe la instrucción Transact-SQL RESTORE LABELONLY, que se utiliza para devolver un conjunto de resultados que contiene información sobre el medio de copia de seguridad identificado por el dispositivo de copia de seguridad dado.|  
-|[RESTORE REWINDONLY &#40; Transact-SQL &#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)|Describe la instrucción Transact-SQL RESTORE REWINDONLY, que se utiliza para rebobinar y cerrar dispositivos de cinta que se quedaron abiertos al ejecutar las instrucciones BACKUP o RESTORE con la opción NOREWIND.|  
+|[RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)|Describe la instrucción Transact-SQL RESTORE REWINDONLY, que se utiliza para rebobinar y cerrar dispositivos de cinta que se quedaron abiertos al ejecutar las instrucciones BACKUP o RESTORE con la opción NOREWIND.|  
 |[RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)|Describe la instrucción Transact-SQL RESTORE VERIFYONLY, que se utiliza para comprobar la copia de seguridad, sin restaurarla, y comprueba que el conjunto de copia de seguridad esté completo y se pueda leer, aunque no intenta comprobar la estructura de los datos.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
   

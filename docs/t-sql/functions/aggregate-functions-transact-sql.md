@@ -1,5 +1,5 @@
 ---
-title: Funciones de agregado (Transact-SQL) | Documentos de Microsoft
+title: Funciones de agregado (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/16/2018
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/18/2018
 
 Las funciones de agregado realizan un cálculo sobre un conjunto de valores y devuelven un solo valor. Si exceptuamos la función COUNT, todas las funciones de agregado ignoran los valores NULL. Las funciones de agregado se suelen utilizar con la cláusula GROUP BY de la instrucción SELECT.
   
-Todas las funciones de agregado son deterministas. Esto significa que las funciones de agregado devuelven el mismo valor cada vez que se las llama con un conjunto específico de valores de entrada. Para obtener más información acerca del determinismo de función, vea [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md). El [cláusula OVER](../../t-sql/queries/select-over-clause-transact-sql.md) puede seguir todas las funciones agregadas excepto GROUPING y GROUPING_ID.
+Todas las funciones de agregado son deterministas. Esto significa que las funciones de agregado devuelven el mismo valor cada vez que se las llama con un conjunto específico de valores de entrada. Para más información sobre el determinismo de las funciones, vea [Funciones deterministas y no deterministas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md). La [cláusula OVER](../../t-sql/queries/select-over-clause-transact-sql.md) puede seguir todas las funciones de agregado excepto GROUPING y GROUPING_ID.
   
 Las funciones de agregado solo se pueden utilizar como expresiones en:
 -   La lista de selección de una instrucción SELECT (una subconsulta o una consulta externa).  
@@ -56,6 +56,6 @@ Las funciones de agregado solo se pueden utilizar como expresiones en:
   
 ## <a name="see-also"></a>Vea también
 [Funciones integradas &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)  
-[EN cláusula &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+[Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

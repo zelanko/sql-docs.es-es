@@ -1,5 +1,5 @@
 ---
-title: "Precedencia de intercalación (Transact-SQL) | Documentos de Microsoft"
+title: "Prioridad de intercalación (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
 -   La intercalación utilizada por los operadores que distinguen la intercalación y que utilizan entradas de cadenas de caracteres pero no devuelven una cadena de caracteres, como LIKE e IN.  
   
- Las reglas de precedencia de intercalación solo se aplican a los tipos de datos de cadena de caracteres: **char**, **varchar**, **texto**, **nchar**, **nvarchar**, y **ntext**. Los objetos con otros tipos de datos no participan en las evaluaciones de intercalación.  
+ Las reglas de prioridad de intercalación solo se aplican a los tipos de datos de cadena de caracteres: **char**, **varchar**, **text**, **nchar**, **nvarchar** y **ntext**. Los objetos con otros tipos de datos no participan en las evaluaciones de intercalación.  
   
 ## <a name="collation-labels"></a>Etiquetas de intercalación  
  En la tabla siguiente se enumeran y describen las cuatro categorías en las que se identifican las intercalaciones de todos los objetos. El nombre de cada categoría se denomina etiqueta de intercalación.  
@@ -91,10 +91,10 @@ ms.lasthandoff: 11/21/2017
   
 |Etiqueta de coerción de operandos|Explicit X|Implicit X|Coercible-default|No-collation|  
 |----------------------------|----------------|----------------|------------------------|-------------------|  
-|**Y explícita**|Genera un error|Da como resultado Explicit Y|Da como resultado Explicit Y|Da como resultado Explicit Y|  
+|**Explicit Y**|Genera un error|Da como resultado Explicit Y|Da como resultado Explicit Y|Da como resultado Explicit Y|  
 |**Implicit Y**|Da como resultado Explicit X|Da como resultado No-collation|Da como resultado Implicit Y|Da como resultado No-collation|  
-|**Coercible-predeterminado**|Da como resultado Explicit X|Da como resultado Implicit X|Da como resultado Coercible-default|Da como resultado No-collation|  
-|**Sin intercalación**|Da como resultado Explicit X|Da como resultado No-collation|Da como resultado No-collation|Da como resultado No-collation|  
+|**Coercible-default**|Da como resultado Explicit X|Da como resultado Implicit X|Da como resultado Coercible-default|Da como resultado No-collation|  
+|**No-collation**|Da como resultado Explicit X|Da como resultado No-collation|Da como resultado No-collation|Da como resultado No-collation|  
   
  Las siguientes reglas adicionales también se aplican a la prioridad de intercalación:  
   
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/21/2017
   
      `WHERE ColumnA = ( 'abc' COLLATE French_CI_AS) COLLATE French_CS_AS`  
   
--   Para las conversiones de páginas de código **texto** no se permiten los tipos de datos. No se puede convertir un **texto** expresión desde una intercalación a otra si tienen páginas de códigos diferentes. El operador de asignación no puede asignar valores cuando la intercalación del operando de texto de la derecha tiene una página de códigos distinta de la del operando de texto de la izquierda.  
+-   No se permiten las conversiones de páginas de códigos para los tipos de datos **text**. No puede convertir una expresión **text** de una intercalación a otra si tienen páginas de códigos diferentes. El operador de asignación no puede asignar valores cuando la intercalación del operando de texto de la derecha tiene una página de códigos distinta de la del operando de texto de la izquierda.  
   
  La prioridad de intercalación se determina después de la conversión de los tipos de datos. El operando del que se obtiene la intercalación resultante puede ser distinto del operando que proporciona el tipo de datos del resultado final. Considere, por ejemplo, el siguiente lote:  
   
@@ -228,7 +228,7 @@ a
  El operador de concatenación de cadenas distingue la intercalación, por lo que a los dos operandos de cadena y al resultado se les asigna la etiqueta de intercalación del operando que tiene la prioridad de intercalación más alta. Los operadores UNION ALL y CASE no distinguen la intercalación, y a todos los operandos de cadena y al resultado final se les asigna la etiqueta de intercalación del operando que tiene la prioridad más alta. La prioridad de intercalación de los operandos UNION ALL y del resultado se evalúan columna a columna.  
   
 ### <a name="functions-and-collation"></a>Funciones e intercalación  
- Son de las funciones CAST, CONVERT y COLLATE distinguen la intercalación para **char**, **varchar**, y **texto** tipos de datos. Si la entrada y la salida de las funciones CAST y CONVERT son cadenas de caracteres, la cadena de salida tiene la etiqueta de intercalación de la cadena de entrada. Si la entrada no es una cadena de caracteres, la cadena de salida es Coercible-default, y se le asigna la intercalación de la base de datos actual para la conexión o de la base de datos que contiene la función definida por el usuario, el procedimiento almacenado o el desencadenador en el que se hace referencia a CAST o CONVERT.  
+ Las funciones CAST, CONVERT y COLLATE distinguen la intercalación para los tipos de datos **char**, **varchar** y **text**. Si la entrada y la salida de las funciones CAST y CONVERT son cadenas de caracteres, la cadena de salida tiene la etiqueta de intercalación de la cadena de entrada. Si la entrada no es una cadena de caracteres, la cadena de salida es Coercible-default, y se le asigna la intercalación de la base de datos actual para la conexión o de la base de datos que contiene la función definida por el usuario, el procedimiento almacenado o el desencadenador en el que se hace referencia a CAST o CONVERT.  
   
  Para las funciones integradas que devuelven una cadena pero no reciben una entrada de cadena, la cadena de resultado es Coercible-default, y se le asigna la intercalación de la base de datos actual o la intercalación de la base de datos que contiene la función definida por el usuario, el procedimiento almacenado o el desencadenador en el que se hace referencia a la función.  
   
@@ -244,10 +244,10 @@ a
 |LOWER|SUBSTRING|  
 |PATINDEX|UPPER|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
- [Conversiones de tipos de datos &#40; motor de base de datos &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
- [Operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Conversión de tipo de datos &#40;motor de base de datos&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
   
   

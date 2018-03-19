@@ -1,5 +1,5 @@
 ---
-title: SET STATISTICS XML (Transact-SQL) | Documentos de Microsoft
+title: SET STATISTICS XML (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -49,12 +49,12 @@ ms.lasthandoff: 01/25/2018
 SET STATISTICS XML { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El valor de SET STATISTICS XML se establece en tiempo de ejecución, no en tiempo de análisis.  
   
  Si SET STATISTICS XML es ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve información sobre la ejecución de cada instrucción después de ejecutarla. Cuando esta opción está establecida en ON, se devuelve información acerca de todas las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] siguientes hasta que se vuelve a establecer en OFF. Tenga en cuenta que SET STATISTICS XML no tiene que ser la única instrucción de un lote.  
   
- SET STATISTICS XML devuelve el resultado como **nvarchar (max)** para las aplicaciones, como el **sqlcmd** utilidad, donde la salida XML se utiliza otras herramientas para mostrar y procesar el plan de consulta información.  
+ SET STATISTICS XML devuelve los resultados como **nvarchar(max)** para las aplicaciones que disponen de herramientas que usan la salida XML para mostrar y procesar la información del plan de consulta, como la utilidad **sqlcmd**.  
   
  SET STATISTICS XML devuelve la información como un conjunto de documentos XML. Cada instrucción posterior a la instrucción SET STATISTICS XML ON se refleja en la salida con un solo documento. Cada documento contiene el texto de la instrucción, seguido de los detalles de los pasos de ejecución. La salida muestra información en tiempo de ejecución, como los costos, los índices a los que se ha tenido acceso, los tipos de operaciones realizadas, el orden de combinación, el número de veces que se realiza una operación física, el número de filas generadas por cada operador físico, etc.  
   
@@ -62,14 +62,14 @@ SET STATISTICS XML { ON | OFF }
   
  \Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\showplan\showplanxml.xsd  
   
- También puede encontrarse en el esquema del plan de presentación [este sitio Web](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
+ El esquema del plan de presentación se puede encontrar también en [este sitio web](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   
  SET STATISTICS PROFILE y SET STATISTICS XML son equivalentes. El primero genera resultados en formato de texto y el último en formato XML. En futuras versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la información del plan de ejecución de consultas se mostrará únicamente mediante la instrucción SET STATISTICS XML, no SET STATISTICS PROFILE.  
   
 > [!NOTE]  
->  Si **incluir Plan de ejecución real** está seleccionado en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], esta opción SET no produce resultado del plan de presentación XML. Desactive el **incluir Plan de ejecución real** botón antes de utilizarla opción SET.  
+>  Si se selecciona **Incluir plan de ejecución real** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], esta opción SET no general la salida del plan de presentación XML. Desactive la opción **Incluir plan de ejecución real** antes de usar la opción SET.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para utilizar SET STATISTICS XML y ver el resultado, los usuarios deben tener los permisos siguientes:  
   
 -   Los permisos adecuados para ejecutar instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -79,7 +79,7 @@ SET STATISTICS XML { ON | OFF }
  Para las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que no generan conjuntos de resultados de STATISTICS XML, solo se necesitan los permisos adecuados para ejecutar las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que generan conjuntos de resultados de STATISTICS XML, el permiso de ejecución de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] y el permiso SHOWPLAN deben ser correctos, o la ejecución de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] se anulará y no se generará información relativa al plan de presentación.  
   
 ## <a name="examples"></a>Ejemplos  
- Las dos instrucciones siguientes utilizan la opción SET STATISTICS XML para mostrar la forma en que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analiza y optimiza el uso de índices en las consultas. La primera consulta utiliza el operador de comparación Es igual a (=) en la cláusula WHERE de una columna indizada. La segunda consulta utiliza el operador LIKE en la cláusula WHERE. De este modo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe utilizar un recorrido de índice clúster para encontrar los datos que satisfacen la condición de la cláusula WHERE. Los valores de la **EstimateRows** y **EstimatedTotalSubtreeCost** atributos son inferiores en la primera consulta indizada que indica que se procesa mucho más rápido y utiliza menos recursos que el consultas no indizadas.  
+ Las dos instrucciones siguientes utilizan la opción SET STATISTICS XML para mostrar la forma en que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analiza y optimiza el uso de índices en las consultas. La primera consulta utiliza el operador de comparación Es igual a (=) en la cláusula WHERE de una columna indizada. La segunda consulta utiliza el operador LIKE en la cláusula WHERE. De este modo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe utilizar un recorrido de índice clúster para encontrar los datos que satisfacen la condición de la cláusula WHERE. Los valores de los atributos **EstimateRows** y **EstimatedTotalSubtreeCost** son inferiores en la primera consulta indizada, lo que indica que se procesa mucho más rápidamente y que usa menos recursos que la no indizada.  
   
 ```  
 USE AdventureWorks2012;  
@@ -100,7 +100,7 @@ SET STATISTICS XML OFF;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [SET SHOWPLAN_XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-xml-transact-sql.md)   
  [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
   

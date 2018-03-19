@@ -1,5 +1,5 @@
 ---
-title: ALTER SYMMETRIC KEY (Transact-SQL) | Documentos de Microsoft
+title: ALTER SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -72,19 +72,19 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  DROP ENCRYPTION BY  
  Quita el cifrado utilizando el método especificado. No es posible quitar todos los cifrados de una clave simétrica.  
   
- CERTIFICADO *nombre_de_certificado*  
+ CERTIFICATE *Certificate_name*  
  Especifica el certificado que se utiliza para cifrar la clave simétrica. El certificado debe existir en la base de datos.  
   
- CONTRASEÑA **='***contraseña***'**  
- Especifica la contraseña que se usa para cifrar la clave simétrica. *contraseña* debe cumplir los requisitos de directiva de contraseñas de Windows del equipo que ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ PASSWORD **='***password***'**  
+ Especifica la contraseña que se usa para cifrar la clave simétrica. *password* debe cumplir los requisitos de la directiva de contraseñas de Windows del equipo que ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- CLAVE SIMÉTRICA *Symmetric_Key_Name*  
+ SYMMETRIC KEY *Symmetric_Key_Name*  
  Especifica la clave simétrica que se utiliza para cifrar la clave simétrica que va a cambiarse. La clave simétrica debe existir en la base de datos y debe estar abierta.  
   
- CLAVE ASIMÉTRICA *Asym_Key_Name*  
+ ASYMMETRIC KEY *Asym_Key_Name*  
  Especifica la clave asimétrica que se utiliza para cifrar la clave simétrica que va a cambiarse. La clave asimétrica debe existir en la base de datos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 > [!CAUTION]  
 >  Si se utiliza una contraseña para cifrar una clave simétrica, en lugar de la clave pública de la clave maestra de base de datos, se utiliza el algoritmo de cifrado TRIPLE_DES. Por ello, las claves creadas con un algoritmo de cifrado seguro, como AES, se protegen mediante un algoritmo menos seguro.  
@@ -96,7 +96,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
 > [!NOTE]  
 >  El algoritmo RC4 se admite únicamente por razones de compatibilidad con versiones anteriores. El material nuevo solo se puede cifrar con RC4 o RC4_128 cuando la base de datos tenga el nivel de compatibilidad 90 o 100. (No se recomienda). Use un algoritmo más reciente como uno de los algoritmos AES en su lugar. En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] el material cifrado con RC4 o RC4_128 se puede descifrar en cualquier nivel de compatibilidad.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Necesita el permiso ALTER en la clave simétrica. Si se agrega el cifrado mediante una clave asimétrica o un certificado, es necesario el permiso VIEW DEFINITION en el certificado o en la clave asimétrica. Si se quita el cifrado mediante una clave asimétrica o un certificado, es necesario el permiso CONTROL en el certificado o en la clave asimétrica.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -117,10 +117,10 @@ ALTER SYMMETRIC KEY JanainaKey043
 CLOSE SYMMETRIC KEY JanainaKey043;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
- [CLOSE SYMMETRIC KEY &#40; Transact-SQL &#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
+ [CLOSE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

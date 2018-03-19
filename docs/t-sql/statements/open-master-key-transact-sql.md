@@ -1,5 +1,5 @@
 ---
-title: OPEN MASTER KEY (Transact-SQL) | Documentos de Microsoft
+title: OPEN MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -56,11 +56,11 @@ OPEN MASTER KEY DECRYPTION BY PASSWORD = 'password'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- '*contraseña*'  
+ '*password*'  
  Contraseña con la que se cifró la clave maestra de la base de datos.  
   
-## <a name="remarks"></a>Comentarios  
- Si la clave maestra de la base de datos se ha cifrado con la clave maestra de servicio, se abre automáticamente cuando sea necesario para el cifrado y el descifrado. En este caso, no es necesario utilizar la **OPEN MASTER KEY** instrucción.  
+## <a name="remarks"></a>Notas  
+ Si la clave maestra de la base de datos se ha cifrado con la clave maestra de servicio, se abre automáticamente cuando sea necesario para el cifrado y el descifrado. En este caso, no es necesario usar la instrucción **OPEN MASTER KEY**.  
   
  La primera vez que se adjunta una base de datos o se restaura en una instancia nueva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], aún no se ha almacenado una copia de la clave maestra de la base de datos (cifrada por la clave maestra de servicio) en el servidor. Debe usar la instrucción **OPEN MASTER KEY** para descifrar la clave maestra de la base de datos (DMK). Una vez que se ha descifrado la clave maestra de la base de datos, tiene la posibilidad de habilitar el descifrado automático en el futuro usando la instrucción **ALTER MASTER KEY REGENERATE** para proporcionar al servidor una copia de la clave maestra de la base de datos cifrada con la clave maestra de servicio (SMK). Cuando una base de datos se haya actualizado desde una versión anterior, se debe volver a generar la DMK para usar el algoritmo AES más reciente. Para obtener más información sobre cómo volver a generar la DMK, vea [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md). El tiempo necesario para volver a generar la DMK con el fin de actualizarse a AES depende del número de objetos protegidos por la DMK. Solo es necesario volver a generar la DMK una vez y no tiene ningún efecto sobre las nuevas generaciones futuras como parte de una estrategia de rotación de claves.  
   
@@ -68,7 +68,7 @@ OPEN MASTER KEY DECRYPTION BY PASSWORD = 'password'
   
  Si se revierte una transacción en que la clave maestra de la base de datos se ha abierto de forma explícita, la clave permanece abierta.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Necesita el permiso CONTROL en la base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -80,8 +80,8 @@ OPEN MASTER KEY DECRYPTION BY PASSWORD = '43987hkhj4325tsku7';
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- En el ejemplo siguiente se abre a la base de datos maestra, se han cifrado con una contraseña.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ En este ejemplo se abre la clave maestra de la base de datos, que se ha cifrado con una contraseña.  
   
 ```  
 USE master;  
@@ -91,13 +91,13 @@ CLOSE MASTER KEY;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
- [CLOSE MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/close-master-key-transact-sql.md)   
- [CLAVE maestra de la copia de seguridad &#40; Transact-SQL &#41;](../../t-sql/statements/backup-master-key-transact-sql.md)   
- [RESTORE MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/restore-master-key-transact-sql.md)   
+ [CLOSE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-master-key-transact-sql.md)   
+ [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-master-key-transact-sql.md)   
+ [RESTORE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-master-key-transact-sql.md)   
  [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)   
- [DROP MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-master-key-transact-sql.md)   
+ [DROP MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-master-key-transact-sql.md)   
  [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

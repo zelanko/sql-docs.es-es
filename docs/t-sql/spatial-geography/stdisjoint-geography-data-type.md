@@ -1,5 +1,5 @@
 ---
-title: STDisjoint (tipo de datos geography) | Documentos de Microsoft
+title: STDisjoint (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdisjoint-geography-data-type"></a>STDisjoint (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve 1 si una **geography** está separada de la otra instancia **geography** instancia. Devuelve 0, en caso contrario.  
+  Devuelve 1 si una instancia de **geography** se encuentra espacialmente separada de otra instancia de **geography**. Devuelve 0, en caso contrario.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,17 +45,17 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *other_geography*  
- Es otra **geography** instancia va a comparar con la instancia en la que se invoca STDisjoint().  
+ Es otra instancia de **geography** con la que se compara la instancia en la que se invoca STDisjoint().  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **bits**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Comentarios  
- Dos **geography** instancias no son contiguas si la intersección de sus conjuntos de puntos está vacía.  
+## <a name="remarks"></a>Notas  
+ Dos instancias de **geography** son disjuntas si la intersección de sus conjuntos de puntos está vacía.  
   
- Este método siempre devuelve null si los identificadores de referencia espacial (SRID) de la **geography** instancias no coinciden.  
+ Este método siempre devuelve NULL si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geography**.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se usa `STDisjoint()` para ver si dos instancias de `geography` no están combinadas en el espacio.  
@@ -68,7 +68,7 @@ SET @h = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.STDisjoint(@h);  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de OGC en instancias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

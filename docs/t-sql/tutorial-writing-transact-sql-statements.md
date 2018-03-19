@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Escribir instrucciones Transact-SQL | Documentos de Microsoft'
+title: 'Tutorial: Escribir instrucciones Transact-SQL | Microsoft Docs'
 ms.custom: 
 ms.date: 08/03/2016
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>Tutorial: Escribir instrucciones Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Asistente para la escritura [!INCLUDE[tsql](../includes/tsql-md.md)] tutorial de instrucciones. Este tutorial está pensado para usuarios que no tienen experiencia en escribir instrucciones SQL. Ayudará a los nuevos usuarios a empezar revisando algunas instrucciones básicas para crear tablas e insertar datos. Este tutorial usa [!INCLUDE[tsql](../includes/tsql-md.md)], la implementación de [!INCLUDE[msCoName](../includes/msconame-md.md)] del estándar SQL. Este tutorial está pensado como una breve introducción al lenguaje [!INCLUDE[tsql](../includes/tsql-md.md)] y no como una sustitución de una clase de [!INCLUDE[tsql](../includes/tsql-md.md)] . Las instrucciones de este tutorial son sencillas de forma intencionada y no pretenden representar la complejidad que se encuentra en una base de datos de producción típica.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Este es el tutorial Escribir instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)]. Este tutorial está pensado para usuarios que no tienen experiencia en escribir instrucciones SQL. Ayudará a los nuevos usuarios a empezar revisando algunas instrucciones básicas para crear tablas e insertar datos. Este tutorial usa [!INCLUDE[tsql](../includes/tsql-md.md)], la implementación de [!INCLUDE[msCoName](../includes/msconame-md.md)] del estándar SQL. Este tutorial está pensado como una breve introducción al lenguaje [!INCLUDE[tsql](../includes/tsql-md.md)] y no como una sustitución de una clase de [!INCLUDE[tsql](../includes/tsql-md.md)] . Las instrucciones de este tutorial son sencillas de forma intencionada y no pretenden representar la complejidad que se encuentra en una base de datos de producción típica.  
   
 >**Nota:** Si es un principiante, le resultará más fácil usar [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] en lugar de escribir instrucciones de [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   

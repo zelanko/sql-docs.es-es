@@ -1,5 +1,5 @@
 ---
-title: STOverlaps (tipo de datos geometry) | Documentos de Microsoft
+title: STOverlaps (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve 1 si una **geometry** instancia superpone a otra **geometry** instancia. Devuelve 0 en caso contrario.
+Devuelve 1 si una instancia de **geometry** se superpone con otra instancia de **geometry**. Devuelve 0 en caso contrario.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,22 +45,22 @@ Devuelve 1 si una **geometry** instancia superpone a otra **geometry** instancia
   
 ## <a name="arguments"></a>Argumentos  
  *other_geometry*  
- Es otra **geometry** instancia va a comparar con la instancia en la que `STOverlaps()` se invoca.  
+ Es otra instancia de **geometry** con la que se compara la instancia en la que se invoca `STOverlaps()`.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **bits**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Comentarios  
- Dos **geometry** instancias se superponen si la región que representa su intersección tiene la misma dimensión que tienen las instancias y la región no es igual a alguna de las instancias.  
+## <a name="remarks"></a>Notas  
+ Dos instancias de **geometry** se superponen si la región que representa su intersección tiene la misma dimensión que tienen las instancias y la región no es igual a ninguna instancia.  
   
- `STOverlaps()`siempre devuelve 0 si los puntos donde la **geometry** instancias tienen la intersección no son la misma dimensión.  
+ `STOverlaps()` siempre devuelve 0 si los puntos de intersección de las instancias de **geometry** no son de la misma dimensión.  
   
- Este método siempre devuelve null si los identificadores de referencia espacial (SRID) de la **geometry** instancias no coinciden.  
+ Este método siempre devuelve NULL si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geometry**.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se utiliza `STOverlaps()` para comprobar si dos **geometry** instancias para determinar si se superponen.  
+ En el ejemplo siguiente se usa `STOverlaps()` para ver si se superponen dos instancias de **geometry**.  
   
 ```  
 DECLARE @g geometry;  
@@ -70,7 +70,7 @@ SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);
 SELECT @g.STOverlaps(@h);  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

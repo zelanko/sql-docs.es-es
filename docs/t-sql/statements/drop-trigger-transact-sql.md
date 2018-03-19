@@ -1,5 +1,5 @@
 ---
-title: DROP TRIGGER (Transact-SQL) | Documentos de Microsoft
+title: DROP TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
@@ -66,16 +66,16 @@ ON ALL SERVER
 
   
 ## <a name="arguments"></a>Argumentos  
- *IF EXISTE*  
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
+ *IF EXISTS*  
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
   
- Quita condicionalmente el desencadenador solo si ya existe.  
+ Quita el desencadenador condicionalmente solo si ya existe.  
   
  *schema_name*  
- Es el nombre del esquema al que pertenece un desencadenador DML. Los desencadenadores DML tienen como ámbito el esquema de la tabla o la vista donde se crean. *schema_name* no se puede especificar para desencadenadores DDL o logon.  
+ Es el nombre del esquema al que pertenece un desencadenador DML. Los desencadenadores DML tienen como ámbito el esquema de la tabla o la vista donde se crean. *schema_name* no se puede especificar para los desencadenadores DDL o de inicio de sesión.  
   
  *trigger_name*  
- Es el nombre del desencadenador que se va a quitar. Para ver una lista de los desencadenadores creados actualmente, use [sys.server_assembly_modules](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) o [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md).  
+ Es el nombre del desencadenador que se va a quitar. Para ver una lista de los desencadenadores creados actualmente, utilice [sys.server_assembly_modules](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) o [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md).  
   
  DATABASE  
  Indica que el ámbito del desencadenador DDL se aplica a la base de datos actual. Debe especificarse DATABASE si también se especificó al crear o modificar el desencadenador.  
@@ -88,22 +88,22 @@ ON ALL SERVER
 > [!NOTE]  
 >  Esta opción no está disponible en las bases de datos independientes.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Puede eliminar un desencadenador DML si quita éste o quita la tabla del desencadenador. Cuando se quita una tabla, también se quitan todos los desencadenadores asociados.  
   
- Cuando se quita un desencadenador, información acerca del desencadenador se quita de la **sys.objects**, **sys.triggers** y **sys.sql_modules** vistas de catálogo.  
+ Cuando se quita un desencadenador, se quita la información acerca del desencadenador de las vistas de catálogos **sys.objects**, **sys.triggers** y **sys.sql_modules**.  
   
  Se pueden quitar varios desencadenadores DDL por instrucción DROP TRIGGER solo si todos los desencadenadores se crearon utilizando las mismas cláusulas ON.  
   
  Para cambiar el nombre de un desencadenador, utilice DROP TRIGGER y CREATE TRIGGER. Para cambiar la definición de un desencadenador, utilice ALTER TRIGGER.  
   
- Para obtener más información acerca de cómo determinar las dependencias de un desencadenador específico, consulte [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md), [sys.dm_sql_referenced_entities &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md), y [sys.dm_sql_referencing_entities &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).  
+ Para obtener más información sobre cómo determinar las dependencias de un desencadenador específico, consulte [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md), [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) y [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).  
   
- Para obtener más información acerca de cómo ver el texto del desencadenador, consulte [sp_helptext &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md) y [sys.sql_modules &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
+ Para obtener más información sobre cómo ver el texto del desencadenador, consulte [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md) y [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
   
- Para obtener más información acerca de cómo ver una lista de los desencadenadores existentes, consulte [sys.triggers &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) y [sys.server_triggers &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md).  
+ Para obtener más información sobre cómo ver una lista de desencadenadores existentes, consulte [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) and [sys.server_triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para quitar un desencadenador DML se requiere el permiso ALTER en la tabla o vista en la que está definido el desencadenador.  
   
  Para anular un desencadenador DDL definido con ámbito de servidor (ON ALL SERVER) o un desencadenador logon se requiere el permiso CONTROL SERVER en el servidor. Para quitar un desencadenador DDL definido con el ámbito de base de datos (ON DATABASE) se requiere el permiso ALTER ANY DATABASE DDL TRIGGER en la base de datos actual.  
@@ -111,7 +111,7 @@ ON ALL SERVER
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-dropping-a-dml-trigger"></a>A. Quitar un desencadenador DML  
- En el siguiente ejemplo se quita el desencadenador `employee_insupd` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. (A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] puede utilizar la sintaxis de DROP TRIGGER IF EXISTS.)  
+ En el siguiente ejemplo se quita el desencadenador `employee_insupd` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. (A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] se puede usar la sintaxis DROP TRIGGER IF EXISTS).  
   
 ```  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  
@@ -122,14 +122,14 @@ IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL
  En el siguiente ejemplo se quita el desencadenador DDL `safety`.  
   
 > [!IMPORTANT]  
->  Dado que los desencadenadores DDL no tienen el ámbito de esquema y, por lo tanto, no aparecen en la **sys.objects** vista de catálogo no se puede usar la función OBJECT_ID para consultar si existen en la base de datos. Los objetos que no están en el ámbito del esquema deben consultarse utilizando la vista de catálogo apropiada. Para los desencadenadores DDL, use **sys.triggers**.  
+>  Puesto que los desencadenadores DDL no están en el ámbito del esquema y, por tanto, no aparecen en la vista de catálogo **sys.objects**, la función OBJECT_ID no se puede utilizar para consultar si existen en la base de datos. Los objetos que no están en el ámbito del esquema deben consultarse utilizando la vista de catálogo apropiada. Para los desencadenadores DDL, use **sys.triggers**.  
   
 ```  
 DROP TRIGGER safety  
 ON DATABASE;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   

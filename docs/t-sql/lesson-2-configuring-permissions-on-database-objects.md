@@ -1,5 +1,5 @@
 ---
-title: "Lección 2: Configurar permisos en objetos de base de datos | Documentos de Microsoft"
+title: "Lección 2: Configurar permisos en objetos de base de datos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-2-configuring-permissions-on-database-objects"></a>Lección 2: Configurar permisos en objetos de base de datos
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Concesión de acceso de usuario a una base de datos implica tres pasos. Primero, debe crear un inicio de sesión. El inicio de sesión permite al usuario conectarse a [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Luego, debe configurar el inicio de sesión como un usuario de una base de datos determinada. Y, por último, debe conceder al usuario permiso a objetos de la base de datos. En esta lección se muestran estos tres pasos y cómo crear una vista y un procedimiento almacenado como el objeto.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Conceder acceso de usuario a una base de datos conlleva tres pasos. Primero, debe crear un inicio de sesión. El inicio de sesión permite al usuario conectarse a [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Luego, debe configurar el inicio de sesión como un usuario de una base de datos determinada. Y, por último, debe conceder al usuario permiso a objetos de la base de datos. En esta lección se muestran estos tres pasos y cómo crear una vista y un procedimiento almacenado como el objeto.  
   
 En esta lección se incluyen los temas siguientes:  
   

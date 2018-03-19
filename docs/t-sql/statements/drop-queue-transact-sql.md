@@ -1,5 +1,5 @@
 ---
-title: COLA de destino (Transact-SQL) | Documentos de Microsoft
+title: DROP QUEUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -58,31 +58,31 @@ DROP QUEUE <object>
   
 ## <a name="arguments"></a>Argumentos  
  *database_name*  
- Nombre de la base de datos que contiene la cola que se va a quitar. Si no *database_name* se proporciona, el valor predeterminado es la base de datos actual.  
+ Nombre de la base de datos que contiene la cola que se va a quitar. Si no se proporciona *database_name*, el valor predeterminado es la base de datos actual.  
   
  *schema_name (object)*  
- Nombre del esquema propietario de la cola que se va a quitar. Si no *schema_name* se proporciona, el valor predeterminado es el esquema predeterminado para el usuario actual.  
+ Nombre del esquema propietario de la cola que se va a quitar. Si no se proporciona *schema_name*, se usa el esquema predeterminado del usuario actual.  
   
  *queue_name*  
  Nombre de la cola que se va a quitar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  No se puede quitar una cola si hay servicios que hacen referencia a ella.  
   
-## <a name="permissions"></a>Permissions  
- Permiso para quitar una cola tiene como valor predeterminado el propietario de la cola, los miembros de la **db_ddladmin** o **db_owner** se han corregido los roles de base de datos y los miembros de la **sysadmin** fijo rol de servidor.  
+## <a name="permissions"></a>Permisos  
+ De forma predeterminada, se concede permiso para quitar una cola al propietario de esta, a los miembros de los roles fijos de base de datos **db_ddladmin** o **db_owner** y a los miembros del rol fijo de servidor **sysadmin**.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se quita el **ExpenseQueue** cola de la base de datos actual.  
+ En el siguiente ejemplo se quita la cola **ExpenseQueue** de la base de datos actual.  
   
 ```  
 DROP QUEUE ExpenseQueue ;  
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
- [ALTER QUEUE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
+ [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

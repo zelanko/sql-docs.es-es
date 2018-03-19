@@ -1,5 +1,5 @@
 ---
-title: ISNULL (Transact-SQL) | Documentos de Microsoft
+title: ISNULL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -50,19 +50,19 @@ ISNULL ( check_expression , replacement_value )
   
 ## <a name="arguments"></a>Argumentos  
  *check_expression*  
- Es el [expresión](../../t-sql/language-elements/expressions-transact-sql.md) para comprobar si hay valores NULL. *check_expression* puede ser de cualquier tipo.  
+ Es la [expresión](../../t-sql/language-elements/expressions-transact-sql.md) que se va a comprobar si es NULL. *check_expression* puede ser de cualquier tipo.  
   
  *replacement_value*  
- Es la expresión que se devuelve si *check_expression* es NULL. *replacement_value* debe ser de un tipo que sea implícitamente convertible al tipo de *check_expresssion*.  
+ Es la expresión que se devuelve si *check_expression* es NULL. *replacement_value* debe ser de un tipo que se puede convertir implícitamente en el tipo de *check_expression*.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- Devuelve el mismo tipo que *check_expression*. Si se proporciona un literal NULL como *check_expression*, devuelve el tipo de datos de la *replacement_value*. Si se proporciona un literal NULL como *check_expression* y no *replacement_value* se proporciona, se devuelve un **int**.  
+ Devuelve el mismo tipo que *check_expression*. Si se proporciona un literal NULL como *check_expression*, devuelve el tipo de datos de *replacement_value*. Si se proporciona un literal NULL como *check_expression* y no se proporciona *replacement_value*, se devuelve un **int**.  
   
-## <a name="remarks"></a>Comentarios  
- El valor de *check_expression* se devuelve si no es NULL; en caso contrario, *replacement_value* se devuelve después de que se convierte implícitamente al tipo de *check_expression*, si los tipos son diferentes. *replacement_value* se puede truncar si *replacement_value* es mayor que *check_expression*.  
+## <a name="remarks"></a>Notas  
+ El valor de *check_expression* se devuelve si no es NULL; de lo contrario, se devuelve *replacement_value* después de convertirse de forma implícita al tipo de *check_expression*, si los tipos son diferentes. *replacement_value* se puede truncar si *replacement_value* es mayor que *check_expression*.  
   
 > [!NOTE]  
->  Use [COALESCE &#40; Transact-SQL &#41; ](../../t-sql/language-elements/coalesce-transact-sql.md) para devolver el primer valor distinto de null.  
+>  Use [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md) para devolver el primer valor distinto de NULL.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -107,16 +107,16 @@ GO
 |  Volume Discount   |  0.10           |   25        |   0                  |
 |  Volume Discount   |  0.15           |   41        |   0                  |
 |  Volume Discount   |  0.20           |   61        |   0                  |
-|  Cl Mountain-100   |  0.35           |   0         |   0                  |
-|  Sport casco Di   |  0.10           |   0         |   0                  |
-|  Overst Road-650   |  0.30           |   0         |   0                  |
+|  Mountain-100 Cl   |  0.35           |   0         |   0                  |
+|  Sport Helmet Di   |  0.10           |   0         |   0                  |
+|  Road-650 Overst   |  0.30           |   0         |   0                  |
 |  Mountain Tire S   |  0.50           |   0         |   0                  |
-|  Sport casco Di   |  0.15           |   0         |   0                  |
-|  Bicicleta de montaña LL S   |  0.35           |   0         |   0                  |
-|  Pr Touring-3000   |  0.15           |   0         |   0                  |
-|  Pr Touring-1000   |  0.20           |   0         |   0                  |
-|  Precio medio Peda   |  0.50           |   0         |   0                  |
-|  Si Mountain-500   |  0.40           |   0         |   0                  |
+|  Sport Helmet Di   |  0.15           |   0         |   0                  |
+|  LL Road Frame S   |  0.35           |   0         |   0                  |
+|  Touring-3000 Pr   |  0.15           |   0         |   0                  |
+|  Touring-1000 Pr   |  0.20           |   0         |   0                  |
+|  Half-Price Peda   |  0.50           |   0         |   0                  |
+|  Mountain-500 Si   |  0.40           |   0         |   0                  |
 
  `(16 row(s) affected)`  
   
@@ -132,7 +132,7 @@ WHERE Weight IS NULL;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-isnull-with-avg"></a>D. Usar ISNULL con AVG  
  En el ejemplo siguiente se busca el promedio del peso de todos los productos en una tabla de ejemplo. Sustituye el valor `50` para todas las entradas NULL en la columna `Weight` de la tabla `Product`.  
@@ -152,7 +152,7 @@ FROM dbo.DimProduct;
 ```  
   
 ### <a name="e-using-isnull"></a>E. Usar ISNULL  
- En el ejemplo siguiente se usa ISNULL para comprobar los valores NULL en la columna `MinPaymentAmount` y mostrar el valor `0.00` para las filas.  
+ En el ejemplo siguiente se usa ISNULL para comprobar los valores NULL en la columna `MinPaymentAmount` y mostrar el valor `0.00` para esas filas.  
   
 ```  
 -- Uses AdventureWorks  
@@ -169,14 +169,14 @@ ORDER BY ResellerName;
 |  ResellerName                |  MinimumPayment    |
 |  -------------------------   |  --------------    |
 |  Una asociación de bicicleta       |     0.0000         |
-|  Un almacén de bicicleta                |     0.0000         |
-|  Una tienda de ciclo                |     0.0000         |
-|  Una gran empresa de bicicleta     |     0.0000         |
-|  Una tienda de bicicletas típico         |   200.0000         |
-|  Servicio & ventas aceptables  |     0.0000         |
+|  Una tienda de bicicletas                |     0.0000         |
+|  Una tienda de bicis                |     0.0000         |
+|  Una gran empresa de bicicletas     |     0.0000         |
+|  La típica tienda de bicicletas         |   200.0000         |
+|  Servicio y ventas aceptables  |     0.0000         |
   
-### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>F. Uso de IS NULL para probar si hay valores NULL en una cláusula WHERE  
- En el ejemplo siguiente se busca todos los productos que tienen `NULL` en la `Weight` columna. Tenga en cuenta el espacio entre `IS` y `NULL`.  
+### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>F. Usar IS NULL para probar NULL en una cláusula WHERE  
+ En el ejemplo siguiente se buscan todos los productos que tienen `NULL` en la columna `Weight`. Tenga en cuenta el espacio entre `IS` y `NULL`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -186,12 +186,12 @@ FROM dbo.DimProduct
 WHERE Weight IS NULL;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Expresiones &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [ES NULL &#40; Transact-SQL &#41;](../../t-sql/queries/is-null-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [IS NULL &#40;Transact-SQL&#41;](../../t-sql/queries/is-null-transact-sql.md)   
  [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [DONDE &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
- [COALESCE &#40; Transact-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md)  
   
   
 

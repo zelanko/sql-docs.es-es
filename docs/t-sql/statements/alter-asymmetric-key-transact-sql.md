@@ -1,5 +1,5 @@
 ---
-title: "Modificar clave ASIMÉTRICA (Transact-SQL) | Documentos de Microsoft"
+title: ALTER ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/12/2017
 ms.prod: sql-non-specified
@@ -71,27 +71,27 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  Cambia la protección de la clave privada.  
   
  ENCRYPTION BY PASSWORD **='***stongPassword***'**  
- Especifica una nueva contraseña para proteger la clave privada. *contraseña* debe cumplir los requisitos de directiva de contraseñas de Windows del equipo que ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si se omite esta opción, la clave privada se cifrará con la clave maestra de la base de datos.  
+ Especifica una nueva contraseña para proteger la clave privada. *password* debe cumplir los requisitos de la directiva de contraseñas de Windows del equipo que ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si se omite esta opción, la clave privada se cifrará con la clave maestra de la base de datos.  
   
  DECRYPTION BY PASSWORD **='***oldPassword***'**  
  Especifica la antigua contraseña con la que está protegida la clave privada. No es necesario si la clave privada está cifrada con la clave maestra de la base de datos.  
   
-## <a name="remarks"></a>Comentarios  
- Si no hay una clave maestra de base de datos, es necesaria la opción ENCRYPTION BY PASSWORD y la operación registrará errores si no se proporciona una contraseña. Para obtener información sobre cómo crear una clave maestra de base de datos, vea [CREATE MASTER KEY &#40; Transact-SQL &#41; ](../../t-sql/statements/create-master-key-transact-sql.md).  
+## <a name="remarks"></a>Notas  
+ Si no hay una clave maestra de base de datos, es necesaria la opción ENCRYPTION BY PASSWORD y la operación registrará errores si no se proporciona una contraseña. Para más información sobre cómo crear una clave maestra de base de datos, vea [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md).  
   
  Puede utilizar ALTER ASYMMETRIC KEY para cambiar la protección de la clave privada si especifica las opciones de PRIVATE KEY como se muestra en la siguiente tabla.  
   
 |Cambiar protección de|ENCRYPTION BY PASSWORD|DECRYPTION BY PASSWORD|  
 |----------------------------|----------------------------|----------------------------|  
-|Antigua contraseña a nueva contraseña|Obligatorio|Necesario|  
-|Contraseña a clave maestra|Omitir|Necesario|  
-|Clave maestra a contraseña|Necesario|Omitir|  
+|Antigua contraseña a nueva contraseña|Obligatorio|Obligatorio|  
+|Contraseña a clave maestra|Omitir|Obligatorio|  
+|Clave maestra a contraseña|Obligatorio|Omitir|  
   
- Es necesario abrir la clave maestra de la base de datos antes de utilizarla para proteger una clave privada. Para obtener más información, vea [OPEN MASTER KEY &#40; Transact-SQL &#41; ](../../t-sql/statements/open-master-key-transact-sql.md).  
+ Es necesario abrir la clave maestra de la base de datos antes de utilizarla para proteger una clave privada. Para más información, vea [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md).  
   
- Para cambiar la propiedad de una clave asimétrica, utilice [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ Para cambiar la propiedad de una clave asimétrica, use [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL en la clave asimétrica si se quita la clave privada.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -125,13 +125,13 @@ ALTER ASYMMETRIC KEY PacificSales09 WITH PRIVATE KEY (
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   
  [SQL Server y claves de cifrado de base de datos &#40;motor de base de datos&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
- [Abra la clave maestra &#40; Transact-SQL &#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
+ [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
  [Administración extensible de claves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
   

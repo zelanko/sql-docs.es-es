@@ -1,5 +1,5 @@
 ---
-title: HasM (tipo de datos geography) | Documentos de Microsoft
+title: HasM (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 05/04/2017
 ms.prod: sql-non-specified
@@ -44,11 +44,11 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **bits**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **booleano**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -58,8 +58,8 @@ SELECT @p.HasM
 --Returns: 1 (true)  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Métodos extendidos en instancias de Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [M &#40; tipo de datos geography &#41;](../../t-sql/spatial-geography/m-geography-data-type.md)  
+## <a name="see-also"></a>Ver también  
+ [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [M &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/m-geography-data-type.md)  
   
   

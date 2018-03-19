@@ -1,5 +1,5 @@
 ---
-title: Permisos de texto completo de GRANT (Transact-SQL) | Documentos de Microsoft
+title: GRANT (permisos de texto completo de Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/17/2017
 ms.prod: sql-non-specified
@@ -61,10 +61,10 @@ GRANT permission [ ,...n ] ON
  Es el nombre de un permiso. Las asignaciones válidas de permisos a elementos protegibles se describen en la sección "Comentarios", más adelante en este tema.  
   
  ON FULLTEXT CATALOG **::***full-text_catalog_name*  
- Especifica el catálogo de texto completo para el que se concede el permiso. El calificador de ámbito **::** es necesario.  
+ Especifica el catálogo de texto completo para el que se concede el permiso. El calificador de ámbito **::** es obligatorio.  
   
  ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
- Especifica la lista de palabras irrelevantes de texto completo en la que se concede el permiso. El calificador de ámbito **::** es necesario.  
+ Especifica la lista de palabras irrelevantes de texto completo en la que se concede el permiso. El calificador de ámbito **::** es obligatorio.  
   
  *database_principal*  
  Especifica la entidad de seguridad para la que se concede el permiso. Uno de los siguientes:  
@@ -93,7 +93,7 @@ AS *granting_principal*
 -   usuario de base de datos asignado a una clave asimétrica  
 -   usuario de base de datos no asignado a una entidad de seguridad del servidor  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 ## <a name="fulltext-catalog-permissions"></a>Permisos FULLTEXT CATALOG  
  Un catálogo de texto completo es un elemento protegible en el nivel de base de datos que contiene la base de datos que es su entidad primaria en la jerarquía de permisos. Los permisos más limitados y específicos que se pueden conceder en un catálogo de texto completo se muestran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.  
@@ -117,7 +117,7 @@ AS *granting_principal*
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  El otorgante del permiso (o la entidad de seguridad especificada con la opción AS) debe tener el permiso con GRANT OPTION, o un permiso superior que implique el permiso que se va a conceder.  
   
  Si se utiliza la opción AS, debe tener en cuenta los requisitos adicionales siguientes.  
@@ -157,12 +157,12 @@ GRANT VIEW DEFINITION
     TO Mary ;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Crear rol de aplicación &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [Crear catálogo de texto completo &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [Crear lista de palabras IRRELEVANTES de texto completo &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
  [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   

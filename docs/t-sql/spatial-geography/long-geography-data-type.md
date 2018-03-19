@@ -1,5 +1,5 @@
 ---
-title: Long (tipo de datos geography) | Documentos de Microsoft
+title: Long (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="long-geography-data-type"></a>Long (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  La propiedad de longitud de la **geography** instancia.  
+  Propiedad de longitud de la instancia de **geography**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **float**  
+ Tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo CLR: **SqlDouble**  
+ Tipo de CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Comentarios  
- En el modelo OpenGIS, larga se define solo en **geography** instancias se componen de un solo punto. Esta propiedad devolverá NULL si **geography** instancias contienen más de un único punto. Esta propiedad es precisa y de solo lectura.  
+## <a name="remarks"></a>Notas  
+ En el modelo OpenGIS, Long se define solo en instancias de **geography** que constan de un solo punto. Esta propiedad devuelve NULL si las instancias de **geography** contienen más de un punto. Esta propiedad es precisa y de solo lectura.  
   
 ## <a name="examples"></a>Ejemplos  
- Este ejemplo se crea un **punto** de la instancia y recupera la longitud del punto.  
+ En este ejemplo se crea una instancia de **Point** y se recupera la longitud del punto.  
   
 ```  
 DECLARE @g geography;  
@@ -60,7 +60,7 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.Long;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

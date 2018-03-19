@@ -1,5 +1,5 @@
 ---
-title: nchar y nvarchar (Transact-SQL) | Documentos de Microsoft
+title: nchar y nvarchar (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -32,38 +32,38 @@ ms.lasthandoff: 11/21/2017
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar y nvarchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Tipos de datos que son de longitud fija, caracteres **nchar**, o de longitud variable, **nvarchar**, juego de caracteres de datos Unicode y use el UNICODE UCS-2.
+Tipos de datos de caracteres para datos Unicode de longitud fija, **nchar** o de longitud variable, **nvarchar**, y que usan el juego de caracteres UNICODE UCS-2.
   
 ## <a name="arguments"></a>Argumentos  
-**nchar** [(n)]  
-Datos de cadena Unicode de longitud fija. *n*define la longitud de cadena y debe estar comprendido entre 1 y 4.000. El tamaño de almacenamiento es dos veces  *n*  bytes. Cuando la página de códigos de la intercalación utiliza caracteres de doble byte, el tamaño de almacenamiento sigue siendo  *n*  bytes. Dependiendo de la cadena, el tamaño de almacenamiento de  *n*  bytes puede ser menor que el valor especificado para  *n* . Los sinónimos ISO de **nchar** son **national char** y **caracteres no nacionales**...
+**nchar** [ ( n ) ]  
+Datos de cadena Unicode de longitud fija. *n* define la longitud de la cadena y debe ser un valor entre 1 y 4000. El tamaño de almacenamiento es dos veces *n* bytes. Si la página de códigos de la intercalación usa caracteres de doble byte, el tamaño de almacenamiento sigue siendo de *n* bytes. Dependiendo de la cadena, el tamaño de almacenamiento de *n* bytes puede ser inferior al valor especificado para *n*. Los sinónimos ISO de **nchar** son **national char** y **national character**.
   
-**nvarchar** [(n | **max** )]  
-Datos de cadena Unicode de longitud variable. *n*define la longitud de cadena y puede ser un valor entre 1 y 4.000. **max** indica que el tamaño máximo de almacenamiento es 2 ^ 31-1 caracteres (2 GB). El tamaño de almacenamiento, en bytes, es dos veces la longitud real de los datos especificados + 2 bytes. Los sinónimos ISO de **nvarchar** son **variación car** y **national character varying de**.
+**nvarchar** [ ( n | **max** ) ]  
+Datos de cadena Unicode de longitud variable. *n* define la longitud de la cadena y puede ser un valor entre 1 y 4000. **max** indica que el tamaño máximo de almacenamiento es de 2^31-1 caracteres (2 GB). El tamaño de almacenamiento, en bytes, es dos veces la longitud real de los datos especificados + 2 bytes. Los sinónimos ISO de **nvarchar** son **national char varying** y **national character varying**.
   
-## <a name="remarks"></a>Comentarios  
-Cuando  *n*  no se especifica en una definición de datos o la instrucción de declaración de variable, la longitud predeterminada es 1. Cuando  *n*  no se especifica con la función CAST, la longitud predeterminada es 30.
+## <a name="remarks"></a>Notas  
+Cuando no se especifica el argumento *n* en una instrucción de definición de datos o de declaración de variable, la longitud predeterminada es 1. Cuando no se especifica *n* con la función CAST, la longitud predeterminada es 30.
   
-Use **nchar** cuando los tamaños de las entradas de datos de columna probablemente se van a ser similares.
+Use **nchar** cuando sea probable que el tamaño de las entradas de datos de las columnas sea similar.
   
-Use **nvarchar** cuando los tamaños de las entradas de datos de columna probablemente va a variar considerablemente.
+Use **nvarchar** cuando sea probable que el tamaño de las entradas de datos de las columnas varíe.
   
-**sysname** es un tipo de datos proporcionado por sistema definido por el usuario que es funcionalmente equivalente a **nvarchar (128)**, salvo que no acepta valores NULL. **sysname** se usa para hacer referencia a nombres de objeto de base de datos.
+**sysname** es un tipo de datos definido por el usuario y suministrado por el sistema que es funcionalmente equivalente a **nvarchar(128)**, excepto que no acepta valores NULL. **sysname** se usa para hacer referencia a nombres de objetos de base de datos.
   
-Objetos que utilizan **nchar** o **nvarchar** se asigna la intercalación predeterminada de la base de datos a menos que se asigne una intercalación específica mediante la cláusula COLLATE.
+Los objetos que usan **nchar** o **nvarchar** se asignan a la intercalación predeterminada de la base de datos, a menos que se asigne una intercalación específica por medio de la cláusula COLLATE.
   
-SET ANSI_PADDING está siempre activado para **nchar** y **nvarchar**. SET ANSI_PADDING OFF no se aplica a la **nchar** o **nvarchar** tipos de datos.
+SET ANSI_PADDING siempre es ON para **nchar** y **nvarchar**. SET ANSI_PADDING OFF no se aplica a los tipos de datos **nchar** ni **nvarchar**.
   
-Prefijo de las constantes de cadena de caracteres Unicode con la letra N. Sin el prefijo N, la cadena se convierte en la página de códigos predeterminada de la base de datos. Esta página de códigos predeterminada puede no reconocer determinados caracteres.
+Anteponga el prefijo N en las constantes de cadena de caracteres Unicode. Sin este prefijo, la cadena se convierte en la página de códigos predeterminada de la base de datos. Esta página de códigos predeterminada puede no reconocer determinados caracteres.
  
 > [!NOTE]  
->  Cuando un prefijo de una constante de cadena con la letra N, se producirá la conversión implícita en una cadena Unicode si la constante para convertir no supera la longitud máxima para un tipo de datos de cadena Unicode (4.000). En caso contrario, se producirá la conversión implícita en un Unicode valores grandes (max).
+>  Cuando se antepone un prefijo con la letra N en una constante de cadena, la conversión implícita dará como resultado una cadena Unicode si la constante que se convierte no supera la longitud máxima de un tipo de datos de cadena Unicode (4000). En caso contrario, la conversión implícita generará un valor grande de Unicode (max).
   
 > [!WARNING]  
->  Cada usuario que no sea null **varchar (max)** o **nvarchar (max)** columna requiere 24 bytes de asignación fija adicional que se descuentan del límite de 8.060 bytes de filas durante una operación de ordenación. Esto puede crear un límite al número de no null implícito **varchar (max)** o **nvarchar (max)** columnas que se pueden crear en una tabla. No se produce ningún error especial cuando se crea la tabla (más allá de la advertencia habitual de que el tamaño máximo de la fila supera el máximo permitido de 8060 bytes) ni en el momento de la inserción de los datos. Este tamaño de fila grande puede provocar errores (como el error 512) durante algunas operaciones normales, como una actualización de claves de índices agrupados u ordenaciones del conjunto completo de columnas, que los usuarios no pueden prever hasta que lleven a cabo alguna operación.  
+>  Cada columna **varchar(max)** o **nvarchar(max)** cuyo valor no sea NULL requiere 24 bytes de asignación fija adicional que se descuentan del límite de 8060 bytes de las filas durante una operación de ordenación. Esto puede crear un límite implícito del número de columnas **varchar(max)** o **nvarchar(max)** cuyo valor no sea NULL que es posible crear en una tabla. No se produce ningún error especial cuando se crea la tabla (más allá de la advertencia habitual de que el tamaño máximo de la fila supera el máximo permitido de 8060 bytes) ni en el momento de la inserción de los datos. Este tamaño de fila grande puede provocar errores (como el error 512) durante algunas operaciones normales, como una actualización de claves de índices agrupados u ordenaciones del conjunto completo de columnas, que los usuarios no pueden prever hasta que lleven a cabo alguna operación.  
   
 ## <a name="converting-character-data"></a>Convertir datos de caracteres  
-Para obtener información sobre cómo convertir datos de caracteres, vea [char y varchar &#40; Transact-SQL &#41; ](../../t-sql/data-types/char-and-varchar-transact-sql.md).
+Para más información sobre cómo convertir datos de caracteres, vea [char y varchar &#40;Transact-SQL&#41;](../../t-sql/data-types/char-and-varchar-transact-sql.md).
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -95,12 +95,12 @@ Test data       More test data
 ## <a name="see-also"></a>Vea también
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[COLLATE &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
-[COMO &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)  
-[SET ANSI_PADDING &#40; Transact-SQL &#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)  
+[LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)  
+[SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md)
   

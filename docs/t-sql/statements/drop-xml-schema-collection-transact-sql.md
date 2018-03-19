@@ -1,5 +1,5 @@
 ---
-title: DROP XML SCHEMA COLLECTION (Transact-SQL) | Documentos de Microsoft
+title: DROP XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
@@ -57,12 +57,12 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
  *sql_identifier*  
  Es el nombre de la colección de esquemas XML que se va a quitar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La eliminación de una colección de esquemas XML es una operación transaccional. Esto significa que si quita una colección de esquemas XML de una transacción y, después, revierte la transacción, no se quitará la colección de esquemas XML.  
   
  No podrá quitar una colección de esquemas XML cuando esté en uso. Esto significa que la colección que se desea quitar no puede cumplir ninguna de las condiciones siguientes:  
   
--   Asociada a cualquier **xml** columna o parámetro de tipo.  
+-   Estar asociada a cualquier columna o parámetro de tipo **xml**.  
   
 -   Estar especificada en restricciones de tabla.  
   
@@ -80,7 +80,7 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
     END;  
     ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para quitar una colección de esquemas XML (XML SCHEMA COLLECTION) es necesario el permiso DROP sobre la colección.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -91,9 +91,9 @@ DROP XML SCHEMA COLLECTION ManuInstructionsSchemaCollection;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Crear colección de esquemas XML &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
- [ALTER XML SCHEMA COLLECTION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
+ [ALTER XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Comparar XML con tipo y XML sin tipo](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Requisitos y limitaciones de las colecciones de esquemas XML en el servidor](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  

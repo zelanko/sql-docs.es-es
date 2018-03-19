@@ -1,5 +1,5 @@
 ---
-title: EVENTDATA (Transact-SQL) | Documentos de Microsoft
+title: EVENTDATA (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 EVENTDATA( )  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  EVENTDATA devuelve datos solo cuando se hace referencia al mismo directamente dentro de un desencadenador DDL o logon. EVENTDATA devuelve NULL si se llama desde otras rutinas, aunque un desencadenador DDL o logon llame a esas rutinas.  
   
  Los datos devueltos por EVENTDATA no son válidos después de confirmar o revertir una transacción que ha llamado a EVENTDATA, de forma implícita o explícita.  
@@ -77,7 +77,7 @@ EVENTDATA( )
 ## <a name="schemas-returned"></a>Esquemas devueltos  
  EVENTDATA devuelve un valor de tipo **xml**. De forma predeterminada, la definición de esquema para todos los eventos se instala en el directorio siguiente: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
   
- Como alternativa, el esquema de eventos se publica en el [Microsoft SQL Server XML Schemas](http://go.microsoft.com/fwlink/?LinkID=31850) página Web.  
+ Como alternativa, el esquema de eventos se publica en la página web [Microsoft SQL Server XML Schemas](http://go.microsoft.com/fwlink/?LinkID=31850) (Esquemas XML de Microsoft SQL Server).  
   
  Para extraer el esquema de un evento concreto, busque el esquema del tipo complejo `EVENT_INSTANCE_\<event_type>`. Por ejemplo, para extraer el esquema del evento DROP_TABLE, busque el esquema de `EVENT_INSTANCE_DROP_TABLE`.  
   
@@ -87,7 +87,7 @@ EVENTDATA( )
  En el siguiente ejemplo se crea un desencadenador DDL para impedir que se creen tablas nuevas en la base de datos. La instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que activa el desencadenador se captura con XQuery con los datos XML que genera EVENTDATA. Para obtener más información, vea [Referencia del lenguaje XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md).  
   
 > [!NOTE]  
->  Al consultar el `\<TSQLCommand>` elemento mediante **resultados a cuadrícula** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], saltos de línea en el texto del comando no aparecen. Use **resultados a texto** en su lugar.  
+>  Cuando se consulta el elemento `\<TSQLCommand>` mediante **Resultados a cuadrícula** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], no se muestran saltos de línea en el texto del comando. Es preferible usar **Resultados a texto**.  
   
 ```  
 USE AdventureWorks2012;  
@@ -113,7 +113,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Si desea devolver datos de evento, se recomienda que utilice la expresión XQuery **value()** en lugar del método la **query()** método. El **query()** método devuelve XML y retornos de carro con caracteres de escape "y" comercial devuelto y avance de línea de instancias (CR/LF) en la salida, mientras que la **value()** método representa instancias de CR/LF invisibles en el resultado.  
+>  Cuando quiera devolver datos de evento, recomendamos usar el método XQuery **value()** en vez del método **query()**. El método **query()** devuelve XML e instancias de retorno de carro y avance de línea (CR/LF) con el carácter de escape “y” comercial en el resultado, mientras que el método **value()** representa instancias de CR/LF invisibles en el resultado.  
   
 ### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>B. Crear una tabla de registro con datos de evento en un desencadenador DDL  
  En el siguiente ejemplo se crea una tabla para almacenar información sobre todos los eventos de nivel de base de datos y se rellena con un desencadenador DDL. El tipo de evento y la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] se capturan mediante XQuery con los datos XML generados por `EVENTDATA`.  
@@ -152,7 +152,7 @@ DROP TABLE ddl_log;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Usar la función EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md)   
  [Desencadenadores DDL](../../relational-databases/triggers/ddl-triggers.md)   
  [Notificaciones de eventos](../../relational-databases/service-broker/event-notifications.md)   

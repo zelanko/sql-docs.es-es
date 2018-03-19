@@ -1,5 +1,5 @@
 ---
-title: BufferWithTolerance (tipo de datos geometry) | Documentos de Microsoft
+title: BufferWithTolerance (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve un objeto geométrico que representa la unión del punto de todos los valores cuya distancia desde una **geometry** instancia es menor o igual que un valor especificado, permitiendo una tolerancia especificada.
+Devuelve un objeto geométrico que representa la unión de todos los valores de puntos cuya distancia desde una instancia de **geometry** es menor o igual que un valor especificado, lo que posibilita una tolerancia especificada.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,49 +45,49 @@ Devuelve un objeto geométrico que representa la unión del punto de todos los v
   
 ## <a name="arguments"></a>Argumentos  
  *distance*  
- Es un **float** expresión que especifica la distancia desde la **geometry** instancia alrededor de la cual se puede calcular el búfer.  
+ Es una expresión **float** que especifica la distancia desde la instancia de **geometry** en torno a la que se va a calcular el búfer.  
   
  *tolerance*  
- Es un **float** expresión que especifica la tolerancia de la distancia de búfer.  
+ Es una expresión **float** que especifica la tolerancia de la distancia del búfer.  
   
- *Tolerancia* hace referencia a la variación máxima en la distancia de búfer ideal para la aproximación lineal devuelta.  
+ *Tolerance* hace referencia a la variación máxima en la distancia de búfer ideal para la aproximación lineal devuelta.  
   
  Por ejemplo, la distancia de búfer ideal de un punto es un círculo, pero un círculo debe conseguirse de forma aproximada mediante un polígono. Cuanto más pequeña sea la tolerancia, más puntos tendrá el polígono, lo que aumenta la complejidad del resultado, pero disminuye el error.  
   
  *relative*  
- Es un **bits** especifica si la *tolerancia* valor es relativo o absoluto. Si 'TRUE' o 1, a continuación, tolerancia es relativa y se calcula como el producto de la *tolerancia* parámetro y el diámetro del cuadro de límite de la instancia. Si 'FALSE' o 0, la tolerancia es absoluta y *tolerancia* valor es la variación máxima absoluta en la distancia de búfer ideal para la aproximación lineal devuelta.  
+ Es un valor **bit** que especifica si el valor *tolerance* es relativo o absoluto. Si es TRUE o 1, la tolerancia es relativa y se calcula como el producto del parámetro *tolerance* por el diámetro del cuadro de límite de la instancia. Si es FALSE o 0, la tolerancia es absoluta y el valor *tolerance* es la variación máxima absoluta en la distancia del búfer ideal para la aproximación lineal devuelta.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geometry**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
 ## <a name="exceptions"></a>Excepciones  
- El *tolerancia* parámetro debe ser mayor que cero. Si *tolerancia* < = 0, a continuación, un `System.ArgumentOutOfRangeException` se produce.  
+ El parámetro *tolerance* debe ser mayor que cero. Si *tolerance* <= 0, se produce una excepción `System.ArgumentOutOfRangeException`.  
   
 > [!NOTE]  
->  Puesto que *tolerancia* es un **float** tipo, un `System.Runtime.InteropServices.COMException` se puede producir si el valor dado para la tolerancia es muy pequeño debido a problemas de redondeo con tipos de punto flotante.  
+>  Puesto que *tolerance* es un tipo **float**, se puede generar una excepción `System.Runtime.InteropServices.COMException` si el valor dado para la tolerancia es muy pequeño, debido a problemas de redondeo con los tipos de punto flotante.  
   
-## <a name="remarks"></a>Comentarios  
- Cuando *distancia* > 0, a continuación, ya sea un **polígono** o **MultiPolygon** se devuelve la instancia.  
+## <a name="remarks"></a>Notas  
+ Cuando *distance* > 0, se devuelve una instancia de **Polygon** o **MultiPolygon**.  
   
 > [!NOTE]  
->  Puesto que la distancia es un **float**, un valor muy pequeño puede igualarse a cero en los cálculos. Cuando esto ocurre, una copia de la llamada a **geometry** se devuelve la instancia. Vea [float y real &#40; Transact-SQL &#41; ](../../t-sql/data-types/float-and-real-transact-sql.md).  
+>  Dado que la distancia es **float**, un valor sumamente pequeño puede igualarse a cero en los cálculos. Cuando ocurre esto, se devuelve una copia de la instancia de **geometry** que llama. Vea [float y real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md).  
   
- Cuando *distancia* = 0, a continuación, una copia de la llamada a **geometry** se devuelve la instancia.  
+ Cuando *distance* = 0, se devuelve una copia de la instancia de **geometry** que llama.  
   
- Cuando *distancia* < 0, a continuación,  
+ Cuando *distance* < 0:  
   
--   vacío **GeometryCollection** instancia se devuelve cuando las dimensiones de la instancia son 0 ó 1.  
+-   Se devuelve una instancia de **GeometryCollection** vacía si las dimensiones de la instancia son 0 o 1.  
   
 -   Se devuelve un búfer negativo si las dimensiones de la instancia son dos o más.  
   
     > [!NOTE]  
-    >  Un búfer negativo también puede crear vacío **GeometryCollection** instancia.  
+    >  Un búfer negativo también puede crear una instancia de **GeometryCollection** vacía.  
   
- Un búfer negativo quita todos los puntos dentro de la distancia especificada del límite de la **geometry** instancia.  
+ Un búfer negativo quita todos los puntos que se encuentran dentro de la distancia especificada del límite de la instancia de **geometry**.  
   
- El error entre el búfer teórico y calculada es max (tolerancia a errores, extensiones \* 1.E-7) donde la tolerancia es el valor de la *tolerancia* parámetro. Para obtener más información sobre extensiones, consulte [referencia de método de tipo de datos geometry](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
+ El error entre el búfer teórico y el calculado es max(tolerance, extents \* 1.E-7), donde tolerance es el valor del parámetro *tolerance*. Para más información sobre las extensiones, vea la [referencia del método del tipo de datos geometry](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea una instancia de `Point` y se usa `BufferWithTolerance()` para obtener un búfer aproximado a su alrededor.  
@@ -98,8 +98,8 @@ SET @g = geometry::STGeomFromText('POINT(3 3)', 0);
 SELECT @g.BufferWithTolerance(1, .5, 0).ToString();  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [STBuffer &#40; tipo de datos geometry &#41;](../../t-sql/spatial-geometry/stbuffer-geometry-data-type.md)   
+## <a name="see-also"></a>Ver también  
+ [STBuffer &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stbuffer-geometry-data-type.md)   
  [Métodos extendidos en instancias de geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

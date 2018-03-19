@@ -1,5 +1,5 @@
 ---
-title: STBuffer (tipo de datos geometry) | Documentos de Microsoft
+title: STBuffer (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve un objeto geométrico que representa la unión de todos los puntos cuya distancia desde una **geometry** instancia es menor o igual que un valor especificado.
+Devuelve un objeto geométrico que representa la unión de todos los puntos cuya distancia desde una instancia de **geometry** es menor o igual que un valor especificado.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,35 +45,35 @@ Devuelve un objeto geométrico que representa la unión de todos los puntos cuya
   
 ## <a name="arguments"></a>Argumentos  
  *distance*  
- Es un valor de tipo **float** (**doble** en .NET Framework) especifica la distancia desde la instancia de geometry alrededor de la cual se puede calcular el búfer.  
+ Es un valor de tipo **float** (**double** en .NET Framework) que especifica la distancia desde la instancia de geometry en torno a la cual se puede calcular el búfer.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geometry**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentarios  
- `STBuffer()`calcula un búfer como [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md), especificando *tolerancia* = distancia \* .001 y *relativa*  =   **false**.  
+## <a name="remarks"></a>Notas  
+ `STBuffer()` calcula un búfer como [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md) mediante la especificación de *tolerance* = distance \* .001 y *relative* = **false**.  
   
- Cuando *distancia* > 0, a continuación, ya sea un **polígono** o **MultiPolygon** se devuelve la instancia.  
+ Cuando *distance* > 0, se devuelve una instancia de **Polygon** o **MultiPolygon**.  
   
 > [!NOTE]  
->  Puesto que la distancia es un **float**, un valor muy pequeño puede igualarse a cero en los cálculos.  Cuando esto ocurre, una copia de la llamada a **geometry** se devuelve la instancia.  Vea [float y real &#40; Transact-SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
+>  Puesto que la distancia es un tipo **float**, un valor muy pequeño puede resultar igual a cero en los cálculos.  Cuando ocurre esto, se devuelve una copia de la instancia de **geometry** que llama.  Vea [float y real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md).  
   
- Cuando *distancia* = 0, entonces una copia de la llamada a **geometry** se devuelve la instancia.  
+ Cuando *distance* = 0, se devuelve una copia de la instancia de **geometry** que llama.  
   
- Cuando *distancia* < 0, entonces  
+ Cuando *distance* < 0:  
   
--   vacío **GeometryCollection** instancia se devuelve cuando las dimensiones de la instancia son 0 ó 1.  
+-   Se devuelve una instancia de **GeometryCollection** vacía si las dimensiones de la instancia son 0 o 1.  
   
 -   se devuelve un búfer negativo si las dimensiones de la instancia son 2 o más.  
   
     > [!NOTE]  
-    >  Un búfer negativo también puede crear vacío **GeometryCollection** instancia.  
+    >  Un búfer negativo también puede crear una instancia de **GeometryCollection** vacía.  
   
  Un búfer negativo quita todos los puntos incluidos en la distancia dada del límite de la geometría.  
   
- El error entre el búfer teórico y calculada es max (tolerancia a errores, extensiones * 1.E-7) donde tolerancia = distancia \* .001. Para obtener más información sobre extensiones, consulte [referencia de método de tipo de datos geometry](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
+ El error entre el búfer teórico y el calculado es max(tolerance, extents * 1.E-7), donde tolerance = distance \* .001. Para más información sobre las extensiones, vea la [referencia del método del tipo de datos geometry](http://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -102,17 +102,17 @@ Devuelve un objeto geométrico que representa la unión de todos los puntos cuya
  ```  
   
 > [!NOTE]  
->  Se devuelve una instancia de `Polygon` en lugar de una instancia de `CurvePolygon`.  Para devolver un `CurvePolygon` de la instancia, consulte [BufferWithCurves &#40; tipo de datos geometry &#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
+>  Se devuelve una instancia de `Polygon` en lugar de una instancia de `CurvePolygon`.  Para devolver una instancia de `CurvePolygon`, vea [BufferWithCurves &#40;tipo de datos Geometry&#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md).  
   
 ### <a name="d-calling-stbuffer-with-a-negative-parameter-value-that-returns-an-empty-instance"></a>D. Llamar a STBuffer() con un valor de parámetro negativo que devuelve una instancia vacía  
- En el ejemplo siguiente se muestra lo que sucede cuando el *distancia* parámetro es igual a -2 para el ejemplo anterior.  
+ En el ejemplo siguiente se muestra lo que sucede cuando el parámetro *distance* es igual a -2 para el ejemplo anterior.  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
  SELECT @g.STBuffer(-2).ToString();
  ```  
   
- Esto **seleccione** instrucción devuelve una`GEOMETRYCOLLECTION EMPTY.`  
+ Esta instrucción **SELECT** devuelve `GEOMETRYCOLLECTION EMPTY.`.  
   
 ### <a name="e-calling-stbuffer-with-parametervalue--0"></a>E. Llamar a STBuffer() con parameter_value = 0  
  En el siguiente ejemplo se devuelve una copia de la instancia de `geometry` que realiza la llamada:  
@@ -167,10 +167,10 @@ Devuelve un objeto geométrico que representa la unión de todos los puntos cuya
  SELECT @g.STBuffer(1.6).ToString();
  ```  
   
- Las dos primeras **seleccione** instrucciones devuelven un `MultiPolygon` instancia porque el parámetro *distancia* es menor o igual a 1/2, la distancia entre los dos puntos (1 1) y (1 4). La tercera **seleccione** instrucción devuelve un `Polygon` instancia porque las instancias almacenadas en búfer de los dos puntos (1 1) y (1 4) se superponen.  
+ Las primeras dos instrucciones **SELECT** devuelven una instancia de `MultiPolygon` porque el parámetro *distance* es menor o igual a la mitad de la distancia entre los dos puntos (1 1) y (1 4). La tercera instrucción **SELECT** devuelve una instancia de `Polygon` porque las instancias almacenadas en búfer de los dos puntos (1 1) y (1 4) se superponen.  
   
-## <a name="see-also"></a>Vea también  
- [BufferWithTolerance &#40; tipo de datos geometry &#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
+## <a name="see-also"></a>Ver también  
+ [BufferWithTolerance &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

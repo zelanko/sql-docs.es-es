@@ -1,5 +1,5 @@
 ---
-title: ":: (Resolución de ámbito) (Transact-SQL) | Documentos de Microsoft"
+title: ":: (Resolución de ámbito) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -28,10 +28,10 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-scope-resolution-transact-sql"></a>:: (Resolución de ámbito) (Transact-SQL)
+# <a name="-scope-resolution-transact-sql"></a>:: (Resolución de ámbito)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  El operador de resolución de ámbito **::** proporciona acceso a los miembros estáticos de un tipo de datos compuesto. Un tipo de datos compuesto es aquel que contiene varios tipos de datos simples y métodos, como los tipos integrados de CLR y tipos personalizados de SQLCLR User-Defined (UDT).  
+  El operador de resolución de ámbito **::** proporciona acceso a los miembros estáticos de un tipo de datos compuesto. Un tipo de datos compuesto es aquel que contiene varios métodos y tipos de datos simples, como los tipos de CLR integrados y los tipos de SQLCLR definidos por el usuario (UDT) personalizados.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se muestra cómo usar el operador de resolución de ámbito para obtener acceso al miembro `GetRoot()` del tipo `hierarchyid`.  
@@ -46,7 +46,7 @@ PRINT @hid.ToString();
   
  `/`  
   
-## <a name="see-also"></a>Vea también  
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

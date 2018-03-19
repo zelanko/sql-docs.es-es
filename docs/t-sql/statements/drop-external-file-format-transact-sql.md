@@ -1,5 +1,5 @@
 ---
-title: QUITAR el formato de archivo externo (Transact-SQL) | Documentos de Microsoft
+title: DROP EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -26,7 +26,7 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="drop-external-file-format-transact-sql"></a>QUITAR el formato de archivo externo (Transact-SQL)
+# <a name="drop-external-file-format-transact-sql"></a>DROP EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Quita un formato de archivo externo de PolyBase.  
@@ -43,33 +43,33 @@ DROP EXTERNAL FILE FORMAT external_file_format_name
   
 ## <a name="arguments"></a>Argumentos  
  *external_file_format_name*  
- El nombre del formato de archivo externo para quitar.  
+ El nombre del formato de archivo externo que se va a eliminar.  
   
 ## <a name="metadata"></a>Metadatos  
- Para ver una lista de formatos de archivo externo, utilice la [sys.external_file_formats &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md) vista del sistema.  
+ Para ver una lista de los formatos de archivo externo, use la vista del sistema [sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md).  
   
 ```  
 SELECT * FROM sys.external_file_formats;  
 ```  
   
-## <a name="permissions"></a>Permissions  
- Requiere modificar cualquier formato de archivo externo.  
+## <a name="permissions"></a>Permisos  
+ Requiere ALTER ANY EXTERNAL FILE FORMAT.  
   
 ## <a name="general-remarks"></a>Notas generales  
- Al quitar un formato de archivo externo, no quita los datos externos.  
+ Al quitar un formato de archivo externo, no se quitan los datos externos.  
   
 ## <a name="locking"></a>Bloqueo  
  Toma un bloqueo compartido en el objeto de formato de archivo externo.  
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-basic-syntax"></a>A. Con la sintaxis básica  
+### <a name="a-using-basic-syntax"></a>A. Uso de sintaxis básica  
   
 ```  
 DROP EXTERNAL FILE FORMAT myfileformat;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)  
   
   

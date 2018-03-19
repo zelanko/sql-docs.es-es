@@ -1,5 +1,5 @@
 ---
-title: STGeomCollFromText (tipo de datos geometry) | Documentos de Microsoft
+title: STGeomCollFromText (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomcollfromtext-geometry-data-type"></a>STGeomCollFromText (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve un **geometry** instancia a partir de una representación de Open Geospatial Consortium (OGC) Well-Known Text (WKT) ampliada con los Z (elevación) y los valores M (medida) pertenecientes a la instancia.
+Devuelve una instancia de **geometry** a partir de una representación Well-Known Text (WKT) de Open Geospatial Consortium (OGC), ampliada con los valores Z (elevación) y M (medida) pertenecientes a la instancia.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,18 +45,18 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *geometrycollection_tagged_text*  
- Es la representación WKT de la **geometry** instancia que se va a devolver. *geometry_tagged_text* es un **nvarchar (max)** expresión.  
+ Es la representación WKT de la instancia de **geometry** que se quiere devolver. *geometry_tagged_text* es una expresión **nvarchar(max)**.  
   
  *SRID*  
- Es un **int** expresión que representa el espaciales identificador de referencia (SRID) de la **geometry** instancia que se va a devolver.  
+ Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometry** que se quiere devolver.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geometry**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentarios  
- El tipo OGC de la **geometry** instancia devuelta por `STGeomCollFromText()` se establece en la entrada WKT correspondiente.  
+## <a name="remarks"></a>Notas  
+ El tipo OGC de la instancia de **geometry** devuelto por `STGeomCollFromText()` se establece en la entrada WKT correspondiente.  
   
  Este método producirá una excepción si la entrada no es válida.  
   
@@ -69,7 +69,7 @@ SET @g = geometry::STGeomCollFromText('GEOMETRYCOLLECTION ( POLYGON((5 5, 10 5, 
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de geometría estáticos de OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

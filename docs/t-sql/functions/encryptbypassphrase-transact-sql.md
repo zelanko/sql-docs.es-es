@@ -1,5 +1,5 @@
 ---
-title: ENCRYPTBYPASSPHRASE (Transact-SQL) | Documentos de Microsoft
+title: ENCRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -51,17 +51,17 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *frase de contraseña*  
+ *passphrase*  
  Frase de contraseña a partir de la cual se genera una clave simétrica.  
   
  @passphrase  
- Una variable de tipo **nvarchar**, **char**, **varchar**, **binario**, **varbinary**, o **nchar** que contiene una frase de contraseña desde el que se va a generar una clave simétrica.  
+ Variable de tipo **nvarchar**, **char**, **varchar**, **binary**, **varbinary** o **nchar** que contiene una frase de contraseña a partir de la cual se genera una clave simétrica.  
   
- *texto no cifrado*  
+ *cleartext*  
  Texto no cifrado que se va a cifrar.  
   
  @cleartext  
- Una variable de tipo **nvarchar**, **char**, **varchar**, **binario**, **varbinary**, o **nchar** que contiene el texto sin cifrar. El tamaño máximo es de 8.000 bytes.  
+ Una variable de tipo **nvarchar**, **char**, **varchar**, **binary**, **varbinary** o **nchar** que contiene el texto sin cifrar. El tamaño máximo es de 8.000 bytes.  
   
  *add_authenticator*  
  Indica si se cifrará un autenticador junto con el texto sin cifrar. 1 si se va a agregar un autenticador. **int**.  
@@ -69,16 +69,16 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
  @add_authenticator  
  Indica si se cifrará un hash junto con el texto no cifrado.  
   
- *autenticador*  
+ *authenticator*  
  Datos a partir de los cuales se obtiene un autenticador. **sysname**.  
   
  @authenticator  
  Variable que contiene datos a partir de los cuales se obtiene un autenticador.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- **varbinary** con un tamaño máximo de 8.000 bytes.  
+ **varbinary** con un tamaño máximo de 8000 bytes.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Una frase de contraseña es una contraseña que incluye espacios. La ventaja de usar una frase de contraseña es que es más fácil recordar una frase con significado que una cadena larga de caracteres.  
   
  Esta función no comprueba la complejidad de la contraseña.  
@@ -107,8 +107,8 @@ WHERE CreditCardID = '3681';
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [DECRYPTBYPASSPHRASE &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
  [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

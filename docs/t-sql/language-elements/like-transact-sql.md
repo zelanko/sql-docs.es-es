@@ -1,5 +1,5 @@
 ---
-title: Al igual que (Transact-SQL) | Documentos de Microsoft
+title: LIKE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -67,10 +67,10 @@ match_expression [ NOT ] LIKE pattern
   
 ## <a name="arguments"></a>Argumentos  
  *match_expression*  
- Se trata de cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md) del tipo de datos de caracteres.  
+ Es cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md) válida de tipo de datos de caracteres.  
   
  *pattern*  
- Es la cadena de caracteres que se va a buscar en específica *match_expression*y pueden incluir los siguientes caracteres comodín válidos. *patrón de* puede tener un máximo de 8.000 bytes.  
+ Es la cadena de caracteres específica que se busca en *match_expression* y puede incluir los siguientes caracteres comodín válidos. *pattern* puede tener 8.000 bytes como máximo.  
   
 |Carácter comodín|Description|Ejemplo|  
 |------------------------|-----------------|-------------|  
@@ -85,13 +85,13 @@ match_expression [ NOT ] LIKE pattern
 ## <a name="result-types"></a>Tipos de resultado  
  **Boolean**  
   
-## <a name="result-value"></a>Valor de resultado  
- LIKE devuelve TRUE si el *match_expression* coincide con la que se especifica *patrón*.  
+## <a name="result-value"></a>Valor del resultado  
+ LIKE devuelve TRUE si *match_expression* coincide con el valor *pattern* especificado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando se realizan comparaciones de cadenas con LIKE, todos los caracteres de la cadena patrón son significativos, incluso los espacios iniciales o finales. Si una comparación de una consulta debe devolver todas las filas con una cadena LIKE 'abc ' (abc seguido de un espacio), no se devolverán las filas en las que el valor de esa columna sea abc (sin espacio al final). Sin embargo, no se tienen en cuenta los espacios en blanco finales de la expresión con la que se compara el patrón. Si la comparación de una consulta debe devolver todas las filas con la cadena LIKE 'abc' (abc sin espacio), se devolverán todas las filas que empiecen por abc y tengan cero o más espacios al final.  
   
- Una comparación de cadenas con un patrón que contenga **char** y **varchar** datos pueden no pasar una comparación LIKE debido a cómo se almacenan los datos. Es importante conocer el almacenamiento de cada tipo de datos y dónde puede generar errores una comparación LIKE. En el ejemplo siguiente se pasa una variable local **char** variable a un procedimiento almacenado y, a continuación, para encontrar todos los empleados cuyo apellidos empiecen por un conjunto especificado de caracteres de coincidencia de patrón de usos.  
+ Una comparación de cadenas con un patrón que contenga datos de tipo **char** y **varchar** puede no pasar una comparación LIKE debido a la forma en que se han almacenado los datos. Es importante conocer el almacenamiento de cada tipo de datos y dónde puede generar errores una comparación LIKE. En el siguiente ejemplo se pasa una variable local **char** a un procedimiento almacenado y luego se usa la coincidencia de patrones para encontrar todos los empleados cuyos apellidos empiecen por un juego de caracteres especificado.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -107,9 +107,9 @@ EXEC FindEmployee @EmpLName = 'Barb';
 GO  
 ```  
   
- En el `FindEmployee` procedimiento, no se devuelven filas porque la **char** variable (`@EmpLName`) contiene espacios en blanco finales siempre que el nombre contiene menos de 20 caracteres. Dado que la `LastName` columna es **varchar**, no hay espacios en blanco finales. Este procedimiento no funciona porque los espacios al final son significativos.  
+ En el procedimiento `FindEmployee`, no se devuelven filas porque la variable **char** (`@EmpLName`) contiene espacios al final cuando el nombre tiene menos de 20 caracteres. Debido a que la columna `LastName` es de tipo **varchar**, no hay espacios al final. Este procedimiento no funciona porque los espacios al final son significativos.  
   
- Sin embargo, en el ejemplo siguiente se realiza correctamente porque los espacios en blanco no se agregan a un **varchar** variable.  
+ Pero el siguiente ejemplo funciona porque no se agregan espacios al final a una variable **varchar**.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -135,7 +135,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
  ``` 
  
 ## <a name="pattern-matching-by-using-like"></a>Operación de búsqueda de coincidencias de patrón con LIKE  
- LIKE admite operaciones de búsqueda de coincidencias de patrón ASCII y Unicode. Cuando todos los argumentos (*match_expression*, *patrón*, y *escape_character*, si está presente) son tipos de datos de caracteres ASCII, se realiza la búsqueda de coincidencias de patrón ASCII. Si alguno de los argumentos es del tipo de datos Unicode, todos los argumentos se convierten a Unicode y se realiza la operación de búsqueda de coincidencias de patrón Unicode. Cuando se utilizan datos Unicode (**nchar** o **nvarchar** tipos de datos) con LIKE, los espacios en blanco finales son significativos; sin embargo, para los datos no Unicode, los espacios en blanco no son significativos. El uso que se hace de LIKE con Unicode es compatible con el estándar ISO. El uso que se hace de LIKE con ASCII es compatible con las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ LIKE admite operaciones de búsqueda de coincidencias de patrón ASCII y Unicode. Cuando todos los argumentos (*match_expression*, *pattern* y *escape_character*, si están presentes) son tipos de datos de caracteres ASCII, se realiza la coincidencia de patrones ASCII. Si alguno de los argumentos es del tipo de datos Unicode, todos los argumentos se convierten a Unicode y se realiza la operación de búsqueda de coincidencias de patrón Unicode. Cuando se usan datos Unicode (tipos de datos **nchar** o **nvarchar**) con LIKE, los espacios en blanco al final son significativos; pero para los datos que no son Unicode, no lo son. El uso que se hace de LIKE con Unicode es compatible con el estándar ISO. El uso que se hace de LIKE con ASCII es compatible con las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  A continuación se ofrece una serie de ejemplos donde se muestran las diferencias entre las filas devueltas tras la operación de búsqueda de coincidencias de patrón con LIKE para ASCII y Unicode.  
   
@@ -202,7 +202,7 @@ GO
   
  Si no hay ningún carácter después de un carácter de escape en el patrón de LIKE, el patrón no es válido y LIKE devuelve FALSE. Si el carácter posterior a un carácter de escape no es un carácter comodín, el carácter de escape se descarta y el carácter que sigue al escape se trata como un carácter normal del patrón. Esto afecta a los caracteres comodín del signo de porcentaje (%), carácter de subrayado (_) y corchete de apertura ([) cuando se encuentran entre corchetes dobles ([ ]). Asimismo, dentro de corchetes dobles ([ ]) se pueden aplicar caracteres de escape al símbolo de intercalación (^), guión (-) y corchete de cierre (]).  
   
- 0 x 0000 (**char(0)**) es un carácter no definido en las intercalaciones de Windows y no se pueden incluir en LIKE.  
+ 0x0000 (**char(0)**) es un carácter no definido en las intercalaciones de Windows y no se puede incluir en LIKE.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -297,7 +297,7 @@ GO
 ```  
   
 ### <a name="d-using-the---wildcard-characters"></a>D. Utilizar el carácter comodín [ ]  
- El ejemplo siguiente busca empleados en la `Person` tabla con el nombre de `Cheryl` o `Sheryl`.  
+ El ejemplo siguiente busca empleados cuyo nombre sea `Cheryl` o `Sheryl` en la tabla `Person`.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -320,10 +320,10 @@ ORDER BY LastName ASC, FirstName ASC;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-like-with-the--wildcard-character"></a>E. Utilizar LIKE con el carácter comodín %  
- En el ejemplo siguiente se buscan todos los empleados en la `DimEmployee` tabla con números de teléfono que comiencen por `612`.  
+ El siguiente ejemplo busca todos los empleados cuyo número de teléfono empieza por `612` en la tabla `DimEmployee`.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -335,7 +335,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. Utilizar NOT LIKE con el carácter comodín %  
- En el ejemplo siguiente se busca todos los números de teléfono en el `DimEmployee` tabla que no se inician con `612`.  .  
+ El siguiente ejemplo busca todos los números de teléfono de la tabla `DimEmployee` que no empiecen por `612`.  .  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -346,8 +346,8 @@ WHERE phone NOT LIKE '612%'
 ORDER by LastName;  
 ```  
   
-### <a name="g-using-like-with-the--wildcard-character"></a>G. Utilizar LIKE con el carácter comodín _  
- En el ejemplo siguiente se busca todos los números de teléfono que tienen un código de área a partir de `6` y finales de `2` en el `DimEmployee` tabla. Tenga en cuenta que el carácter comodín % también se incluye al final del patrón de búsqueda, ya que el código de área es la primera parte del número de teléfono y existan los caracteres adicionales después del valor de columna.  
+### <a name="g-using-like-with-the--wildcard-character"></a>G. Usar LIKE con el carácter comodín _  
+ En el siguiente ejemplo se buscan todos los números de teléfono cuyo código de área empieza por `6` y termina por `2` de la tabla `DimEmployee`. Tenga en cuenta que el carácter comodín % también se incluye al final del patrón de búsqueda, ya que el código de área es la primera parte del número de teléfono y después hay caracteres adicionales en el valor de columna.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -358,7 +358,7 @@ WHERE phone LIKE '6_2%'
 ORDER by LastName;   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

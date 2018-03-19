@@ -1,5 +1,5 @@
 ---
-title: DECRYPTBYPASSPHRASE (Transact-SQL) | Documentos de Microsoft
+title: DECRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -51,13 +51,13 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *frase de contraseña*  
+ *passphrase*  
  Frase de contraseña que se utilizará para generar la clave para el descifrado.  
   
  @passphrase  
- Es una variable de tipo **nvarchar**, **char**, **varchar**, o **nchar** que contiene la frase de contraseña que se utilizará para generar la clave para descifrado.  
+ Es una variable de tipo **nvarchar**, **char**, **varchar** o **nchar** que contiene la frase de contraseña que se usará para generar la clave de descifrado.  
   
- '*texto cifrado*'  
+ '*ciphertext*'  
  Es el texto cifrado que hay que descifrar.  
   
  @ciphertext  
@@ -69,16 +69,16 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
  @add_authenticator  
  Indica si se ha cifrado un autenticador junto con el texto simple. Es 1 si se ha utilizado un autenticador. **int**.  
   
- *autenticador*  
+ *authenticator*  
  Son los datos del autenticador. **sysname**.  
   
  @authenticator  
  Es una variable que contiene los datos de los que se derivará un autenticador.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- **varbinary** con un tamaño máximo de 8.000 bytes.  
+ **varbinary** con un tamaño máximo de 8000 bytes.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  No es necesario ningún permiso para ejecutar esta función.  
   
  Devuelve NULL si se utiliza la información de autenticador o frase de contraseña errónea.  
@@ -88,7 +88,7 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
  Si al cifrar el texto cifrado se incluyó un autenticador, éste debe incluirse en el momento del descifrado. Si el valor del autenticador proporcionado en el momento del descifrado no coincide con el valor cifrado con los datos, se producirá un error en el descifrado.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se descifra el registro actualizado en [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md).  
+ En el siguiente ejemplo se descifra el registro actualizado en [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md).  
   
 ```  
 USE AdventureWorks2012;  
@@ -107,7 +107,7 @@ SELECT CardNumber, CardNumber_EncryptedbyPassphrase
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Elegir un algoritmo de cifrado](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbypassphrase-transact-sql.md)  
   

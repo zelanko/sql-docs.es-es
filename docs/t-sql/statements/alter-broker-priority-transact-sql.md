@@ -1,5 +1,5 @@
 ---
-title: ALTER BROKER PRIORITY (Transact-SQL) | Documentos de Microsoft
+title: ALTER BROKER PRIORITY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -64,11 +64,11 @@ FOR CONVERSATION
  SET  
  Especifica los criterios para determinar si la prioridad de conversación se aplica a una conversación. SET es necesario y debe incluir al menos un criterio: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME o PRIORITY_LEVEL.  
   
- CONTRACT_NAME = {*ContractName* | **ANY**}  
- Especifica el nombre de un contrato que se va a usar como criterio para determinar si la prioridad de conversación se aplica a una conversación. *ContractName* es un [!INCLUDE[ssDE](../../includes/ssde-md.md)] identificador y debe especificar el nombre de un contrato de la base de datos actual.  
+ CONTRACT_NAM = {*ContractName* | **ANY**}  
+ Especifica el nombre de un contrato que se va a usar como criterio para determinar si la prioridad de conversación se aplica a una conversación. *ContractName* es un identificador de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y debe especificar el nombre de un contrato en la base de datos actual.  
   
  *ContractName*  
- Especifica que la prioridad de conversación se puede aplicar solo a las conversaciones que la instrucción BEGIN DIALOG que inició la conversación especificó ON CONTRACT *ContractName*.  
+ Especifica que la prioridad de conversación solo se puede aplicar a las conversaciones cuya instrucción BEGIN DIALOG que inició la conversación ha especificado ON CONTRACT *ContractName*.  
   
  ANY  
  Especifica que la prioridad de conversación se puede aplicar a cualquier conversación, independientemente de qué contrato use.  
@@ -78,14 +78,14 @@ FOR CONVERSATION
  LOCAL_SERVICE_NAME = {*LocalServiceName* | **ANY**}  
  Especifica el nombre de un servicio que se va a usar como criterio para determinar si la prioridad de conversación se aplica a un extremo de una conversación.  
   
- *LocalServiceName* es un [!INCLUDE[ssDE](../../includes/ssde-md.md)] identificador y debe especificar el nombre de un servicio en la base de datos actual.  
+ *LocalServiceName* es un identificador de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y debe especificar el nombre de un servicio de la base de datos actual.  
   
  *LocalServiceName*  
  Especifica que la prioridad de conversación se puede aplicar a lo siguiente:  
   
--   Cualquier extremo iniciador de conversación cuyo nombre de servicio iniciador coincida con *LocalServiceName*.  
+-   Cualquier extremo iniciador de conversación cuyo nombre de servicio de iniciador coincida con *LocalServiceName*.  
   
--   Cualquier extremo de conversación de destino cuyo nombre de servicio de destino coincide con *LocalServiceName*.  
+-   Cualquier extremo de destino de conversación cuyo nombre de servicio de destino coincida con *LocalServiceName*.  
   
  ANY  
  -   Especifica que la prioridad de conversación se puede aplicar a cualquier extremo de conversación, independientemente del nombre del servicio local utilizado por el extremo.  
@@ -95,32 +95,32 @@ FOR CONVERSATION
  REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  Especifica el nombre de un servicio que se va a usar como criterio para determinar si la prioridad de conversación se aplica a un extremo de una conversación.  
   
- *RemoteServiceName* es un literal de tipo **nvarchar (256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)]utiliza una comparación byte a byte para que coincida con el *RemoteServiceName* cadena. En la comparación se distinguen mayúsculas y minúsculas, y no se considera la intercalación actual. El servicio de destino puede estar en la instancia actual de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o en una instancia remota de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ *RemoteServiceName* es un literal de tipo **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa una comparación byte a byte para buscar una coincidencia con la cadena *RemoteServiceName*. En la comparación se distinguen mayúsculas y minúsculas, y no se considera la intercalación actual. El servicio de destino puede estar en la instancia actual de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o en una instancia remota de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- '*RemoteServiceName*'  
+ "*RemoteServiceName*"  
  Especifica la prioridad de conversación que se va a asignar a:  
   
--   Cualquier extremo iniciador de conversación cuyo nombre de servicio de destino asociado coincida con *RemoteServiceName*.  
+-   Cualquier extremo de iniciador de conversación cuyo nombre de servicio de destino asociado coincida con *RemoteServiceName*.  
   
--   Cualquier extremo de conversación de destino cuyo nombre de servicio iniciador asociado coincida con *RemoteServiceName*.  
+-   Cualquier extremo de destino de conversación cuyo nombre de servicio de iniciador asociado coincida con *RemoteServiceName*.  
   
  ANY  
  Especifica que la prioridad de conversación se aplica a cualquier extremo de conversación, independientemente del nombre del servicio remoto asociado al extremo.  
   
  Si no se especifica REMOTE_SERVICE_NAME, la propiedad de servicio remoto de la prioridad de conversación no se modifica.  
   
- Valor de PRIORITY_LEVEL = { *PriorityValue* | **predeterminado** }  
- Especifica el nivel de prioridad que se asigna a cualquier extremo de conversación que utilice los contratos y servicios especificados en la prioridad de conversación. *PriorityValue* debe ser un entero literal de 1 (prioridad más baja) y 10 (prioridad más alta).  
+ PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
+ Especifica el nivel de prioridad que se asigna a cualquier extremo de conversación que utilice los contratos y servicios especificados en la prioridad de conversación. *PriorityValue* debe ser un literal entero comprendido entre 1 (prioridad más baja) y 10 (prioridad más alta).  
   
  Si no se especifica PRIORITY_LEVEL, la propiedad de nivel de prioridad no se modifica.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Ninguna de las propiedades modificadas por ALTER BROKER PRIORITY se aplica a las conversaciones existentes. Las conversaciones existentes continúan con la prioridad que les fue asignada cuando se iniciaron.  
   
- Para obtener más información, vea [CREATE BROKER PRIORITY &#40; Transact-SQL &#41; ](../../t-sql/statements/create-broker-priority-transact-sql.md).  
+ Para obtener más información, vea [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
- Permiso para crear una prioridad de conversación de forma predeterminada a los miembros de la **db_ddladmin** o **db_owner** funciones fijas de base de datos y a la **sysadmin** rol fijo de servidor. Requiere el permiso ALTER en la base de datos.  
+## <a name="permissions"></a>Permisos  
+ El permiso para crear una prioridad de conversación recae de forma predeterminada en los miembros de los roles fijos de base de datos **db_ddladmin** o **db_owner**, y en el rol fijo de servidor **sysadmin**. Requiere el permiso ALTER en la base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -145,8 +145,8 @@ ALTER BROKER PRIORITY SimpleContractPriority
          PRIORITY_LEVEL = 8);  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [CREATE BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
  [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
   

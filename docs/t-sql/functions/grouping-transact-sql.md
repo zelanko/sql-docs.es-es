@@ -1,5 +1,5 @@
 ---
-title: "AGRUPACIÓN (Transact-SQL) | Documentos de Microsoft"
+title: GROUPING (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="grouping-transact-sql"></a>GROUPING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Indica si una expresión de columna especificada en una lista GROUP BY es agregada o no. GROUPING devuelve 1 para agregado y 0 para no agregado, en el conjunto de resultados. AGRUPACIÓN puede usarse solo en la instrucción SELECT \<seleccione > enumerar, HAVING y se ORDENA por cláusulas cuando se especifica GROUP BY.  
+  Indica si una expresión de columna especificada en una lista GROUP BY es agregada o no. GROUPING devuelve 1 para agregado y 0 para no agregado, en el conjunto de resultados. GROUPING solo se puede usar en la lista de SELECT \<selección>, cláusulas HAVING y ORDER BY cuando se especifica GROUP BY.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,13 +51,13 @@ GROUPING ( <column_expression> )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- \<expresióndecolumna >  
- Es una columna o una expresión que contiene una columna de un [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) cláusula.  
+ \<column_expression>  
+ Es una columna o una expresión que contiene una columna en una cláusula [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **tinyint**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  GROUPING se utiliza para distinguir entre los valores NULL devueltos por ROLLUP, CUBE o GROUPING SETS y los valores NULL normales. El valor NULL devuelto como resultado de una operación ROLLUP, CUBE o GROUPING SETS es un uso especial de NULL. Actúa como marcador de posición de columna en el conjunto de resultados y significa "todos".  
   
 ## <a name="examples"></a>Ejemplos  
@@ -70,7 +70,7 @@ GROUP BY SalesQuota WITH ROLLUP;
 GO  
 ```  
   
- El conjunto de resultados muestra dos valores NULL bajo `SalesQuota`. El primer valor `NULL` representa el grupo de valores NULL de esta columna en la tabla. El segundo valor `NULL` se encuentra en la fila de resumen que agrega la operación ROLLUP. La fila de resumen muestra la `TotalSalesYTD` cantidades para todos los `SalesQuota` agrupa y se indica mediante `1` en la `Grouping` columna.  
+ El conjunto de resultados muestra dos valores NULL bajo `SalesQuota`. El primer valor `NULL` representa el grupo de valores NULL de esta columna en la tabla. El segundo valor `NULL` se encuentra en la fila de resumen que agrega la operación ROLLUP. La fila de resumen indica las cantidades de `TotalSalesYTD` de todos los grupos `SalesQuota`, como señala el valor `1` en la columna `Grouping`.  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
@@ -85,8 +85,8 @@ NULL           44294026.1344         1
 (4 row(s) affected)
 ```  
   
-## <a name="see-also"></a>Vea también  
- [GROUPING_ID &#40; Transact-SQL &#41;](../../t-sql/functions/grouping-id-transact-sql.md)   
- [GROUP BY &#40; Transact-SQL &#41;](../../t-sql/queries/select-group-by-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [GROUPING_ID &#40;Transact-SQL&#41;](../../t-sql/functions/grouping-id-transact-sql.md)   
+ [GROUP BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-group-by-transact-sql.md)  
   
   

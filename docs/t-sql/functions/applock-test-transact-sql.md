@@ -1,5 +1,5 @@
 ---
-title: APPLOCK_TEST (Transact-SQL) | Documentos de Microsoft
+title: APPLOCK_TEST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -50,34 +50,34 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
   
 ## <a name="arguments"></a>Argumentos  
 **'** *database_principal* **'**  
-Es el usuario, el rol o el rol de aplicación al que se pueden conceder permisos para los objetos de la base de datos. El llamador de la función debe ser un miembro de *database_principal*, **dbo**, o la **db_owner** rol fijo de base de datos para poder llamar a la función correctamente.
+Es el usuario, el rol o el rol de aplicación al que se pueden conceder permisos para los objetos de la base de datos. El autor de la llamada de la función debe ser miembro de *database_principal*, **dbo** o del rol fijo de base de datos **db_owner** para poder llamar a la función correctamente.
   
 **'** *resource_name* **'**  
-Es un nombre de recurso de bloqueo especificado por la aplicación cliente. La aplicación debe garantizar que el recurso es único. El nombre especificado se convierte internamente mediante un algoritmo hash en un valor que puede almacenarse en el administrador de bloqueos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name*es **nvarchar (255)** no tiene ningún valor predeterminado. *resource_name* se compara binario y distingue mayúsculas de minúsculas, independientemente de la configuración de intercalación de la base de datos actual.
+Es un nombre de recurso de bloqueo especificado por la aplicación cliente. La aplicación debe garantizar que el recurso es único. El nombre especificado se convierte internamente mediante un algoritmo hash en un valor que puede almacenarse en el administrador de bloqueos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* es **nvarchar(255)** y no tiene ningún valor predeterminado. *resource_name* se compara con un binario y distingue mayúsculas de minúsculas, independientemente de la configuración de intercalación de la base de datos actual.
   
 **'** *lock_mode* **'**  
-Es el modo de bloqueo que se va a obtener para un recurso determinado. *Lock_Mode* es **nvarchar (32)** y no tiene ningún valor predeterminado. El valor puede ser cualquiera de las siguientes acciones: **Shared**, **actualización**, **IntentShared**, **IntentExclusive**, **exclusivo** .
+Es el modo de bloqueo que se va a obtener para un recurso determinado. *lock_mode* es **nvarchar(32)** y carece de valor predeterminado. El valor puede ser: **Shared**, **Update**, **IntentShared**, **IntentExclusive**, **Exclusive**.
   
 **'** *lock_owner* **'**  
-Es el propietario del bloqueo, que es el *lock_owner* valor cuando se solicitó el bloqueo. *lock_owner* es **nvarchar (32)**. El valor puede ser **transacciones** (valor predeterminado) o **sesión**. Si predeterminado o **transacciones** se especifica explícitamente, debe ejecutarse APPLOCK_TEST desde dentro de una transacción.
+Es el propietario del bloqueo, que es el valor de *lock_owner* cuando se solicitó el bloqueo. *lock_owner* es **nvarchar(32)**. El valor puede ser **Transaction** (predeterminado) o **Session**. Si se especifica el valor predeterminado o **Transaction** explícitamente, debe ejecutarse APPLOCK_TEST desde una transacción.
   
-## <a name="return-types"></a>Tipos de valor devuelto
+## <a name="return-types"></a>Tipos de valores devueltos
 **smallint**
   
 ## <a name="return-value"></a>Valor devuelto
 Devuelve 0 cuando no se puede conceder el bloqueo al propietario especificado y devuelve 1 si se puede conceder el bloqueo.
   
-## <a name="function-properties"></a>Propiedades de la función
-**No determinista**
+## <a name="function-properties"></a>Propiedades de las funciones
+**Nondeterministic**
   
-**No indizable**
+**Nonindexable**
   
-**No Paralelizable**
+**Nonparallelizable**
   
 ## <a name="examples"></a>Ejemplos  
-En el ejemplo siguiente, dos usuarios (**usuario A** y **usuario B**) con sesiones independientes ejecutan la siguiente secuencia de [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones.
+En el ejemplo siguiente, dos usuarios (**Usuario A** y **Usuario B**) con sesiones independientes ejecutan la siguiente secuencia de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
-**El usuario A** se ejecuta:
+El **Usuario A** ejecuta:
   
 ```sql
 USE AdventureWorks2012;  
@@ -93,7 +93,7 @@ SELECT APPLOCK_MODE('public', 'Form1', 'Transaction');
 GO  
 ```  
   
-**El usuario B** , a continuación, se ejecuta:
+Después, el **Usuario B** ejecuta:
   
 ```sql
 Use AdventureWorks2012;  
@@ -110,14 +110,14 @@ SELECT APPLOCK_TEST('public', 'Form1', 'Exclusive', 'Transaction');
 GO  
 ```  
   
-**El usuario A** , a continuación, se ejecuta:
+Después, el **Usuario A** ejecuta:
   
 ```sql
 EXEC sp_releaseapplock @Resource='Form1', @DbPrincipal='public';  
 GO  
 ```  
   
-**El usuario B** , a continuación, se ejecuta:
+Después, el **Usuario B** ejecuta:
   
 ```sql
 SELECT APPLOCK_TEST('public', 'Form1', 'Exclusive', 'Transaction');  
@@ -125,7 +125,7 @@ SELECT APPLOCK_TEST('public', 'Form1', 'Exclusive', 'Transaction');
 GO  
 ```  
   
-**El usuario A** y **usuario B** , a continuación, se ejecutan ambos:
+Después, el **Usuario A** y el **Usuario B** ejecutan:
   
 ```sql
 COMMIT TRAN;  
@@ -133,8 +133,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también
-[APPLOCK_MODE &#40; Transact-SQL &#41;](../../t-sql/functions/applock-mode-transact-sql.md)  
-[sp_getapplock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
-[sp_releaseapplock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
+[APPLOCK_MODE &#40;Transact-SQL&#41;](../../t-sql/functions/applock-mode-transact-sql.md)  
+[sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+[sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
   
   

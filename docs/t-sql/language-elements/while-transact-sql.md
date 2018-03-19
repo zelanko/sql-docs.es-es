@@ -1,5 +1,5 @@
 ---
-title: AL (Transact-SQL) | Documentos de Microsoft
+title: WHILE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -62,18 +62,18 @@ WHILE Boolean_expression
   
 ## <a name="arguments"></a>Argumentos  
  *Boolean_expression*  
- Es un [expresión](../../t-sql/language-elements/expressions-transact-sql.md) que devuelve **TRUE** o **FALSE**. Si la expresión booleana contiene una instrucción SELECT, la instrucción SELECT debe ir entre paréntesis.  
+ Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) que devuelve **TRUE** o **FALSE**. Si la expresión booleana contiene una instrucción SELECT, la instrucción SELECT debe ir entre paréntesis.  
   
  {*sql_statement* | *statement_block*}  
- Es cualquier [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones o agrupación tal como se define con un bloque de instrucciones. Para definir un bloque de instrucciones, utilice las palabras clave de control de flujo BEGIN y END.  
+ Se trata de cualquier instrucción o grupo de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] definidas con un bloque de instrucciones. Para definir un bloque de instrucciones, utilice las palabras clave de control de flujo BEGIN y END.  
   
  BREAK  
- Produce la salida del bucle WHILE más interno. Las instrucciones que aparecen después de la palabra clave END, marca el final del bucle, se ejecutan.  
+ Produce la salida del bucle WHILE más interno. Se ejecutan las instrucciones que aparecen después de la palabra clave END, que marca el final del bucle.  
   
  CONTINUE  
  Hace que se reinicie el bucle WHILE y omite las instrucciones que haya después de la palabra clave CONTINUE.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si dos o más bucles WHILE están anidados, la instrucción BREAK interna sale al siguiente bucle más externo. Todas las instrucciones que se encuentran después del final del bucle interno deben ejecutarse primero y después se reinicia el siguiente bucle más externo.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -116,10 +116,10 @@ DEALLOCATE Employee_Cursor;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-while-loop"></a>C: simple bucle While  
- En el ejemplo siguiente, si el precio de venta promedio de un producto es inferior a `$300`, el bucle `WHILE` dobla los precios y, a continuación, selecciona el precio máximo. Si el precio máximo es menor o igual que `$500`, el bucle `WHILE` se reinicia y vuelve a doblar los precios. Este bucle continúa doblando los precios hasta que el precio máximo es mayor que `$500`y, a continuación, se cierra el `WHILE` bucle.  
+### <a name="c-simple-while-loop"></a>C: Bucle WHILE simple  
+ En el ejemplo siguiente, si el precio de venta promedio de un producto es inferior a `$300`, el bucle `WHILE` dobla los precios y, a continuación, selecciona el precio máximo. Si el precio máximo es menor o igual que `$500`, el bucle `WHILE` se reinicia y vuelve a doblar los precios. Este bucle continúa doblando los precios hasta que el precio máximo es mayor que `$500`, después de lo cual sale del bucle `WHILE`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -135,9 +135,9 @@ END
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [Lenguaje de control de flujo &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [Lenguaje de control de flujo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Cursores &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  

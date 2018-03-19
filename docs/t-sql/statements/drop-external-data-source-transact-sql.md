@@ -1,5 +1,5 @@
 ---
-title: Coloque el origen de datos externo (Transact-SQL) | Documentos de Microsoft
+title: DROP EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -26,7 +26,7 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="drop-external-data-source-transact-sql"></a>Coloque el origen de datos externo (Transact-SQL)
+# <a name="drop-external-data-source-transact-sql"></a>DROP EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Quita un origen de datos externo de PolyBase.  
@@ -43,33 +43,33 @@ DROP EXTERNAL DATA SOURCE external_data_source_name
   
 ## <a name="arguments"></a>Argumentos  
  *external_data_source_name*  
- El nombre del origen de datos externo para quitar.  
+ Nombre del origen de datos externo que se va a quitar.  
   
 ## <a name="metadata"></a>Metadatos  
- Para ver una lista de datos externos orígenes usan la vista del sistema sys.external_data_sources.  
+ Para ver una lista de orígenes de datos externos se usa la vista del sistema sys.external_data_sources.  
   
 ```  
 SELECT * FROM sys.external_data_sources;  
 ```  
   
-## <a name="permissions"></a>Permissions  
- Requiere modificar cualquier origen de datos externo.  
+## <a name="permissions"></a>Permisos  
+ Requiere ALTER ANY EXTERNAL DATA SOURCE.  
   
 ## <a name="locking"></a>Bloqueo  
- Tiene un bloqueo compartido en el objeto de origen de datos externo.  
+ Toma un bloqueo compartido en el objeto EXTERNAL DATA SOURCE.  
   
 ## <a name="general-remarks"></a>Notas generales  
- Al quitar un origen de datos externo, no quita los datos externos.  
+ Al quitar un origen de datos externo, no se quitan los datos externos.  
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-basic-syntax"></a>A. Con la sintaxis básica  
+### <a name="a-using-basic-syntax"></a>A. Usar sintaxis básica  
   
 ```  
 DROP EXTERNAL DATA SOURCE mydatasource;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)  
   
   

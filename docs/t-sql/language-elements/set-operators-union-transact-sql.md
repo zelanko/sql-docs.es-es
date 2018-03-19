@@ -1,5 +1,5 @@
 ---
-title: UNION (Transact-SQL) | Documentos de Microsoft
+title: UNION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="set-operators---union-transact-sql"></a>Operadores - de conjuntos UNION (Transact-SQL)
+# <a name="set-operators---union-transact-sql"></a>Operadores de conjuntos: UNION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Combina los resultados de dos o más consultas en un solo conjunto de resultados que incluye todas las filas que pertenecen a las consultas de la unión. La operación UNION es distinta de la utilización de combinaciones de columnas de dos tablas.  
@@ -57,9 +57,9 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-\<query_specification > | ( \<query_expression >) es una especificación de consulta o expresión de consulta que devuelve datos que se combinarán con los datos de otra consulta especificación o expresión de consulta. No es preciso que las definiciones de las columnas que forman parte de una operación UNION sean iguales, pero deben ser compatibles a través de una conversión implícita. Cuando los tipos de datos difieren, el tipo de datos resultante se determina según las reglas de [prioridad de tipo de datos](../../t-sql/data-types/data-type-precedence-transact-sql.md). Cuando los tipos son los mismos pero varían en cuanto a precisión, escala o longitud, el resultado se determina según las mismas reglas para combinar expresiones. Para más información, vea [Precisión, escala y longitud &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
+\<especificación_de_consulta> | ( \<expresión_de_consulta> ) es una especificación o expresión de consulta que devuelve datos que se van a combinar con los de otra especificación o expresión de consulta. No es preciso que las definiciones de las columnas que forman parte de una operación UNION sean iguales, pero deben ser compatibles a través de una conversión implícita. Cuando los tipos de datos difieren, el tipo de datos resultante se determina según las reglas de [prioridad de tipo de datos](../../t-sql/data-types/data-type-precedence-transact-sql.md). Cuando los tipos son los mismos pero varían en cuanto a precisión, escala o longitud, el resultado se determina según las mismas reglas para combinar expresiones. Para más información, vea [Precisión, escala y longitud &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
- Columnas de la **xml** tipo de datos debe ser equivalente. Todas las columnas deben tener un tipo de esquema XML o no tener tipo. Si tienen tipo, debe ser el de la misma colección de esquemas XML.  
+ Las columnas con el tipo de datos **xml** deben ser equivalentes. Todas las columnas deben tener un tipo de esquema XML o no tener tipo. Si tienen tipo, debe ser el de la misma colección de esquemas XML.  
   
  UNION  
  Especifica que se deben combinar varios conjuntos de resultados para ser devueltos como un solo conjunto de resultados.  
@@ -246,10 +246,10 @@ GO
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-a-simple-union"></a>E. Usar una instrucción UNION simple  
- En el ejemplo siguiente, el conjunto de resultados incluye el contenido de la `CustomerKey` columnas de ambos el `FactInternetSales` y `DimCustomer` tablas. Puesto que no se usa la palabra clave ALL, los duplicados se excluyen de los resultados.  
+ En el ejemplo siguiente, el conjunto de resultados incluye el contenido de las columnas `CustomerKey` de las tablas `FactInternetSales` y `DimCustomer`. Puesto que no se usa la palabra clave ALL, los duplicados se excluyen de los resultados.  
   
 ```  
 -- Uses AdventureWorks  
@@ -263,7 +263,7 @@ ORDER BY CustomerKey;
 ```  
   
 ### <a name="f-using-union-of-two-select-statements-with-order-by"></a>F. Usar UNION con dos instrucciones SELECT y ORDER BY  
- Cuando una instrucción SELECT en una instrucción UNION incluye una cláusula ORDER BY, se debe colocar esa cláusula después de todas las instrucciones SELECT. En el ejemplo siguiente se muestra el uso correcto e incorrecto de `UNION` en dos `SELECT` las instrucciones en el que se ordena una columna con ORDER BY.  
+ Cuando una instrucción SELECT en una instrucción UNION incluye una cláusula ORDER BY, esa cláusula se debe colocar detrás de todas las instrucciones SELECT. En el ejemplo siguiente se muestra el uso correcto e incorrecto de `UNION` en dos instrucciones `SELECT` en las que se ordena una columna con ORDER BY.  
   
 ```  
 -- Uses AdventureWorks  
@@ -288,8 +288,8 @@ FROM DimCustomer
 ORDER BY CustomerKey;  
 ```  
   
-### <a name="g-using-union-of-two-select-statements-with-where-and-order-by"></a>G. Mediante la unión de dos instrucciones SELECT con WHERE y ORDER BY  
- En el ejemplo siguiente se muestra el uso correcto e incorrecto de `UNION` en dos `SELECT` instrucciones donde donde y son necesarias ORDER BY.  
+### <a name="g-using-union-of-two-select-statements-with-where-and-order-by"></a>G. Uso de UNION de dos instrucciones SELECT con WHERE y ORDER BY  
+ En el ejemplo siguiente se muestra el uso correcto e incorrecto de `UNION` en dos instrucciones `SELECT` en las que se necesita WHERE y ORDER BY.  
   
 ```  
 -- Uses AdventureWorks  
@@ -316,12 +316,12 @@ FROM DimCustomer
 ORDER BY CustomerKey;  
 ```  
   
-### <a name="h-using-union-of-three-select-statements-to-show-effects-of-all-and-parentheses"></a>H. Utilizar UNION de tres instrucciones SELECT para mostrar los efectos de ALL y los paréntesis  
- Los ejemplos siguientes usan `UNION` para combinar los resultados de **la misma tabla** para mostrar los efectos de ALL y los paréntesis al usar `UNION`.  
+### <a name="h-using-union-of-three-select-statements-to-show-effects-of-all-and-parentheses"></a>H. Uso de UNION de tres instrucciones SELECT para mostrar los efectos de ALL y los paréntesis  
+ En los ejemplos siguientes se usa `UNION` para combinar los resultados de **la misma tabla** para mostrar los efectos de ALL y los paréntesis al usar `UNION`.  
   
- El primer ejemplo se utiliza `UNION ALL` para mostrar duplicado registros y devuelve cada fila de la tabla de origen tres veces. El segundo ejemplo usa `UNION` sin `ALL` para eliminar las filas duplicadas de los resultados combinados de las tres `SELECT` instrucciones y devuelve solo las filas sin duplicar la tabla de origen.  
+ En el primer ejemplo se usa `UNION ALL` para mostrar los registros duplicados y se devuelve tres veces cada fila de la tabla de origen. En el segundo ejemplo se usa `UNION` sin `ALL` para eliminar las filas duplicadas de los resultados combinados de las tres instrucciones `SELECT` y solo se devuelven las filas sin duplicar de la tabla de origen.  
   
- El tercer ejemplo se utiliza `ALL` con la primera `UNION` y el segundo entre paréntesis `UNION` que está usando no `ALL`. El segundo `UNION` se procesa en primer lugar porque está entre paréntesis. Devuelve solo las filas sin duplicar de la tabla porque el `ALL` no se utiliza la opción y se quitan los duplicados. Estas filas se combinan con los resultados de la primera `SELECT` utilizando el `UNION ALL` palabras clave. Esto no quita los duplicados entre los dos conjuntos.  
+ En el tercer ejemplo se usa `ALL` con la primera `UNION` y los paréntesis para incluir a la segunda `UNION` que no usa `ALL`. La segunda `UNION` se procesa en primer lugar porque está entre paréntesis. Solo devuelve las filas sin duplicar de la tabla porque no se usa la opción `ALL` y los duplicados se quitan. Estas filas se combinan con los resultados de la primera instrucción `SELECT` mediante las palabras clave `UNION ALL`. Esto no quita los duplicados entre los dos conjuntos.  
   
 ```  
 -- Uses AdventureWorks  
@@ -356,9 +356,9 @@ FROM DimCustomer
 );  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [Ejemplos SELECT &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)  
+ [Ejemplos de SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)  
   
   
 

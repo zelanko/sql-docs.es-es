@@ -1,5 +1,5 @@
 ---
-title: STInteriorRingN (tipo de datos geometry) | Documentos de Microsoft
+title: STInteriorRingN (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stinteriorringn-geometry-data-type"></a>STInteriorRingN (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve el anillo interior especificado de un **Polygongeometry** instancia.
+Devuelve el anillo interior especificado de una instancia de **geometry** de Polygon.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,20 +45,20 @@ Devuelve el anillo interior especificado de un **Polygongeometry** instancia.
   
 ## <a name="arguments"></a>Argumentos  
  *expression*  
- Es un **int** expresión entre 1 y el número de anillos interiores de la **geometry** instancia.  
+ Es una expresión **int** entre 1 y el número de anillos interiores en la instancia de **geometry**.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geometry**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
- Abrir tipo Geospatial Consortium (OGC): **LineString**  
+ Tipo Open Geospatial Consortium (OGC): **LineString**  
   
-## <a name="remarks"></a>Comentarios  
- Este método devuelve **null** si la **geometry** instancia no es un polígono. Este método también producirá un **ArgumentOutOfRangeException** si la expresión es mayor que el número de anillos. Se puede devolver el número de anillos usando `STNumInteriorRing``()`.  
+## <a name="remarks"></a>Notas  
+ Este método devuelve **null** si la instancia de **geometry** no es un polígono. Este método también producirá una excepción **ArgumentOutOfRangeException** si la expresión es mayor que el número de anillos. El número de anillos se puede devolver usando `STNumInteriorRing``()`.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se crea un `Polygon` instancia y se utiliza `STInteriorRingN()` para devolver el anillo interior del polígono como un **LineString**.  
+ En el siguiente ejemplo se crea una instancia de `Polygon` y se usa `STInteriorRingN()` para devolver el anillo interior del polígono como un elemento **LineString**.  
   
 ```  
 DECLARE @g geometry;  
@@ -66,7 +66,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 
 SELECT @g.STInteriorRingN(1).ToString();  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

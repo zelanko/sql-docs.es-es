@@ -1,5 +1,5 @@
 ---
-title: Permisos de esquema GRANT (Transact-SQL) | Documentos de Microsoft
+title: GRANT (permisos de esquema de Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/19/2017
 ms.prod: sql-non-specified
@@ -48,11 +48,11 @@ GRANT permission  [ ,...n ] ON SCHEMA :: schema_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permiso*  
+ *permission*  
  Especifica un permiso que se puede conceder en un esquema. Para obtener una lista de permisos, vea la sección Comentarios más adelante en este tema.  
   
- ESQUEMA ON **::** esquema*_name*  
- Especifica el esquema en el que se va a conceder el permiso. El calificador de ámbito **::** es necesario.  
+ ON SCHEMA **::** schema*_name*  
+ Especifica el esquema en el que se va a conceder el permiso. El calificador de ámbito **::** es obligatorio.  
   
  *database_principal*  
  Especifica la entidad de seguridad para la que se concede el permiso. Uno de los siguientes:  
@@ -81,7 +81,7 @@ AS *granting_principal*
 -   usuario de base de datos asignado a una clave asimétrica  
 -   usuario de base de datos no asignado a una entidad de seguridad del servidor  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 > [!IMPORTANT]  
 >  En algunos casos, una combinación de los permisos ALTER y REFERENCE podría permitir al receptor ver datos o ejecutar funciones no autorizadas. Por ejemplo, un usuario con el permiso ALTER en una tabla y el permiso REFERENCE en una función puede crear una columna calculada sobre una función y hacer que se ejecute. En este caso, el usuario también debe disponer del permiso SELECT en la columna calculada.  
@@ -93,7 +93,7 @@ AS *granting_principal*
 |ALTER|CONTROL|ALTER ANY SCHEMA|  
 |CONTROL|CONTROL|CONTROL|  
 |CREATE SEQUENCE|ALTER|ALTER ANY SCHEMA|  
-|DELETE|CONTROL|DELETE|  
+|Delete|CONTROL|Delete|  
 |Ejecute|CONTROL|Ejecute|  
 |INSERT|CONTROL|INSERT|  
 |REFERENCES|CONTROL|REFERENCES|  
@@ -116,7 +116,7 @@ AS *granting_principal*
   
  Para obtener más información, vea el artículo número 914847 de la Microsoft Knowledge Base.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  El otorgante del permiso (o la entidad de seguridad especificada con la opción AS) debe tener el permiso con GRANT OPTION, o un permiso superior que implique el permiso que se va a conceder.  
   
  Si se utiliza la opción AS, debe tener en cuenta los requisitos adicionales siguientes.  
@@ -150,18 +150,18 @@ GRANT INSERT ON SCHEMA :: HumanResources TO guest;
 GRANT SELECT ON SCHEMA :: Person TO WilJo WITH GRANT OPTION;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [DENEGAR permisos de esquema &#40; Transact-SQL &#41;](../../t-sql/statements/deny-schema-permissions-transact-sql.md)   
- [REVOCAR permisos de esquema &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [DENY &#40;permisos de esquema de Transact-SQL&#41;](../../t-sql/statements/deny-schema-permissions-transact-sql.md)   
+ [REVOKE &#40;permisos de esquema de Transact-SQL&#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [Crear rol de aplicación &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [Sys.fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

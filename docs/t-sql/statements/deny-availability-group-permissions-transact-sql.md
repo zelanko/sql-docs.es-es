@@ -1,5 +1,5 @@
 ---
-title: DENEGAR permisos de grupo de disponibilidad (Transact-SQL) | Documentos de Microsoft
+title: DENY (permisos de grupos de disponibilidad de Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="deny-availability-group-permissions-transact-sql"></a>Disponibilidad de los permisos de grupo DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Deniega permisos en un grupo de disponibilidad AlwaysOn en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Deniega los permisos en un grupo de disponibilidad Always On de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -55,13 +55,13 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permiso*  
+ *permission*  
  Especifica un permiso que se puede denegar en un grupo de disponibilidad. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
- EN el grupo de disponibilidad **::***availability_group_name*  
- Especifica el grupo de disponibilidad en el que se va a denegar el permiso. El calificador de ámbito (**::**) es necesario.  
+ ON AVAILABILITY GROUP **::***availability_group_name*  
+ Especifica el grupo de disponibilidad en el que se va a denegar el permiso. Se necesita el calificador de ámbito (**::**).  
   
- PARA \<entidadseguridadservidor >  
+ TO \<server_principal>  
  Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el que se va a denegar el permiso.  
   
  *SQL_Server_login*  
@@ -82,10 +82,10 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  AS *SQL_Server_login*  
  Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del que la entidad de seguridad que ejecuta esta consulta deriva su derecho de denegar el permiso.  
   
-## <a name="remarks"></a>Comentarios  
- Se pueden denegar permisos en el ámbito del servidor solo cuando la base de datos actual es **principal**.  
+## <a name="remarks"></a>Notas  
+ Los permisos del ámbito del servidor solo pueden denegarse si la base de datos actual es **master**.  
   
- Información acerca de los grupos de disponibilidad está visible en el [sys.availability_groups &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) vista de catálogo. Información acerca de los permisos de servidor está visible en el [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) vista de catálogo e información sobre las entidades de seguridad de servidor está visible en el [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) vista de catálogo.  
+ Encontrará información sobre los grupos de disponibilidad en la vista de catálogo [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md). Puede ver la información sobre los permisos del servidor en la vista de catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md), mientras que la información sobre las entidades de seguridad de servidor puede verse en la vista de catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Un grupo de disponibilidad es un elemento protegible en el nivel servidor. La mayoría de permisos limitados y específicos que se pueden denegar en un grupo de disponibilidad se muestran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.  
   
@@ -97,7 +97,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL en el grupo de disponibilidad o el permiso ALTER ANY AVAILABILTIY GROUP en el servidor.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -111,7 +111,7 @@ DENY VIEW DEFINITION ON AVAILABILITY GROUP::MyAg TO ZArifin;
 GO  
 ```  
   
-### <a name="b-denying-take-ownership-permission-with-the-cascade-option"></a>B. Denegar el permiso TAKE OWNERSHIP con la opción CASCADE  
+### <a name="b-denying-take-ownership-permission-with-the-cascade-option"></a>B. Denegar el permiso TAKE OWNERSHIP con CASCADE OPTION  
  En el siguiente ejemplo se deniega el permiso `TAKE OWNERSHIP` en el grupo de disponibilidad `MyAg` al usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` con la opción `CASCADE`.  
   
 ```  
@@ -121,11 +121,11 @@ DENY TAKE OWNERSHIP ON AVAILABILITY GROUP::MyAg TO PKomosinski
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Permisos de grupo de disponibilidad REVOKE &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-availability-group-permissions-transact-sql.md)   
- [Permisos de grupo de disponibilidad de GRANT &#40; Transact-SQL &#41;](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [REVOKE Availability Group Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-availability-group-permissions-transact-sql.md)  [REVOKE &#40;permisos de grupos de disponibilidad de Transact-SQL&#41;]  
+ [GRANT Availability Group Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)  [GRANT &#40;permisos de grupos de disponibilidad de Transact-SQL&#41;]  
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [Sys.availability_groups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
+ [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [Vistas de catálogo de grupos de disponibilidad AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

@@ -1,5 +1,5 @@
 ---
-title: Permisos de objeto GRANT (Transact-SQL) | Documentos de Microsoft
+title: GRANT (permisos de objeto de Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -62,7 +62,7 @@ GRANT <permission> [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permiso*  
+ *permission*  
  Especifica un permiso que se puede conceder para un objeto contenido en un esquema. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
  ALL  
@@ -77,22 +77,22 @@ GRANT <permission> [ ,...n ] ON
 PRIVILEGES  
  Incluido por compatibilidad con [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92. No cambia el comportamiento de ALL.  
   
-*columna*  
- Especifica el nombre de una columna en una tabla, vista o función con valores de tabla en la que se concede el permiso. Los paréntesis () son necesarios. Solo es posible conceder los permisos SELECT, REFERENCES y UPDATE para una columna. *columna* se pueden especificar en la cláusula de permisos o después del nombre del elemento protegible.  
+*column*  
+ Especifica el nombre de una columna en una tabla, vista o función con valores de tabla en la que se concede el permiso. Los paréntesis ( ) son obligatorios. Solo es posible conceder los permisos SELECT, REFERENCES y UPDATE para una columna. Se puede especificar *column* en la cláusula de permisos o después del nombre del elemento protegible.  
   
 > [!CAUTION]  
 >  Un permiso DENY de nivel de tabla no tiene prioridad sobre uno GRANT de nivel de columna. Se ha conservado esta incoherencia en la jerarquía de permisos para mantener la compatibilidad con versiones anteriores.  
   
- ON [objeto::] [ *schema_name* ]. *object_name*  
- Especifica el objeto en el que se va a conceder el permiso. La frase OBJECT es opcional si *schema_name* se especifica. Si se utiliza la frase OBJECT, se requiere el calificador de ámbito (::).  Si *schema_name* no se especifica, se utiliza el esquema predeterminado. Si *schema_name* se especifica, se requiere el calificador de ámbito de esquema (.).  
+ ON [ OBJECT :: ] [ *schema_name* ] . *object_name*  
+ Especifica el objeto en el que se va a conceder el permiso. La frase OBJECT es opcional si se especifica *schema_name*. Si se utiliza la frase OBJECT, se requiere el calificador de ámbito (::).  Si no se especifica *schema_name*, se usa el esquema predeterminado. Si se especifica *schema_name*, se necesita el calificador de ámbito de esquema (.).  
   
- PARA \<database_principal >  
+ TO \<database_principal>  
  Especifica la entidad de seguridad para la que se concede el permiso.  
   
  WITH GRANT OPTION  
  Indica que la entidad de seguridad también podrá conceder el permiso especificado a otras entidades de seguridad.  
   
- AS \<database_principal > especifica una entidad de seguridad de la que la entidad de seguridad para ejecutar esta consulta deriva su derecho a conceder el permiso.  
+ AS \<database_principal> especifica una entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de conceder el permiso.  
   
  *Database_user*  
  Especifica un usuario de base de datos.  
@@ -118,12 +118,12 @@ PRIVILEGES
  *Database_user_with_no_login*  
  Especifica un usuario de base de datos sin entidad de seguridad de servidor correspondiente.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 > [!IMPORTANT]  
 >  En algunos casos, una combinación de los permisos ALTER y REFERENCE podría permitir al receptor ver datos o ejecutar funciones no autorizadas. Por ejemplo, un usuario con el permiso ALTER en una tabla y el permiso REFERENCE en una función puede crear una columna calculada sobre una función y hacer que se ejecute. En este caso, el usuario también necesitaría el permiso SELECT en la columna calculada.  
   
- Puede ver la información acerca de objetos en varias vistas de catálogo. Para obtener más información, vea [vistas de catálogo de objetos &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
+ Puede ver la información acerca de objetos en varias vistas de catálogo. Para más información, vea [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md) [Vistas de catálogo de objetos &#40;Transact-SQL&#41;].  
   
  Un objeto es un elemento protegible de nivel de esquema que contiene el esquema que es su entidad primaria en la jerarquía de permisos. La mayoría de los permisos limitados y específicos que se pueden conceder para un objeto se muestran en la siguiente tabla, junto con los permisos más generales que los incluyen por implicación.  
   
@@ -131,7 +131,7 @@ PRIVILEGES
 |-----------------------|----------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER|  
 |CONTROL|CONTROL|CONTROL|  
-|DELETE|CONTROL|DELETE|  
+|Delete|CONTROL|Delete|  
 |Ejecute|CONTROL|Ejecute|  
 |INSERT|CONTROL|INSERT|  
 |RECEIVE|CONTROL|CONTROL|  
@@ -142,7 +142,7 @@ PRIVILEGES
 |VIEW CHANGE TRACKING|CONTROL|VIEW CHANGE TRACKING|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  El otorgante del permiso (o la entidad de seguridad especificada con la opción AS) debe tener el permiso con GRANT OPTION, o un permiso superior que implique el permiso que se va a conceder.  
   
  Si utiliza la opción AS, se aplican los siguientes requisitos adicionales.  
@@ -212,16 +212,16 @@ GRANT EXECUTE ON dbo.uspGetBillOfMaterials TO newrole ;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Permisos de objeto DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)   
- [REVOCAR permisos de objeto &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)   
- [Vistas de catálogo de objetos &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [REVOKE &#40;permisos de objeto de Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)   
+ [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  [Vistas de catálogo de objetos (Transact-SQL)]  
  [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
- [Sys.fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
   
   
 

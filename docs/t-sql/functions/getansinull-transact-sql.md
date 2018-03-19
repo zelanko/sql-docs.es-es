@@ -1,5 +1,5 @@
 ---
-title: GETANSINULL (Transact-SQL) | Documentos de Microsoft
+title: GETANSINULL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -49,13 +49,13 @@ GETANSINULL ( [ 'database' ] )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- '*base de datos*'  
- Es el nombre de la base de datos para la que se devuelve información sobre nulabilidad. *base de datos*sea **char** o **nchar**. Si **char**, *base de datos* se convierte implícitamente en **nchar**.  
+ "*database*"  
+ Es el nombre de la base de datos para la que se devuelve información sobre nulabilidad. *database* es o **char** o **nchar**. Si **char**, *database* se convierte implícitamente en **nchar**.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **int**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando la nulabilidad de la base de datos especificada permite valores NULL y la nulabilidad de la columna o del tipo de datos no está definida explícitamente, GETANSINULL devuelve 1. Este valor es el predeterminado para ANSI NULL.  
   
  Para habilitar el comportamiento predeterminado de ANSI NULL, se debe establecer una de las siguientes condiciones:  
@@ -85,7 +85,7 @@ GO
 (1 row(s) affected)
  ```  
   
-## <a name="see-also"></a>Vea también  
- [Funciones del sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

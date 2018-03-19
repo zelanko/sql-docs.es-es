@@ -1,5 +1,5 @@
 ---
-title: TAN (Transact-SQL) | Documentos de Microsoft
+title: TAN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ TAN ( float_expression )
   
 ## <a name="arguments"></a>Argumentos  
  *float_expression*  
- Es un [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de tipo **float** o de un tipo que pueda convertirse implícitamente a **float**, interpreta como número de radianes.  
+ Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de tipo **float** o de un tipo que puede convertirse implícitamente a **float**, interpretado como un número de radianes.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **float**  
@@ -66,8 +66,8 @@ SELECT TAN(PI()/2);
 1.6331778728383844E+16  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- El ejemplo siguiente devuelve la tangente de.45.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ En el siguiente ejemplo se devuelve la tangente de .45.  
   
 ```  
 SELECT TAN(.45);  
@@ -80,8 +80,8 @@ SELECT TAN(.45);
 0.48
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Funciones matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [Funciones matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

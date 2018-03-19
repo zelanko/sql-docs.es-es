@@ -1,5 +1,5 @@
 ---
-title: DECLARAR @local_variable (Transact-SQL) | Documentos de Microsoft
+title: DECLARE @local_variable (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="declare-localvariable-transact-sql"></a>DECLARAR @local_variable (Transact-SQL)
+# <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Las variables se declaran en el cuerpo de un proceso por lotes o un procedimiento con la instrucción DECLARE, y se les asignan valores con una instrucción SET o SELECT. Las variables de cursor pueden declararse con esta instrucción y utilizarse con otras instrucciones relacionadas con los cursores. Después de la declaración, todas las variables se inicializan como NULL, a menos que se proporcione un valor como parte de la declaración.  
@@ -90,12 +90,12 @@ DECLARE
   
 ## <a name="arguments"></a>Argumentos  
 @*local_variable*  
- Es el nombre de una variable. Los nombres de variables deben comenzar con un signo de arroba (@). Nombres de variables locales deben cumplir las reglas de [identificadores](../../relational-databases/databases/database-identifiers.md).  
+ Es el nombre de una variable. Los nombres de variables deben comenzar con un signo de arroba (@). Los nombres de las variables locales deben respetar las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
 *data_type*  
- Es cualquier tipo de tabla definido por el usuario CLR (Common Language Runtime) o tipo de datos de alias, suministrado por el sistema. No puede ser una variable de **texto**, **ntext**, o **imagen** tipo de datos.  
+ Es cualquier tipo de tabla definido por el usuario CLR (Common Language Runtime) o tipo de datos de alias, suministrado por el sistema. Una variable no puede estar enlazada con los tipos de datos **text**, **ntext** o **image**.  
   
- Para obtener más información acerca de los tipos de datos del sistema, consulte [tipos de datos &#40; Transact-SQL &#41; ](../../t-sql/data-types/data-types-transact-sql.md). Para obtener más información acerca de los tipos de datos de alias o tipos definidos por el usuario CLR, vea [CREATE TYPE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-type-transact-sql.md).  
+ Para más información sobre los tipos de datos del sistema, vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md). Para más información sobre los tipos de datos definidos por el usuario CLR o de alias, vea [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
   
  =*value*  
  Asigna un valor a la variable en línea. El valor puede ser una constante o una expresión, pero debe coincidir con el tipo de declaración de la variable o poder convertirse implícitamente a ese tipo. Para obtener más información, vea [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
@@ -107,15 +107,15 @@ CURSOR
  Especifica que la variable es una variable de cursor local.  
   
 @*table_variable_name*  
- Es el nombre de una variable de tipo **tabla**. Los nombres de variable deben comenzar con un signo de arroba (@) y seguir las reglas de los identificadores.  
+ Es el nombre de una variable de tipo **table**. Los nombres de variable deben comenzar con un signo de arroba (@) y seguir las reglas de los identificadores.  
   
 <table_type_definition>  
-Define la **tabla** tipo de datos. La declaración de tabla incluye definiciones de columna, nombres, tipos de datos y restricciones. Solo se permiten los tipos de restricciones PRIMARY KEY, UNIQUE, NULL y CHECK. Un tipo de datos de alias no puede usarse como un tipo de datos de columna escalar si una regla o definición de valor predeterminado está enlazada al tipo.
+Define el tipo de datos de **table**. La declaración de tabla incluye definiciones de columna, nombres, tipos de datos y restricciones. Solo se permiten los tipos de restricciones PRIMARY KEY, UNIQUE, NULL y CHECK. Un tipo de datos de alias no puede usarse como un tipo de datos de columna escalar si una regla o definición de valor predeterminado está enlazada al tipo.
   
-\<table_type_definiton > es un subconjunto de información que se usa para definir una tabla en CREATE TABLE. Aquí se incluyen los elementos y definiciones fundamentales. Para obtener más información, vea [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
+\<table_type_definiton> es un subconjunto de información que se usa para definir una tabla en CREATE TABLE. Aquí se incluyen los elementos y definiciones fundamentales. Para obtener más información, vea [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
  *n*  
- Es un marcador de posición que indica que se pueden especificar y asignar valores a varias variables. Cuando se declara **tabla** variables, la **tabla** variable debe ser la única variable que se declara en la instrucción DECLARE.  
+ Es un marcador de posición que indica que se pueden especificar y asignar valores a varias variables. Cuando se declara una variable de **table**, esta debe ser la única variable de **table** que se declara en la instrucción DECLARE.  
   
  *column_name*  
  Es el nombre de la columna de la tabla.  
@@ -124,30 +124,30 @@ Define la **tabla** tipo de datos. La declaración de tabla incluye definiciones
  Especifica que la columna es de un tipo de datos escalar.  
   
  *computed_column_expression*  
- Es una expresión que define el valor de una columna calculada. Se calcula a partir de una expresión mediante otras columnas de la misma tabla. Por ejemplo, una columna calculada puede tener la definición de **costo** AS **precio \* qty**. La expresión puede ser un nombre de columna no calculada, una constante, una función integrada, una variable o cualquier combinación de estos elementos conectados mediante uno o más operadores. La expresión no puede ser una subconsulta o una función definida por el usuario. La expresión no puede hacer referencia a un tipo CLR definido por el usuario.  
+ Es una expresión que define el valor de una columna calculada. Se calcula a partir de una expresión mediante otras columnas de la misma tabla. Por ejemplo, una columna calculada puede tener la definición **cost** AS **price \* qty**. La expresión puede ser un nombre de columna no calculada, una constante, una función integrada, una variable o cualquier combinación de estos elementos conectados mediante uno o más operadores. La expresión no puede ser una subconsulta o una función definida por el usuario. La expresión no puede hacer referencia a un tipo CLR definido por el usuario.  
   
- [COLLATE *collation_name*]  
- Especifica la intercalación de la columna. *collation_name* puede ser un nombre de intercalación de Windows o un nombre de intercalación de SQL y es aplicable únicamente a las columnas de la **char**, **varchar**, **texto** , **nchar**, **nvarchar**, y **ntext** tipos de datos. Si no se especifica, se asignará a la columna la intercalación del tipo de datos definido por el usuario, si la columna es de un tipo de datos definido por el usuario, o la intercalación de la base de datos actual.  
+ [ COLLATE *collation_name*]  
+ Especifica la intercalación de la columna. *collation_name* puede ser un nombre de intercalación de Windows o un nombre de intercalación de SQL, y solo es aplicable a las columnas de los tipos de datos **char**, **varchar**, **text**, **nchar**, **nvarchar** y **ntext**. Si no se especifica, se asignará a la columna la intercalación del tipo de datos definido por el usuario, si la columna es de un tipo de datos definido por el usuario, o la intercalación de la base de datos actual.  
   
- Para obtener más información acerca de los nombres de intercalación de Windows y SQL, consulte [COLLATE &#40; Transact-SQL &#41; ](~/t-sql/statements/collations.md).  
+ Para más información sobre los nombres de intercalación de Windows y SQL, vea [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
  DEFAULT  
- Especifica el valor suministrado para la columna cuando no se ha especificado explícitamente un valor durante una inserción. Las definiciones DEFAULT se pueden aplicar a cualquier columna excepto los definidos como **timestamp** o aquellos con la propiedad IDENTITY. Las definiciones DEFAULT desaparecen cuando se quita la tabla. Solo se puede utilizar un valor constante como valor predeterminado, por ejemplo, una cadena de caracteres, una función del sistema como SYSTEM_USER() o el valor NULL. Para mantener la compatibilidad con las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se puede asignar un nombre de restricción a DEFAULT.  
+ Especifica el valor suministrado para la columna cuando no se ha especificado explícitamente un valor durante una inserción. Las definiciones DEFAULT se pueden aplicar a cualquier columna excepto a las definidas como **timestamp** o a aquellas que tengan la propiedad IDENTITY. Las definiciones DEFAULT desaparecen cuando se quita la tabla. Solo se puede utilizar un valor constante como valor predeterminado, por ejemplo, una cadena de caracteres, una función del sistema como SYSTEM_USER() o el valor NULL. Para mantener la compatibilidad con las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se puede asignar un nombre de restricción a DEFAULT.  
   
  *constant_expression*  
  Es una constante, el valor NULL o una función del sistema que se utiliza como el valor predeterminado de una columna.  
   
  IDENTITY  
- Indica que la nueva columna es una columna de identidad. Cuando se agrega una nueva fila a la tabla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un valor incremental único para la columna. Las columnas de identidad se utilizan normalmente junto con restricciones PRIMARY KEY para que actúen como identificador exclusivo de fila para la tabla. La propiedad IDENTITY se puede asignar a **tinyint**, **smallint**, **int**, **decimal(p,0)**, o **numeric(p,0)** columnas. Solo se puede crear una columna de identidad para cada tabla. Las restricciones DEFAULT y los valores predeterminados enlazados no se pueden utilizar en las columnas de identidad. Se debe especificar los dos argumentos, seed e increment, o ninguno. Si no se especifica ninguno, el valor predeterminado es (1,1).  
+ Indica que la nueva columna es una columna de identidad. Cuando se agrega una nueva fila a la tabla, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un valor incremental único para la columna. Las columnas de identidad se utilizan normalmente junto con restricciones PRIMARY KEY para que actúen como identificador exclusivo de fila para la tabla. La propiedad IDENTITY se puede asignar a columnas **tinyint**, **smallint**, **int**, **decimal(p,0)** o **numeric(p,0)**. Solo se puede crear una columna de identidad para cada tabla. Las restricciones DEFAULT y los valores predeterminados enlazados no se pueden utilizar en las columnas de identidad. Se debe especificar los dos argumentos, seed e increment, o ninguno. Si no se especifica ninguno, el valor predeterminado es (1,1).  
   
  *seed*  
  Es el valor que se utiliza para la primera fila cargada en la tabla.  
   
  *increment*  
- Es el valor incremental que se agrega al valor de identidad de la fila anterior que se cargó.  
+ Es el valor incremental que se agrega al valor de identidad de la fila cargada anteriormente.  
   
  ROWGUIDCOL  
- Indica que la nueva columna es una columna de identificador único global de fila. Solo un **uniqueidentifier** se puede designar la columna por tabla como columna ROWGUIDCOL. La propiedad ROWGUIDCOL se puede asignar solo a un **uniqueidentifier** columna.  
+ Indica que la nueva columna es una columna de identificador único global de fila. Solo se puede designar una columna **uniqueidentifier** por tabla como columna ROWGUIDCOL. La propiedad ROWGUIDCOL únicamente se puede asignar a una columna **uniqueidentifier**.  
   
  NULL | NOT NULL  
  Indica si NULL se permite en la variable. El valor predeterminado es NULL.  
@@ -164,14 +164,14 @@ Define la **tabla** tipo de datos. La declaración de tabla incluye definiciones
  *logical_expression*  
  Es una expresión lógica que devuelve TRUE o FALSE.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Las variables se suelen utilizar en un proceso por lotes o procedimiento como contadores para WHILE, LOOP o un bloque IF…ELSE.  
   
- Las variables pueden usarse solo en las expresiones, no en lugar de nombres de objeto o palabras clave. Para formar instrucciones SQL dinámicas, utilice EXECUTE.  
+ Las variables solo se pueden usar en expresiones y no en lugar de nombres de objeto o palabras clave. Para formar instrucciones SQL dinámicas, utilice EXECUTE.  
   
  El alcance de una variable local es el lote en el que está declarada.  
  
- Una variable de tabla no es necesariamente residentes en memoria. Presión de memoria, las páginas que pertenecen a una variable de tabla pueden enviarse a tempdb.
+ Una variable de tabla no tiene que estar residente en memoria necesariamente. En condiciones de presión de memoria, las páginas que pertenecen a una variable de tabla pueden enviarse a tempdb.
   
  Se puede hacer referencia como origen a una variable de cursor que actualmente tiene asignado un cursor en una instrucción:  
   
@@ -191,7 +191,7 @@ Define la **tabla** tipo de datos. La declaración de tabla incluye definiciones
   
  Una variable de cursor:  
   
--   Puede ser el destino de un tipo de cursor u otra variable de cursor. Para obtener más información, consulte [establecer @local_variable &#40; Transact-SQL &#41; ](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
+-   Puede ser el destino de un tipo de cursor u otra variable de cursor. Para más información, vea [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
   
 -   Se puede hacer referencia a la variable de cursor como el destino de un parámetro de cursor de salida en una instrucción EXECUTE si la variable de cursor no tiene actualmente un cursor asignado.  
   
@@ -247,7 +247,7 @@ WHERE TerritoryGroup = @Group and SalesYTD >= @Sales;
 ```  
   
 ### <a name="c-declaring-a-variable-of-type-table"></a>C. Declarar una variable de tipo table  
- El ejemplo siguiente crea una variable `table` que almacena los valores especificados en la cláusula OUTPUT de la instrucción UPDATE. Las dos instrucciones `SELECT` que le siguen devuelven los valores en `@MyTableVar` y los resultados de la operación de actualización en la tabla `Employee`. Tenga en cuenta que los resultados en la `INSERTED.ModifiedDate` columna difieren de los valores en el `ModifiedDate` columna en el `Employee` tabla. Esto se debe a que el desencadenador `AFTER UPDATE`, que actualiza el valor de `ModifiedDate` a la fecha actual, se define en la tabla `Employee`. Sin embargo, las columnas que devuelve `OUTPUT` reflejan los datos anteriores a la activación de los desencadenadores. Para obtener más información, vea [cláusula OUTPUT &#40; Transact-SQL &#41; ](../../t-sql/queries/output-clause-transact-sql.md).  
+ El ejemplo siguiente crea una variable `table` que almacena los valores especificados en la cláusula OUTPUT de la instrucción UPDATE. Las dos instrucciones `SELECT` que le siguen devuelven los valores en `@MyTableVar` y los resultados de la operación de actualización en la tabla `Employee`. Tenga en cuenta que los resultados de la columna `INSERTED.ModifiedDate` son diferentes de los valores de la columna `ModifiedDate` de la tabla `Employee`. Esto se debe a que el desencadenador `AFTER UPDATE`, que actualiza el valor de `ModifiedDate` a la fecha actual, se define en la tabla `Employee`. Sin embargo, las columnas que devuelve `OUTPUT` reflejan los datos anteriores a la activación de los desencadenadores. Para más información, vea [Cláusula OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
 ```  
 USE AdventureWorks2012;  
@@ -277,14 +277,14 @@ GO
 ```  
   
 ### <a name="d-declaring-a-variable-of-user-defined-table-type"></a>D. Declarar una variable de tipo de tabla definido por el usuario  
- El ejemplo siguiente crea un parámetro con valores de tabla o una variable de tabla denominada `@LocationTVP`. Esto requiere un tipo de tabla definido por el usuario correspondiente denominado `LocationTableType`. Para obtener más información sobre cómo crear un tipo de tabla definido por el usuario, consulte [CREATE TYPE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-type-transact-sql.md). Para obtener más información acerca de los parámetros con valores de tabla, vea [usar parámetros &#40; motor de base de datos &#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ El ejemplo siguiente crea un parámetro con valores de tabla o una variable de tabla denominada `@LocationTVP`. Esto requiere un tipo de tabla definido por el usuario correspondiente denominado `LocationTableType`. Para más información sobre cómo crear un tipo de tabla definido por el usuario, vea [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md). Para más información sobre los parámetros con valores de tabla, vea[Usar parámetros con valores de tabla &#40;motor de base de datos&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
 ```  
 DECLARE @LocationTVP   
 AS LocationTableType;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-declare"></a>E. Usar DECLARE  
  En el ejemplo siguiente se utiliza una variable local denominada `@find` para recuperar información de contacto para todos los apellidos que comienzan por `Walt`.  
@@ -304,7 +304,7 @@ WHERE LastName LIKE @find;
 ```  
   
 ### <a name="f-using-declare-with-two-variables"></a>F. Usar DECLARE con dos variables  
- En el ejemplo siguiente se recuperan usa variables para especificar los nombres y apellidos de los empleados de la `DimEmployee` tabla.  
+ En el siguiente ejemplo se recuperan variables de usuario para especificar el nombre y el apellido de los empleados de la tabla `DimEmployee`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -319,7 +319,7 @@ FROM DimEmployee
 WHERE LastName LIKE @lastName AND FirstName LIKE @firstName;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

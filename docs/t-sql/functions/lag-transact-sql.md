@@ -1,5 +1,5 @@
 ---
-title: LAG (Transact-SQL) | Documentos de Microsoft
+title: LAG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/09/2017
 ms.prod: sql-non-specified
@@ -35,9 +35,9 @@ ms.lasthandoff: 01/02/2018
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Tiene acceso a datos de una fila anterior en el mismo conjunto de resultados sin el uso de una autocombinación a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. LAG proporciona acceso a una fila en un desplazamiento físico especificado que hay antes de la fila actual. Use esta función analítica en una instrucción SELECT para comparar valores de la fila actual con valores de una fila anterior.  
+  Tiene acceso a datos de una fila anterior en el mismo conjunto de resultados sin usar una autocombinación que empiece por [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. LAG proporciona acceso a una fila en un desplazamiento físico especificado que hay antes de la fila actual. Use esta función analítica en una instrucción SELECT para comparar valores de la fila actual con valores de una fila anterior.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,17 +50,17 @@ LAG (scalar_expression [,offset] [,default])
  *scalar_expression*  
  El valor que se va a devolver en función del desplazamiento especificado. Es una expresión de cualquier tipo que devuelve un único valor (escalar). *scalar_expression* no puede ser una función analítica.  
   
- *desplazamiento*  
- El número de filas hacia atrás de la fila actual de la que se va a obtener un valor. Si no se especifica, el valor predeterminado es 1. *desplazamiento* puede ser una columna, una subconsulta u otra expresión que se evalúa como un número entero positivo o pueden convertirse implícitamente a **bigint**. *desplazamiento* no puede ser un valor negativo o una función analítica.  
+ *offset*  
+ El número de filas hacia atrás de la fila actual de la que se va a obtener un valor. Si no se especifica, el valor predeterminado es 1. *offset* puede ser una columna, una subconsulta u otra expresión que se evalúa como un entero positivo o que se puede convertir implícitamente en **bigint**. *offset* no puede ser un valor negativo o una función analítica.  
   
- *valor predeterminado*  
- Valor que se devuelve cuando *scalar_expression* en *desplazamiento* es NULL. Si no se especifica ningún valor predeterminado, se devuelve NULL. *valor predeterminado* puede ser una columna, una subconsulta u otra expresión, pero no puede ser una función analítica. *valor predeterminado* debe tener un tipo compatible con *scalar_expression*.  
+ *default*  
+ Valor que se devuelve cuando *scalar_expression* en *offset* es NULL. Si no se especifica ningún valor predeterminado, se devuelve NULL. *default* puede ser una columna, una subconsulta u otra expresión, pero no puede ser una función analítica. *default* debe tener un tipo compatible con *scalar_expression*.  
   
- SOBRE **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones al que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. *order_by_clause* determina el orden de los datos antes de que se aplica la función. Si *partition_by_clause* se especifica, determina el orden de los datos de la partición. El *order_by_clause* es necesario. Para obtener más información, consulte [la cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones a las que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. *order_by_clause* determina el orden de los datos antes de que se aplique la función. Si se especifica *partition_by_clause*, determina el orden de los datos en la partición. *order_by_clause* es obligatorio. Para más información, vea [OVER &#40;cláusula de Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos devueltos  
- El tipo de datos del elemento especificado *scalar_expression*. Se devuelve NULL si *scalar_expression* acepta valores NULL o *predeterminado* se establece en NULL.  
+ El tipo de datos de la *scalar_expression* especificada. Se devuelve NULL si *scalar_expression* acepta valores NULL o si *default* se establece en NULL.  
   
 ## <a name="general-remarks"></a>Notas generales  
  LAG es no determinista. Para obtener más información, consulte [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
@@ -94,7 +94,7 @@ BusinessEntityID SalesYear   CurrentQuota          PreviousQuota
 ```  
   
 ### <a name="b-compare-values-within-partitions"></a>B. Comparar valores dentro de particiones  
- En el ejemplo siguiente se usa la función LAG para comparar las ventas anuales hasta la fecha entre los empleados. La cláusula PARTITION BY se especifica para dividir las filas del conjunto de resultados por territorio de ventas. La función LAG se aplica a cada partición por separado y el cálculo se reinicia para cada partición. La cláusula ORDER BY de la cláusula OVER ordena las filas de cada partición. La cláusula ORDER BY en la instrucción SELECT ordena las filas del conjunto de resultados completo. Observe que como no hay ningún valor de intervalo disponible para la primera fila de cada partición, se devuelve el valor predeterminado de cero (0).  
+ En el ejemplo siguiente se usa la función LAG para comparar las ventas anuales hasta la fecha entre los empleados. La cláusula PARTITION BY se especifica para dividir las filas del conjunto de resultados por territorio de ventas. La función LAG se aplica a cada partición por separado y el cálculo se reinicia para cada partición. La cláusula ORDER BY de la cláusula OVER ordena las filas de cada partición. La cláusula ORDER BY de la instrucción SELECT ordena las filas del conjunto de resultados completo. Observe que como no hay ningún valor de intervalo disponible para la primera fila de cada partición, se devuelve el valor predeterminado de cero (0).  
   
 ```sql   
 USE AdventureWorks2012;  
@@ -145,10 +145,10 @@ b           c           i
 1           5           NULL  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-compare-values-between-quarters"></a>D: comparar valores entre los trimestres  
- En el ejemplo siguiente se muestra la función LAG. La consulta usa la función LAG para devolver la diferencia en cuotas de venta para un empleado concreto por trimestres anteriores. Observe que como no hay ningún valor de intervalo disponible para la primera fila, se devuelve el valor predeterminado de cero (0).  
+### <a name="d-compare-values-between-quarters"></a>D. Comparar valores entre trimestres  
+ En este ejemplo se muestra el uso de la función LAG. La consulta usa la función LAG para devolver la diferencia en cuotas de ventas para un empleado concreto en trimestres anteriores. Observe que como no hay ningún valor de intervalo disponible para la primera fila, se devuelve el valor predeterminado de cero (0).  
   
 ```sql   
 -- Uses AdventureWorks  
@@ -174,8 +174,8 @@ Year Quarter  SalesQuota  PrevQuota  Diff
 2002 4       154000.0000   7000.0000   84000.0000
 ```  
   
-## <a name="see-also"></a>Vea también  
- [RESPONSABLE de &#40; Transact-SQL &#41;](../../t-sql/functions/lead-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [LEAD &#40;Transact-SQL&#41;](../../t-sql/functions/lead-transact-sql.md)  
   
   
 

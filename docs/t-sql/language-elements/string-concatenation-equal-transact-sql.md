@@ -1,5 +1,5 @@
 ---
-title: "+= (Concatenación de cadenas y asignación) (Transact-SQL) | Documentos de Microsoft"
+title: "+= (Asignación de concatenación de cadenas) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/07/2016
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="-string-concatenation-assignment-transact-sql"></a>+= (Asignación de concatenación de cadenas) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Concatena dos cadenas y establece como valor de la cadena el resultado de la operación. Por ejemplo, si una variable @x es igual a 'Adventure', a continuación, @x += '´Works' toma el valor original de @x, agrega 'Works' a la cadena y establece @x en el nuevo valor 'AdventureWorks'.  
+  Concatena dos cadenas y establece como valor de la cadena el resultado de la operación. Por ejemplo, si una variable @x es igual a "Adventure", @x += "Works" toma el valor original de @x, agrega "Works" a la cadena y establece @x en el nuevo valor ("AdventureWorks").  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,13 +46,13 @@ expression += expression
   
 ## <a name="arguments"></a>Argumentos  
  *expression*  
- Se trata de cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cualquiera de los tipos de datos de caracteres.  
+ Es cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md) válida de alguno de los tipos de datos de carácter.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  Devuelve el tipo de datos que se define para la variable.  
   
-## <a name="remarks"></a>Comentarios  
- ESTABLECER @v1 += 'expression' es equivalente a conjunto @v1 = @v1 + ('expression'). Además, establece @v1 = @v2 + @v3 + @v4 es equivalente a conjunto @v1 = (@v2 + @v3) + @v4.  
+## <a name="remarks"></a>Notas  
+ SET @v1 += "expresión" equivale a SET @v1 = @v1 + ("expresión"). Asimismo, SET @v1 = @v2 + @v3 + @v4 equivale a SET @v1 = (@v2 + @v3) + @v4.  
   
  El operador += no se puede utilizar sin una variable. Por ejemplo, el código siguiente provocará un error:  
   
@@ -61,7 +61,7 @@ SELECT 'Adventure' += 'Works'
 ```  
   
 ## <a name="examples"></a>Ejemplos  
-### <a name="a-concatenation-using--operator"></a>A. Concatenación con += (operador)
+### <a name="a-concatenation-using--operator"></a>A. Concatenación con el operador +=
  En el siguiente ejemplo se concatena con el operador `+=`.  
   
 ```  
@@ -75,8 +75,8 @@ PRINT @v1;
   
  `This is the original. More text.`  
   
-### <a name="b-order-of-evaluation-while-concatenating-using--operator"></a>B. Orden de evaluación al concatenar utilizando += (operador)
-En el ejemplo siguiente se concatena varias cadenas para formar una cadena larga y, a continuación, intenta calcular la longitud de la cadena final. Este ejemplo muestra las reglas de truncamiento y orden de evaluación, al usar el operador de concatenación. 
+### <a name="b-order-of-evaluation-while-concatenating-using--operator"></a>B. Orden de evaluación al concatenar con el operador +=
+En el siguiente ejemplo se concatenan varias cadenas para formar una cadena larga y, luego, se intenta calcular la longitud de la cadena final. En este ejemplo se muestran las reglas de truncamiento y orden de evaluación cuando se usa el operador de concatenación. 
 
 ```
 DECLARE @x varchar(4000) = replicate('x', 4000)
@@ -129,9 +129,9 @@ GO
  (1 row(s) affected)
   ```   
    
-## <a name="see-also"></a>Vea también  
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [+= &#40;Add Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
- [+ &#40;String Concatenation&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  (Operadores [Transact-SQL])  
+ [+= &#40;Asignación de suma&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
+ [+ &#40;Concatenación de cadenas&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
   
   

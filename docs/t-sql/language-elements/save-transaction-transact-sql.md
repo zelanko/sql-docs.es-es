@@ -1,5 +1,5 @@
 ---
-title: GUARDAR transacciones (Transact-SQL) | Documentos de Microsoft
+title: SAVE TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -56,13 +56,13 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
   
 ## <a name="arguments"></a>Argumentos  
  *savepoint_name*  
- Es el nombre asignado al punto de retorno. Los nombres de los puntos de retorno deben ajustarse a las reglas para los identificadores, aunque están limitados a 32 caracteres. *savepoint_name* es siempre mayúsculas de minúsculas, incluso cuando la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no distingue mayúsculas de minúsculas.  
+ Es el nombre asignado al punto de retorno. Los nombres de los puntos de retorno deben ajustarse a las reglas para los identificadores, aunque están limitados a 32 caracteres. *savepoint_name* siempre distingue mayúsculas de minúsculas, incluso cuando la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no distingue mayúsculas de minúsculas.  
   
  @*savepoint_variable*  
- Es el nombre de una variable definida por el usuario que contiene un nombre de punto de retorno válido. La variable debe declararse con una **char**, **varchar**, **nchar**, o **nvarchar** tipo de datos. Es posible pasar más de 32 caracteres a la variable, aunque solo se utilizarán los primeros 32.  
+ Es el nombre de una variable definida por el usuario que contiene un nombre de punto de retorno válido. La variable debe declararse con un tipo de datos **char**, **varchar**, **nchar** o **nvarchar**. Es posible pasar más de 32 caracteres a la variable, aunque solo se utilizarán los primeros 32.  
   
-## <a name="remarks"></a>Comentarios  
- Un usuario puede establecer un punto de retorno, o marcador, dentro de una transacción. El punto de retorno define una ubicación a la que la transacción puede volver si se cancela parte de la transacción de forma condicional. Si se revierte una transacción hasta un punto de retorno, se debe continuar hasta su finalización con más instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] si es necesario y una instrucción COMMIT TRANSACTION o se debe cancelar completamente al revertir la transacción hasta su inicio. Para cancelar una transacción completa, utilice el formato ROLLBACK TRANSACTION *transaction_name*. Se deshacen todas las instrucciones o procedimientos de la transacción.  
+## <a name="remarks"></a>Notas  
+ Un usuario puede establecer un punto de retorno, o marcador, dentro de una transacción. El punto de retorno define una ubicación a la que la transacción puede volver si se cancela parte de la transacción de forma condicional. Si se revierte una transacción hasta un punto de retorno, se debe continuar hasta su finalización con más instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] si es necesario y una instrucción COMMIT TRANSACTION o se debe cancelar completamente al revertir la transacción hasta su inicio. Para cancelar una transacción completa, use el formato ROLLBACK TRANSACTION *transaction_name*. Se deshacen todas las instrucciones o procedimientos de la transacción.  
   
  En una transacción se permiten nombres de puntos de retorno duplicados, pero una instrucción ROLLBACK TRANSACTION que especifique el nombre de un punto de retorno solo revertirá la transacción hasta la instrucción SAVE TRANSACTION más reciente que también utilice ese nombre.  
   
@@ -71,7 +71,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
 > [!IMPORTANT]  
 >  Una instrucción ROLLBACK TRANSACTION que especifica un savepoint_name libera todos los bloqueos adquiridos más allá del punto de retorno, a excepción de las extensiones y las conversiones. Estos bloqueos no se liberan y no vuelven a convertirse a su modo de bloqueo previo.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol public.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -167,7 +167,7 @@ AS
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
@@ -176,7 +176,7 @@ GO
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
  [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   

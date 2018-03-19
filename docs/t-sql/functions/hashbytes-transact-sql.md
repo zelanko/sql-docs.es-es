@@ -1,5 +1,5 @@
 ---
-title: HASHBYTES (Transact-SQL) | Documentos de Microsoft
+title: HASHBYTES (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2016
 ms.prod: sql-non-specified
@@ -48,28 +48,28 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **'**\<algoritmo >**'**  
- Identifica el algoritmo hash que se va a utilizar para realizar el hash de la entrada. Es un argumento requerido y no tiene valor predeterminado. Las comillas simples son necesarias. A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], todos los algoritmos SHA2_256 y SHA2_512 están en desuso. Algoritmos anteriores (no recomendados) seguirá funcionando, pero generará un evento de degradación.  
+ **'**\<algorithm>**'**  
+ Identifica el algoritmo hash que se va a utilizar para realizar el hash de la entrada. Es un argumento requerido y no tiene valor predeterminado. Las comillas simples son necesarias. A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], todos los algoritmos están en desuso, salvo SHA2_256 y SHA2_512. Los algoritmos antiguos (no recomendados) seguirán funcionando, pero generarán un evento de desuso.  
   
  **@input**  
- Especifica una variable que contiene los datos en los que se va a realizar el hash. **@input**es **varchar**, **nvarchar**, o **varbinary**.  
+ Especifica una variable que contiene los datos en los que se va a realizar el hash. **@input** es **varchar**, **nvarchar** o **varbinary**.  
   
- **'** *entrada* **'**  
+ **'** *input* **'**  
  Especifica una expresión que se evalúa como un carácter o una cadena binaria que se va a aplicar el algoritmo hash.  
   
  La salida se ajusta al algoritmo estándar: 128 bits (16 bytes) para MD2, MD4 y MD5; 160 bits (20 bytes) para SHA y SHA1; 256 bits (32 bytes) para SHA2_256 y 512 bits (64 bytes) para SHA2_512.  
   
-**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Se aplica a**: de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- Para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones anteriores, permite valores de entrada están limitados a 8000 bytes.  
+ En [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones anteriores, los valores de entrada permitidos tienen un límite de 8000 bytes.  
   
 ## <a name="return-value"></a>Valor devuelto  
- **varbinary** (máximo de 8.000 bytes)  
+ **varbinary** (máximo de 8000 bytes)  
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-return-the-hash-of-a-variable"></a>R: devuelve el valor hash de una variable  
- El ejemplo siguiente devuelve el `SHA1` hash de la **nvarchar** datos almacenados en la variable `@HashThis`.  
+### <a name="a-return-the-hash-of-a-variable"></a>A. Devolver el valor hash de una variable  
+ En el siguiente ejemplo se devuelve el hash `SHA1` de los datos **nvarchar** almacenados en la variable `@HashThis`.  
   
 ```  
 DECLARE @HashThis nvarchar(4000);  
@@ -78,7 +78,7 @@ SELECT HASHBYTES('SHA1', @HashThis);
   
 ```  
   
-### <a name="b-return-the-hash-of-a-table-column"></a>B: devuelve el valor hash de una columna de tabla  
+### <a name="b-return-the-hash-of-a-table-column"></a>B. Devolver el valor hash de una columna de tabla  
  En el ejemplo siguiente se devuelve el valor hash SHA1 de los valores de la columna `c1` de la tabla `Test1`.  
   
 ```  
@@ -101,7 +101,7 @@ SELECT HASHBYTES('SHA1', c1) FROM dbo.Test1;
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Elegir un algoritmo de cifrado](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
   
   

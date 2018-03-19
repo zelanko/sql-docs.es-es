@@ -1,5 +1,5 @@
 ---
-title: TERTIARY_WEIGHTS (Transact-SQL) | Documentos de Microsoft
+title: TERTIARY_WEIGHTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="collation-functions---tertiaryweights-transact-sql"></a>Funciones de intercalación - TERTIARY_WEIGHTS (Transact-SQL)
+# <a name="collation-functions---tertiaryweights-transact-sql"></a>Funciones de intercalación: TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Devuelve una cadena binaria de pesos para cada carácter en una expresión de cadena no Unicode definida con una intercalación terciaria de SQL.
@@ -48,13 +48,13 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
   
 ## <a name="arguments"></a>Argumentos  
 *non_Unicode_character_string_expression*  
-Es una cadena [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de tipo **char**, **varchar**, o **varchar (max)** definidas en una intercalación SQL terciaria. Para obtener una lista de estas intercalaciones, vea la sección Notas.
+Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cadena de tipo **char**, **varchar** o **varchar(max)** definida en una intercalación SQL terciaria. Para obtener una lista de estas intercalaciones, vea la sección Notas.
   
-## <a name="return-types"></a>Tipos de valor devuelto
-TERTIARY_WEIGHTS devuelve **varbinary** cuando *non_Unicode_character_string_expression* es **char** o **varchar**y devuelve **varbinary (max)** cuando *non_Unicode_character_string_expression* es **varchar (max)**.
+## <a name="return-types"></a>Tipos de valores devueltos
+TERTIARY_WEIGHTS devuelve **varbinary** cuando *non_Unicode_character_string_expression* es **char** o **varchar**, y devuelve **varbinary(max)** cuando *non_Unicode_character_string_expression* es **varchar(max)**.
   
-## <a name="remarks"></a>Comentarios  
-TERTIARY_WEIGHTS devuelve NULL cuando *non_Unicode_character_string_expression* no está definido con una intercalación terciaria de SQL. En la tabla siguiente se muestran las intercalaciones terciarias de SQL.
+## <a name="remarks"></a>Notas  
+TERTIARY_WEIGHTS devuelve NULL cuando el parámetro *non_Unicode_character_string_expression* no está definido con una intercalación terciaria de SQL. En la tabla siguiente se muestran las intercalaciones terciarias de SQL.
   
 |Id. de orden|Intercalación de SQL|  
 |---|---|
@@ -91,7 +91,7 @@ TERTIARY_WEIGHTS devuelve NULL cuando *non_Unicode_character_string_expression* 
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-Función TERTIARY_WEIGHTS está pensada para su uso en la definición de una columna calculada que se define en los valores de un **char**, **varchar**, o **varchar (max)** columna. Definir un índice en dos la columna calculada y **char**, **varchar**, o **varchar (max)** columna puede mejorar el rendimiento cuando el **char**, **varchar**, o **varchar (max)** columna se especifica en la cláusula ORDER BY de una consulta.
+La función TERTIARY_WEIGHTS está pensada para su uso en la definición de una columna calculada que se define en los valores de una columna **char**, **varchar** o **varchar(max)**. Definir un índice tanto en la columna calculada como en la columna **char**, **varchar** o **varchar(max)** puede mejorar el rendimiento cuando se especifica la columna **char**, **varchar** o **varchar(max)** en la cláusula ORDER BY de una consulta.
   
 ## <a name="examples"></a>Ejemplos  
 El siguiente ejemplo crea una columna calculada en una tabla que aplica la función `TERTIARY_WEIGHTS` a los valores de una columna `char`.
@@ -104,6 +104,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también
-[ORDEN por cláusula &#40; Transact-SQL &#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
+[ORDER BY Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
   
   

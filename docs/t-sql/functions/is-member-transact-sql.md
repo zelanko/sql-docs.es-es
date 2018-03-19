@@ -1,5 +1,5 @@
 ---
-title: IS_MEMBER (Transact-SQL) | Documentos de Microsoft
+title: IS_MEMBER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -55,36 +55,36 @@ IS_MEMBER ( { 'group' | 'role' } )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **'** *grupo* **'**  
-**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+ **'** *group* **'**  
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- Es el nombre del grupo de Windows que se está comprobando; debe tener el formato *dominio*\\*grupo*. *grupo* es **sysname**.  
+ Nombre del grupo de Windows que se está comprobando; su formato debe ser *Dominio*\\*Grupo*. *group* es **sysname**.  
   
- **'** *rol* **'**  
- Es el nombre de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rol que se está comprobando. *rol* es **sysname** y pueden incluir la base de datos fija roles o funciones definidas por el usuario, pero no los roles de servidor.  
+ **'** *role* **'**  
+ Es el nombre del rol [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se va comprobar. *role* es **sysname** y puede contener los roles fijos de base de datos o los roles definidos por el usuario, pero no los roles de servidor.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **int**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  IS_MEMBER devuelve los siguientes valores.  
   
 |Valor devuelto|Description|  
 |------------------|-----------------|  
-|0|Usuario actual no es un miembro de *grupo* o *rol*.|  
-|1|Usuario actual es un miembro de *grupo* o *rol*.|  
-|NULL|Cualquier *grupo* o *rol* no es válido. Cuando se consulta en un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o en un inicio de sesión que usa un rol de aplicación, devuelve NULL para un grupo de Windows.|  
+|0|El usuario actual no es miembro de *group* ni *role*.|  
+|1|El usuario actual es miembro de *group* o *role*.|  
+|NULL|*group* o *role* no son válidos. Cuando se consulta en un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o en un inicio de sesión que usa un rol de aplicación, devuelve NULL para un grupo de Windows.|  
   
  IS_MEMBER determina la pertenencia al grupo de Windows examinando un token de acceso creado por Windows. El token de acceso no refleja los cambios en la pertenencia a grupos que se realizan después de que un usuario se conecte a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La pertenencia a un grupo de Windows no se puede consultar en un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ni en un rol de aplicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Para agregar y quitar miembros de un rol de base de datos, utilice [ALTER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-role-transact-sql.md). Para agregar y quitar miembros de un rol de servidor, utilice [ALTER SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ Para agregar y quitar miembros de un rol de base de datos, use [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md). Para agregar y quitar miembros de un rol de servidor, use [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
- Esta función evalúa la pertenencia al rol, no el permiso subyacente. Por ejemplo, el **db_owner** rol fijo de base de datos tiene la **CONTROL DATABASE** permiso. Si el usuario tiene la **CONTROL DATABASE** permiso pero no es un miembro del rol, esta función informará correctamente que el usuario no es un miembro de la **db_owner** rol, aunque el usuario tiene el mismo permisos.  
+ Esta función evalúa la pertenencia al rol, no el permiso subyacente. Por ejemplo, el rol fijo de base de datos **db_owner** tiene el permiso **CONTROL DATABASE**. Si el usuario tiene el permiso **CONTROL DATABASE** pero no es miembro del rol, esta función informará correctamente de que el usuario no es miembro del rol **db_owner**, aunque tenga los mismos permisos.  
   
- Los miembros de la **sysadmin** rol fijo de servidor escriba cada base de datos como el **dbo** usuario. Comprobación de permisos para el miembro de la **sysadmin** rol fijo de servidor, comprueba los permisos para **dbo**, no el inicio de sesión original. Puesto que **dbo** no se puede agregar a un rol de base de datos y no existe en los grupos de Windows, **dbo** siempre devolverá 0 (o NULL si no existe el rol).  
+ Los miembros del rol fijo de servidor **sysadmin** acceden a cada base de datos con el usuario **dbo**. Al comprobar los permisos para el rol fijo de servidor **sysadmin**, se comprueban los permisos para **dbo**, en lugar del inicio de sesión original. Como **dbo** no se puede agregar a un rol de base de datos y no existe en los grupos de Windows, **dbo** siempre devolverá 0 (o NULL si no existe el rol).  
   
 ## <a name="related-functions"></a>Funciones relacionadas  
- Para determinar si otro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión es un miembro de un rol de base de datos, use [IS_ROLEMEMBER &#40; Transact-SQL &#41; ](../../t-sql/functions/is-rolemember-transact-sql.md). Para determinar si un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión es miembro de un rol de servidor, use [IS_SRVROLEMEMBER &#40; Transact-SQL &#41; ](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
+ Para determinar si otro inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es miembro de un rol de base de datos, use [IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md). Para determinar si un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es miembro de un rol de servidor, use [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se comprueba si el usuario actual es miembro de un rol de base de datos o de un grupo de dominio de Windows.  
@@ -105,8 +105,8 @@ IF IS_MEMBER ('ADVWORKS\Shipping') = 1
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [IS_SRVROLEMEMBER &#40; Transact-SQL &#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Vistas de catálogo de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Funciones de seguridad &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  

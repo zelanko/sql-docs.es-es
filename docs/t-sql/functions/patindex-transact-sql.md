@@ -1,5 +1,5 @@
 ---
-title: PATINDEX (Transact-SQL) | Documentos de Microsoft
+title: PATINDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/19/2016
 ms.prod: sql-non-specified
@@ -50,28 +50,28 @@ PATINDEX ( '%pattern%' , expression )
   
 ## <a name="arguments"></a>Argumentos  
  *pattern*  
- Es una expresión de carácter que contiene la secuencia que se va a buscar. Pueden utilizar caracteres comodín; Sin embargo, el carácter % debe preceder y seguir *patrón* (excepto cuando busque primer o último carácter). *patrón de* es una expresión de la categoría de tipo de datos de cadena de caracteres. *patrón de* está limitado a 8000 caracteres.  
+ Es una expresión de carácter que contiene la secuencia que se va a buscar. Se pueden usar caracteres comodín, pero el carácter % debe ir delante y detrás de *pattern* (a menos que busque el primer o el último carácter). *pattern* es una expresión de la categoría del tipo de datos de cadena de caracteres. *pattern* tiene un límite de 8000 caracteres.  
   
  *expression*  
- Es un [expresión](../../t-sql/language-elements/expressions-transact-sql.md), normalmente una columna que se busca el patrón especificado. *expresión* es de la categoría de tipo de datos de cadena de caracteres.  
+ [expression](../../t-sql/language-elements/expressions-transact-sql.md) es una expresión, normalmente una columna en la que se busca el patrón especificado. *expression* es de la categoría del tipo de datos de cadena de caracteres.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- **bigint** si *expresión* reviste la **varchar (max)** o **nvarchar (max)** tipos de datos; en caso contrario **int**.  
+ **bigint** si *expression* es de los tipos de datos **varchar(max)** o **nvarchar(max)**; en caso contrario, **int**.  
   
-## <a name="remarks"></a>Comentarios  
- Si el valor *patrón* o *expresión* es NULL, PATINDEX devuelve NULL.  
+## <a name="remarks"></a>Notas  
+ Si *pattern* o *expression* son NULL, PATINDEX devuelve NULL.  
   
  PATINDEX realiza comparaciones basadas en la intercalación de la entrada. Para realizar una comparación de una intercalación especificada, puede utilizar COLLATE para aplicar una intercalación explícita a la entrada.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres adicionales (pares suplentes)  
- Al utilizar intercalaciones de SC, el valor devuelto contará cualquier par suplente de UTF-16 en el *expresión* parámetro como un único carácter. Para más información, consulte [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Cuando se usan intercalaciones SC, el valor devuelto contará cualquier par suplente UTF-16 en el parámetro *expression* como un solo carácter. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
- 0 x 0000 (**char(0)**) es un carácter no definido en las intercalaciones de Windows y no se pueden incluir en PATINDEX.  
+ 0x0000 (**char(0)**) es un carácter no definido en las intercalaciones de Windows y no se puede incluir en PATINDEX.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-simple-patindex-example"></a>A. Ejemplo sencillo de PATINDEX  
- En el ejemplo siguiente se comprueba una cadena de caracteres corto (`interesting data`) para la ubicación inicial de los caracteres `ter`.  
+ En este ejemplo se comprueba una cadena corta de caracteres (`interesting data`) para la ubicación inicial de los caracteres `ter`.  
   
 ```  
 SELECT PATINDEX('%ter%', 'interesting data');  
@@ -130,7 +130,7 @@ GO
 ```  
   
 ### <a name="e-using-a-variable-to-specify-the-pattern"></a>E. Usar una variable para especificar el patrón  
- En el ejemplo siguiente se utiliza una variable para pasar un valor para el *patrón* parámetro. Este ejemplo se utiliza la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de datos.  
+ En este ejemplo se usa una variable para pasar un valor al parámetro *pattern*. Aquí se usa la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
 DECLARE @MyValue varchar(10) = 'safety';   
@@ -148,15 +148,15 @@ WHERE DocumentNode = 0x7B40;
   
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CHARINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/charindex-transact-sql.md)  
  [LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Funciones de cadena &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [&#40; Carácter comodín - carácter &#40; s &#41; para la coincidencia &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
- [&#40; Carácter comodín - carácter &#40; s &#41; No en la coincidencia &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)   
- [_ &#40; Carácter comodín - coincidir un carácter &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)   
- [Carácter de porcentaje &#40; Carácter comodín - carácter &#40; s &#41; para la coincidencia &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
+ [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  [Funciones de cadena &#40;Transact-SQL&#41;]  
+ [&#40;Wildcard - Character&#40;s&#41; to Match&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  [&#40;Carácter comodín - Caracteres coincidentes &#40;Transact-SQL&#41;]  
+ [&#40;Wildcard - Character&#40;s&#41; to Match&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  [&#40;Carácter comodín - Caracteres no coincidentes &#40;Transact-SQL&#41;]  
+ [_ &#40;Wildcard - Match One Character&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  [_ &#40;Carácter comodín - Coincidir con un carácter&#41; &#40;Transact-SQL&#41;]  
+ [Percent character &#40;Wildcard - Character&#40;s&#41; to Match&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md) [Carácter de porcentaje &#40;Carácter comodín - Caracteres coincidentes Transact-SQL&#41;]  
   
   
 

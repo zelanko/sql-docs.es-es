@@ -1,5 +1,5 @@
 ---
-title: ALTER SCHEMA (Transact-SQL) | Documentos de Microsoft
+title: ALTER SCHEMA (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/09/2018
 ms.prod: sql-non-specified
@@ -73,30 +73,30 @@ ALTER SCHEMA schema_name
  Es la clase de entidad para la que se va a cambiar el propietario. El valor predeterminado es objeto.  
   
  *securable_name*  
- Es el nombre de uno o dos partes de un ámbito de esquema protegible va a mover al esquema.  
+ Es el nombre de una o dos partes de un elemento protegible en el ámbito de esquema que se va a mover al esquema.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Usuarios y esquemas están completamente separados.  
   
  ALTER SCHEMA solo se puede utilizar para mover elementos protegibles entre esquemas de la misma base de datos. Para cambiar o quitar un elemento protegible de un esquema, use la instrucción ALTER o DROP específica para ese elemento protegible.  
   
- Si se usa un nombre de una parte para *securable_name*, las reglas de resolución de nombres actualmente vigentes se usarán para localizar el elemento protegible.  
+ Si se usa un nombre de una parte para *securable_name*, se usarán las reglas de resolución de nombres actualmente vigentes para localizar el elemento protegible.  
   
  Todos los permisos asociados al elemento protegible se quitarán cuando se mueva el elemento protegible al nuevo esquema. Si el propietario del elemento protegible se ha establecido de forma explícita, el propietario no cambiará. Si el propietario del elemento protegible se ha establecido en SCHEMA OWNER, el propietario seguirá siendo SCHEMA OWNER; no obstante, después del traslado, SCHEMA OWNER se resolverá en el propietario del nuevo esquema. El principal_id del nuevo propietario será NULL.  
   
- Mover un procedimiento almacenado, la función, la vista o el desencadenador no se cambiará el nombre de esquema, si está presente, de los correspondientes objetos en la columna de definición de la [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vista de catálogo u obtenido utilizando la [ OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) función integrada. Por lo tanto, se recomienda que no se utiliza ALTER SCHEMA para mover estos tipos de objeto. En su lugar, quite y vuelva a crear el objeto en su nuevo esquema.  
+ Mover un procedimiento almacenado, una función, una vista o un desencadenador no hará que cambie el nombre de esquema (si lo hay) de la columna de definición de la vista de catálogo [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) o bien obtenido usando la función integrada [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md). Por lo tanto, se desaconseja usar ALTER SCHEMA para mover estos tipos de objetos. En su lugar, quite el objeto y vuelva a crearlo en el nuevo esquema.  
   
- Mover un objeto como una tabla o un sinónimo no actualizará automáticamente las referencias a ese objeto. Debe modificar los objetos que hacen referencia al objeto transferido manualmente. Por ejemplo, si mueve una tabla y se hace referencia a esa tabla en un desencadenador, debe modificar el desencadenador para reflejar el nuevo nombre de esquema. Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) para ver las dependencias en el objeto antes de moverlo.  
+ Mover un objeto como una tabla o una columna no hace que las referencias a ese objeto se actualicen automáticamente. Será necesario pues modificar de forma manual los objetos que hagan referencia al objeto que se ha movido. Por ejemplo, si se mueve una tabla y en un desencadenador existe una referencia a esa tabla, será necesario modificar el desencadenador para reflejar el nuevo nombre de esquema. Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) para ver las dependencias del objeto antes de moverlo.  
 
- Para cambiar el esquema de una tabla mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en el Explorador de objetos, haga doble clic en la tabla y, a continuación, haga clic en **diseño**. Presione **F4** para abrir la ventana Propiedades. En el **esquema** , seleccione un nuevo esquema.  
+ Para cambiar el esquema de una tabla con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], haga clic con el botón derecho en la tabla en el Explorador de objetos y, después, haga clic en **Diseño**. Presione **F4** para abrir la ventana Propiedades. En el cuadro **Esquema**, seleccione un nuevo esquema.  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para transferir un elemento protegible de un esquema a otro, el usuario actual debe tener el permiso CONTROL para el elemento protegible (no el esquema) y el permiso ALTER para el esquema de destino.  
   
- Si el elemento protegible tiene una especificación EXECUTE AS OWNER en él y el propietario se establece en SCHEMA OWNER, el usuario también debe tener el permiso IMPERSONATE en el propietario del esquema de destino.  
+ Si el elemento protegible tiene una especificación EXECUTE AS OWNER y el propietario se establece en SCHEMA OWNER, el usuario también debe tener el permiso IMPERSONATE para el propietario del esquema de destino.  
   
  Cuando se mueve el elemento protegible, se quitan todos los permisos asociados a él.  
   
@@ -141,10 +141,10 @@ SELECT sys.types.name, sys.types.schema_id, sys.schemas.name
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-transferring-ownership-of-a-table"></a>C. Transferir la propiedad de una tabla  
- En el ejemplo siguiente se crea una tabla `Region` en el `dbo` esquema, se crea un `Sales` esquema y, a continuación, se desplaza el `Region` tabla desde el `dbo` esquema para el `Sales` esquema.  
+ En el siguiente ejemplo se crea una tabla `Region` en el esquema `dbo`, se crea un esquema `Sales` y, por último, se mueve la tabla `Region` desde el esquema `dbo` al esquema `Sales`.  
   
 ```  
 CREATE TABLE dbo.Region   
@@ -160,7 +160,7 @@ ALTER SCHEMA Sales TRANSFER OBJECT::dbo.Region;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
  [DROP SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

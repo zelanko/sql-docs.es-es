@@ -1,5 +1,5 @@
 ---
-title: RENAME (Transact-SQL) | Documentos de Microsoft
+title: RENAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/20/2017
 ms.prod: 
@@ -27,10 +27,10 @@ ms.lasthandoff: 01/25/2018
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Cambia el nombre de una tabla creada por el usuario en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Cambia el nombre de una tabla creada por el usuario o una base de datos en [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+  Cambia el nombre de una tabla creada por el usuario en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Cambia el nombre de una tabla o base de datos creada por el usuario en [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 > [!NOTE]  
->  Para cambiar el nombre de una base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use el procedimiento almacenado [sp_renamedb &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). Para cambiar el nombre de una base de datos en Azure SQL Database, use la instrucción [ALTER DATABASE (Azure SQL Database)](/statements/alter-database-azure-sql-database.md). 
+>  Para cambiar el nombre de una base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use el procedimiento almacenado [sp_renamedb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). Para cambiar el nombre de una base de datos en Azure SQL Database, use la instrucción [ALTER DATABASE (Azure SQL Database)](/statements/alter-database-azure-sql-database.md). 
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -56,17 +56,17 @@ RENAME DATABASE [::] database_name TO new_database_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- CAMBIAR EL NOMBRE DE OBJETO [:]   
+ RENAME OBJECT [::]   
           [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* TO *new_table_name*  
- **SE APLICA A:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)],  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ **SE APLICA A:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- Cambiar el nombre de una tabla definida por el usuario. Especificar la tabla que se va a cambiar con un uno, dos o nombre de tres partes.    Especifique la nueva tabla *new_table_name* como un nombre de una sola parte.  
+ Sirve para cambiar el nombre de una tabla definida por el usuario. Especifique la tabla cuyo nombre va a cambiar por un nombre de una, dos o tres partes.    Especifique la nueva tabla *new_table_name* como un nombre de una sola parte.  
   
- CAMBIAR EL NOMBRE DE BASE DE DATOS [:]   
+ RENAME DATABASE [::]   
           [ *database_name* TO *new_database_name*  
- **SE APLICA A:**  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ **SE APLICA A:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- Cambiar el nombre de una base de datos definido por el usuario de *database_name* a *new_database_name*.  No se puede cambiar el nombre de una base de datos a cualquiera de esos [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]nombres de base de datos reservados:  
+ Sirve para cambiar el nombre de una base de datos definida por el usuario de *database_name* a *new_database_name*.  El nombre de una base de datos no se puede cambiar a ninguno de los siguientes nombres de base de datos reservados de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  
   
 -   maestra  
   
@@ -80,40 +80,40 @@ RENAME DATABASE [::] database_name TO new_database_name
   
 -   pdwtempdb2  
   
--   : DWConfiguration  
+-   DWConfiguration  
   
 -   DWDiagnostics  
   
 -   DWQueue  
   
-## <a name="permissions"></a>Permissions  
- Para ejecutar este comando que necesita este permiso:  
+## <a name="permissions"></a>Permisos  
+ Para ejecutar este comando, necesita este permiso:  
   
--   **ALTER** permiso en la tabla  
+-   Permiso **ALTER** en la tabla.  
    
   
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
   
-### <a name="cannot-rename-an-external-table-indexes-or-views"></a>No se puede cambiar el nombre de una tabla externa, índices o vistas
-No se puede cambiar el nombre de una tabla externa, índices o vistas. En lugar de cambiar el nombre, puede quitar la tabla externa, el índice o la vista y, a continuación, volver a crearla con el nuevo nombre.
+### <a name="cannot-rename-an-external-table-indexes-or-views"></a>No se puede cambiar el nombre de tablas externas, índices ni vistas
+El nombre de tablas externas, índices o vistas no se puede cambiar. En lugar de cambiarlo, puede quitar la tabla externa, índice o vista en cuestión y, luego, volver a crearlo con el nuevo nombre.
 
 ### <a name="cannot-rename-a-table-in-use"></a>No se puede cambiar el nombre de una tabla en uso  
- No se puede cambiar el nombre una tabla o una base de datos mientras está en uso. Cambiar el nombre de una tabla, requiere un bloqueo exclusivo en la tabla. Si la tabla está en uso, debe finalizar las sesiones que usan la tabla. Puede utilizar el comando KILL para terminar una sesión. Utilice KILL con precaución, ya que cuando se termina una sesión de cualquier trabajo no confirmado se revertirá. Las sesiones en el almacén de datos de SQL llevan el prefijo 'SID'. Debe incluir esto y el número de sesión al invocar el comando KILL. Este ejemplo muestra una lista de sesiones activas o inactivas y, a continuación, finaliza la sesión 'SID1234'.  
+ No se puede cambiar el nombre una tabla o una base de datos mientras estas están en uso. Cambiar el nombre de una tabla requiere un bloqueo exclusivo en dicha tabla. Si la tabla está en uso, puede que tenga que finalizar las sesiones que la estén usando. Para ello, puede usar el comando KILL. Use KILL con precaución, ya que cuando una sesión se finaliza, se revertirán todos los trabajos que no estén confirmados. Las sesiones en SQL Data Warehouse llevan el prefijo "SID". Cuando invoque el comando KILL, deberá incluir ese prefijo, así como el número de la sesión. En este ejemplo se muestra una lista de sesiones activas o inactivas y, luego, finaliza la sesión "SID1234".  
   
-### <a name="views-are-not-updated"></a>No se actualizan las vistas  
- Al cambiar el nombre de una base de datos, todas las vistas que usan el nombre de la base de datos anterior ya no serán válidas. Esto se aplica a las vistas, tanto dentro como fuera de la base de datos. Por ejemplo, si se cambia el nombre de la base de datos de ventas, una vista que contiene `SELECT * FROM Sales.dbo.table1` dejarán de ser válidos. Para resolver este problema, puede evitar el uso de nombres de tres partes en vistas o actualizar las vistas para hacer referencia al nombre de la base de datos nueva.  
+### <a name="views-are-not-updated"></a>Las vistas no se actualizan  
+ Al cambiar el nombre de una base de datos, todas las vistas que usan el nombre de la base de datos anterior dejarán de ser válidas. Esto ocurre con las vistas tanto dentro como fuera de la base de datos. Por ejemplo, si se cambia el nombre de la base de datos Sales, una vista que contenga `SELECT * FROM Sales.dbo.table1` dejará de ser válida. Para resolver este problema, puede abstenerse de usar nombres de tres partes en las vistas, o bien actualizar las vistas para que hagan referencia al nombre de la nueva base de datos.  
   
- Al cambiar el nombre de una tabla, las vistas no se actualizan para que haga referencia el nuevo nombre de tabla. Cada vista, ya sea dentro o fuera de la base de datos, que hace referencia el nombre de la tabla anterior dejará de ser válida. Para resolver este problema, puede actualizar cada vista para hacer referencia al nombre de la tabla nueva.  
+ Al cambiar el nombre de una tabla, las vistas no se actualizan para que hagan referencia el nuevo nombre de tabla. Cada vista (ya sea dentro o fuera de la base de datos) que haga referencia al nombre de tabla anterior dejará de ser válida. Para resolver este problema, puede actualizar cada vista para que haga referencia al nombre de la nueva tabla.  
   
 ## <a name="locking"></a>Bloqueo  
- Cambiar el nombre de una tabla tiene un bloqueo compartido en el objeto de base de datos, un bloqueo compartido en el objeto de esquema y un bloqueo exclusivo en la tabla.  
+ Al cambiar el nombre de una tabla, se efectúa un bloqueo compartido en el objeto DATABASE, un bloqueo compartido en el objeto SCHEMA y un bloqueo exclusivo en la tabla.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-rename-a-database"></a>A. Cambiar el nombre de una base de datos  
- **Se aplica a:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] sólo  
+ **SE APLICA A:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] solo  
   
- Este ejemplo cambia el nombre de la base de datos definido por el usuario AdWorks a AdWorks2.  
+ En este ejemplo se cambia el nombre de la base de datos definida por el usuario de AdWorks a AdWorks2.  
   
 ```  
 -- Rename the user defined database AdWorks  
@@ -121,12 +121,12 @@ RENAME DATABASE AdWorks to AdWorks2;
   
 ```  
   
- Al cambiar el nombre de una tabla, se actualizan todos los objetos y propiedades asociadas a la tabla para hacer referencia al nombre de la tabla nueva. Por ejemplo, tabla definiciones, índices, restricciones y se actualizan permisos. No se actualizan las vistas.  
+ Al cambiar el nombre de una tabla, se actualizan todos los objetos y propiedades asociados a esa tabla para que hagan referencia al nombre de la nueva tabla. Así, por ejemplo, se actualizan las definiciones, índices, restricciones y permisos de la de tabla. Las vistas no se actualizan.  
   
 ### <a name="b-rename-a-table"></a>B. Cambiar de nombre una tabla  
- **SE APLICA A:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)],  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ **SE APLICA A:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- Este ejemplo cambia el nombre de la tabla Customer para Customer1.  
+ En este ejemplo se cambia el nombre de la tabla Customer a Customer1.  
   
 ```  
 -- Rename the customer table  
@@ -135,22 +135,22 @@ RENAME OBJECT Customer TO Customer1;
 RENAME OBJECT mydb.dbo.Customer TO Customer1;  
 ```  
   
- Al cambiar el nombre de una tabla, se actualizan todos los objetos y propiedades asociadas a la tabla para hacer referencia al nombre de la tabla nueva. Por ejemplo, tabla definiciones, índices, restricciones y se actualizan permisos. No se actualizan las vistas.  
+ Al cambiar el nombre de una tabla, se actualizan todos los objetos y propiedades asociados a esa tabla para que hagan referencia al nombre de la nueva tabla. Así, por ejemplo, se actualizan las definiciones, índices, restricciones y permisos de la de tabla. Las vistas no se actualizan.  
    
   
-### <a name="c-move-a-table-to-a-different-schema"></a>C. Mover una tabla a un esquema diferente  
- **SE APLICA A:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)],  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+### <a name="c-move-a-table-to-a-different-schema"></a>C. Mover una tabla a otro esquema  
+ **SE APLICA A:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- Si su intención es mover el objeto a un esquema diferente, use [ALTER SCHEMA &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-schema-transact-sql.md). Por ejemplo, mueve el elemento de la tabla desde el esquema de producto al esquema dbo.  
+ Si trata de mover el objeto a otro esquema, use [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md). En el siguiente ejemplo se mueve el elemento de tabla desde el esquema product al esquema dbo.  
   
 ```  
 ALTER SCHEMA dbo TRANSFER OBJECT::product.item;  
 ```  
   
-### <a name="d-terminate-sessions-before-renaming-a-table"></a>D. Terminar sesiones antes de cambiar el nombre de una tabla  
- **SE APLICA A:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)],  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+### <a name="d-terminate-sessions-before-renaming-a-table"></a>D. Terminar las sesiones antes de cambiar el nombre de una tabla  
+ **SE APLICA A:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- Es importante recordar que no se puede cambiar el nombre una tabla mientras está en uso. Un cambio de nombre de una tabla requiere un bloqueo exclusivo en la tabla. Si la tabla está en uso, debe finalizar la sesión mediante la tabla. Puede utilizar el comando KILL para terminar una sesión. Utilice KILL con precaución, ya que cuando se termina una sesión de cualquier trabajo no confirmado se revertirá. Las sesiones en el almacén de datos de SQL llevan el prefijo 'SID'. Debe incluir esto y el número de sesión al invocar el comando KILL. Este ejemplo muestra una lista de sesiones activas o inactivas y, a continuación, finaliza la sesión 'SID1234'.  
+ Es importante recordar que no se puede cambiar el nombre una tabla mientras está en uso. Cambiar el nombre de una tabla requiere un bloqueo exclusivo en dicha tabla. Si la tabla está en uso, puede que tenga que finalizar la sesión que la esté usando. Para ello, puede usar el comando KILL. Use KILL con precaución, ya que cuando una sesión se finaliza, se revertirán todos los trabajos que no estén confirmados. Las sesiones en SQL Data Warehouse llevan el prefijo "SID". Cuando invoque el comando KILL, deberá incluir ese prefijo, así como el número de la sesión. En este ejemplo se muestra una lista de sesiones activas o inactivas y, luego, finaliza la sesión "SID1234".  
   
 ```  
 -- View a list of the current sessions  

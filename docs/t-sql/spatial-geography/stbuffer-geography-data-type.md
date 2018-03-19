@@ -1,5 +1,5 @@
 ---
-title: STBuffer (tipo de datos geography) | Documentos de Microsoft
+title: STBuffer (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stbuffer-geography-data-type"></a>STBuffer (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Devuelve un objeto de geography que representa la unión de todos los puntos cuya distancia desde una **geography** instancia es menor o igual que un valor especificado.  
+  Devuelve un objeto geography que representa la unión de todos los puntos cuya distancia desde una instancia de **geography** es menor o igual que un valor especificado.  
   
- Admite el método de tipo de este datos geography **FullGlobe** instancias o instancias espaciales mayores que un hemisferio.  
+ Este método del tipo de datos geography admite instancias de **FullGlobe** o instancias espaciales mayores que un hemisferio.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,32 +47,32 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *distance*  
- Es un valor de tipo **float** (**doble** en .NET Framework) especifica la distancia desde la **geography** instancia alrededor de la cual se puede calcular el búfer.  
+ Es un valor de tipo **float** (**double** en .NET Framework) que especifica la distancia desde la instancia de **geography** en torno a la cual se puede calcular el búfer.  
   
- La distancia máxima del búfer no puede superar 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 circunferencia Terráquea) o todo el globo terráqueo.  
+ La distancia máxima del búfer no puede superar 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0,999 \* 1/2 circunferencia terráquea) o todo el globo terráqueo.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geography**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Comentarios  
- STBuffer() calcula un búfer de la misma manera que [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md), especificando *tolerancia* = ABS (distancia) \* .001 y *relativa*  =  **false**.  
+## <a name="remarks"></a>Notas  
+ STBuffer() calcula un búfer de la misma forma que [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md), mediante la especificación de *tolerance* = abs(distance) \* 0,001 y *relative* = **false**.  
   
- Un búfer negativo quita todos los puntos dentro de la distancia especificada del límite de la **geography** instancia.  
+ Un búfer negativo quita todos los puntos que se encuentran dentro de la distancia especificada del límite de la instancia de **geography**.  
   
- `STBuffer()`devolverá un **FullGlobe** instancia en ciertos casos; por ejemplo, `STBuffer()` devuelve un **FullGlobe** instancia cuando la distancia del búfer es mayor que la distancia desde el Ecuador hasta los polos. Un búfer no puede superar el globo terráqueo completo.  
+ `STBuffer()` devuelve una instancia de **FullGlobe** en determinados casos; por ejemplo, `STBuffer()` devuelve una instancia de **FullGlobe** cuando la distancia del búfer es mayor que la distancia desde el ecuador a los polos. Un búfer no puede superar el globo terráqueo completo.  
   
- Este método producirá una **ArgumentException** en **FullGlobe** instancias donde la distancia del búfer supera la limitación siguiente:  
+ Este método produce una excepción **ArgumentException** en las instancias de **FullGlobe** donde la distancia del búfer supera la siguiente limitación:  
   
- 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 circunferencia Terráquea)  
+ 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0,999 \* 1/2 circunferencia terráquea)  
   
  El límite de distancia máxima permite que la construcción del búfer sea lo más flexible posible.  
   
- El error entre el búfer teórico y calculada es max (tolerancia a errores, extensiones * 1.E-7) donde tolerancia = distancia \* .001. Para obtener más información sobre extensiones, consulte [referencia de método de tipo de datos geography](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
+ El error entre el búfer teórico y el calculado es max(tolerance, extents * 1.E-7), donde tolerance = distance \* .001. Para más información sobre las extensiones, vea [Referencia de los métodos del tipo de datos geography](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se crea un `LineString``geography` instancia. A continuación, se usa `STBuffer()` para devolver la región que se encuentra en un radio de 1 metro de la instancia.  
+ En el ejemplo siguiente se crea una instancia de `LineString``geography`. A continuación, se usa `STBuffer()` para devolver la región que se encuentra en un radio de 1 metro de la instancia.  
   
 ```  
 DECLARE @g geography;  
@@ -80,8 +80,8 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STBuffer(1).ToString();  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [BufferWithTolerance &#40; tipo de datos geography &#41;](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)   
+## <a name="see-also"></a>Ver también  
+ [BufferWithTolerance &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)   
  [Métodos de OGC en instancias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

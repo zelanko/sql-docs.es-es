@@ -1,5 +1,5 @@
 ---
-title: "MODIFICAR la configuración del servidor (Transact-SQL) | Documentos de Microsoft"
+title: ALTER SERVER CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -109,33 +109,33 @@ SET <optionspec>
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **\<process_affinity >:: =**  
+ **\<process_affinity> ::=**  
   
  PROCESS AFFINITY  
  Permite asociar los subprocesos de hardware a las CPU.  
   
- CPU = {AUTOMÁTICA | \<CPU_range_spec >}  
+ CPU = { AUTO | \<CPU_range_spec> }  
  Distribuye los subprocesos de trabajo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cada CPU dentro del rango especificado. Las CPU que no pertenezcan al rango especificado no tendrán subprocesos asignados.  
   
  AUTO  
  Especifica que los subprocesos no se asignan a ninguna CPU. El sistema operativo puede mover los subprocesos libremente entre las CPU según la carga de trabajo del servidor. Esta es la configuración predeterminada y recomendada.  
   
- \<CPU_range_spec >:: =  
+ \<CPU_range_spec> ::=  
  Especifica la CPU o el rango de las CPU a las que se asignan los subprocesos.  
   
  { CPU_ID | CPU_ID  TO  CPU_ID } [ ,...n ]  
- Es la lista de una o varias CPU. Identificadores de CPU comienzan en 0 y son **entero** valores.  
+ Es la lista de una o varias CPU. Los identificadores de CPU comienzan en 0 y son valores **integer**.  
   
- NUMANODE = \<NUMA_node_range_spec >  
+ NUMANODE = \<NUMA_node_range_spec>  
  Asigna subprocesos a todas las CPU que pertenecen al nodo o rango de nodos NUMA especificado.  
   
- \<NUMA_node_range_spec >:: =  
+ \<NUMA_node_range_spec> ::=  
  Especifica el nodo o rango de nodos NUMA.  
   
  { NUMA_node_ID | NUMA_node_ID  TO NUMA_node_ID } [ ,...n ]  
- Es la lista de uno o varios nodos NUMA. Identificadores de nodos NUMA comienzan en 0 y son **entero** valores.  
+ Es la lista de uno o varios nodos NUMA. Los identificadores del nodo NUMA comienzan por 0 y son valores **integer**.  
   
- **\<diagnostic_log >:: =**  
+ **\<diagnostic_log> ::=**  
   
 **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -149,7 +149,7 @@ SET <optionspec>
  Detiene el registro de datos de diagnóstico.  
   
  PATH = { 'os_file_path' | DEFAULT }  
- Ruta de acceso que indica la ubicación de los registros de diagnóstico. La ubicación predeterminada es \<\MSSQL\Log > dentro de la carpeta de instalación de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia de clúster de conmutación por error.  
+ Ruta de acceso que indica la ubicación de los registros de diagnóstico. La ubicación predeterminada es \<\MSSQL\Log> en la carpeta de instalación de la instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  MAX_SIZE = { 'log_max_size' MB | DEFAULT }  
  Tamaño máximo en megabytes que cada registro de diagnóstico puede alcanzar. El valor predeterminado es 100 MB.  
@@ -157,7 +157,7 @@ SET <optionspec>
  MAX_FILES = { 'max_file_count' | DEFAULT }  
  Número máximo de archivos de registro de diagnóstico que pueden almacenarse en el equipo antes de que se reciclen para nuevos registros de diagnóstico.  
   
- **\<failover_cluster_property >:: =**  
+ **\<failover_cluster_property> ::=**  
   
 **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -174,26 +174,26 @@ SET <optionspec>
 -   2: errores y advertencias  
   
 SQLDUMPEREDUMPFLAGS  
- Determina el tipo de archivos de volcado generados por la utilidad SQLDumper de SQL Server. El valor predeterminado es 0. Para obtener más información, consulte [artículo de Knowledge Base utilidad de SQL Server volcado](http://go.microsoft.com/fwlink/?LinkId=206173).  
+ Determina el tipo de archivos de volcado generados por la utilidad SQLDumper de SQL Server. El valor predeterminado es 0. Para obtener más información, vea el artículo de Knowledgebase sobre la [utilidad SQLDumper de SQL Server](http://go.microsoft.com/fwlink/?LinkId=206173).  
   
  SQLDUMPERDUMPPATH = { 'os_file_path' | DEFAULT }  
- Ubicación donde la utilidad SQLDumper almacena los archivos de volcado. Para obtener más información, consulte [artículo de Knowledge Base utilidad de SQL Server volcado](http://go.microsoft.com/fwlink/?LinkId=206173).  
+ Ubicación donde la utilidad SQLDumper almacena los archivos de volcado. Para obtener más información, vea el artículo de Knowledgebase sobre la [utilidad SQLDumper de SQL Server](http://go.microsoft.com/fwlink/?LinkId=206173).  
   
  SQLDUMPERDUMPTIMEOUT = { 'dump_time-out' | DEFAULT }  
- Valor de tiempo de espera en milisegundos para que la utilidad SQLDumper genere un volcado en caso de un error de SQL Server. El valor predeterminado es 0, lo que significa que no hay ningún límite de tiempo para completar el volcado. Para obtener más información, consulte [artículo de Knowledge Base utilidad de SQL Server volcado](http://go.microsoft.com/fwlink/?LinkId=206173).  
+ Valor de tiempo de espera en milisegundos para que la utilidad SQLDumper genere un volcado en caso de un error de SQL Server. El valor predeterminado es 0, lo que significa que no hay ningún límite de tiempo para completar el volcado. Para obtener más información, vea el artículo de Knowledgebase sobre la [utilidad SQLDumper de SQL Server](http://go.microsoft.com/fwlink/?LinkId=206173).  
   
  FAILURECONDITIONLEVEL = { 'failure_condition_level' | DEFAULT }  
- Condiciones en que la instancia de clúster de conmutación por error de SQL Server debe producir la conmutación por error o reiniciarse. El valor predeterminado es 3, lo que significa que el recurso de SQL Server producirá la conmutación por error o se reiniciará en errores de servidor críticos. Para obtener más información sobre este y otros niveles de condición de error, consulte [configurar los valores de propiedad FailureConditionLevel](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).  
+ Condiciones en que la instancia de clúster de conmutación por error de SQL Server debe producir la conmutación por error o reiniciarse. El valor predeterminado es 3, lo que significa que el recurso de SQL Server producirá la conmutación por error o se reiniciará en errores de servidor críticos. Para obtener más información sobre cómo configurar esta propiedad, vea [Configurar los valores de la propiedad FailureConditionLevel](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).  
   
  HEALTHCHECKTIMEOUT = { 'health_check_time-out' | DEFAULT }  
  Valor de tiempo de espera que establece cuánto tiempo debe la DLL del recurso del motor de base de datos de SQL Server esperar la información de estado del servidor antes de considerar que la instancia de SQL Server no responde. El valor de tiempo de espera se expresa en milisegundos. El valor predeterminado es 60000 milisegundos (o 60 segundos).  
   
- **\<hadr_cluster_context >:: =**  
+ **\<hadr_cluster_context> ::=**  
   
 **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- CONTEXTO de clúster de HADR  **=**  { **'***remote_windows_cluster***'** | LOCAL}  
- Cambia el contexto de clúster de HADR de la instancia de servidor al clúster especificado de Clústeres de conmutación por error de Windows Server (WSFC). El *contexto de clúster HADR* determina qué clúster de clústeres de conmutación por error de servidor de Windows (WSFC) administra los metadatos para las réplicas de disponibilidad hospedadas por la instancia del servidor. Use la opción SET HADR CLUSTER CONTEXT solo durante una migración entre clústeres de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] a una instancia de [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] o una versión posterior en un nuevo clúster de WSFC.  
+ HADR CLUSTER CONTEXT **=** { **'***remote_windows_cluster***'** | LOCAL }  
+ Cambia el contexto de clúster de HADR de la instancia de servidor al clúster especificado de Clústeres de conmutación por error de Windows Server (WSFC). El *contexto de clúster de HADR* determina qué clúster de Clústeres de conmutación por error de Windows Server (WSFC) administra los metadatos para las réplicas de disponibilidad hospedadas por la instancia de servidor. Use la opción SET HADR CLUSTER CONTEXT solo durante una migración entre clústeres de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] a una instancia de [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] o una versión posterior en un nuevo clúster de WSFC.  
   
  Solo puede cambiar el contexto de clúster de HADR desde el clúster local de WSFC a un clúster remoto y viceversa. El contexto de clúster de HADR se puede cambiar a un clúster remoto solo cuando la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no hospeda ninguna réplica de disponibilidad.  
   
@@ -207,20 +207,20 @@ SQLDUMPEREDUMPFLAGS
  LOCAL  
  Clúster local de WSFC.  
   
- Para obtener más información, vea [cambiar el contexto de clúster de HADR de instancia servidor &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md).  
+ Para obtener más información, consulte [Cambiar el contexto de clúster de HADR de la instancia de servidor &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md).  
   
- **\<buffer_pool_extension >:: =**  
+ **\<buffer_pool_extension>::=**  
   
 **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  ON  
- Habilita la opción de extensión del grupo de búferes. Esta opción extiende el tamaño del grupo de búferes con almacenamiento no volátil como unidades de estado sólido (SSD) para conservar las páginas de datos limpias en el grupo. Para obtener más información sobre esta característica, consulte [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md). La extensión del grupo de búferes no está disponible en cada edición de SQL Server. Para obtener más información, consulte [ediciones y características admitidas en SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Habilita la opción de extensión del grupo de búferes. Esta opción extiende el tamaño del grupo de búferes con almacenamiento no volátil como unidades de estado sólido (SSD) para conservar las páginas de datos limpias en el grupo. Para obtener más información sobre esta característica, vea [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md). La extensión del grupo de búferes no está disponible en todas las ediciones de SQL Server. Para obtener más información, consulte [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  FILENAME = 'os_file_path_and_name'  
  Define la ruta de acceso al directorio y el nombre del archivo de la memoria caché de la extensión del grupo de búferes. La extensión de archivo se debe especificar como .BPE. Debe desactivar BUFFER POOL EXTENSION para poder modificar FILENAME.  
   
- TAMAÑO = *tamaño* [ **KB** | MB | GB]  
- Define el tamaño de la memoria caché. La especificación de tamaño predeterminado es KB. El tamaño mínimo es el de la Memoria de servidor máxima. El límite máximo es 32 veces el tamaño de Memoria de servidor máxima. Para obtener más información acerca de la memoria de servidor máxima, vea [sp_configure &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+ SIZE = *size* [ **KB** | MB | GB ]  
+ Define el tamaño de la memoria caché. La especificación de tamaño predeterminado es KB. El tamaño mínimo es el de la Memoria de servidor máxima. El límite máximo es 32 veces el tamaño de Memoria de servidor máxima. Para obtener más información sobre la memoria de servidor máxima, vea [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
  Debe desactivar BUFFER POOL EXTENSION para poder modificar el tamaño del archivo. Para especificar un tamaño menor que el actual, la instancia de SQL Server debe reiniciarse para reclamar memoria. De lo contrario, el tamaño especificado debe ser igual o mayor que el actual.  
   
@@ -230,54 +230,54 @@ SQLDUMPEREDUMPFLAGS
 > [!WARNING]  
 >  Deshabilitar la extensión del grupo de búferes puede tener un impacto negativo en el rendimiento del servidor porque el tamaño del grupo de búferes se reduce significativamente.  
   
- **\<soft_numa >**  
+ **\<soft_numa>**  
 
 **Se aplica a**: desde [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  ON  
- Permite la creación automática de particiones dividir grandes nodos NUMA de hardware en los nodos NUMA más pequeños. Cambiar el valor de ejecución, requiere un reinicio del motor de base de datos.  
+ Permite la creación automática de particiones para dividir grandes nodos de hardware NUMA en nodos NUMA más pequeños. Para cambiar el valor de ejecución, es necesario reiniciar el motor de base de datos.  
   
  OFF  
- Deshabilita el software automática creación de particiones de gran tamaño nodos NUMA de hardware en nodos NUMA más pequeños. Cambiar el valor de ejecución, requiere un reinicio del motor de base de datos.  
+ Deshabilita la creación automática de particiones de software de grandes nodos de hardware NUMA en nodos NUMA más pequeños. Para cambiar el valor de ejecución, es necesario reiniciar el motor de base de datos.  
 
 > [!WARNING]  
-> Existen problemas conocidos con el comportamiento de la instrucción ALTER SERVER CONFIGURATION con la opción de NUMA de software y el Agente SQL Server.  La siguiente es la secuencia recomendada de operaciones:  
+> Existen problemas conocidos en el comportamiento de la instrucción ALTER SERVER CONFIGURATION con la opción SOFT NUMA y el Agente SQL Server.  La secuencia recomendada de operaciones es la siguiente:  
 > 1) Detenga la instancia del Agente SQL Server.  
-> 2) Ejecute la opción ALTER NUMA de software de servidor los.  
-> 3) Vuelva a iniciar la instancia de SQL Server.  
+> 2) Ejecute la opción ALTER SERVER CONFIGURATION con SOFT NUMA.  
+> 3) Reinicie la instancia de SQL Server.  
 > 4) Inicie la instancia del Agente SQL Server.  
   
-**Obtener más información:** si se ejecuta una configuración de servidor ALTER con el comando SET SOFTNUMA antes de que se reinicie el servicio de SQL Server, a continuación, cuando se detiene el servicio Agente SQL Server, ejecutará un comando RECONFIGURE de T-SQL que se restablecerá la Configuración de SOFTNUMA a su estado original antes de ALTER SERVER CONFIGURATION. 
+**Más información:** si se ejecuta ALTER SERVER CONFIGURATION con el comando SET SOFTNUMA antes de reiniciar el servicio de SQL Server, cuando el servicio del Agente SQL Server se detiene, ejecuta un comando T-SQL RECONFIGURE que restablece la configuración de SOFTNUMA a su estado original anterior a ALTER SERVER CONFIGURATION. 
   
 ## <a name="general-remarks"></a>Notas generales  
- Esta instrucción no requiere un reinicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a menos que establezca explícitamente lo contrario. En el caso de una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no se requiere un reinicio del recurso de clúster de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Esta instrucción no requiere un reinicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a menos que se indique explícitamente lo contrario. En el caso de una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no se requiere un reinicio del recurso de clúster de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
  Esta instrucción no admite desencadenadores DDL.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Necesita permisos ALTER SETTINGS para la opción de afinidad de proceso. Se necesitan permisos ALTER SETTINGS y VIEW SERVER STATE para las opciones de propiedad de clúster de conmutación por error y registro de diagnóstico, y el permiso CONTROL SERVER para la opción de contexto de clúster de HADR.  
   
  Requiere el permiso ALTER SERVER STATE para la opción de entension del grupo de búferes.  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] recurso DLL se ejecuta bajo la cuenta Sistema Local. Por tanto, la cuenta de sistema local debe tener acceso de lectura y escritura a la ruta de acceso especificada en la opción de registro de diagnóstico.  
+ La DLL de recursos del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de [!INCLUDE[ssDE](../../includes/ssde-md.md)] se ejecuta en la cuenta de sistema local. Por tanto, la cuenta de sistema local debe tener acceso de lectura y escritura a la ruta de acceso especificada en la opción de registro de diagnóstico.  
   
 ## <a name="examples"></a>Ejemplos  
   
 |Categoría|Elementos de sintaxis ofrecidos|  
 |--------------|------------------------------|  
-|[Establecer afinidad de proceso](#Affinity)|CPU • NUMANODE • AUTO|  
-|[Establecer las opciones del registro de diagnóstico](#Diagnostic)|ON • OFF • PATH • MAX_SIZE|  
-|[Establecer propiedades de clúster de conmutación por error](#Failover)|HealthCheckTimeout|  
-|[Cambiar el contexto de clúster de una réplica de disponibilidad](#ChangeClusterContextExample)|**'** *windows_cluster* **'**|  
-|[Establecer la extensión del grupo de búferes](#BufferPoolExtension)|BUFFER POOL EXTENSION|  
+|[Configuración de una afinidad de proceso](#Affinity)|CPU • NUMANODE • AUTO|  
+|[Configuración de opciones de registro de diagnóstico](#Diagnostic)|ON • OFF • PATH • MAX_SIZE|  
+|[Configuración de propiedades de clúster de conmutación por error](#Failover)|HealthCheckTimeout|  
+|[Cambio del contexto de clúster de una réplica de disponibilidad](#ChangeClusterContextExample)|**'** *windows_cluster* **'**|  
+|[Configuración de la extensión del grupo de búferes](#BufferPoolExtension)|BUFFER POOL EXTENSION|  
   
-###  <a name="Affinity"></a>Establecer afinidad de proceso  
+###  <a name="Affinity"></a> Configuración de la afinidad de proceso  
  En los ejemplos de esta sección se muestra cómo establecer la afinidad de proceso en las CPU y nodos NUMA. En los ejemplos se supone que el servidor contiene 256 CPU organizadas en cuatro grupos de 16 nodos NUMA cada una. Los subprocesos no se asignan a ningún nodo NUMA ni a ninguna CPU.  
   
 -   Grupo 0: nodos NUMA del 0 al 3, CPU de la 0 a la 63  
--   Grupo 1: Nodos NUMA del 4 al 7, CPUs 64 a 127  
--   Grupo 2: Nodos NUMA del 8 al 12, CPUs 128 a 191  
+-   Grupo 1: nodos NUMA del 4 al 7, CPU de la 64 a la 127  
+-   Grupo 2: nodos NUMA del 8 al 12, CPU de la 128 a la 191  
 -   Grupo 3: nodos NUMA del 13 al 16, CPU de la 192 a la 255  
   
 #### <a name="a-setting-affinity-to-all-cpus-in-groups-0-and-2"></a>A. Establecer la afinidad en todas las CPU de los grupos 0 y 2  
@@ -355,7 +355,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-###  <a name="Failover"></a>Establecer propiedades de clúster de conmutación por error  
+###  <a name="Failover"></a> Configuración de las propiedades de clúster de conmutación por error  
   
 **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -408,12 +408,12 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Soft-NUMA &#40; SQL Server &#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)   
- [Cambiar el contexto de clúster HADR de la instancia del servidor &#40; SQL Server &#41;](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)   
- [Sys.DM_OS_SCHEDULERS &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)   
- [Sys.dm_os_memory_nodes &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md)   
- [Sys.dm_os_buffer_pool_extension_configuration &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)   
+ [Cambiar el contexto de clúster de HADR de la instancia de servidor &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)   
+ [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)   
+ [sys.dm_os_memory_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md)   
+ [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)   
  [Extensión del grupo de búferes](../../database-engine/configure-windows/buffer-pool-extension.md)  
   
   

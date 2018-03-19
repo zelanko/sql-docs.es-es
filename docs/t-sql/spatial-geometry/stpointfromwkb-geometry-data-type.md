@@ -1,5 +1,5 @@
 ---
-title: STPointFromWKB (tipo de datos geometry) | Documentos de Microsoft
+title: STPointFromWKB (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpointfromwkb-geometry-data-type"></a>STPointFromWKB (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve un **geometryPoint** instancia a partir de una representación Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Devuelve una instancia de **geometryPoint** a partir de una representación Well-Known Binary (WKB) de Open Geospatial Consortium (OGC).
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,20 +45,20 @@ STPointFromWKB ( 'WKB_point' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *WKB_point*  
- Es la representación WKB de la **geometryPoint** instancia que se va a devolver. *WKB_point* es un **varbinary (max)** expresión.  
+ Es la representación WKB de la instancia de **geometryPoint** que se quiere devolver. *WKB_point* es una expresión **varbinary(max)**.  
   
  *SRID*  
- Es un **int** expresión que representa el espaciales identificador de referencia (SRID) de la **geometryPoint** instancia que se va a devolver.  
+ Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometryPoint** que se quiere devolver.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geometry**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
- Tipo de OGC: **punto**  
+ Tipo OGC: **Point**  
   
-## <a name="remarks"></a>Comentarios  
- Este método producirá una **FormatException** si la entrada no tiene el formato correcto.  
+## <a name="remarks"></a>Notas  
+ Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se usa `STPointFromWKB()` para crear una instancia de `geometry`.  
@@ -69,7 +69,7 @@ SET @g = geometry::STPointFromWKB(0x010100000000000000000059400000000000005940, 
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de geometría estáticos de OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

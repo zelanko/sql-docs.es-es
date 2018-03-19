@@ -1,5 +1,5 @@
 ---
-title: Crear servicio (Transact-SQL) | Documentos de Microsoft
+title: CREATE SERVICE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,37 +54,37 @@ CREATE SERVICE service_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *SERVICE_NAME*  
- Es el nombre del servicio que se va a crear. El servicio nuevo se crea en la base de datos actual, la cual pertenece a la entidad de seguridad especificada en la cláusula AUTHORIZATION. No se pueden especificar nombres de servidor, base de datos o esquema. El *service_name* debe ser válido **sysname**.  
+ *service_name*  
+ Es el nombre del servicio que se va a crear. El servicio nuevo se crea en la base de datos actual, la cual pertenece a la entidad de seguridad especificada en la cláusula AUTHORIZATION. No se pueden especificar nombres de servidor, base de datos o esquema. *service_name* debe ser un **sysname** válido.  
   
 > [!NOTE]  
->  No cree un servicio que utiliza la palabra clave ANY para la *service_name*. Cuando especifica ANY para un nombre de servicio en CREATE BROKER PRIORITY, la prioridad se considera para todos los servicios. No se limita a un servicio cuyo nombre sea ANY.  
+>  No cree un servicio que use la palabra clave ANY para *service_name*. Cuando especifica ANY para un nombre de servicio en CREATE BROKER PRIORITY, la prioridad se considera para todos los servicios. No se limita a un servicio cuyo nombre sea ANY.  
   
- AUTORIZACIÓN *owner_name*  
- Establece el propietario del servicio en el usuario o el rol de base de datos especificado. Cuando el usuario actual es **dbo** o **sa**, *owner_name* puede ser el nombre de cualquier usuario o rol válidos. En caso contrario, *owner_name* debe ser el nombre del usuario actual, el nombre de un usuario que el usuario actual tiene permiso IMPERSONATE o el nombre de un rol al que pertenece el usuario actual.  
+ AUTHORIZATION *owner_name*  
+ Establece el propietario del servicio en el usuario o el rol de base de datos especificado. Cuando el usuario actual es **dbo** o **sa**, *owner_name* puede ser el nombre de cualquier usuario o rol válidos. En caso contrario, *owner_name* debe ser el nombre del usuario actual, el nombre de un usuario para el que el usuario actual tiene permisos IMPERSONATE o el nombre de un rol al que pertenece el usuario actual.  
   
- COLA de ON [ *schema_name***.** ] *nombre_de_cola*  
- Especifica la cola que recibe mensajes para el servicio. La cola debe existir en la misma base de datos que el servicio. Si no hay ningún *schema_name* es siempre el esquema es el esquema predeterminado para el usuario que ejecuta la instrucción.  
+ ON QUEUE [ *schema_name***.** ] *queue_name*  
+ Especifica la cola que recibe mensajes para el servicio. La cola debe existir en la misma base de datos que el servicio. Si no se proporciona *schema_name*, el valor es el esquema predeterminado del usuario que ejecuta la instrucción.  
   
  *contract_name*  
  Especifica un contrato para el que este servicio puede ser un destino. Los programas de servicio inician conversaciones con este servicio utilizando los contratos especificados. Si no se especifica ningún contrato, el servicio solo puede iniciar conversaciones.  
   
- **[**PREDETERMINADO**]**  
+ **[**DEFAULT**]**  
  Especifica que el servicio puede ser un destino para conversaciones que sigan el contrato DEFAULT. En el contexto de esta cláusula, DEFAULT no es una palabra clave y debe delimitarse como un identificador. El contrato DEFAULT permite que los dos extremos de la conversación envíen mensajes del tipo DEFAULT. El tipo de mensajes DEFAULT utiliza la validación NONE.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Un servicio muestra la funcionalidad proporcionada por los contratos a los que está asociado, de modo que puedan usarlos otros servicios. Este servicio es destino de los contratos que se especifican en la instrucción CREATE SERVICE. Un servicio solo puede ser destino de conversaciones que utilizan los contratos especificados por el servicio. Un servicio que no especifica ningún contrato no muestra ninguna funcionalidad para otros servicios.  
   
  Las conversaciones iniciadas desde este servicio pueden utilizar cualquier contrato. Puede crear un servicio sin especificar contratos solo si el servicio inicia conversaciones.  
   
  Cuando [!INCLUDE[ssSB](../../includes/sssb-md.md)] acepta una nueva conversación de un servicio remoto, el nombre del servicio de destino determina la cola en la que el agente colocará los mensajes de la conversación.  
   
-## <a name="permissions"></a>Permissions  
- Permiso para crear un servicio tiene como valor predeterminado los miembros de la **db_ddladmin** o **db_owner** funciones fijas de base de datos y la **sysadmin** rol fijo de servidor. El usuario que ejecuta la instrucción CREATE SERVICE debe tener permisos REFERENCES en la cola y en todos los contratos especificados.  
+## <a name="permissions"></a>Permisos  
+ El permiso para crear un servicio pertenece de forma predeterminada a los miembros de los roles fijos de base de datos **db_ddladmin** o **db_owner** y al rol fijo de servidor **sysadmin**. El usuario que ejecuta la instrucción CREATE SERVICE debe tener permisos REFERENCES en la cola y en todos los contratos especificados.  
   
- Permiso REFERENCES para un servicio de forma predeterminada el propietario del servicio, los miembros de la **db_ddladmin** o **db_owner** se han corregido los roles de base de datos y los miembros de la **sysadmin** rol fijo de servidor. Permisos de envío para un servicio de forma predeterminada al propietario del servicio, los miembros de la **db_owner** fijo de rol de base de datos y los miembros de la **sysadmin** rol fijo de servidor.  
+ El permiso REFERENCES en un servicio pertenece de forma predeterminada al propietario del servicio, a los miembros de los roles fijos de base de datos **db_ddladmin** o **db_owner** y a los miembros del rol fijo de servidor **sysadmin**. Los permisos SEND en un servicio pertenecen de forma predeterminada al propietario del servicio, a los miembros del rol fijo de base de datos **db_owner** y a los miembros del rol fijo de servidor **sysadmin**.  
   
- Un servicio no puede ser un objeto temporal. Servicio que empiezan por  **#**  se permiten, pero son objetos permanentes.  
+ Un servicio no puede ser un objeto temporal. Los servicios que empiezan por **#** están permitidos, pero son objetos permanentes.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -107,15 +107,15 @@ CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue
 ```  
   
 ### <a name="c-creating-a-service-with-no-contracts"></a>C. Crear un servicio sin contratos  
- En el ejemplo siguiente se crea el servicio `//Adventure-Works.com/Expenses on the ExpenseQueue` cola. Este servicio no tiene información de contrato. Por lo tanto, el servicio solo puede ser el iniciador de un diálogo.  
+ En el siguiente ejemplo se crea la cola del servicio `//Adventure-Works.com/Expenses on the ExpenseQueue`. Este servicio no tiene información de contrato. Por lo tanto, el servicio solo puede ser el iniciador de un diálogo.  
   
 ```  
 CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue ;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [ALTER SERVICE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-service-transact-sql.md)   
- [Eliminar servicio &#40; Transact-SQL &#41;](../../t-sql/statements/drop-service-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [ALTER SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-transact-sql.md)   
+ [DROP SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-service-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Z (tipo de datos geometry) | Documentos de Microsoft
+title: Z (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -44,12 +44,12 @@ El valor (elevación) Z de la instancia. La semántica del valor de elevación l
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **float**  
+ Tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo CLR: **SqlDouble**  
+ Tipo de CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Comentarios  
- El valor de esta propiedad será null si la instancia de geometry no es un punto, así como a cualquier **punto** instancia para que no se establece.  
+## <a name="remarks"></a>Notas  
+ Si la instancia de geometry no es un punto, se asignará el valor NULL a esta propiedad, así como a cualquier instancia de **Point** para la que no se establezca dicha propiedad.  
   
  Esta propiedad es de solo lectura.  
   
@@ -64,9 +64,9 @@ SET @g = geometry::STGeomFromText('POINT(1 2 3 4)', 0);
 SELECT @g.Z;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [M &#40; tipo de datos geometry &#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
- [AsTextZM &#40; tipo de datos geometry &#41;](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)   
+## <a name="see-also"></a>Ver también  
+ [M &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
+ [AsTextZM &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)   
  [Métodos extendidos en instancias de geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

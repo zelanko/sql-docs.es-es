@@ -1,5 +1,5 @@
 ---
-title: KEY_NAME (Transact-SQL) | Documentos de Microsoft
+title: KEY_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -46,22 +46,22 @@ KEY_NAME ( ciphertext | key_guid )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *texto cifrado*  
- Es el texto cifrado por la clave simétrica. *así* es de tipo **varbinary (8000)**.  
+ *ciphertext*  
+ Es el texto cifrado por la clave simétrica. *cyphertext* es de tipo **varbinary(8000)**.  
   
  *key_guid*  
  Es el GUID de la clave simétrica. *key_guid* es de tipo **uniqueidentifier**.  
   
 ## <a name="returned-types"></a>Tipos devueltos  
- **varchar (128)**  
+ **varchar(128)**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], la visibilidad de los metadatos se limita a los elementos protegibles que son propiedad de un usuario o sobre los que el usuario tienen algún permiso. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-keyguid"></a>A. Mostrar el nombre de una clave simétrica utilizando key_guid  
- El **maestro** base de datos contiene una clave simétrica denominada # #ms_servicemasterkey ##. En el ejemplo siguiente se obtiene el GUID de esa clave a partir de la vista de administración dinámica sys.symmetric_keys, se asigna a una variable y, a continuación, se pasa esa variable a la función KEY_NAME para mostrar la forma de devolver el nombre que corresponde al GUID.  
+ La base de datos **maestra** contiene una clave simétrica denominada ##MS_ServiceMasterKey##. En el ejemplo siguiente se obtiene el GUID de esa clave a partir de la vista de administración dinámica sys.symmetric_keys, se asigna a una variable y, a continuación, se pasa esa variable a la función KEY_NAME para mostrar la forma de devolver el nombre que corresponde al GUID.  
   
 ```  
 USE master;  
@@ -115,9 +115,9 @@ SELECT KEY_NAME(@ciphertext) AS [Name of Key] ;
   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Sys.symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [ENCRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
- [DECRYPTBYKEYAUTOASYMKEY &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
+ [DECRYPTBYKEYAUTOASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  
   
   

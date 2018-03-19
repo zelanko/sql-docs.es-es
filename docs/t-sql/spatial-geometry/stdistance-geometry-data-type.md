@@ -1,5 +1,5 @@
 ---
-title: STDistance (tipo de datos geometry) | Documentos de Microsoft
+title: STDistance (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdistance-geometry-data-type"></a>STDistance (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve la distancia más corta entre un punto de un **geometry** instancia y un punto de otra **geometry** instancia.  
+  Devuelve la distancia más corta entre un punto de una instancia de **geometry** y un punto de otra instancia de **geometry**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *other_geometry*  
- Es otra **geometry** instancia desde el que se va a medir la distancia entre la instancia en la que `STDistance()` se invoca. Si *other_geometry* es un conjunto vacío, `STDistance()` devuelve null.  
+ Es otra instancia de **geometry** a partir de la que medir la distancia entre la instancia en la que se invoca a `STDistance()`. Si *other_geometry* es un conjunto vacío, `STDistance()` devuelve NULL.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **float**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
  Tipo de valor devuelto de CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Comentarios  
- `STDistance()`siempre devuelve null si los identificadores de referencia espacial (SRID) de la **geometry** instancias no coinciden.  
+## <a name="remarks"></a>Notas  
+ `STDistance()` siempre devuelve NULL si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geometry**.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -65,8 +65,8 @@ SET @h = geometry::STGeomFromText('POINT(10 10)', 0);
 SELECT @g.STDistance(@h);  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Información general de los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md)   
+## <a name="see-also"></a>Ver también  
+ [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

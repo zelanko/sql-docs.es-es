@@ -1,5 +1,5 @@
 ---
-title: EOMONTH (Transact-SQL) | Documentos de Microsoft
+title: EOMONTH (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -49,15 +49,15 @@ EOMONTH ( start_date [, month_to_add ] )
  Expresión de fecha que especifica la fecha para la que se devuelve el último día del mes.  
   
  *month_to_add*  
- Expresión entera opcional que especifica el número de meses que desee agregar a *start_date*.  
+ Expresión opcional de tipo entero que especifica el número de meses que se va a agregar a *start_date*.  
   
- Si se especifica este argumento, a continuación, **EOMONTH** suma el número especificado de meses a *start_date*y, a continuación, devuelve el último día del mes de la fecha resultante. Si esto desborda el intervalo válido de fechas, se producirá un error.  
+ Si se especifica este argumento, **EOMONTH** agrega el número especificado de meses a *start_date* y, después, devuelve el último día del mes de la fecha resultante. Si esto desborda el intervalo válido de fechas, se producirá un error.  
   
 ## <a name="return-type"></a>Tipo devuelto  
  **date**  
   
-## <a name="remarks"></a>Comentarios  
- Esta función se puede enviar de forma remota a servidores [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y posteriores. No se puede enviar de forma remota a servidores con una versión inferior a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+## <a name="remarks"></a>Notas  
+ Esta función se puede enviar de forma remota a servidores [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y posteriores. No se puede enviar de forma remota a servidores con una versión anterior a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ## <a name="examples"></a>Ejemplos  
   

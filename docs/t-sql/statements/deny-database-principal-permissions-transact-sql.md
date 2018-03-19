@@ -1,5 +1,5 @@
 ---
-title: DENEGAR permisos de entidad de seguridad de base de datos (Transact-SQL) | Documentos de Microsoft
+title: DENY (permisos de entidad de seguridad de base de datos de Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -73,24 +73,24 @@ DENY permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permiso*  
+ *permission*  
  Especifica un permiso que se puede denegar en la entidad de seguridad de base de datos. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
- USUARIO::*database_user*  
- Especifica la clase y nombre del usuario para el que se deniega el permiso. El calificador de ámbito (**::**) es necesario.  
+ USER ::*database_user*  
+ Especifica la clase y nombre del usuario para el que se deniega el permiso. Se necesita el calificador de ámbito (**::**).  
   
- ROL::*database_role*  
- Especifica la clase y el nombre del rol para el que se deniega el permiso. El calificador de ámbito (**::**) es necesario.  
+ ROLE ::*database_role*  
+ Especifica la clase y el nombre del rol para el que se deniega el permiso. Se necesita el calificador de ámbito (**::**).  
   
- ROL de aplicación::*application_role*  
- **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ APPLICATION ROLE ::*application_role*  
+ **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Especifica la clase y el nombre del rol de aplicación para el que se deniega el permiso. El calificador de ámbito (**::**) es necesario.  
+ Especifica la clase y el nombre del rol de aplicación para el que se deniega el permiso. Se necesita el calificador de ámbito (**::**).  
   
  CASCADE  
  Indica que el permiso que se va a denegar también se denegará a otras entidades de seguridad a las que esta entidad de seguridad ha concedido permisos.  
   
- AS \<database_principal >  
+ AS \<database_principal>  
  Especifica una entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de revocar el permiso.  
   
  *Database_user*  
@@ -100,7 +100,7 @@ DENY permission [ ,...n ]
  Especifica un rol de base de datos.  
   
  *Application_role*  
- **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Especifica un rol de aplicación.  
   
@@ -119,7 +119,7 @@ DENY permission [ ,...n ]
  *Database_user_with_no_login*  
  Especifica un usuario de base de datos sin entidad de seguridad de servidor correspondiente.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 ## <a name="database-user-permissions"></a>Permisos de usuario de base de datos  
  Un usuario de base de datos es un elemento protegible de nivel de base de datos que contiene la base de datos que es su entidad primaria en la jerarquía de permisos. La mayoría de permisos limitados y específicos que se pueden denegar en un usuario de base de datos se muestran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.  
@@ -150,7 +150,7 @@ DENY permission [ ,...n ]
 |ALTER|CONTROL|ALTER ANY APPLICATION ROLE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL en la entidad de seguridad especificada o un permiso superior que implique el permiso CONTROL.  
   
  Los receptores del permiso CONTROL para una base de datos, como los miembros del rol fijo de base de datos db_owner, pueden denegar los permisos para cualquier elemento protegible en la base de datos.   
@@ -179,7 +179,7 @@ GO
 ### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>C. Denegar el permiso IMPERSONATE para un usuario a un rol de aplicación  
  En el ejemplo siguiente se deniega el permiso `IMPERSONATE` para el usuario `HamithaL` al rol de aplicación `AccountsPayable17` de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 USE AdventureWorks2012;  
@@ -187,14 +187,14 @@ DENY IMPERSONATE ON USER::HamithaL TO AccountsPayable17;
 GO    
 ```  
   
-## <a name="see-also"></a>Vea también  
- [CONCEDER permisos de entidad de seguridad de base de datos &#40; Transact-SQL &#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)   
- [REVOCAR permisos de entidad de seguridad de base de datos &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [GRANT &#40;permisos de entidad de seguridad de base de datos de Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)   
+ [REVOKE &#40;permisos de entidad de seguridad de base de datos de Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [Sys.database_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+ [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [Crear rol de aplicación &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [Crear rol &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

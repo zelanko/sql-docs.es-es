@@ -1,5 +1,5 @@
 ---
-title: AsGml (tipo de datos geometry) | Documentos de Microsoft
+title: AsGml (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -36,9 +36,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="asgml-geometry-data-type"></a>AsGml (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve la representación de lenguaje de marcado de geografía (GML) de un **geometry** instancia.
+Devuelve la representación del lenguaje de marcado de geografía (GML) para una instancia de **geometry**.
   
-Para obtener más información sobre el lenguaje de marcado de geografía, vea las siguientes especificaciones de Open Geospatial Consortium:[OGC Specifications, Geography Markup Language.](http://go.microsoft.com/fwlink/?LinkId=93629)
+Para obtener más información sobre el Lenguaje de marcado de geografía, vea la siguiente especificación de Open Geospatial Consortium:[ Especificaciones de OGC, Lenguaje de marcado de geografía.](http://go.microsoft.com/fwlink/?LinkId=93629)
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,11 +48,11 @@ Para obtener más información sobre el lenguaje de marcado de geografía, vea l
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **xml**  
+ Tipo devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **xml**  
   
- Tipo de valor devuelto de CLR: **SqlXml**  
+ Tipo devuelto de CLR: **SqlXml**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea una instancia de `LineString` y se usa `AsGML()` para devolver la descripción de GML de dicha instancia.  
@@ -70,7 +70,7 @@ SELECT @g.AsGml();
 <posList>0 0 0 1 1 0</posList></LineString>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos extendidos en instancias de geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="getfilestreamtransactioncontext-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve un token que representa el contexto de transacción actual de una sesión. Las aplicaciones usan este token para enlazar las operaciones de transmisión por secuencias del sistema de archivos FILESTREAM a la transacción. Para obtener una lista de temas sobre FILESTREAM, vea [objeto binario grande &#40; BLOB &#41; Datos &#40; SQL Server &#41; ](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+  Devuelve un token que representa el contexto de transacción actual de una sesión. Las aplicaciones usan este token para enlazar las operaciones de transmisión por secuencias del sistema de archivos FILESTREAM a la transacción. Para obtener una lista de temas sobre FILESTREAM, vea [Datos de objeto binario grande &#40;Blob&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,13 +51,13 @@ GET_FILESTREAM_TRANSACTION_CONTEXT ()
 ## <a name="return-value"></a>Valor devuelto  
  Se devuelve NULL si no se ha iniciado la transacción o si se ha cancelado o confirmado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La transacción debe ser explícita. Use BEGIN TRANSACTION seguido de COMMIT TRANSACTION o ROLLBACK TRANSACTION.  
   
  Cuando se llama a GET_FILESTREAM_TRANSACTION_CONTEXT, el autor de la llamada obtiene acceso a la transacción a través del sistema de archivos mientras dure la transacción. Para que otro usuario pueda tener acceso a la transacción a través del sistema de archivos, use EXECUTE AS para ejecutar GET_FILESTREAM_TRANSACTION_CONTEXT como el otro usuario.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se utiliza `GET_FILESTREAM_TRANSACTION_CONTEXT` en un [!INCLUDE[tsql](../../includes/tsql-md.md)] transacciones para obtener el contexto de transacción.  
+ En el ejemplo siguiente se usa `GET_FILESTREAM_TRANSACTION_CONTEXT` en una transacción [!INCLUDE[tsql](../../includes/tsql-md.md)] para obtener el contexto de transacción.  
   
 ```csharp  
 using System;  
@@ -282,7 +282,7 @@ Namespace ConsoleApplication
 End Namespace  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [PathName &#40;Transact-SQL&#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
  [Datos de objeto binario grande &#40;Blob&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   

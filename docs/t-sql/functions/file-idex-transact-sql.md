@@ -1,5 +1,5 @@
 ---
-title: FILE_IDEX (Transact-SQL) | Documentos de Microsoft
+title: FILE_IDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -51,15 +51,15 @@ FILE_IDEX ( file_name )
   
 ## <a name="arguments"></a>Argumentos  
  *file_name*  
- Es una expresión de tipo **sysname** que representa el nombre del archivo para el que se va a devolver el identificador de archivo.  
+ Es una expresión de tipo **sysname** que representa el nombre del archivo para el que se devuelve el identificador del archivo.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **int**  
   
  **NULL** en caso de error  
   
-## <a name="remarks"></a>Comentarios  
- *file_name* se corresponde con el nombre de archivo lógico mostrado en el **nombre** columna en el [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) o [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) vistas de catálogo.  
+## <a name="remarks"></a>Notas  
+ *file_name* corresponde al nombre de archivo lógico mostrado en la columna **name** en las vistas de catálogo [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) o [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  
   
  FILE_IDEX se puede utilizar en una lista de selección, en una cláusula WHERE o en cualquier lugar en el que se permita una expresión. Para obtener más información, vea [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
@@ -85,7 +85,7 @@ File ID
 ```  
   
 ### <a name="b-retrieving-the-file-id-when-the-file-name-is-not-known"></a>B. Recuperar el Id. de archivo cuando se desconoce el nombre del archivo  
-En el ejemplo siguiente se devuelve el identificador de archivo de la `AdventureWorks` archivo de registro, seleccione el nombre de archivo lógico de la `sys.database_files` donde el tipo de archivo es igual a la vista de catálogo `1` (registro).  
+En el siguiente ejemplo se devuelve el identificador de archivo del archivo de registro de `AdventureWorks` seleccionando el nombre del archivo lógico de la vista de catálogo `sys.database_files` en la que el tipo de archivo es igual a `1` (registro).  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -103,15 +103,15 @@ File ID
 ```  
   
 ### <a name="c-retrieving-the-file-id-of-a-full-text-catalog-file"></a>C. Recuperar el Id. de archivo de un archivo de catálogo de texto completo  
-En el ejemplo siguiente se devuelve el identificador de archivo de un archivo de texto completo seleccionando el nombre de archivo lógico de la `sys.database_files` donde el tipo de archivo es igual a la vista de catálogo `4` (texto). En este ejemplo se devuelve NULL si no existe ningún catálogo de texto completo.  
+En el siguiente ejemplo se devuelve el identificador de archivo de un archivo de texto completo seleccionando el nombre del archivo lógico de la vista de catálogo `sys.database_files` en la que el tipo de archivo es igual a `4` (texto completo). En este ejemplo se devuelve NULL si no existe ningún catálogo de texto completo.  
   
 ```sql  
 SELECT FILE_IDEX((SELECT name FROM sys.master_files WHERE type = 4))  
 AS 'File_ID';  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Funciones de metadatos &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [Funciones de metadatos &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

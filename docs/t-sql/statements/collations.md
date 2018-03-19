@@ -1,5 +1,5 @@
 ---
-title: Intercalaciones | Documentos de Microsoft
+title: Intercalaciones | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,18 +49,18 @@ COLLATE { <collation_name> | database_default }
   
 ## <a name="arguments"></a>Argumentos  
  *collation_name*  
- Es el nombre de la intercalación que se va a aplicar a la expresión, definición de columna o definición de base de datos. *collation_name* puede ser solo un determinado *Windows_collation_name* o un *SQL_collation_name*. *collation_name* debe ser un valor literal. *collation_name* no se puede representar mediante una variable o expresión.  
+ Es el nombre de la intercalación que se va a aplicar a la expresión, definición de columna o definición de base de datos. *collation_name* solamente puede ser un *Windows_collation_name* o un *SQL_collation_name* especificado. *collation_name* debe ser un valor literal. *collation_name* no se puede representar con una variable ni una expresión.  
   
- *Windows_collation_name* es el nombre de intercalación para un [nombre de intercalación de Windows](../../t-sql/statements/windows-collation-name-transact-sql.md).  
+ *Windows_collation_name* es el nombre de intercalación de un [nombre de intercalación de Windows](../../t-sql/statements/windows-collation-name-transact-sql.md).  
   
- *SQL_collation_name* es el nombre de intercalación para un [nombre de intercalación de SQL Server](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
+ *SQL_collation_name* es el nombre de intercalación de un [nombre de intercalación de SQL Server](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
  Al aplicar una intercalación en el nivel de definición de base de datos, las intercalaciones solo Unicode de Windows no se pueden utilizar con la cláusula COLLATE.  
   
  **database_default**  
  Hace que la cláusula COLLATE herede la intercalación de la base de datos actual.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La cláusula COLLATE se puede especificar en varios niveles. Entre ellas, figuran:  
   
 1.  Crear o modificar una base de datos.  
@@ -68,13 +68,13 @@ COLLATE { <collation_name> | database_default }
      Puede utilizar la cláusula COLLATE de la instrucción CREATE DATABASE o ALTER DATABASE para especificar la intercalación predeterminada de la base de datos. También puede especificar una intercalación al crear una base de datos utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Si no especifica ninguna intercalación, se asigna a la base de datos la intercalación predeterminada de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     > [!NOTE]  
-    >  Intercalaciones exclusivas de Unicode de Windows sólo puede utilizarse con la cláusula COLLATE para aplicar intercalaciones a los **nchar**, **nvarchar**, y **ntext** tipos de datos en el nivel de columna y datos de nivel de expresión; no puede utilizarse con la cláusula COLLATE para cambiar la intercalación de una instancia del servidor o base de datos.  
+    >  Las intercalaciones solo Unicode de Windows se pueden usar únicamente con la cláusula COLLATE para aplicar intercalaciones a los tipos de datos **nchar**, **nvarchar** y **ntext** de nivel de columna y de nivel de datos de expresión; no se pueden usar con la cláusula COLLATE para cambiar la intercalación de una instancia de la base de datos o del servidor.  
   
 2.  Crear o modificar una columna de una tabla.  
   
      Puede especificar intercalaciones para cada columna de cadena de caracteres mediante la cláusula COLLATE de la instrucción CREATE TABLE o ALTER TABLE. También puede especificar una intercalación al crear una tabla utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Si no especifica ninguna intercalación, se asigna a la columna la intercalación predeterminada de la base de datos.  
   
-     También puede usar el `database_default` opción en la cláusula COLLATE para especificar que una columna en una tabla temporal utiliza la intercalación predeterminada de la base de datos de usuario actual para la conexión en lugar de **tempdb**.  
+     También puede usar la opción `database_default` de la cláusula COLLATE para especificar que una columna de una tabla temporal use la intercalación predeterminada de la base de datos de usuario actual para la conexión en lugar de usar **tempdb**.  
   
 3.  Convertir la intercalación de una expresión.  
   
@@ -84,13 +84,13 @@ COLLATE { <collation_name> | database_default }
   
  Las variables, etiquetas GOTO, procedimientos almacenados temporales y tablas temporales pueden crearse cuando se asocia el contexto de conexión a una base de datos y, a continuación, se les hace referencia cuando se ha cambiado el contexto a otra base de datos. Los identificadores para variables, etiquetas GOTO, procedimientos almacenados temporales y tablas temporales se encuentran en la intercalación predeterminada de la instancia de servidor.  
   
- La cláusula COLLATE se puede aplicar únicamente para la **char**, **varchar**, **texto**, **nchar**, **nvarchar** , y **ntext** tipos de datos.  
+ La cláusula COLLATE se puede aplicar únicamente a los tipos de datos **char**, **varchar**, **text**, **nchar**, **nvarchar** y **ntext**.  
   
- COLLATE utiliza *collate_name* para hacer referencia al nombre de la intercalación de SQL Server o la intercalación de Windows que se aplicará a la expresión, la definición de columna o la definición de la base de datos. *collation_name* puede ser solo un determinado *Windows_collation_name* o un *SQL_collation_name* y el parámetro debe contener un valor literal. *collation_name* no se puede representar mediante una variable o expresión.  
+ COLLATE usa *collate_name* para hacer referencia al nombre de la intercalación de SQL Server o de la intercalación de Windows que se va a aplicar a la expresión, definición de columna o definición de base de datos. *collation_name* solamente puede ser un *Windows_collation_name* o un *SQL_collation_name* especificado y el parámetro debe contener un valor literal. *collation_name* no se puede representar con una variable ni una expresión.  
   
- Las intercalaciones se suelen identificar mediante un nombre de intercalación, excepto en el programa de instalación. En el programa de instalación, en su lugar, especifique el designador de intercalación raíz (la configuración regional de la intercalación) para las intercalaciones de Windows y, a continuación, especifique las opciones de ordenación que se distingue o no mayúsculas y minúsculas o acentos.  
+ Las intercalaciones se suelen identificar mediante un nombre de intercalación, excepto en el programa de instalación. En el programa de instalación, se especifica en su lugar el designador de intercalación raíz (configuración regional de la intercalación) para las intercalaciones de Windows y, después, se especifican las opciones de ordenación que distinguen o no las mayúsculas de minúsculas, o acentos.  
   
- Puede ejecutar la función de sistema [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) para recuperar una lista de todos los nombres de intercalación válidos para intercalaciones de Windows e intercalaciones de SQL Server:  
+ Puede ejecutar la función del sistema [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) para recuperar una lista de todos los nombres de intercalación válidos para intercalaciones de Windows y de SQL Server:  
   
 ```sql  
 SELECT name, description  
@@ -103,13 +103,13 @@ FROM fn_helpcollations();
   
 -   Especificar una intercalación para una columna durante la creación o la modificación de una tabla.  
   
--   Al restaurar o adjuntar una base de datos, la intercalación predeterminada de la base de datos y la intercalación de cualquier **char**, **varchar**, y **texto** columnas o parámetros en la base de datos deben ser compatibles con el sistema operativo.  
+-   Cuando se restaura o anexa una base de datos, la intercalación predeterminada de la base de datos y la intercalación de las columnas **char**, **varchar** y **text** o los parámetros de la base de datos deben ser compatibles con el sistema operativo.  
   
 > [!NOTE]
-> Traducción de página de códigos se admite para **char** y **varchar** tipos de datos, pero no para **texto** tipo de datos. La pérdida de datos durante la traducción de páginas de códigos no se notifica.  
+> Las traducciones de páginas de códigos se admiten para los tipos de datos **char** y **varchar**, pero no para el tipo de datos **text**. La pérdida de datos durante la traducción de páginas de códigos no se notifica.  
   
 > [!NOTE]
-> Si la intercalación especificada o la intercalación utilizada por el objeto que se hace referencia utiliza una página de códigos no admitida por Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra un error.  
+> Si la intercalación especificada o la intercalación usada por el objeto al que se hace referencia usa una página de códigos no admitida por Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra un error.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -157,14 +157,14 @@ Colima
 Chiapas
 ```  
   
-### <a name="b-additional-examples"></a>B. Ejemplos adicionales  
- Para obtener ejemplos adicionales que usan **COLLATE**, consulte [CREATE DATABASE &#40; Transact-SQL de SQL Server &#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples) ejemplo **g. crear una base de datos y especificar un nombre de intercalación y sus opciones**, y [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md#alter_column) ejemplo **V. cambiar la intercalación de columnas**.  
+### <a name="b-additional-examples"></a>B. Otros ejemplos  
+ Para ver más ejemplos en los que se usa **COLLATE**, vea el ejemplo G de [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples), **Crear una base de datos y especificar un nombre de intercalación y sus opciones**, y el ejemplo C de [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md#alter_column), **Cambiar la intercalación de columnas**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)    
- [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md)    
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)    
  [Prioridad de intercalación &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)     
- [Constantes &#40; Transact-SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)     
+ [Constantes &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)     
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)     
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)     
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)     

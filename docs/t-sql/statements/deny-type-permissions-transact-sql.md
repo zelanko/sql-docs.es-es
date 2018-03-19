@@ -1,5 +1,5 @@
 ---
-title: DENEGAR permisos de tipo (Transact-SQL) | Documentos de Microsoft
+title: DENY (permisos de tipo de Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -58,19 +58,19 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permiso*  
+ *permission*  
  Especifica un permiso que se puede denegar en un tipo. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
- TIPO de **::** [ *schema_name***.** ] *type_name*  
- Especifica el tipo en el que se va a denegar el permiso. El calificador de ámbito (**::**) es necesario. Si *schema_name* no se especifica, se utiliza el esquema predeterminado. Si *schema_name* se especifica, el calificador de ámbito de esquema (**.**) es necesario.  
+ ON TYPE **::** [ *schema_name***.** ] *type_name*  
+ Especifica el tipo en el que se va a denegar el permiso. Se necesita el calificador de ámbito (**::**). Si no se especifica *schema_name*, se usa el esquema predeterminado. Si se especifica *schema_name*, se requiere el calificador de ámbito de esquema (**.**).  
   
- PARA \<database_principal >  
+ TO \<database_principal>  
  Especifica la entidad de seguridad a la que se deniega el permiso.  
   
  CASCADE  
  Indica que el permiso que se va a denegar también se denegará a otras entidades de seguridad a las que esta entidad de seguridad ha concedido permisos.  
   
- AS \<database_principal >  
+ AS \<database_principal>  
  Especifica una entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de denegar el permiso.  
   
  *Database_user*  
@@ -102,11 +102,11 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *Database_user_with_no_login*  
  Especifica un usuario de base de datos sin entidad de seguridad de servidor correspondiente.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Un tipo es un elemento protegible de nivel de esquema que contiene el esquema que es su entidad primaria en la jerarquía de permisos.  
   
 > [!IMPORTANT]  
->  **GRANT**, **DENY,** y **REVOCAR** permisos no se aplican a tipos del sistema. Se pueden conceder permisos a los tipos definidos por el usuario. Para obtener más información acerca de los tipos definidos por el usuario, consulte [trabajar con tipos definidos por el usuario en SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md).  
+>  Los permisos **GRANT**, **DENY,** y **REVOKE** no se aplican a los tipos de sistemas. Se pueden conceder permisos a los tipos definidos por el usuario. Para más información sobre los tipos definidos por el usuario, vea [Working with User-Defined Types in SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md) (Trabajar con tipos definidos por el usuario en SQL Server).  
   
  La mayoría de permisos limitados y específicos que se pueden denegar en un tipo se muestran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.  
   
@@ -118,7 +118,7 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL en el tipo. Si utiliza la cláusula AS, la entidad de seguridad especificada debe ser propietaria del tipo en el que se deniegan los permisos.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -130,9 +130,9 @@ DENY VIEW DEFINITION ON TYPE::Telemarketing.PhoneNumber
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Tipo de concesión de permisos &#40; Transact-SQL &#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)   
- [REVOCAR permisos de tipo de &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [GRANT Type Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)  [GRANT &#40;permisos de tipo de Transact-SQL&#41]  
+ [REVOKE Type Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)  [REVOKE &#40;permisos de tipo de Transact-SQL&#41;]  
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   

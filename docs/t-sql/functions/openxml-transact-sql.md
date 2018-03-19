@@ -50,47 +50,47 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
 ## <a name="arguments"></a>Argumentos  
  *idoc*  
- Es el identificador del documento de la representación interna de un documento XML. Se crea la representación interna de un documento XML mediante una llamada a **sp_xml_preparedocument**.  
+ Es el identificador del documento de la representación interna de un documento XML. La representación interna de un documento XML se crea mediante una llamada a **sp_xml_preparedocument**.  
   
  *rowpattern*  
- Es el patrón XPath utilizado para identificar los nodos (en el documento XML cuyo identificador se pasa en el *idoc* parámetro) a procesar como filas.  
+ Es el patrón XPath usado para identificar los nodos (en el documento XML cuyo identificador se pasa en el parámetro *idoc*) que se van a procesar como filas.  
   
  *flags*  
- Indica la asignación que debe utilizarse entre los datos XML y el conjunto de filas relacional, y cómo debe llenarse la columna de desbordamiento; *marcas de* es un parámetro de entrada opcional y puede tener uno de los siguientes valores.  
+ Indica la asignación que debe utilizarse entre los datos XML y el conjunto de filas relacional, y cómo debe llenarse la columna de desbordamiento; *flags* es un parámetro de entrada opcional y puede tomar uno de los valores siguientes.  
   
 |Valor del byte|Description|  
 |----------------|-----------------|  
-|**0**|Valor predeterminado es **centrada en atributos** asignación.|  
-|**1**|Use la **centrada en atributos** asignación. Se puede combinar con XML_ELEMENTS. En este caso, **centrada en atributos** asignación se aplica en primer lugar y, a continuación, **centrado** se aplica la asignación para todas las columnas que no se ha trabajado con.|  
-|**2**|Use la **centrado** asignación. Se puede combinar con XML_ATTRIBUTES. En este caso, **centrada en atributos** asignación se aplica en primer lugar y, a continuación, **centrado** se aplica la asignación para todas las columnas no han visto afectadas.|  
-|**8**|Puede combinarse (OR lógico) con XML_ATTRIBUTES o XML_ELEMENTS. En el contexto de la recuperación, esta marca indica que los datos consumidos no deben copiarse a la propiedad de desbordamiento  **@mp:xmltext** .|  
+|**0**|Establece como valor predeterminado la asignación **centrada en atributos**.|  
+|**1**|Usa la asignación **centrada en atributos**. Se puede combinar con XML_ELEMENTS. En ese caso, primero se aplica la asignación **centrada en atributos** y, después, la asignación **centrada en elementos** en todas las columnas que todavía no se han visto afectadas.|  
+|**2**|Usa la asignación **centrada en elementos**. Se puede combinar con XML_ATTRIBUTES. En ese caso, primero se aplica la asignación **centrada en atributos** y, después, la asignación **centrada en elementos** en todas las columnas que todavía no se han visto afectadas.|  
+|**8**|Puede combinarse (OR lógico) con XML_ATTRIBUTES o XML_ELEMENTS. Si se trata de una recuperación, esta marca informa de que los datos consumidos no se deberían copiar a la propiedad de desbordamiento **@mp:xmltext**.|  
   
  *SchemaDeclaration*  
- Es la definición de esquema de la forma: *ColName ** ColType* [*ColPattern* | *metapropiedad*] [**, *** ColNameColType* [*ColPattern * | *Metapropiedad*]...]  
+ Es la definición de esquema de la forma: *ColName**ColType* [*ColPattern* | *MetaProperty*] [**,***ColNameColType* [*ColPattern* | *MetaProperty*]...]  
   
  *ColName*  
  Es el nombre de columna en el conjunto de filas.  
   
  *ColType*  
- Es el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la columna en el conjunto de filas. Si difieren de los tipos de columna de subyacente **xml** se produce el tipo de datos del atributo, la conversión de tipos.  
+ Es el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la columna en el conjunto de filas. Si los tipos de columna son distintos del tipo de datos **xml** subyacente del atributo, se producirá una conversión de tipos.  
   
  *ColPattern*  
- Es un parámetro opcional, un patrón XPath general que describe la forma de asignar los nodos XML a las columnas. Si *ColPattern* no se especifica, la asignación predeterminada (**centrada en atributos** o **centrado** asignar tal y como especifica *marcas* ) tiene lugar.  
+ Es un parámetro opcional, un patrón XPath general que describe la forma de asignar los nodos XML a las columnas. Si no se especifica *ColPattern*, se realiza la asignación predeterminada (asignación **centrada en atributos** o **centrada en elementos** especificada en los valores *flags*).  
   
- El patrón XPath especificado como *ColPattern* se utiliza para especificar la naturaleza especial de la asignación (en el caso de **centrada en atributos** y **centrado** asignación) que sobrescribe o mejora la asignación predeterminada indicada en *marcas*.  
+ El patrón XPath especificado como *ColPattern* se usa para especificar la naturaleza especial de la asignación (en caso de una asignación **centrada en atributos** y **centrada en elementos**) que sobrescribe o mejora la asignación predeterminada especificada por *flags*.  
   
  El patrón XPath general especificado como *ColPattern* también admite las metapropiedades.  
   
  *MetaProperty*  
- Es una de las metapropiedades que proporciona OPENXML. Si *metapropiedad* se especifica, la columna contiene la información proporcionada por la metapropiedad. Las metapropiedades permiten extraer información (como información sobre el espacio de nombres y la posición relativa) acerca de nodos XML. Esto proporciona más información que la que se puede ver en la representación de texto.  
+ Es una de las metapropiedades que proporciona OPENXML. Si se especifica *MetaProperty*, la columna contiene información proporcionada por la metapropiedad. Las metapropiedades permiten extraer información (como información sobre el espacio de nombres y la posición relativa) acerca de nodos XML. Esto proporciona más información que la que se puede ver en la representación de texto.  
   
  *TableName*  
- Es el nombre de tabla que puede proporcionarse (en lugar de *SchemaDeclaration*) si ya existe una tabla con el esquema deseado y ningún patrón de columna es necesarios.  
+ Es el nombre de tabla que puede proporcionarse (en lugar de *SchemaDeclaration*) si ya existe una tabla con el esquema deseado y no se requieren patrones de columna.  
   
-## <a name="remarks"></a>Comentarios  
- La cláusula WITH proporciona un formato de conjunto de filas (e información de asignación adicionales según sea necesario) mediante el uso *SchemaDeclaration* o especificando una existente *TableName*. Si no se especifica la cláusula opcional WITH, los resultados se devuelven en un **borde** formato de tabla. Las tablas irregulares representan la estructura refinada del documento XML (por ejemplo, los nombres de elementos o atributos, la jerarquía del documento, los espacios de nombre, las instrucciones de proceso, etc.) en una única tabla.  
+## <a name="remarks"></a>Notas  
+ La cláusula WITH proporciona un formato de conjunto de filas (e información de asignación adicional si es necesario) mediante *SchemaDeclaration* o la especificación de un *TableName* existente. Si no se especifica la cláusula opcional WITH, los resultados se devuelven en un formato de tabla **irregular**. Las tablas irregulares representan la estructura refinada del documento XML (por ejemplo, los nombres de elementos o atributos, la jerarquía del documento, los espacios de nombre, las instrucciones de proceso, etc.) en una única tabla.  
   
- En la tabla siguiente describe la estructura de la **borde** tabla.  
+ En la tabla siguiente se describe la estructura de la tabla **irregular**.  
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
@@ -102,16 +102,16 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**namespaceuri**|**nvarchar**|Es el URI del espacio de nombres del nodo. Si el valor es NULL, no hay ningún espacio de nombres.|  
 |**datatype**|**nvarchar**|Es el tipo de datos reales de la fila del elemento o atributo y, en caso contrario, es NULL. El tipo de datos se infiere a partir de las DTD insertadas o del esquema insertado.|  
 |**prev**|**bigint**|Es el id. XML del anterior elemento del mismo nivel. Es NULL si no existe ningún elemento previo directo del mismo nivel.|  
-|**texto**|**ntext**|Contiene el valor del atributo o el contenido del elemento en formato de texto (o es NULL si el **borde** entrada de la tabla no requiere un valor).|  
+|**texto**|**ntext**|Contiene el valor de atributo o el contenido de elemento en forma de texto (o es NULL si la entrada de la tabla **irregular** no requiere un valor).|  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-using-a-simple-select-statement-with-openxml"></a>A. Usar una instrucción SELECT simple con OPENXML  
  En el siguiente ejemplo se crea una representación interna de la imagen XML utilizando `sp_xml_preparedocument`. A continuación se ejecuta una instrucción `SELECT` que usa un proveedor del conjunto de filas `OPENXML` contra la representación interna del documento XML.  
   
- El *marca* valor se establece en `1`. Esto indica **centrada en atributos** asignación. Por tanto, los atributos XML se asignan a las columnas del conjunto de filas. El *rowpattern* especificado como `/ROOT/Customer` identifica el `<Customers>` nodos para procesarse.  
+ El valor de *flag* se establece en `1`. Esto indica una asignación **centrada en atributos**. Por tanto, los atributos XML se asignan a las columnas del conjunto de filas. El valor *rowpattern* especificado como `/ROOT/Customer` identifica los nodos `<Customers>` que se van a procesar.  
   
- Opcional *ColPattern* parámetro (patrón de columna) no se especifica porque el nombre de columna coincide con los nombres de atributo XML.  
+ El parámetro opcional *ColPattern* (patrón de columna) no se especifica porque el nombre de columna coincide con los nombres de atributos XML.  
   
  El proveedor del conjunto de filas `OPENXML` crea un conjunto de filas de 2 columnas (`CustomerID` y `ContactName`) desde el que la instrucción `SELECT` recupera las columnas necesarias (en este caso, todas las columnas).  
   
@@ -150,7 +150,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- Si el mismo `SELECT` instrucción se ejecuta con *marcas* establecido en `2`, lo que indica **centrado** asignación, los valores de `CustomerID` y `ContactName` para ambos de la los clientes en el documento XML se devuelven como NULL, porque no hay ningún elemento con el nombre `CustomerID` o `ContactName` en el documento XML.  
+ Si se ejecuta la misma instrucción `SELECT` con el parámetro *flags* establecido en `2`, lo que indica una asignación **centrada en elementos**, los valores de `CustomerID` y `ContactName` para los dos clientes en el documento XML se devuelven como NULL, ya que no hay ningún elemento con el nombre `CustomerID` o `ContactName` en el documento XML.  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
@@ -162,15 +162,15 @@ NULL       NULL
 ```  
   
 ### <a name="b-specifying-colpattern-for-mapping-between-columns-and-the-xml-attributes"></a>B. Especificar ColPattern para la asignación entre columnas y los atributos XML  
- En la siguiente consulta se devuelven los atributos de CustomerID, OrderDate, ProductID y Quantity del documento XML. El *rowpattern* identifica el `<OrderDetails>` elementos. `ProductID` y `Quantity` son los atributos del elemento `<OrderDetails>`. No obstante, `OrderID`, `CustomerID` y `OrderDate` son los atributos del elemento primario (`<Orders>`).  
+ En la siguiente consulta se devuelven los atributos de CustomerID, OrderDate, ProductID y Quantity del documento XML. *rowpattern* identifica los elementos `<OrderDetails>`. `ProductID` y `Quantity` son los atributos del elemento `<OrderDetails>`. No obstante, `OrderID`, `CustomerID` y `OrderDate` son los atributos del elemento primario (`<Orders>`).  
   
- Opcional *ColPattern* se especifica. Indica lo siguiente:  
+ Se especifica el parámetro opcional *colpattern*. Indica lo siguiente:  
   
--   El `OrderID`, `CustomerID`, y `OrderDate` el conjunto de filas se asignan a los atributos del elemento primario de los nodos identificados por *rowpattern* en el documento XML.  
+-   Los valores `OrderID`, `CustomerID` y `OrderDate` del conjunto de filas se asignan a los atributos del elemento primario de los nodos identificados por *rowpattern* en el documento XML.  
   
--   El `ProdID` columna del conjunto de filas se asigna a la `ProductID` atributo y el `Qty` columna del conjunto de filas se asigna a la `Quantity` atributos de los nodos identificados en *rowpattern*.  
+-   La columna `ProdID` del conjunto de filas se asigna al atributo `ProductID`, y la columna `Qty` del conjunto de filas se asigna al atributo `Quantity` de los nodos identificados en *rowpattern*.  
   
- Aunque la **centrado** asignación especificada por el *marcas* parámetro, la asignación especificada en *ColPattern* sobrescribe esta asignación.  
+ Aunque el parámetro *flags* especifica la asignación **centrada en elementos**, la asignación especificada en *ColPattern* sobrescribe la anterior.  
   
 ```  
 DECLARE @idoc int, @doc varchar(1000);   
@@ -215,12 +215,12 @@ OrderID CustomerID           OrderDate                 ProdID    Qty
 10283      LILAS       1996-08-16 00:00:00.000   72      3  
 ```  
   
-### <a name="c-obtaining-results-in-an-edge-table-format"></a>C. Obtener resultados en formato de tabla irregular  
- El documento XML del ejemplo siguiente está formado por los elementos `<Customers>`, `<Orders>` y `<Order_0020_Details>`. En primer lugar, **sp_xml_preparedocument** para obtener un identificador de documento se llama. Este identificador de documentos se pasa a `OPENXML`.  
+### <a name="c-obtaining-results-in-an-edge-table-format"></a>C. Obtener el resultado en formato de tabla irregular  
+ El documento XML del ejemplo siguiente está formado por los elementos `<Customers>`, `<Orders>` y `<Order_0020_Details>`. Primero se llama a **sp_xml_preparedocument** para obtener un identificador de documentos. Este identificador de documentos se pasa a `OPENXML`.  
   
- En el `OPENXML` (instrucción), el *rowpattern* (`/ROOT/Customers`) identifica los `<Customers>` nodos que se va a procesar. Dado que no se proporciona la cláusula WITH, `OPENXML` devuelve el conjunto de filas en una **borde** formato de tabla.  
+ En la instrucción `OPENXML`, el valor *rowpattern* (`/ROOT/Customers`) identifica los nodos `<Customers>` que se van a procesar. Puesto que no se proporciona la cláusula WITH, `OPENXML` devuelve el conjunto de filas en un formato de tabla **irregular**.  
   
- Por último, el `SELECT` instrucción recupera todas las columnas de la **borde** tabla.  
+ Por último, la instrucción `SELECT` recupera todas las columnas de la tabla **irregular**.  
   
 ```  
 DECLARE @idoc int, @doc varchar(1000);   
@@ -251,7 +251,7 @@ EXEC sp_xml_removedocument @idoc;
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Ejemplos: Usar OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
   
   

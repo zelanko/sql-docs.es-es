@@ -1,5 +1,5 @@
 ---
-title: App_name (Transact-SQL) | Documentos de Microsoft
+title: APP_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 Devuelve el nombre de aplicación de la sesión actual si la aplicación lo ha establecido.
   
 > [!IMPORTANT]  
->  El nombre de la aplicación lo proporciona el cliente y no está verificado de ninguna manera. No utilice **APP_NAME** como parte de una comprobación de seguridad.  
+>  El nombre de la aplicación lo proporciona el cliente y no está verificado de ninguna manera. No use **APP_NAME** como parte de una comprobación de seguridad.  
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -53,12 +53,12 @@ APP_NAME  ( )
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
-**nvarchar (128)**
+**nvarchar(128)**
   
-## <a name="remarks"></a>Comentarios  
-Use **APP_NAME** cuando desee realizar acciones diferentes para distintas aplicaciones. Por ejemplo, formatear una fecha de diferentes maneras para diferentes aplicaciones o devolver un mensaje informativo a ciertas aplicaciones.
+## <a name="remarks"></a>Notas  
+Use **APP_NAME** cuando quiera realizar acciones diferentes para aplicaciones diferentes. Por ejemplo, formatear una fecha de diferentes maneras para diferentes aplicaciones o devolver un mensaje informativo a ciertas aplicaciones.
   
-Para establecer un nombre de aplicación en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], en la **conectar al motor de base de datos** cuadro de diálogo, haga clic en **opciones**. En el **parámetros de conexión adicionales** ficha, proporcione un **aplicación** atributo con el formato`;app='application_name'`
+Para establecer el nombre de una aplicación en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], haga clic en **Opciones** en el cuadro de diálogo **Conectar al motor de base de datos**. En la pestaña **Parámetros de conexión adicionales**, indique un atributo **app** con el formato `;app='application_name'`.
   
 ## <a name="examples"></a>Ejemplos  
 En el ejemplo siguiente se comprueba si la aplicación del cliente que ha iniciado este proceso es una sesión `SQL Server Management Studio` y proporciona una fecha en formato estadounidense o ANSI.
@@ -74,7 +74,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también
-[Funciones del sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+[Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
 [Funciones](../../t-sql/functions/functions.md)
   
   

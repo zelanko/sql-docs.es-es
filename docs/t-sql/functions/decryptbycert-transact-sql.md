@@ -1,5 +1,5 @@
 ---
-title: DECRYPTBYCERT (Transact-SQL) | Documentos de Microsoft
+title: DECRYPTBYCERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -50,9 +50,9 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
   
 ## <a name="arguments"></a>Argumentos  
  *certificate_ID*  
- Es el identificador de un certificado de la base de datos. *certificado*_ID es **int**.  
+ Es el identificador de un certificado de la base de datos. *certificate*_ID es **int**.  
   
- *texto cifrado*  
+ *ciphertext*  
  Es una cadena de datos que se ha cifrado con la clave pública del certificado.  
   
  @ciphertext  
@@ -62,15 +62,15 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
  Es la contraseña utilizada para cifrar la clave privada del certificado. Debe ser Unicode.  
   
  @cert_password  
- Es una variable de tipo **nchar** o **nvarchar** que contiene la contraseña que se usó para cifrar la clave privada del certificado. Debe ser Unicode.  
+ Es una variable de tipo **nchar** o **nvarchar** que contiene la contraseña usada para cifrar la clave privada del certificado. Debe ser Unicode.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- **varbinary** con un tamaño máximo de 8.000 bytes.  
+ **varbinary** con un tamaño máximo de 8000 bytes.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta función descifra datos con la clave privada de un certificado. Las transformaciones cifradas que utilizan claves asimétricas consumen gran cantidad de recursos. Por tanto, EncryptByCert y DecryptByCert no resultan adecuados para el cifrado rutinario de datos de usuario.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL en el certificado.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -85,11 +85,11 @@ WHERE Description
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [ENCRYPTBYCERT &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbycert-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [ENCRYPTBYCERT &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbycert-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [Eliminar certificado &#40; Transact-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

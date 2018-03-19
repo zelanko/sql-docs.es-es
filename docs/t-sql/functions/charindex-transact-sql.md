@@ -49,32 +49,32 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
   
 ## <a name="arguments"></a>Argumentos  
 *expressionToFind*  
-Es un carácter [expresión](../../t-sql/language-elements/expressions-transact-sql.md) que contiene la secuencia que se va a encontrar. *expressionToFind* está limitado a 8000 caracteres.
+Es una [expression](../../t-sql/language-elements/expressions-transact-sql.md) de caracteres que contiene la secuencia que se va a buscar. *expressionToFind* tiene un límite de 8000 caracteres.
   
 *expressionToSearch*  
 Expresión de caracteres que se va a buscar.
   
 *start_location*  
-Es un **entero** o **bigint** expresión a la que comienza la búsqueda. Si *start_location* no se especifica, es un número negativo o es 0, la búsqueda comienza al principio de *expressionToSearch*.
+Es una expresión **integer** o **bigint** donde empieza la búsqueda. Si no se especifica *start_location*, es un número negativo o es igual a cero, la búsqueda empieza al principio de *expressionToSearch*.
   
-## <a name="return-types"></a>Tipos de valor devuelto
-**bigint** si *expressionToSearch* reviste la **varchar (max)**, **nvarchar (max)**, o **varbinary (max)** datos tipos; en caso contrario, **int**.
+## <a name="return-types"></a>Tipos de valores devueltos
+**bigint** si *expressionToSearch* es de los tipos de datos **varchar(max)**, **nvarchar(max)** o **varbinary(max)**; en caso contrario, es **int**.
   
-## <a name="remarks"></a>Comentarios  
-Si el valor *expressionToFind* o *expressionToSearch* es de un tipo de datos Unicode (**nvarchar** o **nchar**) y el otro no, el se convierte en un tipo de datos Unicode. CHARINDEX no puede utilizarse con **texto**, **ntext**, y **imagen** tipos de datos.
+## <a name="remarks"></a>Notas  
+Si *expressionToFind* o *expressionToSearch* son de un tipo de datos Unicode (**nvarchar** o **nchar**) y el otro no lo es, el otro se convertirá a un tipo de datos Unicode. CHARINDEX no se puede usar con tipos de datos **text**, **ntext** e **image**.
   
-Si el valor *expressionToFind* o *expressionToSearch* es NULL, CHARINDEX devuelve NULL.
+Si *expressionToFind* o *expressionToSearch* son NULL, CHARINDEX devuelve NULL.
   
-Si *expressionToFind* no se encuentra en *expressionToSearch*, CHARINDEX devuelve 0.
+Si *expressionToFind* no se encuentra dentro de *expressionToSearch*, CHARINDEX devuelve 0.
   
 CHARINDEX realiza comparaciones basadas en la intercalación de la entrada. Para realizar una comparación de una intercalación especificada, puede utilizar COLLATE para aplicar una intercalación explícita a la entrada.
   
 La posición inicial devuelta es de base 1, no de base 0.
   
-0 x 0000 (**char(0)**) es un carácter no definido en las intercalaciones de Windows y no se pueden incluir en CHARINDEX.
+0x0000 (**char(0)**) es un carácter no definido en las intercalaciones de Windows y no se puede incluir en CHARINDEX.
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres adicionales (pares suplentes)  
-Al utilizar intercalaciones de SC, ambos *start_location* y el valor devuelto cuentan los pares suplentes como un solo carácter, en lugar de dos. Para más información, consulte [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
+Al usar intercalaciones de SC, *start_location* y el valor devuelto cuentan los pares suplentes como un carácter, no como dos. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -97,7 +97,7 @@ GO
 ```  
   
 ### <a name="b-searching-from-a-specific-position"></a>B. Buscar desde una posición concreta  
-En el ejemplo siguiente se utiliza la parte opcional *start_location* parámetro para empezar la búsqueda de `vital` en el quinto carácter de la `DocumentSummary` columna en el [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de datos.
+En este ejemplo se usa el parámetro opcional *start_location* para empezar la búsqueda de `vital` en el quinto carácter de la columna `DocumentSummary` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
 ```sql
 DECLARE @document varchar(64);  
@@ -118,7 +118,7 @@ GO
 ```  
   
 ### <a name="c-searching-for-a-nonexistent-expression"></a>C. Buscar una expresión inexistente  
-El ejemplo siguiente se muestra el conjunto de resultados cuando *expressionToFind* no se encuentra en *expressionToSearch*.
+En este ejemplo se muestra el conjunto de resultados cuando el parámetro *expressionToFind* no se encuentra en *expressionToSearch*.
   
 ```sql
 DECLARE @document varchar(64);  
@@ -139,7 +139,7 @@ GO
 ```
   
 ### <a name="d-performing-a-case-sensitive-search"></a>D. Realizar una búsqueda con distinción de mayúsculas y minúsculas  
-En el ejemplo siguiente se realiza una búsqueda entre mayúsculas y minúsculas de la cadena `'TEST'` en `'This is a Test``'`.
+En este ejemplo se realiza una búsqueda con distinción de mayúsculas y minúsculas de la cadena `'TEST'` en `'This is a Test``'`.
   
 ```sql
 USE tempdb;  
@@ -157,7 +157,7 @@ SELECT CHARINDEX ( 'TEST',
 0
 ```  
   
-En el ejemplo siguiente se realiza una búsqueda entre mayúsculas y minúsculas de la cadena `'Test'` en `'This is a Test'`.
+En este ejemplo se realiza una búsqueda con distinción de mayúsculas y minúsculas de la cadena `'Test'` en `'This is a Test'`.
   
 ```sql
   
@@ -195,10 +195,10 @@ GO
 13
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="f-searching-from-the-start-of-a-string-expression"></a>F. Buscar desde el principio de una expresión de cadena  
-En el ejemplo siguiente se devuelve la primera ubicación de la `is` cadena en `This is a string`, empezando desde la posición 1 (el primer carácter) en la cadena.
+En este ejemplo se devuelve la primera ubicación de la cadena `is` en `This is a string`, empezando por la primera posición (el primer carácter) en la cadena.
   
 ```sql
 SELECT CHARINDEX('is', 'This is a string');  
@@ -211,8 +211,8 @@ SELECT CHARINDEX('is', 'This is a string');
 3
 ```  
   
-### <a name="g-searching-from-a-position-other-than-the-first-position"></a>G. Buscar desde una posición que no sea la primera posición  
-En el ejemplo siguiente se devuelve la primera ubicación de la `is` cadena en `This is a string`, comenzando por la cuarta posición.
+### <a name="g-searching-from-a-position-other-than-the-first-position"></a>G. Buscar desde una posición distinta de la primera posición  
+En este ejemplo se devuelve la primera ubicación de la cadena `is` en `This is a string`, empezando por la cuarta posición.
   
 ```sql
 SELECT CHARINDEX('is', 'This is a string', 4);  
@@ -226,7 +226,7 @@ SELECT CHARINDEX('is', 'This is a string', 4);
  ```  
   
 ### <a name="h-results-when-the-string-is-not-found"></a>H. Resultados cuando no se encuentra la cadena  
-El ejemplo siguiente se muestra el valor devuelto cuando la *string_pattern* no se encuentra en la cadena buscada.
+En este ejemplo se muestra el valor devuelto cuando *string_pattern* no se encuentra en la cadena buscada.
   
 ```sql
 SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;  
@@ -242,9 +242,9 @@ SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;
 ## <a name="see-also"></a>Vea también
  [LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)  
- [Funciones de cadena &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funciones de cadena &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
  [+ &#40;String Concatenation&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
 

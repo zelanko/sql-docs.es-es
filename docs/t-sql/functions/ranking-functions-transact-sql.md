@@ -1,5 +1,5 @@
 ---
-title: "Funciones (Transact-SQL) de categoría | Documentos de Microsoft"
+title: "Funciones de categoría (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 |[DENSE_RANK](../../t-sql/functions/dense-rank-transact-sql.md)|[ROW_NUMBER](../../t-sql/functions/row-number-transact-sql.md)|  
   
 ## <a name="examples"></a>Ejemplos  
- A continuación se muestran las cuatro funciones de categoría usadas en la misma consulta. Para obtener ejemplos específicos de función, vea las funciones de categoría.  
+ A continuación se muestran las cuatro funciones de categoría usadas en la misma consulta. Consulte cada función de categoría para ver ejemplos específicos de las funciones.  
   
 ```  
 USE AdventureWorks2012;  
@@ -68,22 +68,22 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 |FirstName|LastName|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
 |---------------|--------------|----------------|----------|----------------|--------------|--------------|----------------|  
-|Michael|Blythe|1|1|1|1|4557045.0459|98027|  
-|Linda|Mitchell|2|1|1|1|5200475.2313|98027|  
-|Jillian|Carson|3|1|1|1|3857163.6332|98027|  
-|Garrett|Vargas|4|1|1|1|1764938.9859|98027|  
-|Tsvi|Reiter|5|1|1|2|2811012.7151|98027|  
-|Shu|Ito|6|6|2|2|3018725.4858|98055|  
-|José|Saraiva|7|6|2|2|3189356.2465|98055|  
-|David|Campbell|8|6|2|3|3587378.4257|98055|  
-|Tete|Mensa Annan|9|6|2|3|1931620.1835|98055|  
-|Lynn|Tsoflias|10|6|2|3|1758385.926|98055|  
-|Rachel|Valdez|11|6|2|4|2241204.0424|98055|  
-|Jae|Pak|12|6|2|4|5015682.3752|98055|  
-|Ranjit|Varkey Chudukatil|13|6|2|4|3827950.238|98055|  
+|Michael|Blythe|1|1|1|1|4 557 045,0459|98027|  
+|Linda|Mitchell|2|1|1|1|5 200 475,2313|98027|  
+|Jillian|Carson|3|1|1|1|3 857 163,6332|98027|  
+|Garrett|Vargas|4|1|1|1|1 764 938,9859|98027|  
+|Tsvi|Reiter|5|1|1|2|2 811 012,7151|98027|  
+|Shu|Ito|6|6|2|2|3 018 725,4858|98055|  
+|José|Saraiva|7|6|2|2|3 189 356,2465|98055|  
+|David|Campbell|8|6|2|3|3 587 378,4257|98055|  
+|Tete|Mensa Annan|9|6|2|3|1 931 620,1835|98055|  
+|Lynn|Tsoflias|10|6|2|3|1 758 385,926|98055|  
+|Rachel|Valdez|11|6|2|4|2 241 204,0424|98055|  
+|Jae|Pak|12|6|2|4|5 015 682,3752|98055|  
+|Ranjit|Varkey Chudukatil|13|6|2|4|3 827 950,238|98055|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [EN cláusula &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+ [OVER &#40;cláusula de Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   

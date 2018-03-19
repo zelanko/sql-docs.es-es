@@ -1,5 +1,5 @@
 ---
-title: FETCH (Transact-SQL) | Documentos de Microsoft
+title: FETCH (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -72,25 +72,25 @@ FETCH
  LAST  
  Devuelve la última fila del cursor y la convierte en la fila actual.  
   
- ABSOLUTA {  *n* | @*nvar*}  
- Si  *n*  o @*nvar* es positivo, se devuelve la fila  *n*  desde el principio del cursor y la fila devuelta se convierte en la nueva fila actual. Si  *n*  o @*nvar* es negativo, se devuelve la fila  *n*  antes del final del cursor y la fila devuelta se convierte en la nueva fila actual. Si  *n*  o @*nvar* es 0, se devuelve ninguna fila. *n*debe ser una constante entera y @*nvar* debe ser **smallint**, **tinyint**, o **int**.  
+ ABSOLUTE { *n*| @*nvar*}  
+ Si *n* o @*nvar* es positivo, se devuelve la fila *n* desde el principio del cursor y la fila devuelta se convierte en la nueva fila actual. Si *n* o @*nvar* es negativo, se devuelve la fila *n* antes del final del cursor y la fila devuelta se convierte en la nueva fila actual. Si *n* o @*nvar* es 0, no se devuelve ninguna fila. *n* debe ser una constante de tipo entero y @*nvar* debe ser **smallint**, **tinyint** o **int**.  
   
- RELATIVA {  *n* | @*nvar*}  
- Si  *n*  o @*nvar* es positivo, se devuelve la fila  *n*  posterior a la fila actual y la fila devuelta se convierte en la nueva fila actual. Si  *n*  o @*nvar* es negativo, se devuelve la fila  *n*  anterior a la fila actual y la fila devuelta se convierte en la nueva fila actual. Si  *n*  o @*nvar* es 0, se devuelve la fila actual. Si se especifica FETCH RELATIVE con  *n*  o @*nvar* establecido en números negativos o 0 en la primera recopilación que se realiza en un cursor, no se devuelven filas. *n*debe ser una constante entera y @*nvar* debe ser **smallint**, **tinyint**, o **int**.  
+ RELATIVE { *n*| @*nvar*}  
+ Si *n* o @*nvar* es positivo, se devuelve la fila *n* posterior a la fila actual y la fila devuelta se convierte en la nueva fila actual. Si *n* o @*nvar* es negativo, se devuelve la fila *n* anterior a la fila actual y la fila devuelta se convierte en la nueva fila actual. Si *n* o @*nvar* es 0, se devuelve la fila actual. Si se especifica FETCH RELATIVE con *n* o @*nvar* establecido en números negativos o 0 en la primera operación de captura que se realiza en un cursor, no se devuelven filas. *n* debe ser una constante de tipo entero y @*nvar* debe ser **smallint**, **tinyint** o **int**.  
   
  GLOBAL  
  Especifica que *cursor_name* hace referencia a un cursor global.  
   
  *cursor_name*  
- Es el nombre del cursor abierto desde el que se debe realizar la captura. Si hay tanto un cursor global y otro local con *cursor_name* como su nombre, *cursor_name* al cursor global si se especifica GLOBAL y al cursor local si no se especifica GLOBAL.  
+ Es el nombre del cursor abierto desde el que se debe realizar la captura. Si hay un cursor global y otro local denominados *cursor_name*, *cursor_name* hace referencia al cursor global si se especifica GLOBAL y al cursor local si no se especifica GLOBAL.  
   
  @*cursor_variable_name*  
  Es el nombre de una variable de cursor que hace referencia al cursor abierto desde el que se va efectuar la captura.  
   
- INTO @*variable_name*[,...*n*]  
+ INTO @*variable_name*[ ,...*n*]  
  Permite colocar en variables locales los datos de las columnas de una captura. Todas las variables de la lista, de izquierda a derecha, están asociadas a las columnas correspondientes del conjunto de resultados del cursor. El tipo de datos de cada variable tiene que coincidir o ser compatible con la conversión implícita del tipo de datos de la columna correspondiente del conjunto de resultados. El número de variables debe coincidir con el número de columnas de la lista de selección del cursor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si no se especifica la opción SCROLL en una instrucción DECLARE CURSOR de estilo ISO, NEXT es la única opción admitida para FETCH. Si se especifica SCROLL en una instrucción DECLARE CURSOR de estilo ISO, se admiten todas las opciones de FETCH.  
   
  Cuando se utilizan las extensiones de cursor DECLARE de [!INCLUDE[tsql](../../includes/tsql-md.md)], se aplican las reglas siguientes:  
@@ -101,9 +101,9 @@ FETCH
   
 -   Los cursores DYNAMIC SCROLL admiten todas las opciones de FETCH excepto ABSOLUTE.  
   
- El @@FETCH_STATUS función notifica el estado de la última instrucción FETCH. La misma información queda grabada en la columna fetch_status del cursor devuelto por sp_describe_cursor. Esta información de estado se debe utilizar para determinar la validez de los datos devueltos por una instrucción FETCH antes de iniciar cualquier operación con esos datos. Para obtener más información, consulte [@@FETCH_STATUS &#40; Transact-SQL &#41; ](../../t-sql/functions/fetch-status-transact-sql.md).  
+ La función @@FETCH_STATUS notifica el estado de la última instrucción FETCH. La misma información queda grabada en la columna fetch_status del cursor devuelto por sp_describe_cursor. Esta información de estado se debe utilizar para determinar la validez de los datos devueltos por una instrucción FETCH antes de iniciar cualquier operación con esos datos. Para más información, vea [@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  De forma predeterminada, todos los usuarios válidos tienen permisos para ejecutar FETCH.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -214,7 +214,7 @@ DEALLOCATE contact_cursor;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: Cursores (Transact-SQL) | Documentos de Microsoft
+title: Cursores (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="cursors-transact-sql"></a>Cursores (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instrucciones generan un conjunto de resultados completo, pero hay ocasiones cuando los resultados procesan mejores una fila a la vez. Abrir un cursor sobre un conjunto de resultados permite procesar el conjunto de resultados de fila en fila. Puede asignar un cursor a una variable o parámetro con un **cursor** tipo de datos.  
+  Las instrucciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] producen un conjunto completo de resultados, pero hay ocasiones en que los resultados se procesan mejor de fila en fila. Abrir un cursor sobre un conjunto de resultados permite procesar el conjunto de resultados de fila en fila. Puede asignar un cursor a una variable o parámetro con un tipo de datos **cursor**.  
   
  Las operaciones de cursor están admitidas en las siguientes instrucciones:  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 01/25/2018
   
  [sp_describe_cursor_tables](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Cursores](../../relational-databases/cursors.md)  
   
   

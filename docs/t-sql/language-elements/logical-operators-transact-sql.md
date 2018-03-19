@@ -1,5 +1,5 @@
 ---
-title: "Operadores lógicos (Transact-SQL) | Documentos de Microsoft"
+title: "Operadores lógicos (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="logical-operators-transact-sql"></a>Operadores lógicos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Los operadores lógicos comprueban la veracidad de alguna condición. Operadores lógicos, como los operadores de comparación, devuelven un **booleano** tipo de datos con un valor de TRUE, FALSE o UNKNOWN.  
+  Los operadores lógicos comprueban la veracidad de alguna condición. Al igual que los operadores de comparación, devuelven el tipo de datos **Boolean** con el valor TRUE, FALSE o UNKNOWN.  
   
 |Operador|Significado|  
 |--------------|-------------|  
@@ -49,9 +49,9 @@ ms.lasthandoff: 01/25/2018
 |[LIKE](../../t-sql/language-elements/like-transact-sql.md)|TRUE si el operando coincide con un patrón.|  
 |[NOT](../../t-sql/language-elements/not-transact-sql.md)|Invierte el valor de cualquier otro operador booleano.|  
 |[O BIEN](../../t-sql/language-elements/or-transact-sql.md)|TRUE si cualquiera de las dos expresiones booleanas es TRUE.|  
-|[ALGUNOS](../../t-sql/language-elements/some-any-transact-sql.md)|TRUE si alguna de las comparaciones de un conjunto es TRUE.|  
+|[SOME](../../t-sql/language-elements/some-any-transact-sql.md)|TRUE si alguna de las comparaciones de un conjunto es TRUE.|  
   
-## <a name="see-also"></a>Vea también  
- [Prioridad de operador & #40; Transact-SQL & #41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [Prioridad de los operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SET ARITHABORT (Transact-SQL) | Documentos de Microsoft
+title: SET ARITHABORT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -61,8 +61,8 @@ SET ARITHABORT { ON | OFF }
 SET ARITHABORT ON
 ```
   
-## <a name="remarks"></a>Comentarios  
- Debe establecer siempre ARITHABORT en ON en las sesiones de inicio de sesión. Establecer ARITHABORT en OFF puede afectar negativamente optimización de consultas de impacto dan lugar a problemas de rendimiento.  
+## <a name="remarks"></a>Notas  
+ Debe establecer siempre ARITHABORT en ON en las sesiones de inicio de sesión. Establecer ARITHABORT en OFF puede afectar negativamente a la optimización de consultas, lo que produce problemas de rendimiento.  
   
 > [!WARNING]  
 >  La configuración predeterminada de ARITHABORT para [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] es ON. Las aplicaciones cliente que establecen ARITHABORT en OFF pueden recibir distintos planes de consulta, lo que dificulta la solución de problemas de consultas con un rendimiento bajo. Es decir, la misma consulta puede ejecutarse más deprisa en Management Studio y más despacio en la aplicación. Al solucionar problemas de consultas con [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], use siempre la configuración de ARITHABORT del cliente.  
@@ -76,19 +76,19 @@ SET ARITHABORT ON
 > [!NOTE]  
 >  Si no se ha establecido SET ARITHABORT ni SET ARITHIGNORE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve NULL y muestra un mensaje de advertencia después de ejecutar la consulta.  
   
- Al establecer ANSI_WARNINGS en ON, ARITHABORT se establece de forma implícita en ON cuando el nivel de compatibilidad de base de datos está establecido en 90 o un valor superior. Si el nivel de compatibilidad de base de datos se establece en 80 o menos, la opción ARITHABORT debe establecerse explícitamente en ON.  
+ Al establecer ANSI_WARNINGS en ON, ARITHABORT se establece de forma implícita en ON cuando el nivel de compatibilidad de base de datos está establecido en 90 o un valor superior. Si el nivel de compatibilidad de la base de datos está establecido en 80 o en un nivel inferior, debe configurarse explícitamente la opción ARITHABORT en ON.  
   
  Si al evaluar una expresión con SET ARITHABORT en OFF, una instrucción INSERT, DELETE o UPDATE encuentra un error aritmético, desbordamiento, división por cero o error de dominio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inserta o actualiza un valor NULL. Si la columna de destino no acepta valores NULL, no se puede efectuar la acción de inserción o actualización y el usuario recibe un error.  
   
  Si SET ARITHABORT o SET ARITHIGNORE es OFF y SET ANSI_WARNINGS es ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devolverá un mensaje de error cuando haya errores de división por cero o desbordamiento.  
   
- Si SET ARITHABORT se establece en OFF y se produce un error de anulación durante la evaluación de una condición booleana de una instrucción IF, se ejecuta la rama FALSE.
+ Si SET ARITHABORT está establecido en OFF y se produce un error de anulación durante la evaluación de una condición booleana de una instrucción IF, se ejecutará la rama FALSE.
   
  SET ARITHABORT también debe ser ON al crear o cambiar índices en columnas calculadas o vistas indizadas. Si SET ARITHABORT es OFF, las instrucciones CREATE, UPDATE, INSERT y DELETE provocarán errores en tablas con índices en columnas calculadas y vistas indizadas.
   
  La opción SET ARITHABORT se establece en tiempo de ejecución, no en tiempo de análisis.  
   
- Para ver la configuración actual de esta configuración, ejecute la consulta siguiente:
+ Para ver la configuración actual de este valor, ejecute la consulta siguiente:
   
 ```  
 DECLARE @ARITHABORT VARCHAR(3) = 'OFF';  
@@ -97,7 +97,7 @@ SELECT @ARITHABORT AS ARITHABORT;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
 ## <a name="examples"></a>Ejemplos  
@@ -196,9 +196,9 @@ DROP TABLE t2;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Instrucciones SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ARITHIGNORE &#40; Transact-SQL &#41;](../../t-sql/statements/set-arithignore-transact-sql.md)   
- [SESSIONPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
+ [SET ARITHIGNORE &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithignore-transact-sql.md)   
+ [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
   
   

@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: 
 ms.component: performance
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - performance (SQL Database)
 - database performance (SQL Database)
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a4f769cf73abdb85749cd7104a74602dd5863e9a
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f17dd20a0a6c3ffd93cc89dd97140341ed893383
+ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>Centro de rendimiento para el motor de base de datos de SQL Server y Base de datos SQL de Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Esta página proporciona los vínculos para ayudarle a buscar la información que necesita sobre rendimiento en [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Esta página proporciona los vínculos para ayudarle a buscar la información que necesita sobre rendimiento en [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
  **Leyenda**  
   
@@ -62,6 +64,8 @@ ms.lasthandoff: 01/18/2018
 |-|-|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Índices](../../relational-databases/indexes/indexes.md)**|[Reorganizar y volver a generar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)<br />[Especificar el factor de relleno para un índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)<br />[Configurar operaciones de índice en paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md)<br />[Opción SORT_IN_TEMPDB para índices](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)<br />[Mejorar el rendimiento de los índices de texto completo](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)<br />[Establecer la opción de configuración del servidor Memoria mínima por consulta](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)<br />[Configure the index create memory Server Configuration Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Tablas e índices con particiones](../../relational-databases/partitions/partitioned-tables-and-indexes.md)**|[Ventajas de la creación de particiones](https://msdn.microsoft.com/library/ms190787.aspx#Anchor_0)|  
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Combinaciones](../../relational-databases/performance/joins.md)**|[Aspectos básicos de las combinaciones](../../relational-databases/performance/joins.md#fundamentals)<br />[Combinación de bucles anidados](../../relational-databases/performance/joins.md#nested_loops)<br />[Combinación de mezcla](../../relational-databases/performance/joins.md#merge)<br />[Combinación hash](../../relational-databases/performance/joins.md#hash)|  
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Subconsultas](../../relational-databases/performance/subqueries.md)**|[Aspectos básicos de las subconsultas](../../relational-databases/performance/subqueries.md#fundamentals)<br />[Subconsultas correlacionadas](../../relational-databases/performance/subqueries.md#correlated)<br />[Tipos de subconsulta](../../relational-databases/performance/subqueries.md#types)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Procedimientos almacenados](../stored-procedures/stored-procedures-database-engine.md)**|[CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md#best-practices)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Funciones definidas por el usuario](../user-defined-functions/user-defined-functions.md)**|[CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md#best-practices)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **Optimización del paralelismo**|[Establecer la opción de configuración del servidor Máximo de subprocesos de trabajo](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)<br />[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  

@@ -1,5 +1,5 @@
 ---
-title: "Modificar proveedor de servicios CRIPTOGRÁFICO (Transact-SQL) | Documentos de Microsoft"
+title: ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/20/2017
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *NombreProveedor*  
+ *provider_name*  
  Nombre del proveedor de Administración extensible de claves.  
   
  *Path_of_DLL*  
@@ -58,7 +58,7 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
  ENABLE | DISABLE  
  Habilita o deshabilita un proveedor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si el proveedor cambia el archivo .dll que se utiliza para implementar la Administración extensible de claves en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es preciso utilizar la instrucción ALTER CRYPTOGRAPHIC PROVIDER.  
   
  Cuando la ruta de acceso del archivo .dll se actualiza mediante la instrucción ALTER CRYPTOGRAPHIC PROVIDER, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza las acciones siguientes:  
@@ -79,34 +79,34 @@ Cuando el archivo de encabezado utilizado para crear la DLL del proveedor de EKM
   
  `SQL Crypto API version '%02d.%02d' implemented by provider is not supported. Supported version is '%02d.%02d'.`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Necesita el permiso CONTROL en el proveedor criptográfico.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se modifica un proveedor criptográfico, denominado `SecurityProvider` en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a una versión más reciente de un archivo .dll. Esta nueva versión se denomina `c:\SecurityProvider\SecurityProvider_v2.dll` y se instala en el servidor. El certificado del proveedor debe estar instalado en el servidor.  
   
-1. Deshabilitar el proveedor para llevar a cabo la actualización. Esto finalizará todas las criptográficas sesiones abiertas.  
+1. Deshabilite el proveedor para llevar a cabo la actualización. Con esto se finalizarán todas las sesiones criptográficas abiertas.  
 ```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 DISABLE;  
 GO  
 ```  
 
-2. Actualice el archivo DLL del proveedor. El GUID debe ser el mismo que la versión anterior, pero la versión puede ser diferente.  
+2. Actualice el archivo .dll del proveedor. El GUID debe ser el mismo que el de la versión anterior, pero la versión puede ser diferente.  
 ```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider  
 FROM FILE = 'c:\SecurityProvider\SecurityProvider_v2.dll';  
 GO  
 ```  
 
-3. Habilitar al proveedor actualizado.   
+3. Habilite el proveedor actualizado.   
 ```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 ENABLE;  
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administración extensible de claves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [DROP CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-cryptographic-provider-transact-sql.md)   

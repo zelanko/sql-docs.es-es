@@ -1,5 +1,5 @@
 ---
-title: ALTER LOGIN (Transact-SQL) | Documentos de Microsoft
+title: ALTER LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -133,14 +133,14 @@ ALTER LOGIN login_name
  Especifica el nombre del inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se está cambiando. Los inicios de sesión del dominio se deben incluir entre corchetes con el formato [dominio\usuario].  
   
  ENABLE | DISABLE  
- Habilita o deshabilita este inicio de sesión. Deshabilitar un inicio de sesión no afecta al comportamiento de los inicios de sesión que ya están conectados. (Use el `KILL` instrucción para terminar las conexiones existentes.) Los inicios de sesión deshabilitados conservan sus permisos y pueden seguir siendo suplantados.  
+ Habilita o deshabilita este inicio de sesión. Deshabilitar un inicio de sesión no afecta al comportamiento de los inicios de sesión que ya están conectados. (Use la instrucción `KILL` para finalizar las conexiones existentes). Los inicios de sesión deshabilitados conservan sus permisos y pueden seguir siendo suplantados.  
   
- CONTRASEÑA **='***contraseña***'**  
+ PASSWORD **='***password***'**  
  Solo se aplica a inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica la contraseña del inicio de sesión que se está cambiando. En las contraseñas se distingue entre mayúsculas y minúsculas.  
   
- Continuamente las conexiones activas con la base de datos SQL requieren vuelva a autorizarla (realizada por el motor de base de datos) al menos cada 10 horas. El motor de base de datos intenta vuelva a autorizarla con la contraseña enviada originalmente e intervención del usuario no es obligatorio. Por motivos de rendimiento cuando se restablece una contraseña de base de datos de SQL, la conexión no se volverá a autenticar, incluso si la conexión se restablezca debido a la agrupación de conexiones. Esto es diferente del comportamiento del servidor local de SQL. Si la contraseña se cambió desde que inicialmente se autorizó la conexión, debe terminar la conexión y establece una nueva conexión con la nueva contraseña. Un usuario con el permiso KILL DATABASE CONNECTION puede finalizar explícitamente una conexión a la base de datos SQL mediante el comando KILL. Para obtener más información, vea [KILL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/kill-transact-sql.md).  
+ Las conexiones continuamente activas a SQL Database requieren una reautorización (realizada por el Motor de base de datos) como mínimo cada 10 horas. El Motor de base de datos intenta la reautorización con la contraseña enviada originalmente y no se requiere la intervención del usuario. Por motivos de rendimiento, cuando una contraseña se restablece en SQL Database, la conexión no se volverá a autenticar, incluso si se restablece la conexión debido a la agrupación de conexiones. Esto es diferente del comportamiento de SQL Database local. Si la contraseña se ha cambiado desde que se autorizó inicialmente la conexión, es necesario terminar la conexión y establecer una nueva conexión con la nueva contraseña. Un usuario con el permiso KILL DATABASE CONNECTION puede terminar explícitamente una conexión con SQL Database mediante el comando KILL. Para obtener más información, consulte [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md).  
   
- CONTRASEÑA  **=**  *hashed_password*  
+ PASSWORD **=***hashed_password*  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Solo se aplica a la palabra clave HASHED. Especifica el valor con hash de la contraseña para el inicio de sesión que se está creando.  
@@ -152,9 +152,9 @@ ALTER LOGIN login_name
    
 **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo inicios de sesión. Especifica que la contraseña especificada después del argumento PASSWORD ya tiene aplicado el algoritmo hash. Si no se selecciona esta opción, se aplica un algoritmo hash a la contraseña antes de almacenarla en la base de datos. Esta opción solo se debería utilizar para la sincronización del inicio de sesión entre dos servidores. No utilice la opción HASHED para cambiar las contraseñas de forma habitual.  
+ Solo se aplica a inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica que la contraseña especificada después del argumento PASSWORD ya tiene aplicado el algoritmo hash. Si no se selecciona esta opción, se aplica un algoritmo hash a la contraseña antes de almacenarla en la base de datos. Esta opción solo se debería utilizar para la sincronización del inicio de sesión entre dos servidores. No utilice la opción HASHED para cambiar las contraseñas de forma habitual.  
   
- Contraseña_anterior **='***oldpassword***'**  
+ OLD_PASSWORD **='***oldpassword***'**  
  Solo se aplica a inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La contraseña actual del inicio de sesión al que se va a asignar una contraseña nueva. En las contraseñas se distingue entre mayúsculas y minúsculas.  
   
  MUST_CHANGE  
@@ -162,39 +162,39 @@ ALTER LOGIN login_name
   
  Solo se aplica a inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si se incluye esta opción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pedirá la contraseña actualizada la primera vez que se utilice el inicio de sesión modificado.  
   
- DEFAULT_DATABASE  **=**  *base de datos*  
+ DEFAULT_DATABASE **=***database*  
 **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica una base de datos predeterminada que debe asignarse al inicio de sesión.  
   
- DEFAULT_LANGUAGE  **=**  *idioma*  
+ DEFAULT_LANGUAGE **=***language*  
  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Especifica el idioma predeterminado que debe asignarse al inicio de sesión. El idioma predeterminado para todos los inicios de sesión de base de datos SQL es el inglés y no se puede cambiar. El idioma predeterminado de la `sa` inicio de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en Linux, es el inglés, pero se puede cambiar.  
+ Especifica el idioma predeterminado que debe asignarse al inicio de sesión. El idioma predeterminado para todos los inicios de sesión de SQL Database es el inglés y no se puede cambiar. El idioma predeterminado del inicio de sesión de `sa` en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en Linux es el inglés, pero se puede cambiar.  
   
- NOMBRE = *login_name*  
- Especifica el nombre nuevo del inicio de sesión al que se está cambiando el nombre. Si se trata de un inicio de sesión de Windows, el SID de la entidad de seguridad de Windows correspondiente al nombre nuevo debe coincidir con el SID asociado al inicio de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El nuevo nombre de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión no puede contener un carácter de barra diagonal inversa (\\).  
+ NAME = *login_name*  
+ Especifica el nombre nuevo del inicio de sesión al que se está cambiando el nombre. Si se trata de un inicio de sesión de Windows, el SID de la entidad de seguridad de Windows correspondiente al nombre nuevo debe coincidir con el SID asociado al inicio de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El nombre nuevo de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede contener un carácter de barra diagonal inversa (\\).  
   
- CHECK_EXPIRATION = {ON | **OFF** }  
+ CHECK_EXPIRATION = { ON | **OFF** }  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Solo se aplica a inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica si debe aplicarse la directiva de caducidad de contraseñas en este inicio de sesión. El valor predeterminado es OFF.  
   
- CHECK_POLICY  **=**  { **ON** | {OFF}  
+ CHECK_POLICY **=** { **ON** | OFF }  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Solo se aplica a inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica que se deben aplicar las directivas de contraseñas de Windows en el equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para este inicio de sesión. El valor predeterminado es ON.  
   
- CREDENCIAL = *credential_name*  
+ CREDENTIAL = *credential_name*  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- El nombre de una credencial que debe asignarse a un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La credencial debe existir en la base de datos. Para obtener más información, consulte [credenciales &#40; motor de base de datos &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md). No se puede asignar una credencial para el inicio de sesión de sa.  
+ El nombre de una credencial que debe asignarse a un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La credencial debe existir en la base de datos. Para obtener más información, vea [Credenciales &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md). Las credenciales no se pueden asignar al inicio de sesión sa.  
   
  NO CREDENTIAL  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Elimina cualquier asignación existente del inicio de sesión a una credencial de servidor. Para obtener más información, consulte [credenciales &#40; motor de base de datos &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
+ Elimina cualquier asignación existente del inicio de sesión a una credencial de servidor. Para obtener más información, vea [Credenciales &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
  UNLOCK  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -204,21 +204,21 @@ ALTER LOGIN login_name
  ADD CREDENTIAL  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Agrega una credencial del proveedor de Administración extensible de claves (EKM) al inicio de sesión. Para obtener más información, vea [administración Extensible de claves &#40; EKM &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ Agrega una credencial del proveedor de Administración extensible de claves (EKM) al inicio de sesión. Para obtener más información, vea [Administración extensible de claves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
  DROP CREDENTIAL  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-Quita una credencial de proveedor de administración Extensible de claves (EKM) desde el inicio de sesión. Para obtener más información consulte [administración Extensible de claves &#40; EKM &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+Quita una credencial del proveedor de Administración extensible de claves (EKM) en el inicio de sesión. Para obtener más información, vea [Administración extensible de claves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando CHECK_POLICY se establece en ON, no puede utilizarse el argumento HASHED.  
   
  Cuando el valor de CHECK_POLICY se cambia a ON, ocurre lo siguiente:  
   
 -   El historial de contraseñas se inicializa con el valor del hash de contraseña actual.  
   
- Cuando CHECK_POLICY se cambia a OFF, ocurre lo siguiente:  
+ Cuando el valor de CHECK_POLICY se cambia a OFF, ocurre lo siguiente:  
   
 -   La opción CHECK_EXPIRATION también se cambia a OFF.  
   
@@ -230,22 +230,22 @@ Si se especifica MUST_CHANGE, CHECK_EXPIRATION y CHECK_POLICY, deben establecers
   
 Si CHECK_POLICY se establece en OFF, CHECK_EXPIRATION no puede establecerse en ON. Una instrucción ALTER LOGIN con esta combinación de opciones dará error.  
   
-No puede usar ALTER_LOGIN con el argumento DISABLE para denegar el acceso a un grupo de Windows. Por ejemplo, ALTER_LOGIN [*domain\group*] DISABLE devolverá el mensaje de error siguiente:  
+No puede usar ALTER_LOGIN con el argumento DISABLE para denegar el acceso a un grupo de Windows. Por ejemplo, ALTER_LOGIN [*domain\group*] DISABLE devolverá el siguiente mensaje de error:  
   
  "Mensaje 15151, nivel 16, estado 1, línea 1"  
   
- "No se puede modificar el inicio de sesión '*Domain\Group*', porque no existe o no tiene permiso."  
+ "No se puede modificar el inicio de sesión '*Domain\Group*' porque no existe o no tiene permisos".  
   
  es así por diseño.  
   
-En [!INCLUDE[ssSDS](../../includes/sssds-md.md)], datos de inicio de sesión necesitan para autenticar una conexión y las reglas de firewall de nivel de servidor se almacenan temporalmente en caché en cada base de datos. Esta caché se actualiza periódicamente. Para forzar una actualización de la caché de autenticación y asegúrese de que una base de datos tiene la versión más reciente de la tabla de inicios de sesión, ejecute [DBCC FLUSHAUTHCACHE &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+En [!INCLUDE[ssSDS](../../includes/sssds-md.md)], los datos de inicio de sesión necesarios para autenticar una conexión y reglas de firewall de nivel de servidor se almacenan temporalmente en caché en cada base de datos. Esta caché se actualiza regularmente. Para forzar una actualización de la caché de autenticación y garantizar que una base de datos tenga la versión más reciente de la tabla de inicios de sesión, ejecute [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER ANY LOGIN.  
   
  Si se utiliza la opción CREDENTIAL, también será necesario el permiso ALTER ANY CREDENTIAL.  
   
- Si el inicio de sesión que se va a cambiar es un miembro de la **sysadmin** rol fijo de servidor o tiene concedido el permiso CONTROL SERVER, también requiere el permiso CONTROL SERVER al realizar los siguientes cambios:  
+ Si el inicio de sesión que se está cambiado es un miembro del rol fijo de servidor **sysadmin** o tiene concedido el permiso CONTROL SERVER, también será necesario el permiso CONTROL SERVER para realizar los cambios siguientes:  
   
 -   Restablecer la contraseña sin proporcionar la antigua.  
   
@@ -332,10 +332,10 @@ GO
   
  
   
-## <a name="see-also"></a>Vea también  
- [Credenciales &#40; motor de base de datos &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+## <a name="see-also"></a>Ver también  
+ [Credenciales &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [QUITAR el inicio de sesión &#40; Transact-SQL &#41;](../../t-sql/statements/drop-login-transact-sql.md)   
+ [DROP LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/drop-login-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Administración extensible de claves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  

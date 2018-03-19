@@ -1,5 +1,5 @@
 ---
-title: WAITFOR (Transact-SQL) | Documentos de Microsoft
+title: WAITFOR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -64,37 +64,37 @@ WAITFOR
  DELAY  
  Es el período de tiempo especificado (hasta un máximo de 24 horas) que debe transcurrir antes de la ejecución de un lote, un procedimiento almacenado o una transacción.  
   
- '*time_to_pass*'  
- Es el período de tiempo que hay que esperar. *time_to_pass* puede especificarse en uno de los formatos aceptados para **datetime** datos, o bien se puede especificar como una variable local. No se pueden especificar fechas; por lo tanto, la parte de fecha de la **datetime** valor no está permitido.  
+ "*tiempo_que_transcurre*"  
+ Es el período de tiempo que hay que esperar. *tiempo_que_transcurre* se puede especificar en uno de los formatos aceptados para el tipo de datos **datetime** o como una variable local. No se pueden especificar fechas; por tanto, no se permite la parte de fecha del valor **datetime**.  
   
  TIME  
  Es la hora especificada a la que se ejecuta el lote, el procedimiento almacenado o la transacción.  
   
- '*time_to_execute*'  
- Es la hora a la que termina la instrucción WAITFOR. *time_to_execute* puede especificarse en uno de los formatos aceptados para **datetime** datos, o bien se puede especificar como una variable local. No se pueden especificar fechas; por lo tanto, la parte de fecha de la **datetime** valor no está permitido.  
+ "*hora_de_ejecución*"  
+ Es la hora a la que termina la instrucción WAITFOR. *hora_de_ejecución* se puede especificar en uno de los formatos aceptados para los datos **datetime** o como una variable local. No se pueden especificar fechas; por tanto, no se permite la parte de fecha del valor **datetime**.  
   
- *receive_statement*  
+ *instrucción_receive*  
  Es una instrucción RECEIVE válida.  
   
 > [!IMPORTANT]  
->  WAITFOR con un *receive_statement* sólo es aplicable a [!INCLUDE[ssSB](../../includes/sssb-md.md)] mensajes. Para obtener más información, vea [recepción &#40; Transact-SQL &#41; ](../../t-sql/statements/receive-transact-sql.md).  
+>  WAITFOR con una *instrucción_receive* solo es aplicable a los mensajes de [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Para obtener más información, vea [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md).  
   
- *get_conversation_group_statement*  
+ *instrucción_get_conversation_group*  
  Es una instrucción GET CONVERSATION GROUP válida.  
   
 > [!IMPORTANT]  
->  WAITFOR con un *get_conversation_group_statement* sólo es aplicable a [!INCLUDE[ssSB](../../includes/sssb-md.md)] mensajes. Para obtener más información, vea [GET CONVERSATION GROUP &#40; Transact-SQL &#41; ](../../t-sql/statements/get-conversation-group-transact-sql.md).  
+>  WAITFOR con una *instrucción_get_conversation_group* solo es aplicable a los mensajes de [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Para obtener más información, vea [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md).  
   
- Tiempo de espera *tiempo de espera*  
+ TIMEOUT *tiempo_de_espera*  
  Especifica el período de tiempo, en milisegundos, que se espera a que llegue un mensaje en la cola.  
   
 > [!IMPORTANT]  
->  Solo se puede especificar WAITFOR con TIMEOUT en mensajes de [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Para obtener más información, vea [recepción &#40; Transact-SQL &#41; ](../../t-sql/statements/receive-transact-sql.md) y [GET CONVERSATION GROUP &#40; Transact-SQL &#41; ](../../t-sql/statements/get-conversation-group-transact-sql.md).  
+>  Solo se puede especificar WAITFOR con TIMEOUT en mensajes de [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Para obtener más información, vea [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md) y [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La transacción se está ejecutando mientras se ejecuta la instrucción WAITFOR y no se puede ejecutar ninguna otra solicitud para la misma transacción.  
   
- El retraso real puede variar desde la hora especificada en *time_to_pass*, *time_to_execute*, o *tiempo de espera* y depende del nivel de actividad del servidor. El contador de tiempo se inicia cuando se programa el subproceso asociado a la instrucción WAITFOR. Si el servidor está ocupado, es posible que no se programe el subproceso inmediatamente; por tanto, el retardo de tiempo puede ser mayor que el tiempo especificado.  
+ El retraso de tiempo real puede variar con respecto al tiempo especificado en *tiempo_que_transcurre*, *hora_de_ejecución* o *tiempo_de_espera*, y depende del nivel de actividad del servidor. El contador de tiempo se inicia cuando se programa el subproceso asociado a la instrucción WAITFOR. Si el servidor está ocupado, es posible que no se programe el subproceso inmediatamente; por tanto, el retardo de tiempo puede ser mayor que el tiempo especificado.  
   
  WAITFOR no cambia la semántica de una consulta. Si una consulta no devuelve ninguna fila, WAITFOR esperará indefinidamente o hasta que se alcance el valor de TIMEOUT, si está especificado.  
   
@@ -102,7 +102,7 @@ WAITFOR
   
  No se pueden definir vistas en las instrucciones WAITFOR.  
   
- Cuando una consulta supera la opción query wait, se puede completar el argumento de la instrucción WAITFOR sin ejecutarse. Para obtener más información acerca de la opción de configuración, consulte [configurar la opción query wait Server Configuration Option](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md). Para ver los procesos de espera y activo, use [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md).  
+ Cuando una consulta supera la opción query wait, se puede completar el argumento de la instrucción WAITFOR sin ejecutarse. Para obtener más información sobre la opción de configuración, vea [Establecer la opción de configuración del servidor Espera de consulta](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md). Para ver los procesos activos y en espera, use [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md).  
   
  Cada instrucción WAITFOR tiene un subproceso asociado. Si se especifica un gran número de instrucciones WAITFOR en el mismo servidor, se pueden acumular muchos subprocesos a la espera de que se ejecuten estas instrucciones. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supervisa el número de subprocesos asociados con las instrucciones WAITFOR y selecciona aleatoriamente algunos de estos subprocesos para salir si el servidor empieza a experimentar la falta de subprocesos.  
   
@@ -175,8 +175,8 @@ GO
   
  `A total time of 00:00:10, in hh:mm:ss, has elapsed. Your time is up.`  
   
-## <a name="see-also"></a>Vea también  
- [Lenguaje de control de flujo &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+## <a name="see-also"></a>Ver también  
+ [Lenguaje de control de flujo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)   
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   

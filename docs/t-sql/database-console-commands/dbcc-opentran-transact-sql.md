@@ -63,7 +63,7 @@ DBCC OPENTRAN
   
 ## <a name="arguments"></a>Argumentos  
  *database_name* | *database_id*| 0  
- Es el nombre o el identificador de la base de datos de la que se va a presentar la información de la transacción más antigua. Si no se especifica o se especifica 0, se utiliza la base de datos actual. Nombres de base de datos deben cumplir las reglas de [identificadores](../../relational-databases/databases/database-identifiers.md).  
+ Es el nombre o el identificador de la base de datos de la que se va a presentar la información de la transacción más antigua. Si no se especifica o se especifica 0, se utiliza la base de datos actual. Los nombres de las bases de datos deben ajustarse a las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
  TABLERESULTS  
  Especifica los resultados en un formato tabular que se puede cargar en una tabla. Utilice esta opción para crear una tabla de resultados que se pueda insertar en una tabla y hacer comparaciones. Cuando no se especifica esta opción, se da formato a los resultados de modo que sean legibles.  
@@ -71,7 +71,7 @@ DBCC OPENTRAN
  NO_INFOMSGS  
  Suprime todos los mensajes de información.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 Utilice DBCC OPENTRAN para determinar si hay alguna transacción abierta dentro del registro de transacciones. Cuando utiliza la instrucción BACKUP LOG, solo puede truncar la parte inactiva del registro; una transacción abierta puede evitar que el registro se trunque completamente. Para identificar una transacción abierta, utilice sp_who para obtener el Id. del proceso del sistema.
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
@@ -82,7 +82,7 @@ No active open transactions.
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
 Debe pertenecer al rol fijo de servidor **sysadmin** o al rol fijo de base de datos **db_owner** .
   
 ## <a name="examples"></a>Ejemplos  
@@ -137,11 +137,11 @@ SELECT * FROM #OpenTranStatus;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)  
-[Confirmar transacción &#40; Transact-SQL &#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)  
+[COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)  
-[ROLLBACK TRANSACTION &#40; Transact-SQL &#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)
+[ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)
   
   

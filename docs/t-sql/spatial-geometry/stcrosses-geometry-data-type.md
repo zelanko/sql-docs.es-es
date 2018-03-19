@@ -1,5 +1,5 @@
 ---
-title: STCrosses (tipo de datos geometry) | Documentos de Microsoft
+title: STCrosses (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcrosses-geometry-data-type"></a>STCrosses (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Devuelve 1 si una **geometry** instancia cruza otra **geometry** instancia. Devuelve 0 en caso contrario.
+Devuelve 1 si una instancia de **geometry** cruza otra instancia de **geometry**. Devuelve 0 en caso contrario.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,21 +45,21 @@ Devuelve 1 si una **geometry** instancia cruza otra **geometry** instancia. Devu
   
 ## <a name="arguments"></a>Argumentos  
  *other_geometry*  
- Es otra **geometry** instancia va a comparar con la instancia en la que `STCrosses()` se invoca.  
+ Es otra instancia de **geometry** con la que se compara la instancia en la que se invoca `STCrosses()`.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **bits**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Comentarios  
- Dos **geometry** instancias se cruzan si se cumplen las condiciones siguientes:  
+## <a name="remarks"></a>Notas  
+ Dos instancias de **geometry** se cruzan si se cumplen las dos condiciones siguientes:  
   
--   La intersección de los dos **geometry** instancias da como resultado una geometría cuyas dimensiones son menores que la dimensión máxima del origen de **geometry** instancias.  
+-   La intersección de las dos instancias de **geometry** da como resultado una geometría cuyas dimensiones son menores que la dimensión máxima de las instancias de **geometry** de origen.  
   
--   El conjunto de intersección es interior a ambas origen **geometry** instancias.  
+-   El conjunto de intersección es interior a ambas instancias de **geometry** de origen.  
   
- Este método siempre devuelve null si los identificadores de referencia espacial (SRID) de la **geometry** instancias no coinciden.  
+ Este método siempre devuelve NULL si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geometry**.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se usa `STCrosses()` para comprobar si dos instancias de `geometry` se cruzan.  
@@ -72,7 +72,7 @@ SET @h = geometry::STGeomFromText('LINESTRING(0 0, 2 2)', 0);
 SELECT @g.STCrosses(@h);  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

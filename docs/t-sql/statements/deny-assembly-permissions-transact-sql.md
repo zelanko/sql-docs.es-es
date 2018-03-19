@@ -1,5 +1,5 @@
 ---
-title: DENEGAR permisos de ensamblado (Transact-SQL) | Documentos de Microsoft
+title: DENY (permisos de ensamblado de Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -50,10 +50,10 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permiso*  
+ *permission*  
  Especifica un permiso que se puede denegar en un ensamblado. Se muestra a continuación.  
   
- EN el ENSAMBLADO **::***assembly_name*  
+ ON ASSEMBLY **::***assembly_name*  
  Especifica el ensamblado en el que se va a denegar el permiso. Es preciso utilizar el calificador de ámbito "::".  
   
  *database_principal*  
@@ -97,7 +97,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
   
 -   usuario de base de datos no asignado a una entidad de seguridad del servidor  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Un ensamblado es un elemento protegible de base de datos incluido en la base de datos primaria en la jerarquía de permisos. La mayoría de permisos limitados y específicos que se pueden denegar en un ensamblado se muestran a continuación, junto con permisos más generales que los incluyen por implicación.  
   
 |Permiso de ensamblado|Implícito en permiso de ensamblado|Implícito en el permiso de base de datos|  
@@ -108,17 +108,17 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL en el ensamblado. Si se utiliza la opción AS, la entidad de seguridad especificada debe ser propietaria del ensamblado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [Crear rol de aplicación &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [CREAR ENSAMBLADOS &#40; Transact-SQL &#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

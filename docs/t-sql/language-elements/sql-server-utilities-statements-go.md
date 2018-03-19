@@ -35,12 +35,12 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="sql-server-utilities-statements---go"></a>Instrucciones de utilidades SQL Server - GO
+# <a name="sql-server-utilities-statements---go"></a>Instrucciones de utilidades de SQL Server: GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Proporciona los comandos que no son [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones, pero son reconocidos por el **sqlcmd** y **osql** utilidades y [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de código. Estos comandos se pueden usar para facilitar la legibilidad y la ejecución de lotes y scripts.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona comandos que no son instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)], pero que las utilidades **sqlcmd** y **osql**, y el Editor de código de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sí reconocen. Estos comandos se pueden usar para facilitar la legibilidad y la ejecución de lotes y scripts.  
   
-  GO marca el final de un lote de [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilidades.  
+  GO indica a las utilidades de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el final de un lote de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,8 +55,8 @@ GO [count]
  *Recuento*  
  Es un entero positivo. El lote que precede a GO se ejecutará el número especificado de veces.  
   
-## <a name="remarks"></a>Comentarios  
- GO no es una [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción, sino un comando reconocido por el **sqlcmd** y **osql** utilidades y [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] editor de código.  
+## <a name="remarks"></a>Notas  
+ GO no es una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)], sino un comando reconocido por las utilidades **sqlcmd** y **osql**, así como por el Editor de código de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Las utilidades de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpretan GO como una señal de que deben enviar el lote actual de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El lote actual de instrucciones está formado por todas las instrucciones especificadas desde el último comando GO o desde el comienzo de la sesión o script ad hoc si se trata del primer comando GO.  
   
@@ -88,7 +88,7 @@ GO
   
  No use un punto y coma como terminador de instrucción después de GO.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  GO es un comando de utilidad que no requiere permisos. Cualquier usuario puede ejecutarlo.  
   
 ```  
@@ -98,7 +98,7 @@ GO;
 ```  
   
 ## <a name="examples"></a>Ejemplos  
- En el siguiente ejemplo se crean dos lotes. El primer lote solo contiene un `USE``AdventureWorks2012` instrucción para establecer el contexto de base de datos. Las instrucciones restantes utilizan una variable local. Por lo tanto, es necesario agrupar todas las declaraciones de variable locales en un único lote. Esto se logra al no usar el comando `GO` hasta después de la última instrucción que hace referencia a la variable.  
+ En el siguiente ejemplo se crean dos lotes. El primer lote solo contiene una instrucción `USE``AdventureWorks2012` para establecer el contexto de base de datos. Las instrucciones restantes utilizan una variable local. Por lo tanto, es necesario agrupar todas las declaraciones de variable locales en un único lote. Esto se logra al no usar el comando `GO` hasta después de la última instrucción que hace referencia a la variable.  
   
 ```  
 USE AdventureWorks2012;  

@@ -31,10 +31,10 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="set-localvariable-transact-sql"></a>ESTABLECER @local_variable (Transact-SQL)
+# <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Establece la variable local indicada, creada previamente con DECLARE @*local_variable* instrucción, en el valor especificado.  
+  Establece en el valor especificado la variable local indicada, creada previamente con la instrucción DECLARE @*local_variable*.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -77,7 +77,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
 ## <a name="arguments"></a>Argumentos  
  **@** *local_variable*  
- Es el nombre de una variable de cualquier tipo excepto **cursor**, **texto**, **ntext**, **imagen**, o **tabla**. Los nombres de variable deben comenzar con un signo de arroba (**@**). Los nombres de variable deben cumplir las reglas de [identificadores](../../relational-databases/databases/database-identifiers.md).  
+ Es el nombre de una variable de cualquier tipo, excepto **cursor**, **text**, **ntext**, **image** o **table**. Los nombres de variables deben comenzar por un signo de arroba (**@**). Los nombres de variable deben seguir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
  *property_name*  
  Es el nombre de una propiedad definida por el usuario.  
@@ -89,9 +89,9 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  Es el nombre de un tipo definido por el usuario CLR (Common Language Runtime).  
   
  { **.** | **::** }  
- Especifica el método de un tipo definido por el usuario CLR. Para un método de instancia (no estáticos), use un punto (**.**). Un método estático, utilice dos puntos dobles (**::**). Para invocar un método, propiedad o campo de un tipo definido por el usuario CLR, debe tener el permiso EXECUTE para el tipo.  
+ Especifica el método de un tipo definido por el usuario CLR. En métodos de instancia (no estáticos), use un punto (**.**). En métodos estáticos, use dos puntos dobles (**::**). Para invocar un método, propiedad o campo de un tipo definido por el usuario CLR, debe tener el permiso EXECUTE para el tipo.  
   
- *NombreMétodo* **(** *argumento* [ **,**... *n* ] **)**  
+ *method_name* **(** *argument* [ **,**... *n* ] **)**  
  Es un método de un tipo definido por el usuario que toma uno o más argumentos para modificar el estado de la instancia de un tipo. Los métodos estáticos deben ser públicos.  
   
  **@** *SQLCLR_local_variable*  
@@ -103,24 +103,24 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  { **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }  
  Operador de asignación compuesta:  
   
- += Sumar y asignar  
+ +=              Sumar y asignar  
   
- -= Restar y asignar  
+ -=               Restar y asignar  
   
- * = Multiplicar y asignar  
+ *=              Multiplicar y asignar  
   
- / = Dividir y asignar  
+ /=               Dividir y asignar  
   
- % = Módulo y asignar  
+ %=             Módulo y asignar  
   
- & = AND bit a bit y asignar  
+ &=              AND bit a bit y asignar  
   
- ^ = XOR bit a bit y asignar  
+ ^=              XOR bit a bit y asignar  
   
- | = OR bit a bit y asignar  
+ |=               OR bit a bit y asignar  
   
  *expression*  
- Se trata de cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Es cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md) válida.  
   
  *cursor_variable*  
  Es el nombre de una variable de cursor. Si la variable de cursor de destino indicada anteriormente hacía referencia a un cursor diferente, esa referencia se pierde.  
@@ -141,9 +141,9 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  Define un cursor que hace una copia temporal de los datos que utiliza. Todas las solicitudes al cursor se responden desde esta tabla temporal de tempdb; por ello, las modificaciones realizadas en las tablas base no se reflejarán en los datos obtenidos de las capturas realizadas en el cursor y, además, este cursor no admite modificaciones.  
   
  KEYSET  
- Especifica que la pertenencia y el orden de las filas del cursor se fijan cuando se abre este cursor. El conjunto de claves que identifican de forma única las filas está integrado en el keysettable en tempdb. Los cambios efectuados en valores que no sean claves de las tablas base, ya sean realizados por el propietario del cursor o confirmados por otros usuarios, son visibles cuando el propietario del cursor se desplaza por el cursor. Las inserciones realizadas por otros usuarios no son visibles y no es posible hacer inserciones a través de un cursor de servidor [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ Especifica que la pertenencia y el orden de las filas del cursor se fijan cuando se abre este cursor. El conjunto de claves que identifica de forma única las filas está integrado en la tabla keyset de tempdb. Los cambios efectuados en valores que no sean claves de las tablas base, ya sean realizados por el propietario del cursor o confirmados por otros usuarios, son visibles cuando el propietario del cursor se desplaza por el cursor. Las inserciones realizadas por otros usuarios no son visibles y no es posible hacer inserciones a través de un cursor de servidor [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- Si se elimina una fila, un intento para capturar la fila devuelve un @@FETCH_STATUS -2. Actualizaciones de valores de clave desde fuera del cursor son similares a la eliminación de la fila antigua seguida de una inserción de la nueva fila. La fila con los nuevos valores no está visible e intenta capturar la fila con los valores antiguos devuelve un @@FETCH_STATUS -2. Los nuevos valores son visibles si la actualización se realiza a través del cursor especificando la cláusula WHERE CURRENT OF.  
+ Si se elimina una fila, un intento para capturar la fila devuelve un @@FETCH_STATUS de -2. Las actualizaciones de valores de clave desde fuera del cursor son similares a la eliminación de la fila anterior seguida por la inserción de la nueva fila. La fila con los nuevos valores no está visible y los intentos de capturar la fila con los valores anteriores devuelven un @@FETCH_STATUS de -2. Los nuevos valores están visibles si la actualización se realiza a través del cursor especificando la cláusula WHERE CURRENT OF.  
   
  DYNAMIC  
  Define un cursor que refleja en su conjunto de resultados todos los cambios realizados en los datos de las filas cuando el propietario del cursor se desplaza por éste. Los valores de los datos, el orden y la pertenencia de las filas pueden cambiar en cada captura. Las opciones de captura absoluta y relativa no se pueden utilizar en los cursores dinámicos.  
@@ -163,43 +163,43 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  TYPE_WARNING  
  Especifica que se envía un mensaje de advertencia al cliente si el cursor se convierte implícitamente del tipo solicitado a otro.  
   
- PARA *select_statement*  
- Es una instrucción SELECT estándar que define el conjunto de resultados del cursor. Las palabras clave FOR BROWSE e INTO no están permitidas dentro de la *select_statement* de una declaración de cursor.  
+ FOR *select_statement*  
+ Es una instrucción SELECT estándar que define el conjunto de resultados del cursor. Las palabras clave FOR BROWSE e INTO no están permitidas en la instrucción *select_statement* de una declaración de cursor.  
   
- Si se utilizan DISTINCT, UNION, GROUP BY o HAVING, o una expresión de agregado se incluye en el *select_list*, el cursor se creará como STATIC.  
+ Si se usa DISTINCT, UNION, GROUP BY o HAVING, o si se incluye una expresión de agregado en *select_list*, el cursor se creará como STATIC.  
   
  Si ninguna de las tablas subyacentes tiene un índice único y se solicita un cursor ISO SCROLL o [!INCLUDE[tsql](../../includes/tsql-md.md)] KEYSET, éste será automáticamente un cursor de tipo STATIC.  
   
- Si *select_statement* contiene una cláusula ORDER BY en que las columnas no son identificadores de fila únicos, un cursor dinámico se convierte en cursores KEYSET o en cursores STATIC si no se puede abrir un cursor KEYSET. Lo mismo ocurre en el caso de un cursor definido con la sintaxis ISO, pero sin la palabra clave STATIC.  
+ Si *select_statement* contiene una cláusula ORDER BY y las columnas indicadas no son identificadores de fila únicos, los cursores DYNAMIC se convertirán en cursores KEYSET o en cursores STATIC, si no es posible abrir un cursor KEYSET. Lo mismo ocurre en el caso de un cursor definido con la sintaxis ISO, pero sin la palabra clave STATIC.  
   
  READ ONLY  
  Impide que se realicen actualizaciones a través de este cursor. No es posible hacer referencia al cursor en una cláusula WHERE CURRENT OF de una instrucción UPDATE o DELETE. Esta opción reemplaza la capacidad predeterminada de actualizar el cursor. Esta palabra clave varía con respecto a la READ_ONLY anterior en que contiene un espacio en lugar de un carácter de subrayado entre READ y ONLY.  
   
  UPDATE [OF *column_name*[ **,**... *n* ] ]  
- Define las columnas actualizables en el cursor. Si se especifica OF *column_name* [**,**...  *n* ] se proporciona, solo las columnas enumeradas admitirán modificaciones. Si no se especifica ninguna lista, se podrán actualizar todas las columnas, a menos que el cursor se haya definido como READ_ONLY.  
+ Define las columnas actualizables en el cursor. Si OF *column_name* [**,**...*n*] se especifica, solo las columnas enumeradas admiten modificaciones. Si no se especifica ninguna lista, se podrán actualizar todas las columnas, a menos que el cursor se haya definido como READ_ONLY.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Después de declarada una variable, ésta se inicializa en NULL. Puede usar la instrucción SET para asignar a una variable declarada un valor distinto de NULL. La instrucción SET que asigna un valor a la variable devuelve un solo valor. Cuando inicialice varias variables, utilice una instrucción SET distinta para cada variable local.  
   
  Las variables solo se pueden utilizar en expresiones y no en lugar de nombres de objeto o palabras clave. Para formar instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] dinámicas, utilice EXECUTE.  
   
- Las reglas de sintaxis de SET **@*** cursor_variable* no incluyen las palabras clave LOCAL y GLOBAL. Cuando el conjunto **@*** cursor_variable* = CURSOR... se utilizan la sintaxis, el cursor se crea como GLOBAL o LOCAL, según la configuración de manera predeterminada para la opción de base de datos de cursor local.  
+ Las reglas de sintaxis de SET **@***cursor_variable* no incluyen las palabras clave LOCAL y GLOBAL. Si se usa la sintaxis SET **@***cursor_variable* = CURSOR..., el cursor se crea como GLOBAL o LOCAL en función del valor de la opción de valor predeterminado de cursores locales de la base de datos.  
   
  Las variables de cursor son siempre locales, incluso cuando hacen referencia a un cursor global. Cuando una variable de cursor hace referencia a un cursor global, éste tiene a la vez una referencia de cursor global y otra local. Para obtener más información, vea el ejemplo C.  
   
- Para obtener más información, vea [DECLARE CURSOR &#40; Transact-SQL &#41; ](../../t-sql/language-elements/declare-cursor-transact-sql.md).  
+ Para más información, vea [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md).  
   
  Se puede utilizar el operador de asignación compuesta en cualquier lugar donde haya una asignación con una expresión en el lado derecho del operador, incluso las variables, y un SET en una instrucción UPDATE, SELECT y RECEIVE.  
   
- No use una variable en una instrucción SELECT para concatenar valores (es decir, para calcular valores de agregado). Pueden producirse resultados de consulta inesperados. Esto se debe a que no se garantiza que todas las expresiones de la lista de SELECT (incluidas las asignaciones) se ejecuten exactamente una vez por cada fila de salida. Para obtener más información, consulte [este artículo de KB](http://support.microsoft.com/kb/287515).  
+ No use una variable en una instrucción SELECT para concatenar valores (es decir, para calcular valores de agregado). Pueden producirse resultados de consulta inesperados. Esto se debe a que no se garantiza que todas las expresiones de la lista de SELECT (incluidas las asignaciones) se ejecuten exactamente una vez por cada fila de salida. Para más información, vea [este artículo de KB](http://support.microsoft.com/kb/287515).  
   
-## <a name="permissions"></a>Permissions  
- Debe pertenecer al rol public. Todos los usuarios pueden usar conjunto **@*** local_variable*.  
+## <a name="permissions"></a>Permisos  
+ Debe pertenecer al rol public. Todos los usuarios pueden usar SET **@***local_variable*.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-printing-the-value-of-a-variable-initialized-by-using-set"></a>A. Imprimir el valor de una variable inicializada con SET  
- En el ejemplo siguiente se crea el `@myvar` variable, coloca un valor de cadena en la variable y se imprime el valor de la `@myvar` variable.  
+ En el siguiente ejemplo se crea la variable `@myvar`, se le asigna un valor de cadena y se imprime el valor de `@myvar`.  
   
 ```  
 DECLARE @myvar char(20);  
@@ -298,7 +298,7 @@ GO
 ```  
   
 ### <a name="h-assigning-a-value-to-a-user-defined-type-variable-by-invoking-a-method-of-the-type"></a>H. Asignar un valor a una variable de tipo definido por el usuario mediante la invocación de un método del tipo  
- En el ejemplo siguiente se establece un valor de tipo definido por el usuario **punto** mediante la invocación de método `SetXY` del tipo.  
+ En el siguiente ejemplo se establece un valor para el tipo definido por el usuario **point** a través de la invocación del método `SetXY` del tipo.  
   
 ```  
 DECLARE @p Point;  
@@ -316,10 +316,10 @@ DECLARE @p Point = CONVERT(Point, '')
 SET @p.SetXY(22, 23);  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="j-printing-the-value-of-a-variable-initialized-by-using-set"></a>J. Imprimir el valor de una variable inicializada con SET  
- En el ejemplo siguiente se crea el `@myvar` variable, coloca un valor de cadena en la variable y se imprime el valor de la `@myvar` variable.  
+ En el siguiente ejemplo se crea la variable `@myvar`, se le asigna un valor de cadena y se imprime el valor de `@myvar`.  
   
 ```  
 DECLARE @myvar char(20);  
@@ -329,7 +329,7 @@ SELECT top 1 @myvar FROM sys.databases;
 ```  
   
 ### <a name="k-using-a-local-variable-assigned-a-value-by-using-set-in-a-select-statement"></a>K. Utilizar en una instrucción SELECT una variable local a la que se ha asignado un valor con SET  
- En el ejemplo siguiente se crea una variable local denominada `@dept` y utiliza esta variable local en un `SELECT` instrucción para buscar los nombres y apellidos de todos los empleados que trabajan en el `Marketing` departamento.  
+ En el siguiente ejemplo se crea una variable local llamada `@dept` que después se usa en una instrucción `SELECT` para buscar el nombre y apellido de todos los empleados que trabajan en el departamento de `Marketing`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -368,8 +368,8 @@ SET @rows = (SELECT COUNT(*) FROM dbo.DimCustomer);
 SELECT TOP 1 @rows FROM sys.tables;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Compuesta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [Operadores compuestos &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: Schema_name (Transact-SQL) | Documentos de Microsoft
+title: SCHEMA_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -49,14 +49,14 @@ SCHEMA_NAME ( [ schema_id ] )
   
 |Término|Definición|  
 |----------|----------------|  
-|*schema_id*|El identificador del esquema. *schema_id* es un **int**. Si *schema_id* no es definido, SCHEMA_NAME devolverá el nombre del esquema predeterminado del autor de la llamada.|  
+|*schema_id*|Id. del esquema. *schema_id* es un **int**. Si *schema_id* no se define, SCHEMA_NAME devolverá el nombre del esquema predeterminado del autor de llamada.|  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **sysname**  
   
- Devuelve NULL cuando *schema_id* no es un identificador válido.  
+ Devuelve NULL cuando *schema_id* no es un Id. válido.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  SCHEMA_NAME devuelve nombres de esquemas del sistema y esquemas definidos por el usuario. SCHEMA_NAME se puede llamar en una lista de selección, en una cláusula WHERE y en cualquier lugar en el que se permita una expresión.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -73,13 +73,13 @@ SELECT SCHEMA_NAME();
 SELECT SCHEMA_NAME(1);  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Expresiones &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [SCHEMA_ID &#40; Transact-SQL &#41;](../../t-sql/functions/schema-id-transact-sql.md)   
- [Sys.Schemas &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   
+## <a name="see-also"></a>Ver también  
+ [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [SCHEMA_ID &#40;Transact-SQL&#41;](../../t-sql/functions/schema-id-transact-sql.md)   
+ [sys.schemas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [Funciones de metadatos &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [DONDE &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [Funciones de metadatos &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
 

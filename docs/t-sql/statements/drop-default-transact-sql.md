@@ -1,5 +1,5 @@
 ---
-title: DESTINO predeterminado (Transact-SQL) | Documentos de Microsoft
+title: DROP DEFAULT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   Quita uno o más valores predeterminados definidos por el usuario de la base de datos actual.  
   
 > [!IMPORTANT]  
->  DROP DEFAULT se quitará en la próxima versión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No use DROP DEFAULT en un nuevo trabajo de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta función. En su lugar, use definiciones predeterminadas que pueden crear mediante la palabra clave DEFAULT de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).  
+>  DROP DEFAULT se quitará en la siguiente versión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No use DROP DEFAULT en un nuevo trabajo de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta función. En su lugar, use definiciones predeterminadas que pueda crear usando la palabra clave DEFAULT de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,8 +49,8 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *IF EXISTE*  
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ *IF EXISTS*  
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Quita condicionalmente el valor predeterminado solo si ya existe.  
   
@@ -58,14 +58,14 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
  Es el nombre del esquema al que pertenece el valor predeterminado.  
   
  *default_name*  
- Es el nombre de un valor predeterminado existente. Para ver una lista de valores predeterminados existentes, ejecute **sp_help**. Los valores predeterminados deben cumplir las reglas de [identificadores](../../relational-databases/databases/database-identifiers.md). Especificar el nombre del esquema predeterminado es opcional.  
+ Es el nombre de un valor predeterminado existente. Para ver la lista de valores predeterminados existentes, ejecute **sp_help**. Los valores predeterminados deben seguir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md). Especificar el nombre del esquema predeterminado es opcional.  
   
-## <a name="remarks"></a>Comentarios  
- Antes de quitar un valor predeterminado, desenlazar el valor predeterminado mediante la ejecución de **sp_unbindefault** si el valor predeterminado está enlazado actualmente a una columna o un tipo de datos de alias.  
+## <a name="remarks"></a>Notas  
+ Antes de quitar un valor predeterminado, cancele el enlace del valor predeterminado; para ello, ejecute **sp_unbindefault** (si el valor predeterminado está enlazado actualmente a una columna o un tipo de datos de alias).  
   
  Después de quitar un valor predeterminado de una columna que permite valores nulos, se inserta NULL en esa posición cuando se agregan filas y no se proporciona un valor explícitamente. Después de quitar un valor predeterminado de una columna NOT NULL, se devuelve un mensaje de error cuando se agregan filas y no se proporciona un valor explícitamente. Estas filas se agregan posteriormente como parte del comportamiento habitual de la instrucción INSERT.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para ejecutar DROP DEFAULT, como mínimo, un usuario debe tener permiso ALTER en el esquema al que pertenece el valor predeterminado.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -83,7 +83,7 @@ IF EXISTS (SELECT name FROM sys.objects
 GO  
 ```  
   
- A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] puede utilizar la siguiente sintaxis.  
+ A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] se puede usar la siguiente sintaxis.  
   
 ```  
 DROP DEFAULT IF EXISTS datedflt;  
@@ -103,10 +103,10 @@ GO
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [sp_unbindefault &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
+ [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
   
   

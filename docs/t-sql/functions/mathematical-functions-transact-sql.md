@@ -1,5 +1,5 @@
 ---
-title: "Funciones matemáticas (Transact-SQL) | Documentos de Microsoft"
+title: "Funciones matemáticas (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/06/2017
 ms.prod: sql-non-specified
@@ -47,12 +47,12 @@ ms.lasthandoff: 11/21/2017
 |[COT](../../t-sql/functions/cot-transact-sql.md)|[RADIANS](../../t-sql/functions/radians-transact-sql.md)||  
   
 > [!NOTE]  
->  Las funciones aritméticas, como ABS, CEILING, DEGREES, FLOOR, POWER, RADIANS y SIGN, devuelven un valor del mismo tipo de datos que el valor de entrada. Funciones trigonométricas y otras funciones, incluidas EXP, LOG, LOG10, SQUARE y SQRT, conversión los valores de entrada a **float** y devolver un **float** valor.  
+>  Las funciones aritméticas, como ABS, CEILING, DEGREES, FLOOR, POWER, RADIANS y SIGN, devuelven un valor del mismo tipo de datos que el valor de entrada. Las funciones trigonométricas y otras funciones, incluidas EXP, LOG, LOG10, SQUARE y SQRT, convierten sus valores de entrada a **float** y devuelven un valor de tipo **float**.  
   
- Todas las funciones matemáticas, excepto RAND, son deterministas, lo que significa que devuelven el mismo resultado cada vez que se llaman con un conjunto específico de valores de entrada. RAND es determinista solo cuando se especifica un parámetro de inicialización. Para obtener más información acerca del determinismo de función, vea [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+ Todas las funciones matemáticas, excepto RAND, son deterministas, lo que significa que devuelven el mismo resultado cada vez que se llaman con un conjunto específico de valores de entrada. RAND es determinista solo cuando se especifica un parámetro de inicialización. Para más información sobre el determinismo de las funciones, vea [Funciones deterministas y no deterministas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
-## <a name="see-also"></a>Vea también  
-  [Operadores aritméticos &#40; Transact-SQL &#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+  [&#40;Transact-SQL&#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)  
   [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: EN la zona HORARIA (Transact-SQL) | Documentos de Microsoft
+title: AT TIME ZONE (Transact-SQL) | Microsoft Docs
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
@@ -29,12 +29,12 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="at-time-zone-transact-sql"></a>EN la zona HORARIA (Transact-SQL)
+# <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Convierte un *inputdate* a los correspondientes *datetimeoffset* valor en la zona horaria de destino. Si *inputdate* es siempre sin información de desplazamiento, la función aplica el desplazamiento de la zona horaria, suponiendo que *inputdate* valor se proporciona en la zona horaria de destino. Si *inputdate* se proporciona como un *datetimeoffset* valor, que **AT TIME ZONE** cláusula lo convierte en la zona horaria de destino mediante las reglas de conversión de zona horaria.  
+  Convierte un valor *inputdate* en el valor *datetimeoffset* correspondiente en la zona horaria de destino. Si *inputdate* se proporciona sin información de desplazamiento, la función aplica el desplazamiento de la zona horaria, suponiendo que el valor *inputdate* se proporciona en la zona horaria de destino. Si *inputdate* se proporciona como un valor *datetimeoffset*, la cláusula **AT TIME ZONE** lo convierte en la zona horaria de destino mediante las reglas de conversión de zona horaria.  
   
- **EN la zona HORARIA** implementación se basa en un mecanismo de Windows para convertir **datetime** valores en distintas zonas horarias.  
+ La implementación de **AT TIME ZONE** se basa en un mecanismo de Windows para convertir valores **datetime** entre zonas horarias.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,21 +46,21 @@ inputdate AT TIME ZONE timezone
   
 ## <a name="arguments"></a>Argumentos  
  *inputdate*  
- Es una expresión que se pueda resolver como un **smalldatetime**, **datetime**, **datetime2**, o **datetimeoffset** valor.  
+ Es una expresión que se puede resolver en un valor **smalldatetime**, **datetime**, **datetime2** o **datetimeoffset**.  
   
  *timezone*  
- Nombre de la zona horaria de destino. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]se basa en las zonas horarias que se almacenan en el registro de Windows. Todas las zonas horarias instaladas en el equipo se almacenan en el subárbol del registro siguientes: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. Una lista de zonas horarias instaladas también se expone a través de la [sys.time_zone_info &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) vista.  
+ Nombre de la zona horaria de destino. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se basa en las zonas horarias almacenadas en el Registro de Windows. Todas las zonas horarias instaladas en el equipo se almacenan en el siguiente subárbol del Registro: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. También se puede exponer una lista de las zonas horarias instaladas a través de la vista [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos devueltos  
- Devuelve el tipo de datos de **datetimeoffset**  
+ Devuelve el tipo de datos de **datetimeoffset**.  
   
 ## <a name="return-value"></a>Valor devuelto  
- El **datetimeoffset** valor en la zona horaria de destino.  
+ Valor **datetimeoffset** de la zona horaria de destino.  
   
-## <a name="remarks"></a>Comentarios  
- **EN la zona HORARIA** aplica reglas específicas para la conversión de valores de entrada en **smalldatetime**, **datetime** y **datetime2** tipos de datos, que se encuentran en un intervalo que se ve afectado por el cambio de horario de verano:  
+## <a name="remarks"></a>Notas  
+ **AT TIME ZONE** aplica reglas específicas para la conversión de valores de entrada en tipos de datos **smalldatetime**, **datetime** y **datetime2**, que se encuentran en un intervalo que se ve afectado por el cambio del horario de verano:  
   
--   Cuando el reloj está configurado con antelación, a continuación, hay una diferencia en la hora local que duración depende de la duración del ajuste del reloj (normalmente 1 hora, pero puede ser 30 o 45 minutos, dependiendo de la zona horaria). En ese caso, los puntos en el tiempo que pertenecen a este intervalo se convierten con el desplazamiento *después* cambio de horario de verano.  
+-   Cuando el reloj está adelantado, hay una diferencia en la hora local cuya duración depende de la duración del ajuste del reloj (normalmente una hora, pero pueden ser 30 o 45 minutos, según la zona horaria). En ese caso, los momentos que coinciden con este intervalo se convierten con el desplazamiento *después* del cambio del horario de verano.  
   
     ```  
     /*  
@@ -91,7 +91,7 @@ inputdate AT TIME ZONE timezone
   
     ```  
   
-- Cuando el reloj se vuelve a establecer, 2 horas de hora local se superponen en una hora.  En ese caso, se presentan los puntos en el tiempo que pertenecen al intervalo superpuesto con el desplazamiento *antes de* el cambio del reloj:  
+- Cuando el reloj se vuelve a configurar, dos horas de la hora local se superponen en una hora.  En ese caso, los momentos que coinciden con el intervalo superpuesto se presentan con el desplazamiento *antes* del cambio del reloj:  
   
     ```  
     /*  
@@ -123,12 +123,12 @@ inputdate AT TIME ZONE timezone
   
     ```  
 
-Puesto que parte de la información (por ejemplo, las reglas de zona horaria) se mantiene fuera de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] y están sujetos a cambios ocasionales, el **AT TIME ZONE** función se clasifica como no deterministas. 
+Puesto que parte de la información (por ejemplo, las reglas de zona horaria) se mantiene fuera de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] y está sujeta a cambios ocasionales, la función **AT TIME ZONE** se clasifica como no determinista. 
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>A. Agregar ajuste de zona horaria de destino a la fecha y hora sin información de desplazamiento  
- Use **AT TIME ZONE** para agregar desplazamiento basándose en reglas de zona horaria cuando sepa que el original **datetime** valores se proporcionan en la misma zona horaria:  
+### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>A. Agregar un desplazamiento de zona horaria de destino a una fecha y hora sin información de desplazamiento  
+ Use **AT TIME ZONE** para agregar un desplazamiento basado en reglas de zona horaria cuando sepa que los valores **datetime** originales se proporcionan en la misma zona horaria:  
   
 ```  
 USE AdventureWorks2016;  
@@ -139,8 +139,8 @@ SELECT SalesOrderID, OrderDate,
 FROM Sales.SalesOrderHeader;  
 ```  
   
-### <a name="b-convert-values-between-different-time-zones"></a>B. Convertir valores entre las diferentes zonas horarias  
- En el ejemplo siguiente se convierte los valores entre zonas horarias diferentes:  
+### <a name="b-convert-values-between-different-time-zones"></a>B. Convertir valores entre zonas horarias diferentes  
+ En el ejemplo siguiente se convierten valores entre zonas horarias diferentes:  
   
 ```  
 USE AdventureWorks2016;  
@@ -153,8 +153,8 @@ SELECT SalesOrderID, OrderDate,
 FROM Sales.SalesOrderHeader;  
 ```  
   
-### <a name="c-query-temporal-tables-using-local-time-zone"></a>C. Consultar las tablas temporales con la zona horaria local  
- El siguiente ejemplo, selecciona datos de una tabla temporal.  
+### <a name="c-query-temporal-tables-using-local-time-zone"></a>C. Consultar tablas temporales con la zona horaria local  
+ En el ejemplo siguiente se seleccionan datos de una tabla temporal.  
   
 ```  
 USE AdventureWorks2016;  
@@ -172,8 +172,8 @@ FROM  Person.Person_Temporal
 FOR SYSTEM_TIME AS OF @ASOF;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Tipos de fecha y hora](../../t-sql/data-types/date-and-time-types.md)   
- [Datos de fecha y hora funciones y tipos de &#40; Transact-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
+ [Tipos de datos y funciones de fecha y hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   
   

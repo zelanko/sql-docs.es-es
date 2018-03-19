@@ -1,5 +1,5 @@
 ---
-title: "COMENZAR la transacción (Transact-SQL) | Documentos de Microsoft"
+title: BEGIN TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-  Marca el punto de inicio de una transacción local explícita. Las transacciones explícitas comenzar con la instrucción BEGIN TRANSACTION y terminan con la instrucción COMMIT o ROLLBACK.  
+  Marca el punto de inicio de una transacción local explícita. Las transacciones explícitas empiezan con la instrucción BEGIN TRANSACTION y acaban con la instrucción COMMIT o ROLLBACK.  
 
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -72,24 +72,24 @@ BEGIN { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>Argumentos  
  *transaction_name*  
- **Se aplica a:** (a partir de 2008) de SQL Server, base de datos de SQL Azure
+ **SE APLICA A:** SQL Server (a partir de 2008), Azure SQL Database
  
- Es el nombre asignado a la transacción. *transaction_name* debe cumplir las reglas para identificadores, pero los identificadores de más de 32 caracteres no se permiten. Utilice nombres de transacciones solamente en la pareja más externa de instrucciones BEGIN…COMMIT o BEGIN…ROLLBACK anidadas. *transaction_name* es siempre mayúsculas de minúsculas, incluso cuando la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no distingue mayúsculas de minúsculas.  
+ Es el nombre asignado a la transacción. *transaction_name* debe cumplir las reglas de los identificadores, pero no se admiten identificadores de más de 32 caracteres. Utilice nombres de transacciones solamente en la pareja más externa de instrucciones BEGIN…COMMIT o BEGIN…ROLLBACK anidadas. *transaction_name* siempre distingue mayúsculas de minúsculas, incluso cuando la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no distingue mayúsculas de minúsculas.  
   
  @*tran_name_variable*  
- **Se aplica a:** (a partir de 2008) de SQL Server, base de datos de SQL Azure
+ **SE APLICA A:** SQL Server (a partir de 2008), Azure SQL Database
  
- Se trata del nombre de una variable definida por el usuario que contiene un nombre de transacción válido. La variable debe declararse con una **char**, **varchar**, **nchar**, o **nvarchar** tipo de datos. Si se pasan más de 32 caracteres a la variable, solo se utilizarán los primeros 32; el resto de caracteres se truncará.  
+ Se trata del nombre de una variable definida por el usuario que contiene un nombre de transacción válido. La variable debe declararse con un tipo de datos **char**, **varchar**, **nchar** o **nvarchar**. Si se pasan más de 32 caracteres a la variable, solo se utilizarán los primeros 32; el resto de caracteres se truncará.  
   
- CON marca ['*descripción*']  
-**Se aplica a:** (a partir de 2008) de SQL Server, base de datos de SQL Azure
+ WITH MARK [ '*description*' ]  
+**SE APLICA A:** SQL Server (a partir de 2008), Azure SQL Database
 
-Especifica que la transacción está marcada en el registro. *descripción* es una cadena que describe la marca. A *descripción* más de 128 caracteres se truncan a 128 caracteres antes de almacenarse en la tabla msdb.dbo.logmarkhistory.  
+Especifica que la transacción está marcada en el registro. *description* es una cadena que describe la marca. Un valor *description* de más de 128 caracteres se trunca en 128 antes de almacenarse en la tabla msdb.dbo.logmarkhistory.  
   
  Si utiliza WITH MARK, debe especificar un nombre de transacción. WITH MARK permite restaurar un registro de transacciones hasta una marca con nombre.  
   
 ## <a name="general-remarks"></a>Notas generales
-BEGIN TRANSACTION incrementa@TRANCOUNT en 1.
+BEGIN TRANSACTION incrementa @@TRANCOUNT en 1.
   
 BEGIN TRANSACTION representa un punto en el que los datos a los que hace referencia una conexión son lógica y físicamente coherentes. Si se producen errores, se pueden revertir todas las modificaciones realizadas en los datos después de BEGIN TRANSACTION para devolver los datos al estado conocido de coherencia. Cada transacción dura hasta que se completa sin errores y se emite COMMIT TRANSACTION para hacer que las modificaciones sean una parte permanente de la base de datos, o hasta que se produzcan errores y se borren todas las modificaciones con la instrucción ROLLBACK TRANSACTION.  
   
@@ -101,24 +101,24 @@ BEGIN TRANSACTION inicia una transacción local para la conexión que emite la i
   
  La transacción local iniciada por la instrucción BEGIN TRANSACTION aumenta al nivel de transacción distribuida si se realizan las siguientes acciones antes de confirmarla o revertirla:  
   
--   Se ejecuta una instrucción INSERT, DELETE o UPDATE que hace referencia a una tabla remota de un servidor vinculado. La instrucción INSERT, UPDATE o DELETE se produce un error si el proveedor de OLE DB utilizado para tener acceso al servidor vinculado no es compatible con la interfaz ITransactionJoin.  
+-   Se ejecuta una instrucción INSERT, DELETE o UPDATE que hace referencia a una tabla remota de un servidor vinculado. La instrucción INSERT, UPDATE o DELETE causa un error si el proveedor OLE DB usado para obtener acceso al servidor vinculado no es compatible con la interfaz ITransactionJoin.  
   
 -   Se realiza una llamada a un procedimiento almacenado remoto cuando la opción REMOTE_PROC_TRANSACTIONS es ON.  
   
  La copia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se convierte en el controlador de la transacción y utiliza el Coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MS DTC) para administrar la transacción distribuida.  
   
- Una transacción se puede ejecutar explícitamente como una transacción distribuida utilizando BEGIN DISTRIBUTED TRANSACTION. Para obtener más información, vea [BEGIN DISTRIBUTED TRANSACTION &#40; Transact-SQL &#41; ](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md).  
+ Una transacción se puede ejecutar explícitamente como una transacción distribuida utilizando BEGIN DISTRIBUTED TRANSACTION. Para más información, vea [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md).  
   
- Cuando SET IMPLICIT_TRANSACTIONS está configurado en ON, una instrucción BEGIN TRANSACTION abrirá dos transacciones anidadas. Para obtener más información, vea [SET IMPLICIT_TRANSACTIONS &#40; Transact-SQL &#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)  
+ Cuando SET IMPLICIT_TRANSACTIONS está configurado en ON, una instrucción BEGIN TRANSACTION abrirá dos transacciones anidadas. Para más información, vea [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)  
   
 ## <a name="marked-transactions"></a>Transacciones marcadas  
- La opción WITH MARK coloca el nombre de la transacción en el registro de transacciones. Al restaurar una base de datos a su estado anterior, se puede utilizar la transacción marcada en lugar de la fecha y la hora. Para obtener más información, vea [usar transacciones marcadas para recuperar las bases de datos relacionadas sistemáticamente &#40; Modelo de recuperación completa &#41; ](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md) y [restauración &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-transact-sql.md).  
+ La opción WITH MARK coloca el nombre de la transacción en el registro de transacciones. Al restaurar una base de datos a su estado anterior, se puede utilizar la transacción marcada en lugar de la fecha y la hora. Para más información, vea [Usar transacciones marcadas para recuperar bases de datos relacionadas sistemáticamente &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md) y [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
  Además, se necesitan las marcas del registro de transacciones si tiene la intención de recuperar un conjunto de bases de datos relacionadas a un estado coherente lógicamente. Una transacción distribuida puede colocar marcas en los registros de transacción de las bases de datos relacionadas. Recuperar el conjunto de bases de datos relacionadas hasta estas marcas da como resultado un conjunto de bases de datos coherente en cuanto a las transacciones. La colocación de las marcas en las bases de datos relacionadas requiere procedimientos especiales.  
   
  La marca se coloca en el registro de transacciones solamente si la transacción marcada actualiza la base de datos. No se marcan las transacciones que no modifican los datos.  
   
- BEGIN TRAN *new_name* WITH MARK puede anidarse dentro de una transacción existente que no esté marcada. De ese modo, *new_name* se convierte en el nombre de marca de la transacción, a pesar de que el nombre que la transacción ya se han asignado. En el siguiente ejemplo, `M2` es el nombre de la marca.  
+ Se puede anidar BEGIN TRAN *new_name* WITH MARK en una transacción existente que no esté marcada. De ese modo, *new_name* se convierte en el nombre de marca de la transacción, aunque esa transacción ya tenga uno. En el siguiente ejemplo, `M2` es el nombre de la marca.  
   
 ```  
 BEGIN TRAN T1;  
@@ -145,15 +145,15 @@ COMMIT TRAN T1;
   
  "Se omitirá la opción."  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol public.  
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-an-explicit-transaction"></a>A. Uso de una transacción explícita
-**Se aplica a:** (a partir de 2008) de SQL Server, base de datos de SQL Azure, almacenamiento de datos de SQL Azure, almacenamiento de datos paralelos
+### <a name="a-using-an-explicit-transaction"></a>A. Usar una transacción explícita
+**SE APLICA A:** SQL Server (a partir de 2008,) Azure SQL Database, Azure SQL Data Warehouse, Almacenamiento de datos paralelos
 
-Este ejemplo utiliza AdventureWorks. 
+En este ejemplo se usa AdventureWorks. 
 
 ```
 BEGIN TRANSACTION;  
@@ -163,9 +163,9 @@ COMMIT;
 ```
 
 ### <a name="b-rolling-back-a-transaction"></a>B. Revertir una transacción
-**Se aplica a:** (a partir de 2008) de SQL Server, base de datos de SQL Azure, almacenamiento de datos de SQL Azure, almacenamiento de datos paralelos
+**SE APLICA A:** SQL Server (a partir de 2008,) Azure SQL Database, Azure SQL Data Warehouse, Almacenamiento de datos paralelos
 
-En el ejemplo siguiente se muestra el efecto de revertir una transacción. En este ejemplo, la instrucción ROLLBACK deshará la instrucción INSERT, pero sigue existiendo la tabla creada.
+En el ejemplo siguiente se muestra el efecto de revertir una transacción. En este ejemplo, la instrucción ROLLBACK revertirá la instrucción INSERT, pero la tabla creada seguirá existiendo.
 
 ```
  
@@ -178,7 +178,7 @@ ROLLBACK;
 ```
 
 ### <a name="c-naming-a-transaction"></a>C. Asignar un nombre a una transacción 
-**Se aplica a:** (a partir de 2008) de SQL Server, base de datos de SQL Azure
+**SE APLICA A:** SQL Server (a partir de 2008), Azure SQL Database
 
 En el siguiente ejemplo se muestra cómo asignar un nombre a una transacción.  
   
@@ -196,7 +196,7 @@ GO
 ```  
   
 ### <a name="d-marking-a-transaction"></a>D. Marcar una transacción  
-**Se aplica a:** (a partir de 2008) de SQL Server, base de datos de SQL Azure
+**SE APLICA A:** SQL Server (a partir de 2008), Azure SQL Database
 
 En el siguiente ejemplo se muestra cómo marcar una transacción. Se marca la transacción `CandidateDelete`.  
   
@@ -213,7 +213,7 @@ COMMIT TRANSACTION CandidateDelete;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   

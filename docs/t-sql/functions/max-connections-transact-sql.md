@@ -1,5 +1,5 @@
 ---
-title: '@@MAX_CONNECTIONS (Transact-SQL) | Documentos de Microsoft'
+title: '@@MAX_CONNECTIONS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipos devueltos  
  **integer**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El número real de conexiones de usuario permitidas depende también de la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está instalada y de los límites de las aplicaciones y del hardware.  
   
- Para volver a configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] menos conexiones, utilizar **sp_configure**.  
+ Para volver a configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de modo que admita menos conexiones, use **sp_configure**.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se muestra cómo devolver el número máximo de conexiones de usuario simultáneas en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En el ejemplo se considera que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se ha configurado de nuevo para utilizar menos conexiones de usuario.  
@@ -71,7 +71,7 @@ Max Connections
 32767            
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Funciones de configuración](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [Establecer la opción de configuración del servidor Conexiones de usuario](../../database-engine/configure-windows/configure-the-user-connections-server-configuration-option.md)  

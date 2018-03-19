@@ -1,5 +1,5 @@
 ---
-title: STY (tipo de datos geometry) | Documentos de Microsoft
+title: STY (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="sty-geometry-data-type"></a>STY (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-La propiedad de la coordenada Y de un **punto** instancia.
+Propiedad de la coordenada Y de una instancia de **Point**.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,12 +44,12 @@ La propiedad de la coordenada Y de un **punto** instancia.
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **float**  
+ Tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo CLR: **SqlDouble**  
+ Tipo de CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Comentarios  
- El valor de esta propiedad será null si el **geometry** instancia es un punto. Esta propiedad es de solo lectura.  
+## <a name="remarks"></a>Notas  
+ El valor de esta propiedad será NULL si la instancia de **geometry** es un punto. Esta propiedad es de solo lectura.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea una instancia de `Point` y se utiliza `STY` para recuperar la coordenada Y de la instancia.  
@@ -60,9 +60,9 @@ SET @g = geometry::STGeomFromText('POINT(3 8)', 0);
 SELECT @g.STY;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [STX &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stx-geometry-data-type.md)   
- [STSrid &#40; tipo de datos geometry &#41;](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)   
+ [STSrid &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)   
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

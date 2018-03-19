@@ -1,5 +1,5 @@
 ---
-title: CONTINUAR (Transact-SQL) | Documentos de Microsoft
+title: CONTINUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -36,6 +36,6 @@ ms.lasthandoff: 01/25/2018
 # <a name="continue-transact-sql"></a>CONTINUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Reinicia un bucle WHILE. Las instrucciones que se encuentren después de la palabra clave CONTINUE se omiten. CONTINUE se suele abrir, aunque no siempre, con una comprobación IF. Para obtener más información, vea [mientras &#40; Transact-SQL &#41; ](../../t-sql/language-elements/while-transact-sql.md) y [lenguaje de Control de flujo &#40; Transact-SQL &#41; ](~/t-sql/language-elements/control-of-flow.md).  
+  Reinicia un bucle WHILE. Las instrucciones que se encuentren después de la palabra clave CONTINUE se omiten. CONTINUE se suele abrir, aunque no siempre, con una comprobación IF. Para más información, vea [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md) y [Lenguaje de control de flujo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
   
   

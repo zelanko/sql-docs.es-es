@@ -1,5 +1,5 @@
 ---
-title: ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Documentos de Microsoft
+title: ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/28/2015
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Modifica una clave de cifrado de columna en una base de datos, agregar o quitar un valor cifrado. Una CEK puede tener hasta dos valores que permite la rotación de la clave maestra de columna correspondiente. Se utiliza una CEK al cifrar las columnas utilizando la [Always Encrypted &#40; motor de base de datos &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) característica. Antes de agregar un valor CEK, debe definir la clave maestra de columna que se usó para cifrar el valor mediante el uso de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) instrucción.  
+  Modifica una clave de cifrado de columna en una base de datos agregando o quitando un valor cifrado. Una clave de cifrado de columna puede tener hasta dos valores de cara a la rotación de la correspondiente clave maestra de columna. Las claves de cifrado de columna se usan al cifrar columnas con la característica [Always Encrypted &#40;motor de base de datos&#41; ](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Antes de agregar un valor de clave de cifrado de columna, debe definir la clave maestra de columna que se usó para cifrar el valor mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o la instrucción [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,32 +54,32 @@ ALTER COLUMN ENCRYPTION KEY key_name
   
 ## <a name="arguments"></a>Argumentos  
  *key_name*  
- La clave de cifrado de columna que va a cambiar.  
+ Clave de cifrado de columna que va a cambiar.  
   
  *column_master_key_name*  
- Especifica el nombre de la clave maestra de columna (CMK) utilizada para cifrar la clave de cifrado de columna (CEK).  
+ Especifica el nombre de la clave maestra de columna que se usa para cifrar la clave de cifrado de columna.  
   
- *nombre_algoritmo*  
- Nombre del algoritmo de cifrado utilizado para cifrar el valor. El algoritmo para proveedores del sistema debe ser **RSA_OAEP**. Este argumento no es válido cuando se coloca un valor de clave de cifrado de columna.  
+ *algorithm_name*  
+ Nombre del algoritmo de cifrado usado para cifrar el valor. El algoritmo para los proveedores del sistema debe ser **RSA_OAEP**. Este argumento no es válido cuando se elimina un valor de clave de cifrado de columna.  
   
  *varbinary_literal*  
- El BLOB CEK había cifrada con el patrón especificado la clave de cifrado. . Este argumento no es válido cuando se coloca un valor de clave de cifrado de columna.  
+ BLOB de la clave de cifrado de columna con la clave de cifrado maestra especificada. . Este argumento no es válido cuando se elimina un valor de clave de cifrado de columna.  
   
 > [!WARNING]  
->  Nunca pasar texto simple CEK valores en esta declaración. Si lo hace, comprenderá la ventaja de esta característica.  
+>  En esta instrucción no se deben pasar nunca valores de clave de cifrado de columna con texto simple. Si lo hace, perderá las ventajas que ofrece esta característica.  
   
-## <a name="remarks"></a>Comentarios  
- Normalmente, se crea una clave de cifrado de columna con un solo valor cifrado. Cuando una clave maestra de columna debe ser girado (el actual columna clave maestra debe reemplazarse con la nueva clave maestra de columna), puede agregar un nuevo valor de la clave de cifrado de columna, cifradas con la nueva clave maestra de columna. Esto le permitirá asegurarse de que las aplicaciones cliente pueden tener acceso a los datos cifrados con la clave de cifrado de columna, mientras que la nueva clave maestra de columna se pone a disposición para las aplicaciones cliente. Un Always Encrypted habilitado el controlador en una aplicación cliente que no tiene acceso a la nueva clave maestra, podrá usar el valor de clave de cifrado de columna cifrado con la clave maestra de columna para tener acceso a datos confidenciales. Los algoritmos de cifrado, admite Always Encrypted, requieren el valor de texto simple que 256 bits. Un valor cifrado se debe generar utilizando un proveedor de almacén de claves que encapsula el almacén de claves que contiene la clave maestra de columna.  
+## <a name="remarks"></a>Notas  
+ Normalmente, una clave de cifrado de columna se crea con un solo valor cifrado. Cuando es necesario rotar una clave maestra de columna (la clave maestra de columna actual debe reemplazarse con la nueva clave maestra de columna), puede agregar un nuevo valor de la clave de cifrado de columna, cifrado con la nueva clave maestra de columna. De este modo, conseguirá que las aplicaciones cliente puedan acceder a los datos cifrados con la clave de cifrado de columna, mientras la nueva clave maestra de columna se pone a disposición de las aplicaciones cliente. Un controlador compatible con Always Encrypted en una aplicación cliente que no tenga acceso a la nueva clave maestra podrá usar el valor de clave de cifrado de columna que está cifrado con la clave maestra de columna para tener acceso a datos confidenciales. Los algoritmos de cifrado, compatibles con Always Encrypted, necesitan que el valor de texto simple tenga 256 bits. Un valor cifrado se debe generar usando un proveedor de almacén de claves que encapsule el almacén de claves que contiene la clave maestra de columna.  
   
- Use [sys.columns &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) y [sys.column_encryption_key_values &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) para ver información sobre las claves de cifrado de columna.  
+ Eche un vistazo a [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) y [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) para saber más sobre las claves de cifrado de columna.  
   
-## <a name="permissions"></a>Permissions  
- Requiere **ALTER ANY COLUMN ENCRYPTION KEY** permiso en la base de datos.  
+## <a name="permissions"></a>Permisos  
+ Necesita el permiso **ALTER ANY COLUMN ENCRYPTION KEY** para la base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-adding-a-column-encryption-key-value"></a>A. Agregar un valor de clave de cifrado de columna  
- En el ejemplo siguiente se modifica una clave de cifrado de columna denominada `MyCEK`.  
+ En el siguiente ejemplo se modifica una clave de cifrado de columna denominada `MyCEK`.  
   
 ```  
 ALTER COLUMN ENCRYPTION KEY MyCEK  
@@ -94,7 +94,7 @@ GO
 ```  
   
 ### <a name="b-dropping-a-column-encryption-key-value"></a>B. Quitar un valor de clave de cifrado de columna  
- En el ejemplo siguiente se modifica una clave de cifrado de columna denominada `MyCEK` colocando un valor.  
+ En el siguiente ejemplo se quita un valor para modificar una clave de cifrado de columna denominada `MyCEK`.  
   
 ```  
 ALTER COLUMN ENCRYPTION KEY MyCEK  
@@ -105,9 +105,9 @@ DROP VALUE
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
- [DROP COLUMN ENCRYPTION KEY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
+ [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
  [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [Always Encrypted &#40;motor de base de datos&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   

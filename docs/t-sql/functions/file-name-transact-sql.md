@@ -1,5 +1,5 @@
 ---
-title: File_name (Transact-SQL) | Documentos de Microsoft
+title: FILE_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -52,17 +52,17 @@ FILE_NAME ( file_id )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *file_ID*  
- Es el número de identificación del archivo cuyo nombre se va a devolver. *file_ID* es **int**.  
+ *file_id*  
+ Es el número de identificación del archivo cuyo nombre se va a devolver. *file_id* es **int**.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  *file_ID* corresponde a la columna file_id de las vistas de catálogo sys.master_files o sys.database_files.  
   
 ## <a name="examples"></a>Ejemplos  
- El ejemplo siguiente devuelve los nombres de archivo para `file_ID 1` y `file_ID` en el [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de datos.  
+ En el siguiente ejemplo se devuelven los nombres de archivo de `file_ID 1` y `file_ID` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  
 SELECT FILE_NAME(1) AS 'File Name 1', FILE_NAME(2) AS 'File Name 2';  
@@ -79,9 +79,9 @@ AdventureWorks2012_Data   AdventureWorks2012_Log
 (1 row(s) affected)
 ``` 
   
-## <a name="see-also"></a>Vea también  
- [FILE_IDEX &#40; Transact-SQL &#41;](../../t-sql/functions/file-idex-transact-sql.md)   
- [Funciones de metadatos &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [FILE_IDEX &#40;Transact-SQL&#41;](../../t-sql/functions/file-idex-transact-sql.md)   
+ [Funciones de metadatos &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

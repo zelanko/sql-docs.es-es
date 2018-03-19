@@ -1,5 +1,5 @@
 ---
-title: Parse (tipo de datos geometry) | Documentos de Microsoft
+title: Parse (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="parse-geometry-data-type"></a>Parse (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve un **geometry** instancia a partir de una representación Open Geospatial Consortium (OGC) Well-Known Text (WKT). `Parse()`es equivalente a [STGeomFromText()](../../t-sql/spatial-geometry/parse-geometry-data-type.md), con la excepción que se considera espaciales identificador de referencia (SRID) de 0 como un parámetro. La entrada puede incluir valores opcionales para Z (elevación) y M (medida).
+Devuelve una instancia de **geometry** a partir de una representación Well-Known Text (WKT) de Open Geospatial Consortium (OGC). `Parse()` es equivalente a [STGeomFromText()](../../t-sql/spatial-geometry/parse-geometry-data-type.md), con la excepción de que presupone un identificador de referencia espacial (SRID) de 0 como parámetro. La entrada puede incluir valores opcionales para Z (elevación) y M (medida).
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,19 +42,19 @@ Parse ( 'geometry_tagged_text' )
   
 ## <a name="arguments"></a>Argumentos  
  *geometry_tagged_text*  
- Es la representación WKT de la **geometry** instancia que se va a devolver. *geometry_tagged_text* es un **nvarchar** expresión.  
+ Es la representación WKT de la instancia de **geometry** que se quiere devolver. *geometry_tagged_text* es una expresión **nvarchar**.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geometry**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentarios  
- El tipo OGC de la **geometry** instancia devuelta por `Parse()` se establece en la entrada WKT correspondiente.  
+## <a name="remarks"></a>Notas  
+ El tipo OGC de la instancia de **geometry** devuelta por `Parse()` se establece en la entrada WKT correspondiente.  
   
- La cadena 'Null' se interpretará como un valor null **geometry** instancia.  
+ La cadena "Null" se interpretará como una instancia NULL de **geometry**.  
   
- Este método producirá una **FormatException** si la entrada no tiene el formato correcto.  
+ Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se usa `Parse()` para crear una instancia de `geometry`.  
@@ -65,7 +65,7 @@ SET @g = geometry::Parse('LINESTRING (100 100, 20 180, 180 180)');
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [STGeomFromText](../../t-sql/spatial-geometry/parse-geometry-data-type.md)   
  [Métodos de geometría estáticos ampliados](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   

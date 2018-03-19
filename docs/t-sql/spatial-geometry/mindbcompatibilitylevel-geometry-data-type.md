@@ -1,5 +1,5 @@
 ---
-title: MinDbCompatibilityLevel (tipo de datos geometry) | Documentos de Microsoft
+title: MinDbCompatibilityLevel (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="mindbcompatibilitylevel-geometry-data-type"></a>MinDbCompatibilityLevel (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Devuelve el nivel de compatibilidad de base de datos mínima que reconoce el **geometry** instancia de tipo de datos.
+Devuelve el nivel de compatibilidad de base de datos mínimo que reconoce la instancia de tipo de datos **geometry**.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,11 +41,11 @@ Devuelve el nivel de compatibilidad de base de datos mínima que reconoce el **g
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **int**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
  Tipo de valor devuelto de CLR: **int**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Use `MinDbCompatibilityLevel()` para probar un objeto espacial a efectos de compatibilidad antes de cambiar el nivel de compatibilidad de una base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -72,7 +72,7 @@ Devuelve el nivel de compatibilidad de base de datos mínima que reconoce el **g
  END
 ``` 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

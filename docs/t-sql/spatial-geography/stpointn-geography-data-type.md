@@ -1,5 +1,5 @@
 ---
-title: STPointN (tipo de datos geography) | Documentos de Microsoft
+title: STPointN (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpointn-geography-data-type"></a>STPointN (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve el punto especificado en un **geography** instancia.  
+  Devuelve el punto especificado de una instancia de **geography**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,21 +45,21 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *expression*  
- Es un **int** expresión entre 1 y el número de puntos en el **geography** instancia.  
+ Es una expresión **int** entre 1 y el número de puntos de la instancia de **geography**.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geography**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
- Abrir tipo Geospatial Consortium (OGC): **punto**  
+ Tipo Open Geospatial Consortium (OGC): **Point**  
   
-## <a name="remarks"></a>Comentarios  
- Si un **geography** instancia es creada por el usuario, STPointN() devuelve el punto especificado por *expresión* Considerando los puntos en el orden en el que se especificaron inicialmente.  
+## <a name="remarks"></a>Notas  
+ Si se trata de una instancia de **geography** creada por el usuario, STPointN() devuelve el punto especificado por *expression* considerando los puntos en el orden en el que se especificaron inicialmente.  
   
- Si un **geography** instancia es generada por el sistema, STPointN() devuelve el punto especificado por *expresión* considerando todos los puntos en el mismo orden que serían salida: primero por  **Geography** instancia, después por anillos dentro de la instancia (si procede) y, a continuación, según el punto en el anillo. Este orden es determinista.  
+ Si se trata de una instancia de **geography** generada por el sistema, STPointN() devuelve el punto especificado por *expression* considerando todos los puntos en el orden en que se generarían: primero por instancias de **geography**, después por anillos dentro de la instancia (si procede) y, luego, por puntos dentro del anillo. Este orden es determinista.  
   
- Si se llama a este método con un valor menor que 1, produce un **ArgumentOutOfRangeException**.  
+ Si se llama a este método con un valor inferior a 1, se genera una excepción **ArgumentOutOfRangeException**.  
   
  Si se llama a este método con un valor superior al número de puntos de la instancia, devuelve NULL.  
   
@@ -72,7 +72,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STPointN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de OGC en instancias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

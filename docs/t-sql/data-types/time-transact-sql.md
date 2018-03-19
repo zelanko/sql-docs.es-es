@@ -1,5 +1,5 @@
 ---
-title: hora (Transact-SQL) | Documentos de Microsoft
+title: time (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 6/7/2017
 ms.prod: sql-non-specified
@@ -41,41 +41,41 @@ ms.lasthandoff: 11/21/2017
   Define una hora de un día. La hora no distingue la zona horaria y está basada en un reloj de 24 horas.  
   
   > [!NOTE]  
-  > Se proporciona información de Informatica para los clientes de PDW mediante el conector de Informatica. 
+  > Se proporciona información de Informatica para clientes de PDW que usen el conector de Informatica. 
   
 ## <a name="time-description"></a>Descripción de time  
   
 |Propiedad|Valor|  
 |--------------|-----------|  
-|Sintaxis|**tiempo** [(*escala fracciones de segundo*)]|  
-|Uso|DECLARAR @MyTime **Time (7)**<br /><br /> Crear tabla Table1 (Column1 **Time (7)** )|  
-|*escala de fracciones de segundo*|Especifica el número de dígitos de la parte fraccionaria de los segundos.<br /><br /> Este valor puede ser un entero de 0 a 7. Para Informatica, esto puede ser un entero de 0 a 3.<br /><br /> La escala de fracciones predeterminada es 7 (100 NS).|  
-|Formato de literal de cadena predeterminado<br /><br /> (se usa para el cliente de nivel inferior)|hh [.nnnnnnn] para Informatica)<br /><br /> Para obtener más información, vea la sección "Compatibilidad con versiones anteriores de los clientes de niveles inferiores" más adelante.|  
-|Intervalo|00:00:00.0000000 a través de 23:59:59.9999999 (00:00:00.000 a través de 23:59:59.999 de Informatica)|  
-|Intervalos de elementos|hh es una cifra de dos dígitos, comprendida entre 0 y 23, que representa la hora.<br /><br /> mm es una cifra de dos dígitos, comprendida entre 0 y 59, que representa los minutos.<br /><br /> ss es una cifra de dos dígitos, comprendida entre 0 y 59, que representa los segundos.<br /><br /> n\*es de cero a siete dígitos, comprendida entre 0 y 9999999 que representa las fracciones de segundo. Para Informatica, n\* es de cero a tres dígitos, comprendida entre 0 y 999.|  
-|Longitud en caracteres|De 8 posiciones como mínimo (hh:mm:ss) a 16 como máximo (hh:mm:ss.nnnnnnn) Para Informatica, el máximo es 12 (hh:mm:ss.nnn).|  
-|Precisión, escala<br /><br /> (el usuario especifica solo la escala)|Vea la siguiente tabla.|  
-|Tamaño de almacenamiento|5 bytes (fijo) es el valor predeterminado con el valor predeterminado de 100 ns de precisión de fracciones de segundo. En informática, el valor predeterminado es 4 bytes, fijo, con el valor predeterminado de 1 ms fracciones precisión de segundos.|  
+|Sintaxis|**time** [ (*escala de fracciones de segundo*) ]|  
+|Uso|DECLARE @MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
+|*escala de fracciones de segundo*|Especifica el número de dígitos de la parte fraccionaria de los segundos.<br /><br /> Este valor puede ser un entero de 0 a 7. En Informatica, puede ser un entero de 0 a 3.<br /><br /> La escala predeterminada de las fracciones es 7 (100 ns).|  
+|Formato de literal de cadena predeterminado<br /><br /> (se usa para el cliente de nivel inferior)|hh:mm:ss[.nnnnnnn] en Informatica)<br /><br /> Para obtener más información, vea la sección "Compatibilidad con versiones anteriores de los clientes de niveles inferiores" más adelante.|  
+|Intervalo|De 00:00:00.0000000 a 23:59:59.9999999 (de 00:00:00.000 a 23:59:59.999 en Informatica)|  
+|Intervalos de elementos|hh es una cifra de dos dígitos, comprendida entre 0 y 23, que representa la hora.<br /><br /> mm es una cifra de dos dígitos, comprendida entre 0 y 59, que representa los minutos.<br /><br /> ss es una cifra de dos dígitos, comprendida entre 0 y 59, que representa los segundos.<br /><br /> n\* es una cifra de cero a siete dígitos comprendida entre 0 y 9999999 que representa las fracciones de segundos. En Informatica, n\* es una cifra de cero a tres dígitos comprendida entre 0 y 999.|  
+|Longitud en caracteres|De 8 posiciones como mínimo (hh:mm:ss) a 16 como máximo (hh:mm:ss.nnnnnnn). En Informatica, el máximo es 12 (hh:mm:ss.nnn).|  
+|Precisión, escala<br /><br /> (el usuario especifica solo la escala)|Vea la tabla siguiente.|  
+|Tamaño de almacenamiento|5 bytes (fijo) es el valor predeterminado con el valor predeterminado de 100 ns de precisión de fracciones de segundo. En Informatica, el valor predeterminado es 4 bytes y fijo, con el valor predeterminado de 1 ms de precisión de fracciones de segundo.|  
 |Precisión|100 nanosegundos (1 milisegundo en Informatica)|  
-|Valor predeterminado|00:00:00<br /><br /> Este valor se utiliza para la parte de hora anexada para la conversión implícita de **fecha** a **datetime2** o **datetimeoffset**.|  
+|Valor predeterminado|00:00:00<br /><br /> Este valor se usa para la parte de fecha anexada en la conversión implícita de **date** a **datetime2** o **datetimeoffset**.|  
 |Precisión de fracciones de segundo definida por el usuario|Sí|  
-|Conservación y reconocimiento del ajuste de zona horaria|No|  
-|Reconocimiento del horario de verano|No|  
+|Conservación y reconocimiento del ajuste de zona horaria|no|  
+|Reconocimiento del horario de verano|no|  
   
 |Escala especificada|Resultado (precisión, escala)|Longitud de la columna (bytes)|Fracciones<br /><br /> segundos<br /><br /> precisión|  
 |---------------------|---------------------------------|-----------------------------|------------------------------------------|  
-|**time**|(16,7) [Informatica en (12,3)]|5 (4 de Informatica)|7 (3 de Informatica)|  
+|**time**|(16,7) [(12,3) en Informatica]|5 (4 en Informatica)|7 (3 en Informatica)|  
 |**time(0)**|(8,0)|3|0-2|  
-|**Time(1)**|(10,1)|3|0-2|  
-|**Time(2)**|(11,2)|3|0-2|  
-|**Time(3)**|(12,3)|4|3-4|  
-|**Time(4)**<br /><br /> No se admite en Informatica.|(13,4)|4|3-4|  
-|**Time(5)**<br /><br /> No se admite en Informatica.|(14,5)|5|5-7|  
-|**Time(6)**<br /><br /> No se admite en Informatica.|(15,6)|5|5-7|  
+|**time(1)**|(10,1)|3|0-2|  
+|**time(2)**|(11,2)|3|0-2|  
+|**time(3)**|(12,3)|4|3-4|  
+|**time(4)**<br /><br /> No se admite en Informatica.|(13,4)|4|3-4|  
+|**time(5)**<br /><br /> No se admite en Informatica.|(14,5)|5|5-7|  
+|**time(6)**<br /><br /> No se admite en Informatica.|(15,6)|5|5-7|  
 |**time(7)**<br /><br /> No se admite en Informatica.|(16,7)|5|5-7|  
   
 ## <a name="supported-string-literal-formats-for-time"></a>Formatos de literales de cadena compatibles para time  
- En la tabla siguiente se muestra la cadena válida formatos de literales para el **tiempo** tipo de datos.  
+ En la siguiente tabla se muestran los formatos de literales de cadena válidos para el tipo de datos **time**.  
   
 |SQL Server|Description|  
 |----------------|-----------------|  
@@ -94,23 +94,23 @@ ms.lasthandoff: 11/21/2017
   
  El formato predeterminado del literal de cadena (que se usa para el cliente de nivel inferior) se ajustará al formato del estándar SQL, definido como hh:mm:ss[.nnnnnnn]. Este formato es similar a la definición de ISO 8601 para TIME, sin incluir las fracciones de segundo.  
   
-##  <a name="BackwardCompatibilityforDownlevelClients"></a>Compatibilidad con versiones anteriores de clientes de nivel inferior  
- Algunos clientes de nivel inferior no admiten la **tiempo**, **fecha**, **datetime2** y **datetimeoffset** tipos de datos. En la tabla siguiente se muestra la asignación de tipo entre una instancia de nivel superior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los clientes de nivel inferior.  
+##  <a name="BackwardCompatibilityforDownlevelClients"></a> Compatibilidad con versiones anteriores de los clientes de niveles inferiores  
+ Algunos clientes de nivel inferior no admiten los tipos de datos **time**, **date**, **datetime2** y **datetimeoffset**. En la tabla siguiente se muestra la asignación de tipo entre una instancia de nivel superior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los clientes de nivel inferior.  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de datos|El formato del literal de cadena predeterminado se pasó al cliente de nivel inferior|ODBC de nivel inferior|OLEDB de nivel inferior|JDBC de nivel inferior|SQLCLIENT de nivel inferior|  
+|Tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|El formato del literal de cadena predeterminado se pasó al cliente de nivel inferior|ODBC de nivel inferior|OLEDB de nivel inferior|JDBC de nivel inferior|SQLCLIENT de nivel inferior|  
 |-----------------------------------------|----------------------------------------------------------------|----------------------|-----------------------|----------------------|---------------------------|  
 |**time**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Cadena o SqString|  
 |**date**|YYYY-MM-DD|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Cadena o SqString|  
 |**datetime2**|AAAA-MM-DD hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Cadena o SqString|  
-|**datetimeoffset**|AAAA-MM-DD hh [.nnnnnnn] [+ &#124;-] hh: mm|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Cadena o SqString|  
+|**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Cadena o SqString|  
   
 ## <a name="converting-date-and-time-data"></a>Convertir datos de fecha y hora  
- Cuando se convierte a los tipos de datos de fecha y hora, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rechaza todos los valores que no reconoce como fechas u horas. Para obtener información acerca de cómo utilizar las funciones CAST y CONVERT con datos de fecha y hora, vea [CAST y CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+ Cuando se convierte a los tipos de datos de fecha y hora, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rechaza todos los valores que no reconoce como fechas u horas. Para más información sobre cómo usar las funciones CAST y CONVERT con datos de fecha y hora, vea [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 ### <a name="converting-timen-data-type-to-other-date-and-time-types"></a>Convertir el tipo de datos time(n) en otros tipos de fecha y hora  
- Esta sección describe lo que ocurre cuando un **tiempo** tipo de dato se convierte a otros tipos de datos de fecha y hora.  
+ En esta sección se describe lo que ocurre cuando un tipo de datos **time** se convierte a otros tipos de datos de fecha y hora.  
   
- Cuando la conversión es a **Time (n)**, se copian a la hora, minutos y segundos. Cuando la precisión de destino es menor que la precisión de origen, las fracciones de segundo se redondea para ajustarse a la precisión de destino. En el siguiente ejemplo se muestran los resultados de convertir un valor `time(4)` en un valor `time(3)`.  
+ Cuando la conversión es a **time(n)**, se copian las horas, los minutos y los segundos. Cuando la precisión de destino es menor que la precisión de origen, las fracciones de segundo se redondean para ajustarse a la precisión de destino. En el siguiente ejemplo se muestran los resultados de convertir un valor `time(4)` en un valor `time(3)`.  
   
 ```  
 DECLARE @timeFrom time(4) = '12:34:54.1237';  
@@ -127,9 +127,9 @@ SELECT @timeTo AS 'time(3)', @timeFrom AS 'time(4)';
 ```  
   
  Si la conversión es a  
-                    **fecha**, se produce un error en la conversión y se genera el mensaje de error 206: "tipos de operandos: date es incompatible con time".  
+                    **date**, la conversión no tiene lugar y se recibe el mensaje de error 206: "Conflicto de tipos de operandos: date es incompatible con time".  
   
- Cuando la conversión es a **datetime**, hora, minuto y segundo valores se copian; y el componente de fecha se establece en ' 1900-01-01'. Cuando la precisión de fracciones de segundo de la **Time (n)** valor es superior a tres dígitos, el **datetime** resultado se truncará. En el código siguiente se muestran los resultados de convertir un valor `time(4)` en un valor `datetime`.  
+ Cuando la conversión es a **datetime**, se copian los valores de hora, minuto y segundo y el componente de fecha se establece en '1900-01-01'. Cuando la precisión de las fracciones de segundo del valor de **time(n)** es superior a tres dígitos, el resultado de **datetime** se truncará. En el código siguiente se muestran los resultados de convertir un valor `time(4)` en un valor `datetime`.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -145,7 +145,7 @@ SELECT @time AS '@time', @datetime AS '@datetime';
   
 ```  
   
- Cuando la conversión es a **smalldatetime**, la fecha se establece en ' 1900-01-01' y los valores de hora y minutos se redondean hacia arriba. Los segundos y las fracciones de segundo se establecen en 0. En el código siguiente se muestran los resultados de convertir un valor `time(4)` en un valor `smalldatetime`.  
+ Cuando la conversión es a **smalldatetime**, la fecha se establece en '1900-01-01' y se redondean los valores de hora y minuto. Los segundos y las fracciones de segundo se establecen en 0. En el código siguiente se muestran los resultados de convertir un valor `time(4)` en un valor `smalldatetime`.  
   
 ```  
 -- Shows rounding up of the minute value.  
@@ -172,7 +172,7 @@ SELECT @time AS '@time', @smalldatetime AS '@smalldatetime';
   
 ```  
   
- Si la conversión es a **DateTimeOffset (n)**, la fecha se establece en ' 1900-01-01' y la hora se copia. El ajuste de zona horaria se establece en +00:00. Cuando la precisión de fracciones de segundo de la **Time (n)** valor es mayor que la precisión de la **DateTimeOffset (n)** valor, el valor se redondea para ajustarse. El ejemplo siguiente muestra los resultados de convertir un valor de `time(4)` en un tipo `datetimeoffset(3)`.  
+ Cuando la conversión es a **datetimeoffset(n)**, la fecha se establece en '1900-01-01' y la hora se copia. El ajuste de zona horaria se establece en +00:00. Cuando la precisión de las fracciones de segundo del valor de **time(n)** es mayor que la precisión del valor de **datetimeoffset(n)**, el valor se redondea para ajustarse. El ejemplo siguiente muestra los resultados de convertir un valor de `time(4)` en un tipo `datetimeoffset(3)`.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -189,7 +189,7 @@ SELECT @time AS '@time', @datetimeoffset AS '@datetimeoffset';
   
 ```  
   
- Al convertir a **datetime2**, la fecha se establece en ' 1900-01-01', se copia el componente de hora, y el ajuste de zona horaria se establece en 00:00. Cuando la precisión de fracciones de segundo de la **datetime2** valor es mayor que el **Time (n)** valor, el valor se redondeará hasta para ajustarse.  En el siguiente ejemplo se muestran los resultados de convertir un valor `time(4)` en un valor `datetime2(2)`.  
+ Cuando la conversión es a **datetime2(n)**, la fecha se establece en '1900-01-01', se copia el componente de hora y el ajuste de zona horaria se establece en 00:00. Cuando la precisión de las fracciones de segundo del valor de **datetime2(n)** es mayor que el valor de **time(n)**, el valor se redondeará para ajustarse.  En el siguiente ejemplo se muestran los resultados de convertir un valor `time(4)` en un valor `datetime2(2)`.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -206,11 +206,11 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
 ```  
   
 ### <a name="converting-string-literals-to-timen"></a>Convertir literales de cadena a time(n)  
- Las conversiones de literales de cadena en tipos de fecha y hora son posibles cuando todas las partes de las cadenas están en formatos válidos. En caso contrario, se generará un error en el tiempo de ejecución. Las conversiones implícitas o explícitas que no especifican un estilo (desde tipos de fecha y hora hasta literales de cadena) estarán en el formato predeterminado de la sesión actual. La siguiente tabla muestra las reglas para convertir una cadena literal la **tiempo** tipo de datos.  
+ Las conversiones de literales de cadena en tipos de fecha y hora son posibles cuando todas las partes de las cadenas están en formatos válidos. En caso contrario, se generará un error en el tiempo de ejecución. Las conversiones implícitas o explícitas que no especifican un estilo (desde tipos de fecha y hora hasta literales de cadena) estarán en el formato predeterminado de la sesión actual. En la siguiente tabla se muestran las reglas para convertir un literal de cadena al tipo de datos **time**.  
   
 |Literal de cadena de entrada|Regla de conversión|  
 |--------------------------|---------------------|  
-|DATE de ODBC|Literales de cadena ODBC se asignan a la **datetime** tipo de datos. Cualquier operación de asignación de literales de DATETIME de ODBC en **tiempo**tipos provocará una conversión implícita entre **datetime** y este tipo de acuerdo con las reglas de conversión.|  
+|DATE de ODBC|Los literales de cadena de ODBC se asignan al tipo de datos **datetime**. Cualquier operación de asignación de los literales de DATETIME de ODBC a tipos **time** provocará una conversión implícita entre **datetime** y este tipo, tal y como se define en las reglas de conversión.|  
 |TIME de ODBC|Vea la regla de DATE de ODBC anterior.|  
 |DATETIME DE ODBC|Vea la regla de DATE de ODBC anterior.|  
 |Solo DATE|Se proporcionan los valores predeterminados.|  
@@ -224,7 +224,7 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-comparing-date-and-time-data-types"></a>A. Comparar tipos de datos de fecha y hora  
- En el ejemplo siguiente se compara los resultados de convertir una cadena a cada uno de ellos **fecha** y **tiempo** tipo de datos.  
+ En el siguiente ejemplo se comparan los resultados de convertir una cadena a cada tipo de datos **date** y **time**.  
   
 ```  
 SELECT   
@@ -249,7 +249,7 @@ SELECT
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
 ###  <a name="ExampleB"></a> B. Insertar literales de cadena time válidos en una columna time(7)  
- En la tabla siguiente se enumera varios literales de cadena que se pueden insertar en una columna de tipo de datos **Time (7)** con los valores que se almacenan en esa columna.  
+ En la tabla siguiente se enumeran varios literales de cadena que se pueden insertar en una columna de tipo de datos **time(7)** con los valores que se almacenan en dicha columna.  
   
 |Tipo de formato de literal de cadena|Literal de cadena insertado|Valor de time(7) almacenado|Description|  
 |--------------------------------|-----------------------------|------------------------------------|-----------------|  
@@ -273,9 +273,9 @@ SELECT
 |'12:12:12'|**smalldatetime**|1900-01-01 12:12:00|Cualquier valor de precisión en fracciones de segundo producirá un error en la instrucción INSERT.|  
 |'12:12:12.123'|**datetime**|1900-01-01 12:12:12.123|Cualquier precisión en segundos de más de tres posiciones producirá un error en la instrucción INSERT.|  
 |'12:12:12.1234567'|**datetime2(7)**|1900-01-01 12:12:12.1234567|Si la precisión en fracciones de segundo supera el valor especificado en la columna, la cadena quedará truncada y no generará un error.|  
-|'12:12:12.1234567'|**DateTimeOffset(7)**|1900-01-01 12:12:12.1234567 +00:00|Si la precisión en fracciones de segundo supera el valor especificado en la columna, la cadena quedará truncada y no generará un error.|  
+|'12:12:12.1234567'|**datetimeoffset(7)**|1900-01-01 12:12:12.1234567 +00:00|Si la precisión en fracciones de segundo supera el valor especificado en la columna, la cadena quedará truncada y no generará un error.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

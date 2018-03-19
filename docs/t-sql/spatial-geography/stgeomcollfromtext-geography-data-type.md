@@ -1,5 +1,5 @@
 ---
-title: STGeomCollFromText (tipo de datos geography) | Documentos de Microsoft
+title: STGeomCollFromText (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomcollfromtext-geography-data-type"></a>STGeomCollFromText (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve un **geography** instancia a partir de una representación Open Geospatial Consortium (OGC) Well-Known Text (WKT), ampliada con los Z (elevación) y los valores M (medida) pertenecientes a la instancia.
+Devuelve una instancia de **geography** a partir de una representación Well-Known Text (WKT) de Open Geospatial Consortium (OGC), ampliada con los valores Z (elevación) y M (medida) pertenecientes a la instancia.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,20 +45,20 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *geometrycollection_tagged_text*  
- Es la representación WKT de la **geography** instancia que se va a devolver. *geometrycollection_tagged_text* es un **nvarchar (max)** expresión.  
+ Es la representación WKT de la instancia de **geography** que se quiere devolver. *geometrycollection_tagged_text* es una expresión **nvarchar(max)**.  
   
  *SRID*  
- Es un **int** expresión que representa el espaciales identificador de referencia (SRID) de la **geography** instancia que se va a devolver.  
+ Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geography** que quiere devolver.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geography**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Comentarios  
- El tipo OGC de la **geography** instancia devuelta por STGeomCollFromText() se establece en la entrada WKT correspondiente.  
+## <a name="remarks"></a>Notas  
+ El tipo OGC de la instancia de **geography** devuelto por STGeomCollFromText() se establece en la entrada WKT correspondiente.  
   
- Este método produce una **ArgumentException** si la entrada no es válida.  
+ Este método produce una excepción **ArgumentException** si la entrada no es válida.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se usa `STGeomCollFromText()` para crear una instancia de `geography`.  
@@ -70,7 +70,7 @@ SET @g = geography::STGeomCollFromText('GEOMETRYCOLLECTION ( POINT(-122.34900 47
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de geografía estáticos de OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

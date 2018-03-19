@@ -1,5 +1,5 @@
 ---
-title: GeomFromGml (tipo de datos geometry) | Documentos de Microsoft
+title: GeomFromGml (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,11 +34,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="geomfromgml-geometry-data-type"></a>GeomFromGml (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Construir un **geometry** instancia dada una representación en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subconjunto del lenguaje de marcado de geografía (GML).
+Crea una instancia de **geometry** dada una representación en el subconjunto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del lenguaje de marcado de geografía (GML).
   
-Para obtener más información sobre el lenguaje de marcado de geografía, vea las siguientes especificaciones de Open Geospatial Consortium:
+Para más información sobre el lenguaje de marcado de geografía, vea las siguientes especificaciones de Open Geospatial Consortium:
   
-[Especificaciones de OGC, lenguaje de marcado de geografía](http://go.microsoft.com/fwlink/?LinkId=93629)
+[Especificaciones de OGC, Lenguaje de marcado de geografía](http://go.microsoft.com/fwlink/?LinkId=93629)
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -52,15 +52,15 @@ GeomFromGml ( GML_input, SRID )
  Es una entrada XML desde la que GML devolverá un valor.  
   
  *SRID*  
- Es un **int** expresión que representa el espaciales identificador de referencia (SRID) de la **geometry** instancia que se va a devolver.  
+ Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometry** que se quiere devolver.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geometry**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentarios  
- Este método producirá una **FormatException** si la entrada no tiene el formato correcto.  
+## <a name="remarks"></a>Notas  
+ Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se usa `GeomFromGml()` para crear una instancia de `geometry`.  
@@ -73,7 +73,7 @@ SET @g = geometry::GeomFromGml(@x, 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de geometría estáticos ampliados](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

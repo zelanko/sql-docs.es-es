@@ -1,5 +1,5 @@
 ---
-title: Cadena de operadores (Transact-SQL) | Documentos de Microsoft
+title: Operadores de cadena (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -43,9 +43,9 @@ ms.lasthandoff: 01/25/2018
   
  [% (caracteres comodín para coincidencia)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
- [& #91; & #93; (Comodín - caracteres para coincidir)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
+ [&#91; &#93; (Wildcard - Character(s) to Match)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md) (&#91; &#93; [caracteres comodín para coincidencia])  
   
- [& #91; ^ & #93; (Comodín - caracteres no coincidentes)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  
+ [&#91;^&#93; (caracteres comodín para no coincidir)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  
   
  [_ (Comodín: un carácter para coincidir)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
   

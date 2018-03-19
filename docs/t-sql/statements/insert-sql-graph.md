@@ -1,6 +1,6 @@
 ---
-title: "INSERT (gráfico SQL) | Documentos de Microsoft"
-description: "Inserte la sintaxis para las tablas de borde o nodo de gráfico de SQL."
+title: "INSERT (gráfico SQL) | Microsoft Docs"
+description: "Sintaxis INSERT para tablas perimetrales o de nodo de gráfico SQL."
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
@@ -33,15 +33,15 @@ ms.lasthandoff: 01/25/2018
 # <a name="insert-sql-graph"></a>INSERT (gráfico SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  Agrega una o más filas a un `node` o `edge` tabla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+  Agrega una o varias filas a una tabla `node` o `edge` en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 > [!NOTE]   
->  Para instrucciones Transact-SQL estándar, consulte [Insertar tabla (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
+>  Para obtener instrucciones Transact-SQL estándar, vea [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="insert-into-node-table-syntax"></a>Insertar en la sintaxis de la tabla de nodo 
-La sintaxis para insertar en una tabla de nodo es el misma que el de una tabla normal. 
+## <a name="insert-into-node-table-syntax"></a>Sintaxis INSERT en tabla de nodo 
+La sintaxis para insertar en una tabla de nodo es la misma que la de una tabla normal. 
 
 ```  
 [ WITH <common_table_expression> [ ,...n ] ]  
@@ -107,43 +107,43 @@ INSERT
   
  
 ## <a name="arguments"></a>Argumentos  
- Este documento describe los argumentos pertenecen al gráfico SQL. Para una lista completa y una descripción de los argumentos admitidos en la instrucción INSERT, vea [Insertar tabla (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
+ En este documento se describen los argumentos pertenecientes a un gráfico SQL. Para obtener una lista completa y una descripción de los argumentos admitidos en una instrucción INSERT, vea [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
 
  INTO  
  Es una palabra clave opcional que se puede usar entre `INSERT` y la tabla de destino.  
   
  *search_condition_with_match*   
- `MATCH`cláusula se puede usar en una subconsulta al insertar en una tabla de nodo o borde. Para `MATCH` sintaxis de la instrucción, consulte [gráfico coincidencia (Transact-SQL)](../../t-sql/queries/match-sql-graph.md)
+ La cláusula `MATCH` se puede usar en una subconsulta mientras se realiza una operación de inserción en una tabla de nodo o perimetral. Para obtener la sintaxis la instrucción `MATCH`, vea [GRAPH MATCH (Transact-SQL)](../../t-sql/queries/match-sql-graph.md).
 
  *graph_search_pattern*   
- Patrón de búsqueda proporcionado a `MATCH` cláusula como parte del predicado de gráfico.
+ Patrón de búsqueda proporcionado a la cláusula `MATCH` como parte del predicado del gráfico.
 
  *edge_table_column_list*   
- Los usuarios deben proporcionar valores para `$from_id` y `$to_id` al insertar en un borde. Si no se proporciona un valor o valores NULL se inserta en estas columnas, se devolverá un error. 
+ Los usuarios deben proporcionar valores en `$from_id` y `$to_id` al realizar una operación de inserción en una tabla perimetral. De lo contrario, se devolverá un error o se insertará NULL en esas columnas. 
   
 
-## <a name="remarks"></a>Comentarios  
-Insertar en un nodo es el mismo que insertar en cualquier tabla relacional. Valores de la columna de node_id $ se generan automáticamente.
+## <a name="remarks"></a>Notas  
+Insertar en un nodo es lo mismo que insertar en cualquier tabla relacional. Los valores de la columna $node_id se generan automáticamente.
 
-Al insertar en una tabla irregular, los usuarios deben proporcionar valores para `$from_id` y `$to_id` columnas.   
+Al insertar en una tabla perimetral, los usuarios deben proporcionar valores para las columnas `$from_id` y `$to_id`.   
 
-Inserción masiva para la tabla de nodos es permanece igual una tabla relacional.
+La inserción con BULK en una tabla de nodo permanece igual que en una tabla relacional.
 
-Antes de insertar en una tabla irregular de forma masiva, se deben importar las tablas del nodo. Los valores para `$from_id` y `$to_id` , a continuación, se puede extraer de la `$node_id` columna de la tabla de nodos y se inserta como bordes. 
+Antes de insertar con BULK en una tabla perimetral, las tablas de nodo se deben importar. Así, los valores de `$from_id` y `$to_id` se podrán extraer de la columna `$node_id` de la tabla de nodo y se insertarán en la tabla perimetral. 
 
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Permisos  
  El permiso INSERT es obligatorio en la tabla de destino.  
   
- Insertar el valor predeterminado de permisos a los miembros de la **sysadmin** rol fijo de servidor, el **db_owner** y **db_datawriter** se han corregido los roles de base de datos y el propietario de la tabla. Los miembros de la **sysadmin**, **db_owner**y el **db_securityadmin** roles y el propietario de la tabla pueden transferir permisos a otros usuarios.  
+ Los permisos INSERT corresponden de forma predeterminada a los miembros del rol fijo de servidor **sysadmin**, de los roles fijos de base de datos **db_owner** y **db_datawriter** y al propietario de la tabla. Los miembros de los roles **sysadmin**, **db_owner** y **db_securityadmin** y el propietario de la tabla pueden transferir permisos a otros usuarios.  
   
- Para ejecutar INSERT con la opción BULK de función OPENROWSET, debe ser miembro de la **sysadmin** rol fijo de servidor o de la **bulkadmin** rol fijo de servidor.  
+ Para ejecutar INSERT con la opción BULK de la función OPENROWSET, debe ser miembro de los roles fijos de servidor **sysadmin** o **bulkadmin**.  
   
 
 ## <a name="examples"></a>Ejemplos  
   
-#### <a name="a--insert-into-node-table"></a>A.  Insertar en la tabla de nodos  
- En el ejemplo siguiente se crea una tabla de nodo de la persona e inserta 2 filas de esa tabla.
+#### <a name="a--insert-into-node-table"></a>A.  Insertar en una tabla de nodo  
+ En el siguiente ejemplo se crea una tabla de nodo Person y se insertan 2 filas en ella.
 
  ```
  -- Create person node table
@@ -154,8 +154,8 @@ Antes de insertar en una tabla irregular de forma masiva, se deben importar las 
  INSERT INTO dbo.Person VALUES (2,'John');
  ```
   
-#### <a name="b--insert-into-edge-table"></a>B.  Insertar en la tabla irregular  
- En el ejemplo siguiente se crea una tabla irregular de confianza y se inserta un borde en la tabla.
+#### <a name="b--insert-into-edge-table"></a>B.  Insertar en una tabla perimetral  
+ En el siguiente ejemplo se crea una tabla perimetral friend y se inserta un borde en ella.
 
  ```
  -- Create friend edge table
@@ -167,8 +167,8 @@ Antes de insertar en una tabla irregular de forma masiva, se deben importar las 
  ```
 
   
-## <a name="see-also"></a>Vea también  
- [Insertar tabla &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
- [Gráfico de procesamiento con SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  
+## <a name="see-also"></a>Ver también  
+ [INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [Graph processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md) (Procesamiento de gráficos con SQL Server 2017)  
 
 

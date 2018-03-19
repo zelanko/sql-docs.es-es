@@ -1,5 +1,5 @@
 ---
-title: Crear rol (Transact-SQL) | Documentos de Microsoft
+title: CREATE ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
@@ -57,11 +57,11 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
  *role_name*  
  Es el nombre del rol que se va a crear.  
   
- AUTORIZACIÓN *owner_name*  
+ AUTHORIZATION *owner_name*  
  Es el usuario o el rol de base de datos que será propietario del nuevo rol. Si no se especifica un usuario, el rol será propiedad del usuario que ejecute CREATE ROLE.  
   
-## <a name="remarks"></a>Comentarios  
- Los roles son elementos protegibles de nivel de base de datos. Después de crear un rol, configure los permisos de nivel de base de datos del rol con GRANT, DENY y REVOKE. Para agregar miembros a un rol de base de datos, use [ALTER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-role-transact-sql.md). Para obtener más información, consulte [Roles de nivel de base de datos](../../relational-databases/security/authentication-access/database-level-roles.md).  
+## <a name="remarks"></a>Notas  
+ Los roles son elementos protegibles de nivel de base de datos. Después de crear un rol, configure los permisos de nivel de base de datos del rol con GRANT, DENY y REVOKE. Para agregar miembros a un rol de base de datos, use [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md). Para más información, vea [Roles de nivel de base de datos](../../relational-databases/security/authentication-access/database-level-roles.md).  
   
  Los roles de base de datos se pueden ver en las vistas de catálogos sys.database_role_members y sys.database_principals.  
   
@@ -70,8 +70,8 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
- Requiere **CREATE ROLE** permiso en la base de datos o la pertenencia a la **db_securityadmin** rol fijo de base de datos. Cuando se usa el **autorización** opción, también se requieren los permisos siguientes:  
+## <a name="permissions"></a>Permisos  
+ Requiere el permiso **CREATE ROLE** en la base de datos o la pertenencia al rol fijo de base de datos **db_securityadmin**. Cuando usa la opción **AUTHORIZATION**, también se necesitan los siguientes permisos:  
   
 -   Asignar la propiedad de un rol a otro usuario requiere el permiso IMPERSONATE para ese usuario.  
   
@@ -80,7 +80,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
 -   Asignar la propiedad de un rol a un rol de aplicación requiere el permiso ALTER para el rol de aplicación.  
   
 ## <a name="examples"></a>Ejemplos  
-Todos los ejemplos siguientes utiliza la base de datos de AdventureWorks.   
+En todos estos ejemplos se usa la base de datos AdventureWorks.   
 
 ### <a name="a-creating-a-database-role-that-is-owned-by-a-database-user"></a>A. Crear un rol de base de datos propiedad de un usuario de la base de datos  
  En el siguiente ejemplo se crea el rol de base de datos `buyers` que es propiedad del usuario `BenMiller`.  
@@ -98,10 +98,10 @@ CREATE ROLE auditors AUTHORIZATION db_securityadmin;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [ALTER ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-role-transact-sql.md)   
- [ELIMINAR rol &#40; Transact-SQL &#41;](../../t-sql/statements/drop-role-transact-sql.md)   
+ [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
+ [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   

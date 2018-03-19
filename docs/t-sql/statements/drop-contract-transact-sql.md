@@ -1,5 +1,5 @@
 ---
-title: COLOCAR contrato (Transact-SQL) | Documentos de Microsoft
+title: DROP CONTRACT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,12 +54,12 @@ DROP CONTRACT contract_name
  *contract_name*  
  Nombre del contrato que se va a quitar. No se pueden especificar nombres de servidor, base de datos o esquema.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  No se puede quitar un contrato si hay servicios o prioridades de conversación que hacen referencia a él.  
   
  Al quitar un contrato, [!INCLUDE[ssSB](../../includes/sssb-md.md)] finaliza con un error las conversaciones existentes que lo utilizan.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  De forma predeterminada, el permiso para quitar un contrato corresponde al propietario del contrato, a los miembros de los roles fijos de base de datos db_ddladmin o db_owner, y a los miembros del rol fijo de servidor sysadmin.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -70,9 +70,9 @@ DROP CONTRACT
     [//Adventure-Works.com/Expenses/ExpenseSubmission] ;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [ALTER BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [ALTER SERVICE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-service-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
+ [ALTER SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-transact-sql.md)   
  [CREATE CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   
  [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
  [DROP SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-service-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: Valor KEY_ID (Transact-SQL) | Documentos de Microsoft
+title: KEY_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -55,10 +55,10 @@ Key_ID ( 'Key_Name' )
 ## <a name="return-types"></a>Tipos devueltos  
  **int**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El nombre de una clave temporal debe comenzar con un signo de número (#).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  No se requieren permisos para el acceso a las claves temporales, dado que éstas solo están disponibles en la sesión en la que se crean. Para tener acceso a una clave que no es temporal, el solicitante necesita tener algún permiso en la clave y no se le debe haber denegado el permiso VIEW en la clave.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -77,10 +77,10 @@ SELECT KEY_ID('ABerglundKey1');
 SELECT KEY_ID('#ABerglundKey2');  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [KEY_GUID &#40; Transact-SQL &#41;](../../t-sql/functions/key-guid-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [KEY_GUID &#40;Transact-SQL&#41;](../../t-sql/functions/key-guid-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
- [Sys.symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
  [sys.key_encryptions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)   
  [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

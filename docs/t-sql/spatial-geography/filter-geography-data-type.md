@@ -1,5 +1,5 @@
 ---
-title: Filtro (tipo de datos geography) | Documentos de Microsoft
+title: Filter (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -35,11 +35,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="filter-geography-data-type"></a>Filter (tipo de datos Geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Un método que ofrece un método rápido solo para índices de intersección para determinar si un **geography** instancia se corta con otra **geography** instancia, suponiendo que hay un índice disponible.  
+  Método que proporciona una forma rápida de intersección solo para índices con la que se puede determinar si una instancia de **geography** forma intersección con otra instancia de **geography**, siempre y cuando haya un índice disponible.  
   
- Devuelve 1 si una **geography** instancia puede intersectar con otra **geography** instancia. Este método puede generar una respuesta falsa positiva y el resultado exacto puede depender del plan. Devuelve un valor 0 preciso (respuesta verdadera negativa) si no hay ninguna intersección de **geography** instancias encontradas.  
+ Devuelve 1 si una instancia de **geography** puede cortar otra instancia de **geography**. Este método puede generar una respuesta falsa positiva y el resultado exacto puede depender del plan. Devuelve el valor 0 preciso (respuesta verdadera negativa) si no se encuentra ninguna intersección de las instancias de **geography**.  
   
- En casos donde un índice no está disponible o no se utiliza, el método devolverá los mismos valores que **STIntersects()** cuando se llama con los mismos parámetros.  
+ En los casos en los que no haya ningún índice disponible o que no se use, el método devolverá los mismos valores que **STIntersects()** cuando se llama con los mismos parámetros.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,14 +50,14 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *other_geography*  
- Es otra **geography** instancia va a comparar con la instancia en la que se invoca Filter().  
+ Es otra instancia de **geography** con la que se compara la instancia en la que se invoca Filter().  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **bits**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método no es determinista y no es preciso.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -79,8 +79,8 @@ WHERE g.Filter(geography::Parse(
    'POLYGON((-120.1 44.9, -119.9 44.9, -119.9 45.1, -120.1 45.1, -120.1 44.9))')) = 1;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Métodos extendidos en instancias de Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [STIntersects &#40; tipo de datos geography &#41;](../../t-sql/spatial-geography/stintersects-geography-data-type.md)  
+## <a name="see-also"></a>Ver también  
+ [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [STIntersects &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/stintersects-geography-data-type.md)  
   
   

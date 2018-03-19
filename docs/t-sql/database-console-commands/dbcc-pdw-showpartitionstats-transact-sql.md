@@ -1,5 +1,5 @@
 ---
-title: DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL) | Documentos de Microsoft
+title: DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: 
@@ -28,9 +28,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-Muestra el tamaño y el número de filas para cada partición de una tabla en una [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] base de datos.
+Muestra el tamaño y el número de filas de cada partición de una tabla en una base de datos [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,26 +42,26 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
   
 ## <a name="arguments"></a>Argumentos  
  [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
- Uno, dos o tres partes de nombre de la tabla que se mostrará.  Para dos o nombres de tabla de tres partes, el nombre deben incluirse entre comillas dobles (""). Uso de comillas alrededor de un nombre de tabla de una parte es opcional.  
+ Nombre de una, dos o tres partes de la tabla que se va a mostrar.  En el caso de los nombres de tabla de dos o tres partes, el nombre debe incluirse entre comillas dobles (""). El uso de comillas en un nombre de tabla de una parte es opcional.  
   
-## <a name="permissions"></a>Permissions
-Requiere **VIEW SERVER STATE** permiso.
+## <a name="permissions"></a>Permisos
+Requiere el permiso **VIEW SERVER STATE**.
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
-Se trata de los resultados del comando DBCC PDW_SHOWPARTITIONSTATS.
+Estos son los resultados del comando DBCC PDW_SHOWPARTITIONSTATS.
   
 |Nombre de la columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
-|partition_number|int|Número de partición.|  
-|used_page_count|bigint|Número de páginas utilizadas para los datos.|  
-|reserved_page_count|bigint|Número de páginas asignadas a la partición.|  
-|row_count|bigint|Número de filas de la partición.|  
-|pdw_node_id|int|Nodo de proceso para los datos.|  
-|distribution_id|int|Identificador de la distribución de los datos.|  
+|partition_number|INT|Número de partición.|  
+|used_page_count|BIGINT|Número de páginas usadas para los datos.|  
+|reserved_page_count|BIGINT|Número de páginas asignadas a la partición.|  
+|row_count|BIGINT|Número de filas de la partición.|  
+|pdw_node_id|INT|Nodo de proceso de los datos.|  
+|distribution_id|INT|Identificador de distribución de los datos.|  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdwshowpartitionstats-basic-syntax-examples"></a>A. Ejemplos de sintaxis básica de DBCC PDW_SHOWPARTITIONSTATS  
-Los ejemplos siguientes muestran el espacio utilizado y el número de filas por partición para la tabla FactInternetSales en la [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] base de datos.
+Los ejemplos siguientes muestran el espacio usado y el número de filas por partición de la tabla FactInternetSales de la base de datos [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].
   
 ```sql
 DBCC PDW_SHOWPARTITIONSTATS ("ssawPDW.dbo.FactInternetSales");  

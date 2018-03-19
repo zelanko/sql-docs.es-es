@@ -1,5 +1,5 @@
 ---
-title: COL_LENGTH (Transact-SQL) | Documentos de Microsoft
+title: COL_LENGTH (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,11 +48,11 @@ COL_LENGTH ( 'table' , 'column' )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-**'** *tabla* **'**  
-Es el nombre de la tabla para la que hay que determinar la información de longitud de columna. *tabla* es una expresión de tipo **nvarchar**.
+**'** *table* **'**  
+Es el nombre de la tabla para la que hay que determinar la información de longitud de columna. *table* es una expresión de tipo **nvarchar**.
   
-**'** *columna* **'**  
-Es el nombre de la columna cuya longitud se desea determinar. *columna* es una expresión de tipo **nvarchar**.
+**'** *column* **'**  
+Es el nombre de la columna cuya longitud se desea determinar. *column* es una expresión de tipo **nvarchar**.
   
 ## <a name="return-type"></a>Tipo de valor devuelto
 **smallint**
@@ -62,8 +62,8 @@ Devuelve NULL si se produce un error o si el autor de la llamada no tiene permis
   
 En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un usuario solo puede ver los metadatos de elementos protegibles que posea o para los que se le haya concedido permiso. Esto significa que las funciones integradas de emisión de metadatos, como COL_LENGTH, pueden devolver NULL si el usuario no tiene ningún permiso para el objeto. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
   
-## <a name="remarks"></a>Comentarios  
-Para las columnas de tipo **varchar** declarado con la **max** especificador (**varchar (max)**), COL_LENGTH devuelve el valor -1.
+## <a name="remarks"></a>Notas  
+En las columnas de tipo **varchar** declaradas con el especificador **max** (**varchar(max)**), COL_LENGTH devuelve el valor –1.
   
 ## <a name="examples"></a>Ejemplos  
 El siguiente ejemplo muestra los valores devueltos de una columna de tipo `varchar(40)` y una columna de tipo `nvarchar(40)`.
@@ -88,8 +88,8 @@ VarChar     NVarChar
   
 ## <a name="see-also"></a>Vea también
 [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[Funciones de metadatos &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
-[COL_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/col-name-transact-sql.md)  
+[Funciones de metadatos &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[COL_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/col-name-transact-sql.md)  
 [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)
   
   

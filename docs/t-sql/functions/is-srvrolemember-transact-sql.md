@@ -1,5 +1,5 @@
 ---
-title: IS_SRVROLEMEMBER (Transact-SQL) | Documentos de Microsoft
+title: IS_SRVROLEMEMBER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -48,10 +48,10 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **'** *rol* **'**  
- Es el nombre del rol de servidor que se va comprobar. *rol* es **sysname**.  
+ **'** *role* **'**  
+ Es el nombre del rol de servidor que se va comprobar. *role* es **sysname**.  
   
- Los valores válidos para *rol* son roles de servidor definidos por el usuario y los siguientes roles fijos de servidor:  
+ Los valores válidos para *role* son los roles de servidor definidos por el usuario y los siguientes roles fijos de servidor:  
   
 |||  
 |-|-|  
@@ -61,24 +61,24 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 |diskadmin|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> public|  
 |processadmin||  
   
- **'** *inicio de sesión* **'**  
- Es el nombre de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión para comprobar. *inicio de sesión* es **sysname**, su valor predeterminado es null. Si no se especifica ningún valor, el resultado se basa en el contexto de ejecución actual. Si el parámetro contiene la palabra NULL, se devolverá NULL.  
+ **'** *login* **'**  
+ Es el nombre del inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se va a comprobar. *login* es de tipo **sysname** y su valor predeterminado es NULL. Si no se especifica ningún valor, el resultado se basa en el contexto de ejecución actual. Si el parámetro contiene la palabra NULL, se devolverá NULL.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **int**  
   
 |Valor devuelto|Description|  
 |------------------|-----------------|  
-|0|*inicio de sesión* no es un miembro de *rol*.<br /><br /> En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], esta instrucción siempre devuelve 0.|  
-|1|*inicio de sesión* es un miembro de *rol*.|  
-|NULL|*rol* o *inicio de sesión* no es válida, o no tiene permiso para ver la pertenencia al rol.|  
+|0|*login* no es miembro del grupo *role*.<br /><br /> En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], esta instrucción siempre devuelve 0.|  
+|1|*login* es miembro del grupo *role*.|  
+|NULL|*role* o *login* no son válidos o no tienen permiso para ver la pertenencia a roles.|  
   
-## <a name="remarks"></a>Comentarios  
- UseIS_SRVROLEMEMBER para determinar si el usuario actual puede realizar una acción que necesite permisos del rol de servidor.  
+## <a name="remarks"></a>Notas  
+ Use IS_SRVROLEMEMBER para determinar si el usuario actual puede realizar una acción que necesite los permisos del rol de servidor.  
   
- Si se especifica un inicio de sesión de Windows, como Contoso\Mary5, para *inicio de sesión*, **IS_SRVROLEMEMBER** devuelve **NULL**, a menos que el inicio de sesión se ha concedido o denegado el acceso directo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Si se especifica un inicio de sesión de Windows, como Contoso\María5, para *login*, **IS_SRVROLEMEMBER** devuelve **NULL**, a menos que se haya concedido o denegado el acceso directo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al inicio de sesión.  
   
- Si la parte opcional *inicio de sesión* parámetro es no siempre y si *inicio de sesión* es un inicio de sesión de dominio de Windows, puede ser un miembro del rol fijo de servidor mediante la pertenencia a un grupo de Windows. Para resolver estas pertenencias indirectas, IS_SRVROLEMEMBER solicita al controlador de dominio información sobre la pertenencia a grupos de Windows. Si el controlador de dominio es inaccesible o no responde, **IS_SRVROLEMEMBER** devuelve información de pertenencia a roles dando cuenta para el usuario y sus grupos locales solo. Si el usuario especificado no es el usuario actual, el valor devuelto por IS_SRVROLEMEMBER podría diferir de la última actualización de datos del autenticador (por ejemplo, Active Directory) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Si no se proporciona el parámetro *login* opcional y *login* es un inicio de sesión de dominio de Windows, puede ser un miembro del rol fijo de servidor mediante la pertenencia a un grupo de Windows. Para resolver estas pertenencias indirectas, IS_SRVROLEMEMBER solicita al controlador de dominio información sobre la pertenencia a grupos de Windows. Si no se puede tener acceso al controlador de dominio o este no responde, **IS_ROLEMEMBER** devuelve información sobre la pertenencia a roles teniendo en cuenta únicamente al usuario y sus grupos locales. Si el usuario especificado no es el usuario actual, el valor devuelto por IS_SRVROLEMEMBER podría diferir de la última actualización de datos del autenticador (por ejemplo, Active Directory) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Si se proporciona el parámetro de inicio de sesión opcional, el inicio de sesión de Windows que se consulta se debe encontrar en sys.server_principals o IS_SRVROLEMEMBER devolverá NULL. Esto indica que el inicio de sesión no es válido.  
   
@@ -86,16 +86,16 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
   
  Si el controlador de dominio no está disponible, la llamada a IS_SRVROLEMEMBER devolverá la información precisa cuando se puede autenticar el principio de Windows localmente, como una cuenta de Windows local o un inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **IS_SRVROLEMEMBER** siempre devuelve 0 cuando se utiliza un grupo de Windows como el argumento de inicio de sesión, y este grupo de Windows es un miembro de otro grupo de Windows que, a su vez, es un miembro del rol de servidor especificado.  
+ **IS_SRVROLEMEMBER** devuelve siempre 0 cuando se usa un grupo de Windows como el argumento de inicio de sesión y este grupo de Windows es un miembro de otro grupo de Windows que, a su vez, es miembro del rol de servidor especificado.  
   
- La configuración de Control de cuentas de usuario (UAC) también puede provocar la devuelven resultados diferentes. Esto dependería de si el usuario tuvo acceso al servidor como un miembro del grupo de Windows o como un usuario específico de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ El valor de Control de cuentas de usuario (UAC) también puede provocar que se devuelvan resultados diferentes. Esto dependería de si el usuario tuvo acceso al servidor como un miembro del grupo de Windows o como un usuario específico de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Esta función evalúa la pertenencia al rol, no el permiso subyacente. Por ejemplo, el **sysadmin** rol fijo de servidor tiene la **CONTROL SERVER** permiso. Si el usuario tiene la **CONTROL SERVER** permiso pero no es un miembro del rol, esta función informará correctamente que el usuario no es un miembro de la **sysadmin** rol, aunque el usuario tiene el mismo permisos.  
+ Esta función evalúa la pertenencia al rol, no el permiso subyacente. Por ejemplo, el rol fijo de servidor **sysadmin** tiene el permiso **CONTROL SERVER**. Si el usuario tiene el permiso **CONTROL SERVER** pero pertenece al rol, esta función informará correctamente de que el usuario no es miembro del rol **sysadmin**, aunque tenga los mismos permisos.  
   
 ## <a name="related-functions"></a>Funciones relacionadas  
- Para determinar si el usuario actual es miembro del grupo de Windows especificado o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rol de base de datos, utilice [IS_MEMBER &#40; Transact-SQL &#41; ](../../t-sql/functions/is-member-transact-sql.md). Para determinar si un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión es un miembro de un rol de base de datos, use [IS_ROLEMEMBER &#40; Transact-SQL &#41; ](../../t-sql/functions/is-rolemember-transact-sql.md).  
+ Para determinar si el usuario actual es miembro del grupo de Windows o del rol de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificados, use [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md). Para determinar si un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es miembro de un rol de base de datos, use [IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW DEFINITION en el rol de servidor.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -110,14 +110,14 @@ ELSE IF IS_SRVROLEMEMBER ('sysadmin') IS NULL
    print 'ERROR: The server role specified is not valid.';  
 ```  
   
- En el ejemplo siguiente se indica si el inicio de sesión de dominio Pat es un miembro de la **diskadmin** rol fijo de servidor.  
+ En este ejemplo se indica si el inicio de sesión de dominio Pat es miembro del rol fijo de servidor **diskadmin**.  
   
 ```  
 SELECT IS_SRVROLEMEMBER('diskadmin', 'Contoso\Pat');  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [IS_MEMBER &#40; Transact-SQL &#41;](../../t-sql/functions/is-member-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md)   
  [Funciones de seguridad &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

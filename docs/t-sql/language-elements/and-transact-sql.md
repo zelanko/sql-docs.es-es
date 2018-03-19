@@ -1,5 +1,5 @@
 ---
-title: Y (Transact-SQL) | Documentos de Microsoft
+title: AND (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Combina dos expresiones booleanas y devuelve **TRUE** cuando ambas expresiones son **TRUE**. Cuando se utiliza más de un operador lógico en una instrucción, el **AND** operadores se evalúan primero. Puede cambiar el orden de evaluación gracias a los paréntesis.  
+  Combina dos expresiones booleanas y devuelve **TRUE** cuando ambas expresiones son **TRUE**. Cuando se usa más de un operador lógico en una instrucción, en primer lugar se evalúan los operadores **AND**. Puede cambiar el orden de evaluación gracias a los paréntesis.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,15 +50,15 @@ boolean_expression AND boolean_expression
   
 ## <a name="arguments"></a>Argumentos  
  *boolean_expression*  
- Se trata de cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md) que devuelve un valor booleano: **TRUE**, **FALSE**, o **desconocido**.  
+ Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) válida que devuelve un valor booleano: **TRUE**, **FALSE** o **UNKNOWN**.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  **Boolean**  
   
-## <a name="result-value"></a>Valor de resultado  
+## <a name="result-value"></a>Valor del resultado  
  Devuelve TRUE cuando ambas expresiones son TRUE.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  En la siguiente tabla se muestran los resultados de la comparación de los valores TRUE y FALSE mediante el operador AND.  
   
 ||TRUE|FALSE|UNKNOWN|  
@@ -100,9 +100,9 @@ ELSE PRINT 'Second Example is FALSE' ;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   

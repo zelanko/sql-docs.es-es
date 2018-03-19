@@ -1,5 +1,5 @@
 ---
-title: STPolyFromWKB (tipo de datos geography) | Documentos de Microsoft
+title: STPolyFromWKB (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpolyfromwkb-geography-data-type"></a>STPolyFromWKB (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve un **geographyPolygon** instancia a partir de una representación Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Devuelve una instancia de **geographyPolygon** a partir de una representación Well-Known Binary (WKB) de Open Geospatial Consortium (OGC).
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,20 +45,20 @@ STPolyFromWKB ( 'WKB_polygon' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *WKB_polygon*  
- Es la representación WKB de la **geographyPolygon** instancia que se va a devolver. *WKB_polygon* es un **varbinary (max)** expresión.  
+ Es la representación WKB de la instancia de **geographyPolygon** que se quiere devolver. *WKB_polygon* es una expresión **varbinary(max)**.  
   
  *SRID*  
- Es un **int** expresión que representa el espaciales identificador de referencia (SRID) de la **geographyPolygon** instancia que se va a devolver.  
+ Es una expresión de tipo **int** que representa el identificador de referencia espacial (SRID) de la instancia **geographyPolygon** que se quiere devolver.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geography**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
- Tipo de OGC: **polígono**  
+ Tipo OGC: **Polygon**  
   
-## <a name="remarks"></a>Comentarios  
- Este método produce una **FormatException** si la entrada no tiene el formato correcto.  
+## <a name="remarks"></a>Notas  
+ Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se usa `STPolyFromWKB()` para crear una instancia de `geography`.  
@@ -69,7 +69,7 @@ SET @g = geography::STPolyFromWKB(0x01030000000100000005000000F4FDD478E9965EC0DD
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de geografía estáticos de OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

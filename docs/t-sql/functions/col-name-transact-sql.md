@@ -1,5 +1,5 @@
 ---
-title: COL_NAME (Transact-SQL) | Documentos de Microsoft
+title: COL_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -52,9 +52,9 @@ COL_NAME ( table_id , column_id )
 Es el número de identificación de la tabla que contiene la columna. *table_id* es de tipo **int**.
   
 *column_id*  
-Es el número de identificación de la columna. *column_id* parámetro es de tipo **int**.
+Es el número de identificación de la columna. El parámetro *column_id* es de tipo **int**.
   
-## <a name="return-types"></a>Tipos de valor devuelto
+## <a name="return-types"></a>Tipos de valores devueltos
 **sysname**
   
 ## <a name="exceptions"></a>Excepciones  
@@ -62,13 +62,13 @@ Devuelve NULL si se produce un error o si el autor de la llamada no tiene permis
   
 Un usuario solo puede ver los metadatos de elementos protegibles que posea o para los que se le haya concedido permiso. Esto significa que las funciones integradas de emisión de metadatos, como COL_NAME, pueden devolver NULL si el usuario no tiene ningún permiso para el objeto. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
   
-## <a name="remarks"></a>Comentarios  
-El *table_id* y *column_id* parámetros juntos generan una cadena de nombre de columna.
+## <a name="remarks"></a>Notas  
+Los parámetros *table_id* y *column_id* generan juntos una cadena de nombre de columna.
   
-Para obtener más información acerca de cómo obtener los números de identificación de tablas y columnas, vea [OBJECT_ID &#40; Transact-SQL &#41; ](../../t-sql/functions/object-id-transact-sql.md).
+Para más información sobre cómo obtener los números de identificación de tablas y columnas, vea [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md).
   
 ## <a name="examples"></a>Ejemplos  
-En el ejemplo siguiente se devuelve el nombre de la primera columna de un ejemplo `Employee` tabla.
+En el siguiente ejemplo se devuelve el nombre de la primera columna de una tabla `Employee` de ejemplo.
   
 ```sql
 -- Uses AdventureWorks  
@@ -87,9 +87,9 @@ BusinessEntityID
   
 ## <a name="see-also"></a>Vea también
 [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[Funciones de metadatos &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[Funciones de metadatos &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)  
-[COL_LENGTH &#40; Transact-SQL &#41;](../../t-sql/functions/col-length-transact-sql.md)
+[COL_LENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md)
   
   
 

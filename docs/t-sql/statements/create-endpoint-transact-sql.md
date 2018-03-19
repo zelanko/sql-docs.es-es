@@ -1,5 +1,5 @@
 ---
-title: "Crear punto de conexión (Transact-SQL) | Documentos de Microsoft"
+title: CREATE ENDPOINT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Crea extremos y define sus propiedades, incluidos los métodos disponibles para las aplicaciones cliente. Para obtener información de permisos relacionada, consulte [permisos de extremo GRANT &#40; Transact-SQL &#41; ](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+  Crea extremos y define sus propiedades, incluidos los métodos disponibles para las aplicaciones cliente. Para obtener más información sobre permisos relacionados, vea [GRANT &#40;permisos de punto de conexión de Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
  La sintaxis de CREATE ENDPOINT puede dividirse lógicamente en dos partes:  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 01/25/2018
   
      En esta parte, defina la carga que admite el extremo. La carga puede ser uno de los tipos admitidos: [!INCLUDE[tsql](../../includes/tsql-md.md)], Service Broker y creación de reflejo de la base de datos. En esta parte, también puede incluir información específica del lenguaje.  
   
-> **Nota:** servicios de Web XML nativos (extremos SOAP/HTTP) se quitó en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+> **NOTA:** Los servicios web XML nativos (puntos de conexión HTTP/SOAP) se quitaron en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -118,14 +118,14 @@ FOR DATABASE_MIRRORING (
  *endPointName*  
  Es el nombre asignado para el extremo que está creando. Se utiliza al actualizar o eliminar el extremo.  
   
- AUTORIZACIÓN *inicio de sesión*  
+ AUTHORIZATION *login*  
  Especifica un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Windows válido al que se le asigna la propiedad del objeto de extremo de nueva creación. Si no se especifica AUTHORIZATION, el autor de la llamada se convierte en el propietario del objeto de nueva creación de forma predeterminada.  
   
- Para asignar la propiedad mediante la especificación de autorización, el llamador debe tener el permiso IMPERSONATE en especificado *inicio de sesión*.  
+ Para asignar la propiedad al especificar AUTHORIZATION, el autor de la llamada debe tener el permiso IMPERSONATE en el parámetro *login* especificado.  
   
- Para reasignar la propiedad, vea [ALTER ENDPOINT &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-endpoint-transact-sql.md).  
+ Para volver a asignar la propiedad, vea [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
   
- ESTADO  **=**  {INICIADO | **DETENIDO** | DESHABILITADO}  
+ STATE **=** { STARTED | **STOPPED** | DISABLED }  
  Es el estado del extremo cuando se crea. Si el estado no se especifica cuando se crea el extremo, el valor predeterminado es STOPPED.  
   
  STARTED  
@@ -137,7 +137,7 @@ FOR DATABASE_MIRRORING (
  **STOPPED**  
  El extremo está detenido. En este estado, el servidor no escucha el puerto del extremo ni responde a ninguna solicitud que se haya intentado para usar el extremo.  
   
- Para cambiar el estado, use [ALTER ENDPOINT &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-endpoint-transact-sql.md).  
+ Para cambiar el estado, use [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
   
  AS { TCP }  
  Especifica el protocolo de transporte que se va a usar.  
@@ -151,7 +151,7 @@ FOR DATABASE_MIRRORING (
   
  Los argumentos que aparecen a continuación solo se aplican a la opción de protocolo TCP.  
   
- LISTENER_PORT **= *** listenerPort*  
+ LISTENER_PORT **=***listenerPort*  
  Especifica el número de puerto que escucha el protocolo TCP/IP de Service Broker para las conexiones. Se usa 4022 por convención, pero cualquier número entre 1024 y 32767 es válido.  
   
  LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "*ip_address_v6*" **)**  
@@ -166,7 +166,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  Para obtener información sobre las opciones específicas de SERVICE_BROKER, vea "Opciones de SERVICE_BROKER", más adelante en esta sección. Para obtener información sobre las opciones específicas de DATABASE_MIRRORING, vea "Opciones de DATABASE_MIRRORING", más adelante en esta sección.  
   
- AUTENTICACIÓN  **=**  \<authentication_options > especifica los requisitos de autenticación de TCP/IP para las conexiones para este extremo. El valor predeterminado es WINDOWS.  
+ AUTHENTICATION **=** \<authentication_options> Especifica los requisitos de autenticación de TCP/IP para las conexiones de este punto de conexión. El valor predeterminado es WINDOWS.  
   
  Entre los métodos de autenticación admitidos se incluyen NTLM, Kerberos o ambos.  
   
@@ -175,21 +175,21 @@ FOR DATABASE_MIRRORING (
   
  **\<authentication_options> ::=**  
   
- **WINDOWS** [{NTLM | KERBEROS | **NEGOTIATE** }]  
+ **WINDOWS** [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
  Especifica que el extremo se conecta mediante el protocolo de autenticación de Windows para autenticar los extremos. Ésta es la opción predeterminada.  
   
  Si especifica un método de autenticación (NTLM o KERBEROS), dicho método se utilizará siempre como el protocolo de autenticación. El valor predeterminado, NEGOTIATE, hace que el extremo utilice el protocolo de negociación de Windows para elegir NTLM o Kerberos.  
   
- CERTIFICADO *nombre_de_certificado*  
- Especifica que el extremo autenticar la conexión con el certificado especificado por *nombre_de_certificado* para establecer la identidad para la autorización. El extremo alejado debe tener un certificado con la clave pública que coincida con la clave privada del certificado especificado.  
+ CERTIFICATE *certificate_name*  
+ Especifica que el punto de conexión va a autenticar la conexión mediante el certificado especificado por *certificate_name* para establecer la identidad para la autorización. El extremo alejado debe tener un certificado con la clave pública que coincida con la clave privada del certificado especificado.  
   
- WINDOWS [{NTLM | KERBEROS | **NEGOTIATE** }] CERTIFICADO *nombre_de_certificado*  
+ WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
  Especifica que el extremo va a intentar conectarse mediante la autenticación de Windows y, si el intento da error, intentará utilizar el certificado especificado.  
   
- CERTIFICADO *nombre_de_certificado* WINDOWS [{NTLM | KERBEROS | **NEGOTIATE** }]  
+ CERTIFICATE *certificate_name* WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
  Especifica que el extremo va a intentar conectarse mediante el certificado especificado y, si el intento da error, intentará utilizar la autenticación de Windows.  
   
- CIFRADO = {DESHABILITADO | ADMITE | **REQUIRED** } [ALGORITMO { **AES** | RC4 | AES RC4 | RC4 AES}]  
+ ENCRYPTION = { DISABLED | SUPPORTED | **REQUIRED** } [ALGORITHM { **AES** | RC4 | AES RC4 | RC4 AES } ]  
  Especifica si el proceso utiliza cifrado. El valor predeterminado es REQUIRED.  
   
  DISABLED  
@@ -207,7 +207,7 @@ FOR DATABASE_MIRRORING (
  Especifica que el extremo debe usar el algoritmo AES. Este es el valor predeterminado en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.  
   
  RC4  
- Especifica que el extremo debe usar el algoritmo RC4. Este es el valor predeterminado a través de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+ Especifica que el extremo debe usar el algoritmo RC4. Este es el valor predeterminado en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
 > [!NOTE]  
 >  El algoritmo RC4 se admite únicamente por razones de compatibilidad con versiones anteriores. El material nuevo solo se puede cifrar con RC4 o RC4_128 cuando la base de datos tenga el nivel de compatibilidad 90 o 100. (No se recomienda). Use un algoritmo más reciente como uno de los algoritmos AES en su lugar. En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores, el material cifrado con RC4 o RC4_128 se puede descifrar en cualquier nivel de compatibilidad.  
@@ -227,7 +227,7 @@ FOR DATABASE_MIRRORING (
   
  Los argumentos que aparecen a continuación son específicos de la opción SERVICE_BROKER.  
   
- MESSAGE_FORWARDING  **=**  {ENABLED | **DESHABILITADO** }  
+ MESSAGE_FORWARDING **=** { ENABLED | **DISABLED** }  
  Determina si se reenviarán los mensajes recibidos por este extremo que sean para los servicios que se encuentran en otro lugar.  
   
  ENABLED  
@@ -236,14 +236,14 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  Descarta los mensajes para los servicios que están ubicados en otro lugar. Ésta es la opción predeterminada.  
   
- MESSAGE_FORWARD_SIZE **= *** forward_size*  
+ MESSAGE_FORWARD_SIZE **=***forward_size*  
  Especifica la cantidad máxima de almacenamiento en megabytes que se va a asignar para que el extremo la utilice cuando almacene mensajes que se van a reenviar.  
   
  **Opciones de DATABASE_MIRRORING**  
   
  Los argumentos que aparecen a continuación son específicos de la opción DATABASE_MIRRORING.  
   
- ROL  **=**  {TESTIGO | SOCIO COMERCIAL | ALL}  
+ ROLE **=** { WITNESS | PARTNER | ALL }  
  Especifica el rol o los roles de creación de reflejo de la base de datos que admite el extremo.  
   
  WITNESS  
@@ -258,23 +258,23 @@ FOR DATABASE_MIRRORING (
  ALL  
  Permite al extremo desempeñar el rol de un testigo y un asociado en el proceso de creación del reflejo.  
   
- Para obtener más información acerca de estos roles, consulte [creación de reflejo de base de datos &#40; SQL Server &#41; ](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
+ Para obtener más información sobre estos roles, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 > [!NOTE]  
 >  No existe ningún puerto predeterminado para DATABASE_MIRRORING.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Las instrucciones ENDPOINT DDL no pueden ejecutarse en una transacción de usuario. Las instrucciones ENDPOINT DDL no generan errores aunque una transacción activa de nivel de aislamiento de instantáneas utilice el extremo que se modifica.  
   
  Pueden ejecutar las solicitudes en un elemento ENDPOINT:  
   
--   Los miembros de **sysadmin** rol fijo de servidor  
+-   Los miembros del rol fijo de servidor **sysadmin**  
   
 -   El propietario del extremo  
   
 -   Los usuarios o grupos con permiso CONNECT en el extremo  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere permiso CREATE ENDPOINT o pertenecer al rol fijo de servidor **sysadmin** . Para obtener más información, vea [GRANT &#40;permisos de punto de conexión de Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ## <a name="example"></a>Ejemplo  
@@ -296,7 +296,7 @@ GO
 ## <a name="see-also"></a>Vea también  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [Elegir un algoritmo de cifrado](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
- [Eliminar punto de conexión &#40; Transact-SQL &#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+ [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

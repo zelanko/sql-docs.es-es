@@ -1,5 +1,5 @@
 ---
-title: Elementos del lenguaje (Transact-SQL) | Documentos de Microsoft
+title: Elementos de lenguaje (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -32,15 +32,15 @@ ms.lasthandoff: 01/25/2018
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los elementos de lenguaje siguientes.  
   
 ## <a name="in-this-section"></a>En esta sección  
-[-- &#40;Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)  
+[-- &#40;Comentarios&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)  
   
-[Estrella de barra diagonal &#40; Comentario en bloque &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)  
+[Slash Star &#40;Block Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md) (Barra diagonal y asterisco [comentario de bloque] [Transact-SQL]).  
  
-[Crear sesión de diagnóstico (Transact-SQL)](../../t-sql/language-elements/create-diagnostics-session-transact-sql.md)  
+[CREATE DIAGNOSTICS SESSION (Transact-SQL)](../../t-sql/language-elements/create-diagnostics-session-transact-sql.md)  
 
-[NULL y UNKNOWN (Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md)
+[NULL and UNKNOWN (Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md) (NULL y UNKNOWN [Transact-SQL])
 
-[Transacciones (almacenamiento de datos SQL)](../../t-sql/language-elements/transactions-sql-data-warehouse.md)
+[Transactions (SQL Data Warehouse)](../../t-sql/language-elements/transactions-sql-data-warehouse.md) (Transacciones [SQL Data Warehouse])
   
 [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
   

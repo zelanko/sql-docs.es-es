@@ -1,5 +1,5 @@
 ---
-title: EnvelopeAngle (tipo de datos geography) | Documentos de Microsoft
+title: EnvelopeAngle (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="envelopeangle-geography-data-type"></a>EnvelopeAngle (tipo de datos Geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve el ángulo máximo entre el punto devuelto por `EnvelopeCenter()` y un punto de la **geography** instancia en grados.  
+  Devuelve el ángulo máximo entre el punto devuelto por el método `EnvelopeCenter()` y un punto de la instancia de **geography** en grados.  
   
- Esto **geography** admite el método de tipo de datos **FullGlobe** instancias o instancias espaciales mayores que un hemisferio.  
+ Este método del tipo de datos **geography** admite instancias de **FullGlobe** o instancias espaciales mayores que un hemisferio.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,16 +46,16 @@ EnvelopeAngle( )
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **float**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
  Tipo de valor devuelto de CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Comentarios  
- Este método devuelve un punto en el **geography** instancia en grados. Cuando se usa con EnvelopeCenter(), `EnvelopeAngle()` devuelve un círculo de límite de un **geography** instancia.  
+## <a name="remarks"></a>Notas  
+ Este método devuelve un punto de la instancia de **geography** en grados. Cuando se usa con EnvelopeCenter(), `EnvelopeAngle()` devuelve un círculo de límite de una instancia de **geography**.  
   
- En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], este método se ha ampliado a **FullGlobe** instancias.  
+ En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], este método se ha extendido a las instancias de **FullGlobe**.  
   
- La limitación de hemisferio aplicada a `EnvelopeAngle()` en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] se ha quitado. Sin embargo, en instancias con ángulos mayores que 90 grados, se devolverán 180 grados. `EnvelopeAngle()`no es preciso para **geography** instancias que abarcan más de un hemisferio.  
+ La limitación de hemisferio aplicada a `EnvelopeAngle()` en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] se ha quitado. Sin embargo, en instancias con ángulos mayores que 90 grados, se devolverán 180 grados. `EnvelopeAngle()` no es exacta en instancias de **geography** que ocupen más de un hemisferio.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -64,8 +64,8 @@ DECLARE @g geography = 'LINESTRING(-120 45, -120 0, -90 0)';
 SELECT @g.EnvelopeAngle();  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Métodos extendidos en instancias de Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [EnvelopeCenter &#40; tipo de datos geography &#41;](../../t-sql/spatial-geography/envelopecenter-geography-data-type.md)  
+## <a name="see-also"></a>Ver también  
+ [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [EnvelopeCenter &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/envelopecenter-geography-data-type.md)  
   
   

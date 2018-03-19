@@ -1,5 +1,5 @@
 ---
-title: "(tipo de datos xml) del método Value() | Documentos de Microsoft"
+title: "value() (método del tipo de datos xml) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 
   Realiza una consulta XQuery en datos XML y devuelve un valor de tipo SQL. Este método devuelve un valor escalar.  
   
- Este método se utiliza normalmente para extraer un valor de una instancia XML almacenada en un **xml** columna de tipo, parámetro o variable. De esta manera, se pueden especificar consultas SELECT que combinen o comparen datos XML con datos de columnas que no son XML.  
+ Normalmente, este método se usa para extraer un valor de una instancia XML almacenada en una columna, un parámetro o una variable de tipo **xml**. De esta manera, se pueden especificar consultas SELECT que combinen o comparen datos XML con datos de columnas que no son XML.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,15 +45,15 @@ value (XQuery, SQLType)
   
 ## <a name="arguments"></a>Argumentos  
  *XQuery*  
- Es el *XQuery* expresión, un literal de cadena, que recupera los datos de la instancia XML. La expresión XQuery debe devolver un valor como máximo. En caso contrario, se devolverá un error.  
+ Es la expresión *XQuery*, un literal de cadena, que recupera datos de la instancia XML. La expresión XQuery debe devolver un valor como máximo. En caso contrario, se devolverá un error.  
   
  *SQLType*  
- Es el tipo SQL preferido, un literal de cadena, que se devuelve. El tipo de valor devuelto de este método coincide con el *SQLType* parámetro. *SQLType* no puede ser un **xml** tipo de datos, un tipo common language runtime (CLR) definido por el usuario, **imagen**, **texto**, **ntext**, o **sql_variant** tipo de datos. *SQLType* puede ser un SQL, tipo de datos definido por el usuario.  
+ Es el tipo SQL preferido, un literal de cadena, que se devuelve. El tipo de valor devuelto de este método coincide con el parámetro *SQLType*. *SQLType* no puede ser un tipo de datos **xml**, un tipo Common Language Runtime (CLR) definido por el usuario, ni un tipo de datos **image**, **text**, **ntext** ni **sql_variant**. *SQLType* puede ser un tipo de datos SQL definido por el usuario.  
   
- El **value()** método usa la [!INCLUDE[tsql](../../includes/tsql-md.md)] convertir implícitamente operador e intenta convertir el resultado de la expresión XQuery, la representación de cadena serializada, del tipo XSD al tipo SQL correspondiente especificado por [!INCLUDE[tsql](../../includes/tsql-md.md)] conversión. Para obtener más información acerca de las reglas de conversión de tipo para que la conversión, consulte [CAST y CONVERT &#40; Transact-SQL &#41; ](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+ El método **value()** usa el operador CONVERT de [!INCLUDE[tsql](../../includes/tsql-md.md)] de manera implícita e intenta convertir el resultado de la expresión XQuery, la representación de cadena serializada, del tipo XSD al tipo SQL correspondiente especificado por la conversión [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para obtener más información sobre las reglas de conversión de tipos de CONVERT, vea [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 > [!NOTE]  
->  Por motivos de rendimiento, en lugar de utilizar el **value()** método en un predicado para compararlo con un valor relacional, utilice **exist()** con **SQL:Column()**. Esto se muestra en el ejemplo D a continuación.  
+>  Por motivos de rendimiento, en lugar de usar el método **value()** en un predicado para la comparación con un valor relacional, use **exist()** con **sql:column()**. Esto se muestra en el ejemplo D a continuación.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -78,10 +78,10 @@ SELECT @ProdID
   
  Como resultado se devuelve el valor 1.  
   
- Aunque hay un solo atributo `ProductID` en la instancia XML, las reglas de los tipos estáticos requieren que se especifique explícitamente que la expresión de ruta de acceso devuelva un singleton. Por tanto, se especifica `[1]` al final de la expresión de ruta de acceso. Para obtener más información acerca de tipos estáticos, vea [XQuery y tipos estáticos](../../xquery/xquery-and-static-typing.md).  
+ Aunque hay un solo atributo `ProductID` en la instancia XML, las reglas de los tipos estáticos requieren que se especifique explícitamente que la expresión de ruta de acceso devuelva un singleton. Por tanto, se especifica `[1]` al final de la expresión de ruta de acceso. Para obtener más información sobre los tipos estáticos, vea [XQuery y el establecimiento de tipos estáticos](../../xquery/xquery-and-static-typing.md).  
   
 ### <a name="b-using-the-value-method-to-retrieve-a-value-from-an-xml-type-column"></a>B. Utilizar el método value() para recuperar un valor de una columna de tipo xml  
- La siguiente consulta se especifica en un **xml** columna de tipo (`CatalogDescription`) en el `AdventureWorks` base de datos. La consulta recupera los valores del atributo `ProductModelID` de cada instancia XML almacenada en la columna.  
+ La siguiente consulta se especifica en una columna de tipo **xml** (`CatalogDescription`) de la base de datos `AdventureWorks`. La consulta recupera los valores del atributo `ProductModelID` de cada instancia XML almacenada en la columna.  
   
 ```  
 SELECT CatalogDescription.value('             
@@ -108,7 +108,7 @@ ORDER BY Result desc
 ```  
   
 ### <a name="c-using-the-value-and-exist-methods-to-retrieve-values-from-an-xml-type-column"></a>C. Utilizar los métodos value() y exist() para recuperar valores de una columna de tipo xml  
- En el ejemplo siguiente se muestra el uso tanto la `value()` método y la [método exist()](../../t-sql/xml/exist-method-xml-data-type.md) de la **xml** tipo de datos. El método `value()` se utiliza para recuperar los valores del atributo `ProductModelID` del XML. El método `exist()` de la cláusula `WHERE` se utiliza para filtrar las filas de la tabla.  
+ En el siguiente ejemplo se muestra el uso del método `value()` y el [método exist()](../../t-sql/xml/exist-method-xml-data-type.md) del tipo de datos **xml**. El método `value()` se utiliza para recuperar los valores del atributo `ProductModelID` del XML. El método `exist()` de la cláusula `WHERE` se utiliza para filtrar las filas de la tabla.  
   
  La consulta recupera los identificadores de modelo de producto de las instancias XML que incluyen información de garantía (el elemento <`Warranty`>) entre sus características. La condición de la cláusula `WHERE` utiliza el método `exist()` para recuperar únicamente las filas que cumplan esta condición.  
   
@@ -126,7 +126,7 @@ WHERE CatalogDescription.exist('
   
  Observe lo siguiente en la consulta anterior:  
   
--   La columna `CatalogDescription` es una columna XML con tipo. Esto significa que tiene asociada una colección de esquemas. En el [prólogo de XQuery](../../xquery/modules-and-prologs-xquery-prolog.md), la declaración de espacio de nombres se utiliza para definir el prefijo que se utiliza más adelante en el cuerpo de la consulta.  
+-   La columna `CatalogDescription` es una columna XML con tipo. Esto significa que tiene asociada una colección de esquemas. En el [Prólogo de XQuery](../../xquery/modules-and-prologs-xquery-prolog.md), se usa la declaración del espacio de nombres para definir el prefijo que se va a usar posteriormente en el cuerpo de la consulta.  
   
 -   Si el método `exist()` devuelve `1` (True), significa que la instancia XML incluye el elemento secundario <`Warranty`> entre sus características.  
   
@@ -164,11 +164,11 @@ WHERE c3.exist( '/root[@a=sql:column("c1")]') = 1
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Agregar espacios de nombres a consultas con WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Comparar XML con tipo y XML sin tipo](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Crear instancias de datos XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [Métodos de tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md)   
- [Lenguaje de manipulación de datos XML &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [métodos del tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [Lenguaje de manipulación de datos XML &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

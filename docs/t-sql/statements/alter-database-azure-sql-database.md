@@ -1,5 +1,5 @@
 ---
-title: ALTER DATABASE (base de datos SQL Azure) | Documentos de Microsoft
+title: ALTER DATABASE (Azure SQL Database) | Microsoft Docs
 ms.custom: 
 ms.date: 02/13/2018
 ms.prod: 
@@ -18,16 +18,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 80aa017e3876a7a41077f770d5328e4c6c49b5be
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 6c303c5abe51eaee2208028ea13991d2d557f1b3
+ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (base de datos SQL Azure)
+# <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Modifica un [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Cambia el nombre de un objetivo de la base de datos, la edición y el servicio de una base de datos, un grupo elástico de combinación y conjuntos de opciones de base de datos.  
+  Modifica una [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Cambia el nombre de una base de datos, el objetivo de edición y servicio de una base de datos, se une a un grupo elástico y establece opciones de base de datos.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -192,7 +192,7 @@ ALTER DATABASE { database_name }
 <temporal_history_retention>  ::=  TEMPORAL_HISTORY_RETENTION { ON | OFF }
 ```  
   
- Para obtener una descripción completa de las opciones set, vea [ALTER DATABASE SET Options &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) y [modificar el nivel de compatibilidad de base de datos &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+ Para obtener las descripciones completas de las opciones, vea [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) y [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ## <a name="arguments"></a>Argumentos  
  *database_name*  
@@ -202,29 +202,29 @@ ALTER DATABASE { database_name }
  Designa que la base de datos actual en uso se debe modificar.  
   
  MODIFY NAME **=***new_database_name*  
- Cambia el nombre de la base de datos con el nombre especificado como *new_database_name*. En el ejemplo siguiente se cambia el nombre de una base de datos `db1` a `db2`:   
+ Reemplaza el nombre de la base de datos por el nombre especificado como *new_database_name*. En el ejemplo siguiente se cambia el nombre de la base de datos `db1` a `db2`:   
 
 ```  
 ALTER DATABASE db1  
     MODIFY Name = db2 ;  
 ```    
 
- MODIFICAR (edición  **=**  ["básico" | 'estándar' | 'premium'])    
- Cambia el nivel de servicio de la base de datos. Se ha quitado la compatibilidad con 'premiumrs'. Si tiene preguntas, utilice este alias de correo electrónico: premium-rs@microsoft.com.
+ MODIFY (EDITION **=** ["Basic" | "Estándar" | "Premium" ])    
+ Cambia el nivel de servicio de la base de datos. Se ha quitado la compatibilidad con "premiumrs". Si tiene preguntas, use este alias de correo electrónico: premium-rs@microsoft.com.
 
-En el ejemplo siguiente se cambia la edición de `premium`:
+En el ejemplo siguiente se cambia la edición a `premium`:
   
 ```  
 ALTER DATABASE current 
     MODIFY (EDITION = 'premium');
 ``` 
 
-Cambio de edición se produce un error si la propiedad MAXSIZE de la base de datos se establece en un valor fuera del intervalo válido admitido por esa edición.  
+Se produce un error en el cambio de EDITION si la propiedad MAXSIZE de la base de datos está establecida en un valor fuera del intervalo válido admitido por esa edición.  
 
- MODIFICAR (MAXSIZE  **=**  [100 MB | 500 MB | 1 | 1024... 4096] GB)  
+ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024…4096] GB)  
  Especifica el tamaño máximo de la base de datos. El tamaño máximo debe cumplir con el conjunto válido de valores de la propiedad EDITION de la base de datos. Cambiar el tamaño máximo de la base de datos puede causar que cambie también el valor de EDITION de la base de datos. En la tabla siguiente se muestran los valores admitidos de MAXSIZE y los valores predeterminados (D) para los niveles de servicio de [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-|**MAXSIZE**|**Básico**|**S0-S2**|**S3-S12**|**P1-P6**|**P11-P15**|  
+|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6**|**P11-P15**|  
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100 MB|√|√|√|√|√|  
 |250 MB|√|√|√|√|√|  
@@ -246,87 +246,87 @@ Cambio de edición se produce un error si la propiedad MAXSIZE de la base de dat
 |500 GB|N/D|√|√|√ (D)|√|  
 |750 GB|N/D|√|√|√|√|  
 |1024 GB|N/D|√|√|√|√ (D)|  
-|De 1024 GB hasta 4096 GB en incrementos de 256 GB *|N/D|N/D|N/D|N/D|√|√|  
+|Desde 1024 GB hasta 4096 GB en incrementos de 256 GB*|N/D|N/D|N/D|N/D|√|√|  
   
- \* P11 y P15 permiten MAXSIZE hasta 4 TB con 1024 GB que el tamaño predeterminado.  P11 y P15 pueden utilizar hasta 4 TB de almacenamiento incluyen sin cargo adicional. En el nivel Premium, MAXSIZE mayor de 1 TB está actualmente disponible en las siguientes regiones: nos East2, oeste de Estados Unidos, nos Gov Virginia, Europa occidental, Alemania Central, sur Asia oriental, este de Japón, Australia Oriental, Canadá Central y este de Canadá. Para las limitaciones actuales, vea [solo las bases de datos](https://docs.microsoft.com/azure/sql-database-single-database-resources).  
+ \* P11 y P15 permiten un valor de MAXSIZE de hasta 4 TB, con 1024 GB como tamaño predeterminado.  P11 y P15 pueden usar hasta 4 TB de almacenamiento incluido sin cargos adicionales. En el nivel Premium, un valor de MAXSIZE superior a 1 TB está actualmente disponible en las siguientes regiones: Este de EE. UU. 2, Oeste de EE. UU., Virginia Gob. EE. UU., Europa Occidental, Centro de Alemania, Asia Suroriental, Japón Oriental, Este de Australia, Canadá Central y Canadá Oriental. Para conocer las limitaciones actuales, consulte [Bases de datos únicas](https://docs.microsoft.com/azure/sql-database-single-database-resources).  
 
   
  Las reglas siguientes se aplican a los argumentos MAXSIZE y EDITION:  
   
--   El valor MAXSIZE, si se especifica, tiene que ser un valor válido, que se muestra en la tabla anterior.  
+-   El valor de MAXSIZE, si se especifica, tiene que ser un valor válido mostrado en la tabla anterior.  
   
 -   Si se especifica EDITION pero no se especifica MAXSIZE, se usa el valor predeterminado de la edición. Por ejemplo, si EDITION está establecido en Standard y MAXSIZE no se especifica, el valor de MAXSIZE se establece automáticamente en 500 MB.  
   
--   Si se especifica MAXSIZE ni EDITION, EDITION se establece en estándar (S0) y MAXSIZE está establecido en 250 GB.  
+-   Si no se especifican los valores de MAXSIZE ni EDITION, este último se establece en Standard (S0) y MAXSIZE en 250 GB.  
  
 
- MODIFICAR (SERVICE_OBJECTIVE = \<objetivo de servicio >)  
- Especifica el nivel de rendimiento. El ejemplo siguiente se cambia de servicio objetivo de una base de datos premium `P6`:
+ MODIFY (SERVICE_OBJECTIVE = \<objetivo_de_servicio>)  
+ Especifica el nivel de rendimiento. El ejemplo siguiente se cambia el objetivo de servicio de una base de datos Premium a `P6`:
  
 ```  
 ALTER DATABASE current 
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```  
- Los valores disponibles para el objetivo de servicio son: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, o`P15`. Para obtener más información sobre el tamaño, las ediciones y las combinaciones de objetivos de servicio y descripciones de objetivo de servicio, consulte [niveles de servicio de base de datos de SQL Azure y los niveles de rendimiento](http://msdn.microsoft.com/library/azure/dn741336.aspx). Si el SERVICE_OBJECTIVE especificado no es compatible con la edición, recibirá un error. Para cambiar el valor SERVICE_OBJECTIVE de un nivel a otro (por ejemplo, de S1 a P1), también debe cambiar el valor EDITION. Se ha quitado la compatibilidad para los objetivos de servicio de PR. Si tiene preguntas, utilice este alias de correo electrónico: premium-rs@microsoft.com. 
+ Los valores disponibles para el objetivo de servicio son: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11` o `P15`. Para obtener las descripciones de los objetivos de servicio y más información sobre las combinaciones de tamaño, ediciones y objetivos de servicio, vea [Azure SQL Database Service Tiers and Performance Levels](http://msdn.microsoft.com/library/azure/dn741336.aspx) (Niveles de servicio y niveles de rendimiento de Azure SQL Database). Si EDITION no admite el valor SERVICE_OBJECTIVE especificado, se devuelve un error. Para cambiar el valor SERVICE_OBJECTIVE de un nivel a otro (por ejemplo, de S1 a P1), también debe cambiar el valor EDITION. Se ha quitado la compatibilidad para los objetivos de servicio de PRS. Si tiene preguntas, use este alias de correo electrónico: premium-rs@microsoft.com. 
   
  MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)  
- Para agregar una base de datos existente a un grupo elástico, establezca el SERVICE_OBJECTIVE de la base de datos en ELASTIC_POOL y proporcione el nombre del grupo elástico. También puede usar esta opción para cambiar la base de datos a un grupo elástico diferentes dentro del mismo servidor. Para obtener más información, consulte [crear y administrar un grupo elástico de base de datos SQL](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/). Para quitar una base de datos de un grupo elástico, utilice ALTER DATABASE para establecer el SERVICE_OBJECTIVE en un nivel de rendimiento de la base de datos único.  
+ Para agregar una base de datos existente a un grupo elástico, establezca el valor SERVICE_OBJECTIVE de la base de datos en ELASTIC_POOL e indique el nombre del grupo. También se puede usar esta opción para cambiar la base de datos a un grupo elástico diferente dentro del mismo servidor. Para obtener más información, vea [Create and manage a SQL Database elastic pool](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/) (Creación y administración de un grupo elástico de SQL Database). Para quitar una base de datos de un grupo elástico, use ALTER DATABASE para establecer el valor SERVICE_OBJECTIVE en un nivel de rendimiento de una sola base de datos.  
 
- Agregar secundario ON SERVER \<partner_server_name >  
- Crea una base de datos de replicación geográfica secundaria con el mismo nombre en un servidor de socio comercial, hacer que la base de datos local en una replicación geográfica principal y comienza a replicar datos de forma asincrónica desde el servidor principal a la nueva base de datos secundaria. Si ya existe una base de datos con el mismo nombre en la base de datos secundaria, se produce un error en el comando. El comando se ejecuta en la base de datos maestra en el servidor que hospeda la base de datos local que se convierte en el servidor principal.  
+ ADD SECONDARY ON SERVER \<partner_server_name>  
+ Crea una base de datos de replicación geográfica secundaria con el mismo nombre en un servidor asociado, lo que convierte a la base de datos local en una base de datos principal de replicación geográfica, y comienza a replicar los datos de forma asincrónica desde la base de datos principal a la nueva base de datos secundaria. Si ya existe una base de datos con el mismo nombre en la base de datos secundaria, se produce un error en el comando. El comando se ejecuta en la base de datos maestra en el servidor que hospeda la base de datos local que se convierte en la principal.  
   
- CON ALLOW_CONNECTIONS {TODOS | **N** }  
- Cuando no se especifica ALLOW_CONNECTIONS, se establece en NO de forma predeterminada. Si se establece todas, es una base de datos de solo lectura que permite a todos los inicios de sesión con los permisos adecuados para conectarse.  
+ WITH ALLOW_CONNECTIONS { **ALL** | NO }  
+ Cuando no se especifica ALLOW_CONNECTIONS, se establece en ALL de forma predeterminada. Si se establece en ALL, es una base de datos de solo lectura que permite la conexión de todos los inicios de sesión con los permisos adecuados.  
   
- CON SERVICE_OBJECTIVE {'S0' | 'S1' | 'S2' | ' S3 "| 'S4' | 'S6' | 'S7' | 'S9' | 'S12' | 'P1' | 'P2' | 'P4' | 'P6' | 'P11' | 'P15'}  
- Cuando no se especifica SERVICE_OBJECTIVE, se crea la base de datos secundaria en el mismo nivel de servicio que la base de datos principal. Cuando se especifica SERVICE_OBJECTIVE, se crea la base de datos secundaria en el nivel especificado. Esta opción permite crear secundarias replicadas geográficamente con niveles de servicio más económico. El SERVICE_OBJECTIVE especificado debe estar en la misma edición que el origen. Por ejemplo, no puede especificar S0 si es de la edición premium.  
+ WITH SERVICE_OBJECTIVE {  "S0" | "S1" | "S2" | "S3" | "S4"| "S6"| "S7"| "S9"| "S12" | "P1" | "P2" | "P4"| "P6" | "P11" | "P15" }  
+ Cuando no se especifica SERVICE_OBJECTIVE, la base de datos secundaria se crea en el mismo nivel de servicio que la principal. Cuando se especifica SERVICE_OBJECTIVE, la base de datos secundaria se crea en el nivel especificado. Esta opción permite crear bases de datos secundarias con replicación geográfica con niveles de servicio más económicos. El valor SERVICE_OBJECTIVE especificado debe estar en la misma edición que el origen. Por ejemplo, no se puede especificar S0 si la edición es Premium.  
   
- ELASTIC_POOL (nombre = \<elastic_pool_name)  
- Cuando no se especifica ELASTIC_POOL, la base de datos secundaria no se crea en un grupo elástico. Cuando se especifica ELASTIC_POOL, se crea la base de datos secundaria en el grupo especificado.  
-  
-> [!IMPORTANT]  
->  El usuario que ejecuta el comando Agregar secundario debe ser DBManager en servidor principal, ser miembro de db_owner en la base de datos local y DBManager en servidor secundario.  
-  
- QUITAR secundaria ON SERVER \<partner_server_name >  
- Quita la replicación geográfica secundaria base de datos especificada en el servidor especificado. El comando se ejecuta en la base de datos maestra en el servidor que hospeda la base de datos principal.  
+ ELASTIC_POOL (name = \<elastic_pool_name)  
+ Cuando no se especifica ELASTIC_POOL, la base de datos secundaria no se crea en un grupo elástico. Cuando se especifica ELASTIC_POOL, la base de datos secundaria se crea en el grupo especificado.  
   
 > [!IMPORTANT]  
->  El usuario que ejecuta el comando Quitar secundario debe ser DBManager en el servidor principal.  
+>  El usuario que ejecuta el comando ADD SECONDARY debe ser DBManager en el servidor principal, ser miembro de db_owner en la base de datos local y DBManager en el servidor secundario.  
+  
+ REMOVE SECONDARY ON SERVER  \<partner_server_name>  
+ Quita la base de datos secundaria con replicación geográfica especificada en el servidor especificado. El comando se ejecuta en la base de datos maestra en el servidor que hospeda la base de datos principal.  
+  
+> [!IMPORTANT]  
+>  El usuario que ejecuta el comando REMOVE SECONDARY debe ser DBManager en el servidor principal.  
   
  FAILOVER  
- Promueve la base de datos secundaria en colaboración de replicación geográfica en la que el comando se ejecuta para convertirlo en el servidor principal y degrada el principal actual para convertirse en la nueva base de datos secundaria. Como parte de este proceso, el modo de replicación geográfica temporalmente cambian de modo asincrónico a modo sincrónico. Durante el proceso de conmutación por error:  
+ Promueve la base de datos secundaria en colaboración de replicación geográfica en la que el comando se ejecuta para convertirla en la principal y degrada la base de datos principal actual para convertirla en la nueva base de datos secundaria. Como parte de este proceso, el modo de replicación geográfica se cambia temporalmente de asincrónico a sincrónico. Durante el proceso de conmutación por error:  
   
-1.  El servidor principal deja de realizar nuevas transacciones.  
+1.  La base de datos principal deja de aceptar nuevas transacciones.  
   
 2.  Todas las transacciones pendientes se vacían en la base de datos secundaria.  
   
-3.  La base de datos secundaria se convierte en el servidor principal y comienza la replicación geográfica asincrónica con el elemento principal anterior y la nueva base de datos secundaria.  
+3.  La base de datos secundaria se convierte en la principal y comienza la replicación geográfica asincrónica con la base de datos principal anterior y la base de datos secundaria nueva.  
   
- Este orden garantiza que se produce ninguna pérdida de datos. El período durante el cual están disponibles ambas bases de datos es del orden de 0-25 segundos mientras se intercambiarán los roles. La operación total debería tardar no más de un minuto aproximadamente. Si la base de datos principal no está disponible cuando se emite este comando, el comando produce un error con un mensaje de error que indica que la base de datos principal no está disponible. Si el proceso de conmutación por error no se completa y aparece bloqueado, puede usar el comando para forzar la conmutación por error y aceptar la pérdida de datos - y, a continuación, si tiene que recuperar los datos perdidos, llame a devops (CSS) para recuperar los datos perdidos.  
+ Esta secuencia garantiza que no se produzca pérdida de datos. El período durante el que ambas bases de datos no están disponibles es de entre 0 y 25 segundos mientras se intercambian los roles. La operación total no debería tardar más de un minuto aproximadamente. Si la base de datos principal no está disponible cuando se emite este comando, el comando produce un error con un mensaje de error en el que se indica que la base de datos principal no está disponible. Si el proceso de conmutación por error no se completa y aparece bloqueado, se puede usar el comando para forzar la conmutación por error y aceptar la pérdida de datos, y después, si tiene que recuperar los datos perdidos, llama a devops (CSS) para recuperarlos.  
   
 > [!IMPORTANT]  
->  El usuario que ejecuta el comando de conmutación por error debe ser DBManager en el servidor principal y el servidor secundario.  
+>  El usuario que ejecuta el comando FAILOVER debe ser DBManager tanto en el servidor principal como en el secundario.  
   
  FORCE_FAILOVER_ALLOW_DATA_LOSS  
- Promueve la base de datos secundaria en colaboración de replicación geográfica en la que el comando se ejecuta para convertirlo en el servidor principal y degrada el principal actual para convertirse en la nueva base de datos secundaria. Utilice este comando solo cuando la réplica principal actual ya no está disponible. Está diseñado para la recuperación de desastres, al restaurar la disponibilidad es crítico y alguna pérdida de datos es aceptable.  
+ Promueve la base de datos secundaria en colaboración de replicación geográfica en la que el comando se ejecuta para convertirla en la principal y degrada la base de datos principal actual para convertirla en la nueva base de datos secundaria. Use este comando solo cuando la base de datos principal actual ya no esté disponible. Está diseñado solo para la recuperación ante desastres, cuando la restauración de la disponibilidad sea esencial y se acepte cierta pérdida de datos.  
   
  Durante una conmutación por error forzada:  
   
-1.  La base de datos secundaria especificada inmediatamente se convierte en la base de datos principal y comienza a aceptar las nuevas transacciones.  
+1.  La base de datos secundaria especificada se convierte inmediatamente en la base de datos principal y comienza a aceptar nuevas transacciones.  
   
-2.  Cuando la réplica principal original puede volver a conectar con el nuevo elemento principal, una copia de seguridad incremental se realiza en el original principal y la réplica principal original se convierte en una nueva base de datos secundaria.  
+2.  Cuando la base de datos principal original se pueda volver a conectar con la nueva base de datos principal, se toma una copia de seguridad incremental en la base de datos principal original y se convierte en una nueva base de datos secundaria.  
   
-3.  Para recuperar datos desde esta copia de seguridad incremental en el servidor principal anterior, el usuario pone devops/CSS.  
+3.  Para recuperar datos de esta copia de seguridad incremental en la base de datos principal anterior, el usuario usa devops/CSS.  
   
-4.  Si no hay réplicas secundarias adicionales, automáticamente se configuren para ser elementos secundarios de la nueva réplica principal. Este proceso es asincrónico y puede haber un retraso hasta que se complete este proceso. Hasta que se haya completado la reconfiguración, los servidores secundarios continúan siendo secundarias de la réplica principal anterior.  
+4.  Si hay otras bases de datos secundarias, se reconfiguran de forma automática para convertirse en secundarias de la nueva base de datos principal. Este proceso es asincrónico y puede haber un retraso hasta que finalice. Hasta que se haya completado la reconfiguración, las bases de datos secundarias siguen siendo secundarias de la base de datos principal anterior.  
   
 > [!IMPORTANT]  
->  El usuario que ejecuta el comando FORCE_FAILOVER_ALLOW_DATA_LOSS debe ser DBManager en el servidor principal y el servidor secundario.  
+>  El usuario que ejecuta el comando FORCE_FAILOVER_ALLOW_DATA_LOSS debe ser DBManager tanto en el servidor principal como en el secundario.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Para quitar una base de datos, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).  
   
- Para reducir el tamaño de una base de datos, utilice [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
+ Para reducir el tamaño de una base de datos, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
   
  La instrucción ALTER DATABASE se debe ejecutar en el modo de confirmación automática (modo de administración de transacciones predeterminado) y no se permite en una transacción explícita o implícita.  
   
@@ -347,7 +347,7 @@ ALTER DATABASE current
 ## <a name="viewing-database-information"></a>Ver la información de la base de datos  
  Se pueden utilizar vistas de catálogo, funciones del sistema y procedimientos almacenados del sistema para devolver información sobre bases de datos, archivos y grupos de archivos.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo el inicio de sesión principal de nivel de servidor (creado por el proceso de aprovisionamiento) o los miembros del rol de base de datos `dbmanager` pueden modificar una base de datos.  
   
 > [!IMPORTANT]  
@@ -355,7 +355,7 @@ ALTER DATABASE current
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-check-the-edition-options-and-change-them"></a>A. Compruebe las opciones de edición y cambiarlos:
+### <a name="a-check-the-edition-options-and-change-them"></a>A. Comprobación y cambio de las opciones de edición:
 
 ```
 SELECT Edition = DATABASEPROPERTYEX('db1', 'EDITION'),
@@ -365,7 +365,7 @@ SELECT Edition = DATABASEPROPERTYEX('db1', 'EDITION'),
 ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJECTIVE = 'P15');
 ```
 
-### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>B. Mover una base de datos a otro grupo elástico  
+### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>B. Movimiento de una base de datos a otro grupo elástico  
  Mueve una base de datos existente en un grupo denominado pool1:  
   
 ```  
@@ -373,35 +373,35 @@ ALTER DATABASE db1
 MODIFY ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = pool1 ) ) ;  
 ```  
   
-### <a name="c-add-a-geo-replication-secondary"></a>C. Agregar un elemento secundario de replicación geográfica  
- Crea una base de datos secundaria ilegible db1 en servidor `secondaryserver` de la Bd1 en el servidor local.  
+### <a name="c-add-a-geo-replication-secondary"></a>C. Adición de una base de datos secundaria de replicación geográfica  
+ Crea una base de datos secundaria legible db1 en el servidor `secondaryserver` de db1 en el servidor local.  
   
 ```  
 ALTER DATABASE db1   
 ADD SECONDARY ON SERVER secondaryserver   
-WITH ( ALLOW_CONNECTIONS = NO )  
+WITH ( ALLOW_CONNECTIONS = ALL )  
 ```  
   
-### <a name="d-remove-a-geo-replication-secondary"></a>D. Quitar un elemento secundario de replicación geográfica  
- Quita la secundaria de la base de datos db1 en servidor `secondaryserver`.  
+### <a name="d-remove-a-geo-replication-secondary"></a>D. Eliminación de una base de datos secundaria de replicación geográfica  
+ Quita la base de datos secundaria db1 en el servidor `secondaryserver`.  
   
 ```  
 ALTER DATABASE db1   
 REMOVE SECONDARY ON SERVER testsecondaryserver   
 ```  
   
-### <a name="e-failover-to-a-geo-replication-secondary"></a>E. Conmutación por error a un elemento secundario de replicación geográfica  
- Promueve un secundario de la base de datos db1 en servidor `secondaryserver` se convierta en la nueva base de datos principal cuando se ejecuta en el servidor `secondaryserver`.  
+### <a name="e-failover-to-a-geo-replication-secondary"></a>E. Conmutación por error a una base de datos secundaria de replicación geográfica  
+ Promueve una base de datos secundaria db1 en el servidor `secondaryserver` para que se convierta en la nueva base de datos principal cuando se ejecute en el servidor `secondaryserver`.  
   
 ```  
 ALTER DATABASE db1 FAILOVER  
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Crear base de datos &#40; Base de datos SQL Azure &#41;](../../t-sql/statements/create-database-azure-sql-database.md)   
+ [CREATE DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/create-database-azure-sql-database.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
- [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
+ [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   

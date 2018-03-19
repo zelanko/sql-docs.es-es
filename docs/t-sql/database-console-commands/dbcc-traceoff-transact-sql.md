@@ -58,7 +58,7 @@ Deshabilita las marcas de seguimiento de forma global.
 WITH NO_INFOMSGS  
 Suprime todos los mensajes informativos con niveles de gravedad entre 0 y 10.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 Las marcas de seguimiento se usan para personalizar algunas características que controlan el funcionamiento de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
@@ -68,7 +68,7 @@ DBCC TRACEOFF devuelve:
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
 Requiere la pertenencia al rol fijo de servidor **sysadmin** .
   
 ## <a name="examples"></a>Ejemplos  
@@ -93,7 +93,7 @@ DBCC TRACEOFF (3205, 260, -1);
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC TRACEON &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)  
 [DBCC TRACESTATUS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  

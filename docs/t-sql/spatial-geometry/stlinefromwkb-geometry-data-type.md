@@ -1,5 +1,5 @@
 ---
-title: STLineFromWKB (tipo de datos geometry) | Documentos de Microsoft
+title: STLineFromWKB (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stlinefromwkb-geometry-data-type"></a>STLineFromWKB (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
-Devuelve un **geometryLineString** instancia a partir de una representación Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Devuelve una instancia de **geometryLineString** a partir de una representación Well-Known Binary (WKB) de Open Geospatial Consortium (OGC).
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,20 +45,20 @@ STLineFromWKB ( 'WKB_linestring' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *WKB_linestring*  
- Es la representación WKB de la **geometryLineString** instancia que se va a devolver. *WKB_linestring* es un **varbinary (max)** expresión.  
+ Es la representación WKB de la instancia de **geometryLineString** que se va a devolver. *WKB_linestring* es una expresión **varbinary(max)**.  
   
  *SRID*  
- Es un **int** expresión que representa el espaciales identificador de referencia (SRID) de la **geometryLineString** instancia que se va a devolver.  
+ Es una expresión de tipo **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometryLineString** que se va a devolver.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geometry**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
  Tipo de OGC: **LineString**  
   
-## <a name="remarks"></a>Comentarios  
- Este método producirá una **FormatException** si la entrada no tiene el formato correcto.  
+## <a name="remarks"></a>Notas  
+ Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se usa `STLineFromWKB()` para crear una instancia de `geometry`.  
@@ -69,7 +69,7 @@ SET @g = geometry::STLineFromWKB(0x010200000002000000000000000000594000000000000
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de geometría estáticos de OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

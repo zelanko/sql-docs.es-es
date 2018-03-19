@@ -1,5 +1,5 @@
 ---
-title: STPointFromText (tipo de datos geometry) | Documentos de Microsoft
+title: STPointFromText (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpointfromtext-geometry-data-type"></a>STPointFromText (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve un **geometry** instancia a partir de una representación de Open Geospatial Consortium (OGC) Well-Known Text (WKT) ampliada con los Z (elevación) y los valores M (medida) pertenecientes a la instancia.
+Devuelve una instancia de **geometry** a partir de una representación Well-Known Text (WKT) de Open Geospatial Consortium (OGC), ampliada con los valores Z (elevación) y M (medida) pertenecientes a la instancia.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,20 +45,20 @@ STPointFromText ( 'point_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *point_tagged_text*  
- Es la representación WKT de la **geometryPoint** instancia que se va a devolver. *point_tagged_text* is an **nvarchar(max)** expression.  
+ Es la representación WKT de la instancia de **geometryPoint** que se quiere devolver. *point_tagged_text* es una expresión **nvarchar(max)**.  
   
  *SRID*  
- Es un **int** expresión que representa el espaciales identificador de referencia (SRID) de la **geometryPoint** instancia que se va a devolver.  
+ Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometryPoint** que se quiere devolver.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geometry**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
- Tipo de OGC: **punto**  
+ Tipo OGC: **Point**  
   
-## <a name="remarks"></a>Comentarios  
- Este método producirá una **FormatException** si la entrada no tiene el formato correcto.  
+## <a name="remarks"></a>Notas  
+ Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se usa `STPointFromText()` para crear una instancia de `geometry`.  
@@ -69,7 +69,7 @@ SET @g = geometry::STPointFromText('POINT (100 100)', 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de geometría estáticos de OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

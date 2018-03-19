@@ -1,5 +1,5 @@
 ---
-title: ERROR_SEVERITY (Transact-SQL) | Documentos de Microsoft
+title: ERROR_SEVERITY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -56,17 +56,17 @@ ERROR_SEVERITY ( )
   
  Devuelve NULL si se le llama desde fuera del ámbito del bloque CATCH.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  ERROR_SEVERITY se puede llamar desde cualquier lugar dentro del ámbito de un bloque CATCH.  
   
- ERROR_SEVERITY devuelve la gravedad del error independientemente de cuántas veces se ejecute o de si se ejecuta dentro del ámbito del bloque CATCH. Esto difiere de las funciones como @@ERROR, que sólo devuelve el número de error en la instrucción inmediatamente posterior a la que se produzca un error, o en la primera instrucción de un bloque CATCH.  
+ ERROR_SEVERITY devuelve la gravedad del error independientemente de cuántas veces se ejecute o de si se ejecuta dentro del ámbito del bloque CATCH. Esto contrasta con funciones como @@ERROR, que solo devuelve el número de error en la instrucción inmediatamente posterior a la que causa un error, o en la primera instrucción de un bloque CATCH.  
   
  En los bloques CATCH anidados, ERROR_SEVERITY devuelve la gravedad del error específica del ámbito del bloque CATCH en el que se hace referencia al mismo. Por ejemplo, el bloque CATCH de una construcción TRY...CATCH externa podría tener una construcción TRY...CATCH anidada. Dentro del bloque CATCH anidado, ERROR_SEVERITY devuelve la gravedad del error que invocó el bloque CATCH anidado. Si ERROR_SEVERITY se ejecuta en el bloque CATCH externo, devuelve la gravedad del error que invocó ese bloque CATCH.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-using-errorseverity-in-a-catch-block"></a>A. Utilizar ERROR_SEVERITY en un bloque CATCH  
- El ejemplo siguiente muestra un `SELECT` instrucción que genera un error de división por cero. Se devuelve la gravedad del error.  
+ En este ejemplo de código se muestra una instrucción `SELECT` que genera un error de división por cero. Se devuelve la gravedad del error.  
   
 ```  
   
@@ -101,7 +101,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>C. Utilizar ERROR_SEVERITY en un bloque CATCH con otras herramientas de control de errores  
  El siguiente ejemplo muestra una instrucción `SELECT` que genera un error de división por cero. Además de la gravedad, se devuelve otra información relacionada con el error.  
@@ -123,14 +123,14 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

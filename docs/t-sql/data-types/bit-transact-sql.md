@@ -1,5 +1,5 @@
 ---
-title: bit (Transact-SQL) | Documentos de Microsoft
+title: bit (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -36,10 +36,10 @@ ms.lasthandoff: 11/21/2017
 
   Tipo de datos entero que puede aceptar los valores 1, 0 o NULL.  
   
-## <a name="remarks"></a>Comentarios  
-El [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] optimiza el almacenamiento de **bits** columnas. Si no hay 8 o menos **bits** columnas en una tabla, las columnas se almacenan como 1 byte. Si hay entre 9 y 16 **bits** las columnas, las columnas se almacenan como 2 bytes y así sucesivamente.
+## <a name="remarks"></a>Notas  
+El [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] optimiza el almacenamiento de las columnas de tipo **bit**. Si una tabla contiene ocho columnas o menos de tipo **bit**, estas se almacenan como 1 byte. Si hay entre 9 y 16 columnas de tipo **bit**, se almacenan como 2 bytes, y así sucesivamente.
   
-Los valores de cadena TRUE y FALSE pueden convertirse a **bits** valores: TRUE se convierte en 1 y FALSE se convierte en 0.
+Los valores de cadena TRUE y FALSE se pueden convertir en valores de tipo **bit**: TRUE se convierte en 1 y FALSE en 0.
   
 La conversión a bit promueve cualquier valor distinto de cero a uno.
   
@@ -47,10 +47,10 @@ La conversión a bit promueve cualquier valor distinto de cero a uno.
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
-[Conversiones de tipos de datos &#40; motor de base de datos &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[Conversiones de tipos de datos &#40;motor de base de datos&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
-[Sys.Types &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
+[sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
   
   

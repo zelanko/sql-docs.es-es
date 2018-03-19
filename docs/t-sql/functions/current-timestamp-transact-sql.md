@@ -1,5 +1,5 @@
 ---
-title: CURRENT_TIMESTAMP (Transact-SQL) | Documentos de Microsoft
+title: CURRENT_TIMESTAMP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -47,14 +47,14 @@ ms.lasthandoff: 11/21/2017
 # <a name="currenttimestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Devuelve la marca de tiempo sistema de base de datos actual como un **datetime** valor sin el ajuste de zona horaria de la base de datos. Este valor se deriva del sistema operativo del equipo donde la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se está ejecutando.
+Devuelve la marca de tiempo del sistema de base de datos actual como un valor **datetime** sin el ajuste de zona horaria de la base de datos. Este valor se deriva del sistema operativo del equipo donde la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se está ejecutando.
   
 > [!NOTE]  
->  SYSDATETIME y SYSUTCDATE tienen más precisión de fracciones de segundo que GETDATE y GETUTCDATE. SYSDATETIMEOFFSET incluye el ajuste de zona horaria del sistema. SYSDATETIME, SYSUTCDATE y SYSDATETIMEOFFSET pueden asignarse a una variable de cualquiera de los tipos de fecha y hora.  
+>  SYSDATETIME y SYSUTCDATE tienen más precisión de fracciones de segundo que GETDATE y GETUTCDATE. SYSDATETIMEOFFSET incluye el ajuste de zona horaria del sistema. SYSDATETIME, SYSUTCDATE y SYSDATETIMEOFFSET se pueden asignar a una variable de cualquiera de los tipos de fecha y hora.  
   
-Esta función es el equivalente a ANSI SQL [GETDATE](../../t-sql/functions/getdate-transact-sql.md).
+Esta función es el equivalente de ANSI SQL a [GETDATE](../../t-sql/functions/getdate-transact-sql.md).
   
-Para obtener información general de todos los [!INCLUDE[tsql](../../includes/tsql-md.md)] tipos de datos de fecha y hora y funciones, vea [funciones y tipos de datos de hora y fecha](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Para ver información general de todos los tipos de datos y funciones de fecha y hora de [!INCLUDE[tsql](../../includes/tsql-md.md)], vea [Date and Time Data Types and Functions](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) (Funciones y tipos de datos de fecha y hora).
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -70,8 +70,8 @@ No tiene argumentos.
 ## <a name="return-type"></a>Tipo devuelto  
 **datetime**
   
-## <a name="remarks"></a>Comentarios  
-[!INCLUDE[tsql](../../includes/tsql-md.md)]las instrucciones pueden hacer referencia a CURRENT_TIMESTAMP en cualquier lugar pueden hacer referencia a un **datetime** expresión.
+## <a name="remarks"></a>Notas  
+Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] pueden hacer referencia a CURRENT_TIMESTAMP en cualquier punto desde el que puedan hacer referencia a una expresión **datetime**.
   
 CURRENT_TIMESTAMP es una función no determinista. Las vistas y las expresiones que hacen referencia a esta columna no se pueden indizar.
   
@@ -136,7 +136,7 @@ GETUTCDATE()       20:18:45.3470000
 */  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ```sql
 SELECT CURRENT_TIMESTAMP;  

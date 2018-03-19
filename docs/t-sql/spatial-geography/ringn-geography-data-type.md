@@ -1,5 +1,5 @@
 ---
-title: RingN (tipo de datos geography) | Documentos de Microsoft
+title: RingN (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="ringn-geography-data-type"></a>RingN (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve el anillo especificado de la **geography** instancia: `1 ≤ n ≤ NumRings()`.  
+  Devuelve el anillo especificado de la instancia de **geography**: `1 ≤ n ≤ NumRings()`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *expression*  
- Es un **int** expresión entre 1 y el número de anillos en una **polígono** instancia.  
+ Expresión de tipo **int** comprendida entre 1 y el número de anillos de una instancia de **polygon**.  
   
 ## <a name="return-value"></a>Valor devuelto  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geography**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Comentarios  
- Si el valor de índice del anillo  **n**  es menor que 1, este método produce una **ArgumentOutOfRangeException.** El valor de índice de anillo debe ser mayor o igual que 1 y debe ser menor o igual que el número devuelto por `NumRings()`.  
+## <a name="remarks"></a>Notas  
+ Si el valor de índice del anillo **n** es menor que 1, este método produce una **ArgumentOutOfRangeException**. El valor de índice del anillo debe ser mayor o igual que 1 y debería ser menor o igual que el número devuelto por `NumRings()`.  
   
 ## <a name="examples"></a>Ejemplos  
  En este ejemplo se crea una instancia de `Polygon` con dos anillos y se devuelve el segundo anillo.  
@@ -64,8 +64,8 @@ SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.RingN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Métodos extendidos en instancias de Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+## <a name="see-also"></a>Ver también  
+ [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [NumRings &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/numrings-geography-data-type.md)  
   
   

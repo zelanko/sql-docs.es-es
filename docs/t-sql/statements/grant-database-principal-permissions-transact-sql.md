@@ -1,5 +1,5 @@
 ---
-title: CONCEDER permisos de entidad de seguridad de base de datos (Transact-SQL) | Documentos de Microsoft
+title: GRANT (permisos de entidad de seguridad de base de datos de Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/12/2017
 ms.prod: sql-non-specified
@@ -71,23 +71,23 @@ GRANT permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permiso*  
+ *permission*  
  Especifica un permiso que se puede conceder para la entidad de seguridad de base de datos. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
- USUARIO::*database_user*  
+ USER ::*database_user*  
  Especifica la clase y nombre del usuario en el que se concede el permiso. Se requiere el calificador de ámbito (::).  
   
- ROL::*database_role*  
+ ROLE ::*database_role*  
  Especifica la clase y nombre del rol en el que se concede el permiso. Se requiere el calificador de ámbito (::).  
   
- ROL de aplicación::*application_role*  
+ APPLICATION ROLE ::*application_role*  
    
  Especifica la clase y nombre del rol de aplicación en el que se concede el permiso. Se requiere el calificador de ámbito (::).  
   
  WITH GRANT OPTION  
  Indica que la entidad de seguridad también podrá conceder el permiso especificado a otras entidades de seguridad.  
   
- AS \<database_principal >  
+ AS \<database_principal>  
  Especifica una entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de conceder el permiso.  
   
  *Database_user*  
@@ -97,12 +97,12 @@ GRANT permission [ ,...n ]
  Especifica un rol de base de datos.  
   
  *Application_role*  
- **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Especifica un rol de aplicación.  
   
  *Database_user_mapped_to_Windows_User*  
- Especifica un usuario de base de datos asignado a un usuario de Windows.  
+ Especifica un usuario de la base de datos asignado a un usuario de Windows.  
   
  *Database_user_mapped_to_Windows_Group*  
   
@@ -119,8 +119,8 @@ GRANT permission [ ,...n ]
  *Database_user_with_no_login*  
  Especifica un usuario de base de datos sin entidad de seguridad de servidor correspondiente.  
   
-## <a name="remarks"></a>Comentarios  
- Información acerca de las entidades de base de datos está visible en el [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) vista de catálogo. Información acerca de los permisos de nivel de base de datos está visible en el [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) vista de catálogo.  
+## <a name="remarks"></a>Notas  
+ Puede ver la información sobre las entidades de seguridad de base de datos en la vista de catálogo [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Puede ver la información sobre los permisos de nivel de base de datos en la vista de catálogo [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md).  
   
 ## <a name="database-user-permissions"></a>Permisos de usuario de base de datos  
  Un usuario de base de datos es un elemento protegible de nivel de base de datos que contiene la base de datos que es su entidad primaria en la jerarquía de permisos. La mayoría de permisos limitados y específicos que se pueden conceder a un usuario de base de datos se muestran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.  
@@ -151,7 +151,7 @@ GRANT permission [ ,...n ]
 |ALTER|CONTROL|ALTER ANY APPLICATION ROLE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  El otorgante del permiso (o la entidad de seguridad especificada con la opción AS) debe tener el permiso con GRANT OPTION, o un permiso superior que implique el permiso que se va a conceder.  
   
  Si utiliza la opción AS, se aplican los siguientes requisitos adicionales.  
@@ -162,9 +162,9 @@ GRANT permission [ ,...n ]
 |Usuario de la base de datos asignado a un usuario de Windows|Permiso IMPERSONATE para el usuario, pertenencia al rol fijo de base de datos db_securityadmin, pertenencia al rol fijo de base de datos db_owner o pertenencia al rol fijo de servidor sysadmin.|  
 |Usuario de la base de datos asignado a un grupo de Windows|Pertenencia al grupo de Windows, pertenencia al rol fijo de base de datos db_securityadmin, pertenencia al rol fijo de base de datos db_owner o pertenencia al rol fijo de servidor sysadmin.|  
 |Usuario de la base de datos asignado a un certificado|Pertenencia al rol fijo de base de datos db_securityadmin, pertenencia al rol fijo de base de datos db_owner o pertenencia al rol fijo de servidor sysadmin.|  
-|Usuario de la base de datos asignado a una clave asimétrica|Pertenecer al rol de base de datos db_securityadminfixed, pertenencia al rol db_owner rol fijo de base de datos o pertenencia en el rol fijo de servidor sysadmin.|  
+|Usuario de la base de datos asignado a una clave asimétrica|Pertenencia al rol fijo de base de datos db_securityadmin, pertenencia al rol fijo de base de datos db_owner o pertenencia al rol fijo de servidor sysadmin.|  
 |Usuario de la base de datos no asignado a una entidad de seguridad del servidor|Permiso IMPERSONATE para el usuario, pertenencia al rol fijo de base de datos db_securityadmin, pertenencia al rol fijo de base de datos db_owner o pertenencia al rol fijo de servidor sysadmin.|  
-|Rol de base de datos|Modifique los permisos del rol, pertenencia al rol de base de datos db_securityadminfixed, pertenencia al rol fijo de base de datos db_owner o pertenencia al rol fijo de servidor sysadmin.|  
+|Rol de base de datos|Permiso ALTER para el rol, pertenencia al rol fijo de base de datos db_securityadmin, pertenencia al rol fijo de base de datos db_owner o pertenencia al rol fijo de servidor sysadmin.|  
 |Rol de aplicación|Permiso ALTER para el rol, pertenencia al rol fijo de base de datos db_securityadmin, pertenencia al rol fijo de base de datos db_owner o pertenencia al rol fijo de servidor sysadmin.|  
   
  Las entidades de seguridad que tienen el permiso CONTROL para un elemento protegible pueden conceder permisos para ese elemento.  
@@ -193,21 +193,21 @@ GO
 ### <a name="c-granting-impersonate-permission-on-a-user-to-an-application-role"></a>C. Conceder el permiso IMPERSONATE sobre un usuario a un rol de aplicación  
  En el siguiente ejemplo se concede el permiso `IMPERSONATE` para el usuario `HamithaL` al rol de aplicación `AdventureWorks2012` de `AccountsPayable17`.  
   
-**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 GRANT IMPERSONATE ON USER::HamithaL TO AccountsPayable17;  
 GO    
 ```  
   
-## <a name="see-also"></a>Vea también  
- [DENEGAR permisos de entidad de seguridad de base de datos &#40; Transact-SQL &#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)   
- [REVOCAR permisos de entidad de seguridad de base de datos &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [DENY &#40;permisos de entidad de seguridad de base de datos de Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)   
+ [REVOKE &#40;permisos de entidad de seguridad de base de datos de Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [Sys.database_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+ [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [Crear rol de aplicación &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [Crear rol &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

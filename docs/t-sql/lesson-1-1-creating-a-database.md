@@ -1,5 +1,5 @@
 ---
-title: Crear una base de datos (Tutorial) | Documentos de Microsoft
+title: Crear una base de datos (tutorial) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-1-1---creating-a-database"></a>Lección 1-1-crear una base de datos
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Como muchas [!INCLUDE[tsql](../includes/tsql-md.md)] instrucciones, la instrucción CREATE DATABASE tiene un parámetro requerido: el nombre de la base de datos. CREATE DATABASE también tiene muchos parámetros opcionales, como la ubicación de disco donde se desean colocar los archivos de la base de datos. Si se ejecuta CREATE DATABASE sin los parámetros opcionales, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa los valores predeterminados para muchos de estos parámetros. Este tutorial usa algunos de los parámetros de sintaxis opcionales.  
+# <a name="lesson-1-1---creating-a-database"></a>Lección 1-1: Crear una base de datos
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Como muchas instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)], la instrucción CREATE DATABASE tiene un parámetro obligatorio: el nombre de la base de datos. CREATE DATABASE también tiene muchos parámetros opcionales, como la ubicación de disco donde se desean colocar los archivos de la base de datos. Si se ejecuta CREATE DATABASE sin los parámetros opcionales, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa los valores predeterminados para muchos de estos parámetros. Este tutorial usa algunos de los parámetros de sintaxis opcionales.  
   
 ### <a name="to-create-a-database"></a>Para crear una base de datos  
   
@@ -52,7 +52,7 @@ Al crear una base de datos, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
 [Crear una tabla &#40;Tutorial&#41;](../t-sql/lesson-1-2-creating-a-table.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
   

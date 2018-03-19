@@ -1,5 +1,5 @@
 ---
-title: Sugerencias (Transact-SQL) | Documentos de Microsoft
+title: Sugerencias (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/25/2018
   Las sugerencias son opciones o estrategias especificadas para que el procesador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las aplique en instrucciones SELECT, INSERT, UPDATE o DELETE. Las sugerencias reemplazan a cualquier plan de ejecución que pueda seleccionar el optimizador de consultas para una consulta.  
   
 > [!CAUTION]  
->  Dado que la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] optimizador de consultas normalmente selecciona el mejor plan de ejecución para una consulta, se recomienda que \<las sugerencias join_hint >, \<query_hint >, y \<sugerenciatabla > se usa solo como último recurso por experimentados los programadores y administradores de base de datos.
+>  Puesto que el optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selecciona normalmente el mejor plan de ejecución para una consulta, se recomienda que las sugerencias \<join_hint>, \<query_hint> y \<table_hint> solamente se usen como último recurso y por parte de desarrolladores y administradores de bases de datos experimentados.
   
  En esta sección se describen las sugerencias siguientes:  
   

@@ -1,5 +1,5 @@
 ---
-title: "Seleccione (gráfico SQL) | Documentos de Microsoft"
+title: SELECT (SQL Graph) | Microsoft Docs
 ms.custom: 
 ms.date: 04/19/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Selecciona los datos de   
+  Selecciona datos de   
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,11 +44,11 @@ SELECT
 
 ## <a name="arguments"></a>Argumentos  
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
 
 ## <a name="examples"></a>Ejemplos  
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 

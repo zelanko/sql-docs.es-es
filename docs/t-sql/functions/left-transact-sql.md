@@ -49,20 +49,20 @@ LEFT ( character_expression , integer_expression )
   
 ## <a name="arguments"></a>Argumentos  
  *character_expression*  
- Es un [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de caracteres o datos binarios. *character_expression* puede ser una constante, variable o columna. *character_expression* puede ser de cualquier tipo de datos, excepto **texto** o **ntext**, que se pueda convertir implícitamente a **varchar** o  **nvarchar**. De lo contrario, utilice la [conversión](../../t-sql/functions/cast-and-convert-transact-sql.md) función para convertir explícitamente *character_expression*.  
+ Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de datos binarios o de caracteres. *character_expression* puede ser una constante, una variable o una columna. *character_expression* puede ser cualquier tipo de datos (excepto **text** o **ntext**) que se pueda convertir implícitamente a **varchar** o **nvarchar**. De lo contrario, use la función [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) para convertir *character_expression* explícitamente.  
   
  *integer_expression*  
- Es un entero positivo que especifica cuántos caracteres de la *character_expression* se devolverá. Si *integer_expression* es negativo, se devuelve un error. Si *integer_expression* es de tipo **bigint** y contiene un valor grande, *character_expression* debe ser de un tipo de datos de gran tamaño como **varchar (max)**.  
+ Es un entero positivo que especifica cuántos caracteres de *character_expression* se van a devolver. Si *integer_expression* es negativo, se devuelve un error. Si *integer_expression* es de tipo **bigint** y contiene un valor grande, *character_expression* debe ser de un tipo de datos de gran tamaño, como **varchar(max)**.  
   
- El *integer_expression* parámetro cuenta un carácter de suplente de UTF-16 como un solo carácter.  
+ El parámetro *integer_expression* cuenta un carácter suplente UTF 16 como un carácter.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- Devuelve **varchar** cuando *character_expression* es un tipo de datos de caracteres no Unicode.  
+ Devuelve **varchar** cuando *character_expression* es de un tipo de datos de caracteres no Unicode.  
   
- Devuelve **nvarchar** cuando *character_expression* es un tipo de datos de caracteres Unicode.  
+ Devuelve **nvarchar** cuando *character_expression* es de un tipo de datos de caracteres Unicode.  
   
-## <a name="remarks"></a>Comentarios  
- Al utilizar intercalaciones de SC, el *integer_expression* parámetro cuenta un par suplente de UTF-16 como un solo carácter. Para más información, consulte [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+## <a name="remarks"></a>Notas  
+ Al usar intercalaciones de SC, el parámetro *integer_expression* cuenta un par suplente UTF 16 como un carácter. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -93,7 +93,7 @@ ab
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-left-with-a-column"></a>C. Utilizar LEFT con una columna  
  En el ejemplo siguiente se devuelven los cinco caracteres situados más a la izquierda de cada nombre de producto.  
@@ -122,16 +122,16 @@ SELECT LEFT('abcdefg',2) FROM dbo.DimProduct;
 ab  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
  [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
  [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
  [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
  [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
  [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
- [CAST y CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Funciones de cadena &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funciones de cadena &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

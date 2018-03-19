@@ -1,5 +1,5 @@
 ---
-title: AsTextZM (tipo de datos geometry) | Documentos de Microsoft
+title: AsTextZM (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="astextzm-geometry-data-type"></a>AsTextZM (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve la representación de Open Geospatial Consortium (OGC) Well-Known Text (WKT) de una instancia de geometría ampliada con los **Z** (elevación) y **M** valores de (medida) pertenecientes a la instancia.
+Devuelve la representación Well-Known Text (WKT) de Open Geospatial Consortium (OGC) de una instancia de geometría ampliada con los valores **Z** (elevación) y **M** (medida) pertenecientes a la instancia.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,14 +46,14 @@ Devuelve la representación de Open Geospatial Consortium (OGC) Well-Known Text 
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **nvarchar (max)**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **nvarchar(max)**  
   
  Tipo de valor devuelto de CLR: **SqlChars**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se crea un `Point` instancia que contiene **Z** (elevación) y **M** valores de (medida). `STAsText()`selecciona los valores WKT, (1 2). `AsTextZM()` selecciona los mismos valores WKT y también devuelve los valores de **Z** y **M**, produciendo (1 2 3 4).  
+ En el ejemplo siguiente se crea una instancia de `Point` que contiene valores **Z** (elevación) y **M** (medida). `STAsText()` selecciona los valores WKT (1 2); `AsTextZM()` selecciona los mismos valores WKT y, asimismo, devuelve los valores de **Z** y **M**, lo que da como resultado (1 2 3 4).  
   
 ```  
 DECLARE @g geometry;  
@@ -62,10 +62,10 @@ SELECT @g.STAsText();
 SELECT @g.AsTextZM();  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Métodos extendidos en instancias de Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [M &#40; tipo de datos geometry &#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
- [Z &#40; tipo de datos geometry &#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
+## <a name="see-also"></a>Ver también  
+ [Métodos extendidos en instancias de geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+ [M &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
+ [Z &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
   
   
 

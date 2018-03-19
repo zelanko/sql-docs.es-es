@@ -1,5 +1,5 @@
 ---
-title: "Crear rol de aplicación (Transact-SQL) | Documentos de Microsoft"
+title: CREATE APPLICATION ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -56,25 +56,25 @@ CREATE APPLICATION ROLE application_role_name
  *application_role_name*  
  Especifica el nombre del rol de aplicación. Ninguna entidad de seguridad de la base de datos debe utilizar este nombre.  
   
- CONTRASEÑA **='***contraseña***'**  
- Especifica la contraseña que utilizarán los usuarios de la base de datos para activar el rol de aplicación. Debe utilizar siempre contraseñas seguras. *contraseña* debe cumplir los requisitos de directiva de contraseñas de Windows del equipo que ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ PASSWORD **='***password***'**  
+ Especifica la contraseña que utilizarán los usuarios de la base de datos para activar el rol de aplicación. Debe utilizar siempre contraseñas seguras. *password* debe cumplir los requisitos de la directiva de contraseñas de Windows del equipo que ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- DEFAULT_SCHEMA  **=**  *schema_name*  
- Especifica el primer esquema donde buscará el servidor cuando resuelva los nombres de objetos de este rol. Si DEFAULT_SCHEMA se deja sin definir, el rol de aplicación utilizará DBO como esquema predeterminado. *schema_name* puede ser un esquema que no existe en la base de datos.  
+ DEFAULT_SCHEMA **=***schema_name*  
+ Especifica el primer esquema donde buscará el servidor cuando resuelva los nombres de objetos de este rol. Si DEFAULT_SCHEMA se deja sin definir, el rol de aplicación utilizará DBO como esquema predeterminado. *schema_name* puede ser un esquema que no exista en la base de datos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 > [!IMPORTANT]  
 >  Al establecer las contraseñas de los roles de aplicación se comprueba la complejidad de la contraseña. Las aplicaciones que invocan roles de aplicación deben almacenar sus propias contraseñas. Las contraseñas de roles de aplicación deben almacenarse cifradas.  
   
- Roles de aplicación están visibles en el [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) vista de catálogo.  
+ Puede ver los roles de aplicación en la vista de catálogo [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
   
- Para obtener información sobre cómo usar las funciones de aplicación, consulte [Roles de aplicación](../../relational-databases/security/authentication-access/application-roles.md).  
+ Para saber más sobre cómo usar roles de aplicación, vea [Roles de aplicación](../../relational-databases/security/authentication-access/application-roles.md).  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER ANY APPLICATION ROLE en la base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -87,11 +87,11 @@ CREATE APPLICATION ROLE weekly_receipts
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Roles de aplicación](../../relational-databases/security/authentication-access/application-roles.md)   
- [sp_setapprole &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
- [ALTER APPLICATION ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-application-role-transact-sql.md)   
- [DROP APPLICATION ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
+ [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
+ [ALTER APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-application-role-transact-sql.md)   
+ [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
  [Directiva de contraseñas](../../relational-databases/security/password-policy.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

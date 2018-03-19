@@ -1,5 +1,5 @@
 ---
-title: FIRMA de DROP (Transact-SQL) | Documentos de Microsoft
+title: DROP SIGNATURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -56,19 +56,19 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Nombre_Del_Módulo*  
+ *module_name*  
  Es el nombre de un procedimiento almacenado, una función, un ensamblado o un desencadenador.  
   
- CERTIFICADO *cert_name*  
+ CERTIFICATE *cert_name*  
  Es el nombre de un certificado con el que está firmado el procedimiento almacenado, la función, el ensamblado o el desencadenador.  
   
- CLAVE ASIMÉTRICA *Asym_key_name*  
+ ASYMMETRIC KEY *Asym_key_name*  
  Es el nombre de una clave asimétrica con la que está firmado el procedimiento almacenado, la función, el ensamblado o el desencadenador.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Para obtener más información acerca de las firmas, vea la vista de catálogo sys.crypt_properties.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER para el objeto y el permiso CONTROL para el certificado o la clave asimétrica. Si una clave privada asociada está protegida por una contraseña, el usuario también debe tener la contraseña.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -81,8 +81,8 @@ DROP SIGNATURE FROM HumanResources.uspUpdateEmployeeLogin
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Sys.crypt_properties &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [Agregar firma &#40; Transact-SQL &#41;](../../t-sql/statements/add-signature-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
+ [ADD SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/add-signature-transact-sql.md)  
   
   

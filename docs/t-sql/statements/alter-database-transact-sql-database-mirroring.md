@@ -1,5 +1,5 @@
 ---
-title: "ALTER (Transact-SQL) de creación de reflejo de base de datos de base de datos | Documentos de Microsoft"
+title: "Creación de reflejo de la base de datos ALTER DATABASE (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-non-specified
@@ -31,19 +31,19 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="alter-database-transact-sql-database-mirroring"></a>Base de datos de ALTER DATABASE (Transact-SQL) de creación de reflejo 
+# <a name="alter-database-transact-sql-database-mirroring"></a>Creación de reflejo de la base de datos ALTER DATABASE (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en su lugar.  
   
- Controla la creación de reflejo de la base de datos. Los valores especificados con las opciones de creación de reflejo de la base de datos se aplican a las dos copias de la base de datos y a la sesión de creación de reflejo de la base de datos en conjunto. Solo un \<database_mirroring_option > se permite por instrucción ALTER DATABASE.  
+ Controla la creación de reflejo de la base de datos. Los valores especificados con las opciones de creación de reflejo de la base de datos se aplican a las dos copias de la base de datos y a la sesión de creación de reflejo de la base de datos en conjunto. Solo se permite una \<database_mirroring_option> por instrucción ALTER DATABASE.  
   
 > [!NOTE]  
->  Se recomienda que configuran la duplicación de base de datos durante las horas, porque la configuración puede afectar al rendimiento.  
+>  Es recomendable configurar la creación de reflejo de la base de datos durante las horas de menor actividad, ya que la configuración puede afectar al rendimiento.  
   
- Para obtener opciones de ALTER DATABASE, consulte [ALTER DATABASE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql.md). Para opciones de ALTER DATABASE SET, vea [ALTER DATABASE SET Options &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ Para más información sobre las opciones de ALTER DATABASE, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md). Para más información sobre las opciones de ALTER DATABASE SET, vea [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) (Opciones de ALTER DATABASE SET [Transact-SQL]).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -84,7 +84,7 @@ SET { <partner_option> | <witness_option> }
  PARTNER \<partner_option>  
  Controla las propiedades de la base de datos que definen los asociados de conmutación por error de una sesión de creación de reflejo de la base de datos y su comportamiento. Algunas opciones de SET PARTNER se pueden establecer en cualquier asociado; otras opciones se limitan al servidor principal o al servidor reflejado. Para obtener más información, vea las opciones de PARTNER especificadas a continuación. Una cláusula SET PARTNER afecta a ambas copias de la base de datos, con independencia del asociado en el que se especifica.  
   
- Para ejecutar una instrucción SET PARTNER, el valor de STATE de los extremos de ambos asociados debe ser STARTED. Además, debe tener en cuenta que el valor de ROLE del extremo de la creación de reflejo de la base de datos de cada instancia del servidor asociado debe establecerse en PARTNER o ALL. Para obtener información sobre cómo especificar un punto de conexión, vea [crear una base de datos de creación de reflejo de punto de conexión de autenticación de Windows &#40; Transact-SQL &#41; ](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md). Para conocer el rol y el estado del extremo de la creación de reflejo de la base de datos de una instancia del servidor, debe usar la siguiente instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] en dicha instancia:  
+ Para ejecutar una instrucción SET PARTNER, el valor de STATE de los extremos de ambos asociados debe ser STARTED. Además, debe tener en cuenta que el valor de ROLE del extremo de la creación de reflejo de la base de datos de cada instancia del servidor asociado debe establecerse en PARTNER o ALL. Para más información sobre cómo especificar un extremo, vea [Crear un extremo de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md). Para conocer el rol y el estado del extremo de la creación de reflejo de la base de datos de una instancia del servidor, debe usar la siguiente instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] en dicha instancia:  
   
 ```  
 SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints  
@@ -93,26 +93,26 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  **\<partner_option> ::=**  
   
 > [!NOTE]  
->  Solo un \<partner_option > se permite por cada cláusula SET PARTNER.  
+>  Solo se permite una opción \<partner_option> por cada cláusula SET PARTNER.  
   
  **'** *partner_server* **'**  
  Especifica la dirección de red del servidor de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para actuar como un asociado de conmutación por error en la nueva sesión de creación de reflejo de la base de datos. Cada sesión requiere dos asociados: uno empieza como servidor principal y el otro como servidor reflejado. Se recomienda que estos asociados residan en equipos distintos.  
   
- Esta opción se especifica una vez por sesión en cada asociado. Iniciar una sesión de creación de reflejo de la base de datos requiere dos ALTER DATABASE *base de datos* SET PARTNER **='***partner_server***'** instrucciones. El orden es relevante. En primer lugar, conéctese al servidor reflejado y especifique la instancia de servidor principal como *partner_server* (SET PARTNER **='***principal_server***'**). En segundo lugar, conéctese al servidor principal y especificar la instancia del servidor reflejado como *partner_server* (SET PARTNER **='***mirror_server***'**); Esto inicia una base de datos creación de reflejo de la sesión entre estos dos socios. Para obtener más información, vea [Configurar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
+ Esta opción se especifica una vez por sesión en cada asociado. El inicio de la creación de reflejo de la base de datos requiere dos instrucciones ALTER DATABASE *database* SET PARTNER **='***partner_server***'**. El orden es relevante. En primer lugar, conéctese al servidor reflejado y especifique la instancia del servidor principal como *partner_server* (SET PARTNER **='***principal_server***'**). Después, establezca la conexión con el servidor principal y especifique la instancia del servidor reflejado como *partner_server* (SET PARTNER **='***mirror_server***'**); de este modo se inicia una sesión de creación de reflejo de la base de datos entre estos dos asociados. Para obtener más información, vea [Configurar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
  El valor de *partner_server* es una dirección de red de servidor. Tiene la siguiente sintaxis:  
   
- TCP**://***\<system-address>***:***\<port>*  
+ TCP**://***\<dirección-del-sistema>***:***\<puerto>*  
   
  donde  
   
--   *\<dirección del sistema >* es una cadena, como un nombre de sistema, un nombre de dominio completo o una dirección IP, que identifica de forma inequívoca el sistema del equipo de destino.  
+-   *\<system-address>* es una cadena, como un nombre de sistema, un nombre de dominio completo o una dirección IP, que identifica sin ambigüedad el equipo de destino.  
   
--   *\<puerto >* es un número de puerto que está asociado con el extremo de reflejo de la instancia de servidor asociado.  
+-   *\<port>* es un número de puerto que está asociado al extremo de reflejo de la instancia del servidor asociado.  
   
  Para obtener más información, vea [Especificar una dirección de red de servidor &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
- En el ejemplo siguiente se muestra la SET PARTNER **='***partner_server***'** cláusula:  
+ En el siguiente ejemplo se muestra la cláusula SET PARTNER **='***partner_server***'**:  
   
 ```  
 'TCP://MYSERVER.mydomain.Adventure-Works.com:7777'  
@@ -124,7 +124,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  FAILOVER  
  Conmuta manualmente el servidor principal al servidor reflejado. Solo puede especificar FAILOVER en el servidor principal. Esta opción es válida solo si la configuración de SAFETY es FULL (valor predeterminado).  
   
- La opción de conmutación por error requiere **maestro** como el contexto de base de datos.  
+ La opción FAILOVER requiere **master** como contexto de base de datos.  
   
  FORCE_SERVICE_ALLOW_DATA_LOSS  
  Fuerza la aplicación del servicio de base de datos a la base de datos reflejada si se produce un error en el servidor principal con la base de datos en un estado no sincronizado o en un estado sincronizado cuando no se produce la conmutación automática por error.  
@@ -135,14 +135,14 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
   
 -   El servidor principal está inactivo.  
   
--   WITNESS está establecido en OFF o el testigo está conectado al servidor reflejado.  
+-   WITNESS se establece en OFF o el testigo está conectado al servidor reflejado.  
   
  Fuerce el servicio solo si es aceptable el riesgo de perder datos para restaurar el servicio en la base de datos inmediatamente.  
   
  Al forzar el servicio, se suspende la sesión, lo que conserva temporalmente todos los datos de la base de datos principal original. Una vez que el servidor principal original esté en funcionamiento y pueda comunicarse con el nuevo servidor principal, el administrador de la base de datos podrá reanudar el servicio. Cuando se reanuda la sesión, se pierden los registros no enviados y las actualizaciones correspondientes.  
   
  OFF  
- Quita una sesión de creación de reflejo de la base de datos, así como los reflejos de la base de datos. Puede especificar OFF en cualquier asociado. Para obtener información, sobre el impacto de quitar la creación de reflejo, vea [quitar creación de reflejo de base de datos &#40; SQL Server &#41; ](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
+ Quita una sesión de creación de reflejo de la base de datos, así como los reflejos de la base de datos. Puede especificar OFF en cualquier asociado. Para más información sobre las repercusiones de quitar la creación de reflejo, vea [Quitar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
   
  RESUME  
  Reanuda la sesión de creación de reflejo de la base de datos suspendida. Solo puede especificar RESUME en el servidor principal.  
@@ -150,7 +150,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  SAFETY { FULL | OFF }  
  Establece el nivel de seguridad de las transacciones. Solo puede especificar SAFETY en el servidor principal.  
   
- El valor predeterminado es FULL. Con la seguridad completa, la sesión de creación de reflejo de la base de datos se ejecuta sincrónicamente (en *modo de alta seguridad*). Si la seguridad está configurada en OFF, la sesión de creación de reflejo de la base de datos se ejecuta de forma asincrónica (en *modo de alto rendimiento*).  
+ El valor predeterminado es FULL. Si se usa seguridad total, la sesión de creación de reflejo de la base de datos se ejecuta de forma sincrónica (en *modo de alta seguridad*). Si SAFETY se establece en OFF, la sesión de creación de reflejo de la base de datos se ejecuta de forma asincrónica (en *modo de alto rendimiento*).  
   
  El comportamiento del modo de alta seguridad depende en parte del testigo, como se indica a continuación:  
   
@@ -170,7 +170,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
   
  Puede especificar SUSPEND en cualquier asociado.  
   
- Tiempo de espera *entero*  
+ TIMEOUT *integer*  
  Especifica el período de espera en segundos. El período de espera es el tiempo máximo durante el que una instancia de servidor espera hasta recibir un mensaje PING de otra instancia en la sesión de creación de reflejo de la base de datos, antes de considerar que la otra instancia está desconectada.  
   
  Solo puede especificar la opción TIMEOUT en el servidor principal. Si no especifica esta opción, el período equivale a 10 segundos de forma predeterminada. Si especifica 5 o más, el tiempo de espera se establece en el número de segundos especificado. Si especifica un tiempo de espera de 0 a 4 segundos, dicho tiempo de espera se establece automáticamente en 5 segundos.  
@@ -181,11 +181,11 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  Para más información, consulte [Possible Failures During Database Mirroring](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md).  
   
  WITNESS \<witness_option>  
- Controla las propiedades de base de datos que definen un testigo de creación de reflejo de la base de datos. La cláusula SET WITNESS afecta a ambas copias de la base de datos, pero solo puede especificar SET WITNESS en el servidor principal. Si se establece un testigo para una sesión, se requiere quórum para servir la base de datos, independientemente de la configuración de seguridad; Para obtener más información, consulte [quórum: cómo un testigo afecta a la base de datos de disponibilidad &#40; creación de reflejo de base de datos &#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Controla las propiedades de base de datos que definen un testigo de creación de reflejo de la base de datos. La cláusula SET WITNESS afecta a ambas copias de la base de datos, pero solo puede especificar SET WITNESS en el servidor principal. Si se establece un testigo para una sesión, se requiere quórum para servir a la base de datos, independientemente de la configuración de SAFETY; para más información, vea [Quórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
- Se recomienda que el testigo y los asociados de conmutación por error residan en equipos distintos. Para obtener información acerca del testigo, vea [testigo de creación de reflejo de base de datos](../../database-engine/database-mirroring/database-mirroring-witness.md).  
+ Se recomienda que el testigo y los asociados de conmutación por error residan en equipos distintos. Para información sobre el testigo, vea [Testigo de creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-witness.md).  
   
- Para ejecutar una instrucción SET WITNESS, el valor de STATE de los extremos de las instancias del servidor principal y del servidor testigo debe establecerse en STARTED. Además, debe tener en cuenta que el valor de ROLE del extremo de creación de reflejo de la base de datos de una instancia del servidor testigo debe establecerse en WITNESS u ALL. Para obtener información acerca de cómo especificar un punto de conexión, vea [extremo de creación de reflejo de la base de datos &#40; SQL Server &#41; ](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
+ Para ejecutar una instrucción SET WITNESS, el valor de STATE de los extremos de las instancias del servidor principal y del servidor testigo debe establecerse en STARTED. Además, debe tener en cuenta que el valor de ROLE del extremo de creación de reflejo de la base de datos de una instancia del servidor testigo debe establecerse en WITNESS u ALL. Para más información sobre cómo especificar un extremo, vea [Extremo de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
   
  Para conocer el rol y el estado del extremo de la creación de reflejo de la base de datos de una instancia del servidor, debe usar la siguiente instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] en dicha instancia:  
   
@@ -199,22 +199,22 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  **\<witness_option> ::=**  
   
 > [!NOTE]  
->  Solo un \<witness_option > se permite por cada cláusula SET WITNESS.  
+>  Solo se permite una opción \<witness_option> por cada cláusula SET WITNESS.  
   
  **'** *witness_server* **'**  
  Especifica una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] para que actúe como el servidor testigo para una sesión de creación de reflejo de la base de datos. Solo puede especificar instrucciones SET WITNESS en el servidor principal.  
   
- En un SET WITNESS **='***servidor_testigo***'** instrucción, la sintaxis de *servidor_testigo* es igual que la sintaxis de *partner_server*.  
+ En una instrucción SET WITNESS **='***witness_server***'**, *witness_server* equivale a la sintaxis de *partner_server*.  
   
  OFF  
  Quita el testigo de la sesión de creación de reflejo de la base de datos. Si se establece el testigo en OFF, se deshabilita la conmutación automática por error. Si la base de datos se establece en FULL SAFETY y el testigo se establece en OFF, un error del servidor reflejado hace que el servidor principal anule la disponibilidad de la base de datos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-creating-a-database-mirroring-session-with-a-witness"></a>A. Crear una sesión de creación de reflejo de la base de datos con un testigo  
- La configuración de la creación de reflejo de la base de datos con un testigo requiere configurar la seguridad y preparar la base de datos reflejada, además de usar ALTER DATABASE para configurar los asociados. Para obtener un ejemplo del proceso de completar la instalación, consulte [configuración de la base de datos de creación de reflejo &#40; SQL Server &#41; ](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
+ La configuración de la creación de reflejo de la base de datos con un testigo requiere configurar la seguridad y preparar la base de datos reflejada, además de usar ALTER DATABASE para configurar los asociados. Para obtener un ejemplo del proceso de configuración completo, vea [Configurar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
 ### <a name="b-manually-failing-over-a-database-mirroring-session"></a>B. Conmutación manual por error en una sesión de creación de reflejo de la base de datos  
  La conmutación manual por error se puede iniciar desde cualquier asociado de creación de reflejo de la base de datos. Antes de llevar a cabo la conmutación por error, debe comprobar si el servidor principal actual es realmente el servidor principal. Por ejemplo, para la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], ejecute la siguiente consulta en la instancia del servidor que crea que es el servidor principal actual:  
@@ -252,7 +252,7 @@ GO
   
      El valor actual de `mirroring_role_desc` es ahora `Mirror`.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  

@@ -34,13 +34,13 @@ ms.lasthandoff: 01/18/2018
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Divide la expresión de caracteres utilizando el separador especificado.  
+  Divide la expresión de caracteres usando el separador especificado.  
   
 > [!NOTE]  
->  El **STRING_SPLIT** función está disponible sólo en el nivel de compatibilidad 130. Si el nivel de compatibilidad de base de datos es inferior a 130, SQL Server no podrá encontrar ni ejecutar **STRING_SPLIT** (función). Puede cambiar un nivel de compatibilidad de la base de datos mediante el comando siguiente:  
+>  La función **STRING_SPLIT** solo está disponible en el nivel de compatibilidad 130. Si el nivel de compatibilidad de la base de datos es inferior a 130, SQL Server no podrá encontrar ni ejecutar la función **STRING_SPLIT**. Puede cambiar un nivel de compatibilidad de la base de datos mediante el comando siguiente:  
 > ALTER DATABASE DatabaseName SET COMPATIBILITY_LEVEL = 130  
 >   
->  Tenga en cuenta que el nivel de compatibilidad 120 podría ser predeterminada incluso en las nuevas bases de datos de SQL Azure.  
+>  Cabe mencionar que es posible que el nivel de compatibilidad 120 sea el valor predeterminado incluso en una base de datos nueva de Azure SQL Database.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,16 +52,16 @@ STRING_SPLIT ( string , separator )
   
 ## <a name="arguments"></a>Argumentos  
  *string*  
- Es un [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cualquier tipo de carácter (es decir, **nvarchar**, **varchar**, **nchar** o **char**).  
+ Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cualquier tipo de carácter (**nvarchar**, **varchar**, **nchar** o **char**).  
   
  *separator*  
- Es un carácter único [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cualquier tipo de caracteres (por ejemplo, **nvarchar(1)**, **varchar (1)**, **nchar (1)** o  **Char (1)**) que se utiliza como separador para cadenas concatenadas.  
+ Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de carácter único de cualquier tipo de caracteres (por ejemplo, **nvarchar(1)**, **varchar(1)**, **nchar(1)** o **char(1)**) que se usa como separador para cadenas concatenadas.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- Devuelve una tabla de una sola columna con fragmentos. El nombre de la columna es **valor**. Devuelve **nvarchar** si cualquiera de los argumentos de entrada son **nvarchar** o **nchar**. De lo contrario devuelve **varchar**. La longitud del tipo de valor devuelto es igual que la longitud del argumento de cadena.  
+ Devuelve una tabla de una sola columna con fragmentos. El nombre de la columna es **value**. Devuelve **nvarchar** si cualquiera de los argumentos de entrada es **nvarchar** o **nchar**. De lo contrario, devuelve **varchar**. La longitud del tipo de valor devuelto es igual a la longitud del argumento de cadena.  
   
-## <a name="remarks"></a>Comentarios  
- **STRING_SPLIT** toma una cadena que se debe dividir y el separador que se utilizará para dividir la cadena. Devuelve una tabla de una sola columna con subcadenas. Por ejemplo, la siguiente instrucción `SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');` con el carácter de espacio como separador, se devuelven después de la tabla de resultados:  
+## <a name="remarks"></a>Notas  
+ **STRING_SPLIT** toma una cadena que se debe dividir y el separador que se usará para dividirla. Devuelve una tabla de una sola columna con subcadenas. Por ejemplo, la siguiente instrucción `SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');`, en la que se usa el carácter de espacio como separador, devuelve la siguiente tabla de resultados:  
   
 |value|  
 |-----------|  
@@ -69,16 +69,16 @@ STRING_SPLIT ( string , separator )
 |ipsum|  
 |dolor|  
 |sit|  
-|AME.|  
+|amet.|  
   
- Si la cadena de entrada es **NULL**, **STRING_SPLIT** función con valores de tabla devuelve una tabla vacía.  
+ Si la cadena de entrada es **NULL**, la función con valores de tabla **STRING_SPLIT** devuelve una tabla vacía.  
   
- **STRING_SPLIT** requiere al menos el modo de compatibilidad 130.  
+ **STRING_SPLIT** requiere el modo de compatibilidad 130 como mínimo.  
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-split-comma-separated-value-string"></a>A. Separada por comas de división de cadena del valor  
- Analizar una lista separada por comas de valores y devuelven todos los tokens no está vacío:  
+### <a name="a-split-comma-separated-value-string"></a>A. Dividir una cadena de valores separados por coma  
+ Se analiza una lista de valores separados por coma y se devuelven todos los tokens que no están vacíos:  
   
 ```  
   
@@ -90,18 +90,18 @@ WHERE RTRIM(value) <> '';
   
 ```  
   
- STRING_SPLIT devolverá una cadena vacía si no hay nada entre separador. Condición RTRIM(value) <> '' quitará tokens vacíos.  
+ STRING_SPLIT devolverá una cadena vacía si no hay nada entre el separador. La condición "RTRIM(value) <>" quitará los tokens vacíos.  
   
-### <a name="b-split-comma-separated-value-string-in-a-column"></a>B. Separada por comas de división de cadena del valor de una columna  
- Tabla Product tiene una columna con lista separadas por comas de etiquetas que se muestra en el ejemplo siguiente:  
+### <a name="b-split-comma-separated-value-string-in-a-column"></a>B. Dividir una cadena de valores separados por coma en una columna  
+ La tabla Product tiene una columna con una lista de etiquetas separadas por comas que se muestran en el siguiente ejemplo:  
   
-|productId|Nombre|Etiquetas|  
+|ProductId|Nombre|Etiquetas|  
 |---------------|----------|----------|  
-|1|Guantes un dedo completo|ropa, road, touring bike|  
-|2|Los auriculares con LL|bicicleta|  
-|3|HL Mountain Frame|Bike, mountain|  
+|1|Guantes|clothing,road,touring,bike|  
+|2|Auriculares LL|bike|  
+|3|HL Mountain Frame|bike,mountain|  
   
- La consulta siguiente transforma cada lista de etiquetas y los combina con la fila original:  
+ Con la siguiente consulta se transforma cada lista de etiquetas y las combina con la fila original:  
   
 ```  
 SELECT ProductId, Name, value  
@@ -111,18 +111,18 @@ FROM Product
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|productId|Nombre|value|  
+|ProductId|Nombre|value|  
 |---------------|----------|-----------|  
-|1|Guantes un dedo completo|ropa|  
-|1|Guantes un dedo completo|carretera|  
-|1|Guantes un dedo completo|Touring|  
-|1|Guantes un dedo completo|bicicleta|  
-|2|Los auriculares con LL|bicicleta|  
-|3|HL Mountain Frame|bicicleta|  
-|3|HL Mountain Frame|montaña|  
+|1|Guantes|clothing|  
+|1|Guantes|road|  
+|1|Guantes|touring|  
+|1|Guantes|bike|  
+|2|Auriculares LL|bike|  
+|3|HL Mountain Frame|bike|  
+|3|HL Mountain Frame|mountain|  
   
 ### <a name="c-aggregation-by-values"></a>C. Agregación por valores  
- Los usuarios deben crear un informe que muestra el número de productos por cada etiqueta, ordenadas por número de productos y para filtrar solo las etiquetas con más de 2 productos.  
+ Los usuarios deben crear un informe que muestre el número de productos por etiqueta, ordenadas por número de productos, y filtrar solo las etiquetas con más de dos productos.  
   
 ```  
 SELECT value as tag, COUNT(*) AS [Number of articles]  
@@ -133,10 +133,10 @@ HAVING COUNT(*) > 2
 ORDER BY COUNT(*) DESC;  
 ```  
   
-### <a name="d-search-by-tag-value"></a>D. Buscar por su valor de etiqueta  
- Los programadores deben crear consultas que busquen artículos por palabras clave. Puede usar los siguientes consultas:  
+### <a name="d-search-by-tag-value"></a>D. Buscar por el valor de tabla  
+ Los desarrolladores deben crear consultas que hallen artículos a partir de palabras clave. Pueden usar las siguientes consultas:  
   
- Para buscar los productos con una sola etiqueta (ropa):  
+ Para encontrar productos con una sola etiqueta (clothing):  
   
 ```  
 SELECT ProductId, Name, Tags  
@@ -144,7 +144,7 @@ FROM Product
 WHERE 'clothing' IN (SELECT value FROM STRING_SPLIT(Tags, ','));  
 ```  
   
- Buscar productos con dos etiquetas especificados (ropa y carretera):  
+ Para encontrar productos con dos etiquetas especificadas (clothing y road):  
   
 ```  
   
@@ -155,8 +155,8 @@ WHERE EXISTS (SELECT *
     WHERE value IN ('clothing', 'road');  
 ```  
   
-### <a name="e-find-rows-by-list-of-values"></a>E. Buscar filas por lista de valores  
- Los desarrolladores deben crear una consulta que busca artículos mediante una lista de identificadores. Puede usar la consulta siguiente:  
+### <a name="e-find-rows-by-list-of-values"></a>E. Encontrar filas por la lista de valores  
+ Los desarrolladores deben crear una consulta que halle artículos a partir de una lista de identificadores. Pueden usar la siguiente consulta:  
   
 ```  
 SELECT ProductId, Name, Tags  
@@ -165,7 +165,7 @@ JOIN STRING_SPLIT('1,2,3',',')
     ON value = ProductId;  
 ```  
   
- Se trata de reemplazo para antipatrón comunes como la creación de una cadena SQL dinámica de nivel de aplicación o [!INCLUDE[tsql](../../includes/tsql-md.md)], o mediante LIKE (operador):  
+ Se trata de una forma de reemplazar el uso habitual de patrones poco recomendables, como la creación de una cadena SQL dinámica en el nivel de aplicación o [!INCLUDE[tsql](../../includes/tsql-md.md)], o usar el operador LIKE:  
   
 ```  
 SELECT ProductId, Name, Tags  
@@ -173,13 +173,13 @@ FROM Product
 WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
  [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
  [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
  [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
  [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
  [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
- [Funciones de cadena &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [Funciones de cadena &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   

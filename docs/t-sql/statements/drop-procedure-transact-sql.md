@@ -1,5 +1,5 @@
 ---
-title: DROP PROCEDURE (Transact-SQL) | Documentos de Microsoft
+title: DROP PROCEDURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -60,27 +60,27 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *IF EXISTE*  
+ *IF EXISTS*  
  **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Quita condicionalmente el procedimiento solamente si ya existe.  
+ Quita el procedimiento condicionalmente solo si ya existe.  
   
  *schema_name*  
  El nombre del esquema al que pertenece el procedimiento. No se puede especificar un nombre de servidor o un nombre de base de datos.  
   
- *procedimiento*  
- Nombre del procedimiento almacenado o grupo de procedimientos almacenados que se van a quitar. No se pueden quitar procedimientos individuales dentro de un grupo de procedimiento numerado; se quita el grupo de procedimientos completo.  
+ *procedure*  
+ Nombre del procedimiento almacenado o grupo de procedimientos almacenados que se van a quitar. No se pueden quitar procedimientos concretos de un grupo de procedimientos numerados, ya que de este modo se quita el grupo de procedimientos completo.  
   
 ## <a name="best-practices"></a>Procedimientos recomendados  
- Antes de quitar un procedimiento almacenado, compruebe los objetos dependientes y modifique estos objetos como corresponda. La acción de quitar un procedimiento almacenado puede hacer que los objetos dependientes y los scripts sufran errores cuando estos objetos no están actualizados. Para obtener más información, vea [ver las dependencias de un procedimiento almacenado](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)  
+ Antes de quitar un procedimiento almacenado, compruebe los objetos dependientes y modifique estos objetos como corresponda. La acción de quitar un procedimiento almacenado puede hacer que los objetos dependientes y los scripts sufran errores cuando estos objetos no están actualizados. Para más información, vea [Ver las dependencias de un procedimiento almacenado](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md).  
   
 ## <a name="metadata"></a>Metadatos  
- Para mostrar una lista de los procedimientos existentes, consulte el **sys.objects** vista de catálogo. Para mostrar la definición del procedimiento, consulte la **sys.sql_modules** vista de catálogo.  
+ Para consultar una lista de procedimientos existentes, vea la vista de catálogo **sys.objects**. Para consultar la definición del procedimiento, vea la vista de catálogo **sys.sql_modules**.  
   
 ## <a name="security"></a>Seguridad  
   
-### <a name="permissions"></a>Permissions  
- Requiere **CONTROL** permiso en el procedimiento, o **ALTER** permiso en el esquema al que pertenece el procedimiento o la pertenencia a la **db_ddladmin** rol fijo de servidor .  
+### <a name="permissions"></a>Permisos  
+ Se necesita el permiso **CONTROL** en el procedimiento o el permiso **ALTER** en el esquema al que corresponde el procedimiento, o la pertenencia al rol fijo de servidor **db_ddladmin**.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se quita el procedimiento almacenado `dbo.uspMyProc` de la base de datos actual.  
@@ -96,7 +96,7 @@ GO
 DROP PROCEDURE dbo.uspGetSalesbyMonth, dbo.uspUpdateSalesQuotes, dbo.uspGetSalesByYear;  
 ```  
   
- En el ejemplo siguiente se quita el `dbo.uspMyProc` procedimiento almacenado si existe, pero no se producirá un error si el procedimiento no existe. Esta sintaxis es nueva en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+ En este ejemplo se quita el procedimiento almacenado `dbo.uspMyProc`, si existe, pero no se produce un error si el procedimiento no existe. Esta sintaxis es nueva en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
 ```  
 DROP PROCEDURE IF EXISTS dbo.uspMyProc;  
@@ -104,10 +104,10 @@ GO
 ```  
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
- [Sys.Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [Eliminar un procedimiento almacenado](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)  
   

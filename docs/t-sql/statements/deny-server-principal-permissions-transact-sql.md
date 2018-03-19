@@ -1,5 +1,5 @@
 ---
-title: DENEGAR permisos de entidad de seguridad de servidor (Transact-SQL) | Documentos de Microsoft
+title: DENY (permisos de entidad de seguridad de servidor de Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -63,19 +63,19 @@ DENY permission [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permiso*  
+ *permission*  
  Especifica un permiso que se puede denegar en un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
- Inicio de sesión **::** *SQL_Server_login*  
- Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el que se deniega el permiso. El calificador de ámbito (**::**) es necesario.  
+ LOGIN **::** *SQL_Server_login*  
+ Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el que se deniega el permiso. Se necesita el calificador de ámbito (**::**).  
   
- ROL de servidor **::** *server_role*  
- Especifica el rol de servidor para el que se deniega el permiso. El calificador de ámbito (**::**) es necesario.  
+ SERVER ROLE **::** *server_role*  
+ Especifica el rol de servidor para el que se deniega el permiso. Se necesita el calificador de ámbito (**::**).  
   
- PARA \<entidadseguridadservidor >  
+ TO \<server_principal>  
  Especifica el rol de servidor o el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el que se va a conceder el permiso.  
   
- PARA *SQL_Server_login*  
+ TO *SQL_Server_login*  
  Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el que se va a denegar el permiso.  
   
  *SQL_Server_login*  
@@ -99,12 +99,12 @@ DENY permission [ ,...n ] }
  AS *SQL_Server_login*  
  Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del que la entidad de seguridad que ejecuta esta consulta deriva su derecho de denegar el permiso.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Los permisos del ámbito del servidor solamente pueden denegarse si la base de datos actual es maestra.  
   
- Información acerca de los permisos de servidor está disponible en la [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) vista de catálogo. Información acerca de las entidades de seguridad de servidor está disponible en la [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) vista de catálogo.  
+ Puede ver la información acerca de los permisos de servidor en la vista de catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md). Puede ver la información acerca de las entidades de seguridad de servidor en la vista de catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
- Se produce un error en la instrucción DENY si no se especifica CASCADE al denegar un permiso a una entidad de seguridad que se concedió dicho permiso con GRANT OPTION.  
+ Se produce un error en la instrucción DENY si no se especifica CASCADE al denegar un permiso a una entidad de seguridad a la que se concedió dicho permiso con GRANT OPTION.  
   
  Los roles de servidor y los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son protegibles en el nivel de servidor. La mayoría de permisos limitados y específicos que se pueden denegar para un rol de servidor o un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se muestran en la siguiente tabla, junto con los permisos más generales que los incluyen por implicación.  
   
@@ -115,7 +115,7 @@ DENY permission [ ,...n ] }
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |ALTER|CONTROL|ALTER ANY LOGIN<br /><br /> ALTER ANY SERVER ROLE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para los inicios de sesión, se necesita el permiso CONTROL en el inicio de sesión o el permiso ALTER ANY LOGIN en el servidor.  
   
  Para los roles de servidor, se necesita el permiso CONTROL en el rol de servidor o el permiso ALTER ANY SERVER ROLE en el servidor.  
@@ -123,7 +123,7 @@ DENY permission [ ,...n ] }
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-denying-impersonate-permission-on-a-login"></a>A. Denegar el permiso IMPERSONATE en un inicio de sesión  
- El siguiente ejemplo se deniega `IMPERSONATE` permiso en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión `WanidaBenshoof` a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión creado por el usuario de Windows `AdvWorks\YoonM`.  
+ En el siguiente ejemplo se deniega el permiso `IMPERSONATE` para el inicio de sesión `WanidaBenshoof` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creado desde el usuario de Windows `AdvWorks\YoonM`.  
   
 ```  
 USE master;  
@@ -150,7 +150,7 @@ DENY VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;
 GO   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [GRANT &#40;permisos de entidad de seguridad de servidor de Transact-SQL&#41;](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)   

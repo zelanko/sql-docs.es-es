@@ -1,5 +1,5 @@
 ---
-title: "QUITAR un proveedor de servicios CRIPTOGRÁFICO (Transact-SQL) | Documentos de Microsoft"
+title: DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -46,17 +46,17 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *NombreProveedor*  
+ *provider_name*  
  Es el nombre del proveedor de Administración extensible de claves.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Para eliminar un proveedor de Administración extensible de claves (EKM), se deben detener todas las sesiones que utilizan el proveedor.  
   
  Un proveedor de EKM se puede quitar únicamente si no existe ninguna credencial asignada a él.  
   
  Si hay claves asignadas a un proveedor de EKM al quitarlo, los GUID para las claves siguen almacenados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si después se crea un proveedor con los mismos GUID de clave, se reutilizarán las claves.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL para la clave simétrica.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -73,7 +73,7 @@ DROP CRYPTOGRAPHIC PROVIDER SecurityProvider;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Administración extensible de claves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [ALTER CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-cryptographic-provider-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: SYSDATETIME (Transact-SQL) | Documentos de Microsoft
+title: SYSDATETIME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -45,12 +45,12 @@ ms.lasthandoff: 11/21/2017
 # <a name="sysdatetime-transact-sql"></a>SYSDATETIME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Devuelve un **datetime2(7)** valor que contiene la fecha y hora del equipo en el que la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está ejecutando.  
+  Devuelve un valor **datetime2(7)** que contiene la fecha y hora del equipo en el que la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se está ejecutando.  
   
 > [!NOTE]  
 >  SYSDATETIME y SYSUTCDATETIME tienen más precisión de fracciones de segundo que GETDATE y GETUTCDATE. SYSDATETIMEOFFSET incluye el ajuste de zona horaria del sistema. SYSDATETIME, SYSUTCDATETIME y SYSDATETIMEOFFSET pueden asignarse a una variable de cualquier tipo de fecha y hora.  
   
- Para obtener información general de todos los [!INCLUDE[tsql](../../includes/tsql-md.md)] tipos de datos de fecha y hora y funciones, vea [funciones y tipos de datos de hora y fecha &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ Para ver información general sobre todos los tipos de datos y funciones de fecha y hora de [!INCLUDE[tsql](../../includes/tsql-md.md)], vea [Tipos de datos y funciones de fecha y hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,18 +63,18 @@ SYSDATETIME ( )
 ## <a name="return-type"></a>Tipo devuelto  
  **datetime2(7)**  
   
-## <a name="remarks"></a>Comentarios  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]las instrucciones pueden hacer referencia a SYSDATETIME en cualquier lugar pueden hacer referencia a un **datetime2(7)** expresión.  
+## <a name="remarks"></a>Notas  
+ Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] pueden hacer referencia a SYSDATETIME en cualquier punto desde el que puedan hacer referencia a una expresión **datetime2(7)**.  
   
  SYSDATETIME es una función no determinista. Las vistas y las expresiones que hacen referencia a esta función en una columna no se pueden indizar.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Obtiene los valores de fecha y hora mediante la API de Windows GetSystemTimeAsFileTime(). La exactitud depende del hardware del equipo y de la versión de Windows en las que la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se esté ejecutando. La precisión de esta API se fija en 100 nanosegundos. La precisión se puede determinar mediante la API de Windows GetSystemTimeAdjustment().  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] obtiene los valores de fecha y hora usando la API de Windows GetSystemTimeAsFileTime(). La exactitud depende del hardware del equipo y de la versión de Windows en las que la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se esté ejecutando. La precisión de esta API se fija en 100 nanosegundos. La precisión se puede determinar por medio de la API de Windows GetSystemTimeAdjustment().  
   
 ## <a name="examples"></a>Ejemplos  
  Los ejemplos siguientes usan las seis funciones de sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que devuelven fecha y hora actuales para devolver la fecha, la hora o ambas. Los valores se devuelven en serie; por consiguiente, sus fracciones de segundo podrían ser diferentes.  
   
-### <a name="a-getting-the-current-system-date-and-time"></a>A. Obtener la fecha actual del sistema y la hora  
+### <a name="a-getting-the-current-system-date-and-time"></a>A. Obtener la fecha y hora actuales del sistema  
   
 ```  
 SELECT SYSDATETIME()  
@@ -126,9 +126,9 @@ GETUTCDATE()       20:18:45.3470000
 */  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-getting-the-current-system-date-and-time"></a>D: obtener la fecha actual del sistema y la hora  
+### <a name="d-getting-the-current-system-date-and-time"></a>D. Obtener la fecha y hora actuales del sistema  
   
 ```  
 SELECT SYSDATETIME();  
@@ -141,9 +141,9 @@ SELECT SYSDATETIME();
 7/20/2013 2:49:59 PM
 ```  
   
-## <a name="see-also"></a>Vea también  
- [CAST y CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [Datos de fecha y hora funciones y tipos de &#40; Transact-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [Tipos de datos y funciones de fecha y hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   
   
 

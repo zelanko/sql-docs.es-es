@@ -1,5 +1,5 @@
 ---
-title: FORMATO (Transact-SQL) | Documentos de Microsoft
+title: FORMAT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
@@ -49,48 +49,48 @@ FORMAT ( value, format [, culture ] )
  Expresión de un tipo de datos compatible a la que se va a dar formato. Para obtener una lista de tipos válidos, vea la tabla de la sección Comentarios.  
   
  *format*  
- **nvarchar** modelo de formato.  
+ Patrón de formato **nvarchar**.  
   
- El *formato* argumento debe contener una cadena de formato de .NET Framework válida, como una cadena de formato estándar (por ejemplo, "C" o "D") o como un modelo de caracteres personalizados para las fechas y los valores numéricos (por ejemplo, "DD de MMMM, aaaa (dddd)") . No se admite el formato compuesto. Para obtener una explicación completa de estos modelos de formato, consulte la documentación de .NET Framework en la cadena de formato en general, fechas personalizado y formatos de hora y formatos de número personalizados. Un buen punto de partida es el tema "[aplicar formato a tipos](http://go.microsoft.com/fwlink/?LinkId=211776)."  
+ El argumento *format* debe contener una cadena de formato de .NET Framework válida, ya sea como una cadena de formato estándar (por ejemplo, "C" o "D") o como un modelo de caracteres personalizados para los valores de fecha y numéricos (por ejemplo, "DD de MMMM, aaaa (dddd)"). No se admite el formato compuesto. Para obtener una explicación completa de estos modelos de formato, vea la documentación de .NET Framework sobre el formato de cadena en general, los formatos de fecha y hora personalizados, y los formatos de número personalizados. Un buen punto de partida es el tema "[Formatting Types](http://go.microsoft.com/fwlink/?LinkId=211776)" (Tipos de formato).  
   
  *culture*  
- Opcional **nvarchar** argumento especifica una referencia cultural.  
+ Argumento opcional de tipo **nvarchar** que especifica una referencia cultural.  
   
- Si el *referencia cultural* no se proporciona un argumento, se utiliza el idioma de la sesión actual. Este idioma se establece implícitamente, o explícitamente mediante la instrucción SET LANGUAGE. *referencia cultural* acepta cualquier referencia cultural compatible con .NET Framework como argumento; no se limita a los idiomas admitidos explícitamente por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si el *referencia cultural* argumento no es válido, FORMAT producirá un error.  
+ Si no se proporciona el argumento *culture*, se usará el idioma de la sesión actual. Este idioma se establece implícitamente, o explícitamente mediante la instrucción SET LANGUAGE. *culture* acepta como argumento cualquier referencia cultural compatible con .NET Framework; no se limita a los idiomas admitidos explícitamente por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si el argumento *culture* no es válido, FORMAT desencadena un error.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **nvarchar** o null  
   
- La longitud del valor devuelto viene determinada por la *formato*.  
+ La longitud del valor devuelto viene determinada por *format*.  
   
-## <a name="remarks"></a>Comentarios  
- FORMAT devuelve NULL para los errores distintos de un *referencia cultural* que no es *válido*. Por ejemplo, se devuelve NULL si el valor especificado en *formato* no es válido.  
+## <a name="remarks"></a>Notas  
+ FORMAT devuelve NULL para los errores distintos de *culture* que no son *válidos*. Por ejemplo, se devuelve NULL si el valor especificado en *format* no es válido.  
  
- La función de formato es no determinista.   
+ La función FORMAT es no determinista.   
   
- FORMATO se basa en la presencia del .NET Framework Common Language Runtime (CLR).  
+ FORMAT se basa en la presencia de Common Language Runtime (CLR) de .NET Framework.  
   
- Esta función no puede ser remota, ya que depende de la presencia de CLR. Comunicación remota de una función que requiere el CLR, podría producirse un error en el servidor remoto.  
+ Esta función no se puede enviar de forma remota puesto que depende de la presencia del CLR. El envío remoto de una función que necesita CLR produciría un error en el servidor remoto.  
   
- FORMATO se basa en formato reglas que dictan que deben convertirse dos puntos y los períodos CLR. Por lo tanto, cuando la cadena de formato (segundo parámetro) contiene un coma o punto, los dos puntos o período deben convertirse con barra diagonal inversa cuando un valor de entrada (primer parámetro) es de la **tiempo** tipo de datos. Vea [formatoD.con tipos de datos de tiempo](#ExampleD).  
+ FORMAT se basa en las reglas de formato de CLR, que dictan que los signos de punto y de dos puntos deben incluir caracteres de escape. Por tanto, cuando la cadena de formato (segundo parámetro) contiene un signo de punto o de dos puntos, estos deben incluir caracteres de escape, como una barra diagonal inversa, cuando un valor de entrada (primer parámetro) es del tipo de datos **time**. Vea [D. FORMAT con tipos de datos de tiempo](#ExampleD).  
   
- En la tabla siguiente se enumera los tipos de datos aceptables para el *valor* argumento junto con sus tipos equivalentes de asignación de .NET Framework.  
+ En esta tabla se muestran los tipos de datos aceptables para el argumento *value*, junto con sus tipos equivalentes de asignación de .NET Framework.  
   
 |Categoría|Tipo|Tipo de .NET|  
 |--------------|----------|---------------|  
 |Numérico|bigint|Int64|  
-|Numérico|int|Int32|  
-|Numérico|smallint|Int16|  
-|Numérico|tinyint|Byte|  
+|Numérico|INT|Int32|  
+|Numérico|SMALLINT|Int16|  
+|Numérico|TINYINT|Byte|  
 |Numérico|decimal|SqlDecimal|  
-|Numérico|numeric|SqlDecimal|  
-|Numérico|float|Doble|  
-|Numérico|real|Único|  
-|Numérico|smallmoney|Decimal|  
+|Numérico|NUMERIC|SqlDecimal|  
+|Numérico|FLOAT|Doble|  
+|Numérico|REAL|Único|  
+|Numérico|SMALLMONEY|Decimal|  
 |Numérico|money|Decimal|  
-|Fecha y hora|date|DateTime|  
+|Fecha y hora|Date|DateTime|  
 |Fecha y hora|time|Timespan|  
-|Fecha y hora|datetime|DateTime|  
+|Fecha y hora|DATETIME|DateTime|  
 |Fecha y hora|smalldatetime|DateTime|  
 |Fecha y hora|datetime2|DateTime|  
 |Fecha y hora|datetimeoffset|DateTimeOffset|  
@@ -130,7 +130,7 @@ Saturday, October 01, 2011   01 October 2011               Samstag, 1. Oktober 2
 ```  
   
 ### <a name="b-format-with-custom-formatting-strings"></a>B. FORMAT con cadenas de formato personalizado  
- En el ejemplo siguiente se muestran valores numéricos de formato especificando un formato personalizado. En el ejemplo se da por supuesto que la fecha actual es el 27 de septiembre de 2012. Para obtener más información sobre estos y otros formatos personalizados, vea [cadenas de formato numérico personalizado](http://msdn.microsoft.com/library/0c899ak8.aspx).  
+ En el ejemplo siguiente se muestran valores numéricos de formato especificando un formato personalizado. En el ejemplo se da por supuesto que la fecha actual es el 27 de septiembre de 2012. Para más información sobre estos y otros formatos personalizados, vea [Cadenas con formato numérico personalizado](http://msdn.microsoft.com/library/0c899ak8.aspx).  
   
 ```sql  
 DECLARE @d DATETIME = GETDATE();  
@@ -149,7 +149,7 @@ DateTime Result  Custom Number Result
 ```  
   
 ### <a name="c-format-with-numeric-types"></a>C. FORMAT con tipos numéricos  
- En el ejemplo siguiente se devuelve 5 filas de la **Sales.CurrencyRate** tabla el [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de datos. La columna **EndOfDateRate** se almacena como tipo **dinero** en la tabla. En este ejemplo, la columna se devuelve sin formato y después con formato especificando el formato Number de .NET, el formato General y los tipos de formato Currency. Para obtener más información sobre estos y otros formatos numéricos, vea [cadenas de formato numérico estándar](http://msdn.microsoft.com/library/dwhawy9k.aspx).  
+ En este ejemplo se devuelven 5 filas de la tabla **Sales.CurrencyRate** de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. La columna **EndOfDateRate** se almacena como el tipo **money** en la tabla. En este ejemplo, la columna se devuelve sin formato y después con formato especificando el formato Number de .NET, el formato General y los tipos de formato Currency. Para más información sobre estos y otros formatos numéricos, vea [Cadenas con formato numérico estándar](http://msdn.microsoft.com/library/dwhawy9k.aspx).  
   
 ```sql  
 SELECT TOP(5)CurrencyRateID, EndOfDayRate  
@@ -199,23 +199,23 @@ CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format
 ```  
   
 ###  <a name="ExampleD"></a> D. FORMAT con tipos de datos de tiempo  
- FORMAT devuelve NULL en estos casos porque `.` y `:` sin escape.  
+ FORMAT devuelve NULL en estos casos porque `.` y `:` no incluyen caracteres de escape.  
   
 ```sql  
 SELECT FORMAT(cast('07:35' as time), N'hh.mm');   --> returns NULL  
 SELECT FORMAT(cast('07:35' as time), N'hh:mm');   --> returns NULL  
 ```  
   
- Format devuelve una cadena con formato porque la `.` y `:` son caracteres de escape.  
+ FORMAT devuelve una cadena con formato porque `.` y `:` incluyen caracteres de escape.  
   
 ```sql  
 SELECT FORMAT(cast('07:35' as time), N'hh\.mm');  --> returns 07.35  
 SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
  [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
- [Funciones de cadena &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [Funciones de cadena &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   

@@ -1,5 +1,5 @@
 ---
-title: '@@TIMETICKS (Transact-SQL) | Documentos de Microsoft'
+title: '@@TIMETICKS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipos devueltos  
  **integer**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La cantidad de tiempo por tic depende de cada equipo. Cada tic del sistema operativo dura 31,25 milisegundos o un treintaidosavo de segundo.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/21/2017
 SELECT @@TIMETICKS AS 'Time Ticks';  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Funciones estadísticas del sistema &#40;Transact-SQL&#41;&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [Funciones estadísticas del sistema &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

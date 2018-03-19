@@ -1,5 +1,5 @@
 ---
-title: Almacenamientos de datos paralelo y de datos de SQL Azure Perms REVOKE denegar GRANT | Documentos de Microsoft
+title: Permisos GRANT, DENY y REVOKE en Azure SQL Data Warehouse y Almacenamiento de datos paralelos | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -26,22 +26,22 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Permisos: GRANT, DENY y REVOKE (almacenamiento de datos SQL Azure, almacenamiento de datos en paralelo)
+# <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Permisos: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Almacenamiento de datos paralelos)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Use [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **GRANT** y **DENY** instrucciones para conceder o denegar un permiso (como **actualización**) en un elemento protegible (por ejemplo, una base de datos, tabla, vista etcetera.) para una entidad de seguridad (un inicio de sesión, un usuario de base de datos o un rol de base de datos). Use **REVOCAR** para quitar la concesión o denegación de un permiso.  
+  Use las instrucciones **GRANT** y **DENY** de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] para conceder o denegar un permiso (como **UPDATE**) en un elemento protegible (por ejemplo, una base de datos, una tabla, una vista, etc.) a una entidad de seguridad (un inicio de sesión, un usuario de base de datos o un rol de base de datos). Use **REVOKE** para quitar la concesión o la denegación de un permiso.  
   
- Permisos de nivel de servidor se aplican a los inicios de sesión. Permisos de nivel de base de datos se aplican a los usuarios de base de datos y roles de base de datos.  
+ Los permisos de nivel de servidor se aplican a los inicios de sesión. Los permisos de nivel de base de datos se aplican a los usuarios de base de datos y roles de base de datos.  
   
- Para ver qué permisos han sido concedidos y denegados, consulte las vistas de sys.server_permissions y sys.database_permissions. Los permisos que no explícitamente se conceden o deniegan a una entidad de seguridad se pueden heredarlos con pertenencia a un rol que tenga permisos. Los permisos de los roles fijos de base de datos no se puede cambiar y no aparecen en las vistas sys.server_permissions y sys.database_permissions.  
+ Para ver qué permisos se han concedido y denegado, consulte las vistas sys.server_permissions y sys.database_permissions. Los permisos que no se conceden o deniegan explícitamente a una entidad de seguridad se pueden heredar si se dispone de una pertenencia en un rol que tiene permisos. Los permisos de los roles fijos de base de datos no se pueden cambiar y no aparecen en las vistas sys.server_permissions y sys.database_permissions.  
   
 -   **GRANT** concede explícitamente uno o varios permisos.  
   
--   **DENY** deniega explícitamente la entidad de seguridad de tener uno o varios permisos.  
+-   **DENY** deniega explícitamente uno o varios permisos a la entidad de seguridad.  
   
--   **REVOCAR** quita existente **GRANT** o **DENY** permisos.  
+-   **REVOCAR** quita los permisos **GRANT** o **DENY** existentes.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -83,61 +83,61 @@ REVOKE
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- \<permiso > [ **,**... *n* ]  
- Uno o varios permisos para conceder, denegar o revocar.  
+ \<permission>[ **,**...*n* ]  
+ Uno o varios permisos que se van a conceder, denegar o revocar.  
   
- ON [ \<class_type >::] *protegible* el **ON** cláusula describe el parámetro que se puede proteger en el que se va a conceder, denegar o revocar permisos.  
+ ON [ \<class_type> :: ] *securable* La cláusula **ON** describe el parámetro protegible en el que se van a conceder, denegar o revocar permisos.  
   
- \<class_type > el tipo de clase del elemento protegible. Esto puede ser **inicio de sesión**, **base de datos**, **objeto**, **esquema**, **rol**, o **usuario** . También se pueden conceder permisos a la **SERVER *** class_type*, pero **SERVER** no se especifica para esos permisos. **Base de datos** no se especifica si el permiso incluye la palabra **base de datos** (por ejemplo **ALTER ANY DATABASE**). Si no *class_type* se especifica y el tipo de permiso no está restringido en el servidor o la clase de base de datos, se supone que la clase **objeto**.  
+ \<class_type > Tipo de clase del elemento protegible. Puede ser **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE** o **USER**. También se pueden conceder permisos a **SERVER***class_type*, pero **SERVER** no se especifica para esos permisos. **DATABASE** no se especifica si el permiso incluye la palabra **DATABASE** (por ejemplo, **ALTER ANY DATABASE**). Si no se especifica *class_type* y el tipo de permiso no está restringido a la clase de base de datos o servidor, se supone que la clase es **OBJECT**.  
   
  *securable*  
- El nombre del inicio de sesión, base de datos, tabla, vista, esquema, procedimiento, rol o usuario en el que se va a conceder, denegar o revocar permisos. Se puede especificar el nombre del objeto con las reglas de nomenclatura de tres partes que se describen en [convenciones de sintaxis de Transact-SQL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ Nombre del inicio de sesión, base de datos, tabla, vista, esquema, procedimiento, rol o usuario en el que se van a conceder, denegar o revocar permisos. El nombre del objeto se puede especificar con las reglas de nomenclatura de tres partes que se describen en [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
- PARA *principal* [ **,**... *n* ]  
- Una o más entidades que se va a conceder, denegar o revocar permisos. Entidad de seguridad es el nombre de un inicio de sesión, el usuario de base de datos o el rol de base de datos.  
+ TO *principal* [ **,**...*n* ]  
+ Una o varias entidades de seguridad a las que se van a conceder, denegar o revocar permisos. "Principal" es el nombre de un inicio de sesión, un usuario de base de datos o un rol de base de datos.  
   
- DE *principal* [ **,**... *n* ]  
- Una o más entidades revocar los permisos de.  Entidad de seguridad es el nombre de un inicio de sesión, el usuario de base de datos o el rol de base de datos. **DE** sólo puede utilizarse con un **REVOCAR** instrucción. **PARA** puede utilizarse con **GRANT**, **DENY**, o **REVOCAR**.  
+ FROM *principal* [ **,**...*n* ]  
+ Una o varias entidades de seguridad cuyos permisos se van a revocar.  "Principal" es el nombre de un inicio de sesión, un usuario de base de datos o un rol de base de datos. **FROM** solo se puede usar con una instrucción **REVOKE**. **TO** se puede usar con **GRANT**, **DENY** o **REVOKE**.  
   
  WITH GRANT OPTION  
  Indica que el receptor también podrá conceder el permiso especificado a otras entidades de seguridad.  
   
  CASCADE  
- Indica que el permiso se deniega o revoca para la entidad de seguridad especificada y todas las otras entidades de seguridad a la que la entidad de seguridad concede el permiso. Se requiere si la entidad de seguridad tiene el permiso con **GRANT OPTION**.  
+ Indica que el permiso se deniega o revoca para la entidad de seguridad especificada y para el resto de entidades de seguridad a las que esta ha concedido el permiso. Es obligatorio cuando la entidad de seguridad tiene el permiso con **GRANT OPTION**.  
   
  GRANT OPTION FOR  
- Indica que se revocará la capacidad de conceder el permiso especificado. Esto es necesario cuando se utiliza el **CASCADE** argumento.  
+ Indica que se revocará la capacidad de conceder el permiso especificado. Se requiere cuando se usa el argumento **CASCADE**.  
   
 > [!IMPORTANT]  
->  Si la entidad de seguridad tiene el permiso especificado sin el **GRANT** opción, se revocará el permiso.  
+>  Si la entidad de seguridad dispone del permiso especificado sin la opción **GRANT**, se revocará el permiso.  
   
-## <a name="permissions"></a>Permissions  
- Para conceder un permiso, el Otorgante de permisos debe tener el mismo permiso con la **WITH GRANT OPTION**, o debe tener un permiso superior que implique el permiso que se va a conceder.  Los propietarios de objetos pueden conceder permisos para los objetos que poseen. Entidades de seguridad con **CONTROL** permiso para un elemento protegible puede conceder permisos para ese elemento.  Los miembros de la **db_owner** y **db_securityadmin** roles fijos de base de datos pueden conceder cualquier permiso en la base de datos.  
+## <a name="permissions"></a>Permisos  
+ Para conceder un permiso, el otorgante debe tener el permiso en cuestión con **WITH GRANT OPTION**, o un permiso superior que implique el permiso que se va a conceder.  Los propietarios de objetos pueden conceder permisos para los objetos que poseen. Las entidades de seguridad con permiso **CONTROL** en un elemento protegible pueden conceder permisos para ese elemento.  Los miembros de los roles fijos de base de datos **db_owner** y **db_securityadmin** pueden conceder cualquier permiso en la base de datos.  
   
 ## <a name="general-remarks"></a>Notas generales  
- Denegar o revocar permisos para una entidad de seguridad no afectará a las solicitudes que han pasado la autorización y se está ejecutando actualmente. Para restringir el acceso inmediatamente, debe cancelar las solicitudes activas o eliminar las sesiones actuales.  
+ El hecho de denegar o revocar permisos para una entidad de seguridad no afectará a las solicitudes que hayan superado la autorización y se estén ejecutando. Para restringir el acceso de inmediato, debe cancelar las solicitudes activas o terminar las sesiones actuales.  
   
 > [!NOTE]  
->  Funciones más fijas de servidor no están disponibles en esta versión. Usar las funciones de base de datos definido por el usuario en su lugar. Los inicios de sesión no se puede agregar a la **sysadmin** rol fijo de servidor. Conceder el **CONTROL SERVER** permiso se aproxima a la pertenencia a la **sysadmin** rol fijo de servidor.  
+>  La mayoría de los roles fijos de servidor no están disponibles en esta versión. Use en su lugar roles de base de datos definidos por el usuario. Los inicios de sesión no se pueden agregar al rol fijo de servidor **sysadmin**. La concesión del permiso **CONTROL SERVER** es similar a la pertenencia al rol fijo de servidor **sysadmin**.  
   
- Algunas instrucciones requieren varios permisos. Por ejemplo crear una tabla requiere el **CREATE TABLE** permisos en la base de datos y la **ALTER SCHEMA** permiso para la tabla que contendrá la tabla.  
+ Algunas instrucciones requieren varios permisos. Por ejemplo, la creación de una tabla requiere permisos **CREATE TABLE** en la base de datos y el permiso **ALTER SCHEMA** para la tabla que contendrá la tabla.  
   
- PDW a veces ejecuta los procedimientos almacenados para distribuir las acciones del usuario a los nodos de proceso. Por lo tanto, no se puede denegar el permiso execute para una base de datos completa. (Por ejemplo `DENY EXECUTE ON DATABASE::<name> TO <user>;` se producirá un error.) Como una solución alternativa, denegar el permiso execute para esquemas de usuario u objetos específicos (procedimientos).  
+ En ocasiones, el Almacenamiento de datos paralelos ejecuta procedimientos almacenados para distribuir las acciones del usuario a los nodos de ejecución. Por lo tanto, no se puede denegar el permiso EXECUTE para toda una base de datos. (Por ejemplo, se producirá un error en `DENY EXECUTE ON DATABASE::<name> TO <user>;`). Como solución alternativa, deniegue el permiso EXECUTE para esquemas de usuario u objetos específicos (procedimientos).  
   
 ### <a name="implicit-and-explicit-permissions"></a>Permisos implícitos y explícitos  
- Un *permiso explícito* es un **GRANT** o **DENY** permiso otorgado a una entidad de seguridad mediante un **GRANT** o **DENY**instrucción.  
+ Un *permiso explícito* es un permiso **GRANT** o **DENY** concedido a una entidad de seguridad mediante una instrucción **GRANT** o **DENY**.  
   
- Un *permiso implícito* es un **GRANT** o **DENY** permiso que una entidad de seguridad (inicio de sesión, usuario o rol de base de datos) se hereda de otro rol de base de datos.  
+ Un *permiso implícito* es un permiso **GRANT** o **DENY** que una entidad de seguridad (inicio de sesión, usuario o rol de base de datos) ha heredado de otro rol de base de datos.  
   
- También se puede heredar un permiso implícito de una cobertura o el permiso primario. Por ejemplo, **actualización** puedan heredarse los permisos en una tabla manteniendo **actualización** permiso en el esquema que contiene la tabla, o **CONTROL** permiso en la tabla.  
+ También se puede heredar un permiso implícito de un permiso principal o inclusivo. Por ejemplo, el permiso **UPDATE** en una tabla puede heredarse si se tiene el permiso **UPDATE** en el esquema que contiene la tabla o si se tiene el permiso **CONTROL** en la tabla.  
   
 ### <a name="ownership-chaining"></a>Encadenamiento de propiedad  
- Cuando varios objetos de base de datos tienen acceso entre sí secuencialmente, la secuencia se conoce como un *cadena*. Aunque estas cadenas no existen de manera independiente, cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recorre los eslabones de una cadena, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] evalúa los permisos de los objetos que la componen de manera distinta a si se estuviese obteniendo acceso a los objetos por separado. El encadenamiento de propiedad tiene importantes implicaciones para administrar la seguridad. Para obtener más información sobre cadenas de propiedad, vea [cadenas de propiedad](http://msdn.microsoft.com/en-us/library/ms188676\(v=sql11\).aspx) y [Tutorial: cadenas de propiedad y cambio de contexto](http://msdn.microsoft.com/en-us/library/bb153640\(v=sql11\).aspx).  
+ Cuando varios objetos de base de datos obtienen acceso unos a otros de forma secuencial, la secuencia se denomina *cadena*. Aunque estas cadenas no existen de manera independiente, cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recorre los eslabones de una cadena, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] evalúa los permisos de los objetos que la componen de manera distinta a si se estuviese obteniendo acceso a los objetos por separado. El encadenamiento de propiedad tiene implicaciones importantes en lo que respecta a la administración de la seguridad. Para más información sobre las cadenas de propiedad, vea [Cadenas de propiedad](http://msdn.microsoft.com/en-us/library/ms188676\(v=sql11\).aspx) y [Tutorial: Cadenas de propiedad y cambio de contexto](http://msdn.microsoft.com/en-us/library/bb153640\(v=sql11\).aspx).  
   
 ## <a name="permission-list"></a>Lista de permisos  
   
 ### <a name="server-level-permissions"></a>Permisos de nivel de servidor  
- Permisos de nivel de servidor concedido, se pueden denegar y revocar desde los inicios de sesión.  
+ Se pueden conceder, denegar o revocar permisos de nivel de servidor de inicios de sesión.  
   
  **Permisos que se aplican a los servidores**  
   
@@ -169,16 +169,16 @@ REVOKE
   
  **Permisos que se aplican a los inicios de sesión**  
   
--   CONTROLAR EL INICIO DE SESIÓN  
+-   CONTROL ON LOGIN  
   
--   ALTER EN EL INICIO DE SESIÓN  
+-   ALTER ON LOGIN  
   
--   SUPLANTAR EN INICIO DE SESIÓN  
+-   IMPERSONATE ON LOGIN  
   
 -   VIEW DEFINITION  
   
 ### <a name="database-level-permissions"></a>Permisos de nivel de base de datos  
- Permisos de nivel de base de datos pueden tener, denegado y revocados de usuarios de base de datos y roles de base de datos definido por el usuario.  
+ Los permisos de nivel de base de datos se pueden conceder, denegar y revocar de usuarios de base de datos y roles de base de datos definidos por el usuario.  
   
  **Permisos que se aplican a todas las clases de base de datos**  
   
@@ -188,7 +188,7 @@ REVOKE
   
 -   VIEW DEFINITION  
   
- **Permisos que se aplican a todas las clases de base de datos excepto a los usuarios**  
+ **Permisos que se aplican a todas las clases de base de datos, excepto usuarios**  
   
 -   TAKE OWNERSHIP  
   
@@ -196,7 +196,7 @@ REVOKE
   
 -   ALTER ANY DATABASE  
   
--   ALTER EN LA BASE DE DATOS  
+-   ALTER ON DATABASE  
   
 -   ALTER ANY DATASPACE  
   
@@ -208,7 +208,7 @@ REVOKE
   
 -   BACKUP DATABASE  
   
--   CONECTARSE A LA BASE DE DATOS  
+-   CONNECT ON DATABASE  
   
 -   CREATE PROCEDURE  
   
@@ -230,7 +230,7 @@ REVOKE
   
 -   ALTER  
   
--   DELETE  
+-   Delete  
   
 -   Ejecute  
   
@@ -240,38 +240,38 @@ REVOKE
   
 -   UPDATE  
   
--   REFRENCES  
+-   REFERENCES  
   
- Para una definición de cada tipo de permiso, vea [permisos (motor de base de datos)](http://msdn.microsoft.com/library/ms191291.aspx).  
+ Para una definición de cada tipo de permiso, vea [Permisos (motor de base de datos)](http://msdn.microsoft.com/library/ms191291.aspx).  
   
 ### <a name="chart-of-permissions"></a>Gráfico de permisos  
- Todos los permisos se representan gráficamente en este póster. Se trata de la manera más fácil de Ver jerarquía anidada de permisos. Por ejemplo la **ALTER LOGIN de ON** permiso se puede conceder por sí mismo, pero también se incluye si se concede un inicio de sesión el **CONTROL** permiso ese inicio de sesión, o si un inicio de sesión se le concede la **ALTER ANY Inicio de sesión** permiso.  
+ En este póster se representan gráficamente todos los permisos. Es la manera más fácil de ver la jerarquía anidada de permisos. Por ejemplo, el permiso **ALTER LOGIN ON** se puede conceder por sí mismo, pero también se incluye si se concede a un inicio de sesión el permiso **CONTROL** en ese inicio de sesión, o si se concede el permiso **ALTER ANY LOGIN** a un inicio de sesión.  
   
- ![Póster de permisos de seguridad APS](../../t-sql/statements/media/aps-security-perms-poster.png "póster de permisos de seguridad APS")  
+ ![Póster de permisos de seguridad de APS](../../t-sql/statements/media/aps-security-perms-poster.png "Póster de permisos de seguridad de APS")  
   
- Para descargar una versión de tamaño completo de este póster, consulte [permisos de SQL Server PDW](http://go.microsoft.com/fwlink/?LinkId=244249)en la sección de archivos del sitio de Yammer de APS (o una solicitud por correo electrónico desde  **apsdoc@microsoft.com** .  
+ Para descargar una versión a tamaño completo de este póster, vea [Permisos de PDW de SQL Server](http://go.microsoft.com/fwlink/?LinkId=244249) en la sección de archivos del sitio de Yammer de APS (o solicítelo por correo electrónico a **apsdoc@microsoft.com**).  
   
 ## <a name="default-permissions"></a>Permisos predeterminados  
- En la lista siguiente se describe los permisos predeterminados:  
+ En la lista siguiente se describen los permisos predeterminados:  
   
--   Cuando se crea un inicio de sesión mediante el uso de la **CREATE LOGIN** instrucción nuevo inicio de sesión recibe el **CONNECT SQL** permiso.  
+-   Cuando se crea un inicio de sesión mediante la instrucción **CREATE LOGIN**, el nuevo inicio de sesión recibe el permiso **CONNECT SQL**.  
   
--   Todos los inicios de sesión son miembros de la **público** rol de servidor y no se puede quitar **público**.  
+-   Todos los inicios de sesión son miembros del rol de servidor **público** y no se pueden quitar de **público**.  
   
--   Cuando se crea un usuario de base de datos mediante el uso de la **CREATE USER** permiso, el usuario de base de datos recibe la **conectar** permiso en la base de datos.  
+-   Cuando se crea un usuario de base de datos mediante el permiso **CREATE USER**, el usuario de base de datos recibe el permiso **CONNECT** en la base de datos.  
   
--   Todas las entidades, incluido el **público** rol, no tener ningún permiso explícito o implícito de forma predeterminada.  
+-   Ninguna entidad de seguridad, incluido el rol **público**, tiene permisos explícitos o implícitos de forma predeterminada.  
   
--   Cuando un inicio de sesión o usuario se convierte en el propietario de un objeto o base de datos, el inicio de sesión o el usuario siempre tendrá todos los permisos en la base de datos o el objeto. Los permisos de la propiedad no se puede cambiar y no están visibles como permisos explícitos. El **GRANT**, **DENY**, y **REVOCAR** instrucciones no tienen ningún efecto en los propietarios.  
+-   Cuando un inicio de sesión o usuario se convierte en el propietario de una base de datos o un objeto, el inicio de sesión o el usuario siempre tiene todos los permisos en la base de datos o el objeto. Los permisos de propiedad no se pueden cambiar y no están visibles como permisos explícitos. Las instrucciones **GRANT**, **DENY** y **REVOKE** no tienen ningún efecto en los propietarios.  
   
--   El **sa** inicio de sesión tiene todos los permisos en el dispositivo. Similar a los permisos de la propiedad, el **sa** permisos no se puede cambiar y no están visibles como permisos explícitos. El **GRANT**, **DENY**, y **REVOCAR** instrucciones no tienen ningún efecto **sa** inicio de sesión. El **sa** no se puede cambiar el nombre de inicio de sesión.  
+-   El inicio de sesión **sa** tiene todos los permisos en el dispositivo. Al igual que sucede con los permisos de propiedad, los permisos **sa** no se pueden cambiar y no están visibles como permisos explícitos. Las instrucciones **GRANT**, **DENY** y **REVOKE** no tienen ningún efecto en el inicio de sesión **sa**. No se puede cambiar el nombre del inicio de sesión **sa**.  
   
--   El **USE** instrucción no requiere permisos. Pueden ejecutar todas las entidades del **USE** instrucción en cualquier base de datos.  
+-   La instrucción **USE** no requiere permisos. Todas las entidades de seguridad pueden ejecutar la instrucción **USE** en cualquier base de datos.  
   
-##  <a name="Examples"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+##  <a name="Examples"></a> Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-granting-a-server-level-permission-to-a-login"></a>A. Conceder un permiso de nivel de servidor a un inicio de sesión  
- Las dos instrucciones siguientes conceder un permiso de nivel de servidor a un inicio de sesión.  
+ Las dos instrucciones siguientes conceden un permiso de nivel de servidor a un inicio de sesión.  
   
 ```  
 GRANT CONTROL SERVER TO [Ted];  
@@ -282,40 +282,40 @@ GRANT ALTER ANY DATABASE TO Mary;
 ```  
   
 ### <a name="b-granting-a-server-level-permission-to-a-login"></a>B. Conceder un permiso de nivel de servidor a un inicio de sesión  
- El siguiente ejemplo concede un permiso de nivel de servidor en un inicio de sesión a un servidor principal (otro inicio de sesión).  
+ En el ejemplo siguiente se concede un permiso de nivel de servidor en un inicio de sesión a una entidad de seguridad de servidor (otro inicio de sesión).  
   
 ```  
 GRANT  VIEW DEFINITION ON LOGIN::Ted TO Mary;  
 ```  
   
 ### <a name="c-granting-a-database-level-permission-to-a-user"></a>C. Conceder un permiso de nivel de base de datos a un usuario  
- El siguiente ejemplo concede un permiso de nivel de base de datos un usuario a una base de datos principal (otro usuario).  
+ En el ejemplo siguiente se concede un permiso de nivel de base de datos en un usuario a una entidad de seguridad de base de datos (otro usuario).  
   
 ```  
 GRANT VIEW DEFINITION ON USER::[Ted] TO Mary;  
 ```  
   
 ### <a name="d-granting-denying-and-revoking-a-schema-permission"></a>D. Conceder, denegar y revocar un permiso de esquema  
- El siguiente **GRANT** instrucción concede Yuen la capacidad de seleccionar datos de cualquier tabla o vista en el esquema dbo.  
+ La siguiente instrucción **GRANT** concede a Yuen la capacidad de seleccionar datos de cualquier tabla o vista del esquema dbo.  
   
 ```  
 GRANT SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
- El siguiente **DENY** instrucción impide que Yuen seleccionar datos de cualquier tabla o vista en el esquema dbo. Yuen no puede leer los datos, incluso si tiene permiso de alguna otra manera, como a través de una pertenencia a una función.  
+ La siguiente instrucción **DENY** impide que Yuen pueda seleccionar datos de cualquier tabla o vista del esquema dbo. Yuen no puede leer los datos, ni siquiera aunque tenga el permiso de otra manera, por ejemplo, mediante una pertenencia a un rol.  
   
 ```  
 DENY SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
- El siguiente **REVOCAR** instrucción quita la **DENY** permiso. Ahora los permisos explícitos del Yuen son neutros. Yuen puede seleccionar datos de cualquier tabla a través de algunas otras permisos implícita como una pertenencia a una función.  
+ La siguiente instrucción **REVOKE** quita el permiso **DENY**. Ahora, los permisos explícitos de Yuen son neutros. Yuen puede seleccionar los datos de cualquier tabla mediante otro permiso implícito, como una pertenencia a un rol.  
   
 ```  
 REVOKE SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
-### <a name="e-demonstrating-the-optional-object-clause"></a>E. Que muestra el objeto opcional:: cláusula  
- Dado que OBJECT es la clase de valor predeterminado para una instrucción de permiso, las dos instrucciones siguientes son los mismos. El **objeto::** cláusula es opcional.  
+### <a name="e-demonstrating-the-optional-object-clause"></a>E. Demostración de la cláusula opcional OBJECT::  
+ Dado que OBJECT es la clase predeterminada para una instrucción de permiso, las dos instrucciones siguientes son iguales. La cláusula **OBJECT::** es opcional.  
   
 ```  
 GRANT UPDATE ON OBJECT::dbo.StatusTable TO [Ted];  

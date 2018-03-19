@@ -1,5 +1,5 @@
 ---
-title: "Crear lista de propiedades de búsqueda (Transact-SQL) | Documentos de Microsoft"
+title: CREATE SEARCH PROPERTY LIST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
@@ -55,38 +55,38 @@ CREATE SEARCH PROPERTY LIST new_list_name
   
 ## <a name="arguments"></a>Argumentos  
  *new_list_name*  
- Es el nombre de la nueva lista de propiedades de búsqueda. *new_list_name* es un identificador con un máximo de 128 caracteres. *new_list_name* debe ser único entre todas las listas de propiedades de la base de datos actual y cumplir las reglas para identificadores. *new_list_name* se utilizará cuando se crea el índice de texto completo.  
+ Es el nombre de la nueva lista de propiedades de búsqueda. *new_list_name* es un identificador con un máximo de 128 caracteres. *new_list_name* debe ser único entre todas las listas de propiedades de la base de datos actual y cumplir las reglas de los identificadores. *new_list_name* se usará cuando se cree el índice de texto completo.  
   
  *database_name*  
- Es el nombre de la base de datos en la lista de propiedades especificada por *source_list_name* se encuentra. Si no se especifica, *database_name* el valor predeterminado es la base de datos actual.  
+ Es el nombre de la base de datos donde se encuentra la lista de propiedades especificada por *source_list_name*. Si no se especifica, *database_name* usa de manera predeterminada la base de datos actual.  
   
- *database_name* debe especificar el nombre de una base de datos existente. El inicio de sesión para la conexión actual debe estar asociado con un identificador de usuario existente en la base de datos especificada por *database_name*. También debe disponer de los necesarios [permisos](#Permissions) en la base de datos.  
+ *database_name* debe especificar el nombre de una base de datos existente. El inicio de sesión de la conexión actual debe estar asociado a un identificador de usuario existente en la base de datos especificada por *database_name*. También debe tener los [permisos](#Permissions) necesarios en la base de datos.  
   
  *source_list_name*  
- Especifica que la lista de propiedades de nueva se crea copiando una lista de propiedades existente desde *database_name*. Si *source_list_name* no existe, se produce un error de CREATE SEARCH PROPERTY LIST con un error. Las propiedades de búsqueda *source_list_name* son heredadas por *new_list_name*.  
+ Especifica que la nueva lista de propiedades se crea copiando una lista de propiedades existente desde *database_name*. Si *source_list_name* no existe, CREATE SEARCH PROPERTY LIST produce un error. *new_list_name* hereda las propiedades de búsqueda de *source_list_name*.  
   
- AUTORIZACIÓN *owner_name*  
- Especifica el nombre de un usuario o rol que posea la lista de propiedades. *owner_name* debe ser el nombre de un rol de los cuales el usuario actual es un miembro o el usuario actual debe tener el permiso IMPERSONATE *owner_name*. Si no se especifica, la propiedad se otorga al usuario actual.  
-  
-> [!NOTE]  
->  El propietario puede modificarse mediante el uso de la [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción.  
-  
-## <a name="remarks"></a>Comentarios  
+ AUTHORIZATION *owner_name*  
+ Especifica el nombre de un usuario o rol que posea la lista de propiedades. *owner_name* debe ser el nombre de un rol del que el usuario actual sea miembro, o bien el usuario actual debe tener el permiso IMPERSONATE sobre *owner_name*. Si no se especifica, la propiedad se otorga al usuario actual.  
   
 > [!NOTE]  
->  Para obtener información acerca de la propiedad listas en general, vea [buscar propiedades de documento con listas de propiedades de búsqueda](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
+>  El propietario se puede cambiar usando la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
+  
+## <a name="remarks"></a>Notas  
+  
+> [!NOTE]  
+>  Para más información sobre las listas de propiedades en general, vea [Buscar propiedades de documento con listas de propiedades de búsqueda](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
  De forma predeterminada, una nueva lista de propiedades de búsqueda está vacía y debe modificarla para agregar manualmente una o más propiedades de búsqueda. Opcionalmente, puede copiar una lista de propiedades de búsqueda existente. En este caso, la nueva lista hereda las propiedades de búsqueda de su origen, pero se puede modificar para agregar o quitar propiedades. Cualquier propiedad de la lista de propiedades de búsqueda en el momento del siguiente rellenado completo se incluye en el índice de texto completo.  
   
  Una instrucción CREATE SEARCH PROPERTY LIST da error en cualquiera de las condiciones siguientes:  
   
--   Si la base de datos especificada por *database_name* no existe.  
+-   Si la base de datos que especifica *database_name* no existe.  
   
--   Si la lista especificada por *source_list_name* no existe.  
+-   Si la lista que especifica *source_list_name* no existe.  
   
 -   Si no tiene los permisos correctos.  
   
- **Para agregar o quitar propiedades de una lista**  
+ **Para agregar o quitar las propiedades de una lista**  
   
 -   [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)  
   
@@ -94,7 +94,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
   
 -   [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md)  
   
-##  <a name="Permissions"></a> Permisos  
+##  <a name="Permissions"></a> Permissions  
  Requiere los permisos CREATE FULLTEXT CATALOG en la base de datos actual y los permisos REERENCES en cualquier base de datos de la que copie una lista de propiedades de origen.  
   
 > [!NOTE]  
@@ -103,10 +103,10 @@ CREATE SEARCH PROPERTY LIST new_list_name
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-creating-an-empty-property-list-and-associating-it-with-an-index"></a>A. Crear una lista de propiedades vacía y asociarla a un índice  
- El siguiente ejemplo crea una nueva lista de propiedades de búsqueda denominada `DocumentPropertyList`. El ejemplo se utiliza un [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) instrucción que se va a asociar la nueva lista de propiedades con el índice de texto completo de la `Production.Document` tabla el `AdventureWorks` base de datos, sin iniciar un rellenado.  
+ El siguiente ejemplo crea una nueva lista de propiedades de búsqueda denominada `DocumentPropertyList`. Luego, en el ejemplo se usa una instrucción [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) para asociar la nueva lista de propiedades al índice de texto completo de la tabla `Production.Document` en la base de datos `AdventureWorks`, sin iniciar un rellenado.  
   
 > [!NOTE]  
->  Para obtener un ejemplo que se agrega varias propiedades de búsqueda predefinidas conocidas a esta lista de propiedades de búsqueda, vea [ALTER SEARCH PROPERTY LIST &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-search-property-list-transact-sql.md). Después de agregar las propiedades de búsqueda a la lista, el administrador de bases de datos necesitaría utilizar otra instrucción ALTER FULLTEXT INDEX con la cláusula START FULL POPULATION.  
+>  Para obtener un ejemplo en el que se agregan varias propiedades de búsqueda predefinidas conocidas a esta lista de propiedades de búsqueda, vea [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md). Después de agregar las propiedades de búsqueda a la lista, el administrador de bases de datos necesitaría utilizar otra instrucción ALTER FULLTEXT INDEX con la cláusula START FULL POPULATION.  
   
 ```  
 CREATE SEARCH PROPERTY LIST DocumentPropertyList;  
@@ -131,12 +131,12 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [ALTER SEARCH PROPERTY LIST &#40; Transact-SQL &#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
- [DROP SEARCH PROPERTY LIST &#40; Transact-SQL &#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md)   
- [Sys.registered_search_properties &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
- [Sys.registered_search_property_lists &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
- [Sys.dm_fts_index_keywords_by_property &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
+ [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md)   
+ [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
+ [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
+ [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
  [Buscar propiedades de documento con listas de propiedades de búsqueda](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [Buscar GUID del conjunto de propiedades e identificadores de enteros de propiedad para las propiedades de búsqueda](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)  
   

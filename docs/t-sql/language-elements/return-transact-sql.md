@@ -1,5 +1,5 @@
 ---
-title: RETURN (Transact-SQL) | Documentos de Microsoft
+title: RETURN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -57,12 +57,12 @@ RETURN [ integer_expression ]
  Es el valor entero que se devuelve. Los procedimientos almacenados pueden devolver un valor entero al procedimiento que realiza la llamada o a una aplicación.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- Opcionalmente devuelve **int**.  
+ Devuelve opcionalmente **int**.  
   
 > [!NOTE]  
 >  A menos que se documente de otra manera, todos los procedimientos almacenados del sistema devuelven el valor 0. Esto indica que son correctos y un valor distinto de cero indica que se ha producido un error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando se utiliza con un procedimiento almacenado, RETURN no puede devolver un valor NULL. Si un procedimiento intenta devolver un valor NULL (por ejemplo, al utilizar RETURN @status cuando @status es NULL), se genera un mensaje de advertencia y se devuelve un valor 0.  
   
  El valor de estado devuelto se puede incluir en las siguientes instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] del lote o procedimiento que ha ejecutado el procedimiento actual, pero se debe escribir de la forma siguiente: `EXECUTE @return_status = <procedure_name>`.  
@@ -159,7 +159,7 @@ GO
  2
  ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   

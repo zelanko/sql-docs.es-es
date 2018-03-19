@@ -1,5 +1,5 @@
 ---
-title: ENCRYPTBYCERT (Transact-SQL) | Documentos de Microsoft
+title: ENCRYPTBYCERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -51,16 +51,16 @@ EncryptByCert ( certificate_ID , { 'cleartext' | @cleartext } )
  *certificate_ID*  
  Id. de un certificado de la base de datos. **int**.  
   
- *texto no cifrado*  
+ *cleartext*  
  Cadena de datos que se cifrarán con el certificado.  
   
  **@cleartext**  
- Una variable de tipo **nvarchar**, **char**, **varchar**, **binario**, **varbinary**, o **nchar** que contiene los datos que se cifrará con la clave pública del certificado.  
+ Es una variable de tipo **nvarchar**, **char**, **varchar**, **binary**, **varbinary** o **nchar** que contiene los datos que se cifrarán con la clave pública del certificado.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- **varbinary** con un tamaño máximo de 8.000 bytes.  
+ **varbinary** con un tamaño máximo de 8000 bytes.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta función cifra datos con la clave pública de un certificado. El texto cifrado solo puede descifrarse con la correspondiente clave privada. Dichas transformaciones asimétricas son muy costosas en comparación con el cifrado y el descifrado mediante una clave simétrica. Por ello, el cifrado asimétrico no se recomienda cuando se trabaja con conjuntos de datos grandes como datos de usuarios en tablas.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -73,11 +73,11 @@ INSERT INTO [AdventureWorks2012].[ProtectedData04]
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [DECRYPTBYCERT &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbycert-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [DECRYPTBYCERT &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbycert-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [Eliminar certificado &#40; Transact-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

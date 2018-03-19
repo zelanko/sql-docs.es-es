@@ -1,5 +1,5 @@
 ---
-title: DBCC TRACEON (Transact-SQL) | Documentos de Microsoft
+title: DBCC TRACEON (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -60,14 +60,14 @@ Activa las marcas de seguimiento especificadas de forma global.
 WITH NO_INFOMSGS  
 Suprime todos los mensajes de información.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 En un servidor de producción, para evitar un comportamiento impredecible, se recomienda habilitar únicamente marcas de seguimiento en todo el servidor mediante uno de los siguientes métodos:
--   Use la **-T** opción de línea de comandos de inicio de Sqlservr.exe. Es una práctica recomendada porque garantiza que todas las instrucciones se ejecutarán con la marca de seguimiento habilitada. Incluye comandos en scripts de inicio. Para más información, consulte [sqlservr Application](../../tools/sqlservr-application.md).  
--   Use DBCC TRACEON  **(*** trace #* [**,**... *.n*]**, -1)** solo mientras los usuarios o aplicaciones no ejecuten simultáneamente instrucciones en el sistema.  
+-   Use la opción de inicio de la línea de comandos **-T** de Sqlservr.exe. Es una práctica recomendada porque garantiza que todas las instrucciones se ejecutarán con la marca de seguimiento habilitada. Incluye comandos en scripts de inicio. Para más información, consulte [sqlservr Application](../../tools/sqlservr-application.md).  
+-   Solo debe usar DBCC TRACEON **(***trace#* [**,** ...*.n*]**,-1)** mientras los usuarios o las aplicaciones no ejecuten simultáneamente instrucciones en el sistema.  
 
 Las marcas de seguimiento se utilizan para personalizar algunas características controlando el funcionamiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las marcas de seguimiento, una vez habilitadas, permanecen habilitadas en el servidor hasta que son deshabilitadas al ejecutarse una instrucción DBCC TRACEOFF. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], hay dos tipos de marcas de seguimiento: sesión y global. Las marcas de seguimiento de sesión se activan para una conexión y solo están visibles para esa conexión. Las marcas de seguimiento globales se establecen en el nivel del servidor y están visibles para todas las conexiones del servidor. Para determinar el estado de las marcas de seguimiento, utilice DBCC TRACESTATUS. Para deshabilitar marcas de seguimiento, utilice DBCC TRACEOFF.
   
-Después de activar una marca de seguimiento que afecta a los planes de consulta, ejecute `DBCC FREEPROCCACHE;` para que se vuelve a compilar planes almacenados en caché con el nuevo plan afecta al comportamiento.
+Después de activar una marca de seguimiento que afecta a los planes de consulta, ejecute `DBCC FREEPROCCACHE;` para que los planes almacenados en caché se recompilen con el nuevo comportamiento que afecta a los planes.
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  DBCC TRACEON devuelve el siguiente conjunto de resultados (mensaje):  
@@ -76,7 +76,7 @@ Después de activar una marca de seguimiento que afecta a los planes de consulta
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
 Requiere la pertenencia al rol fijo de servidor **sysadmin** .
   
 ## <a name="examples"></a>Ejemplos  
@@ -101,11 +101,11 @@ DBCC TRACEON (3205, 260, -1);
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC TRACEOFF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
 [DBCC TRACESTATUS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  
 [Marcas de seguimiento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
-[Habilitar que afectan al plan consulta optimizador comportamiento de SQL Server que puede controlarse mediante distintas marcas de seguimiento en un nivel de consulta específica](https://support.microsoft.com/kb/2801413)
+[Habilitar el plan afecta al comportamiento del optimizador de consultas de SQL Server, que se puede controlar mediante distintas marcas de seguimiento en un nivel de consulta específico](https://support.microsoft.com/kb/2801413)
   
   

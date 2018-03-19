@@ -1,5 +1,5 @@
 ---
-title: FIRST_VALUE (Transact-SQL) | Documentos de Microsoft
+title: FIRST_VALUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/10/2016
 ms.prod: sql-non-specified
@@ -49,10 +49,10 @@ FIRST_VALUE ( [scalar_expression ] )
   
 ## <a name="arguments"></a>Argumentos  
  *scalar_expression*  
- Es el valor que se va devolver. *scalar_expression* puede ser una columna, una subconsulta u otra expresión arbitraria que da como resultado un valor único. No se permiten otras funciones analíticas.  
+ Es el valor que se va devolver. *scalar_expression* puede ser una columna, una subconsulta u otra expresión arbitraria que dé como resultado un solo valor. No se permiten otras funciones analíticas.  
   
- SOBRE **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
- *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones al que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. *order_by_clause* determina el orden lógico en el que se realiza la operación. *order_by_clause* es necesario. *rows_range_clause* limita aún más las filas de la partición especificando puntos inicial y final. Para obtener más información, consulte [la cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
+ *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones a las que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. *order_by_clause* determina el orden lógico en el que se realiza la operación. *order_by_clause* es obligatorio. *rows_range_clause* limita aún más las filas de la partición, ya que especifica puntos de inicio y final. Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos devueltos  
  Es el mismo tipo que *scalar_expression*.  
@@ -127,7 +127,7 @@ Accounts Receivable Specialist      Spoon                     61            Poe
 Accounts Receivable Specialist      Walton                    62            Poe  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [EN cláusula &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   

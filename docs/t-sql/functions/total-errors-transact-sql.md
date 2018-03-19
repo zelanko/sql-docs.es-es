@@ -1,5 +1,5 @@
 ---
-title: '@@TOTAL_ERRORS (Transact-SQL) | Documentos de Microsoft'
+title: '@@TOTAL_ERRORS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -53,8 +53,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipos devueltos  
  **integer**  
   
-## <a name="remarks"></a>Comentarios  
- Esta función no se ocupa de todos los errores de escritura encontrados por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los errores de escritura ocasionales que no son graves se administran en el propio servidor y no se consideran errores. Para mostrar un informe que contenga varias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estadísticas, incluido el número total de errores, ejecutan **sp_monitor**.  
+## <a name="remarks"></a>Notas  
+ Esta función no se ocupa de todos los errores de escritura encontrados por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los errores de escritura ocasionales que no son graves se administran en el propio servidor y no se consideran errores. Para mostrar un informe con varias estadísticas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluido el número total de errores, ejecute **sp_monitor**.  
   
 ## <a name="examples"></a>Ejemplos  
  En este ejemplo se muestra el número de errores que ha encontrado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hasta la fecha y hora actuales.  
@@ -71,8 +71,8 @@ Errors      As of
 0           3/28/2003 12:32:11 PM   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [Funciones estadísticas del sistema &#40;Transact-SQL&#41;&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [Funciones estadísticas del sistema &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "[^] (Comodín - caracteres no coincidentes) (Transact-SQL) | Documentos de Microsoft"
+title: "[^] (caracteres comodín para no coincidencia) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-wildcard---characters-not-to-match-transact-sql"></a>\[^\](Comodín - caracteres no coincidentes) (Transact-SQL)
+# <a name="-wildcard---characters-not-to-match-transact-sql"></a>\[^\] (caracteres comodín para no coincidencia) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Coincide con cualquier carácter único que no se encuentre dentro del intervalo o del conjunto especificado entre los corchetes.  
@@ -54,11 +54,11 @@ WHERE FirstName LIKE 'Al[^a]%'
 ORDER BY FirstName;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
- [% &#40; Carácter comodín - carácter &#40; s &#41; para la coincidencia &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
-  [&#91; &#93; &#40; Carácter comodín - carácter &#40; s &#41; para la coincidencia &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
- [\_&#40; Carácter comodín - coincidir un carácter &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
+ [% &#40;Wildcard - Character&#40;s&#41; to Match&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  (% [caracteres comodín para coincidencia] [Transact-SQL])  
+  [&#91; &#93; &#40;Wildcard - Character&#40;s&#41; to Match&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  (&#91; &#93; [caracteres comodín para coincidencia] [Transact-SQL])  
+ [\_ &#40;Wildcard - Match One Character&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md) (&#40; [comodín, coincidir un carácter] [Transact-SQL])  
   
   

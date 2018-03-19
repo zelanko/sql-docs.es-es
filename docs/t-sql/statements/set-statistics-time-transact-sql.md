@@ -1,5 +1,5 @@
 ---
-title: "Establecer tiempo de estadísticas (Transact-SQL) | Documentos de Microsoft"
+title: SET STATISTICS TIME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -52,18 +52,18 @@ ms.lasthandoff: 11/21/2017
 SET STATISTICS TIME { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando SET STATISTICS TIME es ON, se muestran las estadísticas de tiempo de una instrucción. Cuando es OFF no se muestran las estadísticas de tiempo.  
   
  La opción SET STATISTICS TIME se establece en tiempo de ejecución, no en tiempo de análisis.  
   
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede calcular estadísticas precisas en el modo de fibra, que se activa cuando se habilita la **agrupación ligera** opción de configuración.  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede calcular estadísticas precisas en el modo de fibra, que se activa al habilitar la opción de configuración **agrupación ligera**.  
   
- El **cpu** columna en el **sysprocesses** tabla solo se actualiza cuando se ejecuta una consulta con SET STATISTICS TIME ON. Cuando SET STATISTICS TIME es OFF, **0** se devuelve.  
+ La columna **cpu** de la tabla **sysprocesses** solo se actualiza cuando se ejecuta una consulta con SET STATISTICS TIME ON. Si SET STATISTICS TIME es OFF, se devuelve **0**.  
   
  Las opciones ON y OFF también afectan a la columna CPU en la vista Información del proceso para la actividad actual, en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para utilizar SET STATISTICS TIME, los usuarios deben tener permisos apropiados para ejecutar la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]. El permiso SHOWPLAN no es necesario.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -99,8 +99,8 @@ SQL Server parse and compile time:
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Instrucciones SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET STATISTICS IO &#40; Transact-SQL &#41;](../../t-sql/statements/set-statistics-io-transact-sql.md)  
+ [SET STATISTICS IO &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-io-transact-sql.md)  
   
   

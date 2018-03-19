@@ -1,5 +1,5 @@
 ---
-title: "+ (Signo más unario) (Transact-SQL) | Documentos de Microsoft"
+title: "+ (Signo unario más) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="unary-operators---positive"></a>Operadores unarios - positivo
+# <a name="unary-operators---positive"></a>Operadores unarios: positivo
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Devuelve el valor de una expresión numérica (un operador unario). Los operadores unarios realizan una operación sobre una única expresión de cualquiera de los tipos de datos de la categoría del tipo de datos numérico.   
@@ -61,13 +61,13 @@ Devuelve el valor de una expresión numérica (un operador unario). Los operador
   
 ## <a name="arguments"></a>Argumentos  
  *numeric_expression*  
- Se trata de cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de uno de los datos de tipos en la categoría de tipo de datos numéricos, excepto el **datetime** y **smalldatetime** tipos de datos.  
+ Es cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md) válida de cualquiera de los tipos de datos de la categoría de tipos de datos numéricos, excepto los tipos de datos **datetime** y **smalldatetime**.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  Devuelve el tipo de datos de *numeric_expression*.  
   
-## <a name="remarks"></a>Comentarios  
- Aunque una suma unaria puede aparecer antes de cualquier expresión numérica, no realiza ninguna operación en el valor devuelto de la expresión. En concreto, no devolvería el valor positivo de una expresión negativa. Para devolver un valor positivo de una expresión negativa, use la [ABS](../../t-sql/functions/abs-transact-sql.md) función.  
+## <a name="remarks"></a>Notas  
+ Aunque una suma unaria puede aparecer antes de cualquier expresión numérica, no realiza ninguna operación en el valor devuelto de la expresión. En concreto, no devolvería el valor positivo de una expresión negativa. Para devolver el valor positivo de una expresión negativa, use la función [ABS](../../t-sql/functions/abs-transact-sql.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -111,10 +111,10 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  (Expressions [Transact-SQL])  
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  (Operadores [Transact-SQL])  
  [ABS &#40;Transact-SQL&#41;](../../t-sql/functions/abs-transact-sql.md)  
   
   

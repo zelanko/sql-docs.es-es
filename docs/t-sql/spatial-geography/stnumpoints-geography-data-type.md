@@ -1,5 +1,5 @@
 ---
-title: STNumPoints (tipo de datos geography) | Documentos de Microsoft
+title: STNumPoints (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve el número total de puntos de cada una de las figuras de una **geography** instancia.  
+  Devuelve el número total de puntos de cada una de las figuras de una instancia de **geography**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **int**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
  Tipo de valor devuelto de CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Comentarios  
- Este método cuenta los puntos de la descripción de un **geography** instancia. Se cuentan los puntos duplicados; sin embargo, los puntos de conexión entre segmentos se cuentan solo una vez. Si esta instancia es una colección, este método devuelve el número total de puntos de la colección.  
+## <a name="remarks"></a>Notas  
+ Este método cuenta los puntos de la descripción de una instancia de **geography**. Se cuentan los puntos duplicados; sin embargo, los puntos de conexión entre segmentos se cuentan solo una vez. Si esta instancia es una colección, este método devuelve el número total de puntos de la colección.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -79,7 +79,7 @@ SELECT @g.STNumPoints();
  SELECT @g.STNumPoints();
  ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de OGC en instancias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: RESTAURAR la clave maestra (Transact-SQL) | Documentos de Microsoft
+title: RESTORE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -57,19 +57,19 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- ARCHIVO ='*ruta_de_acceso_al_archivo*'  
- Especifica la ruta completa, incluido el nombre de archivo, de acceso a la clave maestra de la base de datos almacenada. *ruta_de_acceso_al_archivo* puede ser una ruta de acceso local o una ruta UNC a una ubicación de red.  
+ FILE ='*path_to_file*'  
+ Especifica la ruta completa, incluido el nombre de archivo, de acceso a la clave maestra de la base de datos almacenada. *path_to_file* puede ser una ruta de acceso local o una ruta UNC a una ubicación de red.  
   
- DECRYPTION BY PASSWORD ='*contraseña*'  
+ DECRYPTION BY PASSWORD ='*password*'  
  Especifica la contraseña necesaria para descifrar la clave maestra de base de datos que se va a importar desde un archivo.  
   
- ENCRYPTION BY PASSWORD ='*contraseña*'  
+ ENCRYPTION BY PASSWORD ='*password*'  
  Especifica la contraseña que se utiliza para cifrar la clave maestra de base de datos una vez cargada a la base de datos.  
   
  FORCE  
  Especifica que el proceso RESTORE debe continuar, aunque la clave maestra de base de datos actual no se encuentre abierta o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no pueda descifrar algunas claves privadas cifradas con ella.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Al restaurar la clave maestra, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] descifra todas las claves cifradas con la clave maestra actualmente activa y cifra estas claves con la clave maestra restaurada. Esta operación requiere un uso intensivo de recursos, por lo que debe programarse durante un período de baja demanda. Si la clave maestra de base de datos no se encuentra abierta, no puede abrirse o alguna de las claves cifradas con ella no pueden descifrarse, la operación de restauración no se puede realizar.  
   
  Utilice la opción FORCE únicamente si la clave maestra es irrecuperable o si se producen errores en el descifrado. Se perderá la información cifrada solamente con una clave irrecuperable.  
@@ -78,7 +78,7 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
   
  Si no hay una clave maestra en la base de datos actual, RESTORE MASTER KEY creará una clave maestra. La nueva clave maestra no se cifrará automáticamente con la clave maestra de servicio.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Necesita el permiso CONTROL en la base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -93,7 +93,7 @@ RESTORE MASTER KEY
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
  [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)   
  [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)  

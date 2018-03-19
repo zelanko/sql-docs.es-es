@@ -1,5 +1,5 @@
 ---
-title: SYSTEM_USER (Transact-SQL) | Documentos de Microsoft
+title: SYSTEM_USER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -55,12 +55,12 @@ SYSTEM_USER
 ## <a name="return-types"></a>Tipos devueltos  
  **nchar**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  En las instrucciones CREATE TABLE y ALTER TABLE puede utilizar la función SYSTEM_USER con restricciones DEFAULT. También puede utilizarla como cualquier función estándar.  
   
  Si el nombre de usuario y el nombre de inicio de sesión con diferentes, SYSTEM_USER devuelve el nombre de inicio de sesión.  
   
- Si el usuario actual ha iniciado sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la autenticación de Windows, SYSTEM_USER devuelve el nombre de identificación de inicio de sesión de Windows con el formato: *dominio*\\*user_login_name*. Sin embargo, si el usuario actual ha iniciado la sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la autenticación de SQL Server, SYSTEM_USER devuelve el nombre de identificación de inicio de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por ejemplo `WillisJo` para un usuario que ha iniciado la sesión como `WillisJo`.  
+ Si el usuario actual ha iniciado la sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la autenticación de Windows, SYSTEM_USER devuelve el nombre de identificación del inicio de sesión de Windows con el formato: *DOMAIN*\\*user_login_name*. Sin embargo, si el usuario actual ha iniciado la sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la autenticación de SQL Server, SYSTEM_USER devuelve el nombre de identificación de inicio de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por ejemplo `WillisJo` para un usuario que ha iniciado la sesión como `WillisJo`.  
   
  SYSTEM_USER devuelve el nombre del contexto de ejecución actual. Si se ha usado la instrucción EXECUTE AS para cambiar el contexto, SYSTEM_USER devuelve el nombre del contexto suplantado.  
   
@@ -133,23 +133,23 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
 (5 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-systemuser-to-return-the-current-system-user-name"></a>C: usar SYSTEM_USER para devolver el nombre de usuario actual del sistema  
- En el ejemplo siguiente se devuelve el valor actual de `SYSTEM_USER`.  
+### <a name="c-using-systemuser-to-return-the-current-system-user-name"></a>C. Usar SYSTEM_USER para devolver el nombre de usuario actual del sistema  
+ El siguiente ejemplo devuelve el valor actual de `SYSTEM_USER`.  
   
 ```  
 SELECT SYSTEM_USER;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [CURRENT_TIMESTAMP &#40; Transact-SQL &#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
- [CURRENT_USER &#40; Transact-SQL &#41;](../../t-sql/functions/current-user-transact-sql.md)   
- [SESSION_USER &#40; Transact-SQL &#41;](../../t-sql/functions/session-user-transact-sql.md)   
+ [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
+ [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
+ [SESSION_USER &#40;Transact-SQL&#41;](../../t-sql/functions/session-user-transact-sql.md)   
  [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [USUARIO &#40; Transact-SQL &#41;](../../t-sql/functions/user-transact-sql.md)  
+ [USER &#40;Transact-SQL&#41;](../../t-sql/functions/user-transact-sql.md)  
   
   
 

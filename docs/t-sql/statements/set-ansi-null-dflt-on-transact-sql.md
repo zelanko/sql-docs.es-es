@@ -1,5 +1,5 @@
 ---
-title: SET ANSI_NULL_DFLT_ON (Transact-SQL) | Documentos de Microsoft
+title: SET ANSI_NULL_DFLT_ON (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/05/2017
 # <a name="set-ansinulldflton-transact-sql"></a>SET ANSI_NULL_DFLT_ON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Modifica el comportamiento de la sesión para invalidar la nulabilidad predeterminada de las columnas nuevas cuando la **ANSI null default** opción para la base de datos es **false**. Para obtener más información acerca de cómo establecer el valor de **ANSI null default**, consulte [ALTER DATABASE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql.md).  
+  Modifica el comportamiento de la sesión para invalidar la nulabilidad predeterminada de las columnas nuevas cuando la opción **ANSI null default** de la base de datos es **false**. Para más información sobre cómo establecer el valor de **ANSI null default**, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -60,14 +60,14 @@ SET ANSI_NULL_DFLT_ON {ON | OFF}
 SET ANSI_NULL_DFLT_ON ON
 ```
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta opción solo afecta a la nulabilidad de las columnas nuevas cuando esta nulabilidad no se especifica en las instrucciones CREATE TABLE ni ALTER TABLE. Cuando SET ANSI_NULL_DFLT_ON es ON, las columnas nuevas creadas con las instrucciones ALTER TABLE y CREATE TABLE admitirán valores NULL si el estado de nulabilidad de la columna no se especifica explícitamente. SET ANSI_NULL_DFLT_ON no afecta a las columnas creadas con una opción NULL o NOT NULL explícita.  
   
- No es posible establecer ON a la vez en SET ANSI_NULL_DFLT_OFF y SET ANSI_NULL_DFLT_ON. Si se establece una de las opciones en ON, la otra se establece en OFF. Por lo tanto, sólo es posible establecer ON en SET ANSI_NULL_DFLT_OFF o ANSI_NULL_DFLT_ON, o establecer OFF en ambas. Si alguna de estas dos opciones es ON (SET ANSI_NULL_DFLT_OFF o SET ANSI_NULL_DFLT_ON), tendrá efecto la opción correspondiente. Si ambas opciones están establecidas en OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza el valor de la **is_ansi_null_default_on** columna en el [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) vista de catálogo.  
+ No es posible establecer ON a la vez en SET ANSI_NULL_DFLT_OFF y SET ANSI_NULL_DFLT_ON. Si se establece una de las opciones en ON, la otra se establece en OFF. Por tanto, solo es posible establecer ON en ANSI_NULL_DFLT_OFF o en ANSI_NULL_DFLT_ON, o bien establecer OFF en ambas. Si alguna de estas dos opciones es ON (SET ANSI_NULL_DFLT_OFF o SET ANSI_NULL_DFLT_ON), tendrá efecto la opción correspondiente. Si ambas opciones están establecidas en OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el valor de la columna **is_ansi_null_default_on** en la vista de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
  Para conseguir la máxima confiabilidad en los scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] que se utilicen en bases de datos con distintas opciones de nulabilidad, se recomienda especificar NULL o NOT NULL en las instrucciones CREATE TABLE y ALTER TABLE.  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC Native Client y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] establecen automáticamente ANSI_NULL_DFLT_ON en ON al conectarse. SET ANSI_NULL_DFLT_ON tiene como opción predeterminada OFF en las conexiones desde aplicaciones DB-Library.  
+ El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client y el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] establecen automáticamente ANSI_NULL_DFLT_ON en ON al conectarse. SET ANSI_NULL_DFLT_ON tiene como opción predeterminada OFF en las conexiones desde aplicaciones DB-Library.  
   
  Cuando SET ANSI_DEFAULTS es ON, se habilita SET ANSI_NULL_DFLT_ON.  
   
@@ -84,11 +84,11 @@ SELECT @ANSI_NULL_DFLT_ON AS ANSI_NULL_DFLT_ON;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se muestra los efectos de `SET ANSI_NULL_DFLT_ON` con los dos valores para el **ANSI null default** opción de base de datos.  
+ En este ejemplo se muestran los efectos de `SET ANSI_NULL_DFLT_ON` con los dos valores de la opción de base de datos **ANSI null default**.  
   
 ```  
 USE AdventureWorks2012;  
@@ -164,11 +164,11 @@ GO
 DROP TABLE t1,t2,t3,t4,t5,t6;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [Instrucciones SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ANSI_DEFAULTS &#40; Transact-SQL &#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
- [SET ANSI_NULL_DFLT_OFF &#40; Transact-SQL &#41;](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)  
+ [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
+ [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)  
   
   

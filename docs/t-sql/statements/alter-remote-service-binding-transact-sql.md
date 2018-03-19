@@ -1,5 +1,5 @@
 ---
-title: Modificar enlace de servicio remoto (Transact-SQL) | Documentos de Microsoft
+title: ALTER REMOTE SERVICE BINDING (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,17 +53,17 @@ ALTER REMOTE SERVICE BINDING binding_name
  *binding_name*  
  Nombre del enlace de servicio remoto que se va a cambiar. No se pueden especificar nombres de servidor, base de datos o esquema.  
   
- CON usuario = \< *nombre_usuario >*  
+ WITH USER = \<*user_name>*  
  Especifica el usuario de base de datos que tiene el certificado asociado con el servicio remoto de este enlace. La clave pública de este certificado se utiliza para cifrar y autenticar mensajes intercambiados con el servicio remoto.  
   
  ANONYMOUS  
  Especifica si se va a utilizar la autenticación anónima en la comunicación con el servicio remoto. Si ANONYMOUS = ON, se utiliza la autenticación anónima y las credenciales del usuario local no se transfieren al servicio remoto. Si ANONYMOUS = OFF, las credenciales de usuario se transfieren. Si no se especifica esta cláusula, el valor predeterminado es OFF.  
   
-## <a name="remarks"></a>Comentarios  
- La clave pública del certificado asociado con *nombre_usuario* se utiliza para autenticar los mensajes enviados al servicio remoto y para cifrar una clave de sesión que, a continuación, se utiliza para cifrar la conversación. El certificado para *nombre_usuario* debe corresponder al certificado de un inicio de sesión en la base de datos que hospeda el servicio remoto.  
+## <a name="remarks"></a>Notas  
+ La clave pública del certificado asociado a *user_name* se usa para autenticar mensajes enviados al servicio remoto y para cifrar una clave de sesión que se usará después para cifrar la conversación. El certificado de *user_name* debe corresponder al certificado de un inicio de sesión en la base de datos que hospede el servicio remoto.  
   
-## <a name="permissions"></a>Permissions  
- Permiso para modificar un enlace de servicio remoto predeterminado es el propietario del servicio remoto de enlace, los miembros de la **db_owner** fijo de rol de base de datos y los miembros de la **sysadmin** rol fijo de servidor.  
+## <a name="permissions"></a>Permisos  
+ De manera predeterminada, el permiso para modificar un enlace de servicio remoto corresponde al propietario del enlace de servicio remoto, a los miembros del rol fijo de base de datos **db_owner** y a los miembros del rol fijo de servidor **sysadmin**.  
   
  El usuario que ejecuta la instrucción ALTER REMOTE SERVICE BINDING debe tener permiso de suplantación del usuario especificado en la instrucción.  
   
@@ -77,9 +77,9 @@ ALTER REMOTE SERVICE BINDING APBinding
     WITH USER = SecurityAccount ;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/create-remote-service-binding-transact-sql.md)   
- [QUITAR el enlace de servicio remoto &#40; Transact-SQL &#41;](../../t-sql/statements/drop-remote-service-binding-transact-sql.md)   
+ [DROP REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/drop-remote-service-binding-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DENSE_RANK (Transact-SQL) | Documentos de Microsoft
+title: DENSE_RANK (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -48,16 +48,16 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- \<partition_by_clause >  
- Divide el conjunto de resultados generado por la [FROM](../../t-sql/queries/from-transact-sql.md) cláusula en particiones a los que se aplica la función DENSE_RANK. Para obtener la sintaxis PARTITION BY, vea [la cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ \<partition_by_clause>  
+ Divide el conjunto de resultados generado por la cláusula [FROM](../../t-sql/queries/from-transact-sql.md) en particiones a las que se aplica la función DENSE_RANK. Para ver la sintaxis de PARTITION BY, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
- \<order_by_clause >  
+ \<order_by_clause>  
  Determina el orden en el que se aplica la función DENSE_RANK a las filas de una partición.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **bigint**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si dos o más filas se enlazan en un rango en la misma partición, cada fila enlazada recibe el mismo rango. Por ejemplo, si los dos mejores vendedores tienen el mismo valor de SalesYTD, los dos tienen el rango uno. El siguiente vendedor con mayor valor en SalesYTD tiene el rango número dos. Es uno más que el número de filas distintas anteriores a esta fila. Por tanto, los números devueltos por la función DENSE_RANK no tienen espacios y siempre tienen rangos consecutivos.  
   
  El criterio de ordenación utilizado por la consulta global determina el orden en que aparecen las filas en el resultado. Esto implica que una fila que tiene el rango uno no tiene que ser la primera fila de la partición.  
@@ -132,7 +132,7 @@ BusinessEntityID Rate                  RankBySalary
 ```  
   
 ## <a name="c-four-ranking-functions-used-in-the-same-query"></a>C. Cuatro funciones de categoría usadas en la misma consulta  
- A continuación se muestran las cuatro funciones de categoría usadas en la misma consulta. Para obtener ejemplos específicos de función, vea las funciones de categoría.  
+ A continuación se muestran las cuatro funciones de categoría usadas en la misma consulta. Consulte cada función de categoría para ver ejemplos específicos de las funciones.  
   
 ```  
 USE AdventureWorks2012;  
@@ -171,10 +171,10 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 |Ranjit|Varkey Chudukatil|13|6|2|4|3827950.238|98055| 
 
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-ranking-rows-within-a-partition"></a>D: clasificar filas dentro de una partición  
- En el ejemplo siguiente se clasifica a los representantes de ventas en cada territorio de ventas según sus ventas totales. Se crean particiones del conjunto de filas por `SalesTerritoryGroup` y se ordenan por `SalesAmountQuota`.  
+### <a name="d-ranking-rows-within-a-partition"></a>D. Clasificar filas dentro de una partición  
+ En el siguiente ejemplo se clasifican los representantes de ventas de cada territorio de ventas según sus ventas totales. Se crean particiones del conjunto de filas por `SalesTerritoryGroup` y se ordenan por `SalesAmountQuota`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -209,11 +209,11 @@ Mensa-Annan        2753000.0000  North America        10
 Tsoflias           1687000.0000  Pacific              1 
 ```  
 
-## <a name="see-also"></a>Vea también  
- [RANGO &#40; Transact-SQL &#41;](../../t-sql/functions/rank-transact-sql.md)   
- [ROW_NUMBER &#40; Transact-SQL &#41;](../../t-sql/functions/row-number-transact-sql.md)   
- [NTILE &#40; Transact-SQL &#41;](../../t-sql/functions/ntile-transact-sql.md)   
- [Funciones de categoría &#40; Transact-SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [RANK &#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   
+ [ROW_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   
+ [NTILE &#40;Transact-SQL&#41;](../../t-sql/functions/ntile-transact-sql.md)   
+ [Funciones de categoría &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [Funciones](../../t-sql/functions/functions.md)  
   
   

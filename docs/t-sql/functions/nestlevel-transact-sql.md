@@ -1,5 +1,5 @@
 ---
-title: '@@NESTLEVEL (Transact-SQL) | Documentos de Microsoft'
+title: '@@NESTLEVEL (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/17/2017
 ms.prod: sql-non-specified
@@ -49,14 +49,14 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipos devueltos  
  **int**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cada vez que un procedimiento almacenado llama a otro procedimiento almacenado o ejecuta un código administrado haciendo referencia a una rutina Common Language Runtime (CLR), un tipo o un agregado, se incrementa el nivel de anidamiento. Cuando se sobrepasa el máximo de 32, se termina la transacción.  
   
- Cuando @@NESTLEVEL se ejecuta en un [!INCLUDE[tsql](../../includes/tsql-md.md)] cadena, el valor devuelto es 1 + actual nivel de anidamiento. Cuando @@NESTLEVEL se ejecuta dinámicamente mediante el uso de sp_executesql el valor devuelto es 2 + el nivel de anidamiento actual.  
+ Cuando @@NESTLEVEL se ejecuta en una cadena de [!INCLUDE[tsql](../../includes/tsql-md.md)], el valor devuelto es 1 + el nivel de anidamiento actual. Cuando @@NESTLEVEL se ejecuta de forma dinámica con sp_executesql, el valor devuelto es 2 + el nivel de anidamiento actual.  
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-nestlevel-in-a-procedure"></a>A. Usar@NESTLEVEL en un procedimiento  
+### <a name="a-using-nestlevel-in-a-procedure"></a>A. Usar @@NESTLEVEL en un procedimiento  
  En el ejemplo siguiente se crean dos procedimientos: uno que llama al otro y uno que muestra el valor `@@NESTLEVEL` de cada uno.  
   
 ```  
@@ -92,7 +92,7 @@ Inner Level
 ```  
   
 ### <a name="b-calling-nestlevel"></a>B. Llamar a @@NESTLEVEL  
- En el ejemplo siguiente se muestra la diferencia de los valores devueltos por `SELECT`, `EXEC`, y `sp_executesql` cuando cada uno de ellos llama `@@NESTLEVEL`.  
+ En el siguiente ejemplo se muestra la diferencia en los valores devueltos por `SELECT`, `EXEC` y `sp_executesql` cuando cada uno de ellos llama a `@@NESTLEVEL`.  
   
 ```  
 CREATE PROC usp_NestLevelValues AS  
@@ -126,7 +126,7 @@ TwoGreater
 (1 row(s) affected)
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Funciones de configuración &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [Crear un procedimiento almacenado](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  

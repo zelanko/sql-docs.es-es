@@ -1,5 +1,5 @@
 ---
-title: CurveToLineWithTolerance (tipo de datos geometry) | Documentos de Microsoft
+title: CurveToLineWithTolerance (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance (tipo de datos Geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Devuelve una aproximación poligonal de un **geometry** instancia que contiene los segmentos de arco circular.
+Devuelve una aproximación poligonal de una instancia de **geometry** que contiene segmentos de arco circulares.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,44 +42,44 @@ Devuelve una aproximación poligonal de un **geometry** instancia que contiene l
   
 ## <a name="arguments"></a>Argumentos  
  *tolerance*  
- Es un **doble** expresión que define el error máximo entre el segmento de arco circular original y su aproximación lineal.  
+ Expresión **double** que define el error máximo entre el segmento del arco circular original y su aproximación lineal.  
   
  *relative*  
- Es un **bool** expresión que indica si se usa un máximo relativo para la desviación. Cuando relative está establecido en falso (0), se establece un máximo absoluto para la desviación que puede tener una aproximación lineal. Cuando relative está establecido en true (1), la tolerancia se calcula como un producto del parámetro de tolerancia y el diámetro del cuadro de límite para el objeto espacial.  
+ Expresión **bool** que indica si se va a usar un máximo relativo para la desviación. Cuando relative está establecido en falso (0), se establece un máximo absoluto para la desviación que puede tener una aproximación lineal. Cuando relative está establecido en true (1), la tolerancia se calcula como un producto del parámetro de tolerancia y el diámetro del cuadro de límite para el objeto espacial.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geometry**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
 ## <a name="exceptions"></a>Excepciones  
  Al establecer la tolerancia <= 0 se produce una excepción `ArgumentOutOfRange`.  
   
-## <a name="remarks"></a>Comentarios  
- Este método puede especificar una cantidad de tolerancia a errores para los resultantes **LineString**.  
+## <a name="remarks"></a>Notas  
+ Este método puede especificar una cantidad de tolerancia a errores para el resultado **LineString** que se obtiene.  
   
  En la siguiente tabla se muestra el tipo de instancia que `CurveToLineWithTolerance()` devuelve para varios tipos.  
   
 |Tipo de la instancia que hace la llamada|Tipo espacial devuelto|  
 |----------------------------|---------------------------|  
-|Instancia de geometría vacía|Vacía **GeometryCollection** instancia|  
-|**Punto de** y **MultiPoint**|**Punto** instancia|  
-|**MultiPoint**|**Punto de** o **MultiPoint** instancia|  
-|**CircularString**, **CompoundCurve**, o **LineString**|**LineString** instancia|  
-|**MultiLineString**|**LineString** o **MultiLineString** instancia|  
-|**CurvePolygon** y **polígono**|**Polígono** instancia|  
-|**MultiPolígono**|**Polígono** o **MultiPolygon** instancia|  
-|**GeometryCollection** con una única instancia que no contiene un segmento de arco circular|La instancia que se encuentra en la **GeometryCollection** determina el tipo de la instancia devuelta.|  
-|**GeometryCollection** con una instancia del segmento de arco circular unidimensional en el único (**CircularString**, **CompoundCurve**)|**LineString** instancia|  
-|**GeometryCollection** con una instancia del segmento de arco circular bidimensional único (**CurvePolygon**)|**Polígono** instancia|  
-|**GeometryCollection** con varias instancias unidimensionales|**MultiLineString** instancia|  
-|**GeometryCollection** con varias instancias bidimensionales|**MultiPolygon** instancia|  
-|**GeometryCollection** con varias instancias de distintas dimensiones|**GeometryCollection** instancia|  
+|Instancia de geometría vacía|Instancia de **GeometryCollection** vacía|  
+|**Point** y **MultiPoint**|Instancia de **Point**|  
+|**MultiPoint**|Instancia de **Point** o de **MultiPoint**|  
+|**CircularString**, **CompoundCurve** o **LineString**|Instancia de **LineString**|  
+|**MultiLineString**|Instancia de **LineString** o **MultiLineString**|  
+|**CurvePolygon** y **Polygon**|Instancia de **Polygon**|  
+|**MultiPolígono**|Instancia de **Polygon** o **MultiPolygon**|  
+|**GeometryCollection** con una instancia única que no contiene un segmento de arco circular|La instancia que se encuentra en **GeometryCollection** determina el tipo de instancia que se devuelve.|  
+|**GeometryCollection** con una sola instancia de arco de segmento circular unidimensional (**CircularString**, **CompoundCurve**)|Instancia de **LineString**|  
+|**GeometryCollection** con una sola instancia de arco de segmento circular bidimensional (**CurvePolygon**)|Instancia de **Polygon**|  
+|**GeometryCollection** con varias instancias unidimensionales|Instancia de **MultiLineString**|  
+|**GeometryCollection** con varias instancias bidimensionales|Instancia de **MultiPolygon**|  
+|**GeometryCollection** con varias instancias de distintas dimensiones|Instancia de **GeometryCollection**|  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. Utilizar valores de tolerancia diferentes en una instancia de CircularString  
- En el ejemplo siguiente se muestra cómo establecer la tolerancia afecta a la `LineString`instancia devuelta desde un `CircularString` instancia:  
+ En el siguiente ejemplo se muestra cómo establecer la tolerancia afecta a la instancia de `LineString` devuelta desde una instancia de `CircularString`:  
   
 ```
  DECLARE @g geometry; 
@@ -106,7 +106,7 @@ Devuelve una aproximación poligonal de un **geometry** instancia que contiene l
  ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. Establecer relative en true para invocar una instancia de CurvePolygon  
- En el ejemplo siguiente se usa un `CurvePolygon` instancia para llamar a `CurveToLineWithTolerance()` con *relativa* establecido en true:  
+ En el siguiente ejemplo se usa una instancia de `CurvePolygon` para llamar a `CurveToLineWithTolerance()` con *relative* establecido en true:  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
@@ -122,9 +122,9 @@ Devuelve una aproximación poligonal de un **geometry** instancia que contiene l
  SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.1, 0).ToString();
  ```  
   
-## <a name="see-also"></a>Vea también  
- [CurveToLineWithTolerance &#40; tipo de datos geography &#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)   
- [STCurveToLine &#40; tipo de datos geometry &#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
+## <a name="see-also"></a>Ver también  
+ [CurveToLineWithTolerance &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)   
+ [STCurveToLine &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
   
   
 

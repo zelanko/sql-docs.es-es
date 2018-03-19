@@ -1,5 +1,5 @@
 ---
-title: ESTABLECER el nivel de aislamiento de transacciones (Transact-SQL) | Documentos de Microsoft
+title: SET TRANSACTION ISOLATION LEVEL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -71,11 +71,11 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
  READ UNCOMMITTED  
  Especifica que las instrucciones pueden leer filas que han sido modificadas por otras transacciones pero todavía no se han confirmado.  
   
- Transacciones que se ejecutan en el nivel READ UNCOMMITTED no emiten bloqueos compartidos para impedir que otras transacciones modifiquen los datos leídos por la transacción actual. Las transacciones READ UNCOMMITTED tampoco se bloquean mediante bloqueos exclusivos que impedirían que la transacción actual leyese las filas modificadas pero no confirmadas por otras transacciones. Cuando se establece esta opción, es posible leer las modificaciones no confirmadas, denominadas lecturas de datos sucios. Los valores de los datos se pueden cambiar, y las filas pueden aparecer o desaparecer en el conjunto de datos antes de que finalice la transacción. Esta opción tiene el mismo efecto que establecer NOLOCK en todas las tablas y en todas las instrucciones SELECT de una transacción. Se trata del nivel de aislamiento menos restrictivo.  
+ Las transacciones que se ejecutan en el nivel READ UNCOMMITTED no emiten bloqueos compartidos para impedir que otras transacciones modifiquen los datos leídos por la transacción actual. Las transacciones READ UNCOMMITTED tampoco se bloquean mediante bloqueos exclusivos que impedirían que la transacción actual leyese las filas modificadas pero no confirmadas por otras transacciones. Cuando se establece esta opción, es posible leer las modificaciones no confirmadas, denominadas lecturas de datos sucios. Los valores de los datos se pueden cambiar, y las filas pueden aparecer o desaparecer en el conjunto de datos antes de que finalice la transacción. Esta opción tiene el mismo efecto que establecer NOLOCK en todas las tablas y en todas las instrucciones SELECT de una transacción. Se trata del nivel de aislamiento menos restrictivo.  
   
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], también se puede reducir al mínimo la contención de bloqueos y, al mismo tiempo, proteger las transacciones de las lecturas de datos sucios de modificaciones de datos no confirmadas mediante una de estas dos alternativas:  
   
--   El nivel de aislamiento READ COMMITTED con la opción de base de datos READ_COMMITTED_SNAPSHOT se establece en ON.  
+-   El nivel de aislamiento READ COMMITTED con la opción de base de datos READ_COMMITTED_SNAPSHOT establecida en ON.  
   
 -   El nivel de aislamiento SNAPSHOT.  
   
@@ -84,7 +84,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  El comportamiento de READ COMMITTED depende del valor de la opción de base de datos READ_COMMITTED_SNAPSHOT:  
   
--   Si READ_COMMITTED_SNAPSHOT se establece en OFF (valor predeterminado), el [!INCLUDE[ssDE](../../includes/ssde-md.md)] utiliza bloqueos compartidos para impedir que otras transacciones modifiquen las filas mientras la transacción actual esté ejecutando una operación de lectura. Los bloqueos compartidos impiden también que la instrucción lea las filas modificadas por otras transacciones hasta que la otra transacción haya finalizado. El tipo de bloqueo compartido determina cuándo se liberará. Los bloqueos de fila se liberan antes de que se procese la fila siguiente. Bloqueos de página se liberan cuando se lee la página siguiente y bloqueos de tabla se liberan cuando termina la instrucción.  
+-   Si READ_COMMITTED_SNAPSHOT se establece en OFF (valor predeterminado), el [!INCLUDE[ssDE](../../includes/ssde-md.md)] utiliza bloqueos compartidos para impedir que otras transacciones modifiquen las filas mientras la transacción actual esté ejecutando una operación de lectura. Los bloqueos compartidos impiden también que la instrucción lea las filas modificadas por otras transacciones hasta que la otra transacción haya finalizado. El tipo de bloqueo compartido determina cuándo se liberará. Los bloqueos de fila se liberan antes de que se procese la fila siguiente. Los bloqueos de página se liberan cuando se lee la página siguiente, y los bloqueos de tabla se liberan cuando la instrucción finaliza.  
   
     > [!NOTE]  
     >  Si READ_COMMITTED_SNAPSHOT se establece en ON, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] utiliza versiones de fila para presentar a cada instrucción una instantánea coherente, desde el punto de vista transaccional, de los datos tal como se encontraban al comenzar la instrucción. No se emplean bloqueos para impedir que otras transacciones actualicen los datos.  
@@ -102,7 +102,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
  Se aplican bloqueos compartidos a todos los datos leídos por cada instrucción de la transacción, y se mantienen hasta que la transacción finaliza. De esta forma, se evita que otras transacciones modifiquen las filas que han sido leídas por la transacción actual. Otras transacciones pueden insertar filas nuevas que coincidan con las condiciones de búsqueda de las instrucciones emitidas por la transacción actual. Si la transacción actual vuelve a ejecutar la instrucción, recuperará las filas nuevas, dando como resultado lecturas fantasma. Debido a que los bloqueos compartidos se mantienen hasta el final de la transacción en lugar de liberarse al final de cada instrucción, la simultaneidad es inferior que en el nivel de aislamiento predeterminado READ COMMITTED. Utilice esta opción solamente cuando sea necesario.  
   
  SNAPSHOT  
- Especifica que los datos leídos por cualquier instrucción de una transacción serán la versión transaccionalmente coherente de los datos existentes al comienzo de la transacción. La transacción únicamente puede reconocer las modificaciones de datos confirmadas antes del comienzo de la misma. Las instrucciones que se ejecuten en la transacción actual no verán las modificaciones de datos efectuadas por otras transacciones después del inicio de la transacción actual. El efecto es el mismo que se obtendría si las instrucciones de una transacción obtuviesen una instantánea de los datos confirmados tal como se encontraban al comienzo de la transacción.  
+ Especifica que los datos leídos por cualquier instrucción de una transacción serán la versión coherente, desde el punto de vista transaccional, de los datos existentes al inicio de la transacción. La transacción únicamente puede reconocer las modificaciones de datos confirmadas antes del comienzo de la misma. Las instrucciones que se ejecuten en la transacción actual no verán las modificaciones de datos efectuadas por otras transacciones después del inicio de la transacción actual. El efecto es el mismo que se obtendría si las instrucciones de una transacción obtuviesen una instantánea de los datos confirmados tal como se encontraban al comienzo de la transacción.  
   
  Las transacciones SNAPSHOT no solicitan bloqueos al leer los datos, excepto cuando se recupera una base de datos. Las transacciones SNAPSHOT que leen datos no bloquean la escritura de datos de otras transacciones. Las transacciones que escriben datos no bloquean la lectura de datos de las transacciones SNAPSHOT.  
   
@@ -128,7 +128,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  Se colocan bloqueos de intervalo en el intervalo de valores de clave que coincidan con las condiciones de búsqueda de cada instrucción ejecutada en una transacción. De esta manera, se impide que otras transacciones actualicen o inserten filas que satisfagan los requisitos de alguna de las instrucciones ejecutadas por la transacción actual. Esto significa que, si alguna de las instrucciones de una transacción se ejecuta por segunda vez, leerá el mismo conjunto de filas. Los bloqueos de intervalo se mantienen hasta que la transacción finaliza. Este es el nivel de aislamiento más restrictivo, porque bloquea intervalos de claves completos y mantiene esos bloqueos hasta que la transacción finaliza. Al ser menor la simultaneidad, solo se debe utilizar esta opción cuando sea necesario. Esta opción tiene el mismo efecto que establecer HOLDLOCK en todas las tablas de todas las instrucciones SELECT de la transacción.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Solo es posible establecer una de las opciones de nivel de aislamiento cada vez, y permanecerá activa para la conexión hasta que se cambie explícitamente. Todas las operaciones de lectura realizadas dentro de la transacción se rigen por las reglas del nivel de aislamiento especificado, a menos que se utilice una sugerencia de tabla en la cláusula FROM de una instrucción para especificar un comportamiento de bloqueo o versiones diferente para una tabla.  
   
  Los niveles de aislamiento de transacciones definen el tipo de bloqueo que se adquiere en las operaciones de lectura. Los bloqueos compartidos que se adquieren para READ COMMITTED o REPEATABLE READ suelen ser bloqueos de fila, aunque éstos se pueden escalar a bloqueos de página o tabla si la operación de lectura hace referencia a un número significativo de filas de una página o tabla. Si la transacción modifica una fila después de haberse leído, la transacción adquiere un bloqueo exclusivo para proteger esa fila, y ese bloqueo exclusivo se mantiene hasta que la transacción finaliza. Por ejemplo, si una transacción REPEATABLE READ tiene un bloqueo compartido en una fila y, después, la transacción modifica esa fila, el bloqueo compartido de fila se convierte en un bloqueo exclusivo de fila.  
@@ -154,11 +154,11 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   READ COMMITTED con versiones de fila  
   
- A la inversa, las consultas que se ejecutan con estos niveles de aislamiento bloquean las operaciones de carga masiva optimizadas que se realizan en montones: Para obtener más información acerca de las operaciones de carga masiva, vea [importación en bloque y exportar datos &#40; SQL Server &#41; ](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
+ A la inversa, las consultas que se ejecutan con estos niveles de aislamiento bloquean las operaciones de carga masiva optimizadas que se realizan en montones: Para más información sobre operaciones de carga masiva, vea [Importar y exportar datos en bloque &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
   
  Las bases de datos habilitadas con FILESTREAM admiten los niveles de aislamiento de transacción siguientes:  
   
-|Nivel de aislamiento|Transact el acceso a SQL|Acceso al sistema de archivos|  
+|Nivel de aislamiento|Acceso Transact SQL|Acceso al sistema de archivos|  
 |---------------------|-------------------------|------------------------|  
 |Lectura no confirmada|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|No compatible|  
 |Lectura confirmada|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
@@ -187,9 +187,9 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [DBCC USEROPTIONS &#40; Transact-SQL &#41;](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
+ [DBCC USEROPTIONS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [Instrucciones SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [Sugerencias de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  

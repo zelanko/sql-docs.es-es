@@ -1,5 +1,5 @@
 ---
-title: Comandos de la consola de base de datos | Documentos de Microsoft
+title: Comandos de consola de base de datos | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified

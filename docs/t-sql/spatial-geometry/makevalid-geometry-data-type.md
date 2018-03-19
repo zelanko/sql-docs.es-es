@@ -1,5 +1,5 @@
 ---
-title: MakeValid (tipo de datos geometry) | Documentos de Microsoft
+title: MakeValid (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="makevalid-geometry-data-type"></a>MakeValid (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Convierte un válido **geometry** instancia en un **geometry** instancia con un tipo de Open Geospatial Consortium (OGC) válido.
+Convierte una instancia no válida de **geometry** en una instancia de **geometry** con un tipo de Open Geospatial Consortium (OGC) válido.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,12 +44,12 @@ Convierte un válido **geometry** instancia en un **geometry** instancia con un 
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geometry**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentarios  
- Este método puede producir un cambio en el tipo de la **geometry** de instancia, así como para provocar que los puntos de un **geometry** instancia se desplacen ligeramente.  
+## <a name="remarks"></a>Notas  
+ Este método puede producir un cambio en el tipo de la instancia de **geometry** y hacer que los puntos de una instancia de **geometry** se desplacen ligeramente.  
   
 ## <a name="examples"></a>Ejemplos  
  En el primer ejemplo se crea una instancia de `LineString` no válida que se superpone a sí misma y usa `STIsValid()` para confirmar que es una instancia no válida. `STIsValid()` devuelve el valor 0 para una instancia no válida.  
@@ -86,7 +86,7 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 1 1, 1 1)';
 SELECT @g.MakeValid().ToString();  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [STIsValid &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
  [Métodos extendidos en instancias de geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   

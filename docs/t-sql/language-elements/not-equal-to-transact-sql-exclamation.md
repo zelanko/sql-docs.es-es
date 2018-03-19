@@ -1,5 +1,5 @@
 ---
-title: '! = (No es igual a) (Transact-SQL) | Documentos de Microsoft'
+title: '!= (No igual a) (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -35,13 +35,13 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="not-equal-to-transact-sql---exclamation"></a>No es igual a (Transact SQL) - signo de exclamación
+# <a name="not-equal-to-transact-sql---exclamation"></a>No igual a (Transact-SQL): exclamación
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Prueba si una expresión es distinta de otra expresión (es un operador de comparación). Si uno o los dos operandos son NULL, se devuelve NULL. Funciona igual que el [<> (no es igual a)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md) operador de comparación.  
+  Prueba si una expresión es distinta de otra expresión (es un operador de comparación). Si uno o los dos operandos son NULL, se devuelve NULL. Funciona de la misma forma que el operador de comparación [<> (No igual a)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md).  
   
-## <a name="see-also"></a>Vea también  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

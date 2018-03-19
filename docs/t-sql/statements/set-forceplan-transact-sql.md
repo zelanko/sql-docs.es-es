@@ -1,5 +1,5 @@
 ---
-title: SET FORCEPLAN (Transact-SQL) | Documentos de Microsoft
+title: SET FORCEPLAN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -51,14 +51,14 @@ ms.lasthandoff: 11/21/2017
 SET FORCEPLAN { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  SET FORCEPLAN básicamente invalida la lógica utilizada por el optimizador de consultas para procesar una instrucción SELECT de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los datos que devuelve la instrucción SELECT son los mismos, independientemente del valor de esta opción. La única diferencia es el modo en que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procesa las tablas para satisfacer la consulta.  
   
  Las sugerencias del optimizador de consultas se pueden usar también en las consultas para influir en el modo en que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procesa la instrucción SELECT.  
   
  SET FORCEPLAN se aplica en tiempo de ejecución y no en tiempo de análisis.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  De forma predeterminada, todos los usuarios tienen permisos para ejecutar SET FORCEPLAN.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -107,10 +107,10 @@ SET FORCEPLAN OFF;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [Instrucciones SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [SET SHOWPLAN_TEXT &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
+ [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET SHOWPLAN_TEXT &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ERROR_PROCEDURE (Transact-SQL) | Documentos de Microsoft
+title: ERROR_PROCEDURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ERROR_PROCEDURE ( )
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- **nvarchar (128)**  
+ **nvarchar(128)**  
   
 ## <a name="return-value"></a>Valor devuelto  
  Cuando se llama en un bloque CATCH, devuelve el nombre del procedimiento almacenado en el que se ha producido el error.  
@@ -60,10 +60,10 @@ ERROR_PROCEDURE ( )
   
  Devuelve NULL si se le llama desde fuera del ámbito del bloque CATCH.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  ERROR_PROCEDURE se puede llamar en cualquier lugar dentro del ámbito de un bloque CATCH.  
   
- ERROR_PROCEDURE devuelve el nombre del procedimiento almacenado o desencadenador en el que se ha producido el error, independientemente del número de veces que se llame o del lugar desde el que se haga dentro del ámbito del bloque CATCH. Esto contrasta con las funciones, como@ERROR, que devuelve el número de error en la instrucción inmediatamente posterior a la que produjo el error o en la primera instrucción del bloque CATCH.  
+ ERROR_PROCEDURE devuelve el nombre del procedimiento almacenado o desencadenador en el que se ha producido el error, independientemente del número de veces que se llame o del lugar desde el que se haga dentro del ámbito del bloque CATCH. Esto contrasta con las funciones, como @@ERROR, que devuelven el número de error en la instrucción inmediatamente posterior a la que ha causado el error o en la primera instrucción del bloque CATCH.  
   
  En los bloques CATCH anidados, ERROR_PROCEDURE devuelve el nombre del procedimiento almacenado o el desencadenador específico del ámbito del bloque CATCH en el que se hace referencia a él. Por ejemplo, el bloque CATCH de una construcción TRY…CATCH podría tener una TRY…CATCH anidada. En el bloque CATCH anidado, ERROR_PROCEDURE devuelve el nombre del procedimiento almacenado o el desencadenador en el que se ha producido el error y que ha llamado al bloque CATCH anidado. Si ERROR_PROCEDURE se ejecuta en el bloque CATCH externo, devuelve el nombre del procedimiento almacenado o el desencadenador en el que se ha producido el error y que ha llamado al bloque CATCH.  
   
@@ -128,7 +128,7 @@ BEGIN CATCH
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errorprocedure-in-a-catch-block"></a>C. Utilizar ERROR_PROCEDURE en un bloque CATCH  
  En el siguiente ejemplo de código se muestra un procedimiento almacenado que genera un error de división por cero. `ERROR_PROCEDURE` devuelve el nombre del procedimiento almacenado en el que se produce el error.  
@@ -188,14 +188,14 @@ BEGIN CATCH
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

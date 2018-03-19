@@ -1,5 +1,5 @@
 ---
-title: DROP FULLTEXT STOPLIST (Transact-SQL) | Documentos de Microsoft
+title: DROP FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -57,11 +57,11 @@ DROP FULLTEXT STOPLIST stoplist_name
  *stoplist_name*  
  Es el nombre de la lista de palabras irrelevantes de texto completo que se va a quitar de la base de datos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  DROP FULLTEXT STOPLIST produce un error si algún índice de texto completo hace referencia a la lista de palabras irrelevantes de texto completo que se va a quitar.  
   
-## <a name="permissions"></a>Permissions  
- Para quitar una lista de palabras irrelevantes es necesario tener el permiso DROP en la lista de palabras irrelevantes o ser miembro de la **db_owner** o **db_ddladmin** funciones fijas de base de datos.  
+## <a name="permissions"></a>Permisos  
+ Para quitar una lista de palabras irrelevantes es necesario tener el permiso DROP en la lista de palabras irrelevantes o ser miembro de los roles fijos de base de datos **db_owner** o **db_ddladmin**.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se quita una lista de palabras irrelevantes de texto completo denominada `myStoplist`.  
@@ -70,10 +70,10 @@ DROP FULLTEXT STOPLIST stoplist_name
 DROP FULLTEXT STOPLIST myStoplist;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [ALTER FULLTEXT STOPLIST &#40; Transact-SQL &#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
- [Crear lista de palabras IRRELEVANTES de texto completo &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
- [Sys.fulltext_stoplists &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
+ [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
  [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)  
   
   

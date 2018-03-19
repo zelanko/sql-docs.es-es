@@ -1,5 +1,5 @@
 ---
-title: "Creación de vistas y procedimientos almacenados | Documentos de Microsoft"
+title: Crear vistas y procedimientos almacenados | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-2-3---creating-views-and-stored-procedures"></a>Lección 2: 3: creación de vistas y procedimientos almacenados
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Ahora que Mary puede tener acceso a la **TestData** base de datos, puede que desee crear algunos objetos de base de datos, como una vista o un procedimiento almacenado, y, a continuación, conceder a Mary acceso a ellos. Una vista es una instrucción SELECT almacenada y un procedimiento almacenado es una o varias instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] que se ejecutan como un lote.  
+# <a name="lesson-2-3---creating-views-and-stored-procedures"></a>Lección 2-3: Crear vistas y procedimientos almacenados
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Ahora que María puede acceder a la base de datos **TestData**, recomendamos crear algunos objetos de base de datos, como una vista o un procedimiento almacenado, y concederle a María acceso a estos objetos. Una vista es una instrucción SELECT almacenada y un procedimiento almacenado es una o varias instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] que se ejecutan como un lote.  
   
 Las vistas se consultan como las tablas y no aceptan parámetros. Los procedimientos almacenados son más complejos que las vistas. Los procedimientos almacenados pueden tener parámetros de entrada y salida y pueden contener instrucciones para controlar el flujo del código, como instrucciones IF y WHILE. Una práctica recomendable de programación es usar procedimientos almacenados para realizar todas las tareas repetitivas en la base de datos.  
   
@@ -88,7 +88,7 @@ Para este ejemplo, usará CREATE VIEW para crear una vista que seleccione solo d
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
 [Conceder acceso a un objeto de base de datos](../t-sql/lesson-2-4-granting-access-to-a-database-object.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [CREATE VIEW &#40;Transact-SQL&#41;](../t-sql/statements/create-view-transact-sql.md)  
 [CREATE PROCEDURE &#40;Transact-SQL&#41;](../t-sql/statements/create-procedure-transact-sql.md)  
   

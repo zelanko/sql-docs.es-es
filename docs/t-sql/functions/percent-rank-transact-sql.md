@@ -1,5 +1,5 @@
 ---
-title: PERCENT_RANK (Transact-SQL) | Documentos de Microsoft
+title: PERCENT_RANK (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/20/2015
 ms.prod: sql-non-specified
@@ -46,8 +46,8 @@ PERCENT_RANK( )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- SOBRE **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones al que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. *order_by_clause* determina el orden lógico en el que se realiza la operación. El *order_by_clause* es necesario. El \<filas o cláusula range > de la sintaxis OVER no se pueden especificar en una función PERCENT_RANK.  Para obtener más información, consulte [la cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones a las que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. *order_by_clause* determina el orden lógico en el que se realiza la operación. El parámetro *order_by_clause* es obligatorio. La \<cláusula rows o range> de la sintaxis OVER no se puede especificar en una función PERCENT_RANK.  Para obtener más información, vea [SELECT - sobre &#40;cláusula de Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **float(53)**  
@@ -58,7 +58,7 @@ PERCENT_RANK( )
  PERCENT_RANK es no determinista. Para obtener más información, consulte [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se usa la función CUME_DIST para calcular el percentil de salario de cada empleado dentro de un departamento determinado. El valor devuelto por la función CUME_DIST representa el porcentaje de empleados que tienen un salario menor o igual que el empleado actual del mismo departamento. La función PERCENT_RANK calcula el rango de salario del empleado dentro de un departamento como un porcentaje. La cláusula PARTITION BY se especifica para crear particiones de las filas del conjunto de resultados por departamento. La cláusula ORDER BY de la cláusula OVER ordena las filas de cada partición. La cláusula ORDER BY en la instrucción SELECT ordena las filas del conjunto de resultados completo.  
+ En el ejemplo siguiente se usa la función CUME_DIST para calcular el percentil de salario de cada empleado dentro de un departamento determinado. El valor devuelto por la función CUME_DIST representa el porcentaje de empleados que tienen un salario menor o igual que el empleado actual del mismo departamento. La función PERCENT_RANK calcula el rango de salario del empleado dentro de un departamento como un porcentaje. La cláusula PARTITION BY se especifica para crear particiones de las filas del conjunto de resultados por departamento. La cláusula ORDER BY de la cláusula OVER ordena las filas de cada partición. La cláusula ORDER BY de la instrucción SELECT ordena las filas del conjunto de resultados completo.  
   
 ```  
 USE AdventureWorks2012;  
@@ -97,7 +97,7 @@ Information Services   Bueno                  27.4038               0.4         
 (15 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [CUME_DIST &#40; Transact-SQL &#41;](../../t-sql/functions/cume-dist-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [CUME_DIST &#40;Transact-SQL&#41;](../../t-sql/functions/cume-dist-transact-sql.md)  
   
   

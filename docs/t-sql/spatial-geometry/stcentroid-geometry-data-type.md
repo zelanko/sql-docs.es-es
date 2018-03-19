@@ -1,5 +1,5 @@
 ---
-title: STCentroid (tipo de datos geometry) | Documentos de Microsoft
+title: STCentroid (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcentroid-geometry-data-type"></a>STCentroid (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Devuelve el centro geométrico de una **geometry** instancia que consta de uno o varios polígonos.
+Devuelve el centro geométrico de una instancia de **geometry** que consta de uno o varios polígonos.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,19 +44,19 @@ Devuelve el centro geométrico de una **geometry** instancia que consta de uno o
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geometry**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
- Abrir tipo Geospatial Consortium (OGC): **punto**  
+ Tipo Open Geospatial Consortium (OGC): **Point**  
   
-## <a name="remarks"></a>Comentarios  
- `STCentroid()`Devuelve null si el **geometry** instancia no es un **Polygon, CurvePolygon**, o **MultiPolygon** tipo.  
+## <a name="remarks"></a>Notas  
+ `STCentroid()` devuelve null si la instancia de **geometry** no es de tipo **Polygon, CurvePolygon** o **MultiPolygon**.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-computing-the-centroid-of-a-polygon-instance"></a>A. Calcular el centroide de una instancia de Polygon  
- En el ejemplo siguiente se utiliza `STCentroid()` para calcular el centroide de una `polygon``geometry` instancia:  
+ En el siguiente ejemplo se usa `STCentroid()` para calcular el centroide de una instancia de `polygon``geometry`:  
   
 ```  
 DECLARE @g geometry;  
@@ -72,7 +72,7 @@ SELECT @g.STCentroid().ToString();
  SELECT @g.STCentroid().ToString() AS Centroid
  ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

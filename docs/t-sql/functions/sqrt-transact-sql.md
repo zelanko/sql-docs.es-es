@@ -1,5 +1,5 @@
 ---
-title: SQRT (Transact-SQL) | Documentos de Microsoft
+title: SQRT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ SQRT ( float_expression )
   
 ## <a name="arguments"></a>Argumentos  
  *float_expression*  
- Es un [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de tipo **float** o de un tipo que puede convertirse implícitamente a float.  
+ Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de tipo **float** o de un tipo que se puede convertir en float de manera implícita.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **float**  
@@ -89,8 +89,8 @@ GO
 3.0  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- El ejemplo siguiente devuelve la raíz cuadrada de números `1.00` y `10.00`.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ En el ejemplo siguiente se devuelve la raíz cuadrada de los números comprendidos entre `1.00` y `10.00`.  
   
 ```  
 SELECT SQRT(1.00), SQRT(10.00);  
@@ -103,8 +103,8 @@ SELECT SQRT(1.00), SQRT(10.00);
 1.00        3.16
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Funciones matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [Funciones matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

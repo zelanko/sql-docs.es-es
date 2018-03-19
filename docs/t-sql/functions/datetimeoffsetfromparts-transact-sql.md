@@ -1,5 +1,5 @@
 ---
-title: DATETIMEOFFSETFROMPARTS (Transact-SQL) | Documentos de Microsoft
+title: DATETIMEOFFSETFROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Devuelve un **datetimeoffset** valor para la fecha y hora especificadas y con los desplazamientos especificados y la precisión.
+Devuelve un valor **datetimeoffset** para la fecha y la hora especificadas, y con los desplazamientos y la precisión indicados.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,25 +45,25 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-*año*  
+*year*  
 Expresión entera que especifica un año.
   
-*mes*  
+*month*  
 Expresión entera que especifica un mes.
   
-*día*  
+*day*  
 Expresión entera que especifica un día.
   
-*hora*  
+*hour*  
 Expresión entera que especifica horas.
   
-*minuto*  
+*minute*  
 Expresión entera que especifica minutos.
   
 *segundos*  
 Expresión entera que especifica segundos.
   
-*fracciones*  
+*fractions*  
 Expresión entera que especifica fracciones.
   
 *hour_offset*  
@@ -73,15 +73,15 @@ Expresión entera que especifica la parte de hora del ajuste de zona horaria.
 Expresión entera que especifica la parte de minutos del ajuste de zona horaria.
   
 *precisión*  
-Literal entero que especifica la precisión de la **datetimeoffset** valor va a devolver.
+Literal entero que especifica la precisión del valor **datetimeoffset** que se va a devolver.
   
-## <a name="return-types"></a>Tipos de valor devuelto
-**DateTimeOffset (** *precisión* **)**
+## <a name="return-types"></a>Tipos de valores devueltos
+**datetimeoffset(** *precision* **)**
   
-## <a name="remarks"></a>Comentarios  
-**DATETIMEOFFSETFROMPARTS** devuelve un totalmente inicializado **datetimeoffset** tipo de datos. Los argumentos de desplazamiento se usan para representar el ajuste de zona horaria. Si se omiten los argumentos de desplazamiento, se supone que el ajuste de zona horaria es 00:00; es decir, no hay ningún ajuste de zona horaria. Si se especifican los argumentos de desplazamiento, ambos argumentos deben estar presente y ambos deben ser positivos o negativos. Si *minute_offset* se especifica sin *hour_offset*, se produce un error. Si otros argumentos no son válidos, se generará un error. Si es necesario argumentos son nulos, se devuelve un valor null. Sin embargo, si la *precisión* del argumento es null, a continuación, se produce un error.
+## <a name="remarks"></a>Notas  
+**DATETIMEOFFSETFROMPARTS** devuelve un tipo de datos **datetimeoffset** totalmente inicializado. Los argumentos de desplazamiento se usan para representar el ajuste de zona horaria. Si se omiten los argumentos de desplazamiento, se supone que el ajuste de zona horaria es 00:00; es decir, no hay ningún ajuste de zona horaria. Si se especifican los argumentos de desplazamiento, ambos argumentos deben estar presente y ambos deben ser positivos o negativos. Si *minute_offset* se especifica sin *hour_offset*, se genera un error. Si otros argumentos no son válidos, se generará un error. Si los argumentos necesarios son NULL, se devuelve un valor NULL. Pero si el argumento *precision* es NULL, se generará un error.
   
-El *fracciones* argumento depende el *precisión* argumento. Por ejemplo, si *precisión* es 7, a continuación, cada fracción representa 100 nanosegundos; si *precisión* es 3, cada fracción representa un milisegundo. Si el valor de *precisión* es cero, el valor de *fracciones* también debe ser cero; en caso contrario, se produce un error.
+El argumento *fractions* depende del argumento *precision*. Por ejemplo, si *precision* es 7, cada fracción representa 100 nanosegundos; si *precision* es 3, cada fracción representa un milisegundo. Si el valor de *precision* es cero, el valor de *fractions* también debe ser cero; de lo contrario, se generará un error.
   
 Esta función se puede enviar de forma remota a servidores de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y superiores. No se puede enviar de forma remota a servidores que tengan una versión inferior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
@@ -104,10 +104,10 @@ Result
 ```  
   
 ### <a name="b-example-with-fractions-of-a-second"></a>B. Ejemplo con fracciones de segundo  
-En el ejemplo siguiente se muestra el uso de la *fracciones* y *precisión* parámetros:
-1.   Cuando *fracciones* tiene un valor de 5 y *precisión* tiene un valor de 1, a continuación, el valor de *fracciones* representa 5/10 de un segundo.  
-1.   Cuando *fracciones* tiene un valor de 50 y *precisión* tiene un valor de 2, a continuación, el valor de *fracciones* representa 50/100 de un segundo.  
-1.   Cuando *fracciones* tiene un valor de 500 y *precisión* tiene un valor de 3, a continuación, el valor de *fracciones* representa 500/1000 de un segundo.  
+En este ejemplo se muestra el uso de los parámetros *fractions* y *precision*:
+1.   Cuando *fractions* tiene el valor 5 y *precision*, el valor 1, el valor de *fractions* representa 5/10 de un segundo.  
+1.   Cuando *fractions* tiene el valor 50 y *precision*, el valor 2, el valor de *fractions* representa 50/100 de un segundo.  
+1.   Cuando *fractions* tiene el valor 500 y *precision*, el valor 3, el valor de *fractions* representa 500/1000 de un segundo.  
   
 ```sql
 SELECT DATETIMEOFFSETFROMPARTS ( 2011, 8, 15, 14, 30, 00, 5, 12, 30, 1 );  
@@ -137,7 +137,7 @@ GO
   
 ## <a name="see-also"></a>Vea también
 [datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
-[EN la zona HORARIA &#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
+[AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   
   
 

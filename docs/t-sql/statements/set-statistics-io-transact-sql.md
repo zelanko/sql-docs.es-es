@@ -1,5 +1,5 @@
 ---
-title: SET STATISTICS IO (Transact-SQL) | Documentos de Microsoft
+title: SET STATISTICS IO (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/10/2016
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/23/2018
 SET STATISTICS IO { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando STATISTICS IO es ON se muestra información estadística. Cuando es OFF, esta información no se muestra.  
   
  Cuando esta opción es ON, las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] siguientes devolverán la información estadística hasta que la opción sea OFF.  
@@ -63,20 +63,20 @@ SET STATISTICS IO { ON | OFF }
 |Elemento de salida|Significado|  
 |-----------------|-------------|  
 |**Table**|Nombre de la tabla.|  
-|**Recuento de exploraciones**|Número de búsquedas y exploraciones iniciadas tras alcanzar el nivel hoja en cualquier dirección para recuperar todos los valores y generar el conjunto de datos final de la salida.<br /><br /> El recuento de la exploración es 0 si el índice utilizado es un índice único o un índice clúster en una clave principal y está buscando un solo valor. Por ejemplo, `WHERE Primary_Key_Column = <value>`.<br /><br /> Recuento de exámenes es 1 cuando está buscando un valor con un índice clúster no único que se define en una columna de clave no principal. Esto se hace para comprobar si hay valores duplicados para el valor de clave que está buscando. Por ejemplo, `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> El recuento de exploraciones es N si N es el número de exploraciones y búsquedas diferentes comenzó hacia la izquierda o la derecha del nivel hoja después de encontrar un valor de clave mediante la clave de índice.|  
-|**lecturas lógicas**|Número de páginas leídas de la caché de datos.|  
-|**lecturas físicas**|Número de páginas leídas del disco.|  
-|**lecturas anticipadas**|Número de páginas llevadas a la caché por la consulta.|  
-|**lecturas lógicas de LOB**|Número de **texto**, **ntext**, **imagen**, o tipo de valor grande (**varchar (max)**, **nvarchar (max)**, **varbinary (max)**) páginas se leen desde la caché de datos.|  
-|**lecturas físicas de LOB**|Número de **texto**, **ntext**, **imagen** o páginas de tipo de valor grande se leen del disco.|  
-|**lecturas anticipadas de LOB**|Número de **texto**, **ntext**, **imagen** o páginas llevadas a la caché para la consulta con un tipo de valor grande.|  
+|**Scan count**|Número de búsquedas y exploraciones iniciadas tras alcanzar el nivel hoja en cualquier dirección para recuperar todos los valores y generar el conjunto de datos final de la salida.<br /><br /> El recuento de la exploración es 0 si el índice utilizado es un índice único o un índice clúster en una clave principal y está buscando un solo valor. Por ejemplo, `WHERE Primary_Key_Column = <value>`.<br /><br /> El número de exploraciones es 1 cuando está buscando un valor con un índice clúster que no es único y que se define en una columna de clave de no principal. Esto se hace para comprobar si hay valores duplicados para el valor de clave que está buscando. Por ejemplo, `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> El recuento de exploraciones es N si N es el número de exploraciones y búsquedas diferentes comenzó hacia la izquierda o la derecha del nivel hoja después de encontrar un valor de clave mediante la clave de índice.|  
+|**logical reads**|Número de páginas leídas de la caché de datos.|  
+|**physical reads**|Número de páginas leídas del disco.|  
+|**read-ahead reads**|Número de páginas llevadas a la caché por la consulta.|  
+|**lob logical reads**|Número de páginas de tipo **text**, **ntext**, **image** o de un tipo de valor grande (**varchar(max)**, **nvarchar(max)**, **varbinary(max)**) que se leen desde la memoria caché de datos.|  
+|**lob physical reads**|Número de páginas de tipo **text**, **ntext**, **image** o de un tipo de valor grande que se leen desde el disco.|  
+|**lob read-ahead reads**|Número de páginas de tipo **text**, **ntext**, **image** o de un tipo de valor grande que se han colocado en la memoria caché en relación con la consulta.|  
   
  La opción SET STATISTICS IO se establece en tiempo de ejecución, no en tiempo de análisis.  
   
 > [!NOTE]  
 >  Cuando las instrucciones Transact-SQL recuperan columnas LOB, es posible que algunas operaciones de recuperación de LOB necesiten recorrer el árbol de LOB varias veces. Esto puede ocasionar que SET STATISTICS IO informe de un mayor número de lecturas lógicas del que cabría esperar.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para utilizar SET STATISTICS IO, los usuarios deben tener los permisos adecuados para ejecutar la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]. El permiso SHOWPLAN no es necesario.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -103,7 +103,7 @@ reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0,
 lob read-ahead reads 0.  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Instrucciones SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
  [SET STATISTICS TIME &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)  

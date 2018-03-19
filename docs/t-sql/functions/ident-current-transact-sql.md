@@ -1,5 +1,5 @@
 ---
-title: IDENT_CURRENT (Transact-SQL) | Documentos de Microsoft
+title: IDENT_CURRENT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,7 +50,7 @@ IDENT_CURRENT( 'table_name' )
   
 ## <a name="arguments"></a>Argumentos  
  *table_name*  
- Es el nombre de la tabla cuyo valor de identidad se devuelve. *table_name* es **varchar**, no tiene ningún valor predeterminado.  
+ Es el nombre de la tabla cuyo valor de identidad se devuelve. *table_name* es **varchar**, sin ningún valor predeterminado.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **numeric(38,0)**  
@@ -60,12 +60,12 @@ IDENT_CURRENT( 'table_name' )
   
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un usuario solo puede ver los metadatos de elementos protegibles que posea o para los que se le haya concedido permiso. Esto significa que las funciones integradas de emisión de metadatos, como IDENT_CURRENT, pueden devolver NULL si el usuario no tiene ningún permiso para el objeto. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Comentarios  
- IDENT_CURRENT es similar a la [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] funciones de identidad SCOPE_IDENTITY y @@IDENTITY. Las tres funciones devuelven los últimos valores de identidad generados. Sin embargo, el ámbito y la sesión en el que *última* se define en cada una de estas funciones son distintas:  
+## <a name="remarks"></a>Notas  
+ IDENT_CURRENT es similar a las funciones de identidad SCOPE_IDENTITY y @@IDENTITY de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Las tres funciones devuelven los últimos valores de identidad generados. Pero la definición de *últimos valores de identidad* para cada una de estas funciones es diferente en cuanto al ámbito y la sesión:  
   
 -   IDENT_CURRENT devuelve el último valor de identidad generado para una tabla específica en cualquier sesión y cualquier ámbito.  
   
--   @@IDENTITY devuelve el último valor de identidad generado para una tabla en la sesión actual, en todos los ámbitos.  
+-   @@IDENTITY devuelve el último valor de identidad generado para cualquier tabla en la sesión actual, en todos los ámbitos.  
   
 -   SCOPE_IDENTITY devuelve el último valor de identidad generado para cualquier tabla en la sesión y el ámbito actuales.  
   
@@ -144,12 +144,12 @@ SELECT IDENT_CURRENT('t7');
 /* Returns the last value inserted into t7.*/  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
  [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)   
- [IDENT_INCR &#40; Transact-SQL &#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
- [IDENT_SEED &#40; Transact-SQL &#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
- [Expresiones &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Funciones del sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
+ [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
+ [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

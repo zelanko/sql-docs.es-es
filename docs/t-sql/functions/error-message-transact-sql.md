@@ -1,5 +1,5 @@
 ---
-title: ERROR_MESSAGE (Transact-SQL) | Documentos de Microsoft
+title: ERROR_MESSAGE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -56,10 +56,10 @@ ERROR_MESSAGE ( )
   
  Devuelve NULL si se le llama desde fuera del ámbito del bloque CATCH.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Puede llamarse a ERROR_MESSAGE desde cualquier lugar del ámbito de un bloque CATCH.  
   
- ERROR_MESSAGE devuelve el mensaje de error con independencia de cuántas veces se haya ejecutado, o en qué parte del ámbito del bloque CATCH se ejecute. Esto difiere de las funciones como @@ERROR, que sólo devuelve un número de error en la instrucción inmediatamente posterior a la que se produzca un error o bloquear la primera instrucción de un bloque CATCH.  
+ ERROR_MESSAGE devuelve el mensaje de error con independencia de cuántas veces se haya ejecutado, o en qué parte del ámbito del bloque CATCH se ejecute. Esto contrasta con funciones como @@@ERROR, que solo devuelve un número de error en la instrucción inmediatamente posterior a la que causa un error, o la primera instrucción de un bloque CATCH.  
   
  En bloques CATCH anidados, ERROR_MESSAGE devuelve el mensaje de error específico del ámbito del bloque CATCH en el que se hace referencia a él. Por ejemplo, el bloque CATCH de una construcción TRY...CATCH externa podría tener una construcción TRY...CATCH anidada. En el bloque CATCH anidado, ERROR_MESSAGE devuelve el mensaje del error que ha invocado el bloque CATCH anidado. Si se ejecuta ERROR_MESSAGE en el bloque CATCH externo, devuelve el mensaje del error que ha invocado el bloque CATCH.  
   
@@ -101,7 +101,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>C. Usar ERROR_MESSAGE en un bloque CATCH con otras herramientas de control de errores.  
  El siguiente ejemplo de código muestra una instrucción `SELECT` que genera un error de división por cero. Además del mensaje de error, se devuelve información relacionada con el error.  

@@ -1,5 +1,5 @@
 ---
-title: Db_name (Transact-SQL) | Documentos de Microsoft
+title: DB_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -50,16 +50,16 @@ DB_NAME ( [ database_id ] )
   
 ## <a name="arguments"></a>Argumentos  
 *database_id*  
-Es el número de identificación (Id.) de la base de datos que se va a devolver. *database_id* es **int**, no tiene ningún valor predeterminado. Si no se especifica el Id., se devuelve el nombre de la base de datos actual.
+Es el número de identificación (Id.) de la base de datos que se va a devolver. *database_id* es de tipo **int** y no tiene ningún valor predeterminado. Si no se especifica el Id., se devuelve el nombre de la base de datos actual.
   
-## <a name="return-types"></a>Tipos de valor devuelto
-**nvarchar (128)**
+## <a name="return-types"></a>Tipos de valores devueltos
+**nvarchar(128)**
   
-## <a name="permissions"></a>Permissions  
-Si el autor de llamada de **DB_NAME** no es el propietario de la base de datos y la base de datos no es **maestro** o **tempdb**, los permisos mínimos necesarios para ver la fila correspondiente son Permiso de nivel de servidor ALTER ANY DATABASE o VIEW ANY DATABASE o permiso CREATE DATABASE en la **maestro** base de datos. La base de datos a la que está conectado el autor de la llamada siempre se puede ver en **sys.databases**.
+## <a name="permissions"></a>Permisos  
+Si el autor de la llamada de **DB_NAME** no es el propietario de la base de datos y la base de datos no es **maestra** o **tempdb**, los permisos mínimos necesarios para ver la fila correspondiente son el permiso ALTER ANY DATABASE o VIEW ANY DATABASE de nivel de servidor, o el permiso CREATE DATABASE en la base de datos **maestra**. La base de datos a la que está conectado el autor de la llamada siempre se puede ver en **sys.databases**.
   
 > [!IMPORTANT]  
->  De forma predeterminada, la función public tiene el permiso VIEW ANY DATABASE, lo que permite todos los inicios de sesión ver información de la base de datos. Para bloquear un inicio de sesión de la capacidad para detectar una base de datos, REVOCAR el permiso VIEW ANY DATABASE de pública o denegar el permiso VIEW ANY DATABASE para inicios de sesión individuales.  
+>  El rol público tiene el permiso VIEW ANY DATABASE de forma predeterminada, lo que permite a todos los inicios de sesión ver información de la base de datos. Para impedir que un inicio de sesión tenga capacidad para detectar una base de datos, revoque el permiso VIEW ANY DATABASE del rol público o deniegue el permiso VIEW ANY DATABASE a inicios de sesión individuales.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -81,16 +81,16 @@ SELECT DB_NAME(3)AS [Database Name];
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-return-the-current-database-name"></a>C. Devolver el nombre de base de datos actual  
+### <a name="c-return-the-current-database-name"></a>C. Devolver el nombre de la base de datos actual  
   
 ```sql
 SELECT DB_NAME() AS [Current Database];  
 ```  
   
-### <a name="d-return-the-name-of-a-database-by-using-the-database-id"></a>D. Devolver el nombre de una base de datos utilizando el identificador de base de datos  
-En el ejemplo siguiente se devuelve el nombre de base de datos y database_id para cada base de datos.
+### <a name="d-return-the-name-of-a-database-by-using-the-database-id"></a>D. Devolver el nombre de la base de datos usando el identificador de base de datos  
+En el siguiente ejemplo se devuelve el nombre y el identificador de base de datos de cada base de datos.
   
 ```sql
 SELECT DB_NAME(database_id) AS [Database], database_id  
@@ -98,8 +98,8 @@ FROM sys.databases;
 ```  
   
 ## <a name="see-also"></a>Vea también
-[Db_id &#40; Transact-SQL &#41;](../../t-sql/functions/db-id-transact-sql.md)  
-[Funciones de metadatos &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)  
+[Funciones de metadatos &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
   
   

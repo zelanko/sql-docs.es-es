@@ -1,5 +1,5 @@
 ---
-title: ALTER RESOURCE POOL (Transact-SQL) | Documentos de Microsoft
+title: ALTER RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 
   Cambia la configuración del grupo de recursos de servidor del regulador de recursos existente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -72,28 +72,28 @@ ALTER RESOURCE POOL { pool_name | "default" }
  "default" debe estar encerrado entre comillas ("") o corchetes ([]) si se utiliza con ALTER RESOURCE POOL para evitar el conflicto con DEFAULT, que es una palabra reservada del sistema. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 > [!NOTE]  
->  Grupos de recursos y grupos de cargas de trabajo predefinido utilizan nombres en minúsculas, por ejemplo, "default". Debe tenerse esto en cuenta en los servidores que usan una intercalación que distingue entre mayúsculas y minúsculas. En los servidores que usan una intercalación que no distingue entre mayúsculas y minúsculas, como SQL_Latin1_General_CP1_CI_AS, los nombres "predeterminado" y "Predeterminado" son equivalentes.  
+>  Todos los grupos de cargas de trabajo y de recursos predefinidos usan nombres en minúsculas, como "predeterminado". Debe tenerse esto en cuenta en los servidores que usan una intercalación que distingue entre mayúsculas y minúsculas. En los servidores que usan una intercalación que no distingue entre mayúsculas y minúsculas, como SQL_Latin1_General_CP1_CI_AS, los nombres "predeterminado" y "Predeterminado" son equivalentes.  
   
- MIN_CPU_PERCENT =*value*  
- Especifica el ancho banda de la CPU promedio garantizado para todas las solicitudes en el grupo de recursos de servidor cuando hay contención de CPU. *valor* es un entero con un valor predeterminado de 0. El intervalo permitido para *valor* está comprendido entre 0 y 100.  
+ MIN_CPU_PERCENT =*valor*  
+ Especifica el ancho banda de la CPU promedio garantizado para todas las solicitudes en el grupo de recursos de servidor cuando hay contención de CPU. *valor* es un entero con un valor predeterminado de 0. El intervalo permitido para *value* es de 0 a 100.  
   
  MAX_CPU_PERCENT =*value*  
- Especifica el promedio máximo de ancho banda de CPU que recibirán todas las solicitudes en el grupo de recursos de servidor cuando hay contención de CPU. *valor* es un entero con un valor predeterminado de 100. El intervalo permitido para *valor* está comprendido entre 1 y 100.  
+ Especifica el promedio máximo de ancho banda de CPU que recibirán todas las solicitudes en el grupo de recursos de servidor cuando hay contención de CPU. *value* es un entero con un valor predeterminado de 100. El intervalo permitido para *value* es de 1 a 100.  
   
- CAP_CPU_PERCENT =*value*  
+ CAP_CPU_PERCENT =*valor*  
  **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Especifica la capacidad máxima de CPU de destino para las solicitudes del grupo de recursos. *valor* es un entero con un valor predeterminado de 100. El intervalo permitido para *valor* está comprendido entre 1 y 100.  
+ Especifica la capacidad máxima de CPU de destino para las solicitudes del grupo de recursos. *value* es un entero con un valor predeterminado de 100. El intervalo permitido para *value* es de 1 a 100.  
   
 > [!NOTE]  
->  Debido a la naturaleza estadística de la regulación de la CPU, puede que observe picos ocasionales si se supera el valor especificado en CAP_CPU_PERCENT.  
+>  Debido a la naturaleza estadística del gobierno de la CPU, es posible que observe picos ocasionales que superen el valor especificado en CAP_CPU_PERCENT.  
   
  AFFINITY {SCHEDULER = AUTO | (Scheduler_range_spec) | NUMANODE = (NUMA_node_range_spec)}  
  **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Adjunte el grupo de recursos de servidor a los programadores específicos. El valor predeterminado es AUTO.  
   
- AFFINITY SCHEDULER = (Scheduler_range_spec) asigna al grupo de recursos a las programaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] representadas por los identificadores proporcionados. Estos identificadores se asignan a los valores de la columna scheduler_id de [sys.dm_os_schedulers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).  
+ AFFINITY SCHEDULER = (Scheduler_range_spec) asigna al grupo de recursos a las programaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] representadas por los identificadores proporcionados. Estos identificadores se asignan a los valores de la columna scheduler_id de [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).  
   
  Cuando usa AFFINITY NAMANODE = (NUMA_node_range_spec), se establece afinidad entre el grupo de recursos y a los programadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se asignan a las CPU físicas correspondientes al nodo NUMA o al intervalo de nodos especificado. Puede usar la siguiente consulta de Transact-SQL para detectar la asignación entre la configuración física de NUMA y los identificadores de programador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -105,43 +105,43 @@ INNER JOIN sys.dm_os_schedulers AS sc
       AND sc.scheduler_id < 1048576;  
 ```  
   
- MIN_MEMORY_PERCENT =*value*  
- Especifica la cantidad mínima de memoria reservada para este grupo de recursos de servidor que no se puede compartir con otros grupos de recursos de servidor. *valor* es un entero con un valor predeterminado de 0. El intervalo permitido para *valor* está comprendido entre 0 y 100.  
+ MIN_MEMORY_PERCENT =*valor*  
+ Especifica la cantidad mínima de memoria reservada para este grupo de recursos de servidor que no se puede compartir con otros grupos de recursos de servidor. *valor* es un entero con un valor predeterminado de 0. El intervalo permitido para *value* es de 0 a 100.  
   
  MAX_MEMORY_PERCENT =*value*  
- Especifica la memoria total del servidor que puede ser utilizada por las solicitudes en este grupo de recursos de servidor. *valor* es un entero con un valor predeterminado de 100. El intervalo permitido para *valor* está comprendido entre 1 y 100.  
+ Especifica la memoria total del servidor que puede ser utilizada por las solicitudes en este grupo de recursos de servidor. *value* es un entero con un valor predeterminado de 100. El intervalo permitido para *value* es de 1 a 100.  
   
  MIN_IOPS_PER_VOLUME =*valor*  
  **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Especifica el número mínimo de operaciones de E/S por segundo (IOPS) por volumen de disco que se deben reservar para el grupo de recursos de servidor. El intervalo permitido para *valor* está comprendido entre 0 y 2 ^ 31-1 (2.147.483.647). Especifique 0 si no desea indicar un umbral mínimo para el grupo.  
+ Especifica el número mínimo de operaciones de E/S por segundo (IOPS) por volumen de disco que se deben reservar para el grupo de recursos de servidor. El intervalo permitido para *value* es de 0 a 2^31-1 (2.147.483.647). Especifique 0 si no desea indicar un umbral mínimo para el grupo.  
   
  MAX_IOPS_PER_VOLUME =*valor*  
  **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Especifica el número máximo de operaciones de E/S por segundo (IOPS) por volumen de disco que se deben permitir para el grupo de recursos de servidor. El intervalo permitido para *valor* está comprendido entre 0 y 2 ^ 31-1 (2.147.483.647). Especifique 0 para establecer un umbral ilimitado para el grupo. El valor predeterminado es 0.  
+ Especifica el número máximo de operaciones de E/S por segundo (IOPS) por volumen de disco que se deben permitir para el grupo de recursos de servidor. El intervalo permitido para *value* es de 0 a 2^31-1 (2.147.483.647). Especifique 0 para establecer un umbral ilimitado para el grupo. El valor predeterminado es 0.  
   
  Si MAX_IOPS_PER_VOLUME se establece en 0 para un grupo, este no está regulado y puede tomar todas las IOPS del sistema, incluso aunque otros grupos tengan establecido un valor MIN_IOPS_PER_VOLUME. En este caso, se recomienda establecer el valor de MAX_IOPS_PER_VOLUME para este grupo en un número alto (por ejemplo, el valor máximo 2^31-1) si desea que se regule la E/S de este grupo.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  MAX_CPU_PERCENT y MAX_MEMORY_PERCENT deben ser mayores o iguales que MIN_CPU_PERCENT y MIN_MEMORY_PERCENT, respectivamente.  
   
- MAX_CPU_PERCENT puede utilizar la capacidad de CPU por encima del valor de MAX_CPU_PERCENT si está disponible. Aunque puede haber periódicos picos anteriormente CAP_CPU_PERCENT, las cargas de trabajo no puede exceder CAP_CPU_PERCENT durante largos períodos de tiempo, incluso cuando la capacidad de CPU adicional está disponible.  
+ MAX_CPU_PERCENT puede usar la capacidad de CPU por encima del valor de MAX_CPU_PERCENT si está disponible. Aunque puede haber picos periódicos por encima de CAP_CPU_PERCENT, las cargas de trabajo no pueden exceder CAP_CPU_PERCENT durante períodos de tiempo prolongados, incluso cuando se dispone de capacidad de CPU adicional.  
   
  El porcentaje total de la CPU para cada componente afín (programadores o nodos NUMA) no debe superar el 100 %.  
   
- Si va a ejecutar instrucciones de DDL, se recomienda familiarizarse primero con los estados del regulador de recursos. Para obtener más información, consulte [regulador de recursos](../../relational-databases/resource-governor/resource-governor.md).  
+ Si va a ejecutar instrucciones de DDL, se recomienda familiarizarse primero con los estados del regulador de recursos. Para obtener más información, vea [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
- Cuando se cambia un plan que afectan a la configuración, la nueva configuración sólo se aplicará en los planes previamente almacenado en caché después de ejecutar DBCC FREEPROCCACHE (*pool_name*), donde *pool_name* es el nombre de un recurso Regulador de recursos.  
+ Cuando se cambia un plan que afecta al valor, el valor nuevo solo se aplica a los planes previamente almacenados en caché después de ejecutar DBCC FREEPROCCACHE (*pool_name*), donde *pool_name* es el nombre de un grupo de recursos de Resource Governor.  
   
--   Si va a cambiar la AFINIDAD de varios programadores a un programador único, la ejecución de DBCC FREEPROCCACHE no es necesario porque planes paralelos pueden ejecutarse en modo de serie. Sin embargo, no puede ser tan eficaz como un plan compilado como un plan en serie.  
+-   Si se va a cambiar AFFINITY de varios programadores a uno solo, la ejecución de DBCC FREEPROCCACHE no es necesaria porque los planes paralelos se pueden ejecutar en serie. Pero es posible que no sea tan eficaz como un plan compilado como un plan en serie.  
   
--   Si va a cambiar la AFINIDAD de un solo programador a los programadores varios, no es necesario ejecutar DBCC FREEPROCCACHE. Sin embargo, los planes en serie no se puede ejecutar en paralelo, para borrar la memoria caché respectiva le permitirá potencialmente nuevos planes para compilarse con paralelismo.  
+-   Si se va a cambiar AFFINITY de un programador a varios, la ejecución de DBCC FREEPROCCACHE no es necesaria. Pero los planes en serie no se pueden ejecutar en paralelo, así que el borrado de la memoria caché respectiva permite compilar potencialmente nuevos planes mediante paralelismo.  
   
 > [!CAUTION]  
->  Borrar los planes almacenados en caché de un grupo de recursos que está asociado a más de un grupo de cargas de trabajo afectará a todos los grupos de cargas de trabajo con el grupo de recursos definidos por el usuario identificado por *pool_name*.  
+>  El borrado de los planes almacenados en caché de un grupo de recursos asociado a más de un grupo de cargas de trabajo afecta a todos los grupos de cargas de trabajo con el grupo de recursos definido por el usuario identificado por *pool_name*.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL SERVER.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -177,7 +177,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: SMALLDATETIMEFROMPARTS (Transact-SQL) | Documentos de Microsoft
+title: SMALLDATETIMEFROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="smalldatetimefromparts-transact-sql"></a>SMALLDATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Devuelve un **smalldatetime** valor para la fecha y hora especificadas.  
+  Devuelve un valor **smalldatetime** de la fecha y la hora especificadas.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,28 +45,28 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *año*  
+ *year*  
  Expresión entera que especifica un año.  
   
- *mes*  
+ *month*  
  Expresión entera que especifica un mes.  
   
- *día*  
+ *day*  
  Expresión entera que especifica un día.  
   
- *hora*  
+ *hour*  
  Expresión entera que especifica horas.  
   
- *minuto*  
+ *minute*  
  Expresión entera que especifica minutos.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **smalldatetime**  
   
-## <a name="remarks"></a>Comentarios  
- Esta función actúa como un constructor para una totalmente inicializado **smalldatetime** valor. Si los argumentos no son válidos, se produce un error. Si los argumentos necesarios son NULL, se devuelve un valor NULL.  
+## <a name="remarks"></a>Notas  
+ Esta función actúa como un constructor para un valor **smalldatetime** totalmente inicializado. Si los argumentos no son válidos, se generará un error. Si los argumentos necesarios son NULL, se devuelve un valor NULL.  
   
- Esta función se puede enviar de forma remota a servidores de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y superiores. No es remota a servidores que tengan una versión inferior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Esta función se puede enviar de forma remota a servidores de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y superiores. No se puede enviar de forma remota a servidores que tengan una versión inferior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="examples"></a>Ejemplos  
   

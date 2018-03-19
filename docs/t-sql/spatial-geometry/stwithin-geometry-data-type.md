@@ -1,5 +1,5 @@
 ---
-title: STWithin (tipo de datos geometry) | Documentos de Microsoft
+title: STWithin (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stwithin-geometry-data-type"></a>STWithin (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve 1 si una **geometry** instancia está totalmente dentro de otra **geometry** instancia; en caso contrario, devuelve 0. El `STWithin` comando distingue mayúsculas de minúsculas.
+Devuelve 1 si una instancia de **geometry** se encuentra totalmente dentro de otra instancia de **geometry**; en caso contrario, devuelve 0. El comando `STWithin` distingue mayúsculas de minúsculas.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,15 +45,15 @@ Devuelve 1 si una **geometry** instancia está totalmente dentro de otra **geome
   
 ## <a name="arguments"></a>Argumentos  
  *other_geometry*  
- Es otra **geometry** instancia va a comparar con la instancia en la que `STWithin()` se invoca.  
+ Es otra instancia de **geometry** con la que se compara la instancia en la que se invoca `STWithin()`.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **bits**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Comentarios  
- Este método siempre devuelve null si los identificadores de referencia espacial (SRID) de la **geometry** instancias no coinciden.
+## <a name="remarks"></a>Notas  
+ Este método siempre devuelve NULL si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geometry**.
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se usa `STWithin()` para comprobar si, dadas dos instancias de `geometry`, la primera de ellas está totalmente dentro de la segunda.  
@@ -66,8 +66,8 @@ SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);
 SELECT @g.STWithin(@h);  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Información general de los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md)   
+## <a name="see-also"></a>Ver también  
+ [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DENEGAR permisos de extremo (Transact-SQL) | Documentos de Microsoft
+title: DENY (permisos de extremo de Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -55,13 +55,13 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permiso*  
+ *permission*  
  Especifica un permiso que se puede denegar en un extremo. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
- EN el extremo de **::***endpoint_name*  
- Especifica el extremo en el que se va a denegar el permiso. El calificador de ámbito (**::**) es necesario.  
+ ON ENDPOINT **::***endpoint_name*  
+ Especifica el extremo en el que se va a denegar el permiso. Se necesita el calificador de ámbito (**::**).  
   
- PARA \<entidadseguridadservidor >  
+ TO \<server_principal>  
  Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el que se va a denegar el permiso.  
   
  *SQL_Server_login*  
@@ -82,10 +82,10 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  AS *SQL_Server_login*  
  Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del que la entidad de seguridad que ejecuta esta consulta deriva su derecho de denegar el permiso.  
   
-## <a name="remarks"></a>Comentarios  
- Se pueden denegar permisos en el ámbito del servidor solo cuando la base de datos actual es **principal**.  
+## <a name="remarks"></a>Notas  
+ Los permisos del ámbito del servidor solo pueden denegarse si la base de datos actual es **master**.  
   
- Información acerca de los puntos de conexión está visible en el [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md) vista de catálogo. Información acerca de los permisos de servidor está visible en el [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) vista de catálogo e información sobre las entidades de seguridad de servidor está visible en el [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) vista de catálogo.  
+ Puede ver la información sobre los extremos en la vista de catálogo [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md). Puede ver información sobre los permisos del servidor en la vista de catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md), mientras que la información sobre las entidades de seguridad de servidor se encuentra en la vista de catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Un extremo es un elemento protegible de nivel de servidor. La mayoría de permisos limitados y específicos que se pueden denegar en un extremo se muestran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.  
   
@@ -97,13 +97,13 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL en el extremo o el permiso ALTER ANY ENDPOINT en el servidor.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-denying-view-definition-permission-on-an-endpoint"></a>A. Denegar el permiso VIEW DEFINITION en un extremo  
- El siguiente ejemplo se deniega `VIEW DEFINITION` permiso en el punto de conexión `Mirror7` a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión `ZArifin`.  
+ En el siguiente ejemplo se deniega el permiso `VIEW DEFINITION` para el extremo `Mirror7` al inicio de sesión `ZArifin` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 USE master;  
@@ -121,12 +121,12 @@ DENY TAKE OWNERSHIP ON ENDPOINT::Shipping83 TO PKomosinski
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [GRANT &#40;permisos de punto de conexión de Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
- [REVOCAR permisos de extremo &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)   
+ [REVOKE &#40;permisos de punto de conexión de Transact-SQL&#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
- [Vistas de catálogo de puntos de conexión &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
- [Sys.endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
+ [Endpoints Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  [Vistas de catálogo de extremos (Transact-SQL)]  
+ [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
  [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

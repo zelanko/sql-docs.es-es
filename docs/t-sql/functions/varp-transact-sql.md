@@ -1,5 +1,5 @@
 ---
-title: VARP (Transact-SQL) | Documentos de Microsoft
+title: VARP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -67,22 +67,22 @@ VARP (expression) OVER ( [ partition_by_clause ] order_by_clause)
  Especifica que se tiene en cuenta cada valor único.  
   
  *expression*  
- Es un [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de exactos categoría de tipos de datos numéricos o numéricos aproximados excepto para la **bits** tipo de datos. No se permiten funciones de agregado ni subconsultas.  
+ Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de la categoría de tipos de datos numérico exacto o numérico aproximado, excepto para el tipo de datos **bit**. No se permiten funciones de agregado ni subconsultas.  
   
- SOBRE **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones al que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. *order_by_clause* determina el orden lógico en el que se realiza la operación. *order_by_clause* es necesario. Para obtener más información, consulte [la cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones a las que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. *order_by_clause* determina el orden lógico en el que se realiza la operación. *order_by_clause* es obligatorio. Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **float**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si se utiliza VARP en todos los elementos de una instrucción SELECT, cada valor del conjunto de resultados se incluye en el cálculo. VARP solo se puede utilizar con columnas numéricas. Se omiten los valores NULL.  
   
  VARP es una función determinista cuando se utiliza sin las cláusulas OVER y ORDER BY. Es no determinista si se especifica con las cláusulas OVER y ORDER BY. Para obtener más información, consulte [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-varp"></a>R: utilizando VARP  
+### <a name="a-using-varp"></a>A. Con VARP  
  En el ejemplo siguiente se devuelve la varianza de la población de todos los valores de bonificación de la tabla `SalesPerson` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
@@ -91,10 +91,10 @@ FROM Sales.SalesPerson;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-using-varp"></a>B: utilizando VARP  
- El ejemplo siguiente devuelve el `VARP`de los valores de cuota de ventas en la tabla `dbo.FactSalesQuota`. La primera columna contiene la varianza de todos los valores distintos y la segunda columna contiene la varianza de todos los valores, incluidos los valores duplicados.  
+### <a name="b-using-varp"></a>B. Con VARP  
+ En el siguiente ejemplo se devuelve el valor `VARP` de los valores de cuota de ventas de la tabla `dbo.FactSalesQuota`. La primera columna contiene la varianza de todos los valores distintos y la segunda, la varianza de todos los valores, incluidos los valores duplicados.  
   
 ```  
 -- Uses AdventureWorks  
@@ -111,8 +111,8 @@ Distinct_Values   All_Values
 158146830494.18   157788848582.94
 ```  
   
-### <a name="c-using-varp-with-over"></a>C. Utilice VARP con OVER  
- El ejemplo siguiente devuelve el `VARP` de los valores de cuota de ventas para cada trimestre de un año natural. Observe que la cláusula ORDER BY en la cláusula OVER ordena la varianza estadística y la cláusula ORDER BY de la instrucción SELECT ordena el conjunto de resultados.  
+### <a name="c-using-varp-with-over"></a>C. Con VARP y OVER  
+ En el siguiente ejemplo se devuelve el valor `VARP` de los valores de cuota de ventas de cada trimestre de un año natural. Observe que ORDER BY en la cláusula OVER ordena la varianza estadística y ORDER BY de la instrucción SELECT ordena el conjunto de resultados.  
   
 ```  
 -- Uses AdventureWorks  
@@ -135,9 +135,9 @@ Year  Quarter  SalesQuota              Variance
 2002  4        154000.0000             1185187500.00
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Las funciones de agregado &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [EN cláusula &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [Funciones de agregado &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 

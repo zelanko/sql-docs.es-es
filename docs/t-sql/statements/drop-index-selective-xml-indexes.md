@@ -1,5 +1,5 @@
 ---
-title: "DROP INDEX (índices XML selectivos) | Documentos de Microsoft"
+title: "DROP INDEX (índices XML selectivos) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -58,7 +58,7 @@ DROP INDEX index_name ON <object>
  *index_name*  
  Es el nombre del índice existente que se va a quitar.  
   
- *\<objeto >* es la tabla que contiene la columna XML indizada. Use uno de los formatos siguientes:  
+ *\< object>* Es la tabla que contiene la columna XML indizada. Use uno de los formatos siguientes:  
   
 -   `database_name.schema_name.table_name`  
   
@@ -68,11 +68,11 @@ DROP INDEX index_name ON <object>
   
 -   `table_name`  
   
- *\<drop_index_option >* para obtener información acerca de las opciones de índice de destino, vea [DROP INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-index-transact-sql.md).  
+ *\<drop_index_option>* Para obtener más información sobre las opciones para quitar índices, vea [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md).  
   
 ## <a name="security"></a>Seguridad  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Permisos  
  Se necesita el permiso ALTER en la tabla o la vista para poder ejecutar DROP INDEX. Este permiso se concede de forma predeterminada al rol fijo de servidor sysadmin y a los roles fijos de base de datos db_ddladmin y db_owner.  
   
 ## <a name="example"></a>Ejemplo  
@@ -82,7 +82,7 @@ DROP INDEX index_name ON <object>
 DROP INDEX sxi_index ON tbl;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Índices XML selectivos &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
  [Crear, modificar y quitar índices XML selectivos](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)  
   

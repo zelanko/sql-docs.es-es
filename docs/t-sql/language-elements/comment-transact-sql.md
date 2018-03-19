@@ -1,5 +1,5 @@
 ---
-title: --(Comentario) (Transact-SQL) | Documentos de Microsoft
+title: -- (Comentarios) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/25/2018
  *text_of_comment*  
  Cadena de caracteres que contiene el texto del comentario.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Use los dos guiones (--) para comentarios de una línea o anidados. Los comentarios que se insertan con dos guiones (--) se terminan con un carácter de nueva línea. No hay límite de longitud para los comentarios. En la tabla siguiente se enumeran los métodos abreviados de teclado que puede utilizar para acotar un texto como comentario o quitar los comentarios.  
   
 |Acción|Standard|  
@@ -61,9 +61,9 @@ ms.lasthandoff: 01/25/2018
 |Hacer un comentario al texto seleccionado|CTRL+K, CTRL+C|  
 |Quitar un comentario del texto seleccionado|CTRL+K, CTRL+U|  
   
- Para obtener más información acerca de métodos abreviados de teclado, consulte [SQL Server Management Studio Keyboard Shortcuts](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
+ Para más información sobre las teclas de método abreviado, vea [Métodos abreviados de teclado de SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
   
- Para comentarios de varias líneas, vea [estrella barra diagonal &#40; Comentario en bloque &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/slash-star-comment-transact-sql.md).  
+ Para más información sobre los comentarios de varias líneas, vea [Slash Star &#40;Block Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md) (Barra diagonal y asterisco [comentario de bloque] [Transact-SQL]).  
   
 ## <a name="examples"></a>Ejemplos  
  En este ejemplo se utilizan los caracteres -- de comentario.  
@@ -80,7 +80,7 @@ ORDER BY PostalCode ASC; -- We do not have to specify ASC because
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Lenguaje de control de flujo &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)  
+## <a name="see-also"></a>Ver también  
+ [Lenguaje de control de flujo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)  
   
   

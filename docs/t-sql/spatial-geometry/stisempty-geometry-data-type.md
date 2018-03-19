@@ -1,5 +1,5 @@
 ---
-title: STIsEmpty (tipo de datos geometry) | Documentos de Microsoft
+title: STIsEmpty (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisempty-geometry-data-type"></a>STIsEmpty (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve 1 si una **geometry** instancia está vacía. Devuelve 0 si una **geometry** instancia no está vacía.
+Devuelve 1 si una instancia de **geometry** está vacía. Devuelve 0 si una instancia de **geometry** no está vacía.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,7 +44,7 @@ Devuelve 1 si una **geometry** instancia está vacía. Devuelve 0 si una **geome
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **bits**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
@@ -57,7 +57,7 @@ SET @g = geometry::STGeomFromText('POLYGON EMPTY', 0);
 SELECT @g.STIsEmpty();  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

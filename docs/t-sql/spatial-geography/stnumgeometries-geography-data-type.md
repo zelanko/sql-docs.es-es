@@ -1,5 +1,5 @@
 ---
-title: STNumGeometries (tipo de datos geography) | Documentos de Microsoft
+title: STNumGeometries (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumgeometries-geography-data-type"></a>STNumGeometries (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve el número de **geometrías** que componen un **geography** instancia.  
+  Devuelve el número de **geometries** que componen una instancia de **geography**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **int**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
  Tipo de valor devuelto de CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Comentarios  
- Este método devuelve 1 si la **geography** instancia no es un **MultiPoint**, **MultiLineString**, **MultiPolygon**, o **GeometryCollection** instancia, o 0 si la **geography** instancia está vacía.  
+## <a name="remarks"></a>Notas  
+ Este método devuelve 1 si la instancia de **geography** no es una instancia de **MultiPoint**, **MultiLineString**, **MultiPolygon** o  **GeometryCollection** y 0 si la instancia de **geography** está vacía.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se crea un `MultiPoint` instancia y se utiliza `STNumGeometries()` para averiguar cómo muchas **geometrías** contiene la instancia.  
+ En el siguiente ejemplo se crea una instancia de `MultiPoint` y se usa `STNumGeometries()` para averiguar cuántas **geometries** contiene dicha instancia.  
   
 ```  
 DECLARE @g geography;  
@@ -60,7 +60,7 @@ SET @g = geography::STGeomFromText('MULTIPOINT((-122.360 47.656), (-122.343 47.6
 SELECT @g.STNumGeometries();  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de OGC en instancias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

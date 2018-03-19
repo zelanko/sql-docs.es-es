@@ -1,5 +1,5 @@
 ---
-title: "Nodes() (método) (tipo de datos xml) | Documentos de Microsoft"
+title: "nodes() (método del tipo de datos XML) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -32,13 +32,13 @@ ms.lasthandoff: 01/25/2018
 # <a name="nodes-method-xml-data-type"></a>nodes() (método del tipo de datos XML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  El **nodes()** método resulta útil cuando desea dividir una **xml** instancia de tipo de datos en datos relacionales. Permite identificar nodos que se asignarán a una fila nueva.  
+  El método **nodes()** es muy útil si desea dividir una instancia de tipo de datos **xml** en datos relacionales. Permite identificar nodos que se asignarán a una fila nueva.  
   
- Cada **xml** instancia de tipo de datos tiene un nodo de contexto proporcionado implícitamente. En el caso de la instancia XML almacenada en una columna o variable, éste es el nodo de documento. El nodo de documento es el nodo implícito situado en la parte superior de cada **xml** instancia de tipo de datos.  
+ Cada instancia de tipo de datos **xml** tiene un nodo de contexto proporcionado de manera implícita. En el caso de la instancia XML almacenada en una columna o variable, éste es el nodo de documento. El nodo de documento es el nodo implícito situado en la parte superior de cada instancia de tipo de datos **xml**.  
   
- El resultado de la **nodes()** método es un conjunto de filas que contiene copias lógicas de las instancias XML originales. En estas copias lógicas, el nodo de contexto de cada instancia de fila se establece en uno de los nodos identificados con la expresión de consulta, de manera que las consultas posteriores pueden navegar de forma relativa hasta estos nodos de contexto.  
+ El resultado del método **nodes()** es un conjunto de datos que contiene copias lógicas de las instancias XML originales. En estas copias lógicas, el nodo de contexto de cada instancia de fila se establece en uno de los nodos identificados con la expresión de consulta, de manera que las consultas posteriores pueden navegar de forma relativa hasta estos nodos de contexto.  
   
- Puede recuperar varios valores del conjunto de filas. Por ejemplo, puede aplicar el **value()** método al conjunto de filas devuelto por **nodes()** y recuperar varios valores de la instancia XML original. Tenga en cuenta que la **value()** método, cuando se aplica a la instancia XML, devuelve un único valor.  
+ Puede recuperar varios valores del conjunto de filas. Por ejemplo, puede aplicar el método **value()** al conjunto de filas devuelto por **nodes()** y recuperar varios valores de la instancia XML original. Tenga en cuenta que el método **value()**, cuando se aplica a la instancia XML, devuelve solo un valor.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -51,10 +51,10 @@ nodes (XQuery) as Table(Column)
  *XQuery*  
  Es un literal de cadena, una expresión XQuery. Si la expresión de consulta construye nodos, éstos se exponen en el conjunto de filas resultante. Si la expresión de consulta da lugar a una secuencia vacía, el conjunto de filas estará vacío. Si la expresión de consulta da lugar estáticamente a una secuencia que contiene valores atómicos en lugar de nodos, se produce un error estático.  
   
- *Tabla*(*columna*)  
+ *Table*(*Column*)  
  Es el nombre de tabla y el nombre de columna del conjunto de filas resultante.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Por ejemplo, imagine que tiene la tabla siguiente:  
   
 ```  
@@ -79,7 +79,7 @@ T (ProductModelID int, Instructions xml)
 </root>  
 ```  
   
- A `nodes()` invocación del método con la expresión de consulta `/root/Location` devuelve un conjunto de filas con tres filas, que contiene una copia lógica del documento XML original y con el elemento de contexto establecido en uno de los `<Location>` nodos:  
+ Una invocación del método `nodes()` con la expresión de consulta `/root/Location` devolvería un conjunto de filas con tres filas, cada una de ellas con una copia lógica del documento XML original y con el elemento de contexto establecido en uno de los nodos `<Location>`:  
   
 ```  
 Product  
@@ -96,7 +96,7 @@ ModelID      Instructions
              </root>  
 ```  
   
- A continuación, puede consultar este conjunto de filas mediante **xml** métodos del tipo de datos. La siguiente consulta extrae el subárbol del elemento de contexto de cada fila generada:  
+ Tras ello, puede consultar este conjunto de filas usando métodos del tipo de datos **xml**. La siguiente consulta extrae el subárbol del elemento de contexto de cada fila generada:  
   
 ```  
 SELECT T2.Loc.query('.')  
@@ -114,15 +114,15 @@ ProductModelID  Instructions
 1        <Location LocationID="30" .../>  
 ```  
   
- Observe que el conjunto de filas devuelto ha mantenido la información de tipo. Puede aplicar **xml** métodos, tipo de datos como **query()**, **value()**, **exist()**, y **nodes()** , en el resultado de un **nodes()** método. Sin embargo, no puede aplicar el **modify()** método para modificar la instancia XML.  
+ Observe que el conjunto de filas devuelto ha mantenido la información de tipo. Puede aplicar métodos del tipo de datos **xml** como **query()**, **value()**, **exist()** y **nodes()** al resultado de un método **nodes()**. En cambio, no puede aplicar el método **modify()** para modificar la instancia XML.  
   
  Asimismo, el nodo de contexto del conjunto de filas no se puede materializar. Es decir, no puede utilizarlo en una instrucción SELECT. Sin embargo, puede utilizarlo en IS NULL y COUNT(*).  
   
- Escenarios para usar la **nodos()** método son los mismos que para utilizar [OPENXML &#40; Transact-SQL &#41; ](../../t-sql/functions/openxml-transact-sql.md). Esto proporciona una vista del conjunto de filas del documento XML. Sin embargo, no es necesario utilizar cursores cuando se usa el **nodes()** método en una tabla que contenga varias filas de documentos XML.  
+ Los escenarios para usar el método **nodes()** son los mismos que para usar [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). Esto proporciona una vista del conjunto de filas del documento XML. En cambio, no tiene que usar cursores cuando emplea el método **nodes()** en una tabla que contenga varias filas de documentos XML.  
   
- Tenga en cuenta que el conjunto de filas devuelto por la **nodes()** método es un conjunto de filas sin nombre. Por tanto, se le debe dar un nombre de manera explícita utilizando alias.  
+ Observe que el conjunto de filas devuelto por el método **nodes()** no tiene nombre. Por tanto, se le debe dar un nombre de manera explícita utilizando alias.  
   
- El **nodes()** función no se puede aplicar directamente a los resultados de una función definida por el usuario. Para usar el **nodes()** función con el resultado de una función escalar definida por el usuario, puede asignar el resultado de la función definida por el usuario a una variable o usar una tabla derivada para asignar un alias de columna a la función definida por el usuario valor devuelto y, a continuación, usar CROSS APPLY para seleccionar del alias.  
+ La función **nodes()** no puede aplicarse directamente a los resultados de una función definida por el usuario. Para usar la función **nodes()** con el resultado de una función escalar definida por el usuario, puede asignar el resultado de la función definida por el usuario a una variable o usar una tabla derivada para asignar un alias de columna al valor devuelto de la función definida por el usuario y luego usar CROSS APPLY para seleccionar del alias.  
   
  En el ejemplo siguiente se muestra una forma de usar `CROSS APPLY` para seleccionar entre los resultados de una función definida por el usuario.  
   
@@ -204,9 +204,9 @@ go
 ```  
   
 ### <a name="specifying-the-nodes-method-against-a-column-of-xml-type"></a>Especificar el método nodes() con una columna de tipo xml  
- Las instrucciones de fabricación de bicicletas en este ejemplo se utilizan y se almacenan en las instrucciones **xml** columna de tipo de la **ProductModel** tabla.  
+ En este ejemplo se usan las instrucciones de fabricación de bicicletas y se almacenan en la columna Instructions de tipo **xml** de la tabla **ProductModel**.  
   
- En el ejemplo siguiente, la `nodes()` método se especifica en el `Instructions` columna de **xml** escriba en el `ProductModel` tabla.  
+ En el siguiente ejemplo, el método `nodes()` se especifica para la columna `Instructions` de tipo **xml** de la tabla `ProductModel`.  
   
  El método `nodes()` establece los elementos <`Location`> como nodos de contexto especificando la ruta de acceso `/MI:root/MI:Location`. El conjunto de filas resultante incluye copias lógicas del documento original, una para cada nodo <`Location`> del documento, con el nodo de contexto establecido en el elemento <`Location`>. Por tanto, la función `nodes()` ofrece un conjunto de nodos de contexto <`Location`>.  
   
@@ -214,9 +214,9 @@ go
   
  En este ejemplo, la consulta establece cada elemento <`Location`> como un nodo de contexto en el documento de instrucciones de fabricación del modelo de producto específico. Puede utilizar estos nodos de contexto para recuperar valores como los siguientes:  
   
--   Buscar el Id. de ubicación de cada <`Location`>  
+-   Encontrar los identificadores de ubicación de cada <`Location`>  
   
--   Recuperar pasos de fabricación (<`step`> elementos secundarios) de cada <`Location`>  
+-   Recuperar pasos de fabricación (elementos <`step`> secundarios) en cada <`Location`>  
   
  Esta consulta devuelve el elemento de contexto, en el que se especifica la sintaxis abreviada `'.'` para `self::node()`, en el método `query()`.  
   
@@ -303,7 +303,7 @@ WHERE ProductModelID=7
 GO    
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Agregar espacios de nombres a consultas con WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Crear instancias de datos XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [Métodos del tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md)  

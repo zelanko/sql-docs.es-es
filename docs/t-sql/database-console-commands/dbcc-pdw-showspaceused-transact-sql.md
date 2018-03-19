@@ -29,9 +29,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-Muestra el número de filas, el espacio de disco reservado y el espacio en disco usado para una tabla específica o para todas las tablas de un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] base de datos.
+Muestra el número de filas, el espacio en disco reservado y el espacio en disco usado para una tabla específica o para todas las tablas de una base de datos [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,37 +47,37 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
   
 ## <a name="arguments"></a>Argumentos  
  [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
- Uno, dos o tres partes de nombre de la tabla que se mostrará. Para dos o nombres de tabla de tres partes, el nombre deben incluirse entre comillas dobles (""). Uso de comillas alrededor de un nombre de tabla de una parte es opcional. Cuando no se especifica ningún nombre de tabla, se muestra la información de la base de datos actual.  
+ Nombre de una, dos o tres partes de la tabla que se va a mostrar. En el caso de los nombres de tabla de dos o tres partes, el nombre debe incluirse entre comillas dobles (""). El uso de comillas en un nombre de tabla de una parte es opcional. Cuando no se especifica ningún nombre de tabla, se muestra la información de la base de datos actual.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
 Requiere el permiso VIEW SERVER STATE.
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
-Se trata de un conjunto de resultados para todas las tablas.
+Este es el conjunto de resultados de todas las tablas.
   
-|Columna|Tipo de datos|Description|  
+|columna|Tipo de datos|Description|  
 |------------|---------------|-----------------|  
-|reserved_space|bigint|Espacio total utilizado para la base de datos, en KB.|  
-|data_space|bigint|Espacio utilizado para los datos, en KB.|  
-|index_space|bigint|Espacio utilizado para los índices, en KB.|  
-|unused_space|bigint|Espacio que forma parte del espacio reservado y no se usa, en KB.|  
-|pdw_node_id|int|Nodo de proceso que se utiliza para los datos.|  
+|reserved_space|BIGINT|Espacio total usado para la base de datos, en KB.|  
+|data_space|BIGINT|Espacio usado para los datos, en KB.|  
+|index_space|BIGINT|Espacio usado para los índices, en KB.|  
+|unused_space|BIGINT|Espacio que forma parte del espacio reservado y que no se usa, en KB.|  
+|pdw_node_id|INT|Nodo de ejecución que se usa para los datos.|  
   
-Se trata de un conjunto de resultados para una tabla.
+Este es el conjunto de resultados de una tabla.
   
-|Columna|Tipo de datos|Description|Intervalo|  
+|columna|Tipo de datos|Description|Intervalo|  
 |------------|---------------|-----------------|-----------|  
-|rows|bigint|Número de filas.||  
-|reserved_space|bigint|Espacio total reservado para el objeto, en KB.||  
-|data_space|bigint|Espacio utilizado para los datos, en KB.||  
-|index_space|bigint|Espacio utilizado para los índices, en KB.||  
-|unused_space|bigint|Espacio que forma parte del espacio reservado y no se usa, en KB.||  
-|pdw_node_id|int|Nodo de proceso que se utiliza para el uso del espacio de informes.||  
-|distribution_id|int|Distribución que se utiliza para el uso del espacio de informes.|El valor es -1 para las tablas replicadas.|  
+|rows|BIGINT|Número de filas.||  
+|reserved_space|BIGINT|Espacio total reservado para el objeto, en KB.||  
+|data_space|BIGINT|Espacio usado para los datos, en KB.||  
+|index_space|BIGINT|Espacio usado para los índices, en KB.||  
+|unused_space|BIGINT|Espacio que forma parte del espacio reservado y que no se usa, en KB.||  
+|pdw_node_id|INT|Nodo de ejecución que se usa para notificar el uso de espacio.||  
+|distribution_id|INT|Distribución que se usa para notificar el uso de espacio.|El valor es -1 para las tablas replicadas.|  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdwshowspaceused-basic-syntax"></a>A. Sintaxis básica de DBCC PDW_SHOWSPACEUSED  
-Los ejemplos siguientes se muestran varias formas para mostrar el número de filas, la reserva de espacio en disco y espacio en disco utilizado por la tabla FactInternetSales en la [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] base de datos.
+En los ejemplos siguientes se muestran varias formas de mostrar el número de filas, el espacio en disco reservado y el espacio en disco usado por la tabla FactInternetSales en la base de datos [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].
   
 ```sql
 -- Uses AdventureWorks  
@@ -88,8 +88,8 @@ DBCC PDW_SHOWSPACEUSED ( "dbo.FactInternetSales" );
 DBCC PDW_SHOWSPACEUSED ( FactInternetSales );  
 ```  
   
-### <a name="b-show-the-disk-space-used-by-all-tables-in-the-current-database"></a>B. Mostrar el espacio en disco utilizado por todas las tablas de la base de datos actual  
- En el ejemplo siguiente se muestra el espacio en disco reservado y las utilizan todas las tablas de usuario y las tablas del sistema en el [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] base de datos.  
+### <a name="b-show-the-disk-space-used-by-all-tables-in-the-current-database"></a>B. Mostrar el espacio en disco usado por todas las tablas de la base de datos actual  
+ En el ejemplo siguiente se muestra el espacio en disco reservado y usado por todas las tablas de usuario y las tablas del sistema en la base de datos [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].  
   
 ```sql
 -- Uses AdventureWorks  

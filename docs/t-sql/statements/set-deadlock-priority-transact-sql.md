@@ -1,5 +1,5 @@
 ---
-title: SET DEADLOCK_PRIORITY (Transact-SQL) | Documentos de Microsoft
+title: SET DEADLOCK_PRIORITY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -63,27 +63,27 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
  HIGH  
  Especifica que la sesión actual será el sujeto de interbloqueo si el resto de las sesiones implicadas en la cadena de interbloqueos tienen la prioridad de interbloqueo establecida en un valor entero superior a 5 o puede ser el sujeto de interbloqueo si otra sesión tiene la prioridad de interbloqueo establecida en HIGH o en un valor entero igual a 5.  
   
- \<prioridad numérica >  
+ \<numeric-priority>  
  Es un intervalo de valores enteros (-de 10 a 10) para proporcionar 21 niveles de prioridad de interbloqueo. Especifica que la sesión actual será el sujeto de interbloqueo si el resto de las sesiones de la cadena de interbloqueos se ejecutan con un valor de prioridad de interbloqueo superior, pero no será el sujeto de interbloqueo si el resto de las sesiones se ejecutan con un valor de prioridad de interbloqueo inferior al valor de la sesión actual. Además, especifica que la sesión actual puede ser el sujeto de interbloqueo si se ejecuta otra sesión con un valor de prioridad de interbloqueo igual al de la sesión actual. LOW se asigna a -5, NORMAL a 0 y HIGH a 5.  
   
- **@***deadlock_var*  
+ **@** *deadlock_var*  
  Es una variable de carácter que especifica la prioridad del interbloqueo. La variable se debe establecer en el valor 'LOW', 'NORMAL' o 'HIGH'. La variable debe tener la longitud suficiente para contener la cadena completa.  
   
- **@***deadlock_intvar*  
+ **@** *deadlock_intvar*  
  Es una variable de entero que especifica la prioridad del interbloqueo. La variable se debe establecer en un valor entero en el intervalo (de -10 a 10).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Los interbloqueos se producen cuando dos sesiones esperan a tener acceso a los recursos bloqueados por la otra sesión. Si una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detecta que dos sesiones están interbloqueadas, resuelve el interbloqueo mediante la elección de una de las sesiones como el sujeto de interbloqueo. La transacción actual del sujeto se revierte y se devuelve el mensaje de error de interbloqueo 1205 al cliente. De este modo, se desbloquea dicha sesión para que pueda continuar la otra sesión.  
   
  La selección de la sesión como sujeto de interbloqueo depende de la prioridad de interbloqueo de cada sesión:  
   
--   Si ambas sesiones tienen la misma prioridad de interbloqueo, la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elige la sesión cuya reversión como sujeto de interbloqueo resulta menos costosa. Por ejemplo, si ambas sesiones tienen la prioridad de interbloqueo establecida en HIGH, la instancia elige como sujeto de interbloqueo la sesión cuya reversión considera menos costosa. El costo se determina comparando el número de bytes de registro escritos en ese punto en cada transacción. (Puede ver este valor como "Utilizado del registro" en un gráfico de interbloqueo).
+-   Si ambas sesiones tienen la misma prioridad de interbloqueo, la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elige la sesión cuya reversión como sujeto de interbloqueo resulta menos costosa. Por ejemplo, si ambas sesiones tienen la prioridad de interbloqueo establecida en HIGH, la instancia elige como sujeto de interbloqueo la sesión cuya reversión considera menos costosa. El costo se determina comparando el número de bytes de registro escritos en ese punto de cada transacción. (Puede ver este valor como "Registro utilizado" en un gráfico de interbloqueo).
   
 -   Si las sesiones tienen distintas prioridades de interbloqueo, la sesión con la prioridad de interbloqueo inferior se elige como el sujeto de interbloqueo.  
   
  SET DEADLOCK_PRIORITY se establece en tiempo de ejecución, no en tiempo de análisis.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
 ## <a name="examples"></a>Ejemplos  
@@ -104,9 +104,9 @@ SET DEADLOCK_PRIORITY NORMAL;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [@@LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/functions/lock-timeout-transact-sql.md)   
  [Instrucciones SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET LOCK_TIMEOUT &#40; Transact-SQL &#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
+ [SET LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
   
   

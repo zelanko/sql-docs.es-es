@@ -1,5 +1,5 @@
 ---
-title: MinDbCompatibilityLevel (tipo de datos geography) | Documentos de Microsoft
+title: MinDbCompatibilityLevel (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="mindbcompatibilitylevel-geography-data-type"></a>MinDbCompatibilityLevel (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Devuelve la compatibilidad de base de datos mínima que reconoce el **geography** tipo de datos.  
+  Devuelve la compatibilidad de base de datos mínima que reconoce el tipo de datos **geography**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **int**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
  Tipo de valor devuelto de CLR: **int**  
   
-## <a name="remarks"></a>Comentarios  
- Use `MinDbCompatibilityLevel()` para probar un objeto espacial a efectos de compatibilidad antes de cambiar el nivel de compatibilidad de una base de datos. No es válida **geography** escriba devuelve 110.  
+## <a name="remarks"></a>Notas  
+ Use `MinDbCompatibilityLevel()` para probar un objeto espacial a efectos de compatibilidad antes de cambiar el nivel de compatibilidad de una base de datos. Un tipo **geography** no válido devuelve 110.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -96,8 +96,8 @@ END
   
  La primera instrucción SELECT devuelve 110 y la segunda instrucción SELECT devuelve 100.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
- [Compatibilidad con versiones anteriores del motor de base de datos SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
+ [Compatibilidad con versiones anteriores del Motor de base de datos de SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
   
   

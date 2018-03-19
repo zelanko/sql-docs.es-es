@@ -1,5 +1,5 @@
 ---
-title: NCHAR (Transact-SQL) | Documentos de Microsoft
+title: NCHAR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -47,16 +47,16 @@ NCHAR ( integer_expression )
   
 ## <a name="arguments"></a>Argumentos  
  *integer_expression*  
- Cuando la intercalación de la base de datos no contiene la marca de carácter complementario (SC), se trata de un número entero positivo de 0 a 65535 (de 0 a 0xFFFF). Si se especifica un valor fuera de este rango, se devuelve NULL. Para obtener más información acerca de los caracteres adicionales, vea [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Cuando la intercalación de la base de datos no contiene la marca de carácter complementario (SC), se trata de un número entero positivo de 0 a 65535 (de 0 a 0xFFFF). Si se especifica un valor fuera de este rango, se devuelve NULL. Para más información sobre el formato de caracteres, vea [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  Cuando la intercalación de la base de datos admite la marca de carácter complementario (SC), se trata de un número entero positivo de 0 a 1114111 (de 0 a 0x10FFFF). Si se especifica un valor fuera de este rango, se devuelve NULL.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- **nchar (1)** cuando la intercalación predeterminada de la base de datos no admite caracteres complementarios.  
+ **nchar(1)** cuando la intercalación de la base de datos predeterminada no admite caracteres complementarios.  
   
- **nvarchar(2)** cuando la intercalación de base de datos predeterminada admite caracteres complementarios.  
+ **nvarchar(2)** cuando la intercalación de la base de datos predeterminada admite caracteres complementarios.  
   
- Si el parámetro *integer_expression* se encuentra en el intervalo 0 - 0xFFFF, que se devuelve un solo carácter. Con valores más altos, NCHAR devuelve el par suplente correspondiente. No cree un par suplente mediante `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)`. En su lugar, utilice una intercalación de base de datos que admita caracteres complementarios y después especifique el punto de código Unicode para el par suplente. En el ejemplo siguiente se muestra el método antiguo de creación de un par suplente y el método preferido de especificación del punto de código Unicode.  
+ Si el parámetro *integer_expression* cae dentro del intervalo comprendido entre 0 y 0xFFFF, solo se devuelve un carácter. Con valores más altos, NCHAR devuelve el par suplente correspondiente. No cree un par suplente mediante `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)`. En su lugar, utilice una intercalación de base de datos que admita caracteres complementarios y después especifique el punto de código Unicode para el par suplente. En el ejemplo siguiente se muestra el método antiguo de creación de un par suplente y el método preferido de especificación del punto de código Unicode.  
   
 ```  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
@@ -218,12 +218,12 @@ Character # Unicode Character UNICODE Value
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
  [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Funciones de cadena &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [Funciones de cadena &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   
 

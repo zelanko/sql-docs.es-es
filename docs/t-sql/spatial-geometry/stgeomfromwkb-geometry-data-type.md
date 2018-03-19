@@ -1,5 +1,5 @@
 ---
-title: STGeomFromWKB (tipo de datos geometry) | Documentos de Microsoft
+title: STGeomFromWKB (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomfromwkb-geometry-data-type"></a>STGeomFromWKB (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve un **geometry** instancia a partir de una representación Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Devuelve una instancia de **geometry** a partir de una representación Well-Known Binary (WKB) de Open Geospatial Consortium (OGC).
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,23 +45,23 @@ STGeomFromWKB ( 'WKB_geometry' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *WKB_geometry*  
- Es la representación WKB de la **geometry** instancia que se va a devolver. *WKB_geometry* es un **varbinary (max)** expresión.  
+ Es la representación WKB de la instancia de **geometry** que se quiere devolver. *WKB_geometry* es una expresión **varbinary(max)**.  
   
  *SRID*  
- Es un **int** expresión que representa el espaciales identificador de referencia (SRID) de la **geometry** instancia que se va a devolver.  
+ Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometry** que se quiere devolver.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geometry**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentarios  
- El tipo OGC de la **geometry** instancia devuelta por `STGeomFromText()` se establece en la entrada WKB correspondiente.  
+## <a name="remarks"></a>Notas  
+ El tipo OGC de la instancia de **geometry** devuelto por `STGeomFromText()` se establece en la entrada WKB correspondiente.  
   
- Este método producirá una **FormatException** si la entrada no tiene el formato correcto.  
+ Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se utiliza `STGeomFromWKB()` para crear un **geometry** instancia.  
+ En el ejemplo siguiente se usa `STGeomFromWKB()` para crear una instancia de **geometry**.  
   
 ```  
 DECLARE @g geometry;   
@@ -69,7 +69,7 @@ SET @g = geometry::STGeomFromWKB(0x010200000003000000000000000000594000000000000
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de geometría estáticos de OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

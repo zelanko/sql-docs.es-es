@@ -1,5 +1,5 @@
 ---
-title: LAST_VALUE (Transact-SQL) | Documentos de Microsoft
+title: LAST_VALUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/20/2015
 ms.prod: sql-non-specified
@@ -49,12 +49,12 @@ LAST_VALUE ( [scalar_expression )
   
 ## <a name="arguments"></a>Argumentos  
  *scalar_expression*  
- Es el valor que se va devolver. *scalar_expression* puede ser una columna, una subconsulta u otra expresión que da como resultado un valor único. No se permiten otras funciones analíticas.  
+ Es el valor que se va devolver. *scalar_expression* puede ser una columna, una subconsulta u otra expresión que dé como resultado un solo valor. No se permiten otras funciones analíticas.  
   
- SOBRE **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
- *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones al que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo.  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
+ *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones a las que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo.  
   
- *order_by_clause* determina el orden de los datos antes de que se aplica la función. El *order_by_clause* es necesario. *rows_range_clause* limita aún más las filas de la partición especificando puntos inicial y final. Para obtener más información, consulte [la cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ *order_by_clause* determina el orden de los datos antes de que se aplique la función. *order_by_clause* es obligatorio. *rows_range_clause* limita aún más las filas de la partición, ya que especifica puntos de inicio y final. Para más información, vea [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) (OVER &#40;cláusula de Transact-SQL&#41;.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  Es el mismo tipo que *scalar_expression*.  
@@ -108,7 +108,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
 ### <a name="b-using-firstvalue-and-lastvalue-in-a-computed-expression"></a>B. Usar FIRST_VALUE y LAST_VALUE en una expresión calculada  
  En el ejemplo siguiente se usan las funciones FIRST_VALUE y LAST_VALUE en expresiones calculadas para mostrar las diferencias entre los valores de cuota de ventas del trimestre actual y el primer y el último trimestre del año respectivamente para un número determinado de empleados. La función FIRST_VALUE devuelve el valor de la cuota de ventas del primer trimestre del año y la resta del valor de la cuota de ventas del trimestre actual. Se devuelve en la columna derivada DifferenceFromFirstQuarter. Para el primer trimestre de un año, el valor de la columna DifferenceFromFirstQuarter es 0. La función LAST_VALUE devuelve el valor de cuota de ventas para el último trimestre del año y lo resta del valor de la cuota de ventas actual del trimestre actual. Se devuelve en la columna derivada DifferenceFromLastQuarter. Para el último trimestre de un año, el valor de la columna DifferenceFromLastQuarter es 0.  
   
- La cláusula "RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING" se requiere en este ejemplo para los valores distintos de cero que se devuelve en la columna DifferenceFromLastQuarter, como se muestra a continuación. El intervalo predeterminado es “RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW”. En este ejemplo, mediante ese intervalo predeterminado (o sin incluir un intervalo, lo que produce el valor predeterminado que se utiliza) daría lugar a que en la columna DifferenceFromLastQuarter se devolvieran ceros. Para obtener más información, consulte [la cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ La cláusula "RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING" se requiere en este ejemplo para los valores distintos de cero que se devuelve en la columna DifferenceFromLastQuarter, como se muestra a continuación. El intervalo predeterminado es “RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW”. En este ejemplo, mediante ese intervalo predeterminado (o sin incluir un intervalo, lo que produce el valor predeterminado que se utiliza) daría lugar a que en la columna DifferenceFromLastQuarter se devolvieran ceros. Para más información, vea [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) (OVER &#40;cláusula de Transact-SQL&#41;.  
   
 ```  
 USE AdventureWorks2012;  

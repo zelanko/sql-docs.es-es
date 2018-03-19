@@ -1,5 +1,5 @@
 ---
-title: CREAR valor predeterminado (Transact-SQL) | Documentos de Microsoft
+title: CREATE DEFAULT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
@@ -58,21 +58,21 @@ AS constant_expression [ ; ]
  Es el nombre del esquema al que pertenece el valor predeterminado.  
   
  *default_name*  
- Es el nombre del valor predeterminado. Nombres predeterminados deben cumplir las reglas de [identificadores](../../relational-databases/databases/database-identifiers.md). Especificar el nombre del propietario del valor predeterminado es opcional.  
+ Es el nombre del valor predeterminado. Los nombres predeterminados deben cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md). Especificar el nombre del propietario del valor predeterminado es opcional.  
   
- *expresiónConstante*  
- Es un [expresión](../../t-sql/language-elements/expressions-transact-sql.md) que contiene solo valores constantes (no puede incluir los nombres de las columnas u otros objetos de base de datos). Se puede utilizar cualquier constante, función integrada o expresión matemática, excepto las que contienen tipos de datos de alias. No se pueden utilizar funciones definidas por el usuario. Incluya las constantes de caracteres y fechas entre comillas simples (**'**); monetario, entero y constantes de punto flotante no necesitan comillas. Los datos binarios deben precederse de 0x y los datos de moneda deben precederse de un signo de dólar ($). El valor predeterminado debe ser compatible con el tipo de datos de la columna.  
+ *constant_expression*  
+ Es una [expression](../../t-sql/language-elements/expressions-transact-sql.md) que contiene solo valores constantes (no puede contener el nombre de ninguna columna u otros objetos de base de datos). Se puede utilizar cualquier constante, función integrada o expresión matemática, excepto las que contienen tipos de datos de alias. No se pueden utilizar funciones definidas por el usuario. Incluya las constantes de caracteres y fechas entre comillas simples (**'**); las constantes de moneda, de enteros y de coma flotante no necesitan comillas. Los datos binarios deben precederse de 0x y los datos de moneda deben precederse de un signo de dólar ($). El valor predeterminado debe ser compatible con el tipo de datos de la columna.  
   
-## <a name="remarks"></a>Comentarios  
- El nombre de un valor predeterminado solo se puede crear en la base de datos actual. En una base de datos, los nombres predeterminados deben ser únicos para cada esquema. Cuando se crea un valor predeterminado, utilice **sp_bindefault** para enlazarlo a una columna o a un tipo de datos de alias.  
+## <a name="remarks"></a>Notas  
+ El nombre de un valor predeterminado solo se puede crear en la base de datos actual. En una base de datos, los nombres predeterminados deben ser únicos para cada esquema. Después de crear un valor predeterminado, use **sp_bindefault** para enlazarlo a una columna o a un tipo de datos de alias.  
   
- Si el valor predeterminado no es compatible con la columna a la que está enlazado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un mensaje de error al intentar insertar el valor predeterminado. Por ejemplo, N/A no se puede usar como un valor predeterminado para un **numérico** columna.  
+ Si el valor predeterminado no es compatible con la columna a la que está enlazado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un mensaje de error al intentar insertar el valor predeterminado. Por ejemplo, N/A no se puede usar como valor predeterminado para una columna **numeric**.  
   
  Si el valor predeterminado es demasiado largo para la columna a la que está enlazado, el valor se trunca.  
   
  Las instrucciones CREATE DEFAULT no se pueden combinar con otras instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] en el mismo lote.  
   
- Valor predeterminado debe quitarse antes de crear uno nuevo el mismo nombre y el valor predeterminado debe ser independiente mediante la ejecución de **sp_unbindefault** antes de quitarla.  
+ Antes de crear un nuevo valor predeterminado con el mismo nombre, es necesario quitar el anterior y quitar el enlace del valor predeterminado; para ello, ejecute **sp_unbindefault** antes de quitarlo.  
   
  Si una columna tiene un valor predeterminado y una regla asociados, el valor predeterminado no debe infringir la regla. No se insertará nunca un valor predeterminado que esté en conflicto con una regla y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un mensaje de error cada vez que se intente insertar el valor predeterminado.  
   
@@ -89,9 +89,9 @@ AS constant_expression [ ; ]
 |**NULL**|NULL|predeterminados|NULL|NULL|  
 |**NOT NULL**|Error|predeterminados|error|error|  
   
- Para cambiar el nombre predeterminado, utilice **sp_rename**. Para obtener un informe sobre un valor predeterminado, utilice **sp_help**.  
+ Para cambiar el nombre de un valor predeterminado, use **sp_rename**. Para obtener un informe sobre un valor predeterminado, use **sp_help**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para ejecutar CREATE DEFAULT, como mínimo, un usuario debe tener permiso CREATE DEFAULT en la base de datos actual y permiso ALTER en el esquema donde se va a crear el valor predeterminado.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -116,18 +116,18 @@ GO
 sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber';  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [ELIMINAR predeterminado &#40; Transact-SQL &#41;](../../t-sql/statements/drop-default-transact-sql.md)   
- [Eliminar regla &#40; Transact-SQL &#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
- [Expresiones &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [DROP DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
+ [DROP RULE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
+ [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [sp_bindefault &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
+ [sp_bindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [sp_unbindefault &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
+ [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
   
   

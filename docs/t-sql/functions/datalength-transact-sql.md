@@ -1,5 +1,5 @@
 ---
-title: DATALENGTH (Transact-SQL) | Documentos de Microsoft
+title: DATALENGTH (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -50,13 +50,13 @@ DATALENGTH ( expression )
   
 ## <a name="arguments"></a>Argumentos  
 *expression*  
-Es un [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cualquier tipo de datos.
+Es una [expression](../../t-sql/language-elements/expressions-transact-sql.md) de cualquier tipo de datos.
   
-## <a name="return-types"></a>Tipos de valor devuelto
-**bigint** si *expresión* reviste la **varchar (max)**, **nvarchar (max)** o **varbinary (max)** tipos de datos; en caso contrario, **int**.
+## <a name="return-types"></a>Tipos de valores devueltos
+**bigint** si *expression* es de los tipos de datos **varchar(max)**, **nvarchar(max)** o **varbinary(max)**; en caso contrario, es **int**.
   
-## <a name="remarks"></a>Comentarios  
-DATALENGTH es especialmente útil con **varchar**, **varbinary**, **texto**, **imagen**, **nvarchar**, y **ntext** tipos de datos porque estos tipos de datos pueden almacenar datos de longitud variable.
+## <a name="remarks"></a>Notas  
+DATALENGTH es especialmente útil con los tipos de datos **varchar**, **varbinary**, **text**, **image**, **nvarchar** y **ntext** porque estos tipos de datos pueden almacenar datos de longitud variable.
   
 DATALENGTH de NULL es NULL.
   
@@ -76,10 +76,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también
-[LEN &#40; Transact-SQL &#41;](../../t-sql/functions/len-transact-sql.md)  
+[LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[Funciones del sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
+[Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
   
   
 

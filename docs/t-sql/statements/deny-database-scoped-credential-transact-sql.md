@@ -1,5 +1,5 @@
 ---
-title: "DENY (Transact-SQL) de credencial de ámbito de base de datos | Documentos de Microsoft"
+title: "Credencial de ámbito de base de datos DENY (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -32,10 +32,10 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="deny-database-scoped-credential-transact-sql"></a>DENEGAR el ámbito de base de datos de credencial (Transact-SQL)
+# <a name="deny-database-scoped-credential-transact-sql"></a>Credencial de ámbito de base de datos DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  Deniega permisos en una credencial de ámbito de la base de datos.  
+  Deniega permisos en una credencial de ámbito de base de datos.  
 
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -52,11 +52,11 @@ DENY permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permiso*  
- Especifica un permiso que se pueden denegar en una credencial de ámbito de la base de datos. Se muestra a continuación.  
+ *permission*  
+ Especifica un permiso que puede denegarse en una credencial de ámbito de base de datos. Se muestra a continuación.  
   
- EN CREDENCIAL de ámbito de base de datos **::***credential_name*  
- Especifica la credencial de ámbito de la base de datos en el que se va a denegar el permiso. Es preciso utilizar el calificador de ámbito "::".  
+ ON DATABASE SCOPED CREDENTIAL **::***credential_name*  
+ Especifica la credencial de ámbito de bases de dados en la que se va a denegar el permiso. Es preciso utilizar el calificador de ámbito "::".  
   
  *database_principal*  
  Especifica la entidad de seguridad a la que se deniega el permiso. Uno de los siguientes:  
@@ -99,10 +99,10 @@ DENY permission  [ ,...n ]
   
 -   usuario de base de datos no asignado a una entidad de seguridad del servidor  
   
-## <a name="remarks"></a>Comentarios  
- Una credencial de ámbito de la base de datos es una base de datos de elemento protegible de nivel contenido en la base de datos que es su entidad primaria en la jerarquía de permisos. Los permisos más específicos y limitados que se pueden denegar en una credencial de ámbito de la base de datos se muestran a continuación, junto con permisos más generales que los incluyen por implicación.  
+## <a name="remarks"></a>Notas  
+ Una credencial de ámbito de base de datos es un elemento protegible de nivel de base de datos que contiene la base de datos que es su entidad primaria en la jerarquía de permisos. La mayoría de permisos limitados y específicos que se pueden denegar en una credencial de ámbito de base de datos se muestran a continuación, junto con permisos más generales que los incluyen por implicación.  
   
-|Permiso de credencial de ámbito de base de datos|Implícito en el permiso de credencial de ámbito de la base de datos|Implícito en el permiso de base de datos|  
+|Permiso de credencial de ámbito de base de datos|Implícito en el permiso de credencial de ámbito de base de datos|Implícito en el permiso de base de datos|  
 |----------------------------|---------------------------------------|------------------------------------|  
 |CONTROL|CONTROL|CONTROL|  
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
@@ -110,13 +110,13 @@ DENY permission  [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
- Requiere el permiso CONTROL en la credencial de ámbito de la base de datos. Si se utiliza la cláusula AS, la entidad de seguridad especificada debe poseer la credencial de ámbito de la base de datos.  
+## <a name="permissions"></a>Permisos  
+ Necesita el permiso CONTROL en la credencial de ámbito de base de datos. Si se utiliza la cláusula AS, la entidad de seguridad especificada debe poseer la credencial de ámbito de base de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [Ámbito de base de datos de concesión credencial (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
- [REVOCAR la credencial de ámbito de la base de datos (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)   
+ [Credencial de ámbito de base de datos GRANT (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
+ [Credencial de ámbito de base de datos REVOKE (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)   
  [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)  

@@ -1,5 +1,5 @@
 ---
-title: ERROR_LINE (Transact-SQL) | Documentos de Microsoft
+title: ERROR_LINE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -62,10 +62,10 @@ ERROR_LINE ( )
   
  Devuelve NULL si se le llama desde fuera del ámbito del bloque CATCH.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta función se puede llamar desde cualquier lugar dentro del ámbito de un bloque CATCH.  
   
- ERROR_LINE devuelve el número de línea en que se produjo el error, independientemente de las veces que se llame o desde dónde se llame en el ámbito del bloque CATCH. Esto contrasta con las funciones, como@ERROR, que devuelven un número de error en la instrucción inmediatamente posterior a la que se produzca un error o en la primera instrucción de un bloque CATCH.  
+ ERROR_LINE devuelve el número de línea en que se produjo el error, independientemente de las veces que se llame o desde dónde se llame en el ámbito del bloque CATCH. En cambio, las funciones como @@ERROR solo devuelven el número de error en la instrucción inmediatamente posterior a la que produjo el error o en la primera instrucción de un bloque CATCH.  
   
  En los bloques CATCH anidados, ERROR_LINE devuelve el número de línea del error específico del ámbito del bloque CATCH en el que se hace referencia al mismo. Por ejemplo, el bloque CATCH de una construcción TRY...CATCH podría contener una construcción TRY...CATCH anidada. Dentro del bloque CATCH anidado, ERROR_LINE devuelve el número de línea del error que invocó el bloque CATCH anidado. Si ERROR_LINE se ejecuta en el bloque CATCH externo, devuelve el número de línea del error que invocó ese bloque CATCH.  
   
@@ -131,14 +131,14 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

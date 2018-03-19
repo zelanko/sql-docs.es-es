@@ -1,5 +1,5 @@
 ---
-title: "Modify() (método) (tipo de datos xml) | Documentos de Microsoft"
+title: "Modify() (método del tipo de datos xml) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="modify-method-xml-data-type"></a>Modify() (método del tipo de datos xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Modifica el contenido de un documento XML. Utilice este método para modificar el contenido de un **xml** columna o variable de tipo. Este método toma una instrucción XML DML para insertar, actualizar o eliminar nodos a partir de datos XML. El **modify()** método de la **xml** tipo de datos solo puede usarse en la cláusula SET de una instrucción UPDATE.  
+  Modifica el contenido de un documento XML. Use este método para modificar el contenido de una columna o variable de tipo **xml**. Este método toma una instrucción XML DML para insertar, actualizar o eliminar nodos a partir de datos XML. El método **modify()** del tipo de datos **xml** solo se puede usar en la cláusula SET de una instrucción UPDATE.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,14 +46,14 @@ modify (XML_DML)
  Es una cadena en lenguaje de manipulación de datos (DML) XML. El documento XML se actualiza conforme a esta expresión.  
   
 > [!NOTE]  
->  Se devuelve un error si la **modify()** método se llama en un valor null o da como resultado un valor null.  
+>  Se devuelve un error si se llama al método **modify()** sobre un valor NULL o da como resultado un valor NULL.  
   
 ## <a name="examples"></a>Ejemplos  
- Dado que la **modify()** método requiere una cadena en el XML datos lenguaje de manipulación (DML), los ejemplos de **modify()** se encuentran en los temas que describen las instrucciones XML DML. Para estos ejemplos, vea [insert &#40; XML DML &#41; ](../../t-sql/xml/insert-xml-dml.md), [delete &#40; XML DML &#41; ](../../t-sql/xml/delete-xml-dml.md) y [reemplazar el valor de &#40; XML DML &#41; ](../../t-sql/xml/replace-value-of-xml-dml.md).  
+ Puesto que el método **modify()** requiere una cadena en el lenguaje de manipulación de datos (DML) XML, los ejemplos de **modify()** se encuentran en los temas que tratan sobre las instrucciones XML DML. Para obtener estos ejemplos, vea [insert &#40;XML DML&#41;](../../t-sql/xml/insert-xml-dml.md), [delete &#40;XML DML&#41;](../../t-sql/xml/delete-xml-dml.md) y [replace value of &#40;XML DML&#41;](../../t-sql/xml/replace-value-of-xml-dml.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Crear instancias de datos XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [Métodos de tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md)   
- [Lenguaje de manipulación de datos XML &#40; XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [métodos del tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [Lenguaje de manipulación de datos XML &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

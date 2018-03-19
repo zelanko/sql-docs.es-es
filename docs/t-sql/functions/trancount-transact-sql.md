@@ -1,5 +1,5 @@
 ---
-title: '@@TRANCOUNT (Transact-SQL) | Documentos de Microsoft'
+title: '@@TRANCOUNT (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40trancount-transact-sql"></a>&#x40;&#x40;@TRANCOUNT (Transact-SQL)
+# <a name="x40x40trancount-transact-sql"></a>&#x40;&#x40;TRANCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Devuelve el número de instrucciones BEGIN TRANSACTION que se han producido en la conexión actual.  
@@ -50,8 +50,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipos devueltos  
  **integer**  
   
-## <a name="remarks"></a>Comentarios  
- La instrucción BEGIN TRANSACTION incrementa@TRANCOUNT en 1. ROLLBACK TRANSACTION disminuye @@TRANCOUNT en 0, salvo para ROLLBACK TRANSACTION *savepoint_name*, que no afecta a@TRANCOUNT. COMMIT TRANSACTION o COMMIT WORK disminuye@TRANCOUNT en 1.  
+## <a name="remarks"></a>Notas  
+ La instrucción BEGIN TRANSACTION incrementa @@TRANCOUNT en 1. ROLLBACK TRANSACTION disminuye @@TRANCOUNT a 0, salvo para ROLLBACK TRANSACTION *savepoint_name*, que no afecta a @@TRANCOUNT. Cada instrucción COMMIT TRANSACTION o COMMIT WORK disminuye @@TRANCOUNT en uno.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -101,10 +101,10 @@ PRINT @@TRANCOUNT
 --0  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [Funciones del sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

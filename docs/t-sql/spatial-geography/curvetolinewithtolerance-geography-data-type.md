@@ -1,5 +1,5 @@
 ---
-title: CurveToLineWithTolerance (tipo de datos geography) | Documentos de Microsoft
+title: CurveToLineWithTolerance (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance (tipo de datos Geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Devuelve una aproximación poligonal de un **geography** instancia que contiene los segmentos de arco circular.  
+  Devuelve una aproximación poligonal de una instancia de **geography** que contiene segmentos de arco circulares.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,28 +45,28 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *tolerance*  
- Es un **doble** expresión que define el error máximo entre el segmento de arco circular original y su aproximación lineal.  
+ Expresión **double** que define el error máximo entre el segmento del arco circular original y su aproximación lineal.  
   
  *relative*  
- Es un **bool** expresión que indica si se debe usar un máximo relativo para la desviación. Cuando relative está establecido en falso (0), se establece un máximo absoluto para la desviación que puede tener una aproximación lineal.  Cuando relative está establecido en true (1), la tolerancia se calcula como un producto del parámetro de tolerancia y el diámetro del cuadro de límite para el objeto espacial.  
+ Expresión **bool** que indica si se va a usar un máximo relativo para la desviación. Cuando relative está establecido en falso (0), se establece un máximo absoluto para la desviación que puede tener una aproximación lineal.  Cuando relative está establecido en true (1), la tolerancia se calcula como un producto del parámetro de tolerancia y el diámetro del cuadro de límite para el objeto espacial.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geography**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
 ## <a name="exceptions"></a>Excepciones  
- Establecer la tolerancia < = 0 se produce un **ArgumentOutOfRange** excepción.  
+ Si se establece la tolerancia <= 0, se produce una excepción **ArgumentOutOfRange**.  
   
-## <a name="remarks"></a>Comentarios  
- Este método permite que una cantidad de tolerancia a errores que se especifique para el resultante **LineString**.  
+## <a name="remarks"></a>Notas  
+ Este método permite especificar una cantidad de tolerancia a errores para el valor **LineString** resultante.  
   
- **CurveToLineWithTolerance** método devolverá un **LineString** de instancia para una **CircularString** o **CompoundCurve** instancia y **Polígono** de instancia para una **CurvePolygon** instancia.  
+ El método **CurveToLineWithTolerance** devolverá una instancia de **LineString** para una instancia de **CircularString** o **CompoundCurve** y una instancia de **Polygon** para una instancia de **CurvePolygon**.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. Utilizar valores de tolerancia diferentes en una instancia de CircularString  
- En el ejemplo siguiente se muestra cómo establecer la tolerancia afecta a la `LineString`instancia devuelta desde un `CircularString` instancia:  
+ En el siguiente ejemplo se muestra cómo establecer la tolerancia afecta a la instancia de `LineString` devuelta desde una instancia de `CircularString`:  
   
  ```
  DECLARE @g geography;  
@@ -93,14 +93,14 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. Establecer relative en true para invocar una instancia de CurvePolygon  
- En el ejemplo siguiente se usa un `CurvePolygon` instancia para llamar a `CurveToLineWithTolerance()` con *relativa* establecido en true:  
+ En el siguiente ejemplo se usa una instancia de `CurvePolygon` para llamar a `CurveToLineWithTolerance()` con *relative* establecido en true:  
   
  ```
  DECLARE @g geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658), (-122.348 47.658, -122.358 47.658, -122.358 47.653)))';  
  SELECT @g.CurveToLineWithTolerance(.5,1).ToString();
  ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: STMPolyFromWKB (tipo de datos geography) | Documentos de Microsoft
+title: STMPolyFromWKB (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stmpolyfromwkb-geography-data-type"></a>STMPolyFromWKB (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve un **geographyMultiPolygon** instancia a partir de una representación Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Devuelve una instancia de **geographyMultiPolygon** a partir de una representación Well-Known Binary (WKB) de Open Geospatial Consortium (OGC).
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,17 +45,17 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *WKB_multipolygon*  
- Es la representación WKB de la **geographyMultiPolygon** instancia que se va a devolver. *WKB_multipolygon* es un **varbinary (max)** expresión.  
+ Es la representación WKB de la instancia de **geographyMultiPolygon** que se quiere devolver. *WKB_multipolygon* es una expresión **varbinary(max)**.  
   
  *SRID*  
- Es un **int** expresión que representa el espaciales identificador de referencia (SRID) de la **geographyMultiPolygon** instancia que se va a devolver.  
+ Es una expresión de tipo **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geographyMultiPolygon** que se quiere devolver.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geography**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
- Tipo de OGC: **MultiPolygon**  
+ Tipo OGC: **MultiPolygon**  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se usa `STMPolyFromWKB()` para crear una instancia de `geography`.  
@@ -66,7 +66,7 @@ SET @g = geography::STMPolyFromWKB(0x0106000000020000000103000000010000000400000
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de geografía estáticos de OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

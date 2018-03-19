@@ -1,5 +1,5 @@
 ---
-title: EXP (Transact-SQL) | Documentos de Microsoft
+title: EXP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="exp-transact-sql"></a>EXP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Devuelve el valor exponencial del elemento especificado **float** expresión.  
+  Devuelve el valor exponencial de la expresión **float** especificada.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,17 +47,17 @@ EXP ( float_expression )
   
 ## <a name="arguments"></a>Argumentos  
  *float_expression*  
- Es un [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de tipo **float** o de un tipo que pueda convertirse implícitamente a **float**.  
+ Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de tipo **float** o de un tipo que se puede convertir en **float** de manera implícita.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **float**  
   
-## <a name="remarks"></a>Comentarios  
- La constante **e** (2,718281 …) es la base de los logaritmos naturales.  
+## <a name="remarks"></a>Notas  
+ La constante **e** (2.718281…) es la base de los logaritmos naturales.  
   
- El exponente de un número es la constante **e** elevado a la potencia del número. Por ejemplo, EXP(1,0) = e^1,0 = 2,71828182845905 y EXP(10) = e^10 = 22026,4657948067.  
+ El exponente de un número es la constante **e** elevada a la potencia del número. Por ejemplo, EXP(1,0) = e^1,0 = 2,71828182845905 y EXP(10) = e^10 = 22026,4657948067.  
   
- El valor exponencial del logaritmo natural de un número es el número propio: EXP (registro (*n*)) =  *n* . Y el logaritmo natural del valor exponencial de un número es el número de sí misma: registro (EXP (*n*)) =  *n* .  
+ El valor exponencial del logaritmo natural de un número es el propio número: EXP (LOG (*n*)) = *n*. Asimismo, el logaritmo natural del valor exponencial de un número es el propio número: LOG (EXP (*n*)) = *n*.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -96,10 +96,10 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-finding-the-exponent-of-a-number"></a>C. Obtener el exponente de un número  
- En el ejemplo siguiente se devuelve el valor exponencial del valor especificado (`10`).  
+ En el siguiente ejemplo se devuelve el valor exponencial del valor especificado (`10`).  
   
 ```  
 SELECT EXP(10);  
@@ -126,10 +126,10 @@ SELECT EXP( LOG(20)), LOG( EXP(20));
 20                  20  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Funciones matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [Registro &#40; Transact-SQL &#41;](../../t-sql/functions/log-transact-sql.md)   
- [LOG10 &#40; Transact-SQL &#41;](../../t-sql/functions/log10-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [Funciones matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [LOG &#40;Transact-SQL&#41;](../../t-sql/functions/log-transact-sql.md)   
+ [LOG10 &#40;Transact-SQL&#41;](../../t-sql/functions/log10-transact-sql.md)  
   
   
 

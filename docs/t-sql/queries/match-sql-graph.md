@@ -1,5 +1,5 @@
 ---
-title: "COINCIDENCIA (gráfico SQL) | Documentos de Microsoft"
+title: MATCH (SQL Graph) | Microsoft Docs
 ms.custom: 
 ms.date: 05/05/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-  Especifica una condición de búsqueda para un gráfico. COINCIDENCIA puede usarse sólo con las tablas de nodo y borde gráfico, en la instrucción SELECT como parte de la cláusula WHERE. 
+  Especifica una condición de búsqueda para un gráfico. MATCH puede usarse solo con tablas perimetrales o de nodo del gráfico, en la instrucción SELECT y como parte de la cláusula WHERE. 
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,24 +63,24 @@ MATCH (<graph_search_pattern>)
 
 ## <a name="arguments"></a>Argumentos  
 *graph_search_pattern*  
-Especifica el patrón de búsqueda o ruta de acceso para recorrer en el gráfico. Este patrón utiliza sintaxis de carátulas de ASCII para recorrer una ruta de acceso en el gráfico. El patrón de tránsito de un nodo a otro a través de un borde, en la dirección de la flecha proporcionada. Borde nombres o los alias se proporcionan dentro de paréntesis. Nombres de nodo o alias aparecen en los dos extremos de la flecha. La flecha puede ir en ambas direcciones en el patrón.
+Especifica el patrón que buscar o la ruta de acceso que atravesar en el gráfico. Este patrón usa sintaxis de arte ASCII para atravesar una ruta de acceso en el gráfico. El patrón va de un nodo a otro a través de un borde, en la dirección de la flecha proporcionada. Los nombres o alias de borde se suministran entre paréntesis. Los nombres o alias de nodo aparecen en los dos extremos de la flecha. La flecha puede ir en ambas direcciones en el patrón.
 
 *node_alias*  
-Nombre o alias de una tabla de nodo que se proporcionan en la cláusula FROM.
+Nombre o alias de una tabla de nodo que se proporciona en la cláusula FROM.
 
 *edge_alias*  
-Nombre o alias de una tabla irregular proporcionada en la cláusula FROM.
+Nombre o alias de una tabla perimetral que se proporciona en la cláusula FROM.
 
 
-## <a name="remarks"></a>Comentarios  
-Se pueden repetir los nombres de nodo dentro de la coincidencia.  En otras palabras, un nodo puede atravesar un número arbitrario de veces en la misma consulta.  
-No se puede repetir el nombre de un borde dentro de la coincidencia.  
-Puede señalar un borde en cualquier dirección, pero debe tener una dirección explícita.  
-O y no se admiten operadores NOT en el patrón de coincidencia. COINCIDENCIA se puede combinar con otras expresiones con y en la cláusula WHERE. Sin embargo, combinarla con otras expresiones mediante OR o no se admite. 
+## <a name="remarks"></a>Notas  
+Los nombres de nodo dentro de MATCH se pueden repetir.  Dicho de otro, un nodo se puede atravesar un número arbitrario de veces en la misma consulta.  
+Los nombres de borde no se pueden repetir dentro de MATCH.  
+Un borde puede apuntar a cualquier dirección, pero debe tener una dirección explícita.  
+Los operadores OR y NOT no se pueden usar en el patrón MATCH. MATCH se puede combinar con otras expresiones por medio de AND en la cláusula WHERE, pero esto no es posible con los operadores OR ni NOT. 
 
 ## <a name="examples"></a>Ejemplos  
-### <a name="a--find-a-friend"></a>A.  Buscar a un amigo 
- En el ejemplo siguiente se crea una tabla de nodos de la persona y la tabla irregular de amigos, inserta algunos datos y, a continuación, usa a coincidencia para buscar a elementos friend de Alicia, una persona en el gráfico.
+### <a name="a--find-a-friend"></a>A.  Buscar un amigo 
+ En el siguiente ejemplo se crea una tabla de nodos Person y una tabla perimetral friend, se insertan algunos datos y, tras ello, se usa MATCH para encontrar amigos de Alice, una persona del gráfico.
 
  ```
  -- Create person node table
@@ -110,8 +110,8 @@ AND Person1.name = 'Alice';
 
  ```
 
- ### <a name="b--find-friend-of-a-friend"></a>B.  Buscar a elemento friend de un amigo
- En el ejemplo siguiente se intenta encontrar a friend de un elemento friend de Alicia. 
+ ### <a name="b--find-friend-of-a-friend"></a>B.  Buscar un amigo de un amigo
+ En el siguiente ejemplo se intenta encontrar un amigo de un amigo de Alice. 
 
  ```
 SELECT Person3.name AS FriendName 
@@ -121,8 +121,8 @@ AND Person1.name = 'Alice';
 
  ```
 
-### <a name="c--more-match-patterns"></a>C.  Más `MATCH` patrones
- A continuación se indican algunas formas más en el que puede especificarse un patrón dentro de la coincidencia.
+### <a name="c--more-match-patterns"></a>C.  Más patrones de `MATCH`
+ Aquí encontrará algunas formas más en las que se puede especificar un patrón en MATCH.
 
  ```
  -- Find a friend
@@ -152,7 +152,7 @@ AND Person1.name = 'Alice';
  ```
  
 
-## <a name="see-also"></a>Vea también  
- [Crear tabla &#40; Gráfico SQL &#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [INSERT (gráfico SQL)](../../t-sql/statements/insert-sql-graph.md)]  
- [Gráfico de procesamiento con SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  
+## <a name="see-also"></a>Ver también  
+ [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
+ [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
+ [Graph processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md) (Procesamiento de gráficos con SQL Server 2017)  

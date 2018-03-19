@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="xml-transact-sql"></a>xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Es el tipo de datos que almacena datos de XML. Puede almacenar **xml** instancias en una columna o una variable de **xml** tipo.  
+  Es el tipo de datos que almacena datos de XML. Puede almacenar instancias de **xml** en una columna o una variable de tipo **xml**.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,20 +47,20 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
   
 ## <a name="arguments"></a>Argumentos  
  CONTENT  
- Restringe la **xml** instancia sea de un fragmento XML con formato correcto. Los datos XML pueden contener cero o más elementos en el nivel superior. También se admiten nodos de texto en el nivel superior.  
+ Restringe la instancia de **xml** a un fragmento de XML correcto. Los datos XML pueden contener cero o más elementos en el nivel superior. También se admiten nodos de texto en el nivel superior.  
   
  Éste es el comportamiento predeterminado.  
   
  DOCUMENT  
- Restringe la **xml** instancia sea de un documento XML bien formado. Los datos XML deben tener un elemento raíz (solo uno). No se admiten nodos de texto en el nivel superior.  
+ Restringe la instancia de **xml** a un documento de XML correcto. Los datos XML deben tener un elemento raíz (solo uno). No se admiten nodos de texto en el nivel superior.  
   
  *xml_schema_collection*  
- Es el nombre de una colección de esquemas XML. Para crear un tipo **xml** columna o variable, también puede especificar el nombre de colección de esquemas XML. Para obtener más información sobre con tipo y XML sin tipo, consulte [comparar XML con tipo y XML sin tipo](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+ Es el nombre de una colección de esquemas XML. Para crear una columna o una variable **xml** con tipo, puede especificar opcionalmente el nombre de la colección de esquemas XML. Para obtener más información sobre XML con y sin tipo, vea [Comparar XML con tipo y XML sin tipo](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
-## <a name="remarks"></a>Comentarios  
- La representación almacenada de **xml** instancias de tipo de datos no pueden superar los 2 gigabytes (GB) de tamaño.  
+## <a name="remarks"></a>Notas  
+ La representación almacenada de las instancias del tipo de datos **xml** no puede superar 2 gigabytes (GB) de tamaño.  
   
- Las facetas CONTENT y DOCUMENT solo se aplican a XML con tipo. Para obtener más información, consulte [comparar XML con tipo y XML sin tipo](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+ Las facetas CONTENT y DOCUMENT solo se aplican a XML con tipo. Para obtener más información, vea [Comparar XML con tipo y XML sin tipo](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -73,10 +73,10 @@ SELECT @y;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Conversiones de tipos de datos &#40; motor de base de datos &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+## <a name="see-also"></a>Ver también  
+ [Conversiones de tipos de datos &#40;motor de base de datos&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Métodos de tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [métodos del tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Referencia del lenguaje XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
   
   

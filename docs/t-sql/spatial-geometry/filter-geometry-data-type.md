@@ -1,5 +1,5 @@
 ---
-title: Filtro (tipo de datos geometry) | Documentos de Microsoft
+title: Filter (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -35,11 +35,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="filter-geometry-data-type"></a>Filter (tipo de datos Geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Un método que ofrece un método rápido solo para índices de intersección para determinar si un **geometry** instancia se corta con otra **geometry** instancia, suponiendo que hay un índice disponible.
+Método que proporciona una forma rápida de intersección solo para índices con la que se puede determinar si una instancia de **geometry** forma intersección con otra instancia de **geometry**, siempre y cuando haya un índice disponible.
   
-Devuelve 1 si una **geometry** instancia puede intersectar con otra **geometry** instancia. Este método puede generar un resultado falso positivo, y el resultado exacto puede depender del plan. Devuelve un valor 0 preciso (respuesta verdadera negativa) si no hay ninguna intersección de **geometry** instancias encontradas.
+Devuelve 1 si una instancia de **geometry** puede formar intersección con otra instancia de **geometry**. Este método puede generar un resultado falso positivo, y el resultado exacto puede depender del plan. Devuelve el valor 0 preciso (respuesta verdadera negativa) si no se encuentra ninguna intersección de las instancias de **geometry**.
   
-En casos donde un índice no está disponible o no se utiliza, el método devolverá los mismos valores que **STIntersects()** cuando se llama con los mismos parámetros.
+En los casos en los que no haya ningún índice disponible o que no se use, el método devolverá los mismos valores que **STIntersects()** cuando se llama con los mismos parámetros.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,14 +50,14 @@ En casos donde un índice no está disponible o no se utiliza, el método devolv
   
 ## <a name="arguments"></a>Argumentos  
  *other_geometry*  
- Es otra **geometry** instancia va a comparar con la instancia en la que se invoca Filter().  
+ Es otra instancia de **geometry** con la que se compara la instancia en la que se invoca Filter().  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **bits**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método no es determinista y no es preciso.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -81,8 +81,8 @@ FROM sample
 WHERE g.Filter(geometry::Parse('POLYGON((-1 -1, 1 -1, 1 1, -1 1, -1 -1))')) = 1;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Métodos extendidos en instancias de Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+## <a name="see-also"></a>Ver también  
+ [Métodos extendidos en instancias de geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [STIntersects &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stintersects-geometry-data-type.md)  
   
   

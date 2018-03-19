@@ -1,5 +1,5 @@
 ---
-title: Nombre de DLL DBCC (FREE) (Transact-SQL) | Documentos de Microsoft
+title: DBCC dllname (FREE) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-dllname-free-transact-sql"></a>DBCC dllname (FREE) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Descarga el procedimiento almacenado extendido especificado DLL de la memoria.
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Descarga de la memoria la DLL del procedimiento almacenado extendido especificado.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -57,27 +57,27 @@ DBCC <dllname> ( FREE ) [ WITH NO_INFOMSGS ]
  WITH NO_INFOMSGS  
  Suprime todos los mensajes de información.  
   
-## <a name="remarks"></a>Comentarios
-Cuando se ejecuta un procedimiento almacenado extendido, la DLL permanece cargada por la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hasta que se cierra el servidor. Esta instrucción permite que se pueda descargar de la memoria una DLL sin tener que cerrar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para mostrar los archivos DLL cargados actualmente por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ejecute **sp_helpextendedproc**
+## <a name="remarks"></a>Notas
+Cuando se ejecuta un procedimiento almacenado extendido, la DLL permanece cargada por la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hasta que se cierra el servidor. Esta instrucción permite que se pueda descargar de la memoria una DLL sin tener que cerrar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para mostrar los archivos DLL cargados actualmente por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ejecute **sp_helpextendedproc**.
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
-Cuando se especifica una DLL válida, DBCC *nombre dll* (FREE) devuelve:
+Si se especifica una DLL válida, DBCC *dllname* (FREE) devuelve:
   
 ```sql
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
 Debe pertenecer al rol fijo de servidor **sysadmin** o al rol fijo de base de datos **db_owner** .
   
 ## <a name="examples"></a>Ejemplos  
-En el siguiente ejemplo se da por supuesto que `xp_sample` está implementado como xp_sample.dll y se ha ejecutado. DBCC \< *nombre dll*> descarga (FREE) el archivo xp_sample.dll asociado con el `xp_sample` procedimiento extendido.
+En el siguiente ejemplo se da por supuesto que `xp_sample` se ha implementado como xp_sample.dll y se ha ejecutado. DBCC \<*dllname*> (FREE) descarga el archivo xp_sample.dll asociado al procedimiento extendido `xp_sample`.
   
 ```sql  
 DBCC xp_sample (FREE);  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [Características de ejecución de los procedimientos almacenados extendidos](../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  
 [sp_addextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)  

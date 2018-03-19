@@ -1,5 +1,5 @@
 ---
-title: "Establezca el perfil de estadísticas (Transact-SQL) | Documentos de Microsoft"
+title: SET STATISTICS PROFILE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 SET STATISTICS PROFILE { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando STATISTICS PROFILE es ON, cada consulta ejecutada devuelve su conjunto de resultados normal, seguido de un conjunto de resultados adicional que muestra el perfil de ejecución de la consulta.  
   
  El conjunto de resultados adicional contiene las columnas SHOWPLAN_ALL de la consulta y estas columnas adicionales.  
@@ -59,9 +59,9 @@ SET STATISTICS PROFILE { ON | OFF }
 |Nombre de columna|Description|  
 |-----------------|-----------------|  
 |**Filas**|Número real de filas que produce cada operador|  
-|**Se ejecuta**|Número de veces que se ha ejecutado el operador|  
+|**Executes**|Número de veces que se ha ejecutado el operador|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para utilizar SET STATISTICS PROFILE y ver el resultado, el usuario debe tener los permisos siguientes:  
   
 -   Los permisos adecuados para ejecutar instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -70,10 +70,10 @@ SET STATISTICS PROFILE { ON | OFF }
   
  Para las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que no generan conjuntos de resultados de STATISTICS PROFILE, solo se necesitan los permisos adecuados para ejecutar las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que generan conjuntos de resultados de STATISTICS PROFILE, el permiso de ejecución de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] y el permiso SHOWPLAN deben ser correctos, o la ejecución de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] se anulará y no se generará información relativa al plan de presentación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Instrucciones SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [ESTABLECER STATISTICS TIME &#40; Transact-SQL &#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)   
- [SET STATISTICS IO &#40; Transact-SQL &#41;](../../t-sql/statements/set-statistics-io-transact-sql.md)  
+ [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET STATISTICS TIME &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)   
+ [SET STATISTICS IO &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-io-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: LAT (tipo de datos geography) | Documentos de Microsoft
+title: Lat (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="lat-geography-data-type"></a>Lat (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  La propiedad latitude de la **geography** instancia.  
+  Devuelve la propiedad de latitud de la instancia de **geography**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,12 +43,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **float**  
+ Tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo CLR: **SqlDouble**  
+ Tipo de CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Comentarios  
- En el modelo OpenGIS, se define únicamente en Lat **geography** instancias se componen de un solo punto. Esta propiedad devolverá NULL si **geography** instancias contienen más de un único punto. Esta propiedad es precisa y de solo lectura.  
+## <a name="remarks"></a>Notas  
+ En el modelo OpenGIS, Lat se define solo en instancias de **geography** que constan de un único punto. Esta propiedad devolverá NULL si las instancias de **geography** contienen más de un punto. Esta propiedad es precisa y de solo lectura.  
   
 ## <a name="examples"></a>Ejemplos  
  Este ejemplo crea un punto y devuelve la latitud del punto.  
@@ -59,7 +59,7 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.Lat;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

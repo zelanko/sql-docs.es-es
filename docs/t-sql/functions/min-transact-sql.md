@@ -1,5 +1,5 @@
 ---
-title: MIN (Transact-SQL) | Documentos de Microsoft
+title: MIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="min-transact-sql"></a>MIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Devuelve el valor mínimo de la expresión. Puede ir seguido por el [cláusula OVER](../../t-sql/queries/select-over-clause-transact-sql.md).  
+  Devuelve el valor mínimo de la expresión. Puede ir seguido de la [cláusula OVER](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,17 +67,17 @@ MIN ( expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] )
  Especifica que se tiene en cuenta cada valor único. DISTINCT no tiene ningún significado con MIN y solo se incluye para la compatibilidad con ISO.  
   
  *expression*  
- Se trata de una constante, nombre de columna o función y cualquier combinación de operadores aritméticos, bit a bit y de cadena. MIN se puede usar con **numérico**, **char**, **varchar**, **uniqueidentifier**, o **datetime** las columnas, pero no con **bits** columnas. No se permiten funciones de agregado ni subconsultas.  
+ Se trata de una constante, nombre de columna o función y cualquier combinación de operadores aritméticos, bit a bit y de cadena. MIN se puede usar con columnas **numeric**, **char**, **varchar**, **uniqueidentifier** o **datetime**, pero no con columnas **bits**. No se permiten funciones de agregado ni subconsultas.  
   
  Para obtener más información, vea [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- SOBRE **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones al que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. *order_by_clause* determina el orden lógico en el que se realiza la operación. *order_by_clause* es necesario. Para obtener más información, consulte [la cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones a las que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. *order_by_clause* determina el orden lógico en el que se realiza la operación. *order_by_clause* es obligatorio. Para más información, vea [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) (OVER &#40;cláusula de Transact-SQL&#41;.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- Devuelve un valor igual a *expresión*.  
+ Devuelve un valor igual a *expression*.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  MIN pasa por alto los valores NULL.  
   
  En el caso de columnas de datos de caracteres, MIN busca el valor más bajo en la secuencia de ordenación.  
@@ -87,7 +87,7 @@ MIN ( expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] )
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-simple-example"></a>A. Ejemplo sencillo  
- En el ejemplo siguiente se devuelve la tasa de impuestos más baja (mínima). El ejemplo se utiliza la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de datos  
+ En el ejemplo siguiente se devuelve la tasa de impuestos más baja (mínima). En el ejemplo se usa la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
 SELECT MIN(TaxRate)  
@@ -148,10 +148,10 @@ Tool Design                   8.62                  29.8462               23.505
  (16 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-min"></a>C. Uso de MIN  
- En el ejemplo siguiente se utiliza la función de agregado MIN para devolver el precio del producto (mínimo) menos costoso en un conjunto especificado de pedidos de venta.  
+### <a name="c-using-min"></a>C. Usar MIN  
+ En este ejemplo se usa la función de agregado MIN para devolver el precio del producto menos caro (mínimo) en un conjunto especificado de pedidos de venta.  
   
 ```  
 -- Uses AdventureWorks  
@@ -169,7 +169,7 @@ WHERE SalesOrderNumber IN (N'SO43659', N'SO43660', N'SO43664');
  ```  
   
 ### <a name="d-using-min-with-over"></a>D. Usar MIN con OVER  
- Los ejemplos siguientes usan la función MIN OVER() analítica para devolver el precio del producto menos costoso en cada pedido de ventas. El conjunto de resultados se crean particiones por la `SalesOrderID` columna.  
+ En los siguientes ejemplos se usa la función analítica MIN OVER() para devolver el precio del producto menos caro en cada pedido de ventas. El conjunto de resultados queda particionado por la columna `SalesOrderID`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -191,10 +191,10 @@ LeastExpensiveProduct SalesOrderID
 28.8404               SO43664
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Las funciones de agregado &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [MAX &#40; Transact-SQL &#41;](../../t-sql/functions/max-transact-sql.md)   
- [EN cláusula &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [Aggregate Functions &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  [Funciones de agregado &#40;Transact-SQL&#41;]  
+ [MAX &#40;Transact-SQL&#41;](../../t-sql/functions/max-transact-sql.md)   
+ [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) [OVER &#40;claúsula de Transact-SQL&#41;]  
   
   
 

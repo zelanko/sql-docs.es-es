@@ -1,5 +1,5 @@
 ---
-title: Quitar grupo de recursos externo (Transact-SQL) | Documentos de Microsoft
+title: DROP EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2016
 ms.prod: sql-non-specified
@@ -31,12 +31,12 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="drop-external-resource-pool-transact-sql"></a>Quitar grupo de recursos externo (Transact-SQL)
+# <a name="drop-external-resource-pool-transact-sql"></a>DROP EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Elimina un grupo de recursos externos del regulador de recursos usa para definir los recursos para los procesos externos. Para los servicios de R rige el grupo externo `rterm.exe`, `BxlServer.exe`y otros procesos generados por ellos. Grupos de recursos externos se crean mediante [CREATE EXTERNAL RESOURCE POOL &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-resource-pool-transact-sql.md) y modificar mediante [ALTER EXTERNAL RESOURCE POOL &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-external-resource-pool-transact-sql.md).  
+  Elimina un grupo de recursos externos de Resource Governor que sirve para definir los recursos de los procesos externos. En R Services, el grupo externo rige `rterm.exe`, `BxlServer.exe` y otros procesos generados por ellos. Los grupos de recursos externos se crean por medio de [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md) y se modifican a través de [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md).  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,22 +46,22 @@ DROP EXTERNAL RESOURCE POOL pool_name
   
 ## <a name="arguments"></a>Argumentos  
  *pool_name*  
- El nombre del grupo de recursos externos va a eliminar.  
+ Nombre del grupo de recursos externos que se va a eliminar.  
   
-## <a name="remarks"></a>Comentarios  
- No se puede quitar un grupo de recursos externos si contiene grupos de cargas de trabajo.  
+## <a name="remarks"></a>Notas  
+ No se puede quitar un grupo de recursos externo si contiene grupos de cargas de trabajo.  
   
  No se pueden quitar los grupos de recursos de servidor predeterminados o internos del regulador de recursos.  
   
- La reconfiguración n  
+ La reconfiguración  
   
- Si va a ejecutar instrucciones de DDL, se recomienda familiarizarse primero con los estados del regulador de recursos. Para obtener más información, consulte [regulador de recursos](../../relational-databases/resource-governor/resource-governor.md).  
+ Si va a ejecutar instrucciones de DDL, se recomienda familiarizarse primero con los estados del regulador de recursos. Para obtener más información, vea [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
-## <a name="permissions"></a>Permissions  
- Requiere `CONTROL SERVER` permiso.  
+## <a name="permissions"></a>Permisos  
+ Requiere el permiso `CONTROL SERVER`.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se quita el grupo de recursos externo denominado `ex_pool`.  
+ En el siguiente ejemplo se quita el grupo de recursos externos denominado `ex_pool`.  
   
 ```  
 DROP EXTERNAL RESOURCE POOL ex_pool;  
@@ -70,13 +70,13 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Opción de configuración de servidor scripts externos habilitados](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
+## <a name="see-also"></a>Ver también  
+ [Opción de configuración del servidor external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
  [SQL Server R Services](../../advanced-analytics/r-services/sql-server-r-services.md)   
- [Problemas conocidos de SQL Server R Services](../../advanced-analytics/r-services/known-issues-for-sql-server-r-services.md)   
+ [Known Issues for SQL Server R Services](../../advanced-analytics/r-services/known-issues-for-sql-server-r-services.md)  (Problemas conocidos de SQL Server R Services)  
  [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)   
- [Modificar grupo de recursos externo &#40; Transact-SQL &#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)   
+ [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)   
  [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
- [Eliminar grupo de recursos &#40; Transact-SQL &#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)  
+ [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)  
   
   

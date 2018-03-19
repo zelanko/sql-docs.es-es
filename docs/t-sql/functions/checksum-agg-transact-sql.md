@@ -1,5 +1,5 @@
 ---
-title: CHECKSUM_AGG (Transact-SQL) | Documentos de Microsoft
+title: CHECKSUM_AGG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="checksumagg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve la suma de comprobación de los valores de un grupo. Se omiten los valores NULL. Puede ir seguida de la [cláusula OVER](../../t-sql/queries/select-over-clause-transact-sql.md).
+Devuelve la suma de comprobación de los valores de un grupo. Se omiten los valores NULL. Puede ir seguido de la [cláusula OVER](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -54,19 +54,19 @@ DISTINCT
 Especifica que CHECKSUM_AGG devuelve la suma de comprobación de valores únicos.
   
 *expression*  
-Es un número entero [expresión](../../t-sql/language-elements/expressions-transact-sql.md). No se permiten funciones de agregado ni subconsultas.
+Es una [expression](../../t-sql/language-elements/expressions-transact-sql.md) de entero. No se permiten funciones de agregado ni subconsultas.
   
-## <a name="return-types"></a>Tipos de valor devuelto
-Devuelve la suma de comprobación de todos los *expresión* valores como **int**.
+## <a name="return-types"></a>Tipos de valores devueltos
+Devuelve la suma de comprobación de todos los valores de *expression* como **int**.
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 CHECKSUM_AGG se puede utilizar para detectar cambios en una tabla.
   
 El orden de las filas en la tabla no afecta al resultado de CHECKSUM_AGG. Además, las funciones CHECKSUM_AGG se pueden utilizar con la palabra clave DISTINCT y la cláusula GROUP BY.
   
 Si uno de los valores de la lista de expresiones cambia, la suma de comprobación de la lista generalmente también cambia. No obstante, existe una pequeña posibilidad de que la suma de comprobación no cambie.
   
-CHECKSUM_AGG tiene una función similar a otras funciones de agregado. Para obtener más información, vea [funciones de agregado &#40; Transact-SQL &#41; ](../../t-sql/functions/aggregate-functions-transact-sql.md).
+CHECKSUM_AGG tiene una función similar a otras funciones de agregado. Para más información, vea [Funciones de agregado &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md).
   
 ## <a name="examples"></a>Ejemplos  
 El ejemplo siguiente utiliza `CHECKSUM_AGG` para detectar cambios en la columna `Quantity` de la tabla `ProductInventory` en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
@@ -103,7 +103,7 @@ FROM Production.ProductInventory;
 ```  
   
 ## <a name="see-also"></a>Vea también
-[Suma de comprobación &#40; Transact-SQL &#41;](../../t-sql/functions/checksum-transact-sql.md)  
-[EN cláusula &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+[CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
+[Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

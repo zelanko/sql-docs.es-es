@@ -1,5 +1,5 @@
 ---
-title: ALTER PROCEDURE (Transact-SQL) | Documentos de Microsoft
+title: ALTER PROCEDURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/02/2018
 
   Modifica un procedimiento creado anteriormente por la ejecución de la instrucción CREATE PROCEDURE en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -91,24 +91,24 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  *procedure_name*  
  El nombre del procedimiento que se va a cambiar. Los nombres de los procedimientos se deben ajustar a las reglas para los [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
- **;**  *número*  
+ **;** *number*  
  Entero opcional existente que se usa para agrupar los procedimientos del mismo nombre, de forma que puedan quitarse juntos mediante una sola instrucción DROP PROCEDURE.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- **@***parámetro*  
+ **@** *parameter*  
  Parámetro del procedimiento. Se pueden especificar hasta 2.100 parámetros.  
   
  [ *type_schema_name***.** ] *data_type*  
  Es el tipo de datos del parámetro y el esquema al que pertenece.  
   
- Para obtener información acerca de las restricciones de tipo de datos, vea [CREATE PROCEDURE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-procedure-transact-sql.md).  
+ Para obtener información acerca de las restricciones a los tipos de datos, vea [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
   
  VARYING  
  Especifica el conjunto de resultados admitido como parámetro de salida. Este parámetro se genera dinámicamente por medio del procedimiento almacenado y su contenido puede variar. Solo se aplica a los parámetros de cursor. Esta opción no es válida para los procedimientos CLR.  
   
- *valor predeterminado*  
+ *default*  
  Es un valor predeterminado para el parámetro.  
   
  OUT | OUTPUT  
@@ -121,16 +121,16 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  Indica que [!INCLUDE[ssDE](../../includes/ssde-md.md)] no almacena en la memoria caché ningún plan para este procedimiento y el procedimiento se vuelve a compilar en tiempo de ejecución.  
   
  ENCRYPTION  
- **Se aplica a**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: SQL Server (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
- Indica que [!INCLUDE[ssDE](../../includes/ssde-md.md)] convertirá el texto original de la instrucción ALTER PROCEDURE en un formato protegido. La salida de la protección no es directamente visible en ninguna de las vistas de catálogo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los usuarios que no disponen de acceso a las tablas del sistema o a los archivos de base de datos no pueden recuperar el texto protegido. Sin embargo, el texto estará disponible para los usuarios con privilegios que pueden tener acceso a las tablas del sistema sobre el [puerto DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) o directamente a los archivos de base de datos. Además, los usuarios que pueden adjuntar un depurador al proceso del servidor pueden recuperar el procedimiento original de la memoria en tiempo de ejecución. Para obtener más información acerca del acceso a los metadatos del sistema, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Indica que [!INCLUDE[ssDE](../../includes/ssde-md.md)] convertirá el texto original de la instrucción ALTER PROCEDURE en un formato protegido. La salida de la protección no es directamente visible en ninguna de las vistas de catálogo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los usuarios que no disponen de acceso a las tablas del sistema o a los archivos de base de datos no pueden recuperar el texto protegido. Sin embargo, estará disponible para los usuarios con privilegios que puedan obtener acceso a las tablas del sistema a través del [puerto DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) o directamente a los archivos de base de datos. Además, los usuarios que pueden adjuntar un depurador al proceso del servidor pueden recuperar el procedimiento original de la memoria en tiempo de ejecución. Para obtener más información sobre cómo acceder al sistema, vea [Configuración de visibilidad de los metadatos](../../relational-databases/security/metadata-visibility-configuration.md).  
   
  Los procedimientos creados mediante esta opción no se pueden publicar como parte de la replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Esta opción no se puede especificar para procedimientos almacenados de Common Language Runtime (CLR).  
   
 > [!NOTE]  
->  Durante una actualización, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] utiliza los comentarios protegidos almacenados en **sys.sql_modules** para volver a crear los procedimientos.  
+>  Durante una actualización, [!INCLUDE[ssDE](../../includes/ssde-md.md)] utiliza los comentarios protegidos almacenados en **sys.sql_modules** para volver a crear los procedimientos.  
   
  EXECUTE AS  
  Especifica el contexto de seguridad en el que se debe ejecutar el procedimiento almacenado una vez que se obtiene acceso al mismo.  
@@ -145,15 +145,15 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
 > [!NOTE]  
 >  Esta opción no está disponible en las bases de datos independientes.  
   
- {[BEGIN] *sql_statement* [;] [ ...  *n*  ] [END]}  
- Una o más instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que comprenden el cuerpo del procedimiento. Puede usar las palabras clave BEGIN y END opcionales para incluir las instrucciones. Para obtener más información, vea las secciones prácticas recomendadas, comentarios generales y las limitaciones y restricciones de [CREATE PROCEDURE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-procedure-transact-sql.md).  
+ { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
+ Una o más instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que comprenden el cuerpo del procedimiento. Puede usar las palabras clave BEGIN y END opcionales para incluir las instrucciones. Para obtener más información, vea las secciones Prácticas recomendadas, Comentarios generales, así como Limitaciones y restricciones que aparecen en [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
   
- NOMBRE externo *assembly_name***.** *class_name***.** *NombreMétodo*  
+ NOMBRE EXTERNO *assembly_name***.***class_name***.***method_name*  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Especifica el método de una [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] procedimiento para hacer referencia a almacenado del ensamblado de CLR. *CLASS_NAME* debe ser válido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificador y debe existir como una clase en el ensamblado. Si la clase tiene un nombre completo de espacio de nombres utiliza un punto (**.**) para separar las partes del espacio de nombres, el nombre de clase debe estar delimitado mediante corchetes (**[]**) o comillas (**""**). El método especificado debe ser un método estático de la clase.  
+ Especifica el método de un ensamblado de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para un procedimiento CLR almacenado al que se va a hacer referencia. *class_name* debe ser un identificador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido y debe existir como clase en el ensamblado. Si la clase tiene un nombre calificado como espacio de nombres que utiliza un punto (**.**) para separar las partes del espacio de nombres, el nombre de la clase debe estar delimitado por corchetes (**[]**) o comillas (**""**). El método especificado debe ser un método estático de la clase.  
   
- De manera predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede ejecutar código CLR. Puede crear, modificar y quitar objetos de base de datos que hagan referencia a common language runtime módulos; Sin embargo, no se puede ejecutar estas referencias en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hasta que habilite la [opción clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Para habilitar la opción, utilice [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+ De manera predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede ejecutar código CLR. Se pueden crear, modificar y quitar objetos de base de datos que hagan referencia a módulos de Common Language Runtime; sin embargo, estas referencias no se pueden ejecutar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hasta que se habilite la [opción clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Para habilitar esta opción, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
 > [!NOTE]  
 >  Los procedimientos CLR no se admiten en las bases de datos independientes.  
@@ -165,12 +165,12 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
   
  Si anteriormente se creó una definición de procedimiento mediante WITH ENCRYPTION o WITH RECOMPILE, estas opciones solo se habilitan si se incluyen en ALTER PROCEDURE.  
   
- Para obtener más información sobre los procedimientos almacenados, vea [CREATE PROCEDURE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-procedure-transact-sql.md).  
+ Para obtener más información sobre los procedimientos almacenados, vea [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
   
 ## <a name="security"></a>Seguridad  
   
-### <a name="permissions"></a>Permissions  
- Requiere **ALTER** permiso en el procedimiento o debe pertenecer a la **db_ddladmin** rol fijo de base de datos.  
+### <a name="permissions"></a>Permisos  
+ Necesita el permiso **ALTER** en el procedimiento o la pertenencia al rol fijo de base de datos **db_ddladmin**.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se crea el procedimiento almacenado `uspVendorAllInfo`. Este procedimiento devuelve los nombres de todos los proveedores que proporciona [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)], los productos que suministran, su solvencia y su disponibilidad. Después de crear este procedimiento, se modifica para devolver un conjunto de resultados diferente.  
@@ -240,13 +240,13 @@ Vision Cycles, Inc.  LL Crankarm   Superior  Yes
 (2 row(s) affected)`  
 ```  
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
- [DROP PROCEDURE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-procedure-transact-sql.md)   
+ [DROP PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-procedure-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [EJECUTAR AS &#40; Transact-SQL &#41;](../../t-sql/statements/execute-as-transact-sql.md)   
+ [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Procedimientos almacenados &#40;motor de base de datos&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
- [Sys.Procedures &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)  
+ [sys.procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)  
   
   

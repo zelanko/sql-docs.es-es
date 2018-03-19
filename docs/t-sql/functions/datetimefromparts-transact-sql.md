@@ -1,5 +1,5 @@
 ---
-title: DATETIMEFROMPARTS (Transact-SQL) | Documentos de Microsoft
+title: DATETIMEFROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="datetimefromparts-transact-sql"></a>DATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Devuelve un **datetime** valor para la fecha y hora especificadas.
+Devuelve un valor **datetime** para la fecha y la hora especificadas.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,32 +45,32 @@ DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-*año*  
+*year*  
 Expresión entera que especifica un año.
   
-*mes*  
+*month*  
 Expresión entera que especifica un mes.
   
-*día*  
+*day*  
 Expresión entera que especifica un día.
   
-*hora*  
+*hour*  
 Expresión entera que especifica horas.
   
-*minuto*  
+*minute*  
 Expresión entera que especifica minutos.
   
 *segundos*  
 Expresión entera que especifica segundos.
   
-*milisegundos*  
+*milliseconds*  
 Expresión entera que especifica milisegundos.
   
-## <a name="return-types"></a>Tipos de valor devuelto
+## <a name="return-types"></a>Tipos de valor devueltos
 **datetime**
   
-## <a name="remarks"></a>Comentarios  
-**DATETIMEFROMPARTS** devuelve un totalmente inicializado **datetime** valor. Si los argumentos no son válidos, se produce un error. Si es necesario argumentos son nulos, se devuelve un valor null.
+## <a name="remarks"></a>Notas  
+**DATETIMEFROMPARTS** devuelve un valor de **datetime2** totalmente inicializado. Si los argumentos no son válidos, se generará un error. Si los argumentos necesarios son NULL, se devuelve un valor NULL.
   
 Esta función se puede enviar de forma remota a servidores de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y superiores. No se puede enviar de forma remota a servidores que tengan una versión inferior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
@@ -91,7 +91,7 @@ Result
 ```  
   
 ## <a name="see-also"></a>Vea también
-[fecha y hora &#40; Transact-SQL &#41;](../../t-sql/data-types/datetime-transact-sql.md)
+[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)
   
   
 

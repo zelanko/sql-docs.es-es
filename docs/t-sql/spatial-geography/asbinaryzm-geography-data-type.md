@@ -1,5 +1,5 @@
 ---
-title: AsBinaryZM (tipo de datos geography) | Documentos de Microsoft
+title: AsBinaryZM (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="asbinaryzm-geography-data-type"></a>AsBinaryZM (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Devuelve la representación de Open Geospatial Consortium (OGC) Well-Known Binary (WKB) de un **geometry** instancia ampliada con los **Z** (elevación) y **M** (medida) valores pertenecientes a la instancia.  
+  Devuelve la representación Well-Known Binary (WKB) de Open Geospatial Consortium (OGC) de una instancia de **geometry** ampliada con los valores **Z** (elevación) y **M** (medida) pertenecientes a la instancia.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,11 +45,11 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **varbinary (max)**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **varbinary (max)**  
   
  Tipo de valor devuelto de CLR: **SqlBytes**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -63,9 +63,9 @@ SELECT @g1.AsBinaryZM();
 --Returns: 0x01B90B0000000000000000F03F000000000000F03F00000000000000400000000000000840  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Métodos extendidos en instancias de Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [M &#40; tipo de datos geography &#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
- [Z &#40; tipo de datos geography &#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
+## <a name="see-also"></a>Ver también  
+ [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [M &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
+ [Z &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Barra diagonal estrella (bloque de comentario) (Transact-SQL) | Documentos de Microsoft
+title: Barra diagonal y asterisco (comentario de bloque) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -35,11 +35,11 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="slash-star-block-comment-transact-sql"></a>Barra diagonal estrella (bloque de comentario) (Transact-SQL)
+# <a name="slash-star-block-comment-transact-sql"></a>Barra diagonal y asterisco (comentario de bloque) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 
-  Indica texto proporcionado por el usuario. El texto situado entre el / * y \*/ no se evalúa por el servidor.  
+  Indica texto proporcionado por el usuario. El servidor no evalúa el texto situado entre /* y \*/.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,12 +56,12 @@ text_of_comment
  *text_of_comment*  
  Es el texto del comentario. Es una o más cadenas de caracteres.  
   
-## <a name="remarks"></a>Comentarios  
- Los comentarios se pueden insertar en una línea aparte o dentro de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]. Comentarios de varias líneas deben indicarse con / * y \*/. Una regla de estilo que se utiliza a menudo para comentarios de varias líneas es comenzar la primera línea con /\*, las siguientes líneas con \* \*, una letra y terminar con \*/.  
+## <a name="remarks"></a>Notas  
+ Los comentarios se pueden insertar en una línea aparte o dentro de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los comentarios con varias líneas deben indicarse con /* y \*/. Una regla de estilo que se usa a menudo para los comentarios de varias líneas es comenzar la primera línea con /\*, las siguientes con \*\* y finalizar con \*/.  
   
  No hay límite de longitud para los comentarios.  
   
- Se admiten comentarios anidados. Si el / * patrón de carácter aparece en algún lugar dentro de un comentario existente, se trata como el inicio de un comentario anidado y, por lo tanto, requiere un cierre \*/ marca de comentario. Si no existe esta marca de comentario de cierre, se genera un error.  
+ Se admiten comentarios anidados. Si el patrón de carácter /* aparece en algún lugar de un comentario existente, se trata como el comienzo de un comentario anidado y, por tanto, requiere una marca de comentario de cierre \*/. Si no existe esta marca de comentario de cierre, se genera un error.  
   
  Por ejemplo, el código siguiente genera un error.  
   
@@ -108,9 +108,9 @@ JOIN Person.Address AS a ON ea.AddressID = a.AddressID;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [-- &#40;Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)   
- [Lenguaje de control de flujo &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)  
+ [Lenguaje de control de flujo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)  
   
   
 

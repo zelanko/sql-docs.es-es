@@ -1,5 +1,5 @@
 ---
-title: "Argumentos de restauración (Transact-SQL) | Documentos de Microsoft"
+title: Argumentos de RESTORE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/05/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="restore-statements---arguments-transact-sql"></a>RESTAURAR instrucciones - argumentos (Transact-SQL)
+# <a name="restore-statements---arguments-transact-sql"></a>Instrucciones RESTORE: argumentos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   En este tema se documentan los argumentos descritos en la sección Sintaxis de la instrucción RESTORE {DATABASE|LOG} y del conjunto de instrucciones auxiliares asociado: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY y RESTORE VERIFYONLY. Solo un subconjunto de estas seis instrucciones admite la mayoría de los argumentos. En la descripción del argumento se indica si éste está admitido.  
@@ -47,43 +47,43 @@ ms.lasthandoff: 01/25/2018
   
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
--   [RESTORE REWINDONLY &#40; Transact-SQL &#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)  
+-   [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)  
   
 -   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
 ## <a name="arguments"></a>Argumentos  
  DATABASE  
- **Compatible con:**[restaurar  ](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Especifica la base de datos de destino. Si se especifica una lista de archivos o de grupos de archivos, solo se restauran esos archivos y grupos de archivos.  
   
  En el caso de una base de datos que utilice el modelo de recuperación completa o el modelo de recuperación optimizado para cargas masivas de registros, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere en la mayoría de los casos que realice una copia de seguridad de registros después del error antes de restaurar la base de datos. Restaurar una base de datos sin hacer primero una copia del final del registro produce un error, a menos que la instrucción RESTORE DATABASE contenga una cláusula WITH REPLACE o WITH STOPAT, que deben especificar un tiempo o una transacción producidos después de finalizar la copia de seguridad de los datos. Para obtener más información sobre las copias del final del registro, vea [Copias del final del registro &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
  LOG  
- **Compatible con:**[restaurar  ](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Especifica que se va a aplicar una copia de seguridad de registros de transacciones a esta base de datos. Los registros de transacciones deben aplicarse en orden secuencial. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comprueba el registro de transacciones del que se ha realizado la copia de seguridad para asegurarse de que las transacciones se cargan en la base de datos y en la secuencia correctas. Para aplicar varios registros de transacciones, utilice la opción NORECOVERY en todas las operaciones de restauración, excepto en la última.  
   
 > [!NOTE]  
->  Normalmente, el último registro que se restaura es el que corresponde a la copia del final del registro. A *copia de seguridad del final del registro* es una copia de seguridad del registro se realiza justo antes de restaurar una base de datos, normalmente después de un error en la base de datos. Al realizar una copia del final del registro de una base de datos posiblemente dañada se evita la pérdida de trabajo, ya que se captura el registro que todavía no se había incluido en la copia de seguridad (el final del registro). Para obtener más información, vea [Copias del final del registro &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
+>  Normalmente, el último registro que se restaura es el que corresponde a la copia del final del registro. Una *copia del final del registro* es una copia de seguridad de registros que se realiza justo antes de restaurar una base de datos, normalmente después de que se haya producido un error en ella. Al realizar una copia del final del registro de una base de datos posiblemente dañada se evita la pérdida de trabajo, ya que se captura el registro que todavía no se había incluido en la copia de seguridad (el final del registro). Para obtener más información, vea [Copias del final del registro &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
  Para obtener más información, vea [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
  { *database_name* | **@***database_name_var*}  
- **Compatible con:**[restaurar  ](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- Es la base de datos en la que se restaura el registro o la base de datos completa. Si se proporciona como una variable (**@***database_name_var*), este nombre se puede especificar como una constante de cadena (**@***database_name_var*   =  *base de datos*_*nombre *) o como una variable de tipo de datos de cadena de caracteres, excepto para la **ntext** o **texto**tipos de datos.  
+ Es la base de datos en la que se restaura el registro o la base de datos completa. Si se proporciona como una variable (**@***database_name_var*), este nombre se puede especificar como una constante de cadena (**@***database_name_var* = *database*_*name*) o como una variable de un tipo de datos de cadena de caracteres, excepto los tipos de datos **ntext** o **text**.  
   
  \<file_or_filegroup_or_page> [ **,**...*n* ]  
- **Compatible con:**[restaurar  ](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Especifica el nombre de un archivo, un grupo de archivos o una página lógicos que se va a incluir en una instrucción RESTORE DATABASE o RESTORE LOG. Puede especificar una lista de archivos o grupos de archivos.  
   
- Para una base de datos que usa el modelo de recuperación simple, se permiten las opciones FILE y FILEGROUP solo si los archivos de destino o grupos de archivos son de sólo lectura, o si se trata de una restauración parcial (que da como resultado un [archivos inactivo](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)).  
+ En una base de datos que usa el modelo de recuperación simple, las opciones FILE y FILEGROUP solo se admiten si los archivos o grupos de archivos de destino son de solo lectura, o bien si se trata de una restauración de tipo PARTIAL (el resultado es un [grupo de archivos inactivo](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)).  
   
  Para una base de datos que utilice el modelo de recuperación completa o de recuperación optimizado para cargas masivas de registros, después de utilizar RESTORE DATABASE para restaurar uno o más archivos, grupos de archivos o páginas, normalmente se debe aplicar el registro de transacciones a los archivos que contienen los datos restaurados; al aplicarles el registro, esos archivos guardarán coherencia con el resto de la base de datos. Existen las siguientes excepciones:  
   
--   Si los archivos se restauran eran de solo lectura antes de última copia de seguridad, no es necesario aplicar un registro de transacciones, y la instrucción RESTORE le informa de esta situación.  
+-   Si los archivos que se restauran eran de solo lectura antes de su última copia de seguridad, no debe aplicarse un registro de transacciones, y la instrucción RESTORE le informará de esta situación.  
   
 -   Si la copia de seguridad contiene el grupo de archivos principal y se va a realizar una restauración parcial. En este caso, el registro de restauración no es necesario, porque se restaura automáticamente desde el conjunto de copia de seguridad.  
   
@@ -93,12 +93,12 @@ FILE **=** { *logical_file_name_in_backup*| **@***logical_file_name_in_backup_va
 FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
  Especifica el nombre de un grupo de archivos que se va a incluir en la restauración de la base de datos.  
   
- **Tenga en cuenta** grupo de archivos solo se permite en el modelo de recuperación simple si el grupo de archivos especificado es de solo lectura y se trata de una restauración parcial (es decir, si se utiliza WITH PARTIAL). Los grupos de archivos de lectura y escritura sin restaurar se marcan como inactivos y, en consecuencia, no se podrán restaurar en la base de datos resultante.  
+ **Nota:** FILEGROUP solo se admite en el modelo de recuperación simple si el grupo de archivos especificado es de solo lectura y se trata de una restauración parcial, es decir, si se usa WITH PARTIAL. Los grupos de archivos de lectura y escritura sin restaurar se marcan como inactivos y, en consecuencia, no se podrán restaurar en la base de datos resultante.  
   
 READ_WRITE_FILEGROUPS  
  Selecciona todos los grupos de archivos de lectura y escritura. Esta opción es especialmente útil cuando se desean restaurar grupos de archivos de solo lectura después de los grupos de archivos de lectura y escritura anteriores a los grupos de archivos de solo lectura.  
   
-PÁGINA =  **'***archivo***: *** página* [ **,**...* n *] **'**  
+PAGE = **'***file***:***page* [ **,**...*n* ]**'**  
  Especifica una lista de una o varias páginas para una restauración de página (que solo se admite en bases de datos que utilizan los modelos de recuperación completa o de recuperación optimizado para cargas masivas de registros). Éstos son sus valores:  
   
 PAGE  
@@ -118,31 +118,31 @@ PAGE
 > [!NOTE]  
 >  Las restauraciones de página no se recuperan nunca.  
   
- Para obtener más información acerca de la restauración de páginas, vea [restaurar páginas &#40; SQL Server &#41; ](../../relational-databases/backup-restore/restore-pages-sql-server.md).  
+ Para más información sobre la restauración de páginas, vea [Restaurar páginas &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md).  
   
  [ **,**...*n* ]  
  Es un marcador de posición que indica que se pueden especificar varios archivos y grupos de archivos y páginas en una lista separada por comas. El número es ilimitado.  
   
-DESDE { \<dispositivodecopiadeseguridad > [ **,**... *n* ]| \<database_snapshot >} Normalmente, especifica los dispositivos de copia de seguridad desde el que se va a restaurar la copia de seguridad. Alternativamente, en una instrucción RESTORE DATABASE, la cláusula FROM puede especificar el nombre de una instantánea de base de datos a la que va a revertir la base de datos, en cuyo caso no se admite ninguna cláusula WITH.  
+FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> } Normalmente, especifica los dispositivos de copia de seguridad desde los que se restaurará la copia de seguridad. Alternativamente, en una instrucción RESTORE DATABASE, la cláusula FROM puede especificar el nombre de una instantánea de base de datos a la que va a revertir la base de datos, en cuyo caso no se admite ninguna cláusula WITH.  
   
  Si se omite la cláusula FROM, no se produce la restauración de la copia de seguridad. En su lugar, se recupera la base de datos. Esto permite recuperar una base de datos restaurada con la opción NORECOVERY o cambiar a un servidor en espera. Si se omite la cláusula FROM, se debe especificar NORECOVERY, RECOVERY o STANDBY en la cláusula WITH.  
   
- \<dispositivodecopiadeseguridad > [ **,**...  *n*  ] Especifica los dispositivos de copia de seguridad físicos o lógicos que se usará para la operación de restauración.  
+ \<backup_device> [ **,**...*n* ] Especifica los dispositivos de copia de seguridad físicos o lógicos que se usarán para la operación de restauración.  
   
- **Compatible con:**[restaurar](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [ RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md), y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
- \<backup_device >:: = especifica un dispositivo de copia de seguridad físico o lógico que se utilizará para la operación de copia de seguridad, como se indica a continuación:  
+ \<backup_device>::= Especifica el dispositivo de copia de seguridad físico o lógico que se va a usar en la operación de copia de seguridad, así:  
   
- { *logical_backup_device_name* | **@*** logical_* } es el nombre lógico, que debe seguir las reglas para los identificadores de los dispositivos de copia de seguridad creado por **sp_addumpdevice** desde que se restaura la base de datos. Si se proporciona como una variable (**@***logical_backup_device_name_var*), el nombre del dispositivo de copia de seguridad se pueden especificar como una constante de cadena (**@*** logical_*  =   *logical_backup_device_name*) o como una variable de tipo de datos de cadena de caracteres, excepto para la **ntext** o **texto** tipos de datos.  
+ { *logical_backup_device_name* | **@***logical_backup_device_name_var* } es el nombre lógico, que debe seguir las reglas de los identificadores, del dispositivo (o dispositivos) de copia de seguridad creado por **sp_addumpdevice** desde el que se restaura la base de datos. Si se proporciona como una variable (**@***logical_backup_device_name_var*), el nombre del dispositivo de copia de seguridad se puede especificar como una constante de cadena (**@***logical_backup_device_name_var* = *logical_backup_device_name*) o como una variable de tipo de datos de cadena de caracteres, excepto los tipos de datos **ntext** o **text**.  
   
- {DISCO | CINTA}  **=**  { **'***physical_backup_device_name***'** | **@*** physical_backup_device_name_var*  } Permite copias de seguridad que se restaurarán desde el dispositivo de disco o cinta con nombre. Los tipos de dispositivo de disco y cinta deben especificarse con el nombre real (por ejemplo, ruta de acceso y nombre completo) del dispositivo: `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` o `TAPE ='\\\\.\TAPE0'`. Si se especifica como una variable (**@***physical_backup_device_name_var*), el nombre de dispositivo se puede especificar como una constante de cadena (**@*** physical_backup_device_name_var* = '* physcial_backup_device_name *') o como una variable de tipo de datos de cadena de caracteres, excepto para la **ntext** o **texto** tipos de datos.  
+ {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } Permite restaurar las copias de seguridad guardadas en el dispositivo de disco o cinta con nombre. Los tipos de dispositivo de disco y cinta deben especificarse con el nombre real (por ejemplo, nombre de archivo y ruta de acceso completa) del dispositivo: `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` o `TAPE ='\\\\.\TAPE0'`. Si se especifica como una variable (**@***physical_backup_device_name_var*), el nombre del dispositivo se puede especificar como una constante de cadena (**@***physical_backup_device_name_var* = '*physical_backup_device_name*') o como una variable de tipo de datos de cadena de caracteres, excepto los tipos de datos **ntext** o **text**.  
   
- Si utiliza un servidor de red con un nombre UNC (que debe contener el nombre del equipo), especifique un tipo de dispositivo de disco. Para obtener más información acerca de cómo utilizar nombres UNC, vea [dispositivos de copia de seguridad &#40; SQL Server &#41; ](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+ Si utiliza un servidor de red con un nombre UNC (que debe contener el nombre del equipo), especifique un tipo de dispositivo de disco. Para más información sobre cómo usar los nombres UNC, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
  La cuenta con la que está ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener acceso de lectura al equipo remoto o servidor de red para poder realizar la operación RESTORE.  
   
  *n*  
- Es un marcador de posición que indica que hasta 64 dispositivos de copia de seguridad se puede especificar en una lista separada por comas.  
+ Es un marcador de posición que indica que se pueden especificar hasta 64 dispositivos de copia de seguridad en una lista separada por comas.  
   
  El hecho de que una secuencia de restauración requiera tantos dispositivos de copia de seguridad como los utilizados para crear el conjunto de medios al que pertenecen las copias de seguridad depende de si la restauración se realiza sin conexión o en línea de la forma siguiente.  
   
@@ -153,24 +153,24 @@ DESDE { \<dispositivodecopiadeseguridad > [ **,**... *n* ]| \<database_snapshot 
  Por ejemplo, suponga que se realiza la copia de seguridad de una base de datos en cuatro unidades de cinta conectadas al servidor. Una restauración en línea requiere que las cuatro unidades estén conectadas al servidor, mientras que una restauración sin conexión permite restaurar la copia de seguridad si hay menos de cuatro unidades en el equipo.  
   
 > [!NOTE]  
->  Cuando se restaura una copia de seguridad desde un conjunto de medios reflejados, puede especificar solo un reflejo para cada familia de medios. No obstante, si hay errores, el hecho de tener otros reflejos habilita la resolución de algunos problemas de restauración rápidamente. Puede sustituir un volumen de medios dañado con el volumen correspondiente de otro reflejo. Tenga en cuenta que para las restauraciones sin conexión, puede restaurar desde menos dispositivos que familias de medios, pero cada familia se procesa solo una vez.  
+>  Si se restaura una copia de seguridad desde un conjunto de medios reflejado, solo puede especificar un reflejo para cada familia de medios. No obstante, si hay errores, el hecho de tener otros reflejos habilita la resolución de algunos problemas de restauración rápidamente. Puede sustituir un volumen de medios dañado con el volumen correspondiente de otro reflejo. Tenga en cuenta que para las restauraciones sin conexión, puede restaurar desde menos dispositivos que familias de medios, pero cada familia se procesa solo una vez.  
   
 \<database_snapshot>::=  
-**Compatible con:**[Restaurar base de datos  ](../../t-sql/statements/restore-statements-transact-sql.md)  
+**Compatible con:** [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
 DATABASE_SNAPSHOT **=***database_snapshot_name*  
- Revierte la base de datos a la instantánea de base de datos especificada por *nombre_base_de_datos_de_instantánea*. La opción DATABASE_SNAPSHOT solo está disponible para una restauración de base de datos completa. En una operación de reversión, la instantánea de base de datos ocupa el lugar de una copia de seguridad de base de datos completa.  
+ Revierte la base de datos a la instantánea de base de datos especificada por *database_snapshot_name*. La opción DATABASE_SNAPSHOT solo está disponible para una restauración de base de datos completa. En una operación de reversión, la instantánea de base de datos ocupa el lugar de una copia de seguridad de base de datos completa.  
   
- En una operación de reversión se requiere que la instantánea de base de datos especificada sea la única en la base de datos. Durante la operación de reversión, la instantánea de base de datos y la base de datos de destino se marcan como `In restore`. Para obtener más información, vea la sección "Comentarios" en [Restaurar base de datos](../../t-sql/statements/restore-statements-transact-sql.md).  
+ En una operación de reversión se requiere que la instantánea de base de datos especificada sea la única en la base de datos. Durante la operación de reversión, la instantánea de base de datos y la base de datos de destino se marcan como `In restore`. Para más información, vea la sección "Comentarios" de [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 ### <a name="with-options"></a>Opciones de WITH  
  Especifica las opciones que han de utilizarse en una operación de restauración. Para obtener un resumen de las instrucciones que utilizan cada opción, vea "Resumen de compatibilidad para las opciones de WITH", más adelante en este tema.  
   
 > [!NOTE]  
->  Opciones de WITH se organizan aquí en el mismo orden que en la sección "Sintaxis" de [Restaurar {base de datos | Registro}](../../t-sql/statements/restore-statements-transact-sql.md).  
+>  Las opciones de WITH se organizan aquí en el mismo orden que en la sección "Sintaxis" de [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md).  
   
  PARTIAL  
- **Compatible con:**[Restaurar base de datos  ](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **Compatible con:** [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Especifica una operación de restauración parcial que solo restaura el grupo de archivos principal y cualquiera de los grupos de archivos secundarios especificados. La opción PARTIAL selecciona implícitamente el grupo de archivos principal; por tanto, no es necesario especificar FILEGROUP = 'PRIMARY'. Para restaurar un grupo de archivos secundario, debe especificarlo de forma explícita mediante la opción FILE o FILEGROUP.  
   
@@ -178,8 +178,8 @@ DATABASE_SNAPSHOT **=***database_snapshot_name*
   
  La opción PARTIAL abre la fase inicial de una restauración por etapas, que permite restaurar los grupos de archivos restantes más adelante. Para obtener más información, vea [Restauraciones por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
   
- [ **RECUPERACIÓN** | NORECOVERY | MODO DE ESPERA]  
- **Compatible con:**[restaurar  ](../../t-sql/statements/restore-statements-transact-sql.md)  
+ [ **RECOVERY** | NORECOVERY | STANDBY ]  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  **RECOVERY**  
  Indica a la operación de restauración que revierta las transacciones no confirmadas. Después del proceso de recuperación, la base de datos está preparada para ser utilizada. Si no se especifica NORECOVERY, RECOVERY o STANDBY, la opción predeterminada es RECOVERY.  
@@ -209,32 +209,32 @@ STANDBY **=***standby_file_name*
   
  El archivo en espera se utiliza para mantener una imagen previa de "copia en escritura" de las páginas modificadas durante la fase de deshacer de una operación RESTORE WITH STANDBY. El archivo en espera permite abrir una base de datos para el acceso de solo lectura entre las restauraciones del registro de transacciones, y utilizarla cuando haya un servidor en espera semiactiva o en situaciones de recuperación especiales en las que resulte útil inspeccionar la base de datos entre las restauraciones del registro. Después de una operación RESTORE WITH STANDBY, el archivo para deshacer se elimina automáticamente en la siguiente operación RESTORE. Si elimina el archivo en espera de forma manual antes de la siguiente operación RESTORE, deberá volver a restaurar la base de datos completa. Mientras la base de datos está en estado STANDBY, debe tratar el archivo en espera con el mismo cuidado que cualquier otro archivo de base de datos. A diferencia de lo que sucede con los demás archivos de base de datos, [!INCLUDE[ssDE](../../includes/ssde-md.md)] mantiene abierto este archivo solo durante las operaciones de restauración activas.  
   
- El *standby_file_name* especifica un archivo en espera cuya ubicación se almacena en el registro de la base de datos. Si hay otro archivo con el mismo nombre, se sobrescribe; en caso contrario, [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea el archivo.  
+ *standby_file_name* especifica un archivo en espera cuya ubicación se almacena en el registro de la base de datos. Si hay otro archivo con el mismo nombre, se sobrescribe; en caso contrario, [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea el archivo.  
   
  Los requisitos de tamaño de un archivo en espera determinado dependen del volumen de las acciones de deshacer resultantes de las transacciones no confirmadas durante la operación de restauración.  
   
 > [!IMPORTANT]  
 >  Si la unidad que contiene el archivo en espera especificado se queda sin espacio de disco, la operación de restauración se detiene.  
   
- Para obtener una comparación de RECOVERY y NORECOVERY, vea la sección "Comentarios" en [restaurar](../../t-sql/statements/restore-statements-transact-sql.md).  
+ Para obtener una comparación de RECOVERY y NORECOVERY, vea la sección "Comentarios" de [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 LOADHISTORY  
- **Compatible con:**[RESTORE VERIFYONLY  ](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
+ **Compatible con:** [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
- Especifica que la operación de restauración carga la información en el **msdb** tablas de historial. La opción LOADHISTORY carga información, para la copia de seguridad único del conjunto que se va a comprobar, aproximadamente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copias de seguridad almacenadas en el medio establecido en la copia de seguridad y restaurar tablas de historial de la **msdb** base de datos. Para obtener más información acerca de las tablas de historial, vea [tablas del sistema &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/system-tables-transact-sql.md).  
+ Especifica que la operación de restauración cargará la información en las tablas de historial de **msdb**. La opción LOADHISTORY carga en las tablas de historial de copias de seguridad y restauración de la base de datos **msdb** la información sobre las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacenadas en el conjunto de medios para el conjunto de copia de seguridad que se comprueba. Para más información sobre las tablas de historial, vea [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md) (Tablas del sistema [Transact-SQL]).  
   
-#### <a name="generalwithoptions--n-"></a>\<general_WITH_options > [,.. .n]  
- Las opciones generales de WITH son todas compatibles con las instrucciones RESTORE DATABASE y RESTORE LOG. Algunas de estas opciones también son compatibles con una o varias instrucciones auxiliares, como se indica a continuación.  
+#### <a name="generalwithoptions--n-"></a>\<general_WITH_options> [ ,...n ]  
+ Las opciones generales de WITH son todas compatibles con las instrucciones RESTORE DATABASE y RESTORE LOG. Algunas de estas opciones también son compatibles con una o varias instrucciones auxiliares, tal y como se indica aquí.  
   
 ##### <a name="restore-operation-options"></a>Opciones de la operación de restauración  
  Estas opciones afectan al comportamiento de la operación de restauración.  
   
 MOVE **'***logical_file_name_in_backup***'** TO **'***operating_system_file_name***'** [ ...*n* ]  
- **Compatible con:**[restaurar](../../t-sql/statements/restore-statements-transact-sql.md) y [RESTORE VERIFYONLY  ](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
- Especifica que los datos o registro de archivos cuyo nombre lógico especificado por *logical_file_name_in_backup* debe moverse restaurándolo en la ubicación especificada por *operating_system_file_name*. El nombre de archivo lógico de un archivo de datos o de registro de un conjunto de copia de seguridad coincide con el nombre lógico que tenía en la base de datos cuando se creó el conjunto de copia de seguridad.  
+ Especifica que el archivo de datos o de registro cuyo nombre lógico está especificado por *logical_file_name_in_backup* debe moverse restaurándolo en la ubicación especificada por *operating_system_file_name*. El nombre de archivo lógico de un archivo de datos o de registro de un conjunto de copia de seguridad coincide con el nombre lógico que tenía en la base de datos cuando se creó el conjunto de copia de seguridad.  
   
-*n*es un marcador de posición que indica que puede especificar instrucciones MOVE adicionales. Especifique una instrucción MOVE para cada archivo lógico del conjunto de copia de seguridad que desee restaurar en otra ubicación. De forma predeterminada, el *logical_file_name_in_backup* archivo se restaura a su ubicación original.  
+*n* es un marcador de posición que indica que puede especificar instrucciones MOVE adicionales. Especifique una instrucción MOVE para cada archivo lógico del conjunto de copia de seguridad que desee restaurar en otra ubicación. El archivo *logical_file_name_in_backup* se restaura de forma predeterminada en su ubicación original.  
   
 > [!NOTE]  
 >  Utilice RESTORE FILELISTONLY para obtener una lista de los archivos lógicos del conjunto de copia de seguridad.  
@@ -243,24 +243,24 @@ MOVE **'***logical_file_name_in_backup***'** TO **'***operating_system_file_name
   
  Cuando se utiliza con RESTORE LOG, la opción MOVE se puede utilizar solo para reubicar los archivos agregados durante la restauración del registro. Por ejemplo, si la copia de seguridad de registros contiene una operación para agregar el archivo `file23`, este archivo se puede reubicar utilizando la opción MOVE en RESTORE LOG.  
   
- Cuando se usa con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copia de seguridad de instantánea, la opción MOVE puede utilizarse solo para reubicar archivos en un Azure blob dentro de la misma cuenta de almacenamiento que el blob original. No se puede usar la opción MOVE para restaurar la copia de seguridad de instantánea en un archivo local o a una cuenta de almacenamiento diferente.  
+ Cuando se usa con la copia de seguridad de instantánea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la opción MOVE solo se puede usar para reubicar archivos en un blob de Azure dentro de la misma cuenta de almacenamiento que el blob original. La opción MOVE no se puede usar para restaurar la copia de seguridad de instantánea en un archivo local o en otra cuenta de almacenamiento.  
   
  Si se utiliza la instrucción RESTORE VERIFYONLY cuando se tiene previsto reubicar una base de datos en el mismo servidor o copiarla en uno diferente, puede que sea necesario utilizar la opción MOVE para comprobar si hay espacio suficiente disponible en el destino y para identificar los posibles conflictos con los archivos existentes.  
   
  Para obtener más información, vea [Copiar bases de datos con Copias de seguridad y restauración](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
 CREDENTIAL  
- **Compatible con:**[restaurar](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)y [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
-**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 hasta[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Se aplica a**: de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- Usar solo cuando se restaura una copia de seguridad desde el servicio de almacenamiento de blobs de Microsoft Azure.  
+ Se usa solo al restaurar una copia de seguridad desde el servicio Microsoft Azure Blob Storage.  
   
 > [!NOTE]  
->  Con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 hasta [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], solo se puede restaurar desde un único dispositivo al restaurar desde una dirección URL. Para restaurar desde varios dispositivos al restaurar desde una dirección URL debe usar [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)) y se deben utilizar tokens de firma de acceso compartido (SAS). Para obtener más información, consulte [habilitar SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) y [simplificar la creación de credenciales de SQL con tokens de firma de acceso compartido (SAS) en el almacenamiento de Azure con Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
+>  Con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 y hasta [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], las restauraciones solo se pueden realizar desde un único dispositivo al restaurar desde una dirección URL. Para restaurar desde varios dispositivos cuando se restaure desde una dirección URL, hay que usar desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)) y, asimismo, usar tokens de Firma de acceso compartido (SAS). Para más información, vea [Habilitar la copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) y [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Simplificación de la creación de credenciales de SQL con tokens de firmas de acceso compartido [SAS] en Almacenamiento de Azure con PowerShell).  
   
  REPLACE  
- **Compatible con:**[restaurar  ](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe crear la base de datos especificada y sus archivos relacionados aunque ya exista otra base de datos con el mismo nombre. En ese caso, se elimina la base de datos existente. Si no se especifica la opción REPLACE, se realiza una comprobación de seguridad. Así se evita sobrescribir por accidente una base de datos distinta. La comprobación de seguridad garantiza que la instrucción RESTORE DATABASE no restaurará la base de datos en el servidor actual si se dan las dos condiciones siguientes:  
   
@@ -272,17 +272,17 @@ CREDENTIAL
   
  REPLACE elimina el requisito de que se realice una copia del final del registro antes de restaurar la base de datos.  
   
- Para obtener información en el impacto del uso de la opción REPLACE, vea [restauración &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-transact-sql.md).  
+ Para más información sobre el impacto de usar la opción REPLACE, vea [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 RESTART  
- **Compatible con:**[restaurar  ](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe reiniciar una operación de restauración que se ha interrumpido. RESTART reinicia la operación de restauración en el punto en que se interrumpió.  
   
 RESTRICTED_USER  
- **Compatible con:**[restaurar](../../t-sql/statements/restore-statements-transact-sql.md).  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md).  
   
- Restringe el acceso a la base de datos recién restaurada a los miembros de la **db_owner**, **dbcreator**, o **sysadmin** roles.  RESTRICTED_USER sustituye a la opción DBO_ONLY. DBO_ONLY no está incluida en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+ Restringe el acceso a la base de datos recién restaurada a los miembros de los roles **db_owner**, **dbcreator** o **sysadmin**.  RESTRICTED_USER sustituye a la opción DBO_ONLY. DBO_ONLY no está incluida en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
  Utilícela con la opción RECOVERY.  
   
@@ -290,17 +290,17 @@ RESTRICTED_USER
  Estas opciones funcionan en el conjunto de copia de seguridad que contiene la copia de seguridad que se va a restaurar.  
   
 FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }  
- **Compatible con:**[restaurar](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Identifica el conjunto de copia de seguridad que se va a restaurar. Por ejemplo, si *backup_set_file_number* es **1** , indica el primer conjunto de copia de seguridad del medio de copia, y si *backup_set_file_number* es **2** , indica el segundo conjunto de copia de seguridad. Puede obtener el valor *backup_set_file_number* de un conjunto de copia de seguridad mediante la instrucción [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) .  
   
- Cuando no se especifica, el valor predeterminado es **1**, excepto para RESTORE HEADERONLY en cuyo caso se procesan todos los conjuntos de copia de seguridad en el conjunto de medios. Para obtener más información, vea "Especificar un conjunto de copia de seguridad" más adelante en este tema.  
+ Cuando no se especifica, el valor predeterminado es **1**, excepto en el caso de RESTORE HEADERONLY, que procesa todos los conjuntos de copia de seguridad de los medios. Para obtener más información, vea "Especificar un conjunto de copia de seguridad" más adelante en este tema.  
   
 > [!IMPORTANT]  
->  Esta opción FILE no está relacionado con la opción de archivo para especificar un archivo de base de datos, archivo  **=**  { *logical_file_name_in_backup* | **@*** logical_file_name_in_backup_var*  }.  
+>  Esta opción FILE no está relacionada con la opción FILE que se usa para especificar un archivo de base de datos, FILE **=** { *logical_file_name_in_backup* | **@***logical_file_name_in_backup_var* }.  
   
  PASSWORD  **=** { *password* | **@***password_variable* }  
- **Compatible con:**[restaurar](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Proporciona la contraseña del conjunto de copia de seguridad. Una contraseña de conjunto de copia de seguridad es una cadena de caracteres.  
   
@@ -316,7 +316,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
  Estas opciones funcionan para todo el conjunto de medios.  
   
  MEDIANAME **=** { *media_name* | **@***media_name_variable*}  
- **Compatible con:**[restaurar](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)y [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Especifica el nombre de los medios. Si se proporciona, el nombre de los medios debe coincidir con el nombre de los medios de los volúmenes de copia de seguridad; en caso contrario, la operación de restauración finaliza. Si no se proporciona el nombre de los medios en la instrucción RESTORE, no se comprueba que éste coincida con el nombre de los medios de los volúmenes de copia de seguridad.  
   
@@ -324,7 +324,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
 >  La utilización coherente de nombres de medios en las operaciones de copias de seguridad y restauración proporciona una comprobación adicional de seguridad del medio seleccionado para la operación de restauración.  
   
  MEDIAPASSWORD **=** { *mediapassword* | **@***mediapassword_variable* }  
- **Compatible con:**[restaurar](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)y [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Proporciona la contraseña del conjunto de medios. Una contraseña de conjunto de medios es una cadena de caracteres.  
   
@@ -334,10 +334,10 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
  Si se proporcionó una contraseña al dar formato al conjunto de medios, ésta será necesaria para tener acceso a cualquier conjunto de copia de seguridad de ese conjunto de medios. Es un error especificar una contraseña incorrecta o especificar una contraseña si el conjunto de medios no tiene ninguna.  
   
 > [!IMPORTANT]  
->  Esta contraseña proporciona un nivel de protección bajo para el conjunto de medios. Para obtener más información, vea la sección "Permisos" de la instrucción correspondiente.  
+>  Esta contraseña proporciona un nivel de protección bajo para el conjunto de medios. Para más información, vea la sección "Permisos" de la instrucción correspondiente.  
   
- BLOCKSIZE  **=**  { *blocksize* | **@*** blocksize_variable* }  
- **Compatible con:**[restaurar  ](../../t-sql/statements/restore-statements-transact-sql.md)  
+ BLOCKSIZE **=** { *blocksize* | **@***blocksize_variable* }  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Especifica el tamaño de bloque físico, en bytes. Los tamaños admitidos son 512, 1024, 2048, 4096, 8192, 16384, 32768 y 65536 (64 KB) bytes. El valor predeterminado es 65536 para dispositivos de cinta y 512 para otros dispositivos. Normalmente, esta opción no es necesaria, ya que RESTORE selecciona automáticamente un tamaño de bloque apropiado para el dispositivo. La especificación explícita de un tamaño de bloque invalida la selección automática del tamaño de bloque.  
   
@@ -349,25 +349,25 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
 ##### <a name="data-transfer-options"></a>Opciones de transferencia de datos  
  Las opciones le permiten optimizar la transferencia de datos desde el dispositivo de copia de seguridad.  
   
- BUFFERCOUNT  **=**  { *buffercount* | **@*** buffercount_variable* }  
- **Compatible con:**[restaurar  ](../../t-sql/statements/restore-statements-transact-sql.md)  
+ BUFFERCOUNT **=** { *buffercount* | **@***buffercount_variable* }  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Especifica el número total de búferes de E/S que se van a utilizar para la operación de restauración. Puede especificar cualquier entero positivo; no obstante, un número de búferes demasiado grande podría provocar errores de "memoria insuficiente" a causa de un espacio de direcciones virtuales inadecuado en el proceso Sqlservr.exe.  
   
- El espacio total utilizado por los búferes está determinado por: *buffercount***\****maxtransfersize*.  
+ El espacio total usado por los búferes viene determinado por: *buffercount***\****maxtransfersize*.  
   
  MAXTRANSFERSIZE **=** { *maxtransfersize* | **@***maxtransfersize_variable* }  
- **Compatible con:**[restaurar  ](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Especifica la unidad de transferencia más grande (en bytes) que se debe utilizar entre el medio de copia de seguridad y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores posibles son múltiplos de 65536 bytes (64 KB), hasta un máximo de 4194304 bytes (4 MB).  
 > [!NOTE]  
->  Cuando la base de datos configurada FILESTREAM, incluye o grupos de archivos de OLTP en memoria, `MAXTRANSFERSIZE` en el momento de restauración debe ser mayor o igual que lo que se usó cuando se creó la copia de seguridad.  
+>  Cuando la base de datos tiene FILESTREAM configurado o incluye grupos de archivos con optimización para memoria, el valor de `MAXTRANSFERSIZE` en el momento de una restauración debe ser mayor o igual que el valor que se usó cuando se creó la copia de seguridad.  
   
 ##### <a name="error-management-options"></a>Operaciones de administración de errores  
- Estas opciones permiten determinar si se habilitan las sumas de comprobación de copia de seguridad para la operación de restauración y si la operación se detiene al encontrar un error.    
+ Estas opciones permiten determinar si se habilitarán las sumas de comprobación de copia de seguridad para la operación de restauración y si ésta se detiene al encontrar un error.    
   
  { CHECKSUM | NO_CHECKSUM }  
- **Compatible con:**[restaurar](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)y [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  El comportamiento predeterminado es comprobar las sumas de comprobación, si están presentes, y continuar sin esta comprobación si no lo están.  
   
@@ -379,13 +379,13 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  De manera predeterminada, al encontrar una suma de comprobación no válida, RESTORE informa de un error de suma de comprobación y se detiene. Sin embargo, si se especifica CONTINUE_AFTER_ERROR, RESTORE continuará después de devolver el error de suma de comprobación y el número de la página que contiene la suma de comprobación que no es válida, si el daño lo permite.  
   
- Para obtener más información sobre cómo trabajar con las sumas de comprobación de copia de seguridad, consulte [posibles medios errores durante la copia de seguridad y restauración &#40; SQL Server &#41; ](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
+ Para más información sobre cómo trabajar con sumas de comprobación de copia de seguridad, vea [Errores posibles de medios durante copia de seguridad y restauración &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
   
  NO_CHECKSUM  
  Deshabilita explícitamente la validación de las sumas de comprobación en la operación de restauración.  
   
- { **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR}  
- **Compatible con:**[restaurar](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)y [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ { **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR }  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  STOP_ON_ERROR  
  Especifica que la operación de restauración debe detenerse con el primer error encontrado. Es el comportamiento predeterminado de RESTORE, excepto en el caso de VERIFYONLY, cuyo comportamiento predeterminado es CONTINUE_AFTER_ERROR.  
@@ -396,36 +396,36 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
  Si una copia de seguridad contiene páginas dañadas, se recomienda repetir la operación de restauración usando una copia de seguridad alternativa que no contenga esos errores (por ejemplo, una copia de seguridad realizada antes de que se produjeran daños en las páginas). Sin embargo, como último recurso, puede restaurar la copia de seguridad dañada con la opción CONTINUE_AFTER_ERROR de la instrucción de restauración e intentar recuperar los datos.  
   
 ##### <a name="filestream-options"></a>Opciones de FILESTREAM  
- FILESTREAM (DIRECTORY_NAME =*directory_name* )  
- **Compatible con:**[restaurar](../../t-sql/statements/restore-statements-transact-sql.md) y [RESTORE VERIFYONLY  ](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
+ FILESTREAM ( DIRECTORY_NAME =*directory_name* )  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
-**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Se aplica a**: de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Un nombre de directorio compatible con Windows. Este nombre debe ser único entre todos los nombres de directorio de FILESTREAM de base de datos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La comparación de unicidad se realiza sin distinción entre mayúsculas y minúsculas, independientemente de la configuración de intercalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##### <a name="monitoring-options"></a>Opciones de supervisión  
  Estas opciones le permiten supervisar la transferencia de datos desde el dispositivo de copia de seguridad.  
   
- ESTADÍSTICAS [  **=**  *porcentaje* ]  
- **Compatible con:**[restaurar](../../t-sql/statements/restore-statements-transact-sql.md) y [RESTORE VERIFYONLY  ](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
+ STATS [ **=** *percentage* ]  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
- Muestra un mensaje cada vez que se completa otro porcentaje; se utiliza para indicar el progreso. Si *porcentaje* se omite, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra un mensaje una vez completada cada 10 por ciento (aproximadamente).  
+ Muestra un mensaje cada vez que se completa otro porcentaje; se utiliza para indicar el progreso. Si *percentage* se omite, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra un mensaje después de completar cada 10 por ciento (aproximadamente).  
   
- La opción STATS informa del porcentaje completado desde el umbral para informar del próximo intervalo. Esto sucede más o menos en el porcentaje especificado. Por ejemplo, con STATS=10, [!INCLUDE[ssDE](../../includes/ssde-md.md)] informa aproximadamente en ese intervalo; en lugar de mostrar exactamente el 40%, la opción podría mostrar el 43%. Para grandes conjuntos de copia de seguridad, esto no es un problema porque el porcentaje completado se mueve muy lentamente entre las llamadas de E/S completadas.  
+ La opción STATS informa del porcentaje completado desde el umbral para informar del próximo intervalo. Esto sucede más o menos en el porcentaje especificado. Por ejemplo, con STATS=10, [!INCLUDE[ssDE](../../includes/ssde-md.md)] informa aproximadamente en ese intervalo; en lugar de mostrar exactamente el 40%, la opción podría mostrar el 43%. En el caso de los conjuntos de copia de seguridad de gran tamaño, esto no representa ningún problema porque el porcentaje completado se mueve muy lentamente entre las llamadas de E/S.  
   
 ##### <a name="tape-options"></a>Opciones de cinta  
  Estas opciones solo se utilizan para dispositivos de cinta. Se omitirán si se utiliza otro tipo de dispositivo.  
   
  { **REWIND** | NOREWIND }  
- Estas opciones solo se utilizan para dispositivos de cinta. Si un dispositivo de cinta no se está usando, se omiten estas opciones.  
+ Estas opciones solo se utilizan para dispositivos de cinta. Se omitirán si se usa otro tipo de dispositivo.  
   
  REWIND  
- **Compatible con:**[restaurar](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)y [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] liberará y rebobinará la cinta. REWIND es la opción predeterminada.  
   
  NOREWIND  
- **Compatible con:**[restaurar](../../t-sql/statements/restore-statements-transact-sql.md) y [RESTORE VERIFYONLY  ](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
  Si se especifica NOREWIND en alguna otra instrucción de restauración, se produce un error.  
   
@@ -434,12 +434,12 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
  NOREWIND implica NOUNLOAD, y estas opciones son incompatibles en una sola instrucción RESTORE.  
   
 > [!NOTE]  
->  Si utiliza NOREWIND, la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserva la propiedad de la unidad de cinta hasta que una instrucción BACKUP o RESTORE que se ejecutan en el mismo proceso utiliza la opción de la REWIND o UNLOAD, o se cierra la instancia del servidor. Mantener abierta la cinta evita que otros procesos obtengan acceso a la misma. Para obtener información acerca de cómo mostrar una lista de cintas abiertas y cómo cerrar una cinta abierta, vea [dispositivos de copia de seguridad &#40; SQL Server &#41; ](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+>  Si usa NOREWIND, la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserva la propiedad de la unidad de cinta hasta que una instrucción BACKUP o RESTORE que se ejecuta en el mismo proceso usa la opción REWIND o UNLOAD, o bien se cierra la instancia del servidor. Mantener abierta la cinta evita que otros procesos obtengan acceso a la misma. Para más información sobre cómo mostrar una lista de cintas abiertas y cómo cerrar una cinta abierta, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
- { **UNLOAD** | NOUNLOAD}  
- **Compatible con:**[restaurar](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [ RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md), y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ { **UNLOAD** | NOUNLOAD }  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
- Estas opciones solo se utilizan para dispositivos de cinta. Si un dispositivo de cinta no se está usando, se omiten estas opciones.  
+ Estas opciones solo se utilizan para dispositivos de cinta. Se omitirán si se usa otro tipo de dispositivo.  
   
 > [!NOTE]  
 >  UNLOAD/NOUNLOAD es una configuración de sesión que persiste mientras dure la sesión o hasta que se restablezca especificando la alternativa.  
@@ -448,17 +448,17 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
  Especifica que la cinta se rebobina y descarga automáticamente al terminar la copia de seguridad. UNLOAD es el valor predeterminado cuando se inicia una sesión.  
   
  NOUNLOAD  
- Especifica que tras la operación de restauración de la cinta permanecerá cargada en la unidad de cinta.  
+ Especifica que, tras la operación RESTORE, la cinta permanece cargada en la unidad de cinta.  
   
 #### <a name="replicationwithoption"></a><replication_WITH_option>  
  Esta opción solo es pertinente si la base de datos se replicó cuando se creó la copia de seguridad.  
   
  KEEP_REPLICATION  
- **Compatible con:**[restaurar  ](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
-Utilice KEEP_REPLICATION al configurar la replicación para que funcione con el trasvase de registros. Evita que se quite la configuración de replicación al restaurar una copia de seguridad de base de datos o de registros en un servidor en espera semiactiva, y la base de datos se recupera. No se permite especificar esta opción para restaurar una copia de seguridad con la opción NORECOVERY. Para garantizar que la replicación funciona correctamente después de la restauración:  
+Use KEEP_REPLICATION al configurar la replicación para que funcione con el trasvase de registros. Evita que se quite la configuración de replicación al restaurar una copia de seguridad de base de datos o de registros en un servidor en espera semiactiva, y la base de datos se recupera. No se permite especificar esta opción para restaurar una copia de seguridad con la opción NORECOVERY. Para garantizar que la replicación funciona correctamente después de la restauración:  
   
--   El **msdb** y **maestro** bases de datos en el servidor en espera semiactiva deben estar sincronizados con el **msdb** y **maestro** bases de datos en el servidor principal servidor.  
+-   Las bases de datos **msdb** y **maestra** del servidor en espera semiactiva deben estar sincronizadas con las bases de datos **msdb** y **maestra** del servidor principal.  
   
 -   El nombre del servidor en espera semiactiva debe cambiarse de manera que sea igual que el del servidor principal.  
   
@@ -466,22 +466,22 @@ Utilice KEEP_REPLICATION al configurar la replicación para que funcione con el 
  Esta opción solo es pertinente si la base de datos se habilitó para la captura de datos modificados cuando se creó la copia de seguridad.  
   
  KEEP_CDC  
- **Compatible con:**[restaurar  ](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **Compatible con:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- KEEP_CDC se debe utilizar para evitar cambiar la configuración de captura de datos desde que se va a quitar cuando se restaura una copia de seguridad de base de datos o registro en otro servidor y se recupera la base de datos. No se permite especificar esta opción para restaurar una copia de seguridad con la opción NORECOVERY.  
+ KEEP_CDC se debe usar para evitar que la configuración de la captura de datos modificados se quite cuando una copia de seguridad de bases de datos o de registros se restaura en otro servidor y se recupera la base de datos. No se permite especificar esta opción para restaurar una copia de seguridad con la opción NORECOVERY.  
   
- Restaurar la base de datos con KEEP_CDC, no cree los trabajos de captura de datos modificados. Para extraer los cambios del registro después de restaurar la base de datos, deberá volver a crear el trabajo del proceso de captura y el trabajo de limpieza para la base de datos restaurada. Para obtener información, consulte [sys.sp_cdc_add_job &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).  
+ Al restaurar la base de datos con KEEP_CDC, no se crean los trabajos de la captura de datos modificados. Para extraer los cambios del registro después de restaurar la base de datos, deberá volver a crear el trabajo del proceso de captura y el trabajo de limpieza para la base de datos restaurada. Para más información, vea [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).  
   
- Para obtener información sobre el uso de captura de datos modificados con la creación de reflejo de base de datos, vea [captura de datos modificados y otras características de SQL Server](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md).  
+ Para más información sobre cómo usar la captura de datos modificados con la creación de reflejo de la base de datos, vea [Captura de datos modificados y otras características de SQL Server](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md).  
   
 #### <a name="servicebrokerwithoptions"></a>\<service_broker_WITH_options>  
  Activa o desactiva la entrega de mensajes de [!INCLUDE[ssSB](../../includes/sssb-md.md)] o establece un nuevo identificador de [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Esta opción solo es pertinente si [!INCLUDE[ssSB](../../includes/sssb-md.md)] se habilitó (activó) para la base de datos cuando se creó la copia de seguridad.  
   
- {ENABLE_BROKER | ERROR_BROKER_CONVERSATIONS | NEW_BROKER}  
- **Compatible con:**[Restaurar base de datos  ](../../t-sql/statements/restore-statements-transact-sql.md)  
+ { ENABLE_BROKER  | ERROR_BROKER_CONVERSATIONS  | NEW_BROKER }  
+ **Compatible con:** [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  ENABLE_BROKER  
- Especifica que [!INCLUDE[ssSB](../../includes/sssb-md.md)] la entrega de mensajes está habilitada al final de la restauración para que los mensajes pueden enviarse inmediatamente. De forma predeterminada, la entrega de mensajes de [!INCLUDE[ssSB](../../includes/sssb-md.md)] está deshabilitada durante una restauración. La base de datos conserva el identificador de Service Broker existente.  
+ Especifica que la entrega de mensajes de [!INCLUDE[ssSB](../../includes/sssb-md.md)] está habilitada al final de la restauración para que los mensajes se puedan enviar inmediatamente. De forma predeterminada, la entrega de mensajes de [!INCLUDE[ssSB](../../includes/sssb-md.md)] está deshabilitada durante una restauración. La base de datos conserva el identificador de Service Broker existente.  
   
  ERROR_BROKER_CONVERSATIONS  
  Finaliza todas las conversaciones con un error que indica que la base de datos está adjunta o restaurada. Esto permite que las aplicaciones realicen una limpieza regular de las conversaciones existentes. La entrega de mensajes de Service Broker está deshabilitada hasta que se completa esta operación y, después, se habilita. La base de datos conserva el identificador de Service Broker existente.  
@@ -490,21 +490,21 @@ Utilice KEEP_REPLICATION al configurar la replicación para que funcione con el 
  Especifica que se asigne a la base de datos un nuevo identificador de Service Broker. Dado que la base de datos se considera como un nuevo Service Broker, todas las conversaciones existentes en la base de datos se quitan inmediatamente sin generar mensajes de fin de diálogo. Cualquier ruta que haga referencia al identificador de Service Broker anterior debe volverse a crear con el nuevo identificador.  
   
 #### <a name="pointintimewithoptions"></a>\<point_in_time_WITH_options>  
- **Compatible con:**[Restaurar {base de datos | Registro}](../../t-sql/statements/restore-statements-transact-sql.md) y solo para los modelos de recuperación completa u optimizado para cargas masivas de registros.  
+ **Compatible con:** [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md) y solo en el modelo de recuperación completa o el modelo de recuperación optimizado para cargas masivas de registros.  
   
  Puede restaurar una base de datos hasta un momento concreto o transacción especificando el punto de recuperación de destino en una cláusula STOPAT, STOPBEFOREMARK o STOPATMARK. Un momento o transacción especificada siempre se restaura a partir de una copia de seguridad de registros. En cada instrucción RESTORE LOG de la secuencia de restauración, debe especificar el momento o la transacción de destino en una cláusula STOPAT, STOPBEFOREMARK o STOPATMARK idéntica.  
   
  Como requisito previo para realizar una restauración a un momento dado, primero debe restaurar una copia de seguridad total de la base de datos cuyo final sea anterior al punto de recuperación de destino. Para ayudarle a identificar qué copia de seguridad de la base de datos restaurar, si lo desea puede especificar la cláusula STOPAT, STOPBEFOREMARK o STOPATMARK en una instrucción RESTORE DATABASE para generar un error si una copia de seguridad de los datos es demasiado reciente para el momento de destino especificado. Pero la copia de seguridad completa de los datos se restaura siempre, aunque contenga el momento de destino.  
   
 > [!NOTE]  
->  El RESTORE_DATABASE y RESTORE_LOG en un momento WITH opciones son similares, pero solo RESTORE LOG admite el *nombre_de_marca* argumento.  
+>  Las opciones RESTORE_DATABASE y RESTORE_LOG a un momento dado de WITH son parecidas, pero solo RESTORE LOG admite el argumento *mark_name*.  
   
  { STOPAT | STOPATMARK | STOPBEFOREMARK }   
  
  STOPAT **=** { **'***datetime***'** | **@***datetime_var* }  
- Especifica que la base de datos se restaura al estado que estaba en la fecha y hora especificadas por el *datetime* o **@*** datetime_var* parámetro. Para obtener información acerca de cómo especificar una fecha y hora, vea [funciones y tipos de datos de hora y fecha &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ Especifica que se va restaurar la base de datos al estado en que estaba en la fecha y hora especificadas por el parámetro *datetime* o **@***datetime_var*. Para más información sobre cómo especificar una fecha y una hora, vea [Tipos de datos y funciones de fecha y hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
- Si se usa una variable para STOPAT, la variable debe ser **varchar**, **char**, **smalldatetime**, o **datetime** tipo de datos. Solo se aplican a la base de datos los datos del registro de transacciones escritos antes de la fecha y hora especificadas.  
+ Si se usa una variable para STOPAT, la variable debe ser del tipo de datos **varchar**, **char**, **smalldatetime** o **datetime**. Solo se aplican a la base de datos los datos del registro de transacciones escritos antes de la fecha y hora especificadas.  
   
 > [!NOTE]  
 >  Si la hora de STOPAT es posterior a la última copia de seguridad de LOG, la base de datos se deja en estado no recuperado, como si se hubiera ejecutado RESTORE LOG con la opción NORECOVERY.  
@@ -514,28 +514,28 @@ Utilice KEEP_REPLICATION al configurar la replicación para que funcione con el 
  STOPATMARK **=** { **'***mark_name***'** | **'**lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
  Especifica que la recuperación se realice en un punto de recuperación especificado. La transacción especificada se incluye en la recuperación, pero solo se confirma si estaba confirmada inicialmente cuando se generó.  
   
- Compatibilidad con RESTORE DATABASE y RESTORE LOG el *lsn_number* parámetro. Este parámetro especifica un número de secuencia de registro.  
+ Tanto RESTORE DATABASE como RESTORE LOG admiten el parámetro *lsn_number*. Este parámetro especifica un número de secuencia de registro.  
   
- El *nombre_de_marca* parámetro solo es compatible con la instrucción RESTORE LOG. Este parámetro identifica una marca de transacción en la copia de seguridad de registros.  
+ El parámetro *mark_name* solo es compatible con la instrucción RESTORE LOG. Este parámetro identifica una marca de transacción en la copia de seguridad de registros.  
   
- En una instrucción RESTORE LOG, si después de *datetime* es se omite, la recuperación se detiene en la primera marca con el nombre especificado. Si después de *datetime* se especifica, la recuperación se detiene en la primera marca con el nombre especificado, ya sea en o después de *datetime*.  
+ En una instrucción RESTORE LOG, si se omite AFTER *datetime*, la recuperación se detiene en la primera marca con el nombre especificado. Si se especifica AFTER *datetime*, la recuperación se detiene en la primera marca que tenga el nombre especificado, ya coincida con *datetime* o ya sea posterior.  
   
 > [!NOTE]  
 >  Si la marca especificada, LSN, o la hora es posterior a la última copia de seguridad de LOG, la base de datos se deja en estado no recuperado, como si se hubiera ejecutado RESTORE LOG con la opción NORECOVERY.  
   
- Para obtener más información, vea [usar transacciones marcadas para recuperar las bases de datos relacionadas sistemáticamente &#40; Modelo de recuperación completa &#41; ](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md) y [recuperar a un número de secuencia de registro &#40; SQL Server &#41; ](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md).  
+ Para más información, vea [Usar transacciones marcadas para recuperar bases de datos relacionadas sistemáticamente &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md) y [Recuperar a un número de secuencia de registro &#40;SQL Server&#41;](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md).  
   
  STOPBEFOREMARK **=** { **'***mark_name***'** | **'**lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
- Especifica que la recuperación hasta un punto de recuperación especificado. La transacción especificada no se incluye en la recuperación y se revertirá cuando se utilice WITH RECOVERY.  
+ Especifica que la recuperación se realice en un punto de recuperación especificado. La transacción especificada no se incluye en la recuperación y se revertirá cuando se utilice WITH RECOVERY.  
   
- Compatibilidad con RESTORE DATABASE y RESTORE LOG el *lsn_number* parámetro. Este parámetro especifica un número de secuencia de registro.  
+ Tanto RESTORE DATABASE como RESTORE LOG admiten el parámetro *lsn_number*. Este parámetro especifica un número de secuencia de registro.  
   
- El *nombre_de_marca* parámetro solo es compatible con la instrucción RESTORE LOG. Este parámetro identifica una marca de transacción en la copia de seguridad de registros.  
+ El parámetro *mark_name* solo es compatible con la instrucción RESTORE LOG. Este parámetro identifica una marca de transacción en la copia de seguridad de registros.  
   
- En una instrucción RESTORE LOG, si después de *datetime* se omite, la recuperación se detiene justo antes de la primera marca con el nombre especificado. Si después de *datetime* se especifica, la recuperación se detiene justo antes de que la primera marca que tenga el nombre especificado ya sea en o después de *datetime*.  
+ En una instrucción RESTORE LOG, si se omite AFTER *datetime*, la recuperación se detiene justo antes de la primera marca con el nombre especificado. Si se especifica AFTER *datetime*, la recuperación se detiene justo antes de la primera marca que tenga el nombre especificado, ya coincida con *datetime* o ya sea posterior.  
   
 > [!IMPORTANT]  
->  Si una secuencia de restauración parcial excluye cualquier grupo de archivos FILESTREAM, no se admite la restauración a un momento dado. Puede forzarse la continuación de la secuencia de restauración. Sin embargo, nunca se pueden restaurar los grupos de archivos FILESTREAM que se omiten de la instrucción RESTORE. Para forzar una restauración a un momento dado, especifique la opción CONTINUE_AFTER_ERROR junto con la opción STOPAT, STOPATMARK o STOPBEFOREMARK. Si se especifica CONTINUE_AFTER_ERROR, la secuencia de restauración parcial será correcta y el grupo de archivos FILESTREAM no será recuperable.  
+>  Si una secuencia de restauración parcial excluye cualquier grupo de archivos FILESTREAM, no se admite la restauración a un momento dado. Puede forzarse la continuación de la secuencia de restauración. Sin embargo, no se podrán restaurar los grupos de archivos FILESTREAM omitidos en la instrucción RESTORE. Para forzar una restauración a un momento dado, especifique la opción CONTINUE_AFTER_ERROR junto con la opción STOPAT, STOPATMARK o STOPBEFOREMARK. Si se especifica CONTINUE_AFTER_ERROR, la secuencia de restauración parcial será correcta y el grupo de archivos FILESTREAM no será recuperable.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Para obtener los conjuntos de resultados, vea los siguientes temas:  
@@ -546,7 +546,7 @@ Utilice KEEP_REPLICATION al configurar la replicación para que funcione con el 
   
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Para comprobar las notas adicionales, vea los siguientes temas:  
   
 -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -555,33 +555,33 @@ Utilice KEEP_REPLICATION al configurar la replicación para que funcione con el 
   
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
--   [RESTORE REWINDONLY &#40; Transact-SQL &#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)  
+-   [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)  
   
 -   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
 ## <a name="specifying-a-backup-set"></a>Especificar un conjunto de copia de seguridad  
- A *conjunto de copia de seguridad* contiene la copia de seguridad de una única operación de copia de seguridad correcta. Las instrucciones RESTORE, RESTORE FILELISTONLY, RESTORE HEADERONLY y RESTORE VERIFYONLY actúan sobre un solo conjunto de copia de seguridad en el conjunto de medios de los dispositivos de copia de seguridad especificados. Debe especificar la copia de seguridad que necesita del conjunto de medios. Puede obtener el valor *backup_set_file_number* de un conjunto de copia de seguridad mediante la instrucción [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) .  
+ Un *conjunto de copia de seguridad* contiene la copia de seguridad de una sola operación de copia de seguridad realizada correctamente. Las instrucciones RESTORE, RESTORE FILELISTONLY, RESTORE HEADERONLY y RESTORE VERIFYONLY actúan sobre un solo conjunto de copia de seguridad en el conjunto de medios de los dispositivos de copia de seguridad especificados. Debe especificar la copia de seguridad que necesita del conjunto de medios. Puede obtener el valor *backup_set_file_number* de un conjunto de copia de seguridad mediante la instrucción [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) .  
   
  La opción para especificar el conjunto de copia de seguridad que se desea restaurar es:  
   
  FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }  
   
- Donde *backup_set_file_number* indica la posición de la copia de seguridad en el conjunto de medios. A *backup_set_file_number* de 1 (archivo = 1) indica la primera copia de seguridad en el medio de copia de seguridad y un *backup_set_file_number* de 2 (archivo = 2) indica el segundo conjunto de copia de seguridad y así sucesivamente.  
+ Donde *backup_set_file_number* indica la posición de la copia de seguridad en el conjunto de medios. Un valor de *backup_set_file_number* de 1 (FILE = 1) indica el primer conjunto de copia de seguridad del medio de copia, y si *backup_set_file_number* es 2 (FILE = 2), indica el segundo conjunto de copia de seguridad, y así sucesivamente.  
   
- El comportamiento de esta opción varía dependiendo de la instrucción, como se describe en la tabla siguiente:  
+ El comportamiento de esta opción varía en función de la instrucción, como se indica en la siguiente tabla:  
   
 |.|Comportamiento de la opción FILE de conjunto de copia de seguridad|  
 |---------------|-----------------------------------------|  
 |RESTORE|El número predeterminado del conjunto de copia de seguridad es 1. En una instrucción RESTORE solo se permite una opción FILE de conjunto de copia de seguridad. Es importante especificar los conjuntos de copia de seguridad por orden.|  
 |RESTORE FILELISTONLY|El número predeterminado del conjunto de copia de seguridad es 1.|  
-|RESTORE HEADERONLY|De forma predeterminada, se procesan todos los conjuntos de copia de seguridad del conjunto de medios. El conjunto de resultados de RESTORE HEADERONLY devuelve información acerca de cada conjunto de copia de seguridad, incluida su **posición** en conjunto de los medios. Para devolver información sobre un conjunto de copia de seguridad determinado, use el número de posición como el *backup_set_file_number* valor en la opción de archivo.<br /><br /> Nota: Para cintas, RESTORE HEADER solo procesa los conjuntos de copia de seguridad de la cinta cargada.|  
-|RESTORE VERIFYONLY|El valor predeterminado *backup_set_file_number* es 1.|  
+|RESTORE HEADERONLY|De forma predeterminada, se procesan todos los conjuntos de copia de seguridad del conjunto de medios. El conjunto de resultados de RESTORE HEADERONLY devuelve información sobre cada conjunto de copia de seguridad, incluida su **posición** en el conjunto de medios. Para devolver información sobre un conjunto de copia de seguridad determinado, use su número de posición como valor de *backup_set_file_number* en la opción FILE.<br /><br /> Nota: En las cintas, RESTORE HEADER solo procesa los conjuntos de copia de seguridad de la cinta cargada.|  
+|RESTORE VERIFYONLY|El valor predeterminado de *backup_set_file_number* es 1.|  
   
 > [!NOTE]  
->  La opción de archivo para especificar un conjunto de copia de seguridad no está relacionado con la opción de archivo para especificar un archivo de base de datos, archivo  **=**  { *logical_file_name_in_backup* | **@*** logical_ file_name_in_backup_var* }.  
+>  La opción FILE para especificar un conjunto de copia de seguridad no está relacionada con la opción FILE que se usa para especificar un archivo de base de datos, FILE **=** { *logical_file_name_in_backup* | **@***logical_file_name_in_backup_var* }.  
   
 ## <a name="summary-of-support-for-with-options"></a>Resumen de compatibilidad para las opciones de WITH  
- Las siguientes opciones de WITH son compatibles con solo la instrucción RESTORE: BLOCKSIZE, BUFFERCOUNT, MAXTRANSFERSIZE, PARTIAL, KEEP_REPLICATION, {RECOVERY | NORECOVERY | STANDBY}, REPLACE, RESTART, RESTRICTED_USER y {STOPAT | STOPATMARK | STOPBEFOREMARK}  
+ Las siguientes opciones de WITH son compatibles únicamente con la instrucción RESTORE: BLOCKSIZE, BUFFERCOUNT, MAXTRANSFERSIZE, PARTIAL, KEEP_REPLICATION, { RECOVERY | NORECOVERY | STANDBY }, REPLACE, RESTART, RESTRICTED_USER y { STOPAT | STOPATMARK | STOPBEFOREMARK }  
   
 > [!NOTE]  
 >  La opción PARTIAL solo se admite en RESTORE DATABASE.  
@@ -590,21 +590,21 @@ Utilice KEEP_REPLICATION al configurar la replicación para que funcione con el 
   
 |Opción de WITH|RESTORE|RESTORE FILELISTONLY|RESTORE HEADERONLY|RESTORE LABELONLY|RESTORE REWINDONLY|RESTORE VERIFYONLY|  
 |-----------------|-------------|--------------------------|------------------------|-----------------------|------------------------|------------------------|  
-|{ CHECKSUM<br /><br /> &#124; NO_CHECKSUM}|√|√|√|√|—|√|  
-|{ CONTINUE_AFTER_ERROR<br /><br /> &#124; STOP_ON_ERROR}|√|√|√|√|—|√|  
+|{ CHECKSUM<br /><br /> &#124; NO_CHECKSUM }|√|√|√|√|—|√|  
+|{ CONTINUE_AFTER_ERROR<br /><br /> &#124; STOP_ON_ERROR }|√|√|√|√|—|√|  
 |FILE<sup>1</sup>|√|√|√|—|—|√|  
 |LOADHISTORY|—|—|—|—|—|√|  
 |MEDIANAME|√|√|√|√|—|√|  
 |MEDIAPASSWORD|√|√|√|√|—|√|  
 |MOVE|√|—|—|—|—|√|  
 |PASSWORD|√|√|√|—|—|√|  
-|{REBOBINAR &#124; NOREWIND}|√|Solo REWIND|Solo REWIND|Solo REWIND|—|√|  
+|{ REWIND &#124; NOREWIND }|√|Solo REWIND|Solo REWIND|Solo REWIND|—|√|  
 |STATS|√|—|—|—|—|√|  
-|{UNLOAD &#124; NOUNLOAD}|√|√|√|√|√|√|  
+|{ UNLOAD &#124; NOUNLOAD }|√|√|√|√|√|√|  
   
- <sup>1</sup> archivo **= *** backup_set_file_number*, que es distinto de {archivo | GRUPO DE ARCHIVOS}.  
+ <sup>1</sup> FILE **=***backup_set_file_number*, que es distinto de {FILE | FILEGROUP}.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para comprobar los permisos, vea los siguientes temas:  
   
 -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -615,7 +615,7 @@ Utilice KEEP_REPLICATION al configurar la replicación para que funcione con el 
   
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
--   [RESTORE REWINDONLY &#40; Transact-SQL &#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)  
+-   [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)  
   
 -   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
@@ -628,7 +628,7 @@ Utilice KEEP_REPLICATION al configurar la replicación para que funcione con el 
   
 -   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: (Division) (Transact-SQL) | Microsoft Docs
+title: "(División) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -48,17 +48,17 @@ dividend / divisor
   
 ## <a name="arguments"></a>Argumentos  
  *dividend*  
- Es la expresión numérica que se va a dividir. *Dividendo* puede ser cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cualquiera de los tipos de datos de los valores numéricos de categoría, tipo de datos excepto la **datetime** y **smalldatetime** tipos de datos.  
+ Es la expresión numérica que se va a dividir. *dividend* es cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md) válida de cualquiera de los tipos de datos de la categoría de tipos de datos numéricos, excepto los tipos de datos **datetime** y **smalldatetime**.  
   
  *divisor*  
- Es la expresión numérica entre la que se va a dividir el dividendo. *divisor* puede ser cualquier expresión válida de cualquiera de los tipos de datos de la categoría de tipo de datos numéricos, excepto el **datetime** y **smalldatetime** tipos de datos.  
+ Es la expresión numérica entre la que se divide el dividendo. *divisor* es cualquier expresión válida de cualquiera de los tipos de datos de la categoría de tipos de datos numéricos, excepto los tipos de datos **datetime** y **smalldatetime**.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  Devuelve el tipo de datos del argumento con mayor prioridad. Para obtener más información, vea [Prioridad de tipo de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
- Si es un entero *dividendo* se divide por un número entero *divisor*, el resultado es un entero que tiene cualquier parte fraccionaria del resultado truncado.  
+ Si un *dividend* de tipo entero se divide entre un *divisor* de tipo entero, el resultado es un entero en el que se trunca la parte fraccionaria del resultado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El valor real que devuelve el operador / es el cociente de la primera expresión, dividida entre la segunda expresión.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -88,8 +88,8 @@ SalesPersonID FirstName    LastName          SalesQuota  Sales Target Per Month
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- En el ejemplo siguiente se usa el operador aritmético de división para calcular una proporción simple de horas de vacaciones de cada empleados en horas de baja por enfermedad.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ En el siguiente ejemplo se usa el operador aritmético de división para calcular una sencilla proporción entre las horas de vacaciones de cada empleado y las horas de baja por enfermedad.  
   
 ```  
 -- Uses AdventureWorks  
@@ -99,14 +99,14 @@ FROM DimEmployee;
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
- [/= &#40;Division Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
- [Compuesta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [/= &#40;Asignación de división&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
+ [Operadores compuestos &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

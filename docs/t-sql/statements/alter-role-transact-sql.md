@@ -1,5 +1,5 @@
 ---
-title: ROL ALTER (Transact-SQL) | Documentos de Microsoft
+title: ALTER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -38,10 +38,10 @@ ms.lasthandoff: 01/02/2018
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Agrega o quita los miembros de un rol de base de datos o cambia el nombre de un rol de base de datos definido por el usuario.  
+  Agrega o quita miembros en un rol de base de datos o cambia el nombre de un rol de base de datos definido por el usuario.  
   
 > [!NOTE]  
->  Para modificar los roles en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use [sp_addrolemember &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) y [sp_droprolemember &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md).  
+>  Para modificar roles en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) y [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -71,51 +71,51 @@ ALTER ROLE role_name
   
 ## <a name="arguments"></a>Argumentos  
  *role_name*  
- **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2008),  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **SE APLICA A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- Especifica el rol de base de datos para cambiar.  
+ Especifica el rol de base de datos que cambiar.  
   
- Agregar miembro *database_principal*l  
- **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2012),  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ ADD MEMBER *database_principal*l  
+ **SE APLICA A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Especifica que se agregue la entidad de seguridad de base de datos a la pertenencia de un rol de base de datos.  
   
 -   *database_principal* es un usuario de base de datos o un rol de base de datos definido por el usuario.  
   
--   *database_principal* no puede ser un rol fijo de base de datos o una entidad de seguridad de servidor.  
+-   *database_principal* no puede ser un rol fijo de base de datos ni una entidad de seguridad del servidor.  
   
 DROP MEMBER *database_principal*  
- **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2012),  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **SE APLICA A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- Especifica que se quite una entidad de seguridad de base de datos de la pertenencia de un rol de base de datos.  
+ Especifica que se quite la entidad de seguridad de base de datos de la pertenencia de un rol de base de datos.  
   
 -   *database_principal* es un usuario de base de datos o un rol de base de datos definido por el usuario.  
   
--   *database_principal* no puede ser un rol fijo de base de datos o una entidad de seguridad de servidor.  
+-   *database_principal* no puede ser un rol fijo de base de datos ni una entidad de seguridad del servidor.  
   
-CON nombre = *new_name*  
- **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2008),  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+WITH NAME = *new_name*  
+ **SE APLICA A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- Especifica que se cambie el nombre de un rol de base de datos definido por el usuario. El nuevo nombre no debe existir ya en la base de datos.  
+ Especifica que se cambie el nombre de un rol de base de datos definido por el usuario. El nuevo nombre no debe existir en la base de datos.  
   
  El cambio de nombre de un rol de base de datos no modifica el número de identificación, el propietario, ni los permisos del rol.  
   
-## <a name="permissions"></a>Permissions  
- Para ejecutar este comando necesita uno o varios de estos permisos o las pertenencias a grupos:  
+## <a name="permissions"></a>Permisos  
+ Para ejecutar este comando, se necesitan uno o varios de los siguientes permisos o pertenencias a grupos:  
   
--   **ALTER** permiso para el rol  
--   **ALTER ANY ROLE** permiso en la base de datos  
--   Pertenencia en el **db_securityadmin** rol fijo de base de datos  
+-   Permiso **ALTER** en el rol  
+-   Permiso **ALTER ANY ROLE** en la base de datos  
+-   Pertenencia al rol fijo de base de datos **db_securityadmin**  
   
-Además, para cambiar la pertenencia a un rol fijo de base de datos debe:  
+Además, para cambiar la pertenencia a un rol fijo de base de datos, se necesita lo siguiente:  
   
--   Pertenencia en el **db_owner** rol fijo de base de datos  
+-   Pertenencia al rol fijo de base de datos **db_owner**  
   
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
- No se puede cambiar el nombre de un rol fijo de base de datos.  
+ El nombre de los roles fijos de base de datos no se puede cambiar.  
   
 ## <a name="metadata"></a>Metadatos  
- Estas vistas del sistema contienen información sobre los roles de base de datos y las entidades de seguridad de base de datos.  
+ Estas vistas del sistema contienen información sobre los roles de base de datos y las entidades de seguridad de las base de datos.  
   
 -   [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)  
   
@@ -124,7 +124,7 @@ Además, para cambiar la pertenencia a un rol fijo de base de datos debe:
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-change-the-name-of-a-database-role"></a>A. Cambiar el nombre de un rol de base de datos  
- **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2008),  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **SE APLICA A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2008), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  En el ejemplo siguiente se cambia el nombre del rol `buyers` a `purchasing`. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
   
@@ -133,9 +133,9 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ```  
   
 ### <a name="b-add-or-remove-role-members"></a>B. Agregar o quitar a miembros del rol  
- **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2012),  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **SE APLICA A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- Este ejemplo crea un rol de base de datos denominado `Sales`. Agrega un usuario de base de datos denominado a Barry a la pertenencia y, a continuación, se muestra cómo quitar el miembro Barry. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
+ En este ejemplo se crea el rol de base de datos `Sales`. Se agrega un usuario de base de datos denominado Barry a la pertenencia y, luego, se indica cómo quitar el miembro Barry. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
   
 ```sql  
 CREATE ROLE Sales;  
@@ -143,10 +143,10 @@ ALTER ROLE Sales ADD MEMBER Barry;
 ALTER ROLE Sales DROP MEMBER Barry;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Crear rol &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [ELIMINAR rol &#40; Transact-SQL &#41;](../../t-sql/statements/drop-role-transact-sql.md)   
+ [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  

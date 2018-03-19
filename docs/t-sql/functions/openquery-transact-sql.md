@@ -1,5 +1,5 @@
 ---
-title: OPENQUERY (Transact-SQL) | Documentos de Microsoft
+title: OPENQUERY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -53,10 +53,10 @@ OPENQUERY ( linked_server ,'query' )
  *linked_server*  
  Es un identificador que representa el nombre del servidor vinculado.  
   
- **'** *consulta* **'**  
+ **'** *query* **'**  
  Es la cadena de consulta que se ejecuta en el servidor vinculado. La longitud máxima de la cadena es de 8 KB.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  OPENQUERY no acepta variables para sus argumentos.  
   
  No se puede utilizar OPENQUERY para ejecutar procedimientos almacenados extendidos en un servidor vinculado. Sin embargo, se puede ejecutar un procedimiento almacenado extendido en un servidor vinculado mediante un nombre de cuatro partes. Por ejemplo:  
@@ -67,7 +67,7 @@ EXEC SeattleSales.master.dbo.xp_msver
   
  Las llamadas a OPENDATASOURCE, OPENQUERY u OPENROWSET en la cláusula FROM se evalúan por separado y de forma independiente de otras llamadas a estas funciones utilizadas como destino de la actualización, incluso si se han suministrado argumentos idénticos a las dos llamadas. En particular, las condiciones de filtro o combinación aplicadas en el resultado de una de esas llamadas no tienen ningún efecto en los resultados de la otra llamada.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Cualquier usuario puede ejecutar OPENQUERY. Los permisos utilizados para conectarse al servidor remoto se obtienen de la configuración definida para el servidor vinculado.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -96,23 +96,23 @@ DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitl
 ```  
   
 ### <a name="d-executing-a-select-pass-through-query"></a>D. Ejecutar una consulta SELECT de paso a través  
- En el ejemplo siguiente se utiliza un acceso directo `SELECT` consulta para seleccionar la fila insertada en el ejemplo C.  
+ En este ejemplo se usa una consulta `SELECT` de paso a través para eliminar la columna insertada en el ejemplo C.  
   
 ```sql  
 SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
     
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Funciones de conjunto de filas &#40; Transact-SQL &#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
+ [Rowset Functions &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_serveroption &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [DONDE &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   

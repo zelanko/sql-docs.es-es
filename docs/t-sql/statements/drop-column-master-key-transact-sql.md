@@ -1,5 +1,5 @@
 ---
-title: QUITAR de la clave maestra de columna (Transact-SQL) | Documentos de Microsoft
+title: DROP COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/20/2016
 ms.prod: sql-non-specified
@@ -51,11 +51,11 @@ DROP COLUMN MASTER KEY key_name;
  *key_name*  
  El nombre de la clave maestra de columna.  
   
-## <a name="remarks"></a>Comentarios  
- La clave maestra de columna se puede quitar únicamente si no hay cifrado de columna valores de clave de cifrado con la clave maestra de columna. Para quitar los valores de clave de cifrado de columna, utilice la [DROP COLUMN ENCRYPTION KEY](../../t-sql/statements/drop-column-encryption-key-transact-sql.md) instrucción.  
+## <a name="remarks"></a>Notas  
+ La clave maestra de columna solo se puede quitar si no hay valores clave de cifrado de columna cifrados con la clave maestra de columna. Para quitar los valores de clave de cifrado de columna, utilice la instrucción [DROP COLUMN ENCRYPTION KEY](../../t-sql/statements/drop-column-encryption-key-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
- Requiere **ALTER ANY COLUMN MASTER KEY** permiso en la base de datos.  
+## <a name="permissions"></a>Permisos  
+ Necesita el permiso **ALTER ANY COLUMN MASTER KEY** para la base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -67,10 +67,10 @@ DROP COLUMN MASTER KEY MyCMK;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
- [DROP COLUMN ENCRYPTION KEY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
+ [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
  [Always Encrypted &#40;motor de base de datos&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [sys.column_master_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)  
   

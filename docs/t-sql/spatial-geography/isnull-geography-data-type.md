@@ -1,5 +1,5 @@
 ---
-title: IsNull (tipo de datos geography) | Documentos de Microsoft
+title: IsNull (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="isnull-geography-data-type"></a>IsNull (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Una propiedad que especifica si el **geography** instancia es null. Devuelve 'TRUE' si la instancia es NULL; en caso contrario, devuelve 0.  
+  Propiedad que especifica si la instancia de **geography** es NULL. Devuelve 'TRUE' si la instancia es NULL; en caso contrario, devuelve 0.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,18 +43,18 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **bits**  
+ Tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo CLR: **SqlBoolean**  
+ Tipo de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Comentarios  
- `IsNull`puede utilizarse para probar si una **geography** instancia es null. Esto puede producir resultados un tanto confusos, devolviendo 0 si la instancia no es NULL y NULL si la instancia es NULL.  
+## <a name="remarks"></a>Notas  
+ `IsNull` se puede usar para comprobar si una instancia de **geography** es NULL. Esto puede producir resultados un tanto confusos, devolviendo 0 si la instancia no es NULL y NULL si la instancia es NULL.  
   
- Este método se usa principalmente el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] infraestructura; se recomienda que utilice el predicado IS NULL de T-SQL para probar si una **geography** instancia es null. Para obtener más información sobre el código T-SQL predicado IS NULL, vea [IS NULL &#40; Transact-SQL &#41; ](../../t-sql/queries/is-null-transact-sql.md).  
+ Este método lo usa principalmente la infraestructura [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; se recomienda usar el predicado IS NULL de T-SQL para comprobar si una instancia de **geography** es NULL. Para más información sobre el predicado IS NULL de T-SQL, vea [IS NULL &#40;Transact-SQL&#41;](../../t-sql/queries/is-null-transact-sql.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

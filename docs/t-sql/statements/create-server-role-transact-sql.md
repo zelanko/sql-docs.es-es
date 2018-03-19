@@ -1,5 +1,5 @@
 ---
-title: Crear rol de servidor (Transact-SQL) | Documentos de Microsoft
+title: CREATE SERVER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -55,24 +55,24 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
  *role_name*  
  Es el nombre del rol de servidor que se va a crear.  
   
- AUTORIZACIÓN *entidadseguridadservidor*  
+ AUTHORIZATION *server_principal*  
  Es el inicio de sesión que será propietario del nuevo rol de servidor. Si no se especifica un inicio de sesión, el rol de servidor será propiedad del inicio de sesión que ejecute CREATE SERVER ROLE.  
   
-## <a name="remarks"></a>Comentarios  
- Los roles de servidor son elementos protegibles en el nivel de servidor. Después de crear un rol de servidor, configure los permisos de nivel de servidor del rol utilizando GRANT, DENY y REVOKE. Para agregar o quitar inicios de sesión de un rol de servidor, utilice [ALTER SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-server-role-transact-sql.md). Para quitar un rol de servidor, utilice [DROP SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-server-role-transact-sql.md). Para obtener más información, vea [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+## <a name="remarks"></a>Notas  
+ Los roles de servidor son elementos protegibles en el nivel de servidor. Después de crear un rol de servidor, configure los permisos de nivel de servidor del rol utilizando GRANT, DENY y REVOKE. Para agregar inicios de sesión a un rol de servidor y quitarlos, use [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md). Para quitar un rol de servidor, utilice [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md). Para obtener más información, vea [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
- Puede ver los roles de servidor consultando la [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) y [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) vistas de catálogo.  
+ Puede ver los roles de servidor consultando las vistas de catálogo [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) y [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  No se puede conceder permisos a los roles de servidor en elementos protegibles de nivel de base de datos. Para crear roles de base de datos, vea [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md).  
   
  Para más información acerca de cómo diseñar un sistema de permisos, consulte [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Se debe disponer del permiso CREATE SERVER CONTROL o pertenecer al rol fijo de servidor sysadmin.  
   
  También se requiere el permiso IMPERSONATE en *server_principal* para los inicios de sesión, el permiso ALTER para los roles de servidor que se han usado como *server_principal*o la pertenencia a un grupo de Windows que se ha usado como server_principal.  
   
- Esto desencadenará el evento Audit Server Principal Management con el tipo de objeto que se establece en función del servidor y el tipo de evento para agregar.  
+ Esto desencadenará el evento Audit Server Principal Management con el tipo de objeto establecido en el rol de servidor y el tipo de evento que se va a agregar.  
   
  Cuando se utiliza la opción AUTHORIZATION para asignar la propiedad de roles de servidor, también se requieren los siguientes permisos:  
   
@@ -100,7 +100,7 @@ CREATE SERVER ROLE auditors AUTHORIZATION securityadmin;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

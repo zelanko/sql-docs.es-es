@@ -1,5 +1,5 @@
 ---
-title: "QUITAR lista de propiedades de búsqueda (Transact-SQL) | Documentos de Microsoft"
+title: DROP SEARCH PROPERTY LIST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -51,20 +51,20 @@ DROP SEARCH PROPERTY LIST property_list_name
  *property_list_name*  
  Es el nombre de la lista de propiedades de búsqueda que se va a quitar. *property_list_name* es un identificador.  
   
- Para ver los nombres de las listas de propiedades existente, use la [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) vista de catálogo como sigue:  
+ Para ver los nombres de las listas de propiedades existentes, use la vista de catálogo [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) de la siguiente manera:  
   
 ```  
 SELECT name FROM sys.registered_search_property_lists;  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- No puede quitar una lista de propiedades de búsqueda de una base de datos mientras la lista está asociada a algún índice de texto completo y los intentos de hacerlo producirán un error. Para quitar una lista de propiedades de búsqueda de un índice de texto completo determinado, utilice la [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) (instrucción) y especifique la cláusula SET SEARCH PROPERTY LIST con OFF o el nombre de otra lista de propiedades de búsqueda.  
+## <a name="remarks"></a>Notas  
+ No puede quitar una lista de propiedades de búsqueda de una base de datos mientras la lista está asociada a algún índice de texto completo y los intentos de hacerlo producirán un error. Para quitar una lista de propiedades de búsqueda de un índice de texto completo determinado, use la instrucción [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) y especifique la cláusula SET SEARCH PROPERTY LIST con OFF o el nombre de otra lista de propiedades de búsqueda.  
   
- **Para ver la propiedad listas en una instancia de servidor**  
+ **Para ver las listas de propiedades en una instancia del servidor**  
   
 -   [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)  
   
- **Para ver la propiedad listas asociados a los índices de texto completo**  
+ **Para ver las listas de propiedades asociadas a índices de texto completo**  
   
 -   [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)  
   
@@ -72,11 +72,11 @@ SELECT name FROM sys.registered_search_property_lists;
   
 -   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
-##  <a name="Permissions"></a> Permisos  
+##  <a name="Permissions"></a> Permissions  
  Se necesita el permiso CONTROL en la lista de propiedades de búsqueda.  
   
 > [!NOTE]  
->  El propietario de la lista de propiedades puede conceder permisos CONTROL para la lista. De manera predeterminada, el usuario que crea una lista de propiedades de búsqueda es su propietario. El propietario puede modificarse mediante el uso de la [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción.  
+>  El propietario de la lista de propiedades puede conceder permisos CONTROL para la lista. De manera predeterminada, el usuario que crea una lista de propiedades de búsqueda es su propietario. El propietario se puede cambiar mediante la instrucción [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se quita la lista de propiedades `JobCandidateProperties` de la base de datos `AdventureWorks2012`.  
@@ -86,12 +86,12 @@ DROP SEARCH PROPERTY LIST JobCandidateProperties;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [ALTER SEARCH PROPERTY LIST &#40; Transact-SQL &#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
- [Crear lista de propiedades de búsqueda &#40; Transact-SQL &#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
+ [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)   
  [Buscar propiedades de documento con listas de propiedades de búsqueda](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
- [Sys.registered_search_properties &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
- [Sys.registered_search_property_lists &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
+ [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
+ [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
  [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)  
   
   

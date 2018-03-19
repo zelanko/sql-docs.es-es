@@ -1,5 +1,5 @@
 ---
-title: FILEPROPERTY (Transact-SQL) | Documentos de Microsoft
+title: FILEPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -54,8 +54,8 @@ FILEPROPERTY ( file_name , property )
  *file_name*  
  Es una expresión que contiene el nombre del archivo asociado a la base de datos actual de la que se va a devolver información de propiedades. *file_name* es **nchar(128)**.  
   
- *propiedad*  
- Es una expresión que contiene el nombre de la propiedad de archivo que se va a devolver. *propiedad* es **varchar (128)**, y puede tener uno de los siguientes valores.  
+ *property*  
+ Es una expresión que contiene el nombre de la propiedad de archivo que se va a devolver. *property* es **varchar (128)** y puede ser uno de estos valores.  
   
 |Valor|Description|Valor devuelto|  
 |-----------|-----------------|--------------------|  
@@ -67,8 +67,8 @@ FILEPROPERTY ( file_name , property )
 ## <a name="return-types"></a>Tipos devueltos  
  **int**  
   
-## <a name="remarks"></a>Comentarios  
- *file_name* corresponde a la **nombre** columna en el **sys.master_files** o **sys.database_files** vista de catálogo.  
+## <a name="remarks"></a>Notas  
+ *file_name* corresponde a la columna **name** de la vista de catálogo **sys.master_files** o **sys.database_files**.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se devuelve el valor de la propiedad `IsPrimaryFile` del nombre de archivo `AdventureWorks_Data` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
@@ -88,9 +88,9 @@ Primary File
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [FILEGROUPPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/filegroupproperty-transact-sql.md)   
- [Funciones de metadatos &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [FILEGROUPPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/filegroupproperty-transact-sql.md)   
+ [Metadata Functions &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  [Funciones de metadatos &#40;Transact-SQL&#41;]  
  [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  

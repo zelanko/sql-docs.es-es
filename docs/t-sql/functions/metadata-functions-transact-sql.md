@@ -1,5 +1,5 @@
 ---
-title: Funciones de metadatos (Transact-SQL) | Documentos de Microsoft
+title: Funciones de metadatos (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
  Ninguna de las funciones de metadatos es determinista. Por ello, estas funciones no siempre devuelven el mismo resultado cada vez que se invocan, incluso con el mismo conjunto de valores de entrada.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

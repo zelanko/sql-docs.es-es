@@ -1,5 +1,5 @@
 ---
-title: Crear tipo de mensaje (Transact-SQL) | Documentos de Microsoft
+title: CREATE MESSAGE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
@@ -64,10 +64,10 @@ CREATE MESSAGE TYPE message_type_name
   
 ## <a name="arguments"></a>Argumentos  
  *message_type_name*  
- Es el nombre del tipo de mensaje que se va a crear. Se crea un tipo de mensaje nuevo en la base de datos actual, el cual pertenece a la entidad de seguridad especificada en la cláusula AUTHORIZATION. No se pueden especificar nombres de servidor, base de datos o esquema. El *message_type_name* puede tener hasta 128 caracteres.  
+ Es el nombre del tipo de mensaje que se va a crear. Se crea un tipo de mensaje nuevo en la base de datos actual, el cual pertenece a la entidad de seguridad especificada en la cláusula AUTHORIZATION. No se pueden especificar nombres de servidor, base de datos o esquema. *message_type_name* puede tener hasta 128 caracteres.  
   
- AUTORIZACIÓN *owner_name*  
- Establece el propietario del tipo de mensaje en el usuario o el rol de base de datos que se ha especificado. Cuando el usuario actual es **dbo** o **sa**, *owner_name* puede ser el nombre de cualquier usuario o rol válidos. En caso contrario, *owner_name* debe ser el nombre del usuario actual, el nombre de un usuario que el usuario actual tiene permiso IMPERSONATE o el nombre de un rol al que pertenece el usuario actual. Si se omite esta cláusula, el tipo de mensaje pertenece al usuario actual.  
+ AUTHORIZATION *owner_name*  
+ Establece el propietario del tipo de mensaje en el usuario o el rol de base de datos que se ha especificado. Cuando el usuario actual es **dbo** o **sa**, *owner_name* puede ser el nombre de cualquier usuario o rol válidos. En caso contrario, *owner_name* debe ser el nombre del usuario actual, el nombre de un usuario para el que el usuario actual tiene permiso IMPERSONATE o el nombre de un rol al que pertenece el usuario actual. Si se omite esta cláusula, el tipo de mensaje pertenece al usuario actual.  
   
  VALIDATION   
  Especifica cómo [!INCLUDE[ssSB](../../includes/sssb-md.md)] valida el cuerpo del mensaje para mensajes de este tipo. Si no se especifica esta cláusula, el valor predeterminado de la validación es NONE.  
@@ -82,19 +82,19 @@ CREATE MESSAGE TYPE message_type_name
  Especifica que el cuerpo del mensaje debe contener XML correcto.  
   
  VALID_XML WITH SCHEMA COLLECTION *schema_collection_name*  
- Especifica que el cuerpo del mensaje debe contener XML que es compatible con un esquema en la colección de esquemas especificado el *schema_collection_name* debe ser el nombre de una colección de esquemas XML.  
+ Especifica que el cuerpo del mensaje debe contener XML que se ajuste a un esquema de la colección de esquemas especificada. *schema_collection_name* debe ser el nombre de una colección de esquemas XML existente.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] valida los mensajes entrantes. Si un mensaje contiene un cuerpo de mensaje que no se ajusta al tipo de validación especificado, [!INCLUDE[ssSB](../../includes/sssb-md.md)] descarta el mensaje no válido y devuelve un mensaje de error al servicio que ha enviado el mensaje.  
   
  Las dos partes de una conversación deben definir el mismo nombre para un tipo de mensaje. Para facilitar la solución de problemas, las dos partes de una conversación suelen especificar la misma validación para el tipo de mensaje, aunque [!INCLUDE[ssSB](../../includes/sssb-md.md)] no necesita que ambas partes de la conversación utilicen la misma validación.  
   
- Un tipo de mensaje no puede ser un objeto temporal. A partir de los nombres de tipo de mensaje  **#**  se permiten, pero son objetos permanentes.  
+ Un tipo de mensaje no puede ser un objeto temporal. Se permiten los nombres de tipo de mensaje que empiezan por **#**, aunque se trata de objetos permanentes.  
   
-## <a name="permissions"></a>Permissions  
- Permiso para crear un tipo de mensaje de forma predeterminada a los miembros de la **db_ddladmin** o **db_owner** funciones fijas de base de datos y la **sysadmin** rol fijo de servidor.  
+## <a name="permissions"></a>Permisos  
+ De forma predeterminada, tienen permiso para crear un tipo de mensaje los miembros de los roles fijos de base de datos **db_ddladmin** o **db_owner** y el rol fijo de servidor **sysadmin**.  
   
- El permiso REFERENCES para un tipo de mensaje predeterminado es el propietario del tipo de mensaje, los miembros de la **db_owner** fijo de rol de base de datos y los miembros de la **sysadmin** rol fijo de servidor.  
+ El permiso REFERENCES para un tipo de mensaje se concede de forma predeterminada al propietario del tipo de mensaje, a los miembros del rol fijo de base de datos **db_owner** y a los miembros del rol fijo de servidor **sysadmin**.  
   
  Si la instrucción CREATE MESSAGE TYPE especifica una colección de esquemas, el usuario que ejecuta la instrucción debe tener el permiso REFERENCES en la colección de esquemas especificada.  
   
@@ -166,9 +166,9 @@ CREATE MESSAGE TYPE
     VALIDATION = NONE ;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Modificar tipo de mensaje &#40; Transact-SQL &#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
- [Eliminar tipo de mensaje &#40; Transact-SQL &#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [ALTER MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
+ [DROP MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "CREAR estadísticas (Transact-SQL) | Documentos de Microsoft"
+title: CREATE STATISTICS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/04/2018
 ms.prod: sql-non-specified
@@ -42,9 +42,9 @@ ms.lasthandoff: 01/05/2018
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Crea las estadísticas de optimización de consulta en una o más columnas de una tabla, una vista indizada o una tabla externa. Para la mayoría de las consultas, el optimizador de consultas genera ya las estadísticas necesarias para un plan de consulta de alta calidad; en algunos casos, para mejorar el rendimiento de la consulta necesita crear estadísticas adicionales con CREATE STATISTICS modificar el diseño de la consulta.  
+  Crea estadísticas de optimización de consultas en una o más columnas de una tabla, en una vista indizada o en una tabla externa. Para la mayoría de las consultas, el optimizador de consultas genera ya las estadísticas necesarias para un plan de consulta de alta calidad; en algunos casos, para mejorar el rendimiento de la consulta necesita crear estadísticas adicionales con CREATE STATISTICS modificar el diseño de la consulta.  
   
- Para obtener más información, consulte [estadísticas](../../relational-databases/statistics/statistics.md).  
+ Para obtener más información, consulte [Estadísticas](../../relational-databases/statistics/statistics.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -129,20 +129,20 @@ CREATE STATISTICS statistics_name
  Es el nombre de las estadísticas que se van a crear.  
   
  *table_or_indexed_view_name*  
- Es el nombre de la tabla, una vista indizada o una tabla externa en la que se va a crear las estadísticas. Para crear estadísticas en otra base de datos, especifique un nombre de tabla completo.  
+ Es el nombre de la tabla, de la vista indizada o de la tabla externa en que se van a crear las estadísticas. Para crear estadísticas en otra base de datos, especifique un nombre de tabla completa.  
   
- *columna [,... n]*  
- Una o varias columnas que se incluirán en las estadísticas. Las columnas deben ser en orden de prioridad, de izquierda a derecha. Sólo la primera columna se usa para crear el histograma. Todas las columnas se usan para las estadísticas de correlación entre las columnas que se llama densidades.  
+ *column [ ,…n]*  
+ Una o varias columnas que se van a incluir en las estadísticas. Las columnas deben estar en orden de prioridad, de izquierda a derecha. Solo se usa la primera columna para crear el histograma. Todas las columnas se usan para las estadísticas de correlación entre columnas denominadas densidades.  
   
  Se puede especificar cualquier columna que pueda ser especificada como columna de clave de índice con las siguientes excepciones:  
   
--   **XML**, búsqueda de texto completo, y no se pueden especificar columnas FILESTREAM.  
+-   Las columnas FILESTREAM, de texto completo y **xml** no se pueden especificar.  
   
 -   Solamente se pueden especificar columnas calculadas si las opciones de base de datos ARITHABORT y QUOTED_IDENTIFIER están establecidas en ON.  
   
 -   Se pueden especificar columnas de tipo CLR definido por el usuario si el tipo admite el orden binario. Es posible especificar columnas calculadas definidas como llamadas a métodos de una columna de un tipo definido por el usuario si los métodos están marcados como deterministas.  
   
- DONDE \<filter_predicate > especifica una expresión para seleccionar un subconjunto de filas que se va a incluir al crear el objeto de estadísticas. Las estadísticas que se crean con un predicado de filtro se llaman estadísticas filtradas. El predicado de filtro utiliza la lógica de comparación simple y no se puede hacer referencia a una columna calculada, una columna UDT, una columna de tipo de datos espaciales, o un **hierarchyID** columna tipo de datos. Las comparaciones que utilizan literales NULL no se admiten con los operadores de comparación. En su lugar, use los operadores IS NULL e IS NOT NULL.  
+ WHERE \<filter_predicate> Especifica una expresión para seleccionar un subconjunto de filas que se va a incluir al crear el objeto de estadísticas. Las estadísticas que se crean con un predicado de filtro se llaman estadísticas filtradas. El predicado de filtro utiliza la lógica de comparación simple y no puede hacer referencia a una columna calculada, a una columna UDT, a una columna de tipo de datos espacial o a una columna de tipo de datos **hierarchyID**. Las comparaciones que utilizan literales NULL no se admiten con los operadores de comparación. En su lugar, use los operadores IS NULL e IS NOT NULL.  
   
  Los siguientes son algunos ejemplos de predicados de filtro para la tabla Production.BillOfMaterials:  
   
@@ -152,42 +152,42 @@ CREATE STATISTICS statistics_name
   
  * `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
   
- Para obtener más información acerca de los predicados de filtro, vea [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
+ Para obtener más información sobre los índices filtrados, vea [Crear índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md).  
   
  FULLSCAN  
- Calcular las estadísticas, examine todas las filas. FULLSCAN y SAMPLE 100 PERCENT tienen los mismos resultados. FULLSCAN no se puede utilizar con la opción SAMPLE.  
+ Calcula estadísticas examinando todas las filas. FULLSCAN y SAMPLE 100 PERCENT tienen los mismos resultados. FULLSCAN no se puede utilizar con la opción SAMPLE.  
   
- Cuando se omite, SQL Server utiliza el muestreo a crear las estadísticas y determina el tamaño de muestra que se requiere para crear un plan de consulta de alta calidad  
+ Cuando se omite, SQL Server utiliza el muestreo para crear las estadísticas y determina el tamaño de la muestra que se requiere para crear un plan de consulta de alta calidad.  
   
- EJEMPLO *número* {% | FILAS}  
- Especifica el porcentaje o número de filas aproximado de la tabla o vista indizada que usa el optimizador de consultas al crear las estadísticas. En PERCENT, *número* puede estar comprendido entre 0 y 100 y para las filas, *número* puede oscilar entre 0 y el número total de filas. El porcentaje o número de filas real de los ejemplos del optimizador de consultas podría no coincidir con el porcentaje o el número especificado. Por ejemplo, el optimizador de consultas examina todas las filas en una página de datos.  
+ SAMPLE *number* { PERCENT | ROWS }  
+ Especifica el porcentaje o número de filas aproximado de la tabla o vista indizada que usa el optimizador de consultas al crear las estadísticas. En PERCENT, *number* puede tener un valor comprendido entre 0 y 100, mientras que en ROWS, *number* puede tener un valor comprendido entre 0 y el número total de filas. El porcentaje o número de filas real de los ejemplos del optimizador de consultas podría no coincidir con el porcentaje o el número especificado. Por ejemplo, el optimizador de consultas examina todas las filas en una página de datos.  
   
- SAMPLE es útil para casos especiales en el que el plan de consulta, basado en el muestreo predeterminado, no es óptimo. En la mayoría de las situaciones, no es necesario especificar SAMPLE porque el optimizador de consultas ya utiliza el muestreo y determina el tamaño de muestra estadísticamente significativo de forma predeterminada, tal y como se exige para crear planes de consulta de alta calidad.  
+ SAMPLE es útil para los casos especiales en los que el plan de consulta, basado en el muestreo predeterminado, no es óptimo. En la mayoría de las situaciones, no es necesario especificar SAMPLE porque el optimizador de consultas ya utiliza el muestreo y determina el tamaño de muestra estadísticamente significativo de forma predeterminada, tal y como se exige para crear planes de consulta de alta calidad.  
   
  SAMPLE no se puede utilizar con la opción FULLSCAN. Cuando no se especifica SAMPLE ni FULLSCAN, el optimizador de consultas utiliza los datos muestreados y calcula el tamaño de la muestra de forma predeterminada.  
   
  Recomendamos no especificar 0 PERCENT ni 0 ROWS. Cuando se especifican 0 PERCENT o ROWS, el objeto de estadísticas se crea pero no contiene datos de estadísticas.  
  
- PERSIST_SAMPLE_PERCENT = {ON | {OFF}  
- Cuando **ON**, las estadísticas conservará el porcentaje de muestreo de creación para las actualizaciones posteriores que no especifican explícitamente un porcentaje de muestreo. Cuando **OFF**, porcentaje de muestreo de las estadísticas se restablecería a muestreo predeterminado en actualizaciones posteriores que no especifican explícitamente un porcentaje de muestreo. El valor predeterminado es **OFF**. 
+ PERSIST_SAMPLE_PERCENT = { ON | OFF }  
+ Cuando es **ON**, las estadísticas conservan el porcentaje de muestreo de la creación para las actualizaciones posteriores que no especifican explícitamente un porcentaje de muestreo. Cuando es **OFF**, el porcentaje de muestreo de estadísticas se restablece al muestreo predeterminado en actualizaciones posteriores que no especifiquen explícitamente un porcentaje de muestreo. El valor predeterminado es **OFF**. 
  
- **Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).    
+ **Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).    
   
- STATS_STREAM  **=**  *stats_stream*  
+ STATS_STREAM **=***stats_stream*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  NORECOMPUTE  
- Deshabilitar las estadísticas automáticas opción de actualización, AUTO_UPDATE_STATISTICS, para *statistics_name*. Si se especifica esta opción, el optimizador de consultas finalizará cualquier actualización de estadísticas en curso para *statistics_name* y deshabilitará las actualizaciones futuras.  
+ Deshabilite la opción automática de actualización de las estadísticas, AUTO_UPDATE_STATISTICS, para *statistics_name*. Si se especifica esta opción, el optimizador de consultas finalizará cualquier actualización de las estadísticas que se esté realizando para *statistics_name* y deshabilitará las actualizaciones futuras.  
   
- Para volver a habilitar las actualizaciones de estadísticas, quite las estadísticas con [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md) y, a continuación, ejecutar CREATE STATISTICS sin la opción NORECOMPUTE.  
+ Para volver a habilitar las actualizaciones de las estadísticas, quite las estadísticas con [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md) y, a continuación, ejecute CREATE STATISTICS sin la opción NORECOMPUTE.  
   
 > [!WARNING]  
 >  Utilizar esta opción puede producir planes de consulta poco óptimos. Se recomienda usar esta opción con moderación y que lo haga únicamente un administrador de sistemas cualificado.  
   
- Para obtener más información acerca de la opción AUTO_UPDATE_STATISTICS, consulte [ALTER DATABASE SET Options &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md). Para obtener más información acerca de cómo deshabilitar y volver a habilitar las actualizaciones de estadísticas, vea [estadísticas](../../relational-databases/statistics/statistics.md).  
+ Para obtener más información sobre la opción AUTO_STATISTICS_UPDATE, vea [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Para obtener más información sobre cómo deshabilitar y volver a habilitar las actualizaciones de estadísticas, vea [Estadísticas](../../relational-databases/statistics/statistics.md).  
   
  INCREMENTAL = { ON | OFF }  
- Cuando **ON**, son las estadísticas creadas por cada partición. Cuando **OFF**, se combinan las estadísticas de todas las particiones. El valor predeterminado es **OFF**.  
+ Cuando se establece en **ON**, se crean estadísticas por cada partición. Cuando se establece en **OFF**, se combinan las estadísticas de todas las particiones. El valor predeterminado es **OFF**.  
   
  Si no se admiten las estadísticas por partición, se genera un error. Las estadísticas incrementales no se admiten para los siguientes tipos de estadísticas:  
   
@@ -204,7 +204,7 @@ CREATE STATISTICS statistics_name
 MAXDOP = *max_degree_of_parallelism*  
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
   
- Invalida el **grado máximo de paralelismo** opción de configuración para la duración de la operación de estadística. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
+ Reemplaza la opción de configuración **max degree of parallelism** durante la operación estadística. Para obtener más información, vea [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
   
  *max_degree_of_parallelism* puede ser:  
   
@@ -212,43 +212,43 @@ MAXDOP = *max_degree_of_parallelism*
  Suprime la generación de planes paralelos.  
   
  \>1  
- Restringe el número máximo de procesadores utilizados en una operación estadística paralelo al número especificado o al menos, según la carga de trabajo del sistema actual.  
+ Restringe el número máximo de procesadores usados en una operación estadística paralela al número especificado o a un número inferior, en función de la carga de trabajo actual del sistema.  
   
  0 (predeterminado)  
  Usa el número real de procesadores o menos, según la carga de trabajo actual del sistema.  
   
- \<update_stats_stream_option >[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+ \<update_stats_stream_option> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
 
-## <a name="permissions"></a>Permissions  
- Requiere uno de estos permisos:  
+## <a name="permissions"></a>Permisos  
+ Se requiere uno de estos permisos:  
   
 -   ALTER TABLE  
--   Usuario es propietario de la tabla  
--   Pertenencia en el **db_ddladmin** rol fijo de base de datos  
+-   El usuario es el propietario de la tabla  
+-   Pertenencia al rol fijo de base de **db_ddladmin**.  
   
 ## <a name="general-remarks"></a>Notas generales  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Puede usar tempdb para ordenar las filas buscadas antes de crear las estadísticas.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede usar tempdb para ordenar las filas buscadas antes de crear las estadísticas.  
   
 ### <a name="statistics-for-external-tables"></a>Estadísticas para tablas externas  
- Al crear las estadísticas de tabla externa, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importa la tabla externa en un archivo temporal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de tabla y, a continuación, crea las estadísticas. Para las estadísticas de ejemplos, se importan solo las filas muestreadas. Si tiene una tabla externa grande, será mucho más rápido que utiliza el muestreo predeterminado en lugar de la opción de examen completo.  
+ Al crear las estadísticas de tabla externa, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importa la tabla externa en una tabla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] temporal y crea las estadísticas. En las estadísticas de muestra, solo se importan las filas muestreadas. Si la tabla externa es grande, es mucho más rápido utilizar el muestreo predeterminado en vez de la opción de examen completo.  
   
 ### <a name="statistics-with-a-filtered-condition"></a>Estadísticas con una condición de filtrado  
  Las estadísticas filtradas pueden mejorar el rendimiento de las consultas que se seleccionan desde subconjuntos de datos bien definidos. Las estadísticas filtradas utilizan un predicado de filtro de la cláusula WHERE para seleccionar el subconjunto de datos que se incluye en las estadísticas.  
   
 ### <a name="when-to-use-create-statistics"></a>Cuándo utilizar CREATE STATISTICS  
- Para obtener más información sobre cuándo utilizar CREATE STATISTICS, vea [estadísticas](../../relational-databases/statistics/statistics.md).  
+ Para obtener más información sobre cuándo usar CREATE STATISTICS, vea [Estadísticas](../../relational-databases/statistics/statistics.md).  
   
 ### <a name="referencing-dependencies-for-filtered-statistics"></a>Hacer referencia a las dependencias para las estadísticas filtradas  
- El [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) vista de catálogo realiza el seguimiento de cada columna en el predicado de estadísticas filtradas como una dependencia de referencia. Tenga en cuenta las operaciones que realiza en las columnas de la tabla antes de crear estadísticas filtradas, porque no puede quitar, modificar, cambiar el nombre de la definición de una columna de tabla definida en un predicado de estadísticas filtradas.  
+ La vista de catálogo [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) realiza el seguimiento de cada columna en la expresión del predicado de estadísticas filtradas como una dependencia de referencia. Tenga en cuenta las operaciones que realiza en las columnas de la tabla antes de crear estadísticas filtradas, porque no puede quitar, modificar, cambiar el nombre de la definición de una columna de tabla definida en un predicado de estadísticas filtradas.  
   
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
-* No se admite la actualización de las estadísticas en tablas externas. Para actualizar las estadísticas en una tabla externa, quite y vuelva a crear las estadísticas.  
+* No se admite la actualización de estadísticas en tablas externas. Para actualizar las estadísticas en una tabla externa, quite las estadísticas y vuelva a crearlas.  
 * Puede mostrar hasta 64 columnas por objeto de estadísticas.
-* La opción MAXDOP no es compatible con opciones STATS_STREAM, recuento de filas y PAGECOUNT.
+* La opción MAXDOP no es compatible con opciones STATS_STREAM, ROWCOUNT y PAGECOUNT.
   
 ## <a name="examples"></a>Ejemplos  
 
-### <a name="examples-use-the-adventureworks-database"></a>Ejemplos utilizan la base de datos de AdventureWorks.  
+### <a name="examples-use-the-adventureworks-database"></a>En los ejemplos se usa la base de datos de AdventureWorks.  
 
 ### <a name="a-using-create-statistics-with-sample-number-percent"></a>A. Utilizar CREATE STATISTICS con SAMPLE number PERCENT  
  En el ejemplo siguiente, se crean las estadísticas `ContactMail1` a partir de una muestra aleatoria del 5 por ciento de las columnas `BusinessEntityID` y `EmailPromotion` de la tabla `Contact` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
@@ -282,7 +282,7 @@ GO
 ### <a name="d-create-statistics-on-an-external-table"></a>D. Crear estadísticas en una tabla externa  
  La única decisión que debe tomar al crear las estadísticas en una tabla externa, además de proporcionar la lista de columnas, es si desea crear las estadísticas mediante el muestreo de las filas o examinando todas las filas.  
   
- Puesto que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importa datos de la tabla externa en una tabla temporal para crear estadísticas, la opción de examen completo tardará mucho más tiempo. Para una tabla grande, el método de muestreo predeterminado es generalmente es suficiente.  
+ Puesto que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importa datos de la tabla externa en una tabla temporal para crear estadísticas, la opción de examen completo tardará mucho más tiempo. En una tabla grande, el método de muestreo predeterminado generalmente es suficiente.  
   
 ```sql  
 --Create statistics on an external table and use default sampling.  
@@ -293,7 +293,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 ```  
 
 ### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. Utilizar CREATE STATISTICS con FULLSCAN y PERSIST_SAMPLE_PERCENT  
- En el ejemplo siguiente se crea el `ContactMail2` estadísticas para todas las filas de la `BusinessEntityID` y `EmailPromotion` columnas de la `Contact` de tabla y establece un porcentaje de muestreo del 100 por ciento de todas las actualizaciones subsiguientes que realice explícitamente no especifican un muestreo porcentaje.  
+ En el ejemplo siguiente se crean las estadísticas `ContactMail2` para todas las filas de las columnas `BusinessEntityID` y `EmailPromotion` de la tabla `Contact` y establece un porcentaje de muestreo del 100 % para todas las actualizaciones siguientes en que no se especifique de forma explícita un porcentaje de muestreo.  
   
 ```sql  
 CREATE STATISTICS NamePurchase  
@@ -301,39 +301,39 @@ CREATE STATISTICS NamePurchase
     WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
 ```  
   
-### <a name="examples-using-adventureworksdw-database"></a>Ver ejemplos de uso de la base de datos AdventureWorksDW. 
+### <a name="examples-using-adventureworksdw-database"></a>Ejemplos en los que se usa la base de datos AdventureWorksDW. 
   
 ### <a name="f-create-statistics-on-two-columns"></a>F. Crear estadísticas en dos columnas  
- En el ejemplo siguiente se crea el `CustomerStats1` estadísticas, tomando como base la `CustomerKey` y `EmailAddress` columnas de la `DimCustomer` tabla. Las estadísticas se crean en función de un muestreo estadísticamente significativo de las filas de la `Customer` tabla.  
+ En el ejemplo siguiente se crean estadísticas de `CustomerStats1` basadas en las columnas `CustomerKey` y `EmailAddress` de la tabla `DimCustomer`. Las estadísticas se crean en función de un muestreo estadísticamente significativo de las filas de la tabla `Customer`.  
   
 ```sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
 ```  
   
 ### <a name="g-create-statistics-by-using-a-full-scan"></a>G. Crear estadísticas mediante un examen completo  
- En el ejemplo siguiente se crea el `CustomerStatsFullScan` estadísticas, en función de examen de todas las filas en el `DimCustomer` tabla.  
+ En este ejemplo se crean las estadísticas de `CustomerStatsFullScan`, en función del examen de todas las filas de la tabla `DimCustomer`.  
   
 ```sql  
 CREATE STATISTICS CustomerStatsFullScan 
 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
   
-### <a name="h-create-statistics-by-specifying-the-sample-percentage"></a>H. Especifica el porcentaje de ejemplo para crear estadísticas  
- En el ejemplo siguiente se crea el `CustomerStatsSampleScan` estadísticas, en función de examen el 50 por ciento de las filas de la `DimCustomer` tabla.  
+### <a name="h-create-statistics-by-specifying-the-sample-percentage"></a>H. Crear las estadísticas especificando el porcentaje de muestreo  
+ En este ejemplo se crean las estadísticas de `CustomerStatsSampleScan`, en función del examen del 50 % de las filas de la tabla `DimCustomer`.  
   
 ```sql  
 CREATE STATISTICS CustomerStatsSampleScan 
 ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Estadísticas](../../relational-databases/statistics/statistics.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
- [Sys.stats_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
+ [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
   
   
 

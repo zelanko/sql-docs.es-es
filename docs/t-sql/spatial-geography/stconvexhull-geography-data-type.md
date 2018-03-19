@@ -1,5 +1,5 @@
 ---
-title: STConvexHull (tipo de datos geography) | Documentos de Microsoft
+title: STConvexHull (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stconvexhull-geography-data-type"></a>STConvexHull (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve un objeto que representa la forma convexa de un **geography** instancia.  
+  Devuelve un objeto que representa la envolvente convexa de una instancia de **geography**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,21 +41,21 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geography**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Comentarios  
- Devuelve un `FullGlobe` objeto **geography** instancia que tiene un ángulo envolvente mayor de 90 grados.  
+## <a name="remarks"></a>Notas  
+ Devuelve un objeto `FullGlobe` para una instancia de **geography** que tiene un ángulo envolvente mayor de 90 grados.  
   
- Devuelve una instancia vacía **geography** colección para vacío **geography** instancia.  
+ Devuelve una colección vacía de **geography** para una instancia vacía de **geography**.  
   
- Devuelve **null** para una sin inicializar **geography** instancia.  
+ Devuelve **null** para una instancia no inicializada de **geography**.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-using-stconvexhull-on-an-uninitialized-geography-instance"></a>A. Usar STConvexHull() en una instancia de geography no inicializada  
- En el ejemplo siguiente se utiliza `STConvexHull()` en una variable **geography** instancia.  
+ En el ejemplo siguiente se usa `STConvexHull()` en una instancia no inicializada de **geography**.  
   
 ```
  DECLARE @g geography;  
@@ -80,7 +80,7 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ### <a name="d-finding-the-convex-hull-on-a-geography-instance-with-an-envelope-angle-larger-than-90-degrees"></a>D. Buscar la forma convexa de una instancia de geography con un ángulo envolvente mayor de 90 grados  
- En el ejemplo siguiente se utiliza `STConvexHull()` en un **geography** instancia con un ángulo envolvente mayor de 90 grados.  
+ En el ejemplo siguiente se usa `STConvexHull()` en una instancia de **geography** con un ángulo envolvente mayor de 90 grados.  
   
 ```
  DECLARE @g geography = 'POLYGON((20.533 46.566, -18.283 46.1, -22.3 47.45, 20.533 46.566))';  

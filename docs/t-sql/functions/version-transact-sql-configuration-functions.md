@@ -1,5 +1,5 @@
 ---
-title: '@@VERSION (Transact-SQL) | Documentos de Microsoft'
+title: '@@VERSION (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;Versión - Transact funciones de configuración de SQL
+# <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;Version - Funciones de configuración Transact SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Devuelve información del sistema y la compilación para la instalación actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -50,12 +50,12 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipos devueltos  
  **nvarchar**  
   
-## <a name="remarks"></a>Comentarios  
- El @@VERSION resultados se presentan como una sola cadena nvarchar. Puede usar el [SERVERPROPERTY &#40; Transact-SQL &#41; ](../../t-sql/functions/serverproperty-transact-sql.md) función para recuperar los valores de propiedad individuales.  
+## <a name="remarks"></a>Notas  
+ Los resultados de @@VERSION se presentan como una cadena nvarchar. Puede usar la función [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md) para recuperar los valores de propiedad individuales.  
   
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se devuelve la siguiente información.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Versión  
+-   Versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   Arquitectura del procesador  
   
@@ -81,22 +81,22 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-return-the-current-version-of-includessnoversionincludesssnoversion-mdmd"></a>R: regresar a la versión actual de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="a-return-the-current-version-of-includessnoversionincludesssnoversion-mdmd"></a>A. Devolver la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  En el ejemplo siguiente se muestra cómo devolver la información de versión de la instalación actual.  
   
 ```  
 SELECT @@VERSION AS 'SQL Server Version';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-return-the-current-version-of-includessdwincludesssdw-mdmd"></a>B. Devolver la versión actual de[!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
+### <a name="b-return-the-current-version-of-includessdwincludesssdw-mdmd"></a>B. Devolver la versión actual de [!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
   
 ```  
 SELECT @@VERSION AS 'SQL Server PDW Version';  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)  
   
   

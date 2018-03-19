@@ -1,5 +1,5 @@
 ---
-title: Eliminar objetos de base de datos | Documentos de Microsoft
+title: "Eliminación de objetos de base de datos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-3-1---deleting-database-objects"></a>Lección 3-1: eliminar objetos de base de datos
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Para quitar todos los seguimientos de este tutorial, podría eliminar únicamente la base de datos. No obstante, en este tema, recorrerá los pasos para revertir cada una de las acciones llevadas a cabo en el tutorial.  
+# <a name="lesson-3-1---deleting-database-objects"></a>Lección 3-1: Eliminación de objetos de base de datos
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Para quitar todos los seguimientos de este tutorial, solo podría eliminar la base de datos. No obstante, en este tema, recorrerá los pasos para revertir cada una de las acciones llevadas a cabo en el tutorial.  
   
 ### <a name="removing-permissions-and-objects"></a>Quitar permisos y objetos  
   
@@ -111,7 +111,7 @@ Esto finaliza el tutorial de escritura de instrucciones [!INCLUDE[tsql](../inclu
 ## <a name="return-to-sql-server-tools-portal"></a>Volver al portal de las herramientas de SQL Server  
 [Tutorial: Escribir instrucciones Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [REVOKE &#40;Transact-SQL&#41;](../t-sql/statements/revoke-transact-sql.md)  
 [DROP USER &#40;Transact-SQL&#41;](../t-sql/statements/drop-user-transact-sql.md)  
 [DROP LOGIN &#40;Transact-SQL&#41;](../t-sql/statements/drop-login-transact-sql.md)  

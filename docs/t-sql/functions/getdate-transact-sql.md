@@ -1,5 +1,5 @@
 ---
-title: GETDATE (Transact-SQL) | Documentos de Microsoft
+title: GETDATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -46,12 +46,12 @@ ms.lasthandoff: 11/21/2017
 # <a name="getdate-transact-sql"></a>GETDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Devuelve la marca de tiempo sistema de base de datos actual como un **datetime** valor sin el ajuste de zona horaria de la base de datos. Este valor se deriva del sistema operativo del equipo donde la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se está ejecutando.  
+  Devuelve la marca de tiempo del sistema de base de datos actual como un valor **datetime** sin el desplazamiento de zona horaria de la base de datos. Este valor se deriva del sistema operativo del equipo donde la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se está ejecutando.  
   
 > [!NOTE]  
 >  SYSDATETIME y SYSUTCDATETIME tienen más precisión de fracciones de segundo que GETDATE y GETUTCDATE. SYSDATETIMEOFFSET incluye el ajuste de zona horaria del sistema. SYSDATETIME, SYSUTCDATETIME y SYSDATETIMEOFFSET pueden asignarse a una variable de cualquier tipo de fecha y hora.  
   
- Para obtener información general de todos los [!INCLUDE[tsql](../../includes/tsql-md.md)] tipos de datos de fecha y hora y funciones, vea [funciones y tipos de datos de hora y fecha &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ Para ver información general sobre todos los tipos de datos y funciones de fecha y hora de [!INCLUDE[tsql](../../includes/tsql-md.md)], vea [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) (Tipos de datos y funciones de fecha y hora [Transact-SQL]).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,12 +64,12 @@ GETDATE ( )
 ## <a name="return-type"></a>Tipo devuelto  
  **datetime**  
   
-## <a name="remarks"></a>Comentarios  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]las instrucciones pueden hacer referencia a GETDATE en cualquier lugar pueden hacer referencia a un **datetime** expresión.  
+## <a name="remarks"></a>Notas  
+ Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] pueden hacer referencia a GETDATE desde cualquier parte desde donde puedan hacer referencia a una expresión **datetime**.  
   
  GETDATE es una función no determinista. Las vistas y las expresiones que hacen referencia a esta función en una columna no se pueden indizar.  
   
- El uso de SWITCHOFFSET con la función GETDATE() puede hacer que la consulta se ejecute despacio porque el optimizador de consultas no puede obtener estimaciones de cardinalidad precisas para el valor de GETDATE. Se recomienda calcular previamente el valor de GETDATE y especificar después ese valor en la consulta como se muestra en el ejemplo siguiente. Además, puede usar la sugerencia de consulta OPTION (RECOMPILE) para forzar al optimizador de consultas para volver a compilar un plan de consulta la próxima vez que se ejecuta la misma consulta. Entonces, el optimizador tendrá estimaciones de cardinalidad precisas para GETDATE() y producirá un plan de consulta más eficaz.  
+ El uso de SWITCHOFFSET con la función GETDATE() puede hacer que la consulta se ejecute despacio porque el optimizador de consultas no puede obtener estimaciones de cardinalidad precisas para el valor de GETDATE. Se recomienda calcular previamente el valor de GETDATE y especificar después ese valor en la consulta como se muestra en el ejemplo siguiente. Además, use la sugerencia de consulta OPTION (RECOMPILE) para forzar que el optimizador de consultas recompile un plan de consulta la próxima vez que se ejecute la misma consulta. Entonces, el optimizador tendrá estimaciones de cardinalidad precisas para GETDATE() y producirá un plan de consulta más eficaz.  
   
 ```  
 DECLARE @dt datetimeoffset = switchoffset (CONVERT(datetimeoffset, GETDATE()), '-04:00');   
@@ -81,7 +81,7 @@ WHERE c1 > @dt OPTION (RECOMPILE);
 ## <a name="examples"></a>Ejemplos  
  En los ejemplos siguientes se usan las seis funciones del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que devuelven la fecha y hora actuales para devolver la fecha, la hora o ambas. Los valores se devuelven en serie; por consiguiente, sus fracciones de segundo podrían ser diferentes.  
   
-### <a name="a-getting-the-current-system-date-and-time"></a>A. Obtener la fecha actual del sistema y la hora  
+### <a name="a-getting-the-current-system-date-and-time"></a>A. Obtener la fecha y hora actuales del sistema  
   
 ```  
 SELECT SYSDATETIME()  
@@ -149,10 +149,10 @@ GETDATE()          13:18:45.3470000
 GETUTCDATE()       20:18:45.3470000  
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Los ejemplos siguientes usan las tres [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funciones del sistema que devolución la fecha actual y la hora para devolver la fecha, hora o ambas. Los valores se devuelven en serie; por consiguiente, sus fracciones de segundo podrían ser diferentes.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ En estos ejemplos se usan las tres funciones del sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que devuelven la fecha y hora actuales para devolver la fecha, la hora o ambas. Los valores se devuelven en serie; por consiguiente, sus fracciones de segundo podrían ser diferentes.  
   
-### <a name="d-getting-the-current-system-date-and-time"></a>D. Obtener la fecha actual del sistema y la hora  
+### <a name="d-getting-the-current-system-date-and-time"></a>D. Obtener la fecha y hora actuales del sistema  
   
 ```  
 SELECT SYSDATETIME()  
@@ -178,7 +178,7 @@ SELECT CONVERT (time, SYSDATETIME())
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

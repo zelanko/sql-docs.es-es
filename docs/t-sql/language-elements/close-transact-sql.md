@@ -1,5 +1,5 @@
 ---
-title: CLOSE (Transact-SQL) | Documentos de Microsoft
+title: CLOSE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }
  Especifica que *cursor_name* hace referencia a un cursor global.  
   
  *cursor_name*  
- Es el nombre de un cursor abierto. Si existen tanto un cursor global y otro local con *cursor_name* como su nombre, *cursor_name* hace referencia al cursor global si se especifica GLOBAL; en caso contrario, *cursor_name* hace referencia al cursor local.  
+ Es el nombre de un cursor abierto. Si existen un cursor global y otro local denominados *cursor_name*, *cursor_name* hace referencia al cursor global cuando se especifica GLOBAL; en caso contrario, *cursor_name* hace referencia al cursor local.  
   
  *cursor_variable_name*  
  Es el nombre de una variable de cursor asociada a un cursor abierto.  
@@ -74,7 +74,7 @@ DEALLOCATE Employee_Cursor;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Cursores](../../relational-databases/cursors.md)   
  [Cursores &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   

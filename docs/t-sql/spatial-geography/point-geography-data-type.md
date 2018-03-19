@@ -1,5 +1,5 @@
 ---
-title: Punto (tipo de datos geography) | Documentos de Microsoft
+title: Point (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="point-geography-data-type"></a>Point (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Construye un **geography** instancia que representa un **punto** instancia a partir de sus valores de latitud y longitud y una referencia espacial (SRID) de identificador.
+Construye una instancia de **geography** que representa una instancia de **Point** a partir de sus valores de latitud y longitud y de un identificador de referencia espacial (SRID).
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,17 +45,17 @@ Point ( Lat, Long, SRID )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *LAT*  
- Es un **float** expresión que representa la coordenada x de la **punto** que se está generando.  
+ *Lat*  
+ Es una expresión **float** que representa la coordenada X del elemento **Point** que se está generando.  
   
  *Long*  
- Es un **float** expresión que representa la coordenada y de la **punto** que se está generando. Para obtener más información sobre los valores de longitud y latitud válida, consulte [punto](../../relational-databases/spatial/point.md).  
+ Es una expresión **float** que representa la coordenada Y del elemento **Point** que se está generando. Para más información sobre los valores de latitud y longitud correctos, vea [Punto](../../relational-databases/spatial/point.md).  
   
  *SRID*  
- Es un **int** expresión que representa el SRID de la **geography** instancia que se va a devolver.  
+ Es una expresión **int** que representa el SRID de la instancia de **geography** que se quiere devolver.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geography**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
@@ -71,7 +71,7 @@ SET @g = geography::Point(47.65100, -122.34900, 4326)
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de geografía estáticos extendidos](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

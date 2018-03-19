@@ -1,5 +1,5 @@
 ---
-title: DROP BROKER PRIORITY (Transact-SQL) | Documentos de Microsoft
+title: DROP BROKER PRIORITY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -50,10 +50,10 @@ DROP BROKER PRIORITY ConversationPriorityName
  *ConversationPriorityName*  
  Especifica el nombre de la prioridad de conversación que se va a quitar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Al quitar una prioridad de conversación, cualquier conversación existente continúa funcionando con los niveles de prioridad asignados por la prioridad de conversación.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  El permiso para crear una prioridad de conversación recae de forma predeterminada en los miembros de los roles fijos de base de datos db_ddladmin o db_owner, y en el rol fijo de servidor sysadmin. Requiere el permiso ALTER en la base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -64,9 +64,9 @@ DROP BROKER PRIORITY InitiatorAToTargetPriority;
   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [ALTER BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [CREATE BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
+ [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
   
   

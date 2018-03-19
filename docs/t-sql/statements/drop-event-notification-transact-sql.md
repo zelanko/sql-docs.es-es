@@ -1,5 +1,5 @@
 ---
-title: DROP EVENT NOTIFICATION (Transact-SQL) | Documentos de Microsoft
+title: DROP EVENT NOTIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
   
 ## <a name="arguments"></a>Argumentos  
  *notification_name*  
- Es el nombre de la notificación de eventos que se va a quitar. Se pueden especificar varias notificaciones de eventos. Para ver una lista de las notificaciones de eventos creadas actualmente, utilice [sys.event_notifications &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md).  
+ Es el nombre de la notificación de eventos que se va a quitar. Se pueden especificar varias notificaciones de eventos. Para ver una lista de las notificaciones de eventos creadas actualmente, use [sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md).  
   
  SERVER  
  Indica que el ámbito de la notificación de eventos se aplica al servidor actual. Se debe especificar SERVER si se especificó cuando se creó la notificación de eventos.  
@@ -61,13 +61,13 @@ ON { SERVER | DATABASE | QUEUE queue_name }
  DATABASE  
  Indica que el ámbito de la notificación de eventos se aplica a la base de datos actual. Se debe especificar DATABASE si se especificó cuando se creó la notificación de eventos.  
   
- COLA *nombre_de_cola*  
- Indica el ámbito de la notificación de eventos se aplica a la cola especificada por *nombre_de_cola*. Se debe especificar QUEUE si se especificó cuando se creó la notificación de eventos. *nombre_de_cola* es el nombre de la cola y también debe especificarse.  
+ QUEUE *queue_name*  
+ Indica que el ámbito de la notificación de eventos se aplica a la cola especificada por *queue_name*. Se debe especificar QUEUE si se especificó cuando se creó la notificación de eventos. *queue_name* es el nombre de la cola y también se debe especificar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si una notificación de eventos se activa y se quita en la misma transacción, la instancia de notificación de eventos se envía y después se quita la notificación de eventos.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para quitar una notificación de eventos que pertenece al ámbito de la base de datos, como mínimo, un usuario debe ser el propietario de la notificación de eventos o tener el permiso ALTER ANY DATABASE EVENT NOTIFICATION en la base de datos actual.  
   
  Para quitar una notificación de eventos que pertenece al ámbito del servidor, como mínimo, un usuario debe ser el propietario de la notificación de eventos o tener el permiso ALTER ANY EVENT NOTIFICATION en el servidor.  
@@ -90,10 +90,10 @@ DROP EVENT NOTIFICATION NotifyALTER_T1
 ON DATABASE;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [CREAR la notificación de eventos &#40; Transact-SQL &#41;](../../t-sql/statements/create-event-notification-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [Sys.event_notifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
- [Sys.Events &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
+ [sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
+ [sys.events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
   
   

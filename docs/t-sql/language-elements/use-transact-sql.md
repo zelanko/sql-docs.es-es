@@ -1,5 +1,5 @@
 ---
-title: USE (Transact-SQL) | Documentos de Microsoft
+title: USE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/28/2016
 ms.prod: sql-non-specified
@@ -50,16 +50,16 @@ USE { database_name }
   
 ## <a name="arguments"></a>Argumentos  
  *database_name*  
- Es el nombre de la base de datos o instantánea de base de datos a la que se cambia el contexto de usuario. Base de datos y nombres de instantánea de base de datos deben cumplir las reglas de [identificadores](../../relational-databases/databases/database-identifiers.md).  
+ Es el nombre de la base de datos o instantánea de base de datos a la que se cambia el contexto de usuario. Los nombres de base de datos y de instantánea de base de datos deben cumplir las mismas reglas que los [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
- En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], el parámetro de base de datos solo puede hacer referencia a la base de datos actual. Si se proporciona una base de datos que no sea la base de datos actual, el `USE` instrucción no cambia entre bases de datos y se devuelve el código de error 40508. Para cambiar de base de datos, debe conectarse directamente a la base de datos. La instrucción USE se marca como no es aplicable a la base de datos de SQL en la parte superior de esta página, porque, aunque puede tener la `USE` instrucción en un lote, no hace nada.
+ En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], el parámetro de base de datos solo puede hacer referencia a la base de datos actual. Si se proporciona una base de datos distinta de la base de datos actual, la instrucción `USE` no cambia entre bases de datos y se devuelve el código de error 40508. Para cambiar de base de datos, debe conectarse directamente a la base de datos. La instrucción USE está marcada como no aplicable a SQL Database al inicio de esta página porque, aunque se puede tener la instrucción `USE` en un lote, esta no hace nada.
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el inicio de sesión se conecta automáticamente a su base de datos predeterminada y adquiere el contexto de seguridad de un usuario de la base de datos. Si no se ha creado ningún usuario de la base de datos para el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el inicio de sesión se conecta como guest. Si el usuario de la base de datos no tiene permiso CONNECT en la base de datos, la instrucción USE no funcionará correctamente. Si no se ha asignado ninguna base de datos predeterminada al inicio de sesión, su base de datos predeterminada se establecerá en master.  
   
  USE se ejecuta en tiempo de compilación y de ejecución, y surte efecto inmediatamente. Por lo tanto, las instrucciones que aparecen en un lote después de la instrucción USE se ejecutan en la base de datos especificada.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere permiso CONNECT en la base de datos de destino.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -70,7 +70,7 @@ USE AdventureWorks2012;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

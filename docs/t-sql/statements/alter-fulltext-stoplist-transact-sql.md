@@ -1,5 +1,5 @@
 ---
-title: ALTER FULLTEXT STOPLIST (Transact-SQL) | Documentos de Microsoft
+title: ALTER FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -62,42 +62,42 @@ ALTER FULLTEXT STOPLIST stoplist_name
  *stoplist_name*  
  Es el nombre de la lista de palabras irrelevantes que se está modificando. *stoplist_name* puede tener un máximo de 128 caracteres.  
   
- **'** *palabra irrelevante* **'**  
- Es una cadena que podría ser una palabra con significado lingüístico en el idioma especificado o un token que no tiene un significado lingüístico. *palabra irrelevante* está limitado a la longitud máxima del token (64 caracteres). Una palabra irrelevante se puede especificar en forma de cadena Unicode.  
+ **'** *stopword* **'**  
+ Es una cadena que podría ser una palabra con significado lingüístico en el idioma especificado o un token que no tiene un significado lingüístico. *stopword* tiene como límite la longitud máxima del token (64 caracteres). Una palabra irrelevante se puede especificar en forma de cadena Unicode.  
   
- IDIOMA *language_term*  
- Especifica el idioma que desea asociar a la *palabra irrelevante* que se va a agregar o quitar.  
+ LANGUAGE *language_term*  
+ Especifica el idioma que se va a asociar al parámetro *stopword* que se va a agregar o quitar.  
   
- *language_term* se puede especificar como una cadena, entero o un valor hexadecimal correspondiente al identificador de configuración regional (LCID) del idioma, como se indica a continuación:  
+ *language_term* se puede especificar como una cadena, un entero o un valor hexadecimal correspondiente al identificador de configuración regional (LCID) de un idioma, tal y como se muestra aquí:  
   
 |Formato|Description|  
 |------------|-----------------|  
-|String|*language_term* corresponde a la **alias** valor de columna en la [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) vista de compatibilidad. La cadena debe incluirse entre comillas simples, como en **'***language_term***'**.|  
-|Integer|*language_term* es el LCID del idioma.|  
-|Hexadecimal|*language_term* 0 x seguido del valor hexadecimal del LCID. El valor hexadecimal no puede superar los ocho dígitos, incluidos los ceros a la izquierda. Si el valor está en formato de juego de caracteres de doble byte (DBCS), SQL Server lo convertirá a Unicode.|  
+|String|*language_term* corresponde al valor de columna **alias** en la vista de compatibilidad [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). La cadena debe estar delimitada con comillas sencillas, como en **'***language_term***'**.|  
+|Integer|*language_term* es la configuración regional (LCID) del idioma.|  
+|Hexadecimal|*language_term* es 0x seguido del valor hexadecimal de LCID. El valor hexadecimal no puede superar los ocho dígitos, incluidos los ceros a la izquierda. Si el valor está en formato de juego de caracteres de doble byte (DBCS), SQL Server lo convertirá a Unicode.|  
   
- AGREGAR **'***palabra irrelevante***'** LENGUAJE *language_term*  
- Agrega una palabra irrelevante a la lista de palabras irrelevantes para el idioma especificado por idioma *language_term*.  
+ ADD **'***stopword***'** LANGUAGE *language_term*  
+ Agrega una palabra irrelevante a una lista de palabras irrelevantes del idioma especificado por LANGUAGE *language_term*.  
   
  Si la combinación especificada de la palabra clave y del valor LCID del idioma no es única en la lista de palabras irrelevantes, se devuelve un error.  Si el valor LCID no corresponde a un idioma registrado, se genera un error.  
   
- DROP { **'***palabra irrelevante***'** LENGUAJE *language_term* | Todos los idiomas *language_term* | ALL}  
+ DROP { **'***stopword***'** LANGUAGE *language_term* | ALL LANGUAGE *language_term* | ALL }  
  Quita una palabra de la lista de palabras irrelevantes.  
   
- **'** *palabra irrelevante* **'** LENGUAJE *language_term*  
- Quita la palabra irrelevante especificada para el idioma especificado por *language_term*.  
+ **'** *stopword* **'** LANGUAGE *language_term*  
+ Quita la palabra irrelevante especificada del idioma especificado por *language_term*.  
   
- Todos los idiomas *language_term*  
- Quita todas las palabras irrelevantes para el idioma especificado por *language_term*.  
+ ALL LANGUAGE *language_term*  
+ Quita todas las palabras irrelevantes del idioma especificado por *language_term*.  
   
  ALL  
  Quita todas las palabras irrelevantes de la lista de palabras irrelevantes.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  CREATE FULLTEXT STOPLIST solo se admite para el nivel de compatibilidad 100 y posterior. Para los niveles de compatibilidad 80 y 90, la lista de palabras irrelevantes del sistema siempre se asigna a la base de datos.  
   
-## <a name="permissions"></a>Permissions  
- Para designar una lista de palabras irrelevantes como la lista predeterminada de la base de datos, se requiere el permiso ALTER DATABASE. Para modificar una lista de palabras irrelevantes es necesario ser el propietario de la lista de palabras irrelevantes o la pertenencia a la **db_owner** o **db_ddladmin** funciones fijas de base de datos.  
+## <a name="permissions"></a>Permisos  
+ Para designar una lista de palabras irrelevantes como la lista predeterminada de la base de datos, se requiere el permiso ALTER DATABASE. Para modificar la lista de palabras irrelevantes de cualquier otra forma, se requiere ser el propietario de la lista de palabras irrelevantes o pertenecer a los roles fijos de base de datos **db_owner** o **db_ddladmin**.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se modifica la lista de palabras irrelevantes `CombinedFunctionWordList`, agregando la palabra 'en', primero para español y, a continuación, para francés.  
@@ -107,12 +107,12 @@ ALTER FULLTEXT STOPLIST CombinedFunctionWordList ADD 'en' LANGUAGE 'Spanish';
 ALTER FULLTEXT STOPLIST CombinedFunctionWordList ADD 'en' LANGUAGE 'French';  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Crear lista de palabras IRRELEVANTES de texto completo &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
- [DROP FULLTEXT STOPLIST &#40; Transact-SQL &#41;](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)   
  [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- [Sys.fulltext_stoplists &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
- [Sys.fulltext_stopwords &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
+ [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
+ [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
  [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)  
   
   

@@ -51,15 +51,15 @@ UPPER ( character_expression )
   
 ## <a name="arguments"></a>Argumentos  
  *character_expression*  
- Es un [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de datos de caracteres. *character_expression* puede ser una constante, variable o columna de caracteres o datos binarios.  
+ Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de datos de caracteres. *character_expression* puede ser una constante, una variable o una columna de datos binarios o de caracteres.  
   
- *character_expression* debe ser de un tipo de datos que es implícitamente convertible a **varchar**. De lo contrario, utilice [conversión](../../t-sql/functions/cast-and-convert-transact-sql.md) para convertir explícitamente *character_expression*.  
+ *character_expression* debe ser de un tipo de datos que se pueda convertir implícitamente a **varchar**. De lo contrario, utilice [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) para convertir *character_expression* explícitamente.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **varchar** o **nvarchar**  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se usa el `UPPER` y `RTRIM` funciones para devolver el apellido de las personas de la `dbo.DimEmployee` para que esté en mayúsculas, recortado y concatenado con el nombre de tabla.  
+ En el ejemplo siguiente se utilizan las funciones `UPPER` y `RTRIM` para devolver el apellido de las personas de la tabla `dbo.DimEmployee` de manera que aparezca en mayúsculas, recortado y concatenado al nombre.  
   
 ```  
 -- Uses AdventureWorks  
@@ -79,9 +79,9 @@ ABERCROMBIE, Kim
 ABOLROUS, Hazem
  ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Funciones de cadena &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funciones de cadena &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
  [LOWER &#40;Transact-SQL&#41;](../../t-sql/functions/lower-transact-sql.md)  
   
   

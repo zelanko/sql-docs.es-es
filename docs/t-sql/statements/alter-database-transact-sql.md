@@ -1,5 +1,5 @@
 ---
-title: ALTER DATABASE (Transact-SQL) | Documentos de Microsoft
+title: ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/20/2017
 ms.prod: sql-non-specified
@@ -43,33 +43,33 @@ ms.lasthandoff: 11/21/2017
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Modifica una base de datos o los archivos y grupos de archivos asociados a la base de datos. Agrega o quita archivos y grupos de archivos en una base de datos, cambia los atributos de una base de datos o de sus archivos y grupos de archivos, cambia la intercalación de base de datos y establece las opciones de base de datos. Las instantáneas de base de datos no se pueden modificar. Para modificar opciones de base de datos asociados con la replicación, utilice [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
+  Modifica una base de datos o los archivos y grupos de archivos asociados a la base de datos. Agrega o quita archivos y grupos de archivos en una base de datos, cambia los atributos de una base de datos o de sus archivos y grupos de archivos, cambia la intercalación de base de datos y establece las opciones de base de datos. Las instantáneas de base de datos no se pueden modificar. Para modificar las opciones de base de datos asociadas a la replicación, utilice [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
    
  Debido a su longitud, la sintaxis de ALTER DATABASE se divide en los temas siguientes:  
   
  ALTER DATABASE  
  El tema actual proporciona la sintaxis para cambiar el nombre y la intercalación de una base de datos.  
   
- [MODIFICAR el archivo de base de datos y las opciones de grupo de archivos](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
+ [Opciones File y Filegroup de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
  Proporciona la sintaxis para agregar y eliminar archivos y grupos de archivos de una base de datos y para cambiar los atributos de archivos y grupos de archivos.  
   
- [Opciones de ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
+ [Opciones SET de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
  Proporcionan la sintaxis para cambiar los atributos de una base de datos usando las opciones SET de ALTER DATABASE.  
   
- [Base de datos de base de datos de ALTER de creación de reflejo](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)  
+ [Creación de reflejo de la base de datos de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)  
  Proporciona la sintaxis de las opciones SET de ALTER DATABASE relacionadas con la creación de reflejo de la base de datos.  
   
- [MODIFICAR BASE DE DATOS SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)  
- Proporciona la sintaxis de la [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] opciones de ALTER DATABASE para configurar una base de datos secundaria en una réplica secundaria de un grupo de disponibilidad Always On.  
+ [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)  
+ Proporciona la sintaxis de las opciones [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] de ALTER DATABASE para configurar una base de datos secundaria en una réplica secundaria de un grupo de disponibilidad AlwaysOn.  
   
  [Nivel de compatibilidad de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
  Proporciona la sintaxis de las opciones SET de ALTER DATABASE relacionadas con los niveles de compatibilidad de la base de datos.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
-Base de datos de SQL Azure, consulte [ALTER DATABASE &#40; Base de datos SQL Azure &#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
-Para almacenamiento de datos de SQL Azure, consulte [ALTER DATABASE &#40; Almacenamiento de datos SQL de Azure &#41; ](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).  
-Para almacenamiento de datos paralelos, vea [ALTER DATABASE &#40; Almacenamiento de datos en paralelo &#41; ](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).
+Para Azure SQL Database, consulte [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md).  
+Para Azure SQL Data Warehouse, consulte [ALTER DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).  
+Para almacenamiento de datos paralelos, consulte [ALTER DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md) [ALTER DATABASE &#40;Almacenamiento de datos paralelos&#41;].
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -125,32 +125,32 @@ ALTER DATABASE { database_name  | CURRENT }
   
  Designa que la base de datos actual en uso se debe modificar.  
   
- MODIFY NAME  **=**  *new_database_name*  
- Cambia el nombre de la base de datos con el nombre especificado como *new_database_name*.  
+ MODIFY NAME **=***new_database_name*  
+ Reemplaza el nombre de la base de datos por el nombre especificado como *new_database_name*.  
   
  COLLATE *collation_name*  
  Especifica la intercalación de la base de datos. *collation_name* puede ser un nombre de intercalación de Windows o un nombre de intercalación de SQL. Si no se especifica, se asigna a la base de datos la intercalación de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Al crear bases de datos con una intercalación diferente de la predeterminada, los datos de la base de datos siempre respetan la intercalación especificada. Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], al crear una base de datos independiente, la información de catálogo interno se mantiene mediante el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predeterminado de intercalación, **Latin1_General_100_CI_AS_WS_KS_SC**.  
+ Al crear bases de datos con una intercalación diferente de la predeterminada, los datos de la base de datos siempre respetan la intercalación especificada. Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], al crear una base de datos independiente, la información de catálogo interno se mantiene mediante la intercalación predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **Latin1_General_100_CI_AS_WS_KS_SC**.  
   
- Para obtener más información acerca de los nombres de intercalación de Windows y SQL, consulte [COLLATE &#40; Transact-SQL &#41; ](~/t-sql/statements/collations.md).  
+ Para obtener más información sobre los nombres de intercalación de Windows y SQL, vea [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
- **\<delayed_durability_option >:: =**  
+ **\<delayed_durability_option> ::=**  
  **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Para obtener más información consulte [ALTER DATABASE SET Options &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) y [controlar la durabilidad](../../relational-databases/logs/control-transaction-durability.md).  
+ Para obtener más información, vea [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) y [Controlar la durabilidad de las transacciones](../../relational-databases/logs/control-transaction-durability.md).  
   
- **\<file_and_filegroup_options >:: =**  
- Para obtener más información, vea [modificar el archivo de base de datos y opciones de grupo de archivos &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
+ **\<file_and_filegroup_options>::=**  
+ Para obtener más información, vea [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Para quitar una base de datos, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).  
   
- Para reducir el tamaño de una base de datos, utilice [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
+ Para reducir el tamaño de una base de datos, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
   
  La instrucción ALTER DATABASE se debe ejecutar en el modo de confirmación automática (modo de administración de transacciones predeterminado) y no se permite en una transacción explícita o implícita.  
   
- El estado de un archivo de base de datos (por ejemplo, en línea o sin conexión) se mantiene con independencia del estado de la base de datos. Para obtener más información, consulte [Estados de los archivos](../../relational-databases/databases/file-states.md). El estado de los archivos de un grupo de archivos determina la disponibilidad de todo el grupo de archivos. Para que un grupo de archivos esté disponible, todos los archivos del grupo de archivos deben estar en línea. Si un grupo de archivos se encuentra en modo sin conexión, todos los intentos de acceso al grupo de archivos por parte de una instrucción SQL generan un error. Al generar un plan de consulta para las instrucciones SELECT, el optimizador de consultas evita los índices no clúster y las vistas indizadas que residen en los grupos de archivos sin conexión. Esto permite que las instrucciones se ejecuten correctamente. No obstante, si el grupo de archivos sin conexión contiene el montón o el índice clúster de la tabla de destino, las instrucciones SELECT no funcionarán. Adicionalmente, cualquier instrucción INSERT, UPDATE o DELETE que modifique una tabla con cualquier índice en un grupo de archivos sin conexión no funcionará.  
+ El estado de un archivo de base de datos (por ejemplo, en línea o sin conexión) se mantiene con independencia del estado de la base de datos. Para obtener más información, vea [Estados de los archivos](../../relational-databases/databases/file-states.md). El estado de los archivos de un grupo de archivos determina la disponibilidad de todo el grupo de archivos. Para que un grupo de archivos esté disponible, todos los archivos del grupo de archivos deben estar en línea. Si un grupo de archivos se encuentra en modo sin conexión, todos los intentos de acceso al grupo de archivos por parte de una instrucción SQL generan un error. Al generar un plan de consulta para las instrucciones SELECT, el optimizador de consultas evita los índices no clúster y las vistas indizadas que residen en los grupos de archivos sin conexión. Esto permite que las instrucciones se ejecuten correctamente. No obstante, si el grupo de archivos sin conexión contiene el montón o el índice clúster de la tabla de destino, las instrucciones SELECT no funcionarán. Adicionalmente, cualquier instrucción INSERT, UPDATE o DELETE que modifique una tabla con cualquier índice en un grupo de archivos sin conexión no funcionará.  
   
  Si una base de datos se encuentra en estado RESTORING, se producirán errores en la mayoría de las instrucciones ALTER DATABASE. La excepción es el establecimiento de opciones de creación de reflejo de la base de datos. Es posible que una base de datos se encuentre en estado RESTORING durante una operación de restauración activa o cuando se produce un error en una operación de restauración de una base de datos o de un archivo de registro, debido a un archivo de copia de seguridad dañado.  
   
@@ -187,7 +187,7 @@ ALTER DATABASE { database_name  | CURRENT }
   
 -   Ningún objeto enlazado a un esquema depende de la intercalación de la base de datos.  
   
-     Si los objetos siguientes, que dependen de la intercalación de base de datos, existen en la base de datos, la instrucción ALTER DATABASE*database_name*instrucción COLLATE producirá un error. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devolverá un mensaje de error para cada objeto que bloquee la acción de ALTER:  
+     Si los objetos siguientes, que dependen de la intercalación de la base de datos, existen en la base de datos, la instrucción ALTER DATABASE*database_name*COLLATE producirá un error. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devolverá un mensaje de error para cada objeto que bloquee la acción de ALTER:  
   
     -   Vistas y funciones definidas por el usuario creadas con SCHEMABINDING  
   
@@ -220,7 +220,7 @@ Los nombres duplicados resultantes de la nueva intercalación provocarán que la
 ## <a name="viewing-database-information"></a>Ver la información de la base de datos  
  Se pueden utilizar vistas de catálogo, funciones del sistema y procedimientos almacenados del sistema para devolver información sobre bases de datos, archivos y grupos de archivos.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -254,20 +254,20 @@ COLLATE French_CI_AI ;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
-- [ALTER DATABASE &#40; Base de datos SQL Azure &#41;](alter-database-azure-sql-database.md)  
+## <a name="see-also"></a>Ver también  
+- [ALTER DATABASE &#40;Azure SQL Database&#41;](alter-database-azure-sql-database.md)  
 - [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
 - [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
 - [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
 - [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
 - [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
 - [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
-- [sp_spaceused &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
+- [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
 - [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
 - [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
-- [Sys.database_mirroring_witnesses &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
-- [Sys.data_spaces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
-- [Sys.FileGroups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+- [sys.database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
+- [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+- [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 - [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 - [Bases de datos del sistema](../../relational-databases/databases/system-databases.md)  
   

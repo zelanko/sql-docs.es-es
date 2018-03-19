@@ -1,5 +1,5 @@
 ---
-title: ORIGINAL_LOGIN (Transact-SQL) | Documentos de Microsoft
+title: ORIGINAL_LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -52,8 +52,8 @@ ORIGINAL_LOGIN( )
 ## <a name="return-types"></a>Tipos devueltos  
  **sysname**  
   
-## <a name="remarks"></a>Comentarios  
- Esta función puede resultar útil para la auditoría de la identidad del contexto de conexión original. Mientras que las funciones como [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) y [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md) devuelven el contexto de ejecución actual, ORIGINAL_LOGIN devuelve la identidad del inicio de sesión que se conectó por primera vez a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]en esa sesión.  
+## <a name="remarks"></a>Notas  
+ Esta función puede resultar útil para la auditoría de la identidad del contexto de conexión original. Mientras que funciones como [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) y [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md) devuelven el contexto de ejecución actual, ORIGINAL_LOGIN devuelve la identidad del inicio de sesión que se conectó en primer lugar a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en esa sesión.  
   
  Devuelve NULL en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
@@ -85,8 +85,8 @@ DROP USER user1;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [EJECUTAR AS &#40; Transact-SQL &#41;](../../t-sql/statements/execute-as-transact-sql.md)   
- [REVERTIR &#40; Transact-SQL &#41;](../../t-sql/statements/revert-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
+ [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)  
   
   

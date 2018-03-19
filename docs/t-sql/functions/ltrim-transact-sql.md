@@ -51,7 +51,7 @@ LTRIM ( character_expression )
   
 ## <a name="arguments"></a>Argumentos  
  *character_expression*  
- Es un [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de caracteres o datos binarios. *character_expression* puede ser una constante, variable o columna. *character_expression* debe ser de un tipo de datos, excepto **texto**, **ntext**, y **imagen**, que se pueden convertir implícitamente a **varchar** . De lo contrario, utilice [conversión](../../t-sql/functions/cast-and-convert-transact-sql.md) para convertir explícitamente *character_expression*.  
+ Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de datos binarios o de caracteres. *character_expression* puede ser una constante, una variable o una columna. *character_expression* debe ser de un tipo de datos (excepto **text**, **ntext** e **image**) que se pueda convertir implícitamente a **varchar**. De lo contrario, use [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) para convertir *character_expression* explícitamente.  
   
 ## <a name="return-type"></a>Tipo devuelto  
  **varchar** o **nvarchar**  
@@ -60,7 +60,7 @@ LTRIM ( character_expression )
 
 ### <a name="a-simple-example"></a>A. Ejemplo sencillo   
 
- En el ejemplo siguiente se usa LTRIM para quitar los espacios iniciales de una expresión de caracteres.  
+ En el siguiente ejemplo se usa LTRIM para quitar los espacios iniciales de una expresión de caracteres.  
   
 ```sql  
 SELECT LTRIM('     Five spaces are at the beginning of this string.') FROM sys.databases;  
@@ -73,7 +73,7 @@ SELECT LTRIM('     Five spaces are at the beginning of this string.') FROM sys.d
   Five spaces are at the beginning of this string.
   ```  
 
-### <a name="b-example-using-a-variable"></a>B: ejemplo usando una variable   
+### <a name="b-example-using-a-variable"></a>B. Ejemplo con una variable   
   
  En el siguiente ejemplo se utiliza `LTRIM` para quitar espacios iniciales de una variable de caracteres.  
   
@@ -94,7 +94,7 @@ Original string Without spaces
      5 spaces are at the beginning of this string.  5 spaces are at the beginning of this string.
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
  [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
  [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
@@ -102,7 +102,7 @@ Original string Without spaces
  [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
  [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Funciones de cadena &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funciones de cadena &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

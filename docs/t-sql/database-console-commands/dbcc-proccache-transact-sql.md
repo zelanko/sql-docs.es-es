@@ -1,5 +1,5 @@
 ---
-title: DBCC PROCCACHE (Transact-SQL) | Documentos de Microsoft
+title: DBCC PROCCACHE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -55,7 +55,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
  NO_INFOMSGS  
  Suprime todos los mensajes informativos que tienen niveles de gravedad entre 0 y 10.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 La caché de procedimientos se utiliza para almacenar en caché los planes compilados y ejecutables con el fin de acelerar la ejecución de lotes. Las entradas de una caché de procedimientos están en el nivel de lote. La caché de procedimientos incluye las siguientes entradas:
 -   Planes compilados  
 -   Planes de ejecución  
@@ -63,21 +63,21 @@ La caché de procedimientos se utiliza para almacenar en caché los planes compi
 -   Procedimientos extendidos  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
-En la tabla siguiente se describe las columnas del conjunto de resultados.
+En la tabla siguiente se describen las columnas del conjunto de resultados.
   
 |Nombre de columna|Description|  
 |-----------------|-----------------|  
-|**NUM proc búferes**|Número total de páginas utilizadas por todas las entradas de la caché de procedimientos.|  
-|**NUM proc búferes utilizados**|Número total de páginas utilizadas por todas las entradas que se están utilizando actualmente.|  
-|**NUM proc curiosidad activa**|Se conserva únicamente por compatibilidad con versiones anteriores. Número total de páginas utilizadas por todas las entradas que se están utilizando actualmente.|  
-|**tamaño de la caché de procedimientos**|Número total de entradas de la caché de procedimientos.|  
-|**caché de procedimientos que se usa**|Número total de entradas que se están utilizando actualmente.|  
-|**caché de procedimientos active**|Se conserva únicamente por compatibilidad con versiones anteriores. Número total de entradas que se están utilizando actualmente.|  
+|**num proc buffs**|Número total de páginas utilizadas por todas las entradas de la caché de procedimientos.|  
+|**num proc buffs used**|Número total de páginas utilizadas por todas las entradas que se están utilizando actualmente.|  
+|**num proc buffs active**|Se conserva únicamente por compatibilidad con versiones anteriores. Número total de páginas utilizadas por todas las entradas que se están utilizando actualmente.|  
+|**proc cache size**|Número total de entradas de la caché de procedimientos.|  
+|**proc cache used**|Número total de entradas que se están utilizando actualmente.|  
+|**proc cache active**|Se conserva únicamente por compatibilidad con versiones anteriores. Número total de entradas que se están utilizando actualmente.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
 Debe pertenecer al rol fijo de servidor **sysadmin** o al rol fijo de base de datos **db_owner** .
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Sugerencias (Transact-SQL) de combinación | Documentos de Microsoft"
+title: "Sugerencias de combinación (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -36,13 +36,13 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="hints-transact-sql---join"></a>Combinación de sugerencias (Transact-SQL):
+# <a name="hints-transact-sql---join"></a>Sugerencias (Transact-SQL): combinación
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Las sugerencias de combinación especifican que el optimizador de consultas aplique una estrategia de combinación entre dos tablas en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener información general sobre las combinaciones y la sintaxis de combinación, vea [FROM &#40; Transact-SQL &#41; ](../../t-sql/queries/from-transact-sql.md).  
+  Las sugerencias de combinación especifican que el optimizador de consultas aplique una estrategia de combinación entre dos tablas en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener información general sobre las combinaciones y la sintaxis de combinación, vea [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
 > [!IMPORTANT]  
->  Dado que la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] optimizador de consultas normalmente selecciona el mejor plan de ejecución para una consulta, se recomienda que las sugerencias, incluidos \<las sugerencias join_hint >, los desarrolladores experimentados pueden usar únicamente como último recurso y los administradores de base de datos.
+>  Puesto que el optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalmente selecciona el mejor plan de ejecución de una consulta, se recomienda que solo los administradores de bases de datos y los desarrolladores experimentados usen las sugerencias, incluida \<sugerencia_de_combinación>, como último recurso.
   
  **Se aplica a:**  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/25/2018
   
  REMOTE solo puede utilizarse en operaciones INNER JOIN.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Las sugerencias de combinación se especifican en la cláusula FROM de una consulta. Las sugerencias de combinación exigen una estrategia de combinación entre dos tablas. Si se especifica una sugerencia de combinación entre dos tablas, el optimizador de consultas aplica automáticamente el orden de combinación de todas las tablas combinadas de la consulta, basándose en la posición de las palabras clave ON. Cuando se utiliza CROSS JOIN sin la cláusula ON, se pueden utilizar paréntesis para indicar el orden de combinación.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -114,7 +114,7 @@ INNER MERGE JOIN Purchasing.PurchaseOrderDetail AS pod
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [Sugerencias &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)  
   
   

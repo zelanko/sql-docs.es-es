@@ -1,5 +1,5 @@
 ---
-title: STBoundary (tipo de datos geometry) | Documentos de Microsoft
+title: STBoundary (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stboundary-geometry-data-type"></a>STBoundary (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve el límite de un **geometry** instancia.  
+  Devuelve el límite de una instancia de **geometry**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geometry**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentarios  
- `STBoundary()`Devuelve una instancia vacía **GeometryCollection** cuando los puntos de conexión para un **LineString**, **CircularString**, o **CompoundCurve** instancia son los mismos.  
+## <a name="remarks"></a>Notas  
+ `STBoundary()` devuelve una instancia vacía de **GeometryCollection** cuando los extremos de una instancia de **LineString**, **CircularString** o **CompoundCurve** son los mismos.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-using-stboundary-on-a-linestring-instance-with-different-endpoints"></a>A. Usar STBoundary () en una instancia de LineString con extremos diferentes  
- En el ejemplo siguiente se crea un `LineString``geometry` instancia. `STBoundary()`Devuelve el límite de la `LineString`.  
+ En el ejemplo siguiente se crea una instancia de `LineString``geometry`. `STBoundary()` devuelve el límite de `LineString`.  
   
 ```  
 DECLARE @g geometry;  
@@ -80,7 +80,7 @@ SELECT @g.STBoundary().ToString();
  SELECT @g.STBoundary().ToString();
  ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: STNumInteriorRing (tipo de datos geometry) | Documentos de Microsoft
+title: STNumInteriorRing (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnuminteriorring-geometry-data-type"></a>STNumInteriorRing (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve el número de anillos interiores de un **Polygongeometry** instancia.
+Devuelve el número de anillos interiores de una instancia de **Polygongeometry**.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,12 +44,12 @@ Devuelve el número de anillos interiores de un **Polygongeometry** instancia.
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **int**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
  Tipo de valor devuelto de CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Comentarios  
- Este método devuelve null si el **geometry** instancia no es un polígono.  
+## <a name="remarks"></a>Notas  
+ Este método devuelve NULL si la instancia de **geometry** no es un polígono.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea una instancia de `Polygon` y se usa `STNumInteriorRing()` para averiguar cuántos anillos interiores tiene dicha instancia.  
@@ -60,7 +60,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 
 SELECT @g.STNumInteriorRing();  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

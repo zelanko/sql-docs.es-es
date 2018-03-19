@@ -1,5 +1,5 @@
 ---
-title: DONDE (Transact-SQL) | Documentos de Microsoft
+title: WHERE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-\<*search_condition* > define la condición que debe cumplirse para que se devuelvan las filas. No hay límite en el número de predicados que se pueden incluir en una condición de búsqueda. Para obtener más información sobre predicados y las condiciones de búsqueda, vea [condición de búsqueda &#40; Transact-SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
+\< *search_condition* > Define la condición que se debe cumplir para que se devuelvan las filas. No hay límite en el número de predicados que se pueden incluir en una condición de búsqueda. Para más información sobre los predicados y las condiciones de búsqueda, vea [Condición de búsqueda &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
 ## <a name="examples"></a>Ejemplos  
  En los ejemplos siguientes se muestra cómo utilizar algunas condiciones de búsqueda comunes en la cláusula `WHERE`.  
@@ -124,10 +124,10 @@ FROM DimEmployee
 WHERE EmployeeKey Between 100 AND 200;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [Predicates &#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md)   
- [Condición de búsqueda &#40; Transact-SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md)   
+ [Predicados &#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md)   
+ [Condición de búsqueda &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  

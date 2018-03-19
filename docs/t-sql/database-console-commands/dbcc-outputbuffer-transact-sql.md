@@ -1,5 +1,5 @@
 ---
-title: DBCC OUTPUTBUFFER (Transact-SQL) | Documentos de Microsoft
+title: DBCC OUTPUTBUFFER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Devuelve el búfer de salida actual en formato hexadecimal y ASCII para el elemento especificado *session_id*.
+Devuelve el búfer de salida actual del parámetro *id_de_sesión* especificado, en formato hexadecimal y ASCII.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -52,9 +52,9 @@ DBCC OUTPUTBUFFER ( session_id [ , request_id ])
  *session_id*  
  Es el Id. de sesión asociado a cada conexión principal activa.  
   
- *request_id*  
+ *id_de_solicitud*  
  Solicitud exacta (en lote) que se buscará en la sesión actual.  
- La siguiente consulta devuelve *request_id*:  
+ La consulta siguiente devuelve *id_de_solicitud*:  
   
 ```sql
 SELECT request_id   
@@ -68,8 +68,8 @@ WHERE session_id = @@spid;
  NO_INFOMSGS  
  Suprime todos los mensajes informativos con niveles de gravedad entre 0 y 10.  
   
-## <a name="remarks"></a>Comentarios  
-DBCC OUTPUTBUFFER muestra los resultados enviados al cliente especificado (*session_id*). En los procesos que no contengan flujos de salida, se devuelve un mensaje de error.
+## <a name="remarks"></a>Notas  
+DBCC OUTPUTBUFFER muestra los resultados enviados al cliente especificado (*id_de_sesión*). En los procesos que no contengan flujos de salida, se devuelve un mensaje de error.
   
 Para mostrar la instrucción ejecutada que ha devuelto los resultados presentados por DBCC OUTPUTBUFFER, ejecute DBCC INPUTBUFFER.
   
@@ -90,7 +90,7 @@ Output Buffer
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
 Requiere la pertenencia al rol fijo de servidor **sysadmin** .
   
 ## <a name="examples"></a>Ejemplos  
@@ -100,7 +100,7 @@ En el siguiente ejemplo se devuelve información del búfer de salida actual de 
 DBCC OUTPUTBUFFER (52);  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
 [Marcas de seguimiento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)

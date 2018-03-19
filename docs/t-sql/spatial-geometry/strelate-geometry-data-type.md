@@ -1,5 +1,5 @@
 ---
-title: STRelate (tipo de datos geometry) | Documentos de Microsoft
+title: STRelate (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="strelate-geometry-data-type"></a>STRelate (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Devuelve 1 si una **geometry** está relacionada con otra instancia **geometry** instancia, donde la relación está definida por un valor de matriz de patrones de Dimensionally Extended 9 Intersection Model (DE-9IM); en caso contrario , devuelve 0.  
+  Devuelve 1 si una instancia de **geometry** está relacionada con otra instancia de **geometry**, donde la relación está definida por un valor de matriz de patrones DE-9IM (Dimensionally Extended 9 Intersection Model); en caso contrario, devuelve 0.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,21 +45,21 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *other_geometry*  
- Es otra **geometry** instancia va a comparar con la instancia en la que `STRelate()` se invoca.  
+ Es otra instancia de **geometry** con la que se compara la instancia en la que se invoca `STRelate()`.  
   
  *intersection_pattern_matrix*  
- Es una cadena de tipo **nchar(9)** codifica valores aceptables para el dispositivo de matriz de patrones DE-9IM entre los dos **geometry** instancias.  
+ Es una cadena de tipo **nchar(9)** que codifica valores aceptables para el dispositivo de matriz de patrones DE-9IM entre las dos instancias de **geometry**.  
   
-## <a name="remarks"></a>Comentarios  
- Este método siempre devuelve null si los identificadores de referencia espacial (SRID) de la **geometry** instancias no coinciden. Este método producirá una **ArgumentException** si la matriz no está bien formada.  
+## <a name="remarks"></a>Notas  
+ Este método siempre devuelve null si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geometry**. Este método produce una excepción **ArgumentException** si la matriz no tiene el formato correcto.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **bits**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se utiliza `STRelate()` para comprobar si dos **geometry** instancias para espacial separado utilizando un patrón DE-9IM explícito.  
+ En el ejemplo siguiente se usa `STRelate()` para comprobar si dos instancias de **geometry** no están combinadas en el espacio mediante un patrón DE-9IM explícito.  
   
 ```  
 DECLARE @g geometry;  
@@ -69,7 +69,7 @@ SET @h = geometry::STGeomFromText('POINT(5 5)', 0);
 SELECT @g.STRelate(@h, 'FF*FF****');  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "QUITAR la clave ASIMÉTRICA (Transact-SQL) | Documentos de Microsoft"
+title: DROP ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -56,16 +56,16 @@ DROP ASYMMETRIC KEY key_name [ REMOVE PROVIDER KEY ]
  Es el nombre de la clave asimétrica que se va quitar de base de datos.  
   
  REMOVE PROVIDER KEY  
- Quita una clave de Administración extensible de claves (EKM) de un dispositivo EKM. Para obtener más información acerca de la administración Extensible de claves, consulte [administración Extensible de claves &#40; EKM &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ Quita una clave de Administración extensible de claves (EKM) de un dispositivo EKM. Para más información sobre la Administración extensible de claves, vea [Administración extensible de claves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
-## <a name="remarks"></a>Comentarios  
- Una clave asimétrica con la que se ha cifrado la clave simétrica en la base de datos, o con la que está asignado un usuario o inicio de sesión, no se puede quitar. Antes de quitar dicha clave, debe quitar los usuarios o inicios de sesión asignados a la clave. También debe quitar o cambiar las claves simétricas cifradas con la clave asimétrica. Puede usar la opción DROP ENCRYPTION de [ALTER SYMMETRIC KEY](../../t-sql/statements/alter-symmetric-key-transact-sql.md) para quitar el cifrado mediante una clave asimétrica.  
+## <a name="remarks"></a>Notas  
+ Una clave asimétrica con la que se ha cifrado la clave simétrica en la base de datos, o con la que está asignado un usuario o inicio de sesión, no se puede quitar. Antes de quitar dicha clave, debe quitar los usuarios o inicios de sesión asignados a la clave. También debe quitar o cambiar las claves simétricas cifradas con la clave asimétrica. Puede usar la opción DROP ENCRYPTION de [ALTER SYMMETRIC KEY](../../t-sql/statements/alter-symmetric-key-transact-sql.md) para eliminar el cifrado con una clave asimétrica.  
   
- Pueden tener acceso a los metadatos de las claves asimétricas mediante el uso de la [sys.asymmetric_keys](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md) vista de catálogo. Las propias claves no se pueden ver directamente desde dentro de la base de datos.  
+ Con la vista de catálogo [sys.asymmetric_keys](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md) se puede acceder a los metadatos de claves asimétricas. Las propias claves no se pueden ver directamente desde dentro de la base de datos.  
   
  Si la clave asimétrica está asignada a una clave de Administración extensible de claves (EKM) en un dispositivo EKM y no se especifica la opción de REMOVE PROVIDER KEY, la clave se quitará de la base de datos pero no del dispositivo. Se emitirá una advertencia.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere permiso CONTROL en la clave asimétrica.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -76,10 +76,10 @@ USE AdventureWorks2012;
 DROP ASYMMETRIC KEY MirandaXAsymKey6;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [ALTER SYMMETRIC KEY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)  
+ [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Operadores de comparación (Transact-SQL) | Documentos de Microsoft"
+title: "Operadores de comparación (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="comparison-operators-transact-sql"></a>Operadores de comparación (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Los operadores de comparación comprueban si dos expresiones son iguales. Operadores de comparación se pueden utilizar en todas las expresiones excepto de los **texto**, **ntext**, o **imagen** tipos de datos. En la siguiente tabla se presentan los operadores de comparación [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Los operadores de comparación comprueban si dos expresiones son iguales. Se pueden usar en todas las expresiones, excepto en las de los tipos de datos **text**, **ntext** o **image**. En la siguiente tabla se presentan los operadores de comparación [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 |Operador|Significado|  
 |--------------|-------------|  
@@ -47,18 +47,18 @@ ms.lasthandoff: 01/25/2018
 |[>= (Mayor o igual a)](../../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)|Mayor o igual que|  
 |[<= (Menor o igual a)](../../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)|Menor o igual que|  
 |[<> (No es igual a)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)|No es igual a|  
-|[\!= (No es igual a)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|No es igual a (no es del estándar ISO)|  
-|[\!< (No menor que)](../../t-sql/language-elements/not-less-than-transact-sql.md)|No es menor que (no es del estándar ISO)|  
-|[\!> (No mayor que)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|No es mayor que (no es del estándar ISO)|  
+|[!= (No es igual a)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|No es igual a (no es del estándar ISO)|  
+|[!< (No menor que)](../../t-sql/language-elements/not-less-than-transact-sql.md)|No es menor que (no es del estándar ISO)|  
+|[!> (no mayor que)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|No es mayor que (no es del estándar ISO)|  
   
 ## <a name="boolean-data-type"></a>Tipo de datos Boolean  
- El resultado de un operador de comparación tiene la **booleano** tipo de datos. Tiene tres valores: TRUE, FALSE y UNKNOWN. Las expresiones que devuelven un **booleano** tipo de datos se conocen como expresiones booleanas.  
+ El resultado de un operador de comparación es del tipo de datos **Boolean**. Tiene tres valores: TRUE, FALSE y UNKNOWN. Las expresiones que devuelven tipos de datos **Boolean** se conocen como expresiones booleanas.  
   
- A diferencia de otras [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos, un **booleano** tipo de datos no se puede especificar como el tipo de datos de una variable o columna de tabla y no se puede devolver en un conjunto de resultados.  
+ A diferencia de los otros tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el tipo de datos **Boolean** no se puede especificar como tipo de datos de una columna o variable de una tabla y no se puede devolver en un conjunto de resultados.  
   
  Cuando SET ANSI_NULLS es ON, un operador con una o dos expresiones NULL devuelve UNKNOWN. Cuando SET ANSI_NULLS es OFF, se aplica la misma regla, excepto que el operador de igualdad (=) devuelve TRUE si ambas expresiones son NULL. Por ejemplo, NULL = NULL devuelve TRUE si SET ANSI_NULLS es OFF.  
   
- Expresiones con **booleano** tipos de datos se utilizan en la cláusula WHERE para filtrar las filas que se incluyen para las condiciones de búsqueda y en las instrucciones de lenguaje de control de flujo tales como IF y WHILE, por ejemplo:  
+ Las expresiones con tipos de datos **Boolean** se usan en la cláusula WHERE para filtrar las filas que cumplen las condiciones de búsqueda y en las instrucciones de lenguaje de control de flujo tales como IF y WHILE, por ejemplo:  
   
 ```  
 -- Uses AdventureWorks  
@@ -71,8 +71,8 @@ IF (@MyProduct <> 0)
    WHERE ProductID = @MyProduct;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md) (Operadores [Transact-SQL])  
   
   

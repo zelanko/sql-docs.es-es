@@ -1,5 +1,5 @@
 ---
-title: STSrid (tipo de datos geometry) | Documentos de Microsoft
+title: STSrid (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsrid-geometry-data-type"></a>STSrid (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  **STSrid** es un entero que representa el identificador de referencia espacial de la instancia.  
+  **STSrid** es un número entero que representa el identificador de referencia espacial de la instancia.  
   
 Esta propiedad se puede modificar.
   
@@ -46,12 +46,12 @@ STSrid
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **int**  
+ Tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Tipo CLR: **SqlInt32**  
+ Tipo de CLR: **SqlInt32**  
   
 ## <a name="examples"></a>Ejemplos  
- El primer ejemplo se crea un **geometry** instancia con el valor SRID 13 y se usa `STSrid` para confirmar dicho SRID.  
+ En el primer ejemplo se crea una instancia de **geometry** con el valor SRID 13 y se usa `STSrid` para confirmar dicho SRID.  
   
 ```  
 DECLARE @g geometry;  
@@ -66,7 +66,7 @@ SET @g.STSrid = 23;
 SELECT @g.STSrid;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [STX &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stx-geometry-data-type.md)   
  [STY &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/sty-geometry-data-type.md)   
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

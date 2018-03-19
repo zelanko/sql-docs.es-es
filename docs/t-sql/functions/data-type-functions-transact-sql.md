@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos de funciones (Transact-SQL) | Documentos de Microsoft
+title: Funciones de tipos de datos (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -35,8 +35,8 @@ Las siguientes funciones escalares devuelven información sobre distintos valore
   
 |||  
 |-|-|  
-|[DATALENGTH &#40; Transact-SQL &#41;](../../t-sql/functions/datalength-transact-sql.md)|[IDENT_SEED &#40; Transact-SQL &#41;](../../t-sql/functions/ident-seed-transact-sql.md)|  
-|[IDENT_CURRENT &#40; Transact-SQL &#41;](../../t-sql/functions/ident-current-transact-sql.md)|[IDENTIDAD &#40; Función &#41; &#40; Transact-SQL &#41;](../../t-sql/functions/identity-function-transact-sql.md)|  
-|[IDENT_INCR &#40; Transact-SQL &#41;](../../t-sql/functions/ident-incr-transact-sql.md)|[SQL_VARIANT_PROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/sql-variant-property-transact-sql.md)|  
+|[DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)|[IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)|  
+|[IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)|[IDENTITY &#40;Function&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/identity-function-transact-sql.md)|  
+|[IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)|[SQL_VARIANT_PROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sql-variant-property-transact-sql.md)|  
   
   

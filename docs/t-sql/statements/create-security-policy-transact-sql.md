@@ -1,5 +1,5 @@
 ---
-title: Crear directiva de seguridad (Transact-SQL) | Documentos de Microsoft
+title: CREATE SECURITY POLICY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -39,10 +39,10 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="create-security-policy-transact-sql"></a>Crear directiva de seguridad (Transact-SQL)
+# <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Crea una directiva de seguridad para la seguridad de nivel de fila.  
+  Crea una directiva de seguridad para la seguridad de nivel de filas.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,27 +67,27 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  El nombre de la directiva de seguridad. Los nombres de directivas de seguridad deben seguir las reglas de los identificadores y deben ser únicos en la base de datos y para su esquema.  
   
  *schema_name*  
- Es el nombre del esquema al que pertenece la directiva de seguridad. *schema_name* es necesaria debido a los enlaces de esquema.  
+ Es el nombre del esquema al que pertenece la directiva de seguridad. *schema_name* es necesario debido a los enlaces de esquema.  
   
- [FILTRO | BLOQUE]  
- El tipo de predicado de seguridad de la función que se enlaza a la tabla de destino. Los predicados de filtro filtran en modo silencioso las filas que están disponibles para las operaciones de lectura. BLOQUE predicados explícitamente que las operaciones de escritura de bloque que infringen la función de predicado.  
+ [ FILTER | BLOCK ]  
+ El tipo de predicado de seguridad de la función vinculada a la tabla de destino. Los predicados FILTER filtran en modo silencioso las filas disponibles para leer operaciones. Los predicados BLOCK bloquean explícitamente las operaciones de escritura que infringen la función del predicado.  
   
  *tvf_schema_name.security_predicate_function_name*  
  Es la función de valor de tabla insertada que se usará como predicado y que se aplicará en las consultas en una tabla de destino. Se puede definir, como máximo, un predicado de seguridad para una operación DML determinada en una tabla determinada. La función de valor de tabla insertada se debe haber creado con la opción SCHEMABINDING.  
   
- { *column_name* | *argumentos* }  
+ { *column_name* | *arguments* }  
  El nombre de columna o la expresión que se usan como parámetros de la función de predicado de seguridad. Todas las columnas de la tabla de destino pueden utilizarse como argumentos de la función de predicado. Pueden utilizarse expresiones que incluyen literales, builtins y expresiones que usan operadores aritméticos.  
   
  *table_schema_name.table_name*  
- Es la tabla de destino a la que se aplicará el predicado de seguridad. Varias directivas de seguridad deshabilitado pueden tener como destino una sola tabla para una operación DML determinada, pero sólo uno puede habilitarse en un momento dado.  
+ Es la tabla de destino a la que se aplicará el predicado de seguridad. Puede haber varias directivas de seguridad deshabilitadas que tengan como destino una sola tabla para una operación DML concreta, pero no puede haber varias de ellas habilitadas al mismo tiempo.  
   
- *\<block_dml_operation >* la operación DML determinada para los que se aplicará el predicado de bloqueo. DESPUÉS, especifica que el predicado se va a evaluar los valores de las filas después de la operación de DML fue realizada (INSERT o UPDATE). Especifica antes que el predicado se va a evaluar los valores de las filas antes de que la operación DML se realizan (UPDATE o DELETE). Si se ha especificado ninguna operación, el predicado se aplicará a todas las operaciones.  
+ *\<block_dml_operation>* La operación DML determinada a la que se aplicará el predicado de bloqueo. AFTER especifica que el predicado se va a evaluar en función de los valores de las filas después de que se haya realizado la operación DML (INSERT o UPDATE). BEFORE especifica que el predicado se va a evaluar en función de los valores de las filas antes de que se haya realizado la operación DML (UPDATE o DELETE). Si no se especifica ninguna operación, el predicado se aplicará a todas las operaciones.  
   
- [ESTADO = {ON | **OFF** }]  
+ [ STATE = { ON | **OFF** } ]  
  Habilita o deshabilita la aplicación de los predicados de seguridad de la directiva de seguridad en las tablas de destino. Si no se especifica, se habilita la directiva de seguridad que se está creando.  
   
- [SCHEMABINDING = {ON | {OFF}]  
- Indica si se deben crear todas las funciones de predicado de la directiva con la opción SCHEMABINDING. De forma predeterminada, todas las funciones deben crearse con SCHEMABINDING.  
+ [ SCHEMABINDING = { ON | OFF } ]  
+ Indica si todas las funciones de predicado de la directiva se deben crear con la opción SCHEMABINDING. Todas las funciones se deben crear con SCHEMABINDING de forma predeterminada.  
   
  NOT FOR REPLICATION  
  Indica que la directiva de seguridad no debe ejecutarse cuando un agente de replicación modifica el objeto de destino. Para obtener más información, vea [Controlar el comportamiento de desencadenadores y restricciones durante la sincronización &#40;programación de la replicación con Transact-SQL&#41;](../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md).  
@@ -95,12 +95,12 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  [*table_schema_name*.] *table_name*  
  Es la tabla de destino a la que se aplicará el predicado de seguridad. Puede haber varias directivas de seguridad deshabilitadas que tengan como destino una sola tabla, pero no puede haber varias de ellas habilitadas al mismo tiempo.  
   
-## <a name="remarks"></a>Comentarios  
- Al utilizar las funciones de predicado con tablas optimizadas en memoria, debe incluir **SCHEMABINDING** y use la **WITH NATIVE_COMPILATION** sugerencia de compilación.  
+## <a name="remarks"></a>Notas  
+ Al usar las funciones de predicado con tablas optimizadas para memoria, hay que incluir **SCHEMABINDING** y usar la sugerencia de compilación **WITH NATIVE_COMPILATION**.  
   
- Los predicados de bloqueo se evalúan después de ejecuta la operación de DML correspondiente. Por lo tanto, una consulta READ UNCOMMITTED puede ver valores transitorios que se revertirá.  
+ Los predicados de bloqueo se evalúan después de ejecutar la operación DML correspondiente. Por lo tanto, una consulta READ UNCOMMITTED puede mostrar valores transitorios que se revertirán.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER ANY SECURITY POLICY y el permiso ALTER en el esquema.  
   
  Además, son necesarios los siguientes permisos para cada predicado que se agrega:  
@@ -112,7 +112,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
 -   El permiso REFERENCES en todas las columnas de la tabla de destino que se utilizan como argumentos.  
   
 ## <a name="examples"></a>Ejemplos  
- Los ejemplos siguientes muestran el uso de la sintaxis de **CREATE SECURITY POLICY** . Para obtener un ejemplo de un escenario de directiva de seguridad completa, consulte [seguridad de nivel de fila](../../relational-databases/security/row-level-security.md).  
+ Los ejemplos siguientes muestran el uso de la sintaxis de **CREATE SECURITY POLICY** . Para ver un ejemplo de un escenario completo de la directiva de seguridad, vea [Seguridad de nivel de fila](../../relational-databases/security/row-level-security.md).  
   
 ### <a name="a-creating-a-security-policy"></a>A. Creación de una directiva de seguridad  
  La siguiente sintaxis crea una directiva de seguridad con un predicado de filtro para la tabla Customer y deja deshabilitada la directiva de seguridad.  
@@ -138,7 +138,7 @@ WITH (STATE = ON);
 ```  
   
 ### <a name="c-creating-a-policy-with-multiple-types-of-security-predicates"></a>C. Crear una directiva con varios tipos de predicados de seguridad  
- Agregar un predicado de filtro y un predicado de bloqueo a la tabla Sales.  
+ Agregue un predicado de filtro y un predicado de bloqueo a la tabla Sales.  
   
 ```  
 CREATE SECURITY POLICY rls.SecPol  
@@ -146,12 +146,12 @@ CREATE SECURITY POLICY rls.SecPol
     ADD BLOCK PREDICATE rls.tenantAccessPredicate(TenantId) ON dbo.Sales AFTER INSERT;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Seguridad de nivel de fila](../../relational-databases/security/row-level-security.md)   
  [ALTER SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   
  [sys.security_policies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
- [Sys.security_predicates &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
+ [sys.security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
   
   
 

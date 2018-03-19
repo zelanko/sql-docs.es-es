@@ -1,5 +1,5 @@
 ---
-title: HOST_ID (Transact-SQL) | Documentos de Microsoft
+title: HOST_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,12 +49,12 @@ HOST_ID ()
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- **Char (10)**  
+ **char(10)**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando el parámetro de una función del sistema es opcional, se asumen la base de datos, el equipo host, el usuario del servidor o el usuario de la base de datos actuales. Las funciones integradas siempre deben ir seguidas de paréntesis.  
   
- Funciones de sistema se pueden usar en la lista de selección en la cláusula WHERE, y en cualquier lugar en que se permita una expresión.  
+ Las funciones del sistema se pueden usar en la lista de selección, en la cláusula WHERE y en cualquier lugar donde se permita una expresión.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se crea una tabla que utiliza `HOST_ID()` en una definición de `DEFAULT` para registrar el identificador de terminal de los equipos que insertan filas en una tabla que registra pedidos.  
@@ -70,8 +70,8 @@ CREATE TABLE Orders
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Expresiones &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Funciones del sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

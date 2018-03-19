@@ -1,5 +1,5 @@
 ---
-title: STContains (tipo de datos geography) | Documentos de Microsoft
+title: STContains (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcontains--geography-data-type"></a>STContains (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Especifica si la llamada a **geography** instancia contiene espacialmente el **geography** instancia se pasa al método.  
+  Especifica si la instancia de **geography** que hace la llamada contiene espacialmente a la instancia de **geography** que se pasa al método.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,15 +42,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *other_geography*  
- Es otra **geography** instancia va a comparar con la instancia en la que `STContains()` se invoca.  
+ Es otra instancia de **geography** con la que se compara la instancia en la que se invoca `STContains()`.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **bits**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Comentarios  
- Devuelve 1 si la llamada a **geography** instancia contiene espacialmente el **geography** instancia pasado al método y devuelve 0 si no es así. Devuelve **null** si el SRID de los dos **geography** instancias no son iguales.  
+## <a name="remarks"></a>Notas  
+ Devuelve 1 si la instancia de **geography** que hace la llamada contiene espacialmente a la instancia de **geography** que se pasa al método, y devuelve 0 si no lo hace. Devuelve **null** si el SRID de las dos instancias de **geography** no coincide.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se usa `STContains()` para comprobar si, dadas dos instancias de `geography`, la primera de ellas contiene a la segunda.  

@@ -1,5 +1,5 @@
 ---
-title: STLineFromText (tipo de datos geography) | Documentos de Microsoft
+title: STLineFromText (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stlinefromtext-geography-data-type"></a>STLineFromText (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve un **geography** instancia a partir de una representación Open Geospatial Consortium (OGC) Well-Known Text (WKT), ampliada con los Z (elevación) y los valores M (medida) pertenecientes a la instancia.
+Devuelve una instancia de **geography** a partir de una representación Well-Known Text (WKT) de Open Geospatial Consortium (OGC), ampliada con los valores Z (elevación) y M (medida) pertenecientes a la instancia.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,20 +45,20 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *linestring_tagged_text*  
- Es la representación WKT de la **geographyLineString** instancia que se va a devolver. *linestring_tagged_text* es un **nvarchar (max)** expresión.  
+ Es la representación WKT de la instancia de **geographyLineString** que se quiere devolver. *linestring_tagged_text* es una expresión **nvarchar(max)**.  
   
  *SRID*  
- Es un **int** expresión que representa el espaciales identificador de referencia (SRID) de la **geographyLineString** instancia que se va a devolver.  
+ Es una expresión de tipo **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geographyLineString** que se quiere devolver.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geography**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
- Tipo de OGC: **LineString**  
+ Tipo OGC: **LineString**  
   
-## <a name="remarks"></a>Comentarios  
- Este método produce una **FormatException** si la entrada no tiene el formato correcto.  
+## <a name="remarks"></a>Notas  
+ Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se usa `STLineFromText()` para crear una instancia de `geography`.  
@@ -69,7 +69,7 @@ SET @g = geography::STLineFromText('LINESTRING(-122.360 47.656, -122.343 47.656 
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de geografía estáticos de OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

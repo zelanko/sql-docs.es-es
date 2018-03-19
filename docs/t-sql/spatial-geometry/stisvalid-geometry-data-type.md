@@ -1,5 +1,5 @@
 ---
-title: STIsValid (tipo de datos geometry) | Documentos de Microsoft
+title: STIsValid (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisvalid-geometry-data-type"></a>STIsValid (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve true si un **geometry** instancia es correcto, según su tipo de Open Geospatial Consortium (OGC). Devuelve false si un **geometry** instancia no está bien formada.
+Devuelve true si una instancia de **geometry** tiene el formato correcto, en función de su tipo de Open Geospatial Consortium (OGC). Devuelve false si una instancia de **geometry** no tiene el formato correcto.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,14 +44,14 @@ Devuelve true si un **geometry** instancia es correcto, según su tipo de Open G
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **bits**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Comentarios  
- El tipo OGC de una **geometry** instancia se puede determinar invocando [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md).  
+## <a name="remarks"></a>Notas  
+ El tipo de OGC de una instancia de **geometry** se puede determinar mediante la invocación de [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]solo es válido se genera **geometry** instancias, pero permite el almacenamiento y la recuperación de instancias no válidas. El método `MakeValid()` permite recuperar una instancia válida que representa el mismo conjunto de puntos que cualquier instancia no válida.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo produce instancias válidas de **geometry**, pero permite el almacenamiento y la recuperación de instancias no válidas. El método `MakeValid()` permite recuperar una instancia válida que representa el mismo conjunto de puntos que cualquier instancia no válida.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea una instancia de `geometry` y se usa `STIsValid()` para comprobar si dicha instancia es válida.  
@@ -62,8 +62,8 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
 SELECT @g.STIsValid();  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [STGeometryType &#40; tipo de datos geometry &#41;](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)   
+## <a name="see-also"></a>Ver también  
+ [STGeometryType &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)   
  [MakeValid &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/makevalid-geometry-data-type.md)   
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

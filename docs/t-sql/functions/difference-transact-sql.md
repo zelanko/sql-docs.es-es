@@ -1,5 +1,5 @@
 ---
-title: DIFERENCIA (Transact-SQL) | Documentos de Microsoft
+title: DIFFERENCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -48,18 +48,18 @@ DIFFERENCE ( character_expression , character_expression )
   
 ## <a name="arguments"></a>Argumentos  
  *character_expression*  
- Es un carácter alfanumérico [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de datos de caracteres. *character_expression* puede ser una constante, variable o columna.  
+ Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) alfanumérica de datos de caracteres. *character_expression* puede ser una constante, una variable o una columna.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **int**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El entero devuelto es el número de caracteres de los valores de SOUNDEX que son iguales. El valor devuelto puede oscilar entre 0 y 4, donde 0 indica una similitud escasa o inexistente, y 4 indica una elevada similitud o los mismos valores.  
   
  DIFFERENCE y SOUNDEX distinguen la intercalación.  
   
 ## <a name="examples"></a>Ejemplos  
- En la primera parte del ejemplo siguiente, se comparan los valores de `SOUNDEX` de dos cadenas muy similares. Para una intercalación Latin1_General `DIFFERENCE` devuelve un valor de `4`. En la segunda parte del ejemplo siguiente, la `SOUNDEX` valores para que se comparan dos cadenas muy diferentes y una intercalación Latin1_General `DIFFERENCE` devuelve un valor de `0`.  
+ En la primera parte del ejemplo siguiente, se comparan los valores de `SOUNDEX` de dos cadenas muy similares. En una intercalación de Latin1_General `DIFFERENCE` devuelve un valor de `4`. En la segunda parte, se comparan los valores de `SOUNDEX` de dos cadenas muy diferentes y, en el caso de una intercalación de Latin1_General `DIFFERENCE`, devuelve un valor de `0`.  
   
 ```  
 -- Returns a DIFFERENCE value of 4, the least possible difference.  
@@ -84,9 +84,9 @@ B432  G650  0
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [SOUNDEX &#40; Transact-SQL &#41;](../../t-sql/functions/soundex-transact-sql.md)   
- [Funciones de cadena &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [SOUNDEX &#40;Transact-SQL&#41;](../../t-sql/functions/soundex-transact-sql.md)   
+ [Funciones de cadena &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

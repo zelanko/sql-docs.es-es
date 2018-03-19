@@ -1,5 +1,5 @@
 ---
-title: Crear vista (Transact-SQL) | Documentos de Microsoft
+title: CREATE VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -95,10 +95,10 @@ AS <select_statement>
 ```  
   
 ## <a name="arguments"></a>Argumentos
-O ALTER  
+OR ALTER  
  **Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).   
   
- Condicionalmente, se modifica la vista solo si ya existe. 
+ Altera la vista condicionalmente solo si ya existe. 
  
  *schema_name*  
  Es el nombre del esquema al que pertenece la vista.  
@@ -106,13 +106,13 @@ O ALTER
  *view_name*  
  Es el nombre de la vista. Los nombres de las vistas deben cumplir las reglas de los identificadores. La especificación del nombre del propietario de la vista es opcional.  
   
- *columna*  
+ *column*  
  Es el nombre que se va a utilizar para una columna en una vista. Solo se necesita un nombre de columna cuando una columna proviene de una expresión aritmética, una función o una constante; cuando dos o más columnas puedan tener el mismo nombre, normalmente debido a una combinación; o cuando una columna de una vista recibe un nombre distinto al de la columna de la que proviene. Los nombres de columna se pueden asignar también en la instrucción SELECT.  
   
- Si *columna* no se especifica, las columnas de la vista adquieren los mismos nombres que las columnas de la instrucción SELECT.  
+ Si no se especifica el parámetro *column*, las columnas de la vista adquieren los mismos nombres que las columnas de la instrucción SELECT.  
   
 > [!NOTE]  
->  En las columnas de la vista, los permisos de un nombre de columna se aplican mediante una instrucción CREATE VIEW o ALTER VIEW, independientemente del origen de los datos subyacentes. Por ejemplo, si se conceden permisos sobre la **SalesOrderID** columna en una instrucción CREATE VIEW, una instrucción ALTER VIEW puede dar el nombre la **SalesOrderID** columna con un nombre de columna diferente, como **OrderRef**y seguir teniendo los permisos asociados con la vista utilizando **SalesOrderID**.  
+>  En las columnas de la vista, los permisos de un nombre de columna se aplican mediante una instrucción CREATE VIEW o ALTER VIEW, independientemente del origen de los datos subyacentes. Por ejemplo, si se conceden permisos para la columna **SalesOrderID** en una instrucción CREATE VIEW, una instrucción ALTER VIEW puede denominar a la columna **SalesOrderID** con un nombre de columna distinto, por ejemplo **OrderRef**, y seguir teniendo los permisos asociados a la vista que utiliza **SalesOrderID**.  
   
  AS  
  Especifica las acciones que va a llevar a cabo la vista.  
@@ -137,45 +137,45 @@ O ALTER
   
 -   Una referencia a una tabla temporal o a una variable de tabla  
   
- Dado que *select_statement* utiliza la instrucción SELECT, es válido usar \<las sugerencias join_hint > y \<sugerenciatabla > sugerencias de acuerdo con lo especificado en la cláusula FROM. Para obtener más información, vea [FROM &#40; Transact-SQL &#41; ](../../t-sql/queries/from-transact-sql.md) y [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md). 
+ Dado que *select_statement* utiliza la instrucción SELECT, es válido utilizar \<join_hint> y \<table_hint> hints como se especifican en la cláusula FROM. Para obtener más información, vea [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) y [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md). 
   
- Funciones y varias instrucciones SELECT separadas por UNION o UNION ALL pueden utilizarse en *select_statement*.  
+ En *select_statement* se pueden utilizar funciones y varias instrucciones SELECT separadas por UNION o UNION ALL.  
   
  CHECK OPTION  
- Obliga a todas las instrucciones de modificación de datos ejecutadas en la vista sigan los criterios establecidos en *select_statement*. Cuando una fila se modifica mediante una vista, WITH CHECK OPTION garantiza que los datos permanezcan visibles en toda la vista después de confirmar la modificación.  
+ Fuerza que todas las instrucciones de modificación de datos que se ejecuten en la vista sigan los criterios establecidos en *select_statement*. Cuando una fila se modifica mediante una vista, WITH CHECK OPTION garantiza que los datos permanezcan visibles en toda la vista después de confirmar la modificación.  
   
 > [!NOTE]  
 >  Cualquier actualización realizada directamente en las tablas subyacentes de una vista no se comprueba en la vista, aunque se haya especificado CHECK OPTION.  
   
  ENCRYPTION  
- **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Cifra las entradas de [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) que contienen el texto de la instrucción CREATE VIEW. El uso de WITH ENCRYPTION evita que la vista se publique como parte de la replicación de SQL Server.  
   
  SCHEMABINDING  
- Enlaza la vista al esquema de las tablas subyacentes. Cuando se especifica SCHEMABINDING, las tablas base no se pueden modificar de una forma que afecte a la definición de la vista. En primer lugar, se debe modificar o quitar la propia definición de la vista para quitar las dependencias en la tabla que se va a modificar. Cuando se utiliza SCHEMABINDING, el *select_statement* debe incluir los nombres de dos partes (*esquema***.** *objeto*) de tablas, vistas o funciones definidas por el usuario que se hace referencia. Todos los objetos a los que se hace referencia se deben encontrar en la misma base de datos.  
+ Enlaza la vista al esquema de las tablas subyacentes. Cuando se especifica SCHEMABINDING, las tablas base no se pueden modificar de una forma que afecte a la definición de la vista. En primer lugar, se debe modificar o quitar la propia definición de la vista para quitar las dependencias en la tabla que se va a modificar. Cuando se usa SCHEMABINDING, *select_statement* debe incluir los nombres en dos partes (*schema***.***object*) de las tablas, las vistas o las funciones definidas por el usuario a las que se hace referencia. Todos los objetos a los que se hace referencia se deben encontrar en la misma base de datos.  
   
- Vistas o tablas que participan en una vista creada con la cláusula SCHEMABINDING no se puede quitar a menos que la vista se quita o cambia para que ya no tiene enlaces de esquema. En caso contrario, [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un error. Además, la ejecución de las instrucciones ALTER TABLE en tablas que participan en vistas que tienen enlaces de esquema provoca un error si estas instrucciones afectan a la definición de la vista.  
+ Las vistas o las tablas que participan en una vista creada con la cláusula SCHEMABINDING no se pueden quitar a menos que se quite o cambie esa vista de forma que deje de tener un enlace de esquema. En caso contrario, [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un error. Además, la ejecución de las instrucciones ALTER TABLE en tablas que participan en vistas que tienen enlaces de esquema provoca un error si estas instrucciones afectan a la definición de la vista.  
   
  VIEW_METADATA  
  Especifica que la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devolverá a las API de DB-Library, ODBC y OLE DB la información de metadatos sobre la vista en vez de las tablas base cuando se soliciten los metadatos del modo de exploración para una consulta que hace referencia a la vista. Los metadatos del modo de exploración son metadatos adicionales que la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve a estas API del lado cliente. Estos metadatos permiten a las API del lado cliente implementar cursores del lado cliente actualizables. Los metadatos del modo de exploración incluyen información sobre la tabla base a la que pertenecen las columnas del conjunto de resultados.  
   
  Para las vistas creadas con VIEW_METADATA, los metadatos del modo de exploración devuelven el nombre de vista y no los nombres de tablas base cuando describen columnas de la vista en el conjunto de resultados.  
   
- Cuando se crea una vista utilizando WITH VIEW_METADATA, todas sus columnas, excepto un **timestamp** columna, son actualizables si la vista tiene INSTEAD OF INSERT o desencadenadores INSTEAD OF UPDATE. Para obtener más información acerca de las vistas actualizables, vea la sección Notas.  
+ Cuando se crea una vista mediante WITH VIEW_METADATA, todas sus columnas, excepto una columna **timestamp**, son actualizables si la vista tiene los desencadenadores INSTEAD OF INSERT o INSTEAD OF UPDATE. Para obtener más información acerca de las vistas actualizables, vea la sección Notas.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Una vista solo se puede crear en la base de datos actual. CREATE VIEW debe ser la primera instrucción en un lote de consultas. Una vista puede tener un máximo de 1.024 columnas.  
   
  Cuando se realiza una consulta a través de una vista, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] se asegura de que todos los objetos de base de datos a los que se hace referencia en algún lugar de la instrucción existen, que son válidos en el contexto de la instrucción y que las instrucciones de modificación de datos no infringen ninguna regla de integridad de los datos. Las comprobaciones que no son correctas devuelven un mensaje de error. Las comprobaciones correctas traducen la acción a una acción con las tablas subyacentes.  
   
  Si una vista depende de una tabla o vista que se ha quitado, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un mensaje de error si alguien trata de utilizar la vista. Si se crea una nueva tabla o vista y la estructura de la tabla no cambia con respecto a la tabla base anterior para sustituir a la eliminada, se puede volver a utilizar la vista. Si cambia la estructura de la nueva tabla o vista, es necesario eliminar la vista y volver a crearla.  
   
- Si no se crea una vista con la cláusula SCHEMABINDING, [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) deben ejecutarse cuando se realizan cambios en los objetos subyacentes de la vista que afectan a la definición de la vista. De lo contrario, la vista podría producir resultados inesperados en las consultas.  
+ Si una vista no se crea con la cláusula SCHEMABINDING, debe ejecutarse [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) cuando se realicen cambios en los objetos subyacentes de la vista que afecten a la definición de ésta. De lo contrario, la vista podría producir resultados inesperados en las consultas.  
   
- Cuando se crea una vista, información sobre la vista se almacena en las siguientes vistas de catálogo: [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md), [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), y [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md). El texto de la instrucción CREATE VIEW se almacena en la [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vista de catálogo.  
+ Cuando se crea una vista, la información sobre ella se almacena en estas vistas de catálogo: [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md), [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) y [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md). El texto de la instrucción CREATE VIEW se almacena en la vista de catálogo [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
   
- Define una consulta que utiliza un índice en una vista con **numérico** o **float** expresiones pueden tener un resultado que es diferente de una consulta similar que no utiliza el índice en la vista. Esta diferencia se podría deber a errores de redondeo durante las acciones INSERT, DELETE o UPDATE en las tablas subyacentes.  
+ El resultado de una consulta que utiliza un índice de una vista definido con expresiones **numeric** o **float** podría diferir del resultado de una consulta similar que no utiliza el índice de la vista. Esta diferencia se podría deber a errores de redondeo durante las acciones INSERT, DELETE o UPDATE en las tablas subyacentes.  
   
  Cuando se crea una vista, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] guarda la configuración de SET QUOTED_IDENTIFIER y SET ANSI_NULLS. Esta configuración original se utiliza para analizar la vista cuando ésta se utiliza. Por tanto, cualquier configuración de sesión de cliente de SET QUOTED_IDENTIFIER y SET ANSI_NULLS no afecta a la definición de la vista cuando se obtiene acceso a ella.  
   
@@ -184,7 +184,7 @@ O ALTER
   
 -   Cualquier modificación, incluidas las instrucciones UPDATE, INSERT y DELETE, debe hacer referencia a las columnas de una única tabla base.  
   
--   Las columnas que se va a modificar en la vista deben hacer referencia directamente a los datos subyacentes en las columnas de tabla. Las columnas no se pueden obtener de otra forma, como las siguientes:  
+-   Las columnas que se vayan a modificar en la vista deben hacer referencia directa a los datos subyacentes de las columnas de la tabla. Las columnas no se pueden obtener de otra forma, como las siguientes:  
   
     -   Una función de agregado: AVG, COUNT, SUM, MIN, MAX, GROUPING, STDEV, STDEVP, VAR y VARP.  
   
@@ -192,15 +192,15 @@ O ALTER
   
 -   Las columnas que se van a modificar no se ven afectadas por las cláusulas GROUP BY, HAVING o DISTINCT.  
   
--   TOP no se utiliza en cualquier lugar en el *select_statement* de la vista junto con la cláusula WITH CHECK OPTION.  
+-   No se utiliza TOP con la cláusula WITH CHECK OPTION en ningún punto de *select_statement* de la vista.  
   
- Las restricciones anteriores se aplican a cualquier subconsulta de la cláusula FROM de la vista, al igual que a la propia vista. Normalmente, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] debe poder realizar un seguimiento sin ambigüedades de las modificaciones de la definición de la vista a una tabla base. Para obtener más información, consulte [modificar datos mediante una vista](../../relational-databases/views/modify-data-through-a-view.md).  
+ Las restricciones anteriores se aplican a cualquier subconsulta de la cláusula FROM de la vista, al igual que a la propia vista. Normalmente, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] debe poder realizar un seguimiento sin ambigüedades de las modificaciones de la definición de la vista a una tabla base. Para más información, vea [Modificar datos mediante una vista](../../relational-databases/views/modify-data-through-a-view.md).  
   
  Si las restricciones anteriores le impiden modificar datos directamente mediante una vista, considere las siguientes opciones:  
   
 -   **Desencadenadores INSTEAD OF**  
   
-     Es posible crear desencadenadores INSTEAD OF en una vista para que sea actualizable. El desencadenador INSTEAD OF se ejecuta en lugar de la instrucción de modificación de datos en la que se define el desencadenador. Este desencadenador permite al usuario especificar el conjunto de acciones que hay que realizar para procesar la instrucción de modificación de datos. Por lo tanto, si existe un desencadenador INSTEAD OF para una vista en una instrucción de modificación de datos determinada (INSERT, UPDATE o DELETE), la vista correspondiente se puede actualizar mediante esa instrucción. Para obtener más información acerca de desencadenadores INSTEAD OF, vea [desencadenadores DML](../../relational-databases/triggers/dml-triggers.md).  
+     Es posible crear desencadenadores INSTEAD OF en una vista para que sea actualizable. El desencadenador INSTEAD OF se ejecuta en lugar de la instrucción de modificación de datos en la que se define el desencadenador. Este desencadenador permite al usuario especificar el conjunto de acciones que hay que realizar para procesar la instrucción de modificación de datos. Por lo tanto, si existe un desencadenador INSTEAD OF para una vista en una instrucción de modificación de datos determinada (INSERT, UPDATE o DELETE), la vista correspondiente se puede actualizar mediante esa instrucción. Para obtener más información acerca de los desencadenadores INSTEAD OF, vea [Desencadenadores DML](../../relational-databases/triggers/dml-triggers.md).  
   
 -   **Vistas con particiones**  
   
@@ -210,7 +210,7 @@ O ALTER
  Una vista con particiones es una vista definida por un operador UNION ALL de las tablas miembro estructuradas de la misma manera pero almacenadas en diferentes tablas de la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o en un grupo de instancias autónomas de servidores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominados servidores de bases de datos federadas.  
   
 > [!NOTE]  
->  El método preferido para la partición de datos local en un servidor es a través de tablas con particiones. Para obtener más información, consulte [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+>  El método preferido para la partición de datos local en un servidor es a través de tablas con particiones. Para obtener más información, vea [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  Si diseña un esquema de partición, debe tener claro qué datos pertenecen a cada partición. Por ejemplo, los datos de la tabla `Customers` se distribuyen en tres tablas miembro en tres ubicaciones de servidor: `Customers_33` en `Server1`, `Customers_66` en `Server2` y `Customers_99` en `Server3`.  
   
@@ -269,7 +269,7 @@ FROM Tn;
         < col > { < | <= } < value2 >  
         ```  
   
-    -   Las restricciones deben estar definidas de manera que cualquier valor especificado de `<col>` pueda cumplir al menos una de las restricciones `C1, ..., Cn` de modo que las restricciones formen un conjunto de intervalos no combinados o que no se superpongan. La columna `<col>` en la que se definen las restricciones no combinadas se denomina columna de partición. Observe que la columna de partición puede tener diferentes nombres en las tablas subyacentes. Las restricciones deben estar habilitadas y ser de confianza para cumplir las condiciones mencionadas anteriormente de la columna de partición. Si las restricciones están deshabilitadas, vuelva a habilitarlas mediante el uso de la restricción CHECK *constraint_name* opción de ALTER TABLE y utilizar la opción WITH CHECK para validarlas.  
+    -   Las restricciones deben estar definidas de manera que cualquier valor especificado de `<col>` pueda cumplir al menos una de las restricciones `C1, ..., Cn` de modo que las restricciones formen un conjunto de intervalos no combinados o que no se superpongan. La columna `<col>` en la que se definen las restricciones no combinadas se denomina columna de partición. Observe que la columna de partición puede tener diferentes nombres en las tablas subyacentes. Las restricciones deben estar habilitadas y ser de confianza para cumplir las condiciones mencionadas anteriormente de la columna de partición. Si las restricciones están deshabilitadas, vuelva a habilitarlas mediante la opción CHECK CONSTRAINT *constraint_name* de ALTER TABLE y la opción WITH CHECK para validarlas.  
   
          En los siguientes ejemplos se muestran conjuntos válidos de restricciones:  
   
@@ -284,7 +284,7 @@ FROM Tn;
   
     -   La columna de partición forma parte de la restricción PRIMARY KEY de la tabla.  
   
-    -   No puede ser una calculada, de identidad, de forma predeterminada, o **timestamp** columna.  
+    -   No puede ser una columna calculada, de identidad, predeterminada o **timestamp**.  
   
     -   Si existe más de una restricción en la misma columna de una tabla miembro, el Motor de base de datos omite todas las restricciones y no las tiene en cuenta al determinar si la vista tiene particiones. Para cumplir las condiciones de la vista con particiones, solamente debe existir una restricción de partición en la columna de partición.  
   
@@ -292,7 +292,7 @@ FROM Tn;
   
 3.  Tablas miembro o tablas subyacentes `T1, ..., Tn`  
   
-    -   Las tablas pueden ser locales o tablas de otros equipos que ejecuten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a los que se haga referencia mediante un nombre de cuatro partes o un nombre basado en OPENDATASOURCE u OPENROWSET. La sintaxis de OPENDATASOURCE y OPENROWSET puede especificar un nombre de tabla, pero no una consulta de paso a través. Para obtener más información, vea [OPENDATASOURCE &#40; Transact-SQL &#41; ](../../t-sql/functions/opendatasource-transact-sql.md) y [OPENROWSET &#40; Transact-SQL &#41; ](../../t-sql/functions/openrowset-transact-sql.md).  
+    -   Las tablas pueden ser locales o tablas de otros equipos que ejecuten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a los que se haga referencia mediante un nombre de cuatro partes o un nombre basado en OPENDATASOURCE u OPENROWSET. La sintaxis de OPENDATASOURCE y OPENROWSET puede especificar un nombre de tabla, pero no una consulta de paso a través. Para obtener más información, consulte [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md) y [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
   
          Si una o más tablas miembro son remotas, la vista se denomina vista con particiones distribuida y se aplican condiciones adicionales. Se describen más adelante en esta sección.  
   
@@ -300,9 +300,9 @@ FROM Tn;
   
     -   Las tablas miembro no pueden tener índices creados en columnas calculadas de la tabla.  
   
-    -   Las tablas miembro deben tener todas las restricciones de clave principal en el mismo número de columnas.  
+    -   Las tablas miembro deben tener todas las restricciones PRIMARY KEY en el mismo número de columnas.  
   
-    -   Todas las tablas miembro de la vista deben tener el mismo valor de relleno ANSI. Esto se puede establecer utilizando la **opciones de usuario** opción **sp_configure** o la instrucción SET.  
+    -   Todas las tablas miembro de la vista deben tener el mismo valor de relleno ANSI. Éste se establece mediante la opción **user options** de **sp_configure** o la instrucción SET.  
   
 ## <a name="conditions-for-modifying-data-in-partitioned-views"></a>Condiciones para la modificación de datos en vistas con particiones  
  Las siguientes restricciones se aplican a instrucciones que modifican datos en vistas con particiones:  
@@ -315,13 +315,13 @@ FROM Tn;
   
 -   Las columnas de la vista que sean columnas de identidad en una o varias tablas miembro no se pueden modificar mediante una instrucción INSERT o UPDATE.  
   
--   Si una de las tablas miembro contiene una **timestamp** columna, no se pueden modificar los datos mediante una instrucción INSERT o UPDATE.  
+-   Si una de las tablas miembro contiene una columna **timestamp**, los datos no se pueden modificar mediante una instrucción INSERT o UPDATE.  
   
 -   Si una de las tablas miembro contiene un desencadenador o una restricción ON UPDATE CASCADE/SET NULL/SET DEFAULT u ON DELETE CASCADE/SET NULL/SET DEFAULT, no se puede modificar la vista.  
   
 -   Las acciones INSERT, UPDATE y DELETE en una vista con particiones no están permitidas si hay una autocombinación con la misma vista o con cualquiera de las tablas miembro de la instrucción.  
   
--   Importación masiva de datos en una vista con particiones no es compatible con **bcp** las o BULK INSERT e INSERT... SELECT * FROM OPENROWSET(BULK...). Sin embargo, puede insertar varias filas en una vista con particiones mediante el uso de la [insertar](../../t-sql/statements/insert-transact-sql.md) instrucción.  
+-   La importación masiva de datos a una vista con particiones no es compatible con la utilidad **bcp** ni con las instrucciones BULK INSERT e INSERT... SELECT * FROM OPENROWSET(BULK...). Sin embargo, puede insertar varias filas en una vista con particiones utilizando la instrucción [INSERT](../../t-sql/statements/insert-transact-sql.md).  
   
     > [!NOTE]  
     >  Para actualizar una vista con particiones, el usuario debe tener permisos INSERT, UPDATE y DELETE en las tablas miembro.  
@@ -329,13 +329,13 @@ FROM Tn;
 ## <a name="additional-conditions-for-distributed-partitioned-views"></a>Condiciones adicionales de las vistas con particiones distribuidas  
  A las vistas con particiones distribuidas (cuando una o varias tablas miembro son remotas) se les aplican las siguientes condiciones adicionales:  
   
--   Se iniciará una transacción distribuida para garantizar la atomicidad en todos los nodos que se ve afectados por la actualización.  
+-   Se iniciará una transacción distribuida para garantizar la atomicidad en todos los nodos a los que afecta la actualización.  
   
 -   La opción XACT_ABORT SET debe establecerse en ON para que las instrucciones INSERT, UPDATE o DELETE funcionen.  
   
--   Las columnas de tablas remotas de tipo **smallmoney** que se hace referencia en una vista con particiones se asignan como **dinero**. Por lo tanto, las columnas correspondientes (en la misma posición ordinal en la lista de selección) de las tablas locales también deben ser de tipo **dinero**.  
+-   Cualquier columna de las tablas remotas de tipo **smallmoney** a la que se haga referencia en una vista con particiones se asignará como **money**. Por lo tanto, las columnas correspondientes (en la misma posición ordinal de la lista de selección) de las tablas locales deben ser también de tipo **money**.  
   
--   En el nivel de compatibilidad 110 y posterior, las columnas de tablas remotas de tipo **smalldatetime** que se hace referencia en una vista con particiones se asignan como **smalldatetime**. Las columnas correspondientes (en la misma posición ordinal en la lista de selección) de las tablas locales deben ser **smalldatetime**. Se trata de un cambio de comportamiento de versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en que las columnas de tablas remotas de tipo **smalldatetime** que se hace referencia en una vista con particiones se asignan como **datetime** y las columnas correspondientes de las tablas locales deben ser de tipo **datetime**. Para obtener más información, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+-   En el nivel 110 y posteriores de compatibilidad de bases de datos, cualquier columna de las tablas remotas de tipo **smalldatetime** a la que se haga referencia en una vista con particiones se asignará como **smalldatetime**. Las columnas correspondientes (en la misma posición ordinal en la lista de selección) de las tablas locales deben ser **smalldatetime**. Esto representa un cambio de comportamiento con respecto a versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en las que las columnas de tablas remotas de tipo **smalldatetime** a las que se hace referencia en una vista con particiones se asignan como **datetime** y las columnas correspondientes de las tablas locales deben ser de tipo **datetime**. Para obtener más información, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 -   Ningún servidor vinculado de la vista con particiones puede ser un servidor vinculado en bucle de retorno. Se trata de un servidor vinculado que apunta a la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -346,18 +346,18 @@ FROM Tn;
 ## <a name="considerations-for-replication"></a>Consideraciones acerca de la replicación  
  Para crear vistas con particiones en tablas miembro implicadas en la replicación, deben tenerse en cuenta las consideraciones siguientes:  
   
--   Si las tablas subyacentes intervienen en la replicación de mezcla o la replicación transaccional con suscripciones de actualización, el **uniqueidentifier** columna también debe incluirse en la lista de selección.  
+-   Si las tablas subyacentes intervienen en la replicación de mezcla o en la replicación transaccional con suscripciones de actualización, la columna **uniqueidentifier** también debe incluirse en la lista de selección.  
   
-     Las acciones INSERT en la vista con particiones deben proporcionar un valor NEWID() para la **uniqueidentifier** columna. Las acciones UPDATE en el **uniqueidentifier** columna debe proporcionar NEWID() como el valor porque no se puede usar la palabra clave DEFAULT.  
+     Las acciones INSERT que se ejecutan en la vista con particiones deben proporcionar un valor NEWID() para la columna **uniqueidentifier**. Las acciones UPDATE en la columna **uniqueidentifier** deben proporcionar NEWID() como valor, puesto que no se puede usar la palabra clave DEFAULT.  
   
 -   La replicación de actualizaciones que se realiza mediante la vista es igual que cuando las tablas se replican en dos bases de datos distintas: agentes de replicación diferentes dan servicio a las tablas y no se garantiza el orden de las actualizaciones.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Se necesita el permiso CREATE VIEW en la base de datos y el permiso ALTER en el esquema en que se crea la vista.  
   
 ## <a name="examples"></a>Ejemplos  
 
-Los ejemplos siguientes usan la base de datos de 2012 de AdventureWorks o AdventureWorksDW.  
+Para los siguientes ejemplos se usan las bases de datos AdventureWorks 2012 o AdventureWorksDW.  
 
 ### <a name="a-using-a-simple-create-view"></a>A. Usar una instrucción CREATE VIEW sencilla  
  En el ejemplo siguiente se crea una vista mediante una instrucción `SELECT` sencilla. Una vista sencilla resulta útil cuando se consulta con frecuencia una combinación de columnas. Los datos de esta vista provienen de las tablas `HumanResources.Employee` y `Person.Person` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Los datos proporcionan el nombre e información sobre la fecha de contratación de los empleados de [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. Esta vista puede crearse para la persona responsable del seguimiento de los aniversarios de trabajo pero sin concederle acceso a todos los datos de estas tablas.  
@@ -375,7 +375,7 @@ GO
 ### <a name="b-using-with-encryption"></a>B. Usar WITH ENCRYPTION  
  En el siguiente ejemplo se utiliza la opción `WITH ENCRYPTION` y se muestran columnas calculadas, columnas con el nombre cambiado y varias columnas.  
   
-**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Se aplica a**: desde[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y a [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ```  
 CREATE VIEW Purchasing.PurchaseOrderReject  
@@ -469,10 +469,10 @@ SELECT supplyID, supplier
   FROM dbo.SUPPLY4;  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="f-creating-a-simple-view"></a>F. Crear una vista sencilla  
- En el ejemplo siguiente se crea una vista, seleccione solo algunas de las columnas en la tabla de origen.  
+### <a name="f-creating-a-simple-view"></a>F. Crear una vista simple  
+ En el ejemplo siguiente se crea una vista seleccionando solo algunas de las columnas de la tabla de origen.  
   
 ```  
 CREATE VIEW DimEmployeeBirthDates AS  
@@ -481,7 +481,7 @@ FROM DimEmployee;
 ```  
   
 ### <a name="g-create-a-view-by-joining-two-tables"></a>G. Crear una vista mediante la combinación de dos tablas  
- En el ejemplo siguiente se crea una vista mediante el uso de un `SELECT` instrucción con un `OUTER JOIN`. Los resultados de la consulta de combinación de rellenan la vista.  
+ En el ejemplo siguiente se crea una vista mediante una instrucción `SELECT` con `OUTER JOIN`. Los resultados de la consulta de combinación rellenan la vista.  
   
 ```  
 CREATE VIEW view1  
@@ -493,20 +493,20 @@ LEFT OUTER JOIN DimSalesTerritory AS dst
 ON (fis.SalesTerritoryKey=dst.SalesTerritoryKey);  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/alter-view-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [Eliminar vista &#40; Transact-SQL &#41;](../../t-sql/statements/drop-view-transact-sql.md)   
+ [DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [Crear un procedimiento almacenado](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
- [sp_refreshview &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
+ [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [Sys.Views &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)   
+ [sys.views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

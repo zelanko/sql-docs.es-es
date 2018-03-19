@@ -1,5 +1,5 @@
 ---
-title: ROLLBACK WORK (Transact-SQL) | Documentos de Microsoft
+title: ROLLBACK WORK (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -52,15 +52,15 @@ ROLLBACK [ WORK ]
 [ ; ]  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta instrucción funciona de forma idéntica a ROLLBACK TRANSACTION, con la diferencia de que ROLLBACK TRANSACTION acepta nombres de transacción definidos por el usuario. Se especifique o no la palabra clave opcional WORK, esta sintaxis de ROLLBACK es compatible con ISO.  
   
- Cuando se anidan transacciones, ROLLBACK WORK siempre revierte a la instrucción BEGIN TRANSACTION más externa y disminuye el @@TRANCOUNT función del sistema en 0.  
+ Al anidar transacciones, ROLLBACK WORK siempre revierte las transacciones hasta la instrucción BEGIN TRANSACTION más externa y disminuye la función del sistema @@TRANCOUNT a 0.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Los permisos ROLLBACK WORK corresponden, de forma predeterminada, a cualquier usuario válido.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   

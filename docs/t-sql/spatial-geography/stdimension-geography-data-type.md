@@ -1,5 +1,5 @@
 ---
-title: STDimension (tipo de datos geography) | Documentos de Microsoft
+title: STDimension (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdimension-geography-data-type"></a>STDimension (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve la dimensión máxima de un **geography** instancia.  
+  Devuelve la dimensión máxima de una instancia de **geography**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **int**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
  Tipo de valor devuelto de CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Comentarios  
- STDimension() devuelve -1 si la **geography** instancia está vacía.  
+## <a name="remarks"></a>Notas  
+ STDimension() devuelve 1 si una instancia de **geography** está vacía.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se utiliza `STDimension()` para crear una variable de tabla que contenga `geography` instancias e inserta una `Point`, `LineString`y un `Polygon`.  
+ En el siguiente ejemplo se usa `STDimension()` para crear una variable de tabla que contenga instancias de `geography` y se inserta una entrada `Point`, una entrada `LineString` y una entrada `Polygon`.  
   
 ```  
 DECLARE @temp table ([name] varchar(10), [geom] geography);  
@@ -65,15 +65,15 @@ SELECT [name], [geom].STDimension() as [dim]
 FROM @temp;  
 ```  
   
- En el ejemplo, a continuación, devuelve las dimensiones de cada `geography`instancia.  
+ Después, el ejemplo devuelve las dimensiones de cada instancia de `geography`.  
   
-|name|dim|  
+|NAME|dim|  
 |----------|---------|  
 |Punto|0|  
 |LineString|1|  
-|Polígono|2|  
+|Polygon|2|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de OGC en instancias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

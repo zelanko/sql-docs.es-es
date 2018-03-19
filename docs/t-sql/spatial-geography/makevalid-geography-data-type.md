@@ -1,5 +1,5 @@
 ---
-title: MakeValid (tipo de datos geography) | Documentos de Microsoft
+title: MakeValid (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,11 +31,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="makevalid-geography-data-type"></a>MakeValid (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Convierte un **geography** instancia que no es válido en válido **geography** instancia con un tipo de Open Geospatial Consortium (OGC) válido.  
+  Convierte una instancia de **geography** que no es válida en una instancia de **geography** válida con un tipo de Open Geospatial Consortium (OGC) válido.  
   
  Si un objeto de entrada devuelve False para STIsValid(), `MakeValid()` convierte la instancia que no es válida en una instancia válida.  
   
- Admite el método de tipo de este datos geography **FullGlobe** instancias o instancias espaciales mayores que un hemisferio.  
+ Este método del tipo de datos geography admite instancias de **FullGlobe** o instancias espaciales mayores que un hemisferio.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,17 +45,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geography**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Comentarios  
- Este método puede cambiar el tipo de la **geography** instancia. Además, los puntos de un **geography** instancia puede desplazarse ligeramente. Pueden cambiar los resultados de algunos métodos como NumPoint().  
+## <a name="remarks"></a>Notas  
+ Este método puede cambiar el tipo de la instancia de **geography**. Además, los puntos de una instancia de **geography** pueden desplazarse ligeramente. Los resultados de algunos métodos, como NumPoint(), pueden cambiar.  
   
- En casos donde la instancia espacial no válida se corta con el Ecuador y tiene un EnvelopeAngle() = 180, un **FullGlobe** se devolverá la instancia. El `MakeValid()` **geography** método de tipo de datos hará lo posible pare de devolver instancias válidas, pero no se garantiza que los resultados precisos ni exactos.  
+ En los casos en los que la instancia espacial que no es válida corta en intersección con el ecuador y el valor de EnvelopeAngle() es 180, se devolverá una instancia de **FullGlobe**. El método `MakeValid()` del tipo de datos **geography** hará todo lo posible pare devolver instancias válidas, pero no está garantizado que los resultados sean precisos ni exactos.  
   
 > [!NOTE]  
->  Los objetos no válidos se pueden almacenar en la base de datos. Los métodos que se pueden ejecutar en instancias no válidas (aquellas instancias en las que STIsValid() devuelven False) son métodos que comprueban la validez o permiten la exportación: STIsValid(), MakeValid(), STAsText(), STAsBinary(), ToString(), AsTextZM() y AsGml().  
+>  Los objetos no válidos se pueden almacenar en la base de datos. Los métodos que se pueden ejecutar en instancias no válidas (aquellas en las que STIsValid() devuelve False) son métodos que comprueban la validez o permiten la exportación: STIsValid(), MakeValid(), STAsText(), STAsBinary(), ToString(), AsTextZM() y AsGml().  
   
  Este método no es preciso.  
   
@@ -87,7 +87,7 @@ SELECT @g.ToString();
 MULTILINESTRING ((0 2, 1 1, 2 2), (1 1, 1 0))  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [STIsValid &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
  [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   

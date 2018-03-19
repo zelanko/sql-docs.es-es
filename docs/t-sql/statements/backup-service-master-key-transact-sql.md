@@ -1,5 +1,5 @@
 ---
-title: CLAVE maestra de servicio de copia de seguridad (Transact-SQL) | Documentos de Microsoft
+title: BACKUP SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -54,16 +54,16 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- ARCHIVO **='***ruta_de_acceso_al_archivo***'**  
+ FILE **='***path_to_file***'**  
  Especifica la ruta de acceso completa, incluido el nombre de archivo, al archivo al que se exportará la clave maestra de servicio. Puede ser una ruta local o una ruta UNC a una ubicación de red.  
   
- CONTRASEÑA **='***contraseña***'**  
+ PASSWORD **='***password***'**  
  Es la contraseña utilizada para cifrar la clave maestra de servicio en el archivo de copia de seguridad. Esta contraseña se somete a comprobaciones de complejidad. Para obtener más información, vea [Password Policy](../../relational-databases/security/password-policy.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Debe realizar una copia de seguridad de la clave maestra de servicio y almacenarla en una ubicación segura y fuera de las instalaciones. Crear esta copia de seguridad debe ser una de las primeras acciones de administración que se realicen en el servidor.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL SERVER en el servidor.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -73,8 +73,8 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
 BACKUP SERVICE MASTER KEY TO FILE = 'c:\temp_backups\keys\service_master_key' ENCRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Modificar clave maestra de servicio &#40; Transact-SQL &#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
  [RESTORE SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-service-master-key-transact-sql.md)  
   
   

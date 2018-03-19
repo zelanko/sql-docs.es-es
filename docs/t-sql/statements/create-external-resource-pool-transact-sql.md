@@ -1,5 +1,5 @@
 ---
-title: Crear grupo de recursos externos (Transact-SQL) | Documentos de Microsoft
+title: CREATE EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/13/2017
 ms.prod: sql-non-specified
@@ -35,18 +35,18 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="create-external-resource-pool-transact-sql"></a>Crear grupo de recursos externos (Transact-SQL)
+# <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] y [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] y [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-Crea un grupo externo que se usa para definir los recursos para los procesos externos. Un grupo de recursos representa un subconjunto de los recursos físicos (memoria y CPU) de una instancia del motor de base de datos. El Regulador de recursos permite que un administrador de bases de datos distribuya los recursos del servidor entre los grupos de recursos, hasta un máximo de 64 grupos.
+Crea un grupo externo que sirve para definir los recursos de los procesos externos. Un grupo de recursos de servidor representa un subconjunto de los recursos físicos (memoria y CPU) de una instancia del motor de base de datos. El Regulador de recursos permite que un administrador de bases de datos distribuya los recursos del servidor entre los grupos de recursos, hasta un máximo de 64 grupos.
 
-+ Para [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] en [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], el grupo externo rige `rterm.exe`, `BxlServer.exe`y otros procesos generados por ellos.
++ En [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] en [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], el grupo externo rige `rterm.exe`, `BxlServer.exe` y otros procesos generados por ellos.
 
-+ Para [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] en [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], el grupo externo rige los procesos de R para SQL Server 2016, así como `python.exe`, `BxlServer.exe`y otros procesos generados por ellos.
++ En [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] en [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], el grupo externo rige los procesos de R que aparecen en SQL Server 2016, así como `python.exe`, `BxlServer.exe` y otros procesos generados por ellos.
 
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -73,38 +73,38 @@ CREATE EXTERNAL RESOURCE POOL pool_name
 ## <a name="arguments"></a>Argumentos
 
 *pool_name*  
-Es el nombre definido por el usuario para el grupo de recursos externos. *pool_name* es alfanumérico, puede tener hasta 128 caracteres, deben ser únicos dentro de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y debe cumplir las reglas de [identificadores](../../relational-databases/databases/database-identifiers.md).  
+Es el nombre definido por el usuario para identificar el grupo de recursos externos. *pool_name* es alfanumérico, puede tener hasta 128 caracteres, debe ser único dentro de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y debe cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
 
-MAX_CPU_PERCENT =*valor*  
-Especifica el medio CPU ancho de banda máximo que pueden recibir todas las solicitudes del grupo de recursos externos cuando hay contención de CPU. *valor* es un entero con un valor predeterminado de 100. El intervalo permitido para *valor* está comprendido entre 1 y 100.
+MAX_CPU_PERCENT =*value*  
+Especifica el promedio máximo de ancho de banda de CPU que pueden recibir todas las solicitudes en el grupo de recursos externo cuando haya contención de CPU. *value* es un entero con un valor predeterminado de 100. El intervalo permitido para *value* es de 1 a 100.
 
-AFINIDAD {CPU = AUTO | ( \<CPU_range_spec >) | NUMANODE = (\<NUMA_node_range_spec >)} asociar el grupo de recursos externos a una CPU específica. El valor predeterminado es AUTO.
+AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)} Adjunte el grupo de recursos externos a CPU concretas. El valor predeterminado es AUTO.
 
-AFINIDAD de CPU = **(** \<CPU_range_spec > **)** asigna el grupo de recursos externos a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU identificado por la CPU_IDs determinado.
+AFFINITY CPU = **(** \<CPU_range_spec> **)** asigna el grupo de recursos externos a las CPU de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificadas por los CPU_ID dados.
 
-Cuando usa AFFINITY NUMANODE = **(** \<NUMA_node_range_spec > **)**, se establece la afinidad el grupo de recursos externos a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU físicas correspondientes a la determinada NUMA nodo o un rango de nodos. 
+Cuando se usa AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)**, se establece una afinidad entre el grupo de recursos externos y las CPU físicas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondientes al nodo o al intervalo de nodos NUMA especificado. 
 
-MAX_MEMORY_PERCENT =*valor*  
-Especifica la memoria total del servidor que puede utilizarse en las solicitudes en este grupo de recursos externos. *valor* es un entero con un valor predeterminado de 100. El intervalo permitido para *valor* está comprendido entre 1 y 100.
+MAX_MEMORY_PERCENT =*value*  
+Especifica la memoria total del servidor que puede ser usada por las solicitudes en este grupo de recursos externos. *value* es un entero con un valor predeterminado de 100. El intervalo permitido para *value* es de 1 a 100.
 
-MAX_PROCESSES =*valor*  
-Especifica el número máximo de procesos permitidos para el grupo de recursos externos. Especifique 0 para establecer un umbral ilimitado para el grupo, que está enlazado a partir de ahí por los recursos del equipo. El valor predeterminado es 0.
+MAX_PROCESSES =*value*  
+Especifica el número máximo de procesos permitidos para el grupo de recursos externos. Especifique 0 para establecer un umbral ilimitado para el grupo, que estará enlazado solamente por recursos del equipo. El valor predeterminado es 0.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-El [!INCLUDE[ssDE](../../includes/ssde-md.md)] implementa el grupo de recursos al ejecutar el [ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md) instrucción.
+El [!INCLUDE[ssDE](../../includes/ssde-md.md)] implementa el grupo de recursos al ejecutar la instrucción [ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md).
 
- Para obtener información general acerca de los grupos de recursos, consulte [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md), [sys.resource_governor_external_resource_pools &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md), y [sys.dm_resource_governor_external_resource_pool_affinity &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md).
+ Para obtener información general sobre los grupos de recursos, vea [Grupo de recursos de servidor del regulador de recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md), [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md) y [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md).
 
-Para obtener información específica a la administración de grupos de recursos externos utilizados para el aprendizaje automático, consulte [regulador de recursos para el aprendizaje automático en SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md). 
+Para obtener información específica sobre cómo administrar los grupos de recursos externos usados en el aprendizaje automático, vea [Resource governance for machine learning in SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md) (Gobierno de recursos para aprendizaje automático en SQL Server). 
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Permisos
 
-Requiere `CONTROL SERVER` permiso.
+Requiere el permiso `CONTROL SERVER`.
 
 ## <a name="examples"></a>Ejemplos
 
-La instrucción siguiente define un grupo externo que restringe el uso de CPU al 75 por ciento y la memoria máxima al 30 por ciento de la memoria disponible en el equipo.
+Con la siguiente instrucción se define un grupo externo que restringe el uso de CPU al 75 por ciento y a una memoria máxima del 30 por ciento de la memoria disponible en el equipo.
 
 ```sql
 CREATE EXTERNAL RESOURCE POOL ep_1
@@ -120,13 +120,13 @@ GO
   
 ## <a name="see-also"></a>Vea también
 
- [Opción de configuración de servidor scripts externos habilitados](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
+ [Opción de configuración del servidor external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
  [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)   
- [Modificar grupo de recursos externo &#40; Transact-SQL &#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)   
+ [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)   
  [DROP EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)   
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [Grupo de recursos de servidor del regulador de recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)   
- [Sys.dm_resource_governor_external_resource_pool_affinity &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)   
+ [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md) 

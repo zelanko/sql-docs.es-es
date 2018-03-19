@@ -1,5 +1,5 @@
 ---
-title: STNumPoints (tipo de datos geometry) | Documentos de Microsoft
+title: STNumPoints (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumpoints-geometry-data-type"></a>STNumPoints (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Devuelve la suma del número de puntos de cada una de las figuras de una **geometry** instancia.  
+  Devuelve la suma del número de puntos de cada una de las figuras de una instancia de **geometry**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **int**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
  Tipo de valor devuelto de CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Comentarios  
- Este método cuenta los puntos de la descripción de un **geometry** instancia. Los puntos duplicados se cuentan. Si esta instancia es un **colección** tipo, este método devuelve la suma de los puntos de cada uno de sus elementos.  
+## <a name="remarks"></a>Notas  
+ Este método cuenta los puntos de la descripción de una instancia de **geometry**. Los puntos duplicados se cuentan. Si esta instancia es de tipo **collection**, este método devuelve la suma de los puntos de cada uno de sus elementos.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea una instancia de `LineString` y se utiliza `STNumPoints()` para determinar el número de puntos que se utilizaron en la descripción de la instancia.  
@@ -60,7 +60,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
 SELECT @g.STNumPoints();  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: GetDescendant (motor de base de datos) | Documentos de Microsoft
+title: GetDescendant (motor de base de datos) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -49,18 +49,18 @@ SqlHierarchyId GetDescendant ( SqlHierarchyId child1 , SqlHierarchyId child2 )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-*Child1*  
-NULL o **hierarchyid** de un elemento secundario del nodo actual.
+*child1*  
+NULL o el **hierarchyid** de un nodo secundario del nodo actual.
   
-*Child2*  
-NULL o **hierarchyid** de un elemento secundario del nodo actual.
+*child2*  
+NULL o el **hierarchyid** de un nodo secundario del nodo actual.
   
 ## <a name="return-types"></a>Tipos devueltos  
-**Tipo: hierarchyid devuelto de SQL Server**
+**Tipo de valor devuelto de SQL Server: hierarchyid**
   
-**Tipo: SqlHierarchyId devuelto de CLR**
+**Tipo devuelto de CLR: SqlHierarchyId**
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 Devuelve un nodo secundario que es un descendiente del nodo primario.
 -   Si el elemento primario es NULL, devolverá NULL.  
 -   Si el elemento primario no es NULL, y child1 y child2 son NULL, devuelve un elemento secundario del elemento primario.  
@@ -71,12 +71,12 @@ Devuelve un nodo secundario que es un descendiente del nodo primario.
 -   Si child2 no es NULL ni es un elemento secundario del elemento primario, se producirá una excepción.  
 -   Si child1 >= child2, se producirá una excepción.  
   
-GetDescendant es determinista. Por lo tanto, si se llama a GetDescendant con las mismas entradas, siempre se producirá el mismo resultado. Sin embargo, la identidad exacta del nodo secundario producido puede variar en función de su relación con los demás nodos, como se muestra en el ejemplo C.
+GetDescendant es determinista. Por lo tanto, si se llama a GetDescendant con las mismas entradas, siempre producirá la misma salida. Sin embargo, la identidad exacta del nodo secundario producido puede variar en función de su relación con los demás nodos, como se muestra en el ejemplo C.
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-inserting-a-row-as-the-least-descendant-node"></a>A. Insertar una fila como el nodo menos descendiente  
-Se contrata a un nuevo empleado, que es subordinado de un empleado ya existente en el nodo `/3/1/`. Ejecute el siguiente código para insertar la nueva fila mediante el método GetDescendant sin argumentos para especificar el nuevo nodo de filas como `/3/1/1/`:
+Se contrata a un nuevo empleado, que es subordinado de un empleado ya existente en el nodo `/3/1/`. Ejecute el siguiente código para insertar la nueva fila usando el método GetDescendant sin argumentos para especificar el nodo de la nueva fila como `/3/1/1/`:
   
 ```sql
 DECLARE @Manager hierarchyid;   
@@ -89,7 +89,7 @@ VALUES
 ```  
   
 ### <a name="b-inserting-a-row-as-a-greater-descendant-node"></a>B. Insertar una fila como un nodo más descendiente  
-Se contrata a otro empleado nuevo, informes del mismo jefe que en el ejemplo A. ejecute el siguiente código para insertar la nueva fila mediante el método GetDescendant mediante el argumento Child1 para especificar que el nodo de la nueva fila vendrá a continuación el nodo del ejemplo A , pase a ser `/3/1/2/`:
+Se contrata a otro empleado nuevo, que es subordinado del mismo jefe que en el ejemplo A. Ejecute el siguiente código para insertar la fila nueva con el método GetDescendant, usando el argumento child1 para especificar que el nodo de la nueva fila vendrá después del nodo del ejemplo A, convirtiéndose en `/3/1/2/`:
   
 ```sql
 DECLARE @Manager hierarchyid, @Child1 hierarchyid;  
@@ -104,7 +104,7 @@ VALUES
 ```  
   
 ### <a name="c-inserting-a-row-between-two-existing-nodes"></a>C. Insertar una fila entre dos nodos existentes  
-Se contrata a un tercer empleado, subordinado del mismo jefe como en el ejemplo A. Este ejemplo inserta la nueva fila a un nodo mayor que el `FirstNewEmployee` en el ejemplo A, y menor que el `SecondNewEmployee` del ejemplo B. ejecute el siguiente código mediante el método GetDescendant. Use los argumentos child1 y child2 para especificar que el nodo de la nueva fila se convertirá en el nodo `/3/1/1.1/`:
+Se contrata a un tercer empleado, subordinado del mismo jefe que en el ejemplo A. Este ejemplo inserta la nueva fila en un nodo mayor que el nodo `FirstNewEmployee` del ejemplo A y menor que el nodo `SecondNewEmployee` del ejemplo B. Ejecute el siguiente código con el método GetDescendant. Use los argumentos child1 y child2 para especificar que el nodo de la nueva fila se convertirá en el nodo `/3/1/1.1/`:
   
 ```sql
 DECLARE @Manager hierarchyid, @Child1 hierarchyid, @Child2 hierarchyid;  
@@ -120,7 +120,7 @@ VALUES
   
 ```  
   
-Después de completar los ejemplos A, B y C, los nodos agregados a la tabla será equipos del mismo nivel con el siguiente **hierarchyid** valores:
+Después de completar los ejemplos A, B y C, los nodos agregados a la tabla estarán en el mismo nivel que los siguientes valores **hierarchyid**:
   
 `/3/1/1/`
   
@@ -131,7 +131,7 @@ Después de completar los ejemplos A, B y C, los nodos agregados a la tabla ser�
 El nodo `/3/1/1.1/` es mayor que el nodo `/3/1/1/`, pero está en el mismo nivel de la jerarquía.
   
 ### <a name="d-scalar-examples"></a>D. Ejemplos escalares  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]admite inserciones y eliminaciones de cualquier arbitrarias **hierarchyid** nodos. Mediante el uso de GetDescendant(), siempre es posible generar un nodo entre dos **hierarchyid** nodos. Ejecute el código siguiente para generar nodos de ejemplo mediante `GetDescendant`:
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite inserciones y eliminaciones arbitrarias de cualquier nodo **hierarchyid**. Si usa GetDescendant(), siempre podrá generar un nodo entre dos nodos **hierarchyid** cualesquiera. Ejecute el código siguiente para generar nodos de ejemplo mediante `GetDescendant`:
   
 ```sql
 DECLARE @h hierarchyid = hierarchyid::GetRoot();  

@@ -1,5 +1,5 @@
 ---
-title: '@@SPID (Transact-SQL) | Documentos de Microsoft'
+title: '@@SPID (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -53,8 +53,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipos devueltos  
  **smallint**  
   
-## <a name="remarks"></a>Comentarios  
- @@SPID puede usarse para identificar el proceso de usuario actual en la salida de **sp_who**.  
+## <a name="remarks"></a>Notas  
+ @@SPID se puede usar para identificar el proceso de usuario actual en la salida de **sp_who**.  
   
 ## <a name="examples"></a>Ejemplos  
  Este ejemplo devuelve el Id. de sesión, el nombre de inicio de sesión y el nombre de usuario del proceso de usuario actual.  
@@ -71,16 +71,16 @@ ID     Login Name                     User Name
 54     SEATTLE\joanna                 dbo                             
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Este ejemplo devuelve el [!INCLUDE[ssDW](../../includes/ssdw-md.md)] Id. de sesión, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlar el Id. de sesión de nodo, el nombre de inicio de sesión y el nombre de usuario para el proceso de usuario actual.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ Este ejemplo devuelve el identificador de sesión de [!INCLUDE[ssDW](../../includes/ssdw-md.md)], el identificador de sesión del nodo de control de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el nombre de inicio de sesión y el nombre de usuario del proceso de usuario actual.  
   
 ```  
 SELECT SESSION_ID() AS ID, @@SPID AS 'Control ID', SYSTEM_USER AS 'Login Name', USER AS 'User Name';  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Funciones de configuración](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [sp_lock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   
   

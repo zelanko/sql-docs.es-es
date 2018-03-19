@@ -53,7 +53,7 @@ EXISTS ( subquery )
   
 ## <a name="arguments"></a>Argumentos  
  *subquery*  
- Es una instrucción SELECT restringida. No se permite la palabra clave INTO. Para obtener más información, consulte la información acerca de las subconsultas en [Seleccionar &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
+ Es una instrucción SELECT restringida. No se permite la palabra clave INTO. Para más información, vea todo lo relativo a las subconsultas en [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="result-types"></a>Tipos de resultado  
  **Boolean**  
@@ -119,7 +119,7 @@ Willis                                             Johnson
  ```  
   
 ### <a name="c-comparing-queries-by-using-exists-and--any"></a>C. Comparar consultas mediante EXISTS y = ANY  
- En el ejemplo siguiente se muestran dos consultas para buscar tiendas cuyo nombre sea el mismo que el de un proveedor. La primera consulta utiliza `EXISTS` y el segundo usa `=``ANY`.  
+ En el ejemplo siguiente se muestran dos consultas para buscar tiendas cuyo nombre sea el mismo que el de un proveedor. En la primera consulta se usa `EXISTS` y en la segunda, `=``ANY`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -302,10 +302,10 @@ Peng                           Wu                             Quality Assurance 
 (91 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="f-using-exists"></a>F. Utilizar EXISTS  
- En el ejemplo siguiente se identifica si alguno filas en el `ProspectiveBuyer` tabla podría ser coincidencias en las filas de la `DimCustomer` tabla. La consulta devolverá filas solo cuando tanto el `LastName` y `BirthDate` valores en la búsqueda de coincidencias de dos tablas.  
+### <a name="f-using-exists"></a>F. Usar EXISTS  
+ En el siguiente ejemplo se identifica si alguna fila de la tabla `ProspectiveBuyer` podría coincidir con alguna fila de la tabla `DimCustomer`. La consulta devolverá filas solo cuando los valores tanto de `LastName` como de `BirthDate` en ambas tablas coincidan.  
   
 ```  
 -- Uses AdventureWorks  
@@ -319,7 +319,7 @@ WHERE EXISTS
 ```  
   
 ### <a name="g-using-not-exists"></a>G. Utilizar NOT EXISTS  
- NOT EXISTS funciona el efecto contrario como EXISTS. La cláusula WHERE de NOT EXISTS se cumple si la subconsulta no devuelve ninguna fila. En el ejemplo siguiente se busca las filas de la `DimCustomer` tabla en la que el `LastName` y `BirthDate` no coincide con ninguna entrada en el `ProspectiveBuyers` tabla.  
+ NOT EXISTS funciona de forma contraria a EXISTS. La cláusula WHERE de NOT EXISTS se cumple si la subconsulta no devuelve ninguna fila. En el siguiente ejemplo se hallan las filas de la tabla `DimCustomer` en las que ni `LastName` ni `BirthDate` coinciden con los valores de ninguna de las entradas de la tabla `ProspectiveBuyers`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -332,8 +332,8 @@ WHERE NOT EXISTS
     WHERE (a.LastName = b.LastName) AND (a.BirthDate = b.BirthDate));  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  (Expressions [Transact-SQL])  
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   

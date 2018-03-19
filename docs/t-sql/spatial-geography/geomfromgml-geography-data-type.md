@@ -1,5 +1,5 @@
 ---
-title: GeomFromGML (tipo de datos geography) | Documentos de Microsoft
+title: GeomFromGML (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -35,11 +35,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Construye un **geography** instancia dada una representación en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subconjunto del lenguaje de marcado de geografía (GML).
+Crea una instancia de **geography** dada una representación en el subconjunto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del lenguaje de marcado de geografía (GML).
   
-Para obtener más información sobre GML, consulte las siguientes especificaciones de Open Geospatial Consortium: [especificaciones de OGC, lenguaje de marcado de geografía](http://go.microsoft.com/fwlink/?LinkId=93629)
+Para obtener más información sobre GML, vea las siguientes especificaciones de Open Geospatial Consortium: [Especificaciones de OGC, Lenguaje de marcado de geografía](http://go.microsoft.com/fwlink/?LinkId=93629)
   
-Esto **geography** admite el método de tipo de datos **FullGlobe** instancias o instancias espaciales mayores que un hemisferio.
+Este método del tipo de datos **geography** admite instancias de **FullGlobe** o instancias espaciales mayores que un hemisferio.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -53,17 +53,17 @@ GeomFromGml ( GML_input, SRID )
  Es una entrada XML desde la que GML devolverá un valor.  
   
  *SRID*  
- Es un **int** expresión que representa el espaciales identificador de referencia (SRID) de la **geography** instancia para devolver.  
+ Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geography** que se va a devolver.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geography**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Comentarios  
- Este método produce una **FormatException** si la entrada no tiene el formato correcto.  
+## <a name="remarks"></a>Notas  
+ Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  
   
- Este método producirá **ArgumentException** si la entrada contiene borde opuesto.  
+ Este método producirá una excepción **ArgumentException** si la entrada contiene un borde opuesto.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se usa `GeomFromGml()` para crear una instancia de `geography`.  
@@ -86,7 +86,7 @@ SET @g = geography::GeomFromGml(@x, 4326);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de geografía estáticos extendidos](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

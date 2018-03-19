@@ -1,5 +1,5 @@
 ---
-title: '@@FETCH_STATUS (Transact-SQL) | Documentos de Microsoft'
+title: '@@FETCH_STATUS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -57,14 +57,14 @@ ms.lasthandoff: 11/21/2017
 |0|La instrucción FETCH se ejecutó correctamente.|  
 |-1|La instrucción FETCH no se ejecutó correctamente o la fila estaba más allá del conjunto de resultados.|  
 |-2|Falta la fila capturada.|
-|-9|El cursor no está realizando una operación de búsqueda.|  
+|-9|El cursor no está realizando ninguna operación de búsqueda.|  
   
-## <a name="remarks"></a>Comentarios  
- Dado que @@FETCH_STATUS es global para todos los cursores de una conexión, utilice @@FETCH_STATUS cuidadosamente. Después de ejecuta una instrucción FETCH, la comprobación de @@FETCH_STATUS deben tener lugar antes de que se ejecuta otra instrucción FETCH sobre otro cursor. El valor de @@FETCH_STATUS no está definido antes de producirse las capturas en la conexión.  
+## <a name="remarks"></a>Notas  
+ Como @@FETCH_STATUS es global para todos los cursores de una conexión, use @@FETCH_STATUS con cuidado. Después de ejecutar una instrucción FETCH, la prueba de @@FETCH_STATUS se debe realizar antes de que se ejecute otra instrucción FETCH sobre otro cursor. El valor de @@FETCH_STATUS no está definido antes de producirse las capturas en la conexión.  
   
- Por ejemplo, supongamos que un usuario ejecuta una instrucción FETCH sobre un cursor y a continuación llama a un procedimiento almacenado que abre y procesa los resultados de otro cursor. Cuando el control se devuelve desde el procedimiento almacenado llamado, @@FETCH_STATUS refleja la última captura ejecutada en el procedimiento almacenado, no la instrucción de captura que se ejecuta antes de que se llama al procedimiento almacenado.  
+ Por ejemplo, supongamos que un usuario ejecuta una instrucción FETCH sobre un cursor y a continuación llama a un procedimiento almacenado que abre y procesa los resultados de otro cursor. Cuando vuelve el control desde el procedimiento almacenado llamado, @@FETCH_STATUS reflejará la última instrucción FETCH ejecutada en el procedimiento almacenado, no la ejecutada antes de llamar al procedimiento.  
   
- Para recuperar el último estado de un cursor específico, consulte la **fetch_status** columna de la **sys.dm_exec_cursors** función de administración dinámica.  
+ Para recuperar el último estado capturado de un cursor específico, realice una consulta en la columna **fetch_status** de la función de administración dinámica **sys.dm_exec_cursors**.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se usa `@@FETCH_STATUS` para controlar las actividades del cursor en un bucle `WHILE`.  
@@ -84,8 +84,8 @@ DEALLOCATE Employee_Cursor;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Funciones del cursor &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)   
- [FETCH &#40; Transact-SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
   
   

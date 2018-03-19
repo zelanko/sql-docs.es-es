@@ -1,5 +1,5 @@
 ---
-title: "Actualizar estadísticas (Transact-SQL) | Documentos de Microsoft"
+title: UPDATE STATISTICS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/04/2018
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/05/2018
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Actualiza las estadísticas de optimización de consulta para una tabla o vista indizada. De forma predeterminada, el optimizador de consultas ya actualiza las estadísticas como requisito para mejorar el plan de consulta; en algunos casos puede mejorar el rendimiento de las consultas utilizando UPDATE STATISTICS o el procedimiento almacenado [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) para actualizar las estadísticas con más frecuencia que las actualizaciones de forma predeterminada.  
+  Actualiza las estadísticas de optimización de consulta para una tabla o vista indizada. De forma predeterminada, el optimizador de consultas ya actualiza las estadísticas como requisito para mejorar el plan de consulta; en algunos casos puede mejorar el rendimiento de las consultas usando UPDATE STATISTICS o el procedimiento almacenado [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) para actualizar las estadísticas con más frecuencia que la de las actualizaciones predeterminadas.  
   
  La actualización de las estadísticas asegura que las consultas se compilan con estadísticas actualizadas. Sin embargo, la actualización de las estadísticas hace que las consultas se vuelvan a compilar. Recomendamos no actualizar las estadísticas con demasiada frecuencia, porque hay que elegir el punto válido entre la mejora de los planes de consulta y el tiempo empleado en volver a compilar las consultas. Las compensaciones específicas dependen de su aplicación. UPDATE STATISTICS puede usar tempdb para ordenar la muestra de filas con fines de creación de estadísticas.  
   
@@ -94,51 +94,51 @@ UPDATE STATISTICS schema_name . ] table_name
   
 ## <a name="arguments"></a>Argumentos  
  *table_or_indexed_view_name*  
- Es el nombre de la tabla o vista indizada que contiene el objeto de estadísticas.  
+ Es el nombre de la tabla o la vista indizada que contiene el objeto de estadísticas.  
   
  *index_or_statistics_name*  
- Es el nombre del índice cuyas estadísticas se van a actualizar o el nombre de las estadísticas que actualizar. Si *index_or_statistics_name* no se especifica, el optimizador de consultas actualiza todas las estadísticas de la tabla o vista indizada. Esto incluye las estadísticas creadas usando la instrucción CREATE STATISTICS en las columnas, las estadísticas de columna única creadas cuando se usa AUTO_CREATE_STATISTICS y las estadísticas creadas para los índices.  
+ Es el nombre del índice cuyas estadísticas se van a actualizar o el nombre de las estadísticas que actualizar. Si no se especifica *index_or_statistics_name*, el optimizador de consultas actualiza todas las estadísticas para la tabla o la vista indizada. Esto incluye las estadísticas creadas usando la instrucción CREATE STATISTICS en las columnas, las estadísticas de columna única creadas cuando se usa AUTO_CREATE_STATISTICS y las estadísticas creadas para los índices.  
   
- Para obtener más información acerca de AUTO_CREATE_STATISTICS, vea [ALTER DATABASE SET Options &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md). Para ver todos los índices de una tabla o vista, puede usar [sp_helpindex](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
+ Para más información sobre AUTO_CREATE_STATISTICS, vea [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Para ver todos los índices para una tabla o vista, puede usar [sp_helpindex](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
   
  FULLSCAN  
  Para calcular las estadísticas, examine todas las filas de la tabla o la vista indizada. FULLSCAN y SAMPLE 100 PERCENT tienen los mismos resultados. FULLSCAN no se puede utilizar con la opción SAMPLE.  
   
- EJEMPLO *número* {% | FILAS}  
- Especifique el porcentaje aproximado o número de filas de la tabla o vista indizada que el optimizador de consultas usará al actualizar las estadísticas. En PERCENT, *número* puede estar comprendido entre 0 y 100 y para las filas, *número* puede oscilar entre 0 y el número total de filas. El porcentaje o número de filas real de los ejemplos del optimizador de consultas podría no coincidir con el porcentaje o el número especificado. Por ejemplo, el optimizador de consultas examina todas las filas en una página de datos.  
+ SAMPLE *number* { PERCENT | ROWS }  
+ Especifique el porcentaje aproximado o número de filas de la tabla o vista indizada que el optimizador de consultas usará al actualizar las estadísticas. En PERCENT, *number* puede tener un valor comprendido entre 0 y 100, mientras que en ROWS, *number* puede tener un valor comprendido entre 0 y el número total de filas. El porcentaje o número de filas real de los ejemplos del optimizador de consultas podría no coincidir con el porcentaje o el número especificado. Por ejemplo, el optimizador de consultas examina todas las filas en una página de datos.  
   
- SAMPLE es útil para casos especiales en el que el plan de consulta, basado en el muestreo predeterminado, no es óptimo. En la mayoría de las situaciones, no es necesario especificar SAMPLE porque el optimizador de consultas utiliza el muestreo y determina el tamaño de muestra estadísticamente significativo de forma predeterminada, tal y como se exige para crear planes de consulta de alta calidad. 
+ SAMPLE es útil para los casos especiales en los que el plan de consulta, basado en el muestreo predeterminado, no es óptimo. En la mayoría de las situaciones, no es necesario especificar SAMPLE porque el optimizador de consultas utiliza el muestreo y determina el tamaño de muestra estadísticamente significativo de forma predeterminada, tal y como se exige para crear planes de consulta de alta calidad. 
  
-A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], muestreo de datos para generar estadísticas se realiza en paralelo, cuando se usa el nivel de compatibilidad 130, para mejorar el rendimiento de recopilación de estadísticas. El optimizador de consultas usará las estadísticas de ejemplo paralelas, cada vez que un tamaño de la tabla supera un cierto umbral. 
+A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], el muestreo de datos para generar estadísticas se realiza en paralelo (en el nivel de compatibilidad 130) para mejorar el rendimiento de recopilación de estadísticas. El optimizador de consultas usará las estadísticas de ejemplo paralelas cada vez que un tamaño de tabla supere un determinado umbral. 
    
  SAMPLE no se puede utilizar con la opción FULLSCAN. Cuando no se especifica SAMPLE ni FULLSCAN, el optimizador de consultas utiliza los datos muestreados y calcula el tamaño de la muestra de forma predeterminada.  
   
  Recomendamos no especificar 0 PERCENT ni 0 ROWS. Cuando se especifican 0 PERCENT o ROWS, el objeto de estadísticas se actualiza pero no contiene datos de estadísticas.  
   
- Para la mayoría de las cargas de trabajo, no se requiere un examen completo y muestreo predeterminado es el adecuado.  
-Sin embargo, ciertas cargas de trabajo que son sensibles a muy diferentes distribuciones de datos pueden requerir un tamaño de muestra mayor, o incluso un examen completo.  
-Para obtener más información, consulte el [blog de CSS SQL Escalation Services](http://blogs.msdn.com/b/psssql/archive/2010/07/09/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed.aspx).  
+ Para la mayoría de las cargas de trabajo, no es necesario hacer un examen completo, sino tan solo un muestreo predeterminado.  
+Pero para ciertas cargas de trabajo que son sensibles a distribuciones de datos muy diferentes, puede que sea necesario un tamaño de muestreo mayor o incluso un examen completo.  
+Para más información, vea el blog [CSS SQL Server Engineers](http://blogs.msdn.com/b/psssql/archive/2010/07/09/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed.aspx) (Ingenieros de CSS SQL Server).  
   
  RESAMPLE  
  Se actualiza cada estadística utilizando su velocidad de muestra más reciente.  
   
  El uso de RESAMPLE puede producir un recorrido de tabla completo. Por ejemplo, las estadísticas de los índices utilizan un recorrido de tabla completo como su velocidad de muestra. Cuando no se especifica ninguna de las opciones de muestreo (SAMPLE, FULLSCAN ni RESAMPLE), el optimizador de consultas muestrea los datos y calcula el tamaño de la muestra de forma predeterminada.  
 
-PERSIST_SAMPLE_PERCENT = {ON | {OFF}  
-Cuando **ON**, las estadísticas conservará el porcentaje de muestreo de conjunto para las actualizaciones posteriores que no especifican explícitamente un porcentaje de muestreo. Cuando **OFF**, porcentaje de muestreo de las estadísticas se restablecería a muestreo predeterminado en actualizaciones posteriores que no especifican explícitamente un porcentaje de muestreo. El valor predeterminado es **OFF**. 
+PERSIST_SAMPLE_PERCENT = { ON | OFF }  
+Cuando es **ON**, las estadísticas conservan el porcentaje de muestreo definido para las actualizaciones posteriores que no especifican explícitamente un porcentaje de muestreo. Cuando es **OFF**, el porcentaje de muestreo de estadísticas se restablece al muestreo predeterminado en actualizaciones posteriores que no especifiquen explícitamente un porcentaje de muestreo. El valor predeterminado es **OFF**. 
  
  > [!NOTE]
- > Si se ejecuta AUTO_UPDATE_STATISTICS, utiliza el porcentaje de muestreo persistente si está disponible, o usar el porcentaje de muestreo predeterminado si no.
- > Volver a MUESTREAR comportamiento no se ve afectado por esta opción.
+ > Si se ejecuta AUTO_UPDATE_STATISTICS, usa el porcentaje de muestreo persistente (si está disponible) o, de no ser así, el porcentaje de muestreo predeterminado.
+ > El comportamiento de RESAMPLE no se ve afectado por esta opción.
  
  > [!TIP] 
- > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) y [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) exponer el valor de porcentaje de ejemplo persistente para la estadística seleccionada.
+ > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) y [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) exponen el valor de porcentaje de muestreo persistente para la estadística seleccionada.
  
- **Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).  
+ **Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).  
  
- EN las particiones ({ \<número_de_partición > | \<intervalo >} [,... n]) ] Fuerza las estadísticas de nivel de hoja que abarcan las particiones especificadas en la cláusula ON PARTITIONS se vuelven a calcular y, a continuación, se combinen para generar las estadísticas globales. WITH RESAMPLE es necesario porque no se pueden combinar estadísticas de partición generadas con distintas frecuencias de muestreo.  
+ ON PARTITIONS ( { \<partition_number> | \<range> } [, …n] ) ] Obliga a que se recalculen las estadísticas de nivel de hoja que abarcan las particiones especificadas en la cláusula ON PARTITIONS y, después, a que se combinen para generar las estadísticas globales. WITH RESAMPLE es necesario porque no se pueden combinar estadísticas de partición generadas con distintas frecuencias de muestreo.  
   
-**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a través de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  ALL | COLUMNS | INDEX  
  Actualice todas las estadísticas existentes, las estadísticas creadas en una o más columnas, o las estadísticas creadas para los índices. Si no se especifica ninguna de las opciones, la instrucción UPDATE STATISTICS actualiza todas las estadísticas en la tabla o vista indizada.  
@@ -146,15 +146,15 @@ Cuando **ON**, las estadísticas conservará el porcentaje de muestreo de conjun
  NORECOMPUTE  
  Deshabilite la opción automática de actualización de las estadísticas, AUTO_UPDATE_STATISTICS, para las estadísticas especificadas. Si se especifica esta opción, el optimizador de consultas completa esta actualización de estadísticas y deshabilita las actualizaciones futuras.  
   
- Para volver a habilitar el comportamiento de la opción AUTO_UPDATE_STATISTICS, vuelva a ejecutar UPDATE STATISTICS sin la opción NORECOMPUTE o ejecute **sp_autostats**.  
+ Para rehabilitar el comportamiento de la opción AUTO_UPDATE_STATISTICS, ejecute de nuevo UPDATE STATISTICS sin la opción NORECOMPUTE o ejecute **sp_autostats**.  
   
 > [!WARNING]  
 >  Utilizar esta opción puede producir planes de consulta poco óptimos. Se recomienda usar esta opción con moderación y que lo haga únicamente un administrador de sistemas cualificado.  
   
- Para obtener más información acerca de la opción AUTO_UPDATE_STATISTICS, consulte [ALTER DATABASE SET Options &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ Para más información sobre la opción AUTO_STATISTICS_UPDATE, vea [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  INCREMENTAL = { ON | OFF }  
- Cuando **ON**, las estadísticas se vuelven a crear como estadísticas por partición. Cuando **OFF**, se quita el árbol de estadísticas y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vuelve a calcular las estadísticas. El valor predeterminado es **OFF**.  
+ Cuando se establece en **ON**, las estadísticas se vuelven a crear como estadísticas por partición. Cuando se establece en **OFF**, se quita el árbol de estadísticas y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recalcula las estadísticas. El valor predeterminado es **OFF**.  
   
  Si no se admiten las estadísticas por partición, se genera un error. Las estadísticas incrementales no se admiten para los siguientes tipos de estadísticas:  
   
@@ -166,12 +166,12 @@ Cuando **ON**, las estadísticas conservará el porcentaje de muestreo de conjun
 -   Estadísticas creadas sobre tablas internas.  
 -   Estadísticas creadas con índices espaciales o índices XML.  
   
-**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a través de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
 MAXDOP = *max_degree_of_parallelism*  
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
   
- Invalida el **grado máximo de paralelismo** opción de configuración para la duración de la operación de estadística. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
+ Reemplaza la opción de configuración **max_degree_of_parallelism** durante la operación estadística. Para obtener más información, vea [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
   
  *max_degree_of_parallelism* puede ser:  
   
@@ -179,21 +179,21 @@ MAXDOP = *max_degree_of_parallelism*
  Suprime la generación de planes paralelos.  
   
  \>1  
- Restringe el número máximo de procesadores utilizados en una operación estadística paralelo al número especificado o al menos, según la carga de trabajo del sistema actual.  
+ Restringe el número máximo de procesadores usados en una operación estadística paralela al número especificado o a un número inferior, en función de la carga de trabajo actual del sistema.  
   
  0 (predeterminado)  
  Usa el número real de procesadores o menos, según la carga de trabajo actual del sistema.  
   
- \<update_stats_stream_option >[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+ \<update_stats_stream_option> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 ## <a name="when-to-use-update-statistics"></a>Cuándo utilizar UPDATE STATISTICS  
- Para obtener más información acerca de cuándo utilizar UPDATE STATISTICS, vea [estadísticas](../../relational-databases/statistics/statistics.md).  
+ Para más información sobre cuándo usar UPDATE STATISTICS, vea [Estadísticas](../../relational-databases/statistics/statistics.md).  
 
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
-* No se admite la actualización de las estadísticas en tablas externas. Para actualizar las estadísticas en una tabla externa, quite y vuelva a crear las estadísticas.  
-* La opción MAXDOP no es compatible con opciones STATS_STREAM, recuento de filas y PAGECOUNT.
+* No se admite la actualización de estadísticas en tablas externas. Para actualizar las estadísticas en una tabla externa, quite las estadísticas y vuelva a crearlas.  
+* La opción MAXDOP no es compatible con opciones STATS_STREAM, ROWCOUNT y PAGECOUNT.
 
 ## <a name="updating-all-statistics-with-spupdatestats"></a>Actualizar todas las estadísticas con sp_updatestats  
  Para obtener más información sobre cómo actualizar las estadísticas para todas las tablas internas y definidas por el usuario de la base de datos, vea el procedimiento almacenado [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). Por ejemplo, el comando siguiente llama a sp_updatestats para actualizar todas las estadísticas de la base de datos.  
@@ -205,8 +205,8 @@ EXEC sp_updatestats;
 ## <a name="determining-the-last-statistics-update"></a>Determinar la actualización de estadísticas más reciente  
  Para saber cuándo se actualizaron las estadísticas por última vez, use la función [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) .  
   
-## <a name="pdw--sql-data-warehouse"></a>PDW / almacenamiento de datos SQL  
- La siguiente sintaxis no es compatible con PDW / almacenamiento de datos SQL  
+## <a name="pdw--sql-data-warehouse"></a>PDW/SQL Data Warehouse  
+ La siguiente sintaxis no es compatible con PDW/SQL Data Warehouse  
   
 ```sql  
 update statistics t1 (a,b);   
@@ -228,13 +228,13 @@ update statistics t1 (a) with INCREMENTAL=ON;
 update statistics t1 (a) with stats_stream = 0x01;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER en la tabla o la vista.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-update-all-statistics-on-a-table"></a>A. Actualizar todas las estadísticas en una tabla  
- En el ejemplo siguiente se actualiza las estadísticas de todos los índices de la `SalesOrderDetail` tabla.  
+ En este ejemplo se actualizan las estadísticas de todos los índices de la tabla `SalesOrderDetail`.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -278,38 +278,38 @@ UPDATE STATISTICS Production.Product(Products)
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-update-statistics-on-a-table"></a>E. Actualizar las estadísticas en una tabla  
- El siguiente ejemplo se actualiza el `CustomerStats1` estadísticas sobre la `Customer` tabla.  
+### <a name="e-update-statistics-on-a-table"></a>E. Actualizar estadísticas en una tabla  
+ En este ejemplo se actualizan las estadísticas de `CustomerStats1` en la tabla `Customer`.  
   
 ```sql  
 UPDATE STATISTICS Customer ( CustomerStats1 );  
 ```  
   
 ### <a name="f-update-statistics-by-using-a-full-scan"></a>F. Actualizar estadísticas mediante un examen completo  
- El siguiente ejemplo se actualiza el `CustomerStats1` estadísticas, en función de examen de todas las filas en el `Customer` tabla.  
+ En este ejemplo se actualizan las estadísticas de `CustomerStats1`, en función del examen de todas las filas de la tabla `Customer`.  
   
 ```sql  
 UPDATE STATISTICS Customer (CustomerStats1) WITH FULLSCAN;  
 ```  
   
 ### <a name="g-update-all-statistics-on-a-table"></a>G. Actualizar todas las estadísticas en una tabla  
- En el ejemplo siguiente se actualiza todas las estadísticas en el `Customer` tabla.  
+ En este ejemplo se actualizan todas las estadísticas en la tabla `Customer`.  
   
 ```sql  
 UPDATE STATISTICS Customer;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Estadísticas](../../relational-databases/statistics/statistics.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
- [sp_autostats &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
+ [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
- [STATS_DATE &#40; Transact-SQL &#41;](../../t-sql/functions/stats-date-transact-sql.md)  
+ [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)  
  [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
   
 

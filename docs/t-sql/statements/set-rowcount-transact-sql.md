@@ -1,5 +1,5 @@
 ---
-title: SET ROWCOUNT (Transact-SQL) | Documentos de Microsoft
+title: SET ROWCOUNT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -54,13 +54,13 @@ SET ROWCOUNT { number | @number_var }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *número* | @*number_var*  
+ *number* | @*number_var*  
  Es el número entero de filas que se deben procesar antes de detener la consulta específica.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 > [!IMPORTANT]  
->  La utilización de SET ROWCOUNT no afectará a las instrucciones DELETE, INSERT ni UPDATE en una futura versión de SQL Server. Evite utilizar SET ROWCOUNT con las instrucciones DELETE, INSERT y UPDATE en los nuevos trabajos de desarrollo, y modifique las aplicaciones que la utilizan en la actualidad. Para conseguir un comportamiento similar, utilice la sintaxis TOP. Para obtener más información, vea [TOP &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
+>  La utilización de SET ROWCOUNT no afectará a las instrucciones DELETE, INSERT ni UPDATE en una futura versión de SQL Server. Evite utilizar SET ROWCOUNT con las instrucciones DELETE, INSERT y UPDATE en los nuevos trabajos de desarrollo, y modifique las aplicaciones que la utilizan en la actualidad. Para conseguir un comportamiento similar, utilice la sintaxis TOP. Para más información, vea [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
  Para desactivar esta opción con el fin de que se devuelvan todas las filas, especifique SET ROWCOUNT 0.  
   
@@ -70,7 +70,7 @@ SET ROWCOUNT { number | @number_var }
   
  La opción SET ROWCOUNT se establece en tiempo de ejecución, no en tiempo de análisis.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol public.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -107,8 +107,8 @@ GO
 (4 row(s) affected)
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- SET ROWCOUNT detiene el procesamiento cuando se alcanza el número de filas especificado. En el ejemplo siguiente, tenga en cuenta que más de 20 filas cumplen los criterios de `AccountType = 'Assets'`. Sin embargo, después de aplicar SET ROWCOUNT, se puede ver que no se devolvieron todas las filas.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ SET ROWCOUNT detiene el procesamiento cuando se alcanza el número de filas especificado. En este ejemplo, fíjese en que hay más de 20 filas que cumplen los criterios de `AccountType = 'Assets'`. Sin embargo, después de aplicar SET ROWCOUNT, se puede ver que no se devolvieron todas las filas.  
   
 ```  
 -- Uses AdventureWorks  
@@ -118,7 +118,7 @@ SELECT * FROM [dbo].[DimAccount]
 WHERE AccountType = 'Assets';  
 ```  
   
- Para devolver todas las filas, establezca el número de filas en 0.  
+ Para devolver todas las filas, establezca ROWCOUNT en 0.  
   
 ```  
 -- Uses AdventureWorks  
@@ -128,7 +128,7 @@ SELECT * FROM [dbo].[DimAccount]
 WHERE AccountType = 'Assets';  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Instrucciones SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: AsGml (tipo de datos geography) | Documentos de Microsoft
+title: AsGml (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -33,12 +33,12 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/25/2018
 ---
-#  <a name="asgml---geography-data-type"></a>AsGml - tipo de datos geography
+#  <a name="asgml---geography-data-type"></a>AsGml: tipo de datos geography
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve la representación de lenguaje de marcado de geografía (GML) de un **geography** instancia.  
+  Devuelve la representación del lenguaje de marcado de geografía (GML) de una instancia de **geography**.  
   
- Para obtener más información sobre el lenguaje de marcado de geografía, vea la especificación de Open Geospatial Consortium: [OGC Specifications, Geography Markup Language.](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ Para más información sobre el lenguaje de marcado de geografía, vea las especificaciones de Open Geospatial Consortium: [OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629) (Especificaciones de OGC, lenguaje de marcado de geografía).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,11 +48,11 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **xml**  
+ Tipo devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **xml**  
   
- Tipo de valor devuelto de CLR: **SqlXml**  
+ Tipo devuelto de CLR: **SqlXml**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea una instancia de `LineString` y se usa `AsGML()` para devolver la descripción de GML de dicha instancia.  
@@ -69,7 +69,7 @@ SELECT @g.AsGml();
 <LineString xmlns="http://www.opengis.net/gml"><posList>47.656 -122.36 47.656 -122.343</posList></LineString>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: WITH XMLNAMESPACES (Transact-SQL) | Documentos de Microsoft
+title: WITH XMLNAMESPACES (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -70,12 +70,12 @@ DEFAULT <xml_namespace_uri>
   
 ## <a name="arguments"></a>Argumentos  
  *xml_namespace_uri*  
- Identificador uniforme de recursos (URI) que identifica el espacio de nombres XML que se va a declarar. *xml_namespace_uri* es una cadena SQL.  
+ Identificador uniforme de recursos (URI) que identifica el espacio de nombres XML que se va a declarar. *xml_namespace_uri* es una cadena de SQL.  
   
  *xml_namespace_prefix*  
- Especifica un prefijo que se van a asignar y asociado con el valor de identificador URI de espacio de nombres especificado en *xml_namespace_uri*. *xml_namespace_prefix* debe ser un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificador.  
+ Especifica un prefijo que se va a asignar y asociar al valor URI del espacio de nombres especificado en *xml_namespace_uri*. *xml_namespace_prefix* debe ser un identificador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Al utilizar la cláusula WITH XMLNAMESPACES en una instrucción que también incluye una expresión de tabla común, la cláusula WITH XMLNAMESPACES debe preceder a la expresión de tabla común en la instrucción.  
   
  Estas son las reglas generales de sintaxis que se aplican cuando se usa la cláusula WITH XMLNAMESPACES:  
@@ -96,7 +96,7 @@ DEFAULT <xml_namespace_uri>
   
 -   Los valores de la cadena del URI se codifican según la página de códigos de la intercalación de la base de datos actual y se traducen internamente a Unicode.  
   
--   El espacio de nombres XML URI será un espacio en blanco siguiendo el espacio en blanco XSD contraer las reglas que se usan para **xs: anyURI**. Además, tenga en cuenta que no se definirán entidades ni se eliminarán entidades en los valores de URI del espacio de nombres XML.  
+-   Se eliminarán los espacios en blanco del URI del espacio de nombres XML siguiendo las reglas de eliminación de espacios en blanco de XSD que se usan para **xs:anyURI**. Además, tenga en cuenta que no se definirán entidades ni se eliminarán entidades en los valores de URI del espacio de nombres XML.  
   
 -   Se comprobará el URI del espacio de nombres XML para buscar caracteres XML 1.0 no válidos y se generará un error si se encuentran (por ejemplo, U+0007).  
   
@@ -105,9 +105,9 @@ DEFAULT <xml_namespace_uri>
 -   La palabra clave XMLNAMESPACES está reservada en el contexto de la cláusula WITH.  
   
 ## <a name="examples"></a>Ejemplos  
- Para obtener ejemplos, vea [agregar espacios de nombres a consultas con WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
+ Para obtener ejemplos, vea [Agregar espacios de nombres a consultas con WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Referencia del lenguaje XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
   
   

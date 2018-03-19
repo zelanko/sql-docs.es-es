@@ -1,5 +1,5 @@
 ---
-title: 'Resumen: Crear objetos de base de datos | Documentos de Microsoft'
+title: 'Resumen: Crear objetos de base de datos | Microsoft Docs'
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -28,13 +28,13 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-1-5---summary---creating-database-objects"></a>Objetos de base de datos de 1-5 - resumen - crear la lección
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]En este tutorial que ha creado una base de datos, creado una tabla en la base de datos, inserta datos en la tabla, ha cambiado los datos y, a continuación, lee los datos de la tabla. La sintaxis de las instrucciones usadas solo es la sintaxis básica y en este tutorial no se tratan  muchas de las opciones de sintaxis. Para obtener más información acerca de estas instrucciones, lea la sintaxis completa de las instrucciones en los Libros en pantalla de SQL Server y revise los diversos ejemplos que se proporcionan en los temas.  
+# <a name="lesson-1-5---summary---creating-database-objects"></a>Lección 1-5: Resumen: Crear objetos de base de datos
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] En este tutorial ha creado una base de datos y una tabla en la base de datos, ha insertado datos en la tabla, ha cambiado los datos y, después, ha leído los datos de la tabla. La sintaxis de las instrucciones usadas solo es la sintaxis básica y en este tutorial no se tratan  muchas de las opciones de sintaxis. Para obtener más información acerca de estas instrucciones, lea la sintaxis completa de las instrucciones en los Libros en pantalla de SQL Server y revise los diversos ejemplos que se proporcionan en los temas.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
 [Lección 2: Configurar permisos en objetos de base de datos](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
   

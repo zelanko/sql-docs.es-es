@@ -1,5 +1,5 @@
 ---
-title: '- (Negativo) (Transact-SQL) | Documentos de Microsoft'
+title: '- (Negativo) (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="unary-operators---negative"></a>Operadores unarios - negativo
+# <a name="unary-operators---negative"></a>Operadores unarios: negativo
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Devuelve el valor negativo de una expresión numérica (un operador unario). Los operadores unarios realizan una operación sobre una única expresión de cualquiera de los tipos de datos de la categoría del tipo de datos numérico.   
@@ -55,10 +55,10 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *numeric_expression*  
- Se trata de cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cualquiera de los tipos de datos de la categoría de tipos de datos numéricos, salvo que la fecha y la categoría de tiempo.  
+ Es cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md) válida de cualquiera de los tipos de datos de la categoría del tipo de datos numérico, a excepción de la categoría de fecha y hora.  
   
 ## <a name="result-types"></a>Tipos de resultado  
- Devuelve el tipo de datos de *numeric_expression*, salvo que unsigned **tinyint** expresión se promueve a iniciado **smallint** resultado.  
+ Devuelve el tipo de datos de *expresión_numérica*, excepto si se trata de una expresión **tinyint** sin signo que se promueve a un resultado **smallint** con signo.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -109,10 +109,10 @@ VariableValue NegativeValue
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-returning-the-negative-of-a-positive-constant"></a>C. Devolver el valor negativo de una constante positivo  
- En el ejemplo siguiente se devuelve el valor negativo de una constante positivo.  
+### <a name="c-returning-the-negative-of-a-positive-constant"></a>C. Devolución del valor negativo de una constante positiva  
+ En el ejemplo siguiente se devuelve el valor negativo de una constante positiva.  
   
 ```  
 USE ssawPDW;  
@@ -126,7 +126,7 @@ SELECT TOP (1) - 17 FROM DimEmployee;
 -17  
 ```  
   
-### <a name="d-returning-the-positive-of-a-negative-constant"></a>D. Devuelve el valor positivo de una constante negativa  
+### <a name="d-returning-the-positive-of-a-negative-constant"></a>D. Devolución del valor positivo de una constante negativa  
  En el ejemplo siguiente se devuelve el valor positivo de una constante negativa.  
   
 ```  
@@ -141,8 +141,8 @@ SELECT TOP (1) – ( - 17) FROM DimEmployee;
 17  
 ```  
   
-### <a name="e-returning-the-negative-of-a-column"></a>E. Devolver el valor negativo de una columna  
- En el ejemplo siguiente se devuelve el valor negativo de la `BaseRate` valor de cada empleado en el `dimEmployee` tabla.  
+### <a name="e-returning-the-negative-of-a-column"></a>E. Devolución del valor negativo de una columna  
+ En el ejemplo siguiente se devuelve el valor negativo del valor `BaseRate` de cada empleado de la tabla `dimEmployee`.  
   
 ```  
 USE ssawPDW;  
@@ -150,10 +150,10 @@ USE ssawPDW;
 SELECT - BaseRate FROM DimEmployee;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: PARSENAME (Transact-SQL) | Documentos de Microsoft
+title: PARSENAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -56,7 +56,7 @@ PARSENAME ( 'object_name' , object_piece )
  Es el nombre del objeto del que se desea recuperar la parte de objeto especificada. *object_name* es **sysname**. Este parámetro es un nombre de objeto completo opcionalmente. Si todas las partes del nombre de objeto están completas, este nombre puede tener cuatro partes: el nombre del servidor, de la base de datos, del propietario y del propio objeto.  
   
  *object_piece*  
- Es la parte del objeto que se va a devolver. *object_piece* es de tipo **int**y puede tener estos valores:  
+ Es la parte del objeto que se va a devolver. *object_piece* es de tipo **int** y puede tener los valores siguientes:  
   
  1 = Nombre del objeto  
   
@@ -69,14 +69,14 @@ PARSENAME ( 'object_name' , object_piece )
 ## <a name="return-types"></a>Tipos devueltos  
  **nchar**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  PARSENAME devuelve NULL cuando se cumple una de las siguientes condiciones:  
   
--   Cualquier *object_name* o *object_piece* es NULL.  
+-   Tanto *object_name* como *object_piece* son NULL.  
   
 -   Se produce un error de sintaxis.  
   
- La parte del objeto solicitada tiene una longitud de 0 y no es válido [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificador. Un nombre de objeto de longitud cero hace que el nombre completo no sea válido.  
+ La parte del objeto solicitada tiene una longitud 0 y no es un identificador [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido. Un nombre de objeto de longitud cero hace que el nombre completo no sea válido.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se utiliza `PARSENAME` para devolver información acerca de la tabla `Person` de la base de datos `AdventureWorks2012`.  
@@ -118,11 +118,11 @@ Server Name
 (1 row(s) affected)
 ```
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [Funciones del sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: EnvelopeAggregate (tipo de datos geometry) | Documentos de Microsoft
+title: EnvelopeAggregate (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="envelopeaggregate-geometry-data-type"></a>EnvelopeAggregate (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Devuelve un cuadro de límite para un conjunto determinado de **geometry** objetos.
+Devuelve un cuadro de límite para un conjunto determinado de objetos **geometry**.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,21 +42,21 @@ EnvelopeAggregate ( geometry_operand )
   
 ## <a name="arguments"></a>Argumentos  
  *geometry_operand*  
- Es un **geometry** columna de tabla de tipo que representa el conjunto de **geometry** objetos.  
+ Es una columna de tabla de tipo **geometry** que representa el conjunto de objetos **geometry**.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geometry**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
 ## <a name="exceptions"></a>Excepciones  
- Produce una excepción `FormatException` cuando hay valores de entrada no válidos. Vea [STIsValid &#40; tipo de datos geometry &#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
+ Produce una excepción `FormatException` cuando hay valores de entrada no válidos. Vea [STIsValid &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md).  
   
-## <a name="remarks"></a>Comentarios  
- Método **null** cuando la entrada está vacía o la entrada tiene SRID diferentes. Vea [identificadores de referencia espacial &#40; SRID &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+## <a name="remarks"></a>Notas  
+ El método devuelve **null** cuando la entrada está vacía o esta tiene unos SRID diferentes. Vea [Identificadores de referencia espacial &#40;SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
   
- Método omite **null** entradas.  
+ El método omite las entradas **null**.  
   
 > [!NOTE]  
->  Método **null** si todos los valores introducidos son **null**.  
+>  El método devuelve **null** si todos los valores introducidos son **null**.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se devuelve un cuadro de límite para un conjunto de objetos en una columna de variables de tabla.  
@@ -75,7 +75,7 @@ SELECT geometry::EnvelopeAggregate(shape).ToString()
 FROM @Geom;
  ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de geometría estáticos ampliados](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

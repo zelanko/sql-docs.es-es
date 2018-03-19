@@ -1,5 +1,5 @@
 ---
-title: STOverlaps (tipo de datos geography) | Documentos de Microsoft
+title: STOverlaps (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stoverlaps-geography-data-type"></a>STOverlaps (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve 1 si una **geography** instancia se superpone espacialmente con otra **geography** instancia, o bien 0 si no es así.  
+  Devuelve 1 si una instancia de **geography** se superpone espacialmente a otra instancia de **geography**, o 0 en caso contrario.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,18 +42,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *other_geography*  
- Es otra **geography** instancia va a comparar con la instancia en la que `STOverlaps()` se invoca.  
+ Es otra instancia de **geography** con la que se compara la instancia en la que se invoca `STOverlaps()`.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **bits**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Comentarios  
- Este método siempre devuelve null si los identificadores de referencia espacial (SRID) de la **geography** instancias no coinciden.  
+## <a name="remarks"></a>Notas  
+ Este método siempre devuelve null si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geography**.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se utiliza `STOverlaps()` para comprobar si dos **geography** instancias para determinar si se superponen.  
+ En el siguiente ejemplo se usa `STOverlaps()` para ver si se superponen dos instancias de **geography**.  
   
 ```  
 DECLARE @g geography;  

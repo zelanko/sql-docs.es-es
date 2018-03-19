@@ -1,5 +1,5 @@
 ---
-title: $PARTITION (transact-SQL) | Documentos de Microsoft
+title: $PARTITION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,13 +54,13 @@ ms.lasthandoff: 11/21/2017
  Es el nombre de cualquier función de partición existente con la que se está aplicando un conjunto de valores de columnas de partición.  
   
  *expression*  
- Es un [expresión](../../t-sql/language-elements/expressions-transact-sql.md) cuyo tipo de datos debe coincidir o ser implícitamente convertible al tipo de datos de la columna de partición correspondiente. *expresión* también puede ser el nombre de una columna de partición que participa actualmente en *partition_function_name*.  
+ Es una [expression](../../t-sql/language-elements/expressions-transact-sql.md) cuyo tipo de datos debe coincidir con el tipo de datos de su columna de partición correspondiente, o debe poder convertirse a dicho tipo de datos de forma implícita. *expression* también puede ser el nombre de una columna de partición que participa en ese momento en *partition_function_name*.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **int**  
   
-## <a name="remarks"></a>Comentarios  
- $PARTITION devuelve un **int** valor entre 1 y el número de particiones de la función de partición.  
+## <a name="remarks"></a>Notas  
+ $PARTITION devuelve un valor **int** entre 1 y el número de particiones de la función de partición.  
   
  $PARTITION devuelve el número de partición de cualquier valor válido, independientemente de si el valor existe en ese momento en una tabla o índice con particiones que utilice la función de partición.  
   
@@ -82,7 +82,7 @@ GO
 ### <a name="b-getting-the-number-of-rows-in-each-nonempty-partition-of-a-partitioned-table-or-index"></a>B. Obtener el número de filas de cada partición no vacía de una tabla o un índice con particiones  
  En el siguiente ejemplo se devuelve el número de filas de cada partición de la tabla `TransactionHistory` que contiene datos. La tabla `TransactionHistory` utiliza la función de partición `TransactionRangePF1`. Además, se crean particiones en la columna `TransactionDate`.  
   
- Para ejecutar este ejemplo, primero hay que ejecutar el script PartitionAW.sql en la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Para obtener más información, consulte [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015).  
+ Para ejecutar este ejemplo, primero hay que ejecutar el script PartitionAW.sql en la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Para más información, vea [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015).  
   
 ```  
 USE AdventureWorks2012;  
@@ -98,14 +98,14 @@ GO
  En el siguiente ejemplo se devuelven todas las filas que se encuentran en la partición `5` de la tabla `TransactionHistory`.  
   
 > [!NOTE]  
->  Para ejecutar este ejemplo, primero hay que ejecutar el script PartitionAW.sql en la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Para obtener más información, consulte [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015).  
+>  Para ejecutar este ejemplo, primero hay que ejecutar el script PartitionAW.sql en la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Para más información, vea [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015).  
   
 ```  
 SELECT * FROM Production.TransactionHistory  
 WHERE $PARTITION.TransactionRangePF1(TransactionDate) = 5 ;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "ENVÍO (Transact-SQL) | Documentos de Microsoft"
+title: SEND (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -57,16 +57,16 @@ SEND
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- EN la conversación *conversation_handle [.. @conversation_handle_n]*  
- Especifica las conversaciones a las que pertenece el mensaje. El *conversation_handle* debe contener un identificador de conversación válido. El mismo identificador de conversación no se puede utilizar más de una vez.  
+ ON CONVERSATION *conversation_handle [.. @conversation_handle_n]*  
+ Especifica las conversaciones a las que pertenece el mensaje. El parámetro *conversation_handle* debe contener un identificador de conversación válido. El mismo identificador de conversación no se puede utilizar más de una vez.  
   
- TIPO de mensaje *message_type_name*  
+ MESSAGE TYPE *message_type_name*  
  Especifica el tipo de mensaje enviado. Este tipo de mensaje se debe incluir en los contratos de servicio que utilizan estas conversaciones. Estos contratos deben permitir que el tipo de mensaje se envíe desde este lado de la conversación. Por ejemplo, es posible que los servicios de destino de las conversaciones solo envíen mensajes especificados en el contrato como SENT BY TARGET o SENT BY ANY. Si se omite esta cláusula, el mensaje es de tipo DEFAULT.  
   
  *message_body_expression*  
- Proporciona una expresión que representa el cuerpo del mensaje. El *message_body_expression* es opcional. Sin embargo, si la *message_body_expression* está presente la expresión debe ser de un tipo que pueda convertirse a **varbinary (max)**. La expresión no puede ser NULL. Si se omite esta cláusula, el cuerpo del mensaje está vacío.  
+ Proporciona una expresión que representa el cuerpo del mensaje. *message_body_expression* es opcional, pero si *message_body_expression* está presente, la expresión debe ser de un tipo que se pueda convertir a **varbinary(max)**. La expresión no puede ser NULL. Si se omite esta cláusula, el cuerpo del mensaje está vacío.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 > [!IMPORTANT]  
 >  Si la instrucción SEND no es la primera instrucción de un lote o procedimiento almacenado, la instrucción anterior debe finalizar con un punto y coma (;).  
@@ -79,9 +79,9 @@ SEND
   
 -   Al enviar un mensaje que es la respuesta a un mensaje previamente recibido de otro servicio, utilice el identificador de conversación devuelto por la instrucción RECEIVE que devolvió el mensaje original.  
   
- En muchos casos, el código que contiene la instrucción SEND es independiente del código que contiene instrucciones del BEGIN DIALOG o RECEIVE proporcionando el identificador de conversación. En estos casos, el identificador de conversación debe ser uno de los elementos de datos de la información de estado que se pasa al código que contiene la instrucción SEND.  
+ En muchos casos, el código que contiene la instrucción SEND es independiente del código que contiene las instrucciones BEGIN DIALOG o RECEIVE que proporcionan el identificador de conversación. En estos casos, el identificador de conversación debe ser uno de los elementos de datos de la información de estado que se pasa al código que contiene la instrucción SEND.  
   
- Los mensajes que se envían a servicios de otras instancias de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] se almacenan en una cola de transmisión de la base de datos actual hasta que se puedan transmitir a las colas de servicio de las instancias remotas. Los mensajes enviados a servicios de la misma instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] se colocan directamente en las colas asociadas con esos servicios. Si una condición impide que un mensaje local se coloque en la cola del servicio de destino directamente, se puede almacenar en la cola de transmisión hasta que se resuelva la condición. Por ejemplo, esto se produce en algunos tipos de errores o cuando la cola del servicio de destino está inactiva. Puede usar el **sys.transmission_queue** vista del sistema para ver los mensajes en la cola de transmisión.  
+ Los mensajes que se envían a servicios de otras instancias de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] se almacenan en una cola de transmisión de la base de datos actual hasta que se puedan transmitir a las colas de servicio de las instancias remotas. Los mensajes enviados a servicios de la misma instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] se colocan directamente en las colas asociadas con esos servicios. Si una condición impide que un mensaje local se coloque en la cola del servicio de destino directamente, se puede almacenar en la cola de transmisión hasta que se resuelva la condición. Por ejemplo, esto se produce en algunos tipos de errores o cuando la cola del servicio de destino está inactiva. Puede usar la vista del sistema **sys.transmission_queue** para ver los mensajes de la cola de transmisión.  
   
  SEND es una instrucción atómica, es decir, si se produce un error en una instrucción SEND que envía un mensaje en varias conversaciones (por ejemplo, porque una conversación está en un estado de error), no se almacena ningún mensaje en la cola de transmisión ni tampoco se pone en ninguna cola de servicio de destino.  
   
@@ -99,11 +99,11 @@ SEND
   
  SEND no tiene validez en una función definida por el usuario.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para enviar un mensaje, el usuario actual debe tener el permiso RECEIVE en la cola de cada servicio que envía el mensaje.  
   
 ## <a name="examples"></a>Ejemplos  
- En el siguiente ejemplo se inicia un diálogo y se envía un mensaje XML en el diálogo. Para enviar el mensaje, en el ejemplo se convierte el objeto de xml en **varbinary (max)**.  
+ En el siguiente ejemplo se inicia un diálogo y se envía un mensaje XML en el diálogo. Para enviar el mensaje, el ejemplo convierte el objeto xml a **varbinary(max)**.  
   
 ```  
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  
@@ -151,10 +151,10 @@ SEND ON CONVERSATION (@dialog_handle1, @dialog_handle2, @dialog_handle3)
     (@OrderMsg) ;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [EMPEZAR conversación de diálogo &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [Finalizar conversación &#40; Transact-SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
- [RECIBIR &#40; Transact-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)   
- [Sys.transmission_queue &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
+ [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
+ [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: FILEGROUPPROPERTY (Transact-SQL) | Documentos de Microsoft
+title: FILEGROUPPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -50,10 +50,10 @@ FILEGROUPPROPERTY ( filegroup_name , property )
   
 ## <a name="arguments"></a>Argumentos  
  *filegroup_name*  
- Es una expresión de tipo **sysname** que representa el nombre del grupo de archivos para el que se va a devolver la información de propiedad con nombre.  
+ Es una expresión de tipo **sysname** que representa el nombre del grupo de archivos del que se va a devolver información de una propiedad con nombre.  
   
- *propiedad*  
- Es una expresión de tipo **varchar (128)** contiene el nombre de la propiedad de grupo de archivos que se va a devolver. *propiedad* puede ser uno de estos valores.  
+ *property*  
+ Es una expresión de tipo **varchar(128)** que contiene el nombre de la propiedad del grupo de archivos que se va a devolver. *property* puede ser uno de estos valores.  
   
 |Valor|Description|Valor devuelto|  
 |-----------|-----------------|--------------------|  
@@ -64,8 +64,8 @@ FILEGROUPPROPERTY ( filegroup_name , property )
 ## <a name="return-types"></a>Tipos devueltos  
  **int**  
   
-## <a name="remarks"></a>Comentarios  
- *filegroup_name* corresponde a la **nombre** columna en el **sys.filegroups** vista de catálogo.  
+## <a name="remarks"></a>Notas  
+ *filegroup_name* corresponde a la columna **name** de la vista de catálogo **sys.filegroups**.  
   
 ## <a name="examples"></a>Ejemplos  
  En este ejemplo se devuelve el valor de la propiedad `IsDefault` del grupo de archivos principal de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
@@ -86,11 +86,11 @@ Default Filegroup
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Filegroup_id &#40; Transact-SQL &#41;](../../t-sql/functions/filegroup-id-transact-sql.md)   
- [FILEGROUP_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
- [Funciones de metadatos &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [FILEGROUP_ID &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-id-transact-sql.md)   
+ [FILEGROUP_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
+ [Funciones de metadatos &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [Sys.FileGroups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
   
   

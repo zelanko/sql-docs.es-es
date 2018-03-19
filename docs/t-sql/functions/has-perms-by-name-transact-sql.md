@@ -1,5 +1,5 @@
 ---
-title: HAS_PERMS_BY_NAME (Transact-SQL) | Documentos de Microsoft
+title: HAS_PERMS_BY_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -52,34 +52,34 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *elemento protegible*  
- Es el nombre del elemento protegible. Si el elemento protegible es el servidor mismo, este valor debe establecerse en NULL. *elemento protegible* es una expresión escalar de tipo **sysname**. No tiene ningún valor predeterminado.  
+ *securable*  
+ Es el nombre del elemento protegible. Si el elemento protegible es el servidor mismo, este valor debe establecerse en NULL. *securable* es una expresión escalar de tipo **sysname**. No tiene ningún valor predeterminado.  
   
  *securable_class*  
- Es el nombre de la clase de elemento protegible en la cual se prueba el permiso. *securable_class* es una expresión escalar de tipo **nvarchar (60)**.  
+ Es el nombre de la clase de elemento protegible en la cual se prueba el permiso. *securable_class* es una expresión escalar de tipo **nvarchar(60)**.  
   
- En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], el argumento securable_class debe establecerse en uno de los siguientes: **base de datos**, **objeto**, **rol**, **esquema**, o **usuario**.  
+ En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], el argumento securable_class debe establecerse en uno de los valores siguientes: **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** o **USER**.  
   
- *permiso*  
- Una expresión escalar no NULL de tipo **sysname** que representa el nombre del permiso que se va a comprobar. No tiene ningún valor predeterminado. El nombre de permiso ANY es un comodín.  
+ *permission*  
+ Expresión escalar no NULL de tipo **sysname** que representa el nombre del permiso que se va a comprobar. No tiene ningún valor predeterminado. El nombre de permiso ANY es un comodín.  
   
- *Sub-protegibles*  
- Una expresión escalar opcional de tipo **sysname** que representa el nombre de la subentidad protegible en la que se va a probar el permiso. El valor predeterminado es NULL.  
+ *sub-securable*  
+ Expresión escalar opcional de tipo **sysname** que representa el nombre de la subentidad protegible en la que se va a probar el permiso. El valor predeterminado es NULL.  
   
 > [!NOTE]  
->  En las versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], subentidades protegibles no pueden utilizar corchetes en el formulario **' [***nombre sub***]'**. Use **'***nombre sub***'** en su lugar.  
+>  En las versiones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], las subentidades protegibles no pueden usar corchetes con el formato **'[***sub name***]'**. Es mejor usar **'***sub name***'**.  
   
- *Sub-securable_class*  
- Una expresión escalar opcional de tipo **nvarchar (60)** que representa la clase de subentidad protegible en la que se va a probar el permiso. El valor predeterminado es NULL.  
+ *sub-securable_class*  
+ Expresión escalar opcional de tipo **nvarchar(60)** que representa la clase de subentidad protegible en la que se va a probar el permiso. El valor predeterminado es NULL.  
   
- En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], el argumento sub-securable_class solo es válido si el argumento securable_class se establece en **objeto**. Si el argumento securable_class se establece en **objeto**, el argumento sub-securable_class debe establecerse en **columna**.  
+ En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], el argumento sub-securable_class solo es válido si el argumento securable_class está establecido en **OBJECT**. Si el argumento securable_class se establece en **OBJECT**, el argumento sub-securable_class debe establecerse en **COLUMN**.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **int**  
   
  Devuelve NULL cuando la consulta da error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta función integrada determina si la entidad de seguridad actual tiene un permiso efectivo específico sobre un elemento protegible determinado. HAS_PERMS_BY_NAME devuelve 1 cuando el usuario tiene un permiso efectivo sobre el elemento protegible, 0 cuando el usuario no tiene ningún permiso efectivo sobre el elemento protegible y NULL cuando la clase protegible o el permiso no son válidos. Un permiso efectivo puede ser cualquiera de los siguientes:  
   
 -   Un permiso concedido directamente a la entidad de seguridad, no denegado.  
@@ -112,7 +112,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 ### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>A. ¿Tengo el permiso VIEW SERVER STATE en el servidor?  
   
-**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
@@ -120,7 +120,7 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 ### <a name="b-am-i-able-to-impersonate-server-principal-ps"></a>B. ¿Puedo suplantar (IMPERSONATE) la entidad de seguridad del servidor Ps?  
   
-**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  
@@ -186,7 +186,7 @@ SELECT name AS column_name,
     WHERE c.object_id=object_id('T');  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [Jerarquía de permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   

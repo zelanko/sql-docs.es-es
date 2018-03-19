@@ -1,5 +1,5 @@
 ---
-title: TRY_CONVERT (Transact-SQL) | Documentos de Microsoft
+title: TRY_CONVERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -46,26 +46,26 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *data_type [(longitud)]*  
- Tipo de datos al que se va a convertir *expresión*.  
+ *data_type [ ( length ) ]*  
+ Tipo de datos al que se va a convertir *expression*.  
   
  *expression*  
- Valor que se puede convertir.  
+ Valor que se va a convertir.  
   
- *estilo*  
- Expresión de entero opcional que especifica cómo la **TRY_CONVERT** función consiste en traducir *expresión*.  
+ *style*  
+ Expresión opcional de tipo entero que especifica el modo en que la función **TRY_CONVERT** va a traducir *expression*.  
   
- *estilo* acepta los mismos valores que la *estilo* parámetro de la **convertir** función. Para obtener más información, vea [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+ *style* acepta los mismos valores que el parámetro *style* de la función **CONVERT**. Para obtener más información, vea [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
- El intervalo de valores aceptables está determinado por el valor de *data_type*. Si *estilo* es null, entonces **TRY_CONVERT** devuelve null.  
+ El intervalo de valores aceptables está determinado por el valor de *data_type*. Si *style* es NULL, **TRY_CONVERT** devuelve NULL.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  Devuelve una conversión de valor al tipo de datos especificado si la conversión se realiza correctamente; de lo contrario, devuelve NULL.  
   
-## <a name="remarks"></a>Comentarios  
- **TRY_CONVERT** toma el valor pasado a él e intenta convertir al especificado *data_type*. Si la conversión se realiza correctamente, **TRY_CONVERT** devuelve el valor especificado *data_type*; si se produce un error, se devuelve null. Sin embargo si se solicita una conversión que no está explícitamente permitida, a continuación, **TRY_CONVERT** produce un error.  
+## <a name="remarks"></a>Notas  
+ **TRY_CONVERT** toma el valor que se le ha pasado e intenta convertirlo al *data_type* especificado. Si la conversión se realiza correctamente, **TRY_CONVERT** devuelve el valor como el *data_type* especificado; si se produce un error, se devuelve NULL. Pero si se solicita una conversión que no se permite explícitamente, **TRY_CONVERT** generará un error.  
   
- **TRY_CONVERT** es una palabra reservada en el nivel de compatibilidad 110 y posteriores.  
+ **TRY_CONVERT** es una palabra clave reservada en el nivel de compatibilidad 110 y posteriores.  
   
  Esta función se puede enviar de forma remota a servidores que tengan una versión de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y superior. No se puede enviar de forma remota a servidores que tengan una versión inferior a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
@@ -144,7 +144,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

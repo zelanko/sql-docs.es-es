@@ -1,5 +1,5 @@
 ---
-title: CERT_ID (Transact-SQL) | Documentos de Microsoft
+title: CERT_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -51,13 +51,13 @@ Cert_ID ( 'cert_name' )
 **'** *cert_name* **'**  
 Es el nombre de un certificado de la base de datos.
   
-## <a name="return-types"></a>Tipos de valor devuelto
+## <a name="return-types"></a>Tipos de valores devueltos
  **int**  
   
-## <a name="remarks"></a>Comentarios  
-Nombres de certificado son visibles en el [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) vista de catálogo.
+## <a name="remarks"></a>Notas  
+Los nombres de certificados se ven en la vista de catálogo [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md).
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
 Requiere algunos permisos en el certificado y que el llamador no tenga denegado el permiso VIEW DEFINITION en el certificado.
   
 ## <a name="examples"></a>Ejemplos  

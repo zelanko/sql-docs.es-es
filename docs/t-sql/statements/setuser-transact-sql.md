@@ -1,5 +1,5 @@
 ---
-title: SETUSER (Transact-SQL) | Documentos de Microsoft
+title: SETUSER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -37,10 +37,10 @@ ms.lasthandoff: 11/21/2017
 # <a name="setuser-transact-sql"></a>SETUSER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Permite a un miembro de la **sysadmin** rol fijo de servidor o el propietario de una base de datos para suplantar a otro usuario.  
+  Permite a un miembro del rol fijo de servidor **sysadmin** o al propietario de una base de datos suplantar a otro usuario.  
   
 > [!IMPORTANT]  
->  SETUSER se incluye únicamente por motivos de compatibilidad con versiones anteriores. Es posible que SETUSER deje de admitirse en versiones futuras de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se recomienda que use [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) en su lugar.  
+>  SETUSER se incluye únicamente por motivos de compatibilidad con versiones anteriores. Es posible que SETUSER deje de admitirse en versiones futuras de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por eso, es preferible usar [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,24 +52,24 @@ SETUSER [ 'username' [ WITH NORESET ] ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **'** *nombre de usuario* **'**  
- Es el nombre de un usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o de Windows en la base de datos actual al que se suplanta. Cuando *nombre de usuario* no se especifica, se restablece la identidad original del administrador del sistema o propietario de base de datos al suplantar al usuario.  
+ **'** *username* **'**  
+ Es el nombre de un usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o de Windows en la base de datos actual al que se suplanta. Cuando no se especifica el parámetro *username*, se restablece la identidad original del administrador del sistema o propietario de la base de datos que suplantaba al usuario.  
   
  WITH NORESET  
- Especifica que las siguientes instrucciones SETUSER (no especificada *nombre de usuario*) no se debe restablecer la identidad del usuario al administrador del sistema o propietario de la base de datos.  
+ Especifica que las instrucciones SETUSER siguientes (que no especifican *username*) no deben restablecer la identidad del usuario como administrador del sistema o propietario de la base de datos.  
   
-## <a name="remarks"></a>Comentarios  
- Pueden utilizar SETUSER por un miembro de la **sysadmin** rol fijo de servidor o el propietario de una base de datos para adoptar la identidad de otro usuario para probar los permisos de ese usuario. No es suficiente la pertenencia al rol fijo de base de datos db_owner.  
+## <a name="remarks"></a>Notas  
+ Los miembros del rol fijo de servidor **sysadmin** o el propietario de una base de datos pueden usar la identidad de otro usuario con el fin de probar los permisos de ese usuario. No basta con pertenecer al rol fijo de base de datos db_owner.  
   
- Solo se debe utilizar SETUSER con usuarios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. SETUSER no se admite con usuarios de Windows. Cuando se ha utilizado SETUSER para asumir la identidad de otro usuario, los objetos que crea el usuario que realiza la suplantación serán propiedad del usuario suplantado. Por ejemplo, si el propietario de la base de datos asume la identidad de usuario **Margaret** y crea una tabla denominada **pedidos**, **pedidos** es propiedad de tabla **Margaret** , no el administrador del sistema.  
+ Solo se debe utilizar SETUSER con usuarios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. SETUSER no se admite con usuarios de Windows. Cuando se ha utilizado SETUSER para asumir la identidad de otro usuario, los objetos que crea el usuario que realiza la suplantación serán propiedad del usuario suplantado. Por ejemplo, si el propietario de la base de datos adopta la identidad de la usuaria **Margaret** y crea una tabla llamada **orders**, la propietaria de la tabla **orders** será **Margaret**, en lugar del administrador del sistema.  
   
  SETUSER sigue teniendo efecto hasta que se ejecute otra instrucción SETUSER o hasta que se cambie la base de datos actual con la instrucción USE.  
   
 > [!NOTE]  
 >  Si se utiliza SETUSER WITH NORESET, la única forma de que el administrador del sistema o el propietario de la base de datos pueda restablecer sus propios derechos es cerrar la sesión e iniciar otra.  
   
-## <a name="permissions"></a>Permissions  
- Debe pertenecer a la **sysadmin** rol fijo de servidor o debe ser el propietario de la base de datos. Pertenencia en el **db_owner** rol fijo de base de datos no es suficiente  
+## <a name="permissions"></a>Permisos  
+ Es necesario pertenecer al rol fijo de servidor **sysadmin** o ser propietario de la base de datos. No basta con pertenecer al rol fijo de base de datos **db_owner**.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente muestra cómo el propietario de la base de datos puede adoptar la identidad de otro usuario. La usuaria `mary` ha creado una tabla llamada `computer_types`. Mediante SETUSER, el propietario de la base de datos suplanta a `mary` para garantizar al usuario `joe` el acceso a la tabla `computer_types` y, a continuación, restablece su propia identidad.  
@@ -83,7 +83,7 @@ GO
 SETUSER;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   

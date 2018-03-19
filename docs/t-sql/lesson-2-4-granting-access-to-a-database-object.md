@@ -1,5 +1,5 @@
 ---
-title: Conceder acceso a un objeto de base de datos | Documentos de Microsoft
+title: "Concesión de acceso a un objeto de base de datos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-2-4---granting-access-to-a-database-object"></a>Lección 2-4-conceder acceso a un objeto de base de datos
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Como administrador, puede ejecutar la selección de la **productos** tabla y la **vw_Names** ver y ejecutar la **pr_Names** procedimiento; sin embargo, Mary no puede hacerlo. Para conceder a Mary los permisos necesarios, use la instrucción GRANT.  
+# <a name="lesson-2-4---granting-access-to-a-database-object"></a>Lección 2-4: Concesión de acceso a un objeto de base de datos
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Como administrador, puede ejecutar la instrucción SELECT desde la tabla **Products** y la vista **vw_Names** y ejecutar el procedimiento **pr_Names**; en cambio, Mary no puede hacerlo. Para conceder a Mary los permisos necesarios, use la instrucción GRANT.  
   
 ### <a name="procedure-title"></a>Título del procedimiento  
   
@@ -51,7 +51,7 @@ Para ejecutar un procedimiento almacenado, debe tener permiso EXECUTE. Para tene
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
 [Resumen: Configurar permisos en objetos de base de datos](../t-sql/lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [GRANT &#40;Transact-SQL&#41;](../t-sql/statements/grant-transact-sql.md)  
 [REVOKE &#40;Transact-SQL&#41;](../t-sql/statements/revoke-transact-sql.md)  
   

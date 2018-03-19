@@ -1,5 +1,5 @@
 ---
-title: CURRENT_TRANSACTION_ID (Transact-SQL) | Documentos de Microsoft
+title: CURRENT_TRANSACTION_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -45,27 +45,27 @@ CURRENT_TRANSACTION_ID( )
   
 ```  
   
-## <a name="return-types"></a>Tipos de valor devuelto
+## <a name="return-types"></a>Tipos de valores devueltos
 **bigint**
   
 ## <a name="return-value"></a>Valor devuelto  
-Id. de transacción de la transacción actual en la sesión actual, tomada de [sys.dm_tran_current_transaction &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md).
+Identificador de transacción de la transacción actual en la sesión actual tomado de [sys.dm_tran_current_transaction &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md).
   
-## <a name="permissions"></a>Permissions  
-Cualquier usuario puede devolver el Id. de transacción de la sesión actual.
+## <a name="permissions"></a>Permisos  
+Cualquier usuario puede devolver el identificador de transacción de la sesión actual.
   
 ## <a name="examples"></a>Ejemplos  
-En el ejemplo siguiente se devuelve el identificador de transacción de la sesión actual:
+En el siguiente ejemplo se devuelve el identificador de transacción de la sesión actual:
   
 ```sql
 SELECT CURRENT_TRANSACTION_ID();  
 ```  
   
 ## <a name="see-also"></a>Vea también
-[sp_set_session_context &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)  
-[SESSION_CONTEXT &#40; Transact-SQL &#41;](../../t-sql/functions/session-context-transact-sql.md)  
+[sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)  
+[SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md)  
 [Seguridad de nivel de fila](../../relational-databases/security/row-level-security.md)  
-[CONTEXT_INFO &#40; Transact-SQL &#41;](../../t-sql/functions/context-info-transact-sql.md)  
-[SET CONTEXT_INFO &#40; Transact-SQL &#41;](../../t-sql/statements/set-context-info-transact-sql.md)
+[CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)  
+[SET CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/statements/set-context-info-transact-sql.md)
   
   

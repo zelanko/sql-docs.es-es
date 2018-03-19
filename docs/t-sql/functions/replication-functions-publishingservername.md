@@ -1,5 +1,5 @@
 ---
-title: PUBLISHINGSERVERNAME (Transact-SQL) | Documentos de Microsoft
+title: PUBLISHINGSERVERNAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,15 +49,15 @@ PUBLISHINGSERVERNAME()
 ## <a name="return-types"></a>Tipos devueltos  
  **nvarchar**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  PUBLISHINGSERVERNAME se utiliza en todos los tipos de replicación.  
   
  PUBLISHINGSERVERNAME se utiliza cuando existe una sesión de creación de reflejo de la base de datos en la base de datos de publicaciones entre el publicador y una instancia asociada reflejada.  
   
  Esta función debe ejecutarse dentro del contexto de una base de datos de publicaciones. Cuando PUBLISHINGSERVERNAME se ejecuta en una base de datos de publicaciones en la instancia del servidor reflejado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se obtiene el nombre de la instancia del publicador desde el que se publica la base de datos. Cuando esta función se ejecuta en una base de datos en la instancia del servidor reflejado que no se ha publicado o que se ha publicado desde la misma tras una conmutación por error, se obtiene el nombre de esta instancia. Cuando esta función se ejecuta en la instancia del publicador original, se obtiene el nombre del publicador.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Replicación y creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
- [Funciones de replicación &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/53702dee-de58-47d5-a552-7f32000f77d4)  
+ [Funciones de replicación &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/53702dee-de58-47d5-a552-7f32000f77d4)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SESSIONPROPERTY (Transact-SQL) | Documentos de Microsoft
+title: SESSIONPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ SESSIONPROPERTY (option)
   
 ## <a name="arguments"></a>Argumentos  
  *Opción*  
- Es la configuración de opción actual para esta sesión. *opción* puede ser cualquiera de los siguientes valores.  
+ Es la configuración de opción actual para esta sesión. *option* puede ser cualquiera de los siguientes valores.  
   
 |Opción|Description|  
 |------------|-----------------|  
@@ -60,12 +60,12 @@ SESSIONPROPERTY (option)
 |CONCAT_NULL_YIELDS_ NULL|Determina si los resultados de la concatenación se tratan como valores NULL o como valores de cadena vacía.<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
 |NUMERIC_ROUNDABORT|Especifica si se generan mensajes de error y advertencias cuando el redondeo en una expresión provoca una pérdida de precisión.<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
 |QUOTED_IDENTIFIER|Especifica si las reglas de ISO en cuanto a si hay que seguir las comillas delimitadoras de identificadores y cadenas literales.<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
-|\<Cualquier otra cadena >|NULL = La entrada no es válida.|  
+|\<Cualquier otra cadena>|NULL = La entrada no es válida.|  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **sql_variant**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Las opciones SET se indican mediante la combinación de las opciones de nivel de servidor, de nivel de base de datos y especificadas por el usuario.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -75,7 +75,7 @@ SESSIONPROPERTY (option)
 SELECT   SESSIONPROPERTY ('CONCAT_NULL_YIELDS_NULL')  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sql_variant &#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   

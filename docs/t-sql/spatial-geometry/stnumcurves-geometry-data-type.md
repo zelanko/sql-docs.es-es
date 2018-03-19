@@ -1,5 +1,5 @@
 ---
-title: STNumCurves (tipo de datos geometry) | Documentos de Microsoft
+title: STNumCurves (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Este método devuelve el número de curvas de una **geometry** instancia cuando la instancia es un tipo de datos espacial unidimensional. Los tipos de datos espaciales unidimensionales incluyen **LineString**, **CircularString**, y **CompoundCurve**. `STNumCurves`() funciona solo en tipos simples; no funciona con **geometry** colecciones como **MultiLineString**.
+Este método devuelve el número de curvas en una instancia de **geometry** cuando la instancia es un tipo de datos espacial unidimensional. Los tipos de datos espaciales unidimensionales incluyen **LineString**, **CircularString** y **CompoundCurve**. `STNumCurves`() solo funciona en tipos simples; no funciona con colecciones de **geometry** como **MultiLineString**.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,12 +41,12 @@ Este método devuelve el número de curvas de una **geometry** instancia cuando 
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geometry**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentarios  
- Unidimensional vacía **geometry** instancia devuelve 0. **NULL** se devuelve cuando la **geometry** instancia no es una instancia unidimensional o es una instancia no inicializada.  
+## <a name="remarks"></a>Notas  
+ Una instancia vacía unidimensional de **geometry** devuelve 0. Se devuelve **NULL** cuando la instancia de **geometry** no es una instancia unidimensional o es una instancia no inicializada.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -68,7 +68,7 @@ Este método devuelve el número de curvas de una **geometry** instancia cuando 
  SELECT @g.STNumCurves();
  ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Información general de los tipos de datos espaciales](../../relational-databases/spatial/spatial-data-types-overview.md)   
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

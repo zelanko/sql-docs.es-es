@@ -1,5 +1,5 @@
 ---
-title: ALTER QUEUE (Transact-SQL) | Documentos de Microsoft
+title: ALTER QUEUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2016
 ms.prod: sql-non-specified
@@ -93,10 +93,10 @@ WITH
   
 ## <a name="arguments"></a>Argumentos  
  *database_name* (objeto)  
- Es el nombre de la base de datos que contiene la cola que se va a cambiar. Si no *database_name* es siempre el valor predeterminado es la base de datos actual.  
+ Es el nombre de la base de datos que contiene la cola que se va a cambiar. Si no se proporciona *database_name*, el valor predeterminado es la base de datos actual.  
   
- *schema_name* (object)  
- Nombre del esquema al que pertenece la nueva cola. Si no *schema_name* es siempre el valor predeterminado es el esquema predeterminado para el usuario actual.  
+ *schema_name* (objeto)  
+ Nombre del esquema al que pertenece la nueva cola. Si no se proporciona *schema_name*, se usa el esquema predeterminado del usuario actual.  
   
  *queue_name*  
  Es el nombre de la cola que se va a cambiar.  
@@ -105,10 +105,10 @@ WITH
  Especifica si la cola está disponible (ON) o no (OFF). Cuando la cola no está disponible, no pueden agregarse mensajes a ella ni tampoco quitarse.  
   
  RETENTION  
- Especifica la configuración de retención para la cola. Si RETENTION = ON, todos los mensajes enviados o recibidos relativos a conversaciones que utilizan esta cola se retendrán hasta que las conversaciones finalicen. Esto permite retener mensajes con fines de auditoría o realizar transacciones de compensación si un error se produce  
+ Especifica la configuración de retención para la cola. Si RETENTION = ON, todos los mensajes enviados o recibidos relativos a conversaciones que utilizan esta cola se retendrán hasta que las conversaciones finalicen. Esto permite retener mensajes con fines de auditoría o para realizar transacciones de compensación si se produce un error.  
   
 > [!NOTE]  
->  Si se establece RETENTION = ON puede reducir el rendimiento. Esta configuración solo debe utilizarse si es necesario satisfacer el acuerdo de nivel de servicio para la aplicación.  
+>  El rendimiento puede disminuir si se establece RETENTION en ON. Esta configuración solo debe utilizarse si es necesario satisfacer el acuerdo de nivel de servicio para la aplicación.  
   
  ACTIVATION  
  Especifica información acerca del procedimiento almacenado que se activa para procesar mensajes que llegan a esta cola.  
@@ -119,36 +119,36 @@ WITH
  REBUILD [ WITH \<queue_rebuild_options> ]  
  **Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Vuelve a generar todos los índices de la tabla interna de la cola. Use esta función cuando están experimentando problemas de fragmentación debido a una carga elevada. MAXDOP es la cola compatible sola opción rebuild. Volver a generar siempre es una operación sin conexión.  
+ Vuelve a compilar todos los índices de la tabla interna de colas. Use esta función cuando experimente problemas de fragmentación debido a una carga elevada. MAXDOP es la única opción de recompilación de cola admitida. REBUILD siempre es una operación sin conexión.  
   
- REORGANIZAR [CON (LOB_COMPACTION = {ON | DESACTIVADO})]  
+ REORGANIZE [ WITH ( LOB_COMPACTION = { ON | OFF } ) ]  
  **Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Reorganizar todos los índices de la tabla interna de la cola.   
-A diferencia de REORGANIZACIÓN en tablas de usuario, REORGANIZE en una cola siempre se realiza como una operación sin conexión porque los bloqueos de nivel de página se deshabilitarán explícitamente en las colas.  
+ Vuelve a organizar todos los índices de la tabla interna de colas.   
+A diferencia de REORGANIZE en tablas de usuario, REORGANIZE en una cola siempre se realiza como una operación sin conexión porque los bloqueos de nivel de página se deshabilitan explícitamente en las colas.  
   
 > [!TIP]  
->  Para obtener instrucciones generales sobre la fragmentación del índice, una vez fragmentación entre 5 y 30%, reorganizar el índice. Cuando la fragmentación es superior al 30%, vuelva a generar el índice. Sin embargo, estos números son solo para obtener instrucciones generales como punto de partida para su entorno. Para determinar la cantidad de fragmentación del índice, use [sys.dm_db_index_physical_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) -vea el ejemplo G de ese artículo para obtener ejemplos.  
+>  Para obtener información general sobre la fragmentación del índice, cuando la fragmentación se encuentre entre el 5 % y el 30 %, reorganice el índice. Cuando la fragmentación sea superior al 30 %, recompile el índice. Aun así, estas cifras solo aportan información general que se puede tomar como punto de partida para el entorno. Para determinar la cantidad de fragmentación del índice, use [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md). Vea el ejemplo G del artículo para obtener ejemplos.  
   
- Mover a { *file_group* | "default"}  
+ MOVE TO { *file_group* | "default" }  
  **Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Mueve la tabla interna de cola (con sus índices) a un grupo de archivos especificado por el usuario.  El nuevo grupo de archivos no debe ser de solo lectura.  
+ Mueve la tabla interna de colas (con sus índices) a un grupo de archivos especificado por el usuario.  El nuevo grupo de archivos no debe ser de solo lectura.  
   
- Procedure_name = \<procedimiento >  
+ PROCEDURE_NAME = \<procedure>  
  Especifica el nombre del procedimiento almacenado que se va a activar cuando la cola contiene mensajes para procesar. Este valor debe ser un identificador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- *database_name* (procedure)  
+ *database_name* (procedimiento)  
  Nombre de la base de datos que contiene el procedimiento almacenado.  
   
- *schema_name* (procedure)  
+ *schema_name* (procedimiento)  
  Nombre del esquema que tiene la propiedad del procedimiento almacenado.  
   
  *stored_procedure_name*  
  Es el nombre del procedimiento almacenado.  
   
  MAX_QUEUE_READERS =*max_reader*  
- Especifica el número máximo de instancias del procedimiento almacenado de activación que la cola inicia simultáneamente. El valor de *max_readers* debe ser un número entre 0 y 32767.  
+ Especifica el número máximo de instancias del procedimiento almacenado de activación que la cola inicia simultáneamente. El valor de *max_readers* debe ser un número comprendido entre 0 y 32 767.  
   
  EXECUTE AS  
  Especifica la cuenta de usuario de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la que se ejecuta el procedimiento almacenado de activación. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe poder comprobar los permisos de este usuario en el momento en que la cola inicia el procedimiento almacenado. Para un usuario de dominio de Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe estar conectado al dominio y debe poder validar los permisos del usuario especificado cuando se active el procedimiento o la activación genere un error. En usuarios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el servidor siempre puede comprobar los permisos.  
@@ -157,7 +157,7 @@ A diferencia de REORGANIZACIÓN en tablas de usuario, REORGANIZE en una cola sie
  Especifica que el procedimiento almacenado se ejecuta como el usuario actual. Es la entidad de seguridad de base de datos que ejecuta esta instrucción ALTER QUEUE.  
   
  '*user_name*'  
- Es el nombre de usuario con el que se ejecuta el procedimiento almacenado. *user_name* debe ser válido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usuario especificado como un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificador. El usuario actual debe tener el permiso IMPERSONATE para el *nombre_usuario* especificado.  
+ Es el nombre de usuario con el que se ejecuta el procedimiento almacenado. *user_name* debe ser un usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido especificado como identificador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El usuario actual debe tener el permiso IMPERSONATE para el valor de *user_name* especificado.  
   
  OWNER  
  Especifica que el procedimiento almacenado se ejecuta como el propietario de la cola.  
@@ -170,18 +170,18 @@ A diferencia de REORGANIZACIÓN en tablas de usuario, REORGANIZE en una cola sie
   
  Una cola que tenga configurado en OFF el control de mensajes dudosos no se deshabilitará después de cinco reversiones de transacción consecutivas. Esto permite que el sistema de control de mensajes dudosos sea definido por la aplicación.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando una cola que tiene especificado un procedimiento almacenado de activación contiene mensajes, al cambiar el estado de activación de OFF a ON, se activa inmediatamente el procedimiento almacenado de activación. Cambiar el estado de activación de ON a OFF impide que el agente active instancias del procedimiento almacenado, pero las instancias que están en ejecución no se detienen.  
   
  Modificar una cola para agregar un procedimiento almacenado de activación no afecta al estado de activación de la cola. Modificar el procedimiento almacenado de activación de la cola no afecta a las instancias del procedimiento almacenado de activación que se estén ejecutando en el momento actual.  
   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] comprueba el número máximo de lectores de cola como parte del proceso de activación. Por tanto, si se modifica una cola para aumentar el número máximo de lectores de cola, [!INCLUDE[ssSB](../../includes/sssb-md.md)] iniciará inmediatamente más instancias del procedimiento almacenado de activación. Modificar una cola para reducir el número máximo de lectores de cola no afecta a las instancias del procedimiento almacenado de activación que se estén ejecutando en el momento actual. No obstante, [!INCLUDE[ssSB](../../includes/sssb-md.md)] no inicia ninguna nueva instancia del procedimiento almacenado hasta que el número de instancias del procedimiento almacenado de activación sea inferior al número máximo configurado.  
   
- Cuando una cola no está disponible, [!INCLUDE[ssSB](../../includes/sssb-md.md)] retiene los mensajes de los servicios que usan la cola en la cola de transmisión de la base de datos. El [sys.transmission_queue](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md) vista de catálogo proporciona una vista de la cola de transmisión.  
+ Cuando una cola no está disponible, [!INCLUDE[ssSB](../../includes/sssb-md.md)] retiene los mensajes de los servicios que usan la cola en la cola de transmisión de la base de datos. La vista de catálogo [sys.transmission_queue](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md) proporciona una vista de la cola de transmisión.  
   
  Si las instrucciones RECEIVE o GET CONVERSATION GROUP especifican una cola que no está disponible, generarán un error de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  De forma predeterminada, se concede permiso para modificar una cola al propietario de la cola, a los miembros de los roles fijos de base de datos db_ddladmin o db_owner y a los miembros del rol fijo de servidor sysadmin.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -234,27 +234,27 @@ ALTER QUEUE ExpenseQueue WITH RETENTION = ON ;
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;  
 ```  
   
-### <a name="g-rebuilding-queue-indexes"></a>G. Volver a generar índices de cola  
+### <a name="g-rebuilding-queue-indexes"></a>G. Recompilar índices de cola  
   
 **Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- En el ejemplo siguiente se vuelve a generar los índices de cola  
+ En el ejemplo siguiente se recompilan índices de cola.  
   
 ```  
 ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)   
 ```  
   
-### <a name="h-reorganizing-queue-indexes"></a>H. La reorganización de índices de cola  
+### <a name="h-reorganizing-queue-indexes"></a>H. Reorganizar índices de cola  
   
 **Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- En el ejemplo siguiente se reorganiza los índices de cola  
+ En el ejemplo siguiente se reorganizan índices de cola.  
   
 ```  
 ALTER QUEUE ExpenseQueue REORGANIZE   
 ```  
   
-### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I: Mover tabla interna de cola a otro grupo de archivos  
+### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I. Mover una tabla interna de colas a otro grupo de archivos  
   
 **Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -262,7 +262,7 @@ ALTER QUEUE ExpenseQueue REORGANIZE
 ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
  [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

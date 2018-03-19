@@ -1,5 +1,5 @@
 ---
-title: STGeomFromWKB (tipo de datos geography) | Documentos de Microsoft
+title: STGeomFromWKB (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomfromwkb-geography-data-type"></a>STGeomFromWKB (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve un **geography** instancia a partir de una representación Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Devuelve una instancia de **geography** a partir de una representación Well-Known Binary (WKB) de Open Geospatial Consortium (OGC).
   
-Esto **geography** admite el método de tipo de datos **FullGlobe** instancias o instancias espaciales mayores que un hemisferio.
+Este método del tipo de datos **geography** admite instancias de **FullGlobe** o instancias espaciales mayores que un hemisferio.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,22 +47,22 @@ STGeomFromWKB ( 'WKB_geography' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *WKB_geography*  
- Es la representación WKB de la **geography** instancia para devolver. *WKB_geography* es un **varbinary (max)** expresión.  
+ Es la representación WKB de la instancia de **geography** que se devuelve. *WKB_geography* es una expresión **varbinary(max)**.  
   
  *SRID*  
- Es un **int** expresión que representa el espaciales identificador de referencia (SRID) de la **geography** instancia para devolver.  
+ Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geography** que se va a devolver.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geography**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Comentarios  
- El tipo OGC de la **geography** instancia devuelta por `STGeomFromText()` se establece en la entrada WKB correspondiente.  
+## <a name="remarks"></a>Notas  
+ El tipo OGC de la instancia de **geography** devuelta por `STGeomFromText()` se establece en la entrada WKB correspondiente.  
   
- Este método produce una **FormatException** si la entrada no tiene el formato correcto.  
+ Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  
   
- Este método producirá **ArgumentException** si la entrada contiene un borde opuesto.  
+ Este método producirá una excepción **ArgumentException** si la entrada contiene un borde opuesto.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se usa `STGeomFromWKB()` para crear una instancia de `geography`.  
@@ -73,7 +73,7 @@ SET @g = geography::STGeomFromWKB(0x010200000002000000D7A3703D0A975EC08716D9CEF7
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de geografía estáticos de OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

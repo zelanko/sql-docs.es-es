@@ -1,5 +1,5 @@
 ---
-title: STGeomCollFromWKB (tipo de datos geometry) | Documentos de Microsoft
+title: STGeomCollFromWKB (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomcollfromwkb-geometry-data-type"></a>STGeomCollFromWKB (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve un **geometrycollection** instancia a partir de una representación Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Devuelve una instancia de **geometrycollection** a partir de una representación Well-Known Binary (WKB) de Open Geospatial Consortium (OGC).
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,23 +45,23 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *WKB_geometrycollection*  
- Es la representación WKB de la **geometrycollection** instancia que se va a devolver. *WKB_geometrycollection* es un **varbinary (max)** expresión.  
+ Es la representación WKB de la instancia de **geometrycollection** que se quiere devolver. *WKB_geometrycollection* es una expresión **varbinary(max)**.  
   
  *SRID*  
- Es un **int** expresión que representa el espaciales identificador de referencia (SRID) de la **geometry** instancia que se va a devolver.  
+ Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometry** que se quiere devolver.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geometry**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentarios  
- El tipo OGC de la **geometry** instancia devuelta por `STGeomCollFromWKB()` está establecido en **GeomCollection**, **MultiPolygon**, **MultiLineString**, o **MulitPoint**, en función de la entrada WKB correspondiente.  
+## <a name="remarks"></a>Notas  
+ El tipo OGC de la instancia de **geometry** devuelto por `STGeomCollFromWKB()` se establece en **GeomCollection**, **MultiPolygon**, **MultiLineString** o **MulitPoint**, en función de los datos WKB correspondientes.  
   
  Este método producirá una excepción FormatException si la entrada no tiene el formato correcto.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se utiliza `STGeomCollFromWKB()` para crear un **geometry** instancia.  
+ En el siguiente ejemplo se usa `STGeomCollFromWKB()` para crear una instancia de **geometry**.  
   
 ```  
 DECLARE @g geometry;  
@@ -69,7 +69,7 @@ SET @g = geometry::STGeomCollFromWKB(0x01070000000200000001030000000100000004000
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de geometría estáticos de OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

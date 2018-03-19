@@ -1,5 +1,5 @@
 ---
-title: OPENDATASOURCE (Transact-SQL) | Documentos de Microsoft
+title: OPENDATASOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -51,13 +51,13 @@ OPENDATASOURCE ( provider_name, init_string )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *NombreProveedor*  
- Es el nombre registrado como PROGID del proveedor OLE DB utilizado para obtener acceso al origen de datos. *NombreProveedor* es un **char** tipo de datos, sin valor predeterminado.  
+ *provider_name*  
+ Es el nombre registrado como PROGID del proveedor OLE DB utilizado para obtener acceso al origen de datos. *provider_name* es un tipo de datos **char** que carece de valor predeterminado.  
   
  *init_string*  
- Es la cadena de conexión que se pasa a la interfaz IDataInitialize del proveedor de destino. La sintaxis de cadena de proveedor se basa en pares de palabra clave y valor separados por punto y coma, por ejemplo: **'***palabraclave1*=*valor***;** *palabraclave2*=*valor***'**.  
+ Es la cadena de conexión que se pasa a la interfaz IDataInitialize del proveedor de destino. La sintaxis de la cadena del proveedor se basa en pares de palabra clave y valor separados por signos de punto y coma; por ejemplo: **'***keyword1*=*value***;***keyword2*=*value***'**.  
   
- Para conocer los pares de palabra clave y valor admitidos, vea [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK. En esta documentación se define la sintaxis básica. La siguiente tabla se palabras clave de las listas utilizadas con más frecuencia en el *init_string* argumento.  
+ Para conocer los pares de palabra clave y valor admitidos, vea [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK. En esta documentación se define la sintaxis básica. En la siguiente tabla se muestran las palabras clave más utilizadas en el argumento *init_string*.  
   
 |Palabra clave|Propiedad OLE DB|Valores válidos y descripción|  
 |-------------|---------------------|----------------------------------|  
@@ -70,7 +70,7 @@ OPENDATASOURCE ( provider_name, init_string )
 |Catálogo|DBPROP_INIT_CATALOG|Nombre del catálogo inicial o predeterminado al conectarse al origen de datos.|  
 |Seguridad integrada|DBPROP_AUTH_INTEGRATED|SSPI, para especificar la autenticación de Windows|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  OPENDATASOURCE se puede utilizar para tener acceso a datos remotos desde orígenes de datos de OLE DB solo cuando la opción de Registro DisallowAdhocAccess está establecida explícitamente en 0 para el proveedor especificado y la opción de configuración avanzada Ad Hoc Distributed Queries está habilitada. Cuando no se establecen estas opciones, el comportamiento predeterminado no permite el acceso ad hoc.  
   
  Es posible utilizar la función OPENDATASOURCE en las mismas ubicaciones de la sintaxis [!INCLUDE[tsql](../../includes/tsql-md.md)] de un nombre del servidor vinculado. Por tanto, se puede utilizar OPENDATASOURCE como la primera parte de un nombre de cuatro partes que hace referencia a un nombre de tabla o vista en una instrucción SELECT, INSERT, UPDATE o DELETE, o a un procedimiento almacenado remoto en una instrucción EXECUTE. Cuando se ejecutan procedimientos almacenados remotos, OPENDATASOURCE debe hacer referencia a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. OPENDATASOURCE no acepta variables como argumentos.  
@@ -80,11 +80,11 @@ OPENDATASOURCE ( provider_name, init_string )
 > [!IMPORTANT]  
 >  La autenticación de Windows es mucho más segura que la de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Siempre que sea posible, debe utilizar la Autenticación de Windows. OPENDATASOURCE no se debe utilizar con contraseñas explícitas en la cadena de conexión.  
   
- Los requisitos de conexión de cada proveedor son similares a los requisitos de esos parámetros cuando se crean servidores vinculados. Los detalles de muchos proveedores comunes se enumeran en el tema [sp_addlinkedserver &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
+ Los requisitos de conexión de cada proveedor son similares a los requisitos de esos parámetros cuando se crean servidores vinculados. En el tema [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) se incluye información detallada sobre muchos proveedores comunes.  
   
  Las llamadas a OPENDATASOURCE, OPENQUERY u OPENROWSET en la cláusula FROM se evalúan por separado y de forma independiente de otras llamadas a estas funciones utilizadas como destino de la actualización, incluso si se han suministrado argumentos idénticos a las dos llamadas. En particular, las condiciones de filtro o combinación aplicadas en el resultado de una de esas llamadas no tienen ningún efecto en los resultados de la otra llamada.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Todos los usuarios pueden ejecutar OPENDATASOURCE. Los permisos que se utilizan para conectarse al servidor remoto se determinan a partir de la cadena de conexión.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -104,7 +104,7 @@ SELECT * FROM OPENDATASOURCE('Microsoft.Jet.OLEDB.4.0',
 'Data Source=C:\DataFolder\Documents\TestExcel.xls;Extended Properties=EXCEL 5.0')...[Sheet1$] ;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  
   

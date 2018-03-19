@@ -1,5 +1,5 @@
 ---
-title: Variables (Transact-SQL) | Documentos de Microsoft
+title: Variables (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -29,14 +29,14 @@ ms.lasthandoff: 01/25/2018
 # <a name="variables-transact-sql"></a>Variables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Una variable local de Transact-SQL es un objeto que puede contener un solo valor de datos de un tipo específico. Normalmente, las variables se utilizan en lotes y scripts: 
+Una variable local de Transact-SQL es un objeto que contiene un valor individual de datos de un tipo específico. Normalmente, las variables se utilizan en lotes y scripts: 
 
 * Como contadores, para contar el número de veces que se realiza un bucle o controlar cuántas veces debe ejecutarse.
 * Para contener un valor de datos que desea probar mediante una instrucción de control de flujo.
 * Para guardar el valor de un dato que se va a devolver en un código de retorno de un procedimiento almacenado o un valor devuelto de una función.
 
 > [!NOTE]
-> Los nombres de algunas funciones de sistema de Transact-SQL empiezan con dos *en* signos (@ @). Aunque en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], @@functions se conocen a como variables globales, no son variables y no tiene el mismo comportamiento que las variables. El @@functions son funciones del sistema y uso de su sintaxis sigue las reglas para las funciones.
+> Los nombres de algunas funciones del sistema Transact-SQL comienzan por dos *arrobas* (@@). A pesar de que en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se hacía referencia a @@functions como variables globales, no son variables y no tienen el mismo comportamiento que las variables. Las funciones @@functions son funciones del sistema y el uso de su sintaxis sigue las reglas de las funciones.
 
 Este script crea una pequeña tabla de prueba y la rellena con 26 filas. El script usa una variable para hacer tres cosas: 
 
@@ -86,23 +86,23 @@ GO
 ```
 
 ## <a name="declaring-a-transact-sql-variable"></a>Declarar una variable de Transact-SQL
-La instrucción DECLARE inicializa una variable de Transact-SQL mediante: 
+La instrucción DECLARE inicializa una variable de Transact-SQL al: 
 * Asignar un nombre. El nombre debe tener un único @ como primer carácter.
 * Asignar un tipo de datos suministrado por el sistema o definido por el usuario y una longitud. Para las variables numéricas, se asignan también una precisión y una escala. Para las variables del tipo XML, puede asignarse una colección de esquemas opcional.
 * Establecer el valor a NULL.
 
-Por ejemplo, la siguiente **DECLARE** instrucción crea una variable local denominada  **@mycounter**  con un tipo de datos int.  
+Por ejemplo, la siguiente instrucción **DECLARE** crea una variable local llamada **@mycounter** con un tipo de datos int.  
 ```sql
 DECLARE @MyCounter int;
 ```
 Para declarar más de una variable local, use una coma después de la primera variable local definida y, a continuación, especifique el nombre y tipo de datos de la siguiente variable local.
 
-Por ejemplo, la siguiente **DECLARE** instrucción crea tres variables locales llamadas  **@LastName** ,  **@FirstName**  y  **@StateProvince** e inicializa cada una en NULL:  
+Por ejemplo, la siguiente instrucción **DECLARE** crea tres variables locales, denominadas **@LastName**, **@FirstName** y **@StateProvince**, e inicializa cada una en NULL:  
 ```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
 
-El ámbito de una variable es las instrucciones de intervalo de Transact-SQL que pueden hacer referencia a la variable. El ámbito de una variable se extiende desde el punto en el que se declara hasta el final del lote o procedimiento almacenado en el que se ha declarado. Por ejemplo, el siguiente script genera un error de sintaxis porque la variable se declara en un lote y se hace referencia a la misma en otro:  
+El ámbito de una variable es el conjunto de instrucciones de Transact-SQL que pueden hacer referencia a la variable. El ámbito de una variable se extiende desde el punto en el que se declara hasta el final del lote o procedimiento almacenado en el que se ha declarado. Por ejemplo, el siguiente script genera un error de sintaxis porque la variable se declara en un lote y se hace referencia a la misma en otro:  
 ```sql
 USE AdventureWorks2014;
 GO
@@ -167,7 +167,7 @@ GO
 > [!WARNING]
 > Si hay varias cláusulas de asignación en una sola instrucción SELECT, SQL Server no garantiza el orden de evaluación de las expresiones. Tenga en cuenta que los efectos solo están visibles si existen referencias entre las asignaciones.
 
-Si una instrucción SELECT devuelve más de una fila y la variable hace referencia a una expresión no escalar, la variable se establece en el valor devuelto de la expresión en la última fila del conjunto de resultados. Por ejemplo, en el siguiente lote  **@EmpIDVariable**  está establecido en el **BusinessEntityID** valor de la última fila devuelta, que es 1:  
+Si una instrucción SELECT devuelve más de una fila y la variable hace referencia a una expresión no escalar, la variable se establece en el valor devuelto para la expresión en la última fila del conjunto de resultados. Por ejemplo, en el siguiente lote, **@EmpIDVariable** se establece en el valor de **BusinessEntityID** de la última fila devuelta, que es 1:  
 
 ```sql
 USE AdventureWorks2014;
@@ -182,11 +182,11 @@ SELECT @EmpIDVariable;
 GO
 ```
 
-## <a name="see-also"></a>Vea también  
- [Declarar@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [Declare @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
  [SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
  [SELECT @local_variable](../../t-sql/language-elements/select-local-variable-transact-sql.md)  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Compuesta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  (Expressions [Transact-SQL])  
+ [Operadores compuestos &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
   
   

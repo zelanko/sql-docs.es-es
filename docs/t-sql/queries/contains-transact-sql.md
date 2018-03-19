@@ -1,5 +1,5 @@
 ---
-title: CONTIENE (Transact-SQL) | Documentos de Microsoft
+title: CONTAINS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Busca coincidencias precisas o aproximadas (menos precisas) de palabras o frases, palabras que se encuentran a cierta distancia de otra o coincidencias ponderadas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTAINS es un predicado que se usa en la [cláusula WHERE](../../t-sql/queries/where-transact-sql.md) de un [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción SELECT para realizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] búsqueda de texto completo en texto completo indizadas las columnas que contienen tipos de datos basados en caracteres.  
+  Busca coincidencias precisas o aproximadas (menos precisas) de palabras o frases, palabras que se encuentran a cierta distancia de otra o coincidencias ponderadas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTAINS es un predicado que se usa en la [cláusula WHERE](../../t-sql/queries/where-transact-sql.md) de una instrucción SELECT de [!INCLUDE[tsql](../../includes/tsql-md.md)] para realizar una búsqueda de texto completo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en las columnas indizadas de texto completo que contienen tipos de datos basados en caracteres.  
   
  CONTAINS puede buscar:  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 01/25/2018
   
 -   Una palabra que sea un sinónimo de otra mediante un diccionario de sinónimos (por ejemplo, la palabra "metal" puede tener sinónimos como "aluminio" y "acero").  
   
- Para obtener información acerca de las formas de búsquedas de texto completo que son compatibles con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [consultar con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md).  
+ Para más información sobre las formas de búsqueda de texto completo que se admiten en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Consultar con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md).  
  
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -148,39 +148,39 @@ CONTAINS (
   
 ## <a name="arguments"></a>Argumentos  
  *column_name*  
- Es el nombre de una columna indizada de texto completo de la tabla especificada en la cláusula FROM. Las columnas pueden ser de tipo **char**, **varchar**, **nchar**, **nvarchar**, **texto**, **ntext**, **imagen**, **xml**, **varbinary**, o **varbinary (max)**.  
+ Es el nombre de una columna indizada de texto completo de la tabla especificada en la cláusula FROM. Las columnas pueden ser de tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** o **varbinary(max)**.  
   
  *column_list*  
- Especifica dos o más columnas, separadas por comas. *column_list* debe ir entre paréntesis. A menos que *language_term* se especifica, el idioma de todas las columnas de *column_list* debe ser el mismo.  
+ Especifica dos o más columnas, separadas por comas. *column_list* debe ir entre paréntesis. A menos que se especifique *language_term*, el idioma de todas las columnas de *column_list* debe ser el mismo.  
   
  \*  
- Especifica que la consulta busca todas las columnas indizadas de texto completo en la tabla especificada en la cláusula FROM de la condición de búsqueda determinada. Las columnas de la cláusula CONTAINS deben proceder de una tabla única que tenga un índice de texto completo. A menos que *language_term* se especifica, el idioma de todas las columnas de la tabla debe ser el mismo.  
+ Especifica que la consulta busca la condición de búsqueda especificada en todas las columnas indizadas de texto completo de la tabla especificada en la cláusula FROM. Las columnas de la cláusula CONTAINS deben proceder de una tabla única que tenga un índice de texto completo. A menos que se especifique *language_term*, el idioma de todas las columnas de la tabla debe ser el mismo.  
   
- PROPIEDAD ( *column_name* , '*property_name*')  
+ PROPERTY ( *column_name*, '*property_name*')  
 **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Especifica la propiedad de un documento por la que buscar la condición de búsqueda especificada.  
   
 > [!IMPORTANT]  
->  Para la consulta devolver las filas, *property_name* debe especificarse en la propiedad de búsqueda lista del índice de texto completo y el índice de texto completo debe contener entradas específicas de la propiedad *property_name*. Para obtener más información, vea [Buscar propiedades de documento con listas de propiedades de búsqueda](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
+>  Para que la consulta devuelva alguna fila, *property_name* se debe especificar en la lista de propiedades de búsqueda del índice de texto completo y el índice de texto completo debe contener entradas específicas de la propiedad *property_name*. Para obtener más información, vea [Buscar propiedades de documento con listas de propiedades de búsqueda](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
- IDIOMA *language_term*  
- Es el idioma que se usará para la separación de palabras, lematización, expansiones del diccionario de sinónimos y reemplazos y palabras irrelevantes (o [palabra irrelevante](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) eliminación como parte de la consulta. Este parámetro es opcional.  
+ LANGUAGE *language_term*  
+ Es el idioma que se usará para la separación de palabras, la lematización, las expansiones y reemplazos del diccionario de sinónimos y la eliminación de [palabras irrelevantes](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) como parte de la consulta. Este parámetro es opcional.  
   
  Si se almacenan juntos documentos de idiomas diferentes como objetos binarios (BLOB) en una sola columna, el identificador de configuración regional (LCID) de un documento determinado determina qué idioma se usa para indizar su contenido. Al consultar este tipo de columna, especificar LANGUAGE *language_term* puede aumentar la probabilidad de encontrar una coincidencia acertada.  
   
- *language_term* se puede especificar como una cadena, entero o un valor hexadecimal correspondiente para el LCID del idioma. Si *language_term* se especifica, el idioma que representa se aplica a todos los elementos de la condición de búsqueda. Si no se especifica ningún valor, se utiliza el idioma de texto completo de la columna.  
+ *language_term* se puede especificar como una cadena, un entero o un valor hexadecimal correspondiente al identificador de configuración regional (LCID) de un idioma. Si se especifica *language_term*, el idioma que representa se aplica a todos los elementos de la condición de búsqueda. Si no se especifica ningún valor, se utiliza el idioma de texto completo de la columna.  
   
- Cuando se especifica como una cadena, *language_term* corresponde a la **alias** valor de columna en el [sys.syslanguages &#40; Transact-SQL &#41; ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) vista de compatibilidad. La cadena debe incluirse entre comillas simples, como en '*language_term*'. Cuando se especifica como un entero, *language_term* es el LCID real que identifica el idioma. Cuando se especifica como un valor hexadecimal, *language_term* 0 x seguido del valor hexadecimal del LCID. El valor hexadecimal no puede superar los ocho dígitos, incluidos los ceros a la izquierda.  
+ Cuando se especifica como una cadena, *language_term* corresponde al valor de columna **alias** de la vista de compatibilidad [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). La cadena debe estar delimitada con comillas sencillas, como en '*language_term*'. Cuando se especifica como un entero, *language_term* es el LCID real que identifica el idioma. Cuando se especifica como un valor hexadecimal, *language_term* es 0x seguido del valor hexadecimal del LCID. El valor hexadecimal no puede superar los ocho dígitos, incluidos los ceros a la izquierda.  
   
- Si el valor está en formato de caracteres de doble byte (DBCS), set, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo convertirá a Unicode.  
+ Si el valor está en formato de juego de caracteres de doble byte (DBCS), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo convertirá a Unicode.  
   
- Si el idioma especificado no es válido o no hay recursos instalados que se correspondan con dicho idioma, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve un error. Para usar los recursos de idioma neutro, especifique 0 x 0 como *language_term*.  
+ Si el idioma especificado no es válido o no hay recursos instalados que se correspondan con dicho idioma, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve un error. Para usar recursos de idioma neutro, especifique 0x0 como *language_term*.  
   
  \<*contains_search_condition*>  
- Especifica el texto que se va a buscar en *column_name* y las condiciones para una coincidencia.  
+ Especifica el texto que se va a buscar en *column_name* y las condiciones para obtener coincidencias.  
   
-*\<contains_search_condition>* is **nvarchar**. Se realiza una conversión implícita cuando se usa otro tipo de datos de carácter como entrada. No se puede usar varchar (max) y nvarchar (max) tipos de datos de cadena grande. En el siguiente ejemplo, la variable `@SearchWord`, definida como una variable de tipo `varchar(30)`, provoca una conversión implícita en el predicado `CONTAINS`.
+*\<contains_search_condition>* es **nvarchar**. Se realiza una conversión implícita cuando se usa otro tipo de datos de carácter como entrada. No se pueden usar los tipos de datos de cadena grande varchar(max) y nvarchar(max). En el siguiente ejemplo, la variable `@SearchWord`, definida como una variable de tipo `varchar(30)`, provoca una conversión implícita en el predicado `CONTAINS`.
   
 ```sql  
 USE AdventureWorks2012;  
@@ -192,7 +192,7 @@ FROM Production.ProductDescription
 WHERE CONTAINS(Description, @SearchWord);  
 ```  
   
- Dado que "examen de parámetros" no funciona con la conversión, utilice **nvarchar** para mejorar el rendimiento. En el ejemplo, declare `@SearchWord` como `nvarchar(30)`.  
+ Como el "examen de parámetros" no funciona con la conversión, use **nvarchar** para lograr un mejor rendimiento. En el ejemplo, declare `@SearchWord` como `nvarchar(30)`.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -216,47 +216,47 @@ WHERE CONTAINS(Description, @SearchWord);
 >  Algunos idiomas, como los de algunas partes de Asia, pueden tener frases que contengan una o varias palabras sin espacios entre ellas.  
   
 \<simple_term>  
-Especifica una coincidencia para una palabra o frase exactas. Ejemplos de términos simples válidos son "blue berry", blueberry y "Microsoft SQL Server". Las frases tienen que ir entre comillas dobles (""). Las palabras en una frase deben aparecer en el mismo orden que se especifica en  *\<contains_search_condition >* tal y como aparecen en la columna de base de datos. La búsqueda de caracteres en la palabra o la frase no distingue mayúsculas de minúsculas. Las palabras irrelevantes (o [las palabras irrelevantes](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) (como un y, o) en las columnas indizadas de texto completo no se almacenan en el índice de texto completo. Si se utiliza una palabra irrelevante en la búsqueda de una sola palabra, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve un mensaje de error que indica que la consulta contiene solo palabras irrelevantes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye una lista estándar de palabras irrelevantes en el directorio \Mssql\Binn\FTERef de cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Especifica una coincidencia para una palabra o frase exactas. Ejemplos de términos simples válidos son "blue berry", blueberry y "Microsoft SQL Server". Las frases tienen que ir entre comillas dobles (""). Las palabras de una frase tienen que aparecer en la columna de la base de datos en el mismo orden que el especificado en *\<contains_search_condition>*. La búsqueda de caracteres en la palabra o la frase no distingue mayúsculas de minúsculas. Las [palabras irrelevantes](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) (como un, y, el o la) de las columnas indizadas de texto completo no se almacenan en el índice de texto completo. Si se utiliza una palabra irrelevante en la búsqueda de una sola palabra, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve un mensaje de error que indica que la consulta contiene solo palabras irrelevantes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye una lista estándar de palabras irrelevantes en el directorio \Mssql\Binn\FTERef de cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Los signos de puntuación se omiten. Por lo tanto, `CONTAINS(testing, "computer failure")` coincide con una fila que contiene el valor "Where is my computer? Failure to find it would be expensive". Para obtener más información sobre el comportamiento del separador de palabras, vea [configurar y administrar separadores de palabras y lematizadores para la búsqueda](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
+ Los signos de puntuación se omiten. Por lo tanto, `CONTAINS(testing, "computer failure")` coincide con una fila que contiene el valor "Where is my computer? Failure to find it would be expensive". Para más información sobre el comportamiento de los separadores de palabras, vea [Configurar y administrar separadores de palabras y lematizadores para la búsqueda](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
  \<prefix_term>  
- Especifica la coincidencia de palabras o frases que comiencen con el texto especificado. Incluya un término prefijo entre comillas dobles ("") y agregue un asterisco (\*) antes de la comilla final, para que cualquier texto que comience con el término sencillo especificado antes del asterisco se compara. La cláusula debe especificarse de esta manera:`CONTAINS (column, '"text*"')`. El asterisco representa cero, uno o más caracteres (de la palabra raíz o de las palabras de la palabra o la frase). Si el texto y el asterisco no se delimitan con comillas dobles de modo que el predicado sea `CONTAINS (column, 'text*')`, la búsqueda de texto completo considera el asterisco un carácter y busca coincidencias exactas con `text*`. El motor de texto completo no encontrará palabras con el asterisco (\*) como separadores de palabras suelen omitir dichos caracteres de caracteres.  
+ Especifica la coincidencia de palabras o frases que comiencen con el texto especificado. Incluya un término prefijo entre comillas dobles ("") y agregue un asterisco (\*) delante de las comillas de cierre, de modo que se haga coincidir con cualquier texto que comience con el término sencillo especificado antes del asterisco. La cláusula debe especificarse de esta manera:`CONTAINS (column, '"text*"')`. El asterisco representa cero, uno o más caracteres (de la palabra raíz o de las palabras de la palabra o la frase). Si el texto y el asterisco no se delimitan con comillas dobles de modo que el predicado sea `CONTAINS (column, 'text*')`, la búsqueda de texto completo considera el asterisco un carácter y busca coincidencias exactas con `text*`. El motor de texto completo no encontrará palabras con el carácter de asterisco (\*) porque los separadores de palabras suelen omitir dichos caracteres.  
   
- Cuando  *\<prefix_term >* es una frase, cada palabra de dicha frase se considera un prefijo separado. Por tanto, una consulta que especifique el prefijo "local wine*" hace que se devuelvan todas las filas que contengan el texto "local winery", "locally wined and dined", etc.  
+ Cuando *\<prefix_term>* es una frase, todas las palabras de dicha frase se consideran prefijos. Por tanto, una consulta que especifique el prefijo "local wine*" hace que se devuelvan todas las filas que contengan el texto "local winery", "locally wined and dined", etc.  
   
  \<generation_term>  
  Especifica la coincidencia de palabras cuando los términos simples incluyen variaciones de la palabra original que se busca.  
   
  INFLECTIONAL  
- Especifica que se va a utilizar el analizador lingüístico dependiente del idioma en el término simple especificado. El comportamiento del analizador lingüístico se define en función de las reglas de análisis lingüístico de cada idioma concreto. El idioma neutro no tiene ningún analizador lingüístico asociado. El idioma de las columnas que se van a consultar se utiliza para hacer referencia al analizador lingüístico deseado. Si *language_term* se especifica, el analizador lingüístico correspondiente para que se utiliza el idioma.  
+ Especifica que se va a utilizar el analizador lingüístico dependiente del idioma en el término simple especificado. El comportamiento del analizador lingüístico se define en función de las reglas de análisis lingüístico de cada idioma concreto. El idioma neutro no tiene ningún analizador lingüístico asociado. El idioma de las columnas que se van a consultar se utiliza para hacer referencia al analizador lingüístico deseado. Si se especifica *language_term*, se usa el analizador lingüístico correspondiente a dicho idioma.  
   
- A partir de  *\<simple_term >* dentro de un  *\<generation_term >* no coincidirá con nombres y verbos.  
+ Un *\<simple_term>* determinado dentro de un *\<generation_term>* no coincidirá con nombres y verbos.  
   
  THESAURUS  
- Especifica que se utiliza el diccionario de sinónimos correspondiente al idioma de texto completo de la columna o el idioma especificado en la consulta. El patrón o patrones de mayor el  *\<simple_term >* se comparan con el diccionario de sinónimos y se generan términos adicionales para expandir o reemplazar el patrón original. Si no se encuentra una coincidencia para la totalidad o parte de la  *\<simple_term >*, la parte no coincidente se trata como un *simple_term*. Para obtener más información sobre el diccionario de sinónimos de búsqueda de texto completo, vea [configurar y administrar archivos de diccionario de sinónimos para búsquedas de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
+ Especifica que se utiliza el diccionario de sinónimos correspondiente al idioma de texto completo de la columna o el idioma especificado en la consulta. El patrón o patrones más largos de *\<simple_term>* se hacen coincidir con el diccionario de sinónimos y se generan términos adicionales para expandir o reemplazar el patrón original. Si no se encuentra ninguna coincidencia para todo o parte de *\<simple_term>*, la parte no coincidente se trata como un *simple_term*. Para más información sobre los sinónimos de búsqueda de texto completo, vea [Configurar y administrar archivos de sinónimos para búsquedas de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
  \<generic_proximity_term>  
  Especifica una coincidencia de palabras o frases que deben estar en el documento en el que se busca.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Se recomienda que use \<término_proximidad_personalizado >.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Se recomienda usar \<custom_proximity_term>.  
   
  NEAR | ~  
- Indica que la palabra o frase de cada lado del operador NEAR o ~ debe aparecer en un documento para que se devuelva una coincidencia. Debe especificar dos términos de búsqueda. Un término de búsqueda determinada puede ser una sola palabra o frase que está delimitada por comillas dobles ("*frase*").  
+ Indica que la palabra o frase de cada lado del operador NEAR o ~ debe aparecer en un documento para que se devuelva una coincidencia. Debe especificar dos términos de búsqueda. Un término de búsqueda determinado puede ser una sola palabra o una frase delimitada por comillas dobles ("*phrase*").  
   
  Se pueden encadenar varias condiciones de proximidad, como en `a NEAR b NEAR c` o `a ~ b ~ c`. Las condiciones de proximidad encadenadas deben estar todas en el documento para que se devuelva una coincidencia.  
   
- Por ejemplo, `CONTAINS(*column_name*, 'fox NEAR chicken')` y `CONTAINSTABLE(*table_name*, *column_name*, 'fox ~ chicken')` devolverían ambos cualquier documento de la columna especificada que contuviera "fox" y "pollo". Además, CONTAINSTABLE devuelve un rango para cada documento según la proximidad de "zorro" y "pollo". Por ejemplo, si un documento contiene la frase "The fox ate the chicken", su clasificación sería alta porque los términos se encuentran más próximos que en otros documentos.  
+ Por ejemplo, `CONTAINS(*column_name*, 'fox NEAR chicken')` y `CONTAINSTABLE(*table_name*, *column_name*, 'fox ~ chicken')` devolverían ambos cualquier documento de la columna especificada que contuviera "fox" y "chicken". Además, CONTAINSTABLE devuelve un rango para cada documento según la proximidad de "zorro" y "pollo". Por ejemplo, si un documento contiene la frase "The fox ate the chicken", su clasificación sería alta porque los términos se encuentran más próximos que en otros documentos.  
   
- Para obtener más información acerca de los términos de proximidad genérico, vea [buscar palabras cerca de otra palabra con NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).  
+ Para más información sobre los términos de proximidad genéricos, vea [Buscar palabras cerca de otra palabra con NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).  
   
  \<custom_proximity_term>  
 **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
- Especifica una coincidencia entre palabras o frases y, opcionalmente, la distancia máxima permitida entre los términos de búsqueda. También puede especificar que los términos de búsqueda deben encontrarse en el orden exacto en que se especifica (\<orden_coincidencia >).  
+ Especifica una coincidencia entre palabras o frases y, opcionalmente, la distancia máxima permitida entre los términos de búsqueda. También se puede especificar que los términos de búsqueda deben estar en el orden exacto en que se indican (\<match_order>).  
   
- Un término de búsqueda determinada puede ser una sola palabra o frase que está delimitada por comillas dobles ("*frase*"). Todos los términos especificados deben estar en el documento para que se devuelva una coincidencia. Debe especificar dos términos de búsqueda como mínimo. El número máximo de términos de búsqueda es 64.  
+ Un término de búsqueda determinado puede ser una sola palabra o una frase delimitada por comillas dobles ("*phrase*"). Todos los términos especificados deben estar en el documento para que se devuelva una coincidencia. Debe especificar dos términos de búsqueda como mínimo. El número máximo de términos de búsqueda es 64.  
   
  De forma predeterminada, el término de proximidad personalizado devuelve todas las filas que contengan los términos especificados, independientemente de la distancia a la que se encuentren y su orden. Por ejemplo, en el caso de la siguiente consulta, un documento tendría que contener `term1` y "`term3 term4`" en cualquier parte y en cualquier orden:  
   
@@ -278,7 +278,7 @@ CONTAINS(column_name, 'NEAR(term1,"term3 term4")')
 CONTAINS(column_name, 'NEAR((AA,BB),5)')  
 ```  
   
- La cadena `AA one two three four five BB` sería una coincidencia. En el ejemplo siguiente, la consulta especifica tres términos de búsqueda, `AA`, `BB`, y `CC` dentro de una distancia máxima de cinco:  
+ La cadena `AA one two three four five BB` se consideraría una coincidencia. En el siguiente ejemplo, la consulta especifica tres términos de búsqueda (`AA`, `BB` y `CC`) con una distancia máxima de cinco:  
   
 ```  
 CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')  
@@ -288,15 +288,15 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
   
  `BB   one two   CC   three four five A  A`  
   
- Observe que la interna Buscar término, `CC`, no se cuenta.  
+ Observe que no se cuenta el término de búsqueda interno, `CC`.  
   
  **MAX**  
  Devuelve todas las filas que contengan los términos especificados sin tener en cuenta la distancia a la que se encuentran. Ésta es la opción predeterminada.  
   
  \<match_order>  
- Especifica si los términos deben encontrarse en el orden especificado para que los devuelva una consulta de búsqueda. Para especificar \<orden_coincidencia >, también debe especificar \<distancia_máxima >.  
+ Especifica si los términos deben encontrarse en el orden especificado para que los devuelva una consulta de búsqueda. Para especificar \<match_order>, también debe especificar \<maximum_distance>.  
   
- \<orden_coincidencia > toma uno de los siguientes valores:  
+ \<match_order> puede tener uno de los siguientes valores:  
   
  **TRUE**  
  Exige que los términos estén en el orden especificado. Por ejemplo, `NEAR(A,B)` solo consideraría como coincidencia `A … B`.  
@@ -312,16 +312,16 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
 CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')  
 ```  
   
- Para obtener más información sobre el uso de términos de proximidad personalizado, consulte [buscar palabras cerca de otra palabra con NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).  
+ Para más información sobre el uso de términos de proximidad personalizados, vea [Buscar palabras cerca de otra palabra con NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).  
   
  \<weighted_term>  
  Especifica que las filas coincidentes (devueltas por la consulta) coinciden con una lista de palabras y frases a las que se asigna opcionalmente un valor ponderado.  
   
  ISABOUT  
- Especifica la  *\<weighted_term >* (palabra clave).  
+ Especifica la palabra clave *\<weighted_term>*.  
   
  WEIGHT(*weight_value*)  
- Especifica el valor de ponderación como un número entre 0,0 y 1,0. Cada componente de  *\<weighted_term >* puede incluir un *weight_value*. *weight_value* es una manera de modificar cómo varias partes de una consulta afectan al valor de rango asignado a cada fila que coincide con la consulta. WEIGHT no influye en los resultados de las consultas CONTAINS, pero sí en el rango de [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) consultas.  
+ Especifica el valor de ponderación como un número entre 0,0 y 1,0. Cada componente de *\<weighted_term>* puede incluir un *weight_value*. *weight_value* es una forma de modificar cómo varias partes de una consulta afectan al valor de rango asignado a cada fila que coincide con la consulta. WEIGHT no influye en los resultados de las consultas CONTAINS, pero sí en el rango de las consultas [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md).  
   
 > [!NOTE]  
 >  El separador decimal siempre es un punto, independientemente de la configuración regional del sistema operativo.  
@@ -329,16 +329,16 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  { AND | & } | { AND NOT | &! } | { OR | | }   
  Especifica una operación lógica entre dos condiciones de búsqueda.  
   
- {Y | &}  
+ { AND | & }  
  Indica que en ambos casos se incluyen condiciones de búsqueda que se deben cumplir para encontrar coincidencias. Se puede utilizar el símbolo de "y" comercial (&) en lugar de la palabra clave AND para representar el operador AND.  
   
- {Y NO | &! }  
+ { AND NOT | &! }  
  Indica que la segunda condición de búsqueda no puede estar presente para encontrar coincidencias. Se puede utilizar el símbolo de "y" comercial seguido del signo de admiración (&!) en lugar de la palabra clave AND NOT para representar el operador AND NOT.  
   
- {O ||}  
+ { OR | | }  
  Indica que en uno de los dos casos se incluyen condiciones de búsqueda que se deben cumplir para encontrar coincidencias. Se puede utilizar el símbolo de barra (|) en lugar de la palabra clave OR para representar el operador OR.  
   
- Cuando  *\<contains_search_condition >* contiene grupos entre paréntesis, estos entre paréntesis se evalúan primero. Después de evaluar los grupos entre paréntesis, se aplican las reglas siguientes cuando se utilizan estos operadores lógicos con condiciones de búsqueda:  
+ Cuando *\<contains_search_condition>* contiene grupos entre paréntesis, estos se evalúan primero. Después de evaluar los grupos entre paréntesis, se aplican las reglas siguientes cuando se utilizan estos operadores lógicos con condiciones de búsqueda:  
   
 -   NOT se aplica antes que AND.  
   
@@ -354,18 +354,18 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
 ## <a name="general-remarks"></a>Notas generales  
  Los predicados y las funciones de texto completo operan en una única tabla, que se obtiene del predicado FROM. Para buscar en varias tablas, utilice una tabla combinada en la cláusula FROM a fin de buscar en un conjunto de resultados que sea el producto de dos o más tablas.  
   
- Predicados de texto completo no están permitidos en el [cláusula OUTPUT](../../t-sql/queries/output-clause-transact-sql.md) cuando el nivel de compatibilidad de base de datos se establece en 100.  
+ Los predicados de texto completo no se pueden usar en la [cláusula OUTPUT](../../t-sql/queries/output-clause-transact-sql.md) cuando el nivel de compatibilidad de la base de datos está establecido en 100.  
   
 ## <a name="querying-remote-servers"></a>Consultar servidores remotos  
- Puede utilizar un nombre de cuatro partes en la CONTAINS o [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) predicado de consulta de texto completo indizadas columnas de las tablas de destino en un servidor vinculado. Para preparar un servidor remoto para recibir consultas de texto completo, es necesario crear un índice de texto completo en las tablas y columnas de destino en el servidor remoto y, posteriormente, agregar el servidor remoto como un servidor vinculado.  
+ Se puede usar un nombre de cuatro partes en el predicado CONTAINS o [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) para consultar columnas indizadas de texto completo de las tablas de destino en un servidor vinculado. Para preparar un servidor remoto para recibir consultas de texto completo, es necesario crear un índice de texto completo en las tablas y columnas de destino en el servidor remoto y, posteriormente, agregar el servidor remoto como un servidor vinculado.  
   
 ## <a name="comparison-of-like-to-full-text-search"></a>Comparación de LIKE con la búsqueda de texto completo  
- A diferencia de la búsqueda de texto completo, el [como](../../t-sql/language-elements/like-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] predicado funciona en patrones de caracteres solo. Además, no es posible utilizar el predicado de LIKE para consultar datos binarios con formato. Por otro lado, una consulta LIKE contra una cantidad grande de datos de texto no estructurados es mucho más lenta que una consulta de texto completo equivalente contra los mismos datos. Una consulta LIKE realizada en millones de filas de datos de texto puede tardar minutos en devolver resultados, mientras que una consulta de texto completo en los mismos datos puede tardar únicamente segundos, en función del número de filas que se devuelvan y su tamaño. También hay que tener en cuenta que LIKE realiza solo un análisis de patrón simple de toda una tabla. Por el contrario, una consulta de texto completo reconoce el lenguaje y aplica transformaciones concretas al realizar el índice y la consulta. Por ejemplo, filtra las palabras irrelevantes y amplía el diccionario de sinónimos y las inflexiones. Estas transformaciones contribuyen a mejorar los resultados de las consultas de texto completo y su orden final.  
+ A diferencia de la búsqueda de texto completo, el predicado [LIKE](../../t-sql/language-elements/like-transact-sql.md) de [!INCLUDE[tsql](../../includes/tsql-md.md)] funciona solamente en patrones de caracteres. Además, no es posible utilizar el predicado de LIKE para consultar datos binarios con formato. Por otro lado, una consulta LIKE contra una cantidad grande de datos de texto no estructurados es mucho más lenta que una consulta de texto completo equivalente contra los mismos datos. Una consulta LIKE realizada en millones de filas de datos de texto puede tardar minutos en devolver resultados, mientras que una consulta de texto completo en los mismos datos puede tardar únicamente segundos, en función del número de filas que se devuelvan y su tamaño. También hay que tener en cuenta que LIKE realiza solo un análisis de patrón simple de toda una tabla. Por el contrario, una consulta de texto completo reconoce el lenguaje y aplica transformaciones concretas al realizar el índice y la consulta. Por ejemplo, filtra las palabras irrelevantes y amplía el diccionario de sinónimos y las inflexiones. Estas transformaciones contribuyen a mejorar los resultados de las consultas de texto completo y su orden final.  
   
 ## <a name="querying-multiple-columns-full-text-search"></a>Consultar varias columnas (búsqueda de texto completo)  
  Puede consultar varias columnas especificando una lista de columnas en las que realizar la búsqueda. Las columnas deben ser de la misma tabla.  
   
- Por ejemplo, la siguiente consulta CONTAINS busca el término `Red` en el `Name` y `Color` columnas de la `Production.Product` tabla de la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de datos de ejemplo.  
+ Por ejemplo, la siguiente consulta CONTAINS busca el término `Red` en las columnas `Name` y `Color` de la tabla `Production.Product` de la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  
 Use AdventureWorks2012;  
@@ -377,7 +377,7 @@ WHERE CONTAINS((Name, Color), 'Red');
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-contains-with-simpleterm"></a>A. Usar CONTAINS con \<simple_term >  
+### <a name="a-using-contains-with-simpleterm"></a>A. Usar CONTAINS con \<simple_term>  
  En este ejemplo se buscan todos los productos con un precio de `$80.99` que contengan la palabra `Mountain`.  
   
 ```sql  
@@ -390,7 +390,7 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-### <a name="b-using-contains-and-phrase-with-simpleterm"></a>B. Usar CONTAINS y una frase con \<simple_term >  
+### <a name="b-using-contains-and-phrase-with-simpleterm"></a>B. Usar CONTAINS y una frase con \<simple_term>  
  En el siguiente ejemplo se obtienen todos los productos que contienen la palabra `Mountain` o `Road`.  
   
 ```sql  
@@ -402,7 +402,7 @@ WHERE CONTAINS(Name, ' Mountain OR Road ')
 GO  
 ```  
   
-### <a name="c-using-contains-with-prefixterm"></a>C. Usar CONTAINS con \<prefix_term >  
+### <a name="c-using-contains-with-prefixterm"></a>C. Usar CONTAINS con \<prefix_term>  
  En el siguiente ejemplo se obtienen todos los nombres de producto con una palabra como mínimo que empiece por el prefijo "chain" en la columna `Name`.  
   
 ```sql  
@@ -414,7 +414,7 @@ WHERE CONTAINS(Name, ' "Chain*" ');
 GO  
 ```  
   
-### <a name="d-using-contains-and-or-with-prefixterm"></a>D. Usar CONTAINS y OR con \<prefix_term >  
+### <a name="d-using-contains-and-or-with-prefixterm"></a>D. Usar CONTAINS y OR con \<prefix_term>  
  En el siguiente ejemplo se obtienen todas las descripciones de categorías que contienen cadenas con los prefijos `chain` o `full`.  
   
 ```sql  
@@ -426,11 +426,11 @@ WHERE CONTAINS(Name, '"chain*" OR "full*"');
 GO  
 ```  
   
-### <a name="e-using-contains-with-proximityterm"></a>E. Usar CONTAINS con \<proximity_term >  
+### <a name="e-using-contains-with-proximityterm"></a>E. Usar CONTAINS con \<proximity_term>  
   
 **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
- El siguiente ejemplo se buscan los `Production.ProductReview` tabla todos los comentarios que contengan la palabra `bike` dentro de 10 términos de la palabra "`control`" y en el orden especificado (es decir, donde "`bike`"precede a"`control`").  
+ En el siguiente ejemplo se buscan en la tabla `Production.ProductReview` todos los comentarios que contengan la palabra `bike` a una distancia de diez términos de la palabra "`control`" y en el orden especificado (es decir, donde "`bike`" preceda a "`control`").  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -441,7 +441,7 @@ WHERE CONTAINS(Comments , 'NEAR((bike,control), 10, TRUE)');
 GO  
 ```  
   
-### <a name="f-using-contains-with-generationterm"></a>F. Usar CONTAINS con \<generation_term >  
+### <a name="f-using-contains-with-generationterm"></a>F. Usar CONTAINS con \<generation_term>  
  En el siguiente ejemplo se buscan todos los productos que tengan palabras derivadas de `ride`: riding, ridden, etc.  
   
 ```sql  
@@ -453,8 +453,8 @@ WHERE CONTAINS(Description, ' FORMSOF (INFLECTIONAL, ride) ');
 GO  
 ```  
   
-### <a name="g-using-contains-with-weightedterm"></a>G. Usar CONTAINS con \<weighted_term >  
- En el siguiente ejemplo busca todos los nombres de producto que contienen las palabras `performance`, `comfortable`, o `smooth`, y se asignan pesos distintos a cada palabra.  
+### <a name="g-using-contains-with-weightedterm"></a>G. Usar CONTAINS con \<weighted_term>  
+ En el siguiente ejemplo se buscan todos los nombres de productos que contengan las palabras `performance`, `comfortable` o `smooth`. Cada palabra tiene asignado un peso distinto.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -481,7 +481,7 @@ GO
 ```  
   
 ### <a name="i-using-contains-with-a-logical-operator-and"></a>I. Usar CONTAINS con un operador lógico (AND)  
- En el ejemplo siguiente se utiliza la tabla ProductDescription de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . La consulta usa el predicado CONTAINS para buscar las descripciones en el que el identificador de la descripción no es igual a 5 y la descripción contiene las palabras `Aluminum` y la palabra `spindle`. La condición de búsqueda usa el operador booleano AND.  
+ En el ejemplo siguiente se utiliza la tabla ProductDescription de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . La consulta usa el predicado CONTAINS para buscar las descripciones en las que el identificador de la descripción no es igual a 5 y la descripción contiene las palabras `Aluminum` y `spindle`. La condición de búsqueda usa el operador booleano AND.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -541,10 +541,10 @@ WHERE CONTAINS(PROPERTY(Document,'Title'), 'Maintenance OR Repair');
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Introducción a la búsqueda de texto completo](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Crear y administrar catálogos de texto completo](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
- [Crear catálogo de texto completo &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [Crear y administrar índices de texto completo](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
  [Consultar con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md)   

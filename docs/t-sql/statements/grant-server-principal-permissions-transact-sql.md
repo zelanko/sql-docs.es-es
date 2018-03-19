@@ -1,5 +1,5 @@
 ---
-title: Permisos de entidad de seguridad de servidor GRANT (Transact-SQL) | Documentos de Microsoft
+title: GRANT (permisos de entidad de seguridad de servidor de Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -63,16 +63,16 @@ GRANT permission [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permiso*  
+ *permission*  
  Especifica un permiso que puede concederse para un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
- Inicio de sesión **::** *SQL_Server_login*  
- Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se va a conceder el permiso. El calificador de ámbito (**::**) es necesario.  
+ LOGIN **::** *SQL_Server_login*  
+ Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se va a conceder el permiso. Se necesita el calificador de ámbito (**::**).  
   
- ROL de servidor **::** *server_role*  
- Especifica el rol del servidor definido por el usuario en el que se concede el permiso. El calificador de ámbito (**::**) es necesario.  
+ SERVER ROLE **::** *server_role*  
+ Especifica el rol del servidor definido por el usuario en el que se concede el permiso. Se necesita el calificador de ámbito (**::**).  
   
- PARA \<entidadseguridadservidor > especifica los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rol de servidor o de inicio de sesión a la que se va a conceder el permiso.  
+ TO \<server_principal> Especifica el rol de servidor o el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el que se va a conceder el permiso.  
   
  *SQL_Server_login*  
  Especifica el nombre de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -95,10 +95,10 @@ GRANT permission [ ,...n ] }
  AS *SQL_Server_login*  
  Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del que la entidad de seguridad que ejecuta esta consulta deriva su derecho de conceder el permiso.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Los permisos del ámbito del servidor solamente pueden concederse si la base de datos actual es maestra.  
   
- Información acerca de los permisos de servidor está visible en el [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) vista de catálogo. Información acerca de las entidades de seguridad de servidor está visible en el [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) vista de catálogo.  
+ Encontrará información sobre los permisos de servidor en la vista de catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md). Encontrará información sobre las entidades de seguridad de servidor en la vista de catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Los roles de servidor y los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son protegibles en el nivel de servidor. La mayoría de permisos limitados y específicos que se pueden conceder para un rol de servidor o inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se muestran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.  
   
@@ -109,7 +109,7 @@ GRANT permission [ ,...n ] }
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |ALTER|CONTROL|ALTER ANY LOGIN<br /><br /> ALTER ANY SERVER ROLE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para los inicios de sesión, se necesita el permiso CONTROL en el inicio de sesión o el permiso ALTER ANY LOGIN en el servidor.  
   
  Para los roles de servidor, se necesita el permiso CONTROL en el rol de servidor o el permiso ALTER ANY SERVER ROLE en el servidor.  
@@ -117,7 +117,7 @@ GRANT permission [ ,...n ] }
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-granting-impersonate-permission-on-a-login"></a>A. Conceder el permiso IMPERSONATE para un inicio de sesión  
- El siguiente ejemplo se concede `IMPERSONATE` permiso en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión `WanidaBenshoof` a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión creado por el usuario de Windows `AdvWorks\YoonM`.  
+ En el siguiente ejemplo se concede el permiso `IMPERSONATE` para el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof` a un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creado desde el usuario de Windows `AdvWorks\YoonM`.  
   
 ```  
 USE master;  
@@ -144,7 +144,7 @@ GRANT VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;
 GO   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   

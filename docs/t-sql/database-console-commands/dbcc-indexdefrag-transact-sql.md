@@ -43,9 +43,9 @@ ms.lasthandoff: 01/25/2018
 Desfragmenta los índices de la tabla o la vista especificada.
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Use [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) en su lugar.  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -63,7 +63,7 @@ DBCC INDEXDEFRAG
   
 ## <a name="arguments"></a>Argumentos  
  *database_name* | *database_id* | 0  
- Es la base de datos que contiene el índice que se va a desfragmentar. Si se especifica 0, se utiliza la base de datos actual. Nombres de base de datos deben cumplir las reglas de [identificadores](../../relational-databases/databases/database-identifiers.md).  
+ Es la base de datos que contiene el índice que se va a desfragmentar. Si se especifica 0, se utiliza la base de datos actual. Los nombres de las bases de datos deben cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
  *table_name* | *table_id* | *view_name* | *view_id*  
  Es la tabla o la vista que contiene el índice que se va a desfragmentar. Los nombres de las tablas y las vistas deben ajustarse a las reglas de los identificadores.  
@@ -71,13 +71,13 @@ DBCC INDEXDEFRAG
  *index_name* | *index_id*  
  Es el nombre o Id. del índice que se va a desfragmentar. Si no se especifica, la instrucción desfragmenta todos los índices de la tabla o la vista especificada. Los nombres de los índices deben ajustarse a las reglas de los identificadores.  
   
- *partition_number* | 0  
+ *número_de_partición* | 0  
  Es el número de partición del índice que se va a desfragmentar. Si no se especifica o se especifica 0, la instrucción desfragmenta todas las particiones del índice especificado.  
   
  WITH NO_INFOMSGS  
  Suprime todos los mensajes informativos con niveles de gravedad entre 0 y 10.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 DBCC INDEXDEFRAG desfragmenta el nivel hoja de un índice para que el orden físico de las páginas coincida con el orden lógico de izquierda a derecha de los nodos hoja, lo que mejora el rendimiento de recorrido del índice.
   
 > [!NOTE]  
@@ -93,7 +93,7 @@ A diferencia de DBCC DBREINDEX, o la operación de generación del índice en ge
   
 La desfragmentación siempre se registra por completo con independencia de la configuración del modelo de recuperación. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md). La desfragmentación de un índice muy fragmentado puede generar más información en el registro que la creación de un índice de registro completo. No obstante, la desfragmentación se realiza como una serie de transacciones cortas y, por tanto, no es necesario un registro grande si se realizan con frecuencia copias de seguridad de registros o si la configuración del modelo de recuperación es SIMPLE.
   
-## <a name="restrictions"></a>Restricciones  
+## <a name="restrictions"></a>Restrictions  
 DBCC INDEXDEFRAG coloca las páginas hoja del índice en su lugar. Por lo tanto, si un índice se intercala con otros índices en el disco, la ejecución de DBCC INDEXDEFRAG en dicho índice no ordena las páginas hoja del índice de forma contigua. Para mejorar la agrupación en clústeres de páginas, vuelva a generar el índice.
 No se puede utilizar DBCC INDEXDEFRAG para desfragmentar los índices siguientes:
 -   Un índice deshabilitado.  
@@ -115,12 +115,12 @@ Pages Scanned Pages Moved Pages Removed
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
-Autor de la llamada debe poseer la tabla o ser miembro de la **sysadmin** rol fijo de servidor, el **db_owner** función fija de base de datos, o la **db_ddladmin** rol fijo de base de datos.
+## <a name="permissions"></a>Permisos  
+El autor de la llamada debe ser el propietario de la tabla, o bien un miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_owner** o **db_ddladmin**.
   
 ## <a name="examples"></a>Ejemplos  
 ### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>A. Usar DBCC INDEXDEFRAG para desfragmentar un índice  
-El siguiente ejemplo desfragmentan todas las particiones de la `PK_Product_ProductID` de índice en el `Production.Product` tabla el `AdventureWorks` base de datos.
+En el siguiente ejemplo se desfragmentan todas las particiones del índice `PK_Product_ProductID` de la tabla `Production.Product` de la base de datos `AdventureWorks`.
   
 ```sql  
 DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID);  
@@ -234,7 +234,7 @@ DROP TABLE #fraglist;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

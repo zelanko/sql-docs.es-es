@@ -54,12 +54,12 @@ GOTO label
   
 ## <a name="arguments"></a>Argumentos  
  *label*  
- Es el punto tras el que comienza el procesamiento cuando una instrucción GOTO especifica esa etiqueta. Las etiquetas deben cumplir las reglas de [identificadores](../../relational-databases/databases/database-identifiers.md). Una etiqueta puede servir para comentar si se utiliza GOTO.  
+ Es el punto tras el que comienza el procesamiento cuando una instrucción GOTO especifica esa etiqueta. Las etiquetas deben cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md). Una etiqueta puede servir para comentar si se utiliza GOTO.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  GOTO puede aparecer dentro de las instrucciones de control de flujo condicional, en bloques de instrucciones o en procedimientos, pero no se puede dirigir a una etiqueta externa al lote. La ramificación con GOTO se puede dirigir a una etiqueta definida antes o después de la instrucción GOTO.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  De forma predeterminada, cualquier usuario válido puede utilizar GOTO.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -84,8 +84,8 @@ Branch_Three:
     SELECT 'Jumping To Branch Three.';  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Lenguaje de control de flujo &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+## <a name="see-also"></a>Ver también  
+ [Lenguaje de control de flujo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
  [BREAK &#40;Transact-SQL&#41;](../../t-sql/language-elements/break-transact-sql.md)   
  [CONTINUE &#40;Transact-SQL&#41;](../../t-sql/language-elements/continue-transact-sql.md)   

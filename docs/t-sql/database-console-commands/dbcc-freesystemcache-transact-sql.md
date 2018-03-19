@@ -55,9 +55,9 @@ DBCC FREESYSTEMCACHE
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- ('ALL' [,*pool_name* ])  
+ ( 'ALL' [,*pool_name* ] )  
  ALL especifica todas las memorias caché compatibles.  
- *pool_name* especifica una caché de grupo del regulador de recursos. Solo se liberarán las entradas asociadas a este grupo.  
+ *pool_name* especifica una memoria caché de conjunto del regulador de recursos. Solo se liberarán las entradas asociadas a este grupo.  
   
  MARK_IN_USE_FOR_REMOVAL  
  Libera asincrónicamente las entradas utilizadas actualmente de sus respectivas cachés después de que dejan de utilizarse. No se verán afectadas las nuevas entradas creadas en la memoria caché después de ejecutar DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL.  
@@ -65,13 +65,13 @@ DBCC FREESYSTEMCACHE
  NO_INFOMSGS  
  Suprime todos los mensajes de información.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 Al ejecutar DBCC FREESYSTEMCACHE se borra la memoria caché del plan para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al borrar la memoria caché de planes, se provoca una nueva compilación de todos los planes de ejecución posteriores y puede ocasionar una disminución repentina y temporal del rendimiento de las consultas. Para cada almacén de caché borrado de la caché del plan, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contendrá el siguiente mensaje informativo: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha detectado %d instancias de vaciado del almacén de caché '%s' (parte de la caché del plan) debido a operaciones 'DBCC FREEPROCCACHE' o 'DBCC FREESYSTEMCACHE'". Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.
 
 ## <a name="result-sets"></a>Conjuntos de resultados  
-DBCC FREESYSTEMCACHE devuelve: "ejecución de DBCC completada. Si DBCC imprime algún mensaje de error, póngase en contacto con su administrador del sistema."
+DBCC FREESYSTEMCACHE devuelve: "Ejecución de DBCC completada. Si DBCC imprime algún mensaje de error, póngase en contacto con su administrador del sistema."
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
 Requiere el permiso ALTER SERVER STATE en el servidor.
   
 ## <a name="examples"></a>Ejemplos  
@@ -91,7 +91,7 @@ En el ejemplo siguiente se utiliza la cláusula MARK_IN_USE_FOR_REMOVAL para lib
 DBCC FREESYSTEMCACHE ('ALL') WITH MARK_IN_USE_FOR_REMOVAL;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)  
 [DBCC FREESESSIONCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)  

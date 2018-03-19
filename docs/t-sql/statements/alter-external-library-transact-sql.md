@@ -1,7 +1,7 @@
 ---
-title: ALTER biblioteca externa (Transact-SQL) | Documentos de Microsoft
+title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 10/05/2017
+ms.date: 02/25/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -14,26 +14,28 @@ ms.topic: language-reference
 f1_keywords:
 - ALTER EXTERNAL LIBRARY
 - ALTER_EXTERNAL_LIBRARY_TSQL
-dev_langs: TSQL
-helpviewer_keywords: ALTER EXTERNAL LIBRARY
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- ALTER EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: d0fe9adc1907d773bdfddda38b5900774ec97deb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
-ms.translationtype: MT
+ms.openlocfilehash: 0581957db73b82b9486f938d17b4c8938e20258d
+ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/27/2018
 ---
-# <a name="alter-external-library-transact-sql"></a>BIBLIOTECA externa ALTER (Transact-SQL)  
+# <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Modifica el contenido de una biblioteca externa de paquete existente.
+Modifica el contenido de una biblioteca de paquetes externa existente.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```text
 ALTER EXTERNAL LIBRARY library_name
 [ AUTHORIZATION owner_name ]
 SET <file_spec>
@@ -59,85 +61,88 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-Especifica el nombre de una biblioteca de paquete existente. Las bibliotecas tienen como ámbito el usuario. Es decir, nombres de las bibliotecas se consideran únicos dentro del contexto de un usuario específico o un propietario.
+Especifica el nombre de una biblioteca de paquetes existente. Las bibliotecas tienen como ámbito el usuario. Es decir, los nombres de biblioteca se consideran únicos dentro del contexto de un usuario o propietario específico.
+
+El nombre de biblioteca no se puede asignar de forma arbitraria. Es decir, se debe usar el nombre que el tiempo de ejecución que realiza la llamada espera cuando se carga el paquete.
 
 **owner_name**
 
-Especifica el nombre del usuario o rol que tiene la biblioteca externa.
+Especifica el nombre del usuario o rol que es propietario de la biblioteca externa.
 
 **file_spec**
 
-Especifica el contenido del paquete para una plataforma específica. Se admite el artefacto de un solo archivo por cada plataforma.
+Especifica el contenido del paquete para una plataforma específica. Solo se admite un artefacto de archivo por cada plataforma.
 
-El archivo puede especificarse en forma de una ruta de acceso local o una ruta de red. Si se especifica la opción de origen de datos, el nombre de archivo puede ser una ruta de acceso relativa con respecto a la del contenedor al que hace referencia en el `EXTERNAL DATA SOURCE`.
+El archivo se puede especificar como una ruta de acceso local o una ruta de acceso de red. Si se especifica la opción de origen de datos, el nombre de archivo puede ser una ruta de acceso relativa con respecto al contenedor al que hace referencia en el `EXTERNAL DATA SOURCE`.
 
-Si lo desea, puede especificarse una plataforma de sistema operativo para el archivo. Artefacto de un solo archivo o el contenido se permite para cada plataforma de sistema operativo de un determinado idioma o en tiempo de ejecución.
+Opcionalmente, se puede especificar una plataforma de sistema operativo para el archivo. Solo se permite un artefacto de archivo o contenido para cada plataforma de sistema operativo para un determinado lenguaje o tiempo de ejecución.
 
 **DATA_SOURCE = external_data_source_name**
 
-Especifica el nombre del origen de datos externo que contiene la ubicación del archivo de biblioteca. Esta ubicación debe hacer referencia a una ruta de acceso de almacenamiento de blobs de Azure. Para crear un origen de datos externo, use [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md).
+Especifica el nombre del origen de datos externo que contiene la ubicación del archivo de biblioteca. Esta ubicación debe hacer referencia a una ruta de acceso de Azure Blob Storage. Para crear un origen de datos externo, use [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md).
 
 > [!IMPORTANT] 
-> Actualmente, no se admiten blobs como origen de datos en la versión de SQL Server 2017.
+> Actualmente, no se admiten los blobs como origen de datos en la versión de SQL Server 2017.
 
 **library_bits**
 
-Especifica el contenido del paquete como un literal hexadecimal, similar a los ensamblados. Esta opción permite a los usuarios crear una biblioteca para modificar la biblioteca si dispone del permiso requerido, pero no tiene acceso de la ruta de acceso de archivo a cualquier carpeta que puede tener acceso el servidor.
+Especifica el contenido del paquete como un literal hexadecimal, similar a los ensamblados. 
 
-**PLATAFORMA = WINDOWS**
+Esta opción es útil si se dispone del permiso requerido para modificar una biblioteca, pero el acceso de archivo en el servidor está restringido y no se puede guardar el contenido en una ruta de acceso a la que el servidor pueda tener acceso.
 
-Especifica la plataforma para el contenido de la biblioteca. Este valor es necesario para modificar una biblioteca para agregar una plataforma diferente. Windows es la única plataforma admitida.
+En su lugar, se puede pasar el contenido del paquete como una variable en formato binario.
 
-## <a name="remarks"></a>Comentarios
+**PLATFORM = WINDOWS**
 
-Para el lenguaje R, paquetes deben estar preparados en forma de archivos de almacenamiento comprimido con el. Código postal de extensión para Windows. Actualmente, solo la plataforma de Windows es compatible.  
+Especifica la plataforma para el contenido de la biblioteca. Este valor es obligatorio al modificar una biblioteca para agregar una plataforma diferente. Windows es la única plataforma admitida.
 
-El `ALTER EXTERNAL LIBRARY` instrucción solo carga los bits de la biblioteca en la base de datos. La biblioteca modificada no se instala realmente hasta que un usuario ejecuta un script externo después, mediante la ejecución de [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+## <a name="remarks"></a>Notas
 
-## <a name="permissions"></a>Permissions
+Para el lenguaje R, los paquetes deben estar preparados en forma de archivos de almacenamiento comprimidos con la extensión .ZIP para Windows. Actualmente, solo se admite la plataforma Windows.  
 
-Requiere la `ALTER ANY EXTERNAL LIBRARY` permiso. Los usuarios que crean una biblioteca externa, puede modificar esa biblioteca externa.
+La instrucción `ALTER EXTERNAL LIBRARY` solo carga los bits de biblioteca en la base de datos. La biblioteca modificada se instala cuando un usuario ejecuta código en el [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) que llama a la biblioteca.
+
+## <a name="permissions"></a>Permisos
+
+Requiere el permiso `ALTER ANY EXTERNAL LIBRARY`. Los usuarios que crean una biblioteca externa pueden modificarla.
 
 ## <a name="examples"></a>Ejemplos
 
-Los ejemplos siguientes se modifica una biblioteca externa denominada customPackage.
+En los ejemplos siguientes se modifica una biblioteca externa denominada `customPackage`.
 
-### <a name="a-replace-the-contents-of-a-library-using-a-file"></a>A. Reemplace el contenido de una biblioteca mediante un archivo
+### <a name="a-replace-the-contents-of-a-library-using-a-file"></a>A. Sustitución del contenido de una biblioteca mediante un archivo
 
-En el ejemplo siguiente se modifica una biblioteca externa denominada customPackage, mediante un archivo comprimido que contiene los bits actualizados.
+En el ejemplo siguiente se modifica una biblioteca externa denominada `customPackage`, mediante un archivo comprimido que contiene los bits actualizados.
 
 ```sql
 ALTER EXTERNAL LIBRARY customPackage 
 SET 
   (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip')
 WITH (LANGUAGE = 'R');
-```  
+```
 
 Para instalar la biblioteca actualizada, ejecute el procedimiento almacenado `sp_execute_external_script`.
 
-```sql   
+```sql
 EXEC sp_execute_external_script 
 @language =N'R', 
-@script=N'
-# load customPackage
-library(customPackage)
-# call customPackageFunc
-OutputDataSet <- customPackageFunc()
-'
-WITH RESULT SETS (([result] int));
+@script=N'library(customPackage)'
+;
 ```
 
-### <a name="b-alter-an-existing-library-using-a-byte-stream"></a>B. Modificar una biblioteca mediante una secuencia de bytes
+### <a name="b-alter-an-existing-library-using-a-byte-stream"></a>B. Modificación de una biblioteca existente mediante un flujo de bytes
 
-En el ejemplo siguiente se modifica la biblioteca existente pasando los nuevos bits como un hexadecimal literal.
+En el ejemplo siguiente se modifica la biblioteca existente pasando los nuevos bits como un literal hexadecimal.
 
 ```SQL
 ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
-## <a name="see-also"></a>Vea también  
+En este ejemplo de código, el contenido de las variables se trunca para mejorar la legibilidad.
 
-[Crear biblioteca externa (Transact-SQL)](create-external-library-transact-sql.md)
-[quitar biblioteca externa (Transact-SQL)](drop-external-library-transact-sql.md)  
+## <a name="see-also"></a>Vea también
+
+[CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)
+[DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
-[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
+[sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md) 

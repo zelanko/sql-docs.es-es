@@ -1,5 +1,5 @@
 ---
-title: DENEGAR permisos de texto completo (Transact-SQL) | Documentos de Microsoft
+title: DENY (permisos de texto completo de Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -59,10 +59,10 @@ DENY permission [ ,...n ] ON
  Es el nombre de un permiso. Las asignaciones válidas de permisos a elementos protegibles se describen en la sección "Comentarios", más adelante en este tema.  
   
  ON FULLTEXT CATALOG **::***full-text_catalog_name*  
- Especifica el catálogo de texto completo en el que se deniega el permiso. El calificador de ámbito **::** es necesario.  
+ Especifica el catálogo de texto completo en el que se deniega el permiso. El calificador de ámbito **::** es obligatorio.  
   
  ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
- Especifica la lista de palabras irrelevantes de texto completo en la que se deniega el permiso. El calificador de ámbito **::** es necesario.  
+ Especifica la lista de palabras irrelevantes de texto completo en la que se deniega el permiso. El calificador de ámbito **::** es obligatorio.  
   
  *database_principal*  
  Especifica la entidad de seguridad a la que se deniega el permiso. Uno de los siguientes:  
@@ -128,19 +128,19 @@ DENY permission [ ,...n ] ON
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL en el catálogo de texto completo. Si utiliza la opción AS, la entidad de seguridad especificada debe poseer el catálogo de texto completo.  
   
-## <a name="see-also"></a>Vea también  
- [Crear rol de aplicación &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [Crear catálogo de texto completo &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [Crear lista de palabras IRRELEVANTES de texto completo &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
- [Permisos de texto completo de GRANT &#40; Transact-SQL &#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)   
+ [GRANT &#40;permisos de texto completo de Transact-SQL&#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
  [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

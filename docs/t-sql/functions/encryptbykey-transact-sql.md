@@ -1,5 +1,5 @@
 ---
-title: ENCRYPTBYKEY (Transact-SQL) | Documentos de Microsoft
+title: ENCRYPTBYKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -52,32 +52,32 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
   
 ## <a name="arguments"></a>Argumentos  
  *key_GUID*  
- Es el GUID de la clave que se utilizará para cifrar el *texto no cifrado*. **uniqueidentifier**.  
+ Es el GUID de la clave que se usará para cifrar *cleartext*. **uniqueidentifier**.  
   
- '*texto no cifrado*'  
+ '*cleartext*'  
  Son los datos que se cifrarán con la clave.  
   
  @cleartext  
- Es una variable de tipo **nvarchar**, **char**, **varchar**, **binario**, **varbinary**, o **nchar** que contiene datos que se van a cifrar con la clave.  
+ Es una variable de tipo **nvarchar**, **char**, **varchar**, **binary**, **varbinary** o **nchar** que contiene datos que se van a cifrar con la clave.  
   
  *add_authenticator*  
- Indica si se cifrará un autenticador junto con el *texto no cifrado*. Debe ser 1 cuando se utilice un autenticador. **int**.  
+ Indica si se cifrará un autenticador junto con *cleartext*. Debe ser 1 cuando se utilice un autenticador. **int**.  
   
  @add_authenticator  
- Indica si se cifrará un autenticador junto con el *texto no cifrado*. Debe ser 1 cuando se utilice un autenticador. **int**.  
+ Indica si se cifrará un autenticador junto con *cleartext*. Debe ser 1 cuando se utilice un autenticador. **int**.  
   
- *autenticador*  
+ *authenticator*  
  Son los datos de los que se derivará un autenticador. **sysname**.  
   
  @authenticator  
  Es una variable que contiene los datos de los que se derivará un autenticador.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- **varbinary** con un tamaño máximo de 8.000 bytes.  
+ **varbinary** con un tamaño máximo de 8000 bytes.  
   
  Devuelve NULL si la clave no está abierta, si la clave no existe o si se trata de una clave RC4 desusada y la base de datos no está en el nivel de compatibilidad 110 o superior.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  EncryptByKey usa una clave simétrica. Esta clave debe estar abierta. Si la clave simétrica ya está abierta en la sesión actual, no tiene que abrirla de nuevo en el contexto de la consulta.  
   
  El autenticador le ayudará a impedir la sustitución de todo el valor de los campos cifrados. Por ejemplo, considere la siguiente tabla de datos de nóminas:  
@@ -97,10 +97,10 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  El cifrado y descifrado simétrico es relativamente rápido y se puede adaptar para trabajar con grandes cantidades de datos.  
   
 > [!IMPORTANT]  
->  El uso de las funciones de cifrado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] junto con el valor ANSI_PADDING OFF podría provocar la pérdida de datos debido a las conversiones implícitas. Para obtener más información sobre ANSI_PADDING, consulte [SET ANSI_PADDING &#40; Transact-SQL &#41; ](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
+>  El uso de las funciones de cifrado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] junto con el valor ANSI_PADDING OFF podría provocar la pérdida de datos debido a las conversiones implícitas. Para más información sobre ANSI_PADDING, vea [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
 ## <a name="examples"></a>Ejemplos  
- La funcionalidad ilustrada en los ejemplos siguientes se basa en claves y certificados que se crean en [How To: cifrar una columna de datos](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
+ Las funciones que se muestran en estos ejemplos se basan en claves y certificados creados en [Cómo cifrar una columna de datos](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
   
 ### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>A. Cifrar una cadena con una clave simétrica  
  En el ejemplo siguiente se agrega una columna a la tabla `Employee` y, a continuación, se cifra el valor del número de seguridad social almacenado en la columna `NationalIDNumber`.  
@@ -149,12 +149,12 @@ SET CardNumber_Encrypted = EncryptByKey(Key_GUID('CreditCards_Key11'),
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [DECRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [DECRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [HASHBYTES &#40; Transact-SQL &#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
+ [HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
   
   

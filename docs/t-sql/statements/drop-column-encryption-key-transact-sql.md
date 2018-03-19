@@ -1,5 +1,5 @@
 ---
-title: DROP COLUMN ENCRYPTION KEY (Transact-SQL) | Documentos de Microsoft
+title: DROP COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
@@ -50,13 +50,13 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
   
 ## <a name="arguments"></a>Argumentos  
  *key_name*  
- Es el nombre por el que el cifrado de columna clave que se para van a quitar de la base de datos.  
+ Es el nombre por el que se debe quitar de la base de datos la clave de cifrado de la columna.  
   
-## <a name="remarks"></a>Comentarios  
- No se puede quitar una clave de cifrado de columna si se usa para cifrar cualquier columna de la base de datos. Primero se deben quitar todas las columnas utilizando la clave de cifrado de columna.  
+## <a name="remarks"></a>Notas  
+ No se puede quitar una clave de cifrado de columna si se usa para cifrar cualquier columna de la base de datos. Primero se deben quitar todas las columnas que utilizan la clave de cifrado de columna.  
   
-## <a name="permissions"></a>Permissions  
- Requiere **ALTER ANY COLUMN ENCRYPTION KEY** permiso en la base de datos.  
+## <a name="permissions"></a>Permisos  
+ Necesita el permiso **ALTER ANY COLUMN ENCRYPTION KEY** para la base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -68,10 +68,10 @@ DROP COLUMN ENCRYPTION KEY MyCEK;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Always Encrypted &#40;motor de base de datos&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
- [ALTER COLUMN ENCRYPTION KEY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
+ [ALTER COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
  [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)  
   
   

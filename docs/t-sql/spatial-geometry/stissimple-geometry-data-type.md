@@ -1,5 +1,5 @@
 ---
-title: STIsSimple (tipo de datos geometry) | Documentos de Microsoft
+title: STIsSimple (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stissimple-geometry-data-type"></a>STIsSimple (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Devuelve 1 si una **geometry** instancia es simple, tal como se define por Open Geospatial Consortium (OGC). Devuelve 0 si una **geometry** instancia no es simple.
+Devuelve 1 si una instancia de **geometry** es sencilla, según la definición de Open Geospatial Consortium (OGC). Devuelve 0 si una instancia de **geometry** no es sencilla.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,12 +44,12 @@ Devuelve 1 si una **geometry** instancia es simple, tal como se define por Open 
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **bits**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Comentarios  
- Para ser simple, un **geometry** instancia debe cumplir todos los requisitos siguientes:  
+## <a name="remarks"></a>Notas  
+ Para que una instancia de **geometry** sea sencilla, debe cumplir estos requisitos:  
   
 -   Cada figura de la instancia no debe cortarse, excepto en sus extremos.  
   
@@ -64,7 +64,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 0 2, 2 0)', 0);
 SELECT @g.STIsSimple();  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

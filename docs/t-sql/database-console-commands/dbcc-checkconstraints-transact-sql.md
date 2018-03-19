@@ -1,5 +1,5 @@
 ---
-title: DBCC CHECKCONSTRAINTS (Transact-SQL) | Documentos de Microsoft
+title: DBCC CHECKCONSTRAINTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -61,7 +61,7 @@ DBCC CHECKCONSTRAINTS
   
 ## <a name="arguments"></a>Argumentos  
  *table_name* | *table_id* | *constraint_name* | *constraint_id*  
- Es la tabla o la restricción que se va a comprobar. Cuando *table_name* o *table_id* está especificado, se comprueban todas las restricciones habilitadas en la tabla. Cuando *constraint_name* o *constraint_id* está especificado, se comprueba sólo esa restricción. Si no se especifica un identificador de tabla ni un identificador de restricción, se comprueban todas las restricciones habilitadas en todas las tablas de la base de datos actual.  
+ Es la tabla o la restricción que se va a comprobar. Si no se especifica *table_name* o *table_id*, se comprueban todas las restricciones habilitadas en la tabla. Si se especifica *constraint_name* o *constraint_id*, se comprueba solo esa restricción. Si no se especifica un identificador de tabla ni un identificador de restricción, se comprueban todas las restricciones habilitadas en todas las tablas de la base de datos actual.  
  Un nombre de restricción identifica exclusivamente a la tabla a la que pertenece. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
  por  
@@ -76,7 +76,7 @@ DBCC CHECKCONSTRAINTS
  NO_INFOMSGS  
  Suprime todos los mensajes de información.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 DBCC CHECKCONSTRAINTS construye y ejecuta una consulta para todas las restricciones FOREIGN KEY y CHECK en una tabla.
   
 Por ejemplo, una consulta de clave externa tiene el siguiente formato:
@@ -93,21 +93,21 @@ WHERE <table_being_checked.fkey1> IS NOT NULL
 ```  
   
 La consulta de datos se almacena en una tabla temporal. Tras la comprobación de todas las tablas o restricciones solicitadas, se devuelve el conjunto de resultados.
-DBCC CHECKCONSTRAINTS comprueba la integridad de las restricciones FOREIGN KEY y CHECK, pero no comprueba la integridad de las estructuras de datos del disco en una tabla. Estas comprobaciones de la estructura de datos pueden realizarse mediante [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) y [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
+DBCC CHECKCONSTRAINTS comprueba la integridad de las restricciones FOREIGN KEY y CHECK, pero no comprueba la integridad de las estructuras de datos del disco en una tabla. Estas comprobaciones de las estructuras de datos pueden realizarse con [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) y [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
   
-**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Se aplica a**: de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
-Si *table_name* o *table_id* se especifica y está habilitado para control de versiones de sistema, DBCC CHECKCONSTRAINTS también realiza comprobaciones de coherencia de datos temporales en la tabla especificada. Cuando *NO_INFOMSGS* no se especifica, este comando devolverá cada infracción de coherencia en la salida en una línea independiente. El formato del resultado será ([pkcol1], [pkcol2]...) = (\<pkcol1_value >, \<pkcol2_value >...) Y \<cuál es el problema con el registro de la tabla temporal >.
+Si se especifica *table_name* o *table_id* y está habilitado para el control de versiones del sistema, DBCC CHECKCONSTRAINTS también realiza comprobaciones de coherencia de datos temporales en la tabla especificada. Si no se especifica *NO_INFOMSGS*, este comando devolverá cada infracción de coherencia en la salida en una línea independiente. El formato de la salida será ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>…) AND \<problema del registro de la tabla temporal>.
   
-|Comprobación|Información adicional en la salida si el error de comprobación|  
+|Comprobación|Información adicional en la salida si se ha producido un error en la comprobación|  
 |-----------|-----------------------------------------------|  
 |PeriodEndColumn ≥ PeriodStartColumn (actual)|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
 |PeriodEndColumn ≥ PeriodStartColumn (actual, historial)|[sys_start] = '{0}' AND [sys_end] = '{1}'|  
-|PeriodStartColumn < current_utc_time (actual)|[sys_start] = '{0}' y SYSUTCTIME|  
-|PeriodEndColumn < current_utc_time (historial)|[sys_end] = '{0}' y SYSUTCTIME|  
-|Se superpone a|(sys_start1, sys_end1), (sys_start2, sys_end2) para dos que se superponen los registros.<br /><br /> Si hay más de 2 que se superponen los registros, salida tendrá varias filas cada uno con un par de superposiciones.|  
+|PeriodStartColumn < current_utc_time (actual)|[sys_start] = '{0}' AND SYSUTCTIME|  
+|PeriodEndColumn < current_utc_time (historial)|[sys_end] = '{0}' AND SYSUTCTIME|  
+|Superposiciones|(sys_start1, sys_end1) , (sys_start2, sys_end2) para dos registros que se superponen.<br /><br /> Si hay más de dos registros que se superponen, la salida tendrá varias filas, cada una de las cuales mostrará un par de superposiciones.|  
   
-No hay ninguna manera de especificar constraint_name o constraint_id para ejecutar comprobaciones de coherencia solo.
+No hay ninguna manera de especificar constraint_name o constraint_id para ejecutar únicamente comprobaciones de coherencia temporales.
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
 DBCC CHECKCONSTRAINTS devuelve un conjunto de filas con las siguientes columnas.
@@ -118,7 +118,7 @@ DBCC CHECKCONSTRAINTS devuelve un conjunto de filas con las siguientes columnas.
 |Constraint Name|**varchar**|Nombre de la restricción infringida.|  
 |Where|**varchar**|Asignaciones del valor de columna que identifican la fila o las filas que infringen la restricción.<br /><br /> El valor de esta columna se puede utilizar en una cláusula WHERE de una instrucción SELECT para consultar qué filas infringen la restricción.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
 Debe pertenecer al rol fijo de servidor **sysadmin** o al rol fijo de base de datos **db_owner** .
   
 ## <a name="examples"></a>Ejemplos  
@@ -157,7 +157,7 @@ DBCC CHECKCONSTRAINTS WITH ALL_CONSTRAINTS;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
 [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)

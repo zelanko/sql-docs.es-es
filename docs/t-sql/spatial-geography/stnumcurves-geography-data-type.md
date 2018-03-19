@@ -1,5 +1,5 @@
 ---
-title: STNumCurves (tipo de datos geography) | Documentos de Microsoft
+title: STNumCurves (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumcurves-geography-data-type"></a>STNumCurves (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Devuelve el número de curvas de una unidimensional **geography** instancia.  
+  Devuelve el número de curvas de una instancia unidimensional de **geography**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,16 +44,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geography**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Comentarios  
- Los tipos de datos espaciales unidimensionales incluyen **LineString**, **CircularString**, y **CompoundCurve**. Unidimensional vacía **geography** instancia devuelve 0.  
+## <a name="remarks"></a>Notas  
+ Los tipos de datos espaciales unidimensionales incluyen **LineString**, **CircularString** y **CompoundCurve**. Una instancia vacía unidimensional de **geography** devuelve 0.  
   
- `STNumCurves`() funciona solo en tipos simples; no funciona con **geography** colecciones como **MultiLineString**. **NULL** se devuelve cuando la **geography** instancia no es un tipo de datos unidimensional.  
+ `STNumCurves`() solo funciona en tipos simples; no funciona con colecciones de **geography** como **MultiLineString**. Se devuelve **NULL** cuando la instancia de **geography** no es un tipo de datos unidimensional.  
   
- **NULL** se devuelve para que no se ha inicializado **geography** instancias.  
+ Se devuelve **Null** para las instancias sin inicializar de **geography**.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/25/2018
  SELECT @g.STNumCurves();
  ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Información general de los tipos de datos espaciales](../../relational-databases/spatial/spatial-data-types-overview.md)   
  [Métodos de OGC en instancias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: FLOOR (Transact-SQL) | Documentos de Microsoft
+title: FLOOR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -48,7 +48,7 @@ FLOOR ( numeric_expression )
   
 ## <a name="arguments"></a>Argumentos  
  *numeric_expression*  
- Es una expresión de la categoría de tipo de datos numérico exacto o numérico aproximado, excepto para la **bits** tipo de datos.  
+ Es una expresión de la categoría de tipos de datos numérico exacto o numérico aproximado, excepto para el tipo de datos **bit**.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  Devuelve el mismo tipo que *numeric_expression*.  
@@ -67,8 +67,8 @@ SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);
 123            -124          123.0000     
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- En el ejemplo siguiente se muestran negativo numérico, positivo numéricos y los valores con el `FLOOR` función.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ En el siguiente ejemplo se muestran valores numéricos positivos y negativos con la función `FLOOR`.  
   
 ```  
 SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);  
@@ -82,8 +82,8 @@ SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);
  123     -124         123
  ```  
   
-## <a name="see-also"></a>Vea también  
- [Funciones matemáticas &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [Funciones matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

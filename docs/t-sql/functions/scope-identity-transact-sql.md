@@ -1,5 +1,5 @@
 ---
-title: SCOPE_IDENTITY (Transact-SQL) | Documentos de Microsoft
+title: SCOPE_IDENTITY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/06/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve el último valor de identidad insertado en una columna de identidad en el mismo ámbito. Un ámbito es un módulo: un procedimiento almacenado, desencadenador, función o lote. Por lo tanto, si dos instrucciones están en el mismo procedimiento almacenado, función o lote, están en el mismo ámbito.  
+  Devuelve el último valor de identidad insertado en una columna de identidad en el mismo ámbito. Un ámbito es un módulo: un procedimiento almacenado, desencadenador, función o lote. Por tanto, si dos instrucciones se encuentran en el mismo procedimiento almacenado, función o lote, están en el mismo ámbito.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,22 +50,22 @@ SCOPE_IDENTITY()
 ## <a name="return-types"></a>Tipos devueltos  
  **numeric(38,0)**  
   
-## <a name="remarks"></a>Comentarios  
- SCOPE_IDENTITY, IDENT_CURRENT y @@IDENTITY son funciones parecidas ya que devuelven valores que se insertan en las columnas de identidad.  
+## <a name="remarks"></a>Notas  
+ SCOPE_IDENTITY, IDENT_CURRENT y @@IDENTITY son funciones parecidas ya que devuelven valores insertados en columnas de identidad.  
   
- IDENT_CURRENT no está limitado por el ámbito y la sesión; se limita a una tabla especificada. IDENT_CURRENT devuelve el valor generado para una tabla específica en cualquier sesión y cualquier ámbito. Para obtener más información, vea [IDENT_CURRENT &#40; Transact-SQL &#41; ](../../t-sql/functions/ident-current-transact-sql.md).  
+ IDENT_CURRENT no está limitado por el ámbito y la sesión; se limita a una tabla especificada. IDENT_CURRENT devuelve el valor generado para una tabla específica en cualquier sesión y cualquier ámbito. Para obtener más información, vea [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md).  
   
- SCOPE_IDENTITY y @@IDENTITY devuelven los últimos valores de identidad que se generan en cualquier tabla en la sesión actual. No obstante, SCOPE_IDENTITY devuelve los valores insertados solo dentro del ámbito actual; @@IDENTITY no está limitado a un ámbito concreto.  
+ SCOPE_IDENTITY y @@IDENTITY devuelven los últimos valores de identidad generados en una tabla en la sesión actual. No obstante, SCOPE_IDENTITY solo devuelve los valores insertados en el ámbito actual; @@IDENTITY no se limita a un ámbito específico.  
   
  Por ejemplo, suponga que hay dos tablas, T1 y T2, y un desencadenador INSERT definido en T1. Cuando se inserta una fila en T1, el desencadenador se activa e inserta una fila en T2. Este escenario muestra dos ámbitos: la inserción en T1 y la inserción en T2 como resultado del desencadenador.  
   
- Suponiendo que T1 y T2 tienen columnas de identidad, @@IDENTITY y SCOPE_IDENTITY devuelven valores distintos al final de una instrucción INSERT en T1. @@IDENTITY devuelve el último valor de columna de identidad insertado en cualquier ámbito de la sesión actual. Este es el valor insertado en T2. SCOPE_IDENTITY () devuelve el valor IDENTITY insertado en T1. Es la última inserción que se ha producido en el mismo ámbito. La función SCOPE_IDENTITY () devuelve el valor null si la función se invoca antes de que las instrucciones INSERT en una columna de identidad se producen en el ámbito.  
+ Suponiendo que T1 y T2 tienen columnas de identidad, @@IDENTITY y SCOPE_IDENTITY devolverán distintos valores al finalizar una instrucción INSERT en T1. @@IDENTITY devolverá el último valor de la columna de identidad insertado en cualquier ámbito en la sesión actual. Este es el valor insertado en T2. SCOPE_IDENTITY() devuelve el valor IDENTITY insertado en T1. Es la última inserción que se ha producido en el mismo ámbito. La función SCOPE_IDENTITY() devuelve el valor NULL si se llama a la función antes de que se ejecuten las instrucciones INSERT en una columna de identidad del ámbito.  
   
  Las instrucciones y transacciones con errores pueden cambiar la identidad actual de una tabla y crear huecos en los valores de columna de identidad. El valor de identidad jamás se revierte, aun cuando no se haya confirmado la transacción que intentó insertar el valor en la tabla. Por ejemplo, si se produce un error en una instrucción INSERT debido a una infracción de tipo IGNORE_DUP_KEY, el valor de identidad actual de la tabla se sigue incrementando.  
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-identity-and-scopeidentity-with-triggers"></a>A. Usar@IDENTITY y SCOPE_IDENTITY con desencadenadores  
+### <a name="a-using-identity-and-scopeidentity-with-triggers"></a>A. Uso de @@IDENTITY y SCOPE_IDENTITY con desencadenadores  
  Este ejemplo crea dos tablas, `TZ` y `TY`, y un desencadenador INSERT en `TZ`. Cuando se inserta una fila en `TZ`, el desencadenador `Ztrig` se activa e inserta una fila en `TY`.  
   
 ```sql  
@@ -99,7 +99,7 @@ INSERT TY (Y_name)
   
 SELECT * FROM TY;  
 ```   
-Conjunto de resultados: Esto es TY aspecto:  
+Conjunto de resultados: este es el aspecto de TY.  
 ```  
 Y_id  Y_name  
 ---------------  
@@ -108,7 +108,7 @@ Y_id  Y_name
 110   elevator  
 ```  
 
-Cree el desencadenador que inserta una fila en la tabla TY cuando se inserta una fila en la tabla TZ.  
+Cree el desencadenador que inserta una fila en una tabla TY cuando se inserta una fila en una tabla TZ.  
 ```sql  
 CREATE TRIGGER Ztrig  
 ON TZ  
@@ -117,7 +117,7 @@ FOR INSERT AS
    INSERT TY VALUES ('')  
    END;  
 ```  
-ACTIVAR el desencadenador y determinar qué valores de identidad obtener con el @@IDENTITY y SCOPE_IDENTITY funciones.   
+ACTIVE el desencadenador y determine los valores de identidad que se obtienen con las funciones @@IDENTITY y SCOPE_IDENTITY.   
 ```sql
 INSERT TZ VALUES ('Rosalie');  
   
@@ -139,10 +139,10 @@ SCOPE_IDENTITY
 115  
 ```  
   
-### <a name="b-using-identity-and-scopeidentity-with-replication"></a>B. Usar@IDENTITY y SCOPE_IDENTITY () con la replicación  
+### <a name="b-using-identity-and-scopeidentity-with-replication"></a>B. Uso de @@IDENTITY y SCOPE_IDENTITY() con una replicación  
  Los ejemplos siguientes muestran cómo se usan `@@IDENTITY` y `SCOPE_IDENTITY()` para las inserciones en una base de datos publicada para la replicación de mezcla. Las dos tablas de los ejemplos se encuentran en la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]: `Person.ContactType` no está publicado y `Sales.Customer` sí. La replicación de mezcla agrega desencadenadores a las tablas publicadas. Por lo tanto, `@@IDENTITY` puede devolver el valor de la inserción en una tabla de sistema de replicación en lugar de la inserción en una tabla de usuario.  
   
- El `Person.ContactType` tabla tiene un valor de identidad máximo de 20. Si inserta una fila en la tabla, `@@IDENTITY` y `SCOPE_IDENTITY()` devolverán el mismo valor.  
+ La tabla `Person.ContactType` tiene un valor de identidad máximo de 20. Si inserta una fila en la tabla, `@@IDENTITY` y `SCOPE_IDENTITY()` devolverán el mismo valor.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -182,7 +182,7 @@ GO
  89
  ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)  
   
   

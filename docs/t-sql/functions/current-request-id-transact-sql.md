@@ -1,5 +1,5 @@
 ---
-title: CURRENT_REQUEST_ID (Transact-SQL) | Documentos de Microsoft
+title: CURRENT_REQUEST_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -44,11 +44,11 @@ Devuelve el Id. de la solicitud actual en la sesión actual.
 CURRENT_REQUEST_ID()  
 ```  
   
-## <a name="return-types"></a>Tipos de valor devuelto
+## <a name="return-types"></a>Tipos de valores devueltos
 **smallint**
   
-## <a name="remarks"></a>Comentarios  
-Para obtener información exacta sobre la sesión actual y la solicitud actual, utilice @@SPID y current_request_id (), respectivamente.
+## <a name="remarks"></a>Notas  
+Para obtener información exacta sobre la sesión y la solicitud actuales, utilice @@SPID y CURRENT_REQUEST_ID() respectivamente.
   
 ## <a name="see-also"></a>Vea también
 [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md)

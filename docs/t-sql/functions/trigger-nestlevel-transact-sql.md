@@ -1,5 +1,5 @@
 ---
-title: TRIGGER_NESTLEVEL (Transact-SQL) | Documentos de Microsoft
+title: TRIGGER_NESTLEVEL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -49,18 +49,18 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
   
 ## <a name="arguments"></a>Argumentos  
  *object_id*  
- Es el Id. de objeto de un desencadenador. Si *object_id* se especifica, el número de veces que se ha ejecutado el desencadenador especificado para la instrucción se devuelve. Si *object_id* no se especifica, el número de veces que se han ejecutado todos los desencadenadores para la instrucción se devuelve.  
+ Es el Id. de objeto de un desencadenador. Si se especifica *object_id*, se devuelve el número de veces que el desencadenador especificado se ha ejecutado para la instrucción. Si no se especifica *object_id*, se devuelve el número de veces que se han ejecutado todos los desencadenadores para la instrucción.  
   
  **'** *trigger_type* **'**  
- Especifica si se aplica TRIGGER_NESTLEVEL a los desencadenadores AFTER o a los desencadenadores INSTEAD OF. Especifique **AFTER** para desencadenadores AFTER. Especifique **IOT** para los desencadenadores INSTEAD OF. Si *trigger_type* se especifica, *trigger_event_category* también debe especificarse.  
+ Especifica si se aplica TRIGGER_NESTLEVEL a los desencadenadores AFTER o a los desencadenadores INSTEAD OF. Especifique **AFTER** para desencadenadores AFTER. Especifique **IOT** para desencadenadores INSTEAD OF. Si se especifica *trigger_type*, *trigger_event_category* también debe especificarse.  
   
  **'** *trigger_event_category* **'**  
- Especifica si se aplica TRIGGER_NESTLEVEL a desencadenadores DML o DDL. Especifique **DML** para desencadenadores DML. Especifique **DDL** para los desencadenadores DDL. Si *trigger_event_category* se especifica, *trigger_type* también debe especificarse. Tenga en cuenta que solo **AFTER** puede especificarse con **DDL**, dado que los desencadenadores DDL solo pueden ser desencadenadores AFTER.  
+ Especifica si se aplica TRIGGER_NESTLEVEL a desencadenadores DML o DDL. Especifique **DML** para desencadenadores DML. Especifique **DDL** para desencadenadores DDL. Si se especifica *trigger_event_category*, *trigger_type* también debe especificarse. Tenga en cuenta que solo se puede especificar **AFTER** con **DDL**, ya que los desencadenadores DDL solo pueden ser desencadenadores AFTER.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando no se especifica ningún parámetro, TRIGGER_NESTLEVEL devuelve el número total de desencadenadores de la pila de llamadas. Esto incluye el propio desencadenador. La omisión de los parámetros puede darse cuando un desencadenador ejecuta comandos que causan la activación de otro desencadenador o de una serie de desencadenadores.  
   
- Para devolver el número total de desencadenadores en la pila de llamadas para una categoría de tipo y evento de desencadenador determinado, especifique *object_id* = 0.  
+ Para devolver el número total de desencadenadores en la pila de llamadas para un tipo de desencadenador y una categoría de eventos determinados, especifique *object_id* = 0.  
   
  TRIGGER_NESTLEVEL devuelve 0 si se ejecuta fuera de un desencadenador y cualquier parámetro es distinto de NULL.  
   
@@ -91,7 +91,7 @@ IF ( (SELECT trigger_nestlevel() ) > 5 )
       ('This statement nested over 5 levels of triggers.',16,-1)  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
   
   

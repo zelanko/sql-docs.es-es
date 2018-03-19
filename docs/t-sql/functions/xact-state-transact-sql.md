@@ -1,5 +1,5 @@
 ---
-title: XACT_STATE (Transact-SQL) | Documentos de Microsoft
+title: XACT_STATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ XACT_STATE()
 ## <a name="return-type"></a>Tipo devuelto  
  **smallint**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  XACT_STATE devuelve los siguientes valores.  
   
 |Valor devuelto|Significado|  
@@ -61,7 +61,7 @@ XACT_STATE()
 |0|No hay ninguna transacción de usuario activa para la solicitud actual.|  
 |-1|La solicitud actual tiene una transacción de usuario activa, pero se ha producido un error por el cual la transacción se clasificó como no confirmable. La solicitud no puede confirmar la transacción o revertirla a un punto de retorno; solo puede solicitar que la transacción se revierta completamente. Tampoco puede realizar operaciones de escritura hasta que se revierta la transacción. Mientras tanto, solo puede realizar operaciones de lectura. Una vez que la transacción se ha revertido, la solicitud puede realizar operaciones de lectura y escritura, y puede iniciar transacciones nuevas.<br /><br /> Cuando finalice la ejecución de un lote, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] revertirá automáticamente todas las transacciones no confirmables activas. Si no se envió ningún mensaje de error cuando la transacción entró en un estado no confirmable, cuando finalice la ejecución del lote se enviará un mensaje de error a la aplicación cliente. Este mensaje indica que se detectó y revirtió una transacción no confirmable.|  
   
- Tanto el XACT_STATE y @@TRANCOUNT funciones pueden utilizarse para detectar si la solicitud actual tiene una transacción de usuario activa. @@TRANCOUNT no se puede usar para determinar si esa transacción se ha clasificado como una transacción no confirmable. No se puede utilizar XACT_STATE para determinar si hay transacciones anidadas.  
+ Las funciones XACT_STATE y @@TRANCOUNT pueden usarse para detectar si la solicitud actual tiene o no una transacción de usuario activa. No se puede usar @@TRANCOUNT para determinar si esa transacción se ha clasificado como no confirmable. No se puede utilizar XACT_STATE para determinar si hay transacciones anidadas.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se utiliza `XACT_STATE` en el bloque `CATCH` de una construcción `TRY…CATCH` para determinar si se debe confirmar o revertir una transacción. Como `SET XACT_ABORT` está en el estado `ON`, el error de infracción de restricción hace que la transacción pase a un estado no  confirmable.  
@@ -112,7 +112,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   

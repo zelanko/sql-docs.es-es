@@ -1,5 +1,5 @@
 ---
-title: O (Transact-SQL) | Documentos de Microsoft
+title: OR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -48,15 +48,15 @@ boolean_expression OR boolean_expression
   
 ## <a name="arguments"></a>Argumentos  
  *boolean_expression*  
- Se trata de cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md) que devuelve TRUE, FALSE o UNKNOWN.  
+ Es cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md) válida que devuelva TRUE, FALSE o UNKNOWN.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  **Boolean**  
   
-## <a name="result-value"></a>Valor de resultado  
+## <a name="result-value"></a>Valor del resultado  
  OR devuelve TRUE cuando alguna de las condiciones es TRUE.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  En la siguiente tabla se muestra el resultado del operador OR.  
   
 ||TRUE|FALSE|UNKNOWN|  
@@ -86,8 +86,8 @@ WHERE Department = 'Quality Assurance'
  Sootha       Charncherngkha   Night
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- En el ejemplo siguiente se recuperan los nombres de los empleados que cualquiera disfrutar de un `BaseRate` menos de 20 o tiene un `HireDate` el 1 de enero de 2001 o posterior.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ En el ejemplo siguiente se recuperan los nombres de los empleados que ganan un `BaseRate` menor de 20 o cuya `HireDate` es el 1 de enero de 2001 o posterior.  
   
 ```  
 -- Uses AdventureWorks  
@@ -97,10 +97,10 @@ FROM DimEmployee
 WHERE BaseRate < 10 OR HireDate >= '2001-01-01';  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   

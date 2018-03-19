@@ -1,5 +1,5 @@
 ---
-title: STNumGeometries (tipo de datos geometry) | Documentos de Microsoft
+title: STNumGeometries (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumgeometries-geometry-data-type"></a>STNumGeometries (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve el número de geometrías que componen un **geometry** instancia.
+Devuelve el número de geometrías que componen una instancia de **geometry**.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,15 +44,15 @@ Devuelve el número de geometrías que componen un **geometry** instancia.
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **int**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
  Tipo de valor devuelto de CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Comentarios  
- Este método devuelve 1 si la **geometry** instancia no es un **MultiPoint**, **MultiLineString**, **MultiPolygon**, o  **GeometryCollection** instancia y 0 si la **geometry** instancia está vacía.  
+## <a name="remarks"></a>Notas  
+ Este método devuelve 1 si la instancia de **geometry** no es una instancia de **MultiPoint**, **MultiLineString**, **MultiPolygon** o  **GeometryCollection** y 0 si la instancia de **geometry** está vacía.  
   
 > [!NOTE]  
->  Si un **GeometryCollection** tiene elementos anidados vacíos, `STNumGeometries()` no devolverá 0. Aunque los elementos de la **GeometryCollection** instancia está vacía, la propia instancia no es un conjunto vacío.  
+>  Si **GeometryCollection** tiene elementos anidados vacíos, `STNumGeometries()` no devuelve 0. Aunque los elementos de la instancia de **GeometryCollection** estén vacíos, la propia instancia no es un conjunto vacío.  
   
   
 

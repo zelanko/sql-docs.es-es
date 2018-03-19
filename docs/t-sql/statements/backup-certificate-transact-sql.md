@@ -1,5 +1,5 @@
 ---
-title: CERTIFICADO de copia de seguridad (Transact-SQL) | Documentos de Microsoft
+title: BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -75,7 +75,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *ruta_de_acceso_al_archivo*  
+ *path_to_file*  
  Especifica la ruta de acceso completa, incluido el nombre de archivo, al archivo en el que se almacenará el certificado. Puede ser una ruta de acceso local o una ruta UNC a una ubicación de red. La ruta de acceso predeterminada es la carpeta DATA de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  *path_to_private_key_file*  
@@ -87,14 +87,14 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  *decryption_password*  
  Es la contraseña que se utiliza para descifrar la clave privada antes de realizar una copia de seguridad de la clave.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si la clave privada se cifra con una contraseña en la base de datos, es necesario especificar la contraseña de descifrado.  
   
  Para realizar una copia de seguridad de la clave privada en un archivo es necesario el cifrado. La contraseña utilizada para proteger la copia de seguridad de un certificado no es la misma que la usada para cifrar la clave privada del certificado.  
   
- Para restaurar una copia de seguridad de certificado, use el [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md)instrucción.  
+ Para restaurar la copia de seguridad de un certificado utilice la instrucción [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL en el certificado y conocimiento de la contraseña que se utiliza para cifrar la clave privada. Si solo se hace una copia de seguridad de la parte pública del certificado, se necesita algún permiso en el certificado y que el llamador no haya denegado el permiso VIEW en el certificado.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -128,10 +128,10 @@ BACKUP CERTIFICATE sales09 TO FILE = 'c:\storedcerts\sales09cert'
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [Eliminar certificado &#40; Transact-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)  
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)  
   
   
 

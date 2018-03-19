@@ -1,5 +1,5 @@
 ---
-title: "CREAR auditoría de servidor (Transact-SQL) | Documentos de Microsoft"
+title: CREATE SERVER AUDIT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/22/2018
 ms.prod: sql-non-specified
@@ -81,39 +81,39 @@ CREATE SERVER AUDIT audit_name
   
 ## <a name="arguments"></a>Argumentos  
  TO { FILE | APPLICATION_LOG | SECURITY_LOG }  
- Determina la ubicación del destino de la auditoría. Las opciones son un archivo binario, registro de la aplicación de Windows o el registro de seguridad de Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede escribir en el registro de seguridad de Windows sin configurar valores adicionales en Windows. Para obtener más información, vea [Escribir eventos de auditoría de SQL Server en el registro de seguridad](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md).  
+ Determina la ubicación del destino de la auditoría. Las opciones son un archivo binario, el registro de la aplicación Windows o el registro de seguridad de Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede escribir en el registro de seguridad de Windows sin configurar valores adicionales en Windows. Para obtener más información, vea [Escribir eventos de auditoría de SQL Server en el registro de seguridad](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md).  
   
  FILEPATH ='*os_file_path*'  
  La ruta de acceso del registro de auditoría. El nombre de archivo se genera en función del nombre de la auditoría y del GUID de la auditoría.  
   
- MAXSIZE = { *max_size}*  
- Especifica el tamaño máximo que puede alcanzar el archivo de auditoría. El *max_size* valor debe ser un número entero seguido de MB, GB, TB o UNLIMITED. El tamaño mínimo que puede especificar para *max_size* 2 MB y el máximo es 2.147.483.647 TB. Si se especifica UNLIMITED, el archivo crecerá hasta que se llene el disco. (0 también indica UNLIMITED). Especificar un valor inferior a 2 MB, genera el error MSG_MAXSIZE_TOO_SMALL. El valor predeterminado es UNLIMITED.  
+ MAXSIZE = { *max_size }*  
+ Especifica el tamaño máximo que puede alcanzar el archivo de auditoría. El valor de *max_size* debe ser un entero seguido de MB, GB, TB o UNLIMITED. El tamaño mínimo que se puede especificar para *max_size* es 2 MB y el máximo, 2.147.483.647 TB. Si se especifica UNLIMITED, el archivo crecerá hasta que se llene el disco. (0 también indica UNLIMITED). Si se especifica un valor inferior a 2 MB, se produce el error MSG_MAXSIZE_TOO_SMALL. El valor predeterminado es UNLIMITED.  
   
- MAX_ROLLOVER_FILES =*{entero* | ILIMITADO}  
- Especifica el número máximo de archivos que se deben conservar en el sistema de archivos además del archivo actual. El *MAX_ROLLOVER_FILES* valor debe ser un entero o UNLIMITED. El valor predeterminado es UNLIMITED. Este parámetro se evalúa cada vez que se reinicia la auditoría (lo que puede suceder cuando la instancia de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] se reinicia o cuando se activa la auditoría off y, a continuación, en nuevo) o cuando se necesita un nuevo archivo porque se ha alcanzado el MAXSIZE. Cuando *MAX_ROLLOVER_FILES* se evalúa si el número de archivos supera el *MAX_ROLLOVER_FILES* establecer, el archivo más antiguo se elimina. Como resultado, cuando el valor de *MAX_ROLLOVER_FILES* es 0, se crea un nuevo archivo cada vez que la *MAX_ROLLOVER_FILES* se evalúa el valor. Solo un archivo automáticamente es eliminado al *MAX_ROLLOVER_FILES* se evalúa el valor, por lo que cuando el valor de *MAX_ROLLOVER_FILES* es ha disminuido, el número de archivos no se reduce a menos que sean archivos antiguos eliminar de forma manual. El número máximo de archivos que se pueden especificar es 2.147.483.647.  
+ MAX_ROLLOVER_FILES =*{ integer* | UNLIMITED }  
+ Especifica el número máximo de archivos que se deben conservar en el sistema de archivos además del archivo actual. El valor de *MAX_ROLLOVER_FILES* debe ser un entero o UNLIMITED. El valor predeterminado es UNLIMITED. Este parámetro se evalúa siempre que se reinicia la auditoría (lo que puede suceder cuando se reinicia la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o cuando se desactiva la auditoría y, a continuación, se activa de nuevo) o cuando se necesita un nuevo archivo porque se ha alcanzado el MAXSIZE. Cuando se evalúa *MAX_ROLLOVER_FILES*, si el número de archivos supera la configuración de *MAX_ROLLOVER_FILES*, se elimina el archivo más antiguo. Como resultado, cuando la configuración de *MAX_ROLLOVER_FILES* es 0, se crea un archivo cada vez que se evalúa la configuración de *MAX_ROLLOVER_FILES*. Se elimina solo un archivo automáticamente cuando se evalúa la configuración de *MAX_ROLLOVER_FILES*, de modo que cuando se disminuye el valor de *MAX_ROLLOVER_FILES*, el número de archivos no se reduce a menos que se eliminen manualmente los archivos antiguos. El número máximo de archivos que se pueden especificar es 2.147.483.647.  
   
  MAX_FILES =*integer*  
  **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Especifica el número máximo de archivos de auditoría que pueden crearse. No realiza la sustitución incremental al primer archivo cuando se alcanza el límite. Cuando se alcanza el límite MAX_FILES, cualquier acción que ocasione la generación, de los eventos de auditoría adicionales produce un error.  
+ Especifica el número máximo de archivos de auditoría que pueden crearse. No realiza la sustitución incremental al primer archivo cuando se alcanza el límite. Cuando se alcanza el límite de MAX_FILES, cualquier acción que ocasione la generación de eventos de auditoría adicionales producirá un error y se mostrará un mensaje.  
   
  RESERVE_DISK_SPACE = { ON | OFF }  
- Esta opción preasigna el archivo en el disco al valor de MAXSIZE. Se aplica solo si MAXSIZE no es igual a UNLIMITED. El valor predeterminado es OFF.  
+ Esta opción preasigna el archivo en el disco al valor de MAXSIZE. Se aplica únicamente si MAXSIZE no es igual a UNLIMITED. El valor predeterminado es OFF.  
   
  QUEUE_DELAY =*integer*  
- Determina el tiempo, en milisegundos, que puede transcurrir antes de que las acciones de auditoría se convierten obligatoriamente a procesarse. El valor 0 indica la entrega sincrónica. El valor mínimo que puede establecerse para la cola es 1000 (1 segundo), que es el valor predeterminado. El máximo es 2.147.483.647 (2.147.483,647 segundos, o 24 días, 20 horas, 31 minutos y 23,647 segundos). Especificar un número no válido, se genera el error MSG_INVALID_QUEUE_DELAY.  
+ Determina el tiempo, en milisegundos, que puede transcurrir antes de exigir que se procesen las acciones de auditoría. El valor 0 indica la entrega sincrónica. El valor mínimo que puede establecerse para la cola es 1000 (1 segundo), que es el valor predeterminado. El máximo es 2.147.483.647 (2.147.483,647 segundos, o 24 días, 20 horas, 31 minutos y 23,647 segundos). Si se especifica un número no válido, se producirá el error MSG_INVALID_QUEUE_DELAY.  
   
- ON_FAILURE = {CONTINUAR | CIERRE | FAIL_OPERATION}  
+ ON_FAILURE = { CONTINUE | SHUTDOWN | FAIL_OPERATION }  
  Indica si la escritura de la instancia en el destino debe suspender, continuar o detener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si el destino no puede escribir en el registro de auditoría. El valor predeterminado es CONTINUE.  
   
  CONTINUE  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Las operaciones de  continúan. Los registros de auditoría no se conservan. La auditoría continúa intentando registrar eventos y se reanudará si se resuelve la condición de error. Al seleccionar la opción continuar puede permitir que la actividad no auditada, lo que se infringirían las directivas de seguridad. Utilice esta opción cuando la operación de continuación del [!INCLUDE[ssDE](../../includes/ssde-md.md)] sea más importante que el mantenimiento de una auditoría completa.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Las operaciones de  continúan. Los registros de auditoría no se conservan. La auditoría continúa intentando el registro de eventos y se reanuda si se resuelve la condición de error. La selección de la opción Continuar puede permitir que una actividad no se audite, con lo que se infringirían las directivas de seguridad. Utilice esta opción cuando la operación de continuación del [!INCLUDE[ssDE](../../includes/ssde-md.md)] sea más importante que el mantenimiento de una auditoría completa.  
   
 SHUTDOWN  
-Obliga a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] apagar, if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se produce un error al escribir datos en el destino de auditoría por cualquier motivo. El inicio de sesión que ejecuta la `CREATE SERVER AUDIT` instrucción debe tener la `SHUTDOWN` permiso dentro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El comportamiento de apagado persiste incluso si la `SHUTDOWN` más adelante se revoca el permiso desde el inicio de sesión está ejecutando. Si el usuario no tiene este permiso, a continuación, la instrucción generará errores y la auditoría no se crea. Utilice la opción si un error de auditoría puede poner en peligro la seguridad o la integridad del sistema. Para obtener más información, consulte [apagado](../../t-sql/language-elements/shutdown-transact-sql.md).  
+Obliga a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a apagarse si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede escribir datos en el destino de auditoría por algún motivo. El inicio de sesión que ejecuta la instrucción `CREATE SERVER AUDIT` debe tener el permiso `SHUTDOWN` en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El comportamiento de apagado persiste aun cuando el permiso `SHUTDOWN` se revoque más adelante del inicio de sesión que ejecuta la instrucción. Si el usuario no tiene este permiso, la instrucción producirá un error y la auditoría no se creará. Utilice la opción si un error de auditoría puede poner en peligro la seguridad o la integridad del sistema. Para más información, vea [SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md).  
   
  FAIL_OPERATION  
- Las acciones de base de datos producen un error si generan eventos auditados. Las acciones, que no se producen eventos auditados pueden continuar, pero no los eventos auditados pueden producirse. La auditoría continúa intentando registrar eventos y se reanudará si se resuelve la condición de error. Utilice esta opción si el mantenimiento de una auditoría completa es más importante que el acceso total al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Las acciones de base de datos producen un error si generan eventos auditados. Las acciones que no generan eventos auditados pueden continuar, pero no pueden producirse eventos auditados. La auditoría continúa intentando el registro de eventos y se reanuda si se resuelve la condición de error. Utilice esta opción si el mantenimiento de una auditoría completa es más importante que el acceso total al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
 **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
  AUDIT_GUID =*uniqueidentifier*  
@@ -127,10 +127,10 @@ Obliga a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
  event_field_name  
  **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Es el nombre del campo de evento que identifica el origen del predicado. Campos de auditoría se describen en [sys.fn_get_audit_file &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). Se pueden filtrar todos los campos excepto `file_name`, `audit_file_offset`, y `event_time`.  
+ Es el nombre del campo de evento que identifica el origen del predicado. Los campos de auditoría se describen en [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). Todos los campos se pueden filtrar, excepto `file_name`, `audit_file_offset` y `event_time`.  
 
 > [!NOTE]  
->  Mientras el `action_id` y `class_type` campos son de tipo **varchar** en sys.fn_get_audit_file, sólo pueden utilizarse con números cuando tienen un origen de predicado para filtrar. Para obtener una lista de valores que se usarán con `class_type`, ejecute la siguiente consulta:  
+>  Si bien los campos `action_id` y `class_type` son de tipo **varchar** en sys.fn_get_audit_file, solo se pueden usar con números cuando sean un origen de predicado para el filtrado. Ejecute la siguiente consulta para obtener una lista de los valores que se usarán con `class_type`:  
 > ```sql
 > SELECT spt.[name], spt.[number]
 > FROM   [master].[dbo].[spt_values] spt
@@ -142,19 +142,19 @@ Obliga a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
  number  
  **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Es cualquier tipo numérico, incluido **decimal**. Las limitaciones son la falta de memoria física disponible o un número demasiado grande para ser representado como un entero de 64 bits.  
+ Es cualquier tipo numérico, incluido el tipo **decimal**. Las limitaciones son la falta de memoria física disponible o un número demasiado grande para ser representado como un entero de 64 bits.  
   
  ' string '  
  **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Una cadena ANSI o Unicode según lo requerido por la comparación de predicado. No se realiza ninguna conversión implícita de tipos de cadena para las funciones de comparación de predicado. Si se pasa el tipo incorrecto se producirá un error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando se crea una auditoría de servidor, está en un estado deshabilitado.  
   
  La instrucción CREATE SERVER AUDIT está en el ámbito de una transacción. Si se revierte la transacción, también se revierte la instrucción.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para crear, modificar o quitar una auditoría de servidor, las entidades de seguridad deben tener el permiso ALTER ANY SERVER AUDIT o CONTROL SERVER.  
   
  Al guardar información de auditoría en un archivo, para tratar de impedir su alteración, restrinja el acceso a la ubicación del archivo.  
@@ -179,7 +179,7 @@ CREATE SERVER AUDIT HIPAA_Audit
 ```  
   
 ###  <a name="ExampleWhere"></a> C. Crear un servidor de auditoría que contiene una cláusula WHERE  
- En el ejemplo siguiente se crean una base de datos, un esquema y dos tablas para el ejemplo. La tabla denominada `DataSchema.SensitiveData` contiene datos confidenciales y se registran en la auditoría de acceso a la tabla. La tabla denominada `DataSchema.GeneralData` no contiene datos confidenciales. La especificación de auditoría de base de datos audita el acceso a todos los objetos del esquema `DataSchema`. La auditoría de servidor se crea con una cláusula WHERE que limita la auditoría de servidor solamente a la tabla `SensitiveData`. La auditoría de servidor presupone que existe una carpeta de auditoría en `C:\SQLAudit`.  
+ En el ejemplo siguiente se crean una base de datos, un esquema y dos tablas para el ejemplo. La tabla denominada `DataSchema.SensitiveData` contiene datos confidenciales y el acceso a la tabla debe registrarse en la auditoría. La tabla denominada `DataSchema.GeneralData` no contiene datos confidenciales. La especificación de auditoría de base de datos audita el acceso a todos los objetos del esquema `DataSchema`. La auditoría de servidor se crea con una cláusula WHERE que limita la auditoría de servidor solamente a la tabla `SensitiveData`. La auditoría de servidor da por hecho que existe una carpeta de auditoría en `C:\SQLAudit`.  
   
 ```sql  
 CREATE DATABASE TestDB;  
@@ -218,16 +218,16 @@ SELECT * FROM fn_get_audit_file('C:\SQLAudit\AuditDataAccess_*.sqlaudit',default
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [ALTER SERVER AUDIT &#40; Transact-SQL &#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
- [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
- [CREAR especificación de auditoría de servidor &#40; Transact-SQL &#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
- [ALTER SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
- [DROP SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
- [CREAR especificación de auditoría de base de datos &#40; Transact-SQL &#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
- [ALTER DATABASE AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
- [QUITE la especificación de auditoría de base de datos &#40; Transact-SQL &#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
- [ALTER AUTHORIZATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
+ [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
+ [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
+ [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
+ [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
+ [DROP DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
  [sys.server_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
  [sys.server_file_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   

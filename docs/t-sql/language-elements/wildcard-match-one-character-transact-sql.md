@@ -1,5 +1,5 @@
 ---
-title: "_ (Comodín - coincidir un carácter) (Transact-SQL) | Documentos de Microsoft"
+title: "_ (comodín, coincidir un carácter) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -41,13 +41,13 @@ ms.lasthandoff: 01/25/2018
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (comodín, coincidir un carácter) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Utilice el carácter de subrayado _ para hacer coincidir cualquier carácter individual en una operación de comparación de cadenas que implica la coincidencia de patrones, como `LIKE` y `PATINDEX`.  
+Use el carácter de subrayado _ para hacer coincidir todos los caracteres de una operación de comparación de cadenas que implica una coincidencia de patrón como `LIKE` y `PATINDEX`.  
   
 ## <a name="examples"></a>Ejemplos  
 
-## <a name="a-simple-example"></a>R: ejemplo sencillo de   
+## <a name="a-simple-example"></a>A: ejemplo sencillo   
 
-El ejemplo siguiente devuelve todos los nombres que comienzan por la letra de la base de datos `m` y tener la letra `d` como la tercera letra. El carácter de subrayado especifica que el segundo carácter del nombre puede ser cualquier letra. El `model` y `msdb` las bases de datos cumplan este criterio. El `master` base de datos no lo hace.
+En el ejemplo siguiente se devuelven todos los nombres de base de datos que comienzan por la letra `m` y tienen `d` como la tercera letra. El carácter de subrayado especifica que el segundo carácter del nombre puede ser cualquier letra. Las bases de datos `model` y `msdb` cumplen este criterio. La base de datos `master` no lo cumple.
 
 ```sql
 SELECT name FROM sys.databases
@@ -62,10 +62,10 @@ msdb
 ```   
 Puede tener bases de datos adicionales que cumplan este criterio.
 
-Puede usar varios caracteres de subrayado para representar varios caracteres. Cambiar el `LIKE` criterios para incluir dos caracteres de subrayado `'m__%` incluye la base de datos maestra en el resultado.
+Puede usar varios caracteres de subrayado para representar varios caracteres. Al cambiar el criterio `LIKE` para incluir dos caracteres de subrayado `'m__%` se incluye la base de datos maestra en el resultado.
 
 ### <a name="b-more-complex-example"></a>B: ejemplo más complejo
- En el ejemplo siguiente se usa el operador de _ para buscar todas las personas en la `Person` tabla, que tienen un apellido de tres letras que termina en `an`.  
+ En el siguiente ejemplo se usa el operador _ para buscar todas las personas de la tabla `Person` con un nombre de tres letras que termina en `an`.  
   
 ```sql  
 -- USE AdventureWorks2012
@@ -75,21 +75,21 @@ FROM Person.Person
 WHERE FirstName LIKE '_an'  
 ORDER BY FirstName;  
 ```  
-## <a name="c-escaping-the-underscore-character"></a>C: escape el carácter de subrayado   
-El ejemplo siguiente devuelve los nombres de los roles fijos de base de datos como `db_owner` y `db_ddladmin`, pero también devuelve la `dbo` usuario. 
+## <a name="c-escaping-the-underscore-character"></a>C: escape del carácter de subrayado   
+En el ejemplo siguiente se devuelven los nombres de los roles fijos de base de datos como `db_owner` y `db_ddladmin`, pero también se devuelve el usuario `dbo`. 
 
 ```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db_%';
 ```
 
-El carácter de subrayado en la tercera posición de carácter se toma como un carácter comodín y no se filtran solo las entidades a partir de las letras `db_`. Como escape el carácter de subrayado entre corchetes `[_]`. 
+El carácter de subrayado en la tercera posición de carácter se toma como un carácter comodín y no filtra solo las entidades de seguridad que empiezan con las letras `db_`. Para incluir el carácter de subrayado entre secuencias de escape, inclúyalo entre corchetes `[_]`. 
 
 ```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db[_]%';
 ```   
-Ahora el `dbo` se excluye el usuario.   
+Ahora se excluye el usuario `dbo`.   
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]   
 ```
 name
@@ -101,10 +101,10 @@ db_securityadmin
 ```
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
-  [% (Caracteres comodín para coincidir)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
-  [&#91; &#93; (Comodín - caracteres para coincidir)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
- [&#91; ^ &#93; (Comodín - caracteres no coincidentes)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
+  [% (caracteres comodín para coincidencia)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
+  [&#91; &#93; (caracteres comodín para coincidencia)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
+ [&#91;^&#93; (caracteres comodín para no coincidir)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
   

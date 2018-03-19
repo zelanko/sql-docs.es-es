@@ -1,5 +1,5 @@
 ---
-title: ALTER TRIGGER (Transact-SQL) | Documentos de Microsoft
+title: ALTER TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/08/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Modifica la definición de un desencadenador logon, DDL o DML creado anteriormente por una instrucción CREATE TRIGGER. Los desencadenadores se crean con CREATE TRIGGER. Se pueden crear directamente desde [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones o de métodos de ensamblados que se crean en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) y cargados en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información acerca de los parámetros que se utilizan en la instrucción ALTER TRIGGER, vea [CREATE TRIGGER &#40; Transact-SQL &#41; ](../../t-sql/statements/create-trigger-transact-sql.md).  
+  Modifica la definición de un desencadenador logon, DDL o DML creado anteriormente por una instrucción CREATE TRIGGER. Los desencadenadores se crean con CREATE TRIGGER. Se pueden crear directamente a partir de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] o métodos de ensamblados creados en Common Language Runtime (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y cargados en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para más información sobre los parámetros que se usan en la instrucción ALTER TRIGGER, vea [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -144,26 +144,26 @@ AS { sql_statement
   
 ## <a name="arguments"></a>Argumentos  
  *schema_name*  
- Es el nombre del esquema al que pertenece un desencadenador DML. Los desencadenadores DML tienen como ámbito el esquema de la tabla o la vista donde se crean. *esquema**_name* es opcional solo si el desencadenador DML y su tabla o vista correspondiente pertenece al esquema predeterminado. *schema_name* no se puede especificar para desencadenadores DDL o logon.  
+ Es el nombre del esquema al que pertenece un desencadenador DML. Los desencadenadores DML tienen como ámbito el esquema de la tabla o la vista donde se crean. *schema**_name* es opcional únicamente si el desencadenador DML y su tabla o vista correspondiente pertenecen al esquema predeterminado. *schema_name* no se puede especificar para los desencadenadores DDL o de inicio de sesión.  
   
  *trigger_name*  
  Es el desencadenador existente que se va a modificar.  
   
- *tabla* | *vista*  
+ *table* | *view*  
  Es la tabla o la vista en que se ejecuta el desencadenador DML. Especificar el nombre completo de la tabla o vista es opcional.  
   
  DATABASE  
- Aplica el ámbito de un desencadenador DDL a la base de datos actual. Si se especifica, el desencadenador se activa cada vez que *event_type* o *event_group* se produce en la base de datos actual.  
+ Aplica el ámbito de un desencadenador DDL a la base de datos actual. Si se especifica, el desencadenador se activa cada vez que *event_type* o *event_group* tienen lugar en la base de datos actual.  
   
  ALL SERVER  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Aplica el ámbito de un desencadenador DDL o logon al servidor actual. Si se especifica, el desencadenador se activa cada vez que *event_type* o *event_group* tienen lugar en el servidor actual.  
+ Aplica el ámbito de un desencadenador DDL o logon al servidor actual. Si se especifica, el desencadenador se activa cada vez que *event_type* o *event_group* tienen lugar en cualquier lugar del servidor actual.  
   
  WITH ENCRYPTION  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Cifra las entradas de sys.syscommentssys.sql_modules que contienen el texto de la instrucción ALTER TRIGGER. El uso de WITH ENCRYPTION impide que el desencadenador se publique como parte de la replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. WITH ENCRYPTION no se puede especificar para desencadenadores CLR.  
+ Cifra las entradas sys.syscomments y sys.sql_modules que contienen el texto de la instrucción ALTER TRIGGER. El uso de WITH ENCRYPTION impide que el desencadenador se publique como parte de la replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. WITH ENCRYPTION no se puede especificar para desencadenadores CLR.  
   
 > [!NOTE]  
 >  Si se crea un desencadenador mediante WITH ENCRYPTION, debe volver a especificarse en la instrucción ALTER TRIGGER para que esta opción se mantenga habilitada.  
@@ -174,14 +174,14 @@ AS { sql_statement
  Para obtener más información, vea [EXECUTE AS &#40;cláusula de Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
  NATIVE_COMPILATION  
- Indica que el desencadenador se compila de forma nativa.  
+ Indica que el desencadenador está compilado de forma nativa.  
   
- Esta opción es necesaria para los desencadenadores en tablas optimizadas en memoria.  
+ Esta opción es necesaria para los desencadenadores en tablas optimizadas para memoria.  
   
  SCHEMABINDING  
- Garantiza que las tablas que hace referencia un desencadenador no se pueden quitar ni modificar.  
+ Se garantiza que las tablas a las que un desencadenador hace referencia no se pueden quitar o modificar.  
   
- Esta opción es necesaria para desencadenadores en tablas optimizadas en memoria y no se admite para los desencadenadores de las tablas tradicionales.  
+ Esta opción es necesaria para desencadenadores en tablas optimizadas para memoria y no se admite en desencadenadores de tablas tradicionales.  
   
  AFTER  
  Especifica que el desencadenador se activa solo después de que se ejecute correctamente la instrucción SQL desencadenadora. También todas las acciones referenciales en cascada y las comprobaciones de restricciones deben ser correctas para que este desencadenador se active.  
@@ -195,7 +195,7 @@ AS { sql_statement
   
  Como máximo, se puede definir un desencadenador INSTEAD OF por cada instrucción INSERT, UPDATE o DELETE en cada tabla o vista. No obstante, en las vistas es posible definir otras vistas que tengan su propio desencadenador INSTEAD OF.  
   
- Los desencadenadores INSTEAD OF no se pueden utilizar en vistas creadas con WITH CHECK OPTION. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un error cuando se agrega un desencadenador INSTEAD OF a una vista para la que se especificó WITH CHECK OPTION. El usuario debe quitar esta opción mediante ALTER VIEW antes de definir el desencadenador INSTEAD OF.  
+ Los desencadenadores INSTEAD OF no se pueden utilizar en vistas creadas con WITH CHECK OPTION. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un error cuando se agrega un desencadenador INSTEAD OF a una vista para la que se especificó WITH CHECK OPTION. El usuario debe quitar esta opción por medio ALTER VIEW antes de definir el desencadenador INSTEAD OF.  
   
  { [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] } | { [INSERT ] [ , ] [ UPDATE ] }  
  Especifica las instrucciones de modificación de datos que, cuando se ejecutan en esta tabla o vista, activan el desencadenador DML. Se debe especificar al menos una opción. En la definición del desencadenador se permite cualquier combinación de éstas, en cualquier orden. Si especifica más de una opción, deben separarse con comas.  
@@ -203,10 +203,10 @@ AS { sql_statement
  Para los desencadenadores INSTEAD OF, no se permite la opción DELETE en tablas que tengan una relación de integridad referencial que especifica una acción ON DELETE en cascada. Tampoco se permite la opción UPDATE en tablas que tengan una relación referencial que especifique una acción ON UPDATE en cascada. Para obtener más información, vea [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
  *event_type*  
- Es el nombre de un evento de lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)] que, después de su ejecución, hace que se active un desencadenador DDL. Eventos válidos para los desencadenadores DDL se enumeran en [eventos DDL](../../relational-databases/triggers/ddl-events.md).  
+ Es el nombre de un evento de lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)] que, después de su ejecución, hace que se active un desencadenador DDL. Los eventos válidos para los desencadenadores DDL se enumeran en [Eventos DDL](../../relational-databases/triggers/ddl-events.md).  
   
  *event_group*  
- Es el nombre de un agrupamiento predefinido de eventos de lenguaje de [!INCLUDE[tsql](../../includes/tsql-md.md)]. El desencadenador DDL se activa tras la ejecución de cualquier [!INCLUDE[tsql](../../includes/tsql-md.md)] eventos de lenguaje que pertenece a *event_group*. Grupos de eventos válidos para los desencadenadores DDL se enumeran en [grupos de eventos DDL](../../relational-databases/triggers/ddl-event-groups.md). Una vez que ALTER TRIGGER ha terminado de ejecutarse, *event_group* también actúa como una macro agregando los tipos de evento que abarca a la vista de catálogo sys.trigger_events.  
+ Es el nombre de un agrupamiento predefinido de eventos de lenguaje de [!INCLUDE[tsql](../../includes/tsql-md.md)]. El desencadenador DDL se activa tras la ejecución de cualquier evento de lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)] que pertenezca a *event_group*. Los grupos de eventos válidos para los desencadenadores DDL se enumeran en [Grupos de eventos DDL](../../relational-databases/triggers/ddl-event-groups.md). Una vez que ALTER TRIGGER ha terminado de ejecutarse, *event_group* actúa también como una macro al agregar los tipos de eventos que abarca a la vista de catálogo sys.trigger_events.  
   
  NOT FOR REPLICATION  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -216,15 +216,15 @@ AS { sql_statement
  *sql_statement*  
  Son las condiciones y acciones del desencadenador.  
   
- Para los desencadenadores en tablas optimizadas en memoria, el único *sql_statement* permitido en el nivel superior es un bloque ATOMIC. El código T-SQL permitido dentro del bloque ATOMIC está limitado por el código T-SQL permitido dentro de los procedimientos nativos.  
+ Para los desencadenadores en tablas optimizadas para memoria, el único *sql_statement* permitido en el nivel superior es un bloque ATOMIC. El código T-SQL permitido dentro del bloque ATOMIC está limitado por el código T-SQL permitido dentro de los procedimientos nativos.  
   
- NOMBRE externo \<method_specifier >  
+ EXTERNAL NAME \<method_specifier>  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Especifica el método de un ensamblado que se enlaza al desencadenador. El método no debe tomar argumentos y debe devolver void. *CLASS_NAME* debe ser válido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificador y debe existir como una clase en el ensamblado con visibilidad de ensamblado. La clase no puede ser anidada.  
+ Especifica el método de un ensamblado que se enlaza al desencadenador. El método no debe tomar argumentos y debe devolver void. *class_name* debe ser un identificador válido de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y debe existir como clase en el ensamblado con visibilidad de ensamblado. La clase no puede ser anidada.  
   
-## <a name="remarks"></a>Comentarios  
- Para obtener más información acerca de ALTER TRIGGER, vea la sección comentarios en [CREATE TRIGGER &#40; Transact-SQL &#41; ](../../t-sql/statements/create-trigger-transact-sql.md).  
+## <a name="remarks"></a>Notas  
+ Para más información sobre ALTER TRIGGER, vea la sección Comentarios de [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 > [!NOTE]  
 >  Las opciones EXTERNAL_NAME y ON_ALL_SERVER no están disponibles en una base de datos independiente.  
@@ -241,18 +241,18 @@ AS { sql_statement
  Cuando una acción DELETE en una tabla de referencia o secundaria es el resultado de una acción CASCADE de una instrucción DELETE de la tabla principal y el desencadenador INSTEAD OF de DELETE está definido en esta tabla secundaria, el desencadenador se pasa por alto y se ejecuta la acción DELETE.  
   
 ## <a name="ddl-triggers"></a>Desencadenadores DDL  
- A diferencia de los desencadenadores DML, los desencadenadores DDL no tienen como ámbito los esquemas. Por tanto, no se pueden utilizar OBJECT_ID, OBJECT_NAME, OBJECTPROPERTY ni OBJECTPROPERTY(EX) al consultar metadatos acerca de desencadenadores DDL. Utilice en su lugar las vistas de catálogo. Para obtener más información, consulte [obtener información acerca de los desencadenadores DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md).  
+ A diferencia de los desencadenadores DML, los desencadenadores DDL no tienen como ámbito los esquemas. Por tanto, no se pueden utilizar OBJECT_ID, OBJECT_NAME, OBJECTPROPERTY ni OBJECTPROPERTY(EX) al consultar metadatos acerca de desencadenadores DDL. Utilice en su lugar las vistas de catálogo. Para más información, vea [Obtener información sobre los desencadenadores DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md).  
   
 ## <a name="logon-triggers"></a>Desencadenadores logon  
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] no admite desencadenadores en eventos de inicio de sesión.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para modificar un desencadenador DML se requiere el permiso ALTER en la tabla o vista en la que se define el desencadenador.  
   
  Para alterar un desencadenador DDL definido con ámbito de servidor (ON ALL SERVER) o un desencadenador logon se requiere el permiso CONTROL SERVER en el servidor. Para modificar un desencadenador DDL definido con el ámbito de base de datos (ON DATABASE), se requiere el permiso ALTER ANY DATABASE DDL TRIGGER en la base de datos actual.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se crea un desencadenador DML en la base de datos de AdventureWorks 2012, que imprime un mensaje definido por el usuario en el cliente cuando un usuario intenta agregar o cambiar datos en el `SalesPersonQuotaHistory` tabla. Después, el desencadenador se modifica utilizando `ALTER TRIGGER` para aplicar el desencadenador solo en las actividades `INSERT`. Este desencadenador es útil porque recuerda al usuario que actualiza o inserta filas en esta tabla que debe notificar también al departamento `Compensation` .  
+ En el siguiente ejemplo se crea un desencadenador DML en la base de datos AdventureWorks 2012 que imprime para el cliente un mensaje definido por el usuario cuando alguien intenta agregar o cambiar los datos de la tabla `SalesPersonQuotaHistory`. Después, el desencadenador se modifica utilizando `ALTER TRIGGER` para aplicar el desencadenador solo en las actividades `INSERT`. Este desencadenador es útil porque recuerda al usuario que actualiza o inserta filas en esta tabla que debe notificar también al departamento `Compensation` .  
   
 ```  
 CREATE TRIGGER Sales.bonus_reminder  
@@ -270,15 +270,15 @@ AS RAISERROR ('Notify Compensation', 16, 10);
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   
  [DISABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/disable-trigger-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [Crear un procedimiento almacenado](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
- [sp_addmessage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
- [Transacciones](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
+ [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [Transactions](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
  [Obtener información acerca de los desencadenadores DML](../../relational-databases/triggers/get-information-about-dml-triggers.md)   
  [Obtener información sobre los desencadenadores DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md)   
  [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   

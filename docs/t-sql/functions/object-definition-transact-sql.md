@@ -1,5 +1,5 @@
 ---
-title: OBJECT_DEFINITION (Transact-SQL) | Documentos de Microsoft
+title: OBJECT_DEFINITION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,7 +50,7 @@ OBJECT_DEFINITION ( object_id )
   
 ## <a name="arguments"></a>Argumentos  
  *object_id*  
- Es el identificador del objeto que se va a utilizar. *object_id* es **int**y considera que representa un objeto en el contexto de base de datos actual.  
+ Es el identificador del objeto que se va a utilizar. *object_id* es **int** y se considera que representa un objeto del contexto de la base de datos actual.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **nvarchar(max)**  
@@ -60,22 +60,22 @@ OBJECT_DEFINITION ( object_id )
   
  Un usuario solo puede ver los metadatos de elementos protegibles que posea o para los que se le haya concedido permiso. Esto significa que las funciones integradas de emisión de metadatos, como OBJECT_DEFINITION, pueden devolver NULL si el usuario no tiene ningún permiso para el objeto. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Comentarios  
- El [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] se da por supuesto que *object_id* está en el contexto de base de datos actual. La intercalación de la definición del objeto siempre coincide con la del contexto de la base de datos que realiza la llamada.  
+## <a name="remarks"></a>Notas  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] presupone que *object_id* se encuentra en el contexto de la base de datos actual. La intercalación de la definición del objeto siempre coincide con la del contexto de la base de datos que realiza la llamada.  
   
  OBJECT_DEFINITION se aplica a los siguientes tipos de objeto:  
   
 -   C = Restricción CHECK  
   
--   D. = valor predeterminado (restricción o independiente)  
+-   D = Default (restricción o independiente)  
   
--   P = procedimiento almacenado de SQL  
+-   P = Procedimiento almacenado de SQL  
   
 -   FN = Función escalar de SQL  
   
 -   R = Regla  
   
--   RF = procedimiento de filtro de replicación  
+-   RF = Procedimiento de filtro de replicación  
   
 -   TR = Desencadenador SQL (desencadenador DML en el ámbito del esquema o desencadenador DDL en el ámbito de la base de datos o del servidor)  
   
@@ -85,7 +85,7 @@ OBJECT_DEFINITION ( object_id )
   
 -   V = Vista  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Las definiciones de los objetos del sistema están visibles públicamente. La definición de los objetos de usuario está visible para el propietario del objeto o los receptores de los permisos siguientes: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION. Estos permisos corresponden implícitamente a los miembros de los roles fijos de base de datos **db_owner**, **db_ddladmin**y **db_securityadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
@@ -110,10 +110,10 @@ SELECT OBJECT_DEFINITION (OBJECT_ID(N'sys.sp_columns')) AS [Object Definition];
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Funciones de metadatos &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [Object_name &#40; Transact-SQL &#41;](../../t-sql/functions/object-name-transact-sql.md)   
- [Object_id &#40; Transact-SQL &#41;](../../t-sql/functions/object-id-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [Funciones de metadatos &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [OBJECT_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/object-name-transact-sql.md)   
+ [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.server_sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-sql-modules-transact-sql.md)  

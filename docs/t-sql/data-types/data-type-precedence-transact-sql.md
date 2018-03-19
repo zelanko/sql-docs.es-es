@@ -1,5 +1,5 @@
 ---
-title: Tipo de datos de prioridad (Transact-SQL) | Documentos de Microsoft
+title: Prioridad de tipo de datos (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="data-type-precedence-transact-sql"></a>Precedencia de tipo de datos (Transact-SQL)
+# <a name="data-type-precedence-transact-sql"></a>Prioridad de tipo de datos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Cuando un operador combina dos expresiones de tipos de datos distintos, las reglas de prioridad de tipo de datos especifican que el tipo de datos con la prioridad más baja se convierta al tipo de datos con la prioridad más alta. Si la conversión no es una conversión implícita admitida, se devuelve un error. Cuando ambas expresiones de operandos tienen el mismo tipo de datos, el resultado de la operación tiene ese tipo de datos.
@@ -59,16 +59,16 @@ Cuando un operador combina dos expresiones de tipos de datos distintos, las regl
 1. **tinyint**  
 1. **bit**  
 1. **ntext**  
-1. **text**  
-1. **image**  
+1. **texto**  
+1. **imagen**  
 1. **timestamp**  
 1. **uniqueidentifier**  
-1. **nvarchar** (incluidos **nvarchar (max)** )  
+1. **nvarchar** (**nvarchar(max)** incluido)  
 1. **nchar**  
-1. **varchar** (incluidos **varchar (max)** )  
+1. **varchar** (**varchar(max)** incluido)  
 1. **char**  
-1. **varbinary** (incluidos **varbinary (max)** )  
-1. **binario** (el más bajo)  
+1. **varbinary** (**varbinary(max)** incluido)  
+1. **binary** (el más bajo)  
   
 ## <a name="see-also"></a>Vea también
 [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

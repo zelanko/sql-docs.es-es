@@ -51,31 +51,31 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
   
 ## <a name="arguments"></a>Argumentos  
  *scalar_expression*  
- Se trata de cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Es cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md) válida.  
   
  { = | <> | != | > | >= | !> | < | <= | !< }  
  Es un operador de comparación.  
   
  *subquery*  
- Es una subconsulta que devuelve un conjunto de resultados de una columna. El tipo de datos de la columna devuelta debe ser el mismo tipo de datos que el tipo de datos de *scalar_expression*.  
+ Es una subconsulta que devuelve un conjunto de resultados de una columna. El tipo de datos de la columna devuelta debe ser igual que el tipo de datos de *scalar_expression*.  
   
  Es una instrucción SELECT restringida en la que no se permiten la cláusula ORDER BY ni la palabra clave INTO.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  **Boolean**  
   
-## <a name="result-value"></a>Valor de resultado  
- Devuelve TRUE cuando la comparación especificada es TRUE para todos los pares (*scalar_expression***,***x)*, cuando *x* es un valor en el conjunto de columna única; en caso contrario, devuelve FALSE.  
+## <a name="result-value"></a>Valor del resultado  
+ Devuelve TRUE cuando la comparación especificada es TRUE para todos los pares (*scalar_expression***,***x)*, donde *x* es un valor del conjunto de una sola columna; en caso contrario, devuelve FALSE.  
   
-## <a name="remarks"></a>Comentarios  
- Requiere que todos los *scalar_expression* a compare de forma positiva con cada valor devuelto por la subconsulta. Por ejemplo, si la subconsulta devuelve los valores 2 y 3, *scalar_expression* < = ALL (subconsulta) se evaluaría como TRUE para un *scalar_expression* de 2. Si la subconsulta devuelve los valores 2 y 3, *scalar_expression* = ALL (subconsulta) se evaluaría como FALSE, porque algunos de los valores de la subconsulta (el valor de 3) no cumpliría los criterios de la expresión.  
+## <a name="remarks"></a>Notas  
+ ALL requiere que *scalar_expression* se compare de forma positiva con cada valor devuelto por la subconsulta. Por ejemplo, si la subconsulta devuelve los valores 2 y 3, *scalar_expression* <= ALL (subconsulta) se evaluaría como TRUE para una *scalar_expression* de 2. Si la subconsulta devuelve los valores 2 y 3, *scalar_expression* = ALL (subconsulta) se evaluaría como FALSE, porque algunos de los valores de la subconsulta (el valor 3) no cumplirían los criterios de la expresión.  
   
- Para instrucciones que requieren la *scalar_expression* para comparar de forma positiva a solo un valor devuelto por la subconsulta, vea [algunos &#124; CUALQUIER &#40; Transact-SQL &#41; ](../../t-sql/language-elements/some-any-transact-sql.md).  
+ Para instrucciones que requieren que *scalar_expression* se compare de forma positiva con solo un valor devuelto por la subconsulta, vea [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md).  
   
- Este tema hace referencia a ALL cuando se utiliza con una subconsulta. También puede utilizar con [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) y [seleccione](../../t-sql/queries/select-transact-sql.md).  
+ Este tema hace referencia a ALL cuando se utiliza con una subconsulta. ALL también se puede usar con [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) y [SELECT](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se crea un procedimiento almacenado que determina si todos los componentes de un determinado `SalesOrderID` en el [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de datos se puede fabricar en el número de días especificado. En el ejemplo se usa una subconsulta para crear una lista del número del valor de `DaysToManufacture` para todos los componentes del `SalesOrderID` específico y, a continuación, confirma que todos los `DaysToManufacture` están dentro del número de días especificado.  
+ En el ejemplo siguiente se crea un procedimiento almacenado que determina si todos los componentes de un valor `SalesOrderID` especificado en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] se pueden fabricar en el número de días especificado. En el ejemplo se usa una subconsulta para crear una lista del número del valor de `DaysToManufacture` para todos los componentes del `SalesOrderID` específico y, a continuación, confirma que todos los `DaysToManufacture` están dentro del número de días especificado.  
   
 ```  
 -- Uses AdventureWorks  
@@ -97,7 +97,7 @@ PRINT 'Some items for this order cannot be manufactured in specified number of d
   
 ```  
   
- Para probar el procedimiento, ejecútelo con `SalesOrderID 49080`, que tiene un componente que requiere `2` días y dos componentes que requieren 0 días. La primera instrucción siguiente cumple los criterios. La segunda consulta no los cumple.  
+ Para probar el procedimiento, ejecútelo con `SalesOrderID 49080`, que tiene un componente que requiere `2` días y dos componentes que requieren 0 días. La primera instrucción que se indica a continuación cumple los criterios. La segunda consulta no los cumple.  
   
 ```  
 EXECUTE DaysToBuild 49080, 2 ;  
@@ -115,12 +115,12 @@ EXECUTE DaysToBuild 49080, 1 ;
   
  `Some items for this order cannot be manufactured in specified number of days or less.`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  

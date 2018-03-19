@@ -1,5 +1,5 @@
 ---
-title: '&amp;(AND bit a bit) (Transact-SQL) | Documentos de Microsoft'
+title: '&amp; (AND bit a bit) (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="amp-bitwise-and-transact-sql"></a>&amp;(AND bit a bit) (Transact-SQL)
+# <a name="amp-bitwise-and-transact-sql"></a>&amp; (AND bit a bit) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Realiza una operación lógica AND bit a bit entre dos valores enteros.  
@@ -49,25 +49,25 @@ expression & expression
   
 ## <a name="arguments"></a>Argumentos  
  *expression*  
- Se trata de cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cualquiera de los tipos de datos de la categoría de tipo de datos entero, o la **bits**, o la **binario** o **varbinary** datos tipos. *expresión* se trata como un número binario para la operación bit a bit.  
+ Es cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md) válida de uno de los tipos de datos de la categoría del tipo de datos entero, o los tipos de datos **bit**, **binary** o **varbinary**. *expression* se trata como un número binario para la operación bit a bit.  
   
 > [!NOTE]  
->  En una operación bit a bit, solo uno *expresión* puede ser del **binario** o **varbinary** tipo de datos.  
+>  En una operación bit a bit, solo un objeto *expression* puede tener el tipo de datos **binario** o **varbinary**.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  **int** si los valores de entrada son **int**.  
   
  **smallint** si los valores de entrada son **smallint**.  
   
- **tinyint** si los valores de entrada son **tinyint** o **bits**.  
+ **tinyint** si los valores de entrada son **tinyint** o **bit**.  
   
-## <a name="remarks"></a>Comentarios  
- El  **&**  operador bit a bit realiza una operación lógica AND bit a bit entre las dos expresiones, toma cada bit de ambas expresiones correspondiente. Los bits del resultado se establecen en 1 si y solo si los dos bits (para el bit actual que se resuelve) de las expresiones de entrada tienen el valor 1; de otro modo, el bit del resultado se establece en 0.  
+## <a name="remarks"></a>Notas  
+ El operador **&** bit a bit realiza una operación lógica AND bit a bit entre las dos expresiones, y, para ello, usa el bit correspondiente de ambas. Los bits del resultado se establecen en 1 si y solo si los dos bits (para el bit actual que se resuelve) de las expresiones de entrada tienen el valor 1; de otro modo, el bit del resultado se establece en 0.  
   
- Si las expresiones izquierdas y derecha tienen tipos de datos enteros diferentes (por ejemplo, a la izquierda *expresión* es **smallint** y el derecho *expresión* es  **int**), el argumento del tipo de datos más pequeño se convierte al tipo de datos mayor. En este caso, el **smallint *** expresión* se convierte en una **int**.  
+ Si las expresiones de la izquierda y de la derecha tienen tipos de datos de entero diferentes (por ejemplo, *expression* de la izquierda es de tipo **smallint** y *expression* de la derecha es de tipo **int**), el argumento del tipo de datos más pequeño se convierte al tipo de datos mayor. En nuestro caso, **smallint***expression* se convierte en **int**.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se crea una tabla con el **int** tipo para almacenar los valores de datos e inserta dos valores en una fila.  
+ En el ejemplo siguiente se crea una tabla con el tipo de datos **int** para almacenar los valores, y se insertan dos valores en una misma fila.  
   
 ```  
 CREATE TABLE bitwise  
@@ -108,12 +108,12 @@ GO
 ```  
   
   
-## <a name="see-also"></a>Vea también  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Bitwise Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
- [&= &#40;Bitwise AND Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
- [Compuesta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operadores bit a bit &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
+ [&= &#40;Asignación de AND bit a bit&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
+ [Operadores compuestos &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: DateTimeOffset (Transact-SQL) | Documentos de Microsoft
+title: datetimeoffset (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -41,82 +41,82 @@ ms.lasthandoff: 11/21/2017
 
 Define una fecha que se combina con una hora del día con reconocimiento de zona horaria y basado en un reloj de 24 horas.
   
-## <a name="datetimeoffset-description"></a>Descripción de DateTimeOffset
+## <a name="datetimeoffset-description"></a>Descripción de datetimeoffset
   
 |Propiedad|Valor|  
 |---|---|
-|Sintaxis|**DateTimeOffset** [(*precisión de fracciones de segundo*)]|  
-|Uso|DECLARAR @MyDatetimeoffset **datetimeoffset(7)**<br /><br /> Crear tabla Table1 (Column1 **datetimeoffset(7)** )|  
-|Formatos de literal de cadena predeterminados (utilizados para el cliente de nivel inferior)|AAAA-MM-DD hh [.nnnnnnn] [{+ &#124;-} hh: mm]<br /><br /> Para obtener más información, vea la sección "Compatibilidad con versiones anteriores de clientes de nivel inferior" que sigue.|  
-|Intervalo de fechas|De 0001-01-01 a 31.12.99<br /><br /> El 1 de enero de 1 CE hasta el 31 de diciembre de 9999 CE|  
-|Intervalo de horas|00:00:00 a 23:59:59.9999999 (no se admiten las fracciones de segundo de Informatica)|  
-|Intervalo de ajuste de zona horaria|-14:00 a + 14:00 (se omite el desplazamiento de zona horaria de Informatica)|  
-|Intervalos de elementos|AAAA es una cifra de cuatro dígitos comprendida entre 0001 y 9999 que representa un año.<br /><br /> MM es una cifra de dos dígitos comprendido entre 01 y 12, que representa un mes del año especificado.<br /><br /> DD es cifra de dos dígitos comprendido entre 01 y 31 dependiendo del mes, que representa un día del mes especificado.<br /><br /> hh es una cifra de dos dígitos comprendida entre 00 y 23 que representa la hora.<br /><br /> mm es una cifra de dos dígitos comprendida entre 00 y 59 que representa los minutos.<br /><br /> s es una cifra de dos dígitos comprendida entre 00 y 59 que representa los segundos.<br /><br /> n* es una cifra de cero a siete dígitos comprendida entre 0 y 9999999 que representa las fracciones de segundos. No se admiten las fracciones de segundo de Informatica.<br /><br /> hh es una cifra de dos dígitos comprendida entre -14 y 14. Se omite el desplazamiento de zona horaria de Informatica.<br /><br /> mm es una cifra de dos dígitos comprendida entre 00 y 59. Se omite el desplazamiento de zona horaria de Informatica.|  
-|Longitud en caracteres|26 posiciones como mínimo (aaaa-MM-DD hh {+ &#124;-} hh: mm) a 34 como máximo (. nnnnnnn aaaa-MM-DD {+ &#124;-} hh: mm)|  
-|Precisión, escala|Vea la siguiente tabla.|  
+|Sintaxis|**datetimeoffset** [(*precisión de fracciones de segundo*)]|  
+|Uso|DECLARE @MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
+|Formatos de literal de cadena predeterminados (utilizados para el cliente de nivel inferior)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> Para más información, vea la sección "Compatibilidad con versiones anteriores de clientes de niveles inferiores" más adelante.|  
+|Intervalo de fechas|De 0001-01-01 a 31.12.99<br /><br /> Del 1 de enero del año 1 E. C. al 31 de diciembre de 9999 E. C.|  
+|Intervalo de horas|De 00:00:00 a 23:59:59,9999999 (no se admiten fracciones de segundo en Informatica)|  
+|Intervalo de ajuste de zona horaria|De -14:00 a + 14:00 (se omite el desplazamiento de zona horaria en Informatica)|  
+|Intervalos de elementos|AAAA es una cifra de cuatro dígitos comprendida entre 0001 y 9999 que representa un año.<br /><br /> MM es una cifra de dos dígitos, comprendida entre 01 y 12, que representa un mes del año especificado.<br /><br /> DD es una cifra de dos dígitos, comprendida entre 01 y 31 dependiendo del mes, que representa un día del mes especificado.<br /><br /> hh es una cifra de dos dígitos comprendida entre 00 y 23 que representa la hora.<br /><br /> mm es una cifra de dos dígitos comprendida entre 00 y 59 que representa los minutos.<br /><br /> s es una cifra de dos dígitos comprendida entre 00 y 59 que representa los segundos.<br /><br /> n* es una cifra de cero a siete dígitos comprendida entre 0 y 9999999 que representa las fracciones de segundos. No se admiten fracciones de segundo en Informatica.<br /><br /> hh es una cifra de dos dígitos comprendida entre -14 y 14. Se omite el desplazamiento de zona horaria en Informatica.<br /><br /> mm es una cifra de dos dígitos comprendida entre 00 y 59. Se omite el desplazamiento de zona horaria en Informatica.|  
+|Longitud en caracteres|De 26 posiciones como mínimo (AAAA-MM-DD hh:mm:ss {+&#124;-}hh:mm) a 34 como máximo (AAAA-MM-DD hh:mm:ss.nnnnnnn {+&#124;-}hh:mm)|  
+|Precisión, escala|Vea la tabla siguiente.|  
 |Tamaño de almacenamiento|10 bytes, fijo es el valor predeterminado con el valor predeterminado de 100 ns de precisión de fracciones de segundo.|  
 |Precisión|100 nanosegundos|  
 |Valor predeterminado|1900-01-01 00:00:00 00:00|  
 |Calendario|Gregoriano|  
 |Precisión de fracciones de segundo definida por el usuario|Sí|  
 |Conservación y reconocimiento del ajuste de zona horaria|Sí|  
-|Reconocimiento del horario de verano|No|  
+|Reconocimiento del horario de verano|no|  
   
 |Escala especificada|Resultado (precisión, escala)|Longitud de la columna (bytes)|Precisión de fracciones de segundo|  
 |---|---|---|---|
 |**datetimeoffset**|(34,7)|10|7|  
-|**DateTimeOffset(0)**|(26,0)|8|0-2|  
-|**DateTimeOffset(1)**|(28,1)|8|0-2|  
-|**DateTimeOffset(2)**|(29,2)|8|0-2|  
-|**DateTimeOffset(3)**|(30,3)|9|3-4|  
-|**DateTimeOffset(4)**|(31,4)|9|3-4|  
-|**DateTimeOffset(5)**|(32,5)|10|5-7|  
-|**DateTimeOffset(6)**|(33,6)|10|5-7|  
-|**DateTimeOffset(7)**|(34,7)|10|5-7|  
+|**datetimeoffset(0)**|(26,0)|8|0-2|  
+|**datetimeoffset(1)**|(28,1)|8|0-2|  
+|**datetimeoffset(2)**|(29,2)|8|0-2|  
+|**datetimeoffset(3)**|(30,3)|9|3-4|  
+|**datetimeoffset(4)**|(31,4)|9|3-4|  
+|**datetimeoffset(5)**|(32,5)|10|5-7|  
+|**datetimeoffset(6)**|(33,6)|10|5-7|  
+|**datetimeoffset(7)**|(34,7)|10|5-7|  
   
-## <a name="supported-string-literal-formats-for-datetimeoffset"></a>Admite los formatos de literal de cadena para datetimeoffset
-En la tabla siguiente se enumera los compatibles formatos literales de cadena de ISO 8601 para **datetimeoffset**. Para obtener información acerca de los formatos alfabético, numéricos, sin separación y el tiempo para las partes de fecha y hora de **datetimeoffset**, consulte [inte &#40; Transact-SQL &#41; ](../../t-sql/data-types/date-transact-sql.md) y [tiempo &#40; Transact-SQL &#41; ](../../t-sql/data-types/time-transact-sql.md).
+## <a name="supported-string-literal-formats-for-datetimeoffset"></a>Formatos de literales de cadena admitidos para datetimeoffset
+En esta tabla se enumeran los formatos de literales de cadena ISO 8601 admitidos para **datetimeoffset**. Para más información sobre los formatos alfabético, numérico, sin separación y de hora de las partes de fecha y hora de **datetimeoffset**, vea [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md) y [time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md).
   
 |ISO 8601|Description|  
 |---|---|
-|AAAA-MM-ddTHH [.nnnnnnn] [{+ &#124;-} hh: mm]|Estos dos formatos no se ven afectados por la configuración regional de sesión de SET LANGUAGE y SET DATEFORMAT. No se permiten espacios entre el **datetimeoffset** y **datetime** partes.|  
-|AAAA-MM-DDThh:mm:ss[.nnnnnnn]Z (UTC)|Este formato de la definición de ISO indica la **datetime** parte se debe expresar en hora Universal coordinada (UTC). Por ejemplo, 1999-12-12 12:30:30.12345 -07: 00 se deberían representar como 1999-12-12 19:30:30.12345 Z.|  
+|YYYY-MM-DDThh:mm:ss[.nnnnnnn][{+&#124;-}hh:mm]|Estos dos formatos no se ven afectados por la configuración regional de sesión de SET LANGUAGE y SET DATEFORMAT. No se permiten espacios entre las partes de **datetimeoffset** y **datetime**.|  
+|AAAA-MM-DDThh:mm:ss[.nnnnnnn]Z (UTC)|Este formato por definición de ISO indica que la parte **datetime** se debería expresar en Hora universal coordinada (UTC). Por ejemplo, 1999-12-12 12:30:30.12345 -07: 00 se deberían representar como 1999-12-12 19:30:30.12345 Z.|  
   
 ## <a name="time-zone-offset"></a>Ajuste de zona horaria
-Un desplazamiento de zona horaria especifica el desplazamiento de zona a la hora UTC para un **tiempo** o **datetime** valor. El ajuste de zona horaria se puede representar como [+ | -] hh:mm:
+El desplazamiento de zona horaria especifica el desplazamiento de zona a partir de Hora UTC para un valor **time** o **datetime**. El ajuste de zona horaria se puede representar como [+ | -] hh:mm:
 -   hh es una cifra de dos dígitos comprendidos entre 00 a 14 y representa el número de horas en el ajuste de zona horaria.  
 -   mm es una cifra de dos dígitos comprendidos entre 00 a 59 y representa el número minutos adicionales en el ajuste de zona horaria.  
--   \+(más) o – (menos) es el inicio de sesión obligatorio para un desplazamiento de zona horaria. Esto indica si el ajuste de zona horaria se agrega o resta de la hora UTC para obtener la hora local. El intervalo válido de ajuste de zona horaria es de -14: 00 a +14: 00.  
+-   \+ (más) o – (menos) es el signo que se usa obligatoriamente para indicar un ajuste de zona horaria. Esto indica si el ajuste de zona horaria se agrega o resta de la hora UTC para obtener la hora local. El intervalo válido de ajuste de zona horaria es de -14: 00 a +14: 00.  
   
 El intervalo del ajuste de zona horaria sigue la norma de W3C XML para la definición del esquema XSD y es ligeramente diferente de la definición estándar de SQL 2003, de 12:59 a +14: 00.
   
-El parámetro de tipo opcional *precisión de fracciones de segundo* especifica el número de dígitos para la parte fraccionaria de los segundos. Este valor puede ser un entero con 0 a 7 (100 nanosegundos). El valor predeterminado *precisión de fracciones de segundo* es 100 NS (siete dígitos para la parte fraccionaria de los segundos).
+El parámetro de tipo opcional *precisión de fracciones de segundo* especifica el número de dígitos para la parte fraccionaria de los segundos. Este valor puede ser un entero con 0 a 7 (100 nanosegundos). El valor predeterminado de *precisión de fracciones de segundo* es 100 ns (siete dígitos para la parte fraccionaria de los segundos).
   
 Los datos se almacenan en la base de datos y se procesan, comparan, ordena e indizan en el servidor como en UTC. El ajuste de zona horaria se conservará en la base de datos para la recuperación.
   
-El desplazamiento de zona horaria determinada se asumirá que el horario de verano (DST) tenga en cuenta y se ajustará para cualquier **datetime** que se encuentra en el período de horario de verano.
+Se supone que el desplazamiento de zona horaria determinada reconoce el horario de verano (DST) y se ajusta para cualquier **datetime** determinado dentro del periodo DST.
   
-Para **datetimeoffset** escriba UTC y local (para el desplazamiento de zona horaria persistente o convertido) **datetime** valor se validarán durante las operaciones de inserción, actualización, aritmética, convert o asignar. La detección de cualquier válido UTC o local (para el desplazamiento de zona horaria persistente o convertido) **datetime** valor, producirá un error de valor no válido. Por ejemplo, 9999-12-31 10:10:00 son válidos en UTC, pero se desbordan en la hora local al ajuste de zona horaria +13: 50.
+Para el tipo **datetimeoffset**, los valores **datetime** UTC y local (al desplazamiento de la zona horaria persistente o convertido) se validarán durante las operaciones de inserción, actualización, aritmética, conversión o asignación. La detección de cualquier valor **datetime** UTC o local (al desplazamiento de la zona horaria persistente o convertido) que no sea válido generará un error de valor no válido. Por ejemplo, 9999-12-31 10:10:00 son válidos en UTC, pero se desbordan en la hora local al ajuste de zona horaria +13: 50.
   
-Para convertir una fecha en su correspondiente **datetimeoffset** valor en un destino de la zona horaria, vea [AT TIME ZONE &#40; Transact-SQL &#41; ](../../t-sql/queries/at-time-zone-transact-sql.md).
+Para convertir una fecha a su correspondiente valor **datetimeoffset** en una zona horaria de destino, vea [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md).
   
-## <a name="ansi-and-iso-8601-compliance"></a>Cumplimiento de normas ANSI e ISO 8601  
-Las secciones de ANSI e ISO 8601 cumplimiento de la [fecha](../../t-sql/data-types/date-transact-sql.md) y [tiempo](../../t-sql/data-types/time-transact-sql.md) temas se aplican a **datetimeoffset**.
+## <a name="ansi-and-iso-8601-compliance"></a>Compatibilidad con ANSI e ISO 8601  
+Las secciones de compatibilidad con ANSI e ISO 8601 de los temas sobre [date](../../t-sql/data-types/date-transact-sql.md) y [time](../../t-sql/data-types/time-transact-sql.md) se aplican también a **datetimeoffset**.
   
-## <a name="backward-compatibility-for-down-level-clients"></a>Compatibilidad con versiones anteriores de clientes de nivel inferior
-Algunos clientes de nivel inferior no admiten la **tiempo**, **fecha**, **datetime2** y **datetimeoffset** tipos de datos. En la tabla siguiente se muestra la asignación de tipo entre una instancia de nivel superior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los clientes de nivel inferior.
+## <a name="backward-compatibility-for-down-level-clients"></a>Compatibilidad con versiones anteriores de clientes de niveles inferiores
+Algunos clientes de nivel inferior no admiten los tipos de datos **time**, **date**, **datetime2** y **datetimeoffset**. En la tabla siguiente se muestra la asignación de tipo entre una instancia de nivel superior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los clientes de nivel inferior.
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de datos|El formato del literal de cadena predeterminado se pasó al cliente de nivel inferior|ODBC de nivel inferior|OLEDB de nivel inferior|JDBC de nivel inferior|SQLCLIENT de nivel inferior|  
+|Tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|El formato del literal de cadena predeterminado se pasó al cliente de nivel inferior|ODBC de nivel inferior|OLEDB de nivel inferior|JDBC de nivel inferior|SQLCLIENT de nivel inferior|  
 |---|---|---|---|---|---|
 |**time**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Cadena o SqString|  
 |**date**|YYYY-MM-DD|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Cadena o SqString|  
 |**datetime2**|AAAA-MM-DD hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Cadena o SqString|  
-|**datetimeoffset**|AAAA-MM-DD hh [.nnnnnnn] [+ &#124;-] hh: mm|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Cadena o SqString|  
+|**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Cadena o SqString|  
   
 ## <a name="converting-date-and-time-data"></a>Convertir datos de fecha y hora
-Cuando se convierte a los tipos de datos de fecha y hora, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rechaza todos los valores que no reconoce como fechas u horas. Para obtener información acerca de cómo utilizar las funciones CAST y CONVERT con datos de fecha y hora, vea [CAST y CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
+Cuando se convierte a los tipos de datos de fecha y hora, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rechaza todos los valores que no reconoce como fechas u horas. Para más información sobre cómo usar las funciones CAST y CONVERT con datos de fecha y hora, vea [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) [CAST y CONVERT &#40;Transact-SQL&#41;].
   
-Al convertir a **fecha**, se copian el año, mes y día. En el código siguiente se muestran los resultados de convertir un valor `datetimeoffset(4)` en un valor `date`.  
+Al convertir a **date**, se copian el año, el mes y el día. En el código siguiente se muestran los resultados de convertir un valor `datetimeoffset(4)` en un valor `date`.  
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10 +01:00';  
@@ -133,7 +133,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @date AS 'date';
   
 ```  
   
-Si la conversión es a **Time (n)**, nuestro, minuto, segundo y fracciones de segundo se copian. Se trunca el valor de zona horaria. Cuando la precisión de la **DateTimeOffset (n)** valor es mayor que la precisión de la **Time (n)** valor, el valor se redondea. En el código siguiente se muestran los resultados de convertir un valor `datetimeoffset(4)` en un valor `time(3)`.
+Si la conversión es a **time(n)**, se copia la hora, los minutos, los segundos y las fracciones de segundo. Se trunca el valor de zona horaria. Cuando la precisión del valor de **datetimeoffset(n)** es mayor que la precisión del valor de **time(n)**, el valor se redondea. En el código siguiente se muestran los resultados de convertir un valor `datetimeoffset(4)` en un valor `time(3)`.
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  
@@ -151,7 +151,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @time AS 'time';
   
 ```  
   
-Al convertir a**datetime**, los valores de fecha y hora se copian y se trunca la zona horaria. Cuando la precisión fraccionaria de los **DateTimeOffset (n)** valor es superior a tres dígitos, el valor se trunca. En el código siguiente se muestran los resultados de convertir un valor `datetimeoffset(4)` en un valor `datetime`.
+Cuando se convierte a **datetime**, se copian los valores de fecha y hora, y se trunca la zona horaria. Cuando la precisión de las fracciones del valor de **datetimeoffset(n)** es superior a tres dígitos, el valor se trunca. En el código siguiente se muestran los resultados de convertir un valor `datetimeoffset(4)` en un valor `datetime`.
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  
@@ -167,7 +167,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @datetime AS 'datetime';
 --(1 row(s) affected)  
 ```  
   
-Para las conversiones a **smalldatetime**, se copian a la fecha y horas. Los minutos se redondean hacia arriba con respecto al valor de los segundos y los segundos se establecen en 0. En el código siguiente se muestran los resultados de convertir un valor `datetimeoffset(3)` en un valor `smalldatetime`.  
+Para las conversiones a **smalldatetime**, se copia la fecha y la hora. Los minutos se redondean hacia arriba con respecto al valor de los segundos y los segundos se establecen en 0. En el código siguiente se muestran los resultados de convertir un valor `datetimeoffset(3)` en un valor `smalldatetime`.  
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(3) = '1912-10-25 12:24:32 +10:0';  
@@ -183,7 +183,7 @@ SELECT @datetimeoffset AS '@datetimeoffset', @smalldatetime AS '@smalldatetime';
 --(1 row(s) affected)  
 ```  
   
-Si la conversión es a **datetime2**, la fecha y hora se copian en el **datetime2** se trunca el valor y la zona horaria. Cuando la precisión de la **datetime2** valor es mayor que la precisión de la **DateTimeOffset (n)** valor, las fracciones de segundo se truncan para ajustarse. En el código siguiente se muestran los resultados de convertir un valor `datetimeoffset(4)` en un valor `datetime2(3)`.
+Si la conversión es a **datetime2(n)**, se copia la fecha y la hora al valor **datetime2** y se trunca la zona horaria. Cuando la precisión del valor de **datetime2(n)** es mayor que la precisión del valor de **datetimeoffset(n)**, el valor de las fracciones de segundo se trunca para ajustarse. En el código siguiente se muestran los resultados de convertir un valor `datetimeoffset(4)` en un valor `datetime2(3)`.
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '1912-10-25 12:24:32.1277 +10:0';  
@@ -199,15 +199,15 @@ SELECT @datetimeoffset AS '@datetimeoffset', @datetime2 AS '@datetime2';
 --(1 row(s) affected)  
 ```  
   
-### <a name="converting-datetimeoffset-data-type-to-other-date-and-time-types"></a>Conversión de tipo de datos datetimeoffset a otra fecha y tipos de tiempo
-En la tabla siguiente describe lo que ocurre cuando un **datetimeoffset** tipo de dato se convierte a otros tipos de datos de fecha y hora.
+### <a name="converting-datetimeoffset-data-type-to-other-date-and-time-types"></a>Convertir el tipo de datos datetimeoffset en otros tipos de fecha y hora
+En esta tabla se describe lo que ocurre cuando un tipo de datos **datetimeoffset** se convierte a otros tipos de datos de fecha y hora.
   
 ### <a name="converting-string-literals-to-datetimeoffset"></a>Convertir literales de cadena a datetimeoffset
-Las conversiones de literales de cadena en tipos de fecha y hora son posibles cuando todas las partes de las cadenas están en formatos válidos. En caso contrario, se generará un error en el tiempo de ejecución. Las conversiones implícitas o explícitas que no especifican un estilo (desde tipos de fecha y hora hasta literales de cadena) estarán en el formato predeterminado de la sesión actual. La siguiente tabla muestra las reglas para convertir una cadena literal la **datetimeoffset** tipo de datos.
+Las conversiones de literales de cadena en tipos de fecha y hora son posibles cuando todas las partes de las cadenas están en formatos válidos. En caso contrario, se generará un error en el tiempo de ejecución. Las conversiones implícitas o explícitas que no especifican un estilo (desde tipos de fecha y hora hasta literales de cadena) estarán en el formato predeterminado de la sesión actual. En esta tabla se muestran las reglas para convertir un literal de cadena al tipo de datos **datetimeoffset**.
   
-|Literal de cadena de entrada|**DateTimeOffset (n)**|  
+|Literal de cadena de entrada|**datetimeoffset(n)**|  
 |---|---|
-|DATE de ODBC|Literales de cadena ODBC se asignan a la **datetime** tipo de datos. Cualquier operación de asignación de literales de DATETIME de ODBC en **datetimeoffset** tipos provocará una conversión implícita entre **datetime** y este tipo de acuerdo con las reglas de conversión.|  
+|DATE de ODBC|Los literales de cadena de ODBC se asignan al tipo de datos **datetime**. Cualquier operación de asignación de los literales de DATETIME de ODBC a tipos **datetimeoffset** provocará una conversión implícita entre **datetime** y este tipo, tal y como se define en las reglas de conversión.|  
 |TIME de ODBC|Vea la regla anterior de DATE de ODBC.|  
 |DATETIME DE ODBC|Vea la regla anterior de DATE de ODBC.|  
 |Solo DATE|La parte de TIME tiene como valor predeterminado 00:00:00. TIMEZONE tiene como valor predeterminado +00:00.|  
@@ -219,7 +219,7 @@ Las conversiones de literales de cadena en tipos de fecha y hora son posibles cu
 |DATE + TIME + TIMEZONE|Trivial|  
   
 ## <a name="examples"></a>Ejemplos  
-En el ejemplo siguiente se compara los resultados de convertir una cadena a cada uno de ellos **fecha** y **tiempo** tipo de datos.
+En este ejemplo se comparan los resultados de convertir una cadena a cada tipo de datos **date** y **time**.
   
 ```sql
 SELECT   
@@ -241,14 +241,14 @@ SELECT
 |Tipo de datos|Salida|  
 |---|---|
 |**Time**|12:35:29. 1234567|  
-|**Fecha**|2007-05-08|  
+|**Date**|2007-05-08|  
 |**Smalldatetime**|2007-05-08 12:35:00|  
 |**Fecha y hora**|2007-05-08 12:35:29.123|  
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
-|**DateTimeOffset**|2007-05-08 12:35:29.1234567 +12:15|  
+|**Datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
 ## <a name="see-also"></a>Vea también
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[EN la zona HORARIA &#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
+[AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   
   

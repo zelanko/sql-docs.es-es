@@ -1,5 +1,5 @@
 ---
-title: REVOCAR permisos de Service Broker (Transact-SQL) | Documentos de Microsoft
+title: REVOKE (permisos de Service Broker de Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -61,7 +61,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 ## <a name="arguments"></a>Argumentos  
  GRANT OPTION FOR  
- Indica que se revocará el derecho a conceder el derecho especificado a otras entidades de seguridad. El permiso no estará revoca.  
+ Indica que se revocará el derecho a conceder el derecho especificado a otras entidades de seguridad. No se revocará el permiso.  
   
 > [!IMPORTANT]  
 >  Si la entidad de seguridad dispone del permiso especificado sin la opción GRANT, se revocará el permiso.  
@@ -70,22 +70,22 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  Especifica un permiso que se puede revocar para un elemento protegible de [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Para obtener una lista de estos permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
  CONTRACT **::***contract_name*  
- Especifica el contrato en el que se va a revocar el permiso. El calificador de ámbito **::** es necesario.  
+ Especifica el contrato en el que se va a revocar el permiso. El calificador de ámbito **::** es obligatorio.  
   
- TIPO de mensaje **:: *** message_type_name*  
- Especifica el tipo de mensaje en el que se va a revocar el permiso. El calificador de ámbito **::** es necesario.  
+ MESSAGE TYPE **::***message_type_name*  
+ Especifica el tipo de mensaje en el que se va a revocar el permiso. El calificador de ámbito **::** es obligatorio.  
   
  REMOTE SERVICE BINDING **::***remote_binding_name*  
- Especifica el enlace de servicio remoto en el que se va a revocar el permiso. El calificador de ámbito **::** es necesario.  
+ Especifica el enlace de servicio remoto en el que se va a revocar el permiso. El calificador de ámbito **::** es obligatorio.  
   
- RUTA **:: *** route_name*  
- Especifica la ruta en la que se va a revocar el permiso. El calificador de ámbito **::** es necesario.  
+ ROUTE **::***route_name*  
+ Especifica la ruta en la que se va a revocar el permiso. El calificador de ámbito **::** es obligatorio.  
   
  SERVICE **::***message_type_name*  
- Especifica el servicio en el que se va a revocar el permiso. El calificador de ámbito **::** es necesario.  
+ Especifica el servicio en el que se va a revocar el permiso. El calificador de ámbito **::** es obligatorio.  
   
  *database_principal*  
- Especifica la entidad de seguridad desde la que se revoca el permiso. *database_principal* puede ser uno de los siguientes:  
+ Especifica la entidad de seguridad desde la que se revoca el permiso. *database_principal* puede ser uno de los valores siguientes:  
   
 -   Usuario de la base de datos  
   
@@ -110,7 +110,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 >  Una revocación en cascada de un permiso concedido WITH GRANT OPTION revocará tanto GRANT como DENY de dicho permiso.  
   
  AS *revoking_principal*  
- Especifica una entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de revocar el permiso. *revoking_principal* puede ser uno de los siguientes:  
+ Especifica una entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de revocar el permiso. *revoking_principal* puede ser uno de los valores siguientes:  
   
 -   Usuario de la base de datos  
   
@@ -128,10 +128,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   Usuario de la base de datos no asignado a una entidad de seguridad de servidor  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 ## <a name="service-broker-contracts"></a>Contratos de Service Broker  
- Un [!INCLUDE[ssSB](../../includes/sssb-md.md)] contrato es una base de datos de elemento protegible de nivel que está contenida en la base de datos que es su entidad primaria en la jerarquía de permisos. La mayoría de permisos limitados y específicos que se pueden revocar en un [!INCLUDE[ssSB](../../includes/sssb-md.md)] contrato se enumeran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.  
+ Un contrato de [!INCLUDE[ssSB](../../includes/sssb-md.md)] es un elemento protegible de nivel de base de datos que contiene la base de datos que es su entidad primaria en la jerarquía de permisos. Los permisos más específicos y limitados que se pueden revocar en un contrato de [!INCLUDE[ssSB](../../includes/sssb-md.md)] se muestran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.  
   
 |Permiso de contrato de Service Broker|Implícito en el permiso de contrato de Service Broker|Implícito en el permiso de base de datos|  
 |----------------------------------------|---------------------------------------------------|------------------------------------|  
@@ -163,7 +163,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ## <a name="service-broker-routes"></a>Rutas de Service Broker  
- Una ruta de [!INCLUDE[ssSB](../../includes/sssb-md.md)] es un elemento protegible de nivel de base de datos que contiene la base de datos que es su entidad primaria en la jerarquía de permisos. La mayoría de permisos limitados y específicos que se pueden revocar en un [!INCLUDE[ssSB](../../includes/sssb-md.md)] ruta se muestran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.  
+ Una ruta de [!INCLUDE[ssSB](../../includes/sssb-md.md)] es un elemento protegible de nivel de base de datos que contiene la base de datos que es su entidad primaria en la jerarquía de permisos. Los permisos más específicos y limitados que se pueden revocar en una ruta de [!INCLUDE[ssSB](../../includes/sssb-md.md)] se muestran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.  
   
 |Permiso de ruta de Service Broker|Implícito en el permiso de ruta de Service Broker|Implícito en el permiso de base de datos|  
 |-------------------------------------|------------------------------------------------|------------------------------------|  
@@ -173,7 +173,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ### <a name="service-broker-services"></a>Servicios de Service Broker  
- Un servicio de [!INCLUDE[ssSB](../../includes/sssb-md.md)] es un elemento protegible de nivel de base de datos que contiene la base de datos que es su entidad primaria en la jerarquía de permisos. La mayoría de permisos limitados y específicos que se pueden revocar en un [!INCLUDE[ssSB](../../includes/sssb-md.md)] servicio se muestran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.  
+ Un servicio de [!INCLUDE[ssSB](../../includes/sssb-md.md)] es un elemento protegible de nivel de base de datos que contiene la base de datos que es su entidad primaria en la jerarquía de permisos. Los permisos más específicos y limitados que se pueden revocar en un servicio de [!INCLUDE[ssSB](../../includes/sssb-md.md)] se muestran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.  
   
 |Permiso de servicio de Service Broker|Implícito en el permiso de servicio de Service Broker|Implícito en el permiso de base de datos|  
 |---------------------------------------|--------------------------------------------------|------------------------------------|  
@@ -183,12 +183,12 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |ALTER|CONTROL|ALTER ANY SERVICE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL en el contrato, tipo de mensaje, enlace de servicio remoto, ruta o servicio de [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
-## <a name="see-also"></a>Vea también  
- [Permisos de concesión Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)   
- [DENEGAR permisos de Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [GRANT &#40;permisos de Service Broker de Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)   
+ [DENY &#40;permisos de Service Broker de Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

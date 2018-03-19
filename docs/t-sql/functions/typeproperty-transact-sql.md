@@ -1,5 +1,5 @@
 ---
-title: TYPEPROPERTY (Transact-SQL) | Documentos de Microsoft
+title: TYPEPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,15 +50,15 @@ TYPEPROPERTY (type , property)
  *Tipo*  
  Es el nombre del tipo de datos.  
   
- *propiedad*  
- Es el tipo de información que se devuelve del tipo de datos. *propiedad* puede ser uno de los siguientes valores.  
+ *property*  
+ Es el tipo de información que se devuelve del tipo de datos. *property* puede tener uno de estos valores.  
   
 |Propiedad|Description|Valor devuelto|  
 |--------------|-----------------|--------------------|  
 |**AllowsNull**|El tipo de datos permite valores nulos.|1 = True<br /><br /> 0 = False<br /><br /> NULL = No se encuentra el tipo de datos.|  
 |**OwnerId**|Propietario del tipo.<br /><br /> Nota: El propietario del esquema no es necesariamente el propietario del tipo.|NonNULL = El Id. de usuario de la base de datos del propietario del tipo.<br /><br /> NULL = Tipo no compatible o Id. de tipo no válido.|  
-|**Precisión**|Precisión del tipo de datos.|El número de dígitos o caracteres.<br /><br /> -1 = **xml** o tipo de datos de valores grandes<br /><br /> NULL = No se encuentra el tipo de datos.|  
-|**Escala**|Escala del tipo de datos.|El número de decimales del tipo de datos.<br /><br /> NULL = no es de tipo de datos **numérico** o no se encuentra.|  
+|**Precisión**|Precisión del tipo de datos.|El número de dígitos o caracteres.<br /><br /> -1 = **xml** o un tipo de datos de valor largo<br /><br /> NULL = No se encuentra el tipo de datos.|  
+|**Escala**|Escala para el tipo de datos.|El número de decimales del tipo de datos.<br /><br /> NULL = El tipo de datos no es **numeric** o no se encontró.|  
 |**UsesAnsiTrim**|La configuración del relleno ANSI era ON cuando se creó el tipo de datos.|1 = True<br /><br /> 0 = False<br /><br /> NULL = No se encuentra el tipo de datos o no es un tipo de datos de cadena o binario.|  
   
 ## <a name="return-types"></a>Tipos devueltos  
@@ -86,14 +86,14 @@ FROM sys.types;
 SELECT TYPEPROPERTY( 'tinyint', 'PRECISION');  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [TYPE_ID &#40; Transact-SQL &#41;](../../t-sql/functions/type-id-transact-sql.md)   
- [TYPE_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/type-name-transact-sql.md)   
- [COLUMNPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
- [Funciones de metadatos &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [TYPE_ID &#40;Transact-SQL&#41;](../../t-sql/functions/type-id-transact-sql.md)   
+ [TYPE_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/type-name-transact-sql.md)   
+ [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
+ [Metadata Functions &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  [Funciones de metadatos &#40;Transact-SQL&#41;]  
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [ALTER AUTHORIZATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [Sys.Types &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
   
   
 

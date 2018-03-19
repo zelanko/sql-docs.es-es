@@ -1,5 +1,5 @@
 ---
-title: CREAR CREDENCIAL (Transact-SQL) | Documentos de Microsoft
+title: CREATE CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-non-specified
@@ -40,10 +40,10 @@ ms.lasthandoff: 11/21/2017
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Crea una credencial de nivel de servidor. Una credencial es un registro que contiene la información de autenticación necesaria para conectarse a un recurso fuera de SQL Server. La mayoría de las credenciales incluyen un usuario y una contraseña de Windows. Por ejemplo, guardar una copia de seguridad de base de datos en alguna ubicación podría requerir SQL Server proporcionar credenciales especiales para tener acceso a esa ubicación. Para obtener más información, consulte [credenciales (motor de base de datos)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
+  Crea una credencial de nivel de servidor. Una credencial es un registro que contiene la información de autenticación necesaria para conectarse a un recurso fuera de SQL Server. La mayoría de las credenciales incluyen un usuario y una contraseña de Windows. Por ejemplo, guardar una copia de seguridad de base de datos en una ubicación cualquiera podría requerir que SQL Server proporcione credenciales especiales para tener acceso a esa ubicación. Para más información, vea [Credenciales (motor de base de datos)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
   
 > [!NOTE]  
->  Para realizar la credencial en el nivel de base de datos de uso [CREATE DATABASE SCOPED CREDENTIAL &#40; Transact-SQL &#41; ](../../t-sql/statements/create-database-scoped-credential-transact-sql.md). Usar una credencial de nivel de servidor cuando necesite usar las mismas credenciales para varias bases de datos en el servidor. Use una credencial de ámbito de base de datos para hacer que la base de datos sea más portátil. Cuando una base de datos se mueve a un nuevo servidor, la credencial de ámbito de la base de datos se moverá con ella. Credenciales con ámbito de base de datos de uso en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+>  Para establecer la credencial en el nivel de base de datos, vea [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md). Use una credencial de nivel de servidor cuando necesite usar la misma credencial para varias bases de datos en el servidor. Use una credencial de ámbito de base de datos para hacer que la base de datos sea más portátil. Cuando una base de datos se mueve a un nuevo servidor, la credencial de ámbito de la base de datos se moverá con ella. Use credenciales con ámbito de base de datos en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,33 +59,33 @@ WITH IDENTITY = 'identity_name'
   
 ## <a name="arguments"></a>Argumentos  
  *credential_name*  
- Especifica el nombre de la credencial que se va a crear. *credential_name* no se puede iniciar con el signo de número (#). Las credenciales del sistema comienzan por ##.  Cuando se utiliza una firma de acceso compartido (SAS), este nombre debe coincidir con la ruta de acceso de contenedor, comenzar con https y no debe contener una barra diagonal. Vea el ejemplo D a continuación.  
+ Especifica el nombre de la credencial que se va a crear. *credential_name* no puede comenzar por el signo de almohadilla (#). Las credenciales del sistema comienzan por ##.  Cuando se usa una Firma de acceso compartido (SAS), este nombre debe coincidir con la ruta de acceso de contenedor, comenzar por https y no contener una barra diagonal. Vea el ejemplo D de abajo.  
   
- IDENTIDAD **='***identity_name***'**  
- Especifica el nombre de la cuenta que se utilizará para conectarse fuera del servidor. Cuando la credencial se usa para acceder al almacén de claves de Azure, el **identidad** es el nombre del almacén de claves. Vea el ejemplo C más adelante. Cuando la credencial es mediante una firma de acceso compartido (SAS), el **identidad** es *firma de acceso compartido*. Vea el ejemplo D a continuación.  
+ IDENTITY **='***identity_name***'**  
+ Especifica el nombre de la cuenta que se utilizará para conectarse fuera del servidor. Cuando la credencial se usa para tener acceso a Azure Key Vault, **IDENTITY** es el nombre del almacén de claves. Vea el ejemplo C más adelante. Cuando la credencial usa una Firma de acceso compartido (SAS), **IDENTITY** es *SHARED ACCESS SIGNATURE*. Vea el ejemplo D de abajo.  
   
- SECRETO **='***secreto***'**  
+ SECRET **='***secret***'**  
  Especifica el secreto necesario para la autenticación de salida.  
   
- Cuando se utiliza la credencial para tener acceso al almacén de claves de Azure la **secreto** argumento de **CREATE CREDENTIAL** requiere el  *\<Id. de cliente >* (sin guiones) y  *\<secreto >* de un **entidad de servicio** en Azure Active Directory que se pasen sin un espacio entre ellos. Vea el ejemplo C más adelante. Cuando la credencial es mediante una firma de acceso compartido, el **secreto** es el token de firma de acceso compartido. Vea el ejemplo D a continuación.  Para obtener información acerca de cómo crear una directiva de acceso almacenada y una firma de acceso compartido en un contenedor de Azure, consulte [lección 1: crear una directiva de acceso almacenada y una firma de acceso compartido en un contenedor de Azure](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
+ Cuando se usa la credencial para acceder a Azure Key Vault, el argumento **SECRET** de **CREATE CREDENTIAL** requiere que los valores de *\<Client ID>* (sin guiones) y *\<Secret>* de una **entidad de servicio** en Azure Active Directory se pasen entre sí sin un espacio entre ellos. Vea el ejemplo C más adelante. Cuando la credencial usa una Firma de acceso compartido (SAS), **SECRET** es el token de la Firma de acceso compartido. Vea el ejemplo D de abajo.  Para más información sobre cómo crear una directiva de acceso almacenada y una Firma de acceso compartido en un contenedor de Azure, vea [Lección 1: Creación de una directiva de acceso almacenada y una firma de acceso compartido](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
   
- Proveedor de servicios criptográficos *cryptographic_provider_name*  
- Especifica el nombre de un *proveedor de administración de claves (EKM) de empresa*. Para obtener más información acerca de la administración de claves, consulte [administración Extensible de claves &#40; EKM &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name*  
+ Especifica el nombre de un *Proveedor de administración de claves de la empresa (EKM)*. Para más información sobre la administración de claves, vea [Administración extensible de claves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 
  Si IDENTITY es un usuario de Windows, el secreto puede ser la contraseña. El secreto se cifra usando la clave maestra de servicio. Si se vuelve a generar la clave maestra de servicio, el secreto se vuelve a cifrar con la nueva clave maestra de servicio.  
   
- Después de crear una credencial, puede asignarla a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión mediante el uso de [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) o [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md). A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión se puede asignar a sólo una credencial, pero puede asignar una única credencial a varios [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicios de sesión. Para obtener más información, consulte [credenciales &#40; motor de base de datos &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md). Una credencial de nivel de servidor solo puede asignarse a un inicio de sesión, no a un usuario de base de datos. 
+ Una vez creada una credencial, puede asignarla a un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por medio de [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) o [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md). Un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solamente se puede asignar a una credencial, pero una credencial puede asignarse a varios inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para más información, vea [Credenciales &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md). Una credencial de nivel de servidor solo se puede asignar a un inicio de sesión, no a un usuario de base de datos. 
   
- Información acerca de las credenciales es visible en el [sys.credentials](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md) vista de catálogo.  
+ Encontrará más información sobre las credenciales en la vista de catálogo [sys.credentials](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md).  
   
  Si no hay ninguna credencial de inicio de sesión asignada para el proveedor, se utiliza la credencial asignada a la cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Un inicio de sesión puede tener asignadas varias credenciales, siempre y cuando se utilicen con proveedores distintos. Solo debe haber una credencial asignada por cada proveedor y por cada inicio de sesión. La misma credencial puede estar asignada a otros inicios de sesión.  
   
-## <a name="permissions"></a>Permissions  
- Requiere **ALTER ANY CREDENTIAL** permiso.  
+## <a name="permissions"></a>Permisos  
+ Requiere el permiso **ALTER ANY CREDENTIAL**.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -99,7 +99,7 @@ GO
 ```  
   
 ### <a name="b-creating-a-credential-for-ekm"></a>B. Crear una credencial de EKM  
- En el ejemplo siguiente se utiliza una cuenta creada previamente denominada `User1OnEKM` en un módulo EKM a través de las herramientas de administración de EKM, con un tipo de cuenta y una contraseña básicos. El **sysadmin** cuenta en el servidor crea una credencial que se usa para conectarse a la cuenta EKM y lo asigna a la `User1` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta:  
+ En el ejemplo siguiente se utiliza una cuenta creada previamente denominada `User1OnEKM` en un módulo EKM a través de las herramientas de administración de EKM, con un tipo de cuenta y una contraseña básicos. La cuenta **sysadmin** del servidor crea una credencial que se usa para conectar la cuenta de EKM y la asigna a la cuenta `User1` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 ```  
 CREATE CREDENTIAL CredentialForEKM  
@@ -118,10 +118,10 @@ GO
 ```  
   
 ### <a name="c-creating-a-credential-for-ekm-using-the-azure-key-vault"></a>C. Crear una credencial de EKM con Azure Key Vault  
- En el ejemplo siguiente se crea un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credencial para la [!INCLUDE[ssDE](../../includes/ssde-md.md)] a usar al obtener acceso el almacén de claves de Azure utilizando el **conector de SQL Server para el almacén de claves de Microsoft Azure**. Para obtener un ejemplo completo del uso de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conector, consulte [Extensible administración utilizando Azure clave de almacén de claves &#40; SQL Server &#41; ](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
+ En el siguiente ejemplo se crea una credencial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que [!INCLUDE[ssDE](../../includes/ssde-md.md)] la use al tener acceso a Azure Key Vault con el **Conector de SQL Server para Azure Key Vault**. Para ver un ejemplo completo sobre cómo usar el Conector de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Administración extensible de claves con el Almacén de claves de Azure &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
 > [!IMPORTANT]  
->  El argumento **IDENTITY** de **CREATE CREDENTIAL** requiere el nombre del Almacén de claves. El **secreto** argumento de **CREATE CREDENTIAL** requiere el  *\<Id. de cliente >* (sin guiones) y  *\<secreto >*  se pasen juntos sin un espacio entre ellos.  
+>  El argumento **IDENTITY** de **CREATE CREDENTIAL** requiere el nombre del Almacén de claves. El argumento **SECRET** de **CREATE CREDENTIAL** requiere que los valores de *\<Client ID>* (sin guiones) y *\<Secret>* se pasen juntos, sin un espacio entre ellos.  
   
  En el ejemplo siguiente, el **Id. de cliente** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) se deja sin guiones y se introduce como la cadena `EF5C8E094D2A4A769998D93440D8115D` . El **secreto** se representa con la cadena *SECRET_DBEngine*.  
   
@@ -133,7 +133,7 @@ CREATE CREDENTIAL Azure_EKM_TDE_cred
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov ;  
 ```  
   
- En el ejemplo siguiente se crea la misma credencial al usar variables para el **Id. de cliente** y **secreto** cadenas, ya que, a continuación, se concatenan juntos para formar la **secreto** argumento pasado. El **reemplazar** función se utiliza para quitar los guiones del ID de cliente.  
+ En el siguiente ejemplo se crea la misma credencial usando variables para las cadenas **Client ID** y **Secret**, que luego se concatenan entre sí para formar el argumento **SECRET**. La función **REPLACE** se usa para quitar los guiones del identificador de cliente.  
   
 ```  
 DECLARE @AuthClientId uniqueidentifier = 'EF5C8E09-4D2A-4A76-9998-D93440D8115D';  
@@ -145,13 +145,13 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov ;');  
 ```  
   
-### <a name="d-creating-a-credential-using-a-sas-token"></a>D. Crear una credencial utilizando un Token de SAS  
- **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a través de [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+### <a name="d-creating-a-credential-using-a-sas-token"></a>D. Crear una credencial con un token de SAS  
+ **Se aplica a**: de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
- En el ejemplo siguiente se crea una credencial de firma de acceso compartido con un token SAS.  Para obtener un tutorial sobre cómo crear una directiva de acceso almacenada y una firma de acceso compartido en un contenedor de Azure y, a continuación, crear una credencial mediante la firma de acceso compartido, consulte [Tutorial: usar el servicio de almacenamiento de blobs de Microsoft Azure con SQL Server 2016 las bases de datos](Tutorial:%20Using%20the%20Microsoft%20Azure%20Blob%20storage%20service%20with%20SQL%20Server%202016%20databases.md).  
+ En el siguiente ejemplo se crea una credencial de firma de acceso compartido con un token de SAS.  Para obtener un tutorial sobre cómo crear una directiva de acceso almacenada y una firma de acceso compartido en un contenedor de Azure y, luego, crear una credencial usando la firma de acceso compartido, vea [Tutorial: Usar el servicio Microsoft Azure Blob Storage con bases de datos de SQL Server 2016](Tutorial:%20Using%20the%20Microsoft%20Azure%20Blob%20storage%20service%20with%20SQL%20Server%202016%20databases.md).  
   
 > [!IMPORTANT]  
->  EL **nombre de CREDENCIAL** argumento requiere que el nombre coincide con la ruta de acceso de contenedor, empiece con https y no contienen una barra diagonal. El **identidad** argumento requiere el nombre, *firma de acceso compartido*. El **secreto** argumento requiere que el token de firma de acceso compartido.  
+>  El argumento **CREDENCIAL NAME** requiere que el nombre coincida con la ruta de acceso del contenedor, comience por https y no contenga una barra diagonal. El argumento **IDENTITY** requiere el nombre, *SHARED ACCESS SIGNATURE*. El argumento **SECRET** requiere el token de firma de acceso compartido.  
   
 ```  
 USE master  
@@ -161,15 +161,15 @@ CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystora
 GO    
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Credenciales &#40; motor de base de datos &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
- [ALTER CREDENTIAL &#40; Transact-SQL &#41;](../../t-sql/statements/alter-credential-transact-sql.md)   
- [DROP CREDENTIAL &#40; Transact-SQL &#41;](../../t-sql/statements/drop-credential-transact-sql.md)   
- [CREAR CREDENCIAL en el ámbito de base de datos &#40; Transact-SQL &#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [Credenciales &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [ALTER CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-credential-transact-sql.md)   
+ [DROP CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-credential-transact-sql.md)   
+ [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
- [Lección 2: Crear una credencial de SQL Server mediante una firma de acceso compartido](../../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)   
+ [Lección 2: Crear una credencial de SQL Server con una firma de acceso compartido](../../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)   
  [Firmas de acceso compartido](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
   
   

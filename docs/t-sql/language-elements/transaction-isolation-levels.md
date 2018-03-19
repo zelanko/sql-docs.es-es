@@ -1,5 +1,5 @@
 ---
-title: "Niveles de aislamiento de transacción | Documentos de Microsoft"
+title: "Niveles de aislamiento de transacción | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
   
 -   Funciones integradas de emisión de metadatos  
   
--   **sp_help** grupo de procedimientos almacenados  
+-   Grupo de procedimientos almacenados **sp_help**  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Procedimientos de catálogo de cliente nativo  
+-   Procedimientos de catálogo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
   
 -   Funciones y vistas de administración dinámica  
   
- Para obtener más información acerca de los niveles de aislamiento, consulte [SET TRANSACTION ISOLATION LEVEL & #40; Transact-SQL & #41; ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ Para más información sobre los niveles de aislamiento, vea [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
  En la siguiente tabla se proporciona un resumen de acceso a metadatos en distintos niveles de aislamiento.  
   
-|Nivel de aislamiento|Compatible|Respetado|  
+|Nivel de aislamiento|Admitida|Respetado|  
 |---------------------|---------------|-------------|  
 |READ UNCOMMITTED|no|Sin garantizar|  
 |READ COMMITTED|Sí|Sí|  

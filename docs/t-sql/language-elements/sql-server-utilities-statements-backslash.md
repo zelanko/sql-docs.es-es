@@ -1,5 +1,5 @@
 ---
-title: "Barra diagonal inversa (continuación de línea) (Transact-SQL) | Documentos de Microsoft"
+title: "Barra diagonal inversa (continuación de línea) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/09/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="backslash-line-continuation-transact-sql"></a>Barra diagonal inversa (continuación de línea) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-`\`divide una constante de cadena larga, carácter o binario, en dos o más líneas para mejorar la legibilidad.  
+`\` divide una constante de cadena larga, de carácter o binaria, en dos o más líneas para facilitar la lectura.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,18 +59,18 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- \<primera sección de cadena >  
+ \<primera sección de la cadena>  
  Es el principio de una cadena.  
   
- \<sigue la sección de cadena >  
+ \<sección de continuación de la cadena>  
  Es la continuación de una cadena.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este comando devuelve las secciones primera y de continuación de la cadena como una cadena, sin la barra diagonal inversa.  
 
 ## <a name="examples"></a>Ejemplos  
 
-### <a name="a-splitting-a-character-string"></a>A. Dividir una cadena de caracteres  
+### <a name="a-splitting-a-character-string"></a>A. División de una cadena de caracteres  
 
 En el ejemplo siguiente se usa una barra diagonal inversa y un retorno de carro para dividir una cadena de caracteres en dos líneas.  
   
@@ -88,7 +88,7 @@ def' AS [ColumnResult];
  abcdef
  ```    
 
-### <a name="b-splitting-a-binary-string"></a>B. Dividir una cadena binaria  
+### <a name="b-splitting-a-binary-string"></a>B. División de una cadena binaria  
 
 En el ejemplo siguiente se usa una barra diagonal inversa y un retorno de carro para dividir una cadena binaria en dos líneas.  
 
@@ -106,12 +106,12 @@ def AS [ColumnResult];
  0xABCDEF
  ```    
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [&#40;Division&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-transact-sql.md)   
- [&#40; asignación y división &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
- [Compuesta operadores &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [&#40;Divisió&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-transact-sql.md)   
+ [&#40;Asignación y División&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
+ [Operadores compuestos &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   

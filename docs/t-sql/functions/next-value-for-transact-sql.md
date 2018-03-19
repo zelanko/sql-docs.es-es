@@ -1,5 +1,5 @@
 ---
-title: "A continuación valor (Transact-SQL) | Documentos de Microsoft"
+title: NEXT VALUE FOR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/19/2016
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 
   Genera un número de secuencia a partir del objeto de secuencia especificado.  
   
- Para obtener más información sobre la creación y uso de secuencias, vea [números de secuencia](../../relational-databases/sequence-numbers/sequence-numbers.md). Use [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) para generar reservar un intervalo de números de secuencia.  
+ Para más información sobre cómo crear y usar secuencias, vea [Números de secuencia](../../relational-databases/sequence-numbers/sequence-numbers.md). Use [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) para generar una reserva de un intervalo de números de secuencia.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,28 +64,28 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
  Nombre del objeto de secuencia que genera el número.  
   
  *over_order_by_clause*  
- Determina el orden en el que se asigna el valor de secuencia a las filas de una partición. Para obtener más información, consulte [la cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ Determina el orden en el que se asigna el valor de secuencia a las filas de una partición. Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos devueltos  
  Devuelve un número utilizando el tipo de la secuencia.  
   
-## <a name="remarks"></a>Comentarios  
- El **NEXT VALUE FOR** función puede utilizarse en procedimientos almacenados y desencadenadores.  
+## <a name="remarks"></a>Notas  
+ La función **NEXT VALUE FOR** se puede usar en procedimientos almacenados y en desencadenadores.  
   
- Cuando el **NEXT VALUE FOR** función se utiliza en una consulta o restricción predeterminada, si el mismo objeto de secuencia se usa más de una vez, o si se utiliza el mismo objeto de secuencia en la instrucción que proporciona los valores y en una restricción default que se está ejecutando, se devolverá el mismo valor para todas las columnas que hacen referencia a la misma secuencia dentro de una fila del conjunto de resultados.  
+ Cuando la función **NEXT VALUE FOR** se usa en una consulta o restricción predeterminada, si se usa más de una vez el mismo objeto de secuencia, o si se usa el mismo objeto de secuencia en la instrucción que proporciona los valores y en una restricción predeterminada que se está ejecutando, se devolverá el mismo valor para todas las columnas que hagan referencia a la misma secuencia dentro de una fila del conjunto de resultados.  
   
- El **NEXT VALUE FOR** función es determinista y solo se permite en contextos donde se define bien el número de valores de secuencia generados. A continuación se encuentra la definición de cuántos valores se utilizarán para cada objeto de secuencia al que se hace referencia en una instrucción determinada:  
+ La función **NEXT VALUE FOR** es no determinista y solo se permite en contextos donde se define bien el número de valores de secuencia generados. A continuación se encuentra la definición de cuántos valores se utilizarán para cada objeto de secuencia al que se hace referencia en una instrucción determinada:  
   
--   **Seleccione** -para cada objeto de secuencia que se hace referencia, se genera un nuevo valor una vez por cada fila del resultado de la instrucción.  
+-   **SELECT**: por cada objeto de secuencia al que se hace referencia, se genera un valor nuevo una vez por fila en el resultado de la instrucción.  
   
--   **INSERTAR** ... **VALORES** -para cada objeto de secuencia que se hace referencia, se genera un nuevo valor una vez para cada fila insertada en la instrucción.  
+-   **INSERT** … **VALUES**: por cada objeto de secuencia al que se hace referencia, se genera un valor nuevo una vez por cada fila insertada en la instrucción.  
   
--   **ACTUALIZACIÓN** -para cada objeto de secuencia que se hace referencia, se genera un nuevo valor para cada fila actualizada por la instrucción.  
+-   **UPDATE**: por cada objeto de secuencia al que se hace referencia, se genera un valor nuevo para cada fila que actualiza la instrucción.  
   
--   Instrucciones de procedimiento (como **DECLARE**, **establecer**, etc.)-para cada objeto de secuencia que se hace referencia, se genera un nuevo valor para cada instrucción.  
+-   Instrucciones de procedimiento (como **DECLARE**, **SET**, etc.): por cada objeto de secuencia al que se hace referencia, se genera un valor nuevo para cada instrucción.  
   
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
- El **NEXT VALUE FOR** función no se puede usar en las situaciones siguientes:  
+ La función **NEXT VALUE FOR** no se puede usar en las siguientes situaciones:  
   
 -   Cuando una base de datos está en modo de solo lectura.  
   
@@ -97,15 +97,15 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   En vistas, en funciones definidas por el usuario o en columnas calculadas.  
   
--   En una instrucción que usa el **DISTINCT**, **UNION**, **UNION ALL**, **EXCEPT** o **INTERSECT** operador.  
+-   En una instrucción que use los operadores **DISTINCT**, **UNION**, **UNION ALL**, **EXCEPT** o **INTERSECT**.  
   
--   En una instrucción que usa el **ORDER BY** cláusula a menos que **NEXT VALUE FOR** ... **SOBRE** (**ORDER BY** ...) se utiliza.  
+-   En una instrucción que use la cláusula **ORDER BY**, a menos que se use **NEXT VALUE FOR**… **OVER** (**ORDER BY**…).  
   
--   En las cláusulas siguientes: **capturar**, **sobre**, **salida**, **ON**, **PIVOT**,  **Anulación de DINAMIZACIÓN**, **Agrupar por**, **HAVING**, **proceso**, **CALCULE**, o **FOR XML**.  
+-   En las siguientes cláusulas: **FETCH**, **OVER**, **OUTPUT**, **ON**, **PIVOT**, **UNPIVOT**, **GROUP BY**, **HAVING**, **COMPUTE**, **COMPUTE BY** o **FOR XML**.  
   
--   En expresiones condicionales mediante **caso**, **elegir**, **COALESCE**, **IIF**, **ISNULL**, o  **NULLIF**.  
+-   En expresiones condicionales que usan **CASE**, **CHOOSE**, **COALESCE**, **IIF**, **ISNULL** o **NULLIF**.  
   
--   En un **valores** cláusula que no es parte de un **insertar** instrucción.  
+-   En una cláusula **VALUES** que no forme parte de una instrucción **INSERT**.  
   
 -   En la definición de una restricción CHECK.  
   
@@ -113,14 +113,14 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   Como valor predeterminado de un tipo de tabla definido por el usuario.  
   
--   En una instrucción que usa **arriba**, **desplazamiento**, o cuando la **ROWCOUNT** opción está establecida.  
+-   En una instrucción que use **TOP**, **OFFSET** o cuando se establece la opción **ROWCOUNT**.  
   
--   En el **donde** cláusula de una instrucción.  
+-   En la cláusula **WHERE** de una instrucción.  
   
--   En un **mezcla** instrucción. (Salvo cuando la **NEXT VALUE FOR** función se utiliza en una restricción default en la tabla de destino y se utiliza el valor predeterminado en el **crear** instrucción de la **mezcla** instrucción.)  
+-   En una instrucción **MERGE** (salvo cuando la función **NEXT VALUE FOR** se use en una restricción predeterminada en la tabla de destino y el valor predeterminado se use en la instrucción **CREATE** de la instrucción **MERGE**).  
   
 ## <a name="using-a-sequence-object-in-a-default-constraint"></a>Utilizar un objeto de secuencia en una restricción predeterminada  
- Cuando se usa el **NEXT VALUE FOR** función en una restricción predeterminada, se aplican las siguientes reglas:  
+ Al usar la función **NEXT VALUE FOR** en una restricción predeterminada, se aplican las siguientes reglas:  
   
 -   Se puede hacer referencia a un objeto de secuencia único desde restricciones Default en varias tablas.  
   
@@ -132,49 +132,49 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   Se devuelve el mismo número de secuencia para todas las columnas de una fila si varias restricciones Default utilizan el mismo objeto de secuencia, o si el mismo objeto de secuencia se utiliza en la instrucción que proporciona los valores y en una restricción Default que se esté ejecutando.  
   
--   Las referencias a la **NEXT VALUE FOR** función en una restricción predeterminada no se puede especificar el **sobre** cláusula.  
+-   Las referencias a la función **NEXT VALUE FOR** de una restricción predeterminada no pueden especificar la cláusula **OVER**.  
   
 -   Se puede modificar un objeto de secuencia al que se haga referencia en una restricción predeterminada.  
   
--   En el caso de un `INSERT … SELECT` o `INSERT … EXEC` instrucción procedencia de los datos que se va a insertar en una consulta con un **ORDER BY** cláusula, los valores devueltos por la **NEXT VALUE FOR** será (función) se generan en el orden especificado por el **ORDER BY** cláusula.  
+-   En el caso de las instrucciones `INSERT … SELECT` o `INSERT … EXEC` en las que los datos que se van a insertar procedan de una consulta con una cláusula **ORDER BY**, los valores que devuelva la función **NEXT VALUE FOR** se generarán en el orden especificado por la cláusula **ORDER BY**.  
   
 ## <a name="using-a-sequence-object-with-an-over-order-by-clause"></a>Utilizar un objeto de secuencia con una cláusula OVER ORDER BY  
- El **NEXT VALUE FOR** función permite generar valores de secuencia ordenados aplicando la **sobre** cláusula para la **NEXT VALUE FOR** llamar. Mediante el uso de la **sobre** cláusula, un usuario se garantiza que los valores que se devuelven se generan en el orden de la **sobre** la cláusula **orden B**Y subcláusula. Las siguientes reglas adicionales se aplican cuando se usa el **NEXT VALUE FOR** funcionando con la **sobre** cláusula:  
+ La función **NEXT VALUE FOR** permite generar valores de secuencia ordenados aplicando la cláusula **OVER** a la llamada a **NEXT VALUE FOR**. Si usa la cláusula **OVER**, el usuario tiene la garantía de que los valores que se devuelven se generan en el orden de la subcláusula **ORDER BY** de la cláusula **OVER**. Al usar la función **NEXT VALUE FOR** con la cláusula **OVER**, se aplican las siguientes reglas adicionales:  
   
--   Varias llamadas a la **NEXT VALUE FOR** función para el mismo generador de secuencias en una sola instrucción, todas debe utilizar el mismo **sobre** definición de la cláusula.  
+-   Si hay varias llamadas a la función **NEXT VALUE FOR** para el mismo generador de secuencias en una única instrucción, todas deben usar la misma definición de la cláusula **OVER**.  
   
--   Varias llamadas a la **NEXT VALUE FOR** función que referencia distintos generadores de secuencias en una sola instrucción pueden tener diferentes **sobre** definiciones de la cláusula.  
+-   Si hay varias llamadas a la función **NEXT VALUE FOR** que hacen referencia a distintos generadores de secuencias en una única instrucción, pueden tener distintas definiciones de la cláusula **OVER**.  
   
--   Un **sobre** cláusula que se aplica a la **NEXT VALUE FOR** función no admite la **PARTITION BY** subcláusula.  
+-   Una cláusula **OVER** aplicada a la función **NEXT VALUE FOR** no admite la subcláusula **PARTITION BY**.  
   
--   Si todas las llamadas a la **NEXT VALUE FOR** funcionando en un **seleccione** instrucción especifica la **sobre** cláusula, un **ORDER BY** cláusula puede usarse en el **seleccione** instrucción.  
+-   Si todas las llamadas a la función **NEXT VALUE FOR** de una instrucción **SELECT** especifican la cláusula **OVER**, se puede usar una cláusula **ORDER BY** en la instrucción **SELECT**.  
   
--   El **sobre** se permite la cláusula con el **NEXT VALUE FOR** funcionar cuando se utiliza en una **seleccione** instrucción o `INSERT … SELECT …` instrucción. El uso de la **sobre** cláusula con el **NEXT VALUE FOR** función no está permitida en **actualización** o **mezcla** instrucciones.  
+-   La cláusula **OVER** se admite con la función **NEXT VALUE FOR** si se usa en una instrucción **SELECT** o una instrucción `INSERT … SELECT …`. No se puede usar la cláusula **OVER** con la función **NEXT VALUE FOR** en las instrucciones **UPDATE** ni **MERGE**.  
   
 -   Si otro proceso está teniendo acceso al objeto de secuencia a la vez, los números devueltos podrían tener lagunas.  
   
 ## <a name="metadata"></a>Metadatos  
- Para obtener información acerca de las secuencias, consulte el [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md) vista de catálogo.  
+ Para más información sobre las secuencias, consulte la vista de catálogo [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md).  
   
 ## <a name="security"></a>Seguridad  
   
-### <a name="permissions"></a>Permissions  
- Requiere **actualización** permiso en el objeto de secuencia o el esquema de la secuencia. Para obtener un ejemplo de concesión de permisos, vea el ejemplo F más adelante en este tema.  
+### <a name="permissions"></a>Permisos  
+ Requiere el permiso **UPDATE** en el objeto de secuencia o el esquema de la secuencia. Para obtener un ejemplo de concesión de permisos, vea el ejemplo F más adelante en este tema.  
   
 ### <a name="ownership-chaining"></a>Encadenamiento de propiedad  
  Los objetos de secuencia son compatibles con el encadenamiento de propiedad. Si el objeto de secuencia tiene el mismo propietario que el procedimiento almacenado, desencadenador o tabla que hace la llamada (y un objeto de secuencia como restricción predeterminada), no se necesita ninguna comprobación de permiso en el objeto de secuencia. Si el objeto de secuencia no pertenece al mismo propietario que el procedimiento almacenado, desencadenador o tabla que hace la llamada, se requiere una comprobación de permiso en el objeto de secuencia.  
   
- Cuando el **NEXT VALUE FOR** función se utiliza como valor predeterminado en una tabla, los usuarios deben tener **insertar** permiso en la tabla, y **actualización** permiso en el objeto de secuencia , para insertar datos utilizando el valor predeterminado.  
+ Cuando la función **NEXT VALUE FOR** se usa como valor predeterminado en una tabla, los usuarios deben tener el permiso **INSERT** en la tabla y el permiso **UPDATE** en el objeto de secuencia para insertar datos por medio del valor predeterminado.  
   
 -   Si la restricción predeterminada tiene el mismo propietario que el objeto de secuencia, no es necesario ningún permiso en el objeto de secuencia cuando se llama a la restricción predeterminada.  
   
 -   Si la restricción predeterminada y el objeto de secuencia no son propiedad del mismo usuario, se necesitan permisos en el objeto de secuencia aunque la llamada se haga mediante la restricción predeterminada.  
   
 ### <a name="audit"></a>Auditar  
- Para auditar la **NEXT VALUE FOR** funcionar, supervise SCHEMA_OBJECT_ACCESS_GROUP.  
+ Para auditar la función **NEXT VALUE FOR** supervise SCHEMA_OBJECT_ACCESS_GROUP.  
   
 ## <a name="examples"></a>Ejemplos  
- Para obtener ejemplos de secuencias de creación y uso de la **NEXT VALUE FOR** función para generar números de secuencia, vea [números de secuencia](../../relational-databases/sequence-numbers/sequence-numbers.md).  
+ Para ver ejemplos de cómo crear secuencias y cómo usar la función **NEXT VALUE FOR** para generar números de secuencia, vea [Números de secuencia](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
  En los siguientes ejemplos se utiliza una secuencia denominada `CountBy1` en un esquema denominado `Test`. Ejecute la siguiente instrucción para crear la secuencia `Test.CountBy1`. En los ejemplos C y E se utiliza la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], de modo que la secuencia `CountBy1` se cree en esa base de datos.  
   
@@ -235,7 +235,7 @@ GO
 ```  
   
 ### <a name="d-using-the-next-value-for-function-in-the-definition-of-a-default-constraint"></a>D. Usar la función NEXT VALUE FOR en la definición de una restricción predeterminada  
- Mediante el **NEXT VALUE FOR** se admite la función en la definición de una restricción predeterminada. Para obtener un ejemplo del uso de **NEXT VALUE FOR** en un **CREATE TABLE** instrucción, vea el ejemplo C[números de secuencia](../../relational-databases/sequence-numbers/sequence-numbers.md). En el siguiente ejemplo se utiliza `ALTER TABLE` para agregar una secuencia como valor predeterminado a una tabla actual.  
+ La función **NEXT VALUE FOR** se puede usar en la definición de una restricción predeterminada. Para ver un ejemplo de uso de **NEXT VALUE FOR** en una instrucción **CREATE TABLE**, vea el ejemplo C de [Números de secuencia](../../relational-databases/sequence-numbers/sequence-numbers.md). En el siguiente ejemplo se utiliza `ALTER TABLE` para agregar una secuencia como valor predeterminado a una tabla actual.  
   
 ```  
 CREATE TABLE Test.MyTable  
@@ -285,7 +285,7 @@ GO
 ```  
   
 ### <a name="e-using-the-next-value-for-function-with-select--into"></a>E. Usar la función NEXT VALUE FOR con SELECT ... INTO  
- En el ejemplo siguiente se usa el `SELECT … INTO` instrucción para crear una tabla denominada `Production.NewLocation` y usa el `NEXT VALUE FOR` función para numerar cada fila.  
+ En el siguiente ejemplo se usa la instrucción `SELECT … INTO` para crear una tabla denominada `Production.NewLocation` y se usa la función`NEXT VALUE FOR` para numerar cada fila.  
   
 ```  
 USE AdventureWorks2012 ;   
@@ -301,15 +301,15 @@ GO
 ```  
   
 ### <a name="f-granting-permission-to-execute-next-value-for"></a>F. Conceder permiso para ejecutar NEXT VALUE FOR  
- El siguiente ejemplo se concede **actualización** permiso a un usuario denominado `AdventureWorks\Larry` permiso para ejecutar `NEXT VALUE FOR` mediante el `Test.CounterSeq` secuencia.  
+ En el siguiente ejemplo se concede el permiso **UPDATE** a un usuario denominado `AdventureWorks\Larry` para ejecutar `NEXT VALUE FOR` con `Test.CounterSeq`.  
   
 ```  
 GRANT UPDATE ON OBJECT::Test.CounterSeq TO [AdventureWorks\Larry] ;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Crear secuencia de &#40; Transact-SQL &#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [ALTER SEQUENCE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
  [Números de secuencia](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

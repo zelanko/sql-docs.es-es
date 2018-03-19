@@ -1,5 +1,5 @@
 ---
-title: VAR (Transact-SQL) | Documentos de Microsoft
+title: VAR (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="var-transact-sql"></a>VAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Devuelve la varianza estadística de todos los valores de la expresión especificada. Puede ir seguido por el [cláusula OVER](../../t-sql/queries/select-over-clause-transact-sql.md).  
+  Devuelve la varianza estadística de todos los valores de la expresión especificada. Puede ir seguida de la [cláusula OVER](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,22 +67,22 @@ VAR (expression) OVER ( [ partition_by_clause ] order_by_clause)
  Especifica que se tiene en cuenta cada valor único.  
   
  *expression*  
- Es un [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de exactos categoría de tipos de datos numéricos o numéricos aproximados excepto para la **bits** tipo de datos. No se permiten funciones de agregado ni subconsultas.  
+ Es una [expression](../../t-sql/language-elements/expressions-transact-sql.md) de la categoría de tipos de datos numérico exacto o numérico aproximado, excepto para el tipo de datos **bit**. No se permiten funciones de agregado ni subconsultas.  
   
- SOBRE **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones al que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. *order_by_clause* determina el orden lógico en el que se realiza la operación. *order_by_clause* es necesario. Para obtener más información, consulte [la cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones a las que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. *order_by_clause* determina el orden lógico en el que se realiza la operación. *order_by_clause* es obligatorio. Para más información, vea [OVER &#40;cláusula de Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **float**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si se utiliza VAR en todos los elementos de una instrucción SELECT, cada valor del conjunto de resultados se incluye en el cálculo. VAR solo se puede utilizar con columnas numéricas. Se omiten los valores NULL.  
   
  VAR es una función determinista cuando se utiliza sin las cláusulas OVER y ORDER BY. Es no determinista si se especifica con las cláusulas OVER y ORDER BY. Para obtener más información, consulte [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-var"></a>R: utilizando VAR  
+### <a name="a-using-var"></a>A. Usar VAR  
  El siguiente ejemplo devuelve la varianza para todos los valores de bonificación de la tabla `SalesPerson` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
@@ -91,10 +91,10 @@ FROM Sales.SalesPerson;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-using-var"></a>B: utilizando VAR  
- En el ejemplo siguiente se devuelve la varianza estadística de los valores de cuota de ventas en la tabla `dbo.FactSalesQuota`. La primera columna contiene la varianza de todos los valores distintos y la segunda columna contiene la varianza de todos los valores, incluidos los valores duplicados.  
+### <a name="b-using-var"></a>B. Usar VAR  
+ En este ejemplo se devuelve la varianza estadística de los valores de cuota de ventas de la tabla `dbo.FactSalesQuota`. La primera columna contiene la varianza de todos los valores distintos y la segunda columna contiene la varianza de todos los valores, incluidos los valores duplicados.  
   
 ```  
 -- Uses AdventureWorks  
@@ -112,7 +112,7 @@ Distinct_Values   All_Values
  ```  
   
 ### <a name="c-using-var-with-over"></a>C. Usar VAR con OVER  
- En el ejemplo siguiente se devuelve la varianza estadística de los valores de cuota de ventas para cada trimestre de un año natural. Observe que la cláusula ORDER BY en la cláusula OVER ordena la varianza estadística y la cláusula ORDER BY de la instrucción SELECT ordena el conjunto de resultados.  
+ En este ejemplo se devuelve la varianza estadística de las cuotas de ventas para cada trimestre de un año natural. Observe que ORDER BY en la cláusula OVER ordena la varianza estadística y ORDER BY de la instrucción SELECT ordena el conjunto de resultados.  
   
 ```  
 -- Uses AdventureWorks  
@@ -135,9 +135,9 @@ Year  Quarter  SalesQuota              Variance
 2002  4        154000.0000             1580250000.00
  ```  
   
-## <a name="see-also"></a>Vea también  
- [Las funciones de agregado &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [EN cláusula &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [Funciones de agregado &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [OVER &#40;cláusula de Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 

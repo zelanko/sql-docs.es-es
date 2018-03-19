@@ -1,5 +1,5 @@
 ---
-title: '@@PACKET_ERRORS (Transact-SQL) | Documentos de Microsoft'
+title: '@@PACKET_ERRORS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40packeterrors-transact-sql"></a>&#x40;&#x40;@Packet_errors (Transact-SQL)
+# <a name="x40x40packeterrors-transact-sql"></a>&#x40;&#x40;PACKET_ERRORS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve el número de errores de paquetes de red en las conexiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde la última vez que se inició [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -52,8 +52,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipos devueltos  
  **integer**  
   
-## <a name="remarks"></a>Comentarios  
- Para mostrar un informe que contenga varias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las estadísticas, incluyendo errores en paquetes, ejecutan **sp_monitor**.  
+## <a name="remarks"></a>Notas  
+ Para ver un informe que contenga varias estadísticas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluidos los errores de paquetes, ejecute **sp_monitor**.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se muestra la forma de utilizar `@@PACKET_ERRORS`.  
@@ -70,10 +70,10 @@ Packet Errors
 0  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [@@PACK_RECEIVED &#40;Transact-SQL&#41;](../../t-sql/functions/pack-received-transact-sql.md)   
  [@@PACK_SENT &#40;Transact-SQL&#41;](../../t-sql/functions/pack-sent-transact-sql.md)   
  [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
- [Funciones estadísticas del sistema &#40;Transact-SQL&#41;&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [Funciones estadísticas del sistema &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

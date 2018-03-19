@@ -1,5 +1,5 @@
 ---
-title: Agregar firma (Transact-SQL) | Documentos de Microsoft
+title: ADD SIGNATURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -61,22 +61,22 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  *module_class*  
  Es la clase del módulo al que se agrega la firma. El valor predeterminado para módulos de ámbito de esquema es OBJECT.  
   
- *Nombre_Del_Módulo*  
+ *module_name*  
  Es el nombre de un procedimiento almacenado, una función, un ensamblado o un desencadenador que se firmará o contrafirmará.  
   
- CERTIFICADO *cert_name*  
+ CERTIFICATE *cert_name*  
  Es el nombre de un certificado con el que está firmado o contrafirmado el procedimiento almacenado, la función, el ensamblado o el desencadenador.  
   
- CON contraseña ='*contraseña*'  
+ WITH PASSWORD ='*password*'  
  Es la contraseña necesaria para descifrar la clave privada del certificado o la clave simétrica. Esta cláusula solo se requiere si la clave privada no está protegida por la clave maestra de la base de datos.  
   
- FIRMA =*signed_blob*  
- Especifica el objeto binario grande (BLOB) firmado del módulo. Esta cláusula es útil si desea enviar un módulo sin enviar la clave privada. Si utiliza esta cláusula, solo se necesitan el módulo, la firma y la clave pública para agregar el objeto binario grande firmado a una base de datos. *signed_blob* el blob propiamente dicho se encuentra en formato hexadecimal.  
+ SIGNATURE =*signed_blob*  
+ Especifica el objeto binario grande (BLOB) firmado del módulo. Esta cláusula es útil si desea enviar un módulo sin enviar la clave privada. Si utiliza esta cláusula, solo se necesitan el módulo, la firma y la clave pública para agregar el objeto binario grande firmado a una base de datos. *signed_blob* es el propio blob en formato hexadecimal.  
   
- CLAVE ASIMÉTRICA *Asym_Key_Name*  
+ ASYMMETRIC KEY *Asym_Key_Name*  
  Es el nombre de una clave asimétrica con el que está firmado o contrafirmado el procedimiento almacenado, la función, el ensamblado o el desencadenador.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El módulo que se va a firmar o contrafirmar, y el certificado o la clave simétrica utilizada para firmarlo ya deben existir. En el cálculo de la firma se incluyen todos los caracteres del módulo. Esto incluye saltos de línea y retornos de carro iniciales.  
   
  Un módulo se puede firmar y contrafirmar por diversos certificados y claves simétricas.  
@@ -98,7 +98,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
 ## <a name="countersignatures"></a>Contrafirmas  
  Al ejecutar un módulo firmado, las firmas se agregarán temporalmente al token de SQL, pero se pierden si el módulo ejecuta otro módulo o si termina la ejecución. Una contrafirma es una forma especial de firma. Por si sola, una contrafirma no concede ningún permiso; sin embargo, permite a las firmas realizadas por el mismo certificado o clave asimétrica conservarse mientras dure la llamada realizada al objeto contrafirmado.  
   
- Por ejemplo, suponga que la usuaria Alice llama al procedimiento ProcSelectT1ForAlice, que llama al procedimiento procSelectT1, que realiza una selección en la tabla T1. Alice dispone del permiso EXECUTE en ProcSelectT1ForAlice y procSelectT1, pero no tiene el permiso SELECT en T1 y no hay ninguna cadena de propiedad implicada en esta cadena completa. Alice no puede tener acceso a la tabla T1, ni directamente ni a través del uso de ProcSelectT1ForAlice y procSelectT1. Puesto que deseamos que Alice utilice siempre ProcSelectT1ForAlice para el acceso, no debe concederle permiso para ejecutar procSelectT1. ¿Cómo podemos lograr esto?  
+ Por ejemplo, suponga que la usuaria Alice llama al procedimiento ProcSelectT1ForAlice, que llama al procedimiento procSelectT1, que realiza una selección en la tabla T1. Alice dispone del permiso EXECUTE en ProcSelectT1ForAlice y procSelectT1, pero no tiene el permiso SELECT en T1 y no hay ninguna cadena de propiedad implicada en esta cadena completa. Alice no puede tener acceso a la tabla T1, ni directamente ni a través del uso de ProcSelectT1ForAlice y procSelectT1. Como queremos que Alice use siempre ProcSelectT1ForAlice para el acceso, no es aconsejable concederle permiso para ejecutar procSelectT1. ¿Cómo podemos lograr esto?  
   
 -   Si firmamos procSelectT1, procSelectT1 puede tener acceso a T1 y entonces Alice puede invocar a procSelectT1 directamente y no tiene que llamar a ProcSelectT1ForAlice.  
   
@@ -106,9 +106,9 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
 -   Si solo se firma ProcSelectT1ForAlice, no funcionaría, porque la firma se perdería en la llamada a procSelectT1.  
   
-Sin embargo, al contrafirmar procSelectT1 con el mismo certificado usado para firmar ProcSelectT1ForAlice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantendrá la firma a través de la cadena de llamadas y permitirá el acceso a T1. Si Alice intenta llamar directamente a procSelectT1, no puede tener acceso a T1, porque la contrafirma no concede ningún derecho. El ejemplo C siguiente muestra el código de [!INCLUDE[tsql](../../includes/tsql-md.md)] para este ejemplo.  
+Pero al contrafirmar procSelectT1 con el mismo certificado que se usó para firmar ProcSelectT1ForAlice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantendrá la firma a través de la cadena de llamadas y permitirá el acceso a T1. Si Alice intenta llamar directamente a procSelectT1, no puede tener acceso a T1, porque la contrafirma no concede ningún derecho. El ejemplo C siguiente muestra el código de [!INCLUDE[tsql](../../includes/tsql-md.md)] para este ejemplo.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER para el objeto y el permiso CONTROL para el certificado o la clave asimétrica. Si una clave privada asociada está protegida por una contraseña, el usuario también debe tener la contraseña.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -255,8 +255,8 @@ DROP LOGIN Alice;
   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Sys.crypt_properties &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [ELIMINAR firma &#40; Transact-SQL &#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
+ [DROP SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
   
   

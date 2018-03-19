@@ -1,5 +1,5 @@
 ---
-title: "Cláusula OPTION (Transact-SQL) | Documentos de Microsoft"
+title: "OPTION (cláusula de Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -74,7 +74,7 @@ OPTION ( <query_option> [ ,...n ] )
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>A. Utilizar una cláusula OPTION con una cláusula GROUP BY  
+### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>A. Usar una cláusula OPTION con una cláusula GROUP BY  
  En el ejemplo siguiente se muestra cómo se usa la cláusula `OPTION` con una cláusula `GROUP BY`.  
   
 ```  
@@ -89,10 +89,10 @@ OPTION (HASH GROUP, FAST 10);
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>B. Una instrucción SELECT con una etiqueta en la cláusula OPTION  
- En el ejemplo siguiente se muestra un sencillo [!INCLUDE[ssDW](../../includes/ssdw-md.md)] instrucción SELECT con una etiqueta en la cláusula OPTION.  
+### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>B. Instrucción SELECT con una etiqueta en la cláusula OPTION  
+ En el ejemplo siguiente se muestra una instrucción SELECT simple de [!INCLUDE[ssDW](../../includes/ssdw-md.md)] con una etiqueta en la cláusula OPTION.  
   
 ```  
 -- Uses AdventureWorks  
@@ -101,8 +101,8 @@ SELECT * FROM FactResellerSales
   OPTION ( LABEL = 'q17' );  
 ```  
   
-### <a name="c-select-statement-with-a-query-hint-in-the-option-clause"></a>C. Una instrucción SELECT con una sugerencia de consulta en la cláusula OPTION  
- En el ejemplo siguiente se muestra una instrucción SELECT que utilice una sugerencia de consulta HASH JOIN en la cláusula OPTION.  
+### <a name="c-select-statement-with-a-query-hint-in-the-option-clause"></a>C. Instrucción SELECT con una sugerencia de consulta en la cláusula OPTION  
+ En el ejemplo siguiente se muestra una instrucción SELECT que usa una sugerencia de consulta HASH JOIN en la cláusula OPTION.  
   
 ```  
 -- Uses AdventureWorks  
@@ -113,8 +113,8 @@ ON (a.CustomerKey = b.CustomerKey)
 OPTION (HASH JOIN);  
 ```  
   
-### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>D. Una instrucción SELECT con una etiqueta y varias sugerencias de consulta en la cláusula OPTION  
- El ejemplo siguiente es un [!INCLUDE[ssDW](../../includes/ssdw-md.md)] instrucción SELECT que contiene una etiqueta y varias sugerencias de consulta. Cuando se ejecuta la consulta en los nodos de proceso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se aplicará una combinación hash o la combinación de mezcla, según la estrategia que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] decide es la óptima.  
+### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>D. Instrucción SELECT con una etiqueta y varias sugerencias de consulta en la cláusula OPTION  
+ El ejemplo siguiente es una instrucción SELECT de [!INCLUDE[ssDW](../../includes/ssdw-md.md)] que contiene una etiqueta y varias sugerencias de consulta. Cuando se ejecuta la consulta en los nodos de proceso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplica una combinación hash o una combinación de mezcla, según la estrategia que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considere óptima.  
   
 ```  
 -- Uses AdventureWorks  
@@ -125,8 +125,8 @@ ON (a.CustomerKey = b.CustomerKey)
 OPTION ( Label = 'CustJoin', HASH JOIN, MERGE JOIN);  
 ```  
   
-### <a name="e-using-a-query-hint-when-querying-a-view"></a>E. Usar una sugerencia de consulta al consultar una vista  
- En el ejemplo siguiente se crea una vista denominada CustomerView y, a continuación, usa una HASH JOIN, sugerencia de consulta en una consulta que hace referencia a una vista y una tabla.  
+### <a name="e-using-a-query-hint-when-querying-a-view"></a>E. Usar una sugerencia de consulta al consultar a una vista  
+ En el ejemplo siguiente se crea una vista denominada CustomerView y luego se usa una sugerencia de consulta HASH JOIN en una consulta que hace referencia a una vista y a una tabla.  
   
 ```  
 -- Uses AdventureWorks  
@@ -144,8 +144,8 @@ DROP VIEW CustomerView;
   
 ```  
   
-### <a name="f-query-with-a-subselect-and-a-query-hint"></a>F. Consulta con una Subselección y una sugerencia de consulta  
- En el ejemplo siguiente se muestra una consulta que contenga una Subselección y una sugerencia de consulta. La sugerencia de consulta se aplica globalmente. No se permiten sugerencias de consulta que se debe anexar a la instrucción de subselección.  
+### <a name="f-query-with-a-subselect-and-a-query-hint"></a>F. Consultar con una subselección y una sugerencia de consulta  
+ En el ejemplo siguiente se muestra una consulta que contiene una subselección y una sugerencia de consulta. La sugerencia de consulta se aplica de forma global. No se permite anexar sugerencias de consulta a la instrucción de subselección.  
   
 ```  
 -- Uses AdventureWorks  
@@ -160,8 +160,8 @@ ON ( a.CustomerKey = b.CustomerKey )) AS t
 OPTION (HASH JOIN);  
 ```  
   
-### <a name="g-force-the-join-order-to-match-the-order-in-the-query"></a>G. Forzar el orden de combinación para que coincida con el orden en la consulta  
- En el ejemplo siguiente se utiliza la sugerencia ORDER forzar al forzar el plan de consulta se usa el orden de combinación especificado por la consulta. Esto mejorará el rendimiento en algunas consultas; No todas las consultas.  
+### <a name="g-force-the-join-order-to-match-the-order-in-the-query"></a>G. Hacer coincidir el orden de combinación con el orden de la consulta  
+ En el ejemplo siguiente se usa la sugerencia FORCE ORDER para hacer que el plan de consulta emplee el orden de combinación especificado por la consulta. Esto mejora el rendimiento de algunas consultas, no de todas.  
   
 ```  
 -- Uses AdventureWorks  
@@ -182,7 +182,7 @@ OPTION ( FORCE ORDER )
 ```  
   
 ### <a name="h-using-externalpushdown"></a>H. Usar EXTERNALPUSHDOWN  
- En el ejemplo siguiente se fuerza la aplicación de la cláusula WHERE para el trabajo de MapReduce en la tabla externa de Hadoop.  
+ En el ejemplo siguiente se fuerza a la aplicación de la cláusula WHERE al trabajo MapReduce en la tabla externa de Hadoop.  
   
 ```  
 SELECT ID FROM External_Table_AS A   
@@ -190,7 +190,7 @@ WHERE ID < 1000000
 OPTION (FORCE EXTERNALPUSHDOWN);  
 ```  
   
- En el ejemplo siguiente, se evita que la aplicación de la cláusula WHERE para el trabajo de MapReduce en la tabla externa de Hadoop. Todas las filas se devuelven en PDW de donde se aplica la cláusula WHERE.  
+ En el ejemplo siguiente se evita la aplicación de la cláusula WHERE al trabajo MapReduce en la tabla externa de Hadoop. Todas las filas se devuelven a PDW, donde se aplica la cláusula WHERE.  
   
 ```  
 SELECT ID FROM External_Table_AS A   
@@ -198,7 +198,7 @@ WHERE ID < 10
 OPTION (DISABLE EXTERNALPUSHDOWN);  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   

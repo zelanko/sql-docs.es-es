@@ -1,5 +1,5 @@
 ---
-title: "MODIFICAR la especificación de auditoría de base de datos (Transact-SQL) | Documentos de Microsoft"
+title: ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -64,39 +64,39 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
   
 ## <a name="arguments"></a>Argumentos  
  *audit_specification_name*  
- El nombre de la especificación de auditoría.  
+ Nombre de la especificación de auditoría.  
   
  *audit_name*  
  Nombre de la auditoría a la que se aplica esta especificación.  
   
  *audit_action_specification*  
- Nombre de una o varias acciones de auditoría de nivel de base de datos. Para obtener una lista de grupos de acciones de auditoría, consulte [acciones y grupos de acciones de auditoría de SQL Server](../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  
+ Nombre de una o varias acciones de auditoría de nivel de base de datos. Para obtener una lista de grupos de acciones de auditoría, vea [Grupos de acciones y acciones de SQL Server Audit](../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  
   
  *audit_action_group_name*  
- Nombre de uno o varios grupos de acciones de auditoría de nivel de base de datos. Para obtener una lista de grupos de acciones de auditoría, consulte [acciones y grupos de acciones de auditoría de SQL Server](../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  
+ Nombre de uno o varios grupos de acciones de auditoría de nivel de base de datos. Para obtener una lista de grupos de acciones de auditoría, vea [Grupos de acciones y acciones de SQL Server Audit](../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  
   
- *clase*  
+ *class*  
  Nombre de clase (si procede) en el objeto protegible.  
   
- *elemento protegible*  
+ *securable*  
  Tabla, vista u otro objeto protegible de la base de datos al que se debe aplicar la acción de auditoría o el grupo de acciones de auditoría. Para más información, consulte [Securables](../../relational-databases/security/securables.md).  
   
- *columna*  
+ *column*  
  Nombre de columna (si procede) en el objeto protegible.  
   
- *entidad de seguridad*  
- Nombre de la entidad de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que se debe aplicar la acción de auditoría o el grupo de acciones de auditoría. Para obtener más información, consulte [entidades de seguridad &#40; motor de base de datos &#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).  
+ *principal*  
+ Nombre de la entidad de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que se debe aplicar la acción de auditoría o el grupo de acciones de auditoría. Para más información, vea [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).  
   
- CON **(** ESTADO  **=**  {ON | {OFF} **)**  
+ WITH **(** STATE **=** { ON | OFF } **)**  
  Habilita o deshabilita la recopilación de registros por parte de la auditoría para esta especificación de auditoría. Los cambios de estado de la especificación de auditoría se deben realizar fuera de una transacción de usuario y no puede haber otros cambios en la misma instrucción cuando la transición es de ON a OFF.  
   
-## <a name="remarks"></a>Comentarios  
- Las especificaciones de auditoría de base de datos son objetos no protegibles que residen en una base de datos determinada. Debe establecer el estado de una especificación de auditoría en OFF para realizar cambios en una base de datos de la especificación de auditoría. Si se ejecuta ALTER DATABASE AUDIT SPECIFICATION cuando una auditoría está habilitada con opciones distintas de STATE=OFF, aparecerá un mensaje de error. Para obtener más información, consulte [tempdb Database](../../relational-databases/databases/tempdb-database.md).  
+## <a name="remarks"></a>Notas  
+ Las especificaciones de auditoría de base de datos son objetos no protegibles que residen en una base de datos determinada. Para poder realizar cambios en una especificación de auditoría de base de datos, es necesario establecer su estado en OFF. Si se ejecuta ALTER DATABASE AUDIT SPECIFICATION cuando una auditoría está habilitada con opciones distintas de STATE=OFF, aparecerá un mensaje de error. Para obtener más información, consulte [tempdb Database](../../relational-databases/databases/tempdb-database.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Los usuarios con el permiso ALTER ANY DATABASE AUDIT pueden modificar las especificaciones de auditoría de base de datos y enlazarlas a cualquier auditoría.  
   
- Una vez creada una especificación de auditoría de base de datos, se puede ver las entidades de seguridad con el servidor de CONTROL, o permisos ALTER ANY DATABASE AUDIT, la cuenta de administrador del sistema o que tengan acceso explícito a la auditoría de entidades de seguridad.  
+ Después de crearse una especificación de auditoría de base de datos, podrá ser vista por entidades de seguridad que cuenten con los permisos CONTROL SERVER o ALTER ANY DATABASE AUDIT, así como la cuenta sysadmin, o por entidades de seguridad que tengan acceso explícito a la auditoría.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se modifica una especificación de auditoría de base de datos denominada `HIPPA_Audit_DB_Specification` en la que se auditan las instrucciones `SELECT` emitidas por el usuario `dbo` para una auditoría de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada `HIPPA_Audit`.  
@@ -111,27 +111,27 @@ FOR SERVER AUDIT HIPPA_Audit
 GO  
 ```  
   
- Para obtener un ejemplo completo sobre cómo crear una auditoría, consulte [SQL Server Audit &#40; motor de base de datos &#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+ Si quiere un ejemplo completo de cómo crear una auditoría, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-## <a name="see-also"></a>Vea también  
- [CREATE SERVER AUDIT &#40; Transact-SQL &#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
- [ALTER SERVER AUDIT &#40; Transact-SQL &#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
- [DROP SERVER AUDIT &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
- [CREAR especificación de auditoría de servidor &#40; Transact-SQL &#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
- [ALTER SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
- [DROP SERVER AUDIT SPECIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
- [CREAR especificación de auditoría de base de datos &#40; Transact-SQL &#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
- [QUITE la especificación de auditoría de base de datos &#40; Transact-SQL &#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
- [ALTER AUTHORIZATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [Sys.fn_get_audit_file &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
- [Sys.server_audits &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
- [Sys.server_file_audits &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
- [Sys.server_audit_specifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
- [Sys.server_audit_specification_details &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
- [Sys.database_audit_specifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
- [Sys.database_audit_specification_details &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
- [Sys.dm_server_audit_status &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
- [Sys.dm_audit_actions &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
+ [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
+ [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
+ [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
+ [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
+ [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [DROP DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
+ [sys.server_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
+ [sys.server_file_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
+ [sys.server_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
+ [sys.server_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
+ [sys.database_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
+ [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
+ [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
+ [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
  [Crear una auditoría de servidor y una especificación de auditoría de servidor](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

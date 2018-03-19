@@ -32,7 +32,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Concatena los valores de expresiones de cadena y coloca los valores de separador entre ellos. El separador no se agrega al final de la cadena.
+Concatena los valores de expresiones de cadena y coloca valores de separador entre ellos. El separador no se agrega al final de la cadena.
  
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,25 +48,25 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 ## <a name="arguments"></a>Argumentos 
 
 *separator*  
-Es un [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de `NVARCHAR` o `VARCHAR` tipo que se utiliza como separador para concatena cadenas. Puede ser literal o una variable. 
+Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de tipo `NVARCHAR` o `VARCHAR` que se usa como separador de cadenas concatenadas. Puede ser un literal o una variable. 
 
 *expression*  
-Es un [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cualquier tipo. Las expresiones se convierten en `NVARCHAR` o `VARCHAR` tipos durante la concatenación. Tipos de cadena no se convierten en `NVARCHAR` tipo.
+Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cualquier tipo. Las expresiones se convierten en tipos `NVARCHAR` o `VARCHAR` durante la concatenación. Los tipos que no son de cadena se convierten en `NVARCHAR`.
 
 
 <order_clause>   
-Opcionalmente, especificar el orden de resultados concatenados con `WITHIN GROUP` cláusula:
+Si quiere, especifique el orden de los resultados concatenados con la cláusula `WITHIN GROUP`:
 ```
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
 <order_by_expression_list>   
  
-  Una lista de no sea constante [expresiones](../../t-sql/language-elements/expressions-transact-sql.md) que se puede utilizar para ordenar los resultados. Solo un `order_by_expression` permitido por cada consulta. El criterio de ordenación predeterminado es ascendente.   
+  Lista de [expresiones](../../t-sql/language-elements/expressions-transact-sql.md) no constantes que se pueden usar para ordenar los resultados. Solo se permite un parámetro `order_by_expression` por consulta. El criterio de ordenación predeterminado es ascendente.   
   
 
 ## <a name="return-types"></a>Tipos devueltos 
 
-Tipo de valor devuelto es depende en el primer argumento (expresión). Si el argumento de entrada es de tipo string (`NVARCHAR`, `VARCHAR`), el tipo de resultado será igual que el tipo de entrada. En la tabla siguiente se enumera las conversiones automáticas:  
+El tipo de valor devuelto depende del primer argumento (expression). Si el argumento de entrada es de tipo string (`NVARCHAR`, `VARCHAR`), el tipo del resultado será igual que el tipo de la entrada. En la siguiente tabla se enumeran las conversiones automáticas:  
 
 |Tipo de expresión de entrada |Resultado | 
 |-------|-------|
@@ -74,24 +74,24 @@ Tipo de valor devuelto es depende en el primer argumento (expresión). Si el arg
 |VARCHAR(MAX) |VARCHAR(MAX) |
 |NVARCHAR(1…4000) |NVARCHAR(4000) |
 |VARCHAR(1…8000) |VARCHAR(8000) |
-|int, bigint, smallint, tinyint, numeric, float, real, bit, decimal, smallmoney, money, datetime, datetime2, |NVARCHAR(4000) |
+|int, bigint, smallint, tinyint, numeric, float, real, bit, decimal, smallmoney, money, datetime, datetime2 |NVARCHAR(4000) |
 
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  
-`STRING_AGG`es una función de agregado que toma todas las expresiones de las filas y los concatena en una sola cadena. Valores de la expresión se convierte implícitamente en tipos de cadena y, a continuación, concatenar. La conversión implícita de cadenas sigue las reglas existentes para las conversiones de tipos de datos. Para obtener más información acerca de las conversiones de tipo de datos, vea [CAST y CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
+`STRING_AGG` es una función de agregado que toma todas las expresiones de las filas y las concatena en una sola cadena. Los valores de la expresión se convierten implícitamente a tipos string y, después, se concatenan. La conversión implícita de cadenas sigue las reglas existentes para las conversiones de tipos de datos. Para más información sobre las conversiones de tipo de datos, vea [CAST y CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
 
 Si la expresión de entrada es de tipo `VARCHAR`, el separador no puede ser de tipo `NVARCHAR`. 
 
-Se omiten los valores NULL y no se agrega el separador correspondiente. Para devolver un marcador de posición para valores null, utilice la `ISNULL` funcione como se muestra en el ejemplo B.
+Los valores NULL se omiten y no se agrega el separador correspondiente. Para devolver un marcador de posición para valores NULL, use la función `ISNULL` como se muestra en el ejemplo B.
 
-`STRING_AGG`está disponible en cualquier nivel de compatibilidad.
+`STRING_AGG` está disponible en cualquier nivel de compatibilidad.
 
 
 ## <a name="examples"></a>Ejemplos 
 
-### <a name="a-generate-list-of-names-separated-in-new-lines"></a>A. Generar la lista de nombres separados en las líneas nuevas 
-En el ejemplo siguiente se genera una lista de nombres en una celda individual de resultados, separados por retornos de carro.
+### <a name="a-generate-list-of-names-separated-in-new-lines"></a>A. Generar una lista de nombres separados en líneas nuevas 
+En el siguiente ejemplo se genera una lista de nombres en una única celda de resultados separados por retornos de carro.
 ```sql
 SELECT STRING_AGG (FirstName, CHAR(13)) AS csv 
 FROM Person.Person; 
@@ -100,15 +100,15 @@ FROM Person.Person;
 
 |csv | 
 |--- |
-|Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
+|Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />… | 
 
-`NULL`valores que se encuentran en `name` celdas no se devuelven en el resultado.   
+Loa valores `NULL` detectados en las celdas `name` no se incluyen en el resultado.   
 > [!NOTE]  
->  Si utiliza el Editor de consultas de Management Studio, el **resultados a cuadrícula** opción no puede implementar el retorno de carro. Cambie a **resultados a texto** ver el resultado establecido correctamente.   
+>  Si usa el Editor de consultas de Management Studio, la opción **Resultados a cuadrícula** no puede implementar el retorno de carro. Cambie a **Resultados a texto** para ver el resultado configurado correctamente.   
 
 
-### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. Generar la lista de nombres separados por coma sin valores NULL   
-En el ejemplo siguiente se reemplaza los valores null con n '/' y devuelve los nombres separados por comas en una celda individual de resultados.  
+### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. Generar una lista de nombres separados por coma sin valores NULL   
+En el siguiente ejemplo los valores NULL se reemplazan por "N/A" y se devuelven los nombres separados por comas en una única celda de resultados.  
 ```sql
 SELECT STRING_AGG ( ISNULL(FirstName,'N/A'), ',') AS csv 
 FROM Person.Person; 
@@ -119,10 +119,10 @@ FROM Person.Person;
 
 |Csv | 
 |--- |
-|John, n /, Mike, Peter, n /, n /, Alice, Bob |  
+|John,N/A,Mike,Peter,N/A,N/A,Alice,Bob |  
 
 
-### <a name="c-generate-comma-separated-values"></a>C. Generar valores separados por comas 
+### <a name="c-generate-comma-separated-values"></a>C. Generar nombres separados por comas 
 
 ```sql   
 SELECT 
@@ -134,15 +134,15 @@ FROM Person.Person;
 
 |nombres | 
 |--- |
-|Ken Sánchez (8 de febrero de 2003 12:00 A.M.) <br />Terri Duffy (24 de febrero de 2002 12:00 A.M.) <br />Roberto Tamburello (5 de diciembre de 2001 12:00 A.M.) <br />Rob Walters (29 de diciembre de 2001 12:00 A.M.) <br />... |
+|Ken Sánchez (8 de febrero de 2003 12:00 A.M.) <br />Terri Duffy (24 de febrero de 2002 12:00 A.M.) <br />Roberto Tamburello (5 de diciembre de 2001 12:00 A.M.) <br />Rob Walters (29 de diciembre de 2001 12:00 A.M.) <br />… |
 
 > [!NOTE]  
->  Si utiliza el Editor de consultas de Management Studio, el **resultados a cuadrícula** opción no puede implementar el retorno de carro. Cambie a **resultados a texto** ver el resultado establecido correctamente.   
+>  Si usa el Editor de consultas de Management Studio, la opción **Resultados a cuadrícula** no puede implementar el retorno de carro. Cambie a **Resultados a texto** para ver el resultado configurado correctamente.   
  
 
 ### <a name="d-return-news-articles-with-related-tags"></a>D. Devolver artículos de noticias con etiquetas relacionadas 
 
-Artículo y sus etiquetas se dividen en tablas diferentes. Programador desea devolver una fila por cada artículo con todas las etiquetas asociadas. Uso de consulta siguiente: 
+Los artículos y sus etiquetas están divididos en tablas diferentes. El desarrollador quiere que se devuelva una fila por cada artículo con todas las etiquetas asociadas. Si se usa la siguiente consulta: 
 ```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
 FROM dbo.Article AS a       
@@ -153,15 +153,15 @@ GROUP BY a.articleId, title;
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|identificador de artículo |title |etiquetas |
+|articleId |title |etiquetas |
 |--- |--- |--- |
-|172 |Sondeos indican elección Cerrar resultados |política, sondeos, Consejo de ciudad | 
-|176 |Se esperaba autopista de nuevo reducir la congestión |NULL |
-|177 |Dogs siguen siendo más popular que gatos |sondeos, animales| 
+|172 |Los sondeos vaticinan unos resultados electorales ajustados |política,sondeos,ayuntamiento | 
+|176 |Se espera que la nueva autopista reduzca la congestión |NULL |
+|177 |Los perros siguen siendo más populares que los gatos |sondeos,animales| 
 
-### <a name="e-generate-list-of-emails-per-towns"></a>E. Generar la lista de mensajes de correo electrónico por ciudades
+### <a name="e-generate-list-of-emails-per-towns"></a>E. Generar una lista de correos electrónicos por ciudades
 
-La siguiente consulta busca las direcciones de correo electrónico de los empleados y los agrupa por ciudades: 
+Con la siguiente consulta se buscan las direcciones de correo electrónico de los empleados y se las agrupa por ciudades: 
 ```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
 FROM dbo.Employee 
@@ -170,16 +170,16 @@ GROUP BY town;
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|Ciudad |mensajes de correo electrónico |
+|town |emails |
 |--- |--- |
 |Seattle |syed0@adventure-works.com;catherine0@adventure-works.com;kim2@adventure-works.com |
-|LA |sam1@adventure-works.com;hazem0@adventure-works.com |
+|Los Ángeles |sam1@adventure-works.com;hazem0@adventure-works.com |
 
-Mensajes de correo electrónico se devuelven en los correos electrónicos de columna se puede utilizar directamente para enviar mensajes de correo electrónico al grupo de personas que trabajan en algunas ciudades determinados. 
+Los correos electrónicos devueltos en la columna emails se pueden usar para enviar mensajes de correo electrónico al grupo de personas que trabajan en determinadas ciudades. 
 
-### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>F. Generar una lista ordenada de mensajes de correo electrónico por ciudades   
+### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>F. Generar una lista ordenada de correos electrónicos por ciudades   
    
-Similar al ejemplo anterior, la siguiente consulta busca las direcciones de correo electrónico de los empleados, los agrupa por ciudad y ordena alfabéticamente los correos electrónicos:   
+Al igual que el ejemplo anterior, con la siguiente consulta se buscan las direcciones de correo electrónico de los empleados, se las agrupa por ciudad y se ordenan alfabéticamente:   
 ```sql
 SELECT town, 
     STRING_AGG (email, ';') WITHIN GROUP (ORDER BY email ASC) AS emails 
@@ -189,13 +189,13 @@ GROUP BY town;
    
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|Ciudad |mensajes de correo electrónico |
+|town |emails |
 |--- |--- |
 |Seattle |catherine0@adventure-works.com;kim2@adventure-works.com;syed0@adventure-works.com |
-|LA |hazem0@adventure-works.com;sam1@adventure-works.com |
+|Los Ángeles |hazem0@adventure-works.com;sam1@adventure-works.com |
 
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
@@ -205,6 +205,6 @@ GROUP BY town;
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [Las funciones de agregado &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
- [Funciones de cadena &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funciones de agregado &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+ [Funciones de cadena &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
 

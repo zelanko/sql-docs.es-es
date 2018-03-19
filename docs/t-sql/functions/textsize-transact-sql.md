@@ -1,5 +1,5 @@
 ---
-title: '@@TEXTSIZE (Transact-SQL) | Documentos de Microsoft'
+title: '@@TEXTSIZE (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="x40x40textsize-transact-sql"></a>&#x40;&#x40;TEXTSIZE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve el valor actual de la [TEXTSIZE](../../t-sql/statements/set-textsize-transact-sql.md) opción.  
+  Devuelve el valor actual de la opción [TEXTSIZE](../../t-sql/statements/set-textsize-transact-sql.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/21/2017
  **integer**  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se utiliza `SELECT` para mostrar la `@@TEXTSIZE` valor antes y después se cambia con el `SET``TEXTSIZE` instrucción.  
+ En el ejemplo siguiente se utiliza `SELECT` para mostrar el valor de `@@TEXTSIZE` antes y después de su modificación con la instrucción `SET``TEXTSIZE`.  
   
 ```  
 -- Set the TEXTSIZE option to the default size of 4096 bytes.  
@@ -73,8 +73,8 @@ Text Size
 2048
  ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Funciones de configuración &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [SET TEXTSIZE &#40; Transact-SQL &#41;](../../t-sql/statements/set-textsize-transact-sql.md)  
+ [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)  
   
   

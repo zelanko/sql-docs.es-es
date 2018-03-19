@@ -1,5 +1,5 @@
 ---
-title: ISDATE (Transact-SQL) | Documentos de Microsoft
+title: ISDATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -47,11 +47,11 @@ ms.lasthandoff: 11/21/2017
 # <a name="isdate-transact-sql"></a>ISDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Devuelve 1 si la *expresión* es válido **fecha**, **tiempo**, o **datetime** valor; en caso contrario, 0.  
+  Devuelve 1 si *expression* es un valor válido de **date**, **time** o **datetime**; en caso contrario, devuelve 0.  
   
- ISDATE devuelve 0 si la *expresión* es un **datetime2** valor.  
+ ISDATE devuelve 0 si *expression* es un valor **datetime2**.  
   
- Para obtener información general de todos los [!INCLUDE[tsql](../../includes/tsql-md.md)] tipos de datos de fecha y hora y funciones, vea [funciones y tipos de datos de hora y fecha &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md). Tenga en cuenta que el intervalo de datos de fecha y hora es de 01-01-1753 a 31-12-9999, mientras que el intervalo de datos de fecha es de 01-01-0001 a 31-12-9999.  
+ Para ver información general sobre todos los tipos de datos y funciones de fecha y hora de [!INCLUDE[tsql](../../includes/tsql-md.md)], vea [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) (Tipos de datos y funciones de fecha y hora [Transact-SQL]). Tenga en cuenta que el intervalo de datos de fecha y hora es de 01-01-1753 a 31-12-9999, mientras que el intervalo de datos de fecha es de 01-01-0001 a 31-12-9999.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,33 +63,33 @@ ISDATE ( expression )
   
 ## <a name="arguments"></a>Argumentos  
  *expression*  
- Es una cadena de caracteres o [expresión](../../t-sql/language-elements/expressions-transact-sql.md) que se pueda convertir en una cadena de caracteres. La expresión debe tener menos de 4.000 caracteres. No se permiten tipos de datos de fecha y hora, excepto datetime y smalldatetime, como argumento para ISDATE.  
+ Es una cadena de caracteres o una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) que se puede convertir en una cadena de caracteres. La expresión debe tener menos de 4.000 caracteres. No se permiten tipos de datos de fecha y hora, excepto datetime y smalldatetime, como argumento para ISDATE.  
   
 ## <a name="return-type"></a>Tipo devuelto  
  **int**  
   
-## <a name="remarks"></a>Comentarios  
- ISDATE solo es determinista si se usa con la [convertir](../../t-sql/functions/cast-and-convert-transact-sql.md) funcione, si se especifica el parámetro de estilo CONVERT y el estilo no es igual a 0, 100, 9 o 109.  
+## <a name="remarks"></a>Notas  
+ ISDATE solo es determinista si se usa con la función [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md), se especifica el parámetro de estilo CONVERT y el estilo no es igual a 0, 100, 9 ni 109.  
   
- El valor devuelto de ISDATE depende de los valores establecidos por [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md), [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) y [configurar la opción de configuración de servidor idioma predeterminado](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md).  
+ El valor devuelto de ISDATE depende de los valores establecidos por [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md), [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) y la [opción de configuración del servidor Idioma predeterminado](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md).  
   
 ## <a name="isdate-expression-formats"></a>Formatos de expresión ISDATE  
- Para obtener ejemplos de formatos válidos para los que ISDATE devolverá 1, vea la sección "Cadena Literal formatos de fecha y hora" en la [datetime](../../t-sql/data-types/datetime-transact-sql.md) y [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) temas. Para obtener ejemplos adicionales, consulte también la columna de entrada/salida de la sección "Argumentos" de [CAST y CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+ Para obtener ejemplos de formatos válidos para los que ISDATE devolverá 1, vea la sección "Formatos de literales de cadena compatibles para datetime" en los temas [datetime](../../t-sql/data-types/datetime-transact-sql.md) y [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md). Para obtener más ejemplo, vea también la columna Entrada/salida de la sección "Argumentos" de [CAST y CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
  En la tabla siguiente se resumen los formatos de expresión de entrada que no son válidos y devuelven 0 o un error.  
   
 |Expresión ISDATE|Valor devuelto de ISDATE|  
 |-----------------------|-------------------------|  
 |NULL|0|  
-|Valores de tipos de datos aparecen en [tipos de datos](../../t-sql/data-types/data-types-transact-sql.md) en cualquier categoría de tipo de datos distinto de cadenas de caracteres, cadenas de caracteres Unicode o fecha y hora.|0|  
-|Los valores de **texto**, **ntext**, o **imagen** tipos de datos.|0|  
-|Cualquier valor que tiene una escala de precisión por segundos mayor que 3 (.0000 a.0000000... n) ISDATE devuelve 0 si la *expresión* es un **datetime2** valor, pero devolverá 1 si la *expresión* es válido **datetime** valor.|0|  
+|Valores de tipos de datos incluidos en la lista [Tipos de datos](../../t-sql/data-types/data-types-transact-sql.md) en cualquier categoría de tipo de datos distinta de las cadenas de caracteres, cadenas de caracteres Unicode o fecha y hora.|0|  
+|Valores de los tipos de datos **text**, **ntext**o **image**.|0|  
+|Cualquier valor que tiene una escala de precisión por segundos mayor que 3 (.0000 a.0000000... n) ISDATE devuelve 0 si *expression* es un valor **datetime2**, pero devolverá 1 si *expression* es un valor **datetime** válido.|0|  
 |Cualquier valor que mezcla una fecha válida con un valor no válido, por ejemplo 1995-10-1a.|0|  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-using-isdate-to-test-for-a-valid-datetime-expression"></a>A. Utilizar ISDATE para probar si una expresión de fecha y hora es válida  
- En el ejemplo siguiente se muestra cómo usar `ISDATE` para comprobar si una cadena de caracteres es válido **datetime**.  
+ En este ejemplo se muestra cómo usar `ISDATE` para probar si una cadena de caracteres es un tipo **datetime** válido.  
   
 ```  
 IF ISDATE('2009-05-12 10:19:41.177') = 1  
@@ -146,10 +146,10 @@ SET LANGUAGE us_english;
 SET DATEFORMAT mdy;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-isdate-to-test-for-a-valid-datetime-expression"></a>C. Utilizar ISDATE para probar si una expresión de fecha y hora es válida  
- En el ejemplo siguiente se muestra cómo usar `ISDATE` para comprobar si una cadena de caracteres es válido **datetime**.  
+ En este ejemplo se muestra cómo usar `ISDATE` para probar si una cadena de caracteres es un tipo **datetime** válido.  
   
 ```  
 IF ISDATE('2009-05-12 10:19:41.177') = 1  
@@ -158,7 +158,7 @@ ELSE
     SELECT 'INVALID';  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

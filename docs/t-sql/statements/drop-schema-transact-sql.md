@@ -1,5 +1,5 @@
 ---
-title: ESQUEMA de destino (Transact-SQL) | Documentos de Microsoft
+title: DROP SCHEMA (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -57,22 +57,22 @@ DROP SCHEMA schema_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *IF EXISTE*  
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ *IF EXISTS*  
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Quita condicionalmente el esquema solo si ya existe.  
   
  *schema_name*  
  Es el nombre por el que se conoce el esquema en la base de datos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El esquema que se va a quitar no puede contener objetos. Si el esquema contiene objetos, la instrucción DROP registrará errores.  
   
- Información acerca de los esquemas es visible en el [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md) vista de catálogo.  
+ Puede ver información sobre los esquemas en la vista de catálogo [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md).  
   
- **Precaución**[!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
+ **Precaución** [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL en el esquema o el permiso ALTER ANY SCHEMA en la base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -95,8 +95,8 @@ GO
 ```  
   
   
-## <a name="see-also"></a>Vea también  
- [Crear esquema &#40; Transact-SQL &#41;](../../t-sql/statements/create-schema-transact-sql.md)   
- [ALTER SCHEMA &#40; Transact-SQL &#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
- [ESQUEMA de destino (Transact-SQL)](../../t-sql/statements/drop-schema-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+ [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
+ [DROP SCHEMA (Transact-SQL)](../../t-sql/statements/drop-schema-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

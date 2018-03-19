@@ -1,5 +1,5 @@
 ---
-title: "Métodos de agregado de geometría estáticos | Documentos de Microsoft"
+title: "Métodos de agregado de geometría estáticos | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -42,22 +42,22 @@ ms.lasthandoff: 01/25/2018
   
  [Especificaciones de OGC; Acceso a características simples, Parte 2 - Opciones de SQL](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
- [Especificaciones de OGC, lenguaje de marcado de geografía](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ [Especificaciones de OGC, Lenguaje de marcado de geografía](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [CollectionAggregate &#40; tipo de datos geometry &#41;](../../t-sql/spatial-geometry/collectionaggregate-geometry-data-type.md)  
+-   [CollectionAggregate &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/collectionaggregate-geometry-data-type.md)  
   
--   [ConvexHullAggregate &#40; tipo de datos geometry &#41;](../../t-sql/spatial-geometry/convexhullaggregate-geometry-data-type.md)  
+-   [ConvexHullAggregate &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/convexhullaggregate-geometry-data-type.md)  
   
--   [EnvelopeAggregate &#40; tipo de datos geometry &#41;](../../t-sql/spatial-geometry/envelopeaggregate-geometry-data-type.md)  
+-   [EnvelopeAggregate &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/envelopeaggregate-geometry-data-type.md)  
   
--   [UnionAggregate &#40; tipo de datos geometry &#41;](../../t-sql/spatial-geometry/unionaggregate-geometry-data-type.md)  
+-   [UnionAggregate &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/unionaggregate-geometry-data-type.md)  
   
-## <a name="see-also"></a>Vea también  
- [Métodos extendidos en instancias de Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+## <a name="see-also"></a>Ver también  
+ [Métodos extendidos en instancias de geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [Métodos de geometría estáticos ampliados](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)   
- [Métodos de OGC en instancias de Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
+ [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
  [Métodos de geometría estáticos de OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

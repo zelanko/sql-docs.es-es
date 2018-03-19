@@ -1,5 +1,5 @@
 ---
-title: GetRoot (motor de base de datos) | Documentos de Microsoft
+title: GetRoot (motor de base de datos) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -49,11 +49,11 @@ static SqlHierarchyId GetRoot ( )
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
-**Tipo: hierarchyid devuelto de SQL Server**
+**Tipo de valor devuelto de SQL Server: hierarchyid**
   
-**Tipo: SqlHierarchyId devuelto de CLR**
+**Tipo devuelto de CLR: SqlHierarchyId**
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 Se utiliza para determinar el nodo raíz de un árbol de jerarquía.
   
 ## <a name="examples"></a>Ejemplos  
@@ -68,7 +68,7 @@ WHERE OrgNode = hierarchyid::GetRoot()
 ```  
   
 ### <a name="b-clr-example"></a>B. Ejemplo de CLR  
-El fragmento de código siguiente llama al método de GetRoot():
+En el fragmento de código siguiente se llama al método GetRoot():
   
 ```sql
 SqlHierarchyId.GetRoot()  

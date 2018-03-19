@@ -1,5 +1,5 @@
 ---
-title: CREAR FULLTEXT STOPLIST (Transact-SQL) | Documentos de Microsoft
+title: CREATE FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 
   Crea una nueva lista de palabras irrelevantes de texto completo en la base de datos actual.  
   
- Las palabras irrelevantes se administran en bases de datos mediante objetos denominados *listas de palabras irrelevantes*. Una lista de palabras irrelevantes es una lista de palabras que, cuando se asocia a un índice de texto completo, se aplica a las consultas de texto completo en ese índice. Para obtener más información, vea [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
+ Las palabras irrelevantes se administran en bases de datos por medio de objetos denominados *listas de palabras irrelevantes*. Una lista de palabras irrelevantes es una lista de palabras que, cuando se asocia a un índice de texto completo, se aplica a las consultas de texto completo en ese índice. Para obtener más información, vea [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
 > [!IMPORTANT]  
 >  CREATE FULLTEXT STOPLIST, ALTER FULLTEXT STOPLIST y DROP FULLTEXT STOPLIST solo se admiten para un nivel de compatibilidad de 100. En niveles de compatibilidad de 80 y 90, estas instrucciones no se admiten. Sin embargo, en todos los niveles de compatibilidad la lista de palabras irrelevantes del sistema se asocia automáticamente a los nuevos índices de texto completo.  
@@ -63,26 +63,26 @@ CREATE FULLTEXT STOPLIST stoplist_name
   
 ## <a name="arguments"></a>Argumentos  
  *stoplist_name*  
- Es el nombre de la lista de palabras irrelevantes. *stoplist_name* puede tener un máximo de 128 caracteres. *stoplist_name* debe ser único entre todas las listas de palabras irrelevantes en la base de datos actual y cumplir las reglas para identificadores.  
+ Es el nombre de la lista de palabras irrelevantes. *stoplist_name* puede tener un máximo de 128 caracteres. *stoplist_name* debe ser único entre todas las listas de palabras irrelevantes de la base de datos actual y cumplir las reglas de los identificadores.  
   
- *stoplist_name* se utilizará cuando se crea el índice de texto completo.  
+ *stoplist_name* se usará cuando se cree el índice de texto completo.  
   
  *database_name*  
- Es el nombre de la base de datos donde la lista de palabras irrelevantes especificada por *source_stoplist_name* se encuentra. Si no se especifica, *database_name* el valor predeterminado es la base de datos actual.  
+ Es el nombre de la base de datos donde se encuentra la lista de palabras irrelevantes especificada por *source_stoplist_name*. Si no se especifica, *database_name* usa de manera predeterminada la base de datos actual.  
   
  *source_stoplist_name*  
- Especifica que la nueva lista de palabras irrelevantes se crea copiando otra lista existente. Si *source_stoplist_name* no existe, o el usuario de base de datos no tiene los permisos correctos, CREATE FULLTEXT STOPLIST produce un error. Si alguno de los idiomas especificados en las palabras irrelevantes de la lista de palabras irrelevantes de origen no está registrado en la base de datos actual, CREATE FULLTEXT STOPLIST crea correctamente la lista, pero se devuelven advertencias y no se agregan las palabras irrelevantes correspondientes.  
+ Especifica que la nueva lista de palabras irrelevantes se crea copiando otra lista existente. Si *source_stoplist_name* no existe, o el usuario de la base de datos no tiene los permisos correctos, CREATE FULLTEXT STOPLIST produce un error. Si alguno de los idiomas especificados en las palabras irrelevantes de la lista de palabras irrelevantes de origen no está registrado en la base de datos actual, CREATE FULLTEXT STOPLIST crea correctamente la lista, pero se devuelven advertencias y no se agregan las palabras irrelevantes correspondientes.  
   
  SYSTEM STOPLIST  
- Especifica que se crea la nueva lista de palabras irrelevantes de la lista de palabras irrelevantes que existe de forma predeterminada en el [base de datos Resource](../../relational-databases/databases/resource-database.md).  
+ Especifica que la nueva lista de palabras irrelevantes se crea a partir de la lista predeterminada que hay en la [base de datos Resource](../../relational-databases/databases/resource-database.md).  
   
- AUTORIZACIÓN *owner_name*  
- Especifica el nombre de una entidad de seguridad de base de datos como propietaria de la lista de palabras irrelevantes. *owner_name* debe ser el nombre de una entidad de seguridad de los cuales el usuario actual es un miembro o el usuario actual debe tener el permiso IMPERSONATE *owner_name*. Si no se especifica, la propiedad se otorga al usuario actual.  
+ AUTHORIZATION *owner_name*  
+ Especifica el nombre de una entidad de seguridad de base de datos como propietaria de la lista de palabras irrelevantes. *owner_name* debe ser el nombre de una entidad de seguridad de la que el usuario actual sea miembro, o bien el usuario actual debe tener el permiso IMPERSONATE en *owner_name*. Si no se especifica, la propiedad se otorga al usuario actual.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El creador de la lista de palabras irrelevantes es su propietario.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para crear una lista STOPLIST se requieren permisos CREATE FULLTEXT CATALOG. El propietario de la lista de palabras irrelevantes puede conceder explícitamente el permiso CONTROL para una lista de palabras irrelevantes para permitir a los usuarios agregar y quitar palabras, y quitar la lista de palabras irrelevantes.  
   
 > [!NOTE]  
@@ -114,12 +114,12 @@ CREATE FULLTEXT STOPLIST myStoplist3 FROM SYSTEM STOPLIST;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [ALTER FULLTEXT STOPLIST &#40; Transact-SQL &#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
- [DROP FULLTEXT STOPLIST &#40; Transact-SQL &#41;](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
+ [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)   
  [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- [Sys.fulltext_stoplists &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
- [Sys.fulltext_stopwords &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
+ [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
+ [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
  [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)  
   
   

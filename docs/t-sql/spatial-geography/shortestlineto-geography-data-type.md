@@ -1,5 +1,5 @@
 ---
-title: ShortestLineTo (tipo de datos geography) | Documentos de Microsoft
+title: ShortestLineTo (tipo de datos Geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo (tipo de datos Geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Devuelve un **LineString** instancia con dos puntos que representan la distancia más corta entre los dos **geography** instancias. La longitud de la **LineString** instancia devuelta es la distancia entre los dos **geography** instancias.  
+  Devuelve una instancia de **LineString** con dos puntos que representan la distancia más corta entre las dos instancias de **geography**. La longitud de la instancia de **LineString** devuelta es la distancia entre las dos instancias de **geography**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,16 +44,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *geography_other*  
- Especifica el segundo **geography** instancia que la llamada a **geography** instancia está intentando determinar la distancia más corta.  
+ *otra_geografía*  
+ Especifica la segunda instancia de **geography** a la que la instancia de **geography** que realiza la llamada está intentando determinar la distancia más corta.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **geography**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Comentarios  
- El método devuelve un **LineString** instancia con los extremos que quedan en los bordes de las dos programaciones **geography** instancias que se están comparadas. La longitud de la **LineString** devuelta es igual a la distancia más corta entre las dos **geography** instancias. Vacío **LineString** instancia se devuelve cuando las dos **geography** instancias tienen la intersección entre sí.  
+## <a name="remarks"></a>Notas  
+ El método devuelve una instancia de **LineString** con los extremos en los bordes de las dos instancias de **geography** que no se cruzan y que se comparan. La longitud de la instancia de **LineString** devuelta es igual a la distancia más corta entre las dos instancias de **geography**. Se devuelve una instancia vacía de **LineString** cuando las dos instancias de **geography** se cruzan.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/25/2018
  SELECT @g1.ShortestLineTo(@g2).ToString();
 ``` 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

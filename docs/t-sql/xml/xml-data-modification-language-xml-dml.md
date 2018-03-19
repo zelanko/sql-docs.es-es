@@ -1,5 +1,5 @@
 ---
-title: "Lenguaje de manipulación de datos XML (XML DML) | Documentos de Microsoft"
+title: "Lenguaje de manipulación de datos XML (XML DML) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="xml-data-modification-language-xml-dml"></a>Lenguaje de manipulación de datos XML (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  El Lenguaje de manipulación de datos XML (XML DML) es una extensión del lenguaje XQuery. Según W3C, el lenguaje XQuery carece de la parte de manipulación de datos (DML). El DML de XML que se presenta en este tema así como el lenguaje de XQuery, proporciona una consulta totalmente funcional y el lenguaje de manipulación de datos que se puede usar con la **xml** tipo de datos.  
+  El Lenguaje de manipulación de datos XML (XML DML) es una extensión del lenguaje XQuery. Según W3C, el lenguaje XQuery carece de la parte de manipulación de datos (DML). El lenguaje XML DML que se presenta en este tema, así como el lenguaje XQuery, proporciona un lenguaje de consultas y modificación de datos completamente funcional que se puede usar con el tipo de datos **xml**.  
   
  XML DML agrega a XQuery las siguientes palabras clave, donde se distingue entre mayúsculas y minúsculas:  
   
@@ -46,34 +46,34 @@ ms.lasthandoff: 01/25/2018
   
 -   **delete**  
   
--   **Reemplace el valor de**  
+-   **replace value of**  
   
- Como se describe en [tipo de datos XML y columnas &#40; SQL Server &#41; ](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md), puede crear variables y columnas de la **xml** escriba y asignarles documentos o fragmentos XML. Para modificar o actualizar estas instancias XML, realice el siguiente procedimiento:  
+ Como se describe en [Tipo de datos XML y columnas &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md), se pueden crear variables y columnas de tipo **xml** y asignarles documentos o fragmentos XML. Para modificar o actualizar estas instancias XML, realice el siguiente procedimiento:  
   
--   Utilice la [tipo de datos de xml de método modify())](../../t-sql/xml/modify-method-xml-data-type.md) de la **xml** tipo de datos.  
+-   Use [Modify() (método del tipo de datos xml)](../../t-sql/xml/modify-method-xml-data-type.md) del tipo de datos **xml**.  
   
--   Especificar las instrucciones XML DML correspondientes dentro de la **modify()** método.  
+-   Especifique las instrucciones XML DML correspondientes en el método **modify()**.  
   
  Tenga en cuenta que no se pueden insertar ni eliminar algunos atributos, y a veces tampoco es posible modificar sus valores. Por ejemplo:  
   
--   Para con o sin tipo **xml,** los atributos son **xmlns**, **xmlns:\***, y **XML: base**.  
+-   En **xml** con o sin tipo, los atributos son **xmlns**, **xmlns:\*** y **xml:base**.  
   
--   Para tipos de **xml** únicamente, los atributos son **xsi: nil**, y **xsi: Type**.  
+-   En **xml** solo con tipo, los atributos son **xsi:nil** y **xsi:type**.  
   
  Entre otras restricciones se pueden citar las siguientes:  
   
--   Para con o sin tipo **xml**, insertar el atributo **XML: base** se producirá un error.  
+-   En **xml** con o sin tipo, se producirá un error al insertar el atributo **xml:base**.  
   
--   Para tipos de **xml**, eliminar y modificar el **xsi: nil** se producirá un error de atributo. Sin tipo **xml**, puede eliminar el atributo o modificar su valor.  
+-   En **xml** con tipo, se producirá un error al eliminar y modificar el atributo **xsi:nil**. En **xml** sin tipo, se puede eliminar el atributo o modificar su valor.  
   
--   Para tipos de **xml**, modificar el valor de la **xs: Type** se producirá un error de atributo. Sin tipo **xml**, puede modificar el valor del atributo.  
+-   En **xml** con tipo, se producirá un error si se modifica el valor del atributo **xs:type**. En **xml** sin tipo, se puede modificar el valor del atributo.  
   
  Cuando se modifica una instancia XML con tipo, el formato final debe ser una instancia válida de ese tipo. En caso contrario, se devuelve un error de validación.  
   
-## <a name="see-also"></a>Vea también  
- [Insert &#40; XML DML &#41;](../../t-sql/xml/insert-xml-dml.md)   
- [Eliminar &#40; XML DML &#41;](../../t-sql/xml/delete-xml-dml.md)   
- [valor de reemplazo de &#40; XML DML &#41;](../../t-sql/xml/replace-value-of-xml-dml.md)   
+## <a name="see-also"></a>Ver también  
+ [insert &#40;XML DML&#41;](../../t-sql/xml/insert-xml-dml.md)   
+ [delete &#40;XML DML&#41;](../../t-sql/xml/delete-xml-dml.md)   
+ [replace value of &#40;XML DML&#41;](../../t-sql/xml/replace-value-of-xml-dml.md)   
  [Comparar XML con tipo y XML sin tipo](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Crear instancias de datos XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [Métodos del tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md)  

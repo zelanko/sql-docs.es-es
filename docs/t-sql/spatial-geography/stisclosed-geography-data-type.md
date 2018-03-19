@@ -1,5 +1,5 @@
 ---
-title: STIsClosed (tipo de datos geography) | Documentos de Microsoft
+title: STIsClosed (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisclosed-geography-data-type"></a>STIsClosed (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve 1 si los puntos inicial y final de la determinada **geography** instancia son los mismos. Devuelve 1 para **geography** si cada una contiene tipos de colección **geography** instancia está cerrada. Devuelve 0 si la instancia no está cerrada.  
+  Devuelve 1 si el punto inicial y el punto final de la instancia de **geography** especificada son los mismos. Devuelve 1 para los tipos de colección **geography** si están cerradas todas las instancias de **geography** que contienen. Devuelve 0 si la instancia no está cerrada.  
   
- Esto **geography** admite el método de tipo de datos **FullGlobe** instancias o instancias espaciales mayores que un hemisferio.  
+ Este método del tipo de datos **geography** admite instancias de **FullGlobe** o instancias espaciales mayores que un hemisferio.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,16 +46,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **bits**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Comentarios  
- Este método devuelve 0 si las cifras de un **geography** instancia es un punto o si la instancia está vacía.  
+## <a name="remarks"></a>Notas  
+ Este método devuelve 0 si alguna figura de una instancia de **geography** es un punto o si la instancia está vacía.  
   
- Este método devuelve true si un **FullGlobe** instancia es un **polígono** u otro tipo de instancia.  
+ Este método devuelve true si una instancia de **FullGlobe** es de tipo **Polygon** u otro tipo de instancia.  
   
- Todos los **polígono** instancias se consideran cerradas.  
+ Todas las instancias **Polygon** se consideran cerradas.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea una instancia de `Polygon` y se usa `STIsClosed()` para comprobar si `Polygon` está cerrada.  
@@ -66,7 +66,7 @@ SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.STIsClosed();  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de OGC en instancias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

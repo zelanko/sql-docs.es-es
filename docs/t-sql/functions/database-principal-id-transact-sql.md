@@ -1,5 +1,5 @@
 ---
-title: DATABASE_PRINCIPAL_ID (Transact-SQL) | Documentos de Microsoft
+title: DATABASE_PRINCIPAL_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="databaseprincipalid-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve el número de Id. de una entidad de seguridad de la base de datos actual. Para obtener más información acerca de las entidades, consulte [entidades de seguridad &#40; motor de base de datos &#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).
+Devuelve el número de Id. de una entidad de seguridad de la base de datos actual. Para más información sobre entidades de seguridad, vea [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,13 +50,13 @@ DATABASE_PRINCIPAL_ID ( 'principal_name' )
 ## <a name="arguments"></a>Argumentos  
 *principal_name*  
 Es una expresión de tipo **sysname** que representa la entidad de seguridad.  
-Cuando *principal_name* es se omite, se devuelve el identificador del usuario actual. Es obligatorio utilizar paréntesis.
+Si se omite *principal_name*, se devuelve el identificador del usuario actual. Es obligatorio utilizar paréntesis.
   
-## <a name="return-types"></a>Tipos de valor devuelto
+## <a name="return-types"></a>Tipos de valores devueltos
 **int**  
 NULL cuando la entidad de base de datos no existe
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 DATABASE_PRINCIPAL_ID se puede utilizar en una lista de selección, en una cláusula WHERE o en cualquier lugar en el que se permita una expresión. Para obtener más información, vea [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
   
 ## <a name="examples"></a>Ejemplos  

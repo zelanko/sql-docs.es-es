@@ -1,5 +1,5 @@
 ---
-title: DBCC UPDATEUSAGE (Transact-SQL) | Documentos de Microsoft
+title: DBCC UPDATEUSAGE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -66,7 +66,7 @@ DBCC UPDATEUSAGE
   
 ## <a name="arguments"></a>Argumentos  
 *database_name* | *database_id* | 0  
-Es el nombre o el identificador de la base de datos sobre cuyas estadísticas de uso de espacio se va a informar y las cuales se van a corregir. Si se especifica 0, se utiliza la base de datos actual. Nombres de base de datos deben cumplir las reglas de [identificadores](../../relational-databases/databases/database-identifiers.md).  
+Es el nombre o el identificador de la base de datos sobre cuyas estadísticas de uso de espacio se va a informar y las cuales se van a corregir. Si se especifica 0, se utiliza la base de datos actual. Los nombres de las bases de datos deben cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
 *table_name* | *table_id* | *view_name* | *view_id*  
 Es el nombre o el identificador de la tabla o la vista indizada sobre cuyas estadísticas de uso de espacio se va a informar y las que se van a corregir. Los nombres de las tablas y las vistas deben ajustarse a las reglas de los identificadores.  
@@ -83,7 +83,7 @@ Suprime todos los mensajes de información.
 COUNT_ROWS  
 Especifica que la columna row count se actualiza con el recuento actual del número de filas de la tabla o la vista.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 Si una tabla o un índice tienen particiones, DBCC UPDATEUSAGE corrige los recuentos de las filas, las páginas utilizadas, las páginas reservadas, las páginas hoja y las páginas de datos. Si no hay imprecisiones en las tablas del sistema, DBCC UPDATEUSAGE no devuelve datos. Si se encuentran y se corrigen imprecisiones y no se utiliza WITH NO_INFOMSGS, DBCC UPDATEUSAGE devuelve las filas y las columnas que se están actualizando en las tablas del sistema.
   
 DBCC CHECKDB se ha mejorado para detectar si los recuentos de páginas o filas devuelven valores negativos. En caso de que se detecte un recuento negativo, la salida de DBCC CHECKDB contiene una advertencia y una recomendación para que se ejecute DBCC UPDATEUSAGE con el fin de solucionar el problema.
@@ -98,7 +98,7 @@ DBCC UPDATEUSAGE devuelve (los valores pueden variar):
   
 `DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
 Debe pertenecer al rol fijo de servidor **sysadmin** o al rol fijo de base de datos **db_owner** .
   
 ## <a name="examples"></a>Ejemplos  
@@ -120,7 +120,7 @@ GO
 ```  
   
 ### <a name="c-updating-page-or-row-counts-or-both-for-the-employee-table"></a>C. Actualizar recuentos de páginas o filas, o ambos, para la tabla Employee  
-En el ejemplo siguiente se notifica información actualizada de recuento de páginas o filas para la `Employee` tabla el [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de datos.
+En el siguiente ejemplo se devuelve información actualizada del recuento de filas o páginas de la tabla `Employee` de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
   
 ```sql
 DBCC UPDATEUSAGE (AdventureWorks2012,'HumanResources.Employee');  
@@ -135,7 +135,7 @@ DBCC UPDATEUSAGE (AdventureWorks2012, 'HumanResources.Employee', IX_Employee_Org
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)

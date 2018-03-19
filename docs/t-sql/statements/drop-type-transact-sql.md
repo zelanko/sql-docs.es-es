@@ -1,5 +1,5 @@
 ---
-title: "TIPO de COLOCACIÓN (Transact-SQL) | Documentos de Microsoft"
+title: DROP TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
@@ -48,28 +48,28 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *IF EXISTE*  
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ *IF EXISTS*  
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Quita condicionalmente el tipo solo si ya existe.  
+ Quita el tipo condicionalmente solo si ya existe.  
   
  *schema_name*  
  Es el nombre del esquema al que pertenece el tipo de alias o el tipo definido por el usuario.  
   
- *TYPE_NAME*  
+ *type_name*  
  Es el nombre del tipo de datos de alias o del tipo definido por el usuario que desea quitar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La instrucción DROP TYPE no se ejecuta si se cumple alguna de las siguientes condiciones:  
   
--   Hay tablas en la base de datos que contienen columnas del tipo de datos de alias o del tipo definido por el usuario. Información sobre las columnas de tipo definido por el usuario o el alias puede obtenerse consultando la [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) o [sys.column_type_usages](../../relational-databases/system-catalog-views/sys-column-type-usages-transact-sql.md) vistas de catálogo.  
+-   Hay tablas en la base de datos que contienen columnas del tipo de datos de alias o del tipo definido por el usuario. Encontrará más información sobre las columnas de tipo de alias o de tipo definido por el usuario si consulta las vistas de catálogo [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) o [sys.column_type_usages](../../relational-databases/system-catalog-views/sys-column-type-usages-transact-sql.md).  
   
--   Hay columnas calculadas, restricciones CHECK, vistas enlazadas a esquema y funciones enlazadas a esquema cuyas definiciones hacen referencia al tipo de alias o a un tipo definido por el usuario. Se puede obtener información acerca de estas referencias consultando la [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) vista de catálogo.  
+-   Hay columnas calculadas, restricciones CHECK, vistas enlazadas a esquema y funciones enlazadas a esquema cuyas definiciones hacen referencia al tipo de alias o a un tipo definido por el usuario. Encontrará más información sobre estas referencias si consulta la vista de catálogo [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md).  
   
--   Hay funciones, procedimientos almacenados o desencadenadores creados en la base de datos, y estas rutinas utilizan variables y parámetros de tipo de alias o de tipo definido por el usuario. Información sobre alias o los parámetros de tipo definido por el usuario puede obtenerse consultando la [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) o [sys.parameter_type_usages](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md) vistas de catálogo.  
+-   Hay funciones, procedimientos almacenados o desencadenadores creados en la base de datos, y estas rutinas utilizan variables y parámetros de tipo de alias o de tipo definido por el usuario. Encontrará más información sobre los parámetros de tipo de alias o de tipo definido por el usuario si consulta las vistas de catálogo [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) o [sys.parameter_type_usages](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
- Requiere el permiso CONTROL en *type_name* o el permiso ALTER en *schema_name*.  
+## <a name="permissions"></a>Permisos  
+ Se necesita el permiso CONTROL en *type_name* o el permiso ALTER en *schema_name*.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se supone que ya se ha creado un tipo denominado `ssn` en la base de datos actual.  
@@ -78,7 +78,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
 DROP TYPE ssn ;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

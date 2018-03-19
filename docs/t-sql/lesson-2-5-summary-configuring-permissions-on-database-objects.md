@@ -1,5 +1,5 @@
 ---
-title: 'Resumen: Configurar permisos en objetos de base de datos | Documentos de Microsoft'
+title: 'Resumen: Configurar permisos en objetos de base de datos | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-2-5---summary---configuring-permissions-on-database-objects"></a>Lección 2-5 - resumen - configurar permisos en objetos de base de datos
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Los inicios de sesión otorgar permisos de usuarios para conectarse a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Los usuarios son inicios de sesión que pueden tener acceso a una base de datos específica. Use la instrucción GRANT para conceder a los usuarios permisos para leer y tener acceso a los datos y cambiarlos.  
+# <a name="lesson-2-5---summary---configuring-permissions-on-database-objects"></a>Lección 2-5: Resumen: Configurar permisos en objetos de base de datos
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Los inicios de sesión proporcionan a los usuarios permisos para conectarse a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Los usuarios son inicios de sesión que pueden tener acceso a una base de datos específica. Use la instrucción GRANT para conceder a los usuarios permisos para leer y tener acceso a los datos y cambiarlos.  
   
 Una vista es una sola instrucción SELECT y, para el usuario, tiene el aspecto de una tabla. Un procedimiento almacenado es una o varias instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] que se ejecutan como un lote.  
   

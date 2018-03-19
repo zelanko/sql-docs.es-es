@@ -1,5 +1,5 @@
 ---
-title: COLUMNS_UPDATED (Transact-SQL) | Documentos de Microsoft
+title: COLUMNS_UPDATED (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve un **varbinary** patrón de bits que indica las columnas de una tabla o vista que fueron insertadas o actualizadas. COLUMNS_UPDATED se utiliza en cualquier parte del cuerpo de un desencadenador INSERT o UPDATE de [!INCLUDE[tsql](../../includes/tsql-md.md)] para comprobar si el desencadenador debe ejecutar determinadas acciones.
+Devuelve un patrón de bits **varbinary** que indica las columnas de una tabla o vista que se insertaron o se actualizaron. COLUMNS_UPDATED se utiliza en cualquier parte del cuerpo de un desencadenador INSERT o UPDATE de [!INCLUDE[tsql](../../includes/tsql-md.md)] para comprobar si el desencadenador debe ejecutar determinadas acciones.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -47,15 +47,15 @@ Devuelve un **varbinary** patrón de bits que indica las columnas de una tabla o
 COLUMNS_UPDATED ( )   
 ```  
   
-## <a name="return-types"></a>Tipos de valor devuelto
+## <a name="return-types"></a>Tipos de valores devueltos
 **varbinary**
   
-## <a name="remarks"></a>Comentarios  
-COLUMNS_UPDATED comprueba las acciones UPDATE o INSERT realizadas en varias columnas. Para comprobar los intentos de UPDATE o INSERT en una columna, use [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md).
+## <a name="remarks"></a>Notas  
+COLUMNS_UPDATED comprueba las acciones UPDATE o INSERT realizadas en varias columnas. Para comprobar los intentos UPDATE o INSERT realizados en una columna, use [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md).
   
 COLUMNS_UPDATED devuelve uno o varios bytes ordenados de izquierda a derecha, donde el primer bit por la derecha es el menos importante de cada byte. El primer bit por la derecha del byte más a la izquierda representa la primera columna de la tabla, el siguiente bit a la izquierda representa la segunda columna, y así sucesivamente. COLUMNS_UPDATED devuelve varios bytes si la tabla en que se ha creado el desencadenador contiene más de 8 columnas, siendo el menos significativo el primero por la izquierda. COLUMNS_UPDATED devuelve el valor TRUE en todas las columnas de las acciones INSERT porque en las columnas se insertaron valores explícitos o implícitos (NULL).
   
-Para comprobar las actualizaciones o inserciones de columnas específicas, siga la sintaxis con un operador bit a bit y una máscara de bits de enteros de las columnas que se están comprobando. Por ejemplo, tabla **t1** contiene columnas **C1**, **C2**, **C3**, **C4**, y **C5** . Para comprobar que las columnas **C2**, **C3**, y **C4** están todos actualizado (con la tabla **t1** tiene un desencadenador UPDATE), siga la sintaxis con **& 14**. Para comprobar si la única columna **C2** está actualizado, especifique **& 2**.
+Para comprobar las actualizaciones o inserciones de columnas específicas, siga la sintaxis con un operador bit a bit y una máscara de bits de enteros de las columnas que se están comprobando. Por ejemplo, la tabla **t1** contiene las columnas **C1**, **C2**, **C3**, **C4** y **C5**. Para comprobar que las columnas **C2**, **C3** y **C4** están todas actualizadas (donde la tabla **t1** tiene un desencadenador UPDATE), siga la sintaxis con **& 14**. Para comprobar si solo se ha actualizado la columna **C2**, especifique **& 2**.
   
 COLUMNS_UPDATED puede utilizarse en cualquier parte dentro de un desencadenador INSERT o UPDATE de [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
@@ -188,7 +188,7 @@ GO
 ```  
   
 ### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>B. Utilizar COLUMNS_UPDATED para comprobar más de ocho columnas  
-Si tiene que comprobar actualizaciones que afectan a otras columnas que no sean las ocho primeras de una tabla, utilice la función `SUBSTRING` para comprobar si `COLUMNS_UPDATED` devuelve el bit correcto. En el ejemplo siguiente, se comprueba las actualizaciones que afectan a otras columnas `3`, `5`, y `9` en el `AdventureWorks2012.Person.Person` tabla.
+Si tiene que comprobar actualizaciones que afectan a otras columnas que no sean las ocho primeras de una tabla, utilice la función `SUBSTRING` para comprobar si `COLUMNS_UPDATED` devuelve el bit correcto. En los siguientes ejemplos se comprueban las actualizaciones que afectan a las columnas `3`, `5` y `9` de la tabla `AdventureWorks2012.Person.Person`.
   
 ```sql
 USE AdventureWorks2012;  
@@ -211,8 +211,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también
-[Operadores bit a bit &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
+[Operadores bit a bit &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
-[ACTUALIZACIÓN &#40; &#41; &#40; Transact-SQL &#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)
+[UPDATE&#40;&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: '@@DBTS (Transact-SQL) | Documentos de Microsoft'
+title: '@@DBTS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -45,16 +45,16 @@ Devuelve el valor del tipo de datos **timestamp** actual de la base de datos act
 @@DBTS  
 ```  
   
-## <a name="return-types"></a>Tipos de valor devuelto
+## <a name="return-types"></a>Tipos de valor devueltos
 **varbinary**
   
-## <a name="remarks"></a>Comentarios  
-@@DBTS devuelve el valor de marca de tiempo utilizó por última vez de la base de datos actual. Se genera un nuevo valor de marca de tiempo cuando se inserta o actualiza una fila con una columna de tipo **timestamp** .
+## <a name="remarks"></a>Notas  
+@@DBTS devuelve el último valor de marca de tiempo de la base de datos actual que se ha usado. Se genera un nuevo valor de marca de tiempo cuando se inserta o actualiza una fila con una columna de tipo **timestamp** .
   
-El @@DBTS función no se ve afectada por los cambios en los niveles de aislamiento de transacción.
+La función @@DBTS no se ve afectada por los cambios en los niveles de aislamiento de transacciones.
   
 ## <a name="examples"></a>Ejemplos  
-En el ejemplo siguiente se devuelve el valor actual **timestamp** desde el [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de datos.
+En el siguiente ejemplo se devuelve el valor actual de **timestamp** de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
 ```sql
 USE AdventureWorks2012;  
@@ -63,9 +63,9 @@ SELECT @@DBTS;
 ```  
   
 ## <a name="see-also"></a>Vea también
-[Funciones de configuración &#40; Transact-SQL &#41;](../../t-sql/functions/configuration-functions-transact-sql.md)  
-[Simultaneidad de cursor &#40; ODBC &#41;](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
+[Configuration Functions &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md) (Funciones de configuración [Transact-SQL])  
+[Cursor Concurrency &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md) (Simultaneidad de cursor [ODBC])  
 [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[MIN_ACTIVE_ROWVERSION &#40; Transact-SQL &#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)
+[MIN_ACTIVE_ROWVERSION &#40;Transact-SQL&#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)
   
   

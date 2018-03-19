@@ -1,5 +1,5 @@
 ---
-title: STATS_DATE (Transact-SQL) | Documentos de Microsoft
+title: STATS_DATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/18/2017
 ms.prod: sql-non-specified
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/02/2018
 
   Devuelve la fecha de la actualización más reciente de las estadísticas de una tabla o vista indizada.  
   
- Para obtener más información acerca de cómo actualizar las estadísticas, vea [estadísticas](../../relational-databases/statistics/statistics.md).  
+ Para más información sobre cómo actualizar las estadísticas, vea [Estadísticas](../../relational-databases/statistics/statistics.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,16 +58,16 @@ STATS_DATE ( object_id , stats_id )
  Identificador del objeto de estadísticas.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- Devuelve **datetime** si se ejecuta correctamente. Devuelve **NULL** si no se creó un blob de estadísticas.  
+ Devuelve **datetime** si es correcto. Devuelve **NULL** si no se creó un blob de estadísticas.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Las funciones del sistema se pueden utilizar en la lista de selección, en la cláusula WHERE y en cualquier lugar donde se permita una expresión.  
  
- Fecha de actualización de estadísticas se almacena en la [statistics, objeto blob](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) junto con el [histograma](../../relational-databases/statistics/statistics.md#histogram) y [vector de densidad](../../relational-databases/statistics/statistics.md#density), pero no en los metadatos. Cuando se lee ningún dato para generar datos de estadísticas, no se creó el blob de estadísticas y la fecha no está disponible. Este es el caso de las estadísticas filtradas para que el predicado no devuelve ninguna fila, o para nuevas tablas vacías.
+ La fecha de actualización de estadísticas se almacena en el [objeto BLOB de estadísticas](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) junto con el [histograma](../../relational-databases/statistics/statistics.md#histogram) y el [vector de densidad](../../relational-databases/statistics/statistics.md#density), pero no en los metadatos. Cuando no se lee ningún dato con el que generar datos de estadísticas, el BLOB de estadísticas no se crea y la fecha no está disponible. Esto sucede en las estadísticas filtradas, en las que el predicado no devuelve ninguna fila, o en las tablas nuevas vacías.
  
- Si las estadísticas corresponden a un índice, el *stats_id* valor en el [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) vista de catálogo es el mismo que el *index_id* valor en el [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) vista de catálogo.
+ Si las estadísticas corresponden a un índice, el valor de *stats_id* de la vista de catálogo [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) es el mismo que el valor de *index_id* de la vista de catálogo [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Es necesaria la pertenencia al rol fijo de servidor db_owner o al rol fijo de base de datos maestra o al rol fijo de servidor sysadmin.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -85,7 +85,7 @@ WHERE object_id = OBJECT_ID('Person.Address');
 GO  
 ```  
   
- Si las estadísticas corresponden a un índice, el *stats_id* valor en el [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) vista de catálogo es el mismo que el *index_id* valor en el [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) vista de catálogo y la consulta siguiente devuelve los mismos resultados que la consulta anterior. Si las estadísticas no corresponden a un índice, aparecen en los resultados de sys.stats pero no en los de sys.indexes.  
+ Si las estadísticas corresponden a un índice, el valor de *stats_id* de la vista de catálogo [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) es el mismo que el valor de *index_id* de la vista de catálogo [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md), y la consulta siguiente devuelve los mismos resultados que la consulta precedente. Si las estadísticas no corresponden a un índice, aparecen en los resultados de sys.stats pero no en los de sys.indexes.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -97,10 +97,10 @@ WHERE object_id = OBJECT_ID('Person.Address');
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-learn-when-a-named-statistics-was-last-updated"></a>B. Obtenga información acerca de cuándo se actualizó por última vez las estadísticas con nombre  
- En el ejemplo siguiente se crea las estadísticas sobre la columna LastName de la tabla DimCustomer. A continuación, se ejecuta una consulta para mostrar la fecha de las estadísticas. A continuación, las estadísticas de las actualizaciones y se ejecuta la consulta para mostrar la fecha de actualización de nuevo.  
+### <a name="b-learn-when-a-named-statistics-was-last-updated"></a>B. Saber cuándo se actualizaron las estadísticas con nombre por última vez  
+ En el siguiente ejemplo se crean estadísticas basadas en la columna LastName de la tabla DimCustomer. Luego, se ejecuta una consulta para mostrar la fecha de las estadísticas. Por último, las estadísticas se actualizan y la consulta se vuelve ejecutar para mostrar la fecha de actualización.  
   
 ```sql
 --First, create a statistics object  
@@ -134,8 +134,8 @@ WHERE s.object_id = OBJECT_ID('dbo.DimCustomer')
 GO    
 ```  
   
-### <a name="c-view-the-date-of-the-last-update-for-all-statistics-on-a-table"></a>C. Ver la fecha de la última actualización de todas las estadísticas en una tabla  
- Este ejemplo devuelve la fecha de cuando se actualizó por última vez cada objeto de estadísticas en la tabla DimCustomer.  
+### <a name="c-view-the-date-of-the-last-update-for-all-statistics-on-a-table"></a>C. Ver la fecha de última actualización de todas las estadísticas en una tabla  
+ En este ejemplo se devuelve la fecha de última actualización de cada objeto de estadísticas en la tabla DimCustomer.  
   
 ```sql  
 --Return the dates all statistics on the table were last updated.  
@@ -146,7 +146,7 @@ WHERE s.object_id = OBJECT_ID('dbo.DimCustomer');
 GO  
 ```  
   
- Si las estadísticas corresponden a un índice, el *stats_id* valor en el [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) vista de catálogo es el mismo que el *index_id* valor en el [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) vista de catálogo y la consulta siguiente devuelve los mismos resultados que la consulta anterior. Si las estadísticas no corresponden a un índice, aparecen en los resultados de sys.stats pero no en los de sys.indexes.  
+ Si las estadísticas corresponden a un índice, el valor de *stats_id* de la vista de catálogo [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) es el mismo que el valor de *index_id* de la vista de catálogo [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md), y la consulta siguiente devuelve los mismos resultados que la consulta precedente. Si las estadísticas no corresponden a un índice, aparecen en los resultados de sys.stats pero no en los de sys.indexes.  
   
 ```sql  
 USE AdventureWorksPDW2012;  
@@ -158,10 +158,10 @@ WHERE object_id = OBJECT_ID('dbo.DimCustomer');
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
- [sp_autostats &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
+ [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [Estadísticas](../../relational-databases/statistics/statistics.md)    
  [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
  [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   

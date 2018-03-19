@@ -1,5 +1,5 @@
 ---
-title: Funciones de cadena (Transact-SQL) | Documentos de Microsoft
+title: Funciones de cadena (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/15/2016
 ms.prod: sql-non-specified
@@ -52,11 +52,11 @@ ms.lasthandoff: 11/21/2017
 
 
   
- Funciones de cadena integradas todos excepto `FORMAT` son deterministas. Esto significa que devuelven el mismo valor siempre que se llamen con un conjunto determinado de valores de entrada. Para obtener más información acerca del determinismo de función, vea [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+ Todas las funciones de cadena integradas son deterministas, salvo `FORMAT`. Esto significa que devuelven el mismo valor siempre que se llamen con un conjunto determinado de valores de entrada. Para más información sobre el determinismo de las funciones, vea [Funciones deterministas y no deterministas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
- Cuando se pasan a las funciones de cadena argumentos que no son valores de cadena, el tipo de entrada se convierte explícitamente en un tipo de datos de texto. Para obtener más información, consulte [conversiones de tipos de datos &#40; motor de base de datos &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
+ Cuando se pasan a las funciones de cadena argumentos que no son valores de cadena, el tipo de entrada se convierte explícitamente en un tipo de datos de texto. Para más información, vea [Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md) (Conversión de tipos de datos [motor de base de datos]).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

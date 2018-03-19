@@ -1,5 +1,5 @@
 ---
-title: DECRYPTBYASYMKEY (Transact-SQL) | Documentos de Microsoft
+title: DECRYPTBYASYMKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
  *Asym_Key_ID*  
  Id. de una clave asimétrica en la base de datos. *Asym_Key_ID* es **int**.  
   
- *texto cifrado*  
+ *ciphertext*  
  Cadena de datos cifrados con la clave asimétrica.  
   
  @ciphertext  
@@ -62,16 +62,16 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
  Contraseña utilizada para cifrar la clave asimétrica en la base de datos.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- **varbinary** con un tamaño máximo de 8.000 bytes.  
+ **varbinary** con un tamaño máximo de 8000 bytes.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  EL cifrado/descifrado con una clave asimétrica es muy costoso si lo comparamos con el cifrado/descifrado con una clave simétrica. No es recomendable el uso de una clave asimétrica cuando trabaje con grandes conjuntos de datos, por ejemplo, datos de usuario en las tablas.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere permiso CONTROL en la clave asimétrica.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se descifra texto cifrado con la clave asimétrica `JanainaAsymKey02`, almacenada en `AdventureWorks2012.ProtectedData04`. Los datos devueltos se descifran con la clave asimétrica `JanainaAsymKey02`, que se ha descifrado con la contraseña `pGFD4bb925DGvbd2439587y`. El texto no cifrado se convierte al tipo **nvarchar**.  
+ En el ejemplo siguiente se descifra texto cifrado con la clave asimétrica `JanainaAsymKey02`, almacenada en `AdventureWorks2012.ProtectedData04`. Los datos devueltos se descifran con la clave asimétrica `JanainaAsymKey02`, que se ha descifrado con la contraseña `pGFD4bb925DGvbd2439587y`. El texto simple se convierte al tipo **nvarchar**.  
   
 ```  
 SELECT CONVERT(nvarchar(max),  
@@ -83,8 +83,8 @@ WHERE Description = N'encrypted by asym key''JanainaAsymKey02''';
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [ENCRYPTBYASYMKEY &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbyasymkey-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   

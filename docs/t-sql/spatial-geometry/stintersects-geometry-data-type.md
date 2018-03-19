@@ -1,5 +1,5 @@
 ---
-title: STIntersects (tipo de datos geometry) | Documentos de Microsoft
+title: STIntersects (tipo de datos geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stintersects-geometry-data-type"></a>STIntersects (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve 1 si una **geometry** instancia se corta con otra **geometry** instancia. Devuelve 0 en caso contrario.
+Devuelve 1 si una instancia de **geometry** forma intersección con otra instancia de **geometry**. Devuelve 0 en caso contrario.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,15 +45,15 @@ Devuelve 1 si una **geometry** instancia se corta con otra **geometry** instanci
   
 ## <a name="arguments"></a>Argumentos  
  *other_geometry*  
- Es otra **geometry** instancia va a comparar con la instancia en la que `STIntersects()` se invoca.  
+ Es otra instancia de **geometry** con la que se compara la instancia en la que se invoca `STIntersects()`.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **bits**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Comentarios  
- Este método siempre devuelve null si los identificadores de referencia espacial (SRID) de la **geometry** instancias no coinciden.  
+## <a name="remarks"></a>Notas  
+ Este método siempre devuelve NULL si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geometry**.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se usa `STIntersects()` para determinar si dos instancias de `geometry` forman intersección.  
@@ -66,8 +66,8 @@ SET @h = geometry::STGeomFromText('POINT(1 1)', 0);
 SELECT @g.STIntersects(@h);  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Información general de los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md)   
+## <a name="see-also"></a>Ver también  
+ [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

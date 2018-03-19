@@ -1,5 +1,5 @@
 ---
-title: "DENEGAR permisos de clave asimétrica (Transact-SQL) | Documentos de Microsoft"
+title: "DENY (permisos de clave asimétrica de Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -53,10 +53,10 @@ DENY { permission  [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permiso*  
+ *permission*  
  Especifica un permiso que se puede denegar para una clave asimétrica. Se muestra a continuación.  
   
- CLAVE ASIMÉTRICA **::***asymmetric_key_name*  
+ ON ASYMMETRIC KEY **::***asymmetric_key_name*  
  Especifica la clave asimétrica para la que se deniega el permiso. Es preciso utilizar el calificador de ámbito "::".  
   
  *database_principal*  
@@ -100,7 +100,7 @@ DENY { permission  [ ,...n ] }
   
 -   usuario de base de datos no asignado a una entidad de seguridad del servidor  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Una clave asimétrica es un elemento protegible de nivel de base de datos que contiene la base de datos que es su entidad primaria en la jerarquía de permisos. A continuación, se enumeran los permisos más específicos y limitados que se pueden conceder para una clave asimétrica, además de los permisos más generales que los incluyen implícitamente.  
   
 |Permiso de clave asimétrica|Implícito en el permiso de clave asimétrica|Implícito en el permiso de base de datos|  
@@ -111,10 +111,10 @@ DENY { permission  [ ,...n ] }
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere permiso CONTROL en la clave asimétrica. Si se utiliza la cláusula AS, la entidad de seguridad especificada debe poseer la clave asimétrica.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

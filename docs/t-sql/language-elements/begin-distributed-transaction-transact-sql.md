@@ -1,5 +1,5 @@
 ---
-title: BEGIN DISTRIBUTED TRANSACTION (Transact-SQL) | Documentos de Microsoft
+title: BEGIN DISTRIBUTED TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/29/2016
 ms.prod: sql-non-specified
@@ -59,12 +59,12 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>Argumentos  
  *transaction_name*  
- Se trata de un nombre de transacción definida por el usuario que se utiliza para realizar el seguimiento de la transacción distribuida en las utilidades de MS DTC. *transaction_name* debe cumplir las reglas para identificadores y debe ser \<= 32 caracteres.  
+ Se trata de un nombre de transacción definida por el usuario que se utiliza para realizar el seguimiento de la transacción distribuida en las utilidades de MS DTC. *transaction_name* debe seguir las reglas de los identificadores y ser \<= 32 caracteres.  
   
  @*tran_name_variable*  
- Se trata del nombre de una variable definida por el usuario que contiene el nombre de una transacción utilizada para realizar el seguimiento de la transacción distribuida en las utilidades de MS DTC. La variable debe declararse con una **char**, **varchar**, **nchar**, o **nvarchar** tipo de datos.  
+ Se trata del nombre de una variable definida por el usuario que contiene el nombre de una transacción utilizada para realizar el seguimiento de la transacción distribuida en las utilidades de MS DTC. La variable debe declararse con un tipo de datos **char**, **varchar**, **nchar** o **nvarchar**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que ejecuta la instrucción BEGIN DISTRIBUTED TRANSACTION es el originador de la transacción y controla su realización. Posteriormente, cuando en la sesión se ejecuta una instrucción COMMIT TRANSACTION o ROLLBACK TRANSACTION, la instancia que controla la transacción solicita a MS DTC que administre la realización de la transacción distribuida entre todas las instancias participantes.  
   
  El aislamiento de instantáneas de nivel de instantánea no admite transacciones distribuidas.  
@@ -75,15 +75,15 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
   
  Las sesiones que participan en transacciones distribuidas de [!INCLUDE[tsql](../../includes/tsql-md.md)] no obtienen un objeto de transacción que puedan pasar a otra sesión para que se dé de alta explícitamente en la transacción distribuida. La única forma en que un servidor remoto puede darse de alta en la transacción consiste en que constituya el destino de una llamada a un procedimiento almacenado remoto o a una consulta distribuida.  
   
- Cuando se ejecuta una consulta distribuida en una transacción local, la transacción se promueve automáticamente a una transacción distribuida si el origen de datos de OLE DB de destino es compatible con ITransactionLocal. Si el origen de datos de OLE DB de destino no es compatible con ITransactionLocal, solo las operaciones de solo lectura se permiten en la consulta distribuida.  
+ Cuando se ejecuta una consulta distribuida en una transacción local, la transacción se promueve automáticamente al nivel de transacción distribuida si el origen de datos OLE DB de destino es compatible con ITransactionLocal. Si el origen de datos OLE DB de destino no es compatible con ITransactionLocal, únicamente se permite realizar operaciones de solo lectura en la consulta distribuida.  
   
  Una sesión que ya se ha dado de alta en la transacción distribuida realiza una llamada a un procedimiento almacenado remoto que hace referencia a un servidor remoto.  
   
- El **transacciones de procedimientos remotos sp_configure** opción controla si las llamadas a procedimientos almacenados remotos en una transacción local provocan automáticamente que la transacción local se promueva a una transacción distribuida administrada mediante MS DTC. La opción SET de nivel de conexión REMOTE_PROC_TRANSACTIONS puede utilizarse para invalidar el valor de instancia predeterminado establecido por **transacciones de procedimientos remotos sp_configure**. Con esta opción activada, la llamada a un procedimiento almacenado remoto hace que una transacción local se promueva al nivel de transacción distribuida. La conexión que crea la transacción de MS DTC se convierte en el originador de la transacción. COMMIT TRANSACTION inicia una confirmación coordinada de MS DTC. Si el **transacciones de procedimientos remotos sp_configure** opción está activada, llamadas a procedimientos almacenados remotos en transacciones locales se protegen automáticamente como parte de transacciones distribuidas sin tener que volver a escribir las aplicaciones específicamente problema BEGIN DISTRIBUTED TRANSACTION en lugar de BEGIN TRANSACTION.  
+ La opción **sp_configure remote proc trans** controla si las llamadas a procedimientos almacenados remotos en una transacción local provocan automáticamente que la transacción local se promueva al nivel de transacción distribuida administrada mediante MS DTC. Se puede usar la opción REMOTE_PROC_TRANSACTIONS de SET de nivel de conexión para anular la configuración predeterminada de la instancia establecida por **sp_configure remote proc trans**. Con esta opción activada, la llamada a un procedimiento almacenado remoto hace que una transacción local se promueva al nivel de transacción distribuida. La conexión que crea la transacción de MS DTC se convierte en el originador de la transacción. COMMIT TRANSACTION inicia una confirmación coordinada de MS DTC. Si la opción **sp_configure remote proc trans** está activada, las llamadas realizadas a procedimientos almacenados remotos en transacciones locales se protegen automáticamente como parte de transacciones distribuidas sin necesidad de volver a escribir las aplicaciones para que emitan específicamente BEGIN DISTRIBUTED TRANSACTION en lugar de BEGIN TRANSACTION.  
   
  Para obtener más información sobre el entorno y el proceso de transacciones distribuidas, vea la documentación del Coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol public.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -106,7 +106,7 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   

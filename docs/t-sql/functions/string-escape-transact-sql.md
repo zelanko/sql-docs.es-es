@@ -1,5 +1,5 @@
 ---
-title: STRING_ESCAPE (Transact-SQL) | Documentos de Microsoft
+title: STRING_ESCAPE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 02/25/2016
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="stringescape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Escapes de caracteres especiales en textos y devuelve el texto con caracteres de escape. **STRING_ESCAPE** es una función determinista.  
+  Aplica caracteres de escape a caracteres especiales en textos y devuelve texto con caracteres de escape. **STRING_ESCAPE** es una función determinista.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,19 +46,19 @@ STRING_ESCAPE( text , type )
   
 ## <a name="arguments"></a>Argumentos  
  *varchar(max)*  
- Es un **nvarchar**[expresión](../../t-sql/language-elements/expressions-transact-sql.md) expresión que representa el objeto que debe ser caracteres de escape.  
+ Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) **nvarchar** que representa el objeto que se debe escapar.  
   
  *Tipo*  
- Reglas de escape que se aplicará. Actualmente el valor admitido es `'json'`.  
+ Reglas de escape que se aplicarán. Actualmente el valor admitido es `'json'`.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- **nvarchar (max)** texto con especiales de escape y caracteres de control. Actualmente **STRING_ESCAPE** sólo se puede omitir los caracteres especiales de JSON se muestra en las tablas siguientes.  
+ Texto **nvarchar(max)** con caracteres especiales y de control de escape. Actualmente **STRING_ESCAPE** solo puede aplicar caracteres de escape a los caracteres especiales de JSON que se muestran en las tablas siguientes.  
   
 |Carácter especial|Secuencia codificada|  
 |-----------------------|----------------------|  
 |Comillas (")|\\"|  
-|barra inclinada inversa (\\)|\\\|  
-|barra inclinada (/)|\\/|  
+|Barra oblicua invertida (\\)|\\\|  
+|Barra oblicua (/)|\\/|  
 |Retroceso|\b|  
 |Avance de página|\f|  
 |Nueva línea|\n|  
@@ -69,15 +69,15 @@ STRING_ESCAPE( text , type )
 |-----------------------|----------------------|  
 |CHAR(0)|\u0000|  
 |CHAR(1)|\u0001|  
-|...|...|  
+|…|…|  
 |CHAR(31)|\u001f|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a--escape-text-according-to-the-json-formatting-rules"></a>A.  Escape texto según la reglas de formato de JSON  
- La siguiente consulta convierte caracteres especiales mediante las reglas JSON y devuelve el texto de escape.  
+### <a name="a--escape-text-according-to-the-json-formatting-rules"></a>A.  Aplicar carácter de escape a texto según las reglas de formato de JSON  
+ En esta consulta se aplican caracteres de escape a caracteres especiales mediante las reglas de JSON y se devuelve texto de escape.  
   
 ```  
 SELECT STRING_ESCAPE('\   /  
@@ -92,15 +92,15 @@ escapedText
 \\\t\/\n\\\\\t\"\t
 ```  
   
-### <a name="b-format-json-object"></a>B. Objeto JSON de formato  
- La siguiente consulta crea texto JSON a partir de las variables de cadena y el número y convierte cualquier carácter especial de JSON en variables.  
+### <a name="b-format-json-object"></a>B. Aplicar formato a objeto de JSON  
+ En esta consulta se crea texto de JSON a partir de variables de cadena y número, y se aplica un carácter de escape a cualquier carácter especial de JSON en variables.  
   
 ```  
 SET @json = FORMATMESSAGE('{ "id": %d,"name": "%s", "surname": "%s" }',   
     17, STRING_ESCAPE(@name,'json'), STRING_ESCAPE(@surname,'json') );  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
@@ -110,6 +110,6 @@ SET @json = FORMATMESSAGE('{ "id": %d,"name": "%s", "surname": "%s" }',
  [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [Funciones de cadena &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md) [Funciones de cadena &#40;Transact-SQL&#41;]   
   
   

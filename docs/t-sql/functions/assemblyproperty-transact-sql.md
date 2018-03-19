@@ -1,5 +1,5 @@
 ---
-title: ASSEMBLYPROPERTY (Transact-SQL) | Documentos de Microsoft
+title: ASSEMBLYPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -50,9 +50,9 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 Es el nombre del ensamblado.
   
 *property_name*  
-Es el nombre de una propiedad de la que se va a recuperar información. *property_name* puede ser uno de los siguientes valores.
+Es el nombre de una propiedad de la que se va a recuperar información. *property_name* puede ser uno de los valores siguientes.
   
-|Value|Description|  
+|Valor|Description|  
 |---|---|
 |**CultureInfo**|Configuración regional del ensamblado.|  
 |**PublicKey**|Clave pública o símbolo (token) de clave pública del ensamblado.|  
@@ -69,7 +69,7 @@ Es el nombre de una propiedad de la que se va a recuperar información. *propert
 **sql_variant**
   
 ## <a name="examples"></a>Ejemplos  
-En el ejemplo siguiente, se supone que se registra un ensamblado de `HelloWorld` en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Para obtener más información, consulte [ejemplo Hello World](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).
+En el ejemplo siguiente, se supone que se registra un ensamblado de `HelloWorld` en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Para más información, vea [Ejemplo de Hola a todos](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).
   
 ```sql
 USE AdventureWorks2012;  

@@ -12,16 +12,16 @@ ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67aaeb56b3d3230e650dc24d16221e2af6872344
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 0306d075998380efc599e82386e49496db3cdaaa
+ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="configure-distributed-availability-group"></a>Configurar un grupo de disponibilidad distribuido  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -210,10 +210,10 @@ GO
 ```  
 
 ## <a name="failover"></a> Unión a la base de datos de la réplica secundaria del segundo grupo de disponibilidad
-Después de que la base de datos de la réplica secundaria del segundo grupo de disponibilidad ha entrado en un estado de restauración, tiene que unirla manualmente al grupo de disponibilidad.
+Una vez que la base de datos de la réplica secundaria del segundo grupo de disponibilidad se encuentre en un estado de restauración, deberá unirla manualmente al grupo de disponibilidad.
 
 ```sql  
-ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag1];   
+ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
 ```  
   
 ## <a name="failover"></a> Conmutación por error de un grupo de disponibilidad secundario  

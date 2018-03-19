@@ -1,5 +1,5 @@
 ---
-title: "REVOCAR permisos de clave simétrica (Transact-SQL) | Documentos de Microsoft"
+title: "REVOKE (permisos de clave simétrica de Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -59,10 +59,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permiso*  
+ *permission*  
  Especifica un permiso que se puede revocar en una clave simétrica. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
- CLAVE SIMÉTRICA de ON:: *asymmetric_key_name*  
+ ON SYMMETRIC KEY :: *asymmetric_key_name*  
  Especifica la clave simétrica en la que se va a revocar el permiso. Se requiere el calificador de ámbito (::).  
   
  GRANT OPTION  
@@ -77,10 +77,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  Una revocación en cascada de un permiso concedido WITH GRANT OPTION revocará tanto GRANT como DENY de dicho permiso.  
   
- {A | FROM} \< *database_principal*>  
+ { TO | FROM } \<*database_principal*>  
  Especifica la entidad de seguridad desde la que se revoca el permiso.  
   
- AS \<database_principal > especifica una entidad de seguridad de la que la entidad de seguridad para ejecutar esta consulta deriva su derecho a revocar el permiso.  
+ AS \<database_principal> Especifica una entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho a revocar el permiso.  
   
  *Database_user*  
  Especifica un usuario de base de datos.  
@@ -106,8 +106,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *Database_user_with_no_login*  
  Especifica un usuario de base de datos sin entidad de seguridad de servidor correspondiente.  
   
-## <a name="remarks"></a>Comentarios  
- Información acerca de las claves simétricas está visible en el [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) vista de catálogo.  
+## <a name="remarks"></a>Notas  
+ Puede ver la información acerca de las claves simétricas en la vista de catálogo [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md).  
   
  Se producirá un error en la instrucción si no se especifica CASCADE para revocar un permiso de una entidad de seguridad a la que se concedió dicho permiso con GRANT OPTION especificado.  
   
@@ -121,7 +121,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL en la clave simétrica o el permiso ALTER ANY SYMMETRIC KEY en la base de datos. Si utiliza la opción AS, la entidad de seguridad especificada debe ser propietaria de la clave simétrica.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -133,10 +133,10 @@ REVOKE ALTER ON SYMMETRIC KEY::SamInventory42 TO HamidS CASCADE;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Sys.symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [CONCEDER permisos de clave simétrica &#40; Transact-SQL &#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)   
- [DENEGAR permisos de clave simétrica &#40; Transact-SQL &#41;](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [GRANT &#40;permisos de clave simétrica de Transact-SQL&#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)   
+ [DENY &#40;permisos de clave simétrica de Transact-SQL&#41;](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

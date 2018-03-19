@@ -1,5 +1,5 @@
 ---
-title: InstanceOf (tipo de datos geography) | Documentos de Microsoft
+title: InstanceOf (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="instanceof-geography-data-type"></a>InstanceOf (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Comprueba si el **geography** instancia es el mismo que el tipo especificado.  
+  Comprueba si la instancia de **geography** es del tipo especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,27 +44,27 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *geography_type*  
- Es un **nvarchar (4000)** cadena que especifica uno de los 16 tipos expuestos en el **geography** jerarquía de tipos.  
+ *tipo_de_geography*  
+ Es una cadena **nvarchar(4000)** en la que se especifica uno de los 16 tipos expuestos en la jerarquía de tipos de **geography**.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **bits**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Comentarios  
- Devuelve 1 si el tipo de un **geography** instancia es el mismo que el tipo especificado, o si el tipo especificado es un antecesor del tipo de instancia; en caso contrario, devuelve 0.  
+## <a name="remarks"></a>Notas  
+ Devuelve 1 si el tipo de una instancia de **geography** coincide con el tipo especificado, o si el tipo especificado es un antecesor del tipo de la instancia; en caso contrario, devuelve 0.  
   
- Esto **geography** admite el método de tipo de datos **FullGlobe** instancias o instancias espaciales mayores que un hemisferio.  
+ Este método del tipo de datos **geography** admite instancias de **FullGlobe** o instancias espaciales mayores que un hemisferio.  
   
- La entrada para el método debe ser uno de los siguientes: Geometry, punto, Curve, LineString, CircularString, superficie, Polygon, CurvePolygon, **GeometryCollection**, **MultiSurface**,  **MultiPolygon, MultiCurve, MultiLineString**, **MultiPoint**, o **FullGlobe**.  
+ La entrada para el método debe ser una de las siguientes: Geometry, Point, Curve, LineString,CircularString, Surface, Polygon, CurvePolygon, **GeometryCollection**, **MultiSurface**, **MultiPolygon, MultiCurve, MultiLineString**, **MultiPoint** o **FullGlobe**.  
   
  Este método produce una excepción `ArgumentException` si se utiliza cualquier otra cadena para la entrada.  
   
  Este método no es preciso.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se crea un `MultiPoint` instancia y se utiliza `InstanceOf()` para ver si la instancia es un `GeometryCollection`.  
+ En el ejemplo siguiente se crea una instancia de `MultiPoint` y se usa `InstanceOf()` para comprobar si la instancia es de tipo `GeometryCollection`.  
   
 ```  
 DECLARE @g geography;  
@@ -72,7 +72,7 @@ SET @g = geography::STGeomFromText('MULTIPOINT(-122.360 47.656, -122.343 47.656)
 SELECT @g.InstanceOf('GEOMETRYCOLLECTION');  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

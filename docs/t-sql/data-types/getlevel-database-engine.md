@@ -1,5 +1,5 @@
 ---
-title: GetLevel (motor de base de datos) | Documentos de Microsoft
+title: GetLevel (motor de base de datos) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getlevel-database-engine"></a>GetLevel (motor de base de datos)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve un entero que representa la profundidad del nodo *esto* en el árbol.
+Devuelve un entero que representa la profundidad del nodo *this* en el árbol.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -49,19 +49,19 @@ SqlInt16 GetLevel ( )
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
-**Tipo: smallint devuelto de SQL Server**
+**Tipo de valor devuelto de SQL Server: smallint**
   
-**Tipo: SqlInt16 devuelto de CLR**
+**Tipo de valor devuelto de CLR: SqlInt16**
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 Se utiliza para determinar el nivel de uno o más nodos o para filtrar los nodos a los miembros de un nivel especificado. La raíz del árbol de jerarquía tiene el nivel 0.
   
-GetLevel es muy útil para los índices de búsqueda de amplitud. Para obtener más información, vea [datos jerárquicos &#40; SQL Server &#41; ](../../relational-databases/hierarchical-data-sql-server.md).
+GetLevel resulta muy útil en los índices de búsqueda con prioridad a la amplitud. Para más información, vea [Datos jerárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-returning-the-hierarchy-level-as-a-column"></a>A. Devolver el nivel de jerarquía como una columna  
-En el ejemplo siguiente se devuelve una representación de texto de la **hierarchyid**y, a continuación, el nivel de jerarquía como la **EmpLevel** columna para todas las filas de la tabla:
+En el siguiente ejemplo se devuelve una representación de texto del objeto **hierarchyid** y, después, el nivel de jerarquía como la columna **EmpLevel** para todas las filas de la tabla:
   
 ```sql
 SELECT OrgNode.ToString() AS Text_OrgNode,   
@@ -90,7 +90,7 @@ WHERE OrgNode.GetLevel() = 0;
 ```  
   
 ### <a name="d-clr-example"></a>D. Ejemplo de CLR  
-El fragmento de código siguiente llama al método GetLevel():
+En el siguiente fragmento de código se llama al método GetLevel():
   
 ```sql
 this.GetLevel()  

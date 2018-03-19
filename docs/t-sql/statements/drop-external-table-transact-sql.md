@@ -1,5 +1,5 @@
 ---
-title: Quitar tabla externa (Transact-SQL) | Documentos de Microsoft
+title: DROP EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -26,10 +26,10 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="drop-external-table-transact-sql"></a>Quitar tabla externa (Transact-SQL)
+# <a name="drop-external-table-transact-sql"></a>DROP EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Quita una tabla externa de PolyBase de. Esto no elimina los datos externos.  
+  Quita una tabla externa de PolyBase. Esto no elimina los datos externos.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,18 +43,18 @@ DROP EXTERNAL TABLE [ database_name . [schema_name ] . | schema_name . ] table_n
 
 ## <a name="arguments"></a>Argumentos  
  [ *database_name* . [*schema_name*] . | *schema_name* . ] *table_name*  
- El nombre de una a tres partes de la tabla externa para quitar. El nombre de tabla puede incluir opcionalmente el esquema, o la base de datos y el esquema.  
+ Nombre de entre una y tres partes de la tabla externa que se va a quitar. El nombre de tabla puede incluir opcionalmente el esquema, o la base de datos y el esquema.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
   
--   Requiere **ALTER** permiso en el esquema al que pertenece la tabla.  
+-   Requiere el permiso **ALTER** en el esquema al que la tabla pertenece.  
   
 ## <a name="general-remarks"></a>Notas generales  
- Al quitar una tabla externa, quitan todos los metadatos relacionados con la tabla. No elimina los datos externos.  
+ Al quitar una tabla externa, se quitan todos los metadatos relacionados con dicha tabla. Esto no elimina los datos externos.  
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-basic-syntax"></a>A. Con la sintaxis básica  
+### <a name="a-using-basic-syntax"></a>A. Uso de sintaxis básica  
   
 ```  
 DROP EXTERNAL TABLE SalesPerson;  
@@ -63,7 +63,7 @@ DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;
 ```  
   
 ### <a name="b-dropping-an-external-table-from-the-current-database"></a>B. Quitar una tabla externa de la base de datos actual  
- En el ejemplo siguiente se quita el `ProductVendor1` tabla, sus datos, índices y las vistas dependientes de la base de datos actual.  
+ En el siguiente ejemplo se quita la tabla `ProductVendor1` y sus datos e índices, así como cualquier vista dependiente, de la base de datos actual.  
   
 ```  
 DROP EXTERNAL TABLE ProductVendor1;  
@@ -76,7 +76,7 @@ DROP EXTERNAL TABLE ProductVendor1;
 DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
   
   

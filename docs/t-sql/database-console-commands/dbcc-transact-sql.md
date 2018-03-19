@@ -79,8 +79,8 @@ Cuando se ejecuta uno de estos comandos DBCC, el [!INCLUDE[ssDE](../../includes/
 Algunas veces no es necesaria una instantánea de la base de datos interna o no se puede crear. Cuando esto ocurre, el comando DBCC se ejecuta de nuevo en la base de datos real. Si la base de datos está en línea, el comando DBCC utiliza el bloqueo de tabla para asegurar la coherencia de los objetos que está comprobando. Este comportamiento es el mismo que si se especificara la opción WITH TABLOCK.
   
 No se crea ninguna instantánea de la base de datos interna al ejecutar un comando DBCC:
--   En **maestro**y la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en modo de usuario único.  
--   En una base de datos distinto de **maestro**, pero la base de datos se puso en modo de usuario único mediante la instrucción ALTER DATABASE.  
+-   En **master** y cuando la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se está ejecutando en el modo de usuario único.  
+-   En una base de datos distinta de **master**, pero cuando la base de datos se haya puesto en el modo de usuario único mediante la instrucción ALTER DATABASE.  
 -   En una base de datos de solo lectura.  
 -   En una base de datos que se ha establecido en modo de emergencia mediante la instrucción ALTER DATABASE.  
 -   En **tempdb**. En este caso, no se puede crear una instantánea de la base de datos debido a restricciones internas.  
@@ -93,13 +93,13 @@ Los comandos DBCC utilizan bloqueos de tabla en lugar de instantáneas internas 
 -   Un volumen que no admite "flujos alternativos"  
   
 > [!NOTE]  
->  Intentar ejecutar DBCC CHECKALLOC, o la parte equivalente de DBCC CHECKDB, utilizando la opción WITH TABLOCK requiere un bloqueo X de base de datos. Este bloqueo de base de datos no se puede establecer en **tempdb** o **maestro** y probablemente se producirán errores en todas las demás bases de datos.  
+>  Intentar ejecutar DBCC CHECKALLOC, o la parte equivalente de DBCC CHECKDB, utilizando la opción WITH TABLOCK requiere un bloqueo X de base de datos. Este bloqueo de base de datos no se puede definir ni en **tempdb** ni en **master** y probablemente produzca error en todas las demás bases de datos.  
   
 > [!NOTE]  
->  DBCC CHECKDB produce un error cuando se ejecuta en **maestro** si no se puede crear una instantánea de base de datos interna.  
+>  DBCC CHECKDB produce un error cuando se ejecuta en **master** si no se puede crear una instantánea de base de datos interna.  
   
 ## <a name="progress-reporting-for-dbcc-commands"></a>Generación de informes de progreso para comandos DBCC  
-El **sys.dm_exec_requests** vista de catálogo contiene información sobre el progreso y la fase actual de la ejecución de los comandos DBCC CHECKDB, CHECKFILEGROUP y CHECKTABLE. El **percent_complete** columna indica el porcentaje completado del comando y el **comando** columna informa de la fase actual de la ejecución del comando.
+La vista de catálogo **sys.dm_exec_requests** contiene información sobre el progreso y la fase actual de ejecución de los comandos DBCC CHECKDB, CHECKFILEGROUP y CHECKTABLE. La columna **percent_complete** indica el porcentaje del comando que se ha completado, mientras que la columna **command** informa de la fase actual de ejecución de este.
   
 La definición de una unidad de progreso depende de la fase actual de ejecución del comando DBCC. En ocasiones, se informa del progreso con la granularidad de una página de base de datos; en otras fases, se informa del mismo con la granularidad de una sola base de datos o reparación de asignaciones. En la siguiente tabla se describe cada una de las fases de ejecución y la granularidad con la que el comando informa del progreso.
   
@@ -107,12 +107,12 @@ La definición de una unidad de progreso depende de la fase actual de ejecución
 |---------------------|-----------------|------------------------------------|  
 |DBCC TABLE CHECK|Durante esta fase se comprueba la coherencia lógica y física de los objetos de la base de datos.|Informe de progreso en el nivel de página de la base de datos.<br /><br /> El valor del informe de progreso se actualiza para cada 1.000 páginas de base de datos comprobadas.|  
 |DBCC TABLE REPAIR|Durante esta fase de realizan reparaciones de base de datos si se especifican REPAIR_FAST, REPAIR_REBUILD o REPAIR_ALLOW_DATA_LOSS y existen errores de objeto que necesiten ser reparados.|Informe de progreso para cada reparación individual.<br /><br /> El contador se actualiza para cada reparación finalizada.|  
-|DBCC ALLOC CHECK|Durante esta fase se comprueban las estructuras de asignación de la base de datos.<br /><br /> Nota: DBCC CHECKALLOC realiza las mismas comprobaciones.|No se notifica el progreso|  
+|DBCC ALLOC CHECK|Durante esta fase se comprueban las estructuras de asignación de la base de datos.<br /><br /> Nota: DBCC CHECKALLOC realiza las mismas comprobaciones.|No se informa del progreso.|  
 |DBCC ALLOC REPAIR|Durante esta fase de realizan reparaciones de base de datos si se especifican REPAIR_FAST, REPAIR_REBUILD o REPAIR_ALLOW_DATA_LOSS y existen errores de asignación que necesiten ser reparados.|No se informa del progreso.|  
 |DBCC SYS CHECK|Durante esta fase se comprueban las tablas de sistema de la base de datos.|Informe de progreso en el nivel de página de la base de datos.<br /><br /> El valor del informe del progreso se actualiza para cada 1000 páginas de base de datos comprobadas.|  
 |DBCC SYS REPAIR|Durante esta fase de realizan reparaciones de base de datos si se especifican REPAIR_FAST, REPAIR_REBUILD o REPAIR_ALLOW_DATA_LOSS y existen errores de tabla del sistema que necesiten ser reparados.|Informe de progreso para cada reparación individual.<br /><br /> El contador se actualiza para cada reparación finalizada.|  
-|DBCC SSB CHECK|Durante esta fase se comprueban los objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker.<br /><br /> Nota: Esta fase no se ejecuta cuando se ejecuta DBCC CHECKTABLE.|No se informa del progreso.|  
-|DBCC CHECKCATALOG|Durante esta fase se comprueba la coherencia de los catálogos de la base de datos.<br /><br /> Nota: Esta fase no se ejecuta cuando se ejecuta DBCC CHECKTABLE.|No se informa del progreso.|  
+|DBCC SSB CHECK|Durante esta fase se comprueban los objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker.<br /><br /> Nota: Esta fase no se ejecuta cuando DBCC CHECKTABLE se ejecuta.|No se informa del progreso.|  
+|DBCC CHECKCATALOG|Durante esta fase se comprueba la coherencia de los catálogos de la base de datos.<br /><br /> Nota: Esta fase no se ejecuta cuando DBCC CHECKTABLE se ejecuta.|No se informa del progreso.|  
 |DBCC IVIEW CHECK|Durante esta fase se comprueba la coherencia lógica de cualquier vista indizada presente en la base de datos.|Informe de progreso en el nivel de la vista de base de datos individual que se está comprobando.|  
   
 ## <a name="informational-statements"></a>Instrucciones informativas  

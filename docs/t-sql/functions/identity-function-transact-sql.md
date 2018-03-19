@@ -1,5 +1,5 @@
 ---
-title: "IDENTITY (función) (Transact-SQL) | Documentos de Microsoft"
+title: IDENTITY (Function) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="identity-function-transact-sql"></a>IDENTITY (Función) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Solo se usa en una instrucción SELECT con una INTO *tabla* cláusula para insertar una columna de identidad en una nueva tabla. Aunque es similar, la función IDENTITY no es la propiedad IDENTITY que se utiliza con CREATE TABLE y ALTER TABLE.  
+  Solo se usa en una instrucción SELECT con una cláusula INTO *table* para insertar una columna de identidad en una nueva tabla. Aunque es similar, la función IDENTITY no es la propiedad IDENTITY que se utiliza con CREATE TABLE y ALTER TABLE.  
   
 > [!NOTE]  
 >  Para crear un número que se incremente automáticamente y que se pueda usar en varias tablas, o que se pueda llamar desde las aplicaciones sin hacer referencia a ninguna tabla, vea [Números de secuencia](../../relational-databases/sequence-numbers/sequence-numbers.md).  
@@ -54,21 +54,21 @@ IDENTITY (data_type [ , seed , increment ] ) AS column_name
   
 ## <a name="arguments"></a>Argumentos  
  *data_type*  
- Se trata del tipo de datos de la columna de identidad. Tipos de datos válidos para una columna de identidad son cualquier tipo de datos de la categoría de tipo de datos entero, excepto para la **bits** tipo de datos, o **decimal** tipo de datos.  
+ Se trata del tipo de datos de la columna de identidad. Los tipos de datos válidos para una columna de identidad son cualquier tipo de datos de la categoría de los enteros, excepto el tipo de datos **bit** o el tipo de datos **decimal**.  
   
- *valor de inicialización*  
- Se trata del valor entero que se asignará a la primera fila de la tabla. Cada fila subsiguiente se asigna el siguiente valor de identidad, que es igual que el último valor IDENTITY más el *incremento* valor. Si no *inicialización* ni *incremento* se especifica, tienen un valor predeterminado 1.  
+ *seed*  
+ Se trata del valor entero que se asignará a la primera fila de la tabla. A cada fila siguiente se le asigna el siguiente valor de identidad, que es igual al último valor IDENTITY más el valor de *increment*. Si no se especifica *seed* ni *increment*, el valor predeterminado de ambos es 1.  
   
- *incremento*  
- Es el valor entero para agregar a la *inicialización* valor para las filas sucesivas de la tabla.  
+ *increment*  
+ Se trata del incremento que se debe agregar al valor de *seed* en las sucesivas filas de la tabla.  
   
  *column_name*  
  Se trata del nombre de la columna que se va a insertar en la nueva tabla.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- Devuelve el mismo que *data_type*.  
+ Devuelve lo mismo que *data_type*.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Debido a que esta función crea una columna en una tabla, se debe especificar un nombre para la columna en la lista de selección de una de las formas siguientes:  
   
 ```  
@@ -108,12 +108,12 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
  [IDENTITY &#40;propiedad&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
- [Seleccione @local_variable &#40; Transact-SQL &#41;](../../t-sql/language-elements/select-local-variable-transact-sql.md)   
+ [SELECT @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/select-local-variable-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [Sys.identity_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
+ [sys.identity_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
   
   

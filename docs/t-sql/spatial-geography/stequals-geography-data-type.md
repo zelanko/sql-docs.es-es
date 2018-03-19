@@ -1,5 +1,5 @@
 ---
-title: STEquals (tipo de datos geography) | Documentos de Microsoft
+title: STEquals (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stequals-geography-data-type"></a>STEquals (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Devuelve 1 si una **geography** instancia representa el mismo punto establecido como otro **geography** instancia. Devuelve 0 en caso contrario.  
+  Devuelve 1 si una instancia de **geography** representa el mismo conjunto de puntos que otra instancia de **geography**. Devuelve 0 en caso contrario.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,18 +45,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argumentos  
  *other_geography*  
- Es otra **geography** instancia va a comparar con la instancia en la que `STEquals()` se invoca.  
+ Es otra instancia de **geography** con la que se compara la instancia en la que se invoca `STEquals()`.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de valor devuelto: **bits**  
+ Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Comentarios  
- Este método siempre devuelve null si los identificadores de referencia espacial (SRID) de la **geography** instancias no coinciden.  
+## <a name="remarks"></a>Notas  
+ Este método siempre devuelve null si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geography**.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se crea dos `geography` instancias con `STGeomFromText()` que son iguales, pero no trivialmente iguales y usa `STEquals()` para comprobar su igualdad. Las instancias son iguales porque `LINESTRING` y `POINT` están incluidos dentro de `POLYGON`.  
+ En el ejemplo siguiente se crean dos instancias de `geography` con `STGeomFromText()` que son iguales, pero no trivialmente iguales, y se usa `STEquals()` para comprobar su igualdad. Las instancias son iguales porque `LINESTRING` y `POINT` están incluidos dentro de `POLYGON`.  
   
 ```  
 DECLARE @g geography;  
@@ -66,7 +66,7 @@ SET @h = geography::STGeomFromText('POLYGON((-122.368 47.658, -122.338 47.649, -
 SELECT @g.STEquals(@h);  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de OGC en instancias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

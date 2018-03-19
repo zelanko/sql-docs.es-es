@@ -1,5 +1,5 @@
 ---
-title: DEALLOCATE (Transact-SQL) | Documentos de Microsoft
+title: DEALLOCATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Quita una referencia a un cursor. Cuando se cancela la asignación de la última referencia al cursor, se liberan las estructuras de datos que componen el cursor por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Quita una referencia a un cursor. Cuando se ha desasignado la última referencia al cursor, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libera las estructuras de datos que componen el cursor.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,12 +51,12 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
   
 ## <a name="arguments"></a>Argumentos  
  *cursor_name*  
- Es el nombre de un cursor ya declarado. Si hay tanto un cursor global y otro local con *cursor_name* como su nombre, *cursor_name* hace referencia al cursor global si se especifica GLOBAL y al cursor local si no se especifica GLOBAL.  
+ Es el nombre de un cursor ya declarado. Si existen un cursor global y otro local denominados *cursor_name*, *cursor_name* hace referencia al cursor global si se especifica GLOBAL y al cursor local si no se especifica GLOBAL.  
   
  @*cursor_variable_name*  
- Es el nombre de un **cursor** variable. @*cursor_variable_name* debe ser de tipo **cursor**.  
+ Es el nombre de una variable de **cursor**. @*cursor_variable_name* debe ser de tipo **cursor**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Las instrucciones que realizan operaciones sobre cursores utilizan un nombre de cursor o una variable de cursor para hacer referencia al cursor. DEALLOCATE quita la asociación existente entre un cursor y el nombre del cursor o la variable de cursor. Si un nombre o variable es el último que hace referencia a un cursor, se quita el cursor y se liberan los recursos que utiliza. Los bloqueos de desplazamiento utilizados para proteger el aislamiento de las capturas se liberan en DEALLOCATE. Los bloqueos de transacciones utilizados para proteger las actualizaciones, incluidas las actualizaciones posicionadas creadas a través del cursor, se mantienen hasta el final de la transacción.  
   
  La instrucción DECLARE CURSOR asigna y asocia un cursor a un nombre de cursor.  
@@ -85,7 +85,7 @@ SELECT * FROM Person.Person;
     SELECT * FROM Person.Person;  
     ```  
   
- DEALLOCATE @*variableDeCursor* instrucción solo quita la referencia de la variable mencionada al cursor. No se desasigna la variable hasta que sale de ámbito al final del proceso por lotes, procedimiento almacenado o desencadenador. Después de DEALLOCATE @*variableDeCursor* instrucción, la variable puede asociarse a otro cursor mediante la instrucción SET.  
+ La instrucción DEALLOCATE @*cursor_variable_name* quita solo la referencia de la variable con nombre al cursor. No se desasigna la variable hasta que sale de ámbito al final del proceso por lotes, procedimiento almacenado o desencadenador. Después de una instrucción DEALLOCATE @*cursor_variable_name*, se puede asociar la variable a otro cursor mediante la instrucción SET.  
   
 ```  
 USE AdventureWorks2012;  
@@ -104,7 +104,7 @@ GO
   
  No es necesario cancelar explícitamente la asignación de una variable de cursor. La asignación de la variable se cancela implícitamente cuando sale de ámbito.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Los permisos para utilizar DEALLOCATE pertenecen de manera predeterminada a cualquier usuario válido.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -147,7 +147,7 @@ DEALLOCATE @MyCursor;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [Cursores](../../relational-databases/cursors.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   

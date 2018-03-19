@@ -1,5 +1,5 @@
 ---
-title: "Ámbito de base de datos de revocación credencial (Transact-SQL) | Documentos de Microsoft"
+title: "REVOKE (credencial de ámbito de base de datos de Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -32,10 +32,10 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="revoke-database-scoped-credential-transact-sql"></a>Ámbito de base de datos de revocación credencial (Transact-SQL)
+# <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE (credencial de ámbito de base de datos de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  Revoca permisos en una credencial de ámbito de la base de datos.  
+  Revoca permisos en una credencial de ámbito de base de datos.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,11 +57,11 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!IMPORTANT]  
 >  Si la entidad de seguridad dispone del permiso especificado sin la opción GRANT, se revocará el permiso.  
   
- *permiso*  
- Especifica un permiso que se pueden revocar en una credencial de ámbito de la base de datos. Se muestra a continuación.  
+ *permission*  
+ Especifica un permiso que puede revocarse en una credencial de ámbito de base de datos. Se muestra a continuación.  
   
- CERTIFICADO ON **::***credential_name*  
- Especifica la credencial de ámbito de la base de datos en el que se va a revocar el permiso. Es preciso utilizar el calificador de ámbito "::".  
+ ON CERTIFICATE **::***credential_name*  
+ Especifica la credencial de ámbito de bases de datos en la que se va a revocar el permiso. Es preciso utilizar el calificador de ámbito "::".  
   
  *database_principal*  
  Especifica la entidad de seguridad desde la que se revoca el permiso. Uno de los siguientes:  
@@ -107,10 +107,10 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   usuario de base de datos no asignado a una entidad de seguridad del servidor  
   
-## <a name="remarks"></a>Comentarios  
- Una credencial de ámbito de la base de datos es una base de datos de elemento protegible de nivel contenido en la base de datos que es su entidad primaria en la jerarquía de permisos. Los permisos más específicos y limitados que se pueden revocar en una credencial de ámbito de la base de datos se muestran a continuación, junto con permisos más generales que los incluyen por implicación.  
+## <a name="remarks"></a>Notas  
+ Una credencial de ámbito de base de datos es un elemento protegible de nivel de base de datos que contiene la base de datos que es su entidad primaria en la jerarquía de permisos. La mayoría de permisos limitados y específicos que se pueden revocar en una credencial de ámbito de base de datos se muestran aquí abajo, junto con permisos más generales que los incluyen por implicación.  
   
-|Permiso de credencial de ámbito de base de datos|Implícito en el permiso de credencial de ámbito de la base de datos|Implícito en el permiso de base de datos|  
+|Permiso de credencial de ámbito de base de datos|Implícito en el permiso de credencial de ámbito de base de datos|Implícito en el permiso de base de datos|  
 |----------------------------|---------------------------------------|------------------------------------|  
 |CONTROL|CONTROL|CONTROL|  
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
@@ -118,13 +118,13 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
- Requiere el permiso CONTROL en la credencial de ámbito de la base de datos.  
+## <a name="permissions"></a>Permisos  
+ Necesita el permiso CONTROL en la credencial de ámbito de base de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)      
- [Ámbito de base de datos de concesión de credenciales (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
- [DENEGAR el ámbito de base de datos de credencial (Transact-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)   
+ [GRANT (credencial de ámbito de base de datos de Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
+ [DENY (credencial de ámbito de base de datos de Transact-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)   
  [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)  

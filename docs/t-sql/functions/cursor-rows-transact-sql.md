@@ -1,5 +1,5 @@
 ---
-title: '@@CURSOR_ROWS (Transact-SQL) | Documentos de Microsoft'
+title: '@@CURSOR_ROWS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 08/18/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40cursorrows-transact-sql"></a>&#x40;&#x40;@Cursor_rows (Transact-SQL)
+# <a name="x40x40cursorrows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve el número de filas certificadas que se encuentran en el último cursor abierto en la conexión. Para mejorar el rendimiento, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede rellenar asincrónicamente los cursores estáticos y de conjunto de claves de gran tamaño. @@CURSOR_ROWS se puede llamar para determinar que el número de filas que se incluyen en un cursor se recupera en el momento @@CURSOR_ROWS se llama.
+Devuelve el número de filas certificadas que se encuentran en el último cursor abierto en la conexión. Para mejorar el rendimiento, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede rellenar asincrónicamente los cursores estáticos y de conjunto de claves de gran tamaño. Puede llamar a @@CURSOR_ROWS para determinar que el número de filas que cumplan las condiciones del cursor se recuperen en el momento en que se llama a @@CURSOR_ROWS.
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -47,20 +47,20 @@ Devuelve el número de filas certificadas que se encuentran en el último cursor
 @@CURSOR_ROWS  
 ```  
   
-## <a name="return-types"></a>Tipos de valor devuelto
+## <a name="return-types"></a>Tipos de valores devueltos
 **integer**
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |Valor devuelto|Description|  
 |---|---|
-|-*m*|El cursor se rellena de forma asincrónica. El valor devuelto (-*m*) es el número de filas actualmente en el conjunto de claves.|  
+|-*m*|El cursor se rellena de forma asincrónica. El valor devuelto (-*m*) es el número de filas que el conjunto de claves contiene actualmente.|  
 |-1|El cursor es dinámico. Como los cursores dinámicos reflejan todos los cambios, el número de filas correspondientes al cursor cambia constantemente. Nunca se puede afirmar que se han recuperado todas las filas que correspondan.|  
 |0|No se han abierto cursores, no hay filas calificadas para el último cursor abierto, o éste se ha cerrado o su asignación se ha cancelado.|  
 |*n*|El cursor está completamente relleno. El valor devuelto (*n*) es el número total de filas del cursor.|  
   
-## <a name="remarks"></a>Comentarios  
-El número devuelto por@CURSOR_ROWS es negativo si el último cursor se abrió de forma asincrónica. Controlador de conjunto de claves o cursores estáticos se abren de forma asincrónica si el valor de sp_configure cursor threshold es mayor que 0 y el número de filas en el conjunto de resultados del cursor es mayor que el umbral de cursor.
+## <a name="remarks"></a>Notas  
+El número que devuelve @@CURSOR_ROWS es negativo cuando el último cursor se ha abierto de forma asincrónica. Los cursores controlados por conjunto de claves y los estáticos se abren de forma asincrónica cuando el valor de umbral de cursor de sp_configure es mayor que cero y el número de filas del conjunto de resultados del cursor es mayor que su umbral.
   
 ## <a name="examples"></a>Ejemplos  
 El ejemplo siguiente declara un cursor y utiliza `SELECT` para mostrar el valor de `@@CURSOR_ROWS`. La opción tiene el valor `0` antes de abrir el cursor y el valor `-1` para indicar que el conjunto de claves del cursor se está rellenando de forma asincrónica.
@@ -98,7 +98,7 @@ Sanchez
 ```  
   
 ## <a name="see-also"></a>Vea también
-[Funciones de cursor &#40; Transact-SQL &#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
-[Abrir &#40; Transact-SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)
+[Funciones del cursor &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
+[OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)
   
   

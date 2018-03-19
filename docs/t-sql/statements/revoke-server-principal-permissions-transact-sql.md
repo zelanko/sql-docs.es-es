@@ -1,5 +1,5 @@
 ---
-title: Permisos de entidad de seguridad de servidor REVOKE (Transact-SQL) | Documentos de Microsoft
+title: REVOKE (permisos de entidad de seguridad de servidor de Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -61,16 +61,16 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *permiso*  
+ *permission*  
  Especifica un permiso que se puede revocar en un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
- Inicio de sesión **::** *SQL_Server_login*  
- Especifica el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se va a revocar el permiso de inicio de sesión. El calificador de ámbito (**::**) es necesario.  
+ LOGIN **::** *SQL_Server_login*  
+ Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se va a revocar el permiso. Se necesita el calificador de ámbito (**::**).  
   
- ROL de servidor **::** *server_role*  
- Especifica el rol de servidor para el que se revoca el permiso. El calificador de ámbito (**::**) es necesario.  
+ SERVER ROLE **::** *server_role*  
+ Especifica el rol de servidor para el que se revoca el permiso. Se necesita el calificador de ámbito (**::**).  
   
- {DESDE | A} \<entidadseguridadservidor > especifica los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rol de servidor o de inicio de sesión desde el que se va a revocar el permiso.  
+ { FROM | TO } \<server_principal> Especifica el inicio de sesión o el rol de servidor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde el que se va a revocar el permiso.  
   
  *SQL_Server_login*  
  Especifica el nombre de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -102,7 +102,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
  AS *SQL_Server_login*  
  Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del que la entidad de seguridad que ejecuta esta consulta deriva su derecho para revocar el permiso.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Los roles de servidor y los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son protegibles en el nivel de servidor. La mayoría de permisos limitados y específicos que se pueden revocar para un rol de servidor o un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se muestran en la siguiente tabla, junto con los permisos más generales que los incluyen por implicación.  
   
 |Permiso de rol de servidor o de inicio de sesión de SQL Server|Permiso de rol de servidor o inicio de sesión implícito de SQL Server|Implícito en el permiso de servidor|  
@@ -112,7 +112,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |ALTER|CONTROL|ALTER ANY LOGIN<br /><br /> ALTER ANY SERVER ROLE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para los inicios de sesión, se necesita el permiso CONTROL en el inicio de sesión o el permiso ALTER ANY LOGIN en el servidor.  
   
  Para los roles de servidor, se necesita el permiso CONTROL en el rol de servidor o el permiso ALTER ANY SERVER ROLE en el servidor.  
@@ -120,7 +120,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-revoking-impersonate-permission-on-a-login"></a>A. Revocar el permiso IMPERSONATE en un inicio de sesión  
- El siguiente ejemplo se revoca `IMPERSONATE` permiso en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión `WanidaBenshoof` desde una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión creado por el usuario de Windows `AdvWorks\YoonM`.  
+ En el siguiente ejemplo se revoca el permiso `IMPERSONATE` para el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof` desde un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creado desde el usuario de Windows `AdvWorks\YoonM`.  
   
 ```  
 USE master;  
@@ -147,7 +147,7 @@ REVOKE VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;
 GO   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [GRANT &#40;permisos de entidad de seguridad de servidor de Transact-SQL&#41;](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)   

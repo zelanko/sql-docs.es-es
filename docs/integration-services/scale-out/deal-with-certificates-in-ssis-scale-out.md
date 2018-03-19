@@ -17,11 +17,11 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cda61336badec20e15cf0d0142e592ef63431254
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 682ab8eb2e55909d78e871c8624c82e8fd5c70c3
+ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>Usar certificados en la escalabilidad horizontal de SQL Server Integration Services
 
@@ -139,7 +139,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s WorkerMachine -a SSISScaleOutWorker
 #### <a name="4-update-the-scale-out-worker-service-configuration-file"></a>4. Actualizar el archivo de configuración de mantenimiento del trabajador de escalabilidad horizontal
 Actualice el archivo de configuración del servicio del trabajador de escalabilidad horizontal, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`, en el nodo del trabajador. Actualice **WorkerHttpsCertThumbprint** a la huella digital del certificado nuevo.
 
-#### <a name="5-install-the-client-certificate-to-the-root-store-of-the-local-computer-on-the-worker-node"></a>5. Instalar el certificado de cliente en el almacén raíz del equipo local en el nodo del trabajador
+#### <a name="5-install-the-client-certificate-to-the-root-store-of-the-local-computer-on-the-master-node"></a>5. Instalar el certificado de cliente en el almacén raíz del equipo local en el nodo principal
 
 #### <a name="6-restart-the-scale-out-worker-service"></a>6. Reiniciar el servicio de trabajador de escalabilidad horizontal
 

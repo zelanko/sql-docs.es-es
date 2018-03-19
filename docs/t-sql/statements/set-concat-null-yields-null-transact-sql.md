@@ -1,5 +1,5 @@
 ---
-title: SET CONCAT_NULL_YIELDS_NULL (Transact-SQL) | Documentos de Microsoft
+title: SET CONCAT_NULL_YIELDS_NULL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -60,17 +60,17 @@ SET CONCAT_NULL_YIELDS_NULL { ON | OFF }
 SET CONCAT_NULL_YIELDS_NULL ON    
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando SET CONCAT_NULL_YIELDS_NULL es ON, al concatenar un valor NULL con una cadena se produce como resultado NULL. Por ejemplo, `SELECT 'abc' + NULL` produce `NULL`. Cuando SET CONCAT_NULL_YIELDS_NULL es OFF, al concatenar un valor NULL con una cadena se obtiene la propia cadena (el valor NULL se trata como una cadena vacía). Por ejemplo, `SELECT 'abc' + NULL` produce `abc`.  
   
- Si no se especifica SET CONCAT_NULL_YIELDS_NULL, la configuración de la **CONCAT_NULL_YIELDS_NULL** se aplica la opción de base de datos.  
+ Si no se especifica SET CONCAT_NULL_YIELDS_NULL, se aplica la configuración de la opción de base de datos **CONCAT_NULL_YIELDS_NULL**.  
   
 > [!NOTE]  
 >  La opción SET CONCAT_NULL_YIELDS_NULL es igual que la opción CONCAT_NULL_YIELDS_NULL de ALTER DATABASE.  
   
  La opción SET CONCAT_NULL_YIELDS_NULL se establece en tiempo de ejecución, no en tiempo de análisis.  
   
- SET CONCAT_NULL_YIELDS_NULL también debe ser ON al crear o cambiar índices en columnas calculadas o vistas indizadas. Si SET CONCAT_NULL_YIELDS_NULL es OFF, las instrucciones CREATE, UPDATE, INSERT y DELETE en tablas con índices, en columnas calculadas o en vistas indizadas generarán errores. Para obtener más información acerca de las configuraciones de opción de SET requeridas con vistas indizadas e índices en columnas calculadas, vea "Consideraciones cuando se Use las instrucciones SET" en [instrucciones SET &#40; Transact-SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md).  
+ SET CONCAT_NULL_YIELDS_NULL también debe ser ON al crear o cambiar índices en columnas calculadas o vistas indizadas. Si SET CONCAT_NULL_YIELDS_NULL es OFF, las instrucciones CREATE, UPDATE, INSERT y DELETE en tablas con índices, en columnas calculadas o en vistas indizadas generarán errores. Para más información sobre las configuraciones de las opciones SET necesarias con vistas indizadas e índices en columnas calculadas, vea el apartado "Consideraciones al utilizar las instrucciones SET" en [Instrucciones SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).  
   
  Cuando CONCAT_NULL_YIELDS_NULL se establece en OFF, no se puede producir la concatenación de cadenas entre los límites del servidor.  
   
@@ -102,8 +102,8 @@ SELECT 'abc' + NULL;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Instrucciones SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SESSIONPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
+ [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
   
   

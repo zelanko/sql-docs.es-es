@@ -1,5 +1,5 @@
 ---
-title: "MODIFICAR el rol de aplicación (Transact-SQL) | Documentos de Microsoft"
+title: ALTER APPLICATION ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -58,16 +58,16 @@ ALTER APPLICATION ROLE application_role_name
  *application_role_name*  
  Nombre del rol de aplicación que va a modificarse.  
   
- NOMBRE =*new_application_role_name*  
+ NAME =*new_application_role_name*  
  Especifica el nuevo nombre del rol de aplicación. Ninguna entidad de seguridad de la base de datos debe utilizar este nombre.  
   
- CONTRASEÑA ='*contraseña*'  
- Especifica la contraseña del rol de aplicación. *contraseña* debe cumplir los requisitos de directiva de contraseñas de Windows del equipo que ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Debe utilizar siempre contraseñas seguras.  
+ PASSWORD ='*password*'  
+ Especifica la contraseña del rol de aplicación. *password* debe cumplir los requisitos de la directiva de contraseñas de Windows del equipo que ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Debe utilizar siempre contraseñas seguras.  
   
  DEFAULT_SCHEMA =*schema_name*  
- Especifica el primer esquema donde buscará el servidor cuando resuelva los nombres de objetos. *schema_name* puede ser un esquema que no existe en la base de datos.  
+ Especifica el primer esquema donde buscará el servidor cuando resuelva los nombres de objetos. *schema_name* puede ser un esquema que no exista en la base de datos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si el nombre del rol de aplicación nuevo ya existe en la base de datos, la instrucción producirá un error. Cuando se modifica el nombre, la contraseña o el esquema predeterminado de un rol de aplicación, no se cambia el identificador asociado al rol.  
   
 > [!IMPORTANT]  
@@ -76,9 +76,9 @@ ALTER APPLICATION ROLE application_role_name
  Los roles de aplicación se pueden ver en la vista de catálogo sys.database_principals.  
   
 > [!CAUTION]  
->  En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]el comportamiento de los esquemas cambió el comportamiento en las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si en el código se supone que los esquemas son equivalentes a usuarios de base de datos, los resultados obtenidos podrían ser incorrectos. Las vistas de catálogo antiguas, incluida sysobjects, no deben usarse en una base de datos en la que se haya usado alguna de las siguientes instrucciones DDL: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. En una base de datos en la que se ha usado alguna de estas instrucciones, deben usarse las nuevas vistas de catálogo. En las nuevas vistas de catálogo se tiene en cuenta la separación de entidades de seguridad y esquemas que se establece en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obtener más información sobre las vistas de catálogo, vea [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
+>  En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], el comportamiento de los esquemas es distinto del de las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si en el código se supone que los esquemas son equivalentes a usuarios de base de datos, los resultados obtenidos podrían ser incorrectos. Las vistas de catálogo antiguas, incluida sysobjects, no deben usarse en una base de datos en la que se haya usado alguna de las siguientes instrucciones DDL: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. En una base de datos en la que se ha usado alguna de estas instrucciones, deben usarse las nuevas vistas de catálogo. En las nuevas vistas de catálogo se tiene en cuenta la separación de entidades de seguridad y esquemas que se establece en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Para obtener más información sobre las vistas de catálogo, vea [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER ANY APPLICATION ROLE en la base de datos. Para cambiar el esquema predeterminado, el usuario también tiene que cambiar el permiso en el rol de aplicación. Un rol de aplicación puede alterar su propio esquema predeterminado, pero no su nombre ni su contraseña.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -117,10 +117,10 @@ ALTER APPLICATION ROLE receipts_ledger
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Roles de aplicación](../../relational-databases/security/authentication-access/application-roles.md)   
- [Crear rol de aplicación &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [DROP APPLICATION ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

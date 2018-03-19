@@ -1,5 +1,5 @@
 ---
-title: M (tipo de datos geography) | Documentos de Microsoft
+title: M (tipo de datos geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="m-geography-data-type"></a>M (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  El **M** (medida) valor de la **geography** instancia. La semántica del valor de medida la define el usuario, pero normalmente describe la distancia en un linestring. Por ejemplo, el valor de medida se podría usar para realizar un seguimiento de los mojones a lo largo de una carretera.  
+  Valor **M** (medida) de la instancia de **geography**. La semántica del valor de medida la define el usuario, pero normalmente describe la distancia en un linestring. Por ejemplo, el valor de medida se podría usar para realizar un seguimiento de los mojones a lo largo de una carretera.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,16 +44,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **float**  
+ Tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo CLR: **SqlDouble**  
+ Tipo de CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Comentarios  
- El valor de esta propiedad es null si el **geography** instancia no es un **punto**, así como a cualquier **punto** instancia para que no se establece.  
+## <a name="remarks"></a>Notas  
+ Si la instancia de **geography** no es de tipo **Point**, se asignará el valor null a esta propiedad, así como a cualquier instancia de **Point** para la que no se establezca dicha propiedad.  
   
  Esta propiedad es de solo lectura.  
   
- Valores M no se usan en los cálculos realizados por la biblioteca y no se llevará a través de los cálculos de biblioteca.  
+ Los valores M no se usan en los cálculos realizados por la biblioteca y, por lo tanto, no se incluirán en ninguno de dichos cálculos.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea una instancia de `Point` con valores Z (elevación) y M (medida), y se usa `M` para capturar el valor `M` de la instancia.  
@@ -64,8 +64,8 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100 10.3 12)', 4326);
 SELECT @g.M;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Métodos extendidos en instancias de Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [Z &#40; tipo de datos geography &#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
+## <a name="see-also"></a>Ver también  
+ [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [Z &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
   
   

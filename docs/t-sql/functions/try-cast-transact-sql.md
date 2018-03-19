@@ -1,5 +1,5 @@
 ---
-title: TRY_CAST (Transact-SQL) | Documentos de Microsoft
+title: TRY_CAST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -47,10 +47,10 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
   
 ## <a name="arguments"></a>Argumentos  
  *expression*  
- Valor que se puede convertir. Cualquier expresión válida.  
+ Valor que se va a convertir. Cualquier expresión válida.  
   
  *data_type*  
- Tipo de datos al que se va a convertir *expresión*.  
+ Tipo de datos al que se va a convertir *expression*.  
   
  *length*  
  Número entero opcional que especifica la longitud del tipo de datos de destino.  
@@ -60,10 +60,10 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
 ## <a name="return-types"></a>Tipos devueltos  
  Devuelve una conversión de valor al tipo de datos especificado si la conversión se realiza correctamente; de lo contrario, devuelve NULL.  
   
-## <a name="remarks"></a>Comentarios  
- **TRY_CAST** toma el valor pasado a él e intenta convertir al especificado *data_type*. Si la conversión se realiza correctamente, **TRY_CAST** devuelve el valor especificado *data_type*; si se produce un error, se devuelve null. Sin embargo si se solicita una conversión que no está explícitamente permitida, a continuación, **TRY_CAST** produce un error.  
+## <a name="remarks"></a>Notas  
+ **TRY_CAST** toma el valor que se le ha pasado e intenta convertirlo al *data_type* especificado. Si la conversión se realiza correctamente, **TRY_CAST** devuelve el valor como el *data_type* especificado; si se produce un error, se devuelve NULL. Pero si se solicita una conversión que no se permite explícitamente, **TRY_CAST** generará un error.  
   
- **TRY_CAST** no es una palabra clave reservada de nuevo y está disponible en todos los niveles de compatibilidad. **TRY_CAST** tiene la misma semántica que **TRY_CONVERT** al conectarse a servidores remotos.  
+ **TRY_CAST** no es una palabra clave reservada y está disponible en todos los niveles de compatibilidad. **TRY_CAST** tiene la misma semántica que **TRY_CONVERT** al conectarse a los servidores remotos.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -140,8 +140,8 @@ Result
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [TRY_CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/try-convert-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [TRY_CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/try-convert-transact-sql.md)   
  [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

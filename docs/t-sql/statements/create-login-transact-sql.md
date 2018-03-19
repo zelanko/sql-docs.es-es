@@ -1,5 +1,5 @@
 ---
-title: "CREAR el inicio de sesión (Transact-SQL) | Documentos de Microsoft"
+title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/15/2017
 ms.prod: sql-non-specified
@@ -103,14 +103,14 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
   
 ## <a name="arguments"></a>Argumentos  
  *login_name*  
- Especifica el nombre del inicio de sesión que se va a crear. Hay cuatro tipos de inicio de sesión: de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], de Windows, asignado a un certificado y asignado a una clave asimétrica. Al crear los inicios de sesión que se asignan desde una cuenta de dominio de Windows, debe usar el nombre de inicio de sesión de usuario anterior a Windows 2000 en el formato [\<domainName >\\< login_name >]. No se puede utilizar un UPN con el formato login_name@DomainName. Vea el ejemplo D más adelante en este tema. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]los inicios de sesión de autenticación son tipo **sysname** y debe cumplir las reglas de [identificadores](http://msdn.microsoft.com/library/ms175874.aspx) y no puede contener un '**\\**'. Los inicios de sesión de Windows pueden contener un carácter '**\\**”. Inicios de sesión basados en usuarios de Active Directory, están limitados a nombres de menos de 21 caracteres.  
+ Especifica el nombre del inicio de sesión que se va a crear. Hay cuatro tipos de inicio de sesión: de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], de Windows, asignado a un certificado y asignado a una clave asimétrica. Cuando crea inicios de sesión que se asignan desde una cuenta de dominio de Windows, debe utilizar el nombre de inicio de sesión de usuario anterior a Windows 2000 con el formato[\<domainName>\\<login_name>]. No puede utilizar un UPN con el formato login_name@DomainName. Vea el ejemplo D más adelante en este tema. Los inicios de sesión con autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son del tipo **sysname**, deben seguir las reglas de [Identificadores](http://msdn.microsoft.com/library/ms175874.aspx) y no pueden contener “**\\**”. Los inicios de sesión de Windows pueden contener un carácter '**\\**”. Los inicios de sesión basados en usuarios de Active Directory se limitan a nombres de menos de 21 caracteres.  
   
- CONTRASEÑA **='***contraseña***'**  
- Se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo inicios de sesión. Especifica la contraseña del inicio de sesión que se está creando. Debe utilizar siempre una contraseña segura. Para obtener más información, consulte [Strong Passwords](../../relational-databases/security/strong-passwords.md) y [directiva de contraseñas](../../relational-databases/security/password-policy.md). A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]almacenadas información de contraseña se calcula con SHA-512 de la contraseña con sal.  
+ PASSWORD **='***password***'**  
+ Solo se aplica a inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica la contraseña del inicio de sesión que se está creando. Debe utilizar siempre una contraseña segura. Para obtener más información, vea [Contraseñas seguras](../../relational-databases/security/strong-passwords.md) y [Directiva de contraseñas](../../relational-databases/security/password-policy.md). A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], la información de la contraseña almacenada se calcula con las funciones SHA-512 de la contraseña salada.  
   
- En las contraseñas se distingue entre mayúsculas y minúsculas. Las contraseñas siempre deben ser de al menos 8 caracteres y no pueden superar los 128 caracteres.  Las contraseñas pueden incluir a-z, A-Z, 0-9 y la mayoría de los caracteres no alfanuméricos. Las contraseñas no pueden contener comillas simples, o la *login_name*.  
+ En las contraseñas se distingue entre mayúsculas y minúsculas. Las contraseñas siempre deben ser de al menos 8 caracteres y no pueden superar los 128 caracteres.  Las contraseñas pueden incluir a-z, A-Z, 0-9 y la mayoría de los caracteres no alfanuméricos. Las contraseñas no pueden contener comillas simples ni *login_name*.  
   
- CONTRASEÑA  **=**  *hashed_password*  
+ PASSWORD **=***hashed_password*  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Solo se aplica a la palabra clave HASHED. Especifica el valor con hash de la contraseña para el inicio de sesión que se está creando.  
@@ -118,44 +118,44 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
  HASHED  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo inicios de sesión. Especifica que la contraseña especificada después del argumento PASSWORD ya tiene aplicado el algoritmo hash. Si no se selecciona esta opción, se aplicará el algoritmo hash a la cadena especificada como contraseña antes de almacenarla en la base de datos. Esta opción solo se debería utilizar para migrar las bases de datos de un servidor a otro. No utilice la opción HASHED para crear nuevos inicios de sesión. La opción HASHED no se puede utilizar con los valores hash creados con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7 o anterior.  
+ Solo se aplica a inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica que la contraseña especificada después del argumento PASSWORD ya tiene aplicado el algoritmo hash. Si no se selecciona esta opción, se aplicará el algoritmo hash a la cadena especificada como contraseña antes de almacenarla en la base de datos. Esta opción solo se debería utilizar para migrar las bases de datos de un servidor a otro. No utilice la opción HASHED para crear nuevos inicios de sesión. La opción HASHED no se puede utilizar con los valores hash creados con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7 o anterior.  
   
  MUST_CHANGE  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo inicios de sesión. Si se incluye esta opción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pide al usuario la contraseña nueva la primera vez que se utilice el inicio de sesión nuevo.  
+ Solo se aplica a inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si se incluye esta opción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pide al usuario la contraseña nueva la primera vez que se utilice el inicio de sesión nuevo.  
   
- CREDENCIAL  **=**  *credential_name*  
+ CREDENTIAL **=***credential_name*  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Nombre de una credencial que debe asignarse al nuevo inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La credencial debe existir en la base de datos. Actualmente esta opción solo vincula la credencial a un inicio de sesión. No se puede asignar una credencial para el inicio de sesión de administrador del sistema (sa).  
+ Nombre de una credencial que debe asignarse al nuevo inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La credencial debe existir en la base de datos. Actualmente esta opción solo vincula la credencial a un inicio de sesión. Las credenciales no se pueden asignar al inicio de sesión del administrador del sistema (sa).  
   
  SID = *sid*  
- Se usa para volver a crear un inicio de sesión. Se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo inicios de sesión de autenticación, no conexiones de autenticación de Windows. Especifica el SID del nuevo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión de autenticación. Si no se usa esta opción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna automáticamente un SID. La estructura de SID depende el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión.  
+ Se usa para volver a crear un inicio de sesión. Se aplica solo a inicios de sesión de autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no a inicios de sesión de autenticación de Windows. Especifica el SID del nuevo inicio de sesión de autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si no se usa esta opción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna automáticamente un SID. La estructura de SID depende de la versión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SID del inicio de sesión: un 16 bytes (**binary (16)**) valor literal según un GUID. Por ejemplo, `SID = 0x14585E90117152449347750164BA00A7`.  
+-   SID del inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: un valor literal de 16 bytes (**binary(16)**) según un GUID. Por ejemplo, `SID = 0x14585E90117152449347750164BA00A7`.  
   
--   [!INCLUDE[ssSDS](../../includes/sssds-md.md)]SID del inicio de sesión: una estructura de SID válida para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Normalmente se trata de un byte 32 (**binary(32)**) literal formada por `0x01060000000000640000000000000000` más 16 bytes que representa un GUID. Por ejemplo, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.  
+-   SID del inicio de sesión de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]: una estructura de SID válida para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Esto suele ser un literal de 32 bytes (**binary(32)**) que consta de `0x01060000000000640000000000000000` más 16 bytes que representan un GUID. Por ejemplo, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.  
   
-DEFAULT_DATABASE  **=**  *base de datos*  
+DEFAULT_DATABASE **=***database*  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica la base de datos predeterminada que debe asignarse al inicio de sesión. Si no se incluye esta opción, el valor predeterminado es master.  
   
-DEFAULT_LANGUAGE  **=**  *idioma*  
+DEFAULT_LANGUAGE **=***language*  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica el idioma predeterminado que debe asignarse al inicio de sesión. Si no se incluye esta opción, el idioma predeterminado es el del servidor. Si el idioma predeterminado del servidor se cambia más tarde, el del inicio de sesión se mantiene igual.  
   
-CHECK_EXPIRATION  **=**  {ON | **OFF** }  
+CHECK_EXPIRATION **=** { ON | **OFF** }  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo inicios de sesión. Especifica si debe aplicarse la directiva de caducidad de contraseñas en este inicio de sesión. El valor predeterminado es OFF.  
+ Solo se aplica a inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica si debe aplicarse la directiva de caducidad de contraseñas en este inicio de sesión. El valor predeterminado es OFF.  
   
-CHECK_POLICY  **=**  { **ON** | {OFF}  
+CHECK_POLICY **=** { **ON** | OFF }  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo inicios de sesión. Especifica que se deben aplicar las directivas de contraseñas de Windows en el equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para este inicio de sesión. El valor predeterminado es ON.  
+ Solo se aplica a inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica que se deben aplicar las directivas de contraseñas de Windows en el equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para este inicio de sesión. El valor predeterminado es ON.  
   
  Si la directiva de Windows requiere contraseñas seguras, las contraseñas deben tener al menos tres de las cuatro siguientes características:  
   
@@ -169,12 +169,12 @@ WINDOWS
   
  Especifica que el inicio de sesión se asigna a un inicio de sesión de Windows.  
   
-CERTIFICADO *certname*  
+CERTIFICATE *certname*  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica el nombre de un certificado al que asociar este inicio de sesión. Este certificado debe existir en la base de datos maestra.  
   
-CLAVE ASIMÉTRICA *asym_key_name*  
+ASYMMETRIC KEY *asym_key_name*  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica el nombre de una clave asimétrica a la que asociar este inicio de sesión. Esta clave debe existir en la base de datos maestra.  
@@ -199,40 +199,40 @@ CLAVE ASIMÉTRICA *asym_key_name*
   
  Al crear un inicio de sesión automáticamente se habilita el nuevo inicio de sesión y se concede al mismo el permiso de **CONNECT SQL** de nivel servidor.  
  
- El servidor [modo de autenticación](../../relational-databases/security/choose-an-authentication-mode.md) debe coincidir con el tipo de inicio de sesión para permitir el acceso.
+ El [modo de autenticación](../../relational-databases/security/choose-an-authentication-mode.md) del servidor debe coincidir con el tipo de inicio de sesión para permitir el acceso.
   
  Para más información acerca de cómo diseñar un sistema de permisos, consulte [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
-## <a name="includesssdsfullincludessssdsfull-mdmd-and-includesssdwincludessssdw-mdmd-logins"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]y [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] los inicios de sesión  
- En [!INCLUDE[ssSDS](../../includes/sssds-md.md)], **CREATE LOGIN** debe ser la única instrucción en un lote.  
+## <a name="includesssdsfullincludessssdsfull-mdmd-and-includesssdwincludessssdw-mdmd-logins"></a>Inicios de sesión de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
+ En [!INCLUDE[ssSDS](../../includes/sssds-md.md)], la instrucción **CREATE LOGIN** debe ser la única de un lote.  
   
- En algunos métodos de conexión a [!INCLUDE[ssSDS](../../includes/sssds-md.md)], como **sqlcmd**, debe anexar el [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nombre del servidor para el nombre de inicio de sesión en la cadena de conexión mediante el uso de la  *\<inicio de sesión >* @  *\<server >* notación. Por ejemplo, si el inicio de sesión `login1` y el nombre completo de la [!INCLUDE[ssSDS](../../includes/sssds-md.md)] servidor es `servername.database.windows.net`, *nombre de usuario* parámetro de la cadena de conexión debe ser `login1@servername`. Dado que la longitud total de la *nombre de usuario* parámetro es de 128 caracteres, *login_name* está limitada a 127 caracteres menos la longitud del nombre del servidor. En el ejemplo, `login_name` solo puede tener 117 caracteres porque `servername` es de 10 caracteres.  
+ En algunos métodos de conexión con [!INCLUDE[ssSDS](../../includes/sssds-md.md)], como **sqlcmd**, debe agregar el nombre del servidor de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] al nombre de inicio de sesión en la cadena de conexión mediante la notación *\<login>*@*\<server>*. Por ejemplo, si el inicio de sesión es `login1` y el nombre completo del servidor de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] es `servername.database.windows.net`, el parámetro *username* de la cadena de conexión debe ser `login1@servername`. Dado que la longitud total del parámetro *username* es de 128 caracteres, *login_name* se limita a 127 caracteres menos la longitud del nombre del servidor. En el ejemplo, `login_name` solo puede tener 117 caracteres porque `servername` es de 10 caracteres.  
   
- En [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] debe estar conectado a la base de datos maestra para crear un inicio de sesión.  
+ En [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], debe estar conectado a la base de datos maestra para crear un inicio de sesión.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]las reglas permiten crear un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión de autenticación en el formato \<loginname > @\<nombreDeServidor >. Si su [!INCLUDE[ssSDS](../../includes/sssds-md.md)] servidor es **myazureserver** y su inicio de sesión es  **myemail@live.com** , debe proporcionar el inicio de sesión como  **myemail@live.com @myazureserver**  .  
+ Las reglas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permiten crear un inicio de sesión de autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el formato \<nombreDeInicioDeSesión>@\<nombreDeServidor>. Si el servidor de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] es **myazureserver** y el inicio de sesión es **myemail@live.com**, debe proporcionar un inicio de sesión como **myemail@live.com@myazureserver**.  
   
- En [!INCLUDE[ssSDS](../../includes/sssds-md.md)], datos de inicio de sesión necesitan para autenticar una conexión y las reglas de firewall de nivel de servidor se almacenan temporalmente en caché en cada base de datos. Esta caché se actualiza periódicamente. Para forzar una actualización de la caché de autenticación y asegúrese de que una base de datos tiene la versión más reciente de la tabla de inicios de sesión, ejecute [DBCC FLUSHAUTHCACHE &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+ En [!INCLUDE[ssSDS](../../includes/sssds-md.md)], los datos de inicio de sesión necesarios para autenticar una conexión y reglas de firewall de nivel de servidor se almacenan temporalmente en caché en cada base de datos. Esta caché se actualiza regularmente. Para forzar una actualización de la caché de autenticación y garantizar que una base de datos tenga la versión más reciente de la tabla de inicios de sesión, ejecute [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
- Para obtener más información acerca de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] inicios de sesión, vea [administrar bases de datos e inicios de sesión en Windows Azure SQL Database](http://msdn.microsoft.com/library/ee336235.aspx).  
+ Para obtener más información sobre los inicios de sesión de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vea [Administrar bases de datos e inicios de sesión en SQL Database de Microsoft Azure](http://msdn.microsoft.com/library/ee336235.aspx).  
   
 ## <a name="permissions"></a>Permisos  
- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requiere **ALTER ANY LOGIN** permiso en el servidor o la pertenencia a la **securityadmin** rol fijo de servidor.  
+ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requiere el permiso **ALTER ANY LOGIN** en el servidor o la pertenencia al rol fijo de servidor **securityadmin**.  
   
  En [!INCLUDE[ssSDS](../../includes/sssds-md.md)], solo pueden crear nuevos inicios de sesión el inicio de sesión principal de nivel servidor (creado por el proceso de aprovisionamiento) o los miembros del rol de base de datos de `loginmanager` en la base de datos maestra.  
   
  Si se utiliza la opción **CREDENTIAL** , también será necesario el permiso **ALTER ANY CREDENTIAL** en el servidor.  
   
 ## <a name="next-steps"></a>Next Steps  
- Después de crear un inicio de sesión, el inicio de sesión puede conectarse a la [!INCLUDE[ssDE](../../includes/ssde-md.md)] o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] pero solo tiene los permisos concedidos a la **público** rol. Considere realizar algunas de las actividades siguientes.  
+ Después de crear un inicio de sesión, el inicio de sesión puede conectarse a [!INCLUDE[ssDE](../../includes/ssde-md.md)] o a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , pero solo tiene los permisos concedidos al rol **public**. Considere realizar algunas de las actividades siguientes.  
   
 -   Para conectarse a una base de datos, cree una para el inicio de sesión. Para obtener más información, vea [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md).  
   
--   Crear un rol de servidor definido por el usuario mediante [CREATE SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-server-role-transact-sql.md). Use **ALTER SERVER ROLE** ... **Agregar miembro** para agregar el nuevo inicio de sesión para el rol de servidor definido por el usuario. Para obtener más información, vea [CREATE SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-server-role-transact-sql.md) y [ALTER SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-server-role-transact-sql.md).  
+-   Cree un rol de servidor definido por el usuario mediante [CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-role-transact-sql.md). Use **ALTER SERVER ROLE** ... **ADD MEMBER** para agregar el nuevo inicio de sesión al rol de servidor definido por el usuario. Para obtener más información, vea [CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-role-transact-sql.md) y [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
--   Use **sp_addsrvrolemember** para agregar el inicio de sesión a un rol fijo de servidor. Para obtener más información, consulte [Roles de nivel de servidor](../../relational-databases/security/authentication-access/server-level-roles.md) y [sp_addsrvrolemember &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
+-   Utilice **sp_addsrvrolemember** para agregar el inicio de sesión a un rol fijo de servidor. Para obtener más información, consulte [Roles de nivel de servidor](../../relational-databases/security/authentication-access/server-level-roles.md) y [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
   
--   Use la **GRANT** instrucción para conceder permisos de nivel de servidor para el nuevo inicio de sesión o a una función que contiene el inicio de sesión. Para obtener más información, vea [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md).  
+-   Use la instrucción de **GRANT**, para conceder permisos de servidor al nuevo inicio de sesión o un rol que contiene el inicio de sesión. Para obtener más información, vea [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -266,7 +266,7 @@ GO
 ```  
   
 ### <a name="d-creating-a-login-from-a-certificate"></a>D. Crear un inicio de sesión desde un certificado  
- En el ejemplo siguiente se crea el inicio de sesión para un usuario determinado de un certificado de master.  
+ En el ejemplo siguiente se crea el inicio de sesión para un usuario determinado a partir de un certificado de master.  
   
 **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -291,7 +291,7 @@ GO
 ```  
   
 ### <a name="f-creating-a-login-from-a-sid"></a>F. Crear un inicio de sesión de un SID  
- En el ejemplo siguiente se crea primero un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión de autenticación y determina el SID del inicio de sesión.  
+ En el ejemplo siguiente se crea primero un inicio de sesión de autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y determina el SID del inicio de sesión.  
   
 ```  
 CREATE LOGIN TestLogin WITH PASSWORD = 'SuperSecret52&&';  
@@ -313,17 +313,17 @@ SELECT * FROM sys.sql_logins WHERE name = 'TestLogin';
 GO  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Ejemplos:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="g-creating-a-sql-server-authentication-login-with-a-password"></a>G. Crear un inicio de sesión de autenticación de SQL Server con una contraseña  
- En el ejemplo siguiente se crea el inicio de sesión `Mary7` con contraseña `A2c3456`.  
+ En el ejemplo siguiente se crea el inicio de sesión `Mary7` con la contraseña `A2c3456`.  
   
 ```sql  
 CREATE LOGIN Mary7 WITH PASSWORD = 'A2c3456$#' ;  
 ```  
   
-### <a name="h-using-options"></a>H. Uso de opciones  
- En el ejemplo siguiente se crea el inicio de sesión `Mary8` con contraseña y algunos de los argumentos opcionales.  
+### <a name="h-using-options"></a>H. Usar Opciones  
+ En el siguiente ejemplo se crea el inicio de sesión `Mary8` con contraseña y algunos de los argumentos opcionales.  
   
 ```  
 CREATE LOGIN Mary8 WITH PASSWORD = 'A2c3456$#' MUST_CHANGE,  
@@ -332,7 +332,7 @@ CHECK_POLICY = ON;
 ```  
   
 ### <a name="i-creating-a-login-from-a-windows-domain-account"></a>I. Crear un inicio de sesión desde una cuenta de dominio de Windows  
- En el ejemplo siguiente se crea un inicio de sesión desde una cuenta de dominio de Windows denominada `Mary` en el `Contoso` dominio.  
+ En el ejemplo siguiente se crea un inicio de sesión a partir de una cuenta de dominio de Windows denominada `Mary` en el dominio `Contoso`.  
   
 ```  
 CREATE LOGIN [Contoso\Mary] FROM WINDOWS;  
@@ -344,7 +344,7 @@ GO
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Directiva de contraseñas](../../relational-databases/security/password-policy.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
- [QUITAR el inicio de sesión &#40; Transact-SQL &#41;](../../t-sql/statements/drop-login-transact-sql.md)   
+ [DROP LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/drop-login-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Crear un inicio de sesión](../../relational-databases/security/authentication-access/create-a-login.md)  
   

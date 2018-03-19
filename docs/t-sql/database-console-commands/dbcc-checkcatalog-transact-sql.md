@@ -1,5 +1,5 @@
 ---
-title: DBCC CHECKCATALOG (Transact-SQL) | Documentos de Microsoft
+title: DBCC CHECKCATALOG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -58,13 +58,13 @@ DBCC CHECKCATALOG
   
 ## <a name="arguments"></a>Argumentos  
  *database_name* | *database_id* | 0  
- Es el nombre o Id. de la base de datos en la que se va a comprobar la coherencia del catálogo. Si no se especifica o se especifica 0, se utiliza la base de datos actual. Nombres de base de datos deben cumplir las reglas de [identificadores](../../relational-databases/databases/database-identifiers.md).  
+ Es el nombre o Id. de la base de datos en la que se va a comprobar la coherencia del catálogo. Si no se especifica o se especifica 0, se utiliza la base de datos actual. Los nombres de las bases de datos deben cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
  WITH NO_INFOMSGS  
  Suprime todos los mensajes de información.  
   
-## <a name="remarks"></a>Comentarios  
-Cuando finaliza el comando DBCC CATALOG, se escribe un mensaje en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si el comando DBCC se ejecuta correctamente, el mensaje lo indica, así como el tiempo de ejecución del comando. Si el comando DBCC se detiene antes de completar la comprobación debido a un error, el mensaje indica que se ha cancelado el comando, un valor de estado y la cantidad de tiempo de ejecución del comando. En la tabla siguiente se muestran y describen los valores de estado que pueden aparecer en el mensaje.
+## <a name="remarks"></a>Notas  
+Cuando finaliza el comando DBCC CATALOG, se escribe un mensaje en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si el comando DBCC se ejecuta correctamente, el mensaje lo indica, así como el tiempo de ejecución del comando. Si el comando DBCC se detiene antes de finalizar la comprobación debido a un error, el mensaje indica que el comando se ha cancelado, un valor de estado y el tiempo de ejecución del comando. En la tabla siguiente se muestran y describen los valores de estado que pueden aparecer en el mensaje.
   
 |State|Description|  
 |-----------|-----------------|  
@@ -75,16 +75,16 @@ Cuando finaliza el comando DBCC CATALOG, se escribe un mensaje en el registro de
 |4|Se ha detectado una infracción de acceso o aserción.|  
 |5|Error desconocido que cancela el comando DBCC.|  
   
-DBCC CHECKCATALOG realiza varias comprobaciones de coherencia entre las tablas de metadatos del sistema. DBCC CHECKCATALOG utiliza una instantánea de base de datos interna para proporcionar la coherencia transaccional que necesita para realizar estas comprobaciones. Para obtener más información, vea [ver el tamaño del archivo disperso de una instantánea de base de datos &#40; Transact-SQL &#41; ](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) y en la sección "DBCC de interno uso de instantáneas de base de datos" [DBCC &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-transact-sql.md).
+DBCC CHECKCATALOG realiza varias comprobaciones de coherencia entre las tablas de metadatos del sistema. DBCC CHECKCATALOG utiliza una instantánea de base de datos interna para proporcionar la coherencia transaccional que necesita para realizar estas comprobaciones. Para obtener más información, vea [Ver el tamaño del archivo disperso de una instantánea de base de datos &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) y la sección "Uso de comandos DBCC en instantáneas internas de la base de datos" de [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md).
 Si no se puede crear una instantánea, DBCC CHECKCATALOG adquiere un bloqueo de base de datos exclusivo para obtener la coherencia necesaria. Si se detecta cualquier incoherencia, no se podrá reparar y será necesario restaurar la base de datos a partir de una copia de seguridad.
   
 > [!NOTE]  
-> Ejecutar DBCC CHECKCATALOG en **tempdb** no realiza ninguna comprobación. Esto es porque, por motivos de rendimiento, instantáneas de base de datos no están disponibles en **tempdb**. Eso significa que no es posible obtener la coherencia transaccional necesaria. Reciclar el servidor para resolver cualquier **tempdb** problemas de metadatos.  
+> Al ejecutar DBCC CHECKCATALOG en **tempdb**, no se realiza ninguna comprobación. Esto se debe a que, por motivos de rendimiento, las instantáneas de base de datos no están disponibles en **tempdb**. Eso significa que no es posible obtener la coherencia transaccional necesaria. Recicle el servidor para solucionar cualquier problema con los metadatos de **tempdb**.  
   
 > [!NOTE]  
 > DBCC CHECKCATALOG no comprueba los FILESTREAM datos. FILESTREAM almacena los objetos binarios grandes (BLBS) en el sistema de archivos.  
   
-DBCC CHECKCATALOG también se ejecuta como parte de [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).
+DBCC CHECKCATALOG se ejecuta también como parte de [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
 Si no se especifica una base de datos, DBCC CHECKCATALOG devuelve:
@@ -99,8 +99,8 @@ Si se especifica [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
- Debe pertenecer a la **sysadmin** fija de servidor sysadmin o el **db_owner** rol fijo de base de datos.  
+## <a name="permissions"></a>Permisos  
+ Debe pertenecer al rol fijo de servidor **sysadmin** o al rol fijo de base de datos **db_owner**.  
   
 ## <a name="examples"></a>Ejemplos  
 El ejemplo siguiente comprueba la integridad del catálogo tanto en la base de datos actual como en la base de datos `AdventureWorks`.
@@ -114,7 +114,7 @@ DBCC CHECKCATALOG (AdventureWorks2012);
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[Tablas del sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
+[Tablas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
   

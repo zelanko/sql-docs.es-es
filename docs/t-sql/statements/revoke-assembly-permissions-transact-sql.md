@@ -1,5 +1,5 @@
 ---
-title: REVOCAR permisos de ensamblado (Transact-SQL) | Documentos de Microsoft
+title: REVOKE (permisos de ensamblado de Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -54,11 +54,11 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!IMPORTANT]  
 >  Si la entidad de seguridad dispone del permiso especificado sin la opción GRANT, se revocará el permiso.  
   
- *permiso*  
+ *permission*  
  Especifica un permiso que se puede revocar para un ensamblado. Se muestra a continuación.  
   
- EN el ENSAMBLADO **::***assembly_name*  
- Especifica el ensamblado para el que se revoca el permiso. El calificador de ámbito **::** es necesario.  
+ ON ASSEMBLY **::***assembly_name*  
+ Especifica el ensamblado para el que se revoca el permiso. El calificador de ámbito **::** es obligatorio.  
   
  *database_principal*  
  Especifica la entidad de seguridad desde la que se revoca el permiso. Uno de los siguientes:  
@@ -104,7 +104,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
 -   usuario de base de datos no asignado a una entidad de seguridad del servidor  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Un ensamblado es un elemento protegible de base de datos incluido en la base de datos primaria en la jerarquía de permisos. A continuación, se enumeran los permisos más específicos y limitados que se pueden revocar para un ensamblado, además de los permisos más generales que los incluyen implícitamente.  
   
 |Permiso de ensamblado|Implícito en permiso de ensamblado|Implícito en el permiso de base de datos|  
@@ -115,17 +115,17 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
- Requiere el permiso CONTROL en el ensamblado  
+## <a name="permissions"></a>Permisos  
+ Necesita el permiso CONTROL en el ensamblado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [CREAR ENSAMBLADOS &#40; Transact-SQL &#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
+ [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [Crear rol de aplicación &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

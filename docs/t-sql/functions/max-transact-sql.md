@@ -1,5 +1,5 @@
 ---
-title: MAX (Transact-SQL) | Documentos de Microsoft
+title: MAX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
@@ -55,17 +55,17 @@ MAX ( [ ALL | DISTINCT ] expression )
  Especifica que se tiene en cuenta cada valor único. DISTINCT no tiene ningún significado con MAX y solo se incluye para la compatibilidad con ISO.  
   
  *expression*  
- Se trata de una constante, nombre de columna o función y cualquier combinación de operadores aritméticos, bit a bit y de cadena. MAX se puede usar con **numérico**, **caracteres**, **uniqueidentifier**, y **datetime** columnas, pero no con **bits**  columnas. No se permiten funciones de agregado ni subconsultas.  
+ Se trata de una constante, nombre de columna o función y cualquier combinación de operadores aritméticos, bit a bit y de cadena. MAX se puede usar con columnas **numeric**, **character**, **uniqueidentifier** y **datetime**, pero no con columnas **bits**. No se permiten funciones de agregado ni subconsultas.  
   
  Para obtener más información, vea [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- SOBRE **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones al que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. *order_by_clause* determina el orden lógico en el que se realiza la operación. *order_by_clause* es necesario. Para obtener más información, consulte [la cláusula OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones a las que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. *order_by_clause* determina el orden lógico en el que se realiza la operación. *order_by_clause* es obligatorio. Para más información, vea [OVER &#40;cláusula de Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos devueltos  
- Devuelve un valor igual a *expresión*.  
+ Devuelve un valor igual a *expression*.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  MAX pasa por alto los valores NULL.  
   
  Para las columnas de caracteres, MAX busca el valor más alto de la secuencia de intercalación.  
@@ -94,7 +94,7 @@ GO
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. Usar la cláusula OVER  
- En el ejemplo siguiente se usa las funciones MIN, MAX, AVG y COUNT con la cláusula OVER para proporcionar los valores agregados para cada departamento en el `HumanResources.Department` tabla el [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de datos.  
+ En este ejemplo se usan las funciones MIN, MAX, AVG y COUNT con la cláusula OVER para proporcionar valores agregados para cada departamento de la tabla `HumanResources.Department` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  
 SELECT DISTINCT Name  
@@ -136,16 +136,16 @@ Tool Design                   8.62                  29.8462               23.505
  (16 row(s) affected)  
 ```  
   
-### <a name="c-using-max-with-character-data"></a>C. Uso máximo con datos de caracteres   
-En el ejemplo siguiente se devuelve el nombre de base de datos que se ordena alfabéticamente como el último nombre. El ejemplo se utiliza `WHERE database_id < 5`, para tener en cuenta solo las bases de datos de sistema.  
+### <a name="c-using-max-with-character-data"></a>C. Usar MAX máximo con datos de caracteres   
+En este ejemplo se devuelve el nombre de base de datos que se ordena alfabéticamente como el último nombre. En el ejemplo se usa `WHERE database_id < 5` para tener en cuenta solo las bases de datos del sistema.  
 ```sql   
 SELECT MAX(name) FROM sys.databases WHERE database_id < 5;
 ```
-La última base de datos de sistema `tempdb`.  
+La última base de datos del sistema es `tempdb`.  
   
-## <a name="see-also"></a>Vea también  
- [Las funciones de agregado &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [EN cláusula &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [Funciones de agregado &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [OVER &#40;cláusula de Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 

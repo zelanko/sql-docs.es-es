@@ -1,5 +1,5 @@
 ---
-title: PWDENCRYPT (Transact-SQL) | Documentos de Microsoft
+title: PWDENCRYPT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 
   Devuelve el valor hash de la contraseña de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondiente al valor de entrada que usa la versión actual del algoritmo de hash de contraseñas.  
   
- PWDENCRYPT es una función antigua y puede que no se admita en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use [HASHBYTES](../../t-sql/functions/hashbytes-transact-sql.md) en su lugar. HASHBYTES proporciona más algoritmos de hash.  
+ PWDENCRYPT es una función antigua y puede que no se admita en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En cambio, puede usar [HASHBYTES](../../t-sql/functions/hashbytes-transact-sql.md). HASHBYTES proporciona más algoritmos de hash.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,17 +48,17 @@ PWDENCRYPT ( 'password' )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *contraseña*  
- Es la contraseña que se va a cifrar. *contraseña* es **sysname**.  
+ *password*  
+ Es la contraseña que se va a cifrar. *password* es **sysname**.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **varbinary(128)**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  PWDENCRYPT está disponible al público.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Funciones de seguridad &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
- [PWDCOMPARE &#40; Transact-SQL &#41;](../../t-sql/functions/pwdcompare-transact-sql.md)  
+ [PWDCOMPARE &#40;Transact-SQL&#41;](../../t-sql/functions/pwdcompare-transact-sql.md)  
   
   

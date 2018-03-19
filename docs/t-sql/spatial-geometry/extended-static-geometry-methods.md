@@ -1,5 +1,5 @@
 ---
-title: "Métodos de geometría estáticos ampliados | Documentos de Microsoft"
+title: "Métodos de geometría estáticos ampliados | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -39,22 +39,22 @@ ms.lasthandoff: 01/25/2018
   
  [Especificaciones de OGC; Acceso a características simples, Parte 2 - Opciones de SQL](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
- [Especificaciones de OGC, lenguaje de marcado de geografía](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ [Especificaciones de OGC, Lenguaje de marcado de geografía](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
 ## <a name="in-this-section"></a>En esta sección  
   
 -   [GeomFromGML](../../t-sql/spatial-geometry/geomfromgml-geometry-data-type.md)  
   
--   [Es null](../../t-sql/spatial-geometry/null-geometry-data-type.md)  
+-   [Null](../../t-sql/spatial-geometry/null-geometry-data-type.md)  
   
 -   [Analizar](../../t-sql/spatial-geometry/parse-geometry-data-type.md)  
   
 -   [Point](../../t-sql/spatial-geometry/point-geometry-data-type.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos de agregado de geometría estáticos](../../t-sql/spatial-geometry/static-aggregate-geometry-methods.md)   
- [Métodos extendidos en instancias de Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [Métodos de OGC en instancias de Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
+ [Métodos extendidos en instancias de geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
+ [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
  [Métodos de geometría estáticos de OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: USER_ID (Transact-SQL) | Documentos de Microsoft
+title: USER_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   Devuelve el número de identificación para un usuario de la base de datos.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Use [DATABASE_PRINCIPAL_ID](../../t-sql/functions/database-principal-id-transact-sql.md) en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [DATABASE_PRINCIPAL_ID](../../t-sql/functions/database-principal-id-transact-sql.md) en su lugar.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,14 +54,14 @@ USER_ID ( [ 'user' ] )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *usuario*  
- Es el nombre de usuario que se va a emplear. *usuario* es **nchar**. Si un **char** valor se especifica, se convierte implícitamente en **nchar**. Es obligatorio utilizar paréntesis.  
+ *user*  
+ Es el nombre de usuario que se va a emplear. *user* es **nchar**. Si se especifica un valor **char**, se convierte implícitamente en **nchar**. Es obligatorio utilizar paréntesis.  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **int**  
   
-## <a name="remarks"></a>Comentarios  
- Cuando *usuario* es se omite, se supone que el usuario actual. Si el parámetro contiene la palabra NULL, devolverá NULL. Cuando se llama a USER_ID después de EXECUTE AS, USER_ID devuelve el identificador del contexto suplantado.  
+## <a name="remarks"></a>Notas  
+ Cuando *user* se omite, se da por supuesto que es el usuario actual. Si el parámetro contiene la palabra NULL, devolverá NULL. Cuando se llama a USER_ID después de EXECUTE AS, USER_ID devuelve el identificador del contexto suplantado.  
   
  Cuando una entidad de seguridad de Windows que no se ha asignado a un usuario específico de base de datos tiene acceso a una base de datos en forma de pertenencia a un grupo, USER_ID devuelve 0 (el identificador de público). Si este tipo de entidad de seguridad crea un objeto sin especificar un esquema, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creará un usuario implícito y un esquema asignados a dicha entidad. El usuario creado en casos como éste no se puede utilizar para conectarse a la base de datos. Las llamadas a USER_ID efectuadas por la entidad de seguridad de Windows asignada a un usuario implícito devolverán el identificador de éste.  
   
@@ -76,10 +76,10 @@ SELECT USER_ID('Harold');
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [User_name &#40; Transact-SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)   
+## <a name="see-also"></a>Ver también  
+ [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [DATABASE_PRINCIPAL_ID &#40; Transact-SQL &#41;](../../t-sql/functions/database-principal-id-transact-sql.md)   
+ [DATABASE_PRINCIPAL_ID &#40;Transact-SQL&#41;](../../t-sql/functions/database-principal-id-transact-sql.md)   
  [Funciones de seguridad &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

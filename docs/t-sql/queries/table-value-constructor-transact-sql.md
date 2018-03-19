@@ -1,5 +1,5 @@
 ---
-title: Constructor (Transact-SQL) con valores de tabla | Documentos de Microsoft
+title: Constructor con valores de tabla (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="table-value-constructor-transact-sql"></a>Constructor con valores de tabla (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Especifica un conjunto de expresiones de valores de fila que se va a construir en una tabla. El constructor de valor de tabla de [!INCLUDE[tsql](../../includes/tsql-md.md)] permite que se especifiquen varias filas de datos en una sola instrucción DML. El constructor con valores de tabla puede especificarse en la cláusula VALUES de la instrucción INSERT, en la opción uso \<tabla de origen > cláusula de la instrucción MERGE y en la definición de una tabla derivada en la cláusula FROM.  
+  Especifica un conjunto de expresiones de valores de fila que se va a construir en una tabla. El constructor de valor de tabla de [!INCLUDE[tsql](../../includes/tsql-md.md)] permite que se especifiquen varias filas de datos en una sola instrucción DML. El constructor con valores de tabla se puede especificar en la cláusula VALUES de la instrucción INSERT, en la cláusula USING \<source table> de la instrucción MERGE y en la definición de una tabla derivada en la cláusula FROM.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,13 +64,13 @@ VALUES ( <row value expression list> ) [ ,...n ]
  Es una constante, variable o expresión. La expresión no puede contener una instrucción EXECUTE.  
   
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
- Constructores con valores de tabla pueden usarse en una de estas dos formas: directamente en la lista de valores de una instrucción INSERT... Se admiten como una tabla derivada desde cualquier lugar y tablas derivadas o valores de instrucción. Se devuelve el error 10738 si el número de filas supera el máximo. Para insertar más filas de las que permite el límite, use uno de los métodos siguientes:  
+ Los constructores con valores de tabla pueden usarse de dos formas distintas: directamente en la lista VALUES de una instrucción INSERT ... VALUES o como una tabla derivada allá donde se permitan tablas derivadas. Si el número de filas supera el máximo, se devuelve el error 10738. Para insertar más filas de lo que permite el límite, use uno de los métodos siguientes:  
   
 -   Crear varias instrucciones INSERT  
   
 -   Usar una tabla derivada  
   
--   Importación masiva de datos mediante el uso de la **bcp** utilidad o la instrucción BULK INSERT  
+-   Importar en bloque los datos mediante la utilidad **bcp** o la instrucción BULK INSERT  
   
  Como expresión de valores de fila solo se permiten valores escalares. Como expresión de valores de fila no se permiten las subconsultas que impliquen a varias columnas. Por ejemplo, el código siguiente produce un error de sintaxis porque la tercera lista de expresiones de valores de fila contiene una subconsulta con varias columnas.  
   
@@ -101,7 +101,7 @@ GO
 ```  
   
 ## <a name="data-types"></a>Tipos de datos  
- Los valores especificados en una instrucción INSERT de varias filas siguen las propiedades de conversión de tipos de datos de la sintaxis de UNION ALL. Esto da como resultado la conversión implícita de tipos no coincidentes para el tipo de mayor [prioridad](../../t-sql/data-types/data-type-precedence-transact-sql.md). Si la conversión no es una conversión implícita admitida, se devuelve un error. Por ejemplo, la instrucción siguiente inserta un valor entero y un valor de carácter en una columna de tipo **char**.  
+ Los valores especificados en una instrucción INSERT de varias filas siguen las propiedades de conversión de tipos de datos de la sintaxis de UNION ALL. Esto produce la conversión implícita de tipos no coincidentes al tipo de [precedencia](../../t-sql/data-types/data-type-precedence-transact-sql.md) superior. Si la conversión no es una conversión implícita admitida, se devuelve un error. Por ejemplo, la instrucción siguiente inserta un valor entero y un valor de carácter en una columna de tipo **char**.  
   
 ```  
 CREATE TABLE dbo.t (a int, b char);  
@@ -149,7 +149,7 @@ SELECT * FROM Sales.MySalesReason;
 ```  
   
 ### <a name="c-specifying-multiple-values-as-a-derived-table-in-a-from-clause"></a>C. Especificar varios valores como una tabla derivada en una cláusula FROM  
- Los ejemplos siguientes usan el constructor con valores de tabla para especificar varios valores en la cláusula FROM de una instrucción SELECT.  
+ En los siguientes ejemplos se usa el constructor con valores de tabla para especificar varios valores en la cláusula FROM de una instrucción SELECT.  
   
 ```  
 SELECT a, b FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);  
@@ -188,7 +188,7 @@ GROUP BY Change;
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  

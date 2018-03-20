@@ -55,7 +55,6 @@
 ### [Usar PowerShell para administrar](sql-server-linux-manage-powershell.md)
 ### [Usar el trasvase de registros](sql-server-linux-use-log-shipping.md)
 ### [Usar alertas de correo electrónico y de correo de base de datos](sql-server-linux-db-mail-sql-agent.md)
-### [Configuración de varias subredes para la disponibilidad](sql-server-linux-configure-multiple-subnet.md)
 
 ## [Migrar](sql-server-linux-migrate-overview.md)
 ### [Exportar e importar un BACPAC desde Windows](sql-server-linux-migrate-ssms.md)
@@ -85,6 +84,7 @@
 ##### [Configurar en Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
 ##### [Conmutación por error](sql-server-linux-availability-group-failover-ha.md)
 ##### [Operar](sql-server-linux-availability-group-operate-ha.md)
+##### [Configuración de varias subredes para la disponibilidad](sql-server-linux-configure-multiple-subnet.md)
 #### [Crear solo para el escalado de lectura]()
 ##### [Configurar un grupo de disponibilidad](sql-server-linux-availability-group-configure-rs.md)
 #### [Configuración de multiplataformas (Windows y Linux)](sql-server-linux-availability-group-cross-platform.md)

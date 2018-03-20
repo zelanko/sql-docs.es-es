@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 06/15/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 679e58fe-b062-4934-a94c-9bb916b0bcb0
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: bbda77b86b4c804ae0cf261f54f51fc487090e1d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0a9ccfb4f49e490cb681561aeaa5a0e9a8e86ad0
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>Flujo de trabajo de WideWorldImportersDW ETL
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]El paquete ETL WWI_Integration se usa para migrar datos de la base de datos WideWorldImporters a la base de datos WideWorldImportersDW como los cambios de datos. El paquete se ejecuta periódicamente (normalmente cada día).
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+El paquete ETL WWI_Integration se usa para migrar datos de la base de datos WideWorldImporters a la base de datos WideWorldImportersDW como los cambios de datos. El paquete se ejecuta periódicamente (normalmente cada día).
 
 ## <a name="overview"></a>Información general
 
@@ -55,13 +57,13 @@ Después de esto, una serie de tareas de flujo de datos carga cada dimensión y,
 
 La versión más reciente del ejemplo:
 
-[Wide world importers versión](http://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
 
 Descargue el archivo de paquete SSIS **ETL.ispac diario**.
 
 Código fuente para volver a crear la base de datos de ejemplo está disponible en la ubicación siguiente.
 
-[importadores de todo el mundo](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)
+[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)
 
 ## <a name="install"></a>Install
 

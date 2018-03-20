@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6dd1f09b-dcff-4627-899a-eca5162d9e5b
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 967755e34b397f2dfac98277d34cb799655f5165
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: add5788063cdc5026d343061b8111cbec42e5a4d
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="installation-and-configuration"></a>Instalación y configuración
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Instrucciones de instalación y configuración de base de datos OLTP de Wide World Importers.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Instrucciones de instalación y configuración de base de datos OLTP de Wide World Importers.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -36,13 +38,13 @@ ms.lasthandoff: 12/05/2017
 
 La versión más reciente del ejemplo:
 
-[Wide world importers versión](http://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
 
 Descargar el ejemplo WideWorldImporters base de datos copia de seguridad/bacpac que corresponde a la edición de SQL Server o base de datos de SQL Azure.
 
 Código fuente para volver a crear la base de datos de ejemplo está disponible en la ubicación siguiente. Tenga en cuenta que volver a crear el ejemplo hará ligeras diferencias en los datos, ya que hay un factor aleatorio en la generación de datos:
 
-[importadores de todo el mundo](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
+[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
 
 ## <a name="install"></a>Install
 
@@ -58,7 +60,7 @@ Para restaurar una copia de seguridad a una instancia de SQL Server, puede utili
 5. Si es necesario, cambie la ubicación de destino para los datos y archivos de registro, en la **archivos** panel. Tenga en cuenta que es una práctica recomendada para colocar datos y archivos de registro en unidades diferentes.
 6. Haga clic en **Aceptar**. Se iniciará la restauración de base de datos. Una vez que se complete, tendrá la base de datos WideWorldImporters instalados en su instancia de SQL Server.
 
-### <a name="azure-sql-database"></a>Base de datos SQL de Azure
+### <a name="azure-sql-database"></a>Azure SQL Database
 
 Para importar un bacpac en una base de datos SQL, puede utilizar Management Studio.
 
@@ -77,7 +79,7 @@ Para importar un bacpac en una base de datos SQL, puede utilizar Management Stud
 La base de datos de ejemplo puede hacer uso de la indización de texto completo. Sin embargo, esta característica no está instalada de forma predeterminada con SQL Server, debe seleccionar durante la instalación de SQL Server (está habilitado de forma predeterminada en la base de datos de SQL Azure). Por lo tanto, se requiere un paso de posterior a la instalación.
 
 1. En SQL Server Management Studio, conéctese a la base de datos WideWorldImporters y abrir una nueva ventana de consulta.
-2. Ejecute el siguiente comando de T-SQL para habilitar el uso de la indización de texto completo en la base de datos:`EXECUTE Application.Configuration_ApplyFullTextIndexing`
+2. Ejecute el siguiente comando de T-SQL para habilitar el uso de la indización de texto completo en la base de datos:  `EXECUTE Application.Configuration_ApplyFullTextIndexing`
 
 
 ### <a name="sql-server-audit"></a>SQL Server Audit

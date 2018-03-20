@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 10/31/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5ed65e42-527a-45e7-9a91-7179e892652e
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: d6b43b590e7a5e6117f6752e1eb1dec701ca645e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8d3957abef7fb70698c04fd22d390d96ac4cd17b
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Catálogo de base de datos de WideWorldImportersDW
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Explicaciones de esquemas, tablas y procedimientos almacenados en la base de datos de WideWorldImportersDW. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Explicaciones de esquemas, tablas y procedimientos almacenados en la base de datos de WideWorldImportersDW. 
 
 La base de datos de WideWorldImportersDW se usa para el almacenamiento de datos y procesamiento analítico. Los datos transaccionales sobre ventas y las compras se generado en la base de datos WideWorldImporters y cargan en la base de datos de WideWorldImportersDW mediante un **proceso ETL diario**.
 
@@ -35,7 +37,7 @@ Por lo tanto, los datos de WideWorldImportersDW refleja los datos de WideWorldIm
 
 Los diferentes tipos de tablas se organizan en tres esquemas.
 
-|esquema|Description|
+|Esquema|Description|
 |-----------------------------|---------------------|
 |Dimensión|Tablas de dimensiones.|
 |Hecho|Tablas de hechos.|  
@@ -49,7 +51,7 @@ Las tablas de hechos y dimensiones se muestran a continuación. Las tablas en el
 
 WideWorldImportersDW tiene las siguientes tablas de dimensiones. La descripción incluye la relación con las tablas de origen en la base de datos WideWorldImporters.
 
-|Tabla|Tablas de origen|
+|Table|Tablas de origen|
 |-----------------------------|---------------------|
 |City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
@@ -64,7 +66,7 @@ WideWorldImportersDW tiene las siguientes tablas de dimensiones. La descripción
 
 WideWorldImportersDW tiene las siguientes tablas de hechos. La descripción incluye la relación con las tablas de origen en la base de datos WideWorldImporters, así como las clases de informes de análisis y consultas, con que cada tabla de hechos se suele utilizar.
 
-|Tabla|Tablas de origen|Análisis de ejemplo|
+|Table|Tablas de origen|Análisis de ejemplo|
 |-----------------------------|---------------------|---------------------|
 |Pedido de|`Sales.Orders`y`Sales.OrderLines`|Ventas personas, productividad de compresor/selector y en el tiempo suficiente para elegir los pedidos. Además, bajo cotizaciones situaciones que conducen a pedidos en espera.|
 |Venta|`Sales.Invoices`y`Sales.InvoiceLines`|Fechas de ventas, las fechas de entrega, rentabilidad con el tiempo, la rentabilidad por vendedor.|
@@ -97,7 +99,7 @@ Estos procedimientos se utilizan para configurar el ejemplo. Se utilizan para ap
 Los procedimientos utilizados en el proceso ETL se dividen en estas categorías:
 - Procedimientos auxiliares para el paquete ETL - Get * todos los procedimientos.
 - Utilizado por el paquete ETL para migrar los procedimientos almacenados provisionalmente datos en las tablas de almacenamiento de datos - todos los procedimientos de migración *.
-- `PopulateDateDimensionForYear`-Toma un año y se asegura de que todas las fechas de dicho año se rellenan en el `Dimension.Date` tabla.
+- `PopulateDateDimensionForYear` -Toma un año y se asegura de que todas las fechas de dicho año se rellenan en el `Dimension.Date` tabla.
 
 ### <a name="sequences-schema"></a>Esquema de secuencias
 

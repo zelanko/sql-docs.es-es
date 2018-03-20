@@ -17,19 +17,19 @@ helpviewer_keywords:
 - WMI Provider for Server Events, about WMI Provider for Server Events
 ms.assetid: 8fd7bd18-76d0-4b28-8fee-8ad861441ab2
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d68916b90c9b8312f02f75f5911a7871d350d4d5
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: a7f710e54927b01ddcbdf0bb7890d992087bc51f
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>Descripción del proveedor WMI para eventos de servidor
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-El proveedor WMI para eventos de servidor le permite utilizar el Instrumental de administración de Windows (WMI) para supervisar eventos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El proveedor trabaja convirtiendo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un objeto WMI administrado. Todos los eventos que puedan generar una notificación de eventos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se aprovechan en el WMI que utiliza el proveedor. Además, como una aplicación de administración que interactúa con el WMI, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede responder a estos eventos aumentando el ámbito de los eventos cubiertos por el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en versiones anteriores.  
+  El proveedor WMI para eventos de servidor le permite utilizar el Instrumental de administración de Windows (WMI) para supervisar eventos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El proveedor trabaja convirtiendo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un objeto WMI administrado. Todos los eventos que puedan generar una notificación de eventos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se aprovechan en el WMI que utiliza el proveedor. Además, como una aplicación de administración que interactúa con el WMI, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede responder a estos eventos aumentando el ámbito de los eventos cubiertos por el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en versiones anteriores.  
   
  Las aplicaciones de administración como el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden utilizar el proveedor WMI para eventos de servidor para obtener acceso a los eventos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emitiendo instrucciones WQL (Lenguaje de consulta de WMI). WQL es un subconjunto simplificado de lenguaje de consulta estructurado (SQL) con algunas extensiones específicas de WMI. Al utilizar WQL, una aplicación recupera un tipo de evento en una base de datos u objeto de base de datos específicos. El proveedor WMI para eventos de servidor convierte la consulta en una notificación de eventos, creando eficazmente una notificación de eventos en la base de datos de destino. Para obtener más información acerca de cómo funcionan las notificaciones de eventos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [proveedor WMI para eventos conceptos del servidor](http://technet.microsoft.com/library/ms180560.aspx). Se muestran los eventos que se pueden consultar en [proveedor WMI de clases de eventos de servidor y propiedades](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e47c0022-ce87-4ba5-a24b-df55efe66431
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 6d87a24e91f96957170671303af641c6bacc6599
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0d458bc15530aa87bfa922787558fff3f07645f7
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catálogo de base de datos WideWorldImporters
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]La base de datos WideWorldImporters contiene todos los la información de las transacciones y datos diarios para ventas y compras, así como datos de detección de vehículos y salones inactivos.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+La base de datos WideWorldImporters contiene todos los la información de las transacciones y datos diarios para ventas y compras, así como datos de detección de vehículos y salones inactivos.
 
 ## <a name="schemas"></a>Esquemas
 
@@ -35,7 +37,7 @@ WideWorldImporters utiliza esquemas para propósitos diferentes, como almacenami
 
 Estos esquemas contienen los datos. Un número de tablas es necesarios para todos los otros esquemas y se encuentra en el esquema de la aplicación.
 
-|esquema|Description|
+|Esquema|Description|
 |-----------------------------|---------------------|
 |Aplicación|Toda la aplicación a los usuarios, contactos y parámetros. Esto también contiene tablas de referencia con datos que se utilizan por varios esquemas|
 |Purchasing|Elemento en existencias adquiere de proveedores y los detalles sobre los proveedores.|  
@@ -46,7 +48,7 @@ Estos esquemas contienen los datos. Un número de tablas es necesarios para todo
 
 Estos esquemas se utilizan para las aplicaciones externas que no pueden tener acceso directamente a las tablas de datos. Contienen vistas y procedimientos almacenados utilizados por las aplicaciones externas.
 
-|esquema|Description|
+|Esquema|Description|
 |-----------------------------|---------------------|
 |Sitio web|Todo el acceso a la base de datos desde el sitio Web de la empresa es a través de este esquema.|
 |Informes|Todo el acceso a la base de datos de informes de Reporting Services es a través de este esquema.|
@@ -58,7 +60,7 @@ Tenga en cuenta que los informes y Power BI no se utilizan en la versión inicia
 
 Esquemas de propósito especial
 
-|esquema|Description|
+|Esquema|Description|
 |-----------------------------|---------------------|
 |Integración|Objetos y procedimientos necesarios para la integración de almacenamiento de datos (es decir, migrar los datos a la base de datos de WideWorldImportersDW).|
 |Secuencias|Contiene secuencias que se utilizan por todas las tablas de la aplicación.|
@@ -71,7 +73,7 @@ Todas las tablas de la base de datos están en los esquemas de datos.
 
 Detalles de los parámetros y usuarios (usuarios y contactos), junto con las tablas de referencia comunes (comunes a varios otros esquemas).
 
-|Tabla|Description|
+|Table|Description|
 |-----------------------------|---------------------|
 |SystemParameters|Contiene los parámetros configurables de todo el sistema.|
 |personas|Contiene los nombres de usuario, información de contacto para todos los usuarios que usan la aplicación y para las personas con las que se encarga de Wide World Importers con en organizaciones de clientes. Esto incluye personal, los clientes, proveedores y los otros contactos. Para las personas que tienen permiso para usar el sistema o el sitio Web, la información incluye detalles de inicio de sesión.|
@@ -86,7 +88,7 @@ Detalles de los parámetros y usuarios (usuarios y contactos), junto con las tab
 
 Detalles de proveedores y de las compras de artículos estándar.
 
-|Tabla|Description|
+|Table|Description|
 |-----------------------------|---------------------|
 |Suppliers|Tabla de la entidad principal para proveedores (entidades)|
 |SupplierCategories|Categorías de proveedores (p. ej., sorpresa, juguetes, ropa, empaquetado, etcetera.)|
@@ -99,7 +101,7 @@ Detalles de proveedores y de las compras de artículos estándar.
 
 Detalles de clientes, vendedores y de ventas de artículos estándar.
 
-|Tabla|Description|
+|Table|Description|
 |-----------------------------|---------------------|
 |Clientes|Tablas de la entidad principal para los clientes (organizaciones o individuos)|
 |CustomerCategories|Categorías de los clientes (es decir novedad tiendas, supermercados, etcetera.)|
@@ -115,7 +117,7 @@ Detalles de clientes, vendedores y de ventas de artículos estándar.
 
 Detalles de elementos de cotizaciones, sus explotaciones y transacciones.
 
-|Tabla|Description|
+|Table|Description|
 |-----------------------------|---------------------|
 |StockItems|Tabla de la entidad principal para los elementos estándar|
 |StockItemHoldings|Columnas no temporales para los elementos estándar. Se trata de columnas actualizadas con frecuencia.|
@@ -185,7 +187,7 @@ Se trata de los procedimientos empleados en una aplicación de cliente, como un 
 
 Los procedimientos almacenados en este esquema se utilizan el proceso ETL. Obtienen los datos necesarios de varias tablas para el período de tiempo necesario para la [paquete ETL](etl-workflow.md).
 
-### <a name="dataloadsimulation-schema"></a>Esquema de DataLoadSimulation
+### <a name="dataloadsimulation-schema"></a>DataLoadSimulation Schema
 
 Simula una carga de trabajo que inserta las compras y ventas. El procedimiento almacenado principal es `PopulateDataToCurrentDate`, que se utiliza para insertar datos de ejemplo hasta la fecha actual.
 

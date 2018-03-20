@@ -18,19 +18,19 @@ helpviewer_keywords:
 - WMI Provider for Configuration Management, about WMI Provider for Configuration Management
 ms.assetid: 7e41db24-b915-4eb8-a1d6-e6948ee915b7
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 17c889a1272d0c52970fa64dc7f39607a8cffdfe
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 398024a3d6329f60cce5d6cb64b7e7a26ae2de2b
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wmi-provider-for-configuration-management"></a>proveedor WMI de administración de configuración
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-El proveedor WMI es un nivel publicado que se usa con la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el complemento Administrador de configuración para [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) y la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Proporciona una forma unificada de crear una interfaz con las llamadas a la API que administran las operaciones del Registro solicitadas por el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y proporciona un mejor control y manipulación de los servicios SQL seleccionados del complemento Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  El proveedor WMI es un nivel publicado que se usa con la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el complemento Administrador de configuración para [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) y la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Proporciona una forma unificada de crear una interfaz con las llamadas a la API que administran las operaciones del Registro solicitadas por el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y proporciona un mejor control y manipulación de los servicios SQL seleccionados del complemento Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  El proveedor WMI de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una DLL y un archivo MOF que compila automáticamente el Programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

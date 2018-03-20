@@ -1,0 +1,2 @@
+> [!IMPORTANT]  
+> En [instancia de base de datos administrada de SQL de Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), esta característica de T-SQL tiene ciertos cambios de comportamiento. Vea [diferencias de Azure SQL Database administrados instancia T-SQL de SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information) para obtener más información para todos los cambios de comportamiento de T-SQL.

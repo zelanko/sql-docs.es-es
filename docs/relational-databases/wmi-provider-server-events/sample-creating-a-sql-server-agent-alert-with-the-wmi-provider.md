@@ -17,19 +17,19 @@ helpviewer_keywords:
 - sample applications [WMI]
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e2c108a7023cb66a82c5613063c039a5f34d6470
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 9ec91622e1f1559f53613830bd77d350d30729a2
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>Ejemplo: Crear una alerta del Agente SQL Server con el proveedor WMI
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Una manera común de utilizar el Proveedor de eventos WMI es crear alertas del Agente SQL Server que respondan a eventos concretos. En el ejemplo siguiente se presenta una alerta simple que guarda los eventos de grafo de interbloqueo de XML en una tabla para el análisis posterior. El Agente SQL Server envía una solicitud WQL, recibe los eventos WMI y ejecuta un trabajo en respuesta al evento. Observe que, aunque varios objetos Service Broker están implicados para procesar el mensaje de notificación, el Proveedor de eventos WMI administra los detalles de creación y administración de estos objetos.  
+  Una manera común de utilizar el Proveedor de eventos WMI es crear alertas del Agente SQL Server que respondan a eventos concretos. En el ejemplo siguiente se presenta una alerta simple que guarda los eventos de grafo de interbloqueo de XML en una tabla para el análisis posterior. El Agente SQL Server envía una solicitud WQL, recibe los eventos WMI y ejecuta un trabajo en respuesta al evento. Observe que, aunque varios objetos Service Broker están implicados para procesar el mensaje de notificación, el Proveedor de eventos WMI administra los detalles de creación y administración de estos objetos.  
   
 ## <a name="example"></a>Ejemplo  
  Primero, se crea una tabla en la base de datos `AdventureWorks` para contener el evento de grafo de interbloqueo. La tabla contiene dos columnas: la columna `AlertTime` contiene la hora a la que se ejecuta la alerta y la columna `DeadlockGraph` contiene el documento XML que contiene el grafo de interbloqueo.  

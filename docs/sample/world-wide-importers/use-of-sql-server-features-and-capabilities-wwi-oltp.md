@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: 9a76e8c2bb70be5accc28d65de7f86db86dacd29
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 34535db5b43311e13d21fd663f5302327b24978e
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>Uso de las capacidades y características de SQL Server
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]WideWorldImporters el uso de características de SQL Server y capacidades de la base de datos OLTP.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+WideWorldImporters el uso de características de SQL Server y capacidades de la base de datos OLTP.
 
 WideWorldImporters está diseñado para mostrar muchas de las características claves de SQL Server, incluidas las características más recientes que se introdujo en SQL Server 2016. La siguiente es una lista de características de SQL Server y las capacidades y una descripción de cómo se utilizan en WideWorldImporters.
 
@@ -42,7 +44,7 @@ WideWorldImporters está diseñado para mostrar muchas de las características c
 |Enmascaramiento de datos dinámicos|En el esquema de base de datos, el enmascaramiento de datos se ha aplicado a los detalles de bank mantenidos para proveedores, en la tabla `Purchasing.Suppliers`. Personal sin privilegios de administrador no tendrá acceso a esta información.|
 |Always Encrypted|Se incluye una demostración para Always Encrypted en el samples.zip descargable, que forma parte de la [versión del ejemplo](http://go.microsoft.com/fwlink/?LinkID=800630)... La demostración, crea una clave de cifrado de una tabla mediante el cifrado de datos confidenciales o una aplicación de ejemplo pequeña que inserta datos en la tabla.|
 |Ajustar la base de datos|El `Warehouse.ColdRoomTemperatures` tabla se ha implementado como una tabla temporal y está optimizada en memoria en la versión completa de la base de datos de ejemplo. La tabla de almacenamiento está basada en disco y puede ajustarse en Azure.|
-|Índices de texto completo|Índices de texto completo mejoran las búsquedas para las personas, los clientes y StockItems. Los índices se aplican a las consultas solo si tiene instalados en su instancia de SQL Server de indización de texto completo. Una columna calculada no persistente se utiliza para crear los datos que es el texto completo indiza en la tabla StockItems.<br/><br/>`CONCAT`se utiliza para concatenar los campos para crear SearchData que tiene índices de texto completo.<br/>Para habilitar el uso de índices de texto completo en el ejemplo de ejecutar la siguiente instrucción en la base de datos:<br/><br/>    `EXECUTE [Application].[Configuration_ConfigureFullTextIndexing]`<br/><br/>El procedimiento crea un catálogo de texto completo predeterminado si uno no existe, reemplaza las vistas de búsqueda con versiones de texto completo de esas vistas).<br/><br/>Tenga en cuenta que utiliza índices de texto completo en SQL Server, es necesario seleccionar la opción de texto completo durante la instalación. No requiere la base de datos de SQL Azure y una configuración concreta para habilitar los índices de texto completo.|
+|Índices de texto completo|Índices de texto completo mejoran las búsquedas para las personas, los clientes y StockItems. Los índices se aplican a las consultas solo si tiene instalados en su instancia de SQL Server de indización de texto completo. Una columna calculada no persistente se utiliza para crear los datos que es el texto completo indiza en la tabla StockItems.<br/><br/>`CONCAT` se utiliza para concatenar los campos para crear SearchData que tiene índices de texto completo.<br/>Para habilitar el uso de índices de texto completo en el ejemplo de ejecutar la siguiente instrucción en la base de datos:<br/><br/>    `EXECUTE [Application].[Configuration_ConfigureFullTextIndexing]`<br/><br/>El procedimiento crea un catálogo de texto completo predeterminado si uno no existe, reemplaza las vistas de búsqueda con versiones de texto completo de esas vistas).<br/><br/>Tenga en cuenta que utiliza índices de texto completo en SQL Server, es necesario seleccionar la opción de texto completo durante la instalación. No requiere la base de datos de SQL Azure y una configuración concreta para habilitar los índices de texto completo.|
 |Indizar las columnas calculadas persistentes|Indizar columnas calculadas persistentes que se usan en SupplierTransactions y CustomerTransactions.|
 |Restricciones CHECK|Es una restricción check relativamente complejo en `Sales.SpecialDeals`. Esto garantiza que uno y solo uno de DiscountAmount, DiscountPercentage, y se configura UnitPrice.|
 |Restricciones UNIQUE|Muchos a muchos construcción (y las restricciones únicas) se configuran para 'Warehouse.StockItemStockGroups.|

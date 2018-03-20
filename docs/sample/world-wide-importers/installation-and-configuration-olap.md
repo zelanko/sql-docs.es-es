@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d07ffb9a-ac4f-4295-9aeb-ecfb97600134
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 6df15e0b16a8b3988da616106c6a29fe88f8debc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a4d1f7c55112efe127e2435d84fc1efadd954495
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW instalación y configuración
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Instrucciones de instalación y configuración para la base de datos de WideWorldImportersDW.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Instrucciones de instalación y configuración para la base de datos de WideWorldImportersDW.
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (o superior) o [base de datos de SQL Azure](https://azure.microsoft.com/services/sql-database/). Para usar la versión completa del ejemplo, use SQL Server Evaluation, Developer o Enterprise Edition.
 - [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md). Para obtener los mejores resultados utilizando la versión de junio de 2016 o posterior.
@@ -34,13 +36,13 @@ ms.lasthandoff: 12/05/2017
 
 La versión más reciente del ejemplo:
 
-[Wide world importers versión](http://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
 
 Descargar el ejemplo WideWorldImportersDW base de datos copia de seguridad/bacpac que corresponde a la edición de SQL Server o base de datos de SQL Azure.
 
 Código fuente para volver a crear la base de datos de ejemplo está disponible en la ubicación siguiente. Tenga en cuenta que el rellenado de datos se basa en ETL de la base de datos OLTP (WideWorldImporters):
 
-[Wide world importers origen](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
+[wide-world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
 
 ## <a name="install"></a>Install
 
@@ -56,7 +58,7 @@ Para restaurar una copia de seguridad a una instancia de SQL Server, puede utili
 5. Si es necesario, cambie la ubicación de destino para los datos y archivos de registro, en la **archivos** panel. Tenga en cuenta que es una práctica recomendada para colocar datos y archivos de registro en unidades diferentes.
 6. Haga clic en **Aceptar**. Se iniciará la restauración de base de datos. Una vez que se complete, tendrá la base de datos WideWorldImporters instalados en su instancia de SQL Server.
 
-### <a name="azure-sql-database"></a>Base de datos SQL de Azure
+### <a name="azure-sql-database"></a>Azure SQL Database
 
 Para importar un bacpac en una base de datos SQL, puede utilizar Management Studio.
 
@@ -77,4 +79,4 @@ La base de datos de ejemplo puede hacer uso de PolyBase en archivos de consulta 
 1. En SQL Server Management Studio, conéctese a la base de datos de WideWorldImportersDW y abrir una nueva ventana de consulta.
 2. Ejecute el siguiente comando de T-SQL para habilitar el uso de PolyBase en la base de datos:
 
-   EJECUTE [aplicación]. [Configuration_ApplyPolyBase]
+   EXECUTE [Application].[Configuration_ApplyPolyBase]

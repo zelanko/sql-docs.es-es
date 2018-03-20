@@ -9,23 +9,25 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: " database-engine "
+ms.technology:
+- " database-engine "
 ms.topic: article
 ms.assetid: f387273b-8b5f-4687-b033-09499ea2d68f
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: 49674a1edbec00a650af036297adacec3bdc150d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 20db5f20256fb4b545482b29b0c5cc41c6ba231e
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimporters-data-generation"></a>Generación de datos WideWorldImporters
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Las versiones publicadas de las bases de datos WideWorldImporters y WideWorldImportersDW contiene los datos a partir del 1 de enero de 2013, hasta el día en que se generaron estas bases de datos.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Las versiones publicadas de las bases de datos WideWorldImporters y WideWorldImportersDW contiene los datos a partir del 1 de enero de 2013, hasta el día en que se generaron estas bases de datos.
 
 Si se utilizan las bases de datos de ejemplo en una fecha posterior, para fines de demostración o ilustración, puede ser beneficioso incluir datos de ejemplo más recientes en la base de datos.
 
@@ -79,7 +81,7 @@ El procedimiento `Application.Configuration_PopulateLargeSaleTable` puede utiliz
 
 #### <a name="parameters"></a>Parámetros:
 
-  `@EstimatedRowsFor2012`**bigint** (su valor predeterminado es 12000000)
+  `@EstimatedRowsFor2012` **bigint** (su valor predeterminado es 12000000)
 
 #### <a name="result"></a>Resultado:
 

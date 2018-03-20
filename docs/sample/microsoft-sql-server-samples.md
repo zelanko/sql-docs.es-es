@@ -12,20 +12,21 @@ ms.component: samples
 ms.technology: 
 ms.topic: article
 ms.assetid: d67e31d0-49fb-40d3-b340-95c1fe00957f
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 40b094c6806e75f1535a1ba4d60ccc0387cd1d67
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 956488f4edf46c21441cebaf5f7019d8ac3b4446
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="microsoft-sql-server-samples"></a>Ejemplos de Microsoft SQL Server
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Esta galería contiene bases de datos de ejemplo y otros ejemplos de productos de Microsoft SQL incluido SQL Server y base de datos de SQL Azure.   
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Esta galería contiene bases de datos de ejemplo y otros ejemplos de productos de Microsoft SQL incluido SQL Server y base de datos de SQL Azure.   
 
 ## <a name="new-wide-world-importers-sample-database"></a>¡¡Nuevo!! Base de datos de ejemplo de Wide World Importers
 

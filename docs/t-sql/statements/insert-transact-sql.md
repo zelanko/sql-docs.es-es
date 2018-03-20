@@ -39,11 +39,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 645cb458c480fb0842f83bf60721f5228e434d4c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9c1d8692b634c1f6f71c112be59eb9e5ff84ea5e
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -398,7 +398,9 @@ Estas optimizaciones son similares a las que están disponibles con el comando B
   
  Cuando se utiliza TOP con INSERT las filas a las que hace referencia no están organizadas de ninguna manera y la cláusula ORDER BY no se puede especificar directamente en esta instrucción. Si necesita usar TOP para insertar las filas en un orden cronológico significativo, debe utilizar TOP junto con una cláusula ORDER BY que se especifica en una instrucción de subselección. Vea la sección Ejemplos que aparece más adelante en este tema.
  
-Las consultas INSERT en las que se usa SELECT con ORDER BY para rellenar filas garantizan el modo en que se calculan los valores de identidad, pero no el orden en el que las filas se insertan.    
+Las consultas INSERT en las que se usa SELECT con ORDER BY para rellenar filas garantizan el modo en que se calculan los valores de identidad, pero no el orden en el que las filas se insertan.
+
+En Almacenamiento de datos paralelos, la cláusula ORDER BY no es válida en VIES, CREATE TABLE AS SELECT, INSERT SELECT, funciones insertadas, tablas derivadas, subconsultas ni expresiones de tabla común, salvo que se especifique también TOP.
   
 ## <a name="logging-behavior"></a>Comportamiento del registro  
  La instrucción INSERT siempre se registra completamente excepto cuando se usa la función OPENROWSET con la palabra clave BULK o cuando se usa `INSERT INTO <target_table> SELECT <columns> FROM <source_table>`. Estas operaciones pueden ser registradas mínimamente. Para obtener más información, vea la sección "Prácticas recomendadas para la carga masiva de datos" anteriormente en este tema.  

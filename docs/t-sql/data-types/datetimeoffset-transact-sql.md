@@ -30,11 +30,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b1b8fba166243143cd9ab8c03303fcfd7448e7a3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8121c4b5054bcf8f3144fee3c05e6979f2252293
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -114,7 +114,10 @@ Algunos clientes de nivel inferior no admiten los tipos de datos **time**, **dat
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Cadena o SqString|  
   
 ## <a name="converting-date-and-time-data"></a>Convertir datos de fecha y hora
-Cuando se convierte a los tipos de datos de fecha y hora, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rechaza todos los valores que no reconoce como fechas u horas. Para más información sobre cómo usar las funciones CAST y CONVERT con datos de fecha y hora, vea [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) [CAST y CONVERT &#40;Transact-SQL&#41;].
+Cuando se convierte a los tipos de datos de fecha y hora, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rechaza todos los valores que no reconoce como fechas u horas. Para más información sobre cómo usar las funciones CAST y CONVERT con datos de fecha y hora, vea [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
+  
+### <a name="converting-datetimeoffset-data-type-to-other-date-and-time-types"></a>Convertir el tipo de datos datetimeoffset en otros tipos de fecha y hora
+En esta tabla se describe lo que ocurre cuando un tipo de datos **datetimeoffset** se convierte a otros tipos de datos de fecha y hora.
   
 Al convertir a **date**, se copian el año, el mes y el día. En el código siguiente se muestran los resultados de convertir un valor `datetimeoffset(4)` en un valor `date`.  
   
@@ -199,9 +202,6 @@ SELECT @datetimeoffset AS '@datetimeoffset', @datetime2 AS '@datetime2';
 --(1 row(s) affected)  
 ```  
   
-### <a name="converting-datetimeoffset-data-type-to-other-date-and-time-types"></a>Convertir el tipo de datos datetimeoffset en otros tipos de fecha y hora
-En esta tabla se describe lo que ocurre cuando un tipo de datos **datetimeoffset** se convierte a otros tipos de datos de fecha y hora.
-  
 ### <a name="converting-string-literals-to-datetimeoffset"></a>Convertir literales de cadena a datetimeoffset
 Las conversiones de literales de cadena en tipos de fecha y hora son posibles cuando todas las partes de las cadenas están en formatos válidos. En caso contrario, se generará un error en el tiempo de ejecución. Las conversiones implícitas o explícitas que no especifican un estilo (desde tipos de fecha y hora hasta literales de cadena) estarán en el formato predeterminado de la sesión actual. En esta tabla se muestran las reglas para convertir un literal de cadena al tipo de datos **datetimeoffset**.
   
@@ -219,7 +219,7 @@ Las conversiones de literales de cadena en tipos de fecha y hora son posibles cu
 |DATE + TIME + TIMEZONE|Trivial|  
   
 ## <a name="examples"></a>Ejemplos  
-En este ejemplo se comparan los resultados de convertir una cadena a cada tipo de datos **date** y **time**.
+En el siguiente ejemplo se comparan los resultados de convertir una cadena a cada tipo de datos **date** y **time**.
   
 ```sql
 SELECT   

@@ -1,7 +1,7 @@
 ---
 title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 02/25/2018
+ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -21,11 +21,11 @@ helpviewer_keywords:
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: 0581957db73b82b9486f938d17b4c8938e20258d
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.openlocfilehash: e2fb628e2f832b7d1b73a2e3fefae1fb1d6b8e2b
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -61,7 +61,7 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-Especifica el nombre de una biblioteca de paquetes existente. Las bibliotecas tienen como ámbito el usuario. Es decir, los nombres de biblioteca se consideran únicos dentro del contexto de un usuario o propietario específico.
+Especifica el nombre de una biblioteca de paquetes existente. Las bibliotecas tienen como ámbito el usuario. Los nombres de biblioteca deben ser únicos dentro del contexto de un usuario o propietario específico.
 
 El nombre de biblioteca no se puede asignar de forma arbitraria. Es decir, se debe usar el nombre que el tiempo de ejecución que realiza la llamada espera cuando se carga el paquete.
 
@@ -76,13 +76,6 @@ Especifica el contenido del paquete para una plataforma específica. Solo se adm
 El archivo se puede especificar como una ruta de acceso local o una ruta de acceso de red. Si se especifica la opción de origen de datos, el nombre de archivo puede ser una ruta de acceso relativa con respecto al contenedor al que hace referencia en el `EXTERNAL DATA SOURCE`.
 
 Opcionalmente, se puede especificar una plataforma de sistema operativo para el archivo. Solo se permite un artefacto de archivo o contenido para cada plataforma de sistema operativo para un determinado lenguaje o tiempo de ejecución.
-
-**DATA_SOURCE = external_data_source_name**
-
-Especifica el nombre del origen de datos externo que contiene la ubicación del archivo de biblioteca. Esta ubicación debe hacer referencia a una ruta de acceso de Azure Blob Storage. Para crear un origen de datos externo, use [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md).
-
-> [!IMPORTANT] 
-> Actualmente, no se admiten los blobs como origen de datos en la versión de SQL Server 2017.
 
 **library_bits**
 
@@ -104,11 +97,11 @@ La instrucción `ALTER EXTERNAL LIBRARY` solo carga los bits de biblioteca en la
 
 ## <a name="permissions"></a>Permisos
 
-Requiere el permiso `ALTER ANY EXTERNAL LIBRARY`. Los usuarios que crean una biblioteca externa pueden modificarla.
+De forma predeterminada, el usuario **dbo** o cualquier miembro del rol **db_owner** tiene permiso para ejecutar ALTER EXTERNAL LIBRARY. Además, el usuario que crea una biblioteca externa puede modificarla.
 
 ## <a name="examples"></a>Ejemplos
 
-En los ejemplos siguientes se modifica una biblioteca externa denominada `customPackage`.
+En los ejemplos siguientes se cambia una biblioteca externa denominada `customPackage`.
 
 ### <a name="a-replace-the-contents-of-a-library-using-a-file"></a>A. Sustitución del contenido de una biblioteca mediante un archivo
 
@@ -135,10 +128,12 @@ EXEC sp_execute_external_script
 En el ejemplo siguiente se modifica la biblioteca existente pasando los nuevos bits como un literal hexadecimal.
 
 ```SQL
-ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
+ALTER EXTERNAL LIBRARY customLibrary 
+SET (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
-En este ejemplo de código, el contenido de las variables se trunca para mejorar la legibilidad.
+> [!NOTE]
+> En este ejemplo de código solo se muestra la sintaxis; el valor binario de `CONTENT =` se ha truncado para mejorar la lectura y no se puede crear una biblioteca funcional. El contenido real de la variable binaria sería mucho más largo.
 
 ## <a name="see-also"></a>Vea también
 

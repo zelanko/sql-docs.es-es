@@ -53,11 +53,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 086151e2916335ae0d7cda3eef11a79363d3ce53
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8762890c81c5ff2b03ba07a44ef6c559c6d57ab7
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -81,7 +81,7 @@ Vaya directamente a [Ejemplos sencillos](#Simple) para omitir los detalles de la
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```sql
 -- Transact-SQL Syntax for Stored Procedures in SQL Server and Azure SQL Database  
   
 CREATE [ OR ALTER ] { PROC | PROCEDURE } 
@@ -100,7 +100,7 @@ AS { [ BEGIN ] sql_statement [;] [ ...n ] [ END ] }
     [ EXECUTE AS Clause ]  
 ```  
   
-```  
+```sql
 -- Transact-SQL Syntax for CLR Stored Procedures  
   
 CREATE [ OR ALTER ] { PROC | PROCEDURE } 
@@ -113,7 +113,7 @@ AS { EXTERNAL NAME assembly_name.class_name.method_name }
 [;]  
 ```  
   
-```  
+```sql
 -- Transact-SQL Syntax for Natively Compiled Stored Procedures  
   
 CREATE [ OR ALTER ] { PROC | PROCEDURE } [schema_name.] procedure_name  
@@ -137,7 +137,7 @@ sql_statement [;] [ ... n ]
   | [ DELAYED_DURABILITY = { OFF | ON } ]  
 ```  
   
-```  
+```sql
 -- Transact-SQL Syntax for Stored Procedures in Azure SQL Data Warehouse
 -- and Parallel Data Warehouse  
   
@@ -167,7 +167,7 @@ OR ALTER
  El nombre completo de un procedimiento o un procedimiento temporal global, incluidos los signos de número ##, no puede superar los 128 caracteres. El nombre completo de un procedimiento temporal local, incluido el signo de número #, no puede superar los 116 caracteres.  
   
  **;** *number*  
- **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Entero opcional que se usa para agrupar procedimientos con el mismo nombre. Estos procedimientos agrupados se pueden quitar juntos mediante una instrucción DROP PROCEDURE.  
   
@@ -224,7 +224,7 @@ RECOMPILE
 ENCRYPTION  
  **Se aplica a**: SQL Server (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convierte el texto original de la instrucción CREATE PROCEDURE en un formato confuso. La salida de la protección no es directamente visible en ninguna de las vistas de catálogo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los usuarios que no dispongan de acceso a las tablas del sistema o a los archivos de base de datos no pueden recuperar el texto confuso. Sin embargo, estará disponible para los usuarios con privilegios que puedan acceder a las tablas del sistema a través del [puerto DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) o que puedan acceder directamente a los archivos de base de datos. Además, los usuarios que puedan adjuntar un depurador al proceso del servidor pueden recuperar el procedimiento descifrado de la memoria en tiempo de ejecución. Para más información sobre cómo acceder al sistema, vea [Configuración de visibilidad de los metadatos](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convierte el texto original de la instrucción CREATE PROCEDURE en un formato confuso. La salida de la protección no es directamente visible en ninguna de las vistas de catálogo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los usuarios que no dispongan de acceso a las tablas del sistema o a los archivos de base de datos no pueden recuperar el texto confuso. Sin embargo, estará disponible para los usuarios con privilegios que puedan acceder a las tablas del sistema a través del [puerto DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) o que puedan acceder directamente a los archivos de base de datos. Además, los usuarios que puedan adjuntar un depurador al proceso del servidor pueden recuperar el procedimiento descifrado de la memoria en tiempo de ejecución. Para más información sobre cómo tener acceso al sistema, vea [Configuración de visibilidad de los metadatos](../../relational-databases/security/metadata-visibility-configuration.md).  
   
  Esta opción no es válida para los procedimientos CLR.  
   
@@ -248,17 +248,17 @@ FOR REPLICATION
  Una o más instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que comprenden el cuerpo del procedimiento. Puede usar las palabras clave BEGIN y END opcionales para incluir las instrucciones. Para obtener información, vea las secciones Prácticas recomendadas, Comentarios generales, así como Limitaciones y restricciones que aparecen más adelante.  
   
 EXTERNAL NAME *assembly_name***.***class_name***.***method_name*  
- **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Especifica el método de un ensamblado de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para un procedimiento CLR al que se va a hacer referencia. *class_name* debe ser un identificador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido y debe existir como clase en el ensamblado. Si la clase tiene un nombre completo de espacio de nombres que usa un punto (**.**) para separar las partes del espacio de nombres, el nombre de la clase debe delimitarse mediante paréntesis (**[]**) o comillas (**""**). El método especificado debe ser un método estático de la clase.  
   
- De manera predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede ejecutar código CLR. Se pueden crear, modificar y quitar objetos de base de datos que hagan referencia a módulos de Common Language Runtime, pero estas referencias no se pueden ejecutar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hasta que se active la opción [CRL habilitado](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Para habilitar esta opción, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+ De manera predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede ejecutar código CLR. Se pueden crear, modificar y quitar objetos de base de datos que hagan referencia a módulos de Common Language Runtime, pero estas referencias no se pueden ejecutar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hasta que se habilite la [opción clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Para habilitar esta opción, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
 > [!NOTE]  
 >  Los procedimientos CLR no se admiten en las bases de datos independientes.  
   
 ATOMIC WITH  
- **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Indica la ejecución automática de procedimientos almacenados. Los cambios se confirman o todos se revierten iniciando una excepción. El bloqueo ATOMIC WITH se requiere para los procedimientos almacenados compilados de forma nativa.  
   
@@ -283,12 +283,12 @@ Las operaciones BEGIN, ROLLBACK y COMMIT no se pueden utilizar dentro de un bloq
  Determina si se permiten valores NULL en un parámetro. NULL es el valor predeterminado.  
   
 NATIVE_COMPILATION  
- **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Indica que el procedimiento está compilado de forma nativa. NATIVE_COMPILATION, SCHEMABINDING, y EXECUTE AS se pueden especificar en cualquier orden. Para más información, vea [Procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
 SCHEMABINDING  
- **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Se garantiza que las tablas a las que un procedimiento hace referencia no se pueden quitar o modificar. SCHEMABINDING se requiere en los procedimientos almacenados compilados de forma nativa (Para más información, vea [Procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)). Las restricciones SCHEMABINDING son las mismas que para las funciones definidas por el usuario. Para más información, vea la sección SCHEMABINDING en [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
@@ -298,7 +298,7 @@ LANGUAGE = [N] 'language'
  Equivalente a la opción de sesión [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md). LANGUAGE = [N] 'language' es necesaria.  
   
 NIVEL DE AISLAMIENTO DE TRANSACCIÓN  
- **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Se requiere para los procedimientos almacenados compilados de forma nativa. Especifica el nivel de aislamiento de la transacción para el procedimiento almacenado. Las opciones son las siguientes:  
   
@@ -317,21 +317,21 @@ SNAPSHOT
  Especifica que los datos leídos por cualquier instrucción de una transacción son la versión coherente, desde el punto de vista transaccional, de los datos existentes al inicio de la transacción.  
   
 DATEFIRST = *number*  
- **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Especifica el primer día de la semana en un número del 1 al 7. DATEFIRST es opcional. Si no se especifica, el valor se deduce del idioma especificado.  
   
  Para más información, vea [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).  
   
 DATEFORMAT = *format*  
- **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Especifica el orden de las partes correspondientes al mes, día y año de una fecha para interpretar las cadenas de caracteres date, smalldatetime, datetime, datetime2 y datetimeoffset. DATEFORMAT es opcional. Si no se especifica, el valor se deduce del idioma especificado.  
   
  Para más información, vea [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).  
   
 DELAYED_DURABILITY = { OFF | ON }  
- **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Las confirmaciones de transacciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden ser totalmente durables (el valor predeterminado) o durables diferidas.  
   
@@ -426,7 +426,7 @@ Vea la sección [Ejemplos](#Examples) casi al final de este tema para ver muchos
   
  No puede especificar el nombre de una función como valor predeterminado de parámetro o como el valor pasado a un parámetro cuando se ejecute un procedimiento. Sin embargo, puede pasar una función como una variable, como se muestra en el ejemplo siguiente.  
   
-```  
+```sql
 -- Passing the function value as a variable.  
 DECLARE @CheckDate datetime = GETDATE();  
 EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;   
@@ -589,7 +589,7 @@ GO
   
  El procedimiento `uspGetEmployees` se puede ejecutar de estas formas:  
   
-```  
+```sql
 EXECUTE HumanResources.uspGetEmployees N'Ackerman', N'Pilar';  
 -- Or  
 EXEC HumanResources.uspGetEmployees @LastName = N'Ackerman', @FirstName = N'Pilar';  

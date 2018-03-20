@@ -1,5 +1,5 @@
 ---
-title: Operadores (Transact-SQL) compuesta | Documentos de Microsoft
+title: Operadores compuestos (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -35,20 +35,20 @@ ms.lasthandoff: 01/25/2018
 # <a name="compound-operators-transact-sql"></a>Operadores compuestos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Los operadores compuestos ejecutan operaciones y establecen un valor original en el resultado de dichas operaciones. Por ejemplo, si una variable @x es igual a 35, a continuación, @x += 2 toma el valor original de @x, agregar 2 y establece @x en el nuevo valor (37).  
+  Los operadores compuestos ejecutan operaciones y establecen un valor original en el resultado de dichas operaciones. Por ejemplo, si una variable @x es igual a 35, @x += 2 toma el valor original de @x, suma 2 y establece @x en el nuevo valor (37).  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] proporciona los operadores compuestos siguientes:  
   
 |Operador|Más información|Acción|  
 |--------------|------------------------------|------------|  
-|+=|[+= &#40;Add Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-equals-transact-sql.md)|Agrega una cantidad al valor original y establece este en el resultado de la operación.|  
-|-=|[-= &#40;Subtract Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)|Resta una cantidad del valor original y establece este en el resultado de la operación.|  
-|*=|[&#42; = &#40; Asignación de multiplicación &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/multiply-equals-transact-sql.md)|Multiplica por una cantidad y establece el valor original en el resultado de la operación.|  
+|+=|[+= &#40;Asignación de suma&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-equals-transact-sql.md)|Agrega una cantidad al valor original y establece este en el resultado de la operación.|  
+|-=|[-= &#40;Subtract Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md) (-= [Asignación de resta] [Transact-SQL])|Resta una cantidad del valor original y establece este en el resultado de la operación.|  
+|*=|[&#42;= &#40;Multiply Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/multiply-equals-transact-sql.md) (&#42;= [Asignación de multiplicación] [Transact-SQL])|Multiplica por una cantidad y establece el valor original en el resultado de la operación.|  
 |/=|[&#40;Divide Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)|Divide por una cantidad y establece el valor original en el resultado de la operación.|  
-|%=|[Asignación y módulo &#40; Transact-SQL &#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)|Divide por una cantidad y establece el valor original en el módulo.|  
-|&=|[&= &#40;Bitwise AND Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)|Realiza una operación AND bit a bit y establece el valor original en el resultado de la operación.|  
-|^=|[^ = &#40; Bit a bit OR exclusivo asignación &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)|Realiza una operación OR exclusiva bit a bit y establece el valor original en el resultado de la operación.|  
-|&#124;=|[&#124; = &#40; OR bit a bit asignación &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)|Realiza una operación OR bit a bit y establece el valor original en el resultado de la operación.|  
+|%=|[Modulus Assignment &#40;Transact-SQL&#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md) (Asignación de módulo [Transact-SQL])|Divide por una cantidad y establece el valor original en el módulo.|  
+|&=|[&= &#40;Asignación de AND bit a bit&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)|Realiza una operación AND bit a bit y establece el valor original en el resultado de la operación.|  
+|^=|[^= &#40;Asignación de OR exclusivo bit a bit&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)|Realiza una operación OR exclusiva bit a bit y establece el valor original en el resultado de la operación.|  
+|&#124;=|[&#124;= &#40;Bitwise OR Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md) (&#124;= [Asignación de OR bit a bit] [Transact-SQL])|Realiza una operación OR bit a bit y establece el valor original en el resultado de la operación.|  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -59,12 +59,12 @@ expression operator expression
   
 ## <a name="arguments"></a>Argumentos  
  *expression*  
- Se trata de cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de uno de los datos de tipos de la categoría numérica.  
+ Cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md) válida de uno de los tipos de datos de la categoría numérica.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  Devuelve el tipo de datos del argumento con mayor prioridad. Para obtener más información, vea [Prioridad de tipo de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Para obtener más información, consulte los temas relacionados con cada operador.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -105,8 +105,8 @@ SELECT @x8 AS Bitwise_OR;
   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Bitwise Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
+## <a name="see-also"></a>Ver también  
+ [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  (Operadores [Transact-SQL])  
+ [Bitwise Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md) (Operadores bit a bit [Transact-SQL])  
   
   

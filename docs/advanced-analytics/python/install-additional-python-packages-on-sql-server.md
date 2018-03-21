@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: f9ac8a72618cb432134d8fd87b0664b720085730
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+ms.openlocfilehash: 8509556cd886f90dbac2211bc0282e8656bdc03e
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>Instalar nuevos paquetes de Python en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +33,7 @@ Para averiguar dónde se instalan los paquetes o qué paquetes están instalados
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-+ Debe instalar Machine Learning Services (In-Database) con la opción de lenguaje de Python. Para obtener instrucciones, consulte [configurar los servicios de aprendizaje de máquina de Python](setup-python-machine-learning-services.md).
++ Debe instalar Machine Learning Services (In-Database) con la opción de lenguaje de Python. Para obtener instrucciones, consulte [instalar SQL Server de 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md).
 
 + Para cada instancia del servidor, debe instalar una copia independiente del paquete. Los paquetes no se pueden compartir entre instancias.
 
@@ -64,7 +64,7 @@ El paquete instalado en este ejemplo es [CNTK](https://docs.microsoft.com/cognit
 
 + Si va a instalar los paquetes de Python en un servidor sin acceso a internet, debe descargar el archivo WHL en un equipo diferente y, a continuación, copiarlo en el servidor.
 
-    Por ejemplo, en un equipo diferente, puede descargar el archivo WHL desde este sitio [https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl)y, a continuación, copie el archivo `cntk-2.1-cp35-cp35m-win_amd64.whl` en una carpeta local en el equipo de SQL Server.
+    Por ejemplo, en un equipo diferente, puede descargar el archivo WHL desde este sitio [ https://cntk.ai/PythonWheel/CPU-Only ](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl)y, a continuación, copie el archivo `cntk-2.1-cp35-cp35m-win_amd64.whl` en una carpeta local en el equipo de SQL Server.
 
 + SQL Server 2017 utiliza 3.5 de Python. 
 

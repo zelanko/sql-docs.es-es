@@ -22,10 +22,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
 ms.openlocfilehash: 4d18a45b40c7f80ae2b46514f6c8245b80f6b142
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>Configurar servicios de aprendizaje de máquina de SQL Server (In-Database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ En este artículo se describe el proceso de instalación que utiliza la [!INCLUD
 
 **Se aplica a:** SQL Server 2016, SQL Server de 2017
 
-## <a name="bkmk_prereqs"></a> Lista de comprobación de preinstalación
+## <a name="bkmk_prereqs"> </a> Lista de comprobación de preinstalación
 
 + Máquina aprendizaje en bases de datos requiere que SQL Server 2016 o posterior. 
 
@@ -77,7 +77,7 @@ En este artículo se describe el proceso de instalación que utiliza la [!INCLUD
 
 + El marco de aprendizaje automático requiere configuración adicional después de que el programa de instalación se completa. Los pasos exactos dependen de su organización y las directivas de seguridad, configuración del servidor y el usuario. Se recomienda que revise todos los pasos y determinar la configuración adicional que podría ser necesario en su entorno.
 
-## <a name="bkmk2016top"></a>Instalar SQL Server 2016 R Services (en bases de datos)
+## <a name="bkmk2016top"></a> Instalar SQL Server 2016 R Services (en bases de datos)
 
 > [!div class="checklist"]
 > * Instalar el motor de base de datos y características de aprendizaje automático
@@ -119,7 +119,7 @@ En este artículo se describe el proceso de instalación que utiliza la [!INCLUD
 7. Cuando una vez completada la instalación, reinicie el equipo.
 
 
-## <a name="bkmk2017top"></a>Instalar servicios de aprendizaje automático SQL Server de 2017 (en bases de datos)
+## <a name="bkmk2017top"></a> Instalar servicios de aprendizaje automático SQL Server de 2017 (en bases de datos)
 
 > [!div class="checklist"]
 > * Instalar el motor de base de datos y características de aprendizaje automático
@@ -240,7 +240,7 @@ En esta sección se describe cómo volver a configurar la instancia para el apre
     + [Pasos posteriores a la instalación opcionales: configurar los permisos y servicio](#bkmk_FollowUp) 
     + [Solución de problemas de aprendizaje automático en SQL Server](upgrade-and-installation-faq-sql-server-r-services.md)
 
-## <a name="bkmk_FollowUp"></a>Pasos posteriores a la instalación opcionales
+## <a name="bkmk_FollowUp"></a> Pasos posteriores a la instalación opcionales
 
 Dependiendo del caso de uso para el aprendizaje automático, deberá realizar cambios adicionales en el servidor, el servidor de seguridad, las cuentas utilizadas por el servicio o los permisos de base de datos. Los cambios que debe realizar varían por mayúsculas o minúsculas.
 

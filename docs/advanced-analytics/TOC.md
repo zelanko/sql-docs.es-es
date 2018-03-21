@@ -4,18 +4,20 @@
 ## [Información general sobre la arquitectura](architecture-overview-machine-learning.md)
 ## [Características por edición](r/differences-in-r-features-between-editions-of-sql-server.md)
 
+# Install 
+## [Machine Learning Services (en base de datos)](install/sql-machine-learning-services-windows-install.md)
+## [Machine Learning Server (independiente)](install/sql-machine-learning-standalone-windows-install.md)
+## SQL Server 2016
+### [R Services (en bases de datos)](install/sql-r-services-windows-install.md)
+### [R Server (Standalone)](install/sql-r-standalone-windows-install.md)
+## [Instalación del símbolo del sistema](install/sql-ml-component-commandline-install.md)
+## [Instalación sin conexión (sin Internet)](install/sql-ml-component-install-without-internet-access.md)
+
 # [Machine Learning Services: R](r/sql-server-r-services.md)
-
-## [Introducción](r/getting-started-with-sql-server-r-services.md)
-### [Configurar SQL Server Machine Learning Services (en base de datos)](r/set-up-sql-server-r-services-in-database.md)
-### [Instalaciones desatendidas de Machine Learning Services](r/unattended-installs-of-sql-server-r-services.md)
-
 ## [Arquitectura](r/architecture-overview-sql-server-r.md)
 ### [Interoperabilidad de R](r/r-interoperability-in-sql-server.md)
 ### [Componentes que admiten la integración de R](r/new-components-in-sql-server-to-support-r.md)
 ### [Seguridad para R](r/security-overview-sql-server-r.md)
-
-## [Supervisión](r/monitoring-r-services.md)
 
 ## [Tutoriales de R para SQL Server](tutorials/sql-server-r-tutorials.md)
 
@@ -64,13 +66,10 @@
 
 # [Machine Learning Services: Python](python/sql-server-python-services.md)
 
-## [Introducción](python/setup-python-machine-learning-services.md)
-
 ## [Arquitectura](python/architecture-overview-sql-server-python.md)
 ### [Interoperabilidad de Python](python/python-interoperability.md)
 ### [Componentes para admitir Python](python/new-components-in-sql-server-to-support-python-integration.md)
 ### [Seguridad de Python](python/security-overview-sql-server-python-services.md)
-## [Supervisión](python/managing-and-monitoring-python-solutions.md)
 <!-- ### [How To Create a Resource Pool for Python](python/how-to-create-a-resource-pool-for-python.md)-->
 <!-- ### [Extended Events for Python](python/extended-events-for-python.md)-->
 <!-- ### [DMVs for Python](python/dmvs-for-python.md)-->
@@ -93,10 +92,6 @@
 #### [Hacer operativo el modelo](tutorials/sqldev-py6-operationalize-the-model.md)
 
 # [Machine Learning Server: independiente](r/r-server-standalone.md)
-## [Introducción](r/getting-started-with-microsoft-r-server-standalone.md)
-## [Configurar Machine Learning Server (independiente)](r/create-a-standalone-r-server.md)
-### [Instalar Microsoft Machine Learning Server desde la línea de comandos](r/install-microsoft-r-server-from-the-command-line.md)
-### [Aprovisionar la máquina virtual de ciencia de datos](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 
 # [Procedimiento](r/sql-server-machine-learning-tasks.md)
 
@@ -155,7 +150,7 @@
 
 ### [Implementar y usar modelos mediante servicios web](operationalization-with-mrsdeploy.md)
 
-### [Administración y supervisión de soluciones de aprendizaje automático](r/managing-and-monitoring-r-solutions.md)
+### [Administrar y supervisar soluciones](r/managing-and-monitoring-r-solutions.md
 ### [Regulación de recursos para Machine Learning Services](r/resource-governance-for-r-services.md)
 ### [Creación de grupos de recursos para el aprendizaje automático](r/how-to-create-a-resource-pool-for-r.md)
 ### [Eventos extendidos de Machine Learning Services](r/extended-events-for-sql-server-r-services.md)
@@ -172,18 +167,14 @@
 ## [Uso de R en Azure SQL Database](r/using-r-in-azure-sql-database.md)
 
 ## [Sugerencias de instalación y solución de problemas](machine-learning-troubleshooting-faq.md)
+### [Aprovisionar la máquina virtual de ciencia de datos](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 ### [Recopilación de datos para la solución de problemas](data-collection-ml-troubleshooting-process.md)
 ### [Preguntas más frecuentes sobre actualización e instalación](r/upgrade-and-installation-faq-sql-server-r-services.md)
-
 ### [Problemas comunes para la ejecución de scripts externos](common-issues-external-script-execution.md)
-### [Instalación de componentes de aprendizaje automático sin acceso a Internet](r/installing-ml-components-without-internet-access.md)
-### [Instalar SQL Server Machine Learning Services en una máquina virtual de Azure](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
-### [Agregar R a una máquina virtual existente de Azure](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
-### [Usar sqlBindR.exe para actualizar una instancia](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
-### [Instalar R Server desde la línea de comandos](r/install-microsoft-r-server-from-the-command-line.md)
-### [Aprovisionamiento de máquinas virtuales de ciencia de datos de empresa](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
-### [Configurar las herramientas de ciencia de datos](r/setup-or-configure-r-tools.md)
-### [Configurar un cliente de ciencia de datos](r/set-up-a-data-science-client.md)
+## [Enlazar a Microsoft ML Server](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+## [Configurar las herramientas de ciencia de datos](r/setup-or-configure-r-tools.md)
+## [Configurar un cliente de ciencia de datos](r/set-up-a-data-science-client.md)
+## [Configurar una máquina virtual](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 
 ## Blogs
 
@@ -198,15 +189,12 @@
 # [Referencia](r/machine-learning-services-r-reference.md)
 ## [MicrosoftML](using-the-microsoftml-package.md)
 ## [RevoScaleR](r/revoscaler-overview.md)
-### [Funciones de ScaleR para los datos de SQL Server](r/scaler-functions-for-working-with-sql-server-data.md)
+### [Funciones de RevoScaleR para los datos de SQL Server](r/scaler-functions-for-working-with-sql-server-data.md)
 ## [SqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
 ## [OlapR](r/how-to-create-mdx-queries-using-olapr.md)
 ## [RevoScalePy](python/what-is-revoscalepy.md)
 
-# [Tutoriales y ejemplos](tutorials/machine-learning-services-tutorials.md)
-
-## [Tutoriales de Python para SQL Server](tutorials/sql-server-python-tutorials.md)
-## [Tutoriales de R para SQL Server](tutorials/sql-server-r-tutorials.md)
+# [Plantillas y ejemplos](tutorials/machine-learning-services-tutorials.md)
 
 ## [Plantillas de soluciones de ciencia de datos](tutorials/data-science-scenarios-and-solution-templates.md)
 ## [Ejemplos de SQL Server](https://github.com/Microsoft/sql-server-samples)

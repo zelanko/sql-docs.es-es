@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 5ae4298fabb7147846b5ee87f391c1a0707cde3a
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: a54400e73c7789dcea15cbd4929c2a7878297df5
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>Getting started with machine learning in SQL Server (Introducción al aprendizaje automático en SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ Este artículo contiene vínculos a los recursos de cada producto de la platafor
   A partir de SQL Server 2017, ahora puede usar código de Python en SQL Server. Para reflejar la compatibilidad más amplia de las soluciones de varios idiomas (con más proceder!) y el nombre se ha cambiado a [!INCLUDE[rsql-productnamenew-md](../includes/rsql-productnamenew-md.md)]. Ahora puede automatizar tareas de aprendizaje automático mediante las herramientas de SQL para ejecutar código R o Python. O bien, usar el equipo de SQL Server como el _cálculo_ para los trabajos que se inicia desde un entorno de desarrollo remoto.
 
     + [Introducción a la arquitectura de Python en SQL Server](../advanced-analytics/python/architecture-overview-sql-server-python.md)
-    + [Configurar SQL Server R Services o servicios de aprendizaje de máquina](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
+    + [Instalar servicios de aprendizaje de 2017 máquinas SQL Server](install/sql-machine-learning-services-windows-install.md)
 
 + SQL Server 2016
 
@@ -47,7 +47,7 @@ Este artículo contiene vínculos a los recursos de cada producto de la platafor
   Esta integración proporciona seguridad para los datos y le permite administrar y equilibrar los recursos que usa R.
 
     + [Obtener iniciado wth SQL Server R Services](r/getting-started-with-sql-server-r-services.md)
-    + [Configurar SQL Server R Services o servicios de aprendizaje de máquina](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
+    + [Instalar SQL Server 2016 R Services](install/sql-r-services-windows-install.md)
 
 ## <a name="microsoft-machine-learning-server-microsoft-r-server"></a>Microsoft Machine Learning Microsoft R (servidor)
 
@@ -66,7 +66,7 @@ También puede instalar [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md
 > [!IMPORTANT]
 > Si desea ejecutar Python con R Server, asegúrese de instalar la versión más reciente, [!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)], que está disponible sólo a través de [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] el programa de instalación:
 > 
->    + [Configurar Microsoft R Server o servidor de aprendizaje de máquina](../advanced-analytics/r/create-a-standalone-r-server.md)
+>    + [Instalar servidor de aprendizaje de máquina (independiente) de SQL Server de 2017](install/sql-machine-learning-standalone-windows-install.md) o [instalar SQL Server 2016 R Server (independiente)](install/sql-r-standalone-windows-install.md).
 
 ## <a name="related-products"></a>Productos relacionados
 

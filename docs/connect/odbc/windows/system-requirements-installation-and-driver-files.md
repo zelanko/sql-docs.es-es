@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f25aa61329742373cff9fcbb38b893500d5baa12
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.openlocfilehash: 8e23264905c2a8b706b32a906d7dbf2dc3dd165b
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>Requisitos del sistema, instalación y archivos del controlador
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -101,6 +101,7 @@ Por ejemplo, cuando se compila una aplicación ODBC con `msodbcsql11.lib` y `mso
 |Componente|Description|  
 |---------------|-----------------|  
 |msodbcsql17.dll o <br> msodbcsql13.dll o <br> msodbcsql11.dll|El archivo de biblioteca de vínculos dinámicos (DLL) que contiene toda la funcionalidad del controlador. Este archivo está instalado en % SYSTEMROOT%\System32.|  
+|msodbcdiag17.dll o <br> msodbcdiag13.dll o <br> msodbcdiag11.dll|El archivo de biblioteca de vínculos dinámicos (DLL) que contiene la interfaz de diagnósticos (seguimiento) del controlador. Este archivo está instalado en % SYSTEMROOT%\System32.|
 |msodbcsqlr17.rll o <br> msodbcsqlr13.rll o <br> msodbcsqlr11.rll|El archivo de recursos asociado de la biblioteca de controladores. Este archivo está instalado en % SYSTEMROOT%\System32\1033.| 
 |s13ch_msodbcsql.chm or <br> s11ch_msodbcsql.chm |El archivo de Ayuda del Asistente para orígenes de datos que documenta cómo crear un origen de datos para el controlador. Este archivo se instala en %SYSTEMROOT%\System32\1033 <br /> <br /> **Nota:** no hay ningún archivo chm para 17 del controlador ODBC. |  
 |msodbcsql.h|El archivo de encabezado que contiene todas las definiciones nuevas necesarias para usar el controlador.<br /><br /> **Nota:**  No se puede hacer referencia a msodbcsql.h y odbcss.h en el mismo programa.<br /><br /> msodbcsql.h de 17 del controlador de ODBC o 13 está instalado en %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK. <br /> msodbcsql.h para ODBC Driver 11 se instala en %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK.| 

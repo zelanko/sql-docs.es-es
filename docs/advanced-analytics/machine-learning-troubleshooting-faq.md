@@ -1,7 +1,7 @@
 ---
 title: "Solución de problemas y preguntas más frecuentes para el aprendizaje automático en SQL Server | Documentos de Microsoft"
 ms.custom: 
-ms.date: 06/16/2017
+ms.date: 03/16/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.service: 
@@ -11,20 +11,20 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d334aefbd43bf17e776a8b75a09a2cef8448542d
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 5b9a5c6497781ef67d9d2ef9b9032a4d9ee250e5
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="troubleshoot-machine-learning"></a>Solucionar problemas de aprendizaje automático
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artículo proporciona información para solucionar problemas relacionados con el programa de instalación y configuración de características de aprendizaje de máquina de SQL Server. La información incluye vínculos a guías de instalación, problemas conocidos y notas de la versión. Otros artículos vinculados a partir de este artículo le proporcionará consejos sobre la optimización de rendimiento de las soluciones de aprendizaje de máquina de SQL Server.
+Este artículo contiene vínculos para solucionar problemas en las guías de instalación, problemas conocidos y notas de la versión. Otros artículos vinculados a partir de este artículo le proporcionará consejos sobre la optimización de rendimiento de las soluciones de aprendizaje de máquina de SQL Server.
 
 Utilice esta página como punto de partida para buscar problemas conocidos, las preguntas más frecuentes el programa de instalación y los procedimientos para solucionar el problema.
 
@@ -50,32 +50,18 @@ El siguiente artículo proporciona una lista de información que facilita la sol
 
 Empiece aquí si no ha configurado aprendizaje automático con SQL Server, o si desea agregar la característica:
 
-+ [Configurar servicios de aprendizaje de máquina con R o R Services](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
-+ [Configurar los servicios de aprendizaje de máquina a Python](../advanced-analytics/python/setup-python-machine-learning-services.md)
-+ [Preguntas más frecuentes sobre el programa de instalación](../advanced-analytics/r/upgrade-and-installation-faq-sql-server-r-services.md)
-+ [Usar SqlBindR para actualizar una instancia de R services](../advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
-
-Los artículos siguientes describen los pasos adicionales necesarios para la instalación sin conexión de características de aprendizaje de máquina de SQL Server:
-
-+ [Instalación desatendida de R Services](../advanced-analytics/r/unattended-installs-of-sql-server-r-services.md) 
-+ [Instalación desatendida de servicios de aprendizaje de máquina a Python](../advanced-analytics/python/unattended-installs-of-sql-server-python-services.md)
-
-Si tiene que instalar el características en un equipo sin conexión de Internet de aprendizaje automático, use los vínculos de este artículo para descargar los componentes de R y Python antes de comenzar el programa de instalación:
-
-+ [Instalación de componentes de aprendizaje automático sin acceso a Internet](../advanced-analytics/r/installing-ml-components-without-internet-access.md)
++ [Instalar servicios de aprendizaje automático SQL Server de 2017 (en bases de datos)](install/sql-machine-learning-services-windows-install.md)
++ [Instalar a servidor de aprendizaje de SQL Server de 2017 máquina (independiente)](install/sql-machine-learning-standalone-windows-install.md)
++ [Instalar SQL Server 2016 R Services (en bases de datos)](install/sql-r-services-windows-install.md)
++ [Instalar a SQL Server 2016R Server (independiente)](install/sql-r-standalone-windows-install.md)
++ [Programa de instalación de línea de comandos](install/sql-ml-component-commandline-install.md)
++ [Programa de instalación sin conexión (no a internet)](install/sql-ml-component-install-without-internet-access.md)
 
 ### <a name="configuration"></a>Configuración
 
 Los artículos siguientes contienen información acerca de los valores predeterminados y cómo personalizar la configuración para una instancia de aprendizaje automático:
 
-+ [Modificar el grupo de cuentas de usuario de SQL Server R Services](../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)  
-+ [Configurar y administrar extensiones de análisis avanzado](../advanced-analytics/r/configure-and-manage-advanced-analytics-extensions.md)  
++ [Modificar el grupo de cuentas de usuario de SQL Server R Services](r/modify-the-user-account-pool-for-sql-server-r-services.md)  
++ [Configurar y administrar extensiones de análisis avanzado](r/configure-and-manage-advanced-analytics-extensions.md)  
 + [Cómo crear un grupo de recursos](r/how-to-create-a-resource-pool-for-r.md)
 + [Optimización de las cargas de trabajo de R](r/operationalizing-your-r-code.md)
-
-## <a name="related-tools-and-services"></a>Servicios y herramientas relacionadas
-
-+ [Configurar Microsoft máquina aprendizaje servidor independiente](../advanced-analytics/r/create-a-standalone-r-server.md)
-+ [Configurar el servidor de R en una máquina virtual de Azure](../advanced-analytics/r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
-+ [Instalar a R Server para Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)
-+ [Obtener herramientas de R para Visual Studio](https://www.visualstudio.com/vs/rtvs/)

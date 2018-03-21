@@ -1,5 +1,5 @@
 ---
-title: R Server (independiente) | Microsoft Docs
+title: "Aprendizaje de máquina SQL Server (independiente) y R Server (independiente) | Documentos de Microsoft"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 06/22/2017
@@ -13,97 +13,76 @@ ms.tgt_pltfrm:
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: ca9e48f1-67b8-4905-9b78-56752d7a4e81
+ms.assetid: 
 caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 3f0c567463c25a54829a988516890bead171f5ec
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: eb30dbfdfd03f5a6515d0559d7f60cdde7b9223c
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
-# <a name="r-server-standalone"></a>R Server (Standalone)
+# <a name="sql-server-machine-learning-server-standalone-and-r-server-standalone"></a>Aprendizaje de máquina SQL Server (independiente) y R Server (independiente)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En SQL Server 2016, Microsoft publicó **R Server (independiente)**, como parte de la plataforma para admitir el análisis de clase empresarial.  Microsoft R Server proporciona escalabilidad y seguridad para el lenguaje R y resuelve las limitaciones de memoria de código abierto R. Al igual que SQL Server R Services, Microsoft R Server (independiente) proporciona el procesamiento paralelo y fragmentado de datos, permitiendo a los usuarios de R usar datos mucho mayores que pueden caber en memoria.
+Un servidor independiente es una instalación de componentes de aprendizaje de máquina, articulado como características de R y Python, que se ejecutan independientemente de instancias del motor de base de datos de SQL Server. Puede instalar a un servidor independiente por sí mismo, sin dependencias de SQL Server. Dado que un servidor independiente es independiente de SQL Server, configuración y tareas de administración y herramientas son más similares a una versión no son de SQL del servidor de aprendizaje de máquina, que puede leer acerca de [este artículo](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server).
 
-En SQL Server 2017, se ha agregado compatibilidad para el lenguaje de Python, que le gusta una amplia compatibilidad con la Comunidad de máquina de aprendizaje en e incluye las populares bibliotecas para el análisis de texto y aprendizaje profundo.  Para reflejar este conjunto más amplio de idiomas, nos hemos también cambió su nombre a **aprendizaje de máquina de Microsoft Server (independiente)**.
+El objetivo de un servidor de aprendizaje de máquina independiente consiste en proporcionar un entorno de desarrollo enriquecido, con el procesamiento distribuido y paralelo de las cargas de trabajo de R y Python en pequeñas a grandes conjuntos de datos, utilizando los paquetes propietarios y los motores de cálculo instalado con el servidor. Los paquetes de R y Python en un servidor independiente son los mismos que los mostrados en una instalación de SQL Server (In-Database), lo que permite la portabilidad del código y [cambio de contexto de proceso](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context).
 
-## <a name="benefits-of-microsoft-r-server"></a>Ventajas de Microsoft R Server
+Los desarrolladores de la razón principal elegir que un servidor de aprendizaje de máquina independiente es algo más que las restricciones de memoria y procesamiento de código abierto R y Python. Servidores independientes pueden cargar y procesar grandes cantidades de datos en varios núcleos y agrupar los resultados en una única salida consolidada. Las funciones y los algoritmos están diseñados para escalabilidad y utilidad: entrega de análisis predictivos, modelo estadístico, visualizaciones de datos y algoritmos en un producto de servidor comercial de aprendizaje de automático de vanguardia ingeniería y compatible con Microsoft.
 
-Puede usar Microsoft R Server para la computación distribuida en varias plataformas. Cuando se instala desde el programa de instalación de SQL Server, aparece el servidor basado en Windows y todas las herramientas necesarias para los modelos de la publicación y distribución. Para obtener más información acerca de otras plataformas, consulte estos recursos en MSDN library:
+Por lo general, se recomienda que trate (independiente) y (en bases de datos) instalaciones como mutuamente exclusivos para evitar la contención de recursos, pero si tiene recursos suficientes, no hay ninguna prohibición de la instalación de ambos en el mismo equipo físico.
 
-+ [Introducción a Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver)
-+ [R Server for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows) (R Server para Windows)
+Solo puede tener un servidor independiente en el equipo: cualquier [máquina aprendizaje Server (independiente) de SQL Server 2017](../install/sql-machine-learning-standalone-windows-install.md) o [R Server (independiente) de SQL Server 2016](../install/sql-r-standalone-windows-install.md). Debe desinstalar manualmente una versión antes de instalar una versión diferente.
 
-También puede instalar Microsoft R Server para usar como un cliente de desarrollo, para obtener la RevoScaleR bibliotecas y las herramientas necesarias para crear soluciones de R que se pueden implementar en SQL Server.
+## <a name="components-of-a-standalone-server"></a>Componentes de un servidor independiente
 
-## <a name="whats-new-in-microsoft-machine-learning-server"></a>Novedades de Microsoft Server de aprendizaje de máquina
+SQL Server 2016 solo es R. SQL Server 2017 admite R y Python. La tabla siguiente describen las características de cada versión.
 
-Si instala Servicios de aprendizaje de máquina (independiente) utilizando el programa de instalación de SQL Server 2017, ahora tiene la opción para agregar el idioma de Python. Naturalmente, el lenguaje R sigue siendo una opción admitida y puede incluso instalar ambos lenguajes si lo desea.
- 
-En SQL Server de 2017 CTP 2.0, la instalación del servidor también incluye el paquete de mrsdeploy y otras utilidades que se usan para los modelos en marcha. Para obtener más información, consulte [puesta en marcha con mrsdeploy](../../advanced-analytics/operationalization-with-mrsdeploy.md).
+| Componente | Description |
+|-----------|-------------|
+| Paquetes de R | [RevoScaleR](revoscaler-overview.md) es la biblioteca principal para R escalable con funciones de manipulación de datos, transformación, visualzation y análisis.  <br/>[MicrosoftML (R)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) agrega algoritmos de aprendizaje automático para crear modelos personalizados para el análisis de texto, análisis de imágenes y análisis de opiniones. <br/>[mrsdeploy](operationalization-with-mrsdeploy.md) web de ofertas de implementación de servicio (en SQL Server 2017). <br/>[olapR](how-to-create-mdx-queries-using-olapr.md) es para especificar las consultas MDX en R.|
+| Microsoft R Open (MRO) | [MRO](https://mran.microsoft.com/open) es la distribución de código abierto de Microsoft de R. Se incluyen el paquete y el intérprete. Utilice siempre la versión de MRO agrupado en el programa de instalación. |
+| Herramientas de R | Ventanas de la consola de R y símbolo del sistema son herramientas estándares en una distribución de R. Puede encontrarlos en \Program Server\140\R_SERVER\bin\x64 de SQL. |
+| Ejemplos de R y secuencias de comandos |  Paquetes de código abierto R y RevoScaleR incluyen conjuntos de datos integrados para que pueda crear y ejecutar script con datos previamente instalados. Mire para ellos \Program SQL Server\140\R_SERVER\library\datasets y \library\RevoScaleR. |
+| Paquetes de Python | [revoscalepy](../python/what-is-revoscalepy.md) es la biblioteca principal para Python ampliables con funciones de manipulación de datos, transformación, visualzation y análisis. <br/>[microsoftml (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) agrega algoritmos de aprendizaje automático para crear modelos personalizados para el análisis de texto, análisis de imágenes y análisis de opiniones.  |
+| Herramientas de Python | La herramienta de línea de comandos integrada de Python es útil para pruebas ad hoc y tareas. La herramienta se encuentra en \Program Server\140\PYTHON_SERVER\python.exe SQL. |
+| Anaconda | Anaconda es una distribución de código abierto de Python y paquetes esenciales. |
+| Las secuencias de comandos y ejemplos de Python | Al igual que con R, Python incluye conjuntos de datos integrados y secuencias de comandos. Buscar los datos revoscalepy en \Program SQL Server\140\PYTHON_SERVER\lib\site-packages\revoscalepy\data\sample-data. |
+| Modelos previamente entrenados en R y Python | Modelos previamente entrenados son compatibles y se puede usar en un servidor independiente, pero no se puede instalar mediante el programa de instalación de SQL Server. El programa de instalación para el servidor de aprendizaje de máquina de Microsoft proporciona los modelos, que puede instalar de forma gratuita. Para obtener más información, consulte [instalar previamente entrenada modelos de aprendizaje automático en SQL Server](install-pretrained-models-sql-server.md). |
 
-Los usuarios empresariales de aprendizaje automático de SQL Server pueden usar a los instaladores que se pueden descargar para Microsoft R Server para actualizar sus componentes de R, en un proceso llamado enlace. Para obtener más información, consulte [SqlBindR de uso para la actualización y la instancia de SQL Server](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+## <a name="get-started-step-by-step"></a>Introducción paso a paso
 
-## <a name="get-microsoft-r-server-or-machine-learning-server-standalone"></a>Obtener Microsoft R Server o servidor de aprendizaje de máquina (independiente)
+Iniciar el programa de instalación, adjuntar los archivos binarios a la herramienta de desarrollo que prefiera y escribir su primera secuencia de comandos.
 
- Existen varias opciones para instalar Microsoft R Server:
+### <a name="step-1-install-the-software"></a>Paso 1: Instalar el software
 
-+ Use el Asistente para la instalación de SQL Server
+Instalar cualquiera de estas versiones:
 
-  [Crear un R Server independiente](../r/create-a-standalone-r-server.md)
++ [Servidor de aprendizaje de SQL Server de 2017 máquina (independiente)](../install/sql-machine-learning-standalone-windows-install.md)
++ [SQL Server 2016 R Server (independiente) - R solo](../install/sql-r-standalone-windows-install.md)
 
-  Ejecute el programa de instalación de SQL Server 2016 para instalar **Microsoft R Server (independiente)**. El lenguaje R se agrega de forma predeterminada.
-  O bien, ejecute el programa de instalación de SQL Server 2017 para instalar **Server de aprendizaje de máquina (independiente)** y seleccione R, Python o ambos.
+### <a name="step-2-configure-a-development-tool"></a>Paso 2: Configurar una herramienta de desarrollo
 
-  > [!IMPORTANT]
-  > La opción para instalar el servidor está en la **características compartidas** sección del programa de instalación. No instale ningún otro componente.
-  >
-  > Si es posible, no instale al servidor en un equipo donde se haya instalado SQL Server R Services o servicios de aprendizaje de máquina de SQL Server.
+Configurar las herramientas de desarrollo para usar los archivos binarios del servidor de aprendizaje de máquina. Para obtener más información acerca de Python, consulte [archivos binarios de Python de vínculo](https://docs.microsoft.com/machine-learning-server/python/quickstart-python-tools). Para obtener instrucciones sobre cómo conectar en R Studio, consulte [utilizando diferentes versiones de R](https://support.rstudio.com/hc/en-us/articles/200486138-Using-Different-Versions-of-R) y seleccione la herramienta C:\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64. También puede intentar [R Tools para Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/installation). 
 
-+ Usar opciones de línea de comandos para el programa de instalación de SQL Server
+### <a name="step-3-write-your-first-script"></a>Paso 3: Escribir la primera secuencia de comandos
 
-  [Instalar Microsoft R Server desde la línea de comandos](../r/install-microsoft-r-server-from-the-command-line.md)
-
-  El programa de instalación de SQL Server es compatible con instalaciones desatendidas a través de un amplio conjunto de argumentos de línea de comandos.
-
-+ Use el instalador independiente
-
-  [Ejecutar Microsoft R Server para Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows).
-
-  Ahora puede usar a un nuevo instalador de Windows para configurar una nueva instancia de Microsoft R Server o servidor de aprendizaje de máquina de Microsoft.  Microsoft R Server (y aprendizaje de máquina de Microsoft Server) requieren un contrato Enterprise de SQL Server. Sin embargo, después de ejecutar al instalador independiente, se actualiza la directiva de soporte técnico para una instalación existente para usar la nueva directiva de ciclo de vida moderna. Esta opción de compatibilidad garantiza que las actualizaciones de componentes de aprendizaje de máquina se aplican con más frecuencia que serían al usar las versiones de servicio de SQL Server.
-
+Escribir el script de R o Python mediante funciones de RevoScaleR, revoscalepy y los algoritmos de aprendizaje automático.
   
-+ Actualizar una instancia de SQL Server
+  + [Explorar R y RevoScaleR en 25 funciones](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler): inicio con comandos básicos de R y, a continuación, en curso para las funciones analíticas distribuibles de RevoScaleR que proporcionan un alto rendimiento y escalado a soluciones en R. Incluye versiones que se pueden usar en parelelo de muchos de los paquetes de R más conocidos, como agrupación en clústeres k-means, árboles y bosques de decisión, y herramientas para la manipulación de datos.
 
-  [Uso de SqlBindR para actualizar una instancia de servicios de R](./use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
-  
-  Puede usar al instalador independiente para actualizar una instancia de SQL Server 2016 R Services para usar la versión más reciente de R. Al ejecutar el programa de instalación, se aplicará la directiva de soporte técnico de ciclo de vida moderna para el servidor y los componentes de R obtendrá actualizaciones más frecuentes.
-  
-  > [! Tenga en cuenta} actualmente este método de actualización está disponible sólo para las instalaciones existentes de SQL Server 2016. Sin embargo, las actualizaciones se admitirá para SQL Server 2017 en el futuro.
+  + [Inicio rápido: Un ejemplo de clasificación binaria con el paquete de Python microsoftml](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml): crear un modelo de clasificación binaria mediante las funciones de microsoftml y el conjunto de datos de ejemplo de cáncer de mama conocido.
 
-## <a name="related-machine-learning-products"></a>Productos de aprendizaje de máquina relacionado
+Elegir el mejor lenguaje para la tarea. R es más adecuado para realizar cálculos estadísticos que son difíciles de implementar mediante SQL. Para las operaciones basadas en conjunto sobre datos, aprovechan la eficacia del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para lograr un rendimiento máximo. Usar el motor de base de datos en memoria para realizar cálculos muy rápidos a través de las columnas.
 
-+ Máquinas virtuales de Azure con R Server
+### <a name="step-4-operationalize-your-solution"></a>Paso 4: Incorporación de operatividad a su solución
 
-  [Aprovisionar una máquina Virtual de servidor de R](../../advanced-analytics/r-services/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
-  
-  Azure marketplace incluye varias imágenes de máquina virtual que incluyen R Server. Crear una nueva máquina virtual de servidor de R en Microsoft Azure es la manera más rápida de configurar un servidor para usar en el desarrollo e implementación de modelos de predicción. Imágenes de proceden con las características de ajuste de escala y uso compartido ya configurado, lo que facilita la que se va a incrustar el análisis de R en aplicaciones como integrar R con sistemas de back-end.
-
-+ Máquina Virtual de ciencia de datos
-
-  [Data Science Virtual Machine - Windows 2016 Preview](http://aka.ms/dsvm/win2016)
-
-  La versión más reciente de la máquina Virtual de ciencia de datos incluye el servidor de R, SQL Server, y una matriz de las herramientas más populares para el aprendizaje automático, todos preinstalado y probado. Crear Jupyter blocs de notas, desarrollar soluciones de Julia y usar las bibliotecas de aprendizaje profundo basadas en la GPU como MXNet, CNTK y TensorFlow.
-
-## <a name="resources"></a>Recursos
-
-Ejemplos, tutoriales y obtener más información acerca de Microsoft R Server, vea [productos de Microsoft R](https://msdn.microsoft.com/microsoft-r/microsoft-r-getting-started).
+Pueden usar servidores independientes el [puesta en marcha](https://docs.microsoft.com//machine-learning-server/what-is-operationalization) funcionalidad de la sin SQL-marca [aprendizaje de máquina de Microsoft Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server). Puede configurar un servidor independiente para la puesta en marcha, que ofrece estas ventajas: implementar y alojar el código como servicios web, ejecute los diagnósticos, prueba la capacidad del servicio web.
 
 ## <a name="see-also"></a>Vea también
 
- [SQL Server R Services](../../advanced-analytics/r/sql-server-r-services.md)
+ [Equipo con SQL Server (en bases de datos) de servicios de aprendizaje](sql-server-r-services.md)
 

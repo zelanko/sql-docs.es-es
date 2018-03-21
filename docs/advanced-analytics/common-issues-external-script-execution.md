@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 261f7c750ab958cf85b3cfa6806704ca18f6d597
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: af9896e9e0baa2899b9e9c95795907ca46463504
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Problemas comunes con la ejecución de scripts externos en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -161,7 +161,7 @@ Si no se puede iniciar sesión en el grupo de Windows para los usuarios de R (qu
 
     * *Registros de seguridad indican que la cuenta de servicio de NT no pudo iniciar sesión*
 
-Para obtener información sobre cómo conceder los permisos necesarios de este grupo de usuarios, consulte [configurar SQL Server R Services](r/set-up-sql-server-r-services-in-database.md).
+Para obtener información sobre cómo conceder los permisos necesarios de este grupo de usuarios, consulte [instalar SQL Server 2016 R Services](install/sql-r-services-windows-install.md).
 
 > [!NOTE]
 > Esta limitación no se aplica si usa inicios de sesión de SQL para ejecutar scripts de R desde una estación de trabajo remota.
@@ -233,7 +233,7 @@ Esta duplicación se convierte en un problema cuando intenta ejecutar un script 
 
 Aunque el área de trabajo de acción de borrar es común cuando se trabaja en la consola de R, puede tener consecuencias no deseadas en una instancia de SQL contexto de proceso.
 
-`revoScriptConnection`es un objeto en el área de trabajo de R que contiene información sobre una sesión de R que se llama desde SQL Server. Sin embargo, si el código de R incluye un comando para borrar el área de trabajo (como `rm(list=ls())`), se desactiva toda la información acerca de la sesión y otros objetos en el área de trabajo de R.
+`revoScriptConnection` es un objeto en el área de trabajo de R que contiene información sobre una sesión de R que se llama desde SQL Server. Sin embargo, si el código de R incluye un comando para borrar el área de trabajo (como `rm(list=ls())`), se desactiva toda la información acerca de la sesión y otros objetos en el área de trabajo de R.
 
 Como alternativa, evite indiscriminado borrado de las variables y otros objetos mientras se ejecuta R en SQL Server. Puede eliminar variables específicas mediante la **quitar** función:
 

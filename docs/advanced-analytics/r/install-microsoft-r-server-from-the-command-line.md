@@ -17,10 +17,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
 ms.openlocfilehash: 95f8e0c688a2f141ce066e3831e461509d72c1a9
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>Instalar servidor de aprendizaje de máquina (independiente) o Microsoft R Server (independiente) desde la línea de comandos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +43,7 @@ Para obtener más información, consulte [instalar SQL Server desde el símbolo 
 Si instala el servidor de aprendizaje de máquina o Microsoft R Server (independiente) en un equipo que no tenga acceso a Internet, debe descargar los componentes necesarios de R (o Python) de antemano y cópielos en una carpeta local. Para ubicaciones de descarga, vea [instalación de componentes de aprendizaje de máquina sin acceso a internet](installing-ml-components-without-internet-access.md).
 
 
-## <a name="bkmk_mls2017"></a>Instalar Microsoft Machine Learning Server (independiente)
+## <a name="bkmk_mls2017"></a> Instalar Microsoft Machine Learning Server (independiente)
 
 **Se aplica a: SQL Server de 2017**
 
@@ -96,8 +96,8 @@ Una vez concluida la instalación, puede revisar el archivo de configuración cr
 
 De forma predeterminada, todo el programa de instalación registros y resúmenes para SQL Server y características relacionadas se crean en las siguientes carpetas:
 
-+ 2017 de SQL Server:`C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
-+ SQL Server 2016:`C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
++ 2017 de SQL Server: `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
++ SQL Server 2016:  `C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
 
 Se crea una subcarpeta independiente para cada característica que se ha instalado.
 

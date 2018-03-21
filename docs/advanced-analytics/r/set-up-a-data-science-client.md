@@ -15,11 +15,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 80b4898397cd0cb6460b379d91be81eb28cd9b87
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 160dae2d84c84aeaecaa07ec16be681fabde5534
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="set-up-a-data-science-client-for-use-with-sql-server"></a>Configurar un cliente de ciencia de datos para su uso con SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,13 +38,13 @@ Para obtener estas bibliotecas, instalar cualquiera de las siguientes acciones:
 
 + Microsoft R Server (para SQL Server 2016)
 
-    - Para instalar desde el programa de instalación de SQL Server, vea [crear un R Server independiente](../../advanced-analytics/r/create-a-standalone-r-server.md)
+    - Para instalar desde el programa de instalación de SQL Server, vea [instalar SQL Server 2016 R Server (independiente)](../install/sql-r-standalone-windows-install.md)
 
     - Para usar el instalador independiente basado en Windows, consulte [instalar servidor para aprendizaje máquina con Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 
 + Aprendizaje de servidor (para SQL Server de 2017) automático
 
-    - Para instalar desde el programa de instalación de SQL Server, vea [crear un R Server independiente](../../advanced-analytics/r/create-a-standalone-r-server.md)
+    - Para instalar desde el programa de instalación de SQL Server, vea [instalar SQL Server de 2017 máquina aprendizaje Server (independiente)](../install/sql-machine-learning-standalone-windows-install.md)
 
     - Para usar el instalador independiente basado en Windows, consulte [instalar R Server 9.1 para Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)
 

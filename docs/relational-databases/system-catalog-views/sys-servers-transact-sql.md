@@ -27,28 +27,29 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 858fe45f817572eea387ce3971a52e72cc23f045
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: cc6dcb18c9961bffcf65db5f918ad54f19ca78ae
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Contiene una fila por cada servidor vinculado o remoto registrado y una fila para el servidor local que tenga **server_id** = 0.  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]  
   
 |Nombre de columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Id. local del servidor vinculado.|  
 |**Nombre**|**sysname**|Cuando **server_id** = 0, este es el nombre de servidor.<br /><br /> Cuando **server_id** > 0, éste es el nombre local del servidor vinculado.|  
 |**product**|**sysname**|Nombre de producto del servidor vinculado. "SQL Server" indica que ésta es otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**proveedor**|**sysname**|Nombre del proveedor OLE DB para la conexión con el servidor vinculado.|  
+|**provider**|**sysname**|Nombre del proveedor OLE DB para la conexión con el servidor vinculado.|  
 |**data_source**|**nvarchar(4000)**|Propiedad de conexión del origen de datos OLE DB.|  
-|**ubicación**|**nvarchar(4000)**|Propiedad de conexión de la ubicación OLE DB. Es NULL si no hay ninguna.|  
+|**Ubicación**|**nvarchar(4000)**|Propiedad de conexión de la ubicación OLE DB. Es NULL si no hay ninguna.|  
 |**provider_string**|**nvarchar(4000)**|Propiedad de conexión de la cadena del proveedor OLE DB.<br /><br /> Es NULL a menos que el autor de la llamada tenga permiso ALTER ANY LINKED SERVER.|  
-|**catálogo**|**sysname**|Propiedad de conexión del catálogo OLE DB. Es NULL si no hay ninguna.|  
+|**catalog**|**sysname**|Propiedad de conexión del catálogo OLE DB. Es NULL si no hay ninguna.|  
 |**connect_timeout**|**int**|Tiempo de espera de conexión, en segundos. Es 0 si no hay ninguno.|  
 |**query_timeout**|**int**|Tiempo de espera de la consulta, en segundos. Es 0 si no hay ninguno.|  
 |**is_linked**|**bit**|0 = es un servidor antiguo agregado mediante **sp_addserver**, con diferentes RPC y el comportamiento de las transacciones distribuidas.<br /><br /> 1 = Servidor vinculado estándar.|  
@@ -82,8 +83,8 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Vea también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Vistas de catálogo de los servidores vinculados &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [Vistas de catálogo de servidores vinculados &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
   

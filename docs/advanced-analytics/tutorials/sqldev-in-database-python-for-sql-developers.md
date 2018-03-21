@@ -20,11 +20,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: c026e09e1fa34b98d1eda43d59097c966051f6d7
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: dab1a9648865f13d1741917bd389eae287afd7f2
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>Análisis de Python en bases de datos para desarrolladores de SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -80,7 +80,7 @@ Todas las tareas pueden realizarse mediante [!INCLUDE[tsql](../../includes/tsql-
 
 ### <a name="prerequisites"></a>Requisitos previos
 
-+ Instale una instancia de SQL Server 2017 con servicios de aprendizaje de máquina y Python habilitado. Para obtener más información, consulte [configurar servicios de aprendizaje de máquina de SQL Server con Python](../python/setup-python-machine-learning-services.md).
++ Instale una instancia de SQL Server 2017 con servicios de aprendizaje de máquina y Python habilitado. Para obtener más información, consulte [instalar SQL Server de 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md).
 + El inicio de sesión que use para este tutorial debe tener permisos para crear bases de datos y otros objetos, cargar datos, seleccionar datos y ejecutar procedimientos almacenados.
 
 ### <a name="experience-level"></a>Nivel de experiencia

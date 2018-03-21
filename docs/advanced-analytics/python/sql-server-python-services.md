@@ -1,6 +1,6 @@
 ---
 title: "Los servicios con Python de aprendizaje automático | Documentos de Microsoft"
-ms.date: 11/03/2017
+ms.date: 03/16/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -9,40 +9,38 @@ ms.component: python
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: ba1dea65-40ea-484a-b767-53680c954934
+ms.assetid: 
 caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 7051781664efd2924dcb187d456197bc9bc88686
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 47762e531cc3b0f78a17b19da80ad3ea2249a086
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="machine-learning-services-with-python"></a>Los servicios con Python de aprendizaje automático
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Python es un lenguaje que ofrece gran flexibilidad y eficacia para una variedad de tareas de aprendizaje automático. Las bibliotecas de código abierto para Python incluyen varias plataformas para redes neurales personalizables, así como las populares bibliotecas para el procesamiento de lenguaje natural. Ahora, se admite este idioma ampliamente utilizado en SQL Server de 2017 CTP 2.0 y versiones posteriores.
+Python es un lenguaje que ofrece gran flexibilidad y eficacia para una variedad de tareas de aprendizaje automático. Las bibliotecas de código abierto para Python incluyen varias plataformas para redes neurales personalizables, así como las populares bibliotecas para el procesamiento de lenguaje natural. Ahora, se admite este idioma usados en el aprendizaje automático de SQL Server de 2017.
 
 Dado que Python está integrado con el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motor de base de datos, puede realizar el análisis en lugar donde residen los datos y eliminar los costos y riesgos de seguridad asociados con el movimiento de datos.  Puede implementar soluciones de aprendizaje de máquina basadas en Python con prácticas y sencillas herramientas como Visual Studio. Las aplicaciones de producción pueden obtener predicciones, modelos, o procedimiento almacenan de objetos visuales del tiempo de ejecución de Python 3.5 mediante la llamada a un instrucción T-SQL.
 
-Esta versión incluye la distribución de Anaconda de Python, así como la nueva [revoscalepy](../python/what-is-revoscalepy.md) biblioteca, para mejorar la escalabilidad y rendimiento de sus soluciones de aprendizaje automático.
+Esta versión incluye la distribución de Anaconda de Python, así como el [revoscalepy](../python/what-is-revoscalepy.md) biblioteca, para mejorar la escalabilidad y rendimiento de sus soluciones de aprendizaje automático.
 
 Puede instalar todo lo que necesita para empezar a trabajar con Python mediante el programa de instalación de SQL Server 2017:
 
-+ **Servicios de aprendizaje de máquina (In-Database):** instale esta característica, junto con el motor de base de datos de SQL Server, para habilitar la ejecución segura de scripts de Python en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] equipo.
++ [**Learning Services (In-Database) del equipo**](../install/sql-machine-learning-services-windows-install.md): instale esta característica, junto con el motor de base de datos de SQL Server, para habilitar la ejecución segura de scripts de Python en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] equipo.
   
      Cuando seleccione esta característica, las extensiones se instalan en el motor de base de datos para admitir la ejecución de scripts de Python y se crea un nuevo servicio, el [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], para administrar las comunicaciones entre el tiempo de ejecución de Python y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia.
 
-+ **Servidor de aprendizaje de máquina (independiente):** si no necesita la integración de SQL Server, instale esta característica para obtener compatibilidad con Python y R para el aprendizaje automático distribuida. También puede implementar la solución de Python como un servicio web mediante **mrsdeploy**.
-  
-     No instale esta característica en el mismo equipo que ejecuta Servicios de aprendizaje de máquina de SQL Server.
++ [**Aprendizaje Server (independiente) la máquina**](../install/sql-machine-learning-standalone-windows-install.md): si no necesita la integración de SQL Server, instale esta característica para obtener compatibilidad con Python y R para el aprendizaje automático distribuida.
 
+## <a name="see-also"></a>Vea también
 
-## <a name="additional-resources"></a>Recursos adicionales
-
-[Configurar servicios de bases de datos de aprendizaje de automático de Python](setup-python-machine-learning-services.md)
-
-[Tutoriales de Python](../tutorials/sql-server-python-tutorials.md)
++ [SQL Server del equipo aprendizaje y R Services (en bases de datos)](../r/sql-server-r-services.md)
++ [SQL Server del equipo aprendizaje y R Server (independiente)](../r/r-server-standalone.md)
++ [Arquitectura de Python](architecture-overview-sql-server-python.md)
++ [Tutoriales de Python](../tutorials/sql-server-python-tutorials.md)

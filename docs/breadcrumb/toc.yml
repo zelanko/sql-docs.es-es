@@ -125,12 +125,21 @@
         - name: SQL Server en Linux
           href: /sql/linux/
           homepage: /sql/linux/sql-server-linux-overview
-        - name: Análisis avanzado de SQL Server
+        - name: Machine Learning Services en SQL Server
           href: /sql/advanced-analytics/
-          homepage: /sql/advanced-analytics/getting-started-with-machine-learning-services
-        - name: R Services de SQL Server
+          homepage: /sql/advanced-analytics/what-is-sql-server-machine-learning
+        - name: R
           href: /sql/advanced-analytics/r/
           homepage: /sql/advanced-analytics/r/architecture-overview-sql-server-r
+        - name: Python
+          href: /sql/advanced-analytics/python/
+          homepage: /sql/advanced-analytics/python/sql-server-python-services
+        - name: Instalar y configurar
+          href: /sql/advanced-analytics/install/
+          homepage: /sql/advanced-analytics/install/sql-machine-learning-services-windows-install.md
+        - name: Tutoriales
+          href: /sql/advanced-analytics/tutorials/
+          homepage: /sql/advanced-analytics/tutorials/machine-learning-services-tutorials
         - name: SQL Server
           href: /sql/sql-server/
           homepage: /sql/sql-server/sql-server-technical-documentation
@@ -210,7 +219,7 @@
                         - name: Cliente
                           href: /sql/analysis-services/multidimensional-models-adomd-net-client/
                           homepage: /sql/analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-functionality
-                        - name: Server
+                        - name: Servidor
                           href: /sql/analysis-services/multidimensional-models-adomd-net-server/
                           homepage: /sql/analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-functionality
                     - name: Objetos de administración de análisis
@@ -614,7 +623,7 @@
             - name: PolyBase
               href: /sql/relational-databases/polybase/
               homepage: /sql/relational-databases/polybase/polybase-guide
-            - name: Replicación
+            - name: REPLICATION
               href: /sql/relational-databases/replication/
               homepage: /sql/relational-databases/replication/sql-server-replication
               items:
@@ -645,7 +654,7 @@
                 - name: Transaccional
                   href: /sql/relational-databases/replication/transactional/
                   homepage: /sql/relational-databases/replication/transactional/transactional-replication
-            - name: Regulador de recursos
+            - name: regulador de recursos
               href: /sql/relational-databases/resource-governor/
               homepage: /sql/relational-databases/resource-governor/resource-governor
             - name: Scripting
@@ -1065,7 +1074,7 @@
                 - name: Ayuda del menú
                   href: /sql/ssms/menu-help/
                   homepage: /sql/ssms/menu-help/sql-server-management-studio-menu-help
-                - name: Object
+                - name: Objeto
                   href: /sql/ssms/object/
                   homepage: /sql/ssms/object/object-explorer
                 - name: Registrar servidores

@@ -15,22 +15,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
 caps.latest.revision: 
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c63c70bdd99e31466aa94f72d765e50e0db78779
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 50ae258437afb40cd2b427048dfe24330676f94f
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>Install SQL Server Business Intelligence Features (Instalar las características de SQL Server Business Intelligence)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   Las características de SQL Server que forman parte de la plataforma Microsoft Business Intelligence incluyen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y varias aplicaciones cliente que se usan para crear datos analíticos o para trabajar con ellos. En esta sección de la documentación del programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se explica cómo instalar estas características.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se pueden instalar como servidores independientes, en configuraciones escaladas o como aplicaciones de servicio compartido en una granja de SharePoint. Al instalar los servicios en una granja de servidores, se habilitan las características de BI que solo están disponibles en SharePoint, incluido [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint y [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], el diseñador de informes interactivo ad hoc de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se ejecuta en bases de datos de modelo tabular de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)].  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se pueden instalar como servidores independientes, en configuraciones escaladas o como aplicaciones de servicio compartido en una granja de SharePoint. Al instalar los servicios en una granja de servidores, se habilitan las características de BI que solo están disponibles en SharePoint, incluido [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint y [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], el diseñador de informes interactivo ad hoc de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se ejecuta en bases de datos de modelo tabular de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="sql-server-bi-features"></a>Características de SQL Server BI  
  Todas las características de SQL Server, incluidos los componentes de BI, se instalan con el programa de instalación de SQL Server. Los siguientes vínculos proporcionan información complementaria específica de cada característica de BI.  

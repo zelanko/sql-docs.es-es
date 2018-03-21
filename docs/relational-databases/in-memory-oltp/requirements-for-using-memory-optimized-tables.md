@@ -14,15 +14,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3482d6e097e77966be39e33b6eb31b7d941c7624
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 50d2fc5af283489b8f02d2a7e7aa54dc76d14e59
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Requisitos para utilizar las tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,8 @@ ms.lasthandoff: 02/12/2018
     > [!NOTE]
     > Nota: OLTP en memoria necesita la versión de 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesita suficiente memoria para almacenar los datos en tablas optimizadas para memoria e índices, así como memoria adicional para admitir la carga de trabajo en línea. Vea [Estimar los requisitos de memoria para las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) para obtener más información.  
+-   
+            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesita suficiente memoria para almacenar los datos en tablas optimizadas para memoria e índices, así como memoria adicional para admitir la carga de trabajo en línea. Vea [Estimar los requisitos de memoria para las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) para obtener más información.  
 
 -   Cuando ejecute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una máquina virtual (VM), asegúrese de que haya suficiente memoria asignada a la VM para admitir la memoria necesaria para índices y tablas optimizadas para memoria. Dependiendo de la aplicación host de VM, la opción de configuración para garantizar la asignación de memoria para la VM podría denominarse Reserva de memoria o, si se usa la memoria dinámica, RAM mínima. Asegúrese de que esta configuración sea suficiente para las necesidades de las bases de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   

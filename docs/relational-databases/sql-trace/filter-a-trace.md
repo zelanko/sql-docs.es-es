@@ -20,18 +20,19 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a53a67bdd997f3daa8168f445ce8eada527b5608
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: b77fb18c3513c7c0a764cad2110931d38c6903f9
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="filter-a-trace"></a>Filtrar un seguimiento
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los filtros limitan los eventos que se recopilan en el seguimiento. Si no se establece un filtro, se devolverán todos los eventos de las clases de eventos seleccionadas en el resultado del seguimiento. Por ejemplo, si limita los nombres de usuarios de Windows de un seguimiento para usuarios específicos, los datos de la salida se limitarán solo a aquellos usuarios.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Los filtros limitan los eventos que se recopilan en el seguimiento. Si no se establece un filtro, se devolverán todos los eventos de las clases de eventos seleccionadas en el resultado del seguimiento. Por ejemplo, si limita los nombres de usuarios de Windows de un seguimiento para usuarios específicos, los datos de la salida se limitarán solo a aquellos usuarios.  
   
  No es obligatorio establecer un filtro para un seguimiento. Sin embargo, un filtro minimiza la sobrecarga que comporta un seguimiento. Un filtro devuelve los datos relativos y, de este modo, facilita el análisis del rendimiento y las auditorías.  
   

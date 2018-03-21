@@ -18,11 +18,11 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0cd80620f668e87eba8a77f1ac6a9e5faa2378da
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0e3fdf8e84b12315ef3ce500b933c4b4d6580f13
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Trabajador de escalado horizontal de Integration Services (SSIS)
 
@@ -43,8 +43,8 @@ StoreName|Nombre del almacén en el que está el certificado de ese trabajador.|
 AgentHeartbeatInterval|Intervalo del latido del trabajador de escalado horizontal.|00:01:00         
 TaskHeartbeatInterval|Intervalo del estado de la tarea de generación de informes del trabajador de escalado horizontal.|00:00:10         
 HeartbeatErrorTollerance|Una vez transcurrido este período desde el último latido correcto, la tarea finaliza si se recibe una respuesta de error del latido.|00:10:00      
-TaskRequestMaxCPU|Límite superior de CPU del trabajador de escalado horizontal para solicitar tareas. **No está en uso en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|70.0         
-TaskRequestMinMemory|Límite inferior de memoria en MB del trabajador de escalado horizontal para solicitar tareas. **No está en uso en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|100.0         
+TaskRequestMaxCPU|Límite superior de CPU del trabajador de escalado horizontal para solicitar tareas.|70.0         
+TaskRequestMinMemory|Límite inferior de memoria en MB del trabajador de escalado horizontal para solicitar tareas.|100.0         
 MaxTaskCount|Número máximo de tareas que puede contener el trabajador de escalado horizontal.|10         
 LeaseInterval|Intervalo de concesión de una tarea por parte del trabajador de escalado horizontal.|00:01:00         
 TasksRootFolder|Carpeta de registros de tareas. Si el valor está vacío, se usará la ruta de acceso de carpeta `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks`. [cuenta] es la cuenta que ejecuta el servicio de trabajador de escalado horizontal. De forma predeterminada, la cuenta es SSISScaleOutWorker140.|Vacía         

@@ -18,19 +18,19 @@ helpviewer_keywords:
 - metadata [SQL Server], event notifications
 ms.assetid: 8bc10867-66d6-4f57-ac32-a6c29f3327cd
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e8a2f7837c7f18293afe66c168b5d52c8b03da9
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 1ef3efe96a38e594a945653ca08469811e813340
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="get-information-about-event-notifications"></a>Obtener información sobre notificaciones de eventos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-A continuación se indican las vistas de catálogo que están disponibles para consultar metadatos acerca de las notificaciones de eventos.  
+  A continuación se indican las vistas de catálogo que están disponibles para consultar metadatos acerca de las notificaciones de eventos.  
   
  **Para obtener información acerca de notificaciones de eventos que no tengan lugar en servidores**  
   

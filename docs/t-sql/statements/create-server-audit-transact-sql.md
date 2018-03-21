@@ -29,17 +29,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b6e637bec3ddcfd7b24bb4f4adb87011bbbe2471
-ms.sourcegitcommit: e851f3cab09f8f09a9a4cc0673b513a1c4303d2d
+ms.openlocfilehash: cf515de224d5e44d8b2015b33a45485f9d7cd63f
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Crea un objeto de auditoría de servidor utilizando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -110,7 +112,7 @@ CREATE SERVER AUDIT audit_name
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Las operaciones de  continúan. Los registros de auditoría no se conservan. La auditoría continúa intentando el registro de eventos y se reanuda si se resuelve la condición de error. La selección de la opción Continuar puede permitir que una actividad no se audite, con lo que se infringirían las directivas de seguridad. Utilice esta opción cuando la operación de continuación del [!INCLUDE[ssDE](../../includes/ssde-md.md)] sea más importante que el mantenimiento de una auditoría completa.  
   
 SHUTDOWN  
-Obliga a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a apagarse si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede escribir datos en el destino de auditoría por algún motivo. El inicio de sesión que ejecuta la instrucción `CREATE SERVER AUDIT` debe tener el permiso `SHUTDOWN` en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El comportamiento de apagado persiste aun cuando el permiso `SHUTDOWN` se revoque más adelante del inicio de sesión que ejecuta la instrucción. Si el usuario no tiene este permiso, la instrucción producirá un error y la auditoría no se creará. Utilice la opción si un error de auditoría puede poner en peligro la seguridad o la integridad del sistema. Para más información, vea [SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md).  
+Obliga a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a apagarse si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede escribir datos en el destino de auditoría por algún motivo. El inicio de sesión que ejecuta la instrucción `CREATE SERVER AUDIT` debe tener el permiso `SHUTDOWN` en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El comportamiento de apagado persiste aun cuando el permiso `SHUTDOWN` se revoque más adelante del inicio de sesión que ejecuta la instrucción. Si el usuario no tiene este permiso, la instrucción producirá un error y la auditoría no se creará. Utilice la opción si un error de auditoría puede poner en peligro la seguridad o la integridad del sistema. Para obtener más información, vea [SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md).  
   
  FAIL_OPERATION  
  Las acciones de base de datos producen un error si generan eventos auditados. Las acciones que no generan eventos auditados pueden continuar, pero no pueden producirse eventos auditados. La auditoría continúa intentando el registro de eventos y se reanuda si se resuelve la condición de error. Utilice esta opción si el mantenimiento de una auditoría completa es más importante que el acceso total al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -220,7 +222,7 @@ GO
   
 ## <a name="see-also"></a>Ver también  
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
- [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
  [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
  [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   

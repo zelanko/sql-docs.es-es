@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b532bf37f99a3fc05b0f2999d0d3d301323457d6
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: edba23fdc5d59a5b1a5d11d1efdfdc05d9132061
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>Quick Start: Extended Events in SQL Server (Inicio rápido: Eventos extendidos en SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -656,7 +656,7 @@ Aquí se muestran vínculos a la documentación relacionada con estas instruccio
 - [sys.server_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms188786.aspx)
 - Especialmente para Base de datos SQL de Azure, [sys.database_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms187328.aspx)
 - Blog: [Effective Database Engine Permissions (Permisos eficaces del motor de base de datos)](http://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)
-- [Póster](http://go.microsoft.com/fwlink/?LinkId=229142)que se puede acercar, en formato PDF, que muestra la jerarquía de todos los permisos de SQL Server.
+- [Póster](https://aka.ms/sql-permissions-poster)que se puede acercar, en formato PDF, que muestra la jerarquía de todos los permisos de SQL Server.
 
 
 

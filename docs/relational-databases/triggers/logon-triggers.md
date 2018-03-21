@@ -1,7 +1,7 @@
 ---
 title: Desencadenadores logon | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 03/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -23,15 +23,15 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 123a1456150d99f47b6f524d76f0afa0d79ba86b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a22d0170dfe776207ca5fe9ecb79cbce3684e797
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="logon-triggers"></a>Desencadenadores logon
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-Los desencadenadores LOGON activan procedimientos almacenados en respuesta a un evento LOGON. Este evento se genera cuando se establece una sesión de usuario con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los desencadenadores logon se activan después de que termine la fase de autenticación del inicio de sesión, pero antes de que se establezca la sesión de usuario realmente. Por tanto, todos los mensajes que se originan dentro del desencadenador y que normalmente llegarían hasta el usuario, como los mensajes de error y los mensajes de la instrucción PRINT, se desvían al registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los desencadenadores logon no se activan si se produce un error en la autenticación.  
+[!INCLUDE[tsql-appliesto-ss2008-xxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+  Los desencadenadores LOGON activan procedimientos almacenados en respuesta a un evento LOGON. Este evento se genera cuando se establece una sesión de usuario con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los desencadenadores logon se activan después de que termine la fase de autenticación del inicio de sesión, pero antes de que se establezca la sesión de usuario realmente. Por tanto, todos los mensajes que se originan dentro del desencadenador y que normalmente llegarían hasta el usuario, como los mensajes de error y los mensajes de la instrucción PRINT, se desvían al registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los desencadenadores logon no se activan si se produce un error en la autenticación.  
   
  Puede utilizar desencadenadores logon para realizar auditorías y controlar sesiones de servidor, como el seguimiento de la actividad de inicio de sesión, la restricción de inicios de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o la limitación del número de sesiones para un inicio de sesión específico. Por ejemplo, en el siguiente código, el desencadenador LOGON rechaza los intentos de iniciar sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] iniciados por el inicio de sesión *login_test* si ya hay tres sesiones de usuario creadas por dicho inicio de sesión.  
   

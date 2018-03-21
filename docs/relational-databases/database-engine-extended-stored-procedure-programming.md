@@ -19,21 +19,21 @@ helpviewer_keywords:
 - Extended Stored Procedure API [SQL Server]
 ms.assetid: 158a6765-0542-4e84-b5ab-f173d946ef5e
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1da67999b5c0ae02606d83dfe47c194b2b4499ff
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: ab25407220d400923cb48e3cc77c4e54326488c8
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="database-engine-extended-stored-procedure-programming"></a>Programación de procedimientos almacenados extendidos de motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)] En su lugar, use la integración con CLR. Para obtener más información, consulte [Conceptos de programación en el ámbito de la integración de Common Language Runtime &#40;CLR&#41;](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)] En su lugar, utilice la integración con CLR. Para obtener más información, consulte [Conceptos de programación en el ámbito de la integración de Common Language Runtime &#40;CLR&#41;](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
   
  La API Procedimiento almacenado extendido de [!INCLUDE[msCoName](../includes/msconame-md.md)] proporciona una interfaz de programación de aplicaciones (API) basada en servidor para extender la funcionalidad de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La API está compuesta de funciones y macros de C y C++ que se utilizan para crear aplicaciones de las siguientes categorías: procedimientos almacenados extendidos y aplicaciones de puerta de enlace.  
   

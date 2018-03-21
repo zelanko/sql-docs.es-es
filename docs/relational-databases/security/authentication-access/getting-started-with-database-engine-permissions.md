@@ -20,11 +20,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6234975f35a30fc956f4e8735771d09cea2d1e2e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 4292564f8e3e392bd01d5b1e580e1f28251840bd
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Introducción a los permisos de los motores de bases de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -166,7 +166,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
 ## <a name="list-of-permissions"></a>Lista de permisos  
  [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] tiene 230 permisos. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] tiene 219 permisos. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] tiene 214 permisos. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] tiene 195 permisos. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]y [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] tienen menos permisos porque solo exponen una parte del motor de base de datos, aunque cada uno tiene permisos que no son aplicables a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El gráfico siguiente muestra los permisos y las relaciones entre ellos. Algunos de los permisos de nivel superior (como `CONTROL SERVER`) se muestran varias veces. En este tema, el póster es demasiado pequeño para leerlo. Haga clic en la imagen para descargar el **póster de los permisos de los motores de bases de datos** en formato pdf.  
   
-[![Permisos de los motores de bases de datos](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+[![Permisos de los motores de bases de datos](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
  
  Para ver un gráfico que muestra las relaciones entre las entidades de seguridad de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] y los objetos de servidor y base de datos, consulte [Permissions Hierarchy &#40;Database Engine&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md) (Jerarquía de permisos [motor de base de datos]).  
   

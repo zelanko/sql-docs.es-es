@@ -25,18 +25,19 @@ helpviewer_keywords:
 - view dependencies
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 caps.latest.revision: 
-author: sstein
+author: stevestein
+ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cfbfda8cf3759f89bf2b0f8ae43257e64e82c779
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 8000835e72e50042b18884c092565253c75c246b
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="get-information-about-a-view"></a>Obtener información acerca de una vista
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
-Puede obtener información acerca de la definición o propiedades de una vista de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Es posible que necesite ver la definición de la vista para entender cómo derivan sus datos de las tablas de origen o para ver los datos que ella misma define.  
+  Puede obtener información acerca de la definición o propiedades de una vista de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Es posible que necesite ver la definición de la vista para entender cómo derivan sus datos de las tablas de origen o para ver los datos que ella misma define.  
   
 > [!IMPORTANT]  
 >  Si cambia el nombre de un objeto al que hace referencia una vista, deberá modificar ésta para que el texto refleje el nuevo nombre. Por lo tanto, antes de cambiar el nombre de un objeto, observe las dependencias del mismo a fin de determinar si el cambio propuesto afecta a alguna vista.  

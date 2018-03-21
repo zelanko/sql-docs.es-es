@@ -14,18 +14,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 74f80667-62f3-4e14-bb1a-f0c2b6ef3402
 caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ea62694191ba258c4b1029f08e4fb5f6ce13fed
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 6555bf45840676342a9df3b37fee8830bfed246f
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="save-trace-results-to-a-file"></a>Guardar los resultados de un seguimiento en un archivo
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Los resultados de un seguimiento se pueden guardar en un archivo. Un archivo de seguimiento es un archivo donde se escriben los resultados de un seguimiento. Un archivo de seguimiento puede ubicarse en un directorio local (por ejemplo C:\\*nombreDeCarpeta*\\*nombreDeArchivo.trc*) o un directorio de red (por ejemplo \\\nombreDeEquipo\nombreDeRecursoCompartido\nombreDeArchivo.trc).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Los resultados de un seguimiento se pueden guardar en un archivo. Un archivo de seguimiento es un archivo donde se escriben los resultados de un seguimiento. Un archivo de seguimiento puede ubicarse en un directorio local (por ejemplo C:\\*nombreDeCarpeta*\\*nombreDeArchivo.trc*) o un directorio de red (por ejemplo \\\nombreDeEquipo\nombreDeRecursoCompartido\nombreDeArchivo.trc).  
   
  Puede utilizar los archivos de seguimiento para realizar lo siguiente:  
   

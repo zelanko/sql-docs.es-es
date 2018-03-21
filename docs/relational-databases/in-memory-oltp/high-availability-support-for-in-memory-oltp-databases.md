@@ -14,19 +14,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 299c2e0d7306fb1cca33eac4a26c1d3b04dca83c
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: eb13a7b90d1e84a57a5c989058dd32ebd2b8eeb3
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Compatibilidad con alta disponibilidad para bases de datos OLTP en memoria
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Las bases de datos que contienen tablas optimizadas para memoria, con o sin procedimientos almacenados compilados nativos, son totalmente compatibles con grupos de disponibilidad AlwaysOn.  No hay ninguna diferencia en la configuración y la compatibilidad de las bases de datos que contienen objetos de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] en comparación con las que no tienen.  
+  Las bases de datos que contienen tablas optimizadas para memoria, con o sin procedimientos almacenados compilados nativos, son totalmente compatibles con grupos de disponibilidad AlwaysOn.  No hay ninguna diferencia en la configuración y la compatibilidad de las bases de datos que contienen objetos de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] en comparación con las que no tienen.  
   
  Cuando se implementa una base de datos de OLTP en memoria en una configuración de Grupo de disponibilidad AlwaysOn, los cambios en las tablas optimizadas para memoria en la réplica principal se aplican en memoria a las tablas de las réplicas secundarias, cuando se aplica REDO. Esto significa que la conmutación por error a una réplica secundaria puede ser muy rápida, puesto que los datos ya están en memoria. Además, las tablas están disponibles para las consultas en las réplicas secundarias que se han configurado para el acceso de lectura.  
   

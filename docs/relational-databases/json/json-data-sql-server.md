@@ -20,14 +20,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ec68e7b254c10d4025b7cee61d47db033757516b
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 92bac08a5168cb60477f8d253a9fee1f0fb5caef
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="json-data-in-sql-server"></a>Datos JSON en SQL Server
-[!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 JSON es un formato de datos de texto muy popular que se usa para intercambiar datos en las aplicaciones web y móviles modernas. JSON también sirve para almacenar los datos no estructurados en archivos de registro o en bases de datos NoSQL, como Microsoft Azure Cosmos DB. Muchos servicios web REST devuelven resultados con formato de texto JSON o bien aceptan datos con este formato. Por ejemplo, la mayoría de los servicios de Azure, como Azure Search, Azure Storage y Azure Cosmos DB, cuentan con extremos REST que devuelven o usan JSON. JSON es también el formato principal para intercambiar datos entre páginas web y servidores web a través de llamadas AJAX. 
 
@@ -324,7 +324,7 @@ Para obtener una introducción visual a la compatibilidad integrada de JSON en S
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player]
 
 *Compilar una API de REST con SQL Server mediante funciones JSON*
-> [!VIDEO https://www.youtube.com/watch?v=0m6GXF3-5WI]
+> [!VIDEO https://www.youtube.com/embed/0m6GXF3-5WI]
 
 ### <a name="reference-articles"></a>Artículos de referencia  
   

@@ -22,19 +22,19 @@ helpviewer_keywords:
 - full transaction logs [SQL Server]
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e7aa56db8223c76b3d597da5c00ffe5be250aae7
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 5f0ea9dba2803d981b5e259105d1e699e08611f1
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Solucionar problemas de un registro de transacciones lleno (Error 9002 de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-En este tema se tratan las posibles respuestas a un registro de transacciones lleno y se sugiere cómo evitar esta situación en el futuro. 
+  En este tema se tratan las posibles respuestas a un registro de transacciones lleno y se sugiere cómo evitar esta situación en el futuro. 
   
   Cuando el registro de transacciones se llena, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] genera un **error 9002**. El registro se puede llenar cuando la base de datos está en línea o en recuperación. Si el registro se llena cuando la base de datos está en línea, la base de datos seguirá en conexión, pero solo se puede leer y no actualizar. Si el registro se llena durante la recuperación, [!INCLUDE[ssDE](../../includes/ssde-md.md)] marca la base de datos como RESOURCE PENDING. En ambos casos, es necesaria la intervención del usuario para proporcionar espacio de registro.  
   

@@ -31,17 +31,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f0e46404d775da09f4aaeb7b9640dd2a35d3cfa2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 200adf6302cb0c86f487a7480579a173403ed14c
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Crea una credencial de nivel de servidor. Una credencial es un registro que contiene la información de autenticación necesaria para conectarse a un recurso fuera de SQL Server. La mayoría de las credenciales incluyen un usuario y una contraseña de Windows. Por ejemplo, guardar una copia de seguridad de base de datos en una ubicación cualquiera podría requerir que SQL Server proporcione credenciales especiales para tener acceso a esa ubicación. Para más información, vea [Credenciales (motor de base de datos)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!NOTE]  
 >  Para establecer la credencial en el nivel de base de datos, vea [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md). Use una credencial de nivel de servidor cuando necesite usar la misma credencial para varias bases de datos en el servidor. Use una credencial de ámbito de base de datos para hacer que la base de datos sea más portátil. Cuando una base de datos se mueve a un nuevo servidor, la credencial de ámbito de la base de datos se moverá con ella. Use credenciales con ámbito de base de datos en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   

@@ -14,19 +14,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4bbbd0581a293ee43da5b56d4717802258150017
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 21f4c76bfc7b333fd21f3fbc7c4c044191b7f8a3
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>Crear una tabla con optimización para memoria y un procedimiento almacenado compilado de forma nativa
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Este tema contiene un ejemplo que le presenta la sintaxis de OLTP en memoria.  
+  Este tema contiene un ejemplo que le presenta la sintaxis de OLTP en memoria.  
   
  Para habilitar una aplicación para que use OLTP en memoria, debe completar las tareas siguientes:  
   

@@ -14,19 +14,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 520fc09bb08f2110ae6cc53b6a61d1305735601c
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 3d29688e3d5ff47f7ddd253ebfc1c2109dc8cc36
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>Cambiar el tiempo de recuperación de destino de una base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-En este tema se describe cómo establecer el cambio el tiempo de recuperación de destino de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. De forma predeterminada, el tiempo de recuperación de destino es de 60 segundos y la base de datos usa *puntos de comprobación indirectos*. El tiempo de recuperación de destino establece un límite superior en el tiempo de recuperación para esta base de datos.  
+  En este tema se describe cómo establecer el cambio el tiempo de recuperación de destino de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. De forma predeterminada, el tiempo de recuperación de destino es de 60 segundos y la base de datos usa *puntos de comprobación indirectos*. El tiempo de recuperación de destino establece un límite superior en el tiempo de recuperación para esta base de datos.  
   
 > [!NOTE]  
 >  El límite superior especificado para una base de datos determinada por el valor de tiempo de recuperación de destino se puede superar si una transacción de larga duración provoca tiempos de UNDO excesivos.  

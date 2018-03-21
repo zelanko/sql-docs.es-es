@@ -21,19 +21,19 @@ helpviewer_keywords:
 - server configuration [SQL Server]
 ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a746ab7863c97e7738760f863227c7d1c0020644
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 778ca272ca6e7cc4a8d3092386457dc2ae5899b2
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="administer-multiple-servers-using-central-management-servers"></a>Administrar varios servidores mediante Servidores de administración central
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Puede administrar varios servidores designando los servidores de administración central y creando grupos de servidores.  
+  Puede administrar varios servidores designando los servidores de administración central y creando grupos de servidores.  
   
 ## <a name="what-is-a-central-management-server-and-server-groups"></a>¿Qué son un servidor de administración central y los grupos de servidores?  
  Una instancia de SQL Server designada como servidor de administración central mantiene los grupos de servidores que contienen la información de conexión de una o varias instancias. Puede ejecutar instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] y directivas de administración basada en directivas al mismo tiempo en grupos de servidores. También puede ver los archivos de registro en las instancias que se administran a través de un servidor de administración central. 

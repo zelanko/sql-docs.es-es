@@ -19,18 +19,19 @@ helpviewer_keywords:
 - renaming views
 ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 caps.latest.revision: 
-author: sstein
+author: stevestein
+ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8b389a635dceb2af0e8457f72ae56013edb1065c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 414515b7c9c2d6b9c3fe3319979a5987594fb5dd
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="modify-views"></a>Modificar vistas
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
-Después de definir una vista, puede cambiar su definición en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sin tener que quitarla y volverla a crear si usa [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Después de definir una vista, puede cambiar su definición en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sin tener que quitarla y volverla a crear si usa [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  
   

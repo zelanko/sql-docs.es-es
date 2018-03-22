@@ -2,15 +2,15 @@
 title: Bookmark (propiedad) (ADO) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
-ms.date: 01/19/2017
-ms.reviewer: 
+ms.custom: ''
+ms.date: 03/20/2018
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: COM
 f1_keywords:
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Bookmark property [ADO]
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3c6076acd2bde7e82bf142bad76093d582106877
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 59cc184403fff8b152ee7eabbdf823abd6c3d4bc
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="bookmark-property-ado"></a>Bookmark (propiedad) (ADO)
 Indica un marcador que identifica de forma única el registro actual en un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) de un objeto o establece el registro actual un **Recordset** objeto en el registro identificado por un marcador válido.  
@@ -40,7 +40,7 @@ Indica un marcador que identifica de forma única el registro actual en un [Reco
   
  Cuando se abre un **Recordset** de objetos, cada uno de sus registros tiene un marcador único. Para guardar el marcador para el registro actual, asigne el valor de la **marcador** propiedad a una variable. Para volver rápidamente a ese registro en cualquier momento después de moverse a un registro diferente, establezca la **Recordset** del objeto **marcador** en el valor de esa variable.  
   
- Es posible que el usuario no pueda ver el valor del marcador. Además, los usuarios no deben esperar que marcadores ser comparables directamente??? dos marcadores que hacen referencia al mismo registro pueden tener valores diferentes.  
+ Es posible que el usuario no pueda ver el valor del marcador. Además, los usuarios no deben esperar que marcadores sean comparables directamente porque dos marcadores que hacen referencia al mismo registro pueden tener valores diferentes.  
   
  Si usas el [clon](../../../ado/reference/ado-api/clone-method-ado.md) método para crear una copia de un **Recordset** objeto, el **marcador** valores de propiedad para la versión original y el duplicado **conjunto de registros**  objetos son idénticos y se pueden usar indistintamente. Sin embargo, no puede utilizar marcadores de diferentes **Recordset** objetos de forma intercambiable, incluso si se crearon a partir del mismo origen o comando.  
   

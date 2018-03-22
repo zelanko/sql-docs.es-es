@@ -1,16 +1,16 @@
 ---
-title: "Método NextRecordset (ADO) | Documentos de Microsoft"
+title: Método NextRecordset (ADO) | Documentos de Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
-ms.date: 01/19/2017
-ms.reviewer: 
+ms.custom: ''
+ms.date: 03/20/2018
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 apitype: COM
 f1_keywords:
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - NextRecordset method [ADO]
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffbc85f40d684095b4f91512943f16911af3233f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b4e0e38fc9c01a65916d7979fddfae929d43acf1
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="nextrecordset-method-ado"></a>Método NextRecordset (ADO)
 Borra actual [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) de objetos y devuelve el siguiente **Recordset** al avanzar a través de una serie de comandos.  
@@ -54,7 +54,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 ## <a name="remarks"></a>Comentarios  
  Use la **NextRecordset** método para devolver los resultados del siguiente comando en una instrucción de comando compuesta o de un procedimiento almacenado que devuelve varios resultados. Si abre un **Recordset** objeto basado en una instrucción de comando compuesta (por ejemplo, "seleccione \* FROM Tabla1; Seleccione \* de table2 ") mediante el [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) método en un [comando](../../../ado/reference/ado-api/command-object-ado.md) o la [abiertos](../../../ado/reference/ado-api/open-method-ado-recordset.md) método en un **conjunto de registros**, ADO ejecuta sólo el primer comando y devuelve los resultados a *conjunto de registros*. Para obtener acceso a los resultados de los comandos subsiguientes de la instrucción, llame a la **NextRecordset** método.  
   
- Siempre que hay resultados adicionales y el **Recordset** que contiene las instrucciones compuestas se desconecte o calcular las referencias en los límites de proceso, no el **NextRecordset** continuará (método) devolver **Recordset** objetos. Si un comando que devuelve filas se ejecuta correctamente pero no devuelve ningún registro, el valor devuelto **Recordset** objeto estará abierto pero vacío. Prueba en este caso, compruebe que la [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) y [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) ambas propiedades están **True**. Si una aplicación no??? comando ejecuta correctamente, el valor devuelto devuelve filas **Recordset** objeto estará cerrado, lo que puede comprobarse mediante la [estado](../../../ado/reference/ado-api/state-property-ado.md) propiedad en el **conjunto de registros**. Cuando ya no queden más resultados, *recordset* se establecerá en *nada*.  
+ Siempre que hay resultados adicionales y el **Recordset** que contiene las instrucciones compuestas se desconecte o calcular las referencias en los límites de proceso, no el **NextRecordset** continuará (método) devolver **Recordset** objetos. Si un comando que devuelve filas se ejecuta correctamente pero no devuelve ningún registro, el valor devuelto **Recordset** objeto estará abierto pero vacío. Prueba en este caso, compruebe que la [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) y [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) ambas propiedades están **True**. Si un comando no devuelve filas ejecuta correctamente, el valor devuelto **Recordset** objeto estará cerrado, lo que puede comprobarse mediante la [estado](../../../ado/reference/ado-api/state-property-ado.md) propiedad en el **Recordset**. Cuando ya no queden más resultados, *recordset* se establecerá en *nada*.  
   
  El **NextRecordset** método no está disponible en un desconectada **Recordset** objeto, donde [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) se ha establecido en **nada**(en Microsoft Visual Basic) o NULL (en otros lenguajes).  
   

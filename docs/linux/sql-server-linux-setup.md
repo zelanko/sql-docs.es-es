@@ -1,25 +1,25 @@
 ---
-title: "Guía de instalación de SQL Server 2017 en Linux | Documentos de Microsoft"
-description: "Instalar, actualizar y desinstalar SQL Server en Linux. Este artículo tratan los escenarios en línea, sin conexión y desatendidos."
+title: Guía de instalación de SQL Server 2017 en Linux | Documentos de Microsoft
+description: Instalar, actualizar y desinstalar SQL Server en Linux. Este artículo tratan los escenarios en línea, sin conexión y desatendidos.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/08/2018
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: d8f8cde3d3a299008d75c4b701be224c458880eb
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: ef5e2131681981e85971d734ebbe576e106e2b92
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guía de instalación para SQL Server en Linux
 
@@ -47,12 +47,10 @@ SQL Server 2017 es compatible con Red Hat Enterprise Linux (RHEL), SUSE Linux En
 | **Ubuntu** | 16.04 | [Obtener Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Motor de docker** | 1.8+ | [Obtener Docker](http://www.docker.com/products/overview)
 
+Microsoft también admite la implementación y administración de contenedores de SQL Server mediante OpenShift y Kubernetes.
+
 > [!NOTE]
-> En ocasiones, es posible instalar y ejecutar SQL Server en otras plataformas de Linux estrechamente relacionado con, pero SQL Server solo se prueba y se admiten en las plataformas que se muestran en la tabla anterior.
-
-Microsoft admite la implementación y administración de contenedores de SQL Server mediante OpenShift y Kubernetes.
-
-Para la directiva de soporte técnico más reciente para SQL Server 2017, consulte [directiva de soporte técnico de Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
+> SQL Server se prueba y se admite en Linux para las distribuciones enumeradas anteriormente. Si decide instalar SQL Server en un sistema operativo no compatible, revise la **directiva de soporte técnico** sección de la [directiva de soporte técnico de Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) para comprender la compatibilidad con implicaciones.
 
 ## <a id="system"></a> Requisitos del sistema
 
@@ -170,7 +168,7 @@ Para obtener un script de ejemplo más detallado, vea los ejemplos siguientes:
 
 ## <a id="offline"></a> Instalación sin conexión
 
-Si su equipo Linux no tiene acceso a los repositorios en línea que se utiliza en el [rápidas](#platforms), puede descargar los archivos del paquete directamente. Estos paquetes se encuentran en el repositorio de Microsoft, [https://packages.microsoft.com](https://packages.microsoft.com).
+Si su equipo Linux no tiene acceso a los repositorios en línea que se utiliza en el [rápidas](#platforms), puede descargar los archivos del paquete directamente. Estos paquetes se encuentran en el repositorio de Microsoft, [ https://packages.microsoft.com ](https://packages.microsoft.com).
 
 > [!TIP]
 > Si se ha instalado correctamente con los pasos descritos en las guías de inicio rápidos, no es necesario descargar o instalar manualmente los paquetes de SQL Server. Esta sección es solo para el escenario sin conexión.
